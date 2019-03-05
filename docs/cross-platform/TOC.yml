@@ -1,30 +1,13 @@
 items:
-- name: Кроссплатформенный
+- name: Кроссплатформенные приложения
   href: index.yml
   items:
-  - name: Приступая к работе
+  - name: Создание мобильных приложений
     href: get-started/index.md
     items:
     - name: Требования
       displayName: System requirements
       href: get-started/requirements.md
-    - name: Установка
-      href: get-started/installation/index.md
-      items:
-      - name: Установка Xamarin в Windows
-        href: get-started/installation/windows.md
-        items:
-        - name: Установка предварительных версий Xamarin в Windows
-          href: get-started/installation/windows-preview.md
-      - name: Установка Visual Studio для Mac
-        href: /visualstudio/mac/installation/
-        items:
-        - name: Установка предварительных версий Xamarin в Mac
-          href: /visualstudio/mac/update/
-      - name: Инструкции по настройке брандмауэра Xamarin
-        href: get-started/installation/firewall.md
-      - name: Удаление Xamarin
-        href: get-started/installation/uninstalling-xamarin.md
     - name: Введение в разработку мобильных приложений
       href: get-started/introduction-to-mobile-development.md
     - name: Введение в жизненный цикл разработки программного обеспечения (SDLC) для мобильных устройств
@@ -192,9 +175,9 @@ items:
   - name: Примеры
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 5eb01503b809979ebbc6598cf1cde985d3431bad
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.openlocfilehash: 083bc3dc1dbd392977b0d4902e37fe0f78513c29
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841332"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197333"

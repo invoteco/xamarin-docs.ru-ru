@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Руководство по Grid в Xamarin.Forms
+metadata:
+  title: Руководство по Grid в Xamarin.Forms
+  description: Узнайте, как с помощью элемента Grid в Xamarin.Forms упорядочить представления в строки и столбцы, которые могу иметь пропорциональные или абсолютные размеры.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 08/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 492e26b8488b615d4d50ee63f4fa4a9fa1f4c01e
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197840"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Создание контейнера Grid
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Указание столбцов и строк
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/columns-rows.md)]
+- title: Охват нескольких столбцов и строк
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/span-columns-rows.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

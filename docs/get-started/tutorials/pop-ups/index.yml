@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Руководство по Pop-ups в Xamarin.Forms
+metadata:
+  title: Руководство по Pop-ups в Xamarin.Forms
+  description: Узнайте, как настроить отображение предупреждений и таблиц действий с помощью Xamarin.Forms, отвечать на простые вопросы пользователей и помочь пользователям в выполнении задач.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/19/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 7943f6caf94328d265ba03f90821a0075d1b02fe
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198920"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Отображение оповещений
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/display-alert.md)]
+- title: Отображение таблицы действий
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/display-action-sheet.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

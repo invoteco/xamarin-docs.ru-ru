@@ -1,0 +1,38 @@
+### YamlMime:Tutorial
+title: Руководство по ListView в Xamarin.Forms
+metadata:
+  title: Руководство по ListView в Xamarin.Forms
+  description: Узнайте, как для настроить представление списков данных с помощью ListView в Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 06/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 5c0621fe10b02ef29a4b426a441221b00c845830
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198030"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Создание ListView
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Заполнение данными
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/populate-data.md)]
+- title: Реагирование на выбор элемента
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/item-selection.md)]
+- title: Настройка внешнего вида ячеек
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/customize-cell-appearance.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Руководство по StackLayout в Xamarin.Forms
+metadata:
+  title: Руководство по StackLayout в Xamarin.Forms
+  description: Узнайте, как с помощью StackLayout в Xamarin.Forms упорядочивать представления в виде распределения (горизонтально или вертикально) на основе одномерного массива.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 07/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 24ab316baf8a0be14d78d35e52698e2bff224dcc
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197850"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Создание StackLayout
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Указание ориентации
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/orientation.md)]
+- title: Указание выравнивания и расширения
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/alignment-expansion.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

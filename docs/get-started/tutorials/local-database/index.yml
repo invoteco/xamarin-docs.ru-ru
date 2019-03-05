@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Руководство по локальной базе данных Xamarin.Forms
+metadata:
+  title: Руководство по локальной базе данных Xamarin.Forms
+  description: Узнайте, как с помощью пакета NuGet для SQLite.NET внедрить операции из локальной базой данных в приложение Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 12/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: b4cd264d11df081fb190044000e73cf012092667
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198570"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Добавление SQLite.NET
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/add-sqlite.md)]
+- title: Создание классов доступа к данным
+  durationInMinutes: 5
+  content: >
+    [!INCLUDE [](includes/create-data-access-classes.md)]
+- title: Использование классов доступа к данным
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/consume-data-access-classes.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

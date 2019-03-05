@@ -1,5 +1,5 @@
 ---
-title: Какой версии Xamarin.Android добавлена поддержка Lollipop?
+title: В какой версии Xamarin.Android добавлена поддержка Lollipop?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ffae20f3e62d8f735e4645143f08a94fd04744b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7e31f9ad46a04b648a6a1f24c075426f7d98a663
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305611"
 ---
-# <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>Какой версии Xamarin.Android добавлена поддержка Lollipop?
+# <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>В какой версии Xamarin.Android добавлена поддержка Lollipop?
 
-**Примечание:** в этом руководстве, первоначально был написан для предварительной версии Android L.
+**Примечание.** В этом руководстве, первоначально был написан для предварительной версии Android L.
 
 -   [Xamarin.Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) добавлена поддержка Android L предварительной версии.
 -   [Xamarin.Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) добавлена поддержка Android Lollipop.
@@ -33,7 +33,7 @@ Xamarin поддерживает только активно текущий ст
 Error 1 Could not find android.jar for API Level 21.
 ```
 
-Это сообщение означает, что платформа SDK для Android для API 21 уровень не установлен. Либо установите диспетчер пакетов SDK Android (Сервис >... Откройте диспетчер пакетов SDK для Android), или измените проект Xamarin.Android для установленной версии API.
+Это сообщение означает, что платформа SDK для Android для API 21 уровень не установлен. Либо установите диспетчер пакетов SDK Android (**средства > открыть диспетчер Android SDK Manager...** ), или измените проект Xamarin.Android для установленной версии API.
 
 Существует несколько обходных путей для этой проблемы:
 
@@ -46,7 +46,7 @@ Error 1 Could not find android.jar for API Level 21.
 3. Временно понизить обратно к предварительной версии Android API 21 уровень "L" [1]:
 
     1.  Удалить **% LOCALAPPDATA %\\Android\\android-sdk\\платформ\\android-21** 
-    2.  Извлечения [1] на **C:\\пользователей\\<username>\\AppData\\локального\\Android\\android-sdk\\платформ** для создания **android-L** папки.
+    2.  Извлечения [1] на **C:\\пользователей\\&lt;username&gt;\\AppData\\локального\\Android\\android-sdk\\платформ**  для создания **android-L** папки.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

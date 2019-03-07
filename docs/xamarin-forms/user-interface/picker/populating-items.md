@@ -6,13 +6,13 @@ ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208016"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557234"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Добавление данных в коллекцию элементов средства выбора
 
@@ -25,7 +25,8 @@ _Представление выбора является элемент упр�
 До Xamarin.Forms 2.3.4, процесс заполнения [ `Picker` ](xref:Xamarin.Forms.Picker) с данными было Добавление данных для отображения только для чтения [ `Items` ](xref:Xamarin.Forms.Picker.Items) коллекции, которая имеет тип `IList<string>`. Каждый элемент в коллекции должен быть типа `string`. Элементы могут быть добавлены в XAML путем инициализации `Items` свойства со списком `x:String` элементов:
 
 ```xaml
-<Picker Title="Select a monkey">
+<Picker Title="Select a monkey"
+        TitleColor="Red">
   <Picker.Items>
     <x:String>Baboon</x:String>
     <x:String>Capuchin Monkey</x:String>
@@ -41,7 +42,7 @@ _Представление выбора является элемент упр�
 Ниже приведен эквивалентный код на C#:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.Items.Add("Baboon");
 picker.Items.Add("Capuchin Monkey");
 picker.Items.Add("Blue Monkey");
@@ -79,11 +80,6 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 
 > [!NOTE]
 > Объект [ `Picker` ](xref:Xamarin.Forms.Picker) может быть инициализировано для отображения указанного элемента, задав [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) свойство. Тем не менее `SelectedIndex` свойство должно быть задано после инициализации [ `Items` ](xref:Xamarin.Forms.Picker.Items) коллекции.
-
-## <a name="summary"></a>Сводка
-
-[ `Picker` ](xref:Xamarin.Forms.Picker) Представление является элемент управления для выбора элемента из списка данных. В этой статье описано, как заполнять `Picker` с данными, путем добавления его в [ `Items` ](xref:Xamarin.Forms.Picker.Items) коллекции, а также реагировать на выбор элемента пользователем. Это было процесс использования `Picker` до Xamarin.Forms 2.3.4.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

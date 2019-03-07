@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: ce1ba235a309e2388bd5eea7d70a1d72852fc615
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2019
+ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831863"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557042"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin.Forms
 
@@ -157,10 +157,13 @@ var label =
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) — размер шрифта для текста в элементе управления span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) — цвет для текста в элементе управления span. Это свойство является устаревшим и будет заменен `TextColor` свойство.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) — Множитель, который следует применить к высота строки по умолчанию диапазона. Дополнительные сведения см. в разделе [высота строки](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style) — стиль, применяемый к нему.
+- [`Text`](xref:Xamarin.Forms.Span.Text)  — стиль, применяемый к нему.
 - [`Text`](xref:Xamarin.Forms.Span.Text) — текст диапазона.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) — цвет для текста в элементе управления span.
 - `TextDecorations` -оформление для применения к тексту в элементе управления span. Дополнительные сведения см. в разделе [оформление текста](#text-decorations).
+
+> [!NOTE]
+> [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor), [ `Text` ](xref:Xamarin.Forms.Span.Text), И [ `Text` ](xref:Xamarin.Forms.Span.Text) привязываемые свойства использовать режим привязки по умолчанию [ `OneWay` ](xref:Xamarin.Forms.BindingMode). Дополнительные сведения об этом режиме привязки см. в разделе [режима привязки по умолчанию](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) в [режим привязки](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) руководства.
 
 Кроме того [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) свойство может использоваться для определения коллекции распознавателей жестов, которые будет отвечать на жесты на [ `Span` ](xref:Xamarin.Forms.Span).
 

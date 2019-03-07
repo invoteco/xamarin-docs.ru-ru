@@ -6,13 +6,13 @@ ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 8e05a5f1c52183f29f22cbcd9655c26dc934e7d8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 2c7daca80a207d0c060fc3a867b1eda03dd65258
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207858"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557081"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Задание свойства ItemsSource средства выбора
 
@@ -27,7 +27,9 @@ _Представление выбора является элемент упр�
 Объект [ `Picker` ](xref:Xamarin.Forms.Picker) могут заполняться с помощью данных, задав его [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) свойства `IList` коллекции. Каждый элемент в коллекции могут иметь и выведенный из типов `object`. Элементы могут быть добавлены в XAML путем инициализации `ItemsSource` свойства из массива элементов:
 
 ```xaml
-<Picker x:Name="picker" Title="Select a monkey">
+<Picker x:Name="picker"
+        Title="Select a monkey"
+        TitleColor="Red">
   <Picker.ItemsSource>
     <x:Array Type="{x:Type x:String}">
       <x:String>Baboon</x:String>
@@ -57,7 +59,7 @@ monkeyList.Add("Golden Lion Tamarin");
 monkeyList.Add("Howler Monkey");
 monkeyList.Add("Japanese Macaque");
 
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.ItemsSource = monkeyList;
 ```
 
@@ -101,18 +103,21 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 > [!NOTE]
 > Объект [ `Picker` ](xref:Xamarin.Forms.Picker) может быть инициализировано для отображения указанного элемента, задав [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) или [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) свойства. Тем не менее, эти свойства должны быть заданы после инициализации [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) коллекции.
 
-## <a name="populating-a-picker-with-data-using-data-binding"></a>Заполнение управляющий элемент выбора с данными, с использованием привязки данных
+## <a name="populating-a-picker-with-data-using-data-binding"></a>Заполнение управляющий элемент выбора данных, с использованием привязки данных
 
 Объект [ `Picker` ](xref:Xamarin.Forms.Picker) может также заполняться данными с помощью привязки данных для привязки его [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) свойства `IList` коллекции. В XAML это достигается за счет [ `Binding` ](xref:Xamarin.Forms.Xaml.BindingExtension) расширение разметки:
 
 ```xaml
-<Picker Title="Select a monkey" ItemsSource="{Binding Monkeys}" ItemDisplayBinding="{Binding Name}" />
+<Picker Title="Select a monkey"
+        TitleColor="Red"
+        ItemsSource="{Binding Monkeys}"
+        ItemDisplayBinding="{Binding Name}" />
 ```
 
 Ниже приведен эквивалентный код на C#:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.ItemDisplayBinding = new Binding("Name");
 ```
@@ -137,6 +142,7 @@ public class Monkey
 
 ```xaml
 <Picker Title="Select a monkey"
+        TitleColor="Red"
         ItemsSource="{Binding Monkeys}"
         ItemDisplayBinding="{Binding Name}"
         SelectedItem="{Binding SelectedMonkey}" />
@@ -149,7 +155,7 @@ public class Monkey
 Ниже приведен эквивалентный код на C#:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.SetBinding(Picker.SelectedItemProperty, "SelectedMonkey");
 picker.ItemDisplayBinding = new Binding("Name");
@@ -173,10 +179,6 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 > [!NOTE]
 > Обратите внимание, что [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) и [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) свойства обоих поддерживают имеют двухсторонние привязки по умолчанию.
-
-## <a name="summary"></a>Сводка
-
-[ `Picker` ](xref:Xamarin.Forms.Picker) Представление является элемент управления для выбора элемента из списка данных. В этой статье описано, как заполнять `Picker` с данными, задав [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) свойство и как реагировать на выбор элемента пользователем. Этот подход, который появился в Xamarin.Forms 2.3.4, подход рекомендуется для взаимодействия с `Picker`.
 
 ## <a name="related-links"></a>Связанные ссылки
 

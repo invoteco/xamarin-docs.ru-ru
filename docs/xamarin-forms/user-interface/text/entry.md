@@ -6,13 +6,13 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/27/2018
-ms.openlocfilehash: 303cca48defdadd69449edbd6c4c3f5e4410bbbb
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2018
+ms.openlocfilehash: bc404986a83d0150c490486c20f780bf4e7f5a9e
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831967"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557208"
 ---
 # <a name="xamarinforms-entry"></a>Запись Xamarin.Forms
 
@@ -58,6 +58,22 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 
 > [!NOTE]
 > Ширина `Entry` может быть определена путем задания его `WidthRequest` свойство. Не зависят от ширину `Entry` , определенное на основе значения из его `Text` свойство.
+
+### <a name="preventing-text-entry"></a>Предотвращение ввод текста
+
+Пользователи могут быть защищены от изменения текста в [ `Entry` ](xref:Xamarin.Forms.Entry) , задав `IsReadOnly` свойство, которое имеет значение по умолчанию из `false`, `true`:
+
+```xaml
+<Entry Text="This is a read-only Entry"
+       IsReadOnly="true" />
+```
+
+```csharp
+var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true });
+```
+
+> [!NOTE]
+> `IsReadonly` Свойство не приводит к изменению внешнего вида [ `Entry` ](xref:Xamarin.Forms.Entry), в отличие от `IsEnabled` свойство, которое также изменяет внешний вид `Entry` к серому.
 
 ### <a name="limiting-input-length"></a>Ограничение длины входных
 

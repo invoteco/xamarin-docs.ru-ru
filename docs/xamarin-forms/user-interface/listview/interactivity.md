@@ -6,13 +6,13 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/14/2018
-ms.openlocfilehash: 939df6cfd17de82e28958363cfa51cd199f928cb
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/27/2019
+ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831695"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557195"
 ---
 # <a name="listview-interactivity"></a>Интерактивность ListView
 
@@ -34,8 +34,10 @@ ms.locfileid: "55831695"
 - [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) активируется, когда элемент выбран.
 - [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) возникает при нажатии элемента.
 
+При касании тот же элемент дважды будет срабатывать два [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события, но будет только вызов одной [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) событий.
+
 > [!NOTE]
-> При касании тот же элемент дважды будет срабатывать два [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события, но будет только вызов одной [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) событий.
+> [ `ItemTappedEventArgs` ](xref:Xamarin.Forms.ItemTappedEventArgs) Класс, который содержит аргументы события для [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события, [ `Group` ](xref:Xamarin.Forms.ItemTappedEventArgs.Group) и [ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item) свойства и `ItemIndex` свойство, значение которого представляет индекс в массиве [ `ListView` ](xref:Xamarin.Forms.ListView) полученные элемента. Аналогичным образом [ `SelectedItemChangedEventArgs` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs) класс, который содержит аргументы события для [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) события, [ `SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) свойство и `SelectedItemIndex` свойство, значение которого представляет индекс в массиве `ListView` выбранного элемента.
 
 Когда [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) свойству [ `Single` ](xref:Xamarin.Forms.ListViewSelectionMode.Single), элементы в [ `ListView` ](xref:Xamarin.Forms.ListView) можно выбрать, [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) и [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события порождаются и [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойству будет присвоено значение выбранного элемента.
 

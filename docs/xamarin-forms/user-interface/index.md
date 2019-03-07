@@ -1,19 +1,14 @@
 ---
 title: Представления интерфейса пользователя Xamarin.Forms
-description: В этой статье рассматриваются элементы управления и основные понятия, которые могут быть использованы при создании пользовательского интерфейса в приложении Xamarin.Forms.
+description: 'В этой статье рассматриваются элементы управления и основные понятия, которые могут быть использованы при создании пользовательского интерфейса в приложении Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: c3759430ce40397418d2f47794e8ecc555ef3ed4
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292289"
 ---
+
 # <a name="xamarinforms-user-interface-views"></a>Представления интерфейса пользователя Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/FormsGallery/)
@@ -108,9 +103,9 @@ Xamarin.Forms имеет несколько представлений для п
 
 `TimePicker` Позволяет пользователю для выбора времени. Она реализуется с помощью средства выбора времени, поддерживаемых конкретной платформы, которое приложение запускается на.
 
-## <a name="visualvisualmd"></a>[Визуальный элемент](visual.md)
+## <a name="visualvisualindexmd"></a>[Визуальный элемент](visual/index.md)
 
-В этой статье рассматриваются Xamarin.Forms визуальный элемент, который отображает представления одинаково, или во многом идентично в iOS и Android.
+Xamarin.Forms Visual включает модули подготовки отчетов, чтобы выборочно применять к `VisualElement` объекты, не прибегая к элементам управления Xamarin.Forms подкласс.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Диспетчер визуальных состояний](visual-state-manager.md)
 

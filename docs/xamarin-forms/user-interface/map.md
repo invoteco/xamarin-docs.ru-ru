@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/27/2016
-ms.openlocfilehash: 1d164c8593e358a97b21f42bf7116f64d0ac460d
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.date: 02/27/2018
+ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815221"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557120"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms карты
 
@@ -20,13 +20,8 @@ ms.locfileid: "53815221"
 
 _Xamarin.Forms использует карту собственного API-интерфейсы на каждой платформе._
 
-Xamarin.Forms.Maps использует карту собственного API-интерфейсы на каждой платформе. Это обеспечивает быстрый, знакомы карт для пользователей, но также означает, что придерживаться каждой платформы определенные требования к API требуются некоторые шаги по настройке.
+Xamarin.Forms.Maps использует карту собственного API-интерфейсы на каждой платформе. Это обеспечивает быстрый, знакомы карт для пользователей, но также означает, что некоторые шаги по настройке необходимо следовать требованиям API каждой платформы.
 После настройки конфигурации `Map` работает так же, как и любой другой элемент Xamarin.Forms в общем коде контроль.
-
-* [Сопоставляет инициализации](#Maps_Initialization) — с помощью `Map` требуется дополнительный код инициализации при запуске.
-* [Конфигурация платформы](#Platform_Configuration) -часть конфигурации соотносятся с рабочими требуются для каждой платформы.
-* [Использование карт в C#](#Using_Maps) -отображение сопоставляет и контакты, с помощью C#.
-* [Использование карт в XAML](#Using_Xaml) -отображения карты с помощью XAML.
 
 Элемент управления map был использован в [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) пример, как показано ниже.
 
@@ -65,7 +60,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 -  **Android** -MainActivity.cs файле `OnCreate` метод.
 -  **UWP** -файл MainPage.xaml.cs, в `MainPage` конструктор.
 
-После добавления пакета NuGet и вызван метод инициализации внутри каждого applcation `Xamarin.Forms.Maps` интерфейсы API, которые могут использоваться в общий проект библиотеки .NET Standard или общий проект кода.
+После добавления пакета NuGet и вызван метод инициализации внутри каждого приложения `Xamarin.Forms.Maps` интерфейсы API, которые могут использоваться в общий проект библиотеки .NET Standard или общий проект кода.
 
 <a name="Platform_Configuration" />
 
@@ -101,7 +96,6 @@ XML-представление для этих ключей в **Info.plist** п
 
 ![Info.plist для iOS 8](map-images/ios8-map-permissions.png "записи Info.plist требуется iOS 8")
 
-
 ### <a name="android"></a>Android
 
 Чтобы использовать [v2 Google Maps API](https://developers.google.com/maps/documentation/android/) на устройстве Android необходимо создать ключ API и добавить его в проект Android.
@@ -114,7 +108,7 @@ XML-представление для этих ключей в **Info.plist** п
 </application>
 ```
 
-Не является допустимым ключом API элемента управления будет отображаться как серый квадрат на устройстве Android.
+Не является допустимым ключом API элемента управления отображается как серый квадрат на устройстве Android.
 
 > [!NOTE]
 > Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Также не забудьте изменить учетные данные ключа, если приложения **имя пакета** изменения. См. в разделе [Получение ключа Google Maps API v2](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
@@ -143,7 +137,7 @@ XML-представление для этих ключей в **Info.plist** п
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>Использование класса Maps
+## <a name="using-maps"></a>Использование карт
 
 См. в разделе [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) в образце MobileCRM пример использования элемента управления картой в коде. Простой `MapPage` класс может выглядеть как - уведомления, новый `MapSpan` создается для размещения представления карты:
 
@@ -165,7 +159,7 @@ public class MapPage : ContentPage {
 }
 ```
 
-### <a name="map-type"></a>Тип схемы
+### <a name="map-type"></a>Тип карты
 
 Также можно изменить, задав содержимого карты `MapType` свойства, чтобы показать карту регулярных улицы (по умолчанию), вспомогательных изображений или их сочетание.
 
@@ -178,7 +172,6 @@ map.MapType == MapType.Street;
 -  Гибридные
 -  Вспомогательные
 -  Улица (по умолчанию)
-
 
 ### <a name="map-region-and-mapspan"></a>Области карты и MapSpan
 
@@ -223,30 +216,31 @@ map.Pins.Add(pin);
 -  SavedPin
 -  SearchResult
 
-
 <a name="Using_Xaml" />
 
-## <a name="using-xaml"></a>С помощью Xaml
+## <a name="using-xaml"></a>С помощью XAML
 
-Maps также может быть размещен в макетах Xaml, как показано в этом фрагменте кода.
+Maps также может быть размещен в макетах XAML, как показано в этом фрагменте кода.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-    x:Class="MapDemo.MapPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="MapDemo.MapPage">
     <StackLayout VerticalOptions="StartAndExpand" Padding="30">
         <maps:Map WidthRequest="320" HeightRequest="200"
-            x:Name="MyMap"
-            IsShowingUser="true"
-            MapType="Hybrid"
-        />
+                  x:Name="MyMap"
+                  IsShowingUser="true"
+                  MapType="Hybrid" />
     </StackLayout>
 </ContentPage>
 ```
 
-`MapRegion` И `Pins` можно задать в коде с помощью `MyMap` ссылка (или все, что называется карты). Обратите внимание, что дополнительная `xmlns` для ссылки на элементы управления Xamarin.Forms.Maps требуется определение пространства имен.
+> [!NOTE]
+> Дополнительная `xmlns` для ссылки на элементы управления Xamarin.Forms.Maps требуется определение пространства имен.
+
+`MapRegion` И `Pins` можно задать в коде с помощью `MyMap` ссылка (или все, что называется карты).
 
 ```csharp
 MyMap.MoveToRegion(
@@ -254,14 +248,44 @@ MyMap.MoveToRegion(
         new Position(37,-122), Distance.FromMiles(1)));
 ```
 
-<a name="Summary" />
+## <a name="populating-a-map-with-data-using-data-binding"></a>Заполнение данных с использованием привязки данных карты
 
-## <a name="summary"></a>Сводка
+[ `Map` ](xref:Xamarin.Forms.Maps.Map) Класс также предоставляет следующие свойства:
 
-Xamarin.Forms.Maps — это отдельный NuGet, которая должна быть добавлена в каждый проект в решение Xamarin.Forms. Как и некоторые действия по настройке iOS, Android и универсальной платформы Windows необходим дополнительный код инициализации.
+- `ItemsSource` — Указывает коллекцию `IEnumerable` отображаемых элементов.
+- `ItemTemplate` — Указывает [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) для применения к каждому элементу в коллекции отображаемых элементов.
 
-После настройки сопоставляет API может использоваться для отрисовки карты с ПИН-код маркерами в несколько строк кода. Карты можно улучшить с помощью [пользовательское средство отрисовки](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
+Таким образом [ `Map` ](xref:Xamarin.Forms.Maps.Map) могут заполняться с помощью данных с помощью привязки данных для привязки его `ItemsSource` свойства `IEnumerable` коллекции:
 
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.PinItemsSourcePage">
+    <Grid>
+        ...
+        <maps:Map x:Name="map"
+                  ItemsSource="{Binding Locations}">
+            <maps:Map.ItemTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                </DataTemplate>
+            </maps:Map.ItemTemplate>
+        </maps:Map>
+        ...
+    </Grid>
+</ContentPage>
+```
+
+`ItemsSource` Свойство данных привязывает к `Locations` свойство модели связанное представление, которое возвращает `ObservableCollection` из `Location` объекты, которые является пользовательским типом. Каждый `Location` объект определяет `Address` и `Description` свойств типа `string`и `Position` свойство типа [ `Position` ](xref:Xamarin.Forms.Maps.Position).
+
+Внешний вид каждого элемента в `IEnumerable` коллекции определяется путем указания `ItemTemplate` свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) , содержащий [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) объекта, что данных привязывается к соответствующие свойства.
+
+Ниже показаны снимки экрана [ `Map` ](xref:Xamarin.Forms.Maps.Map) отображение [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) коллекции с использованием привязки данных:
+
+[![Снимок экрана карты данными привязан ПИН-кодов, в iOS и Android](map-images/pins-itemssource.png "булавки с данными привязанного")](map-images/pins-itemssource-large.png#lightbox "сопоставление с данными привязанного ПИН-кодов")
 
 ## <a name="related-links"></a>Связанные ссылки
 

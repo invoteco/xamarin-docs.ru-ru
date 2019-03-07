@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 02/22/2019
 ---
 
 # <a name="ios-platform-features"></a>Возможности на платформе iOS
@@ -25,8 +25,11 @@ ms.date: 01/07/2018
 
 Предоставляются следующие функциональные возможности платформы для представления Xamarin.Forms в iOS:
 
+- Установка [ `Cell` ](xref:Xamarin.Forms.Cell) цвет фона. Дополнительные сведения см. в разделе [цвет фона ячейки в iOS](cell-background-color.md).
 - Обеспечение, введена текст встраивается в [ `Entry` ](xref:Xamarin.Forms.Entry) , корректируя размер шрифта. Дополнительные сведения см. в разделе [размер шрифта записи в iOS](entry-font-size.md).
 - Задание цвета курсора [ `Entry` ](xref:Xamarin.Forms.Entry). Дополнительные сведения см. в разделе [цвет курсора запись в iOS](entry-cursor-color.md).
+- Управление ли [ `ListView` ](xref:Xamarin.Forms.ListView) ячеек заголовков, число с плавающей запятой при прокрутке. Дополнительные сведения см. в разделе [стиль заголовка группы ListView на iOS](listview-group-header-style.md).
+- Управление, отключены ли строка анимаций при [ `ListView` ](xref:Xamarin.Forms.ListView) обновляется коллекция элементов. Дополнительные сведения см. в разделе [ListView строка анимаций в iOS](listview-row-animations.md).
 - Установка стиль разделителя [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. в разделе [стиль разделителя ListView на iOS](listview-separator-style.md).
 - Управление, когда происходит выбор элементов в [ `Picker` ](xref:Xamarin.Forms.Picker). Дополнительные сведения см. в разделе [Выбор элемента в iOS](picker-selection.md).
 - Включение [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) свойство для задания можно просмотреть, выбрав для положения на [ `Slider` ](xref:Xamarin.Forms.Slider) панели, а не по необходимости перетащите `Slider` бегунка. Дополнительные сведения см. в разделе [ползунок Thumb коснуться iOS](slider-thumb.md).

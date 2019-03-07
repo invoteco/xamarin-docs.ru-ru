@@ -6,24 +6,23 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 9441522af53a1240707eeb21ff9f583501d2491d
-ms.sourcegitcommit: 16a42b69176a40cde71e177079b11e15d300d042
+ms.date: 03/04/2019
+ms.openlocfilehash: fc989ef73c9248bd359c9b1d35aaa9bdde846690
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56795450"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557064"
 ---
 # <a name="fonts-in-xamarinforms"></a>Шрифты в Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 
-В этой статье описывается, как Xamarin.Forms позволяет указать атрибуты шрифта (включая вес и размер) в элементах управления, отображающие текст. Сведения о шрифтах может быть [указано в коде](#Setting_Font_in_Code) или [указан в XAML](#Setting_Font_in_Xaml).
-Можно также использовать [пользовательский шрифт](#Using_a_Custom_Font).
+В этой статье описывается, как Xamarin.Forms позволяет указать атрибуты шрифта (включая вес и размер) в элементах управления, отображающие текст. Сведения о шрифтах может быть [указано в коде](#Setting_Font_in_Code) или [указан в XAML](#Setting_Font_in_Xaml). Он имеет "также можно использовать [пользовательский шрифт](#Using_a_Custom_Font), и [отображать значки шрифта](#display-font-icons).
 
 <a name="Setting_Font_in_Code" />
 
-## <a name="setting-font-in-code"></a>Установка шрифта в коде
+## <a name="set-the-font-in-code"></a>Установите шрифт в коде
 
 Используйте три связанные со шрифтами свойства любых элементов управления, отображающие текст:
 
@@ -43,7 +42,7 @@ var about = new Label {
 
 <a name="FontSize" />
 
-### <a name="font-size"></a>Размер шрифта
+### <a name="font-size"></a>Font size
 
 `FontSize` Свойство может быть присвоено значение типа double, например:
 
@@ -80,7 +79,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### <a name="setting-font-info-per-platform"></a>Данные о шрифте параметр каждой платформы
+### <a name="set-font-info-per-platform"></a>Данные о шрифте набора каждой платформы
 
 Кроме того `Device.RuntimePlatform` свойство может использоваться для установки имен шрифтов на каждой платформе, как показано в этом коде:
 
@@ -95,7 +94,7 @@ label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
 
 <a name="Setting_Font_in_Xaml" />
 
-## <a name="setting-the-font-in-xaml"></a>Задание шрифта в XAML
+## <a name="set-the-font-in-xaml"></a>Установите шрифт в XAML
 
 Xamarin.Forms элементы управления, отображаемый текст, все имеют `FontSize` свойство, которое можно задать в XAML. Самый простой способ задать шрифт в XAML является использование значений перечисления из указанных размеров, как показано в следующем примере:
 
@@ -130,7 +129,7 @@ Xamarin.Forms элементы управления, отображаемый т
 
 <a name="Using_a_Custom_Font" />
 
-## <a name="using-a-custom-font"></a>С помощью пользовательского шрифта
+## <a name="use-a-custom-font"></a>Применение пользовательского шрифта
 
 Использование шрифтов, отличных от встроенных гарнитур требует кодирования некоторые специфические для платформы. На этом снимке экрана показан пользовательский шрифт **Lobster** из [шрифты открытым исходным кодом от Google](https://www.google.com/fonts) отображаются с помощью Xamarin.Forms.
 
@@ -200,15 +199,51 @@ new Label
 </Label>
 ```
 
-<a name="Summary" />
+## <a name="display-font-icons"></a>Отображение значков шрифта
 
-## <a name="summary"></a>Сводка
+Шрифт могут отображаться значки приложений Xamarin.Forms, указав данные значка шрифта в `FontImageSource` объекта. Этот класс, который является производным от [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) класса, имеет следующие свойства:
 
-Xamarin.Forms предоставляет простыми настройками по умолчанию позволяет размер текста легко для всех поддерживаемых платформ. Он также позволяет задать начертание и размер &ndash; даже по-разному для каждой платформы &ndash; Если необходима более точный контроль.
+- `Glyph` — значение символа Юникода значка шрифта, указанный как `string`.
+- `Size` — `double` значение, указывающее размер в аппаратно независимые единицы шрифта отображаемого значка. Значение по умолчанию — 30.
+- `FontFamily` — `string` представляющий семейство шрифтов, к которой принадлежит значок шрифта.
+- `Color` — Необязательный [ `Color` ](xref:Xamarin.Forms.Color) значение, используемое при отображении значок шрифта.
 
-Информацию о шрифте, также можно указать в XAML, с помощью атрибутов шрифта в правильном формате.
+Эти данные используются для создания PNG, отображаемые по представлению, в котором можно отобразить `ImageSource`. Такой подход позволяет значки шрифта, такие как эмодзи, отображаемых по несколько представлений, в отличие от ограничения отображение значка шрифта в один текст, представляющим представление, таких как [ `Label` ](xref:Xamarin.Forms.Label).
+
+> [!IMPORTANT]
+> Значки шрифта можно указать только в настоящее время с их кодировки Юникод.
+
+В следующем примере XAML имеет один шрифт значок, отображаемый элементом [ `Image` ](xref:Xamarin.Forms.Image) представления:
+
+```xaml
+<Image BackgroundColor="#D1D1D1">
+    <Image.Source>
+        <FontImageSource Glyph="&#xf30c;"
+                         FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}"
+                         Size="44" />
+    </Image.Source>
+</Image>
+```
+
+Этот код отображает значок XBox, из Ionicons семейство шрифтов, в [ `Image` ](xref:Xamarin.Forms.Image) представления. Обратите внимание, что при Юникода символов для этот значок — `\uf30c`, он должен экранироваться в XAML и поэтому становится `&#xf30c;`. Ниже приведен аналогичный код C#:
+
+```csharp
+Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };
+image.Source = new FontImageSource
+{
+    Glyph = "\uf30c",
+    FontFamily = Device.RuntimePlatform == Device.iOS ? "Ionicons" : "ionicons.ttf#",
+    Size = 44
+};
+```
+
+Далее на снимках экрана, из [привязываемых макеты](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/) пример, отобразить несколько значков шрифтов, отображаемых привязываемых макета:
+
+![Снимок экрана из отображаемых значков шрифта, в iOS и Android](fonts-images/font-image-source.png "значки шрифта, отображаемого в представлении изображения")
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [FontsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 - [Текст (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/)
+- [Привязываемые макеты (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [Привязываемые макеты](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

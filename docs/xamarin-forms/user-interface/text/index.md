@@ -1,19 +1,14 @@
 ---
 title: Текст в Xamarin.Forms
-description: Xamarin.Forms есть три основных представления для работы с текстом, и в этой статье объясняется, как их использовать для ввода и отображения текста в приложениях Xamarin.Forms.
+description: 'Xamarin.Forms есть три основных представления для работы с текстом, и в этой статье объясняется, как их использовать для ввода и отображения текста в приложениях Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 0563921a59bc698e2360a06b482c7f4994e56f6e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060016"
 ---
+
 # <a name="text-in-xamarinforms"></a>Текст в Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
@@ -66,7 +61,7 @@ Xamarin.Forms есть три основных представления для
 
 ## <a name="fontsfontsmd"></a>[Шрифты](fonts.md)
 
-`Label` Элемент управления поддерживает параметры шрифта, с помощью встроенных шрифтов на каждой платформе или пользовательских шрифтов, поставляемых вместе с вашим приложением. См. в разделе [шрифты](fonts.md) статья более подробные сведения.
+Многие элементы управления поддерживают параметры шрифта, с помощью встроенных шрифтов на каждой платформе или пользовательских шрифтов, поставляемых вместе с вашим приложением. См. в разделе [шрифты](fonts.md) статья более подробные сведения.
 
 <a name="Styles" />
 

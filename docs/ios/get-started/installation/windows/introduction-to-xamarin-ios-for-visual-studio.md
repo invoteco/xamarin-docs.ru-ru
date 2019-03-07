@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 396c6a19a86c3c8f5429d5da1251d69fc8d57309
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5f2617272cfdc84fa2b835ce44919d2599a1dce6
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114084"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197203"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Введение в Xamarin.iOS для Visual Studio
 
@@ -35,12 +35,12 @@ Xamarin для Windows позволяет разрабатывать и тест
 Доступно несколько конфигураций, из которых вы можете выбрать наиболее подходящую под ваши потребности. Эти конфигурации перечислены ниже:
 
 -  Компьютер Mac используется в качестве главного компьютера разработки, а среда Visual Studio установлена на виртуальной машине Windows. Мы рекомендуем использовать для создания виртуальной машины такое программное обеспечение, как [Parallels](http://www.parallels.com/products/desktop/) или [VMWare](http://www.vmware.com/products/fusion/).
--  Компьютер Mac используется только в качестве узла сборки. В этом сценарии он подключается к той же сети, в которой находится компьютер Windows с установленными [необходимыми](~/cross-platform/get-started/installation/windows.md#installation) средствами.
+-  Компьютер Mac используется только в качестве узла сборки. В этом сценарии он подключается к той же сети, в которой находится компьютер Windows с установленными [необходимыми](~/get-started/installation/windows.md#installation) средствами.
 
 В любом случае необходимо выполнить указанные ниже действия:
 
 - [Установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Установите средства Xamarin в Windows](~/cross-platform/get-started/installation/windows.md)
+- [Установите средства Xamarin в Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Подключение к компьютеру Mac
 

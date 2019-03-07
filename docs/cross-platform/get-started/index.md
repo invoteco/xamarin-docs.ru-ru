@@ -1,22 +1,17 @@
 ---
 title: Начало работы с Xamarin
-description: Этот документ содержит ссылки на различные руководства, описывающие начало разработки Xamarin.Mac. Указанные в нем материалы посвящены созданию первого приложения, знакомству с разработкой мобильных приложений и обучению с помощью Xamarin University.
+description: 'Этот документ содержит ссылки на различные руководства, описывающие начало разработки Xamarin.Mac. Указанные в нем материалы посвящены созданию первого приложения, знакомству с разработкой мобильных приложений и обучению с помощью Xamarin University.'
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292172"
 ---
-# <a name="get-started-with-xamarin"></a>Начало работы с Xamarin
 
-Прежде чем начать, ознакомьтесь с [требованиями к системе](requirements.md) и [инструкциями по установке](installation/index.md), чтобы все было готово к работе.
+# <a name="building-mobile-apps"></a>Создание мобильных приложений
+
+Прежде чем начать, ознакомьтесь с [требованиями к системе](requirements.md) и [инструкциями по установке](~/get-started/installation/index.md), чтобы все было готово к работе.
 
 ## <a name="build-your-first-app"></a>Создание первого приложения
 
@@ -57,4 +52,4 @@ ms.locfileid: "55292172"
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Требования к системе](requirements.md)
-- [Инструкции по установке](~/cross-platform/get-started/installation/index.md)
+- [Инструкции по установке](~/get-started/installation/index.md)

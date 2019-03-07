@@ -1,19 +1,14 @@
 ---
 title: Установка Xamarin.iOS в Windows
-description: Этот документ описывает настройку компьютера Windows и узла сборки Mac, а также сопряжение Windows с Mac для разработки Xamarin.iOS.
+description: 'Этот документ описывает настройку компьютера Windows и узла сборки Mac, а также сопряжение Windows с Mac для разработки Xamarin.iOS.'
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 5e7b8a3fb703d8857312b15f4884399ee951b2d4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118543"
 ---
+
 # <a name="installing-xamarinios-on-windows"></a>Установка Xamarin.iOS в Windows
 
 _В этой статье описывается настройка компьютера Windows и узла сборки Mac для разработки Xamarin.iOS._
@@ -36,7 +31,7 @@ _В этой статье описывается настройка компью
 
     Xamarin.iOS поддерживает выпуски Visual Studio 2017 Community, Professional и Enterprise на изолированном компьютере или виртуальной машине.
     
-    - [Установите Visual Studio 2017](~/cross-platform/get-started/installation/windows.md).
+    - [Установите Visual Studio 2017](~/get-started/installation/windows.md).
 
 2. Настройка Mac (установка Xcode и Visual Studio для Mac)
 

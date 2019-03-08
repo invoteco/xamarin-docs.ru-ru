@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: bc404986a83d0150c490486c20f780bf4e7f5a9e
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557208"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667312"
 ---
 # <a name="xamarinforms-entry"></a>Запись Xamarin.Forms
 
@@ -321,6 +321,9 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 - [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; возникает при изменении текста в записи. Содержит текст до и после изменения.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; вызывается, когда пользователь завершен входные данные с помощью возвращаемого значения клавиши на клавиатуре.
+
+> [!NOTE]
+> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) Класс, из которого [ `Entry` ](xref:Xamarin.Forms.Entry) наследует, также имеет [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) и [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)события.
 
 ### <a name="completed"></a>Завершено
 

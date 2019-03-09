@@ -1,19 +1,19 @@
 ---
-title: Ответов на обратные вызовы проверки подлинности
+title: Ответ на обратные вызовы проверки подлинности
 ms.prod: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 17a1c94ad3b9bde67537ea7113352f0fc10d2a08
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c720a30a59eea8f1ed74033da8d1c045a1fb9109
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110125"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666870"
 ---
-# <a name="responding-to-authentication-callbacks"></a>Ответов на обратные вызовы проверки подлинности
+# <a name="responding-to-authentication-callbacks"></a>Ответ на обратные вызовы проверки подлинности
 
 Сканер отпечатков пальцев выполняется в фоновом режиме в отдельном потоке, и после завершения он выведет результаты сканирования, вызвав один из методов `FingerprintManager.AuthenticationCallback` в потоке пользовательского интерфейса. Приложение Android необходимо предоставить свой собственный обработчик, который расширяет этот абстрактный класс, реализующий любого из следующих методов:
 
@@ -101,7 +101,7 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
 ## <a name="help-codes-and-error-message-ids"></a>Коды справки и сообщение ошибки 
 
-Список и описание кодов ошибок и коды справки можно найти в [документации пакета SDK для Android](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) FingerprintManager класса. Xamarin.Android предоставляет эти значения с `Android.Hardware.Fingerprints.FingerprintState` перечисления:
+Список и описание кодов ошибок и коды справки можно найти в [документации пакета SDK для Android](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) FingerprintManager класса. Xamarin.Android предоставляет эти значения с `Android.Hardware.Fingerprints.FingerprintState` перечисления:
 
 
 -   **`AcquiredGood`** &ndash; (значение 0) Получить изображение было хорошим.
@@ -156,5 +156,5 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Шифра](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)

@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 16ee512395b2658b26bc7a489eabecec3656fa93
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5478a09c461ec8f1bf51efaa7b4dc2f862d69b4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115761"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668947"
 ---
 # <a name="c-6-new-features-overview"></a>C#Обзор новых возможностей 6
 
@@ -46,12 +46,12 @@ _Последнюю версию C# язык — версии 6 – постоя
 
 ## <a name="compiler"></a>Компилятор
 
-Mono C# 6 компилятора включается в Mono 4.0 и более поздние версии, который является [бесплатно загрузить](http://www.mono-project.com/download/).
+Mono C# 6 компилятора включается в Mono 4.0 и более поздние версии, который является [бесплатно загрузить](https://www.mono-project.com/download/).
 Visual Studio для Mac автоматически обновляет установки Mono в системе.
 
 Пользователи Windows должны иметь [Visual Studio 2015 или 2017 ^](https://visualstudio.microsoft.com/) установлен для компиляции C# 6 кода (даже если выбираемое Xamarin Studio для Windows в качестве интегрированной среды разработки).
 
-^ или *[Microsoft Build Tools 2015](http://www.microsoft.com/download/details.aspx?id=48159)* для командной строки компиляции или серверов сборки, например.
+^ или *[Microsoft Build Tools 2015](https://www.microsoft.com/download/details.aspx?id=48159)* для командной строки компиляции или серверов сборки, например.
 
 ## <a name="using-c-6"></a>С помощью C# 6
 

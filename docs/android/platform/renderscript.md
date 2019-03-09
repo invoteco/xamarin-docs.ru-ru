@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8364310d23739c05ff97ea8aa8fa4c56f89ea40c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108734"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670731"
 ---
 # <a name="an-introduction-to-renderscript"></a>Общие сведения о Renderscript
 
@@ -20,7 +20,7 @@ _В этом руководстве представлены Renderscript и с�
 
 ## <a name="overview"></a>Обзор
 
-RenderScript — это платформа программирования, разработанную компанией Google, в целях повышения производительности приложений Android, которые потребоваться большое количество вычислительных ресурсов. Это низкого уровня, высокий уровень производительности на основе API [C99](http://en.wikipedia.org/wiki/C99). Так как это низкоуровневый API, который будет выполняться на ЦП, GPU и DSP Renderscript идеально подходит для приложений Android, может потребоваться выполнить одно из следующих:
+RenderScript — это платформа программирования, разработанную компанией Google, в целях повышения производительности приложений Android, которые потребоваться большое количество вычислительных ресурсов. Это низкого уровня, высокий уровень производительности на основе API [C99](https://en.wikipedia.org/wiki/C99). Так как это низкоуровневый API, который будет выполняться на ЦП, GPU и DSP Renderscript идеально подходит для приложений Android, может потребоваться выполнить одно из следующих:
 
 * Графика
 * Обработка изображений
@@ -161,4 +161,4 @@ blurScript.ForEach(outputAllocation);
 - [Пространство имен Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)
 - [Размытие изображения с Renderscript](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript)
 - [Renderscript](https://developer.android.com/guide/topics/renderscript/compute.html)
-- [Учебник: Приступая к работе с Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)
+- [Учебник. Приступая к работе с Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)

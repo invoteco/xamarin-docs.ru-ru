@@ -6,12 +6,13 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: da7064997b8a10d4a4604861a405e13dd23a08cf
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/19/2017
+ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233917"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672577"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Изменения платформы дополнительных iOS 9
 
@@ -195,9 +196,9 @@ Apple включает в себя множество улучшений в не
 
 ### <a name="3d-touch-events"></a>События 3D Touch
 
-Знакомы с iOS 9 и iPhone версии 6s и iPhone 6s Plus, 3D Touch добавляет конфиденциальных жесты давление приложения iOS. Таким образом, если ваше приложение работает в iOS 9 (или более поздней) и устройство iOS может вспомогательных 3D Touch, изменения замедленной вызовет `TouchesMoved` возникает событие. 
+Знакомы с iOS 9 и iPhone версии 6s и iPhone 6s Plus, 3D Touch добавляет конфиденциальных жесты давление приложения iOS. Таким образом, если ваше приложение работает в iOS 9 (или более поздней) и устройство iOS может вспомогательных 3D Touch, изменения замедленной вызовет `TouchesMoved` возникает событие.
 
-Из-за этого изменения в поведении приложения iOS должны быть подготовлены для `TouchesMoved` чаще, вызов события даже в том случае, если X / Y-координаты не изменились. 
+Из-за этого изменения в поведении приложения iOS должны быть подготовлены для `TouchesMoved` чаще, вызов события даже в том случае, если X / Y-координаты не изменились.
 
 Дополнительные сведения см. в разделе наших [введение в 3D Touch](~/ios/platform/3d-touch.md) руководства.
 

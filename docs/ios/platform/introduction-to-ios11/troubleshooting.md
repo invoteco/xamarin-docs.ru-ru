@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: 61aa360e91c3881c77c4bc3776e2cfdc36efb61b
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: f7fbd6f19820b8cbefe1a75c148ca1d9ba1395f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267365"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670961"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Советы для iOS 11 и Xamarin.iOS
 
@@ -26,4 +26,4 @@ ms.locfileid: "53267365"
 
 ## <a name="forums-and-stackoverflow"></a>Форумы и StackOverflow
 
-Ответы на вопросы об использовании и реализации таких функций, определенных iOS 11 в Xamarin.iOS Xamarin [iOS форум](http://forums.xamarin.com/categories/ios) предоставляет широкий набор сведений. [StackOverflow](http://stackoverflow.com/search?tab=newest&q=xamarin) является хорошим источником информации пользователям помочь пользователям.
+Ответы на вопросы об использовании и реализации таких функций, определенных iOS 11 в Xamarin.iOS Xamarin [iOS форум](http://forums.xamarin.com/categories/ios) предоставляет широкий набор сведений. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) является хорошим источником информации пользователям помочь пользователям.

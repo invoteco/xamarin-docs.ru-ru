@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: 18dac665eec1c5d3ac64065c37e73022670c1ba5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48ef40ce8560fd9fbb842dde70622d968591ab98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108851"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666909"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Обеспечение обратной совместимости с пакетом поддержки Android
 
-Полезность фрагментов будет ограничено без обеспечения обратной совместимости с версией Android 3.0 устройствами (уровень API 11). Чтобы предоставить эту возможность, Google ввела [библиотека поддержки](http://developer.android.com/sdk/compatibility-library.html) (изначально назывался *библиотеки Android совместимости* когда был выпущен) какие бэкпортированным некоторые интерфейсы API из более новых версиях Android для более старых версиях Android. Это Android пакет поддержки, который позволяет устройствам под управлением Android версии 1.6 (API уровня 4) для Android 2.3.3. (Уровень API 10).
+Полезность фрагментов будет ограничено без обеспечения обратной совместимости с версией Android 3.0 устройствами (уровень API 11). Чтобы предоставить эту возможность, Google ввела [библиотека поддержки](https://developer.android.com/sdk/compatibility-library.html) (изначально назывался *библиотеки Android совместимости* когда был выпущен) какие бэкпортированным некоторые интерфейсы API из более новых версиях Android для более старых версиях Android. Это Android пакет поддержки, который позволяет устройствам под управлением Android версии 1.6 (API уровня 4) для Android 2.3.3. (Уровень API 10).
 
 > [!NOTE]
 > Только `ListFragment` и `DialogFragment` можно загрузить с помощью Android пакет поддержки. Ни с одним другим Fragment подклассов, такие как `PreferenceFragment,` поддерживаются в Android пакет поддержки. Они не будут работать в приложениях с версией Android 3.0. 

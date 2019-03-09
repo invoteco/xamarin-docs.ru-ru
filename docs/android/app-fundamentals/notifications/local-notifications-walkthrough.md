@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 7cf1dde6c65d2971cecd0a59a2e11d6c2d50ee2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e60ed6cc49921fc7b6e8e2616a6b0bf6f8abb401
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119193"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670094"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Пошаговое руководство. Использование локальных уведомлений в Xamarin.Android
 
@@ -255,7 +255,7 @@ namespace LocalNotifications
 
 [![Второй снимок экрана действия](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-Поздравляем! На этом этапе вы выполнили Пошаговое руководство по Android локальное уведомление, и у вас есть рабочий образец, который можно ссылаться на. Сведения на уведомления о чем мы показали здесь, поэтому если вам нужна дополнительная информация взгляните на множество [документации Google о уведомления](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+Поздравляем! На этом этапе вы выполнили Пошаговое руководство по Android локальное уведомление, и у вас есть рабочий образец, который можно ссылаться на. Сведения на уведомления о чем мы показали здесь, поэтому если вам нужна дополнительная информация взгляните на множество [документации Google о уведомления](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## <a name="summary"></a>Сводка

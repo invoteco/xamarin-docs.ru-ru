@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: 5d3c8b6bd8f7f788a1de74feddf7fcb378fa5818
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cf39d548dc83fae67e8703d42e9387b8f19504e6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233644"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669757"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Селекторы Objective-C в Xamarin.iOS
 
 Основан на языке Objective-C *селекторы*. Селектора — это сообщение, которое может быть отправлено на объект или *класс*. [Xamarin.iOS](~/ios/internals/api-design/index.md) экземпляра селекторы методы экземпляров, карты и селекторы для статических методов класса.
 
-В отличие от обычных функций C (и, как функции-члены C++), невозможно вызвать непосредственно в с помощью селектора [P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/) вместо этого селекторы отправляются к классу Objective-C или экземпляра с помощью [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
+В отличие от обычных функций C (и, как функции-члены C++), невозможно вызвать непосредственно в с помощью селектора [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) вместо этого селекторы отправляются к классу Objective-C или экземпляра с помощью [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
 функция.
 
 Дополнительные сведения о сообщениях в Objective-C, взгляните на Apple [работа с объектами](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) руководства.

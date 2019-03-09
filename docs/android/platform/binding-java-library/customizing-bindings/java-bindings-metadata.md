@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113408"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669899"
 ---
 # <a name="java-bindings-metadata"></a>Метаданные привязок Java
 
@@ -77,7 +77,7 @@ Xamarin.Android **привязка библиотеки Java** пытается 
 ## <a name="metadataxml-transform-file"></a>Файл Metadata.XML преобразования
 
 Как мы уже узнали, файл **Metadata.xml** используется генератор привязок для время создания привязки сборки.
-Использует формат метаданных [XPath](https://www.w3.org/TR/xpath/) синтаксис и почти идентичен *GAPI Используются метаданные* описано в разделе [GAPI Используются метаданные](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) руководства. Эта реализация является почти полную реализацию XPath 1.0 и таким образом поддерживает элементы в стандартные 1.0. Этот файл — это мощный механизм на основе XPath, чтобы изменить, добавить, скрыть или переместить любого элемента или атрибута в файле API. Все элементы правила в спецификации метаданных включают атрибут path для определения узла, к которым будет применяться правило. Правила применяются в следующем порядке:
+Использует формат метаданных [XPath](https://www.w3.org/TR/xpath/) синтаксис и почти идентичен *GAPI Используются метаданные* описано в разделе [GAPI Используются метаданные](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) руководства. Эта реализация является почти полную реализацию XPath 1.0 и таким образом поддерживает элементы в стандартные 1.0. Этот файл — это мощный механизм на основе XPath, чтобы изменить, добавить, скрыть или переместить любого элемента или атрибута в файле API. Все элементы правила в спецификации метаданных включают атрибут path для определения узла, к которым будет применяться правило. Правила применяются в следующем порядке:
 
 * **Добавить узел** &ndash; добавляет дочерний узел в узел, указанный в атрибуте path.
 * **attr** &ndash; задает значение атрибута элемента, указанного в атрибуте пути.
@@ -301,7 +301,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 Бывают случаи, где библиотеки Android целые константы служат для представления состояний, которые передаются свойства или методы библиотек. Во многих случаях полезно для привязки этих целочисленных констант перечисления в C#. Чтобы упростить это сопоставление, используйте **EnumFields.xml** и **EnumMethods.xml** файлов проекта привязки. 
 
-### <a name="defining-an-enum-using-enumfieldsxml"></a>Определение перечисления с помощью EnumFields.xml
+### <a name="defining-an-enum-using-enumfieldsxml"></a>Defining an Enum using EnumFields.xml
 
 **EnumFields.xml** файл содержит сопоставление между Java `int` константы и C# `enums`. Давайте рассмотрим пример C# создан для набора перечисления `int` константы: 
 
@@ -347,4 +347,4 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 
 - [Работа с JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Привязка библиотеки Java](~/android/platform/binding-java-library/index.md)
-- [GAPI Используются метаданные](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [GAPI Используются метаданные](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

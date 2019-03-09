@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b20760d3e8d7e168b0f0508222d8ae0b743a9368
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9fbbe7d33428c1274d78ed882ced3985b8459072
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058916"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671485"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Часть 5. Практические стратегии совместного использования кода
 
@@ -201,7 +201,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 Это механизм по умолчанию для доступа к файлам в Windows Phone (Silverlight), который был реализован в Xamarin.iOS и Xamarin.Android разрешить общий доступ к файлам код для записи. `System.IO.IsolatedStorage` Класс можно ссылаться на всех трех платформах в [общий проект](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Ссылаться на [изолированного хранилища Обзор для Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) Дополнительные сведения.
+Ссылаться на [изолированного хранилища Обзор для Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) Дополнительные сведения.
 
 API изолированного хранилища не доступны в [переносимые библиотеки классов](~/cross-platform/app-fundamentals/pcl.md). Для тех PCL [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -295,7 +295,7 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 -  Даже если сеть доступна, рекомендуется проверить соединение с целевым сервером перед запуском других запросов. Это многократно предотвращения сетевых операций приложения, по истечении времени ожидания и также позволит более информативное сообщение об ошибке для отображения пользователю.
 
 
-Существует [пример Xamarin.iOS](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) доступных (основанная на Apple [достижимость пример кода](http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) помогут Определение доступности сети.
+Существует [пример Xamarin.iOS](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) доступных (основанная на Apple [достижимость пример кода](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) помогут Определение доступности сети.
 
 
 ## <a name="webservices"></a>Веб-службы
@@ -387,7 +387,7 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
 IOS и Android синтаксис требует класса «context» доступен в том, что означает, что код должен передать этот объект в методы, которые требуется обратный вызов в потоке пользовательского интерфейса.
 
-Чтобы вызывать потока пользовательского интерфейса в общем коде, выполните [пример IDispatchOnUIThread](http://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (любезно предоставлено [ @follesoe ](http://jonas.follesoe.no/)). Объявление и программу, чтобы `IDispatchOnUIThread` интерфейс в общем коде, а затем реализовать классы платформы, как показано ниже:
+Чтобы вызывать потока пользовательского интерфейса в общем коде, выполните [пример IDispatchOnUIThread](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (любезно предоставлено [ @follesoe ](http://jonas.follesoe.no/)). Объявление и программу, чтобы `IDispatchOnUIThread` интерфейс в общем коде, а затем реализовать классы платформы, как показано ниже:
 
 ```csharp
 // program to the interface in shared code

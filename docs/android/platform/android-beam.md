@@ -1,19 +1,19 @@
 ---
-title: Android луч
+title: Android Beam
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 13a0a0d9c6a9d1d5f49020b1a8096f5e054d415c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9fcabc90875dda28ecdd5d94f1ca2f263ffe4886
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114929"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670860"
 ---
-# <a name="android-beam"></a>Android луч
+# <a name="android-beam"></a>Android Beam
 
 Android луч — это технология рядом с полем связи действия (NFC), представленные в Android 4.0, который позволяет приложениям обмениваться информацией по NFC, когда в непосредственной близости.
 
@@ -85,4 +85,4 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 - [Android луч Demo (пример)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
 - [Знакомство с Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4.0](http://developer.android.com/sdk/android-4.0.html)
+- [Платформа Android 4.0](https://developer.android.com/sdk/android-4.0.html)

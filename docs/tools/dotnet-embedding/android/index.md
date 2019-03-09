@@ -1,17 +1,12 @@
 ---
-title: .NET, внедрение в Android
+title: '.NET, внедрение в Android'
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
-ms.openlocfilehash: 5c8d493bf54ee1a8a1e7d4b3266451c78a4aa51e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123691"
 ---
+
 # <a name="net-embedding-on-android"></a>.NET, внедрение в Android
 
 В некоторых случаях может потребоваться добавить в существующий проект Android native библиотеку Xamarin .NET. Чтобы сделать это, можно использовать [Embeddinator до 4000](https://www.nuget.org/packages/Embeddinator-4000/) средство, чтобы превратить библиотеку .NET в собственной библиотеки, могут быть включены в собственное приложение Android на основе Java.
@@ -26,7 +21,7 @@ ms.locfileid: "50123691"
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) должен быть установлен.
 
--   **Java Developer Kit** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) должен быть установлен.
+-   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) должен быть установлен.
 
 
 ## <a name="using-embeddinator-4000"></a>С помощью Embeddinator до 4000
@@ -62,9 +57,9 @@ ms.locfileid: "50123691"
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) должен быть установлен.
 
--   **Java Developer Kit** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) должен быть установлен.
+-   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) должен быть установлен.
 
--   **Mono** &ndash; [Mono 5.0](http://www.mono-project.com/download/) должен быть установлен (mono устанавливается вместе с Visual Studio для Mac).
+-   **Mono** &ndash; [Mono 5.0](https://www.mono-project.com/download/) должен быть установлен (mono устанавливается вместе с Visual Studio для Mac).
 
 
 ## <a name="using-embeddinator-4000"></a>С помощью Embeddinator до 4000

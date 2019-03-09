@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: 83f9651fa7fd20709c620258833ae4a152ffd0eb
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 5ccefdb5e527e67338714896905734c74278d00a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563671"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671886"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>События, протоколы и делегаты в Xamarin.iOS
 
@@ -64,7 +64,7 @@ Xamarin.iOS также поддерживает целевое действие 
 
 [![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "Сообщение записывается в консоль при нажатии кнопки")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
-Дополнительные сведения о шаблоне целевое действие iOS, см. в разделе целевое действие из [основной компетенции приложения для iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) в библиотеке разработчика iOS Apple.
+Дополнительные сведения о шаблоне целевое действие iOS, см. в разделе целевое действие из [основной компетенции приложения для iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) в библиотеке разработчика iOS Apple.
 
 Дополнительные сведения о том, как использовать конструктор iOS с помощью Xamarin.iOS см. в разделе [iOS Общие сведения о конструкторе](~/ios/user-interface/designer/index.md) документации.
 
@@ -388,6 +388,6 @@ map.DidSelectAnnotationView += (s,e) => {
 - [Протоколы, делегаты и события (пример)](https://developer.xamarin.com/samples/Protocols_Delegates_Events/)
 - [Привет, iOS](~/ios/get-started/hello-ios/index.md)
 - [Типы привязки Objective-C](~/ios/platform/binding-objective-c/index.md)
-- [В язык программирования Objective-C](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
-- [Разработка пользовательских интерфейсов в Xcode 4](http://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
-- [Основной компетенции приложения для iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)
+- [В язык программирования Objective-C](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
+- [Разработка пользовательских интерфейсов в Xcode 4](https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
+- [Основной компетенции приложения для iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)

@@ -1,19 +1,14 @@
 ---
 title: Фрагменты
-description: Android 3.0 введены фрагментов, в котором показано, как для поддержки более гибкие макеты для многих экранах различных размеров, найденных на телефонах и планшетах. Здесь мы рассмотрим, как использовать фрагменты для разработки приложений Xamarin.Android, а также поддержка фрагментов в предварительно Android 3.0 устройств (уровень API 11).
+description: 'Android 3.0 введены фрагментов, в котором показано, как для поддержки более гибкие макеты для многих экранах различных размеров, найденных на телефонах и планшетах. Здесь мы рассмотрим, как использовать фрагменты для разработки приложений Xamarin.Android, а также поддержка фрагментов в предварительно Android 3.0 устройств (уровень API 11).'
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: bc4441c7ee0c36af990297bad1b0c2f0e77123f3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113291"
 ---
+
 # <a name="fragments"></a>Фрагменты
 
 _Android 3.0 введены фрагментов, в котором показано, как для поддержки более гибкие макеты для многих экранах различных размеров, найденных на телефонах и планшетах. Здесь мы рассмотрим, как использовать фрагменты для разработки приложений Xamarin.Android, а также поддержка фрагментов в предварительно Android 3.0 устройств (уровень API 11)._
@@ -63,6 +58,6 @@ _Android 3.0 введены фрагментов, в котором показа
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Коллекции honeycomb (пример)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
-- [Фрагменты](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Пакет поддержки](http://developer.android.com/sdk/compatibility-library.html)
-- [Веб-семинар MOTODEV: Знакомство с фрагментов](http://motodev.adobeconnect.com/p9h1aqk3ttn/)
+- [Фрагменты](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Пакет поддержки](https://developer.android.com/sdk/compatibility-library.html)
+- [MOTODEV веб-семинар: Знакомство с фрагментов](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

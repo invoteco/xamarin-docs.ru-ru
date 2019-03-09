@@ -1,5 +1,5 @@
 ---
-title: Где найти Мои сведения о версии и журналы?
+title: Где я могу найти информацию о версии и журналы
 description: Этот документ описывает, где можно попытаться найти сведения о версии Xamarin и журналы. Эта информация полезна при диагностике проблемы, отправляйте сообщения об ошибках, или получение технической поддержки.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,14 +7,14 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2c3ded2233810ff4e903596d65f64097aa3b0445
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118231"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668313"
 ---
-# <a name="where-can-i-find-my-version-information-and-logs"></a>Где найти Мои сведения о версии и журналы?
+# <a name="where-can-i-find-my-version-information-and-logs"></a>Где я могу найти информацию о версии и журналы
 
 ## <a name="outline"></a>Контур
 
@@ -100,7 +100,7 @@ ms.locfileid: "50118231"
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Ссылка: [параметры командной строки](http://msdn.microsoft.com/library/aa367988.aspx)
+Справочные материалы. [Параметры командной строки](https://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Запуск Visual Studio, подробных журналов
 
@@ -108,7 +108,7 @@ msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Ссылка:  [ /log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
+Ссылка:  [ /log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Журналы Mac
 
@@ -145,7 +145,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 3.  Выполните очистку и перестройте проект.
 
 4.  Скопируйте и вставьте выходные данные построения в интегрированной среде разработки в текстовый файл.
-     - Visual Studio (Windows): **представление > выходные данные > Показать выходные данные из: построение**
+     - Visual Studio (Windows): **Представление > выходные данные > Показать выходные данные из: Сборки**
      - Visual Studio для Mac: **Вид > панели > ошибки > выходных данных сборки (вкладка ")**
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Отладочный журналы для приложений Xamarin.Android и Xamarin.iOS
@@ -158,9 +158,9 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 ### <a name="visual-studio"></a>Visual Studio
 
-**Представление > выходные данные > Показать выходные данные из: отладка**
+**Представление > выходные данные > Показать выходные данные из: Отладка**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](http://developer.android.com/tools/help/adb.html) logcat журналы
+### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](https://developer.android.com/tools/help/adb.html) logcat журналы
 
 После выполнения команды `adb` команды, снова подключить **android_logcat.txt** файл с рабочего стола. Эти инструкции предполагают, что у вас есть только одно устройство.
 

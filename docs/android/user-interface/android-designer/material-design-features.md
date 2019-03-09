@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: eb636c3b7a41adbab9162e192ead65def377a1a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118985"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669665"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Функции конструктора материальному дизайну Xamarin.Android
 
@@ -20,7 +20,7 @@ _В этом разделе описывает функции конструкт
 
 > [!Video https://youtube.com/embed/E3_ZjIOzVzY]
 
-**Усовершенствовано в 2016 г: Все пользователи могут создавать красивые приложения с материального исполнения**
+**Усовершенствовано в 2016 г. Все пользователи могут создавать красивые приложения с материального исполнения**
 
 ## <a name="overview"></a>Обзор
 
@@ -90,7 +90,7 @@ _В этом разделе описывает функции конструкт
 [![Наследовать вкладку](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
 В этом примере **темы по умолчанию** наследует стиль, который использует `@color/background_material_light` , но переопределяет его с `color/material_grey_50`, которого имеет значение кода цвет `#fffafafa`.
-Дополнительные сведения о наследовании стилей см. в разделе [стили и темы](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Дополнительные сведения о наследовании стилей см. в разделе [стили и темы](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Палитра
 
@@ -125,7 +125,7 @@ _В этом разделе описывает функции конструкт
 Верхней части палитры отображаются основного цвета материальному дизайну, а диапазон тона для выбранной основной цвет нижней части палитры. Например, при выборе **Indigo**, коллекция **Indigo** тона отображается в нижней части диалогового окна.
 При выборе оттенок цвета свойства меняется на выбранной цветовой тон. В следующем примере `Background Tint` кнопки меняется на *Indigo 500*:
 
-![Выберите Indigo 500](material-design-features-images/vs/10-indigo-w158.png)
+![Select Indigo 500](material-design-features-images/vs/10-indigo-w158.png)
 
 `Background Tint` имеет значение код цвета для *Indigo 500* (`#ff3f51b5`), и конструктор обновляет цвет фона, чтобы отразить это изменение:
 
@@ -271,7 +271,7 @@ _В этом разделе описывает функции конструкт
 [![Наследовать вкладку](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 В этом примере **темы по умолчанию** наследует стиль, который использует `@color/background_material_dark` , но переопределяет его с `color/material_grey_850`, которого имеет значение кода цвет `#ff303030`.
-Дополнительные сведения о наследовании стилей см. в разделе [стили и темы](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Дополнительные сведения о наследовании стилей см. в разделе [стили и темы](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Палитра
 

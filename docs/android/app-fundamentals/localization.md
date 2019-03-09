@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 634131025b322b64e89ece3b4c9d092e6b17a373
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579821"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670672"
 ---
 # <a name="android-localization"></a>Android локализации
 
@@ -32,7 +32,7 @@ _В этом документе представлены возможности 
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
-Это значение будет идентификатор языкового стандарта, который содержит код языка и код языкового стандарта, отделенный символом подчеркивания. Для справки ниже приведен [список языковых стандартов Java](http://www.oracle.com/technetwork/java/javase/locales-137662.html) и [Android поддерживается языковых стандартов с помощью StackOverflow](http://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+Это значение будет идентификатор языкового стандарта, который содержит код языка и код языкового стандарта, отделенный символом подчеркивания. Для справки ниже приведен [список языковых стандартов Java](https://www.oracle.com/technetwork/java/javase/locales-137662.html) и [Android поддерживается языковых стандартов с помощью StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Вот наиболее распространенные примеры.
 
@@ -190,7 +190,7 @@ var translated = Resources.GetQuantityString (
 * many
 * другие
 
-Они описаны более подробно в [Android документация](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Если для данного языка не требуется «дополнительно» обработка, с помощью тех `quantity` строки будут пропущены (например, на английском языке использует только `one` и `other`; каждое следующее указание `zero` строки не окажет никакого воздействия, оно не будет использоваться).
+Они описаны более подробно в [Android документация](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Если для данного языка не требуется «дополнительно» обработка, с помощью тех `quantity` строки будут пропущены (например, на английском языке использует только `one` и `other`; каждое следующее указание `zero` строки не окажет никакого воздействия, оно не будет использоваться).
 
 ### <a name="images"></a>Изображений
 
@@ -209,7 +209,7 @@ var translated = Resources.GetQuantityString (
 
 Android 4.2 появилась поддержка [справа налево (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) Если задать параметр приложений `android:supportsRtl="true"`. Квалификатор ресурсов `"ldrtl"` может быть включено в имя каталога, содержащие пользовательские макеты, предназначенные для отображения справа НАЛЕВО.
 
-Дополнительные сведения о resource directory именования и резервных точек, см. документы Android для [обеспечении дополнительных ресурсов](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+Дополнительные сведения о resource directory именования и резервных точек, см. документы Android для [обеспечении дополнительных ресурсов](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### <a name="app-name"></a>Имя приложения
@@ -252,7 +252,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Тестирование устройств
 
 Чтобы протестировать на устройстве, изменить язык в **параметры** приложения.
-**Совет:** запишите значков и расположение элементов меню, таким образом, вы можете вернуться язык исходное значение.
+**Совет.** Запишите значков и расположение элементов меню, таким образом, вы можете вернуться язык исходное значение.
 
 
 ## <a name="summary"></a>Сводка
@@ -264,7 +264,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Tasky (локализованные в коде) (пример)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Локализация ресурсов Android](http://developer.android.com/guide/topics/resources/localization.html)
+- [Локализация ресурсов Android](https://developer.android.com/guide/topics/resources/localization.html)
 - [Общие сведения о локализации](~/cross-platform/app-fundamentals/localization.md)
 - [Локализация Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
-- [iOS локализации](~/ios/app-fundamentals/localization/index.md)
+- [Локализация в iOS](~/ios/app-fundamentals/localization/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: 9458c1f8efa36199b21127123f0013b494a224b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c2f727b55b21dc3bd976f0b41c71b794841cfca4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103742"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667897"
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Ошибка IBTool: Не удалось завершить операцию.
 
@@ -26,7 +26,7 @@ Apple [фиксированной](https://developer.apple.com/library/content/d
 
 `ibtool` Команды в Xcode 6.0 возникала ошибка на OS X 10.10 Yosemite. Xamarin.iOS использует Xcode `ibtool` для компиляции раскадровки и `XIB` файлы.
 
-Дополнительные сведения об ошибке по отношению к Xcode можно найти по приведенным ниже запись Stack Overflow: [http://stackoverflow.com/questions/25754763/cant-open-storyboard](http://stackoverflow.com/questions/25754763/cant-open-storyboard)
+Дополнительные сведения об ошибке по отношению к Xcode можно найти по приведенным ниже запись Stack Overflow: [https://stackoverflow.com/questions/25754763/cant-open-storyboard](https://stackoverflow.com/questions/25754763/cant-open-storyboard)
 
 ### <a name="error-message"></a>Сообщение об ошибке
 
@@ -42,7 +42,7 @@ Apple [фиксированной](https://developer.apple.com/library/content/d
 
 После перемещения изображений высшего уровня `Resources` папку, необходимо будет обновить раскадровку и `.xib` файлы для использования нового пути к изображениям.
 
-### <a name="option-3-set-the-logicalname-for-any-problematic-image-assets-so-they-are-copied-to-the-top-level-of-theapp-bundle"></a>Вариант 3: Задайте `LogicalName` для любого проблемных графические активы, поэтому их копирования на верхнем уровне`.app` пакета
+### <a name="option-3-set-the-logicalname-for-any-problematic-image-assets-so-they-are-copied-to-the-top-level-of-theapp-bundle"></a>Вариант 3. Задайте `LogicalName` для любого проблемных графические активы, поэтому их копирования на верхнем уровне`.app` пакета
 
 Предположим, например, первоначальный `.csproj` файл содержит следующую запись:
 
@@ -56,7 +56,7 @@ Apple [фиксированной](https://developer.apple.com/library/content/d
 </BundleResource>
 ```
 
-В Visual Studio для Mac `LogicalName` также можно задать с помощью `Resource ID` поле для изображения в разделе **представление > панели > свойства**. (См. также: [ http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+В Visual Studio для Mac `LogicalName` также можно задать с помощью `Resource ID` поле для изображения в разделе **представление > панели > свойства**. (См. также: [ https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 После этого изменения необходимо обновить, раскадровки и `.xib` файлы, чтобы использовать новые пути верхнего уровня образа. Visual Studio для Mac автоматически обновит список autocompletions для `Image` свойства в конструкторе iOS. В Visual Studio вам потребуется вручную изменить путь. Конструктор iOS, будет выведено это как образ отсутствует, но проекта построения и запуска правильно.
 

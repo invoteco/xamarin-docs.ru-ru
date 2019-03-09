@@ -1,19 +1,19 @@
 ---
-title: Объект GridLayout
+title: GridLayout
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: bbc764adc204a1f5b9ef4674a183473995be55c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 45e625b28bbdf0009b5cfcf661b00ce17638771d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115163"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667234"
 ---
-# <a name="gridlayout"></a>Объект GridLayout
+# <a name="gridlayout"></a>GridLayout
 
 `GridLayout` — Это новая `ViewGroup` подкласс, который поддерживает размещение представлений в двухмерной сетке аналогично HTML-таблицы, как показано ниже:
 
@@ -247,4 +247,4 @@ ms.locfileid: "50115163"
 
 - [GridLayoutDemo (пример)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/GridLayoutDemo/)
 - [Знакомство с Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4.0](http://developer.android.com/sdk/android-4.0.html)
+- [Платформа Android 4.0](https://developer.android.com/sdk/android-4.0.html)

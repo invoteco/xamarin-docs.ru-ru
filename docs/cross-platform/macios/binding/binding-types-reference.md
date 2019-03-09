@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d460bf867ce09e614be76d0a4a7ffef01420cf82
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55234034"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669483"
 ---
 # <a name="binding-types-reference-guide"></a>Привязки типов справочное руководство
 
@@ -1851,7 +1851,7 @@ public class LinkWithAttribute : Attribute {
 
 `WeakFrameworks` Так же, как работает свойство `Frameworks` свойства, за исключением случаев, во время компоновки `-weak_framework` описатель передается gcc для каждого из перечисленных платформ.
 
-`WeakFrameworks` делает возможным для библиотек и приложений должна действовать слабая привязка от платформ, чтобы их при необходимости их можно использовать, если они доступны, но не принимают жесткие зависимости от их, что полезно, если библиотека предназначена для добавления дополнительных возможностей на более новые версии iOS. Дополнительные сведения о слабых ссылках см. в разделе документации Apple на [слабого связывания](http://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
+`WeakFrameworks` делает возможным для библиотек и приложений должна действовать слабая привязка от платформ, чтобы их при необходимости их можно использовать, если они доступны, но не принимают жесткие зависимости от их, что полезно, если библиотека предназначена для добавления дополнительных возможностей на более новые версии iOS. Дополнительные сведения о слабых ссылках см. в разделе документации Apple на [слабого связывания](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
 
 Было бы хорошо подходят для слабого связывания `Frameworks` , такие как учетные записи, `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` и `Twitter` так, как они доступны только в iOS 5.
 

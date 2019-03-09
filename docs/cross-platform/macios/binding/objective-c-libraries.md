@@ -6,18 +6,18 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 33f27d2585f4fb4d65181cbfd9211ea87b837e73
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e97b211fe6a92ee0df3beed2301cf00c3d42c8f8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233891"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671810"
 ---
 # <a name="binding-objective-c-libraries"></a>Привязка библиотек Objective-C
 
 При работе с Xamarin.iOS и Xamarin.Mac, возможны случаи, где вы хотите использовать сторонние библиотеки Objective-C. В такой ситуации можно использовать для создания проектов привязки Xamarin C# привязки собственных библиотек Objective-C. Проект использует те же средства, которые мы используем iOS и Mac API-интерфейсы для C#.
 
-В этом документе описывается привязка Objective-C API, при связывании просто C API-интерфейсы, для этого следует использовать стандартный механизм .NET [framework P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
+В этом документе описывается привязка Objective-C API, при связывании просто C API-интерфейсы, для этого следует использовать стандартный механизм .NET [framework P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/).
 Сведения о том, как статическое связывание библиотеки доступны на [связывание собственные библиотеки](~/ios/platform/native-interop.md) страницы.
 
 См. в разделе наших companion [привязки справочное руководство по типы](~/cross-platform/macios/binding/binding-types-reference.md).

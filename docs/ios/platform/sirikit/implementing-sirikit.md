@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: ea037aaaac97d9f326f1a2fbcb28d97c9d8a9b45
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110255"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669453"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Реализация SiriKit в Xamarin.iOS
 
@@ -209,7 +209,7 @@ namespace MonkeyChat
 
 Выполните следующие действия на компьютере Mac:
 
-1. В веб-браузер, перейдите к [ http://developer.apple.com ](http://developer.apple.com) и журналов в учетную запись.
+1. В веб-браузер, перейдите к [ https://developer.apple.com ](https://developer.apple.com) и журналов в учетную запись.
 2. Щелкните **сертификаты**, **идентификаторы** и **профили**.
 3. Выберите **профили подготовки** и выберите **идентификаторов приложений**, затем нажмите кнопку **+** кнопки.
 4. Введите **имя** нового профиля.

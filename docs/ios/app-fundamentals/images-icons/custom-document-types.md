@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 51abd00f9a21b702811bb3897f273deff54f7d01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 155847b4f5f6b3e6070f1afb6219db2d3789a075
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110489"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668469"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Настраиваемый документ значки в Xamarin.iOS
 
@@ -44,11 +44,11 @@ _Этот статье охватывает, включая и управлен�
 -----
 
 
-Дополнительные сведения о типах документов см. в разделе Apple [универсальный ссылка на тип идентификаторы](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) и [разделы программирования документа взаимодействия для iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Дополнительные сведения о типах документов см. в разделе Apple [универсальный ссылка на тип идентификаторы](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) и [разделы программирования документа взаимодействия для iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Работа с образами (пример)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Пользовательский значок и правила создания образа](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Пользовательский значок и правила создания образа](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

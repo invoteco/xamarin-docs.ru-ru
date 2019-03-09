@@ -1,19 +1,14 @@
 ---
 title: Проектирование API Xamarin.iOS
-description: В этом документе описываются некоторые из руководящих принципов, позволяют спроектировать API-интерфейсы Xamarin.iOS и как они связаны с Objective-C.
+description: 'В этом документе описываются некоторые из руководящих принципов, позволяют спроектировать API-интерфейсы Xamarin.iOS и как они связаны с Objective-C.'
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 75904ad91df7795c538e736eabb6c6000847b449
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233657"
 ---
+
 # <a name="xamarinios-api-design"></a>Проектирование API Xamarin.iOS
 
 Помимо основных библиотеках базовых классов, которые являются частью Mono [Xamarin.iOS](http://www.xamarin.com/iOS) поставляется с привязками для iOS различные API-интерфейсы, позволяющие разработчикам создавать собственные приложения iOS с Mono.
@@ -94,11 +89,11 @@ Xamarin.iOS содержит ряд для сборки, которые сост
 
 [Foundation](xref:Foundation) пространство имен предоставляет базовые типы данных предназначен для взаимодействия с платформой Foundation Objective-C, который является частью iOS и является основой для объектно-ориентированного программирования в Objective-C.
 
-Xamarin.iOS отражает в C# иерархию классов, от Objective-C. Например, базовый класс Objective-C [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) можно использовать с помощью C# с помощью [Foundation.NSObject](xref:Foundation.NSObject).
+Xamarin.iOS отражает в C# иерархию классов, от Objective-C. Например, базовый класс Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) можно использовать с помощью C# с помощью [Foundation.NSObject](xref:Foundation.NSObject).
 
 Несмотря на то, что это пространство имен обеспечивает привязки для базовых типов Foundation Objective-C, в некоторых случаях мы сопоставили базовые типы и типы .NET. Пример:
 
-- Вместо того чтобы разбираться с [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) и [сравнение NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), среда выполнения предоставляет их как C# [строка](xref:System.String)s и строго типизированные [массива](xref:System.Array)s на протяжении всего API.
+- Вместо того чтобы разбираться с [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) и [сравнение NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), среда выполнения предоставляет их как C# [строка](xref:System.String)s и строго типизированные [массива](xref:System.Array)s на протяжении всего API.
 
 - Различные интерфейсы API модуля поддержки доступны здесь позволяют разработчикам для привязки сторонних Objective-C API, других операций ввода-вывода API или API, в настоящее время не связаны с Xamarin.iOS.
 
@@ -293,7 +288,7 @@ Objective-C и C# имеют различные значения для деле
 2.  [Строго типизированные через `Delegate` свойство](#StrongDelegate)
 3.  [Слабо типизированные через `WeakDelegate` свойство](#WeakDelegate)
 
-Например, рассмотрим [UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) класса. Это передает [UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) экземпляр, который будет назначен [делегировать](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) свойство.
+Например, рассмотрим [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) класса. Это передает [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) экземпляр, который будет назначен [делегировать](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) свойство.
 
 <a name="Via_Events" />
 
@@ -301,9 +296,9 @@ Objective-C и C# имеют различные значения для деле
 
 Для многих типов Xamarin.iOS автоматически создаст соответствующий делегат, который будет пересылать `UIWebViewDelegate` звонков на C# события. Для `UIWebView`:
 
--  [WebViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) относящимся [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) событий.
--  [WebViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) относящимся [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) событий.
--  [WebView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) относящимся [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) событий.
+-  [WebViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) относящимся [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) событий.
+-  [WebViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) относящимся [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) событий.
+-  [WebView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) относящимся [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) событий.
 
 Например Эта простая программа записывает время начала и окончания, при просмотре веб-узел загрузки:
 
@@ -674,7 +669,7 @@ public Foo (NSObjectFlag x)
 public Foo (NSCoder coder)
 ```
 
-Этот конструктор предназначен для случаев, где инициализации объекта из экземпляра NSCoding. Дополнительные сведения см. в разделе Apple [архивы и руководство по программированию сериализации.](http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+Этот конструктор предназначен для случаев, где инициализации объекта из экземпляра NSCoding. Дополнительные сведения см. в разделе Apple [архивы и руководство по программированию сериализации.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
 
 #### <a name="exceptions"></a>Исключения
 
@@ -694,7 +689,7 @@ Xamarin.iOS имеет сборщику мусора, что позаботит�
 
 Предоставление доступа к `IDisposable` интерфейс является удобным способом помощь разработчикам в освобождение объектов, которые могут инкапсулировать большие блоки памяти (например, `UIImage` может выглядеть так же указатель безобидно, но может указывать на образ 2 мегабайта ) и другие важные и конечное ресурсы (например, декодирования видео буфер).
 
-NSObject реализует интерфейс IDisposable, а также [шаблон .NET Dispose](http://msdn.microsoft.com/library/fs2xkftw.aspx). Это позволяет разработчикам Этот подкласс NSObject переопределить поведение Dispose и освободить свои ресурсы по запросу. Например рассмотрим этого контроллера представлений, которая обеспечивает вокруг множество изображений:
+NSObject реализует интерфейс IDisposable, а также [шаблон .NET Dispose](https://msdn.microsoft.com/library/fs2xkftw.aspx). Это позволяет разработчикам Этот подкласс NSObject переопределить поведение Dispose и освободить свои ресурсы по запросу. Например рассмотрим этого контроллера представлений, которая обеспечивает вокруг множество изображений:
 
 ```csharp
 class MenuViewController : UIViewController {

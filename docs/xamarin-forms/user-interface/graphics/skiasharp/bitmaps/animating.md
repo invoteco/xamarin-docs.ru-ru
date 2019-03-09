@@ -7,12 +7,12 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: de27e151a475856f0789285dddc1526613e0b828
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 604067ac853bd53707e059b7db4abf2cfade21ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053149"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668963"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Анимации точечных рисунков SkiaSharp
 
@@ -508,7 +508,7 @@ public partial class MainPage : ContentPage
 
 `SKCodec` Определяет свойство, именуемое [ `Info` ](xref:SkiaSharp.SKCodec.Info) типа [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo), но в этом `SKImageInfo` значение указывает (по крайней мере для этого образа), является тип цвета `SKColorType.Index8`, означающее, что Каждый пиксел является индексом в тип цвета. Чтобы избежать обращения к специалистам с цветовыми таблицами, программа использует [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) и [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) сведения из этой структуры для построения, он является владельцем полноцветного `ImageInfo` значение. Каждый `SKBitmap` создается на основе.
 
-`GetPixels` Метод `SKBitmap` возвращает `IntPtr` ссылки на биты пикселов из точечного рисунка. Эти биты пикселов еще не задано. Что `IntPtr` передать в один из [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) методы `SKCodec`. Этот метод копирует кадр GIF-файл в памяти ссылается `IntPtr`. [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) Конструктор указывает номер кадра:
+`GetPixels` Метод `SKBitmap` возвращает `IntPtr` ссылки на биты пикселов из точечного рисунка. Эти биты пикселов еще не задано. Что `IntPtr` передать в один из [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) методы `SKCodec`. Этот метод копирует кадр GIF-файл в памяти ссылается `IntPtr`. [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions) Конструктор указывает номер кадра:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage

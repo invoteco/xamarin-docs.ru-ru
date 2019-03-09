@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: d8ee5f867c9a4d724c54c14b5afdd005f1b805d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3d0394f6b2388918f728bd5a25e9e809a832ca6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115774"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670978"
 ---
 # <a name="linearlayout"></a>LinearLayout
 
@@ -126,7 +126,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 [![Снимок экрана приложения, первый LinearLayout располагаются горизонтально, второй по вертикали](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Обратите внимание на то, как определить поведение каждого представления в XML-атрибуты. Поэкспериментируйте с различными значениями для `android:layout_weight` чтобы увидеть распределение площади экрана на основе веса каждого элемента. См. в разделе [общих объектов макета](http://developer.android.com/guide/topics/ui/declaring-layout.html) документа для получения дополнительных сведений о том, как [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+Обратите внимание на то, как определить поведение каждого представления в XML-атрибуты. Поэкспериментируйте с различными значениями для `android:layout_weight` чтобы увидеть распределение площади экрана на основе веса каждого элемента. См. в разделе [общих объектов макета](https://developer.android.com/guide/topics/ui/declaring-layout.html) документа для получения дополнительных сведений о том, как [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 дескрипторы `android:layout_weight` атрибута.
 
 

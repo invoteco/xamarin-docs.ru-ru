@@ -1,6 +1,6 @@
 ---
 title: Реализация фрагментов - Пошаговое руководство
-description: В этой статье описано, как использовать фрагменты для разработки приложений Xamarin.Android.
+description: 'В этой статье описано, как использовать фрагменты для разработки приложений Xamarin.Android.'
 ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
@@ -8,13 +8,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: b068169ee3f44932f8ee13d2546804f7b2d2a645
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103067"
 ---
+
 # <a name="implementing-fragments---walkthrough"></a>Реализация фрагментов - Пошаговое руководство
 
 _Фрагменты являются автономное модульными компонентами, которые могут помочь устранить сложности приложений Android, предназначенных для устройств с различными размерами экранов. В этой статье описано, как создавать и использовать фрагменты при разработке приложений Xamarin.Android._
@@ -52,5 +47,5 @@ _Фрагменты являются автономное модульными �
 
 - [FragmentsWalkthrough (пример)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [Общие сведения о конструкторе](~/android/user-interface/android-designer/index.md)
-- [Реализация фрагментов](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Пакет поддержки](http://developer.android.com/sdk/compatibility-library.html)
+- [Реализация фрагментов](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Пакет поддержки](https://developer.android.com/sdk/compatibility-library.html)

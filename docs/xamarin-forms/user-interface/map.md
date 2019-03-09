@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557120"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672486"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms карты
 
@@ -127,7 +127,7 @@ XML-представление для этих ключей в **Info.plist** п
 
 ![Разрешения, необходимые для Android](map-images/android-map-permissions.png "необходимые разрешения для Android")
 
-Последние два необходимы, так как приложения требуют подключения к сети для загрузки данных карты. Ознакомьтесь с Android [разрешения](http://developer.android.com/reference/android/Manifest.permission.html) для получения дополнительных сведений.
+Последние два необходимы, так как приложения требуют подключения к сети для загрузки данных карты. Ознакомьтесь с Android [разрешения](https://developer.android.com/reference/android/Manifest.permission.html) для получения дополнительных сведений.
 
 ### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
 

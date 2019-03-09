@@ -1,19 +1,14 @@
 ---
 title: Ресурсы Android
-description: В этой статье представлена концепция ресурсы Android в Xamarin.Android и опишем способы их использования. Здесь рассматривается, как использовать ресурсы в приложении Android для поддержки локализации приложения и несколько устройств, включая различными размерами экранов и плотности.
+description: 'В этой статье представлена концепция ресурсы Android в Xamarin.Android и опишем способы их использования. Здесь рассматривается, как использовать ресурсы в приложении Android для поддержки локализации приложения и несколько устройств, включая различными размерами экранов и плотности.'
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117270"
 ---
+
 # <a name="android-resources"></a>Ресурсы Android
 
 _В этой статье представлена концепция ресурсы Android в Xamarin.Android и опишем способы их использования. Здесь рассматривается, как использовать ресурсы в приложении Android для поддержки локализации приложения и несколько устройств, включая различными размерами экранов и плотности._
@@ -71,6 +66,6 @@ _В этой статье представлена концепция ресур
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Использование ресурсов Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Принципы работы приложения](http://developer.android.com/guide/topics/fundamentals.html)
-- [Ресурсы приложений](http://developer.android.com/guide/topics/resources/index.html)
-- [Поддержка нескольких экранов](http://developer.android.com/guide/practices/screens_support.html)
+- [Принципы работы приложения](https://developer.android.com/guide/topics/fundamentals.html)
+- [Ресурсы приложений](https://developer.android.com/guide/topics/resources/index.html)
+- [Поддержка нескольких экранов](https://developer.android.com/guide/practices/screens_support.html)

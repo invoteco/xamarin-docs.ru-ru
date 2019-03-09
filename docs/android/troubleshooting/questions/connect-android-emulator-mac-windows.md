@@ -1,5 +1,5 @@
 ---
-title: Можно ли подключиться к эмуляторам Android выполняется на компьютере Mac из виртуальной Машины Windows?
+title: Можно ли подключиться с виртуальной машины Windows к эмуляторам Android под управлением Mac?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 6e66bf4edb4269aa0f3b765df4a08b78c128f763
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 35bfdb92ccfffe54f0ca10dc001d8919703a5bd8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115644"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668157"
 ---
-# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Можно ли подключиться к эмуляторам Android выполняется на компьютере Mac из виртуальной Машины Windows?
+# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Можно ли подключиться с виртуальной машины Windows к эмуляторам Android под управлением Mac?
 
 Чтобы подключиться к эмулятору Android под управлением Mac из виртуальной машины Windows, следуйте инструкциям ниже:
 
@@ -35,9 +35,9 @@ ms.locfileid: "50115644"
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    Нечетные порт будет использоваться для подключения к `adb`. См. также [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    Нечетные порт будет использоваться для подключения к `adb`. См. также [ https://developer.android.com/tools/devices/emulator.html#emulatornetworking ](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4.  _Вариант 1_: использование [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4.  _Вариант 1_: Используйте [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
     пересылать входящие пакеты TCP выслано извне на порту 5555 (или любой другой порт, вам нравится) к порту нечетных на интерфейсе замыкания на себя (**127.0.0.1 5555** в этом примере), и пересылку исходящих пакетов другим способом:
 
     ```bash
@@ -50,7 +50,7 @@ ms.locfileid: "50115644"
 
     (Вариант 1 обычно проще, чем вариант 2, особенно в том случае, если **системные настройки > Безопасность и конфиденциальность > брандмауэр** включено.) 
 
-    _Вариант 2_: использование [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _Вариант 2_: Используйте [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
     для перенаправления пакеты TCP из порта `5555` (или любой другой порт, вам нравится) на [общего доступа к сети](http://kb.parallels.com/en/4948) интерфейс к порту нечетных на интерфейсе замыкания на себя (`127.0.0.1:5555` в этом примере):
 
     ```bash
@@ -95,7 +95,7 @@ ms.locfileid: "50115644"
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>Альтернативный способ, с помощью `adb -H` еще не поддерживается
 
-В теории, можно использовать другой подход `adb`встроенные возможности для подключения к `adb` сервера, работающего на удаленном компьютере (например см. в разделе [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
+В теории, можно использовать другой подход `adb`встроенные возможности для подключения к `adb` сервера, работающего на удаленном компьютере (например см. в разделе [ https://stackoverflow.com/a/18551325 ](https://stackoverflow.com/a/18551325)).
 Но расширения Xamarin.Android IDE в настоящее время не предоставляют способ настроить этот параметр.
 
 ## <a name="contact-information"></a>Контактные данные

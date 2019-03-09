@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 655f988cc54cf54e346e68109271775dee2918a9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e354f8271257ab21a855bdf5d576ce3062fadc7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111256"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668248"
 ---
 # <a name="working-with-the-android-manifest"></a>Работа с манифестом Android
 
@@ -84,7 +84,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-title-bar"></a>Заголовок действия
 
-По умолчанию Android дает приложению заголовок окна при его выполнении. Значение, используемое для этого является [ `/manifest/application/activity/@android:label` ](http://developer.android.com/guide/topics/manifest/activity-element.html#label). В большинстве случаев это значение будет отличаться от имени класса. Чтобы указать метку вашего приложения в заголовке окна, используйте [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) свойство.
+По умолчанию Android дает приложению заголовок окна при его выполнении. Значение, используемое для этого является [ `/manifest/application/activity/@android:label` ](https://developer.android.com/guide/topics/manifest/activity-element.html#label). В большинстве случаев это значение будет отличаться от имени класса. Чтобы указать метку вашего приложения в заголовке окна, используйте [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) свойство.
 Пример: 
 
 ```csharp
@@ -178,7 +178,7 @@ public class MyActivity : Activity
 
 ### <a name="intent-actions-and-features"></a>Действия намерений и компоненты
 
-Манифест Android предоставляет способ для описания возможностей вашего действия. Это делается с помощью [Intents](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) и [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
+Манифест Android предоставляет способ для описания возможностей вашего действия. Это делается с помощью [Intents](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) и [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
 Настраиваемый атрибут. Можно указать, какие действия подходят для действия с [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
 конструктор и категории, соответствующие с [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
 . По крайней мере одно действие должно быть указано (именно действия предоставляются в конструкторе). `[IntentFilter]` можно указать несколько раз, и каждая из которых использует результаты в отдельном `<intent-filter/>` сервисном `<activity/>`. Пример:
@@ -240,18 +240,18 @@ public class MyActivity : Activity
 
 ## <a name="list-of-custom-attributes"></a>Список настраиваемых атрибутов
 
--   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : создает [/manifest/application/activity](http://developer.android.com/guide/topics/manifest/activity-element.html) XML-фрагмент 
--   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : создает [/манифест приложения](http://developer.android.com/guide/topics/manifest/application-element.html) XML-фрагмент 
--   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : создает [/манифест и инструментирования](http://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML-фрагмент 
--   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : создает [//intent-filter](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML-фрагмент 
--   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : создает [//meta-data](http://developer.android.com/guide/topics/manifest/meta-data-element.html) XML-фрагмент 
--   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : создает [//permission](http://developer.android.com/guide/topics/manifest/permission-element.html) XML-фрагмент 
--   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : создает [//permission-group](http://developer.android.com/guide/topics/manifest/permission-group-element.html) XML-фрагмент 
--   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : создает [//permission-tree](http://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML-фрагмент 
--   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : создает [/manifest/application/service](http://developer.android.com/guide/topics/manifest/service-element.html) XML-фрагмент 
--   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : создает [/manifest/application/uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) XML-фрагмент 
--   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : создает [/manifest/uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML-фрагмент 
--   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : создает [/manifest/application/receiver](http://developer.android.com/guide/topics/manifest/receiver-element.html) XML-фрагмент 
--   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : создает [/manifest/application/provider](http://developer.android.com/guide/topics/manifest/provider-element.html) XML-фрагмент 
--   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : создает [/manifest/application/provider/grant-uri-permission](http://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML-фрагмент
+-   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : Создает [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML-фрагмент 
+-   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : Создает [/манифест приложения](https://developer.android.com/guide/topics/manifest/application-element.html) XML-фрагмент 
+-   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : Создает [/манифест и инструментирования](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML-фрагмент 
+-   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : Создает [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML-фрагмент 
+-   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : Создает [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML-фрагмент 
+-   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : Создает [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML-фрагмент 
+-   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : Создает [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML-фрагмент 
+-   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : Создает [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML-фрагмент 
+-   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : Создает [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML-фрагмент 
+-   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : Создает [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML-фрагмент 
+-   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : Создает [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML-фрагмент 
+-   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : Создает [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML-фрагмент 
+-   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : Создает [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML-фрагмент 
+-   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : Создает [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML-фрагмент
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 69952b0bac884fe8b14edcbb87aa8fad47594880
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526564"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670706"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Отображает изображение в Xamarin.iOS
 
@@ -42,7 +42,7 @@ _В этой статье рассматриваются включая ресу
 
     ![](displaying-an-image-images/imageset03.png "Редактор набора изображений")
 4. Отсюда перетащите изображения для каждого из различных устройств и необходимые разрешения. 
-5. Дважды щелкните новый набор изображений **имя** в **списка "ресурсы"** для редактирования: ![](displaying-an-image-images/imageset04.png "имя нового набора образ изменения")
+5. Дважды щелкните новый набор изображений **имя** в **списка "ресурсы"** для редактирования: ![](displaying-an-image-images/imageset04.png "Изменение имени новый набор изображений")
 
 При использовании **образа наборе** в конструкторе iOS, просто выберите имя набора из раскрывающегося списка в редакторе свойств:
 
@@ -213,7 +213,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage");
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-Дополнительные сведения о значков и изображений, см. в документации Apple на [пользовательский значок и правила создания образа](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
+Дополнительные сведения о значков и изображений, см. в документации Apple на [пользовательский значок и правила создания образа](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>Отображает изображение в раскадровках
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
-ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
+ms.openlocfilehash: 12ff6f615b30e53704fee6368c9d7f171f881df0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012299"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671069"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>В приложении используется Google Maps API
 
@@ -297,7 +297,7 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-Предоставляет API для карт [CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) которого будет выполнять статистическую обработку всех возможных значений для положения камеры. Экземпляр этого класса можно указать для [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) метод, который возвратит `CameraUpdate` объекта. Также включает API для карт [CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) класс, предоставляющий fluent API для создания `CameraPosition` объектов.
+Предоставляет API для карт [CameraPosition](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) которого будет выполнять статистическую обработку всех возможных значений для положения камеры. Экземпляр этого класса можно указать для [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) метод, который возвратит `CameraUpdate` объекта. Также включает API для карт [CameraPosition.Builder](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) класс, предоставляющий fluent API для создания `CameraPosition` объектов.
 В следующем фрагменте кода показан пример создания `CameraUpdate` из `CameraPosition` и использовании, чтобы изменить положение камеры в `GoogleMap`:
 
 ```csharp
@@ -342,7 +342,7 @@ Android API для карт предоставляет API для рисован
 
 ##### <a name="adding-a-marker"></a>Добавление маркера
 
-Чтобы добавить маркер на карту, создайте новый [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) объекта, а затем вызвать [AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) метод `GoogleMap` экземпляра. Этот метод будет возвращать [маркер](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) объекта.
+Чтобы добавить маркер на карту, создайте новый [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) объекта, а затем вызвать [AddMarker](https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) метод `GoogleMap` экземпляра. Этот метод будет возвращать [маркер](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) объекта.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -581,4 +581,4 @@ private void MapOnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEvent
 - [Сервисы Google Play APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [Получение ключа Google Maps API](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [использует библиотеку](https://developer.android.com/guide/topics/manifest/uses-library-element)
-- [использует функция](https://developer.android.com/guide/topics/manifest/uses-feature-element)
+- [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element)

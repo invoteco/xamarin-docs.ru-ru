@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 95d11ef692ec8b43c128cb55a21d0973151cd24a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48bb334e7e400d57e7eddc23b0b4ff183a7eba9b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120441"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669418"
 ---
 # <a name="using-the-contacts-contentprovider"></a>Использование контактов ContentProvider
 
@@ -108,7 +108,7 @@ var cursor = (ICursor)loader.LoadInBackground();
 
 `CursorLoader` Гарантирует, что все операции с курсорами выполняются в фоновом потоке и может интеллектуально повторно использовать существующий курсор экземпляров действия после действия перезапуска (например, из-за изменения конфигурации) вместо этого, еще раз перезагрузить данные.
 
-Можно также использовать более ранние версии Android `CursorLoader` , используя [библиотек поддержки v4](http://developer.android.com/tools/support-library/index.html).
+Можно также использовать более ранние версии Android `CursorLoader` , используя [библиотек поддержки v4](https://developer.android.com/tools/support-library/index.html).
 
 
 

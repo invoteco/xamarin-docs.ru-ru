@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
-ms.openlocfilehash: 4258eca8e18229420ceb043a010c896137187653
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: 7834b87687db8fd1a3d51a40a4657b24e46bac17
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240387"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670406"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Средство предварительного просмотра XAML для Xamarin.Forms
 
@@ -21,7 +21,7 @@ _См. в разделе отображаются при вводе макеты
 
 ## <a name="requirements"></a>Требования
 
-Проекты требуют последнюю версию пакета Xamarin.Forms NuGet для средства предварительного просмотра XAML для работы. Предварительный просмотр приложения Android требуется [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Проекты требуют последнюю версию пакета Xamarin.Forms NuGet для средства предварительного просмотра XAML для работы. Предварительный просмотр приложения Android требуется [JDK 1.8 x64](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Дополнительные сведения в [заметки о выпуске](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
 

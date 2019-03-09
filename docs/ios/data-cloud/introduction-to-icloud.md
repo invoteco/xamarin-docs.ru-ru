@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: d40c932c560b3827cccacd4f9bafa155dcf26056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113330"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668885"
 ---
 # <a name="using-icloud-with-xamarinios"></a>С помощью iCloud с помощью Xamarin.iOS
 
@@ -45,7 +45,7 @@ ms.locfileid: "50113330"
 
 Для правильной настройки приложения для доступа к iCloud:
 
--   **Найти ваш TeamID** -войдите в [developer.apple.com](http://developer.apple.com) и посетите **Member Center > учетная запись > Сводка по учетной записи разработчика** идентификатор команды (или Individual ID в случае единственного разработчика ). Он будет строка 10-значный ( **A93A5CM278** к примеру)-это является частью «идентификатор контейнера».
+-   **Найти ваш TeamID** -войдите в [developer.apple.com](https://developer.apple.com) и посетите **Member Center > учетная запись > Сводка по учетной записи разработчика** идентификатор команды (или Individual ID в случае единственного разработчика ). Он будет строка 10-значный ( **A93A5CM278** к примеру)-это является частью «идентификатор контейнера».
 
 -   **Создайте новый идентификатор приложения** - Чтобы создать идентификатор приложения, выполните действия, описанные в [подготовки для технологии Store разделе руководства по подготовке устройств](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)и не забудьте проверить **iCloud** как Разрешенные службы:
 
@@ -144,7 +144,7 @@ NSNotificationCenter.DefaultCenter.AddObserver (
 
 Код затем может выполнять некоторые действия со списком измененных ключей, например обновление локальной копии их или обновление пользовательского интерфейса с новыми значениями.
 
-Изменение возможные причины: ServerChange (0), InitialSyncChange (1) или QuotaViolationChange (2). Вы можете обращаться причину и при необходимости выполнить различную обработку (например, может потребоваться удалить некоторые разделы, в результате использования *QuotaViolationChange*).
+Ниже приведены причины возможных изменений. ServerChange (0), InitialSyncChange (1) или QuotaViolationChange (2). Вы можете обращаться причину и при необходимости выполнить различную обработку (например, может потребоваться удалить некоторые разделы, в результате использования *QuotaViolationChange*).
 
 ## <a name="document-storage"></a>Хранилище документов
 
@@ -417,7 +417,7 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 ## <a name="icloud-backup"></a>резервной копии в iCloud
 
 Хотя создание резервной копии iCloud не является компонентом, к которому осуществляется непосредственно разработчиками, на способ разработки приложения может повлиять на взаимодействие с пользователем.
-Компания Apple предоставляет [iOS правила хранения данных](http://developer.apple.com/icloud/documentation/data-storage/) для разработчиков в свои приложения iOS.
+Компания Apple предоставляет [iOS правила хранения данных](https://developer.apple.com/icloud/documentation/data-storage/) для разработчиков в свои приложения iOS.
 
 Наиболее важным аспектом является ли приложение хранит большие файлы, которые не являются, созданное пользователем (например, приложение читатель журнала, которое хранит hundred-plus мегабайтах содержимого на одну проблему). Apple предпочитает не храните такого рода данных, где он будет иметь копии в iCloud и без необходимости заливки рамки квоты пользователя iCloud.
 
@@ -437,6 +437,6 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
 - [Введение в iCloud (пример)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
 - [iCloud семинар пример кода](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
-- [Семинар слайды iCloud](http://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
+- [Семинар слайды iCloud](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [Хранилище iCloud](http://support.apple.com/kb/HT4847)
+- [Хранилище iCloud](https://support.apple.com/kb/HT4847)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: cd80154602cc22668768fe217da7371b77ded003
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fa32783617fce99514560677184f17be904cd42d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112392"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670337"
 ---
 # <a name="launching-the-maps-application"></a>Запуск приложения карт
 
@@ -42,7 +42,7 @@ StartActivity (mapIntent);
 
 -   `geo:latitude,longitude` &ndash; Открывает приложение карты, отцентрованного в lat или долготы. 
 
--   `geo:latitude,longitude?z=zoom` &ndash; Открытие карты приложения по центру в lat или долготы и в масштабе заданного уровня. Уровень масштаба в диапазоне от 1 до 23: 1 экранов всей поверхности Земли и 23 является ближайшим уровень масштаба.
+-   `geo:latitude,longitude?z=zoom` &ndash; Открытие карты приложения по центру в lat или долготы и в масштабе заданного уровня. Уровень масштаба в диапазоне от 1 до 23: 1 отобразить весь Земли и 23 — ближайший уровень масштаба.
 
 -   `geo:0,0?q=my+street+address` &ndash; Открывает приложение карты требуемый почтовый адрес. 
 
@@ -55,7 +55,7 @@ StartActivity (mapIntent);
 
 
 
-Дополнительные сведения о географической схем URI, см. в разделе [Показать расположение на карте](http://developer.android.com/guide/components/intents-common.html#Maps).
+Дополнительные сведения о географической схем URI, см. в разделе [Показать расположение на карте](https://developer.android.com/guide/components/intents-common.html#Maps).
 
 
 ## <a name="street-view"></a>Представление улицы

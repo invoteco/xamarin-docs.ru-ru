@@ -3,6 +3,8 @@ layout: HubPage
 hide_bc: true
 title: Документация по Xamarin
 description: 'Xamarin позволяет создавать собственные приложения для Android, iOS и macOS с помощью кода .NET и пользовательских интерфейсов платформы. Xamarin.Forms позволяет создавать собственные приложения с общим кодом пользовательского интерфейса на C# или XAML.'
+author: conceptdev
+ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
   - clicktale
@@ -735,7 +737,7 @@ Mac</a>
         <h2>Оставайтесь с нами</h2>
         <ul class="links">
            <li>
-                <a href="http://blog.xamarin.com/"> Блог </a>
+                <a href="https://blog.xamarin.com/"> Блог </a>
             </li>
             <li>
                 <a href="https://forums.xamarin.com/"> Форумы </a>

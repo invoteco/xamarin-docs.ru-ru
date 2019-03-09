@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267642"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670160"
 ---
 # <a name="android-pie-features"></a>Android круговой функции
 
@@ -34,7 +34,7 @@ Xamarin.Android 9.0 обеспечивает поддержку Android круг
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 или более поздней версии, должны быть установлены с Visual Studio (Xamarin.Android автоматически устанавливается как часть **разработки мобильных приложений на .NET** рабочей нагрузки).
 
--   **Java Developer Kit** &ndash; требует разработки Xamarin Android 9.0 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (или можно попробовать предварительную версию распространяемого корпорацией Майкрософт [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 автоматически устанавливается как часть **разработки мобильных приложений на .NET** рабочей нагрузки.
+-   **Java Developer Kit** &ndash; требует разработки Xamarin Android 9.0 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (или можно попробовать предварительную версию распространяемого корпорацией Майкрософт [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 автоматически устанавливается как часть **разработки мобильных приложений на .NET** рабочей нагрузки.
 
 -   **Пакет SDK для Android** &ndash; API пакета SDK для Android 28 или более поздней версии необходимо установить через диспетчер пакетов SDK для Android.
 

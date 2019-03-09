@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 01ff4426dfb4764b7d9ca22703aa2b1667a90454
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 6ce8099aa4230a11a12f4fe8aeffe850f9ef2ce9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528550"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671004"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Макеты с вкладками с ActionBar
 
@@ -31,7 +31,7 @@ _В этом руководстве представлены и объясняе
 
 Любое приложение Xamarin.Android, которое предназначено для API уровня 11 (Android 3.0) или более поздней версии имеет доступ к API-интерфейсы панели действий в рамках собственных API Android. 
 
-Некоторые интерфейсы API, ActionBar перенесенных обратно в API уровня 7 (Android 2.1) и доступны через [библиотека AppCompat V7](http://developer.android.com/tools/support-library/features.html#v7-appcompat), становится доступным для приложений Xamarin.Android с помощью [Xamarin Android библиотека поддержки - версии 7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) пакета.
+Некоторые интерфейсы API, ActionBar перенесенных обратно в API уровня 7 (Android 2.1) и доступны через [библиотека AppCompat V7](https://developer.android.com/tools/support-library/features.html#v7-appcompat), становится доступным для приложений Xamarin.Android с помощью [Xamarin Android библиотека поддержки - версии 7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) пакета.
 
 
 
@@ -182,8 +182,8 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 - [ActionBarTabs (пример)](https://developer.xamarin.com/samples/monodroid/UserInterface/ActionBarTabs/)
 - [ToolBar](~/android/user-interface/controls/tool-bar/index.md)
 - [Фрагменты](~/android/platform/fragments/index.md)
-- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
-- [ActionBarActivity](http://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
-- [Шаблон панели действий](http://developer.android.com/design/patterns/actionbar.html)
-- [AppCompat Android версии 7](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
+- [ActionBarActivity](https://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
+- [Шаблон панели действий](https://developer.android.com/design/patterns/actionbar.html)
+- [AppCompat Android версии 7](https://developer.android.com/tools/support-library/features.html#v7-appcompat)
 - [Пакет NuGet версии 7 AppCompat для поддержки Xamarin.Android библиотеки](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)

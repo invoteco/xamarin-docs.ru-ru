@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 019d89261687d1139ebced9400afbdf5eaf7a128
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109202"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670653"
 ---
 # <a name="cardview"></a>CardView
 
@@ -37,7 +37,7 @@ _Мини-приложения Cardview является компонентом 
 
 -  **Пакет SDK для Android** &ndash; Android 5.0 (API 21) или более поздней версии необходимо установить через диспетчер пакетов SDK для Android.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 может использоваться, если вы являетесь специально уровень API — 23 и более ранних версий. JDK 1.8 доступен из [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+-  **Java JDK 1.8** &ndash; JDK 1.7 может использоваться, если вы являетесь специально уровень API — 23 и более ранних версий. JDK 1.8 доступен из [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Приложение должно также включать `Xamarin.Android.Support.v7.CardView` пакета. Чтобы добавить `Xamarin.Android.Support.v7.CardView` пакета в Visual Studio для Mac:
 
@@ -56,7 +56,7 @@ _Мини-приложения Cardview является компонентом 
 3. Когда **CardView v7 библиотека поддержки Xamarin** отображается, нажмите кнопку **установить**.
 
 Чтобы узнать, как настроить проект приложения Android 5.0, см. в разделе [параметр вверх Android 5.0 проекта](~/android/platform/lollipop.md).
-Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: включая NuGet в проекте](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ## <a name="introducing-cardview"></a>Знакомство с CardView

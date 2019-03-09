@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 7056f7beb623bee32c767a3f2827efa6eb2a6136
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 87015163eca9fdb2fb8cee35e74d5031314fd42e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118803"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670834"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Работа со списками свойств в Xamarin.iOS
 
@@ -110,7 +110,7 @@ Visual Studio для Mac функции это plist-файл в графиче�
 
 Для приложений, которые поддерживают открытие файлов определенных типов, предоставляет iOS `CFBundleDocumentTypes` ключ. Если мы хотим наше приложение для поддержки определенных известных типов файлов — например, PDF - мы бы добавили значение PDF на ключ. В этом разделе предоставляет удобный способ для ввода данных, которая будет храниться в `CFBundleDocumentTypes` в `Info.plist` файл.
 
-Обратитесь к документации на [Регистрация типов файлов, Your поддерживает приложения](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) Дополнительные сведения о настройке этих значений.
+Обратитесь к документации на [Регистрация типов файлов, Your поддерживает приложения](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) Дополнительные сведения о настройке этих значений.
 
 ## <a name="utis"></a>Uti
 
@@ -146,7 +146,7 @@ Visual Studio для Mac также определяет тип свойства
 
  [![](property-lists-images/image33.png "Доступные типы свойств")](property-lists-images/image33.png#lightbox)
 
-Просмотрите Apple [связанные ресурсы приложения](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) ссылки на дополнительные сведения о необязательных свойств.
+Просмотрите Apple [связанные ресурсы приложения](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) ссылки на дополнительные сведения о необязательных свойств.
 
  <a name="Entitlements" />
 
@@ -158,7 +158,7 @@ Visual Studio для Mac также определяет тип свойства
 ## <a name="related-links"></a>Связанные ссылки
 
 - [ИНТЕГРИРОВАННАЯ СРЕДА РАЗРАБОТКИ](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
-- [Приложения, связанные с ней ресурсы](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
-- [Регистрация файла типы поддерживает ваше приложение](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
+- [Приложения, связанные с ней ресурсы](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
+- [Регистрация файла типы поддерживает ваше приложение](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
 - [Реализация схемы пользовательский URL-адрес](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 - [Справочнике по формату каталог активов](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

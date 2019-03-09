@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9ec27402aefd28ded4cf53e7e9fa52eedd2b86b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63164d90419f3a49d9eb52a52d02e05fbee43dbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103015"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667624"
 ---
 # <a name="gridview"></a>GridView
 
@@ -22,7 +22,7 @@ ms.locfileid: "50103015"
 
 Создайте новый проект с именем **HelloGridView**.
 
-Найти некоторые фотографии, вы бы хотели использовать, или [скачайте эти примеры изображений](http://developer.android.com/shareables/sample_images.zip). Добавление файлов изображений в проект **ресурсы/Drawable** каталога. В **свойства** окна, задайте действие при построении каждого из них на **AndroidResource**.
+Найти некоторые фотографии, вы бы хотели использовать, или [скачайте эти примеры изображений](https://developer.android.com/shareables/sample_images.zip). Добавление файлов изображений в проект **ресурсы/Drawable** каталога. В **свойства** окна, задайте действие при построении каждого из них на **AndroidResource**.
 
 Откройте **Resources/Layout/Main.axml** файл и вставьте следующий текст:
 

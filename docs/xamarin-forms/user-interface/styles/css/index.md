@@ -8,12 +8,6 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: f84a6dac64300eb17a45576ae83f9b94208f5732
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831928"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
 
@@ -466,7 +460,7 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 - Четыре значения указывают верхней, а затем правой, нижней, а затем толщину левой.
 
 > [!NOTE]
-> CSS `thickness` значения отличаются от XAML [ `Thickness` ](/api/type/Xamarin.Forms.Thickness/) значения. Например, в XAML двух значений — `Thickness` указывающее толщину горизонтальной, а затем по вертикали, то время как значение четырех `Thickness` указывает слева, сверху, а затем справа, снизу толщины. Кроме того, XAML `Thickness` значения с разделителями-запятыми.
+> CSS `thickness` значения отличаются от XAML [ `Thickness` ](xref:Xamarin.Forms.Thickness) значения. Например, в XAML двух значений — `Thickness` указывающее толщину горизонтальной, а затем по вертикали, то время как значение четырех `Thickness` указывает слева, сверху, а затем справа, снизу толщины. Кроме того, XAML `Thickness` значения с разделителями-запятыми.
 
 ### <a name="namedsize"></a>NamedSize
 

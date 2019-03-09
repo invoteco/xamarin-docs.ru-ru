@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: a9d7f1eb0051035d6bfcc47e18fb0bdd00b60f5d
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: e6e3a989db922dc2941cca4c888c862ffe159241
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235120"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672863"
 ---
 # <a name="xamarinios-errors"></a>Ошибки Xamarin.iOS
 
@@ -28,7 +28,7 @@ ms.locfileid: "50235120"
 
 <a name="MT0000" />
 
-### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: Непредвиденная ошибка - заполните отчет об ошибках в https://github.com/xamarin/xamarin-macios/issues/new
+### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: Непредвиденная ошибка — заполните отчет об ошибках в https://github.com/xamarin/xamarin-macios/issues/new
 
 Произошла непредвиденная ошибка. Пожалуйста [отчет об ошибках](https://github.com/xamarin/xamarin-macios/issues/new) с как можно больше информации, включая:
 
@@ -66,7 +66,7 @@ ms.locfileid: "50235120"
 
 <a name="MT0005" />
 
-### <a name="mt0005-the-output-directory--does-not-exist"></a>MT0005: Выходной каталог * не существует.
+### <a name="mt0005-the-output-directory--does-not-exist"></a>MT0005: В выходной каталог * не существует.
 
 Создайте каталог.
 
@@ -74,7 +74,7 @@ ms.locfileid: "50235120"
 
 <a name="MT0006" />
 
-### <a name="mt0006-there-is-no-devel-platform-at--use---platformplat-to-specify-the-sdk"></a>MT0006: Нет не платформа для разработки *, используйте--платформу = PLAT для указания пакета SDK.
+### <a name="mt0006-there-is-no-devel-platform-at--use---platformplat-to-specify-the-sdk"></a>MT0006: Имеется не платформа для разработки *, используйте--платформу = PLAT для указания пакета SDK.
 
 Xamarin.iOS не удается найти папку пакета SDK в расположении, упомянутые в сообщении об ошибке. Убедитесь, что путь указан правильно.
 
@@ -86,7 +86,7 @@ Xamarin.iOS не удается найти сборку в расположен�
 
 <a name="MT0008" />
 
-### <a name="mt0008-you-should-provide-one-root-assembly-only-found--assemblies-"></a>MT0008: Необходимо указать один корневой сборки для той # только, найдено: *.
+### <a name="mt0008-you-should-provide-one-root-assembly-only-found--assemblies-"></a>MT0008: Необходимо предоставить один корневой сборки для той # только, найдено: *.
 
 Более одной корневой сборки был передан mtouch, хотя может существовать только один корневой сборки.
 
@@ -149,7 +149,7 @@ SGen (--sgen) необходимо включить профилирование
 
 <a name="MT0017" />
 
-### <a name="mt0017-you-should-provide-a-root-assembly"></a>MT0017: Необходимо указать корневой сборки.
+### <a name="mt0017-you-should-provide-a-root-assembly"></a>MT0017: Необходимо предоставить корневая сборка.
 
 Это необходимо, чтобы указать корневой сборки (обычно основного исполняемого файла) при построении приложения.
 
@@ -200,7 +200,7 @@ Mtouch не распознает аргумент командной строк�
 
 <a name="MT0025" />
 
-### <a name="mt0025-no-sdk-version-was-provided-please-add---sdkxy-to-specify-which-ios-sdk-should-be-used-to-build-your-application"></a>MT0025: Версия SDK не был предоставлен. Добавьте `--sdk=X.Y` для указания какой iOS SDK следует использовать для построения приложения.
+### <a name="mt0025-no-sdk-version-was-provided-please-add---sdkxy-to-specify-which-ios-sdk-should-be-used-to-build-your-application"></a>MT0025: Версия пакета SDK не указан. Добавьте `--sdk=X.Y` для указания какой iOS SDK следует использовать для построения приложения.
 
 <a name="MT0026" />
 
@@ -238,11 +238,11 @@ REPL: поддерживается только в том случае, если
 
 <a name="MT0033" />
 
-### <a name="mt0033-a-xamarinios-project-must-reference-either-monotouchdll-or-xamariniosdll"></a>MT0033: Xamarin.iOS проект должен ссылаться на monotouch.dll или Xamarin.iOS.dll
+### <a name="mt0033-a-xamarinios-project-must-reference-either-monotouchdll-or-xamariniosdll"></a>MT0033: Проект Xamarin.iOS должно ссылаться monotouch.dll или Xamarin.iOS.dll
 
 <a name="MT0034" />
 
-### <a name="mt0034-cannot-include-both-monotouchdll-and-xamariniosdll-in-the-same-xamarinios-project----is-referenced-explicitly-while--is-referenced-by-"></a>MT0034: Не может содержать «monotouch.dll» и «Xamarin.iOS.dll», в том же проекте Xamarin.iOS - "\*" является явной ссылки, тогда как "\*" ссылается "*".
+### <a name="mt0034-cannot-include-both-monotouchdll-and-xamariniosdll-in-the-same-xamarinios-project----is-referenced-explicitly-while--is-referenced-by-"></a>MT0034: Не может содержать «monotouch.dll» и «Xamarin.iOS.dll» в том же проекте Xamarin.iOS - "\*" является явной ссылки, тогда как "\*" ссылается "*".
 
 <!-- MT0035 unused -->
 
@@ -256,7 +256,7 @@ REPL: поддерживается только в том случае, если
 
 <a name="MT0038" />
 
-### <a name="mt0038-the-old-registrars---registraroldstaticolddynamic-are-not-supported-when-referencing-xamariniosdll"></a>MT0038: Регистраторов старые (--регистратора: oldstatic | olddynamic) не поддерживаются при указании ссылки на Xamarin.iOS.dll.
+### <a name="mt0038-the-old-registrars---registraroldstaticolddynamic-are-not-supported-when-referencing-xamariniosdll"></a>MT0038: Старый регистраторов (--регистратора: oldstatic | olddynamic) не поддерживаются при указании ссылки на Xamarin.iOS.dll.
 
 <a name="MT0039" />
 
@@ -268,11 +268,11 @@ REPL: поддерживается только в том случае, если
 
 <a name="MT0041" />
 
-### <a name="mt0041-cannot-reference-both-monotouchdll-and-xamariniosdll"></a>MT0041: Не может ссылаться на «monotouch.dll» и «Xamarin.iOS.dll».
+### <a name="mt0041-cannot-reference-both-monotouchdll-and-xamariniosdll"></a>MT0041: Нельзя сослаться на «monotouch.dll» и «Xamarin.iOS.dll».
 
 <a name="MT0042" />
 
-### <a name="mt0042-no-reference-to-either-monotouchdll-or-xamariniosdll-was-found-a-reference-to-monotouchdll-will-be-added"></a>MT0042: Не используйте ссылку на monotouch.dll или Xamarin.iOS.dll найден. Ссылку на monotouch.dll будут добавляться.
+### <a name="mt0042-no-reference-to-either-monotouchdll-or-xamariniosdll-was-found-a-reference-to-monotouchdll-will-be-added"></a>MT0042: Не используйте ссылку на monotouch.dll или Xamarin.iOS.dll был найден. Ссылку на monotouch.dll будут добавляться.
 
 <a name="MT0043" />
 
@@ -328,7 +328,7 @@ REPL: поддерживается только в том случае, если
 
 <a name="MT0055" />
 
-### <a name="mt0055-the-xcode-path--does-not-exist"></a>MT0055: Путь Xcode "*" не существует.
+### <a name="mt0055-the-xcode-path--does-not-exist"></a>MT0055: Путь к Xcode "*" не существует.
 
 Путь Xcode, передаваемый с помощью `--sdkroot` не существует. Укажите допустимый путь.
 
@@ -358,7 +358,7 @@ REPL: поддерживается только в том случае, если
 
 <a name="MT0061" />
 
-### <a name="mt0061-no-xcodeapp-specified-using---sdkroot-using-the-system-xcode-as-reported-by-xcode-select---print-path-"></a>MT0061: Не Xcode.app (с помощью--sdkroot), в системе Xcode, предоставленное 'xcode-select--print-path': *
+### <a name="mt0061-no-xcodeapp-specified-using---sdkroot-using-the-system-xcode-as-reported-by-xcode-select---print-path-"></a>MT0061: Нет Xcode.app (с помощью--sdkroot), в системе Xcode, предоставленное 'xcode-select--print-path': *
 
 Это информационное предупреждение, объясняя Xcode будет использоваться, так как не указаны.
 
@@ -384,7 +384,7 @@ Xamarin.iOS поддерживает только внедренные плат�
 
 <a name="MT0065" />
 
-### <a name="mt0065-xamarinios-only-supports-embedded-frameworks-when-deployment-target-is-at-least-80-current-deployment-target--embedded-frameworks-"></a>MT0065: Xamarin.iOS поддерживает только внедренные платформы при цель развертывания: по крайней мере 8.0 (текущая цель развертывания: * внедренные платформы: *)
+### <a name="mt0065-xamarinios-only-supports-embedded-frameworks-when-deployment-target-is-at-least-80-current-deployment-target--embedded-frameworks-"></a>MT0065: Xamarin.iOS поддерживает внедренные платформы, только когда цель развертывания: по крайней мере 8.0 (текущая цель развертывания: * внедренные платформы: *)
 
 Xamarin.iOS поддерживает внедренные платформы только в том случае, когда целевой объект развертывания — по крайней мере 8.0 (поскольку в более ранних версиях iOS не поддерживает внедренные платформы).
 
@@ -392,7 +392,7 @@ Xamarin.iOS поддерживает внедренные платформы т�
 
 <a name="MT0066" />
 
-### <a name="mt0066-invalid-build-registrar-assembly-"></a>MT0066: Недопустимый сборки регистратора сборки: *
+### <a name="mt0066-invalid-build-registrar-assembly-"></a>MT0066: Недопустимая сборка регистратора сборки: *
 
 Это обычно указывает на ошибку в Xamarin.iOS; Отправьте отчет об ошибках в [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) с тестовым случаем.
 
@@ -414,7 +414,7 @@ Xamarin.iOS поддерживает внедренные платформы т�
 
 <a name="MT0070" />
 
-### <a name="mt0070-invalid-target-framework--valid-target-frameworks-are-"></a>MT0070: Недопустимая целевая платформа: *. Допустимые целевые платформы являются: *.
+### <a name="mt0070-invalid-target-framework--valid-target-frameworks-are-"></a>MT0070: Недопустимый целевой платформы: *. Допустимые целевые платформы являются: *.
 
 Недопустимый целевой платформы был передан с помощью аргумента--целевой платформы. Укажите допустимый целевой платформы.
 
@@ -454,7 +454,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0076" />
 
-### <a name="mt0075-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0075: Архитектура не указан (с помощью аргумента--abi). Архитектура является обязательным для * проектов.
+### <a name="mt0075-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0075: Не архитектура (с помощью аргумента--abi). Архитектура является обязательным для * проектов.
 
 Это обычно указывает на ошибку в Xamarin.iOS; Отправьте отчет об ошибках в [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) с тестовым случаем.
 
@@ -474,7 +474,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0079" />
 
-### <a name="mt0078-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0078: Рекомендуемые Xcode версии для Xamarin.iOS * является Xcode * или более поздней версии. Текущая версия Xcode (в *) — *.
+### <a name="mt0078-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0078: Рекомендуемая версия Xcode для Xamarin.iOS * является Xcode * или более поздней версии. Текущая версия Xcode (в *) — *.
 
 Это предупреждение о том, что текущая версия Xcode не рекомендуется версию Xcode для этой версии Xamarin.iOS.
 
@@ -498,7 +498,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0083" />
 
-### <a name="mt0083-asm-only-bitcode-is-not-supported-on-watchos-use-either---bitcodemarker-or---bitcodefull"></a>MT0083: Только для Asm bitcode не поддерживается в watchOS. Используйте либо bitcode--: маркер или--bitcode: полный.
+### <a name="mt0083-asm-only-bitcode-is-not-supported-on-watchos-use-either---bitcodemarker-or---bitcodefull"></a>MT0083: Только для ASM bitcode не поддерживается в watchOS. Используйте либо bitcode--: маркер или--bitcode: полный.
 
 <a name="MT0084" />
 
@@ -528,7 +528,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0091" />
 
-### <a name="mt0091-this-version-of-xamarinios-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-set-the-managed-linker-behaviour-to-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MT0091: Этой версии Xamarin.iOS требуется * SDK (поставляется с Xcode *). Либо обновление Xcode, чтобы получить обязательные файлы заголовков или задать поведение управляемых компоновщика для связи только пакеты SDK (Чтобы попробовать избежать использования нового API).
+### <a name="mt0091-this-version-of-xamarinios-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-set-the-managed-linker-behaviour-to-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MT0091: Эта версия Xamarin.iOS требует * SDK (поставляется с Xcode *). Либо обновление Xcode, чтобы получить обязательные файлы заголовков или задать поведение управляемых компоновщика для связи только пакеты SDK (Чтобы попробовать избежать использования нового API).
 
 Для Xamarin.iOS требуется файлы заголовков, из пакета SDK версии, указанной в сообщении об ошибке для построения приложения. Для устранения этой ошибки рекомендуется обновить Xcode, чтобы получить пакет SDK для, это будет включать все обязательные файлы заголовков. Если у вас несколько версий Xcode установлен, или нужно использовать Xcode в расположении по умолчанию, не забудьте задать правильное расположение Xcode в настройках вашей интегрированной среды разработки.
 
@@ -546,11 +546,11 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0095" />
 
-### <a name="mt0095-aot-files-could-not-be-copied-to-the-destination-directory-dest-error"></a>MT0095: Файлы Aot не может быть скопирован в каталог назначения {dest}: {error}
+### <a name="mt0095-aot-files-could-not-be-copied-to-the-destination-directory-dest-error"></a>MT0095: Не удалось скопировать файлы AOT к целевому каталогу {dest}: {error}
 
 <a name="MT0096" />
 
-### <a name="mt0096-no-reference-to-xamariniosdll-was-found"></a>MT0096: Не используйте ссылку на Xamarin.iOS.dll найден.
+### <a name="mt0096-no-reference-to-xamariniosdll-was-found"></a>MT0096: Не используйте ссылку на Xamarin.iOS.dll был найден.
 
 <!-- MT0097: used by mmp -->
 <!-- MT0098: used by mmp -->
@@ -565,7 +565,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0100" />
 
-### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0100: Недопустимая сборке разрабатывать: "*". Отправьте отчет об ошибках с тестовым случаем (http://bugzilla.xamarin.com).
+### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0100: Создавать недопустимые сборки: "*". Отправьте отчет об ошибках с тестовым случаем (http://bugzilla.xamarin.com).
 
 Это сообщение об ошибке выводится при сбое Проверка внутренней согласованности в Xamarin.iOS.
 
@@ -603,7 +603,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0105" />
 
-### <a name="mt0105-no-assembly-build-target-was-specified-for-"></a>MT0105: Был указан без построения на языке ассемблера для "*".
+### <a name="mt0105-no-assembly-build-target-was-specified-for-"></a>MT0105: Целевой объект построения сборки был указан для "*".
 
 При указании сборки построения целевого с помощью `--assembly-build-target`, каждая сборка, в приложении необходимо назначить целевым объектом сборки.
 
@@ -613,7 +613,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0106" />
 
-### <a name="mt0106-the-assembly-build-target-name--is-invalid-the-character--is-not-allowed"></a>MT0106: Имя целевой сборки в сборку "\*" является недопустимым: символ "\*" не допускается.
+### <a name="mt0106-the-assembly-build-target-name--is-invalid-the-character--is-not-allowed"></a>MT0106: Сборки имя цели сборки "\*" является недопустимым: символ "\*" не допускается.
 
 Имя целевой сборки сборки должен быть допустимым именем файла.
 
@@ -629,7 +629,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0108" />
 
-### <a name="mt0108-the-assembly-build-target--did-not-match-any-assemblies"></a>MT0108: Сборка разрабатывать "*" не соответствует любой сборки.
+### <a name="mt0108-the-assembly-build-target--did-not-match-any-assemblies"></a>MT0108: Целевой объект построения сборки "*" не соответствует любой сборки.
 
 <a name="MT0109" />
 
@@ -653,7 +653,7 @@ Xamarin.iOS не поддерживает задание минимальной 
 
 <a name="MT0111" />
 
-### <a name="mt0111-bitcode-has-been-enabled-because-this-version-of-xamarinios-does-not-support-building-watchos-projects-using-llvm-without-enabling-bitcode"></a>MT0111: Bitcode работает так, как эта версия Xamarin.iOS не поддерживает watchOS стандартных проектах, использующих LLVM без Включение bitcode.
+### <a name="mt0111-bitcode-has-been-enabled-because-this-version-of-xamarinios-does-not-support-building-watchos-projects-using-llvm-without-enabling-bitcode"></a>MT0111: Так как эта версия Xamarin.iOS не поддерживает построение watchOS был включен Bitcode проектах, использующих LLVM без Включение bitcode.
 
 Bitcode работает автоматически, так как эта версия Xamarin.iOS не поддерживает watchOS стандартных проектах, использующих LLVM без Включение bitcode.
 
@@ -663,7 +663,7 @@ Bitcode работает автоматически, так как эта вер
 
 <a name="MT0112" />
 
-### <a name="mt0112-native-code-sharing-has-been-disabled-because-"></a>MT0112: Совместного использования собственного кода был отключен из-за *
+### <a name="mt0112-native-code-sharing-has-been-disabled-because-"></a>MT0112: Совместное использование собственного кода была отключена, поскольку *
 
 Существует несколько причин, по которым совместного использования кода можно отключить.
 
@@ -771,7 +771,7 @@ iOS 11 не содержит поддержки для 32-разрядных п�
 
 <a name="MT0118" />
 
-### <a name="mt0118-aot-files-could-not-be-found-at-the-expected-directory-msymdir"></a>MT0118: Aot файлов не найден в предполагаемом каталоге «{msymdir}».
+### <a name="mt0118-aot-files-could-not-be-found-at-the-expected-directory-msymdir"></a>MT0118: Не удалось найти файлы AOT в предполагаемом каталоге «{msymdir}».
 
 <!-- 0119 - 0123: free to use -->
 
@@ -812,7 +812,7 @@ class Program {
 
 <a name="MT0125" />
 
-### <a name="mt0125-the---assembly-build-target-command-line-argument-is-ignored-in-the-simulator"></a>MT0125:-сборки — на языке ассемблера аргумент командной строки учитывается в симуляторе.
+### <a name="mt0125-the---assembly-build-target-command-line-argument-is-ignored-in-the-simulator"></a>MT0125: -Сборки — на языке ассемблера аргумент командной строки учитывается в симуляторе.
 
 Никаких действий не требуется, это сообщение является исключительно информационным.
 
@@ -840,7 +840,7 @@ class Program {
 
 Это предупреждение можно игнорировать скорее; случае возникновения проблем зарегистрировать ошибку (https://bugzilla.xamarin.com] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) и будут исследованы.
 
-## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Проект связанные сообщения об ошибках
+## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Проект сообщения об ошибках
 
 ### <a name="mt10xx-installer--mtouch"></a>MT10xx: Установщик / mtouch
 
@@ -941,11 +941,11 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1017" />
 
-### <a name="mt1017-failed-to-create-the-notice-file-"></a>MT1017: Не удалось создать файл Обратите внимание, ЧТО: *.
+### <a name="mt1017-failed-to-create-the-notice-file-"></a>MT1017: Не удалось создать файл Обратите внимание: *.
 
 <a name="MT1018" />
 
-### <a name="mt1018-your-application-failed-code-signing-checks-and-could-not-be-installed-on-the-device--check-your-certificates-provisioning-profiles-and-bundle-ids-probably-your-device-is-not-part-of-the-selected-provisioning-profile-error-0xe8008015"></a>MT1018: Приложения не удалось выполнить проверку подписи кода и не могут быть установлены на устройстве "*". Проверьте сертификаты, профили, подготовки и объединить их идентификаторы. Возможно, устройство не является частью выбранного профиля подготовки (ошибка: 0xe8008015).
+### <a name="mt1018-your-application-failed-code-signing-checks-and-could-not-be-installed-on-the-device--check-your-certificates-provisioning-profiles-and-bundle-ids-probably-your-device-is-not-part-of-the-selected-provisioning-profile-error-0xe8008015"></a>MT1018: Сбой проверки подписи кода приложения и не могут быть установлены на устройстве "*". Проверьте сертификаты, профили, подготовки и объединить их идентификаторы. Возможно, устройство не является частью выбранного профиля подготовки (ошибка: 0xe8008015).
 
 <a name="MT1019" />
 
@@ -995,7 +995,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1024" />
 
-### <a name="mt1024-the-application-signature-could-not-be-verified-on-device--please-make-sure-that-the-provisioning-profile-is-installed-and-not-expired-error-0xe8008017"></a>MT1024: Приложение не удалось проверить подпись на устройстве "*". Убедитесь в том, что установлен и не истек срок действия профиля подготовки (ошибка: 0xe8008017).
+### <a name="mt1024-the-application-signature-could-not-be-verified-on-device--please-make-sure-that-the-provisioning-profile-is-installed-and-not-expired-error-0xe8008017"></a>MT1024: Не удалось проверить подпись приложения на устройстве "*". Убедитесь в том, что установлен и не истек срок действия профиля подготовки (ошибка: 0xe8008017).
 
 Устройство отклонил установку приложения, так как не удалось проверить подпись.
 
@@ -1045,7 +1045,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1029" />
 
-### <a name="mt1029-could-not-find-an-application-at-the-specified-directory-"></a>MT1029: Не удалось найти приложение в указанном каталоге: *
+### <a name="mt1029-could-not-find-an-application-at-the-specified-directory-"></a>MT1029: Не удалось найти приложение в указанный каталог: *
 
 Путь к приложению, передаваемый--launchdev не существует. Укажите допустимое приложение пакета.
 
@@ -1083,7 +1083,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1036" />
 
-### <a name="mt1036-framework-name-included-from-path-related-to-previous-error"></a>MT1036: Состав с Framework «{name}»: {path} (связано с предыдущей ошибкой)
+### <a name="mt1036-framework-name-included-from-path-related-to-previous-error"></a>MT1036: Включенные из платформы «{name}»: {path} (связано с предыдущей ошибкой)
 
 Эта ошибка выдается только совместно с параметром [MT1036](#MT1036). См. в разделе [MT1036](#MT1036) Дополнительные сведения.
 
@@ -1107,7 +1107,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1104" />
 
-### <a name="mt1104-failed-to-send-packet-"></a>MT1104: Не удалось отправить пакет: *
+### <a name="mt1104-failed-to-send-packet-"></a>MT1104: Сбой при отправке пакета: *
 
 <a name="MT1105" />
 
@@ -1119,11 +1119,11 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1107" />
 
-### <a name="mt1107-application-failed-to-launch-"></a>MT1107: Не удалось запустить приложение: *
+### <a name="mt1107-application-failed-to-launch-"></a>MT1107: Не удается запустить приложение: *
 
 Проверьте, если ваше устройство заблокировано.
 
-Если вы развертываете в корпоративное приложение или с помощью бесплатной подготовки профиля, возможно, разработчике (Это объясняется <a href="http://stackoverflow.com/a/30726375/183422">здесь</a>).
+Если вы развертываете в корпоративное приложение или с помощью бесплатной подготовки профиля, возможно, разработчике (Это объясняется <a href="https://stackoverflow.com/a/30726375/183422">здесь</a>).
 
 <a name="MT1108" />
 
@@ -1135,21 +1135,21 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1109" />
 
-### <a name="mt1109-application-failed-to-launch-because-the-device-is-locked-please-unlock-the-device-and-try-again"></a>MT1109: Не удается запустить приложение из-за блокировки устройства. Разблокируйте устройство и повторите попытку.
+### <a name="mt1109-application-failed-to-launch-because-the-device-is-locked-please-unlock-the-device-and-try-again"></a>MT1109: Приложению не удалось запустить из-за блокировки устройства. Разблокируйте устройство и повторите попытку.
 
 Проверьте, если ваше устройство заблокировано.
 
 <a name="MT1110" />
 
-### <a name="mt1110-application-failed-to-launch-because-of-ios-security-restrictions-please-ensure-the-developer-is-trusted"></a>MT1110: Не удается запустить приложение из-за ограничений безопасности iOS. Убедитесь, что разработчик является доверенным.
+### <a name="mt1110-application-failed-to-launch-because-of-ios-security-restrictions-please-ensure-the-developer-is-trusted"></a>MT1110: Приложению не удалось запуститься из-за ограничений безопасности iOS. Убедитесь, что разработчик является доверенным.
 
-Если вы развертываете в корпоративное приложение или с помощью бесплатной подготовки профиля, возможно, разработчике (Это объясняется <a href="http://stackoverflow.com/a/30726375/183422">здесь</a>).
+Если вы развертываете в корпоративное приложение или с помощью бесплатной подготовки профиля, возможно, разработчике (Это объясняется <a href="https://stackoverflow.com/a/30726375/183422">здесь</a>).
 
 <a name="MT1111" />
 
-### <a name="mt1111-application-launched-successfully-but-its-not-possible-to-wait-for-the-app-to-exit-as-requested-because-its-not-possible-to-detect-app-termination-when-launching-using-gdbserver"></a>MT1111: Приложение запущено успешно, но невозможно ожидания для приложения завершить работу по запросу, так как невозможно обнаружить завершение приложения при запуске, использовании программы gdbserver.
+### <a name="mt1111-application-launched-successfully-but-its-not-possible-to-wait-for-the-app-to-exit-as-requested-because-its-not-possible-to-detect-app-termination-when-launching-using-gdbserver"></a>MT1111: Приложение успешно запущено, но его не возможно реализовать ожидание приложение завершить работу по запросу, так как невозможно обнаружить завершение приложения при запуске, использовании программы gdbserver.
 
-### <a name="mt12xx-simulator"></a>MT12xx: симулятора
+### <a name="mt12xx-simulator"></a>MT12xx: Имитатор
 
 <!--
   MT12xx simcontroller.cs
@@ -1165,19 +1165,19 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1203" />
 
-### <a name="mt1203-invalid-simulator-specification-"></a>MT1203: Спецификация недопустимый симулятора: *
+### <a name="mt1203-invalid-simulator-specification-"></a>MT1203: Недопустимый симулятор спецификации: *
 
 <a name="MT1204" />
 
-### <a name="mt1204-invalid-simulator-specification--runtime-not-specified"></a>MT1204: Спецификация недопустимый симулятор "*": среда выполнения не указан.
+### <a name="mt1204-invalid-simulator-specification--runtime-not-specified"></a>MT1204: Недопустимый симулятор спецификации "*": среда выполнения не указан.
 
 <a name="MT1205" />
 
-### <a name="mt1205-invalid-simulator-specification--device-type-not-specified"></a>MT1205: Спецификация недопустимый симулятор "*": не указан тип устройства.
+### <a name="mt1205-invalid-simulator-specification--device-type-not-specified"></a>MT1205: Недопустимый симулятор спецификации "*": не указан тип устройства.
 
 <a name="MT1206" />
 
-### <a name="mt1206-could-not-find-the-simulator-runtime-"></a>MT1206: Не удалось найти среда выполнения симулятор "*".
+### <a name="mt1206-could-not-find-the-simulator-runtime-"></a>MT1206: Не удалось найти среду выполнения симулятор "*".
 
 <a name="MT1207" />
 
@@ -1185,7 +1185,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1208" />
 
-### <a name="mt1208-could-not-find-the-simulator-runtime-"></a>MT1208: Не удалось найти среда выполнения симулятор "*".
+### <a name="mt1208-could-not-find-the-simulator-runtime-"></a>MT1208: Не удалось найти среду выполнения симулятор "*".
 
 <a name="MT1209" />
 
@@ -1193,7 +1193,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1210" />
 
-### <a name="mt1210-invalid-simulator-specification--unknown-key-"></a>MT1210: Спецификация недопустимый симулятора: \*, Неизвестный ключ "\*"
+### <a name="mt1210-invalid-simulator-specification--unknown-key-"></a>MT1210: Недопустимый симулятор спецификации: \*, Неизвестный ключ "\*"
 
 <a name="MT1211" />
 
@@ -1205,11 +1205,11 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1213" />
 
-### <a name="mt1213-invalid-simulator-specification-for-xcode-4-"></a>MT1213: Спецификация недопустимый симулятор для Xcode 4: *
+### <a name="mt1213-invalid-simulator-specification-for-xcode-4-"></a>MT1213: Недопустимый симулятор спецификации для Xcode 4: *
 
 <a name="MT1214" />
 
-### <a name="mt1214-invalid-simulator-specification-for-xcode-5-"></a>MT1214: Спецификация недопустимый симулятора Xcode 5: *
+### <a name="mt1214-invalid-simulator-specification-for-xcode-5-"></a>MT1214: Недопустимый симулятор спецификации для Xcode 5: *
 
 <a name="MT1215" />
 
@@ -1283,7 +1283,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1305" />
 
-### <a name="mt1305-the-binding-library--contains-a-user-framework--but-embedded-user-frameworks-require-ios-80-the-current-deployment-target-is--please-set-the-deployment-target-in-the-infoplist-file-to-at-least-80"></a>MT1305: Библиотека привязки "\*" содержит framework пользователя (\*), но пользователя встроенной платформы требуют iOS 8.0 (текущая цель развертывания: *). Необходимо укажите цель развертывания в файле Info.plist, чтобы по крайней мере 8.0.
+### <a name="mt1305-the-binding-library--contains-a-user-framework--but-embedded-user-frameworks-require-ios-80-the-current-deployment-target-is--please-set-the-deployment-target-in-the-infoplist-file-to-at-least-80"></a>MT1305: Библиотеки привязки "\*" содержит framework пользователя (\*), но пользователя встроенной платформы требуют iOS 8.0 (текущая цель развертывания: *). Необходимо укажите цель развертывания в файле Info.plist, чтобы по крайней мере 8.0.
 
 Указанная привязка библиотеки входит embedded инфраструктура, но Xamarin.iOS поддерживает только внедренные платформы IOS 8.0 или более поздней версии.
 
@@ -1297,7 +1297,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1400" />
 
-### <a name="mt1400-could-not-open-crash-report-service-afcconnectionopen-returned-"></a>MT1400: Не удалось открыть службу отчетов о сбоях: AFCConnectionOpen возвращается *
+### <a name="mt1400-could-not-open-crash-report-service-afcconnectionopen-returned-"></a>MT1400: Не удалось открыть службу отчетов о сбоях: Возвращаемый AFCConnectionOpen *
 
 Произошла ошибка при попытке доступа к отчеты о сбоях с устройства.
 
@@ -1311,7 +1311,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1401" />
 
-### <a name="mt1401-could-not-close-crash-report-service-afcconnectionclose-returned-"></a>MT1401: Не удалось закрыть службу отчетов о сбоях: AFCConnectionClose возвращается *
+### <a name="mt1401-could-not-close-crash-report-service-afcconnectionclose-returned-"></a>MT1401: Не удалось закрыть службу отчетов о сбоях: Возвращаемый AFCConnectionClose *
 
 Произошла ошибка при попытке доступа к отчеты о сбоях с устройства.
 
@@ -1325,7 +1325,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1402" />
 
-### <a name="mt1402-could-not-read-file-info-for--afcfileinfoopen-returned-"></a>MT1402: Не удалось прочитать сведения о файле, для *: AFCFileInfoOpen возвращается *
+### <a name="mt1402-could-not-read-file-info-for--afcfileinfoopen-returned-"></a>MT1402: Не удалось прочитать сведения о файле, для *: Возвращаемый AFCFileInfoOpen *
 
 Произошла ошибка при попытке доступа к отчеты о сбоях с устройства.
 
@@ -1415,7 +1415,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1601" />
 
-### <a name="mt1601-not-a-static-library-unknown-header--"></a>MT1601: Не статической библиотеки (Неизвестный заголовок "*"): *.
+### <a name="mt1601-not-a-static-library-unknown-header--"></a>MT1601: Статическая библиотека (Неизвестный заголовок "*"): *.
 
 Произошла ошибка при обработке в статическую библиотеку в вопросе.
 
@@ -1461,7 +1461,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
     file -arch all -l /path/to/file
 
-## <a name="mt2xxx-linker-error-messages"></a>MT2xxx: Компоновщика, сообщения об ошибках
+## <a name="mt2xxx-linker-error-messages"></a>MT2xxx: Сообщения об ошибках компоновщика
 
 <!--
  MT2xxx Linker
@@ -1494,7 +1494,7 @@ Parameter name: instruction
 
 <a name="MT2004" />
 
-### <a name="mt2004-extra-linker-definitions-file--could-not-be-located"></a>MT2004: Файл определений компоновщика Extra "*" не удалось найти.
+### <a name="mt2004-extra-linker-definitions-file--could-not-be-located"></a>MT2004: Файл определения дополнительных компоновщика "*" не удалось найти.
 
 <a name="MT2005" />
 
@@ -1563,7 +1563,7 @@ Parameter name: instruction
 
 <a name="MT202x" />
 
-### <a name="mt202x-binding-optimizer-failed-processing-"></a>MT202x: Оптимизатор привязки не удалось обработки `...`.
+### <a name="mt202x-binding-optimizer-failed-processing-"></a>MT202x: Сбой обработки привязки оптимизатор `...`.
 
 Произошла непредвиденная произошла при попытке оптимизировать созданный код привязки. Элемент, причиной проблемы является именованным в сообщении об ошибке. Чтобы устранить эту проблему, с именем сборки (или содержащий тип или метод с именем) нужно будет предоставляться в [отчет об ошибках](http://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительных mtouch аргументы**).
 
@@ -1574,7 +1574,7 @@ Parameter name: instruction
 
 <a name="MT2030" />
 
-### <a name="mt2030-remove-user-resources-failed-processing-"></a>MT2030: Обработки не удалось удалить ресурсы пользователя `...`.
+### <a name="mt2030-remove-user-resources-failed-processing-"></a>MT2030: Удаление ресурсов пользователя сбой обработки `...`.
 
 Произошла непредвиденная произошла при попытке удалить ресурсы пользователя. Сборка, причиной проблемы называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка будет необходимо будет предоставить в [отчет об ошибках](http://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительные аргументы mtouch**).
 
@@ -1591,7 +1591,7 @@ Parameter name: instruction
 
 <a name="MT2050" />
 
-### <a name="mt2050-code-remover-failed-processing-"></a>MT2050: Метод удаления кода не удалось обработки `...`.
+### <a name="mt2050-code-remover-failed-processing-"></a>MT2050: Метод удаления кода сбой обработки `...`.
 
 Произошла непредвиденная произошла при попытке удалить код из BCL, в состав приложения. Подайте [отчет об ошибках](http://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительные аргументы mtouch**).
 
@@ -1603,19 +1603,19 @@ Parameter name: instruction
 
 <a name="MT2070" />
 
-### <a name="mt2070-metadata-reducer-failed-processing-"></a>MT2070: Метаданные редуктора не удалось обработки `...`.
+### <a name="mt2070-metadata-reducer-failed-processing-"></a>MT2070: Метаданные редуктора сбой обработки `...`.
 
 Произошла непредвиденная произошла при попытке уменьшить метаданные из приложения. Сборка, причиной проблемы называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка будет необходимо будет предоставить в [отчет об ошибках](http://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительные аргументы mtouch**).
 
 <a name="MT2080" />
 
-### <a name="mt2080-marknsobjects-failed-processing-"></a>MT2080: MarkNSObjects сбой обработки `...`.
+### <a name="mt2080-marknsobjects-failed-processing-"></a>MT2080: Не удалось MarkNSObjects обработки `...`.
 
 Произошла непредвиденная произошла при попытке пометить `NSObject` подклассы из приложения. Сборка, причиной проблемы называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка будет необходимо будет предоставить в [отчет об ошибках](http://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительные аргументы mtouch**).
 
 <a name="MT2090" />
 
-### <a name="mt2090-inliner-failed-processing-"></a>MT2090: Встраивания сбой обработки `...`.
+### <a name="mt2090-inliner-failed-processing-"></a>MT2090: Не удалось выполнить обработку для метода встраивания `...`.
 
 Произошла непредвиденная произошла при попытке встроенный код из приложения. Сборка, причиной проблемы называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка будет необходимо будет предоставить в [отчет об ошибках](https://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительные аргументы mtouch**).
 
@@ -1625,7 +1625,7 @@ Parameter name: instruction
 
 <a name="MT2100" />
 
-### <a name="mt2100-smart-enum-conversion-preserver-failed-processing-"></a>MT2100: Смарт-Сохранить преобразование перечисления не удалось обработки `...`.
+### <a name="mt2100-smart-enum-conversion-preserver-failed-processing-"></a>MT2100: Смарт-Сохранить преобразование перечисления сбой обработки `...`.
 
 Произошла непредвиденная произошла при попытке пометить методы преобразования для смарт-перечислений из приложения. Сборка, причиной проблемы называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка будет необходимо будет предоставить в [отчет об ошибках](https://bugzilla.xamarin.com) вместе с полная сборка журнала с уровнем детализации включен (т. е. `-v -v -v -v` в **дополнительные аргументы mtouch**).
 
@@ -1647,7 +1647,7 @@ Parameter name: instruction
 
 <a name="MT2103" />
 
-### <a name="mt2103-error-processing-assembly--"></a>MT2103: Ошибка при обработке сборки "\*": *
+### <a name="mt2103-error-processing-assembly--"></a>MT2103: Произошла ошибка при обработке сборки "\*": *
 
 Произошла непредвиденная ошибка при обработке сборки.
 
@@ -1661,7 +1661,7 @@ Parameter name: instruction
 
 См. в разделе https://msdn.microsoft.com/library/x0w2664k.aspx Дополнительные сведения о смешанных сборках.
 
-## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: AOT, сообщения об ошибках
+## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Сообщения об ошибках AOT
 
 <!--
  MT3xxx AOT
@@ -1670,7 +1670,7 @@ Parameter name: instruction
 
 <a name="MT3001" />
 
-### <a name="mt3001-could-not-aot-the-assembly-"></a>MT3001: Не удалось не сборки AOT "*"
+### <a name="mt3001-could-not-aot-the-assembly-"></a>MT3001: Может не сборки AOT "*"
 
 Как правило, это указывает на ошибку в компиляторе AOT. Пожалуйста заполните [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) с проектом, который может использоваться для воспроизведения ошибки.
 
@@ -1678,7 +1678,7 @@ Parameter name: instruction
 
 <a name="MT3002" />
 
-### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-httpsdeveloperxamarincomguidesiosadvancedtopicslimitationsreversecallbackshttpsdeveloperxamarincomguidesiosadvancedtopicslimitationsreversecallbacks"></a>MT3002: Ограничение AOT: метод "*" должен быть статическим, так как он дополнен [MonoPInvokeCallback]. См. в разделе [https://developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](https://developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks)
+### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-httpsdeveloperxamarincomguidesiosadvancedtopicslimitationsreversecallbackshttpsdeveloperxamarincomguidesiosadvancedtopicslimitationsreversecallbacks"></a>MT3002: Ограничение AOT: Метод "*" должен быть статическим, так как он дополнен [MonoPInvokeCallback]. См. в разделе [https://developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](https://developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks)
 
 Это сообщение об ошибке поступает из AOT-компилятор.
 
@@ -1690,7 +1690,7 @@ Parameter name: instruction
 
 <a name="MT3004" />
 
-### <a name="mt3004-could-not-aot-the-assembly--because-it-doesnt-exist"></a>MT3004: Не удалось не сборки AOT "*", так как он не существует.
+### <a name="mt3004-could-not-aot-the-assembly--because-it-doesnt-exist"></a>MT3004: Может не сборки AOT "*", так как он не существует.
 
 <a name="MT3005" />
 
@@ -1708,7 +1708,7 @@ Parameter name: instruction
 
 <a name="MT3007" />
 
-### <a name="mt3007-debug-info-files-mdb-will-not-be-loaded-when-llvm-is-enabled"></a>MT3007: Файлы сведений отладки (*.mdb) не будет загружен при включении llvm.
+### <a name="mt3007-debug-info-files-mdb-will-not-be-loaded-when-llvm-is-enabled"></a>MT3007: Не удалось загрузить файлы сведений отладки (*.mdb), при включении llvm.
 
 <a name="MT3008" />
 
@@ -1721,9 +1721,9 @@ Parameter name: instruction
 <!--- 3009 used by mmp -->
 <!--- 3010 used by mmp -->
 
-## <a name="mt4xxx-code-generation-error-messages"></a>MT4xxx: Сообщения об ошибках код создания
+## <a name="mt4xxx-code-generation-error-messages"></a>MT4xxx: Сообщения об ошибках создания кода
 
-### <a name="mt40xx-main"></a>MT40xx: Main
+### <a name="mt40xx-main"></a>MT40xx: Главная ветвь
 
 <!--
  MT4xxx code generation
@@ -1742,7 +1742,7 @@ Parameter name: instruction
 
 Не удалось скомпилировать созданный код для методов P/Invoke. Отправьте отчет об ошибках в [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
-### <a name="mt41xx-registrar"></a>MT41xx: регистратора
+### <a name="mt41xx-registrar"></a>MT41xx: регистратор
 
 <!--
   MT41xx registrar.m
@@ -1760,11 +1760,11 @@ Parameter name: instruction
 
 ### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: Регистратор найден недопустимый тип `*` в сигнатуре для метода `*`. Взамен рекомендуется использовать `*`.
 
-Это в настоящее время происходит только с одним типом: System.DateTime. Вместо этого используйте эквивалентные Objective-C (NSDate).
+Это в настоящее время происходит только из одного типа: System.DateTime. Вместо этого используйте эквивалентные Objective-C (NSDate).
 
 <a name="MT4103" />
 
-### <a name="mt4103-the-registrar-found-an-invalid-type--in-signature-for-method--the-type-implements-inativeobject-but-does-not-have-a-constructor-that-takes-two-intptr-bool-arguments"></a>MT4103: Регистратор найден недопустимый тип `*` в сигнатуре для метода `*`: тип реализует INativeObject, но не имеет конструктор, который принимает два (IntPtr, bool) аргументов
+### <a name="mt4103-the-registrar-found-an-invalid-type--in-signature-for-method--the-type-implements-inativeobject-but-does-not-have-a-constructor-that-takes-two-intptr-bool-arguments"></a>MT4103: Регистратор найден недопустимый тип `*` в сигнатуре для метода `*`: Тип реализует INativeObject, но не имеет конструктор, который принимает два (IntPtr, bool) аргументов
 
 Это происходит, когда регистратор возникнуть тип в сигнатуре с параметрами, упомянутых выше. Регистратор может потребоваться создать новые экземпляры типа, и в этом случае требуется конструктор с (IntPtr, bool) подпись - первый аргумент (IntPtr) указывает управляемых дескриптор, а на втором, если вызывающий объект передает владение машинный код Дескриптор (если это значение равно false, «сохранить» будет вызван для объекта).
 
@@ -1840,7 +1840,7 @@ Parameter name: instruction
 
 <a name="MT4117" />
 
-### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: Найти регистратор Несовпадение подписей в методе "*.*"-селектор указывает метод принимает * параметров, а управляемый метод * параметров.
+### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: Регистратор обнаружил несоответствие сигнатуры в методе "*.*"-селектор указывает метод принимает * параметров, а управляемый метод * параметров.
 
 <a name="MT4118" />
 
@@ -1876,7 +1876,7 @@ Parameter name: instruction
 
 <a name="MT4125" />
 
-### <a name="mt4125-the-registrar-found-an-invalid-type--in-signature-for-method--the-interface-must-have-a-protocol-attribute-specifying-its-wrapper-type"></a>MT4125: Регистратор найден недопустимый тип "\*«в сигнатуре для метода»\*": интерфейс должен иметь атрибут протокола, указывая его тип оболочки.
+### <a name="mt4125-the-registrar-found-an-invalid-type--in-signature-for-method--the-interface-must-have-a-protocol-attribute-specifying-its-wrapper-type"></a>MT4125: Регистратор найден недопустимый тип "\*«в сигнатуре для метода»\*": Интерфейс должен иметь атрибут протокола, указывая его тип оболочки.
 
 <a name="MT4126" />
 
@@ -1908,7 +1908,7 @@ Parameter name: instruction
 
 <a name="MT4133" />
 
-### <a name="mt4133-cannot-construct-an-instance-of-the-type--from-objective-c-because-the-type-is-generic-runtime-exception"></a>MT4133: Не удается создать экземпляр типа "*" из Objective-C, так как тип является универсальным. [Исключение времени выполнения]
+### <a name="mt4133-cannot-construct-an-instance-of-the-type--from-objective-c-because-the-type-is-generic-runtime-exception"></a>MT4133: Невозможно создать экземпляр типа "*" из Objective-C, так как тип является универсальным. [Исключение времени выполнения]
 
 <a name="MT4134" />
 
@@ -1916,7 +1916,7 @@ Parameter name: instruction
 
 <a name="MT4135" />
 
-### <a name="mt4135-the-member--has-an-export-attribute-that-doesnt-specify-a-selector-a-selector-is-required"></a>MT4135: Элемент "\*.\*" имеет атрибут экспорта, который не указывает селектора. Имя является обязательным.
+### <a name="mt4135-the-member--has-an-export-attribute-that-doesnt-specify-a-selector-a-selector-is-required"></a>MT4135: Член "\*.\*" имеет атрибут экспорта, который не указывает селектора. Имя является обязательным.
 
 <a name="MT4136" />
 
@@ -1934,7 +1934,7 @@ Parameter name: instruction
 
 <a name="MT4140" />
 
-### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: Найти регистратор Несовпадение подписей в методе "*.*"-селектор указывает метод с переменным числом аргументов принимает * параметров, а управляемый метод * параметров.
+### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: Регистратор обнаружил несоответствие сигнатуры в методе "*.*"-селектор указывает метод с переменным числом аргументов принимает * параметров, а управляемый метод * параметров.
 
 <a name="MT4141" />
 
@@ -1998,7 +1998,7 @@ class MyCustomNSObject : MyNSObject
 
 <a name="MT4146" />
 
-### <a name="mt4146-the-name-parameter-of-the-registrar-attribute-on-the-class---contains-an-invalid-character--"></a>MT4146: Имя параметра атрибута регистратора в классе\*"("\*") содержит недопустимый символ:"\*"(\*).
+### <a name="mt4146-the-name-parameter-of-the-registrar-attribute-on-the-class---contains-an-invalid-character--"></a>MT4146: Параметр Name регистратора атрибута класса\*"("\*") содержит недопустимый символ:"\*"(\*).
 
 Имя класса Objectice C не может содержать пробелы, это означает, что `Register` атрибут на соответствующий управляемый класс не может иметь `Name` либо параметр не может содержать пробелы.
 
@@ -2062,7 +2062,7 @@ class MyCustomNSObject : MyNSObject
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: Регистратор найден неподдерживаемый структуру "\*": все поля в структуре также должны быть структур (поле "\*«с типом»{2}" не является структурой).
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: Регистратор найден неподдерживаемый структуру "\*": Все поля в структуре также должны быть структур (поле "\*«с типом»{2}" не является структурой).
 
 Регистратор найти структуру с неподдерживаемые поля.
 
@@ -2148,9 +2148,9 @@ Xamarin.iOS не удается создать функцию-оболочку P
 [1]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS
 [2]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS&component=General&bug_severity=enhancement
 
-## <a name="mt5xxx-gcc-and-toolchain-error-messages"></a>MT5xxx: GCC и цепочки инструментов сообщения об ошибках
+## <a name="mt5xxx-gcc-and-toolchain-error-messages"></a>MT5xxx: Сообщения об ошибках GCC и цепочки инструментов
 
-### <a name="mt51xx-compilation"></a>MT51xx: компиляция
+### <a name="mt51xx-compilation"></a>MT51xx: Компиляция
 
 <!--
  MT5xxx GCC and toolchain
@@ -2181,7 +2181,7 @@ Xamarin.iOS не удается создать функцию-оболочку P
 
 Это обычно указывает на ошибку в Xamarin.iOS; можно зарегистрировать ошибку на [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
-### <a name="mt52xx-linking"></a>MT52xx: связывание
+### <a name="mt52xx-linking"></a>MT52xx: Компоновка
 
 <!--
   MT52xx linking
@@ -2189,25 +2189,25 @@ Xamarin.iOS не удается создать функцию-оболочку P
 
 <a name="MT5201" />
 
-### <a name="mt5201-native-linking-failed-please-review-the-build-log-and-the-user-flags-provided-to-gcc-"></a>MT5201: Собственный связывание не удалось. Просмотрите журнал сборки и флаги пользователя, предоставленный gcc: *
+### <a name="mt5201-native-linking-failed-please-review-the-build-log-and-the-user-flags-provided-to-gcc-"></a>MT5201: Не удалось собственного связывания. Просмотрите журнал сборки и флаги пользователя, предоставленный gcc: *
 
 <a name="MT5202" />
 
-### <a name="mt5202-native-linking-failed-please-review-the-build-log"></a>MT5202: Собственный связывание не удалось. Просмотрите журнал построения.
+### <a name="mt5202-native-linking-failed-please-review-the-build-log"></a>MT5202: Не удалось собственного связывания. Просмотрите журнал построения.
 
 <a name="MT5203" />
 
-### <a name="mt5203-native-linking-warning-"></a>MT5203: Машинный код связывание предупреждение: *
+### <a name="mt5203-native-linking-warning-"></a>MT5203: Машинный код, связывание предупреждение: *
 
 <!--- 5204-5208 are not used -->
 
 <a name="MT5209" />
 
-### <a name="mt5209-native-linking-error-"></a>MT5209: Машинный код связывание ошибка: *
+### <a name="mt5209-native-linking-error-"></a>MT5209: Машинный код, связывание ошибка: *
 
 <a name="MT5210" />
 
-### <a name="mt5210-native-linking-failed-undefined-symbol--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-are-properly-linked-in"></a>MT5210: Собственный связывание не удалось неопределенный символ: *. Убедитесь, что содержатся ссылки на все необходимые платформы, и собственные библиотеки должным образом связаны в.
+### <a name="mt5210-native-linking-failed-undefined-symbol--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-are-properly-linked-in"></a>MT5210: Машинный код, связывание сбой, неопределенных символов: *. Убедитесь, что содержатся ссылки на все необходимые платформы, и собственные библиотеки должным образом связаны в.
 
 Это происходит, когда собственный компоновщику не удается найти символ, который используется где-нибудь. Существует несколько причин, что это может произойти:
 
@@ -2230,7 +2230,7 @@ Xamarin.iOS не удается создать функцию-оболочку P
 
 <a name="MT5211" />
 
-### <a name="mt5211-native-linking-failed-undefined-objective-c-class--the-symbol--could-not-be-found-in-any-of-the-libraries-or-frameworks-linked-with-your-application"></a>MT5211: Собственный связывание не удалось неопределенный класс Objective-C: \*. Символ "\*" не удалось найти в любом библиотек и платформ, связанная с вашим приложением.
+### <a name="mt5211-native-linking-failed-undefined-objective-c-class--the-symbol--could-not-be-found-in-any-of-the-libraries-or-frameworks-linked-with-your-application"></a>MT5211: Машинный код, связывание сбой, неопределенный класс Objective-C: \*. Символ "\*" не удалось найти в любом библиотек и платформ, связанная с вашим приложением.
 
 Это происходит, когда собственный компоновщику не удается найти класс, Objective-C, который используется где-нибудь. Это может произойти по нескольким причинам: так же, как [MT5210](#MT5210) и Кроме того:
 
@@ -2245,7 +2245,7 @@ Xamarin.iOS не удается создать функцию-оболочку P
 
 <a name="MT5212" />
 
-### <a name="mt5212-native-linking-failed-duplicate-symbol-"></a>MT5212: Собственный связывание не удалось повторяющегося символа: *.
+### <a name="mt5212-native-linking-failed-duplicate-symbol-"></a>MT5212: Машинный код, связывание сбой, Дублировать символ: *.
 
 Это происходит, когда собственный компоновщик обнаруживает повторяющиеся символы между все собственные библиотеки. После этой ошибки может существовать один или несколько [MT5213](#MT5213) ошибки, связанные с расположение для каждого вхождения символа. Возможные причины этой ошибки:
 
@@ -2302,13 +2302,13 @@ Xamarin.iOS не удается создать функцию-оболочку P
 
 <a name="MT5213" />
 
-### <a name="mt5213-duplicate-symbol-in--location-related-to-previous-error"></a>MT5213: Дублировать символ в: * (расположение связанного с предыдущей ошибкой)
+### <a name="mt5213-duplicate-symbol-in--location-related-to-previous-error"></a>MT5213: Повторяющиеся символ в: * (расположение связанного с предыдущей ошибкой)
 
 Эта ошибка выдается только совместно с параметром [MT5212](#MT5212). См. в разделе [MT5212](#MT5212) Дополнительные сведения.
 
 <a name="MT5214" />
 
-### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: Собственный связывание не удалось неопределенный символ: *. Была ссылка на этот символ управляемого элемента *. Убедитесь, что все необходимые платформы были на которые имеются ссылки и собственные библиотеки связанной.
+### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: Машинный код, связывание сбой, неопределенных символов: *. Была ссылка на этот символ управляемого элемента *. Убедитесь, что все необходимые платформы были на которые имеются ссылки и собственные библиотеки связанной.
 
 Эта ошибка выдается в том случае, когда управляемый код содержит P/Invoke для собственный метод, который не существует. Пример:
 
@@ -2334,7 +2334,7 @@ class MyImports {
 
 <a name="MT5216" />
 
-### <a name="mt5216-native-linking-failed-for--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5216: Собственный связывание сбой для *. Отправьте отчет об ошибках в http://bugzilla.xamarin.com
+### <a name="mt5216-native-linking-failed-for--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5216: Связывание собственного сбой для *. Отправьте отчет об ошибках в http://bugzilla.xamarin.com
 
 Эта ошибка выдается при компоновке выходные данные компилятора AOT.
 
@@ -2342,7 +2342,7 @@ class MyImports {
 
 <a name="MT5217" />
 
-### <a name="mt5217-native-linking-possibly-failed-because-the-linker-command-line-was-too-long--characters"></a>MT5217: Возможно собственного связывание не удалось, так как имеет слишком большую длину командной строки компоновщика (* символов).
+### <a name="mt5217-native-linking-possibly-failed-because-the-linker-command-line-was-too-long--characters"></a>MT5217: Возможно собственного связывание сбой, так как имеет слишком большую длину командной строки компоновщика (* символов).
 
 Собственный связывание не удалось, а возможно, это произошло потому, что компоновщик команду имеет слишком большую длину.
 
@@ -2368,7 +2368,7 @@ class MyImports {
 
 <a name="MT5218" />
 
-### <a name="mt5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MT5218: Не может игнорировать динамический символ {символ} (--игнорировать dynamic-symbol = {symbol}), так как он не был обнаружен в качестве динамического символа.
+### <a name="mt5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MT5218: Нельзя не учитывать динамический символ {символ} (--игнорировать dynamic-symbol = {symbol}), так как он не был обнаружен в качестве динамического символа.
 
 Аргумент командной строки `--ignore-dynamic-symbol=symbol` было передано, но этот символ не является символ, который был распознан как динамический символ, который должен сохраняться вручную.
 
@@ -2436,7 +2436,7 @@ class MyImports {
 
 <a name="MT6001" />
 
-### <a name="mt6001-running-version-of-cecil-doesnt-support-assembly-stripping"></a>MT6001: Запущена версия Сесил не поддерживает удаление сборки
+### <a name="mt6001-running-version-of-cecil-doesnt-support-assembly-stripping"></a>MT6001: Выполняемая версия Сесил не поддерживает удаление сборки
 
 <a name="MT6002" />
 
@@ -2450,7 +2450,7 @@ class MyImports {
 
 Произошла ошибка безопасности при удаление отладочных символов из приложения.
 
-## <a name="mt7xxx-msbuild-error-messages"></a>MT7xxx: MSBuild, сообщения об ошибках
+## <a name="mt7xxx-msbuild-error-messages"></a>MT7xxx: Сообщения об ошибках MSBuild
 
 <!--
  MT7xxx msbuild errors
@@ -2460,7 +2460,7 @@ class MyImports {
 
 ### <a name="mt7001-could-not-resolve-host-ips-for-wifi-debugger-settings"></a>MT7001: Не удалось разрешить IP-адресов узлов для параметров Wi-Fi отладчика.
 
-*Задача MSBuild: DetectDebugNetworkConfigurationTaskBase*
+*Задача MSBuild. DetectDebugNetworkConfigurationTaskBase*
 
 Действия по устранению неполадок:
 
@@ -2471,267 +2471,267 @@ class MyImports {
 
 <a name="MT7002" />
 
-### <a name="mt7002-this-machine-does-not-have-any-network-adapters-this-is-required-when-debugging-or-profiling-on-device-over-wifi"></a>MT7002: Этот компьютер не имеет ни одного сетевого адаптера. Это необходимо, при отладке или профилировании на устройстве через Wi-Fi.
+### <a name="mt7002-this-machine-does-not-have-any-network-adapters-this-is-required-when-debugging-or-profiling-on-device-over-wifi"></a>MT7002: Этот компьютер не поддерживает все сетевые адаптеры. Это необходимо, при отладке или профилировании на устройстве через Wi-Fi.
 
-*Задача MSBuild: DetectDebugNetworkConfigurationTaskBase*
+*Задача MSBuild. DetectDebugNetworkConfigurationTaskBase*
 
 <a name="MT7003" />
 
 ### <a name="mt7003-the-app-extension--does-not-contain-an-infoplist"></a>MT7003: Расширение приложения "*" не содержит Info.plist.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7004" />
 
 ### <a name="mt7004-the-app-extension--does-not-specify-a-cfbundleidentifier"></a>MT7004: Расширение приложения "*" не соответствует CFBundleIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7005" />
 
 ### <a name="mt7005-the-app-extension--does-not-specify-a-cfbundleexecutable"></a>MT7005: Расширение приложения "*" не соответствует CFBundleExecutable.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7006" />
 
 ### <a name="mt7006-the-app-extension--has-an-invalid-cfbundleidentifier--it-does-not-begin-with-the-main-app-bundles-cfbundleidentifier-"></a>MT7006: Расширение приложения "\*" имеет недопустимый CFBundleIdentifier (\*), он не начинается с CFBundleIdentifier набор основных приложений (*).
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7007" />
 
 ### <a name="mt7007-the-app-extension--has-a-cfbundleidentifier--that-ends-with-the-illegal-suffix-key"></a>MT7007: Расширение приложения "\*" имеет CFBundleIdentifier (\*), заканчивается недопустимый суффиксом «.key».
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7008" />
 
 ### <a name="mt7008-the-app-extension--does-not-specify-a-cfbundleshortversionstring"></a>MT7008: Расширение приложения "*" не соответствует CFBundleShortVersionString.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7009" />
 
 ### <a name="mt7009-the-app-extension--has-an-invalid-infoplist-it-does-not-contain-an-nsextension-dictionary"></a>MT7009: Расширение приложения "*" имеет недопустимый Info.plist: он не содержит словарю NSExtension.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7010" />
 
 ### <a name="mt7010-the-app-extension--has-an-invalid-infoplist-the-nsextension-dictionary-does-not-contain-an-nsextensionpointidentifier-value"></a>MT7010: Расширение приложения "*" имеет недопустимый Info.plist: словарь NSExtension не содержит значение NSExtensionPointIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7011" />
 
-### <a name="mt7011-the-watchkit-extension--has-an-invalid-infoplist-the-nsextension-dictionary-does-not-contain-an-nsextensionattributes-dictionary"></a>MT7011: Расширение WatchKit "*" имеет недопустимый Info.plist: словарь NSExtension не содержит словарю NSExtensionAttributes.
+### <a name="mt7011-the-watchkit-extension--has-an-invalid-infoplist-the-nsextension-dictionary-does-not-contain-an-nsextensionattributes-dictionary"></a>MT7011: Расширения WatchKit "*" имеет недопустимый Info.plist: словарь NSExtension не содержит словарю NSExtensionAttributes.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7012" />
 
-### <a name="mt7012-the-watchkit-extension--does-not-have-exactly-one-watch-app"></a>MT7012: Расширение WatchKit "*" не имеет ровно один приложении для Apple watch.
+### <a name="mt7012-the-watchkit-extension--does-not-have-exactly-one-watch-app"></a>MT7012: Расширения WatchKit "*" не имеет ровно один приложении для Apple watch.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7013" />
 
-### <a name="mt7013-the-watchkit-extension--has-an-invalid-infoplist-uirequireddevicecapabilities-must-contain-the-watch-companion-capability"></a>MT7013: Расширение WatchKit "*" имеет недопустимый Info.plist: UIRequiredDeviceCapabilities должен содержать функцию «watch-помощник по поиску».
+### <a name="mt7013-the-watchkit-extension--has-an-invalid-infoplist-uirequireddevicecapabilities-must-contain-the-watch-companion-capability"></a>MT7013: Расширения WatchKit "*" имеет недопустимый Info.plist: UIRequiredDeviceCapabilities должен содержать функцию «watch-помощник по поиску».
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7014" />
 
 ### <a name="mt7014-the-watch-app--does-not-contain-an-infoplist"></a>MT7014: Приложение Контрольные значения "*" не содержит Info.plist.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7015" />
 
 ### <a name="mt7015-the-watch-app--does-not-specify-a-cfbundleidentifier"></a>MT7015: Приложение Контрольные значения "*" не соответствует CFBundleIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7016" />
 
-### <a name="mt7016-the-watch-app--has-an-invalid-cfbundleidentifier--it-does-not-begin-with-the-main-app-bundles-cfbundleidentifier-"></a>MT7016: Приложении для Apple Watch "\*" имеет недопустимый CFBundleIdentifier (\*), он не начинается с CFBundleIdentifier набор основных приложений (*).
+### <a name="mt7016-the-watch-app--has-an-invalid-cfbundleidentifier--it-does-not-begin-with-the-main-app-bundles-cfbundleidentifier-"></a>MT7016: Приложение Watch "\*" имеет недопустимый CFBundleIdentifier (\*), он не начинается с CFBundleIdentifier набор основных приложений (*).
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7017" />
 
-### <a name="mt7017-the-watch-app--does-not-have-a-valid-uidevicefamily-value-expected-watch-4-but-found--"></a>MT7017: Приложении для Apple Watch "\*" не имеет допустимое значение UIDeviceFamily. Ожидаемый «Контрольные значения (4)», но обнаружен "\* (*)".
+### <a name="mt7017-the-watch-app--does-not-have-a-valid-uidevicefamily-value-expected-watch-4-but-found--"></a>MT7017: Приложение Watch "\*" не имеет допустимое значение UIDeviceFamily. Ожидаемый «Контрольные значения (4)», но обнаружен "\* (*)".
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7018" />
 
 ### <a name="mt7018-the-watch-app--does-not-specify-a-cfbundleexecutable"></a>MT7018: Приложение Контрольные значения "*" не соответствует CFBundleExecutable
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7019" />
 
-### <a name="mt7019-the-watch-app--has-an-invalid-wkcompanionappbundleidentifier-value--it-does-not-match-the-main-app-bundles-cfbundleidentifier-"></a>MT7019: Приложении для Apple Watch "\*" имеет недопустимое значение WKCompanionAppBundleIdentifier ("\*"), не соответствует CFBundleIdentifier набор основных приложений ("*").
+### <a name="mt7019-the-watch-app--has-an-invalid-wkcompanionappbundleidentifier-value--it-does-not-match-the-main-app-bundles-cfbundleidentifier-"></a>MT7019: Приложение Watch "\*" имеет недопустимое значение WKCompanionAppBundleIdentifier ("\*"), не соответствует CFBundleIdentifier набор основных приложений ("*").
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7020" />
 
 ### <a name="mt7020-the-watch-app--has-an-invalid-infoplist-the-wkwatchkitapp-key-must-be-present-and-have-a-value-of-true"></a>MT7020: Приложение Контрольные значения "*" имеет недопустимый Info.plist: ключ WKWatchKitApp должен присутствовать и иметь значение «true».
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7021" />
 
 ### <a name="mt7021-the-watch-app--has-an-invalid-infoplist-the-lsrequiresiphoneos-key-must-not-be-present"></a>MT7021: Приложение Контрольные значения "*" имеет недопустимый Info.plist: LSRequiresIPhoneOS ключ не должен присутствовать.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7022" />
 
 ### <a name="mt7022-the-watch-app--does-not-contain-a-watch-extension"></a>MT7022: Приложение Контрольные значения "*" не содержит расширение просмотра.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7023" />
 
 ### <a name="mt7023-the-watch-extension--does-not-contain-an-infoplist"></a>MT7023: Расширение Контрольные значения "*" не содержит Info.plist.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7024" />
 
 ### <a name="mt7024-the-watch-extension--does-not-specify-a-cfbundleidentifier"></a>MT7024: Расширение Контрольные значения "*" не соответствует CFBundleIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7025" />
 
 ### <a name="mt7025-the-watch-extension--does-not-specify-a-cfbundleexecutable"></a>MT7025: Расширение Контрольные значения "*" не соответствует CFBundleExecutable.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7026" />
 
 ### <a name="mt7026-the-watch-extension--has-an-invalid-cfbundleidentifier--it-does-not-begin-with-the-main-app-bundles-cfbundleidentifier-"></a>MT7026: Расширение Контрольные значения "\*" имеет недопустимый CFBundleIdentifier (\*), он не начинается с CFBundleIdentifier набор основных приложений (*).
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7027" />
 
 ### <a name="mt7027-the-watch-extension--has-a-cfbundleidentifier--that-ends-with-the-illegal-suffix-key"></a>MT7027: Расширение Контрольные значения "\*" имеет CFBundleIdentifier (\*), заканчивается недопустимый суффиксом «.key».
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7028" />
 
 ### <a name="mt7028-the-watch-extension--has-an-invalid-infoplist-it-does-not-contain-an-nsextension-dictionary"></a>MT7028: Расширение Контрольные значения "*" имеет недопустимый Info.plist: он не содержит словарю NSExtension.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7029" />
 
 ### <a name="mt7029-the-watch-extension--has-an-invalid-infoplist-the-nsextensionpointidentifier-must-be-comapplewatchkit"></a>MT7029: Расширение Контрольные значения "*" имеет недопустимый Info.plist: NSExtensionPointIdentifier должно быть «com.apple.watchkit».
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7030" />
 
 ### <a name="mt7030-the-watch-extension--has-an-invalid-infoplist-the-nsextension-dictionary-must-contain-nsextensionattributes"></a>MT7030: Расширение Контрольные значения "*" имеет недопустимый Info.plist: словарь NSExtension должен содержать NSExtensionAttributes.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7031" />
 
 ### <a name="mt7031-the-watch-extension--has-an-invalid-infoplist-the-nsextensionattributes-dictionary-must-contain-a-wkappbundleidentifier"></a>MT7031: Расширение Контрольные значения "*" имеет недопустимый Info.plist: словарь NSExtensionAttributes должен содержать WKAppBundleIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7032" />
 
-### <a name="mt7032-the-watchkit-extension--has-an-invalid-infoplist-uirequireddevicecapabilities-should-not-contain-the-watch-companion-capability"></a>MT7032: Расширение WatchKit "*" имеет недопустимый Info.plist: UIRequiredDeviceCapabilities не должен содержать функцию «watch-помощник по поиску».
+### <a name="mt7032-the-watchkit-extension--has-an-invalid-infoplist-uirequireddevicecapabilities-should-not-contain-the-watch-companion-capability"></a>MT7032: Расширения WatchKit "*" имеет недопустимый Info.plist: UIRequiredDeviceCapabilities не должно содержать функцию «watch-помощник по поиску».
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7033" />
 
 ### <a name="mt7033-the-watch-app--does-not-contain-an-infoplist"></a>MT7033: Приложение Контрольные значения "*" не содержит Info.plist.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7034" />
 
 ### <a name="mt7034-the-watch-app--does-not-specify-a-cfbundleidentifier"></a>MT7034: Приложение Контрольные значения "*" не соответствует CFBundleIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7035" />
 
-### <a name="mt7035-the-watch-app--does-not-have-a-valid-uidevicefamily-value-expected--but-found--"></a>MT7035: Приложении для Apple Watch "\*" не имеет допустимое значение UIDeviceFamily. Ожидалось "\*«, обнаружено»\* (\*)".
+### <a name="mt7035-the-watch-app--does-not-have-a-valid-uidevicefamily-value-expected--but-found--"></a>MT7035: Приложение Watch "\*" не имеет допустимое значение UIDeviceFamily. Ожидалось "\*«, обнаружено»\* (\*)".
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7036" />
 
 ### <a name="mt7036-the-watch-app--does-not-specify-a-cfbundleexecutable"></a>MT7036: Приложение Контрольные значения "*" не соответствует CFBundleExecutable.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7037" />
 
-### <a name="mt7037-the-watchkit-extension-extensionname-has-an-invalid-wkappbundleidentifier-value--it-does-not-match-the-watch-apps-cfbundleidentifier-"></a>MT7037: Расширение WatchKit «{extensionName}» имеет недопустимое значение WKAppBundleIdentifier ("\*"), не соответствует CFBundleIdentifier приложение Watch ("\*").
+### <a name="mt7037-the-watchkit-extension-extensionname-has-an-invalid-wkappbundleidentifier-value--it-does-not-match-the-watch-apps-cfbundleidentifier-"></a>MT7037: Расширения WatchKit «{extensionName}» имеет недопустимое значение WKAppBundleIdentifier ("\*"), не соответствует CFBundleIdentifier приложение Watch ("\*").
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7038" />
 
 ### <a name="mt7038-the-watch-app--has-an-invalid-infoplist-the-wkcompanionappbundleidentifier-must-exist-and-must-match-the-main-app-bundles-cfbundleidentifier"></a>MT7038: Приложение Контрольные значения "*" имеет недопустимый Info.plist: WKCompanionAppBundleIdentifier должна существовать и соответствовать CFBundleIdentifier набор основных приложений.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7039" />
 
 ### <a name="mt7039-the-watch-app--has-an-invalid-infoplist-the-lsrequiresiphoneos-key-must-not-be-present"></a>MT7039: Приложение Контрольные значения "*" имеет недопустимый Info.plist: LSRequiresIPhoneOS ключ не должен присутствовать.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7040" />
 
-### <a name="mt7040-the-app-bundle-appbundlepath-does-not-contain-an-infoplist"></a>MT7040: Набора приложений {AppBundlePath} не содержит Info.plist.
+### <a name="mt7040-the-app-bundle-appbundlepath-does-not-contain-an-infoplist"></a>MT7040: Набор приложений {AppBundlePath} не содержит Info.plist.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7041" />
 
 ### <a name="mt7041-main-infoplist-path-does-not-specify-a-cfbundleidentifier"></a>MT7041: Путь Main Info.plist не содержит CFBundleIdentifier.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7042" />
 
 ### <a name="mt7042-main-infoplist-path-does-not-specify-a-cfbundleexecutable"></a>MT7042: Путь Main Info.plist не содержит CFBundleExecutable.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7043" />
 
 ### <a name="mt7043-main-infoplist-path-does-not-specify-a-cfbundlesupportedplatforms"></a>MT7043: Путь Main Info.plist не содержит CFBundleSupportedPlatforms.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7044" />
 
 ### <a name="mt7044-main-infoplist-path-does-not-specify-a-uidevicefamily"></a>MT7044: Путь Main Info.plist не содержит UIDeviceFamily.
 
-*Задача MSBuild: ValidateAppBundleTaskBase*
+*Задача MSBuild. ValidateAppBundleTaskBase*
 
 <a name="MT7045" />
 
 ### <a name="mt7045-unrecognized-format-"></a>MT7045: Нераспознанный формат: *.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 Где * может быть:
 
@@ -2746,137 +2746,137 @@ class MyImports {
 
 <a name="MT7046" />
 
-### <a name="mt7046-add-entry--incorrectly-specified"></a>MT7046: Добавить: запись, *, неправильно указанный.
+### <a name="mt7046-add-entry--incorrectly-specified"></a>MT7046: Добавить: Запись, *, неправильно указанный.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7047" />
 
-### <a name="mt7047-add-entry--contains-invalid-array-index"></a>MT7047: Добавить: запись, *, содержит недопустимый индекс массива.
+### <a name="mt7047-add-entry--contains-invalid-array-index"></a>MT7047: Добавить: Запись, *, содержит недопустимый индекс массива.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7048" />
 
-### <a name="mt7048-add--entry-already-exists"></a>MT7048: Добавить: * запись уже существует.
+### <a name="mt7048-add--entry-already-exists"></a>MT7048: Добавьте: * запись уже существует.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7049" />
 
-### <a name="mt7049-add-cant-add-entry--to-parent"></a>MT7049: Добавить: не удается добавить запись, *, в качестве родительского.
+### <a name="mt7049-add-cant-add-entry--to-parent"></a>MT7049: Добавить: Не удается добавить запись, *, в качестве родительского.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7050" />
 
-### <a name="mt7050-delete-cant-delete-entry--from-parent"></a>MT7050: Удалить: не удается удалить запись, *, из родительского элемента.
+### <a name="mt7050-delete-cant-delete-entry--from-parent"></a>MT7050: Удаление: Не удается удалить запись, *, из родительского элемента.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7051" />
 
-### <a name="mt7051-delete-entry--contains-invalid-array-index"></a>MT7051: Удалить: запись, *, содержит недопустимый индекс массива.
+### <a name="mt7051-delete-entry--contains-invalid-array-index"></a>MT7051: Удаление: Запись, *, содержит недопустимый индекс массива.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7052" />
 
-### <a name="mt7052-delete-entry--does-not-exist"></a>MT7052: Удалить: запись, *, не существует.
+### <a name="mt7052-delete-entry--does-not-exist"></a>MT7052: Удаление: Запись, *, не существует.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7053" />
 
-### <a name="mt7053-import-entry--incorrectly-specified"></a>MT7053: Импортировать: запись, *, неправильно указанный.
+### <a name="mt7053-import-entry--incorrectly-specified"></a>MT7053: Импорт: Запись, *, неправильно указанный.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7054" />
 
-### <a name="mt7054-import-entry--contains-invalid-array-index"></a>MT7054: Импортировать: запись, *, содержит недопустимый индекс массива.
+### <a name="mt7054-import-entry--contains-invalid-array-index"></a>MT7054: Импорт: Запись, *, содержит недопустимый индекс массива.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7055" />
 
-### <a name="mt7055-import-error-reading-file-"></a>MT7055: Импортировать: ошибка при чтении файла: *.
+### <a name="mt7055-import-error-reading-file-"></a>MT7055: Импорт: Ошибка при чтении файла: *.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7056" />
 
-### <a name="mt7056-import-cant-add-entry--to-parent"></a>MT7056: Импортировать: не удается добавить запись, *, в качестве родительского.
+### <a name="mt7056-import-cant-add-entry--to-parent"></a>MT7056: Импорт: Не удается добавить запись, *, в качестве родительского.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7057" />
 
-### <a name="mt7057-merge-cant-add-array-entries-to-dict"></a>MT7057: Слияние: невозможно добавить dict. записей массива
+### <a name="mt7057-merge-cant-add-array-entries-to-dict"></a>MT7057: Слияние: Невозможно добавить dict. записей массива
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7058" />
 
-### <a name="mt7058-merge-specified-entry-must-be-a-container"></a>MT7058: Слияние: указан, операция должна быть контейнер.
+### <a name="mt7058-merge-specified-entry-must-be-a-container"></a>MT7058: Слияние: Указанная запись должен указывать на контейнер.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7059" />
 
-### <a name="mt7059-merge-entry--contains-invalid-array-index"></a>MT7059: Слияние: запись, *, содержит недопустимый индекс массива.
+### <a name="mt7059-merge-entry--contains-invalid-array-index"></a>MT7059: Слияние: Запись, *, содержит недопустимый индекс массива.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7060" />
 
-### <a name="mt7060-merge-entry--does-not-exist"></a>MT7060: Слияние: запись, *, не существует.
+### <a name="mt7060-merge-entry--does-not-exist"></a>MT7060: Слияние: Запись, *, не существует.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7061" />
 
-### <a name="mt7061-merge-error-reading-file-"></a>MT7061: Слияние: ошибка при чтении файла: *.
+### <a name="mt7061-merge-error-reading-file-"></a>MT7061: Слияние: Ошибка при чтении файла: *.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7062" />
 
-### <a name="mt7062-set-entry--incorrectly-specified"></a>MT7062: Задайте: запись, *, неправильно указанный.
+### <a name="mt7062-set-entry--incorrectly-specified"></a>MT7062: Задайте следующие значения: Запись, *, неправильно указанный.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7063" />
 
-### <a name="mt7063-set-entry--contains-invalid-array-index"></a>MT7063: Задайте: запись, *, содержит недопустимый индекс массива.
+### <a name="mt7063-set-entry--contains-invalid-array-index"></a>MT7063: Задайте следующие значения: Запись, *, содержит недопустимый индекс массива.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7064" />
 
-### <a name="mt7064-set-entry--does-not-exist"></a>MT7064: Задайте: запись, *, не существует.
+### <a name="mt7064-set-entry--does-not-exist"></a>MT7064: Задайте следующие значения: Запись, *, не существует.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7065" />
 
-### <a name="mt7065-unknown-propertylist-editor-action-"></a>MT7065: Действие редактора Неизвестный PropertyList: *.
+### <a name="mt7065-unknown-propertylist-editor-action-"></a>MT7065: Неизвестное действие редактора PropertyList: *.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7066" />
 
 ### <a name="mt7066-error-loading--"></a>MT7066: Ошибка при загрузке "*": *.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
 <a name="MT7067" />
 
 ### <a name="mt7067-error-saving--"></a>MT7067: Ошибка при сохранении "*": *.
 
-*Задача MSBuild: PropertyListEditorTaskBase*
+*Задача MSBuild. PropertyListEditorTaskBase*
 
-## <a name="mt8xxx-runtime-error-messages"></a>MT8xxx: Сообщения среды выполнения
+## <a name="mt8xxx-runtime-error-messages"></a>MT8xxx: Сообщения об ошибках среды выполнения
 
 <!--
  MT8xxx runtime
@@ -2885,7 +2885,7 @@ class MyImports {
 
 <a name="MT8001" />
 
-### <a name="mt8001-version-mismatch-between-the-native-xamarinios-runtime-and-monotouchdll-please-reinstall-xamarinios"></a>MT8001: Несоответствие версий между собственной среды выполнения Xamarin.iOS и monotouch.dll. Переустановите Xamarin.iOS.
+### <a name="mt8001-version-mismatch-between-the-native-xamarinios-runtime-and-monotouchdll-please-reinstall-xamarinios"></a>MT8001: Несовпадение версий между собственной среды выполнения Xamarin.iOS и monotouch.dll. Переустановите Xamarin.iOS.
 
 <a name="MT8002" />
 
@@ -2913,7 +2913,7 @@ class MyImports {
 
 <a name="MT8008" />
 
-### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: Загруженную версию Xamarin.iOS.dll был скомпилирован для * bits, во время процесса * bits. Можно зарегистрировать ошибку на http://bugzilla.xamarin.com.
+### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: Загруженная версия Xamarin.iOS.dll был скомпилирован для * bits, во время процесса * bits. Можно зарегистрировать ошибку на http://bugzilla.xamarin.com.
 
 Это означает, что дает сбой в процессе построения. Можно зарегистрировать ошибку на [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
@@ -2931,7 +2931,7 @@ class MyImports {
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: Не удается найти делегат для атрибута block преобразования ([DelegateProxy]) для возвращаемого значения для метода *.*. Можно зарегистрировать ошибку на http://bugzilla.xamarin.com.
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: Не удалось найти делегат для атрибута block преобразования ([DelegateProxy]) для возвращаемого значения для метода *.*. Можно зарегистрировать ошибку на http://bugzilla.xamarin.com.
 
 Xamarin.iOS не удалось найти необходимый метод во время выполнения (для преобразования делегат в блоке).
 
@@ -3011,7 +3011,7 @@ Xamarin.iOS не удалось найти необходимый метод в�
 
 <a name="MT8023" />
 
-### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: Требуется свой объект экземпляра для создания закрытого универсального метода для открытого универсального метода: * (Справочник по маркерам: *). Отправьте отчет об ошибках в http://bugzilla.xamarin.com.
+### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: Объект экземпляра, необходимые для создания закрытого универсального метода для открытого универсального метода: * (Справочник по маркерам: *). Отправьте отчет об ошибках в http://bugzilla.xamarin.com.
 
 Это указывает на ошибку в Xamarin.iOS. Можно зарегистрировать ошибку на [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 

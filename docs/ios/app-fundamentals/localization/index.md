@@ -1,19 +1,14 @@
 ---
 title: Локализация в Xamarin.iOS
-description: В этом документе описываются возможности локализации в iOS и как использовать эти функции в приложениях Xamarin.iOS. В нем описывается языка, языкового стандарта, файлов строк, изображений при запуске и многое другое.
+description: 'В этом документе описываются возможности локализации в iOS и как использовать эти функции в приложениях Xamarin.iOS. В нем описывается языка, языкового стандарта, файлов строк, изображений при запуске и многое другое.'
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527265"
 ---
+
 # <a name="localization-in-xamarinios"></a>Локализация в Xamarin.iOS
 
 _В этом документе описываются функции локализации в пакет SDK для iOS и способ доступа к ним с помощью Xamarin._
@@ -22,11 +17,11 @@ _В этом документе описываются функции локал
 
 ## <a name="ios-platform-features"></a>функции платформы iOS
 
-В этом разделе описываются некоторые возможности локализации в iOS. Перейдите к разделу [разделу](#basics) определенный код и примеры.
+В этом разделе описываются некоторые возможности локализации в iOS. Перейдите к разделу [разделу](#Localization-basics-in-iOS) определенный код и примеры.
 
 ### <a name="language"></a>Язык
 
-Пользователям выбрать язык в **параметры** приложения. Этот параметр влияет на строки языка и изображений, отображаемых в операционной системе и приложениях. 
+Пользователям выбрать язык в **параметры** приложения. Этот параметр влияет на строки языка и изображений, отображаемых в операционной системе и приложениях.
 
 Чтобы определить язык, используемой в приложении, получить первый элемент `NSBundle.MainBundle.PreferredLocalizations`:
 
@@ -59,7 +54,7 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 > [!NOTE]
 > Mono (среда выполнения .NET основе Xamarin.iOS) и API для iOS компании Apple не поддерживают одинаковые наборы комбинаций языка или региона.
 > Из-за этого, имеется возможность выбрать комбинацию языка или региона в iOS **параметры** приложения, которые не сопоставлены допустимое значение в Mono. Например установка iPhone язык на английский и его регион в Испании приведет к следующим интерфейсам API для получения различных значений:
-> 
+>
 > - `CurrentThead.CurrentCulture`: en US (Mono API)
 > - `CurrentThread.CurrentUICulture`: en US (Mono API)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
@@ -76,14 +71,14 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Указания по умолчанию и поддерживаемые языки в файле Info.plist.
 
-В [технические вопросы И ответы QA1828: определение языка для приложений iOS](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple описывает, как iOS выбирает язык, используемый в приложении. Следующие факторы влияют на язык, который отображается:
+В [технические вопросы И ответы QA1828: Определение языка для приложений iOS](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple описывает, как iOS выбирает язык, используемый в приложении. Следующие факторы влияют на язык, который отображается:
 
 - Пользователь Предпочитаемые языки (в **параметры** приложения)
 - Локализации, в состав приложения (.lproj папки)
 - `CFBundleDevelopmentRegion` (**Info.plist** значение, указывающее язык по умолчанию для приложения)
 - `CFBundleLocalizations` (**Info.plist** массиве, указывающий все поддерживаемые локализации)
 
-Как указано в технические вопросы И ответы, `CFBundleDevelopmentRegion` представляет регион по умолчанию и язык приложения. Если приложение не поддерживает явным образом любой из предпочитаемых языков пользователя, он будет использовать язык, указанный по этому полю. 
+Как указано в технические вопросы И ответы, `CFBundleDevelopmentRegion` представляет регион по умолчанию и язык приложения. Если приложение не поддерживает явным образом любой из предпочитаемых языков пользователя, он будет использовать язык, указанный по этому полю.
 
 > [!IMPORTANT]
 > iOS 11 применяет этот механизм выбора языка более строго, чем предыдущие версии операционной системы. По этой причине любого приложения iOS 11, явно не объявлен поддерживаемых локализации — включая .lproj папки или задав значение для `CFBundleLocalizations` — может отображаться другой язык в iOS 11, чем это было в iOS 10.
@@ -255,7 +250,7 @@ iOS предоставляет ряд возможностей для помощ
 
 Ниже показаны снимки экрана [локализованные Tasky пример](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) в арабском и иврите (несмотря на то, что в полях был введен на английском языке):
 
-[![](images/rtl-ar-sml.png "Локализация на арабском языке")](images/rtl-ar.png#lightbox "Arabic") 
+[![](images/rtl-ar-sml.png "Локализация на арабском языке")](images/rtl-ar.png#lightbox "Arabic")
 
 [![](images/rtl-he-sml.png "Локализация на иврит")](images/rtl-he.png#lightbox "Hebrew")
 
@@ -346,7 +341,7 @@ someControl.Text = localizedString;
 
 > [!IMPORTANT]
 > С помощью раскадровки с помощью классов размера может привести переводов, которые не отображаются в приложении. [Заметки о выпуске Apple Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) указывают, что storyboard "или" XIB будет не локализовано правильно при три вещи: он использует классы размера, локализации базового и целевого объекта сборки устанавливаются в универсальные и целей сборки iOS 7.0. Исправление заключается в повторяющийся свой файл раскадровки, строки в два идентичных файла: **MainStoryboard~iphone.strings** и **MainStoryboard~ipad.strings**, как показано на следующем снимке экрана:
-> 
+>
 > ![](images/xs-dup-strings.png "Файлы строк")
 
 <a name="appstore" />
@@ -368,4 +363,4 @@ someControl.Text = localizedString;
 - [Руководство по локализации для Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Общие сведения о локализации](~/cross-platform/app-fundamentals/localization.md)
 - [Локализация Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
-- [Android локализации](~/android/app-fundamentals/localization.md)
+- [Локализация в Android](~/android/app-fundamentals/localization.md)

@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 10. Расширения разметки XAML
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 10. Расширения разметки XAML'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 10. Расширения разметки XAML
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 076e9f5155492e5a69d906c587b24495fe39d3f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054745"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672642"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Сводка Глава 10. Расширения разметки XAML
 
@@ -40,7 +40,7 @@ ms.locfileid: "53054745"
 
 - `StaticResource` поддерживается [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
 - `DynamicResource` поддерживается [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
-- `Binding` поддерживаемые [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;подробно [Глава 16. Привязка данных](#chapter16)
+- `Binding` поддерживаемые [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;подробно [Глава 16. Привязка данных](chapter16.md)
 - `TemplateBinding` поддерживаемые [ `TemplateBindingExtension` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) &mdash;не рассматривается в книге
 
 Дополнительное расширение разметки XAML включен в Xamarin.Forms, в связи с [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout):

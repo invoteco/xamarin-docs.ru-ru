@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 2dc56d9c5b63d428663d98bae4c8687c1f621a04
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 7dbb0044f09d5bc00f2393eb647efba05a061c3f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233202"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669548"
 ---
 # <a name="threading-in-xamarinios"></a>Работа с потоками в Xamarin.iOS
 
@@ -20,7 +20,7 @@ ms.locfileid: "55233202"
 
 
 
-Xamarin настоятельно рекомендует использовать [библиотека параллельных задач](http://msdn.microsoft.com/library/dd460717.aspx) (TPL) для создания приложений по нескольким причинам:
+Xamarin настоятельно рекомендует использовать [библиотека параллельных задач](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) для создания приложений по нескольким причинам:
 -  Планировщик по умолчанию TPL делегирует выполнение задач в пул потоков, который в свою очередь, будет динамически увеличиваться количество потоков, которые нужны, так как процесс занимает место, избегая сценарии, где слишком много потоков итоге будут конкурировать за время ЦП. 
 -  Проще думать об операциях с точки зрения задач TPL. Можно легко работать с ними, можно запланировать, сериализовать их выполнения или запуска многие параллельно с обширный набор API. 
 -  Это основа для программирования с использованием C# async расширений языка. 

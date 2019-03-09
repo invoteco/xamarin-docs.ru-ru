@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8882a7cd36eab5e7905585f5de4d6585dfb53439
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113356"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672265"
 ---
 # <a name="available-assemblies"></a>Доступные сборки
 
@@ -49,34 +49,34 @@ Xamarin.iOS, Xamarin.Android и Xamarin.Mac все поставляются вм
 > |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
 > |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |OpenTK-1.0.dll|OpenGL/OpenAL объектно ориентированного API, расширенная с целью предоставления поддержки устройства iPhone.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен:<br />System.Collections.Specialized<br />Система. &#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net. &#8203;NetworkInformation, соответствующей выбранному<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime. &#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security. &#8203;AccessControl<br />System.Security.Authentication<br />System.Security. &#8203;Криптографии<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
-> |Система. &#8203;ComponentModel. &#8203;Composition.dll| |✓|✓|✓|
-> |Система. &#8203;ComponentModel. &#8203;DataAnnotations.dll| |✓|✓|✓|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен:<br />System.Collections.Specialized<br />Система. &#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net. &#8203;NetworkInformation, соответствующей выбранному<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security. &#8203;Криптографии<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
+> |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
+> |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
 > |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) , с помощью [удалены некоторые функциональные возможности](~/ios/data-cloud/system.data.md).|✓|✓|✓|
-> |System.Data. &#8203;Служб. &#8203;Client.dll|Клиент полный oData.|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx) , с помощью [удалены некоторые функциональные возможности](~/ios/data-cloud/system.data.md).|✓|✓|✓|
+> |System.Data.&#8203;Services.&#8203;Client.dll|Клиент полный oData.|✓|✓|✓|
 > |System.IO. &#8203;Сжатия| |✓|✓|✓|
 > |System.IO. &#8203;Сжатия. &#8203;Файловой системы| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Net. &#8203;Http.dll| |✓|✓|✓|
-> |Система. &#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime. &#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |Система. &#8203;ServiceModel.dll|Стек WCF, заданное на [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Net.&#8203;Http.dll| |✓|✓|✓|
+> |System.&#8203;Numerics.dll| |✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |Система. &#8203;ServiceModel.dll|Стек WCF, заданное на [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |Система. &#8203;ServiceModel. &#8203;Internals.dll| |✓|✓|✓|
-> |Система. &#8203;ServiceModel. &#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <br />Система<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |Система. &#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); частью [System.Data](~/ios/data-cloud/system.data.md) поддержки.|✓|✓|✓|
-> |System.Web. &#8203;Services.dll|Основные веб-службы из профиля .NET 3.5, с сервера компоненты, удаленные.|✓|✓|✓|
+> |Система. &#8203;ServiceModel. &#8203;Web.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <br />Система<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |Система. &#8203;Transactions.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); частью [System.Data](~/ios/data-cloud/system.data.md) поддержки.|✓|✓|✓|
+> |System.Web.&#8203;Services.dll|Основные веб-службы из профиля .NET 3.5, с сервера компоненты, удаленные.|✓|✓|✓|
 > |Система. &#8203;Windows.dll| |✓|✓|✓|
-> |Система. &#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml. &#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|Эта сборка содержит привязку к платформе CocoaTouch API C#. Используется только в единой системе проектов iOS.|✓| | |
 > |Java.Interop.dll| | |✓| |
 > |Mono.Android.dll| | |✓| |
 > |Mono.Android. &#8203;Export.dll| | |✓| |
 > |Mono.Posix.dll| | |✓| |
-> |Система. &#8203;EnterpriseServices.dll| | |✓| |
-> |Xamarin.Android. &#8203;NUnitLite.dll| | |✓| |
+> |System.&#8203;EnterpriseServices.dll| | |✓| |
+> |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
 > |Mono.CompilerServices. &#8203;SymbolWriter.dll|Для компиляторов.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
 > |Система. &#8203;Drawing.dll|System.Drawing не поддерживается на единый API Xamarin.Mac, .NET 4.5 или мобильных платформ. Можно добавить поддержку System.Drawing iOS и macOS с помощью [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) библиотеки|✓| |✓|

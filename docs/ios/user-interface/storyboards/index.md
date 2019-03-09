@@ -1,19 +1,14 @@
 ---
 title: Введение в раскадровки в Xamarin.iOS
-description: Этот документ содержит введение в раскадровки в Xamarin.iOS. Он описывает использование раскадровки для определения пользовательского интерфейса, однако они плохо и как использовать конструктор iOS для редактирования файлов раскадровки.
+description: 'Этот документ содержит введение в раскадровки в Xamarin.iOS. Он описывает использование раскадровки для определения пользовательского интерфейса, однако они плохо и как использовать конструктор iOS для редактирования файлов раскадровки.'
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233566"
 ---
+
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Введение в раскадровки в Xamarin.iOS
 
 В этом руководстве мы расскажем, какие раскадровки — и изучить некоторые из ключевых компонентов — например Segues. Мы рассмотрим как раскадровки можно создавать и использовать, и какие преимущества они имеют для разработчика.
@@ -82,7 +77,7 @@ ms.locfileid: "55233566"
 
 [![](images/adaptivesegue.png "В раскрывающемся списке адаптивной переходами")](images/adaptivesegue.png#lightbox)
 
-|Segue|Описание:|
+|Segue|Описание|
 |--- |--- |
 |Показать|Это очень похоже на Push-уведомления segue, но необходимое содержимое экрана в учетную запись.|
 |Показать подробности|Если в приложении отображаются основные и подробные представления (например, в контроллер разделенного представления на iPad), содержимое заменяет представлении «Подробности». Если в приложении отображается только основной или подробности, содержимое заменяет вершину стека контроллера представления.|
@@ -492,5 +487,5 @@ public partial class MainViewController : UIViewController
 
 - [Ручная раскадровка (образец)](https://developer.xamarin.com/samples/ManualStoryboard/)
 - [Введение в iOS Designer](~/ios/user-interface/designer/introduction.md)
-- [Преобразование в раскадровки](http://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
+- [Преобразование в раскадровки](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [Справочник по классу UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

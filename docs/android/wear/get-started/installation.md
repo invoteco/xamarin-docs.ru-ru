@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ed6d3c1cfc14bd0dece5ffe494cc02fd8f608b1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: af9be54b4509f7202618d9d68210eb534f63ccbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117282"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671641"
 ---
 # <a name="setup-and-installation"></a>Настройка и установка
 
@@ -28,9 +28,9 @@ _В этой статье рассматриваются действия по �
 
 -   **Пакет SDK для Android** -пакета SDK для Android 5.0.1 (API 21) или более поздней версии необходимо установить через диспетчер пакетов SDK для Android.
 
--   **Java Developer Kit** &ndash; требует разработки Xamarin Android [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) при разработке для API уровня 24 или более поздней версии (JDK 1.8 также поддерживает уровни API ниже 24).
+-   **Java Developer Kit** &ndash; требует разработки Xamarin Android [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) при разработке для API уровня 24 или более поздней версии (JDK 1.8 также поддерживает уровни API ниже 24).
 
-Вы можете продолжать использовать [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) при разработке специально для уровень API 23 или более ранней версии.
+Вы можете продолжать использовать [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) при разработке специально для уровень API 23 или более ранней версии.
 
 > [!IMPORTANT]
 > Xamarin.Android не поддерживает пакет JDK 9.
@@ -80,7 +80,7 @@ _В этой статье рассматриваются действия по �
 -----
 
 
-## <a name="configuration"></a>Конфигурация
+## <a name="configuration"></a>Параметр Configuration
 
 Перед использованием протестировать приложение, необходимо настроить эмулятор Android Wear либо само устройство Android Wear. 
 

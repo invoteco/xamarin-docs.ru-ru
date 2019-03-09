@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 859afcf6ab9f3acfb56104fa68683ba28d913ce4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5363e3a2210bdcf1efb870ac808ecb37584de6a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117145"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668924"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Заполнение таблицы с данными в Xamarin.iOS
 
@@ -34,7 +34,7 @@ ms.locfileid: "50117145"
 
 Существует только два обязательных методы, необходимые для создания отображения данных таблицы.
 
--   **RowsInSection** — возвращаемое [ `nint` ](http://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) число общее число строк данных в таблице будет отображаться.
+-   **RowsInSection** — возвращаемое [ `nint` ](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) число общее число строк данных в таблице будет отображаться.
 -   **GetCell** — возвращаемое `UITableCellView` заполняется данными для соответствующего индекса строки, передаваемые методу.
 
 

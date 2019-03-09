@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117144"
 ---
+
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Как использовать Google карты и расположение с помощью Xamarin.Android
 
 _В этой статье описывается использование карты и расположение с помощью Xamarin.Android. Этот интерфейс охватывает все от использования приложения встроенные карты напрямую с помощью Google сопоставляет Android API версии 2._
@@ -35,5 +30,5 @@ _В этой статье описывается использование ка
 - [MapsAndLocationDemo_v3 (пример)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Жизненный цикл действия](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Список целей: Вызов Google приложений на устройствах Android](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [Расположение и карты](http://developer.android.com/guide/topics/location/index.html)
+- [Список целей: Вызов Google приложений на устройствах Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Расположение и карты](https://developer.android.com/guide/topics/location/index.html)

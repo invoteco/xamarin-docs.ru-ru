@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 0b320955cae23b18444732c826849002d6375fe4
-ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
+ms.openlocfilehash: faa52c80fdb776f2c6c7320874b0d08720b4e4ec
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56321146"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670458"
 ---
 # <a name="introduction-to-watchos"></a>Введение в watchOS
 
@@ -136,7 +136,7 @@ Apple Watch состоит из двух размеров лиц. 38 мм и 42 
 - [watchOS 3 каталога (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [watchOS 1 каталога (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Установка и настройка](~/ios/watchos/get-started/installation.md)
-- [Первое приложение просмотра видео](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Первое приложение просмотра видео](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [В разработке Apple для Watch руководства](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Советы по WatchKit Apple](https://developer.apple.com/watchkit/tips/)
 - [Введение в watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563515"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668949"
 ---
 # <a name="location-services"></a>Службы определения местоположения
 
@@ -32,7 +32,7 @@ Android предоставляет доступ к различным распо
 
 Несколько технологий используются внутренне для точного определения расположения пользователя. Оборудование, используемое зависит от типа *поставщик расположения* выбранных для задания сбора данных. Android использует три поставщики услуг размещения:
 
--   **Поставщик GPS** &ndash; GPS дает наиболее точную местонахождение, использует наибольшими возможностями и работает лучше всего лета. Этот поставщик использует сочетание GPS и службе технической GPS ([aGPS](http://en.wikipedia.org/wiki/Assisted_GPS)), возвращающий данные GPS, собранные towers сотовой связи.
+-   **Поставщик GPS** &ndash; GPS дает наиболее точную местонахождение, использует наибольшими возможностями и работает лучше всего лета. Этот поставщик использует сочетание GPS и службе технической GPS ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), возвращающий данные GPS, собранные towers сотовой связи.
 
 -   **Сетевой поставщик** &ndash; предоставляет сочетание Wi-Fi и сотовой сети данные, включая aGPS данные, собранные towers ячейки. Он использует меньше энергии, чем поставщик GPS, но возвращает данные о местоположении различной точности.
 
@@ -59,7 +59,7 @@ Android предоставляет доступ к различным распо
 При настройке любого из этих разрешений сообщает Android, что приложению требуется разрешение от пользователя, чтобы получить доступ к поставщикам расположение. Устройства, запустите уровень API 22 (Android 5.1) или ниже, будет запрашивать у пользователя, чтобы предоставить эти разрешения каждый раз, когда приложение установлено. На устройствах под управлением API уровня 23 (Android 6.0) или более поздней версии, приложение необходимо выполнить проверку разрешений во время выполнения перед запросом поставщика расположения. 
 
 > [!NOTE]
->Примечание: Параметр `ACCESS_FINE_LOCATION` подразумевает доступ к данным как грубое и нормально расположение. Не следует необходимо задать оба разрешения, только *минимальным* разрешения, которые необходимы приложению для работы.
+>Примечание. Параметр `ACCESS_FINE_LOCATION` подразумевает доступ к данным как грубое и нормально расположение. Не следует необходимо задать оба разрешения, только *минимальным* разрешения, которые необходимы приложению для работы.
 
 В этом фрагменте приведен пример того, как проверить, что приложение имеет разрешение для `ACCESS_FINE_LOCATION` разрешение:
 
@@ -84,7 +84,7 @@ else
  
 API поставщика склеенную расположение предоставляет широкий набор средств для расширения возможностей привязанный к местонахождению приложений, включая географическое зонирование и мониторинг активности. В этом разделе мы собираемся сосредоточиться на основные сведения о настройке `LocationClient`, создав поставщиков и получение из местоположения пользователя.
 
-Поставщик расположения склеенную является частью [сервисы Google Play](http://developer.android.com/google/play-services/index.html).
+Поставщик расположения склеенную является частью [сервисы Google Play](https://developer.android.com/google/play-services/index.html).
 Сервисы Google Play пакет должен быть установлен и настроен должным образом в приложении для поставщика склеенную расположения API для работы, и на устройстве должен быть Google Play Services APK установлен.
 
 Прежде чем Xamarin.Android приложение может использовать поставщик склеенную расположения, он должен добавить **Xamarin.GooglePlayServices.Maps** пакет в проект. Кроме того, следующие `using` инструкции должны добавляться к все файлы исходного кода, которые ссылаются на классы, описанные ниже:
@@ -231,7 +231,7 @@ public class FusedLocationProviderCallback : LocationCallback
 
 Расположение службы лучше всего подходит для приложений, которые необходимо выполнить на устройствах, у которых не установлены службы Google Play.
 
-Служба расположений — это специальный тип [службы](http://developer.android.com/guide/components/services.html) управляет система. Системная служба взаимодействует с устройства и всегда работает. Открытий расположение обновлений в наше приложение, мы, чтобы подписаться на расположение обновлений из службы расположения системы с помощью `LocationManager` и `RequestLocationUpdates` вызова.
+Служба расположений — это специальный тип [службы](https://developer.android.com/guide/components/services.html) управляет система. Системная служба взаимодействует с устройства и всегда работает. Открытий расположение обновлений в наше приложение, мы, чтобы подписаться на расположение обновлений из службы расположения системы с помощью `LocationManager` и `RequestLocationUpdates` вызова.
 
 Для получения из местоположения пользователя с помощью Android расположение службы включает несколько этапов:
 
@@ -357,10 +357,10 @@ else
 
 - [Расположение (пример)](https://developer.xamarin.com/samples/Location/)
 - [FusedLocationProvider (пример)](https://developer.xamarin.com/samples/FusedLocationProvider/)
-- [Службы Google Play](http://developer.android.com/google/play-services/index.html)
+- [Службы Google Play](https://developer.android.com/google/play-services/index.html)
 - [Класс критериев](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [Класс LocationManager](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
 - [Класс LocationListener](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
-- [LocationClient API](http://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
-- [LocationListener API](http://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
+- [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
+- [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

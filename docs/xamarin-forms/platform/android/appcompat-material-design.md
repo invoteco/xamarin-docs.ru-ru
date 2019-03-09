@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209319"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667494"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Добавление AppCompat и материальное
 
@@ -114,7 +114,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 ```
 
 Заданы несколько свойств для тех вкладок, включая тяжести вкладки для `fill` и режим `fixed`.
-Если у вас много вкладок можно переключиться в это чтобы прокручиваемые - прочтите Android [TabLayout документации](http://developer.android.com/reference/android/support/design/widget/TabLayout.html) для получения дополнительных сведений.
+Если у вас много вкладок можно переключиться в это чтобы прокручиваемые - прочтите Android [TabLayout документации](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) для получения дополнительных сведений.
 
 **Resources/layout/Toolbar.axml**
 
@@ -136,7 +136,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 Ссылаться на [Hello инструментов](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) записи блога, чтобы узнать больше.
 
 
-### <a name="6-update-the-mainactivity"></a>6. Обновление `MainActivity`
+### <a name="6-update-the-mainactivity"></a>6.  Обновление `MainActivity`
 
 В существующих приложениях Xamarin.Forms **MainActivity.cs** класс будет наследовать от `FormsApplicationActivity`. Его необходимо заменить `FormsAppCompatActivity` для включения новых функциональных возможностей.
 

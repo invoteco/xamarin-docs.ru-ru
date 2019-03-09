@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/02/2017
-ms.openlocfilehash: 209ce2b5fb2fbb357f23e6ccc9bb849fbfedc81d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c387bbead1ac56d7f4c4c05a79c430302e50aec1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115657"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668287"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>API для разработчиков Xamarin.Mac macOS
 
@@ -68,7 +68,7 @@ ms.locfileid: "50115657"
 
 3. Можно использовать [электронной документации по Xamarin.Mac API](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
 
-4. Мигель обеспечивает представление «Розеттском камне» API-интерфейсы Xamarin.Mac [здесь](http://tirania.org/tmp/rosetta.html) , которые можно найти через для заданного API. Если API не AppKit или конкретных macOS, может оказаться существует.
+4. Мигель обеспечивает представление «Розеттском камне» API-интерфейсы Xamarin.Mac [здесь](https://tirania.org/tmp/rosetta.html) , которые можно найти через для заданного API. Если API не AppKit или конкретных macOS, может оказаться существует.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

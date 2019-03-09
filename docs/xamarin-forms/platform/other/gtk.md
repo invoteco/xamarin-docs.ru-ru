@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: dcfcf6c29b0a055c59501d6d95d4f97c16475bb3
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 6243f7d90b921207f4dd406a1f33f4d7af40ecfb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209229"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668375"
 ---
 # <a name="gtk-platform-setup"></a>Программа установки платформы GTK #
 
@@ -27,7 +27,7 @@ Xamarin.Forms теперь имеет поддержку GTK # приложен�
 
 ## <a name="adding-a-gtk-app"></a>Добавление приложения GTK #
 
-GTK # для macOS и Linux устанавливается как часть [Mono](http://www.mono-project.com/download/stable/). GTK # для .NET можно установить в Windows с помощью [GTK # установщика](http://www.mono-project.com/download/stable/#download-win).
+GTK # для macOS и Linux устанавливается как часть [Mono](https://www.mono-project.com/download/stable/). GTK # для .NET можно установить в Windows с помощью [GTK # установщика](https://www.mono-project.com/download/stable/#download-win).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -220,6 +220,6 @@ vbox.PackEnd(settingsView, true, true, 0);
 
 Дополнительные сведения о собственном Forms, см. в разделе [исходные формы](~/xamarin-forms/platform/native-forms.md).
 
-## <a name="issues"></a>Проблемы
+## <a name="issues"></a>Вопросы
 
 Это предварительная версия, поэтому следует ожидать, что не все, что является готовы для рабочей среды. Текущее состояние реализации, см. в разделе [состояние](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Status.md)и текущие известные проблемы, см. в разделе [ожидающие & известные проблемы](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Issues-Pending.md).

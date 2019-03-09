@@ -1,19 +1,14 @@
 ---
 title: Привязка библиотеки Java
-description: Android сообщество имеет множество библиотек Java, которые можно использовать в приложении; в этом руководстве объясняется, как включить библиотеки Java в приложение Xamarin.Android, создавая библиотеку привязок.
+description: 'Android сообщество имеет множество библиотек Java, которые можно использовать в приложении; в этом руководстве объясняется, как включить библиотеки Java в приложение Xamarin.Android, создавая библиотеку привязок.'
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171616"
 ---
+
 # <a name="binding-a-java-library"></a>Привязка библиотеки Java
 
 _Android сообщество имеет множество библиотек Java, которые можно использовать в приложении; в этом руководстве объясняется, как включить библиотеки Java в приложение Xamarin.Android, создавая библиотеку привязок._
@@ -103,7 +98,7 @@ using Com.Company.Package;
 
 ## <a name="including-a-native-library-in-a-binding"></a>Включая собственной библиотеки в привязке
 
-Может потребоваться включить **.so** библиотеки в проект Xamarin.Android привязки в составе привязка библиотеки Java. При выполнении упакованного кода Java для вызова JNI и сообщение об ошибке не удастся Xamarin.Android _java.lang.UnsatisfiedLinkError: собственный метод, не найден:_ будет отображаться в logcat out для приложения.
+Может потребоваться включить **.so** библиотеки в проект Xamarin.Android привязки в составе привязка библиотеки Java. При выполнении упакованного кода Java для вызова JNI и сообщение об ошибке не удастся Xamarin.Android _java.lang.UnsatisfiedLinkError: Собственный метод, не найден:_ будет отображаться в logcat out для приложения.
 
 Способ устранения этой проблемы является вручную загрузить **.so** библиотеки с помощью вызова `Java.Lang.JavaSystem.LoadLibrary`. Например при условии, что проект Xamarin.Android общая библиотека **libpocketsphinx_jni.so** включен в проект привязки с действием сборки **EmbeddedNativeLibrary**, следующий фрагмент кода (выполняется перед использованием общей библиотеки) будет загружать **.so** библиотеки:
 
@@ -145,5 +140,5 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Работа с JNI](~/android/platform/java-integration/working-with-jni.md)
-- [GAPI Используются метаданные](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [GAPI Используются метаданные](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Использование собственных библиотек](~/android/platform/native-libraries.md)

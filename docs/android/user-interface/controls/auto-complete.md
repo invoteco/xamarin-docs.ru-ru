@@ -1,19 +1,19 @@
 ---
-title: Автоматическое завершение
+title: Автозаполнение
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "30764454"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671902"
 ---
-# <a name="auto-complete"></a>Автоматическое завершение
+# <a name="auto-complete"></a>Автозаполнение
 
 `AutoCompleteTextView` является элементом представления ввода и редактирования текста, который автоматически показывает предлагаемые варианты завершения, пока пользователь вводит текст. В раскрывающемся меню, из которого пользователь может выбрать элемент для замены содержимого поля ввода с отображается список предложений.
 
@@ -205,5 +205,5 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 *Некоторые части этой страницы, изменения с учетом работы создана и совместно используется Android откройте исходный проект и используются в соответствии с условиями, описанными в* 
  [ *лицензии Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/) *. Этот учебник создан на основе* 
- [ *Android автоматическое завершение учебника*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+ [ *Android автоматическое завершение учебника*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
  *.*

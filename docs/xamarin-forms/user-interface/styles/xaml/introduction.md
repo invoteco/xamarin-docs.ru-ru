@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6f5af5fde46676cf669e6c02fb83f4aac5d31c46
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 4048ec78d48b810b39d46fbcb7708860c478cce3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292094"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667208"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Введение в стили Xamarin.Forms
 
@@ -82,7 +82,7 @@ public class NoStylesPageCS : ContentPage
 }
 ```
 
-Каждый [ `Label` ](xref:Xamarin.Forms.Label) экземпляр имеет одинаковые значения свойств для внешний вид текста, отображаемого элементом управления `Label`. Это приводит к появлению, показано на следующем снимке экрана:
+Каждый [ `Label` ](xref:Xamarin.Forms.Label) экземпляр имеет одинаковые значения свойств для внешний вид текста, отображаемого элементом управления `Label`. Результат показан на следующих снимках экрана.
 
 [![](introduction-images/no-styles.png "Метка внешний вид, без учета стилей")](introduction-images/no-styles-large.png#lightbox "метки внешний вид, без учета стилей")
 
@@ -133,7 +133,7 @@ public class NoStylesPageCS : ContentPage
 > [!NOTE]
 > **Что такое StyleId?**
 >
-> Предшествующих версии 2.2 Xamarin.Forms [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство используется для идентификации отдельных элементов в приложении для идентификации при тестировании пользовательского интерфейса, а также в тему движков, таких как Pixate. Тем не менее, представила Xamarin.Forms 2.2 [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) свойство, которое используется для [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство. Дополнительные сведения см. в разделе [Xamarin.Forms, автоматизировать тестирование с помощью Xamarin.UITest и тестовое облако](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md).
+> Предшествующих версии 2.2 Xamarin.Forms [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство используется для идентификации отдельных элементов в приложении для идентификации при тестировании пользовательского интерфейса, а также в тему движков, таких как Pixate. Однако представлены Xamarin.Forms 2.2 [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) свойство, которое используется для [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство.
 
 ## <a name="related-links"></a>Связанные ссылки
 

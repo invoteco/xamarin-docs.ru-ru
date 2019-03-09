@@ -1,17 +1,17 @@
 ---
 title: Приступая к работе с целевой Sharpie
-description: Этот документ содержит общий обзор Sharpie цели, средство, используемое для автоматизации создания привязки C# для кода Objective-C.
+description: В этом документе представлен общий обзор из Sharpie цели, средство, используемое для автоматизации создания C# привязки для кода Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: da8c51c4ba4df74afac950bbff867221e7307d6e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854783"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670120"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Приступая к работе с целевой Sharpie
 
@@ -36,7 +36,7 @@ ms.locfileid: "37854783"
 
 ## <a name="basic-walkthrough"></a>Простое пошаговое руководство
 
-Цели Sharpie предоставляется программа командной строки с Xamarin, которое используется для создания определения необходимый для привязки Objective-C библиотека стороннего производителя для C#.
+Цели Sharpie представляет собой программу командной строки, предоставляемую компанией Xamarin, который помогает в создании определений, необходимый для привязки библиотека стороннего производителя Objective-C для C#.
 Даже при использовании Sharpie цели, разработчик *будет* потребуется изменить созданные файлы после завершения задания Sharpie для устранения проблем, которые не удалось обработать автоматически с помощью средства.
 
 Где это возможно, цель Sharpie заметки к API-интерфейсы, с которым он имеет некоторые сомнения, о том, как правильно выполнить привязку (являются неоднозначными многих конструкций в машинный код).
@@ -48,7 +48,7 @@ ms.locfileid: "37854783"
 > Цели Sharpie поступает с одной **основных** правило для надлежащего использования: его необходимо абсолютно передавать аргументы командной строки компилятора clang правильный для обеспечения синтаксический анализ. Это обусловлено Sharpie цели, анализа – это просто средство [реализации от clang libtooling API](http://clang.llvm.org/docs/LibTooling.html).
 
 Это означает, что цель Sharpie имеет всю мощь Clang (компилятор C/Objective-C/C++, фактически компилирует собственной библиотеки, которую нужно привязать) и всех его внутренних сведений о файлах заголовка для привязки.
-Вместо перевода проанализированный [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree) коду объект цели Sharpie преобразует AST для C# привязки «каркас» подходит для входных данных для `bmac` и `btouch` средства привязки Xamarin.
+Вместо перевода проанализированный [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) коду объект цели Sharpie преобразует AST для C# привязки «сформировать шаблон» подходит для входных данных для `bmac` и `btouch` средства привязки Xamarin.
 
 Если цель Sharpie ошибка во время синтаксического анализа, значит, clang, завершившиеся сбоем во время его синтаксический анализ этап, стараюсь строить AST, и вам нужно определить причину проблемы.
 
@@ -61,5 +61,5 @@ ms.locfileid: "37854783"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xamarin University курс: Создание библиотеку привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University курс: Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

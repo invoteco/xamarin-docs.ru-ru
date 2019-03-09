@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4d79988fc2900f1fe58774657344f19fab90f3e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 267dac5b6aec263f1d8b69d81f34f732118c1802
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105094"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671992"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Основные сведения о покупке в приложении и их настройке в Xamarin.iOS
 
@@ -44,9 +44,9 @@ ms.locfileid: "50105094"
 
 Невозможно выбрать любой ценой продукта — вы можете выбрать «Ценовая категория» с указанным значением в каждой страны и валюты, поддерживающий Apple. Не может иметь другой ценовой категорией на различных рынках.
 
-## <a name="configuration"></a>Конфигурация
+## <a name="configuration"></a>Параметр Configuration
 
-До написания любого кода приобретения в приложении необходимо выполнить некоторую работу настройки в iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) и на портале подготовки iOS ( [developer.apple.com/iOS](http://developer.apple.com/iOS)).
+До написания любого кода приобретения в приложении необходимо выполнить некоторую работу настройки в iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) и на портале подготовки iOS ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 
 Следующие три действия должна быть завершена до написания любого кода:
 
@@ -109,13 +109,13 @@ ms.locfileid: "50105094"
 
 Процесс добавления новых продуктов состоит из двух шагов:
 
-1.   Выберите тип продукта: [![](in-app-purchase-basics-and-configuration-images/image8.png "выберите тип продукта")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Введите атрибуты продуктов, включая идентификатор продукта, Ценовая категория и локализованного описания: [![](in-app-purchase-basics-and-configuration-images/image9.png "ввода атрибутов продуктов")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   Выберите тип продукта: [![](in-app-purchase-basics-and-configuration-images/image8.png "Выберите тип продукта")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   Введите атрибуты продуктов, включая идентификатор продукта, Ценовая категория и локализованные описания: [![](in-app-purchase-basics-and-configuration-images/image9.png "Ввода атрибутов продуктов")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 Поля, необходимые для каждого продукта Покупка из приложения, описаны ниже:
 
 
-### <a name="reference-name"></a>Имя ссылки
+### <a name="reference-name"></a>Ссылочное имя
 
 Имя ссылки не отображается для пользователей; он предназначен для внутреннего использования и отображается только в iTunes Connect.
 

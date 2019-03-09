@@ -6,17 +6,17 @@ ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2016
-ms.openlocfilehash: 7e8acc6e8aaf8b8e0e8cec7d5d0f3e28cf60073a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/08/2019
+ms.openlocfilehash: 600120b6ed8484399cf5fc48638ef4b129e9c406
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055599"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671966"
 ---
-# <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Использование веб-службы Windows Communication Foundation (WCF)
+# <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Использование веб-службы Windows Communication Foundation (WCF)
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
 
 _WCF — это унифицированная платформа корпорации Microsoft для построения сервисноориентированных приложений. Он позволяет разработчикам создавать безопасные, надежные, с поддержкой транзакций с возможностью взаимодействия распределенных приложений. В этой статье показано, как использовать службу WCF Simple Object Access Protocol (SOAP) из приложения Xamarin.Forms._
 
@@ -29,9 +29,10 @@ WCF описывает службу, с различными разные кон
 
 Существуют различия между ASP.NET Web Services (ASMX) и WCF, но важно понимать, что WCF поддерживает те же возможности, которые предоставляет ASMX-сообщений SOAP по протоколу HTTP. Дополнительные сведения об использовании службы ASMX, см. в разделе [использование ASP.NET Web Services (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md).
 
-В общем случае платформы Xamarin поддерживает то же подмножество WCF, которая поставляется вместе со средой выполнения Silverlight в стороне клиента. Это включает в себя наиболее распространенные кодировку и протокол реализации WCF — транспорта кодировкой текста сообщений SOAP по протоколу HTTP с помощью протокола `BasicHttpBinding` класса. Кроме того поддержка WCF требует применения средств доступно только в среде Windows для создания прокси-сервера.
+> [!IMPORTANT]
+> Поддержка платформы Xamarin WCF ограничена кодировкой текста сообщений SOAP по сравнению с использованием HTTP/HTTPS `BasicHttpBinding` класса. Кроме того поддержка WCF требует применения средств доступно только в среде Windows для создания прокси-сервера.
 
-Инструкции по настройке службы WCF можно найти в файле readme, сопровождающий пример приложения. Тем не менее при выполнении примера приложения его будет подключаться к службе WCF, размещенной в Xamarin, которая предоставляет доступ только для чтения к данным, как показано на следующем снимке экрана:
+Пример приложения использует внутрипроцессного службы WCF, которая доступна в **TodoWCFService** папки образца и показано на следующем снимке экрана:
 
 ![](wcf-images/portal.png "Пример приложения")
 
@@ -39,7 +40,7 @@ WCF описывает службу, с различными разные кон
 > В iOS 9 и более поздней версии приложение Transport Security (ATS) обеспечивает безопасных соединений между Интернет-ресурсов (например, server серверной части приложения) и приложения, тем самым предотвращая случайное раскрытие конфиденциальной информации. Поскольку ATS включена по умолчанию в приложениях, созданных для iOS 9, все подключения будут применяться требования к безопасности ATS. Если соединения не удовлетворяют этим требованиям, они вызовут сбой с исключением.
 > Если невозможно использовать из могут быть присоединены ATS `HTTPS` протокола и безопасный обмен данными для Интернет-ресурсов. Это достигается путем обновления приложения **Info.plist** файла. Дополнительные сведения см. в разделе [безопасность транспорта приложения](~/ios/app-fundamentals/ats.md).
 
-## <a name="consuming-the-web-service"></a>Использование веб-службы
+## <a name="consume-the-web-service"></a>Использование веб-службы
 
 Служба WCF предоставляет следующие операции:
 
@@ -51,9 +52,6 @@ WCF описывает службу, с различными разные кон
 |DeleteTodoItem|Удаление элемента задачи|XML-сериализации TodoItem|
 
 Дополнительные сведения о модели данных, используемых в приложении, см. в разделе [моделирования данных](~/xamarin-forms/data-cloud/walkthrough.md).
-
-> [!NOTE]
-> Пример приложения использует службу WCF, размещенной в Xamarin, предоставляющий доступ только для чтения к веб-службы. Таким образом операции, создание, обновление и удаление данных, которые не изменится на данных, использованных в приложении. Тем не менее, внедряемое версию службы ASMX доступна в **TodoWCFService** папку в соответствующем приложении-примере. Этот ведущий версию разрешение службы WCF на полный создания, обновления, чтения и удаления доступ к данным.
 
 Объект *прокси* должен быть создан для использования службы WCF, что позволяет приложению для подключения к службе. Прокси создается с помощью много метаданных службы, определяющий методы и связанные службы конфигурации. Эти метаданные предоставляются в виде документа языка описания служб (WSDL), который создается веб-службой. Прокси-сервер может быть построен с помощью Microsoft WCF Web Service Reference Provider в Visual Studio 2017 для добавления ссылки на службу веб-службы в библиотеку .NET Standard. Вместо создания прокси с помощью Microsoft WCF Web Service Reference Provider в Visual Studio 2017 является использование ServiceModel Metadata Utility Tool (svcutil.exe). Дополнительные сведения см. в разделе [ServiceModel Metadata Utility Tool (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 
@@ -67,7 +65,7 @@ WCF описывает службу, с различными разные кон
 
 Дополнительные сведения о APM см. в разделе [модели асинхронного программирования](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) и [TPL и традиционное .NET Framework асинхронное программирование](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) на сайте MSDN.
 
-### <a name="creating-the-todoserviceclient-object"></a>Создание объекта TodoServiceClient
+### <a name="create-the-todoserviceclient-object"></a>Создайте объект TodoServiceClient
 
 Созданный класс прокси предоставляет `TodoServiceClient` класс, который используется для взаимодействия со службой WCF по протоколу HTTP. Он предоставляет функциональные возможности для вызова методов веб-службы, асинхронных операций из URI определения экземпляра службы. Дополнительные сведения об асинхронных операциях см. в разделе [обзор поддержки асинхронного](~/cross-platform/platform/async.md).
 
@@ -93,14 +91,15 @@ public class SoapService : ISoapService
 
 Дополнительные сведения о настройке ссылки на службу, см. в разделе [Настройка ссылки на службу](~/cross-platform/data-cloud/web-services/index.md#wcf).
 
-### <a name="creating-data-transfer-objects"></a>Создание объектов передачи данных
+### <a name="create-data-transfer-objects"></a>Создание объектов передачи данных
 
 В примере приложения используется `TodoItem` для модели данных. Для хранения `TodoItem` элемента в веб-службы, оно сначала должно быть преобразовано в прокси, созданный `TodoItem` типа. Это достигается путем `ToWCFServiceTodoItem` метод, как показано в следующем примере кода:
 
 ```csharp
 TodoWCFService.TodoItem ToWCFServiceTodoItem (TodoItem item)
 {
-  return new TodoWCFService.TodoItem {
+  return new TodoWCFService.TodoItem
+  {
     ID = item.ID,
     Name = item.Name,
     Notes = item.Notes,
@@ -116,7 +115,8 @@ TodoWCFService.TodoItem ToWCFServiceTodoItem (TodoItem item)
 ```csharp
 static TodoItem FromWCFServiceTodoItem (TodoWCFService.TodoItem item)
 {
-  return new TodoItem {
+  return new TodoItem
+  {
     ID = item.ID,
     Name = item.Name,
     Notes = item.Notes,
@@ -128,7 +128,7 @@ static TodoItem FromWCFServiceTodoItem (TodoWCFService.TodoItem item)
 
 Этот метод просто получает данные из прокси, созданный `TodoItem` введите и задает его в только что созданный `TodoItem` экземпляра.
 
-### <a name="retrieving-data"></a>Получение данных
+### <a name="retrieve-data"></a>Получить данные
 
 `TodoServiceClient.BeginGetTodoItems` И `TodoServiceClient.EndGetTodoItems` методы используются для вызова `GetTodoItems` операция, предоставляемая веб-службой. Эти асинхронные методы, инкапсулируются в `Task` объекта, как показано в следующем примере кода:
 
@@ -142,7 +142,8 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
     null,
     TaskCreationOptions.None);
 
-  foreach (var item in todoItems) {
+  foreach (var item in todoItems)
+  {
     Items.Add (FromWCFServiceTodoItem (item));
   }
   ...
@@ -153,7 +154,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 `TodoServiceClient.EndGetTodoItems` Возвращает `ObservableCollection` из `TodoWCFService.TodoItem` экземпляров, которые затем преобразуются `List` из `TodoItem` экземпляров для отображения.
 
-### <a name="creating-data"></a>Создание данных
+### <a name="create-data"></a>Создание данных
 
 `TodoServiceClient.BeginCreateTodoItem` И `TodoServiceClient.EndCreateTodoItem` методы используются для вызова `CreateTodoItem` операция, предоставляемая веб-службой. Эти асинхронные методы, инкапсулируются в `Task` объекта, как показано в следующем примере кода:
 
@@ -176,7 +177,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 
 Служба вызывает исключение web `FaultException` при невозможности создать `TodoItem`, который обрабатывается приложением.
 
-### <a name="updating-data"></a>Обновление данных
+### <a name="update-data"></a>обновление данных
 
 `TodoServiceClient.BeginEditTodoItem` И `TodoServiceClient.EndEditTodoItem` методы используются для вызова `EditTodoItem` операция, предоставляемая веб-службой. Эти асинхронные методы, инкапсулируются в `Task` объекта, как показано в следующем примере кода:
 
@@ -199,7 +200,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 
 Служба вызывает исключение web `FaultException` при невозможности найти или обновить `TodoItem`, который обрабатывается приложением.
 
-### <a name="deleting-data"></a>Удаление данных
+### <a name="delete-data"></a>Удаление данных
 
 `TodoServiceClient.BeginDeleteTodoItem` И `TodoServiceClient.EndDeleteTodoItem` методы используются для вызова `DeleteTodoItem` операция, предоставляемая веб-службой. Эти асинхронные методы, инкапсулируются в `Task` объекта, как показано в следующем примере кода:
 
@@ -220,12 +221,8 @@ public async Task DeleteTodoItemAsync (string id)
 
 Служба вызывает исключение web `FaultException` если его не удается найти или удалить `TodoItem`, который обрабатывается приложением.
 
-## <a name="summary"></a>Сводка
-
-В этой статье показано, как использовать службу WCF SOAP из приложения Xamarin.Forms. В общем случае платформы Xamarin поддерживает то же подмножество WCF, которая поставляется вместе со средой выполнения Silverlight в стороне клиента. Это включает в себя наиболее распространенные кодировку и протокол реализации WCF — транспорта кодировкой текста сообщений SOAP по протоколу HTTP с помощью протокола `BasicHttpBinding` класса. Кроме того поддержка WCF требует применения средств доступно только в среде Windows для создания прокси-сервера.
-
-
 ## <a name="related-links"></a>Связанные ссылки
 
 - [TodoWCF (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
-- [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult(v=vs.110).aspx)
+- [Практическое руководство. Создание клиента Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [Средство ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

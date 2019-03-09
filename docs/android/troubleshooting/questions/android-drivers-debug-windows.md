@@ -1,5 +1,5 @@
 ---
-title: Какие драйверы USB, мне нужно отладки Android в Windows?
+title: Какие драйверы USB нужны для отладки Android в Windows?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
@@ -7,20 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8b996a1cc89acedc47c7169ec579dfb99dae788f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 85045967f5c63eb39c45f917b957d2a393a3a068
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114539"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670302"
 ---
-# <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Какие драйверы USB, мне нужно отладки Android в Windows?
+# <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Какие драйверы USB нужны для отладки Android в Windows?
 
 ## <a name="finding-usb-drivers"></a>Поиск драйверов USB
 
-Отладка на устройстве Android, при разработке в Windows; необходимо установить драйвер USB. Диспетчер Android SDK включает в себя «Драйвер Google USB» по умолчанию, который добавляет поддержку для устройств хранилища, как описано здесь: [http://developer.android.com/sdk/win-usb.html](http://developer.android.com/sdk/win-usb.html)
+Отладка на устройстве Android, при разработке в Windows; необходимо установить драйвер USB. Диспетчер Android SDK включает в себя «Драйвер Google USB» по умолчанию, который добавляет поддержку для устройств хранилища, как описано здесь: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
-Другие устройства требуют драйверов USB, в частности опубликованных производителем устройства. Некоторые ссылки для наиболее распространенных производителей включаются в этом руководстве: [http://developer.android.com/tools/extras/oem-usb.html](http://developer.android.com/tools/extras/oem-usb.html)
+Другие устройства требуют драйверов USB, в частности опубликованных производителем устройства. Некоторые ссылки для наиболее распространенных производителей включаются в этом руководстве: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>Альтернативные варианты
 

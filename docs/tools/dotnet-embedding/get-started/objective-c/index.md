@@ -1,18 +1,13 @@
 ---
 title: Приступая к работе с Objective-C
-description: Здесь описано, как приступить к использованию внедрение .NET с Objective-C. Обсуждаются требования, установка внедрение .NET из NuGet и поддерживаемые платформы.
+description: 'Здесь описано, как приступить к использованию внедрение .NET с Objective-C. Обсуждаются требования, установка внедрение .NET из NuGet и поддерживаемые платформы.'
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: c7bac0612679131383d3b89f24904c8083fa925b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103105"
 ---
+
 # <a name="getting-started-with-objective-c"></a>Приступая к работе с Objective-C
 
 Это начальной странице начала работы для Objective-C, основные сведения для всех поддерживаемых платформ.
@@ -23,7 +18,7 @@ ms.locfileid: "50103105"
 
 * macOS 10.12 (Sierra) или более поздней версии
 * Xcode 8.3.2 или более поздней версии
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Вы можете установить [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/) для редактирования и компиляции вашей C# кода.
 

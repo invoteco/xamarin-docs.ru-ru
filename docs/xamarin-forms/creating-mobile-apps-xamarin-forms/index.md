@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 5dae8f1907b9a61018e335a8fe19ad319d95741d
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207873"
 ---
+
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Создание мобильных приложений с помощью Xamarin.Forms (книга)
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples)
@@ -113,7 +108,7 @@ Xamarin.Forms больше не поддерживает Windows 8.1 и Windows 
 
 Библиотеку .NET Standard 2.0 не поддерживает любой версии Windows 10 Mobile. Таким образом приложения Xamarin.Forms с помощью библиотеки .NET Standard не запустится на устройстве Windows 10 Mobile. Приложения Xamarin.Forms по-прежнему работать под управлением Windows 10 desktop, версии 10.0.16299.0 и выше.
 
-Xamarin.Forms имеет поддержку предварительной версии [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), и [Tizen](/xamarin-forms/platform/other/tizen.md) платформ.
+Xamarin.Forms имеет поддержку предварительной версии [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), и [Tizen](~/xamarin-forms/platform/other/tizen.md) платформ.
 
 ### <a name="chapter-summaries"></a>Глава сводок
 

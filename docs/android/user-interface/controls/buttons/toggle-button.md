@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 22eb8f999450ed8fb46b1f7809c92540be13aa65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 841a11f9cb48786a046802288ce05e7ae186688a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105926"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671720"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
@@ -47,12 +47,12 @@ togglebutton.Click += (o, e) => {
 Запустите приложение.
 
 
-**Совет:** Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), используйте [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+**Совет.** Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), используйте [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
 метод задания свойства или [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
 метод.
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Выключатель](http://developer.android.com/reference/android/widget/ToggleButton.html)
-- [Коммутатор](http://developer.android.com/reference/android/widget/Switch.html)
+- [Выключатель](https://developer.android.com/reference/android/widget/ToggleButton.html)
+- [Коммутатор](https://developer.android.com/reference/android/widget/Switch.html)

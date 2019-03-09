@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 60751437b891579c97acee0e032defcca2b510f6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233869"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668742"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Введение в 3D Touch в Xamarin.iOS
 
@@ -86,7 +86,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 ### <a name="checking-for-3d-touch-availability"></a>Проверка доступности 3D Touch
 
-При работе с [UIViewController]() поддерживает ли приложение выполняется на устройстве iOS 3D Touch можно использовать следующий код:
+При работе с `UIViewController` поддерживает ли приложение выполняется на устройстве iOS 3D Touch можно использовать следующий код:
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -101,7 +101,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-Этот метод может быть вызван перед *или после* `ViewDidLoad()`. 
+Этот метод может быть вызван перед *или после* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>Обработка Peek и Pop
 
@@ -281,7 +281,7 @@ public override void ViewDidLoad ()
 * `UIApplicationShortcutItemType` — Строковое значение, мы будем использовать для идентификации элемента в приложении. Дополнительные сведения см. в следующем разделе.
 
 > [!IMPORTANT]
-> Быстрый пункты контекстного действия, которые заданы в `Info.plist` файл недоступен с `Application.ShortcutItems` свойство. Они только передаются в `HandleShortcutItem` обработчик событий. 
+> Быстрый пункты контекстного действия, которые заданы в `Info.plist` файл недоступен с `Application.ShortcutItems` свойство. Они только передаются в `HandleShortcutItem` обработчик событий.
 
 
 

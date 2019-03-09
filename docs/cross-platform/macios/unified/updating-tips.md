@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce5c8f7cf30407e64464c412359263b52e134675
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267395"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672460"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Советы по обновлению кода в Unified API
 
@@ -88,7 +88,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
  * `NSAction` было [заменить](~/cross-platform/macios/unified/overview.md#NSAction) с starndard .NET `Action`. Некоторые делегаты simple (один параметр) также были заменены `Action<T>`.
 
-Наконец, см. [различия единый API классической v](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) для поиска изменений к интерфейсам API в коде. Поиск [эту страницу](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) поможет найти классический API-интерфейсов и что они были обновлены до.
+Наконец, см. [различия единый API классической v](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) для поиска изменений к интерфейсам API в коде. Поиск [эту страницу](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) поможет найти классический API-интерфейсов и что они были обновлены до.
 
 **Примечание:** `MonoTouch.Dialog` пространство имен остается неизменным после миграции. Если код использует **MonoTouch.Dialog** должны продолжать использовать это пространство имен — сделать *не* изменить `MonoTouch.Dialog` для `Dialog`!
 
@@ -136,7 +136,7 @@ grphc.SetLineDash (0, new nfloat[] { 0, 3 * (nfloat)Math.PI });
 public override nint RowsInSection (UITableView tableview, nint section) {
 ```
 
-**Ошибка CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView) "**
+**Ошибка CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)'**
 
 Исправление: Если тип возвращаемого значения изменяется на `nint`, привести возвращаемое значение к `nint`.
 

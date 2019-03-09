@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: c674112f629f2054f81d72ee2b71268836e48b7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8ad2dde701814c0977e25e6e58272c0aa01ca4ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106719"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672850"
 ---
 # <a name="working-with-jni"></a>Работа с JNI
 
@@ -56,7 +56,7 @@ JNI, предоставляемые [Android.Runtime.JNIEnv имен](https://de
 
 
 
-## <a name="android-callable-wrappers"></a>Вызываемые оболочки времени Android
+## <a name="android-callable-wrappers"></a>Вызываемые программы-оболочки Android
 
 Android вызываемых оболочек (ACW) являются обязательными, каждый раз, когда среда выполнения Android (ГРАФИКА) должна вызывать управляемый код; Эти оболочки необходимы, так как нет способа для регистрации классов с помощью КАРТИНОК во время выполнения.
 (В частности, [DefineClass](http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html#wp15986) JNI функция не поддерживается средой выполнения Android. Вызываемые оболочки времени Android таким образом составляют для отсутствия поддержки регистрации типа среды выполнения.)
@@ -156,7 +156,7 @@ public class HelloAndroid extends android.app.Activity {
 
 -   Android поддерживают действия имена в XML-атрибуты макета, например [android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) XML-атрибута. Если он указан, увеличенную экземпляр представления пытается найти следующий метод Java.
 
--   [Java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html) интерфейс требует `readObject` и `writeObject` методы. Так как они не являются членами этого интерфейса, наши соответствующие управляемую реализацию не предоставляет эти методы в код Java.
+-   [Java.io.Serializable](https://developer.android.com/reference/java/io/Serializable.html) интерфейс требует `readObject` и `writeObject` методы. Так как они не являются членами этого интерфейса, наши соответствующие управляемую реализацию не предоставляет эти методы в код Java.
 
 -   [Android.os.Parcelable](https://developer.xamarin.com/api/type/Android.Os.Parcelable/) интерфейса ожидает, что класс реализации должен иметь статическое поле `CREATOR` типа `Parcelable.Creator`. Созданный код Java требуется некоторые явные поля. С нашей стандартные ситуации нет способа для выходного поля в коде Java из управляемого кода.
 
@@ -248,12 +248,12 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 ### <a name="binding-fields"></a>Привязка полей
 
-Поля Java доступны в качестве C# свойства, например поле Java [java.lang.System.in](http://developer.android.com/reference/java/lang/System.html#in) привязаны как C# свойство [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
+Поля Java доступны в качестве C# свойства, например поле Java [java.lang.System.in](https://developer.android.com/reference/java/lang/System.html#in) привязаны как C# свойство [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
 Кроме того поскольку JNI различает статические поля и поля экземпляров, различные методы использовать при реализации свойства.
 
 Поле привязки состоит из трех наборов методов:
 
-1.  *Регистрационный номер плательщика поле* метод. *Регистрационный номер плательщика поле* метод отвечает за возврат дескриптор поля, *получить значение поля* и *задать значение поля* будет использовать методы. Получение идентификатора поля необходимо знать, объявление типа, имя поля и [сигнатура типа JNI](#_JNI_Type_Signatures) поля.
+1.  *Регистрационный номер плательщика поле* метод. *Регистрационный номер плательщика поле* метод отвечает за возврат дескриптор поля, *получить значение поля* и *задать значение поля* будет использовать методы. Получение идентификатора поля необходимо знать, объявление типа, имя поля и [сигнатура типа JNI](#JNI_Type_Signatures) поля.
 
 1.  *Получить значение поля* методы. Эти методы требуют дескриптором поля и несете ответственность за считывание Java значение поля.
     Метод, используемый зависит от типа поля.
@@ -280,7 +280,7 @@ public static System.IO.Stream In
 }
 ```
 
-Примечание: Мы используем [InputStreamInvoker.FromJniHandle](https://developer.xamarin.com/api/member/Android.Runtime.InputStreamInvoker.FromJniHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) для преобразования в ссылки JNI `System.IO.Stream` используется экземпляр и мы `JniHandleOwnership.TransferLocalRef` поскольку [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/) Возвращает локальную ссылку.
+Примечание. Мы используем [InputStreamInvoker.FromJniHandle](https://developer.xamarin.com/api/member/Android.Runtime.InputStreamInvoker.FromJniHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) для преобразования в ссылки JNI `System.IO.Stream` используется экземпляр и мы `JniHandleOwnership.TransferLocalRef` поскольку [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/) возвращает локальная ссылка.
 
 Многие из [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) типы имеют `FromJniHandle` ссылаются на методы, которые преобразует JNI в требуемый тип.
 
@@ -288,11 +288,11 @@ public static System.IO.Stream In
 
 ### <a name="method-binding"></a>Метод привязки
 
-Java-методы представляются как C# методы и как C# свойства. Например, следующий метод Java [java.lang.Runtime.runFinalizersOnExit](http://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) метод привязан как [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/) метод и [java.lang.Object.getClass ](http://developer.android.com/reference/java/lang/Object.html#getClass) метод привязан как [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/) свойство.
+Java-методы представляются как C# методы и как C# свойства. Например, следующий метод Java [java.lang.Runtime.runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) метод привязан как [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/) метод и [java.lang.Object.getClass ](https://developer.android.com/reference/java/lang/Object.html#getClass) метод привязан как [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/) свойство.
 
 Вызов метода — это двухэтапный процесс:
 
-1.  *Регистрационный номер плательщика метод* для вызываемого метода. *Регистрационный номер плательщика метод* метод отвечает за возврат дескриптор метода, который будет использовать методы вызова метода. Получить идентификатор метода необходимо знать, объявление типа, имя метода и [сигнатура типа JNI](#_JNI_Type_Signatures) метода.
+1.  *Регистрационный номер плательщика метод* для вызываемого метода. *Регистрационный номер плательщика метод* метод отвечает за возврат дескриптор метода, который будет использовать методы вызова метода. Получить идентификатор метода необходимо знать, объявление типа, имя метода и [сигнатура типа JNI](#JNI_Type_Signatures) метода.
 
 1.  Вызовите метод.
 
@@ -308,7 +308,7 @@ Java-методы представляются как C# методы и как 
 
 #### <a name="static-methods"></a>Статические методы
 
-Привязка статический метод предполагает использование `JNIEnv.GetStaticMethodID` для получения дескриптора метода, затем с помощью соответствующего `JNIEnv.CallStatic*Method` метод, в зависимости от типа возвращаемого значения метода. Ниже приведен пример привязки для [Runtime.getRuntime](http://developer.android.com/reference/java/lang/Runtime.html#getRuntime()) метод:
+Привязка статический метод предполагает использование `JNIEnv.GetStaticMethodID` для получения дескриптора метода, затем с помощью соответствующего `JNIEnv.CallStatic*Method` метод, в зависимости от типа возвращаемого значения метода. Ниже приведен пример привязки для [Runtime.getRuntime](https://developer.android.com/reference/java/lang/Runtime.html#getRuntime()) метод:
 
 ```csharp
 static IntPtr id_getRuntime;
@@ -388,7 +388,7 @@ IntPtr lrefInstance = JNIEnv.NewObject (class_ref, id_ctor_I, new JValue (value)
 1.  Если текущий тип среды выполнения является таким же, как объявляющий тип, затем вызвать конструктор Java и используйте [Object.SetHandle](https://developer.xamarin.com/api/member/Java.Lang.Object.SetHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) для хранения дескриптор, возвращенный `JNIEnv.NewInstance` .
 
 
-Например, рассмотрим [java.lang.Integer(int)](http://developer.android.com/reference/java/lang/Integer.html#Integer(int)) конструктор. Это привязывается как:
+Например, рассмотрим [java.lang.Integer(int)](https://developer.android.com/reference/java/lang/Integer.html#Integer(int)) конструктор. Это привязывается как:
 
 ```csharp
 // Cache the constructor's method handle for later use
@@ -634,7 +634,7 @@ int>` делегат, который ссылается на `n_Add` затем 
 
 Наконец `n_Add` метод отвечает за маршалинг параметров JNI для соответствующих управляемых типов, а затем вызовите метод делегирование.
 
-Примечание: Всегда используйте `JniHandleOwnership.DoNotTransfer` при получении MCW поверх экземпляра Java. Рассматривая их как ссылку на локальном (и тем самым вызывая `JNIEnv.DeleteLocalRef`) приведет к разрыву управляемый -&gt; Java -&gt; управляемого стека переходов.
+Примечание. Всегда используйте `JniHandleOwnership.DoNotTransfer` при получении MCW поверх экземпляра Java. Рассматривая их как ссылку на локальном (и тем самым вызывая `JNIEnv.DeleteLocalRef`) приведет к разрыву управляемый -&gt; Java -&gt; управляемого стека переходов.
 
 
 
@@ -807,7 +807,7 @@ public interface IAdderProgress : IJavaObject {
 
 `Invoker` Определение типа должен наследовать `Java.Lang.Object`, реализуйте соответствующий интерфейс и предоставляют все способы подключения, на которые ссылается определение интерфейса. Имеется один Дополнительные предложения, отличается от класса привязки: `class_ref` поле и метод идентификаторы должны входить в экземпляр, не статические члены.
 
-Причина предпочтительного использования члены экземпляра связана с `JNIEnv.GetMethodID` поведение в среде выполнения Android. (Это может быть также поведение Java; она не была протестирована.) `JNIEnv.GetMethodID` возвращает значение null, при поиске метода, поступающие от реализованного интерфейса и не объявленный интерфейс. Рассмотрите возможность [java.util.SortedMap&lt;K, V&gt; ](http://developer.android.com/reference/java/util/SortedMap.html) Java-интерфейса, который реализует [java.util.Map&lt;K, V&gt; ](http://developer.android.com/reference/java/util/Map.html) интерфейс. MAP предоставляет [снимите](http://developer.android.com/reference/java/util/Map.html#clear()) метод, тем самым кажущихся разумным `Invoker` определение для SortedMap будет:
+Причина предпочтительного использования члены экземпляра связана с `JNIEnv.GetMethodID` поведение в среде выполнения Android. (Это может быть также поведение Java; она не была протестирована.) `JNIEnv.GetMethodID` возвращает значение null, при поиске метода, поступающие от реализованного интерфейса и не объявленный интерфейс. Рассмотрите возможность [java.util.SortedMap&lt;K, V&gt; ](https://developer.android.com/reference/java/util/SortedMap.html) Java-интерфейса, который реализует [java.util.Map&lt;K, V&gt; ](https://developer.android.com/reference/java/util/Map.html) интерфейс. MAP предоставляет [снимите](https://developer.android.com/reference/java/util/Map.html#clear()) метод, тем самым кажущихся разумным `Invoker` определение для SortedMap будет:
 
 ```csharp
 // Fails at runtime. DO NOT FOLLOW
@@ -849,7 +849,7 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-Примечание: `Handle` свойство должно использоваться в теле конструктора и не `handle` параметра, как на Android v4.0 `handle` параметр может быть недопустимым, когда базовый конструктор завершится выполнение.
+Примечание. `Handle` Свойство должно использоваться в теле конструктора и не `handle` параметра, как на Android v4.0 `handle` параметр может быть недопустимым, когда базовый конструктор завершится выполнение.
 
 
 #### <a name="dispose-method"></a>Метод Dispose
@@ -1125,7 +1125,7 @@ Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefStrin
 
 Для поиска поля или метода в JNI, объявляющий тип для поля или метода необходимо искать первый. [Android.Runtime.JNIEnv.FindClass(string)](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.FindClass/(System.String)) метод используется для поиска типов Java. Параметр строки *упрощенное ссылка на тип* или *ссылка на полный тип* для типа Java. См. в разделе [тип ссылки JNI](#_JNI_Type_References) Дополнительные сведения о ссылках упрощенного и полного типа.
 
-Примечание: в отличие от всех остальных `JNIEnv` метод, который возвращает экземпляры объектов, `FindClass` Возвращает глобальные ссылки, не является локальной ссылкой.
+Примечание. В отличие от всех остальных `JNIEnv` метод, который возвращает экземпляры объектов, `FindClass` Возвращает глобальные ссылки, не является локальной ссылкой.
 
 <a name="_Instance_Fields" />
 
@@ -1391,7 +1391,7 @@ long f(int n, String s, int[] array);
 (ILjava/lang/String;[I)J
 ```
 
-Как правило, это *строго* рекомендуется использовать `javap` команду, чтобы определить JNI подписи. Например, сигнатура типа JNI из [java.lang.Thread.State.valueOf(String)](http://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) метод является "(Ljava/lang или строка); состояние $ Ljava/lang/потока;», тогда как JNI введите подпись [ java.lang.Thread.State.values](http://developer.android.com/reference/java/lang/Thread.State.html#values) метод является «() [состояние $ Ljava/lang/потока;». Остерегайтесь конечные точки с запятой; Эти *являются* частью сигнатура типа JNI.
+Как правило, это *строго* рекомендуется использовать `javap` команду, чтобы определить JNI подписи. Например, сигнатура типа JNI из [java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) метод является "(Ljava/lang или строка); состояние $ Ljava/lang/потока;», тогда как JNI введите подпись [ java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values) метод является «() [состояние $ Ljava/lang/потока;». Остерегайтесь конечные точки с запятой; Эти *являются* частью сигнатура типа JNI.
 
 <a name="_JNI_Type_References" />
 
@@ -1433,12 +1433,12 @@ long f(int n, String s, int[] array);
 1.  Считывать значения на выходе `'unzip -l android.jar | grep JavaName'` .
 
 
-Одно из двух приведет к типом Java [java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html) , сопоставляемого с ссылку на тип упрощенной `java/lang/Thread$State`.
+Одно из двух приведет к типом Java [java.lang.Thread.State](https://developer.android.com/reference/java/lang/Thread.State.html) , сопоставляемого с ссылку на тип упрощенной `java/lang/Thread$State`.
 
 
 ### <a name="type-references"></a>Ссылки на типы
 
-Ссылка на тип является ссылкой встроенного типа или ссылка на тип упрощенной с `'L'` префикс и `';'` суффикс. Для типа Java [java.lang.String](http://developer.android.com/reference/java/lang/String.html), является ссылка на тип упрощенной `"java/lang/String"`, а ссылка на тип `"Ljava/lang/String;"`.
+Ссылка на тип является ссылкой встроенного типа или ссылка на тип упрощенной с `'L'` префикс и `';'` суффикс. Для типа Java [java.lang.String](https://developer.android.com/reference/java/lang/String.html), является ссылка на тип упрощенной `"java/lang/String"`, а ссылка на тип `"Ljava/lang/String;"`.
 
 Ссылки на типы используются со ссылками на тип массива, так и с подписями JNI.
 
@@ -1491,7 +1491,7 @@ static {};
 *Большинство* времени, в JNI, универсальные шаблоны Java *не существуют*.
 Существуют некоторые «Морщины», но эти Морщины находятся в взаимодействие Java с помощью универсальных шаблонов, не имеющая ищет и вызывает универсальными элементами JNI.
 
-При работе через JNI, нет никакой разницы между универсального типа или члена и неуниверсального типа или члена. Например, универсальный тип [java.lang.Class&lt;T&gt; ](http://developer.android.com/reference/java/lang/Class.html) также является «сырой» универсальным типом `java.lang.Class`, оба из которых имеют одну и ту же ссылку упрощенного типа, `"java/lang/Class"`.
+При работе через JNI, нет никакой разницы между универсального типа или члена и неуниверсального типа или члена. Например, универсальный тип [java.lang.Class&lt;T&gt; ](https://developer.android.com/reference/java/lang/Class.html) также является «сырой» универсальным типом `java.lang.Class`, оба из которых имеют одну и ту же ссылку упрощенного типа, `"java/lang/Class"`.
 
 
 ## <a name="java-native-interface-support"></a>Поддержка собственного интерфейса Java

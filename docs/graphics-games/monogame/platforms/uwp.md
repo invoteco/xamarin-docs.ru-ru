@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 12a07be4adb32e8d9461a00e5fdea52d9b930848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b8eafc3c9c85ba8067b5da7b568ed7c91c9e170c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117854"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666429"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Создание проекта MonoGame UWP
 
@@ -40,11 +40,11 @@ _MonoGame можно использовать для создания игр и 
 После того как будут установлены все необходимые ресурсы и включен режим разработчика на компьютере Windows 10, мы можем создать новый проект MonoGame, с помощью Visual Studio, выполнив следующие действия:
 
 1. Выберите **файл** > **новый** > **проекта...**
-1. Выберите **установлен** > **шаблоны** > **Visual C#**   >  **MonoGame** Категория: 
+1. Выберите **установлен** > **шаблоны** > **Visual C#**   >  **MonoGame** Категория:
 
     ![](uwp-images/image1.png "Категория MonoGame")
 
-1. Выберите **MonoGame универсальный проект Windows 10** параметр: 
+1. Выберите **MonoGame универсальный проект Windows 10** параметр:
 
     ![](uwp-images/image2.png "Выберите параметр MonoGame универсальный проект Windows 10")
 
@@ -76,7 +76,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ![](uwp-images/remote.png "Приложения универсальной платформы Windows можно развернуть, переключившись на целевой объект на удаленный компьютер и введя адрес IP-адрес из них Xbox")
 
-В службе Xbox One белый границы представляет области не безопасной для телевизоры. Дополнительные сведения см. в разделе [разделе безопасной области](#Safe_Area_on_Xbox_One).
+В службе Xbox One белый границы представляет области не безопасной для телевизоры. Дополнительные сведения см. в разделе [разделе безопасной области](#safe-area-on-xbox-one).
 
 ![](uwp-images/safearea.png "В службе Xbox One белая граница представляет области не безопасной для телевизоры")
 
@@ -92,7 +92,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 Содержимое в проектах MonoGame можно ссылаться непосредственно из файла или с помощью [конвейера содержимого MonoGame](~/graphics-games/cocossharp/content-pipeline/index.md). Небольших проектов игр выгоден простота из файла. Крупные проекты будут усовершенствованы благодаря использованию конвейера содержимого для оптимизации содержимого, чтобы уменьшить размер и время загрузки. В отличие от XNA на Xbox 360 `System.IO.File` класс доступен в приложениях UWP один Xbox.
 
-Дополнительные сведения о загрузке содержимого с помощью конвейера содержимого см. в разделе [руководство по содержимому конвейера](~/graphics-games/cocossharp/content-pipeline/index.md). 
+Дополнительные сведения о загрузке содержимого с помощью конвейера содержимого см. в разделе [руководство по содержимому конвейера](~/graphics-games/cocossharp/content-pipeline/index.md).
 
 ### <a name="loading-content-from-file"></a>Загрузка содержимого из файла
 

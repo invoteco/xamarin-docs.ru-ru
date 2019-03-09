@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118517"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672538"
 ---
 # <a name="application-icons-in-xamarinios"></a>Значки приложения в Xamarin.iOS
 
@@ -70,7 +70,7 @@ ms.locfileid: "50118517"
 
 - **iPad: iOS 9 и 10**
 
-    ||2 x (iPad Pro)|
+    ||2x (iPad Pro)|
     |---|---|
     |Значок приложения|167x167<sup>6</sup>|
     |Spotlight|120x120<sup>6</sup>|
@@ -212,4 +212,4 @@ ms.locfileid: "50118517"
 
 - [Работа с образами (пример)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Пользовательский значок и правила создания образа](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [Пользовательский значок и правила создания образа](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

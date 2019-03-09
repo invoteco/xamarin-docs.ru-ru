@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117438"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670575"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Создание ресурсов для разных экранов
 
@@ -50,21 +50,21 @@ Android масштабирует прорисовываемых ресурсов
 
 ### <a name="declare-the-supported-screen-size"></a>Объявляет размер поддерживаемых экрана
 
-Объявление размера экрана гарантирует, что только поддерживаемые устройства можно скачать приложение. Это достигается путем установки [поддерживает экраны](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) элемент в **AndroidManifest.xml** файла. Этот элемент используется для указания, какие размеры экрана поддерживаются приложением. Некоторый экран считается поддерживаться, если приложение правильно может поместить его макеты экран. Используя этот элемент манифеста, приложение не будет отображаться в [ *Google Play* ](https://play.google.com/) для устройств, которые не соответствует характеристикам экрана. Приложение все равно будет работать на устройствах с экранами не поддерживается, но макетов может быть нечеткими и размытыми.
+Объявление размера экрана гарантирует, что только поддерживаемые устройства можно скачать приложение. Это достигается путем установки [поддерживает экраны](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) элемент в **AndroidManifest.xml** файла. Этот элемент используется для указания, какие размеры экрана поддерживаются приложением. Некоторый экран считается поддерживаться, если приложение правильно может поместить его макеты экран. Используя этот элемент манифеста, приложение не будет отображаться в [ *Google Play* ](https://play.google.com/) для устройств, которые не соответствует характеристикам экрана. Приложение все равно будет работать на устройствах с экранами не поддерживается, но макетов может быть нечеткими и размытыми.
 
 Поддерживаемые экрана sixes объявляются в **Properites/AndroidManifest.xml** файл решения:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Манифест Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Манифест Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
-Изменить **AndroidManifest.xml** для включения [поддерживает экраны](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Изменить **AndroidManifest.xml** для включения [поддерживает экраны](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -178,7 +178,7 @@ Android масштабирует прорисовываемых ресурсов
 
 Android выполняется на огромное число устройств, и сочетание размеров экрана и плотности экрана может показаться сложным. Следующие советы помогут свести к минимуму усилия, необходимые для поддержки различных устройств:
 
-- **Только проектирования и разработки, которые вы используете** &ndash; существуют существует множество разных устройств, но некоторые существуют в отдельных форм-факторов, которые могут потребоваться значительные усилия для проектирования и разработки для. [ **Размеру экрана и плотности** ](http://developer.android.com/resources/dashboard/screens.html) панели мониторинга — это страница, предоставляемый Google, предоставляющие данные о декомпозиция матрицы плотностью экрана размер и экрана. Разделении полосы пропускания предоставляет сведения о том, как всяких усилий с поддержкой экранов.
+- **Только проектирования и разработки, которые вы используете** &ndash; существуют существует множество разных устройств, но некоторые существуют в отдельных форм-факторов, которые могут потребоваться значительные усилия для проектирования и разработки для. [ **Размеру экрана и плотности** ](https://developer.android.com/resources/dashboard/screens.html) панели мониторинга — это страница, предоставляемый Google, предоставляющие данные о декомпозиция матрицы плотностью экрана размер и экрана. Разделении полосы пропускания предоставляет сведения о том, как всяких усилий с поддержкой экранов.
 
 - **Использовать DPs, а не в точках** -пиксели становятся нежелательный как изменения плотностью экрана. Делать не следует жестко кодировать значения в пикселях. Избегайте пикселей пользу dp (независимый от плотности пикселей).
 

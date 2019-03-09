@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6f5af4cea0c223b9ddc7cd72331676f5f92f2509
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e02b5631aff76e35300ae4d7dd5e3c6652f6e3da
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055203"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668846"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Панели вкладки панели вкладок и контроллеры в Xamarin.iOS
 
@@ -61,7 +61,7 @@ ms.locfileid: "53055203"
 
 ### <a name="adding-the-uitabbarcontroller"></a>Добавление UITabBarController
 
-Добавьте пустой класс, выбрав **файл > новый файл** и выбрав **общие: пустой класс** шаблона. Назовите файл `TabController` как показано ниже:
+Добавьте пустой класс, выбрав **файл > новый файл** и выбрав **общие: Пустой класс** шаблона. Назовите файл `TabController` как показано ниже:
 
 [![](creating-tabbed-applications-images/02-newclass.png "Добавьте класс TabController")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
@@ -283,8 +283,8 @@ Visual Studio для Mac автоматически создает классы 
 
 Мы хотим перетащите `Label` и `Button` на ViewController1 из **элементов** правой стороны. Далее при помощи панели свойств для редактирования, именем и текстом элементов управления следующего:
 
--  **Метка** : `Text`  =  **один**
--  **Кнопка** : `Title`  =  **пользователь выполняет некоторое Начальное действие**
+-  **Метка** : `Text` = **Один**
+-  **Кнопка** : `Title` = **Пользователь выполняет некоторое Начальное действие**
 
 
 Мы Управление видимостью нашей кнопки в `TouchUpInside` событий и мы должны ссылаться на него в коде программной части. Давайте идентифицировать его с **имя** `aButton` в панели свойств, как показано на следующем снимке экрана:
@@ -372,4 +372,4 @@ public override void ViewDidLoad ()
 
 - [Создание приложения с вкладками (пример)](https://developer.xamarin.com/samples/monotouch/CreatingTabbedApplications/)
 - [Images.ZIP](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
-- [Ссылки на класс UITabBarController](http://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)
+- [Ссылки на класс UITabBarController](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

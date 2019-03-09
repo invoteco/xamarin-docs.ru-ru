@@ -6,16 +6,16 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: affebab9bb6b07f204beef24cce2b57444d45e49
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 55c08c1bd0d82f8458e0c07b4202b6275600ff38
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527304"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671108"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET в Xamarin iOS и Android
 
-[TaskyPortable](/samples/mobile/VisualBasic/TaskyPortableVB/) пример приложения демонстрирует, как можно использовать код Visual Basic, компилируются в переносимой библиотеки классов с помощью Xamarin. Ниже приведены некоторые снимки экрана, полученный приложений, работающих под управлением iOS, Android и Windows Phone.
+[TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB) пример приложения демонстрирует, как можно использовать код Visual Basic, компилируются в переносимой библиотеки классов с помощью Xamarin. Ниже приведены некоторые снимки экрана, полученный приложений, работающих под управлением iOS, Android и Windows Phone.
 
  [![](native-apps-images/image5.png "iOS, Android и Windows телефонов под управлением приложения, созданного с помощью Visual Basic")](native-apps-images/image5.png#lightbox)
 
@@ -26,7 +26,7 @@ IOS, Android и Windows Phone, проекты, в примере записыв�
 В этом руководстве рассматривается, как Visual Basic, был реализован в [TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB) пример Xamarin для iOS и Android.
 
 > [!NOTE]
-> Просмотрите инструкции на [Visual Basic.NET PCL](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/) продолжения с помощью этого руководства.
+> Просмотрите инструкции на [переносимой Visual Basic.NET](index.md) продолжения с помощью этого руководства.
 
 ## <a name="visualbasicportablelibrary"></a>VisualBasicPortableLibrary
 
@@ -335,4 +335,4 @@ Visual Studio для Mac поддержка переносимых библио�
 ## <a name="related-links"></a>Связанные ссылки
 
 - [TaskyPortableVB (пример)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [Кроссплатформенная разработка в .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+- [Кроссплатформенная разработка в .NET Framework (Microsoft)](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

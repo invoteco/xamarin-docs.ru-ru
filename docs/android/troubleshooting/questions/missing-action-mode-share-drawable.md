@@ -1,5 +1,5 @@
 ---
-title: "Android.Support.v7.AppCompat — не найти ресурс, соответствующий заданному имени: attr 'android: actionModeShareDrawable'"
+title: "Android.Support.v7.AppCompat — не удалось найти ресурс, который соответствует указанному имени: attr 'android:actionModeShareDrawable'"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5814069C-FC43-41DE-B5A5-024D05E59929
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: fea681ac3b99abed09d3d3e745bd4bf6015970df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ff2a586773e33a1f4cf78657c3c69c22e79ed047
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112420"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670237"
 ---
-# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat — не найти ресурс, соответствующий заданному имени: attr 'android: actionModeShareDrawable'
+# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat — не удалось найти ресурс, который соответствует указанному имени: attr 'android:actionModeShareDrawable'
 
 1. Убедитесь, что можно загрузить последние дополнения, а также Android 5.0 SDK через диспетчер пакетов SDK Android (API 21).
 
@@ -24,11 +24,11 @@ ms.locfileid: "50112420"
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
-*Примечание*: Если вручную установить с помощью консоли диспетчера пакетов, убедитесь, что вы также установить ту же версию Xamarin.Android.Support.v4
+*Примечание*. Если вручную установить с помощью консоли диспетчера пакетов, убедитесь, что вы также установить ту же версию Xamarin.Android.Support.v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 
-Справочные материалы переполнения стека. [http://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](http://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
+Справочные материалы переполнения стека. [https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
 
 ## <a name="see-also"></a>См. также
 

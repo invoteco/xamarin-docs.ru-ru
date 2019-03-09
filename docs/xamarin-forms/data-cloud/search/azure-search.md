@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 81e6cbb39a522a471e739e7e9bbb8a0f451a38cd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 640d50a45b4b7f61113b609fa6a5e4a04566b360
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052907"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667561"
 ---
 # <a name="searching-data-with-azure-search"></a>Поиск данных с помощью поиска Azure
 
@@ -156,7 +156,7 @@ static void UploadDataToSearchIndex()
 }
 ```
 
-Данные для импорта в индекс входит в состав `IndexBatch` объект, который инкапсулирует коллекцию `IndexAction` объектов. Каждый `IndexAction` экземпляр содержит документ и свойство, определяющее, какое действие следует выполнить в документе службы поиска Azure. В примере выше `IndexAction.Upload` действие указано, что приведет к появлению, вставляемого в индекс, если он новый, документ или заменен, если он уже существует. `IndexBatch` Объект затем передается в индекс с помощью `Documents.Index` метод `SearchIndexClient` объекта. Сведения о других действиях индексирования, см. в разделе [Выбор операций индексирования для использования](/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use).
+Данные для импорта в индекс входит в состав `IndexBatch` объект, который инкапсулирует коллекцию `IndexAction` объектов. Каждый `IndexAction` экземпляр содержит документ и свойство, определяющее, какое действие следует выполнить в документе службы поиска Azure. В примере выше `IndexAction.Upload` действие указано, что приведет к появлению, вставляемого в индекс, если он новый, документ или заменен, если он уже существует. `IndexBatch` Объект затем передается в индекс с помощью `Documents.Index` метод `SearchIndexClient` объекта. Сведения о других действиях индексирования, см. в разделе [Выбор операций индексирования для использования](/azure/search/search-import-data-dotnet#decide-which-indexing-action-to-use).
 
 > [!NOTE]
 > Только 1000 документов могут быть включены в один запрос на индексирование.

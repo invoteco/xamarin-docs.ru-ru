@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: c68cdc443f11ec6709a9d6fdde8ce10cd9db6733
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233683"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667968"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Общие сведения о привязки Objective-C
 
@@ -74,7 +74,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 Можно использовать [[регистрация]](xref:Foundation.RegisterAttribute) атрибут, [[Экспорт]](xref:Foundation.ExportAttribute) атрибут, и [вызова селектора вручную Objective-C](~/ios/internals/objective-c-selectors.md) друг с другом, чтобы вручную выполнять привязку new (ранее несвязанная) типы Objective-C.
 
-Во-первых найти тип, для привязки. Обсуждение целей (и простоты), мы будем привязать [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) типа (который уже был привязан в [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); реализация ниже просто для примера является целей).
+Во-первых найти тип, для привязки. Обсуждение целей (и простоты), мы будем привязать [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) типа (который уже был привязан в [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); реализация ниже просто для примера является целей).
 
 Во-вторых, необходимо создать C# типа. Мы скорее всего захотите добавить его в пространстве имен. так как Objective-C не поддерживает пространства имен, необходимо использовать `[Register]` атрибут, чтобы изменить имя типа, который Xamarin.iOS будет зарегистрирован в среде выполнения Objective-C. C# Тип также должен наследовать от [Foundation.NSObject](xref:Foundation.NSObject):
 

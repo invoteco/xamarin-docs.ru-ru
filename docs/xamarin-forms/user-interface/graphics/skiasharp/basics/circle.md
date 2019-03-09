@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 63379a9a4195bf5128c96caaf8745df8dd0addf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050716"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669457"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Рисование простого кружка в SkiaSharp
 
@@ -108,7 +108,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Значение по умолчанию — `Fill`. Третий параметр для обводки линии и цвет заливки.
 
-Задайте [ `Color` ](xref:SkiaSharp.SKPaint.Color) свойства со значением типа [ `SKColor` ](xref:SkiaSharp.SKColor). Один из способов получения `SKColor` значение — преобразование Xamarin.Forms `Color` значение `SKColor` значение с помощью метода расширения [ `ToSKColor` ](SkiaSharp.Views.Forms.Extensions.ToSKColor*). [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) В класс `SkiaSharp.Views.Forms` пространство имен включает в себя другие методы, которые преобразуют между Xamarin.Forms и SkiaSharp значениями.
+Задайте [ `Color` ](xref:SkiaSharp.SKPaint.Color) свойства со значением типа [ `SKColor` ](xref:SkiaSharp.SKColor). Один из способов получения `SKColor` значение — преобразование Xamarin.Forms `Color` значение `SKColor` значение с помощью метода расширения [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) В класс `SkiaSharp.Views.Forms` пространство имен включает в себя другие методы, которые преобразуют между Xamarin.Forms и SkiaSharp значениями.
 
 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) Свойство указывающее толщину линии. Здесь он становится равным 25 пикселей.
 
@@ -153,7 +153,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 > [!NOTE]
 > `SKPaint` Класс определяет [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) Чтобы включить сглаживание при подготовке к просмотру рисунков. Сглаживание обычно приводит к визуально более гладкие грани, поэтому возможно, нужно присвоить этому свойству `true` в большинстве вашей `SKPaint` объектов. Для простоты данное свойство содержит _не_ в большинство образцов страниц.
 
-Несмотря на то, что ширина контура круга указывается как 25 пикселей &mdash; или части радиус круга &mdash; кажется более тонкие и имеется убедительная причина для этого: Половинная ширина линии замещается синий круг. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
+Несмотря на то, что ширина контура круга указывается как 25 пикселей &mdash; или части радиус круга &mdash; кажется более тонкие и есть хорошее объяснение: Половинная ширина линии замещается синий круг. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
 
 В приведенном ниже примере [интеграция с Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) статья демонстрирует это визуально.
 

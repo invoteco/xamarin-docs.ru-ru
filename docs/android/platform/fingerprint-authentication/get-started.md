@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 05069272bfa25cc1f003d4aeb83e15bd223c2830
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118478"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667728"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Приступая к работе с проверкой подлинности по отпечатку пальца
 
@@ -99,19 +99,19 @@ if (permissionResult == Android.Content.PM.Permission.Granted)
 else
 {
     // No permission. Go and ask for permissions and don't start the scanner. See
-    // http://developer.android.com/training/permissions/requesting.html
+    // https://developer.android.com/training/permissions/requesting.html
 }
 ```
 
 Проверка всех этих условий, каждый раз, это приложение предлагает варианты проверки подлинности будет гарантируют, что пользователь получает удобства работы пользователей. Изменения или обновления к устройству или операционной системы может повлиять на доступность проверки подлинности по отпечатку пальца. Если вы решили кэшировать результаты любого из этих проверок, не забудьте принять во внимание следующие сценарии обновления.
 
-Дополнительные сведения о том, как запросить разрешения в Android 6.0 см. в руководстве по Android [запрос прав доступа во время выполнения](http://developer.android.com/training/permissions/requesting.html).
+Дополнительные сведения о том, как запросить разрешения в Android 6.0 см. в руководстве по Android [запрос прав доступа во время выполнения](https://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Контекст](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
-- [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
-- [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [Запрос разрешений во время выполнения](http://developer.android.com/training/permissions/requesting.html)
+- [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
+- [Запрос разрешений во время выполнения](https://developer.android.com/training/permissions/requesting.html)

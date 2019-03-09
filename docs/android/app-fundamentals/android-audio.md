@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 9b7e9354250881074fc6f0db5d97dc83e4d3fa77
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1a9dd06fb3cd6899dd3a564072bb63e413edf22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114669"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667572"
 ---
 # <a name="android-audio"></a>Android аудио
 
@@ -124,7 +124,7 @@ player.Release();
 
 2. Укажите, какое устройство, чтобы использовать для записи звукового ввода через [SetAudioSource](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioSource/p/Android.Media.AudioSource/) метод.
 
-3. Установка звуковой формат файла выходных данных с помощью [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) метод. Список поддерживаемых типов аудио см. в разделе [Android поддерживаемых форматов медиафайлов](http://developer.android.com/guide/appendix/media-formats.html).
+3. Установка звуковой формат файла выходных данных с помощью [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) метод. Список поддерживаемых типов аудио см. в разделе [Android поддерживаемых форматов медиафайлов](https://developer.android.com/guide/appendix/media-formats.html).
 
 4. Вызовите [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/) метод, чтобы задать тип кодирования аудио.
 
@@ -210,7 +210,7 @@ recorder.Release();
 
 Аудио фокус может удовлетворить немедленно, или изначально запрещен и предоставлены более поздней версии. Например если приложение запросы аудио фокус во время звонка, будут отклонены, но фокус также может быть предоставлена, после завершения звонка. Таким образом чтобы реагировать соответствующим образом, если отзываются аудио фокус регистрируется прослушиватель. Запрос аудио фокус используется для определения того, является ли это хорошо для воспроизведения или записывать звук.
 
-Дополнительные сведения о звуковых фокус, см. в разделе [Управление аудио фокус](http://developer.android.com/training/managing-audio/audio-focus.html).
+Дополнительные сведения о звуковых фокус, см. в разделе [Управление аудио фокус](https://developer.android.com/training/managing-audio/audio-focus.html).
 
 
 

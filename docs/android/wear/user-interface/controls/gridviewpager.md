@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112771"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670926"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -19,7 +19,7 @@ ms.locfileid: "50112771"
 
 ![Пример снимка экрана GridViewPager на квадратным дисплеем](gridviewpager-images/gridviewpager.png)
 
-Сначала добавьте [поддержку Xamarin Android Wear](http://www.nuget.org/packages/Xamarin.Android.Wear/) свой проект пакет NuGet.
+Сначала добавьте [поддержку Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear/) свой проект пакет NuGet.
 
 Макет XML выглядит следующим образом:
 
@@ -31,8 +31,8 @@ ms.locfileid: "50112771"
     android:keepScreenOn="true" />
 ```
 
-Создание [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(или подкласс, такие как [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Создание [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(или подкласс, такие как [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 для предоставления представления для отображения имени пользователя переход.
 
 [Пример адаптера](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) показано, как реализовать требуемые методы, включая переопределения для `RowCount`, `GetColumnCount`, `GetBackground`, и `GetFragment`

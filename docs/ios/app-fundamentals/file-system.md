@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 38422682849de60a3f43e513ef48011d32b030ef
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579873"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672630"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Доступ к файловой системе в Xamarin.iOS
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/FileSystemSampleCode/)
 
-Можно использовать Xamarin.iOS и `System.IO` классы в *библиотеки базовых классов (BCL) .NET* для доступа к файловой системе iOS. `File` Класс позволяет создавать, удалять и читать файлы и `Directory` класс позволяет создавать, удалять или перечислять содержимое каталогов. Можно также использовать `Stream` подклассов, которые может предоставить большую степень контроля над операции с файлами (например, сжатие или позицию поиска в файле).
+Можно использовать Xamarin.iOS и `System.IO` классы в *библиотеки базовых классов (BCL) .NET* для доступа к файловой системе iOS. Класс `File` позволяет создавать, удалять и считывать файлы, а класс и `Directory` — создавать, удалять или перечислять содержимое каталогов. Можно также использовать `Stream` подклассов, которые может предоставить большую степень контроля над операции с файлами (например, сжатие или позицию поиска в файле).
 
 iOS накладывает некоторые ограничения на приложения можно сделать с помощью файловой системы для обеспечения безопасности данных приложения и для защиты пользователей от malignant приложений. Эти ограничения являются частью *приложения "песочницы"* — набор правил доступа приложения к файлы, настройки, сетевые ресурсы, оборудования, и т.д. Приложение ограничено чтение и запись файлов в пределах его домашний каталог (расположения); он нет доступа к файлам других приложений.
 
@@ -198,7 +198,7 @@ iOS для этого используется знак косой черты «
 
 &nbsp;
 
-|Каталог|Описание|
+|Каталог|Описание:|
 |---|---|
 |.App [ApplicationName] /|**В iOS 7 и более ранних версий**, это `ApplicationBundle` каталог, где хранится исполняемый файл приложения. Структура каталогов, которая создается в приложении существует в этом каталоге (например, изображений и других типов файлов, которые вы пометили как ресурсы в Visual Studio для Mac проекта).<br /><br />Если вам требуется доступ к файлам содержимого внутри вашего пакета приложения, путь к этому каталогу доступен через `NSBundle.MainBundle.BundlePath` свойство.|
 |Документы /|Используйте этот каталог для хранения пользовательские документы и файлы данных приложения.<br /><br />Содержимое этого каталога может предоставляться пользователю через iTunes файлам (несмотря на то, что эта функция отключена по умолчанию). Добавление `UIFileSharingEnabled` логический ключ в файле Info.plist, чтобы разрешить пользователям доступ к этим файлам.<br /><br />Даже если приложение не позволяет сразу же использовать общий доступ к файлам, следует избегать размещения файлов, которые должны быть скрыты от пользователей в этом каталоге (такие как файлы базы данных, если не требуется использовать их совместно). До тех пор, пока конфиденциальные файлы остаются скрытыми, эти файлы будут не доступны (и потенциально перемещен, измененные или удаленные, iTunes) при включении общего доступа к файлам в будущей версии.<br /><br /> Можно использовать `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` метод, чтобы получить путь к каталогу документов для вашего приложения.<br /><br />Содержимое этого каталога резервное копирование по iTunes.|
@@ -357,5 +357,5 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример кода файловой системы](https://developer.xamarin.com/samples/FileSystemSampleCode/)
-- [Руководство по программированию в системе файл](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
-- [Регистрация файла типы поддерживает ваше приложение](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)
+- [Руководство по программированию в системе файл](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
+- [Регистрация файла типы поддерживает ваше приложение](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

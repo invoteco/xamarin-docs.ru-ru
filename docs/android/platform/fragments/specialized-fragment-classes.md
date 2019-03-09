@@ -1,19 +1,19 @@
 ---
-title: Специализированный фрагмент классы
+title: Специализированные классы фрагментов
 ms.prod: xamarin
 ms.assetid: 7A0AEB2C-EE77-63BF-652A-DA049B691C64
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 1011d74be971a3acba33c8f2f811e8f89e20cfc4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75d95d630415cdaa4c0c1ed3b8ddebb32b8e3c4d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108448"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670070"
 ---
-# <a name="specialized-fragment-classes"></a>Специализированный фрагмент классы
+# <a name="specialized-fragment-classes"></a>Специализированные классы фрагментов
 
 API фрагментов предоставляет другие подклассов, которые инкапсулируют некоторые из наиболее распространенных функциональные возможности приложения. Ниже приведены эти подклассы.
 
@@ -191,7 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-Чтобы управлять данными, предоставляет API фрагментов `PreferenceFragment` подкласс. `PreferenceFragment` Аналогичен [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; иерархию персональные настройки для пользователя отображается в фрагменте. Как пользователь взаимодействует с настройками, они будут автоматически сохранены в [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+Чтобы управлять данными, предоставляет API фрагментов `PreferenceFragment` подкласс. `PreferenceFragment` Аналогичен [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; иерархию персональные настройки для пользователя отображается в фрагменте. Как пользователь взаимодействует с настройками, они будут автоматически сохранены в [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html).
 В Android 3.0 или более приложений, используйте `PreferenceFragment` дело с настройками в приложениях. На следующем рисунке показаны примером `PreferenceFragment`:
 
 [![Пример PreferencesFragment с помощью встроенного диалогового окна и параметры запуска](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

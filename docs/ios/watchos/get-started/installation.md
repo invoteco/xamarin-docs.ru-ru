@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: fc3a30473b4a38b21f89c5be201c8191658aae63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050326"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668547"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Установка и использование watchOS в Xamarin
 
@@ -178,7 +178,7 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 При использовании Xcode 6 только iPhone 5, 5 iPhone, iPhone 6 и iPhone 6 Plus можно активировать для любого внешнего дисплея **Apple Watch - 38 мм** или **Apple Watch - 42 мм** где будет приложения watch отображается.
 
-**Примечание:** помните, что на экране Контрольное значение не отображается автоматически в симуляторе iOS при использовании Xcode 6.
+**Примечание.** Помните, что на экране Контрольное значение не отображается автоматически в симуляторе iOS при использовании Xcode 6.
 Используйте **оборудования > внешних отображает** меню, чтобы показывать окно контрольных значений.
 
 <a name="custommodes" />
@@ -232,5 +232,5 @@ To test the functionality in your  and
 ## <a name="related-links"></a>Связанные ссылки
 
 - [WatchKitCatalog (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Первое приложение просмотра видео](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Первое приложение просмотра видео](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Советы по WatchKit Apple](https://developer.apple.com/watchkit/tips/)

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e02d7a13a1fd5b554943f9facd6c9f120096a6a5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233930"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667819"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>расширениях iOS в Xamarin.iOS
 
@@ -45,7 +45,7 @@ ms.locfileid: "55233930"
 Универсальные ограничения являются:
 
 - [Kit работоспособности](~/ios/platform/healthkit.md) и [пользовательского интерфейса пакета событий](~/ios/platform/eventkit.md) платформы не доступны
-- Расширения не может использовать [расширенных фоновые режимы](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
+- Расширения не может использовать [расширенных фоновые режимы](https://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - Расширения не может получить доступ к камеры устройства или микрофонов (несмотря на то, что они могут обращаться к существующие файлы мультимедиа)
 - Расширения не могут получать Air Drop данных (несмотря на то, что они могут передавать данные через Air Drop)
 - [UIActionSheet](xref:UIKit.UIActionSheet) и [UIAlertView](xref:UIKit.UIAlertView) недоступны; необходимо использовать расширения [UIAlertController](xref:UIKit.UIAlertController)
@@ -71,11 +71,11 @@ ms.locfileid: "55233930"
 
 Расширения могут взаимодействовать с их размещение приложений с помощью [NSExtensionContext](xref:Foundation.NSExtensionContext) объекта. Некоторые расширения имеют операциям, получающим асинхронные обратные вызовы с результатами. Эти обратные вызовы выполняются в фоновых потоках и модуль должны учитывать это; Например, с помощью [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) для обновления пользовательского интерфейса. См. в разделе [взаимодействия с приложением узла](#Communicating-with-the-Host-App) Дополнительные сведения в приведенном ниже разделе.
 
-По умолчанию расширения и их приложения-контейнеры могут не взаимодействовать, несмотря на то, устанавливаемого вместе. В некоторых случаях приложения-контейнера является по сути пустой «доставка» контейнер, цель которых выдается после установки расширения. Тем не менее, если условиям, приложения-контейнера и расширения могут совместно использовать ресурсы из общую область. Кроме того **сегодня расширение** может запросить его приложения-контейнера для открытия URL-адрес. Это поведение отображается в [развиваться мини-приложение обратного отсчета](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+По умолчанию расширения и их приложения-контейнеры могут не взаимодействовать, несмотря на то, устанавливаемого вместе. В некоторых случаях приложения-контейнера является по сути пустой «доставка» контейнер, цель которых выдается после установки расширения. Тем не менее, если условиям, приложения-контейнера и расширения могут совместно использовать ресурсы из общую область. Кроме того **сегодня расширение** может запросить его приложения-контейнера для открытия URL-адрес. Это поведение отображается в [развиваться мини-приложение обратного отсчета](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
 ## <a name="creating-an-extension"></a>Создание расширения
 
-Расширения (и их приложения-контейнеры) должны быть 64-разрядных двоичных файлов и созданные с помощью Xamarin.iOS [унифицированными API](http://developer.xamarin.com/guides/cross-platform/macios/unified). При разработке расширения, ваши решения будет содержать по крайней мере два проекта: проект приложения-контейнера и один для каждого расширения контейнера обеспечивает. 
+Расширения (и их приложения-контейнеры) должны быть 64-разрядных двоичных файлов и созданные с помощью Xamarin.iOS [унифицированными API](https://developer.xamarin.com/guides/cross-platform/macios/unified). При разработке расширения, ваши решения будет содержать по крайней мере два проекта: проект приложения-контейнера и один для каждого расширения контейнера обеспечивает. 
 
 ### <a name="container-app-project-requirements"></a>Требования к контейнеру приложения проекта
 

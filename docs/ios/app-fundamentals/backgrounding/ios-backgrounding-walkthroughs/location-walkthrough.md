@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d6dac02ac82b74c9b0e33f5fff0b82223df1f47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108682"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669197"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Пошаговое руководство. расположения в фоновом режиме в Xamarin.iOS
 
@@ -103,7 +103,7 @@ ms.locfileid: "50108682"
 
     Существует несколько важных моментов, происходит в этот метод. Во-первых мы выполнить проверку, чтобы увидеть, если приложение имеет доступ к данным расположения на устройстве. Мы проверить это путем вызова `LocationServicesEnabled` на `CLLocationManager`. Этот метод будет возвращать **false** Если пользователь отклонил доступ приложения к сведения о расположении.
 
-1. Затем укажите частоту диспетчером местоположения для обновления. `CLLocationManager` предоставляет много параметров для фильтрации и настройке данных о местоположении, включая частоту обновлений. В этом примере значение `DesiredAccuracy` для обновления при изменении местоположения, единица измерения. Дополнительные сведения о настройке частоту обновления расположение и другие необходимые настройки, см. [ссылки на класс CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) в документации компании Apple.
+1. Затем укажите частоту диспетчером местоположения для обновления. `CLLocationManager` предоставляет много параметров для фильтрации и настройке данных о местоположении, включая частоту обновлений. В этом примере значение `DesiredAccuracy` для обновления при изменении местоположения, единица измерения. Дополнительные сведения о настройке частоту обновления расположение и другие необходимые настройки, см. [ссылки на класс CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) в документации компании Apple.
 
 1. Наконец, вызовите `StartUpdatingLocation` на `CLLocationManager` экземпляра. Это означает, что диспетчером местоположения для получения начального исправление на текущем месте и с которого начинается отправка обновлений
 

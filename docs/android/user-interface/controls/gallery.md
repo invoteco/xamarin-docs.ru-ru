@@ -1,19 +1,19 @@
 ---
-title: Коллекции
+title: Коллекция
 ms.prod: xamarin
 ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 54c9e4fad71d74fe40fc119592a45f6c94b47056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b73428531deeacc7bdea271cdc0c2872038e99
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122261"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666963"
 ---
-# <a name="gallery"></a>Коллекции
+# <a name="gallery"></a>Коллекция
 
 [`Gallery`](https://developer.xamarin.com/api/type/Android.Widget.Gallery/) — Это виджет макет, используемый для отображения элементов в виде горизонтальной прокруткой списка и устанавливает текущее выделение в центре представления.
 
@@ -57,7 +57,7 @@ ms.locfileid: "50122261"
 
 [![Снимок экрана нового проекта Android, в диалоговом окне нового решения](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
-Найти некоторые фотографии, вы бы хотели использовать, или [скачайте эти примеры изображений](http://developer.android.com/shareables/sample_images.zip).
+Найти некоторые фотографии, вы бы хотели использовать, или [скачайте эти примеры изображений](https://developer.android.com/shareables/sample_images.zip).
 Добавление файлов изображений в проект **ресурсы/Drawable** каталога. В **свойства** окна, задайте действие при построении каждого из них на **AndroidResource**.
 
 Откройте **Resources/Layout/Main.axml** и вставьте следующий текст:

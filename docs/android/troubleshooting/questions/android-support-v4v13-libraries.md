@@ -1,5 +1,5 @@
 ---
-title: Поддержки эффективнее Xamarin Android v4 и v13 пакеты NuGet
+title: Оптимизированные пакеты NuGet поддержки Android v4 и v13 в Xamarin
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 43627884c2f8bc4d9e5b5faa2c3af08f74487b65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a990d933c258812b2b3d3374fb6435af06f729ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114649"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671797"
 ---
-# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Поддержки эффективнее Xamarin Android v4 и v13 пакеты NuGet
+# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Оптимизированные пакеты NuGet поддержки Android v4 и v13 в Xamarin
 
 ## <a name="about-the-android-support-libraries"></a>О вспомогательные библиотеки Android
 
-Google создала библиотек поддержки для предоставления новых функций для более старых версиях Android. В общем случае библиотеки поддержки приведены номера версии в их имя, являющееся низкий уровень API Android они совместимы с (например: поддержка v4 может использоваться только в API уровня 4 и выше. Дополнительные сведения в этом [обсуждении Stack Overflow](http://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
+Google создала библиотек поддержки для предоставления новых функций для более старых версиях Android. В общем случае библиотеки поддержки приведены номера версии в их имя, являющееся низкий уровень API Android они совместимы с (например: Поддержка v4 может использоваться только в API уровня 4 и более поздних версий. Дополнительные сведения в этом [обсуждении Stack Overflow](https://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
 
 Два из библиотеки поддержки: `Support-v4` и `Support-v13` не может использоваться вместе в одном приложении, то есть они являются взаимоисключающими. Это обусловлено `Support-v13` фактически содержит все типы и реализации `Support-v4`. При попытке ссылаться как на том же проекте будут возникать ошибки повторяющийся тип.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121000"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669834"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Фоновая обработка задач
 
@@ -67,7 +67,7 @@ public override void DidEnterBackground (UIApplication application) {
 Мы начинаем путем переопределения `DidEnterBackground` метод в `AppDelegate`, где мы регистрируем наш задачи через `BeginBackgroundTask` как это делалось в предыдущем примере. Затем мы создать новый поток и выполните наши длительную задачу. Обратите внимание, что `EndBackgroundTask` теперь вызов из внутри длительную задачу, поскольку `DidEnterBackground` метод будет уже возвратили.
 
 > [!IMPORTANT]
-> iOS использует [контрольные механизм](http://developer.apple.com/library/ios/qa/qa1693/_index.html) для обеспечения реакции пользовательского интерфейса в приложении. Приложение, которое тратит слишком много времени в `DidEnterBackground` перестает отвечать в пользовательском Интерфейсе. В самом начале задачи для выполнения в фоновом режиме позволяет `DidEnterBackground` для возврата своевременно, сохранение реакции пользовательского интерфейса и предотвращает прерывание приложения наблюдения.
+> iOS использует [контрольные механизм](https://developer.apple.com/library/ios/qa/qa1693/_index.html) для обеспечения реакции пользовательского интерфейса в приложении. Приложение, которое тратит слишком много времени в `DidEnterBackground` перестает отвечать в пользовательском Интерфейсе. В самом начале задачи для выполнения в фоновом режиме позволяет `DidEnterBackground` для возврата своевременно, сохранение реакции пользовательского интерфейса и предотвращает прерывание приложения наблюдения.
 
 
 ## <a name="handling-background-task-time-limits"></a>Ограничений по времени задач фоновой обработки

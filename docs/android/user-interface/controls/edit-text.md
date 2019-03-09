@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: e708ceb4b0487cb07ae5a55fae5e96f0e41f17f6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d42cec1ee0939bead9ede83a042f5b6cbb5298cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119505"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670874"
 ---
 # <a name="edit-text"></a>Изменить текст
 
@@ -64,7 +64,7 @@ using Android.Views;
 
 [![Примеры ввода текста в EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Некоторые части этой страницы, изменения с учетом работы и* [ *совместно используется Android откройте исходный проект* ](http://code.google.com/policies.html) *и используются в соответствии с условиями, описанными в* [ *Лицензия creative Commons 2.5 однозначного соответствия примитивов* ](http://creativecommons.org/licenses/by/2.5/) *. Этот учебник создан на основе* [ *Android Stuff формы руководстве* ](http://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Некоторые части этой страницы, изменения с учетом работы и* [ *совместно используется Android откройте исходный проект* ](http://code.google.com/policies.html) *и используются в соответствии с условиями, описанными в* [ *Лицензия creative Commons 2.5 однозначного соответствия примитивов* ](http://creativecommons.org/licenses/by/2.5/) *. Этот учебник создан на основе* [ *Android Stuff формы руководстве* ](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 
 ## <a name="related-links"></a>Связанные ссылки

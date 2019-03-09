@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 3b23a1a07741cd048ea034b2b39b5f9cde902dc6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746899"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672772"
 ---
 # <a name="xamarinforms-button"></a>Кнопка Xamarin.Forms
 
@@ -150,7 +150,7 @@ button.Clicked += OnButtonClicked;
 
 Этот подход особенно удобен в связи с привязкой к данным и особенно в том случае, если реализация архитектуры Model-View-ViewModel (MVVM). В этих разделах рассматриваются в статьях [привязки данных](~/xamarin-forms/app-fundamentals/data-binding/index.md), [из привязки данных до MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), и [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 
-В приложении MVVM ViewModel определяет свойства типа `ICommand` , которые затем подключены к XAML `Button` элементов при помощи привязки данных. Xamarin.Forms также определяет [ `Command` ]((xref:Xamarin.Forms.Command`1)) и [ `Command<T>` ](xref:Xamarin.Forms.Command`1) классы, реализующие `ICommand` интерфейс, а также упрощения ViewModel определения свойств типа `ICommand`.
+В приложении MVVM ViewModel определяет свойства типа `ICommand` , которые затем подключены к XAML `Button` элементов при помощи привязки данных. Xamarin.Forms также определяет [ `Command` ]((xref:Xamarin.Forms.Command)) и [ `Command<T>` ](xref:Xamarin.Forms.Command`1) классы, реализующие `ICommand` интерфейс, а также упрощения ViewModel определения свойств типа `ICommand`.
 
 Система команд описан более подробно в статье [ **интерфейс командной** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) , но **базовая команда кнопку** странице в [  **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) пример основной подход.
 

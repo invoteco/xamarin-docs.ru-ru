@@ -1,18 +1,13 @@
 ---
 title: Приступая к работе с Java
-description: В этом документе описывается, как приступить к использованию внедрение .NET с помощью Java. В нем описывается требования к системе, установки и поддерживаемых платформ.
+description: 'В этом документе описывается, как приступить к использованию внедрение .NET с помощью Java. В нем описывается требования к системе, установки и поддерживаемых платформ.'
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: 74146378d2ee534b357abd73ff7e1563a49a7e4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121754"
 ---
+
 # <a name="getting-started-with-java"></a>Приступая к работе с Java
 
 Это начальной странице начала работы для Java, которые описаны основы для всех поддерживаемых платформ.
@@ -22,7 +17,7 @@ ms.locfileid: "50121754"
 Чтобы использовать внедрение .NET с помощью Java, вам потребуется:
 
 * Java 1.8 или более поздней версии
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Для Mac:
 

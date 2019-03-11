@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207938"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668495"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Принципы проектирования API Xamarin.Android
 
@@ -76,13 +76,13 @@ Xamarin.Android включает несколько сборок, которые
 
 Android интерфейсы API используют java.util коллекций широко предоставляют списки, наборы и карты. Мы предоставляем эти элементы с помощью [System.Collections.Generic](xref:System.Collections.Generic) интерфейсов в нашей привязкой. Приведены основные сопоставления.
 
--   [java.util.Set<E> ](http://developer.android.com/reference/java/util/Set.html) сопоставляется с системным типом [ICollection<T>](xref:System.Collections.Generic.ICollection`1), вспомогательный класс [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
+-   [java.util.Set<E> ](https://developer.android.com/reference/java/util/Set.html) сопоставляется с системным типом [ICollection<T>](xref:System.Collections.Generic.ICollection`1), вспомогательный класс [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
 
--   [java.util.List<E> ](http://developer.android.com/reference/java/util/List.html) сопоставляется с системным типом [IList<T>](xref:System.Collections.Generic.IList`1), вспомогательный класс [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
+-   [java.util.List<E> ](https://developer.android.com/reference/java/util/List.html) сопоставляется с системным типом [IList<T>](xref:System.Collections.Generic.IList`1), вспомогательный класс [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
 
--   [java.util.Map < K, V >](http://developer.android.com/reference/java/util/Map.html) сопоставляется с системным типом [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), вспомогательный класс [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
+-   [java.util.Map < K, V >](https://developer.android.com/reference/java/util/Map.html) сопоставляется с системным типом [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), вспомогательный класс [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
 
--   [java.util.Collection<E> ](http://developer.android.com/reference/java/util/Collection.html) сопоставляется с системным типом [ICollection<T>](xref:System.Collections.Generic.ICollection`1), вспомогательный класс [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
+-   [java.util.Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) сопоставляется с системным типом [ICollection<T>](xref:System.Collections.Generic.ICollection`1), вспомогательный класс [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
 
 Мы предоставили вспомогательные классы для упрощения быстрее copyless маршалинга этих типов. Если это возможно, мы рекомендуем использовать эти предоставляемые коллекции вместо реализации платформы, такие как [ `List<T>` ](xref:System.Collections.Generic.List`1) или [ `Dictionary<TKey, TValue>` ](xref:System.Collections.Generic.Dictionary`2). [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) реализаций внутренним образом используют собственную коллекцию Java и поэтому не требуют копирования из собственного коллекции и при передаче в член Android API.
 
@@ -240,11 +240,11 @@ Java-интерфейсов, преобразуются в двух типов:
 
 Например, рассмотрим [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) интерфейс.
 *Parcelable* интерфейс содержит методы, вложенные типы и константы. *Parcelable* методы интерфейса помещаются в [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) интерфейс.
-*Parcelable* константы интерфейса помещаются в [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) типа. Вложенный [android.os.Parcelable.ClassLoaderCreator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) и [android.os.Parcelable.Creator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.Creator.html) типов в настоящее время не вывода из-за ограничения в поддержке универсальных типов; Если они поддерживались, они будут представлены *Android.OS.IParcelableClassLoaderCreator* и *Android.OS.IParcelableCreator* интерфейсов. Например, вложенные [android.os.IBinder.DeathRecpient](http://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) интерфейс привязан как [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) интерфейс.
+*Parcelable* константы интерфейса помещаются в [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) типа. Вложенный [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) и [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) типов в настоящее время не вывода из-за ограничения в поддержке универсальных типов; Если они поддерживались, они будут представлены *Android.OS.IParcelableClassLoaderCreator* и *Android.OS.IParcelableCreator* интерфейсов. Например, вложенные [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) интерфейс привязан как [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) интерфейс.
 
 
 > [!NOTE]
-> Начиная с Xamarin.Android 1.9, Java интерфейс константы — это <em>дублируются</em> с целью упростить перенос Java кода. Это поможет улучшить перенос кода Java, которая зависит от [android поставщика](http://developer.android.com/reference/android/provider/package-summary.html) интерфейс константы.
+> Начиная с Xamarin.Android 1.9, Java интерфейс константы — это <em>дублируются</em> с целью упростить перенос Java кода. Это поможет улучшить перенос кода Java, которая зависит от [android поставщика](https://developer.android.com/reference/android/provider/package-summary.html) интерфейс константы.
 
 Помимо перечисленных выше типов существует четыре дальнейшие изменения:
 
@@ -257,9 +257,9 @@ Java-интерфейсов, преобразуются в двух типов:
 1. *Расходы* тип больше не используется.
 
 
-Для *android.os.Parcelable* интерфейс, это означает, что теперь будет [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) тип должен содержать константы. Например [Parcelable.CONTENTS_FILE_DESCRIPTOR](http://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) константа будет привязан как [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) константы, а не как  *ParcelableConsts.ContentsFileDescriptor* константы.
+Для *android.os.Parcelable* интерфейс, это означает, что теперь будет [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) тип должен содержать константы. Например [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) константа будет привязан как [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) константы, а не как  *ParcelableConsts.ContentsFileDescriptor* константы.
 
-Для интерфейсов, содержащий константы, которые реализуют другие интерфейсы содержащий еще несколько констант теперь создается объединение все константы. Например [android.provider.MediaStore.Video.VideoColumns](http://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) интерфейс реализует [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) интерфейс. Тем не менее, предшествующих 1.9 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) тип не имеет доступа к константы, объявленных в [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
+Для интерфейсов, содержащий константы, которые реализуют другие интерфейсы содержащий еще несколько констант теперь создается объединение все константы. Например [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) интерфейс реализует [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) интерфейс. Тем не менее, предшествующих 1.9 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) тип не имеет доступа к константы, объявленных в [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
 В результате выражения Java *MediaStore.Video.VideoColumns.TITLE* необходимо привязать к выражение C# *MediaStore.Video.MediaColumnsConsts.Title* это трудно обнаруживать без чтения множество документации по Java. В версии 1.9, будет эквивалентное выражение C# [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Кроме того, рассмотрите [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) тип, который реализует Java *Parcelable* интерфейс. Так как он реализует интерфейс, все константы в этом интерфейсе доступны «через» тип пакета, например *Bundle.CONTENTS_FILE_DESCRIPTOR* является вполне допустимым выражением Java.
@@ -270,8 +270,8 @@ Java-интерфейсов, преобразуются в двух типов:
 
 ## <a name="resources"></a>Ресурсы
 
-Изображения, описания макета, большие двоичные объекты и словари строк может быть включено в приложении как [файлы ресурсов](http://developer.android.com/guide/topics/resources/providing-resources.html).
-Различные интерфейсы API Android предназначены для [оперируют идентификаторы ресурсов](http://developer.android.com/guide/topics/resources/accessing-resources.html) вместо того чтобы разбираться с изображениями, строки или двоичного файла BLOB-объектов напрямую.
+Изображения, описания макета, большие двоичные объекты и словари строк может быть включено в приложении как [файлы ресурсов](https://developer.android.com/guide/topics/resources/providing-resources.html).
+Различные интерфейсы API Android предназначены для [оперируют идентификаторы ресурсов](https://developer.android.com/guide/topics/resources/accessing-resources.html) вместо того чтобы разбираться с изображениями, строки или двоичного файла BLOB-объектов напрямую.
 
 Например, Android пример приложения, содержащий макет пользовательского интерфейса ( `main.axml`), строку таблицы интернационализации ( `strings.xml`) и некоторые значки ( `drawable-*/icon.png`) сохранит его ресурсы в каталоге «Ресурсы» приложения:
 
@@ -317,9 +317,9 @@ public class Resource {
 
 Собственный Android API-интерфейсы имеют множество методов, которые принимают или возвращают значение типа int, должна быть сопоставлена с константного поля, чтобы определить, что int. Чтобы использовать эти методы, пользователь является обязательным для см. в документации, чтобы увидеть, какие константы имеют соответствующие значения, который идеально подходит меньше.
 
-Например, рассмотрим [Activity.requestWindowFeature (int featureID)](http://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
+Например, рассмотрим [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
-В таких случаях для группирования связанных констант в перечислении .NET и переназначить метод выполнить перечисление.
+В таких случаях мы для группирования связанных констант в перечислении .NET и переназначить метод выполнить перечисление.
 Таким образом, мы могут предложить выделение IntelliSense из возможных значений.
 
 Приведенный выше пример выглядит следующим образом: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).

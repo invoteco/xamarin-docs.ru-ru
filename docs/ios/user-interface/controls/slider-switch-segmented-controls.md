@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f3315563725da7c54febd852298c60003eb056a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104899"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671459"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Ползунки, коммутаторы и Сегментированные элементы управления в Xamarin.iOS
 
@@ -50,7 +50,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
  [![](slider-switch-segmented-controls-images/image27a.png "Пользовательские \"ползунок\"")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Сейчас [ошибки](http://stackoverflow.com/a/19496179) вызывает `ThumbTint` для подготовки к просмотру во время выполнения не должным образом. Можно добавить следующую строку кода **перед** кода выше в качестве решения. [[Источника](http://stackoverflow.com/a/21396794)]:
+> Сейчас [ошибки](https://stackoverflow.com/a/19496179) вызывает `ThumbTint` для подготовки к просмотру во время выполнения не должным образом. Можно добавить следующую строку кода **перед** кода выше в качестве решения. [[Источника](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 

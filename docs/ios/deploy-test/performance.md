@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 01c743b4b0eff81bbf4c41e1c2f387e0dc40c067
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233761"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671122"
 ---
 # <a name="xamarinios-performance"></a>Производительность Xamarin.iOS
 
-Низкая производительность приложения проявляется по-разному. Из-за нее приложение может переставать отвечать на запросы, могут возникать задержки при прокрутке и сокращаться время работы батареи. Однако оптимизация производительности предусматривает не только правильную реализацию кода. Необходимо также учитывать эффективность работы пользователей. Например, чтобы повысить удобство работы, необходимо сделать так, чтобы выполнение операций не мешало пользователю выполнять другие действия. 
+Низкая производительность приложения проявляется по-разному. Из-за нее приложение может переставать отвечать на запросы, могут возникать задержки при прокрутке и сокращаться время работы батареи. Однако оптимизация производительности предусматривает не только правильную реализацию кода. Необходимо также учитывать эффективность работы пользователей. Например, чтобы повысить удобство работы, необходимо сделать так, чтобы выполнение операций не мешало пользователю выполнять другие действия.
 
 В этом документе описываются методы, с помощью которых можно повысить производительность и использование памяти в приложениях Xamarin.iOS.
 
@@ -140,7 +140,7 @@ public class MyFooDelegate : FooDelegate {
 Ниже приведен еще один пример использования `[Weak]` в контексте шаблона [делегирования](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html):
 
 ```csharp
-public class MyViewController : UIViewController 
+public class MyViewController : UIViewController
 {
     WKWebView webView;
 
@@ -155,7 +155,7 @@ public class MyViewController : UIViewController
     }
 }
 
-public class UIDelegate : WKUIDelegate 
+public class UIDelegate : WKUIDelegate
 {
     [Weak] MyViewController controller;
 
@@ -196,7 +196,7 @@ class MyContainer : UIView
 В случае с дочерним объектом, сохраняющим строгую ссылку на свой родительский объект, очистите ссылку на родительский объект в реализации `Dispose`:
 
 ```csharp
-class MyChild : UIView 
+class MyChild : UIView
 {
     MyContainer container;
     public MyChild (MyContainer container)
@@ -215,13 +215,13 @@ class MyChild : UIView
 
 ### <a name="more-information"></a>Дополнительные сведения
 
-Дополнительные сведения см. в записи [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Правила по избежанию сохраняемых циклов) в блоге Cocoa With Love, на странице [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (Является ли это ошибкой в сборщике мусора MonoTouch) на сайте StackOverflow и на странице [Why can't MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Почему сборщик мусора MonoTouch не может уничтожать управляемые объекты с refcount > 1?) на сайте StackOverflow.
+Дополнительные сведения см. в записи [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Правила по избежанию сохраняемых циклов) в блоге Cocoa With Love, на странице [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (Является ли это ошибкой в сборщике мусора MonoTouch) на сайте StackOverflow и на странице [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Почему сборщик мусора MonoTouch не может уничтожать управляемые объекты с refcount > 1?) на сайте StackOverflow.
 
 ## <a name="optimize-table-views"></a>Оптимизация табличных представлений
 
 Пользователи рассчитывают на быструю прокрутку и загрузку экземпляров [`UITableView`](xref:UIKit.UITableView). Если ячейки будут содержать иерархии представлений с глубоким уровнем вложения или сложные макеты, производительность прокрутки может заметно снижаться. Тем не менее существует несколько способов повысить производительность `UITableView`:
 
-- Повторное использование ячеек. Дополнительные сведения см. в разделе [Повторное использование ячеек](#reusecells).
+- Повторное использование ячеек. Дополнительные сведения см. в разделе [Повторное использование ячеек](#reuse-cells).
 - Сокращение числа вложенных представлений.
 - Кэширование содержимого ячейки, извлеченного из веб-службы.
 - Кэширование высоты строк, если они не идентичны.

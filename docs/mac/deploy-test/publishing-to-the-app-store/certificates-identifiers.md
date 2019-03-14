@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f60c15ba4b57ed61405b7081ed1cc3cee99c372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5ba09afc477ddaadc07aa415376860eea3c8c28d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115553"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671472"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Сертификаты и идентификаторы в Xamarin.Mac
 
@@ -20,7 +20,7 @@ _В этом руководстве описывается создание не
 
 ## <a name="certificates-and-identifiers"></a>Сертификаты и идентификаторы
 
-Чтобы настроить компьютер Mac для разработки, посетите [Apple Developer Member Center](http://developer.apple.com). Главное меню показано ниже:
+Чтобы настроить компьютер Mac для разработки, посетите [Apple Developer Member Center](https://developer.apple.com). Главное меню показано ниже:
 
 [![Центр участников разработки для Apple](certificates-identifiers-images/devcenter01.png "Центр участников разработки для Apple")](certificates-identifiers-images/devcenter01-large.png#lightbox)
 

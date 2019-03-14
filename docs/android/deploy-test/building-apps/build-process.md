@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/03/2018
-ms.openlocfilehash: 99b5798e8d3cd5723f99aa2483d5d1c0eff8d57c
-ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
+ms.openlocfilehash: 86e2380a2931517b021162a6cecadc7d6d5b4c43
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305650"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669401"
 ---
 # <a name="build-process"></a>Процесс сборки
 
@@ -98,7 +98,7 @@ ms.locfileid: "57305650"
 
 Свойства MSBuild управляют поведением целевых объектов `Install` и `Uninstall`.
 
--   **AdbTarget** — указывает целевое устройство Android, где может быть установлен или удален пакет Android. Значение этого свойства совпадает с значением параметра [`adb` целевого устройства](http://developer.android.com/tools/help/adb.html#issuingcommands):
+-   **AdbTarget** — указывает целевое устройство Android, где может быть установлен или удален пакет Android. Значение этого свойства совпадает с значением параметра [`adb` целевого устройства](https://developer.android.com/tools/help/adb.html#issuingcommands):
 
     ```bash
     # Install package onto emulator via -e
@@ -145,7 +145,7 @@ ms.locfileid: "57305650"
 
     По умолчанию это свойство имеет значение `False`.
 
--   **AndroidEnableSGenConcurrent** — логическое свойство, которое определяет, будет ли использоваться [параллельный сборщик мусора](http://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen) Mono.
+-   **AndroidEnableSGenConcurrent** — логическое свойство, которое определяет, будет ли использоваться [параллельный сборщик мусора](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen) Mono.
 
     Поддержка этого свойства была добавлена в Xamarin.Android версии 7.2.
 
@@ -293,7 +293,7 @@ ms.locfileid: "57305650"
 
     Это свойство игнорируется, если только свойство MSBuild `$(AotAssemblies)` не имеет значение `True`.
 
--   **EnableProguard** — логическое свойство, которое определяет, выполняется ли [proguard](http://developer.android.com/tools/help/proguard.html) как часть процесса упаковки для связывания кода Java.
+-   **EnableProguard** — логическое свойство, которое определяет, выполняется ли [proguard](https://developer.android.com/tools/help/proguard.html) как часть процесса упаковки для связывания кода Java.
 
     Поддержка этого свойства была добавлена в Xamarin.Android версии 5.1.
 

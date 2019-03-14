@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 6023bb4ebcc9d4adcd3408ca09bf9118d14351d4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d0eb5d1c2c45ce347a7ddf9ed0e72bddc57e4188
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120818"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668794"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Настройка пакета SDK для Android для Xamarin.Android
 
@@ -42,9 +42,9 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Диспетчеру пакетов SDK Xamarin Android также требуется Java Development Kit (которая устанавливается автоматически вместе с Xamarin.Android). Существует несколько альтернатив JDK:
 
--   По умолчанию Xamarin.Android использует пакет [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), который необходим при разработке для API уровня 24 или выше (JDK 8 также поддерживает уровни API ниже 24).
+-   По умолчанию Xamarin.Android использует пакет [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), который необходим при разработке для API уровня 24 или выше (JDK 8 также поддерживает уровни API ниже 24).
 
--   При разработке специально для уровня API 23 или ниже можно продолжать использовать пакет [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
+-   При разработке специально для уровня API 23 или ниже можно продолжать использовать пакет [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
 -   Если вы используете Visual Studio 15.8, предварительная версия 5, или более позднюю версию, вы можете использовать [дистрибутив OpenJDK для мобильных устройств от Майкрософт](openjdk.md) (сейчас на этапе предварительной версии) вместо JDK 8.
 
@@ -139,9 +139,9 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Диспетчеру пакетов SDK Xamarin Android также требуется Java Development Kit (которая устанавливается автоматически вместе с Xamarin.Android). Существует несколько альтернатив JDK:
 
--   По умолчанию Xamarin.Android использует пакет [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), который необходим при разработке для API уровня 24 или выше (JDK 8 также поддерживает уровни API ниже 24).
+-   По умолчанию Xamarin.Android использует пакет [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), который необходим при разработке для API уровня 24 или выше (JDK 8 также поддерживает уровни API ниже 24).
 
--   При разработке специально для уровня API 23 или ниже можно продолжать использовать пакет [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
+-   При разработке специально для уровня API 23 или ниже можно продолжать использовать пакет [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
 -   Если вы используете Visual Studio для Mac 7.7 или более позднюю версию, вы можете использовать [дистрибутив OpenJDK для мобильных устройств от Майкрософт](openjdk.md) (сейчас на этапе предварительной версии) вместо JDK 8.
 

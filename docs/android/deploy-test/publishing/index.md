@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ef504e4bef22ac5b2bec5b6a57eb46e8b2f1baff
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102546"
 ---
+
 # <a name="publishing-an-application"></a>Публикация приложения
 
 Вполне очевидно, что пользователи захотят использовать понравившееся им приложение. В этом разделе описано, как использовать открытое распространение приложения, созданного с помощью Xamarin.Android, по таким каналам, как электронная почта, частный веб-сервер, Google Play или Amazon App Store для Android.
@@ -60,8 +55,8 @@ Google Play является, пожалуй, самым всеобъемлющ�
 - [Компоновка](~/android/deploy-test/linker.md)
 - [Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [Подписывание приложений](https://source.android.com/security/apksigning/)
-- [Публикация в Google Play](http://developer.android.com/distribute/googleplay/publish/index.html)
-- [Лицензирование приложения Google](http://developer.android.com/guide/google/play/licensing/index.html)
+- [Публикация в Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
+- [Лицензирование приложения Google](https://developer.android.com/guide/google/play/licensing/index.html)
 - [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary)
 - [Портал распространения мобильных приложений](https://developer.amazon.com/welcome.html)
 - [Вопросы и ответы о распространении мобильных приложений Amazon](https://developer.amazon.com/help/faq.html)

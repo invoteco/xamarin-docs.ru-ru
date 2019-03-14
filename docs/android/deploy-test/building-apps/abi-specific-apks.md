@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: bb9be2140c69578de85128cf7c3a013ad12aa511
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d5d4274adad64e8555659645533a8e58b845bfa7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617570"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667910"
 ---
 # <a name="building-abi-specific-apks"></a>Создание пакетов APK для конкретного ABI
 
@@ -29,7 +29,7 @@ _В этом документе объясняется, как с помощью
 -  **Поддержка разных архитектур ЦП**. Если ваше приложение использует общие библиотеки для конкретных процессоров, их можно включать только в поставку для этих ЦП.
 
 
-Несколько пакетов APK усложняют процессы распространения, но эта проблема решена в Google Play. Google Play обеспечит доставку на устройство правильной версии APK, определяя ее по коду версии приложения и другим метаданным из файла **AndroidManifest.XML**. Подробный алгоритм и ограничения, применяемые Google Play для поддержки нескольких пакетов APK в приложении, можно узнать из [документации Google о поддержке нескольких APK](http://developer.android.com/google/play/publishing/multiple-apks.html).
+Несколько пакетов APK усложняют процессы распространения, но эта проблема решена в Google Play. Google Play обеспечит доставку на устройство правильной версии APK, определяя ее по коду версии приложения и другим метаданным из файла **AndroidManifest.XML**. Подробный алгоритм и ограничения, применяемые Google Play для поддержки нескольких пакетов APK в приложении, можно узнать из [документации Google о поддержке нескольких APK](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
 Это руководство описывает, как организовать для приложения Xamarin.Android сборку нескольких пакетов APK, каждый из которых предназначен для конкретной версии ABI. Здесь рассматриваются следующие темы.
 
@@ -45,7 +45,7 @@ _В этом документе объясняется, как с помощью
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Создание кода версии для APK
 
-Google рекомендует соблюдать определенные правила для кодов версий, составляя их из семи цифр (этот алгоритм описан в разделе, посвященном *использованию схемы кода версии*, [документа о поддержке нескольких APK](http://developer.android.com/google/play/publishing/multiple-apks.html)).
+Google рекомендует соблюдать определенные правила для кодов версий, составляя их из семи цифр (этот алгоритм описан в разделе, посвященном *использованию схемы кода версии*, [документа о поддержке нескольких APK](https://developer.android.com/google/play/publishing/multiple-apks.html)).
 Расширив эту схему до восьми цифр, вы сможете добавить в код версии сведения об ABI, что позволит Google Play распределять на устройства правильные пакеты APK. Следующий список содержит описание восьми цифр кода версии для этого формата (индексы в коде нумеруются слева направо).
 
 -   **Индекс 0** (выделен красным на схеме ниже): &ndash; целое число, обозначающее ABI:
@@ -187,4 +187,4 @@ $ rake build
 
 - [OneABIPerAPK (пример)](https://developer.xamarin.com/samples/OneABIPerAPK/)
 - [Публикация приложения](~/android/deploy-test/publishing/index.md)
-- [Поддержка нескольких APK для Google Play](http://developer.android.com/google/play/publishing/multiple-apks.html)
+- [Поддержка нескольких APK для Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html)

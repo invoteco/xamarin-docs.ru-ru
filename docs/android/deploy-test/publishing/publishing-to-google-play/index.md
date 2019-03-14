@@ -185,7 +185,7 @@ Google Play поддерживается не во всех странах ми�
 #### <a name="create-a-google-api-project"></a>Создание проекта Google API
 
 Сначала войдите в [учетную запись разработчика Google Play](https://play.google.com/apps/publish).
-Если у вас ее еще нет, перейдите на страницу [Запуск](http://developer.android.com/distribute/googleplay/start.html).
+Если у вас ее еще нет, перейдите на страницу [Запуск](https://developer.android.com/distribute/googleplay/start.html).
 В статье, посвященной [началу работы](https://developers.google.com/android-publisher/getting_started) с интерфейсом API разработчика Google Play, описывается его использование. Войдя в Google Play Developer Console, выберите пункт **Настройки**:
 
 [![Значок "Параметры"](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)

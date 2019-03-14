@@ -1,19 +1,14 @@
 ---
 title: Пользовательские отрисовщики Xamarin.Forms
-description: Пользовательские отрисовщики позволяют разработчикам переопределить отрисовку собственных элементов управления на каждой платформе, чтобы настроить внешний вид и поведение элементов управления Xamarin.Forms.
+description: 'Пользовательские отрисовщики позволяют разработчикам переопределить отрисовку собственных элементов управления на каждой платформе, чтобы настроить внешний вид и поведение элементов управления Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c7ae25688b2f8635a9a89318e0b307e58add7a5a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998750"
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Пользовательские отрисовщики Xamarin.Forms
 
 _Пользовательские интерфейсы Xamarin.Forms отрисовываются с помощью собственных элементов управления целевой платформы, обеспечивая единообразный внешний вид приложений Xamarin.Forms на каждой платформе. Пользовательские отрисовщики позволяют разработчикам переопределять этот процесс для настройки внешнего вида и поведения элементов управления Xamarin.Forms на каждой платформе._
@@ -63,4 +58,3 @@ Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell) — это ячейка
 
 - [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Пользовательские отрисовщики (видео от Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [Пользовательские отрисовщики (видео от Xamarin University). Пример](http://bit.ly/xf-customrenderer)

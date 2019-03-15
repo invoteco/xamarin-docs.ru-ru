@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/19/2018
-ms.openlocfilehash: 997b3e8a8f847ae08eea7e022e7b3424d0fddd8d
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/07/2019
+ms.openlocfilehash: b88226dda14e2ae5cd21bb066e107fb4bcad78f6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233943"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672525"
 ---
 # <a name="implementing-a-hybridwebview"></a>Реализация HybridWebView
 
@@ -240,6 +240,8 @@ function invokeCSCode(data) {
 
 Функция JavaScript `invokeCSharpAction` не определена на веб-странице и внедряется в нее каждым настраиваемым отрисовщиком.
 
+На iOS этот HTML-файл находится в папке Content проекта платформы с действием сборки **BundleResource**. На Android этот HTML-файл находится в папке Assets/Content проекта платформы с действием сборки **AndroidAsset**.
+
 <a name="Invoking_C_from_JavaScript" />
 
 ### <a name="invoking-c-from-javascript"></a>Вызов C# из JavaScript
@@ -319,6 +321,16 @@ namespace CustomRenderer.iOS
 
 > [!NOTE]
 > Класс `WKWebView` поддерживается только в iOS 8 и более поздних версий.
+
+Кроме того, необходимо изменить файл **Info.plist**, включив в него следующие значения:
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Создание пользовательского отрисовщика в Android
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 870a9cb20ea962b3c1a342e7222c5e9322537dd1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f545893ca4cde441cd05fc3d8e52ecf0f6aae98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109215"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669496"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Использование mtouch для объединения приложений Xamarin.iOS в пакет
 
@@ -66,7 +66,7 @@ $ mtouch -sim Hello.app hello.exe
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-В этом примере мы используем для подписи приложения сертификат разработчика iPhone с именем Мигель де Иказа (Miguel de Icaza). Это очень важный шаг, без него физические устройства не будут загружать приложение.
+В данном случае мы используем сертификат "iPhone Developer: Miguel de Icaza" для подписывания приложения. Это очень важный шаг, без него физические устройства не будут загружать приложение.
 
  <a name="Running_your_Application" />
 
@@ -82,9 +82,9 @@ $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 $ mtouch --sdkroot /Applications/Xcode.app -launchsim Hello.app 
 ```
 
-Если не задан флаг `--sdkroot`, для него по умолчанию будет установлено значение пути xcode-select, что приведет к появлению следующего предупреждения:
+Если не задан флаг `--sdkroot`, для него по умолчанию будет установлено значение пути xcode-select, что приведет к появлению следующего предупреждения.
 
-> eg: warning MT0061: No Xcode.app specified (using --sdkroot), using the system Xcode as reported by 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer (предупреждение MT0061: не указан параметр Xcode.app с помощью ключа --sdkroot, используется системное значение Xcode, возвращаемое командой 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer). 
+> Пример. Предупреждение MT0061: не указан параметр Xcode.app с помощью ключа --sdkroot. Будет использовано системное значение Xcode, сообщаемое командой "xcode-select --print-path": /Applications/Xcode.app/Contents/Developer 
 
 Приведенная выше командная строка даст примерно следующий результат:
 
@@ -110,7 +110,7 @@ Press enter to terminate the application
 
 ### <a name="deploying-to-a-device"></a>Развертывание на устройстве
 
-Для развертывания на устройстве необходимо подготовить его в соответствии с описанием в документе компании Apple [об управлении устройствами](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html). Подготовив устройство, разверните на нем скомпилированные APP-файлы с помощью команды mtouch. Для этого ее нужно выполнить следующим образом:
+Для развертывания на устройстве необходимо подготовить его в соответствии с описанием в документе компании Apple [об управлении устройствами](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html). Подготовив устройство, разверните на нем скомпилированные APP-файлы с помощью команды mtouch. Для этого ее нужно выполнить следующим образом:
 
 ```bash
 $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
@@ -118,7 +118,7 @@ $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
 
 Если не задан флаг `--sdkroot`, для него по умолчанию будет установлено значение пути xcode-select, что приведет к появлению следующего предупреждения:
 
-> eg: warning MT0061: No Xcode.app specified (using --sdkroot), using the system Xcode as reported by 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer (предупреждение MT0061: не указан параметр Xcode.app с помощью ключа --sdkroot, используется системное значение Xcode, возвращаемое командой 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer). 
+> Пример. Предупреждение MT0061: не указан параметр Xcode.app с помощью ключа --sdkroot. Будет использовано системное значение Xcode, сообщаемое командой "xcode-select --print-path": /Applications/Xcode.app/Contents/Developer 
 
 Эти действия обычно выполняются с помощью Visual Studio для Mac.
 

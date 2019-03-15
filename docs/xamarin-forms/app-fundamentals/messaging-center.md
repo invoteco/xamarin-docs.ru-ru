@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: ecd3fe7256eeaa51baf1bc2c367ff7560db51b0c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055819"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667059"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Класс MessagingCenter в Xamarin.Forms
 
@@ -35,7 +35,6 @@ _Платформа Xamarin.Forms включает в себя простую с
 -  **Subscribe** — ожидает передачи сообщений с определенной сигнатурой и выполняет некоторое действие при их получении. Ожидать передачи одного и того же сообщения могут несколько подписчиков.
 -  **Send** — публикует сообщение для прослушивателей. Если прослушиватели не подписаны на сообщение, оно игнорируется.
 
-
 `MessagingService` — это статический класс с методами `Subscribe` и `Send`, которые используются в рамках всего решения.
 
 Сообщения имеют строковый параметр `message`, который позволяет *адресовать* их. Методы `Subscribe` и `Send` используют универсальные параметры для дальнейшего управления доставкой сообщений: два сообщения с одинаковой строкой `message`, но разными аргументами универсального типа не могут быть доставлены одному подписчику.
@@ -56,6 +55,8 @@ _Платформа Xamarin.Forms включает в себя простую с
 ## <a name="using-the-messagingcenter"></a>Использование класса MessagingCenter
 
 Сообщения могут отправляться в результате действия пользователя (например, нажатия кнопки), системного события (например, изменения состояния элемента управления) или другого инцидента (например, завершения асинхронного скачивания). Получив сообщение, подписчик может изменить внешний вид пользовательского интерфейса, сохранить данные или инициировать другую операцию.
+
+Дополнительные сведения об использовании класса `MessagingCenter`: [Взаимодействие между слабо связанными компонентами](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
 
 ### <a name="simple-string-message"></a>Простое строковое сообщение
 
@@ -114,3 +115,4 @@ MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
 
 - [MessagingCenterSample](https://developer.xamarin.com/samples/UsingMessagingCenter)
 - [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Взаимодействие между слабо связанными компонентами](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)

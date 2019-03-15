@@ -1,5 +1,5 @@
 ---
-title: 'Привет, Android: теперь подробнее'
+title: Знакомство с Android. Глубокое погружение
 description: Из этого состоящего из двух частей руководства вы узнаете, как создать первое приложение Xamarin.Android. Вы также получите представление об основах разработки приложений Android с помощью Xamarin. Кроме того, в этом руководстве будут описаны инструменты, понятия и действия, необходимые для сборки и развертывания приложения Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: cdd0a792a76fa411fdc010c3d662a3d1acc2f373
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108819"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670185"
 ---
-# <a name="hello-android-deep-dive"></a>Привет, Android: теперь подробнее
+# <a name="hello-android-deep-dive"></a>Знакомство с Android. Глубокое погружение
 
 _В этом руководстве из двух частей объясняется, как создать первое приложение Xamarin.Android. Вы также получите представление об основах разработки приложений Android с помощью Xamarin. Кроме того, в руководстве описаны инструменты, понятия и действия, необходимые для сборки и развертывания приложения Xamarin.Android._
 
@@ -113,7 +113,7 @@ Visual Studio для Mac — это бесплатная интегрирова
 
 Эти элементы описываются ниже:
 
-- **drawable** &ndash; в каталогах drawable размещаются [прорисовываемые ресурсы](http://developer.android.com/guide/topics/resources/drawable-resource.html), например изображения, в том числе растровые.
+- **drawable** &ndash; в каталогах drawable размещаются [прорисовываемые ресурсы](https://developer.android.com/guide/topics/resources/drawable-resource.html), например изображения, в том числе растровые.
 
 - **mipmap** &ndash; каталог mipmap содержит прорисовываемые файлы для значков средства запуска с различной плотностью. В шаблоне по умолчанию каталог drawable содержит файл значка приложения **Icon.png**.
 
@@ -269,7 +269,7 @@ SetContentView (Resource.Layout.activity_main);
 ::: zone-end
 ::: zone pivot="macos"
 
-В приложении **Phoneword** первая задача метода `OnCreate` заключается в загрузке пользовательского интерфейса, созданного в Android Designer. Чтобы загрузить пользовательский интерфейс, вызовите метод `SetContentView` и передайте ему *имя макета ресурсов*, связанное с файлом макета: **Main.axml**. Макет находится в `Resource.Layout.Main`:
+В приложении **Phoneword** первая задача метода `OnCreate` заключается в загрузке пользовательского интерфейса, созданного в Android Designer. Чтобы загрузить пользовательский интерфейс, вызовите метод `SetContentView` и передайте ему *имя макета ресурсов* для файла макета: **Main.axml**. Макет находится в `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);

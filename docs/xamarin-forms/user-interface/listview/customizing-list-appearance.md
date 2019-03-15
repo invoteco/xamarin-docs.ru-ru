@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972654"
 ---
 # <a name="customizing-listview-appearance"></a>Настройка внешнего вида ListView
 
@@ -206,8 +206,8 @@ ListView HeaderList = new ListView() {
 [`ListView`](xref:Xamarin.Forms.ListView) имеет `HorizontalScrollBarVisibility` и `VerticalScrollBarVisibility` свойства, которые получить или задать [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) значение, представляющее полоса прокрутки по горизонтали или вертикали, является видимым. Оба свойства можно задать следующие значения:
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает поведение прокрутки панели по умолчанию для платформы, и значение по умолчанию для `HorizontalScrollBarVisibility` и `VerticalScrollBarVisibility` свойства.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает, что полосы прокрутки будут видны, даже в том случае, если содержимое не укладывается в представлении.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает, что полосы прокрутки не будут видны, событие, если содержимое не умещается в представлении.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает, что полоса прокрутки будет отображаться, даже в том случае, если содержимое размещается в представлении.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает, что полосы прокрутки не видны, даже если содержимое не укладывается в представлении.
 
 <a name="Row_Separators" />
 

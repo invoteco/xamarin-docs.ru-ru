@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557042"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972680"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin.Forms
 
@@ -356,7 +356,7 @@ public partial class MainPage : ContentPage
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>Создание многократно используемых hyperlink класса
 
-Предыдущий подход к созданию гиперссылки требуется написание повторяющегося кода, каждый раз, чтобы требовать гиперссылки в приложении. Тем не менее, обе [ `Label` ](xref:Xamarin.Forms.Label) и [ `Span` ](xref:Xamarin.Forms.Span) классы могут быть подкласса для создания `HyperlinkLabel` и `HyperlinkSpan` классов, в которой распознаватель жестов и форматированием текста код также добавлена туда.
+Предыдущий подход к созданию гиперссылки требуется написание повторяющегося кода, каждый раз, чтобы требовать гиперссылки в приложении. Тем не менее, обе [ `Label` ](xref:Xamarin.Forms.Label) и [ `Span` ](xref:Xamarin.Forms.Span) допускается создание подклассов классов для создания `HyperlinkLabel` и `HyperlinkSpan` классов, в которой распознаватель жестов и форматированием кода также добавлена туда.
 
 В следующем примере кода, взятом из [демонстрации Hyperlink](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) образце показано `HyperlinkSpan` класса:
 

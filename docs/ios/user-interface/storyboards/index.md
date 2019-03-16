@@ -20,7 +20,7 @@ ms.date: 03/22/2017
 
 ## <a name="requirements"></a>Требования
 
-Раскадровки можно использовать с помощью iOS Designer в Visual Studio для Mac или Visual Studio 2015 и 2017 с рабочей нагрузки Xamarin.
+Раскадровки можно использовать с помощью iOS Designer в Visual Studio для Mac или Visual Studio 2017 с рабочей нагрузки Xamarin.
 
 ## <a name="what-is-a-storyboard"></a>Что такое раскадровка?
 

@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: f2db5f4acd57cbf887d9955d9ea61fce4427c1c3
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 35c5811d57ade1d320e56e292c1eeed094963a0d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672408"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070921"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Общие сведения о непрерывной интеграции с Xamarin
 
@@ -65,7 +65,7 @@ TFS и Azure DevOps тесно интегрированные с Visual Studio �
 
 Git могут работать полностью основана на веб-браузеров или с помощью [графического](http://git-scm.com/downloads/guis) , работают на Linux, Mac OSX и Windows. Оно предоставляется бесплатно для общедоступных репозиториях; частные репозитории требуют [платный план](https://github.com/pricing).
 
-Visual Studio 2015 и Visual Studio для Mac предоставляют встроенную поддержку для Git; для более старых версий, корпорация Майкрософт предоставляет [загружаемое расширение для Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c). Как отмечалось выше, Visual Studio Team Services и TFS можно использовать Git для управления версиями вместо TFVC.
+Текущие версии Visual Studio для Windows и Mac предоставляют встроенную поддержку Git. Корпорация Майкрософт предоставляет [загружаемое расширение для Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) для более старых версий Visual Studio. Как отмечалось выше, Visual Studio Team Services и TFS можно использовать Git для управления версиями вместо TFVC.
 
 ### <a name="subversion"></a>Subversion
 

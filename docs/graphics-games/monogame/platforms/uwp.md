@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: b8eafc3c9c85ba8067b5da7b568ed7c91c9e170c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666429"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070934"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Создание проекта MonoGame UWP
 
@@ -26,10 +26,10 @@ _MonoGame можно использовать для создания игр и 
 При разработке приложений универсальной платформы Windows MonoGame требуется:
 
 - Операционная система Windows 10
-- Любая версия Visual Studio 2015
+- Любая версия Visual Studio 2017
 - Средства разработчика Windows 10
 - Параметр устройства в режим разработчика
-- [MonoGame 3.5 для Visual Studio](http://www.monogame.net/2016/03/17/monogame-3-5/) или более поздней версии
+- [MonoGame 3.7.1 для Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) или более поздней версии
 
 Дополнительные сведения см. в этом [страница по настройке для разработки приложений Windows 10 UWP](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
 

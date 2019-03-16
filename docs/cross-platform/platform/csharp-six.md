@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: d5478a09c461ec8f1bf51efaa7b4dc2f862d69b4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b69fe417bb521781453042269b9b52609d8e00a0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668947"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070960"
 ---
 # <a name="c-6-new-features-overview"></a>C#Обзор новых возможностей 6
 
@@ -20,38 +20,9 @@ _Последнюю версию C# язык — версии 6 – постоя
 
 В этом документе представлены новые возможности C# 6. Полностью поддерживается mono компилятором, и разработчики могут начать использовать новые функции на всех целевых платформах Xamarin.
 
-Эта статья содержит краткое фрагментов C# 6 кода, которые иллюстрируют использование.
-Пример приложения — это командной строки программа, которая выполняется на всех целевых платформах Xamarin и выполняет различные функции.
-
-
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 
 **Новые возможности C# 6, по [Xamarin University](https://university.xamarin.com/)**
-
-
-## <a name="development-environment"></a>Среда разработки
-
-### <a name="mac"></a>Mac
-
-* **Visual Studio для Mac** поддерживает C# 6: можно создавать и компилировать приложения Xamarin с помощью C# 6 функции.
-  Дополнительные сведения о [Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/).
-
-### <a name="windows"></a>Windows
-
-* **Visual Studio 2015 и 2017** и более поздних версий имеют полную поддержку C# 6. Более ранних версиях Visual Studio не будет поддерживать C# 6.
-
-* **Xamarin Studio для Windows** не поддерживает C# 6 функции в редакторе.
-
-
-
-## <a name="compiler"></a>Компилятор
-
-Mono C# 6 компилятора включается в Mono 4.0 и более поздние версии, который является [бесплатно загрузить](https://www.mono-project.com/download/).
-Visual Studio для Mac автоматически обновляет установки Mono в системе.
-
-Пользователи Windows должны иметь [Visual Studio 2015 или 2017 ^](https://visualstudio.microsoft.com/) установлен для компиляции C# 6 кода (даже если выбираемое Xamarin Studio для Windows в качестве интегрированной среды разработки).
-
-^ или *[Microsoft Build Tools 2015](https://www.microsoft.com/download/details.aspx?id=48159)* для командной строки компиляции или серверов сборки, например.
 
 ## <a name="using-c-6"></a>С помощью C# 6
 

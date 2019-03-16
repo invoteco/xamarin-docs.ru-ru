@@ -1,5 +1,5 @@
 ---
-title: Вопросы и ответы
+title: Вопросы и ответы по Xamarin.iOS
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -7,14 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d2d0af5a69920f392eba1cd655f1d8ab74971be6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107512"
 ---
-# <a name="frequently-asked-questions"></a>Вопросы и ответы
+
+# <a name="ios-frequently-asked-questions"></a>операций ввода-вывода часто задаваемые вопросы
 
 ## <a name="general-questions"></a>Общие вопросы
 
@@ -58,7 +53,7 @@ ms.locfileid: "50107512"
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[Имеется возможность создания xcarchive-архива из Visual Studio?](create-xcarchive.md)
 По состоянию на Xamarin 4 стало возможным создание `.xcarchive` из Windows, задав `ArchiveOnBuild` свойства `true`.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Почему отправка приложения завершается ошибкой "Обнаружены запрещенные пути ( "iTunesMetadata.plist" ) в..."?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Почему отправка приложения завершается ошибкой: "Запрещенные пути ("iTunesMetadata.plist") в…"?](itunesmetadata-disallowed-paths.md)
 Эта ошибка является результатом изменения в процесс проверки Apple App Store. Этот возникла следующая ошибка _не_ относятся к конкретной версии Xamarin, установки, поэтому для снижения будет _не_ справки. Это руководство по представлены ссылки на дополнительные сведения о том, как устранить проблему.
 
 
@@ -70,7 +65,7 @@ ms.locfileid: "50107512"
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[Почему сборка iOS завершается ошибкой "В цепочке ключей не удалось найти допустимые ключи подписывания кода iPhone"?](no-codesigning-keys.md)
 Это сообщение об ошибке возникает, когда проект рассматриваемый ищет действительные учетные данные подписи кода, но не можете найти их. Подписывание кода является обязательным для тестирования и развертывания на физических устройствах iOS; а также приложения для Ad-hoc и сохранения сборок.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Почему приложение iOS 9 завершается ошибкой "System.Exception: не удалось маршалировать объект Objective-C"?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Почему работа приложения iOS 9 завершается ошибкой: System.Exception: Не удалось маршалировать объект Objective-C?](exception-marshal-obj-c.md)
 Изменения API в iOS 9 требуют, что конструктор обратного вызова можно использовать при вызов неуправляемого кода, в качестве базового интерфейса API теперь ожидает ее.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Ошибка выполнения: не удалось найти или загрузить сборку mscorlib.dll](error-mscorlib-not-found.md)
@@ -86,7 +81,7 @@ ms.locfileid: "50107512"
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[Размер IPA-файла составляет 0 байт](ipa-zero-bytes.md)
 Отсутствуют некоторые известные проблемы в предыдущих версиях Xamarin, которое может привести к IPA-файл на Windows 0 байт.
 
-### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Ошибка IBTool: не удалось завершить операцию.](error-ibtool.md)
+### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[IBTool Error: не удалось завершить операцию.](error-ibtool.md)
 Apple [фиксированной](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) это `ibtool` об ошибке в Xcode 6.1.1, поэтому обновление до Xcode 6.1.1 или более поздней версии — самый простой исправления.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Ошибка MT1009: не удалось скопировать сборку](error-mt1009.md)

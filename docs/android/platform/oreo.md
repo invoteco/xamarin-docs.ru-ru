@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 765494b5d9a55aedd9c9b3f0ea29ea389346ae3c
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: c34d81feee48caca94989973a67ba783a0139a90
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267629"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071086"
 ---
 # <a name="oreo-features"></a>Компоненты Oreo
 
@@ -65,8 +65,6 @@ _Как приступить к работе с помощью Xamarin.Android �
     1. Обновление для Visual Studio 2017 версии 15.7 или более поздней версии (см. в разделе [обновление Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
 
     2. Используйте [диспетчер пакетов SDK](~/android/get-started/installation/android-sdk.md) установить уровень API 26.0 или более поздней версии.
-
--   Если вы используете Visual Studio 2015, мы рекомендуем переходе SDK Tools на 25, а также с помощью старый графический пользовательский Интерфейс диспетчера эмуляторов Google. Средства пакета SDK 25 по-прежнему может использоваться вместе с API 26, 27 и более поздних версиях и не влияют на разработку для новых платформ. Это позволит получить интерфейс для управления Android SDK для более старых версий Visual STUDIO.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

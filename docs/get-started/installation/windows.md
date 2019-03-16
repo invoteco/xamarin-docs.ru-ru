@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: d9f4717a4dd76e2fb3767c7baf9aaa868cfc21ff
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 62a10ca57b867255766c02616ee41e57ac166af3
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199820"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071051"
 ---
 # <a name="installing-xamarin-in-visual-studio-2017"></a>Установка Xamarin в Visual Studio 2017
 
@@ -29,7 +29,7 @@ ms.locfileid: "57199820"
 
 Кроме того, можно щелкнуть **Справка > О Microsoft Visual Studio** и, прокрутив список установленных продуктов, узнать, установлена ли среда Xamarin.
 
-![Список установленных продуктов в Visual Studio 2015](windows-images/13-xamarin-is-installed.png "Visual Studio 2015 installed products screen")
+![Visual Studio 2017 экран установленных продуктов](windows-images/13-xamarin-is-installed.png "Visual Studio 2017 экран установленных продуктов")
 
 Дополнительные сведения о поиске данных о версии см. в статье [Где можно найти сведения о версии и журналы?](~/cross-platform/troubleshooting/questions/version-logs.md)
 

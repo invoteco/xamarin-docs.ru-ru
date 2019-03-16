@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 56456372b13dad5b5040c0c466f2efdf6ecdbc2a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668885"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071025"
 ---
 # <a name="using-icloud-with-xamarinios"></a>С помощью iCloud с помощью Xamarin.iOS
 
@@ -37,7 +37,7 @@ ms.locfileid: "57668885"
 
 - Последняя стабильная версия Xamarin.iOS
 - Xcode 8 или более поздней версии
-- Visual Studio для Mac или Visual Studio 2015 и более поздних версиях.
+- Visual Studio для Mac или Visual Studio 2017 и более поздних версиях.
 
 ## <a name="preparing-for-icloud-development"></a>Подготовка для разработки приложений iCloud
 

@@ -1,22 +1,15 @@
 ---
 title: Приступая к работе с tvOS в Xamarin
-description: В этом документе описывается, как можно приступить к сборке приложений tvOS с помощью Xamarin. Ссылки на руководство по установке и краткое руководство.
+description: 'В этом документе описывается, как можно приступить к сборке приложений tvOS с помощью Xamarin. Ссылки на руководство по установке и краткое руководство.'
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 84de9d042295aee8ca07ce3372f2e19bdec9f599
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118140"
 ---
-# <a name="getting-started-with-tvos-in-xamarin"></a>Приступая к работе с tvOS в Xamarin
 
-Xamarin.tvOS позволяет создавать приложения для собственного tvOS с гибкостью и элегантностью modern C# языка, power, библиотеки базовых классов (BCL) .NET и Visual Studio для Mac или Visual Studio 2015 или 2017 под управлением Windows.
+# <a name="getting-started-with-tvos-in-xamarin"></a>Приступая к работе с tvOS в Xamarin
 
 Этой серии документов представлены основы разработки Xamarin.tvOS. Его индикатор приобретает Установка поддержки tvOS с запуском, проектирование, кодирование и запуск приложения. Кроме того он дает навыки и набор инструментов, которые потребуются для работы в другом приложении Xamarin.tvOS.
 

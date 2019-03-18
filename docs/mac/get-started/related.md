@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Mac — сопутствующая документация
-description: 'Этот документ содержит ссылки на документацию для разработчиков Xamarin.Mac: документацию по Xamarin.iOS, центр разработчиков Mac Apple и различные руководства, описывающие создание пользовательских интерфейсов с помощью Xamarin.Mac.'
+description: 'В этом документе приведены ссылки на документацию, актуальную для разработчиков Xamarin.Mac: документацию по Xamarin.iOS, центр Apple для разработчиков на Mac, а также различные руководства, описывающие создание с помощью Xamarin.Mac пользовательских интерфейсов.'
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 87987e79fce2bd5277f8092d09752fe715e2f2ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526953"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667661"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac — сопутствующая документация
 
@@ -22,7 +22,7 @@ ms.locfileid: "51526953"
 
 - **[Центр разработки для Mac](https://developer.apple.com/devcenter/mac/) Apple**. Примеры вызовов API-интерфейсов на языке Objective-C можно без труда преобразовать в примеры на языке C#. Сведения о том, как это сделать, см. в статье [Общие сведения об API-интерфейсах Mac](~/mac/app-fundamentals/mac-apis.md).
 
-- [**Stack Overflow**](http://stackoverflow.com/). Отличный ресурс, где можно найти простые ответы на такие вопросы, как ["Как автоматически развернуть все узлы в NSOutlineView"](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Часто эти примеры будут написаны на языке Objective-C, поэтому их необходимо преобразовать на C#, однако есть ряд ответов и на C#.
+- [**Stack Overflow**](https://stackoverflow.com/). Отличный ресурс, где можно найти простые ответы на такие вопросы, как ["Как автоматически развернуть все узлы в NSOutlineView"](https://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Часто эти примеры будут написаны на языке Objective-C, поэтому их необходимо преобразовать на C#, однако есть ряд ответов и на C#.
 
 ## <a name="user-interface"></a>Пользовательский интерфейс
 

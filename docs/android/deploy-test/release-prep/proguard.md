@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f6f3377c4fdeedefa3277d05012ec868f6626c41
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117399"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670003"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -192,7 +192,7 @@ Xamarin.Android *не учитывает* следующие параметры:
 
 При попытке использовать ProGuard в Android 7.0 или более поздней версии необходимо скачать более новую версию ProGuard, поскольку в пакет SDK для Android не входит новая версия, совместимая с пакетом JDK 1.8.
 
-Этот [пакет NuGet](https://www.nuget.org/packages/name.atsushieno.proguard.facebook/5.3.0) можно использовать для установки более новой версии `proguard.jar`. Дополнительные сведения об обновлении пакета SDK для Android по умолчанию `proguard.jar` см. в этом обсуждении на сайте [Stack Overflow](http://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706).
+Этот [пакет NuGet](https://www.nuget.org/packages/name.atsushieno.proguard.facebook/5.3.0) можно использовать для установки более новой версии `proguard.jar`. Дополнительные сведения об обновлении пакета SDK для Android по умолчанию `proguard.jar` см. в этом обсуждении на сайте [Stack Overflow](https://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706).
 
 Все версии ProGuard представлены на [странице SourceForge](https://sourceforge.net/projects/proguard/files/). 
 
@@ -341,7 +341,7 @@ C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sd
 
 ## <a name="summary"></a>Сводка
 
-В этом руководстве рассматривались принципы работы ProGuard в Xamarin.Android, активация этого средства в проекте и его настройка. Здесь приводился пример конфигураций ProGuard и описывались решения распространенных проблем. Дополнительные сведения о средстве ProGuard и Android см. в статье о [сжатии кода и ресурсов](http://developer.android.com/tools/help/proguard.html). 
+В этом руководстве рассматривались принципы работы ProGuard в Xamarin.Android, активация этого средства в проекте и его настройка. Здесь приводился пример конфигураций ProGuard и описывались решения распространенных проблем. Дополнительные сведения о средстве ProGuard и Android см. в статье о [сжатии кода и ресурсов](https://developer.android.com/tools/help/proguard.html). 
 
 
 ## <a name="related-links"></a>Связанные ссылки

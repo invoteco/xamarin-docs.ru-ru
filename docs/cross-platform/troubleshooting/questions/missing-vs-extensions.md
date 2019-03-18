@@ -1,30 +1,27 @@
 ---
-title: Отсутствуют расширения Visual Studio после установки
+title: Отсутствуют расширения Visual Studio после установки
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 7b1f96807d77d9db0a892c5e78124eb3a9890edc
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 3e3d426e7b00725eafeba139de5bc46d416c368a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251225"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070895"
 ---
-# <a name="missing-visual-studio-extensions-after-installation"></a>Отсутствуют расширения Visual Studio после установки
+# <a name="missing-visual-studio-extensions-after-installation"></a>Отсутствуют расширения Visual Studio после установки
 
 ## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>Сообщение об ошибке: Этот проект несовместим с текущим выпуском Visual Studio
 
-Убедитесь, что установить совместимую версию Visual Studio:
-
--   Visual Studio 2017 (Community, Professional или Enterprise)
--   Visual Studio 2015 (Community, Professional или Enterprise)
+Убедитесь, Visual Studio 2017 (Community, Professional или Enterprise) или более поздняя.
 
 См. также [требования к Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 
-## <a name="possible-fix-1-change-the-installation-to-make-sure-the-visual-studio-extensions-are-installed"></a>Возможные исправления 1: Измените параметры установки, чтобы убедиться в том, что установлены соответствующие расширения Visual Studio
+## <a name="possible-fix-1-change-the-installation-to-make-sure-the-visual-studio-extensions-are-installed"></a>Возможные исправления 1: Изменить параметры установки, чтобы убедиться в том, что установлены соответствующие расширения Visual Studio
 
 В некоторых случаях установщика Xamarin могут автоматически отмените параметры установки для расширений Visual Studio. Если, являющееся причиной проблемы, установите отсутствуют расширения Visual Studio, с помощью установщика **изменение** команды. Например, чтобы установить расширения для Visual Studio 2013:
 
@@ -40,7 +37,7 @@ ms.locfileid: "40251225"
 
 5. Пройдите остальные инструкции мастера установки.
 
-## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Возможному исправлению 2: Visual Studio для настройки расширений попросите
+## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Возможные варианты исправления 2: Попросите Visual Studio для настройки расширений
 
 1. Проверьте, если расширения Xamarin были скопированы в папку расширений Visual Studio:
 
@@ -81,7 +78,7 @@ ms.locfileid: "40251225"
 
 5.  Найдите следующий раздел.
 
-    _Открываемый раздел HKEY\_ЛОКАЛЬНОГО\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
+    _HKEY\_LOCAL\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
 6.  Найдите и удалите все записи, соответствующие этому шаблону.
 
@@ -99,7 +96,7 @@ ms.locfileid: "40251225"
 
 10.  Переустановите текущей стабильной версии Xamarin из [visualstudio.com](https://visualstudio.com/xamarin).
 
-## <a name="possible-fix-4-repair-visual-studio-installation"></a>Возможному исправлению 4: Установки Visual Studio восстановить
+## <a name="possible-fix-4-repair-visual-studio-installation"></a>Возможные варианты исправления 4: Восстановить установку Visual Studio
 
 1.  Откройте Windows **программы и компоненты** панель управления.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 84e99849e3b3d925747df59ffcde242c145dbe74
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111386"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667598"
 ---
 # <a name="gdb"></a>GDB
 
@@ -155,7 +155,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 Чтобы предоставить доступный `gdbserver`, выполните инструкции из раздела [Отладочная сборка без быстрого развертывания](#Debug_Builds_without_Fast_Deployment).
 
-Одна досадная мелочь: целевое устройство MSBuild `_Gdb` принудительно завершит все ранее запущенные экземпляры этого приложения. Это не выполняется на целевых устройствах с версией Android ниже 4.0.
+Одна досадная мелочь: целевая сборка MSBuild `_Gdb` принудительно завершит все ранее запущенные экземпляры приложения. Это не выполняется на целевых устройствах с версией Android ниже 4.0.
 
 <a name="Troubleshooting" />
 
@@ -163,7 +163,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` не работает.
 
-Функция `mono_pmip` (она полезна для [получения кадров управляемого стека](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)), экспортируется из `libmonosgen-2.0.so`, который в настоящее время не запрашивается целевым устройством `_Gdb`. (Эта ошибка будет исправлена в будущих выпусках.)
+Функция `mono_pmip` (она полезна для [получения кадров управляемого стека](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)), экспортируется из `libmonosgen-2.0.so`, который в настоящее время не запрашивается целевым устройством `_Gdb`. (Эта ошибка будет исправлена в будущих выпусках.)
 
 Чтобы включить вызов функций, расположенных в файле `libmonosgen-2.0.so`, скопируйте его с целевого устройства в каталог `gdb-symbols`:
 
@@ -173,7 +173,7 @@ $ adb pull /data/data/Mono.Android.DebugRuntime/lib/libmonosgen-2.0.so Project/g
 
 После копирования перезапустите сеанс отладки.
 
-### <a name="bus-error-10-when-running-the-gdb-command"></a>При выполнении команды `gdb` возникает "Ошибка шины: 10"
+### <a name="bus-error-10-when-running-the-gdb-command"></a>"Bus error: 10" при выполнении команды `gdb`
 
 Когда команда `gdb` завершается ошибкой `"Bus error: 10"`, перезапустите устройство Android.
 

@@ -105,7 +105,7 @@ Xamarin.Forms имеет несколько представлений для п
 
 ## <a name="visualvisualindexmd"></a>[Визуальный элемент](visual/index.md)
 
-Xamarin.Forms Visual включает модули подготовки отчетов, чтобы выборочно применять к `VisualElement` объекты, не прибегая к элементам управления Xamarin.Forms подкласс.
+Visual материал Xamarin.Forms можно использовать для создания приложений Xamarin.Forms, которые выглядят идентичными или мало чем отличается в iOS и Android.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Диспетчер визуальных состояний](visual-state-manager.md)
 

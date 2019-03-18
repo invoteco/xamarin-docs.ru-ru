@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: ce102f189321cbd49b37e7718c1f3d478c322f55
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e009ec60abc5afd06e43122424c325bbb1bf42ac
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526693"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668872"
 ---
 # <a name="set-up-device-for-development"></a>Настройка устройства для разработки
 
@@ -77,7 +77,7 @@ _В этой статье описано, как настроить устрой
 ### <a name="download-the-usb-drivers"></a>Скачивание USB-драйверов
 
 Для работы устройств Google Nexus (за исключением Galaxy Nexus) требуется USB-драйвер Google. Драйвер для Galaxy Nexus [распространяет компания Samsung](http://www.samsung.com/us/support/downloads/).
-Все остальные устройства Android должны использовать [USB-драйвер от соответствующего изготовителя](http://developer.android.com/tools/extras/oem-usb.html#Drivers).
+Все остальные устройства Android должны использовать [USB-драйвер от соответствующего изготовителя](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Установите пакет **USB-драйвера Google**, запустив диспетчер пакетов SDK для Android и открыв папку **Дополнения**, как показано на следующем снимке экрана:
 
@@ -144,7 +144,7 @@ _В этой статье описано, как настроить устрой
 
 ### <a name="connecting-over-wifi"></a>Подключение через Wi-Fi
 
-По умолчанию [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*) настроен для взаимодействия с устройством Android через USB. Его можно перенастроить для использования TCP/IP вместо USB. Для этого устройство и компьютер должны находиться в одной сети Wi-Fi. Чтобы настроить среду для отладки по Wi-Fi, выполните указанные далее действия из командной строки:
+По умолчанию [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) настроен для взаимодействия с устройством Android через USB. Его можно перенастроить для использования TCP/IP вместо USB. Для этого устройство и компьютер должны находиться в одной сети Wi-Fi. Чтобы настроить среду для отладки по Wi-Fi, выполните указанные далее действия из командной строки:
 
 1.  Определите IP-адрес устройства Android. Можно открыть раздел **Параметры > Wi-Fi**, а затем выбрать сеть Wi-Fi, к которой подключено устройство. Появится экран параметров с информацией о сетевом подключении, аналогичный показанному на снимке экрана ниже:
 
@@ -184,9 +184,9 @@ _В этой статье описано, как настроить устрой
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Android Debug Bridge](http://developer.android.com/tools/help/adb.html)
-- [Использование физических устройств](http://developer.android.com/tools/device.html)
+- [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
+- [Использование физических устройств](https://developer.android.com/tools/device.html)
 - [Скачивания драйверов Samsung](http://www.samsung.com/us/support/downloads/)
-- [USB-драйверы изготовителей оборудования](http://developer.android.com/tools/extras/oem-usb.html#Drivers)
-- [USB-драйвер Google](http://developer.android.com/sdk/win-usb.html)
-- [Разработчикам XDA: Windows 8 — решена проблема драйвера ADB/fastboot](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [USB-драйверы изготовителей оборудования](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
+- [USB-драйвер Google](https://developer.android.com/sdk/win-usb.html)
+- [XDA Developers: Windows 8 - ADB/fastboot driver problem solved](http://forum.xda-developers.com/showthread.php?t=1583801) (Windows 8 — решена проблема драйвера ADB/fastboot)

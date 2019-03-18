@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7626c49b2267cbd087a16c310f1b85aea7139823
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056140"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981735"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -428,7 +428,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 Слева направо, Показать эти экраны `NoWrap`, `Wrap` и `Reverse` параметры для 12 дочерних элементов:
 
-[![На странице эксперимента: Перенос](flex-layout-images/ExperimentWrap.png "перенос на странице эксперимента:")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
+[![На странице эксперимента: Wrap](flex-layout-images/ExperimentWrap.png "перенос на странице эксперимента:")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
 Когда `Wrap` свойству `NoWrap` основной оси ограничен (как в этой программе) и основной оси не ширину или высоту в соответствии со всех дочерних элементов, `FlexLayout` пытается уменьшить размер элементов, как на снимке экрана iOS Демонстрирует. Вы можете управлять shrinkness элементов с [ `Shrink` ](#shrink) присоединенного связываемые свойства.
 
@@ -464,7 +464,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 Это один из двух свойств (другие, [ `AlignContent` ](#align-content)), указывающее, как дочерние элементы выравниваются по перекрестной оси. В каждой строке дочерние элементы растягиваются (как показано на предыдущем снимке экрана) или выровнены по start, по центру или по конец каждого элемента, как показано на следующих снимках экрана три:
 
-[![На странице эксперимента: Выравнивания элементов](flex-layout-images/ExperimentAlignItems.png "на странице эксперимента: выравнивания элементов")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
+[![На странице эксперимента: Выравнивайте элементы](flex-layout-images/ExperimentAlignItems.png "на странице эксперимента: выравнивания элементов")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
 
 На снимке экрана iOS верхние края все дочерние элементы выравниваются. На снимках экрана Android элементы являются вертикально по центру зависимости от самого высокого дочернего. На снимке экрана универсальной платформы Windows выравниваются нижние границы всех элементов.
 
@@ -490,7 +490,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 На снимке экрана iOS обе строки, в верхней части; на снимке экрана Android они находятся в центре; и на снимке экрана универсальной платформы Windows они внизу. Строки также могут быть заданы различными способами:
 
-[![На странице эксперимента: Выравнивание содержимого 2](flex-layout-images/ExperimentAlignContent2.png "на странице эксперимента: выравнивание содержимого 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![На странице эксперимента:  Выравнивание содержимого 2](flex-layout-images/ExperimentAlignContent2.png "на странице эксперимента: выравнивание содержимого 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 `AlignContent` Не действует, если имеется только одну строку или столбец.
 
@@ -517,13 +517,13 @@ public partial class PhotoWrappingPage : ContentPage
 Для `Label` элемент с именем `label` (или примере), можно задать `AlignSelf` свойства в коде следующим образом:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Обратите внимание, что отсутствует ссылка на `FlexLayout` предком `Label`. В XAML свойство следующим образом:
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### <a name="the-order-property"></a>Свойство Order
@@ -580,7 +580,7 @@ FlexLayout.SetBasis(label, new FlexBasis(0.25f, true));
 
 [![Основы поэкспериментировать страницы](flex-layout-images/BasisExperiment.png "основы поэкспериментировать страницы")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-На снимке экрана iOS слева показаны два `Label` элементов, получает значения высоты в аппаратно независимых единицах. Android экран показывает, как их, получает высота небольшую часть общей высоты `FlexLayout`. Если `Basis` имеет значение 100%, то дочернее действие высоту `FlexLayout`и переносятся на следующий столбец и занимают всей высоте этого столбца, как показано на снимке экрана универсальной платформы Windows: он отображается так, как если пять дочерних элементов упорядочиваются в строку , но фактически идут в пять столбцов.
+На снимке экрана iOS слева показаны два `Label` элементов, получает значения высоты в аппаратно независимых единицах. Android экран показывает, как их, получает высота небольшую часть общей высоты `FlexLayout`. Если `Basis` имеет значение 100%, то дочернее действие высоту `FlexLayout`и переносятся на следующий столбец и занимают всей высоте этого столбца, как показано на снимке экрана универсальной платформы Windows: Он отображается как пять дочерние элементы размещаются в строке, при этом фактически идут в пять столбцов.
 
 ### <a name="the-grow-property"></a>Увеличение свойства
 

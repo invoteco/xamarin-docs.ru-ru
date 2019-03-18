@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 86abe932e9c244e1a959042cfc995bc184f89cc9
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 17ca8ec481b8af5ad0515e6544613864f0a66271
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671290"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981774"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Часть 3. Расширения разметки XAML
 
@@ -262,7 +262,7 @@ _Расширения разметки XAML составляют важную ф
                 <On Platform="UWP" Value="#80FF80" />
             </OnPlatform>
 
-            <x:String x:Key="fontSize">Large</x:String>
+            <x:Double x:Key="fontSize">24</x:Double>
         </ResourceDictionary>
     </ContentPage.Resources>
 

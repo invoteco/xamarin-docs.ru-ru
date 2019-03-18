@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2679756cd9a9a60c2d7ab637678ff1d8262b2403
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061963"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669990"
 ---
 # <a name="creating-the-platform-video-players"></a>Создание видеопроигрывателей платформы
 
@@ -220,7 +220,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-media-element"></a>Элемент мультимедиа на универсальной платформе Windows
 
-[`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) является самым распространенным видеопроигрывателем на универсальной платформе Windows (UWP). В документации по классу `MediaElement` определено, что вместо него следует использовать класс [`MediaPlayerElement`](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/), если только необходимо поддерживать версии Windows 10, начиная со сборки 1607.
+[`MediaElement`](xref:Windows.UI.Xaml.Controls.MediaElement) является самым распространенным видеопроигрывателем на универсальной платформе Windows (UWP). В документации по классу `MediaElement` определено, что вместо него следует использовать класс [`MediaPlayerElement`](xref:Windows.UI.Xaml.Controls.MediaPlayerElement), если только необходимо поддерживать версии Windows 10, начиная со сборки 1607.
 
 Переопределению метода `OnElementChanged` необходимо создать класс `MediaElement`, задать несколько обработчиков событий и передать объект `MediaElement` методу `SetNativeControl`.
 
@@ -424,7 +424,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-transport-controls-property"></a>Свойство элементов управления транспортировкой на универсальной платформе Windows
 
-Класс `MediaElement` на платформе UWP определяет свойство с именем [`AreTransportControlsEnabled`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled) таким образом, что свойство задается из одноименного свойства `VideoPlayer`.
+Класс `MediaElement` на платформе UWP определяет свойство с именем [`AreTransportControlsEnabled`](xref:Windows.UI.Xaml.Controls.MediaElement.AreTransportControlsEnabled*) таким образом, что свойство задается из одноименного свойства `VideoPlayer`.
 
 ```csharp
 namespace FormsVideoLibrary.UWP

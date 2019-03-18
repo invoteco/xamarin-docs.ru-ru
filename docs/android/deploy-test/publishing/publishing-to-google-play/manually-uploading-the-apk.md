@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4f0378f7e2fe29a5d11c2cbc02fc736adf12577c
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 76292dac6281837ee48b3bb76a362255108bd62c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171733"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667507"
 ---
 # <a name="manually-uploading-the-apk"></a>Отправка пакета APK вручную
 
@@ -162,29 +162,29 @@ Google Play не разрешит изменить бесплатное прил
 
 В манифест приложения можно добавить элементы, позволяющие управлять фильтрацией приложений в Магазине Google Play. Далее перечисляются элементы и атрибуты манифеста, которые можно использовать для фильтрации приложений:
 
--   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) &ndash; Google Play будет использовать атрибуты для определения возможности развертывания приложения на устройстве в зависимости от размера экрана. 
+-   [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) &ndash; Google Play будет использовать атрибуты для определения возможности развертывания приложения на устройстве в зависимости от размера экрана. 
     Google Play будет предполагать, что Android может адаптировать небольшой размер для больших экранов, но не наоборот. Поэтому приложение, которое объявляет поддержку для обычных экранов, будет отображаться в результатах поиска для больших, а не для маленьких экранов. Если приложение Xamarin.Android не предоставляет элемент `<supports-screen>` в файле манифеста, Google Play предположит, что все атрибуты имеют значение true и что приложение поддерживает все размеры экрана. Этот элемент необходимо добавить в файл **AndroidManifest.xml** вручную. 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; Этот элемент манифеста используется для запроса некоторых возможностей оборудования, таких как тип клавиатуры, устройства навигации, сенсорный экран и т. д. Этот элемент необходимо добавить в файл **AndroidManifest.xml** вручную. 
+-   [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; Этот элемент манифеста используется для запроса некоторых возможностей оборудования, таких как тип клавиатуры, устройства навигации, сенсорный экран и т. д. Этот элемент необходимо добавить в файл **AndroidManifest.xml** вручную. 
 
--   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; Этот элемент манифеста объявляет возможности оборудования или программного обеспечения, которыми должно располагать устройство, чтобы обеспечить функционирование приложения. Этот атрибут носит исключительно информационный характер. Google Play не отобразит приложение для устройств, которые не соответствуют условиям этого фильтра. Однако приложение можно установить и другими способами (вручную или путем скачивания). Этот элемент необходимо добавить в файл **AndroidManifest.xml** вручную. 
+-   [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; Этот элемент манифеста объявляет возможности оборудования или программного обеспечения, которыми должно располагать устройство, чтобы обеспечить функционирование приложения. Этот атрибут носит исключительно информационный характер. Google Play не отобразит приложение для устройств, которые не соответствуют условиям этого фильтра. Однако приложение можно установить и другими способами (вручную или путем скачивания). Этот элемент необходимо добавить в файл **AndroidManifest.xml** вручную. 
 
--   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Этот элемент указывает, что на устройстве должны присутствовать некоторые общие библиотеки, например Google Maps. Этот элемент также можно указать с помощью `Android.App.UsesLibraryAttribute`. Пример: 
+-   [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Этот элемент указывает, что на устройстве должны присутствовать некоторые общие библиотеки, например Google Maps. Этот элемент также можно указать с помощью `Android.App.UsesLibraryAttribute`. Например: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
--   [uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; Этот элемент используется для определения некоторых возможностей оборудования, необходимых для запуска приложения, которые могут быть неправильно объявлены с помощью элемента `<uses-feature>`. Например, если приложение запрашивает разрешение на использование камеры, то Google Play предполагает, что на устройствах должна быть камера, даже если объявляющий камеру элемент `<uses-feature>` отсутствует. Этот элемент можно задать с помощью `Android.App.UsesPermissionsAttribute`. Пример: 
+-   [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; Этот элемент используется для определения некоторых возможностей оборудования, необходимых для запуска приложения, которые могут быть неправильно объявлены с помощью элемента `<uses-feature>`. Например, если приложение запрашивает разрешение на использование камеры, то Google Play предполагает, что на устройствах должна быть камера, даже если объявляющий камеру элемент `<uses-feature>` отсутствует. Этот элемент можно задать с помощью `Android.App.UsesPermissionsAttribute`. Например: 
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]
     ```
 
--   [uses-sdk](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html) &ndash; Этот элемент используется для объявления минимального уровня API Android, необходимого для приложения. Этот элемент можно задать в параметрах Xamarin.Android проекта Xamarin.Android. 
+-   [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html) &ndash; Этот элемент используется для объявления минимального уровня API Android, необходимого для приложения. Этот элемент можно задать в параметрах Xamarin.Android проекта Xamarin.Android. 
 
--   [compatible-screens](http://developer.android.com/guide/topics/manifest/compatible-screens-element.html) &ndash; Этот элемент используется для фильтрации приложений, которые не соответствуют размеру экрана и плотности, заданным этим элементом. В большинстве приложений этот фильтр использовать не следует. Он предназначен для конкретных высокопроизводительных игр или приложений, которые необходимо строго контролировать при распространении приложений. Предпочтительным является упомянутый выше атрибут `<support-screen>`. 
+-   [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html) &ndash; Этот элемент используется для фильтрации приложений, которые не соответствуют размеру экрана и плотности, заданным этим элементом. В большинстве приложений этот фильтр использовать не следует. Он предназначен для конкретных высокопроизводительных игр или приложений, которые необходимо строго контролировать при распространении приложений. Предпочтительным является упомянутый выше атрибут `<support-screen>`. 
 
--   [supports-gl-texture](http://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html) &ndash; Этот элемент используется для объявления конструкций сжатия текстур GL, необходимых приложению. В большинстве приложений этот фильтр использовать не следует. Он предназначен для конкретных высокопроизводительных игр или приложений, которые необходимо строго контролировать при распространении приложений. 
+-   [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html) &ndash; Этот элемент используется для объявления конструкций сжатия текстур GL, необходимых приложению. В большинстве приложений этот фильтр использовать не следует. Он предназначен для конкретных высокопроизводительных игр или приложений, которые необходимо строго контролировать при распространении приложений. 
 
 Дополнительные сведения о настройке манифеста приложения см. в статье [Манифест приложения](https://developer.android.com/guide/topics/manifest/manifest-intro.html) на сайте для разработчиков Android.

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669899"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070908"
 ---
 # <a name="java-bindings-metadata"></a>Метаданные привязок Java
 
@@ -246,7 +246,10 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="obfuscated"></a>с маскированием
 
-Средства, закрывающие библиотеки Java может помешать генератор привязки Xamarin.Android и его способность создавать C# классы-оболочки. Характеристики классов скрытый включают: * включает в себя имя класса **$**, т. е. **$.class** * имя класса полностью включает в себя символы в нижнем регистре, т. е.  **a.class**
+Средства, закрывающие библиотеки Java может помешать генератор привязки Xamarin.Android и его способность создавать C# классы-оболочки. Характеристики классов скрытый включают: 
+
+* Имя класса включает **$**, т. е. **$.class**
+* Имя класса полностью включает в себя символы в нижнем регистре, т. е. **a.class**
 
 В этом фрагменте приведен пример создания «без скрытый» C# типа:
 

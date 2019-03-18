@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b02ecc8a40f6ff8a1862d50202439d369003a53d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103898"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981605"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>С помощью ARKit с UrhoSharp в Xamarin.iOS
 
@@ -118,7 +118,7 @@ ARKit API очень просто, создание и настройка [ARSes
 Тем не менее мы столкнулись с необходимостью совмещать этих двух областей две проблемы:
 
 
-1. Текстур GPU iOS, должен иметь разрешение, которое не степень двойки, но кадры, которые мы получаем от камеры, не имеют разрешения, которые степень двойки, например: 1280 x 720.
+1. В iOS текстур GPU должен иметь разрешение, которое не степень двойки, но кадры, которые мы получаем от камеры, не имеют разрешения, которые степень двойки, например: 1280x720.
 2. Кадры кодируются в [YUV](https://en.wikipedia.org/wiki/YUV) формат, представленный два изображения — яркость и цветности.
 
 Кадры YUV бывают двумя разными разрешениями.  изображение 1280 x 720, представляющий освещенности (по сути, изображение оттенки серого) и гораздо меньше 640 x 360 цветности компонента:
@@ -207,11 +207,11 @@ void OnTouchEnd(TouchEndEventArgs e)
 
 В зависимости от условий освещения реального мира виртуальный сцены должно быть светлее или темнее в соответствии с окружающим его элементам. ARFrame содержит LightEstimate свойство, которое можно использовать для настройки внешнего освещения Urho, это делается следующим образом:
 
-
-    var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
-    var zone = Scene.GetComponent<Zone>();
-    zone.AmbientColor = Color.White * ambientIntensity;
-
+```csharp
+var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
+var zone = Scene.GetComponent<Zone>();
+zone.AmbientColor = Color.White * ambientIntensity;
+```
 
 ### <a name="beyond-ios---hololens"></a>Помимо iOS - HoloLens
 

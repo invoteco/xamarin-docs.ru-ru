@@ -5,12 +5,12 @@ description: Простое объяснение того, как для отд�
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 3d3af9c78b7486e7ebfb063a3cb00fabdbd0f5b7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4bf1dea170bd6b63209693963d54cc2e16163eea
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617544"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071103"
 ---
 # <a name="desktop-app-porting-guidance"></a>Руководством по переносу приложения на рабочем столе
 
@@ -26,7 +26,7 @@ ms.locfileid: "51617544"
 
 ## <a name="net-portability-analyzer"></a>Анализатор переносимости .NET
 
-Поддержка Visual Studio 2015 и 2017 [анализатор переносимости .NET](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([скачать для Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) которого можно проверить существующие приложения и сообщит о том, какая часть кода можно перенести «как есть» и других платформ . Дополнительные сведения о нем из этого [видео Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Visual Studio 2017 и более поздние поддерживают [анализатор переносимости .NET](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([скачать для Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) которого можно проверить существующие приложения и сообщит объем кода, можно перенести «как есть» другу платформы. Дополнительные сведения о нем из этого [видео Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
 Также имеется средство командной строки можно загрузить из [анализатор переносимости на сайте GitHub](https://github.com/Microsoft/dotnet-apiport) и используются для обеспечения такие же отчеты.
 

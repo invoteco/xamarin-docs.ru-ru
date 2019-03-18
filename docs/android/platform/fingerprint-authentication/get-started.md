@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 3082dfcd6d0ffbc6404a89a10819e60b57b9c61c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667728"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070713"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Приступая к работе с проверкой подлинности по отпечатку пальца
 
@@ -25,7 +25,7 @@ ms.locfileid: "57667728"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Приложение Android необходимо запросить `USE_FINGERPRINT` разрешения в манифесте. Снимке экрана ниже показано, как добавить это разрешение для приложения в Visual Studio 2015:
+Приложение Android необходимо запросить `USE_FINGERPRINT` разрешения в манифесте. Снимке экрана ниже показано, как добавить это разрешение для приложения в Visual Studio:
 
 [![Разрешение использования\_отпечатков ПАЛЬЦЕВ на экране манифеста Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 

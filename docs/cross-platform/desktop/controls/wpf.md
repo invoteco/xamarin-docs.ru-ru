@@ -5,12 +5,12 @@ description: В этом документе сравниваются и прот
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 990253cbd31ad79bc47f086dc5bd2b99233f2032
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617596"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175243"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF vs. Xamarin.Forms: Сходства и различия
 
@@ -154,7 +154,7 @@ WPF включает встроенную в `RoutedCommand` — иногда и
 
 ## <a name="itemscontrol"></a>Элемент управления ItemsControl
 
-Нет нет встроенных equivelent для `ItemsControl` в Xamarin.Forms; но [настраиваемой классификации для Xamarin.Forms доступен здесь](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
+Нет эквивалента встроенные `ItemsControl` в Xamarin.Forms; но [настраиваемой классификации для Xamarin.Forms доступен здесь](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
 
 ## <a name="user-controls"></a>Пользовательские элементы управления
 
@@ -169,11 +169,11 @@ WPF включает редко используемые `NavigationService` к�
 | Стиль навигации | Тип страницы |
 |--- |--- |
 |На основе стека (отправку/извлечение)|NavigationPage|
-|«Основной/подробности»|MasterDetailPage|
+|Основной/подробности|MasterDetailPage|
 |Вкладки|TabbedPage|
 |Проведите влево/вправо|CarouselView|
 
-`NavigationPage` — Наиболее распространенный подход, и каждая страница имеет `Navigation` свойство, которое может использоваться для передаче или страницы в и из стека навигации. Это ближайший equivelent для `NavigationService` в WPF.
+`NavigationPage` — Наиболее распространенный подход, и каждая страница имеет `Navigation` свойство, которое может использоваться для передаче или страницы в и из стека навигации. Это ближайший эквивалентно `NavigationService` в WPF.
 
 ### <a name="url-navigation"></a>URL-адрес навигации
 

@@ -1,19 +1,14 @@
 ---
 title: Стиля приложений Xamarin.Forms
-description: В этом руководстве объясняется, как для стиля приложений Xamarin.Forms с помощью стилей XAML и с помощью каскадных таблиц стилей.
+description: 'В этом руководстве объясняется, как для стиля приложений Xamarin.Forms с помощью стилей XAML и с помощью каскадных таблиц стилей.'
 ms.prod: xamarin
 ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 28/04/2018
-ms.openlocfilehash: a050024e991e15c537b4548c1d2600ab99f99070
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997417"
+ms.date: 04/28/2018
 ---
+
 # <a name="styling-xamarinforms-apps"></a>Стиля приложений Xamarin.Forms
 
 ## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Задание стиля приложений Xamarin.Forms с помощью стилей XAML](xaml/index.md)

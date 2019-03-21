@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 13/11/2018
-ms.openlocfilehash: f5e3c5dbadeeb3cc1c019707ce7aa106e4946e36
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 11/13/2018
+ms.openlocfilehash: da7d63f43a431d2a31428d28e81e8b6abfed838e
+ms.sourcegitcommit: 4c97f5d73be7eb2da153a85183be4258b6b11ca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292016"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288593"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
@@ -183,7 +183,7 @@ _Представления Xamarin.Forms являются стандартны�
 
 |     |     |
 | --- | --- |
-| [`ListView`](xref:Xamarin.Forms.ListView) является производным от [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) и отображает прокручиваемый список элементов данных, доступный для выбора. Задайте [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) свойство в коллекцию объектов, и набор [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, для форматирования. [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) Событие сигнализирует, что был сделан выбор, который доступен в виде [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойство.<br /><br />[Документация по API](xref:Xamarin.Forms.ListView) / [руководство](~/xamarin-forms/user-interface/listview/index.md) / [образца](https://developer.xamarin.com/samples/WorkingWithListview) | [![Пример ListView](views-images/ListView.png "пример ListView")](views-images/ListView-Large.png#lightbox "пример ListView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+| [`ListView`](xref:Xamarin.Forms.ListView) является производным от [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) и отображает прокручиваемый список элементов данных, доступный для выбора. Задайте [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) свойство в коллекцию объектов, и набор [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, для форматирования. [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) Событие сигнализирует, что был сделан выбор, который доступен в виде [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойство.<br /><br />[Документация по API](xref:Xamarin.Forms.ListView) / [руководство](~/xamarin-forms/user-interface/listview/index.md) / [пример](https://developer.xamarin.com/samples/WorkingWithListview) | [![пример ListView](views-images/ListView.png "Пример ListView")](views-images/ListView-Large.png#lightbox "пример ListView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
 <a name="tableView" />

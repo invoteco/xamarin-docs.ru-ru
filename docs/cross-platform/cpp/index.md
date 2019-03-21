@@ -4,7 +4,7 @@ title: Использование библиотек C/C++ с помощью Xam
 description: 'Visual Studio для Mac можно использовать для построения и интегрировать кода C/C++ для кросс платформенных мобильных приложений для Android и iOS, с помощью Xamarin и C#. В этой статье объясняется, как настроить и отладка проекта C++ в приложении Xamarin.'
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/20178
+ms.date: 12/17/2018
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Использование библиотек C/C++ с помощью Xamarin
 

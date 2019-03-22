@@ -1,5 +1,5 @@
 ---
-title: Реакции на события Xamarin.Forms
+title: Создание реакций на события Xamarin.Forms
 description: Реакции на событие Xamarin.Forms создаются путем наследования от класса Behavior или Behavior<T>. В этой статье содержатся сведения о создании и использовании реакций на события Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: e52ee0a14098c967923f8d92ac47bc64dac08e8c
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: be7263ad0c9112aa640a4558d7fdbaf2a16ce079
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207899"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981683"
 ---
-# <a name="xamarinforms-behaviors"></a>Реакции на события Xamarin.Forms
+# <a name="create-xamarinforms-behaviors"></a>Создание реакций на события Xamarin.Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
 

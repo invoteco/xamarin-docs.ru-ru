@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 24. Переход по страницам
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 24. Переход по страницам'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 24. Переход по страницам
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7210cffb3cd348a6bdbf6cee80c4b6cd55553c58
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052745"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329381"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Сводка Глава 24. Переход по страницам
 
@@ -22,7 +22,7 @@ ms.locfileid: "53052745"
 
 ## <a name="modal-pages-and-modeless-pages"></a>Модальные страницы и страницы немодального
 
-`VisualElement` Определяет [ `Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) свойство типа [ `INavigation` ](xref:Xamarin.Forms.INavigation), который включает в себя следующие два метода для перехода на новую страницу:
+`VisualElement` Определяет [ `Navigation` ](xref:Xamarin.Forms.NavigableElement.Navigation) свойство типа [ `INavigation` ](xref:Xamarin.Forms.INavigation), который включает в себя следующие два метода для перехода на новую страницу:
 
 - [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
 - [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))

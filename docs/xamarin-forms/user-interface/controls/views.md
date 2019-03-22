@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/13/2018
-ms.openlocfilehash: da7d63f43a431d2a31428d28e81e8b6abfed838e
-ms.sourcegitcommit: 4c97f5d73be7eb2da153a85183be4258b6b11ca6
+ms.date: 03/21/2019
+ms.openlocfilehash: e165e6c713028517d69fee92916c94bbf0e46f33
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288593"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329239"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
@@ -170,11 +170,11 @@ _Представления Xamarin.Forms являются стандартны�
 
 ## <a name="views-that-display-collections"></a>Представления, отображаемые в коллекции
 
-### <a name="picker"></a>Средство выбора
+### <a name="collectionview"></a>CollectionView
 
 |     |     |
 | --- | --- |
-| [`Picker`](xref:Xamarin.Forms.Picker) Отображение выбранного элемента из списка текстовых строк и выбор этого элемента, при выборе элемента представления. Задайте [ `Items` ](xref:Xamarin.Forms.Picker.Items) свойства списка строк, или [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) свойства для коллекции объектов. [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) Событие возникает, когда элемент выбран.<br /><br />`Picker` Отображает список элементов только в том случае, когда он выбран. Используйте [ `ListView` ](#listView) или [ `TableView` ](#tableView) прокручиваемый список, который остается на странице.<br /><br />[Документация по API](xref:Xamarin.Forms.Picker) / [руководство](~/xamarin-forms/user-interface/picker/index.md) / [образца](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Пример выбора](views-images/Picker.png "пример выбора")](views-images/Picker-Large.png#lightbox "пример выбора")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
+| `CollectionView` прокручиваемый список элементов доступный для выбора данных, используя спецификации другой макет. Оно предоставляет предоставляют более гибкий и эффективной альтернативой для [ `ListView` ](xref:Xamarin.Forms.ListView). Задайте `ItemsSource` свойство в коллекцию объектов, и набор `ItemTemplate` свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, которые необходимо отформатировать. `SelectionChanged` Событие сигнализирует, что был сделан выбор, который доступен в виде `SelectedItem` свойство.<br /><br />[Руководство по](~/xamarin-forms/user-interface/collectionview/index.md) / [образца](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Пример CollectionView](views-images/CollectionView.png "пример CollectionView")](views-images/CollectionView-Large.png#lightbox "пример CollectionView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />
@@ -184,6 +184,13 @@ _Представления Xamarin.Forms являются стандартны�
 |     |     |
 | --- | --- |
 | [`ListView`](xref:Xamarin.Forms.ListView) является производным от [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) и отображает прокручиваемый список элементов данных, доступный для выбора. Задайте [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) свойство в коллекцию объектов, и набор [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, для форматирования. [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) Событие сигнализирует, что был сделан выбор, который доступен в виде [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойство.<br /><br />[Документация по API](xref:Xamarin.Forms.ListView) / [руководство](~/xamarin-forms/user-interface/listview/index.md) / [пример](https://developer.xamarin.com/samples/WorkingWithListview) | [![пример ListView](views-images/ListView.png "Пример ListView")](views-images/ListView-Large.png#lightbox "пример ListView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+|     |     |
+
+### <a name="picker"></a>Средство выбора
+
+|     |     |
+| --- | --- |
+| [`Picker`](xref:Xamarin.Forms.Picker) Отображение выбранного элемента из списка текстовых строк и выбор этого элемента, при выборе элемента представления. Задайте [ `Items` ](xref:Xamarin.Forms.Picker.Items) свойства списка строк, или [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) свойства для коллекции объектов. [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) Событие возникает, когда элемент выбран.<br /><br />`Picker` Отображает список элементов только в том случае, когда он выбран. Используйте [ `ListView` ](#listView) или [ `TableView` ](#tableView) прокручиваемый список, который остается на странице.<br /><br />[Документация по API](xref:Xamarin.Forms.Picker) / [руководство](~/xamarin-forms/user-interface/picker/index.md) / [образца](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Пример выбора](views-images/Picker.png "пример выбора")](views-images/Picker-Large.png#lightbox "пример выбора")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
 |     |     |
 
 <a name="tableView" />

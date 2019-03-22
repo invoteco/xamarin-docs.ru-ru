@@ -1,24 +1,22 @@
 ---
 title: ListView Xamarin.Forms
-description: Это руководство описывает ListView Xamarin.Forms, который может использоваться для представления данных в списках визуально привлекательные и интерактивные.
+description: 'Это руководство описывает ListView Xamarin.Forms, который может использоваться для представления данных в списках визуально привлекательные и интерактивные.'
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 967d4ae65bdb47adf824f20f47c7b32e24211f9a
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831814"
 ---
+
 # <a name="xamarinforms-listview"></a>ListView Xamarin.Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/WorkingWithListview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) — Это представление для представления списков данных, особенно длинных списках, требующих прокрутки.
+
+> [!IMPORTANT]
+> `CollectionView` Просмотр для представления списков данных с помощью спецификации другой макет. Оно предоставляет предоставляют более гибкий и эффективной альтернативой для [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. в разделе [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
 
 ## <a name="use-cases"></a>Варианты использования
 

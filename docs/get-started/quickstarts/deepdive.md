@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197554"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329368"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Краткое руководство по Xamarin.Forms глубокое погружение в обработку
 
@@ -353,7 +353,7 @@ public App ()
 }
 ```
 
-У всех экземпляров [`ContentPage`](xref:Xamarin.Forms.ContentPage) есть свойство[`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation), которое предоставляет методы для изменения стека страниц. Эти методы должны вызываться только в случае, если приложение содержит класс [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Для перехода к `NoteEntryPage` необходимо вызвать метод [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)), как показано в следующем примере кода:
+У всех экземпляров [`ContentPage`](xref:Xamarin.Forms.ContentPage) есть свойство[`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation), которое предоставляет методы для изменения стека страниц. Эти методы должны вызываться только в случае, если приложение содержит класс [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Для перехода к `NoteEntryPage` необходимо вызвать метод [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)), как показано в следующем примере кода:
 
 ```csharp
 await Navigation.PushAsync(new NoteEntryPage());
@@ -369,7 +369,7 @@ await Navigation.PopAsync();
 
 Дополнительные сведения об иерархической навигации см. в статье [Иерархическая навигация](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
-## <a name="data-binding"></a>привязка данных,
+## <a name="data-binding"></a>Привязка данных
 
 Привязка данных используется для упрощения способа, которым приложение Xamarin.Forms отображает данные и взаимодействует с ними. Она устанавливает связь между пользовательским интерфейсом и базовым приложением. Класс [`BindableObject`](xref:Xamarin.Forms.BindableObject) содержит основную часть инфраструктуры для поддержки привязки данных.
 
@@ -424,7 +424,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 
 Создается привязка между свойством [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) и свойством `Text` *источника*. Изменения, внесенные в `Editor` будут автоматически распространены `Note` объекта. Аналогично Если изменения вносятся `Note.Text` , подсистема привязки Xamarin.Forms будет также обновлять свойство содержимое `Editor`. Это называется *двусторонней привязкой*.
 
-Дополнительные сведения о привязке данных см. в разделе [привязки данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="styling"></a>Задание стиля
 
@@ -509,14 +509,14 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 
 Этот видеокурс определил основ разработки приложений с помощью Xamarin.Forms. Далее рекомендуется ознакомиться с перечисленными ниже функциональными возможностями.
 
-- Для создания пользовательского интерфейса приложения Xamarin.Forms используются четыре основные группы элементов управления. Дополнительные сведения см. в разделе [Справочник по элементам управления](~/xamarin-forms/user-interface/controls/index.md).
-- Привязка данных — это метод связывания свойства двух объектов, чтобы изменения в одном свойстве автоматически отражаются в другое свойство. Дополнительные сведения см. в разделе [привязки данных](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- Для создания пользовательского интерфейса приложения Xamarin.Forms используются четыре основные группы элементов управления. Более подробную информацию см. в разделе [Справочник по элементам управления](~/xamarin-forms/user-interface/controls/index.md).
+- Привязка данных — это способ связывания свойств двух объектов так, чтобы изменения в одном свойстве автоматически отражались в другом. Более подробную информацию см. в разделе [Привязка данных](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 - Xamarin.Forms предоставляет ряд различных способов перехода по страницам в зависимости от используемого типа страницы. Дополнительные сведения см. в разделе [Переходы](~/xamarin-forms/app-fundamentals/navigation/index.md).
-- Стили помогают снизить повтора разметки и разрешить внешний вид приложения, проще изменять. Дополнительные сведения см. в разделе [Задание стиля приложений Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
-- Расширения разметки XAML расширить функциональность и гибкость XAML, позволяя атрибутов элемента из источников, отличных от литеральные текстовые строки. Дополнительные сведения см. в разделе [расширения разметки XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
-- Шаблоны данных позволяют настраивать представление данных на поддерживаемых представлений. Дополнительные сведения см. в статье [Шаблоны данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
-- Каждой страницы, макет и вид преобразуется для просмотра по-разному в разных платформах с помощью `Renderer` класс, который в свою очередь создает собственный элемент управления, размещает его на экране и реализует поведение, определенное в общем коде. Разработчики могут реализовывать пользовательские классы `Renderer` для настройки внешнего вида или работы элемента управления. Дополнительные сведения см. в статье [Пользовательские отрисовщики](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
-- Эффекты также позволяют настраивать собственные элементы управления на каждой платформе. Эффекты создаются в проекты под конкретные платформы путем создания подклассов [ `PlatformEffect` ](xref:Xamarin.Forms.PlatformEffect`2) класса и используются путем их присоединения к соответствующему элементу управления Xamarin.Forms. Дополнительные сведения см. в статье [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md).
+- Стили помогают снизить повторяемость разметки и упрощают изменение внешнего вида приложения. Дополнительные сведения см. в разделе [Стилизация приложений Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
+- Расширения разметки XAML позволяют расширить функциональность и гибкость XAML, давая возможность задавать атрибуты элементов из источников, отличных от строковых литералов. Подробнее см. в разделе [Расширение разметки XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
+- Шаблоны данных дают возможность настраивать представление данных в поддерживаемых представлениях. Дополнительные сведения см. в статье [Шаблоны данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+- Каждая страница, макет и представление отрисовываются по-разному на разных платформах с помощью класса `Renderer`, который создает собственный элемент управления, размещает его на экране и реализует поведение, определенное в общем коде. Разработчики могут реализовывать пользовательские классы `Renderer` для настройки внешнего вида или работы элемента управления. Дополнительные сведения см. в статье [Пользовательские отрисовщики](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+- Эффекты также позволяют настраивать собственные элементы управления на каждой платформе. Эффекты создаются в проектах для конкретных платформ путем создания подклассов класса [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) и используются путем их присоединения к соответствующему элементу управления Xamarin.Forms. Дополнительные сведения см. в статье [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md).
 - Общий код может получать доступ к собственным функциональным возможностям посредством класса [`DependencyService`](xref:Xamarin.Forms.DependencyService). Дополнительные сведения см. в статье, посвященной [доступу к собственным функциональным возможностям с помощью DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 Много полезной информации о платформе Xamarin.Forms можно почерпнуть из книги Чарльза Петцольда (Charles Petzold) [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) (Создание мобильных приложений с помощью Xamarin.Forms). Книга доступна в формате PDF, а также в нескольких форматах электронных книг.

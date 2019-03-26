@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/18/2018
-ms.openlocfilehash: e78c224bae3a0e2c2dfcfded30a4bf2c4794e255
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 370867b52ec09d0c3ad0f801b6a75c356d806734
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112017"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477399"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Использование для SQLite.NET с Xamarin.iOS
 
@@ -26,7 +26,7 @@ ORM — это реляционное сопоставление объекта 
 Чтобы включить для SQLite.NET библиотеки в приложении Xamarin, добавьте следующий пакет NuGet в проект:
 
 - **Имя пакета:** sqlite-net-pcl
-- **Автор:** Крюгер A. франк
+- **Автор**: Фрэнк А. Крюгер (Frank A. Krueger)
 - **Идентификатор:** sqlite-net-pcl
 - **URL-адрес:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
@@ -196,11 +196,13 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Использование нескольких потоков для SQLite.NET
 
-SQLite поддерживает три разных потоков режима: *одним потоком*, *многопоточную*, и *сериализованных*. Если вы хотите получить доступ к базе данных из нескольких потоков без каких-либо ограничений, можно настроить SQLite для использования **сериализованных** threading режим. Очень важно установить этот режим на раннем этапе приложение (например, в начале `OnCreate` метод).
+SQLite поддерживает три разных потоков режима: *Одним потоком*, *многопоточную*, и *сериализации*. Если вы хотите получить доступ к базе данных из нескольких потоков без каких-либо ограничений, можно настроить SQLite для использования **сериализованных** threading режим. Очень важно установить этот режим на раннем этапе приложение (например, в начале `OnCreate` метод).
 
-Чтобы изменить режим работы с потоками, вызовите `SqliteConnection.SetConfig`. Например, эта строка кода настраивает SQLite для **сериализованных** режиме:
+Чтобы изменить режим работы с потоками, вызовите `SqliteConnection.SetConfig` которого находится в `Mono.Data.Sqlite` пространства имен. Например, эта строка кода настраивает SQLite для **сериализованных** режиме:
 
 ```csharp
+using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 

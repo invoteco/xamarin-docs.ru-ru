@@ -6,21 +6,17 @@ ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: e2ab6c053901ad6c1668c5ae5be9ab04d9d05e8a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 01/22/2018
+ms.openlocfilehash: d3f07a72ee26d6be4fafa72137dc9b6c3a724e00
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050346"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477347"
 ---
 # <a name="authenticating-a-restful-web-service"></a>Проверка подлинности веб-службу RESTful
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
-
 _Протокол HTTP поддерживает использование следующих механизмов проверки подлинности для управления доступом к ресурсам. Обычная проверка подлинности обеспечивает доступ к ресурсам только клиентам, которые имеют правильные учетные данные. В этой статье показано, как использовать обычную проверку подлинности для защиты доступа к ресурсам службы веб-RESTful._
-
-Сопутствующий пример приложения Xamarin.Forms использует службы REST, размещенный в Xamarin, которая предоставляет доступ только для чтения к веб-службы. Таким образом операции, создание, обновление и удаление данных, которые не изменится на данных, использованных в приложении. Тем не менее, внедряемое версия службы REST доступна в *TodoRESTService* вы можете найти папку в пример приложения, а также инструкции по настройке службы. Этот ведущий версия службы REST предоставляет создания full, обновление, чтение и удаление доступа к данным.
 
 > [!NOTE]
 > В iOS 9 и более поздней версии приложение Transport Security (ATS) обеспечивает безопасных соединений между Интернет-ресурсов (например, server серверной части приложения) и приложения, тем самым предотвращая случайное раскрытие конфиденциальной информации. Поскольку ATS включена по умолчанию в приложениях, созданных для iOS 9, все подключения будут применяться требования к безопасности ATS. Если соединения не удовлетворяют этим требованиям, они вызовут сбой с исключением.
@@ -59,7 +55,7 @@ Authorization: Basic WGFtYXJpblVzZXI6WGFtYXJpblBhc3N3b3Jk
 ```csharp
 public class RestService : IRestService
 {
-  HttpClient client;
+  HttpClient _client;
   ...
 
   public RestService ()
@@ -67,9 +63,8 @@ public class RestService : IRestService
     var authData = string.Format ("{0}:{1}", Constants.Username, Constants.Password);
     var authHeaderValue = Convert.ToBase64String (Encoding.UTF8.GetBytes (authData));
 
-    client = new HttpClient ();
-    ...
-    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue ("Basic", authHeaderValue);
+    _client = new HttpClient ();
+    _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue ("Basic", authHeaderValue);
   }
   ...
 }
@@ -78,25 +73,18 @@ public class RestService : IRestService
 Затем при запросе операции веб-службы запрос подписан с помощью `Authorization` заголовок, указывающее, имеет ли пользователь разрешение для вызова операции.
 
 > [!NOTE]
-> Хотя образец службы REST учетные данные хранятся в виде константы, они не должны храниться в формате небезопасных в опубликованное приложение. [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet предоставляет функциональные возможности для безопасного хранения учетных данных. Дополнительные сведения см. в разделе [хранение и получение сведения об учетной записи на устройствах](~/xamarin-forms/data-cloud/authentication/oauth.md).
-
+> Хотя этот код учетные данные хранятся в виде константы, они не должны храниться в формате небезопасных в опубликованное приложение. [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet предоставляет функциональные возможности для безопасного хранения учетных данных. Дополнительные сведения см. в разделе [хранение и получение сведения об учетной записи на устройствах](~/xamarin-forms/data-cloud/authentication/oauth.md).
 
 ## <a name="processing-the-authorization-header-server-side"></a>Обработка на стороне сервера заголовка авторизации
 
-Сопутствующий пример службы REST оформляет каждое действие имеет `[BasicAuthentication]` атрибута. Этот атрибут реализуется `BasicAuthenticationAttribute` класса в решении и используется для синтаксического анализа `Authorization` заголовка и допустимость учетных данных в кодировке base64, сравнивая их со значения, хранящиеся в *Web.config*. Хотя этот подход пригоден для образца службы, требуется расширение для общедоступных веб-службы.
+В службу REST следует снабдить каждое действие имеет `[BasicAuthentication]` атрибута. Этот атрибут используется для синтаксического анализа `Authorization` заголовка и допустимость учетных данных в кодировке base64, сравнивая их со значения, хранящиеся в *Web.config*. Хотя этот подход пригоден для образца службы, требуется расширение для общедоступных веб-службы.
 
 В модуле обычной проверки подлинности, используемый службой IIS пользователи пройдут проверку подлинности учетных данных Windows. Таким образом пользователи должны иметь учетные записи в домене сервера. Тем не менее модель обычной проверки подлинности можно настроить таким образом, чтобы разрешить нестандартной проверки подлинности, где учетные записи пользователей проходят проверку подлинности от внешнего источника, например в базе данных. Дополнительные сведения см. в разделе [обычной проверки подлинности в веб-API ASP.NET](http://www.asp.net/web-api/overview/security/basic-authentication) на веб-сайте ASP.NET.
 
 > [!NOTE]
 > Обычная проверка подлинности не предназначалась для управления, то при выходе. Таким образом подход стандартный обычную проверку подлинности для выхода, заключается в том, чтобы завершить сеанс.
 
-## <a name="summary"></a>Сводка
-
-В этой статье было показано, как добавить обычную проверку подлинности веб-запросов, сделанных в приложения Xamarin.Forms с помощью `HttpClient` класса. Обычная проверка подлинности обеспечивает доступ к ресурсам только клиентам, которые имеют правильные учетные данные. Сведения об использовании [Xamarin.Auth](https://www.nuget.org/packages/Xamarin.Auth/) для управления процессом проверки подлинности в приложении Xamarin.Forms, таким образом, пользователи могут совместно использовать серверную часть, имея только доступ к своим данным, см. в разделе [проверки подлинности пользователей с помощью поставщика удостоверений](~/xamarin-forms/data-cloud/authentication/oauth.md).
-
-
 ## <a name="related-links"></a>Связанные ссылки
 
-- [TodoREST (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
 - [Использование веб-службу RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

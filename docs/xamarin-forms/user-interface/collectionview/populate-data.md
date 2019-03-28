@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/15/2019
-ms.openlocfilehash: 70b241944376782ec4c9446878ee2a19dcee2bbd
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 57012202d981b96dba42f3017a19f2e32e4982ec
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507192"
 ---
 # <a name="populate-xamarinforms-collectionview-with-data"></a>Заполнение Xamarin.Forms CollectionView с данными
 
@@ -76,7 +76,7 @@ collectionView.ItemsSource = new string[]
 
 [![Снимок экрана из CollectionView содержащий текстовые элементы, в iOS и Android](populate-data-images/text.png "текстовых элементов в CollectionView")](populate-data-images/text-large.png#lightbox "текстовых элементов в CollectionView")
 
-Сведения о том, как изменить `CollectionView` макета, см. в разделе [указывается макет](layout.md). Сведения о том, как определить внешний вид каждого элемента в `CollectionView`, см. в разделе [определения внешнего вида элемента списка](#define-list-item-appearance).
+Сведения о том, как изменить `CollectionView` макета, см. в разделе [указывается макет](layout.md). Сведения о том, как определить внешний вид каждого элемента в `CollectionView`, см. в разделе [определения внешнего вида элемента](#define-item-appearance).
 
 ### <a name="data-binding"></a>Привязка данных
 

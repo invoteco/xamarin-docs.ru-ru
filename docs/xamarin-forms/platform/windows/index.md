@@ -21,21 +21,21 @@ ms.date: 01/08/2018
 
 Предоставляются следующие функциональные возможности платформы для представления Xamarin.Forms, страницы и макеты на универсальной платформе Windows (UWP):
 
-- Установка ключа доступа для [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. в разделе [VisualElement ключи доступа в Windows](#visualelement-accesskeys).
-- Отключение режима устаревших цвет в поддерживаемой [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. в разделе [VisualElement прежних версий цветовой режим на Windows](#legacy-color-mode).
+- Установка ключа доступа для [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. в разделе [VisualElement ключи доступа в Windows](visualelement-access-keys.md).
+- Отключение режима устаревших цвет в поддерживаемой [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. в разделе [VisualElement прежних версий цветовой режим на Windows](legacy-color-mode.md).
 
 Следующие функциональные возможности платформы предоставляется для представления Xamarin.Forms для UWP:
 
-- Обнаружение, порядок чтения из текстового содержимого в [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), и [ `Label` ](xref:Xamarin.Forms.Label) экземпляров. Дополнительные сведения см. в разделе [InputView порядок чтения на Windows](#inputview-readingorder).
-- Включение поддержки жест касания в [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. в разделе [ListView SelectionMode в Windows](#listview-selectionmode).
-- Включение [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) для взаимодействия с подсистемой проверки орфографии. Дополнительные сведения см. в разделе [SearchBar проверку орфографии Windows](#searchbar-spellcheck).
-- Включение [ `WebView` ](xref:Xamarin.Forms.WebView) на отображение оповещений JavaScript в диалоговом окне сообщения универсальной платформы Windows. Дополнительные сведения см. в разделе [WebView предупреждения JavaScript на Windows](#webview-javascript-alert).
+- Обнаружение, порядок чтения из текстового содержимого в [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), и [ `Label` ](xref:Xamarin.Forms.Label) экземпляров. Дополнительные сведения см. в разделе [InputView порядок чтения на Windows](inputview-reading-order.md).
+- Включение поддержки жест касания в [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. в разделе [ListView SelectionMode в Windows](listview-selectionmode.md).
+- Включение [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) для взаимодействия с подсистемой проверки орфографии. Дополнительные сведения см. в разделе [SearchBar проверку орфографии Windows](searchbar-spell-check.md).
+- Включение [ `WebView` ](xref:Xamarin.Forms.WebView) на отображение оповещений JavaScript в диалоговом окне сообщения универсальной платформы Windows. Дополнительные сведения см. в разделе [WebView предупреждения JavaScript на Windows](webview-javascript-alert.md).
 
 Следующие функциональные возможности платформы предоставляется для страницы Xamarin.Forms для UWP:
 
-- Свертывание [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) панели навигации. Дополнительные сведения см. в разделе [MasterDetailPage панели навигации в Windows](#collapsable_navigation_bar).
-- Настройка параметров размещения панели инструментов. Дополнительные сведения см. в разделе [расположение панели инструментов страницы на Windows](#toolbar_placement).
-- Включение значков страниц, отображаемых на [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) панели инструментов. Дополнительные сведения см. в разделе [TabbedPage значки на Windows](#tabbedpage-icons).
+- Свертывание [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) панели навигации. Дополнительные сведения см. в разделе [MasterDetailPage панели навигации в Windows](masterdetailpage-navigation-bar.md).
+- Настройка параметров размещения панели инструментов. Дополнительные сведения см. в разделе [расположение панели инструментов страницы на Windows](page-toolbar-placement.md).
+- Включение значков страниц, отображаемых на [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) панели инструментов. Дополнительные сведения см. в разделе [TabbedPage значки на Windows](tabbedpage-icons.md).
 
 ## <a name="platform-support"></a>Поддержка платформ
 

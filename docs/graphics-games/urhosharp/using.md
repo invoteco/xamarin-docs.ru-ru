@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7d07733ebf62e6e12ccee05f9b72eaf1a74afad2
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34784043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507166"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Использование UrhoSharp для сборки трехмерной игры
 
@@ -23,7 +23,7 @@ ms.locfileid: "34784043"
 
 Модели сцены можно описать как граф сцены на основе компонентов. Сцены состоит из иерархии узлов сцены, начиная с корневого узла, который также представляет всей сцены. Каждый [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) имеет 3D-преобразование (положение, поворота и масштабирования), имя, идентификатор, а также произвольное число компонентов.  Компоненты, переведите этот узел в жизнь, они могли добавить визуальное представление ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), они могут генерируют звук ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), они могут предоставить границе конфликтов и т. д.
 
-Можно создать сцен и настройка узлов с помощью [Urho редактор](#UrhoEditor), или вы можете выполнять действия в коде C#.  В этом документе мы рассмотрим параметр процесса с помощью кода, как они показывают элементы, необходимые для верного отображения на экране
+Можно создать сцен и настройка узлов с помощью [Urho редактор](#urhoeditor), или вы можете выполнять действия в коде C#.  В этом документе мы рассмотрим параметр процесса с помощью кода, как они показывают элементы, необходимые для верного отображения на экране
 
 В дополнение к настройке в сцену, необходимо установить [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), это, что определяет, что будет получить отображаться пользователю.
 

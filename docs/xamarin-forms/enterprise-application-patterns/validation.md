@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 30c507a1b78600ef1b9a96e37f88904daaf82987
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 22b5fe703486f0ded3a5b91241e3fe5ce41bbc98
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528576"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507101"
 ---
 # <a name="validation-in-enterprise-apps"></a>Проверка в корпоративных приложениях
 
@@ -22,7 +22,7 @@ ms.locfileid: "51528576"
 
 [![](validation-images/validation.png "Классы проверки в мобильном приложении eShopOnContainers")](validation-images/validation-large.png#lightbox "классы проверки в мобильном приложении eShopOnContainers")
 
-**Рис. 6-1**: классы проверки в мобильном приложении eShopOnContainers
+**Рис. 6-1**: Классы проверки в мобильном приложении eShopOnContainers
 
 Просмотр свойств модели, требующих проверки имеют тип `ValidatableObject<T>`и каждый `ValidatableObject<T>` экземпляр имеет правила проверки, добавленные его `Validations` свойство. Проверка вызывается из модели представления путем вызова `Validate` метод `ValidatableObject<T>` экземпляр, который извлекает проверки правил и выполняет их от `ValidatableObject<T>` `Value` свойство. Ошибки проверки, помещаются в `Errors` свойство `ValidatableObject<T>` экземпляр и `IsValid` свойство `ValidatableObject<T>` экземпляр обновляется, чтобы указать, успешно ли выполнена проверка.
 
@@ -216,7 +216,7 @@ public bool Validate()
 
 ![](validation-images/validation-login.png "Отображение ошибок проверки во время входа")
 
-**Рис. 6-2:** отображение ошибок проверки во время входа
+**Рис. 6-2.** Отображение ошибок проверки во время входа
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>Выделите элемент управления, который содержит недопустимые данные.
 
@@ -248,7 +248,7 @@ public bool Validate()
 </Style>
 ```
 
-Этот стиль устанавливает `ApplyLineColor` и `LineColor` вложенные свойства `LineColorBehavior` подключить поведение на [ `Entry` ](xref:Xamarin.Forms.Entry) элемента управления. Дополнительные сведения о стилях см. в разделе [стили](~/xamarin-forms/user-interface/styles/index.md).
+Этот стиль устанавливает `ApplyLineColor` и `LineColor` вложенные свойства `LineColorBehavior` подключить поведение на [ `Entry` ](xref:Xamarin.Forms.Entry) элемента управления. Дополнительные сведения о стилях см. в статье [Стили](~/xamarin-forms/user-interface/styles/index.md).
 
 Если значение `ApplyLineColor` вложенное свойство является набор или изменения, `LineColorBehavior` выполняет вложенное поведение `OnApplyLineColorChanged` метод, который показан в следующем примере кода:
 
@@ -296,7 +296,7 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-[ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) Класс представляет эффект независимо от платформы, который создает оболочку для внутреннего эффект, зависит от платформы. Это упрощает процесс удаления эффекта, так как нет сведений о типе доступа во время компиляции для создания эффекта от платформы. `EntryLineColorEffect` Вызывает конструктор базового класса, передав в качестве параметра, состоящий из объединение имени группы разрешения и уникальный идентификатор, указанный для каждого класса эффект от платформы.
+[ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) Класс представляет эффект независимо от платформы, который создает оболочку для внутреннего эффект, зависит от платформы. Это упрощает процесс удаления эффекта, так как отсутствует доступ времени компиляции к сведениям о типе для определяемого платформой эффекта. `EntryLineColorEffect` Вызывает конструктор базового класса, передав в качестве параметра, состоящий из объединение имени группы разрешения и уникальный идентификатор, указанный для каждого класса эффект от платформы.
 
 В следующем коде показано в примере `eShopOnContainers.EntryLineColorEffect` реализацию для операций ввода-вывода:
 
@@ -374,13 +374,13 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-`OnAttached` Метод получает собственный элемент управления для Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) управления и обновляет цвет линии, вызвав `UpdateLineColor` метод. `OnElementPropertyChanged` Переопределение реагирует на изменения может быть привязано на `Entry` управления, обновив цвет линии, если вложенный `LineColor` изменения свойств или [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) свойство `Entry`изменения. Дополнительные сведения об эффектах см. в разделе [эффекты](~/xamarin-forms/app-fundamentals/effects/index.md).
+`OnAttached` Метод получает собственный элемент управления для Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) управления и обновляет цвет линии, вызвав `UpdateLineColor` метод. `OnElementPropertyChanged` Переопределение реагирует на изменения может быть привязано на `Entry` управления, обновив цвет линии, если вложенный `LineColor` изменения свойств или [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) свойство `Entry`изменения. Дополнительные сведения об эффектах см. в статье [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 При вводе допустимые данные в [ `Entry` ](xref:Xamarin.Forms.Entry) элемента управления, он будет применяться черная линия к нижней части элемента управления, чтобы указать, что отсутствуют ошибки проверки. Рис. 6-3 показан пример этого.
 
 ![](validation-images/validation-blackline.png "Указывающее, ошибки проверки не черная линия")
 
-**Рис. 6-3**: черная линия, указывающее, ошибки проверки не
+**Рис. 6-3**: Указывающее, ошибки проверки не черная линия
 
 [ `Entry` ](xref:Xamarin.Forms.Entry) Элемент управления также имеет [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) добавляемый его [ `Triggers` ](xref:Xamarin.Forms.VisualElement.Triggers) коллекции. В следующем коде показано в примере `DataTrigger`:
 
@@ -403,7 +403,7 @@ namespace eShopOnContainers.iOS.Effects
 
 ![](validation-images/validation-redline.png "Красная линия, указывающих на ошибку проверки")
 
-**Рис. 6-4**: красная линия, указывающих на ошибку проверки
+**Рис. 6-4**: Красная линия, указывающих на ошибку проверки
 
 В строке [ `Entry` ](xref:Xamarin.Forms.Entry) элемент управления останется красным, а введенные данные недопустимы, в противном случае он изменится на черный, чтобы указать, что введенные данные является допустимым.
 
@@ -414,7 +414,7 @@ namespace eShopOnContainers.iOS.Effects
 Пользовательский Интерфейс отображает сообщения об ошибках проверки в элементы управления Label ниже каждый элемент управления, данные которых не прошло проверку. В следующем коде показано в примере [ `Label` ](xref:Xamarin.Forms.Label) , отображающий сообщение об ошибке проверки, если пользователь не ввел допустимое имя пользователя:
 
 ```xaml
-<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 

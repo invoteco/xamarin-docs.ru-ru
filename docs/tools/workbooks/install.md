@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: a1001163d89a9a9cda16a7ee5e644307fcc9875c
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506984"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Требования к установке книг и
 
@@ -27,7 +27,7 @@ ms.locfileid: "57667716"
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. Проверьте [требования](#Requirements) ниже.
+1. Проверьте [требования](#requirements) ниже.
 2. Скачайте и установите [Xamarin Workbooks для Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
 3. Запуск [баловаться](~/tools/workbooks/workbook.md) с книгами или Испытайте [примеры](https://developer.xamarin.com/workbooks)
 

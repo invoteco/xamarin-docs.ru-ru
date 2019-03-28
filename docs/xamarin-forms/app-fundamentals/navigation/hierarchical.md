@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: c5eeb00d4dc5992666a7ba5f9fef2685d5056447
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207977"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329277"
 ---
 # <a name="hierarchical-navigation"></a>Иерархическая навигация
 
@@ -28,7 +28,7 @@ _Класс NavigationPage обеспечивает иерархическую �
 
 ![](hierarchical-images/popping.png "Извлечение страницы из стека навигации")
 
-Методы навигации предоставляются свойством [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) любых типов, производных от класса [`Page`](xref:Xamarin.Forms.Page). Эти методы предоставляют возможность для отправки страниц в стек навигации, извлечения страниц из стека навигации, а также для выполнения операций со стеком.
+Методы навигации предоставляются свойством [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) любых типов, производных от класса [`Page`](xref:Xamarin.Forms.Page). Эти методы предоставляют возможность для отправки страниц в стек навигации, извлечения страниц из стека навигации, а также для выполнения операций со стеком.
 
 <a name="Performing_Navigation" />
 
@@ -69,7 +69,7 @@ public App ()
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>Помещение страниц в стек навигации
 
-Для перехода к странице `Page2Xaml` необходимо вызвать метод [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) свойства [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) текущей страницы, как показано в следующем примере кода.
+Для перехода к странице `Page2Xaml` необходимо вызвать метод [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) свойства [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) текущей страницы, как показано в следующем примере кода.
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -114,7 +114,7 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 
 Однако точный порядок, в котором происходят эти события, зависит от платформы. Дополнительные сведения см. в [главе 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) книги Xamarin.Forms Чарльза Петцольда (Charles Petzold).
 
-Как и методы [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) и [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), свойство [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) каждой страницы также предоставляет метод [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), который показан в следующем примере кода.
+Как и методы [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) и [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), свойство [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) каждой страницы также предоставляет метод [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), который показан в следующем примере кода.
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -127,7 +127,7 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 ### <a name="animating-page-transitions"></a>Анимация переходов по страницам
 
-Свойство [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) каждой страницы также предоставляет переопределенные методы отправки и извлечения, которые включают параметр `boolean`, указывающий, нужно ли отображать анимацию страниц во время перехода, как показано в следующем примере кода.
+Свойство [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) каждой страницы также предоставляет переопределенные методы отправки и извлечения, которые включают параметр `boolean`, указывающий, нужно ли отображать анимацию страниц во время перехода, как показано в следующем примере кода.
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -276,7 +276,7 @@ public class SecondPageCS : ContentPage
 
 ## <a name="manipulating-the-navigation-stack"></a>Управление стеком навигации
 
-Свойство [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) предоставляет свойство [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack), из которого могут быть получены страницы в стеке навигации. Хотя Xamarin.Forms поддерживает доступ к стеку навигации, свойство `Navigation` предоставляет методы [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) и [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) для управления стеком путем вставки страниц или их удаления.
+Свойство [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) предоставляет свойство [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack), из которого могут быть получены страницы в стеке навигации. Хотя Xamarin.Forms поддерживает доступ к стеку навигации, свойство `Navigation` предоставляет методы [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) и [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) для управления стеком путем вставки страниц или их удаления.
 
 Метод [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) вставляет указанную страницу в стек навигации перед указанной существующей страницей, как показано на следующей схеме.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: b88226dda14e2ae5cd21bb066e107fb4bcad78f6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 0b91aae1456827625526d7568176a07e7e61f225
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672525"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507127"
 ---
 # <a name="implementing-a-hybridwebview"></a>Реализация HybridWebView
 
@@ -30,7 +30,7 @@ _Настраиваемые элементы управления пользов
 
 1. [Создание](#Creating_the_HybridWebView) пользовательского элемента управления `HybridWebView`.
 1. [Использование ](#Consuming_the_HybridWebView) `HybridWebView` из Xamarin.Forms.
-1. [Создание](#Creating_the_Custom_Renderer_on_each_Platform) настраиваемого отрисовщика для `HybridWebView` на каждой платформе.
+1. [Создание](#creating-the-custom-renderer-on-each-platform) настраиваемого отрисовщика для `HybridWebView` на каждой платформе.
 
 Мы рассмотрим каждый элемент по очереди, чтобы реализовать отрисовщик `HybridWebView`, который расширяет возможности зависящих от платформы веб-элементов управления для вызова кода C# из JavaScript. Экземпляр `HybridWebView` будет использоваться для отображения HTML-страницы, которая предлагает пользователю ввести свое имя. Затем, когда пользователь нажимает кнопку HTML, функция JavaScript вызывает C# `Action`, который отображает всплывающее окно, содержащее имя пользователя.
 
@@ -141,8 +141,6 @@ public partial class HybridWebViewPage : ContentPage
 Это действие вызывает метод [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) для отображения модального всплывающего окна, которое представляет имя, введенное на странице HTML, отображаемой экземпляром `HybridWebView`.
 
 Настраиваемый отрисовщик теперь можно добавлять в каждый проект приложения для улучшения зависящих от платформы веб-элементов управления благодаря возможности вызова кода C# из JavaScript.
-
-<a nane="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Создание пользовательского отрисовщика на каждой платформе
 

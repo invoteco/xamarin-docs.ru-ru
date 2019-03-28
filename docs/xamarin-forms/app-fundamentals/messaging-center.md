@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 6af392988b8ffa5f01ef07f81be53ea8f82e8fb5
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667059"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477334"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Класс MessagingCenter в Xamarin.Forms
 
@@ -35,7 +35,7 @@ _Платформа Xamarin.Forms включает в себя простую с
 -  **Subscribe** — ожидает передачи сообщений с определенной сигнатурой и выполняет некоторое действие при их получении. Ожидать передачи одного и того же сообщения могут несколько подписчиков.
 -  **Send** — публикует сообщение для прослушивателей. Если прослушиватели не подписаны на сообщение, оно игнорируется.
 
-`MessagingService` — это статический класс с методами `Subscribe` и `Send`, которые используются в рамках всего решения.
+`MessagingCenter` — это статический класс с методами `Subscribe` и `Send`, которые используются в рамках всего решения.
 
 Сообщения имеют строковый параметр `message`, который позволяет *адресовать* их. Методы `Subscribe` и `Send` используют универсальные параметры для дальнейшего управления доставкой сообщений: два сообщения с одинаковой строкой `message`, но разными аргументами универсального типа не могут быть доставлены одному подписчику.
 

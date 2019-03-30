@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 6d3355b1ebac5001984677eb8cc527fe619b8349
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/29/2019
+ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052255"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641456"
 ---
 # <a name="xamarinforms-webview"></a>Веб-представления Xamarin.Forms
 
@@ -331,11 +331,25 @@ public partial class InAppBrowserXaml : ContentPage
 
 Веб-представления вызывает следующие события для реагирования на изменения в состоянии:
 
-- **Перемещение** — событие, возникающее при веб-представления загрузит новую страницу.
-- **Переход** — событие, возникающее при загрузке страницы и навигации был остановлен.
-- **ReloadRequested** — событие, возникающее при выполнении запроса на перезагрузку текущего содержимого.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) — событие, возникающее при веб-представления загрузит новую страницу.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) — событие, возникающее при загрузке страницы и навигации был остановлен.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) — событие, возникающее при выполнении запроса на перезагрузку текущего содержимого.
 
-Если предполагается использование веб-страницы, занять много времени для загрузки, рассмотрите возможность использования `Navigating` и `Navigated` событий для реализации индикатора состояния. Например, XAML выглядит следующим образом:
+[ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs) Объект, который прилагается к [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) событий имеет четыре свойства:
+
+- `Cancel` — Указывает, следует ли для отмены перехода.
+- `NavigationEvent` — произошедшего события навигации.
+- `Source` — элемент, который выполняется переход.
+- `Url` — Цель навигации.
+
+[ `WebNavigatedEventArgs` ](xref:Xamarin.Forms.WebNavigatedEventArgs) Объект, который прилагается к [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) событий имеет четыре свойства:
+
+- `NavigationEvent` — произошедшего события навигации.
+- `Result` — Описывает результат панели навигации с помощью [ `WebNavigationResult` ](xref:Xamarin.Forms.WebNavigationResult) член перечисления. Допустимые значения: `Cancel`, `Failure`, `Success` и `Timeout`.
+- `Source` — элемент, который выполняется переход.
+- `Url` — Цель навигации.
+
+Если предполагается использование веб-страницы, занять много времени для загрузки, рассмотрите возможность использования [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) и [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) событий для реализации индикатора состояния. Пример:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

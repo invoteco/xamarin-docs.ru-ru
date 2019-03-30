@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fda8c08cdbdab01f5d68b7f349d5f28f31316290
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: c18eba873dc1a1dae36c401507d55652ed233b00
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832006"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641443"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -115,7 +115,7 @@ Xamarin.Forms в состав встроенных ячеек для сбора 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) полезно при необходимости отображать текстовые данные, пользователь может редактировать. Он определяет следующие свойства:
 
 - `Keyboard` — Клавиатуры для отображения во время редактирования. Существуют параметры для таких вещей, как числовые значения, электронной почты, номера телефонов, и т.д. [Документация по API см. в разделе](xref:Xamarin.Forms.Keyboard).
-- `Label` — Текст метки для отображения справа от текстового поля ввода.
+- `Label` — Текст метки для отображения, слева от текстового поля ввода.
 - `LabelColor` — Цвет текста метки.
 - `Placeholder` — Текст для отображения в поле ввода, если он пуст или равен null. Этот текст исчезает, когда начинается запись текста.
 - `Text` — Текст в поле ввода.

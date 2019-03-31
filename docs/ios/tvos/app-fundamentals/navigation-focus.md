@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cfa51b8e5434480d7d15fbf23d78f8b8735f16a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cb8d1c1d92146e70056c6cf562f2fa1cb028e7c
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112595"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677876"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Работа с tvOS навигацией и фокусом в Xamarin
 
@@ -25,7 +25,7 @@ _В этой статье рассматриваются концепции фо
 
 Далее мы рассмотрим использование фокус с [фокусировки](#Focus-and-Parallax) и *многослойные образы* для предоставления визуальные подсказки для текущего состояния навигации для конечного пользователя.
 
-Наконец, мы рассмотрим работа с [фокус](#Working-with-Focus), [обновления фокус](#Working-with-Focus-Updates), [направляющие фокус](#Working-with-Focus-Guides), [фокус в коллекциях](#Working-with-Focus-in-Collections) и [ Включение фокусировки](#Enabling-Parallax) на представления изображения в приложениях Xamarin.tvOS.
+Наконец, мы рассмотрим работа с [фокус](#Working-with-Focus), [обновления фокус](#Working-with-Focus-Updates), [направляющие фокус](#Working-with-Focus-Guides), [фокус в коллекциях](#Working-with-Focus-in-Collections) и [ Включение фокусировки](#enabling-parallax) на представления изображения в приложениях Xamarin.tvOS.
 
 <a name="Navigation" />
 

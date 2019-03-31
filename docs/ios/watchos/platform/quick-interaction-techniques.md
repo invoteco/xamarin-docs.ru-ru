@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6a8e74860efd606ae6dd565ea7e3f67884eefc11
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103222"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677941"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Быстрые методы взаимодействия для watchOS 3 в Xamarin
 
@@ -299,7 +299,7 @@ MenuTable.PerformSegue (0);
 
 ## <a name="simple-navigation"></a>Простой навигации
 
-watchOS 3 представляется несколькими способами, что разработчик может упростить навигацию в свои приложения watchOS, например к новому [вертикального разбиения по страницам](#Vertical-Paging), [поддержки распознаватель жестов](#Gesture-Recognizer-Support) и [цифровых корона Поворот](#Digital-Crown-Rotation) функции, представленной выше.
+watchOS 3 представляется несколькими способами, что разработчик может упростить навигацию в свои приложения watchOS, например к новому [вертикального разбиения по страницам](#vertical-paging), [поддержки распознаватель жестов](#gesture-recognizer-support) и [цифровых корона Поворот](#digital-crown-rotation) функции, представленной выше.
 
 Цифровой корона уникален для Apple Watch и может использоваться различными способами, для упрощения навигации. Например приложение таймера можно использовать цифровой корона повысить эффективность поиска через доступные таймера длины.
 

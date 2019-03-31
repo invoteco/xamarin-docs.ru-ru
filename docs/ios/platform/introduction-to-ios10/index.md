@@ -1,19 +1,14 @@
 ---
 title: Введение в iOS 10
-description: В этой статье рассматриваются все новые и измененные API-интерфейсы и функциях, доступных в iOS 10 для разработчиков Xamarin.iOS.
+description: 'В этой статье рассматриваются все новые и измененные API-интерфейсы и функциях, доступных в iOS 10 для разработчиков Xamarin.iOS.'
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233748"
 ---
+
 # <a name="introduction-to-ios-10"></a>Введение в iOS 10
 
 _В этой статье рассматриваются все новые и измененные API-интерфейсы и функциях, доступных в iOS 10 для разработчиков Xamarin.iOS._
@@ -231,7 +226,7 @@ Apple представила ряд дополнительных возможн�
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) символы, связанные с повсеместно содержимое стали нерекомендуемыми.
 - `ADBannerView`, `ADInterstitialAd` и связанные с ней символы в [UIViewController](xref:UIKit.UIViewController) класс стали нерекомендуемыми.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) символов, связанных значений с плавающей запятой являются устаревшими.
-- `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` И `UIUserNotificationSettings` классы UIKit стали нерекомендуемыми. Используйте [уведомления для пользователей](#User-Notifications) framework вместо этого.
+- `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` И `UIUserNotificationSettings` классы UIKit стали нерекомендуемыми. Используйте [уведомления для пользователей](#user-notifications) framework вместо этого.
 - `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` И `DidReceiveRemoteNotification` WatchKit методы стали нерекомендуемыми. Используйте `HandleActionForNotification` и `DidReceiveNotification` методы вместо этого.
 - `DidReceiveLocalNotification` И `DidReceiveRemoteNotification` методы [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) стали нерекомендуемыми. Создайте экземпляр [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) , реализует соответствующие методы и назначьте его `Delegate` свойство [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) объекта.
 - **Приложения Game Center** устаревшими и удалены из iOS. Если приложение использует GameKit, его _необходимо_ предоставить свой собственный интерфейс для отображения GameKit функции, такие как списки лидеров и т. д.

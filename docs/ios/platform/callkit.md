@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 6db9ff0085c17f07d07a7591f5d735793bfbc5f9
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459932"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678045"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit в Xamarin.iOS
 
@@ -278,7 +278,7 @@ namespace MonkeyCall
 }
 ```
 
-`CallHandleFromURL` И `CallHandleFromActivity` классы используются в AppDelegate получить дескриптор контактные лица, вызываемой в исходящий вызов. Дополнительные сведения см. в разделе [обработки исходящие вызовы](#Handling-Outgoing-Calls) разделе ниже.
+`CallHandleFromURL` И `CallHandleFromActivity` классы используются в AppDelegate получить дескриптор контактные лица, вызываемой в исходящий вызов. Дополнительные сведения см. в разделе [обработки исходящие вызовы](#handling-outgoing-calls) разделе ниже.
 
 ### <a name="the-activecallmanager-class"></a>Класс ActiveCallManager
 
@@ -392,7 +392,7 @@ namespace MonkeyCall
 }
 ```
 
-Еще раз, так как это только, моделирование `ActiveCallManager` только поддерживает коллекцию `ActiveCall` объектов и имеет подпрограммы для поиска определенного вызова с его `UUID` свойство. Он также включает методы для запуска, завершения и изменить состояние на время удержания звонка исходящий вызов. Дополнительные сведения см. в разделе [обработки исходящие вызовы](#Handling-Outgoing-Calls) разделе ниже.
+Еще раз, так как это только, моделирование `ActiveCallManager` только поддерживает коллекцию `ActiveCall` объектов и имеет подпрограммы для поиска определенного вызова с его `UUID` свойство. Он также включает методы для запуска, завершения и изменить состояние на время удержания звонка исходящий вызов. Дополнительные сведения см. в разделе [обработки исходящие вызовы](#handling-outgoing-calls) разделе ниже.
 
 ### <a name="the-providerdelegate-class"></a>Класс ProviderDelegate
 
@@ -728,7 +728,7 @@ namespace MonkeyCall
 }
 ```
 
-`OpenUrl` И `ContinueUserActivity` переопределение методов используются в том случае, когда приложение обрабатывает исходящий вызов. Дополнительные сведения см. в разделе [обработки исходящие вызовы](#Handling-Outgoing-Calls) разделе ниже.
+`OpenUrl` И `ContinueUserActivity` переопределение методов используются в том случае, когда приложение обрабатывает исходящий вызов. Дополнительные сведения см. в разделе [обработки исходящие вызовы](#handling-outgoing-calls) разделе ниже.
 
 ## <a name="handling-incoming-calls"></a>Обработка входящих вызовов
 
@@ -945,9 +945,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-Здесь `CallHandleFromActivity` метод вспомогательного класса `StartCallRequest` , используется для получения дескриптора пользователю, вызываемой (см. в разделе [класс StartCallRequest](#The-StartCallRequest-Class) выше). 
+Здесь `CallHandleFromActivity` метод вспомогательного класса `StartCallRequest` , используется для получения дескриптора пользователю, вызываемой (см. в разделе [класс StartCallRequest](#the-startcallrequest-class) выше).
 
-`PerformStartCallAction` Метод [ProviderDelegate класс](#The-ProviderDelegate-Class) используется наконец запустить фактическое исходящий вызов и информирования системы его жизненного цикла:
+`PerformStartCallAction` Метод [ProviderDelegate класс](#the-providerdelegate-class) используется наконец запустить фактическое исходящий вызов и информирования системы его жизненного цикла:
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)

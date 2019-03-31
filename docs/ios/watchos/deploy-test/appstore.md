@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7b2f9ab4cf9bad71153d5bdae9ae44ddf091deed
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bf86759832a1aba0ccc1c144981af6ea4eae8670
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106368"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677798"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Развертывание watchOS приложения в App Store
 
 > [!IMPORTANT]
-> Обязательно просмотрите [отправки Apple Watch руководства](https://developer.apple.com/app-store/watch/)и см. в разделе [Устранение неполадок](#Troubleshooting) любые проблемы, возможно, вам.
+> Обязательно просмотрите [отправки Apple Watch руководства](https://developer.apple.com/app-store/watch/)и см. в разделе [Устранение неполадок](#troubleshooting) любые проблемы, возможно, вам.
 
 - Убедитесь, что у вас есть:
   - [**Профили подготовки распространения** ](#provisioning) создан для ваших проектов.
@@ -41,7 +41,7 @@ ms.locfileid: "50106368"
   - (Необязательно) **Проверки...**  архива.
   - **Отправить...**  архива и выполните указанные действия для отправки в iTunes Connect для проверки и утверждения.
 
-Чтение конкретные советы, связанные с этими ниже. См. в разделе [Устранение неполадок](#Troubleshooting) разделе при возникновении проблем.
+Чтение конкретные советы, связанные с этими ниже. См. в разделе [Устранение неполадок](#troubleshooting) разделе при возникновении проблем.
 
 <a name="provisioning" />
 

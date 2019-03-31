@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116333"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677759"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Дополнительные уведомления пользователя в Xamarin.iOS
 
@@ -375,7 +375,7 @@ namespace MonkeyChatNotifyExtension
 
 ### <a name="using-media-attachments-in-custom-ui"></a>С помощью вложения мультимедиа в пользовательский Интерфейс
 
-Так как вложения мультимедиа (как показано на [Добавление вложения мультимедиа](#Adding-Media-Attachments) раздел выше) являются частью полезные данные уведомления, они могут получить доступ к и отображаться в расширение Notification Content так же, как они будут в используемом по умолчанию Уведомление о пользовательском Интерфейсе.
+Так как вложения мультимедиа (как показано на [Добавление вложения мультимедиа](#adding-media-attachments) раздел выше) являются частью полезные данные уведомления, они могут получить доступ к и отображаться в расширение Notification Content так же, как они будут в используемом по умолчанию Уведомление о пользовательском Интерфейсе.
 
 Например, если включены пользовательского интерфейса для выше `UIImageView` , предоставляется в C# код, приведенный код может использоваться для заполнения его из с вложением мультимедиа:
 

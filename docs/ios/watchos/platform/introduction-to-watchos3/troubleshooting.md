@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ce4f0ecbd5e4d49d2ff88855ff68dd9a63e43
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d2aaf12bd6c45f6268cf87a77d2ee03a9d7a888
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123229"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677733"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 Устранение неполадок
 
@@ -53,7 +53,7 @@ _В этой статье предоставляет некоторые сове
 
 Трудности с только что установленных приложений Apple Watch может отображаться как пустое. Перезагрузите Apple Watch, чтобы устранить эту проблему.
 
-## <a name="connectivity"></a>подключение
+## <a name="connectivity"></a>Подключение
 
 Известные проблемы:
 
@@ -84,7 +84,7 @@ _В этой статье предоставляет некоторые сове
 - **-1200 [3:-9824]** -ошибка при загрузке http.
 - **-1200**  -  `NSURLConnection` завершена с ошибкой.
 
-По состоянию на watchOS 3 безопасность подключений SSL/TLS, строго применяется компанией Apple. Затронутые службы и приложения должны получать веб-серверов для использования последней версии протокола TLS. См. в разделе [NSURLConnection](#NSURLConnection) выше Дополнительные сведения.
+По состоянию на watchOS 3 безопасность подключений SSL/TLS, строго применяется компанией Apple. Затронутые службы и приложения должны получать веб-серверов для использования последней версии протокола TLS. См. в разделе [NSURLConnection](#nsurlconnection) выше Дополнительные сведения.
 
 ## <a name="snapshots"></a>Моментальные снимки
 

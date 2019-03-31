@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b7564e3b94062c2294919121f32c4f830346bda
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105341"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677902"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Введение в упреждающие предложения в Xamarin.iOS
 
@@ -397,7 +397,7 @@ namespace MonkeyNotification
 }
 ```
 
-Просмотрев этот код, подробно, он создает и заполняет экземпляр класса `NSUserActivity` (как показано в [Создание действия](#Creating-an-Activity) предыдущем разделе). Затем он создает экземпляр `INSendMessageIntent` (который наследуется от `INIntent`) и заполняет его аспекты текст отправляемого сообщения:
+Просмотрев этот код, подробно, он создает и заполняет экземпляр класса `NSUserActivity` (как показано в [Создание действия](#creating-an-activity) предыдущем разделе). Затем он создает экземпляр `INSendMessageIntent` (который наследуется от `INIntent`) и заполняет его аспекты текст отправляемого сообщения:
 
 ```csharp
 var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);

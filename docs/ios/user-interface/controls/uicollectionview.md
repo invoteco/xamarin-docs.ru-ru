@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114734"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677993"
 ---
 # <a name="collection-views-in-xamarinios"></a>Представления коллекций в Xamarin.iOS
 
@@ -443,7 +443,7 @@ namespace SimpleCollectionView
     - [Простой пример изменения порядка](#Simple-Reordering-Example)
     - [С помощью пользовательского распознавателя](#Using-a-Custom-Gesture-Recognizer)
     - [Пользовательские макеты и изменение порядка](#Custom-Layouts-and-Reording)
-- [Изменение представления коллекции](#Collection-View-Changes)
+- [Изменение представления коллекции](#collection-view-changes)
 
 <a name="Easy-Reordering-of-Items" />
 
@@ -472,11 +472,11 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 Выберите представление коллекции (он может быть проще всего этого в структуре документа). На вкладке "Макет" панели свойств задайте следующие размеры, как показано на следующем снимке экрана:
 
-- **Размер ячейки**: ширина – 60 | Высота — 60
-- **Размер заголовка**: ширина – 0 | Height: 0
-- **Размер нижнего колонтитула**: ширина – 0 | Height: 0
-- **Интервал Min**: для ячейки — 8 | Строки – 8
-- **Раздел отступы**: 16 верхних | Нижней – 16 | Left — 16 | Справа — 16
+- **Размер ячейки**: Width — 60 | Высота — 60
+- **Размер заголовка**: Ширина – 0 | Height: 0
+- **Размер нижнего колонтитула**: Ширина – 0 | Height: 0
+- **Интервал Min**: Для ячеек — 8 | Строки – 8
+- **Раздел отступы**: TOP — 16 | Нижней – 16 | Left — 16 | Справа — 16
 
 [![](uicollectionview-images/quick04.png "Задать размеры представления коллекции")](uicollectionview-images/quick04.png#lightbox)
 

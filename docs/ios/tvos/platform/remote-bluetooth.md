@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 14c62051afd7489389f154c21b3a76b9aad3f32e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115540"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677954"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Контроллеры Siri Remote и контроллеры Bluetooth для tvOS в Xamarin
 
@@ -310,7 +310,7 @@ namespace tvRemote
 Если приложения необходимые входные данные низкого уровня контроллера, можно использовать корпорации Apple [Framework контроллера игры](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) который имеет указанные ниже изменения для tvOS:
 
 - Профиль контроллера Micro игры (`GCMicroGamepad`) был добавлен для удаленного Siri.
-- Новый `GCEventViewController` класс может использоваться для перенаправления событий игровой контроллер с помощью приложения. См. в разделе [определение входных данных игры контроллера](#Determining-Game-Controller-Input) Дополнительные сведения в приведенном ниже разделе.
+- Новый `GCEventViewController` класс может использоваться для перенаправления событий игровой контроллер с помощью приложения. См. в разделе [определение входных данных игры контроллера](#determining-game-controller-input) Дополнительные сведения в приведенном ниже разделе.
 
 <a name="Game-Controller-Support-Requirements" />
 

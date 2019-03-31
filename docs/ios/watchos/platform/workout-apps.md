@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528784"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677837"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>watchOS тренировок приложений в Xamarin
 
@@ -636,7 +636,7 @@ private void SaveWorkoutSamples (HKWorkout workout)
 
 ## <a name="workouts-and-ios-10"></a>IOS 10 и тренировок
 
-Каждое приложение тренировки watchOS 3 имеет приложения на основе тренировки iOS 10 родительского и опыта работы с iOS 10, это приложение iOS может использоваться для запуска тренировки, который будет размещать Apple Watch в режиме тренировки (без вмешательства пользователя) и запустите приложение, watchOS в режиме выполнения фоновой (см. [инастроеко запущен фоновый](#About-Background-Running) выше для получения дополнительных сведений).
+Каждое приложение тренировки watchOS 3 имеет приложения на основе тренировки iOS 10 родительского и опыта работы с iOS 10, это приложение iOS может использоваться для запуска тренировки, который будет размещать Apple Watch в режиме тренировки (без вмешательства пользователя) и запустите приложение, watchOS в режиме выполнения фоновой (см. [инастроеко запущен фоновый](#about-background-running) выше для получения дополнительных сведений).
 
 Пока выполняется приложение watchOS, его можно использовать WatchConnectivity для обмена данными с приложением iOS, родительский и.
 
@@ -649,7 +649,7 @@ private void SaveWorkoutSamples (HKWorkout workout)
 3. С помощью переданного в конфигурации тренировки, приложение watchOS 3 начинает новый сеанс тренировки (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> Чтобы iPhone в родительское приложение запустить тренировок на Apple Watch приложение watchOS 3 должно иметь фона запуска включены. См. в разделе [Включение фона под управлением](#Enabling-Background-Running) выше для получения дополнительных сведений.
+> Чтобы iPhone в родительское приложение запустить тренировок на Apple Watch приложение watchOS 3 должно иметь фона запуска включены. См. в разделе [Включение фона под управлением](#enabling-background-running) выше для получения дополнительных сведений.
 
 Этот процесс очень похож на процесс запуска сеанса тренировок в приложении watchOS 3 непосредственно. На iPhone используйте следующий код:
 

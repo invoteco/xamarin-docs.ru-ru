@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acfff90b4b983f92718bb9af1f587a73ec0f8da7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104262"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677863"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Поиск с помощью NSUserActivity в Xamarin.iOS
 
@@ -29,7 +29,7 @@ ms.locfileid: "50104262"
 
  - `EligibleForHandoff` — Если `true`, это действие может использоваться в операции передачи.
  - `EligibleForSearch` — Если `true`, это действие будет добавлен к индексу на устройстве и представлены в результатах поиска.
- - `EligibleForPublicIndexing` — Если `true`, это действие будет добавить индекс на основе облака компании Apple и предоставляемые пользователям (с помощью функции поиска), которые еще не установили приложение на своем устройстве iOS. См. в разделе [открытый индексирование поиска](#Public-Search-Indexing) Дополнительные сведения в приведенном ниже разделе.
+ - `EligibleForPublicIndexing` — Если `true`, это действие будет добавить индекс на основе облака компании Apple и предоставляемые пользователям (с помощью функции поиска), которые еще не установили приложение на своем устройстве iOS. См. в разделе [открытый индексирование поиска](#public-search-indexing) Дополнительные сведения в приведенном ниже разделе.
  - `Title` — С заголовком для действия и отображается в результатах поиска. Пользователи также могут искать текст заголовка, сам.
  - `Keywords` — Представляет собой массив строк, используемых для описания действия, индексировать и сделать доступным для поиска конечным пользователем.
  - `ContentAttributeSet` — `CSSearchableItemAttributeSet` Дальнейшего действия подробно описаны и предоставляют форматированное содержимое в результатах поиска.

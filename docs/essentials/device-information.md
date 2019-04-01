@@ -1,18 +1,18 @@
 ---
-title: Xamarin.Essentials. Сведения об устройстве
+title: 'Xamarin.Essentials: Сведения об устройстве'
 description: В этом документе описывается класс DeviceInfo в Xamarin.Essentials, с помощью которого можно получить сведения об устройстве, в котором выполняется приложение.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: a7868277cd5e924d55ad688df1e8e07c81c5f074
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898957"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329329"
 ---
-# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials. Сведения об устройстве
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Сведения об устройстве
 
 Класс **DeviceInfo** предоставляет сведения об устройстве, в котором выполняется приложение.
 
@@ -53,18 +53,18 @@ var idiom = DeviceInfo.Idiom;
 var deviceType = DeviceInfo.DeviceType;
 ```
 
-## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Платформы](xref:Xamarin.Essentials.DeviceInfo.Platforms)
+## <a name="platforms"></a>Платформы
 
-`DeviceInfo.Platform` устанавливает корреляцию с постоянной строкой, которая сопоставляется с операционной системой. Значения можно проверить с помощью структуры `DevicePlatform`:
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform) устанавливает корреляцию с постоянной строкой, которая сопоставляется с операционной системой. Значения можно проверить с помощью структуры `DevicePlatform`:
 
 - **DevicePlatform.iOS** — iOS
 - **DevicePlatform.Android** — Android
 - **DevicePlatform.UWP** — UWP
 - **DevicePlatform.Unknown** — неизвестно
 
-## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idioms](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## <a name="idioms"></a>Идиомы
 
-`DeviceInfo.Idiom` коррелирует постоянную строку, которая сопоставляется с типом устройства, на котором выполняется приложение. Значения можно проверить с помощью структуры `DeviceIdiom`:
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom) коррелирует постоянную строку, сопоставляемую с типом устройства, на котором выполняется приложение. Значения можно проверить с помощью структуры `DeviceIdiom`:
 
 - **DeviceIdiom.Phone** — телефон
 - **DeviceIdiom.Tablet** — планшет
@@ -81,7 +81,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-В iOS не предоставляется API для разработчиков, чтобы получить имя конкретного устройства iOS. Вместо этого возвращается идентификатор аппаратного обеспечения, например _iPhone10,6_, который относится к iPhone X. Сопоставление этих идентификаторов не обеспечивается в Apple, но их можно найти в [Википедии iPhone (The iPhone Wiki)](https://www.theiphonewiki.com/wiki/Models) (неофициальный источник).
+В iOS не предоставляется API для разработчиков, чтобы получить имя конкретного устройства iOS. Вместо этого возвращается идентификатор аппаратного обеспечения, например _iPhone10,6_, который относится к iPhone X. Сопоставление этих идентификаторов не обеспечивается в Apple, но их можно найти на сайте [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (Википедия iPhone) (неофициальный источник).
 
 --------------
 

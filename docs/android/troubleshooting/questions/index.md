@@ -49,10 +49,6 @@ ms.date: 08/29/2018
 
 В этом руководстве рассматриваются действия по настройке тестовый проект Android NUnit, _не_ проект Xamarin.UITest. Xamarin.UITest руководства можно найти [здесь](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
-### <a name="how-do-i-enable-intellisense-in-android-axml-filesenable-axml-intellisensemd"></a>[Как включить Intellisense в AXML-файлах Android?](enable-axml-intellisense.md)
-
-В этом руководстве описывается, как активировать Intellisense в Visual Studio для Android AXML-файлах.
-
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Почему моя сборка выпуска Android не подключается к Интернету?](android-internet.md)
 
 Наиболее распространенной причиной этой проблемы в том, что **INTERNET** разрешение автоматически включается в сборке отладки, но должен быть установлен вручную для построения выпуска. В этом руководстве описывается, как включить разрешение для сборок выпуска.

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: b21bf4da7cf862bd32e71708f9e3657f577682c2
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870278"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>расширениях iOS в Xamarin.iOS
 
@@ -99,7 +99,7 @@ ms.locfileid: "58677928"
 
     ![](extensions-images/registerandprincipalclass.png)
 
-Определенные типы расширений могут иметь дополнительные требования. Например **сегодня** или **центр уведомлений** расширения основной класс должен реализовывать [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/).
+Определенные типы расширений могут иметь дополнительные требования. Например **сегодня** или **центр уведомлений** расширения основной класс должен реализовывать [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > При запуске проекта с помощью одного шаблонов расширения, предоставляемые Visual Studio для Mac, большинство (если не все) эти требования к предоставлен и выполнены для вас автоматически с помощью шаблона.

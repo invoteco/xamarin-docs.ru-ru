@@ -6,29 +6,37 @@ ms.assetid: 2F311A60-A6FC-4051-B938-AEF32086642F
 author: conceptdev
 ms.author: crdun
 ms.custom: video
-ms.date: 08/08/2018
-ms.openlocfilehash: be67de97360a00fb4551f8a3bdd00e7f1d5d3c90
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 04/02/2019
+ms.openlocfilehash: a54d82a3e7ad95267b4083827faf0e52972417bd
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058117"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854864"
 ---
 # <a name="get-started-with-azure-functions"></a>Начало работы с функциями Azure
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
 
 _Начните создавать первую функцию Azure, который взаимодействует с помощью Xamarin.Forms._
 
-## <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+## [<a name="visual-studio-2019"></a>Visual Studio 2019](#tab/windows)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
 ## <a name="step-by-step-instructions"></a>Пошаговые инструкции
 
-В дополнение к видео, необходимо выполнить следующие инструкции, чтобы [Создание первой функции с помощью Visual Studio 2017](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+В дополнение к видео, необходимо выполнить следующие инструкции, чтобы [Создание первой функции с помощью Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
-## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+## [<a name="visual-studio-2017"></a>Visual Studio 2017](#tab/win-vs2017)
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
+
+## <a name="step-by-step-instructions"></a>Пошаговые инструкции
+
+В дополнение к видео, необходимо выполнить следующие инструкции, чтобы [Создание первой функции с помощью Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+
+## [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-for-Mac/player]
 

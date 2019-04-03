@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 41f629739b06431a9b20548f61111bc31e911abb
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870044"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Использование платформы естественного языка с помощью Xamarin.iOS
 
@@ -33,7 +33,7 @@ ms.locfileid: "55233072"
 
 ## <a name="recognizing-languages"></a>Распознавание языков
 
-**Распознаватель** вкладке образец приложения демонстрирует использование [`NLLanguageRecognizer`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguageRecognizer/)
+**Распознаватель** вкладке образец приложения демонстрирует использование [`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 Чтобы определить язык для блока текста.
 
 > [!NOTE]
@@ -43,8 +43,8 @@ ms.locfileid: "55233072"
 
 Коснитесь **языка** кнопки для идентификации доминирующего языка в вводимых пользователем данных.
 
-`HandleDetermineLanguageButtonTap` Метод `LanguageRecognizerViewController` использует [`GetDominantLanguage`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage/)
-метод `NLLanguageRecognizer` для выборки [`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+`HandleDetermineLanguageButtonTap` Метод `LanguageRecognizerViewController` использует [`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
+метод `NLLanguageRecognizer` для выборки [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 в тексте основного языка:
 
 ```csharp
@@ -63,8 +63,8 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 Коснитесь **вероятности языка** кнопку, чтобы получить список гипотез язык для ввода данных пользователем.
 
-`HandleLanguageProbabilitiesButtonTap` Метод `LanguageRecognizerViewController` создает экземпляр класса `NLLanguageRecognizer` и запрашивает у него [`Process`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.Process/)
-текст для пользователя. Затем он вызывает распознаватель языка [`GetNativeLanguageHypotheses`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses)
+`HandleLanguageProbabilitiesButtonTap` Метод `LanguageRecognizerViewController` создает экземпляр класса `NLLanguageRecognizer` и запрашивает у него [`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
+текст для пользователя. Затем он вызывает распознаватель языка [`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
 метод, который извлекает словарь языков и оцененных вероятностей. `LanguageRecognizerTableViewController` Класс отображается этих языков и вероятности.
 
 ```csharp
@@ -141,16 +141,16 @@ partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
 - `Urdu`
 - `Vietnamese`
 
-Полный список поддерживаемых языков доступен как часть [`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+Полный список поддерживаемых языков доступен как часть [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 Документация по API перечисления.
 
 ## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>Маркирование текста на слова, предложения и абзацы
 
-**Разметчика** вкладке примера приложения показано, как выделить блок текста в свои слова компонента или предложений с [ `NLTokenizer` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTokenizer/).
+**Разметчика** вкладке примера приложения показано, как выделить блок текста в свои слова компонента или предложений с [ `NLTokenizer` ](xref:NaturalLanguage.NLTokenizer).
 
 Коснитесь **слова** или **предложения** кнопку, чтобы получить список токенов. Каждый токен, связанный с слово или предложение в исходном тексте.
 
-`ShowTokens` разбиений, введенные пользователем в токены, вызвав [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
+`ShowTokens` разбиений, введенные пользователем в токены, вызвав [`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
 метод `NLTokenizer`. Этот метод возвращает массив [`NSValue`](xref:Foundation.NSValue)
 объекты, каждый упаковки `NSRange` значение, соответствующее токен в исходном тексте.
 
@@ -182,7 +182,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 ## <a name="tagging-named-entities-and-parts-of-speech"></a>Добавление тегов именованных сущностей и частей речи
 
-**Средство создания тегов** вкладке XamarinNL образец приложения демонстрирует использование [`NLTagger`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagger/)
+**Средство создания тегов** вкладке XamarinNL образец приложения демонстрирует использование [`NLTagger`](xref:NaturalLanguage.NLTagger)
 класс должен быть сопоставлен категории маркеры входной строки.
 Платформа естественного языка включает встроенную поддержку распознавание людей, мест, организаций и частей речи.
 
@@ -192,11 +192,11 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 Коснитесь **именованных сущностей** или **частей речи** кнопку для выборки:
 
 - Массив `NSValue` объектов, каждый упаковки `NSRange` для токена в исходном тексте.
-- Массив [ `NLTag` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/) значения — категории для `NSValue` токенов в один и тот же индекс массива.
+- Массив [ `NLTag` ](xref:NaturalLanguage.NLTag) значения — категории для `NSValue` токенов в один и тот же индекс массива.
 
-В `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` и `HandleNamedEntitiesButtonTap` каждый вызов `ShowTags`, передав вдоль [ `NLTagScheme` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagScheme/) — либо `NLTagScheme.LexicalClass` (по частям речи) или `NLTagScheme.NameType` (для именованных сущностей).
+В `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` и `HandleNamedEntitiesButtonTap` каждый вызов `ShowTags`, передав вдоль [ `NLTagScheme` ](xref:NaturalLanguage.NLTagScheme) — либо `NLTagScheme.LexicalClass` (по частям речи) или `NLTagScheme.NameType` (для именованных сущностей).
 
-`ShowTags` Создает `NLTagger`, создание его экземпляра с помощью массива `NLTagScheme` типов, для которой он будет направлен запрос (в данном случае только переданный `NLTagScheme` значение). Затем он использует [`GetTags`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTagger.GetTags/)
+`ShowTags` Создает `NLTagger`, создание его экземпляра с помощью массива `NLTagScheme` типов, для которой он будет направлен запрос (в данном случае только переданный `NLTagScheme` значение). Затем он использует [`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
 метод `NLTagger` для определения теги, относящиеся к текст в вводимых пользователем данных.
 
 ```csharp
@@ -253,7 +253,7 @@ void ShowTags(NLTagScheme tagScheme)
 - `Word`
 - `WordJoiner`
 
-Полный список поддерживаемых тегов доступен как часть [`NLTag`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/)
+Полный список поддерживаемых тегов доступен как часть [`NLTag`](xref:NaturalLanguage.NLTag)
 Документация по API перечисления.
 
 ## <a name="related-links"></a>Связанные ссылки

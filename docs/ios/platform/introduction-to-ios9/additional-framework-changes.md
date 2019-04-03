@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5156259f8178da69595464f75a10cd8f41965519
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672577"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870330"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Изменения платформы дополнительных iOS 9
 
@@ -24,7 +24,7 @@ _В этой статье рассматриваются дополнитель�
 
 ## <a name="avfoundation-framework-additions"></a>Дополнения AVFoundation Framework
 
-В платформе AVFoundation [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) классов теперь можно указать голос по идентификатору Дополнительно языка.
+В платформе AVFoundation [AVSpeechSynthesisVoice](xref:AVFoundation.AVSpeechSynthesisVoice) классов теперь можно указать голос по идентификатору Дополнительно языка.
 
 Например следующий код получает список всех доступных голоса:
 
@@ -32,15 +32,15 @@ _В этой статье рассматриваются дополнитель�
 var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 ```
 
-Затем можно использовать один из голосов, в списке, задав его как `Voice` свойство экземпляра [AVSpeachUtterance](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechUtterance/) класса.
+Затем можно использовать один из голосов, в списке, задав его как `Voice` свойство экземпляра [AVSpeachUtterance](xref:AVFoundation.AVSpeechUtterance) класса.
 
-[AVQueuePlayer](https://developer.xamarin.com/api/type/AVFoundation.AVQueuePlayer/) класс теперь поддерживает смешанные файловые и потоковой передачи мультимедиа для Интернета в очереди. Предыдущие версии может только очереди мультимедиа того же типа.
+[AVQueuePlayer](xref:AVFoundation.AVQueuePlayer) класс теперь поддерживает смешанные файловые и потоковой передачи мультимедиа для Интернета в очереди. Предыдущие версии может только очереди мультимедиа того же типа.
 
 Дополнительные сведения см. в разделе Apple [AVSpeechSynthesisVoice ссылку](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVSpeechSynthesisVoice_Ref/index.html#//apple_ref/occ/cl/AVSpeechSynthesisVoice).
 
 ## <a name="avkit-framework-additions"></a>Дополнения AVKit Framework
 
-Для работы с новой функцией рисунок in-Picture (PIP), платформа AVKit включает новый `AVPictureInPictureController` и [AVPlayerViewController](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) классы:
+Для работы с новой функцией рисунок in-Picture (PIP), платформа AVKit включает новый `AVPictureInPictureController` и [AVPlayerViewController](xref:AVKit.AVPlayerViewController) классы:
 
 - **AVPictureInPictureController** -этот класс позволяет приложению iOS 9 реагировать на пользователя, запуск воспроизведения видео в окне PIP с плавающей запятой, размер которой можно изменять на iPad.
 - **AVPlayerViewController** -управляет `AVPlayer` контроллер, используемый для представления видео в окне PIP с плавающей запятой, размер которой можно изменять на iPad.
@@ -117,7 +117,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 
 ## <a name="healthkit-framework-changes"></a>Изменения платформы HealthKit
 
-Apple включает следующие изменения для [HealthKit](https://developer.xamarin.com/api/namespace/HealthKit/) framework в iOS 9:
+Apple включает следующие изменения для [HealthKit](xref:HealthKit) framework в iOS 9:
 
 - Поддержка массовое удаление и отслеживания удаления записей в базе данных HealthKit. См. в разделе Apple [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) и [ссылки на класс HKHealthStore](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) Дополнительные сведения.
 - Чтобы были добавлены новые категории отслеживания и характеристики `HKQuantityTypeIdentifier` класс (такие как `UVExposure`) и `HKCategoryTypeIdentifier` класс (такие как `OvulationTestResult`). См. в разделе Apple [ссылки константы HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) Дополнительные сведения.
@@ -126,9 +126,9 @@ Apple включает следующие изменения для [HealthKit](
 
 ## <a name="local-authentication-framework-changes"></a>Изменения платформы локальной проверки подлинности
 
-Apple включает следующие изменения для [локальной проверки подлинности](https://developer.xamarin.com/api/namespace/LocalAuthentication/) framework в iOS 9:
+Apple включает следующие изменения для [локальной проверки подлинности](xref:LocalAuthentication) framework в iOS 9:
 
-- С помощью `EvaluateAccessControl` и `EvaluatePolicy` методы [LAContext](https://developer.xamarin.com/api/type/LocalAuthentication.LAContext/) класс, теперь вы можете повторно использовать Touch ID соответствий из предыдущей успешной разблокировки попыток.
+- С помощью `EvaluateAccessControl` и `EvaluatePolicy` методы [LAContext](xref:LocalAuthentication.LAContext) класс, теперь вы можете повторно использовать Touch ID соответствий из предыдущей успешной разблокировки попыток.
 - Возможность получения списка зарегистрированных в настоящее время пальцами.
 - Поддержка отслеживания, когда палец добавляется или удаляется из проверки подлинности.
 - Возможность использования _контекст проверки подлинности_ вызовы цепочки ключей и поддержки для оценки доступ к цепочке ключей управления перечислены.
@@ -138,7 +138,7 @@ Apple включает следующие изменения для [локал�
 
 ### <a name="lacontext-changes"></a>Изменения LAContext
 
-Были внесены следующие изменения для [LAContext](https://developer.xamarin.com/api/type/LocalAuthentication.LAContext/) класс для iOS 9:
+Были внесены следующие изменения для [LAContext](xref:LocalAuthentication.LAContext) класс для iOS 9:
 
 - **TouchIdAuthenticationMaximumAllowableReuseDuration** -возвращает максимальный объем времени, который можно использовать с проверкой подлинности идентификатор сенсорного ввода.
 - **EvaluatedPolicyDomainState** — Возвращает или задает состояние оценки политики.
@@ -153,17 +153,17 @@ Apple включает следующие изменения для [локал�
 
 ## <a name="mapkit-framework-changes"></a>Изменения платформы MapKit
 
-Apple включает следующие изменения для [MapKit](https://developer.xamarin.com/api/namespace/MapKit/) framework в iOS 9:
+Apple включает следующие изменения для [MapKit](xref:MapKit) framework в iOS 9:
 
-- MapKit теперь обеспечивает поддержку для запуска приложения карты непосредственно в передаче направлениях, а также для выполнения запросов к передаче предполагаемое время прибытия (ETA) с помощью [MKLaunchOptions](https://developer.xamarin.com/api/type/MapKit.MKLaunchOptions/) и [MKDirections](https://developer.xamarin.com/api/type/MapKit.MKLaunchOptions/) классы.
-- Результаты поиска, возвращенные MapKit и [CLGeocoder](https://developer.xamarin.com/api/type/CoreLocation.CLGeocoder/) класс также может предоставлять результирующий часовой пояс.
-- Теперь вы можете полностью настроить карты заметки, представленный приложения iOS с помощью `DetailCalloutAccessoryView` свойство [MKAnnotationView](https://developer.xamarin.com/api/type/MapKit.MKAnnotationView/) класса.
+- MapKit теперь обеспечивает поддержку для запуска приложения карты непосредственно в передаче направлениях, а также для выполнения запросов к передаче предполагаемое время прибытия (ETA) с помощью [MKLaunchOptions](xref:MapKit.MKLaunchOptions) и [MKDirections](xref:MapKit.MKLaunchOptions) классы.
+- Результаты поиска, возвращенные MapKit и [CLGeocoder](xref:CoreLocation.CLGeocoder) класс также может предоставлять результирующий часовой пояс.
+- Теперь вы можете полностью настроить карты заметки, представленный приложения iOS с помощью `DetailCalloutAccessoryView` свойство [MKAnnotationView](xref:MapKit.MKAnnotationView) класса.
 
 См. наш [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) и [Пошаговое руководство. изучение заметки и наложения в MapKit](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) Дополнительные сведения о работе с картами и заметок в Xamarin.iOS и Apple [CLGeocoder ссылки](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) Дополнительные сведения.
 
 ## <a name="passkit-framework-additions"></a>Дополнения PassKit Framework
 
-Apple включает следующие изменения для [PassKit](https://developer.xamarin.com/api/namespace/PassKit/) framework в iOS 9:
+Apple включает следующие изменения для [PassKit](xref:PassKit) framework в iOS 9:
 
 - Apple Pay теперь поддерживает хранилище дебетовой и кредитные карты, а также карт Discover. См. в разделе **сетей оплаты** раздел Apple [ссылки на класс PKPaymentRequest](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKPaymentRequest_Ref/index.html#//apple_ref/doc/uid/TP40014832) Дополнительные сведения.
 - Из непосредственно в приложении Xamarin.iOS, теперь добавляемый сетей оплаты и поставщиков карты Apple Pay. См. в разделе Apple [ссылки на класс PKAddPaymentPassViewController](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKAddPaymentPassViewController_Class/index.html#//apple_ref/doc/uid/TP40016116) для получения дополнительных сведений.
@@ -172,15 +172,15 @@ Apple включает следующие изменения для [PassKit](ht
 
 ## <a name="safari-services-framework-additions"></a>Safari служб Framework дополнения
 
-Apple включает следующие изменения для [служб Safari](https://developer.xamarin.com/api/namespace/SafariServices/) framework в iOS 9:
+Apple включает следующие изменения для [служб Safari](xref:SafariServices) framework в iOS 9:
 
-- Теперь вы можете использовать новый [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) для отображения веб-содержимого в приложении Xamarin.iOS. Он предоставляет возможность совместно использовать данные веб-сайтов и файлов cookie с помощью приложения Safari, а также некоторые функции Safari (например, средство чтения и Автозаполнение). [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) функции **сделать** кнопка, которая будет возвращать пользователей в приложение при завершении работы, просмотр веб-содержимое.
+- Теперь вы можете использовать новый [SFSafariViewController](xref:SafariServices.SFSafariViewController) для отображения веб-содержимого в приложении Xamarin.iOS. Он предоставляет возможность совместно использовать данные веб-сайтов и файлов cookie с помощью приложения Safari, а также некоторые функции Safari (например, средство чтения и Автозаполнение). [SFSafariViewController](xref:SafariServices.SFSafariViewController) функции **сделать** кнопка, которая будет возвращать пользователей в приложение при завершении работы, просмотр веб-содержимое.
 
-Так как [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) класс предназначен для отображения на одной странице веб-содержимого, можно использовать его для замены всех [WKWebKit](xref:WebKit.WKWebView) или [UIWebView](xref:UIKit.UIWebView)элементов управления в существующие приложения Xamarin.iOS.
+Так как [SFSafariViewController](xref:SafariServices.SFSafariViewController) класс предназначен для отображения на одной странице веб-содержимого, можно использовать его для замены всех [WKWebKit](xref:WebKit.WKWebView) или [UIWebView](xref:UIKit.UIWebView)элементов управления в существующие приложения Xamarin.iOS.
 
 ### <a name="displaying-a-website"></a>Отображение веб-сайта
 
-В следующем коде приведен пример вызова [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) из внутри другой контроллер представления:
+В следующем коде приведен пример вызова [SFSafariViewController](xref:SafariServices.SFSafariViewController) из внутри другой контроллер представления:
 
 ```csharp
 // Create an instance of the Safari Services View Controller

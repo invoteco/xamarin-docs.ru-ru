@@ -1,5 +1,5 @@
 ---
-title: Store данных в локальную базу данных для SQLite.NET
+title: Хранение данных в локальной базе данных SQLite.NET
 description: В этой статье объясняется, как сохранить данные в локальную базу данных для SQLite.NET.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: 3cea41aa3c021dbb03f851a4deb443ee86fcad25
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 04/01/2019
+ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854994"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store данных в локальную базу данных для SQLite.NET
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 В этом кратком руководстве вы узнаете, как:
 
@@ -44,17 +44,17 @@ ms.locfileid: "55293366"
 
     ![](database-images/vs/add-nuget-packages.png "Добавление пакетов NuGet")    
 
-3. В **диспетчер пакетов NuGet**выберите **Обзор** вкладке, поиск **sqlite-net-pcl** пакет NuGet, выберите его и нажмите кнопку **установить**кнопку, чтобы добавить его в проект:
+3. В разделе **Диспетчер пакетов NuGet** выберите вкладку **Обзор**, выполните поиск пакета NuGet **sqlite-net-pcl**, выберите его и нажмите кнопку **Установить**, чтобы добавить его в проект.
 
     ![](database-images/vs/add-package.png "Добавление пакета")
 
     > [!NOTE]
-    > Существует ряд пакетов NuGet с одинаковыми именами. Правильный пакет имеет следующие атрибуты:
-    > - **Авторов:** Фрэнк А. Крюгер (Frank A. Krueger)
+    > Существует ряд пакетов NuGet с похожими названиями. Правильный пакет имеет следующие атрибуты:
+    > - **Автор(ы)**: Фрэнк А. Крюгер (Frank A. Krueger)
     > - **Идентификатор:** sqlite-net-pcl
     > - **Ссылка в NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > Несмотря на название пакета можно использовать этот пакет NuGet в проектах .NET Standard.
+    > Несмотря на название, этот пакет NuGet можно использовать в проектах .NET Standard.
 
     Этот пакет будет использоваться для включения операций базы данных в приложение.
 
@@ -139,7 +139,7 @@ ms.locfileid: "55293366"
     }
     ```
 
-    Этот класс содержит код, чтобы создать базу данных, чтение данных из него, записать на него данные и удалять данные из нее. Код использует асинхронные интерфейсы API для SQLite.NET, перемещать операции базы данных в фоновых потоках. Кроме того `NoteDatabase` конструктор принимает путь к файлу базы данных в качестве аргумента. Этот путь будет предоставляться системой `App` класс в следующем шаге.
+    Этот класс содержит код, чтобы создать базу данных, чтение данных из него, записать на него данные и удалять данные из нее. В коде используются асинхронные API-интерфейсы SQLite.NET, которые перемещают операции базы данных в фоновые потоки. Кроме того конструктор `NoteDatabase` принимает путь файла базы данных в качестве аргумента. Этот путь будет предоставляться системой `App` класс в следующем шаге.
 
     Сохраните изменения в **NoteDatabase.cs** , нажав клавишу **CTRL + S**и закройте файл.
 
@@ -152,10 +152,8 @@ ms.locfileid: "55293366"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -249,17 +247,17 @@ ms.locfileid: "55293366"
 
     ![](database-images/vsmac/add-nuget-packages.png "Добавление пакетов NuGet")    
 
-3. В **добавить пакеты** окно, и выполните поиск **sqlite-net-pcl** пакет NuGet, выберите его и нажмите кнопку **Add Package** кнопку, чтобы добавить его в проект:
+3. В окне **Добавление пакетов** выполните поиск пакета NuGet **sqlite-net-pcl**, выберите его и нажмите кнопку **Добавить пакет**, чтобы добавить его в проект.
 
     ![](database-images/vsmac/add-package.png "Добавление пакета")
 
     > [!NOTE]
-    > Существует ряд пакетов NuGet с одинаковыми именами. Правильный пакет имеет следующие атрибуты:
-    > - **Автор:** Фрэнк А. Крюгер (Frank A. Krueger)
+    > Существует ряд пакетов NuGet с похожими названиями. Правильный пакет имеет следующие атрибуты:
+    > - **Автор**: Фрэнк А. Крюгер (Frank A. Krueger)
     > - **Идентификатор:** sqlite-net-pcl
     > - **Ссылка в NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > Несмотря на название пакета можно использовать этот пакет NuGet в проектах .NET Standard.
+    > Несмотря на название, этот пакет NuGet можно использовать в проектах .NET Standard.
 
     Этот пакет будет использоваться для включения операций базы данных в приложение.
 
@@ -344,7 +342,7 @@ ms.locfileid: "55293366"
     }
     ```
 
-    Этот класс содержит код, чтобы создать базу данных, чтение данных из него, записать на него данные и удалять данные из нее. Код использует асинхронные интерфейсы API для SQLite.NET, перемещать операции базы данных в фоновых потоках. Кроме того `NoteDatabase` конструктор принимает путь к файлу базы данных в качестве аргумента. Этот путь будет предоставляться системой `App` класс в следующем шаге.
+    Этот класс содержит код, чтобы создать базу данных, чтение данных из него, записать на него данные и удалять данные из нее. В коде используются асинхронные API-интерфейсы SQLite.NET, которые перемещают операции базы данных в фоновые потоки. Кроме того конструктор `NoteDatabase` принимает путь файла базы данных в качестве аргумента. Этот путь будет предоставляться системой `App` класс в следующем шаге.
 
     Сохраните изменения в **NoteDatabase.cs** , выбрав **файл > Сохранить** (или нажав  **&#8984; + S**) и закройте файл.
 
@@ -357,10 +355,8 @@ ms.locfileid: "55293366"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -455,7 +451,7 @@ ms.locfileid: "55293366"
 Чтобы приложение в стиле с помощью стилей XAML, перейдите к следующему руководству.
 
 > [!div class="nextstepaction"]
-> [Вперед](styling.md)
+> [Далее](styling.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 

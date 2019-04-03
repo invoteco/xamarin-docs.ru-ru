@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233735"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869828"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Сочетания клавиш Siri в Xamarin.iOS
 
@@ -149,7 +149,7 @@ public static NSUserActivity ViewMenuActivity {
 В частности Обратите внимание на следующее:
 
 - Установка `EligibleForPrediction` для `true` указывает, что Siri можно прогнозировать это действие и область его ярлык.
-- [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) Массив — это стандарт [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) используется для включения `NSUserActivity` в результатах поиска iOS.
+- [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) Массив — это стандарт [ `CSSearchableItemAttributeSet` ](xref:CoreSpotlight.CSSearchableItemAttributeSet) используется для включения `NSUserActivity` в результатах поиска iOS.
 - [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) является фразой, Siri предложит пользователю как потенциальные вариант, при назначении фразы для ярлыка.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>Обработка NSUserActivity ярлык
@@ -227,7 +227,8 @@ void HandleUserActivity()
 Чтобы просмотреть созданный код:
 
 - Откройте **AppDelegate.m**.
-- Добавьте Импорт пользовательских намерение заголовочный файл: `#import "OrderSoupIntent.h"`
+- Добавьте Импорт пользовательских намерение заголовочный файл:
+`#import "OrderSoupIntent.h"`
 - В любом методе в классе добавьте ссылку на `OrderSoupIntent`.
 - Щелкните правой кнопкой мыши `OrderSoupIntent` и выберите **перейти к определению**.
 - Щелкните правой кнопкой мыши, в файле вновь открыть **OrderSoupIntent.h**и выберите **Показать в Finder**.
@@ -318,7 +319,7 @@ void HandleUserActivity()
 Чтобы Siri этот об, Soup Chef _donates_ объекта intent для Siri каждый раз пользователь размещает заказ солянка из. Зависимости от этого пожертвование —, когда он был, пожертвования, где он был пожертвования, содержит параметры – Siri узнает, когда следует предлагать ярлык в будущем.
 
 **SoupChef** использует `SoupOrderDataManager` класса для размещения пожертвований.
-При вызове для размещения заказа на полный курс по работе для пользователя, `PlaceOrder` в свою очередь вызывает метод [ `DonateInteraction` ](https://developer.xamarin.com/api/member/Intents.INInteraction.DonateInteraction/):
+При вызове для размещения заказа на полный курс по работе для пользователя, `PlaceOrder` в свою очередь вызывает метод [ `DonateInteraction` ](xref:Intents.INInteraction.DonateInteraction*):
 
 ```csharp
 void DonateInteraction(Order order)
@@ -332,8 +333,8 @@ void DonateInteraction(Order order)
 }
 ```
 
-После получения объекта intent, оно помещается в [ `INInteraction` ](https://developer.xamarin.com/api/type/Intents.INInteraction/).
-`INInteraction` Прав [`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
+После получения объекта intent, оно помещается в [ `INInteraction` ](xref:Intents.INInteraction).
+`INInteraction` Прав [`Identifier`](xref:Intents.INInteraction.Identifier*)
 Уникальный идентификатор заказа (это будет полезно позже при удалении намерений пожертвований, которые больше не являются допустимыми), которое соответствует. Затем взаимодействие списания для Siri.
 
 Вызов `order.Intent` выборки считывания `OrderSoupIntent` , представляющий порядок, задав его `Quantity`, `Soup`, `Options`и образ и вызов фразу для использования в качестве подсказки, когда пользователь регистрирует фразы для Siri связать с целью:
@@ -469,7 +470,7 @@ void RemoveDonation(MenuItem menuItem)
 
 Расширение Intents выполняет необходимые фоновые задачи для ярлыка, в зависимости от пользовательских намерение.
 
-Вызовы Siri [ `GetHandler` ](https://developer.xamarin.com/api/member/Intents.INExtension.GetHandler/) метод `IntentHandler` класс (определенный в **Info.plist** как `NSExtensionPrincipalClass`) для получения экземпляра класса, который расширяет `OrderSoupIntentHandling`, который может использоваться для обработки `OrderSoupIntent`:
+Вызовы Siri [ `GetHandler` ](xref:Intents.INExtension.GetHandler*) метод `IntentHandler` класс (определенный в **Info.plist** как `NSExtensionPrincipalClass`) для получения экземпляра класса, который расширяет `OrderSoupIntentHandling`, который может использоваться для обработки `OrderSoupIntent`:
 
 ```csharp
 [Register("IntentHandler")]
@@ -563,9 +564,9 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 > [!NOTE]
 > Интерфейсы для **invoiceView** и **confirmationView** определяются в **Main.storyboard** как вторичный представления. IOS Designer в Visual Studio для Mac и Visual Studio 2017 не обеспечивает поддержку для просмотра или изменения вторичного представления; Чтобы сделать это, откройте **Main.storyboard** в Interface Builder в Xcode.
 
-`IntentViewController` реализует [`IINUIHostedViewControlling`](https://developer.xamarin.com/api/type/IntentsUI.IINUIHostedViewControlling/)
-интерфейс, используемый для предоставления пользовательского интерфейса, при работе с намерениями Siri. В [`ConfigureView`](https://developer.xamarin.com/api/member/IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView/)
-метод вызывается для настройки интерфейса, отображение, подтверждение или накладной, в зависимости от того подтверждается ли взаимодействие ([`INIntentHandlingStatus.Ready`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)) или будет выполнено успешно ([ `INIntentHandlingStatus.Success`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)):
+`IntentViewController` реализует [`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
+интерфейс, используемый для предоставления пользовательского интерфейса, при работе с намерениями Siri. В [`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
+метод вызывается для настройки интерфейса, отображение, подтверждение или накладной, в зависимости от того подтверждается ли взаимодействие ([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)) или будет выполнено успешно ([ `INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus)):
 
 ```csharp
 [Export("configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:")]
@@ -631,9 +632,9 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-Зависимости от того, существует ли существующий голосовой ярлык для заказа отображаемого `RowSelected` представляет контроллер представления типа [ `INUIEditVoiceShortcutViewController` ](https://developer.xamarin.com/api/type/IntentsUI.INUIEditVoiceShortcutViewController/) или [ `INUIAddVoiceShortcutViewController` ](https://developer.xamarin.com/api/type/IntentsUI.INUIAddVoiceShortcutViewController/).
-В каждом случае `OrderDetailViewController` устанавливается как контроллер представления `Delegate`, поэтому он также реализует [`IINUIAddVoiceShortcutViewControllerDelegate`](https://developer.xamarin.com/api/type/IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate/)
-и [ `IINUIEditVoiceShortcutViewControllerDelegate` ](https://developer.xamarin.com/api/type/IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate/).
+Зависимости от того, существует ли существующий голосовой ярлык для заказа отображаемого `RowSelected` представляет контроллер представления типа [ `INUIEditVoiceShortcutViewController` ](xref:IntentsUI.INUIEditVoiceShortcutViewController) или [ `INUIAddVoiceShortcutViewController` ](xref:IntentsUI.INUIAddVoiceShortcutViewController).
+В каждом случае `OrderDetailViewController` устанавливается как контроллер представления `Delegate`, поэтому он также реализует [`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
+и [ `IINUIEditVoiceShortcutViewControllerDelegate` ](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate).
 
 ## <a name="testing-on-device"></a>Тестирование на устройстве
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668352"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870187"
 ---
 # <a name="limitations-of-xamarinios"></a>Ограничения Xamarin.iOS
 
@@ -83,7 +83,7 @@ class Foo<T> : UIView {
 Чтобы вызвать собственную функцию через делегат C#, объявление делегата должен быть снабжен атрибутом один из следующих атрибутов:
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (предпочтительно, поскольку это кросс платформенные и совместимых с .NET Standard 1.1 +)
-- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+- [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Не удалось предоставить один из этих атрибутов приведет к ошибку во время выполнения, такие как:
 
@@ -100,8 +100,8 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 В Mono этих мостах реализуются Just-in-Time компилятора. При использовании компилятора ahead-of-time, необходимый для iPhone, существуют два важных ограничения на этом этапе:
 
--  Необходимо пометить все методы обратного вызова с [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  Методы должны быть статическими методами, не поддерживается для экземпляра метода. 
+-  Необходимо пометить все методы обратного вызова с [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
+-  Методы должны быть статическими методами, не поддерживается для экземпляра метода.
  
 <a name="No_Remoting" />
 

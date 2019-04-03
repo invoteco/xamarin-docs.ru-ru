@@ -1,17 +1,17 @@
 ---
 title: Управление учетными записями Apple
-description: В этом документе описывается, как использовать функции управления учетной записью Apple в Visual Studio для Mac и Visual Studio 2017.
+description: В этом документе описывается использование функций управления учетной записью Apple в Visual Studio для Mac и Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 1e353aceaf0e2c0525b82c0ccb7e7bcb73df3075
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106069"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855059"
 ---
 # <a name="apple-account-management"></a>Управление учетными записями Apple
 
@@ -33,7 +33,7 @@ ms.locfileid: "50106069"
 
 ## <a name="requirements"></a>Требования
 
-Управление учетными записями Apple можно найти в Visual Studio для Mac и Visual Studio 2017 (версия 15.7 и более поздних версий)
+Управление учетными записями Apple можно найти в Visual Studio для Mac, 2019 г. Visual Studio и Visual Studio 2017 (версия 15.7 и более поздних версий).
 
 Необходимо иметь учетную запись разработчика Apple для использования этой функции. Дополнительные сведения об учетных записей разработчиков Apple в [подготовки устройств](~/ios/get-started/installation/device-provisioning/index.md) руководства.
 
@@ -44,7 +44,7 @@ ms.locfileid: "50106069"
 
 ## <a name="adding-an-apple-developer-account"></a>Добавление учетной записи разработчика Apple
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 1. Чтобы открыть диалоговое окно управления учетной записи перейдите к **Visual Studio > Параметры > учетная запись разработчика Apple**:
 
@@ -68,9 +68,9 @@ ms.locfileid: "50106069"
 
     ![Просмотр сведений о экран, отображающий на удостоверений подписывания и профили на вашем компьютере подготовки](apple-account-management-images/image6.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Прежде чем добавлять свой идентификатор Apple ID для Visual Studio 2017, убедитесь, что среда разработки является [пару к узлу сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Прежде чем добавлять свой идентификатор Apple ID к 2019 г. Visual Studio, убедитесь, что среда разработки является [пару к узлу сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Чтобы открыть окно управления учетной записи, перейдите к статье **Сервис > Параметры > Xamarin > учетные записи Apple**:
 
@@ -109,11 +109,11 @@ ms.locfileid: "50106069"
 
 Если один из вариантов в раскрывающемся списке серым и не выбран, это означает, что у вас нет разрешения соответствующей команде разработчиков для создания такого типа.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 ![создать параметры сертификата](apple-account-management-images/image8.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 ![создать параметры сертификата](apple-account-management-images/prov3.png)
 
@@ -123,11 +123,11 @@ ms.locfileid: "50106069"
 
 Сведения о диалоговом окне группы также отображает список всех профилей подготовки, подключенных к вашей учетной записи разработчика. Все профили подготовки можно загрузить на локальный компьютер, нажав клавишу **загрузить все профили** кнопки
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 ![Скачайте подготовки профили](apple-account-management-images/image9.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 ![Скачайте подготовки профили](apple-account-management-images/prov4.png)
 

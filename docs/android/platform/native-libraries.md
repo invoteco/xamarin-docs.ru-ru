@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1195685db9e85e7fba006272ef300e22d47d1fa6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 1b0771a0ccc2597ebd800468b82044e4020d9d94
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666398"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854617"
 ---
 # <a name="using-native-libraries"></a>Использование собственных библиотек
 
@@ -42,10 +42,10 @@ Xamarin.Android поддерживает использование собств
 
 Дополнительные сведения об использовании собственных библиотек см. в разделе [взаимодействия с собственными библиотеками](https://www.mono-project.com/docs/advanced/pinvoke/).
 
-## <a name="debugging-native-code-with-visual-studio-2017"></a>Отладка машинного кода в Visual Studio 2017
+## <a name="debugging-native-code-with-visual-studio"></a>Отладка машинного кода с помощью Visual Studio
 
-Если вы используете *Visual Studio 2017* или более поздней версии, нет необходимости изменять файлы проекта, как описано выше.
-Для построения и отладки C++ в решении Xamarin.Android, добавив ссылку проекта на C++ **динамической общей библиотеки (Android)** проекта. 
+Если вы используете *Visual Studio 2019* или *Visual Studio 2017*, нет необходимости изменять файлы проекта, как описано выше.
+Для построения и отладки C++ в решении Xamarin.Android, добавив ссылку проекта на C++ **динамической общей библиотеки (Android)** проекта.
 
 Чтобы выполнить отладку машинного кода C++ в проекте, выполните следующие действия.
 
@@ -53,7 +53,7 @@ Xamarin.Android поддерживает использование собств
 2. Прокрутите вниз до раздела **параметры отладки**.
 3. В **отладчик** раскрывающемся меню выберите **C++** (вместо значения по умолчанию **.Net (Xamarin)**).
 
-Visual Studio C++ разработчики могут видеть [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) выборку, чтобы попробовать выполнить отладку C++ от Visual Studio 2017 с Xamarin; и ссылаться на наш [блога](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) Дополнительные сведения.
+Visual Studio C++ разработчики могут видеть [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) выборку, чтобы попробовать выполнить отладку C++ от 2019 г. Visual Studio или Visual Studio 2017 с Xamarin; и ссылаться на наш [блога](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) Дополнительные сведения.
 
 
 

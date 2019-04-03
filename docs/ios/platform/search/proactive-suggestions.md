@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677902"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870408"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Введение в упреждающие предложения в Xamarin.iOS
 
@@ -51,7 +51,7 @@ UIKit была расширена в iOS 10, чтобы включить [TextCo
 
 ## <a name="media-based-suggestions"></a>Предложения на основе мультимедиа
 
-Если приложение воспроизводит мультимедиа с помощью [MPPlayableContentManager](https://developer.xamarin.com/api/type/MediaPlayer.MPPlayableContentManager/) API iOS 10 позволяет пользователям просматривать альбома и воспроизведение мультимедиа через приложение на экране блокировки.
+Если приложение воспроизводит мультимедиа с помощью [MPPlayableContentManager](xref:MediaPlayer.MPPlayableContentManager) API iOS 10 позволяет пользователям просматривать альбома и воспроизведение мультимедиа через приложение на экране блокировки.
 
 ## <a name="contextual-siri-reminders"></a>Контекстные Siri напоминания
 
@@ -63,12 +63,12 @@ UIKit была расширена в iOS 10, чтобы включить [TextCo
 
 ## <a name="ride-sharing-based-suggestions"></a>Воспользуйтесь преимуществами управления доступом на основе предложения
 
-Если приложение для управления доступом поездке использует [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 будет представлять их в качестве параметра в переключателе приложений в некоторых случаях в том случае, если пользователь является неприемлемо поездки. Приложение также должен быть зарегистрирован как приложение управления доступом поездке указав `MKDirectionsModeRideShare` для [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) в его `Info.plist` файл.
+Если приложение для управления доступом поездке использует [MKDirectionsRequest](xref:MapKit.MKDirectionsRequest) API, iOS 10 будет представлять их в качестве параметра в переключателе приложений в некоторых случаях в том случае, если пользователь является неприемлемо поездки. Приложение также должен быть зарегистрирован как приложение управления доступом поездке указав `MKDirectionsModeRideShare` для [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) в его `Info.plist` файл.
 
 Если приложение поддерживает только общий доступ к поездке, предложение системы будут начинаться с *«Get поездке для...»*, если поддерживаются другие виды маршрутизации направление (например Walking или велосипед), система будет использовать *«Get указаниям,...»*
 
 > [!IMPORTANT]
-> [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) объект, получающий приложение не содержит сведений, широту и долготу и потребует геокодирования.
+> [MKMapItem](xref:MapKit.MKMapItem) объект, получающий приложение не содержит сведений, широту и долготу и потребует геокодирования.
 
 ## <a name="implementing-proactive-suggestions"></a>Реализация упреждающие предложения
 
@@ -189,7 +189,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 С минимальным объемом кода, приведенного выше приложение теперь могут использовать три новых возможностей iOS 10:
 
-- **Handoff**
+- **Перемещение вручную**
 - **Поиск Spotlight**
 - **Контекстные Siri напоминания**
 

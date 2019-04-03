@@ -1,5 +1,5 @@
 ---
-title: Выполнять навигации в приложении Xamarin.Forms многостраничных
+title: Навигация в многостраничном приложении Xamarin.Forms
 description: В этой статье объясняется, как включить одностраничного приложения, который может хранить одно примечание в одностраничное приложение, может хранить несколько заметок.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: f3c5ec1c6d37c74fd9b4fb4980c68a59c9864c05
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.date: 04/01/2019
+ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197372"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854981"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Выполнять навигации в приложении Xamarin.Forms многостраничных
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 В этом кратком руководстве вы узнаете, как:
 
@@ -39,7 +39,7 @@ ms.locfileid: "57197372"
 
 ## <a name="update-the-app-with-visual-studio"></a>Обновление приложения с помощью Visual Studio
 
-1. Запустите Visual Studio. На начальной странице щелкните **открыть проект / решение**и в **Открытие проекта** диалоговом окне выберите файл решения для проекта примечания:
+1. Запустите Visual Studio. В окне «Пуск» выберите **заметки** решения в список последних проектов и решений, или щелкните **откройте проект или решение**и в **открыть проект/решение** диалоговое окно Выберите файл решения для проекта примечания:
 
     ![](multi-page-images/vs/open-solution.png "Открытие проекта")
 
@@ -285,9 +285,7 @@ ms.locfileid: "57197372"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -324,7 +322,7 @@ ms.locfileid: "57197372"
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Обновление приложения с помощью Visual Studio для Mac
 
-1. Запуск Visual Studio для Mac На начальной странице щелкните **открыть...** и в диалоговом окне выберите файл решения для проекта примечания:
+1. Запуск Visual Studio для Mac В окне «Пуск» щелкните **откройте**и в диалоговом окне выберите файл решения для проекта примечания:
 
     ![](multi-page-images/vsmac/open-solution.png "Открытие решения")
 
@@ -570,9 +568,7 @@ ms.locfileid: "57197372"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -617,7 +613,7 @@ ms.locfileid: "57197372"
 Чтобы изменить приложение таким образом, чтобы он хранит данные в локальную базу данных для SQLite.NET, перейдите к следующему руководству.
 
 > [!div class="nextstepaction"]
-> [Вперед](database.md)
+> [Далее](database.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 

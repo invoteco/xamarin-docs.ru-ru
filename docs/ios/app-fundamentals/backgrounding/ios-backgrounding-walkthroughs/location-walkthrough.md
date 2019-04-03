@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669197"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870148"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Пошаговое руководство. расположения в фоновом режиме в Xamarin.iOS
 
@@ -72,7 +72,7 @@ ms.locfileid: "57669197"
     }
     ```
 
-    Приведенный выше код задает несколько свойств и разрешений на [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) класса:
+    Приведенный выше код задает несколько свойств и разрешений на [CLLocationManager](xref:CoreLocation.CLLocationManager) класса:
 
     - `PausesLocationUpdatesAutomatically` — Это логическое значение, которое можно задать в зависимости от того, разрешено ли приостановка расположение обновлений системы. На некоторых устройствах по умолчанию используется `true`, что может привести к устройству прекратить получение фонового обновления расположения примерно через 15 минут.
     - `RequestAlwaysAuthorization` — Следует передать этот метод, чтобы дать пользователю приложения параметр, чтобы разрешить доступ в фоновом режиме. `RequestWhenInUseAuthorization` также могут передаваться, если вы хотите дать пользователю возможность разрешить расположение доступны только в том случае, когда приложение находится на переднем плане.

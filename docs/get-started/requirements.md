@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
-ms.openlocfilehash: 0a5edaeb6f9edc992c5f735d37adba464c72d4ad
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854746"
 ---
 # <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
 
@@ -43,8 +43,8 @@ _Требования к платформе и системные требова
 
 Эти платформы не поддерживаются при использовании Xamarin.Forms 3.0:
 
-- *Windows 8.1 или Windows Phone 8.1 WinRT;*
-- *Windows Phone 8 Silverlight.*
+- *Windows 8.1 или Windows Phone 8.1 WinRT*
+- *Windows Phone Silverlight 8*
 
 ### <a name="android"></a>Android
 
@@ -52,21 +52,21 @@ _Требования к платформе и системные требова
 
 Кроме того, в целевой версии или версии компиляции для проектов Android **должен** быть выбран параметр *Использовать самую новую установленную платформу*. Однако минимальной версией может быть API 19, что позволяет поддерживать устройства, использующие Android 4.4 и более поздние версии. Эти значения задаются в разделе **Параметры проекта**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-**Параметры проекта > Приложение > Свойства приложения**
+**Параметры проекта > приложение > Свойства приложения**
 
-![](requirements-images/options-android-vs-sml.png "Параметры сборки Android в Visual Studio")
+![Параметры сборки Android в Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
-**Сборка > Общие**
+**Построение > Общие**
 
-![](requirements-images/options-general-sml.png "Сборка > Общие")
+![Выберите последнюю требуемой версии .NET framework](requirements-images/options-general-sml.png)
 
-**Сборка > Приложение Android**
+**Построение > приложение Android**
 
-![](requirements-images/options-android-sml.png "Сборка > Приложение Android")
+![Выберите минимальное и целевой версии Android для приложения](requirements-images/options-android-sml.png)
 
 -----
 
@@ -76,7 +76,7 @@ _Требования к платформе и системные требова
 
 ## <a name="mac-system-requirements"></a>Требования к системе Mac
 
-Visual Studio для Mac можно использовать для разработки приложений Xamarin.Forms в OS X El Capitan (10.11) или более поздних версиях. Для разработки приложений iOS рекомендуется установить по меньшей мере пакет SDK iOS 10 и Xcode 8.
+Visual Studio для Mac можно использовать для разработки приложений Xamarin.Forms в macOS High Sierra (10.13) или более поздней версии. Для разработки приложений iOS, мы рекомендуем использовать по крайней мере iOS 10 SDK и установить Xcode 9.
 
 > [!NOTE]
 >  Приложения Windows нельзя разрабатывать в macOS.
@@ -91,11 +91,10 @@ Visual Studio для Mac можно использовать для разраб
 
 Для разработки приложений Xamarin.Forms для UWP требуются следующие компоненты:
 
-- Windows 10 (рекомендуется Fall Creators Update)
+- Windows 10 (последняя версия рекомендуется, минимальное Fall Creators Update)
 
-- Visual Studio 2017
+- Visual Studio 2019 рекомендуется (Visual Studio 2017 версии 15.8 минимальная)
 
-- [Пакет средств разработки Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
+- [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
-Проекты UWP включены в решения Xamarin.Forms, созданные в Visual Studio 2017 (но не в Visual Studio для Mac).
 [Приложение универсальной платформы Windows (UWP) можно добавить](~/xamarin-forms/platform/windows/installation/index.md) в существующее решение Xamarin.Forms в любое время.

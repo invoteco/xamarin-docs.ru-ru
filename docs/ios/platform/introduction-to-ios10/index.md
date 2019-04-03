@@ -1,14 +1,19 @@
 ---
 title: Введение в iOS 10
-description: 'В этой статье рассматриваются все новые и измененные API-интерфейсы и функциях, доступных в iOS 10 для разработчиков Xamarin.iOS.'
+description: В этой статье рассматриваются все новые и измененные API-интерфейсы и функциях, доступных в iOS 10 для разработчиков Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
+ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870252"
 ---
-
 # <a name="introduction-to-ios-10"></a>Введение в iOS 10
 
 _В этой статье рассматриваются все новые и измененные API-интерфейсы и функциях, доступных в iOS 10 для разработчиков Xamarin.iOS._
@@ -221,9 +226,9 @@ Apple представила ряд дополнительных возможн�
 
 Следующие интерфейсы API стали нерекомендуемыми в iOS 10:
 
-- `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` И `CKFetchRecordChangesOperation` классы в устаревшими CloudKit для iOS 10. Используйте [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) и [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) классы (поддерживающие запись управления доступом) вместо этого.
-- Несколько [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) рекомендованных к использованию API (например, подписки на основе зон и на основе запроса). Используйте [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) и [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) API-интерфейсов вместо этого.
-- [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) символы, связанные с повсеместно содержимое стали нерекомендуемыми.
+- `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` И `CKFetchRecordChangesOperation` классы в устаревшими CloudKit для iOS 10. Используйте [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) и [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) классы (поддерживающие запись управления доступом) вместо этого.
+- Несколько [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) рекомендованных к использованию API (например, подписки на основе зон и на основе запроса). Используйте [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) и [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) API-интерфейсов вместо этого.
+- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) символы, связанные с повсеместно содержимое стали нерекомендуемыми.
 - `ADBannerView`, `ADInterstitialAd` и связанные с ней символы в [UIViewController](xref:UIKit.UIViewController) класс стали нерекомендуемыми.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) символов, связанных значений с плавающей запятой являются устаревшими.
 - `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` И `UIUserNotificationSettings` классы UIKit стали нерекомендуемыми. Используйте [уведомления для пользователей](#user-notifications) framework вместо этого.

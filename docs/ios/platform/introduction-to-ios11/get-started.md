@@ -1,18 +1,18 @@
 ---
 title: Начало работы с iOS 11
-description: В этом документе описываются шаги, которые необходимо выполнить, чтобы приступить к разработке приложений iOS 11. Он описывает, как скачать Xcode и обновление Visual Studio 2017.
+description: В этом документе описываются шаги, которые необходимо выполнить, чтобы приступить к разработке приложений iOS 11. Он описывает, как скачать Xcode и обновлять 2019 г. Visual Studio.
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 697ae79ea7dd9aaeedb1400a405a4ca5c4dc3d1e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec69cd7d176ca4047ffa37fcc2ed8554bd9f9353
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123639"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854604"
 ---
 # <a name="getting-started-with-ios-11"></a>Начало работы с iOS 11
 
@@ -27,7 +27,7 @@ _Скачайте и установите Xcode 9_
 
 Выполните следующие действия, чтобы убедиться, что вы готовы работать с последней версии iOS, tvOS и watchOS функции.
 
-1. **Установите последнюю Xcode** — [загрузить](https://developer.apple.com/download/) и установите последнюю версию _Xcode 9_.
+1. **Установите последнюю Xcode** — [загрузить](https://developer.apple.com/download/) и установите последнюю версию _Xcode 10_.
 
 2. **Выполните первый Xcode** — запустить Xcode один раз, прежде чем обновление и работе с Visual Studio для Mac, так как он устанавливает некоторые средства, Xamarin требуется в первый раз она выполняется.
 

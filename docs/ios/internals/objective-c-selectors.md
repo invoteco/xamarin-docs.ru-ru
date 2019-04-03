@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: cf39d548dc83fae67e8703d42e9387b8f19504e6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669757"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870181"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Селекторы Objective-C в Xamarin.iOS
 
@@ -137,15 +137,15 @@ else
 
 ### <a name="selector-targets"></a>Выбор целевых объектов
 
-Селектор целевой объект является экземпляром объекта или класс Objective-C. Если целевой объект является экземпляром и поступили связанный тип Xamarin.iOS, используйте [ `ObjCRuntime.INativeObject.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.INativeObject.Handle/) свойство.
+Селектор целевой объект является экземпляром объекта или класс Objective-C. Если целевой объект является экземпляром и поступили связанный тип Xamarin.iOS, используйте [ `ObjCRuntime.INativeObject.Handle` ](xref:ObjCRuntime.INativeObject.Handle) свойство.
 
-Если целевой объект — это класс, используйте [ `ObjCRuntime.Class` ](https://developer.xamarin.com/api/type/ObjCRuntime.Class/) для получения ссылки на экземпляр класса, затем с помощью [ `Class.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.Class.Handle/) свойство.
+Если целевой объект — это класс, используйте [ `ObjCRuntime.Class` ](xref:ObjCRuntime.Class) для получения ссылки на экземпляр класса, затем с помощью [ `Class.Handle` ](xref:ObjCRuntime.Class.Handle) свойство.
 
 ### <a name="selector-names"></a>Селектор имен
 
 Селектор перечислены в документации компании Apple. Например [ `NSString` ](https://developer.apple.com/documentation/foundation/nsstring?language=objc) включает в себя [ `sizeWithFont:` ](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) и [ `sizeWithFont:forWidth:lineBreakMode:` ](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) селекторов. Внедренные и конечные двоеточие являются частью имени селектора и не может быть опущено.
 
-Получив имя селектора, можно создать [ `ObjCRuntime.Selector` ](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) экземпляр для него.
+Получив имя селектора, можно создать [ `ObjCRuntime.Selector` ](xref:ObjCRuntime.Selector) экземпляр для него.
 
 ### <a name="calling-objcmsgsend"></a>Вызов objc_msgSend
 

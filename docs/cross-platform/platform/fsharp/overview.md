@@ -1,17 +1,17 @@
 ---
 title: Начало работы сF#
-description: В этом документе описывается, как дополнительные F# и использовать его для создания приложений Xamarin с Visual Studio 2017 и Visual Studio для Mac.
+description: В этом документе описывается, как дополнительные F# и использовать его для создания приложений Xamarin с Visual Studio 2019 и Visual Studio для Mac.
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 044767d52588e48e563a40cb70ef0bfe910f9a3e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2f67983addd03a065383a2940d6e6dfc7076f2be
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112836"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854317"
 ---
 # <a name="getting-started-with-f35"></a>Приступая к работе с F&#35;
 
@@ -50,8 +50,8 @@ F# Руководства также могут создаваться внут�
 
 Имеется множество информацию в Интернете для получения преимуществах F# языка, охватывающий все Специальная подготовка. Ниже перечислены некоторые из наши рекомендации.
 
--  [F# Software Foundation](http://fsharp.org)
--  [Visual F# портал разработки](http://go.microsoft.com/fwlink/?LinkID=234174)
+-  [F#Software Foundation](http://fsharp.org)
+-  [Портал разработки в Visual F#](http://go.microsoft.com/fwlink/?LinkID=234174)
 -  [Visual F# коллекции исходных кодов](http://go.microsoft.com/fwlink/?LinkID=124614)
 -  [Visual F# программирования математические и статистика](http://go.microsoft.com/fwlink/?LinkId=235173)
 -  [Visual F# Создание диаграмм](http://go.microsoft.com/fwlink/?LinkId=235176)

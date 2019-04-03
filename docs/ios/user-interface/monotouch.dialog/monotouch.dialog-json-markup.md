@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 8edabfc6fa3988af0dd38dbfd9daeb1c4003c33e
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670770"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870135"
 ---
 # <a name="monotouchdialog-json-markup"></a>Разметка Json MonoTouch.Dialog
 
-На этой странице описываются разметка Json, принят в MonoTouch.Dialog [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
+На этой странице описываются разметка Json, принят в MonoTouch.Dialog [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
 Сообщите нам, начните с примером. Ниже приведен полный файл Json, который может быть передан в JsonElement.
 
@@ -153,7 +153,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement
 
 -  `header` (необязательно)
 -  `footer` (необязательно)
--  Массив `elements`
+-  `elements` array
 
 
  <a name="header" />

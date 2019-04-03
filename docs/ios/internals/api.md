@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/25/2015
-ms.openlocfilehash: d43ee2ef3f6d66042f489079a0f969509adfb946
-ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
+ms.openlocfilehash: a4637099907dd75a3ab58222dbb4ef42b42e19c3
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54879346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870070"
 ---
 # <a name="xamarinios-api-overview"></a>Общие сведения об API Xamarin.iOS
 
 Xamarin.iOS предоставляет C# / CIL привязки к API cocoatouch, облегченную и также предоставляет доступ к API-интерфейсы ECMA CIL и различных других API-интерфейсы .NET.
 
- **Справочник по API**: Справочник по API доступна на [ https://developer.xamarin.com/api/ ](https://docs.microsoft.com/dotnet/api/), начинаются с [Xamarin.iOS Framework узел](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8) для привязки API для iPhone собственного API-интерфейсы или перейдите в раздел [узел библиотеки базовых классов](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) документацию по .NET API.
+ **Справочник по API**: Справочник по API доступна на [docs.microsoft.com/dotnet/api/](https://docs.microsoft.com/dotnet/api/), начинаются с [ссылку Xamarin.iOS](https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12) для привязки API для iPhone собственного API-интерфейсы или перейдите в раздел [библиотеки базовых классов узел](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8) документацию по .NET API.
 
  **Проектирование API**: Проектирование API для привязки CIL/Objective-C рассматривается в [проектирование API Xamarin.iOS](~/ios/internals/api-design/index.md) документа и он описывает, как мы привязки Objective-C и C API-интерфейсы из cocoatouch, облегченную и предоставляются их C#/CIL мира.
 

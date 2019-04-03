@@ -6,16 +6,19 @@ ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: fdd602da932e0c36cadade50476babba51d67398
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855202"
 ---
 # <a name="xamarin-live-player-app"></a>Приложение Xamarin Live Player
 
 ![Функция предварительного просмотра](~/media/shared/preview.png)
+
+> [!NOTE]
+> Динамический просмотр проигрыватель доступен только в Visual Studio 2017.
 
 После установки приложения на телефоне, выполните [инструкции по установке](~/tools/live-player/install.md) для подключения к компьютеру. Попробуйте выполнить одно из [примеры приложений](~/tools/live-player/samples.md) чтобы заставить ее работать.
 
@@ -35,7 +38,7 @@ ms.locfileid: "50113174"
 
 Нажмите кнопку "Сведения" **(i)** в нижней части приложения, чтобы отобразить **параметры** меню:
 
-[![Снимок экрана: меню "Параметры"](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Screenshot меню "Параметры"](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Журналы
 
@@ -47,13 +50,13 @@ ms.locfileid: "50113174"
 - Сведения о версии.
 - Отправьте отзыв.
 
-[![Снимок экрана: параметры](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![Screenshot параметры](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>Управление устройствами
 
 Для подключения устройства в первый раз, следуйте инструкциям в [требования и настройка](~/tools/live-player/install.md). Можно связать несколько устройств и управлять ими с помощью интегрированной среды разработки.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 В Visual Studio, выберите **средства > Xamarin Live Player > Управление устройствами...**
 
@@ -67,7 +70,7 @@ ms.locfileid: "50113174"
 
 Это окно также можно открыть из списка устройств.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 В Visual Studio для Mac выберите **Инструменты > Управление устройствами (Xamarin Live Player)...**
 
@@ -91,6 +94,5 @@ ms.locfileid: "50113174"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Ограничения](~/tools/live-player/limitations.md)
 - [Устранение неполадок](~/tools/live-player/troubleshooting.md)
-- [Образцы Xamarin Live Player](samples.md)
+- [Примеры для использования с Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

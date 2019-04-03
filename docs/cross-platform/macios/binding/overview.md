@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: d29239d986ebfe153381915dbe0f4bfbbe738007
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667968"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870343"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Общие сведения о привязки Objective-C
 
@@ -88,7 +88,7 @@ namespace Example.Binding {
 }
 ```
 
-В-третьих, см. в документации Objective-C и создайте [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) экземпляров для каждого выбора, вы хотите использовать. Поместите их в теле класса:
+В-третьих, см. в документации Objective-C и создайте [ObjCRuntime.Selector](xref:ObjCRuntime.Selector) экземпляров для каждого выбора, вы хотите использовать. Поместите их в теле класса:
 
 ```csharp
 static Selector selInit       = new Selector("init");
@@ -116,7 +116,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-В пятых предоставляют методы для каждого из селекторы, объявленной в шаге 3. В них используются `objc_msgSend()` для вызова селектора на собственный объект. Обратите внимание на использование [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) для преобразования `IntPtr` в соответствующим образом типизированного `NSObject` (sub) типа. Если этот метод можно было вызвать из кода Objective-C, член должен *необходимо* быть **виртуального**.
+В пятых предоставляют методы для каждого из селекторы, объявленной в шаге 3. В них используются `objc_msgSend()` для вызова селектора на собственный объект. Обратите внимание на использование [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*) для преобразования `IntPtr` в соответствующим образом типизированного `NSObject` (sub) типа. Если этот метод можно было вызвать из кода Objective-C, член должен *необходимо* быть **виртуального**.
 
 ```csharp
 [Export("nextObject")]

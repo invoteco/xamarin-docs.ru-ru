@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617583"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869732"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 в Xamarin.iOS
 
@@ -20,7 +20,7 @@ ML лежит на iOS, macOS, tvOS и watchOS технологии машинн
 
 В iOS 12 Core ML включает пакетной обработки API. Этот API позволяет более эффективно Core ML и обеспечивает повышение производительности в сценариях, где используется модель, чтобы сделать последовательность прогнозов.
 
-## <a name="sample-app-marshabitatcoremltimer"></a>Пример приложения: MarsHabitatCoreMLTimer
+## <a name="sample-app-marshabitatcoremltimer"></a>Пример приложения. MarsHabitatCoreMLTimer
 
 Чтобы продемонстрировать пакетных прогнозов с помощью Core ML, взгляните на [MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer) примера приложения. В этом образце используется модель Core ML обучаться для прогнозирования затрат на создание habitat на режим Mars, на основе различных входных данных: число панелей Солнечной, число greenhouses и число акр.
 
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for - цикл
 
-`for` Версии цикла теста наивно перебор указанное число входов, вызвав [ `GetPrediction` ](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) для каждого и отменяя результат. Метод времени, время, необходимое для создания прогнозов:
+`for` Версии цикла теста наивно перебор указанное число входов, вызвав [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) для каждого и отменяя результат. Метод времени, время, необходимое для создания прогнозов:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,7 +94,7 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (новый пакет API)
 
-Создает в пакетной версии теста `MLArrayBatchProvider` объект из входного массива (так как это обязательный входной параметр для `GetPredictions` метод), создает [`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+Создает в пакетной версии теста `MLArrayBatchProvider` объект из входного массива (так как это обязательный входной параметр для `GetPredictions` метод), создает [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 Объект, который предотвращает прогноза вычислений из ограниченных для ЦП и использует `GetPredictions` API, чтобы получить прогнозы, снова отменяя результат:
 
 ```csharp

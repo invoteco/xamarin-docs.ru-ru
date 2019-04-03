@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 3b5eae4d218fdc66f7f99f0aab8aa32af3cbabf4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: df50b4280335001f2d27ff23a91e4098eed3ba99
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870213"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Поддерживаемые сборки с Xamarin для tvOS
 
@@ -28,7 +28,7 @@ ms.locfileid: "57667368"
 |Mono.Security.dll|1.0|Криптографические API.|
 |monotouch.dll|1.0|Эта сборка содержит [C# привязки к платформе CocoaTouch API](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|OpenTK.dll|1.0|OpenGL/OpenAL объектно ориентированные API-интерфейсы, [расширенной поддержки устройства iPhone](https://developer.xamarin.com/api/namespace/OpenGLES/).|
+|OpenTK.dll|1.0|OpenGL/OpenAL объектно ориентированные API-интерфейсы, [расширенной поддержки устройства iPhone](xref:OpenGLES).|
 |System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
 |System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Data.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx), [с некоторые функциональные возможности удаления](~/ios/data-cloud/system.data.md).|
@@ -40,8 +40,8 @@ ms.locfileid: "57667368"
 |System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <ul><li>Система</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
 |System.Transactions.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); частью [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) поддержки.|
 |System.Web.Services|1.1|[Базовых веб-служб](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) из профиля .NET 3.5, с сервера компоненты, удаленные.|
-|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
-|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 
 <a name="Summary" />
 

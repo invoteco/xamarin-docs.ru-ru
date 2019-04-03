@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667326"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870265"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Ссылки на собственные библиотеки в Xamarin.iOS
 
@@ -122,8 +122,7 @@ lipo -info /full/path/to/libraryname.a
 -  Определить, какую библиотеку, он находится в
 -  Написать соответствующий объявление P/Invoke
 
-
-При использовании P/Invoke, необходимо указать путь к библиотеке, связываемых с. Когда с помощью iOS общие библиотеки, вы можете либо жестко закодировать путь или можно использовать константы удобства, которые мы определили в наших [класс константы](https://developer.xamarin.com/api/type/Constants/), эти константы должны охватывать iOS общих библиотек.
+При использовании P/Invoke, необходимо указать путь к библиотеке, связываемых с. Если с помощью iOS общие библиотеки, вы можете либо жестко закодировать путь или можно использовать константы удобства, которые мы определили в наших `Constants`, эти константы должны охватывать iOS общих библиотек.
 
 Например, если вы хотите вызвать метод UIRectFrameUsingBlendMode из библиотеки UIKit компании Apple, который имеет следующую сигнатуру в C:
 

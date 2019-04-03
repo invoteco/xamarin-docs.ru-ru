@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: edaf9d90e019729f69f721c0a92826c0148db8df
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870096"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Кнопки действий динамического уведомлений в Xamarin.iOS
 
@@ -131,15 +131,15 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
 В примере приложения контроллер представления расширение notification content изменяет кнопки действий только в том случае, при ответе на коснуться кнопки действия уже существующие.
 
 > [!NOTE]
-> Расширение содержимого может отвечать на действия нажатия кнопки в контроллер представления уведомление [ `DidReceiveNotificationResponse` ](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/) метод, объявленный как часть [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/).
+> Расширение содержимого может отвечать на действия нажатия кнопки в контроллер представления уведомление [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) метод, объявленный как часть [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
 > На то, что она имеет одно имя с `DidReceiveNotificationResponse` метод [описанных выше](#in-app-handling-of-notification-action-buttons), это другой метод.
 >
-> После расширение notification content обработав путем нажатия кнопки, можно ли определить основного приложения для обработки этого же нажатия кнопки. Чтобы сделать это, необходимо передать соответствующее значение [UNNotificationContentExtensionResponseOption](https://developer.xamarin.com/api/type/UserNotificationsUI.UNNotificationContentExtensionResponseOption/) к очередной обработчик завершения:
+> После расширение notification content обработав путем нажатия кнопки, можно ли определить основного приложения для обработки этого же нажатия кнопки. Чтобы сделать это, необходимо передать соответствующее значение [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) к очередной обработчик завершения:
 >
-> - [`Dismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.Dismiss/) Указывает, что интерфейс уведомлений должно быть закрыто и что основное приложение не нужно обрабатывать нажатия кнопки.
-> - [`DismissAndForwardAction`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DismissAndForwardAction/) Указывает, что интерфейс уведомлений должно быть закрыто и основного приложения необходимо также обрабатывать нажатия кнопки.
-> - [`DoNotDismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DoNotDismiss/) Указывает, что интерфейс уведомлений не должно быть закрыто и что основное приложение не нужно обрабатывать нажатия кнопки.
+> - `Dismiss` Указывает, что интерфейс уведомлений должно быть закрыто и что основное приложение не нужно обрабатывать нажатия кнопки.
+> - `DismissAndForwardAction` Указывает, что интерфейс уведомлений должно быть закрыто и основного приложения необходимо также обрабатывать нажатия кнопки.
+> - `DoNotDismiss` Указывает, что интерфейс уведомлений не должно быть закрыто и что основное приложение не нужно обрабатывать нажатия кнопки.
 
 Модуль содержимого `DidReceiveNotificationResponse` метод определяет, какая кнопка была касание, поворачивает изображение в интерфейс уведомлений и отображение или скрытие **Сброс** кнопки действия:
 

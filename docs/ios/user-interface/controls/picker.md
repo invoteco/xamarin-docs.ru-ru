@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/14/2018
-ms.openlocfilehash: 525ddf3c8cfc457738099c3afbb162fd3fb9239b
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 946cba08e1e504962c093f67e336d72b654a3a41
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233579"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870005"
 ---
 # <a name="picker-control-in-xamarinios"></a>Средство выбора элемента управления в Xamarin.iOS
 
@@ -131,7 +131,7 @@ public class PeopleModel : UIPickerViewModel
 
 ### <a name="customizing-a-pickers-appearance"></a>Настройка внешнего вида управляющий элемент выбора
 
-Чтобы настроить внешний вид управляющий элемент выбора, используйте [`UIPickerView.UIPickerViewAppearance`](https://developer.xamarin.com/api/type/UIKit.UIPickerView+UIPickerViewAppearance/)
+Чтобы настроить внешний вид управляющий элемент выбора, используйте [`UIPickerView.UIPickerViewAppearance`](xref:UIKit.UIPickerView.UIPickerViewAppearance)
 класс, или переопределить [ `GetView` ](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) и [ `GetRowHeight` ](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) методы в `UIPickerViewModel`.
 
 ## <a name="uidatepicker"></a>UIDatePicker

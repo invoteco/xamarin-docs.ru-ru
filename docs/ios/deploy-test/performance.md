@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671122"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870395"
 ---
 # <a name="xamarinios-performance"></a>Производительность Xamarin.iOS
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 Здесь содержащийся объект не проверяет активности родительского элемента. Однако родительский элемент проверяет активность дочернего путем вызова к `container.AddSubView`.
 
-Это происходит и в интерфейсах API iOS на основе шаблона делегата или источника данных, где равноправный класс содержит реализацию, например при задании свойства [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
-или [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+Это происходит и в интерфейсах API iOS на основе шаблона делегата или источника данных, где равноправный класс содержит реализацию, например при задании свойства [`Delegate`](xref:UIKit.UITableView.Delegate*)
+или [`DataSource`](xref:UIKit.UITableView.DataSource*)
 в классе [`UITableView`](xref:UIKit.UITableView).
 
-В случае с классами, которые создаются исключительно для реализации протокола, например [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), вместо создания подкласса вы можете просто реализовать интерфейс в классе, переопределить метод и присвоить свойство `DataSource` указателю `this`.
+В случае с классами, которые создаются исключительно для реализации протокола, например [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource), вместо создания подкласса вы можете просто реализовать интерфейс в классе, переопределить метод и присвоить свойство `DataSource` указателю `this`.
 
 #### <a name="weak-attribute"></a>Слабый атрибут
 
@@ -278,7 +278,7 @@ class MyTableSource : UITableViewSource
 
 В играх выполнение игровой логики и обновление экрана происходят с высокой частотой. Как правило, экран обновляется с частотой от тридцати до шестидесяти кадров в секунду. Некоторые разработчики стремятся достичь максимальной частоты обновления экрана и пытаются превзойти показатель в шестьдесят кадров в секунду.
 
-Однако сервер дисплея производит его обновление с максимальной частотой шестьдесят раз в секунду. Поэтому попытка обновлять экран чаще может привести к разрывам изображения и небольшим задержкам. Код лучше структурировать так, чтобы обновление экрана было синхронизировано с обновлением дисплея. Этого можно достичь с помощью класса [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), который представляет собой таймер, подходящий для визуализации и игр с частотой обновления шестьдесят кадров в секунду.
+Однако сервер дисплея производит его обновление с максимальной частотой шестьдесят раз в секунду. Поэтому попытка обновлять экран чаще может привести к разрывам изображения и небольшим задержкам. Код лучше структурировать так, чтобы обновление экрана было синхронизировано с обновлением дисплея. Этого можно достичь с помощью класса [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink), который представляет собой таймер, подходящий для визуализации и игр с частотой обновления шестьдесят кадров в секунду.
 
 ## <a name="avoid-core-animation-transparency"></a>Избежание прозрачности в базовой анимации
 

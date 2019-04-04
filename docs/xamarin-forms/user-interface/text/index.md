@@ -1,14 +1,19 @@
 ---
 title: Текст в Xamarin.Forms
-description: 'Xamarin.Forms есть три основных представления для работы с текстом, и в этой статье объясняется, как их использовать для ввода и отображения текста в приложениях Xamarin.Forms.'
+description: Xamarin.Forms есть три основных представления для работы с текстом, и в этой статье объясняется, как их использовать для ввода и отображения текста в приложениях Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
+ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557094"
 ---
-
 # <a name="text-in-xamarinforms"></a>Текст в Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)

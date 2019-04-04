@@ -1,13 +1,18 @@
 ---
 title: Переносимые Visual Basic.NET
-description: 'В этом руководстве объясняется, как Visual Basic можно использовать для записи проекты переносимой библиотеки классов (PCL), которые могут использоваться в решениях, предназначенных для Xamarin.iOS и Xamarin.Android.'
+description: В этом руководстве объясняется, как Visual Basic можно использовать для записи проекты переносимой библиотеки классов (PCL), которые могут использоваться в решениях, предназначенных для Xamarin.iOS и Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
+ms.openlocfilehash: e4c8c43b4df1a7bfc5436f14564c6d0164216c46
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669249"
 ---
-
 # <a name="portable-visual-basicnet"></a>Переносимые Visual Basic.NET
 
 Проекты Xamarin iOS и Android не поддерживаются Visual Basic; Однако разработчики могут использовать переносимые библиотеки классов для миграции существующего кода Visual Basic для iOS и Android, или записи значительную часть логики своих приложений в Visual Basic. Приложения Xamarin.Forms можно создавать полностью в Visual Basic (за исключением фонового кода XAML, пользовательские модули подготовки отчетов и служб зависимостей).

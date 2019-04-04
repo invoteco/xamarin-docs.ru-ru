@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
+ms.openlocfilehash: ca8b554e03c4e8339922ca99619245a45bd08e1d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669093"
 ---
-
 # <a name="android-wear"></a>Android Wear
 
 Android Wear — это версия Android, предназначенный для носимого устройств, таких как смарт-часы. Этот раздел содержит инструкции по установке и настройке средств, необходимых для разработки одежды, пошаговое руководство по созданию первого устройства износа и список примеров, который можно использовать для создания собственной ее приложений.

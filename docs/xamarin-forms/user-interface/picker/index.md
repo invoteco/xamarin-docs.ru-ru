@@ -1,14 +1,19 @@
 ---
 title: Средство выбора Xamarin.Forms
-description: 'Средство выбора Xamarin.Forms отображает краткий список элементов, из которых пользователь может выбрать элемент. В этой статье объясняется, как использовать класс выбора для выбора элемента из списка данных.'
+description: Средство выбора Xamarin.Forms отображает краткий список элементов, из которых пользователь может выбрать элемент. В этой статье объясняется, как использовать класс выбора для выбора элемента из списка данных.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
+ms.openlocfilehash: dc39fd9c129fb63fa4a3a73b15aea4204a38cdbd
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557273"
 ---
-
 # <a name="xamarinforms-picker"></a>Средство выбора Xamarin.Forms
 
 _Представление выбора является элемент управления для выбора элемента из списка данных._

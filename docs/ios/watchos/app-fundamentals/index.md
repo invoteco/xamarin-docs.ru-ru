@@ -1,14 +1,19 @@
 ---
 title: принципы работы приложения watchOS
-description: 'Этот документ содержит ссылки на различные документы, которые описывают основные понятия, основа для разработки приложений watchOS, с помощью Xamarin.'
+description: Этот документ содержит ссылки на различные документы, которые описывают основные понятия, основа для разработки приложений watchOS, с помощью Xamarin.
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
+ms.openlocfilehash: d47c4d705b18a7bf295f2f88aed5a591d21b6ebd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668170"
 ---
-
 # <a name="watchos-application-fundamentals"></a>принципы работы приложения watchOS
 
 ##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[Родительское приложение](~/ios/watchos/app-fundamentals/parent-app.md)

@@ -1,13 +1,18 @@
 ---
 title: Введение в веб-служб
-description: 'В этом руководстве показано, как использовать технологии разных веб-служб. Рассматриваются связи со службами REST, SOAP служб и служб Windows Communication Foundation.'
+description: В этом руководстве показано, как использовать технологии разных веб-служб. Рассматриваются связи со службами REST, SOAP служб и служб Windows Communication Foundation.
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
+ms.openlocfilehash: afebe7f491855844e18bf054d665cf8d54e8f353
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672395"
 ---
-
 # <a name="introduction-to-web-services"></a>Введение в веб-служб
 
 _В этом руководстве показано, как использовать технологии разных веб-служб. Рассматриваются связи со службами REST, SOAP служб и служб Windows Communication Foundation._

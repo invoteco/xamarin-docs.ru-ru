@@ -1,13 +1,18 @@
 ---
 title: Приступая к работе с Objective-C
-description: 'Здесь описано, как приступить к использованию внедрение .NET с Objective-C. Обсуждаются требования, установка внедрение .NET из NuGet и поддерживаемые платформы.'
+description: Здесь описано, как приступить к использованию внедрение .NET с Objective-C. Обсуждаются требования, установка внедрение .NET из NuGet и поддерживаемые платформы.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
+ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670224"
 ---
-
 # <a name="getting-started-with-objective-c"></a>Приступая к работе с Objective-C
 
 Это начальной странице начала работы для Objective-C, основные сведения для всех поддерживаемых платформ.

@@ -1,13 +1,18 @@
 ---
 title: Приступая к работе с Java
-description: 'В этом документе описывается, как приступить к использованию внедрение .NET с помощью Java. В нем описывается требования к системе, установки и поддерживаемых платформ.'
+description: В этом документе описывается, как приступить к использованию внедрение .NET с помощью Java. В нем описывается требования к системе, установки и поддерживаемых платформ.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
+ms.openlocfilehash: 79a483743946c4f7509833867f2afe4b1e055183
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667182"
 ---
-
 # <a name="getting-started-with-java"></a>Приступая к работе с Java
 
 Это начальной странице начала работы для Java, которые описаны основы для всех поддерживаемых платформ.

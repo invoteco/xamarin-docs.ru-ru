@@ -1,13 +1,18 @@
 ---
 title: Введение в разработку игр с помощью Xamarin
-description: 'Этот документ содержит обзор разработки игр с помощью Xamarin, описывающие созданием игр и выборки технологий, доступных для использования с Xamarin.iOS и Xamarin.Android.'
+description: Этот документ содержит обзор разработки игр с помощью Xamarin, описывающие созданием игр и выборки технологий, доступных для использования с Xamarin.iOS и Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
+ms.openlocfilehash: 2fa40925b67e60c5e03e3059c7c369f2a53ce540
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672434"
 ---
-
 # <a name="introduction-to-game-development-with-xamarin"></a>Введение в разработку игр с помощью Xamarin
 
 Разработка игр может оказаться очень сложное, особенно учитывая, как легко можно публикация приложения на мобильных платформах. В этой статье рассматриваются основные понятия и технологии, относящиеся к разработке игр, которые помогут вам создавать игры, ли вашей целью является создание AAA высококачественные игры или просто для программы для интереса.

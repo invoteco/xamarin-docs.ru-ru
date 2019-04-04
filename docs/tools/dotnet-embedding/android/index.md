@@ -1,12 +1,17 @@
 ---
-title: '.NET, внедрение в Android'
+title: .NET, внедрение в Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
+ms.openlocfilehash: 6917267896cff796af4e5cff095720eaeccc7652
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671187"
 ---
-
 # <a name="net-embedding-on-android"></a>.NET, внедрение в Android
 
 В некоторых случаях может потребоваться добавить в существующий проект Android native библиотеку Xamarin .NET. Чтобы сделать это, можно использовать [Embeddinator до 4000](https://www.nuget.org/packages/Embeddinator-4000/) средство, чтобы превратить библиотеку .NET в собственной библиотеки, могут быть включены в собственное приложение Android на основе Java.

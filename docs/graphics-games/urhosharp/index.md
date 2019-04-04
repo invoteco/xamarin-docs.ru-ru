@@ -1,11 +1,17 @@
 ---
 title: UrhoSharp - Engine-трехмерного
-description: 'UrhoSharp является кросс платформенных высокоуровневые двухмерной и трехмерной графики механизм, который может использоваться для создания анимированных 3D и 2D автоматически для приложений с помощью геометрических объектов, материалов, источников света и камер.'
+description: UrhoSharp является кросс платформенных высокоуровневые двухмерной и трехмерной графики механизм, который может использоваться для создания анимированных 3D и 2D автоматически для приложений с помощью геометрических объектов, материалов, источников света и камер.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
+ms.openlocfilehash: c008711a12729779312ae41388495e2058b4f27b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670281"
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - Engine-трехмерного
 

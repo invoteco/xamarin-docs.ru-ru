@@ -1,6 +1,6 @@
 ---
 title: Реализация фрагментов - Пошаговое руководство
-description: 'В этой статье описано, как использовать фрагменты для разработки приложений Xamarin.Android.'
+description: В этой статье описано, как использовать фрагменты для разработки приложений Xamarin.Android.
 ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
+ms.openlocfilehash: 2ff4729e68497391d41521da26917571c146b541
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667273"
 ---
-
 # <a name="implementing-fragments---walkthrough"></a>Реализация фрагментов - Пошаговое руководство
 
 _Фрагменты являются автономное модульными компонентами, которые могут помочь устранить сложности приложений Android, предназначенных для устройств с различными размерами экранов. В этой статье описано, как создавать и использовать фрагменты при разработке приложений Xamarin.Android._

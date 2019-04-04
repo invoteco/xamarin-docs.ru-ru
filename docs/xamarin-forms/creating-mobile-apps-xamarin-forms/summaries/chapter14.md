@@ -1,22 +1,22 @@
 ---
 title: Сводка Глава 14. Абсолютный макет
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 14. Абсолютный макет'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 14. Абсолютный макет
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: a67a2e12a12039755970a78739ea2ca3d2ffae08
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053494"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870239"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Сводка Глава 14. Абсолютный макет
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 Как и `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) является производным от `Layout<View>` и наследует `Children` свойство. `AbsoluteLayout` реализует систему макета, которая требует от программиста для указания положения его дочерних элементов и, возможно, их размера. Позиция задается верхнего левого угла дочернего элемента относительно верхнего левого угла `AbsoluteLayout` в аппаратно независимых единицах. `AbsoluteLayout` также реализует пропорционально позиционирования и возможность изменения размера.
 
@@ -26,7 +26,7 @@ ms.locfileid: "53053494"
 
 ## <a name="absolutelayout-in-code"></a>AbsoluteLayout в коде
 
-Можно добавить дочерний элемент `Children` коллекцию `AbsoluteLayout` с использованием стандарта [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) метод, но `AbsoluteLayout` также предоставляет расширенную [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) метод, который позволяет указать [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Другой [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) метод требует только [ `Point` ](xref:Xamarin.Forms.Point), при этом дочерние неограниченного и изменяет свой размер.
+Можно добавить дочерний элемент `Children` коллекцию `AbsoluteLayout` с использованием стандарта [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) метод, но `AbsoluteLayout` также предоставляет расширенную [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) метод, который позволяет указать [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Другой [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) метод требует только [ `Point` ](xref:Xamarin.Forms.Point), при этом дочерние неограниченного и изменяет свой размер.
 
 Можно создать `Rectangle` со значением [конструктор](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) , требуется четыре значения &mdash; первые два, указывающий положение верхнего левого угла дочернего элемента относительно его родительского элемента, а вторые два, указывающее, размер дочернего элемента. Или можно использовать [конструктор](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) требующее `Point` и [ `Size` ](xref:Xamarin.Forms.Size) значение.
 

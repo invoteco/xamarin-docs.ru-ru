@@ -1,14 +1,19 @@
 ---
 title: Проектирование API Xamarin.iOS
-description: 'В этом документе описываются некоторые из руководящих принципов, позволяют спроектировать API-интерфейсы Xamarin.iOS и как они связаны с Objective-C.'
+description: В этом документе описываются некоторые из руководящих принципов, позволяют спроектировать API-интерфейсы Xamarin.iOS и как они связаны с Objective-C.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
+ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870369"
 ---
-
 # <a name="xamarinios-api-design"></a>Проектирование API Xamarin.iOS
 
 Помимо основных библиотеках базовых классов, которые являются частью Mono [Xamarin.iOS](http://www.xamarin.com/iOS) поставляется с привязками для iOS различные API-интерфейсы, позволяющие разработчикам создавать собственные приложения iOS с Mono.
@@ -57,7 +62,7 @@ ms.date: 03/21/2017
 
 - Собственные типы C#:
 
-  - [`NSString` становится `string`](~/ios/internals/api-design/nsstring.md)
+  - [`NSString` becomes `string`](~/ios/internals/api-design/nsstring.md)
   - Включить `int` и `uint` параметры, которые должны были перечислений в C# перечисления и перечисления C# с `[Flags]` атрибуты
   - А не зависящий от типа `NSArray` объекты, предоставляют массивов в качестве строго типизированных массивов.
   - Для событий и уведомлений предоставьте пользователям возможность выбора из:
@@ -80,7 +85,7 @@ Xamarin.iOS содержит ряд для сборки, которые сост
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
-[ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/) пространства имен позволяет разработчикам устранить мирами между C# и Objective-C.
+[ObjCRuntime](xref:ObjCRuntime) пространства имен позволяет разработчикам устранить мирами между C# и Objective-C.
 Это новую привязку, предназначенные специально для iOS, основано на опыте Cocoa # и Gtk #.
 
 <a name="MonoTouch.Foundation" />
@@ -201,13 +206,13 @@ PreserveAttribute — это настраиваемый атрибут, сооб
 
 #### <a name="opengles"></a>OpenGLES
 
-В отношении OpenGLES, мы распространять [измененная версия](https://developer.xamarin.com/api/namespace/OpenTK/) из [OpenTK](http://www.opentk.com/) API, объектно ориентированного привязку OpenGL, которые были изменены для использования CoreGraphics типы и структуры данных, а также предоставление доступа только к функции, которая доступна на устройствах iOS.
+В отношении OpenGLES, мы распространять [измененная версия](xref:OpenTK) из [OpenTK](http://www.opentk.com/) API, объектно ориентированного привязку OpenGL, которые были изменены для использования CoreGraphics типы и структуры данных, а также предоставление доступа только к функции, которая доступна на устройствах iOS.
 
-OpenGLES 1.1 функциональные возможности доступны в тип ES11.GL, задокументированы [здесь](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES11.GL/) типа.
+OpenGLES 1.1 функциональные возможности доступны в тип ES11.GL, задокументированы [здесь](xref:OpenTK.Graphics.ES11.GL) типа.
 
-OpenGLES 2.0 функциональные возможности доступны в тип ES20.GL, задокументированы [здесь](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES20.GL/) типа.
+OpenGLES 2.0 функциональные возможности доступны в тип ES20.GL, задокументированы [здесь](xref:OpenTK.Graphics.ES20.GL) типа.
 
-OpenGLES 3.0 функциональные возможности доступны в тип ES30.GL, задокументированы [здесь](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/) типа.
+OpenGLES 3.0 функциональные возможности доступны в тип ES30.GL, задокументированы [здесь](xref:OpenTK.Graphics.ES30.GL) типа.
 
 
 ### <a name="binding-design"></a>Привязка проектирования

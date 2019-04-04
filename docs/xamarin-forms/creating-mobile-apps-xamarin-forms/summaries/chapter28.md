@@ -1,22 +1,22 @@
 ---
 title: Сводка Глава 28. Расположение и карты
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 28. Расположение и карты'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 28. Расположение и карты
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bcca7bc7ac56b745945b6d7daef3c4ddd634b486
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059409"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870421"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Сводка Глава 28. Расположение и карты
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > Заметки на этой странице указывать области, где различаются Xamarin.Forms материал, представленный в книге.
@@ -62,7 +62,7 @@ Xamarin.Forms `Map` классы не включают средства для �
 
 #### <a name="the-ios-location-manager"></a>Диспетчером местоположения iOS
 
-Реализация iOS `ILocationTracker` — [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) классе, который делает использование iOS [ `CLLocationManager` ](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/).
+Реализация iOS `ILocationTracker` — [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) классе, который делает использование iOS [ `CLLocationManager` ](xref:CoreLocation.CLLocationManager).
 
 #### <a name="the-android-location-manager"></a>Диспетчер Android расположение
 
@@ -146,7 +146,7 @@ Android приложениях, которые извлекают из мест�
 
 `VisibleRegion` имеет тип [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), класс с четырьмя свойствами только для чтения:
 
-- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) типа [`Position`](xref:Xamarin.Forms.Maps.Position)
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) типа [`Position`](xref:Xamarin.Forms.Maps.Position).
 - [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) типа `double`, указывающее высоту отображаемую область карты
 - [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) типа `double`, указывающее ширину отображаемую область карты
 - [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) типа [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), показывающее размер наибольшего круговой области, видимой на карте

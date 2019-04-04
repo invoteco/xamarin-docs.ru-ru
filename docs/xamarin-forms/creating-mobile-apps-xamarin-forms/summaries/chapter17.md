@@ -1,22 +1,22 @@
 ---
 title: Сводка Глава 17. Совершенствование навыков работы в сетке
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 17. Совершенствование навыков работы в сетке'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 17. Совершенствование навыков работы в сетке
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050901"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869992"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Сводка Глава 17. Совершенствование навыков работы в сетке
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 [ `Grid` ](xref:Xamarin.Forms.Grid) — Это набор мощных механизм, который упорядочивает его дочерние элементы в строки и столбцы ячеек. В отличие от HTML-код, аналогичный `table` элемент, `Grid` , предназначенное исключительно для целей макета, а не презентации.
 
@@ -68,11 +68,11 @@ ms.locfileid: "53050901"
 
 ### <a name="the-grid-in-code"></a>Сетка в коде
 
-[ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) образце показано, как создать и заполнить `Grid` в коде. Вложенные свойства можно задать для каждого дочернего напрямую или косвенно путем вызова дополнительных `Add` методы, такие как [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) определяется [Grid.IGridList<T> ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid+IGridList%3CT%3E/) интерфейс.
+[ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) образце показано, как создать и заполнить `Grid` в коде. Вложенные свойства можно задать для каждого дочернего напрямую или косвенно путем вызова дополнительных `Add` методы, такие как [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) определяется [Grid.IGridList<T> ](xref:Xamarin.Forms.Grid.IGridList`1) интерфейс.
 
 ### <a name="the-grid-bar-chart"></a>На линейчатой диаграмме сетки
 
-[ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) образце показано, как добавить несколько `BoxView` элементы `Grid` с помощью массового [ `AddHorizontal` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.AddHorizontal/p/System.Collections.Generic.IEnumerable%7BXamarin.Forms.View%7D/) метод. По умолчанию эти `BoxView` элементы имеют равные ширину. Высота каждой `BoxView` можно управлять, чтобы он напоминал линейчатую диаграмму.
+[ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) образце показано, как добавить несколько `BoxView` элементы `Grid` с помощью массового [ `AddHorizontal` ](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) метод. По умолчанию эти `BoxView` элементы имеют равные ширину. Высота каждой `BoxView` можно управлять, чтобы он напоминал линейчатую диаграмму.
 
 `Grid` В **GridBarChart** пример общих папок `AbsoluteLayout` родительскому с первоначально невидимо `Frame`. Программа также задает `TapGestureRecognizer` на каждом `BoxView` использовать `Frame` для отображения сведений о строке полученные.
 
@@ -108,4 +108,4 @@ ms.locfileid: "53050901"
 
 - [Глава 17 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Примеры Глава 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [Сетка](~/xamarin-forms/user-interface/layouts/grid.md)
+- [Grid](~/xamarin-forms/user-interface/layouts/grid.md)

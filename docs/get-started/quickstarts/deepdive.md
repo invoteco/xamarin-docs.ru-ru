@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855020"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Краткое руководство по Xamarin.Forms глубокое погружение в обработку
 
@@ -80,6 +80,7 @@ ms.locfileid: "58329368"
 - **Models\Note.cs** — этот класс определяет `Note` модели, экземпляры которого хранения данных о каждом Примечание в приложении.
 - **App.xaml** — разметка XAML для класса `App`, который определяет словарь ресурсов для приложения.
 - **App.xaml.cs** — код программной части для класса `App`, который обеспечивает создание экземпляра первой страницы, отображаемой приложением на каждой платформе, а также обработку событий жизненного цикла приложения.
+- **AssemblyInfo.cs** — этот файл содержит атрибут приложения о проекте, который применяется на уровне сборки.
 - **NotesPage.xaml** — разметка XAML для `NotesPage` класс, который определяет пользовательский Интерфейс страницы, отображаемой при запуске приложения.
 - **NotesPage.xaml.cs** — кода для `NotesPage` класс, который содержит бизнес-логики, который выполняется при взаимодействии пользователя со страницей.
 - **NoteEntryPage.xaml** — разметка XAML для `NoteEntryPage` класс, который определяет пользовательский Интерфейс страницы, отображаемой, если пользователь вводит Примечание.
@@ -106,9 +107,7 @@ ms.locfileid: "58329368"
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Notes
 {
     public partial class App : Application
@@ -123,7 +122,17 @@ namespace Notes
 }
 ```
 
-Этот код задает `MainPage` свойство `App` класс [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) экземпляр, содержимое которого является `NotesPage` экземпляра. Кроме того, атрибут [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) включает компилятор XAML, что позволяет компилировать код XAML непосредственно в промежуточный язык. Дополнительные сведения см. в разделе [Компиляция XAML](~/xamarin-forms/xaml/xamlc.md).
+Этот код задает `MainPage` свойство `App` класс [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) экземпляр, содержимое которого является `NotesPage` экземпляра.
+
+Кроме того **AssemblyInfo.cs** файл содержит атрибут одного приложения, который применяется на уровне сборки:
+
+```csharp
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+```
+
+[ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) Атрибута включает компилятор XAML, таким образом, чтобы XAML компилируется непосредственно в промежуточный язык. Дополнительные сведения см. в разделе [Компиляция XAML](~/xamarin-forms/xaml/xamlc.md).
 
 ## <a name="launching-the-application-on-each-platform"></a>Запуск приложения на каждой платформе
 
@@ -412,7 +421,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 В `OnNoteAddedClicked` метод, который выполняется при добавлении новой заметки к приложению, [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) из `NoteEntryPage` присваивается новый `Note` экземпляра. В `OnListViewItemSelected` метод, который выполняется при выборе существующей заметки в [ `ListView` ](xref:Xamarin.Forms.ListView), `BindingContext` из `NoteEntryPage` набор к выбранному `Note` экземпляра, доступном через [ `e.SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) свойство.
 
 > [!IMPORTANT]
-> Хотя свойство [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) каждого *целевого* объекта можно задавать по отдельности, это не является обязательным. `BindingContext` — это особое свойство, которое наследуется всеми дочерними объектами. Таким образом, когда `BindingContext` на [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) присваивается `Note` экземпляра, все дочерние элементы `ContentPage` имеют одинаковые `BindingContext`и можно привязать к открытым свойствам объекта `Note`объекта.
+> Хотя свойство [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) каждого *целевого* объекта можно задавать по отдельности, это не является обязательным. `BindingContext` представляет собой специальное свойство, которое наследуется всеми дочерними. Таким образом, когда `BindingContext` на [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) присваивается `Note` экземпляра, все дочерние элементы `ContentPage` имеют одинаковые `BindingContext`и можно привязать к открытым свойствам объекта `Note`объекта.
 
 [ `Editor` ](xref:Xamarin.Forms.Editor) В `NoteEntryPage` затем привязывается к `Text` свойство `Note` объекта:
 
@@ -527,7 +536,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 - [Привязка данных](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Справочник по элементам управления](~/xamarin-forms/user-interface/controls/index.md)
 - [Расширения разметки XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Образцы Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Примеры для начала работы](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
-- [Справочник по API для Xamarin.Forms](xref:Xamarin.Forms)
+- [Справочник по API Xamarin.Forms](xref:Xamarin.Forms)
 - [Бесплатное самостоятельное обучение (видео)](https://university.xamarin.com/self-guided/)

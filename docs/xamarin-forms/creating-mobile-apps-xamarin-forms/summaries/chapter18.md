@@ -1,22 +1,22 @@
 ---
 title: Сводка Глава 18. MVVM
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 18. MVVM'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 18. MVVM
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050133"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870226"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Сводка Глава 18. MVVM
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 Одним из лучших способов проектирования приложения является отделение пользовательского интерфейса от базового кода, который иногда называют *бизнес-логики*. Существует несколько методик, но тот, который предназначен для сред на основе XAML называется Model-View-ViewModel или MVVM.
 
@@ -87,7 +87,7 @@ MVVM работает с привязками данных, и привязок 
 
 ### <a name="a-calculator-almost"></a>Калькулятор, почти
 
-[ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) пример делает использование обеих `Execute` и `CanExecute` методы `ICommand`. Она использует [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) библиотеки. ViewModel содержит шесть свойств типа `ICommand`. Они инициализируются из [ `Command` конструктор](xref:Xamarin.Forms.Command.%23ctor(System.Action)) и [ `Command` конструктор](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) из `Command` и [ `Command<T>` конструктор](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command%3CT%3E.Command%3CT%3E/p/System.Action%7BT%7D/System.Func%7BT,System.Boolean%7D/) из `Command<T>`. Числовые ключи арифмометр привязываются к свойству, которое инициализируется с помощью `Command<T>`и `string` аргумент `Execute` и `CanExecute` идентифицирует конкретный ключ.
+[ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) пример делает использование обеих `Execute` и `CanExecute` методы `ICommand`. Она использует [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) библиотеки. ViewModel содержит шесть свойств типа `ICommand`. Они инициализируются из [ `Command` конструктор](xref:Xamarin.Forms.Command.%23ctor(System.Action)) и [ `Command` конструктор](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) из `Command` и [ `Command<T>` конструктор](https://docs.microsoft.com/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) из `Command<T>`. Числовые ключи арифмометр привязываются к свойству, которое инициализируется с помощью `Command<T>`и `string` аргумент `Execute` и `CanExecute` идентифицирует конкретный ключ.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>Модели представлений и жизненного цикла приложения
 

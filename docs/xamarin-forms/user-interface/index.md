@@ -1,14 +1,19 @@
 ---
 title: Представления интерфейса пользователя Xamarin.Forms
-description: 'В этой статье рассматриваются элементы управления и основные понятия, которые могут быть использованы при создании пользовательского интерфейса в приложении Xamarin.Forms.'
+description: В этой статье рассматриваются элементы управления и основные понятия, которые могут быть использованы при создании пользовательского интерфейса в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
+ms.openlocfilehash: f2b569b3e38284db15eac0f4e182dfb38796cce9
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329213"
 ---
-
 # <a name="xamarinforms-user-interface-views"></a>Представления интерфейса пользователя Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/FormsGallery/)

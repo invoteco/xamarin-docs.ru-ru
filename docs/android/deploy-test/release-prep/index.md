@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
+ms.openlocfilehash: 605db1c2e0dc0cf41288f9d6c9252582ce91d525
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58071082"
 ---
-
 # <a name="preparing-an-application-for-release"></a>Подготовка приложения к выпуску
 
 После создания и тестирования кода приложения необходимо подготовить пакет для распространения. Первой задачей при подготовке этого пакета является сборка приложения для выпуска, в основном предполагающая установку некоторых атрибутов приложения.

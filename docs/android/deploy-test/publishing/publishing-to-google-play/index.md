@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668859"
 ---
-
 # <a name="publishing-to-google-play"></a>Публикация в Google Play
 
 Хотя существует множество площадок для распространения приложений, Google Play является, пожалуй, крупнейшим и наиболее посещаемым магазином приложений Android в мире. Google Play предоставляет единую платформу для распространения, рекламирования, продажи и анализа продаж приложений Android.

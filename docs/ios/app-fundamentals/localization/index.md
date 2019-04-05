@@ -1,14 +1,19 @@
 ---
 title: Локализация в Xamarin.iOS
-description: 'В этом документе описываются возможности локализации в iOS и как использовать эти функции в приложениях Xamarin.iOS. В нем описывается языка, языкового стандарта, файлов строк, изображений при запуске и многое другое.'
+description: В этом документе описываются возможности локализации в iOS и как использовать эти функции в приложениях Xamarin.iOS. В нем описывается языка, языкового стандарта, файлов строк, изображений при запуске и многое другое.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
+ms.openlocfilehash: 11926d3cf0c3954c97cdd1e92283626067c9623f
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678019"
 ---
-
 # <a name="localization-in-xamarinios"></a>Локализация в Xamarin.iOS
 
 _В этом документе описываются функции локализации в пакет SDK для iOS и способ доступа к ним с помощью Xamarin._

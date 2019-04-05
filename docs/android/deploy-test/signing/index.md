@@ -1,14 +1,19 @@
 ---
 title: Подписывание пакета приложения для Android
-description: "Сведения о подписывании пакета приложения для Android\_(APK) для публикации"
+description: Сведения о подписывании пакета приложения для Android (APK) для публикации
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
+ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506997"
 ---
-
 # <a name="signing-the-android-application-package"></a>Подписывание пакета приложения для Android
 
 В разделе [Подготовка приложения к выпуску](~/android/deploy-test/release-prep/index.md) для сборки и архивации приложения для последующего подписывания и публикации использовался **Диспетчер архивов**. Из этого раздела вы узнаете, как создать удостоверение подписывания Android, как создать новый сертификат подписи для приложений Android и как опубликовать заархивированное приложение *напрямую* на диск. Полученный неопубликованный APK-файл можно установить на устройства с Android, минуя магазин приложений.

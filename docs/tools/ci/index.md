@@ -1,13 +1,18 @@
 ---
 title: Общие сведения о непрерывной интеграции с Xamarin
-description: 'Этот документ содержит ссылки на руководства, описывающие непрерывной интеграции с Xamarin. Связанное содержимое общие сведения о непрерывной интеграции и описание сборки App Center, TeamCity и Jenkins.'
+description: Этот документ содержит ссылки на руководства, описывающие непрерывной интеграции с Xamarin. Связанное содержимое общие сведения о непрерывной интеграции и описание сборки App Center, TeamCity и Jenkins.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: lobrien
 ms.author: laobri
 ms.date: 10/23/2018
+ms.openlocfilehash: 073fc5abace2e0cb923394a359437528f703f338
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981668"
 ---
-
 # <a name="continuous-integration-with-xamarin"></a>Непрерывная интеграция с Xamarin
 
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]

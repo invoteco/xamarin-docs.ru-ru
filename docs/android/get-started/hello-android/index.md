@@ -1,6 +1,6 @@
 ---
-title: 'Привет, Android'
-description: 'Из этого состоящего из двух частей руководства вы узнаете, как создать первое приложение Xamarin.Android в Visual Studio для Mac или Visual Studio. Вы также получите представление об основах разработки приложений Android с помощью Xamarin. Кроме того, в этом руководстве будут описаны средства, понятия и действия, необходимые для построения и развертывания приложения Xamarin.Android.'
+title: Привет, Android
+description: Из этого состоящего из двух частей руководства вы узнаете, как создать первое приложение Xamarin.Android в Visual Studio для Mac или Visual Studio. Вы также получите представление об основах разработки приложений Android с помощью Xamarin. Кроме того, в этом руководстве будут описаны средства, понятия и действия, необходимые для построения и развертывания приложения Xamarin.Android.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: C6474F70-3617-46AD-93E8-BE66878EEC17
@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
+ms.openlocfilehash: fbe62f08a096a5a48fe96a3445e09eac9c0485fd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668261"
 ---
-
 # <a name="hello-android"></a>Привет, Android
 
 _Из этого руководства из двух частей вы узнаете, как создать первое приложение Xamarin.Android в Visual Studio для Mac или Visual Studio, а также получите представление об основах разработки приложений Android с помощью Xamarin. Кроме того, в этом руководстве описаны средства, понятия и действия, необходимые для создания и развертывания приложения Xamarin.Android._

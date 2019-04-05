@@ -1,14 +1,19 @@
 ---
 title: Функции платформы Windows
-description: 'В этой статье описывается поддержка платформ Windows, которая доступна в Xamarin.Forms.'
+description: В этой статье описывается поддержка платформ Windows, которая доступна в Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
+ms.openlocfilehash: 9367e22ede733ee2d93feccc001836fb4dc02564
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507114"
 ---
-
 # <a name="windows-platform-features"></a>Функции платформы Windows
 
 При разработке приложения Xamarin.Forms для платформ Windows требуется Visual Studio. [Страница "размер"](~/get-started/requirements.md) содержит дополнительные сведения о необходимых компонентах.

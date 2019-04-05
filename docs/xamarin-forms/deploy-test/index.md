@@ -1,14 +1,19 @@
 ---
 title: Развертывание и тестирование Xamarin.Forms
-description: 'Это руководство описывает, как стабилизировать приложения Xamarin.Forms, настроив производительность, а также автоматизировав тестирование с помощью Xamarin.UITest и Центра приложений.'
+description: Это руководство описывает, как стабилизировать приложения Xamarin.Forms, настроив производительность, а также автоматизировав тестирование с помощью Xamarin.UITest и Центра приложений.
 ms.prod: xamarin
 ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
+ms.openlocfilehash: e290c52b2f6ed6a7fc194dea6a9155b57bea3d4b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669587"
 ---
-
 # <a name="xamarinforms-deployment-and-testing"></a>Развертывание и тестирование Xamarin.Forms
 
 ## <a name="publishing-ios-appsiosdeploy-testapp-distributionindexmd"></a>[Публикация приложений iOS](~/ios/deploy-test/app-distribution/index.md)

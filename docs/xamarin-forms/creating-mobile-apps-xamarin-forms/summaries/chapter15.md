@@ -1,22 +1,22 @@
 ---
 title: Сводка Глава 15. Интерактивный интерфейс
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 15. Интерактивный интерфейс'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 15. Интерактивный интерфейс
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6b519b15199373762965a8eeee6c9ae73f125cf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060437"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870122"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Сводка Глава 15. Интерактивный интерфейс
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 В этой главе рассматриваются восьми `View` производных материалов, которые обеспечивают взаимодействие с пользователем.
 
@@ -24,12 +24,12 @@ ms.locfileid: "53060437"
 
 Xamarin.Forms содержит 20 допускающий создание экземпляров классов, производных от `View` , но не `Layout`. Шесть из них уже описаны в предыдущих главах:
 
-- `Label`: [ **Глава 2. Анатомия приложения**](chapter02.md)
-- `BoxView`: [ **Глава 3. Раскрутка стека**](chapter03.md)
-- `Button`: [ **Глава 6. Нажатие кнопки**](chapter06.md)
-- `Image`: [ **Главе 13. Растровые изображения**](chapter13.md)
-- `ActivityIndicator`: [ **Главе 13. Растровые изображения**](chapter13.md)
-- `ProgressBar`: [ **Глава 14. AbsoluteLayout**](chapter14.md)
+- `Label`: [**Глава 2. Анатомия приложения**](chapter02.md)
+- `BoxView`: [**Глава 3. Раскрутка стека**](chapter03.md)
+- `Button`: [**Глава 6. Нажатие кнопки**](chapter06.md)
+- `Image`: [**Глава 13. Растровые изображения**](chapter13.md)
+- `ActivityIndicator`: [**Глава 13. Растровые изображения**](chapter13.md)
+- `ProgressBar`: [**Глава 14. AbsoluteLayout**](chapter14.md)
 
 Восемь представлений в этой главе эффективно разрешить пользователю взаимодействовать с базовых типов данных .NET:
 
@@ -44,12 +44,12 @@ Xamarin.Forms содержит 20 допускающий создание экз
 
 Остальные шесть представления рассматриваются в следующих разделах:
 
-- `WebView`: [ **Глава 16. Привязка данных**](chapter16.md)
-- `Picker`: [ **Главе 19. Представления коллекций**](chapter19.md)
-- `ListView`: [ **Главе 19. Представления коллекций**](chapter19.md)
-- `TableView`: [ **Главе 19. Представления коллекций**](chapter19.md)
-- `Map`: [ **Глава 28. Расположение и карты**](chapter28.md)
-- `OpenGLView`: Не рассматриваются в этой книге (и не поддерживаются для платформ Windows)
+- `WebView`: [**Глава 16. Привязка данных**](chapter16.md)
+- `Picker`: [**Глава 19. Представления коллекций**](chapter19.md)
+- `ListView`: [**Глава 19. Представления коллекций**](chapter19.md)
+- `TableView`: [**Глава 19. Представления коллекций**](chapter19.md)
+- `Map`: [**Глава 28. Расположение и карты**](chapter28.md)
+- `OpenGLView`: NOT, описанные в этой книге (и не поддерживаются для платформ Windows)
 
 ## <a name="slider-and-stepper"></a>Ползунок и несопоставимого
 
@@ -65,8 +65,8 @@ Xamarin.Forms содержит 20 допускающий создание экз
 
 Привязываемые свойства, которые поддерживают эти свойства убедитесь, что они согласованы:
 
-- Для всех трех свойств [ `coerceValue` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+CoerceValueDelegate/) указано свойство, используемое гарантирует, что метод `Value` между `Minimum` и `Maximum`.
-- [ `validateValue` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+ValidateValueDelegate/) Метод `MinimumProperty` возвращает `false` Если `Minimum` устанавливается в значение больше или равно `Maximum`и сказанное `MaximumProperty`. Возвращение `false` из `validateValue` метода заставляет `ArgumentException` вызываемого.
+- Для всех трех свойств [ `coerceValue` ](xref:Xamarin.Forms.BindableProperty.CoerceValueDelegate) указано свойство, используемое гарантирует, что метод `Value` между `Minimum` и `Maximum`.
+- [ `validateValue` ](xref:Xamarin.Forms.BindableProperty.ValidateValueDelegate) Метод `MinimumProperty` возвращает `false` Если `Minimum` устанавливается в значение больше или равно `Maximum`и сказанное `MaximumProperty`. Возвращение `false` из `validateValue` метода заставляет `ArgumentException` вызываемого.
 
 `Slider` активируется [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) событие с [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) аргумент при `Value` изменений свойств, либо программно, либо когда пользователь управляет `Slider`.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 06b95c40b12aa93b79f25c3adf12b74bda232267
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056630"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869674"
 ---
 # <a name="playing-a-web-video"></a>Воспроизведение видео через Интернет
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
-Класс `VideoPlayer` определяет свойство `Source`, используемое для указания источника видеофайла, а также свойство `AutoPlay`. Свойству `AutoPlay` задано значение по умолчанию `true`. Это значит, что видеовоспроизведение должно начинаться автоматически после установки свойства `Source`.
+Класс `VideoPlayer` определяет свойство `Source`, используемое для указания источника видеофайла, а также свойство `AutoPlay`. `AutoPlay` — этому свойству по умолчанию задано значение `true`. Это значит, что видеовоспроизведение должно начинаться автоматически после установки свойства `Source`.
 
 ```csharp
 using System;
@@ -225,7 +225,7 @@ namespace FormsVideoLibrary.iOS
 
 Позже при изменении свойства `Source` вызывается метод `OnElementPropertyChanged` со свойством `PropertyName`, имеющим значение Source, и снова вызывается метод `SetSource`.
 
-Чтобы воспроизвести видеофайл в iOS, сначала создается объект типа [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) для инкапсуляции видеофайла. Этот объект используется для создания класса [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/), который затем передается объекту `AVPlayer`. Вот как метод `SetSource` обрабатывает свойство `Source`, если оно имеет тип `UriVideoSource`:
+Чтобы воспроизвести видеофайл в iOS, сначала создается объект типа [`AVAsset`](xref:AVFoundation.AVAsset) для инкапсуляции видеофайла. Этот объект используется для создания класса [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem), который затем передается объекту `AVPlayer`. Вот как метод `SetSource` обрабатывает свойство `Source`, если оно имеет тип `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS

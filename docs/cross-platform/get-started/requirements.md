@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 486c5c57961e897eae59df66b216a9078d5df517
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c03e9782fe80a88c70df6b7780c43778f673d10d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667995"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854565"
 ---
 # <a name="system-requirements"></a>Требования к системе
 
@@ -45,20 +45,20 @@ ms.locfileid: "57667995"
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> Будущий выпуск Xamarin.Mac 4.8 будет поддерживать только macOS 10.9 или более поздней версии.
+> Xamarin.Mac 4.8 поддерживает только macOS 10.9 () или более поздней версии.
 > Предыдущие версии Xamarin.Mac поддерживали macOS 10.7 или более поздней версии, но в этих версиях macOS нет достаточной инфраструктуры TLS для поддержки TLS 1.2. Для macOS 10.7 или macOS 10.8 используйте Xamarin.Mac 4.6 или более ранней версии.
 
 ## <a name="windows-requirements"></a>Требования к Windows
 
 Чтобы использовать компьютер Windows для разработки в Xamarin, требуются следующие версии программного обеспечения и пакетов SDK.
 Проверьте версию операционной системы (и убедитесь, что вы не используете *Express*-выпуск Visual Studio, в противном случае рекомендуется выполнить обновление до выпуска *Community*).
-В установщике Visual Studio 2017 есть параметр для автоматической установки Xamarin (**разработка мобильных приложений на .NET**).
+В установщике Visual Studio 2019 и Visual Studio 2017 есть параметр для автоматической установки Xamarin (рабочая нагрузка **Разработка мобильных приложений на .NET**).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
-> - Xamarin для Visual Studio поддерживает все выпуски Visual Studio 2017 (Community, Professional и Enterprise).
-> - Для разработки приложений Xamarin.Forms для универсальной платформы Windows (UWP) требуется Windows 10 с Visual Studio 2017.
+> - Xamarin для Visual Studio поддерживает все выпуски Visual Studio 2019 и Visual Studio 2017 (Community, Professional и Enterprise).
+> - Для разработки приложений Xamarin.Forms для универсальной платформы Windows (UWP) требуется Windows 10 с Visual Studio 2017. Рекомендуется использовать Visual Studio 2019.
 
 ### <a name="testing--debugging-on-windows"></a>Тестирование и отладка в Windows
 
@@ -68,7 +68,7 @@ ms.locfileid: "57667995"
 
 ## <a name="installation-instructions"></a>Инструкции по установке
 
-Последний выпуск Xamarin для macOS можно скачать на веб-странице [xamarin.com/download](http://xamarin.com/download). В Windows следуйте инструкциям по установке [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
+Последний выпуск Xamarin для macOS можно скачать вместе с [Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation). В Windows следуйте инструкциям по установке [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
 Полный список текущих версий продукта можно найти на [странице текущих выпусков](https://developer.xamarin.com/releases/current/). На этой странице также приводятся версии отдельных продуктов (и ссылки на заметки о выпуске) для альфа- и бета-каналов.
 
@@ -82,5 +82,7 @@ ms.locfileid: "57667995"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Загрузить Xamarin](https://visualstudio.microsoft.com/xamarin/)
-- [Текущие выпуски](https://developer.xamarin.com/releases/current/)
+- [Скачать Xamarin](https://visualstudio.microsoft.com/xamarin/)
+- [Заметки о выпуске Xamarin.Forms](/xamarin/xamarin-forms/release-notes/)
+- [Заметки о выпуске Xamarin.Android](/xamarin/android/release-notes/)
+- [Заметки о выпуске Xamarin.iOS](/xamarin/ios/release-notes/)

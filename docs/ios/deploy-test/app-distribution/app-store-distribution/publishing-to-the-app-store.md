@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: babfc85de645b285812421d453d51d5be6dceb1c
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831941"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855163"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Публикация приложений Xamarin.iOS в App Store
 
@@ -90,7 +90,7 @@ Apple проверяет публикуемые в App Store приложени
 
 В новых проектах Xamarin.iOS автоматически создаются _конфигурации сборки_ **Отладка** и **Выпуск**. Для корректной настройки сборки **Выпуск** выполните следующие действия:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 1. На **Панели решения** откройте файл **Info.plist**. Выберите **Ручная подготовка**. Сохраните и закройте файл.
 2. Щелкните правой кнопкой мыши **имя проекта** на **Панели решения**, выберите **Параметры** и перейдите на вкладку **Сборка iOS**.
@@ -120,9 +120,9 @@ Apple проверяет публикуемые в App Store приложени
 
 15. Нажмите кнопку **ОK**, чтобы сохранить измененные свойства проекта.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Проверьте, что среда Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Убедитесь, что среда Visual Studio 2019 или Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. В **обозревателе решений** щелкните правой кнопкой мыши **имя проекта** и выберите пункт **Свойства**.
 3. На вкладке **Сборка iOS** для параметра **Конфигурация** задайте значение **Выпуск**, а для параметра **Платформа** — **iPhone**.
 4. Чтобы выполнить сборку с конкретным пакетом SDK для iOS, выберите его в списке **Версия SDK**. В противном случае оставьте значение **по умолчанию**.
@@ -172,7 +172,7 @@ Apple проверяет публикуемые в App Store приложени
 
 Когда вы настроите должным образом параметры сборки и iTunes Connect будет ожидать отправки, вы можете выполнить сборку приложения и отправить его в Apple.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 1. В Visual Studio для Mac выберите конфигурацию сборки **Выпуск** и устройство (не симулятор), для которого выполняется сборка.
 
@@ -231,12 +231,12 @@ Apple проверяет публикуемые в App Store приложени
     >
     > Сведения об устранении этой ошибки см. в [этой записи на форумах Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Сейчас Visual Studio 2017 не поддерживает рабочий процесс **Архивирование для публикации**, доступный в Visual Studio для Mac.
 
-1. Проверьте, что среда Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Убедитесь, что среда Visual Studio 2019 или Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. В Visual Studio 2017 в раскрывающемся списке **Конфигурации решения** выберите **Выпуск**, а в раскрывающемся списке **Платформы решения** выберите **iPhone**.
 
     ![Выбор конфигурации и платформы сборки](publishing-to-the-app-store-images/chooseConfig-w157.png "Выбор конфигурации и платформы сборки")
@@ -246,8 +246,8 @@ Apple проверяет публикуемые в App Store приложени
     > [!NOTE]
     > В разделе [Обновление конфигурации сборки "Выпуск"](#update-the-release-build-configuration) этого документа параметры сборки приложения настроены для создания IPA-файла для каждой сборки **Выпуск**.
 
-4. Чтобы найти IPA-файл на компьютере Windows, в Visual Studio 2017 в **обозревателе решений** щелкните правой кнопкой мыши имя проекта Xamarin.iOS и выберите пункт **Open Folder in File Explorer** (Открыть папку в проводнике). Затем в открывшемся **проводнике** Windows перейдите в подкаталог **iPhone/bin/Release**. Если вы не [настроили расположение выходного IPA-файла](#customize-the-ipa-location), оно должно находиться в этом каталоге.
-5. Чтобы просмотреть IPA-файл на узле сборки Mac, в Visual Studio 2017 **обозревателе решений** (в Windows) щелкните правой кнопкой мыши имя проекта Xamarin.iOS и выберите пункт **Show IPA File on Build Server** (Показать IPA-файл на сервере сборки). На узле сборки Mac откроется окно **системы поиска** с выбранным IPA-файлом.
+4. Чтобы найти IPA-файл на компьютере Windows, в Visual Studio 2019 или Visual Studio 2017 в **обозревателе решений** щелкните правой кнопкой мыши имя проекта Xamarin.iOS и выберите пункт **Open Folder in File Explorer** (Открыть папку в проводнике). Затем в открывшемся **проводнике** Windows перейдите в подкаталог **iPhone/bin/Release**. Если вы не [настроили расположение выходного IPA-файла](#customize-the-ipa-location), оно должно находиться в этом каталоге.
+5. Чтобы просмотреть IPA-файл на узле сборки Mac, в Visual Studio 2019 или Visual Studio 2017 в **обозревателе решений** (в Windows) щелкните правой кнопкой мыши имя проекта Xamarin.iOS и выберите пункт **Show IPA File on Build Server** (Показать IPA-файл на сервере сборки). На узле сборки Mac откроется окно **системы поиска** с выбранным IPA-файлом.
 6. На узле сборки Mac откройте **загрузчик приложений**. В Xcode выберите **Xcode > Open Developer Tool > Application Launcher** (Xcode > Открыть средство разработчика > Загрузчик приложений).
 
     > [!NOTE]

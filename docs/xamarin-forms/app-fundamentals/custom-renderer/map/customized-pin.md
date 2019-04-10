@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059383"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870304"
 ---
 # <a name="customizing-a-map-pin"></a>Настройка закрепления карты
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _В этой статье содержатся сведения о создании настраиваемого отрисовщика для элемента управления Map, который отображает собственную карту с настраиваемым закреплением и настраиваемым представлением закрепленных данных на каждой платформе._
 
@@ -225,9 +225,9 @@ namespace CustomRenderer.iOS
 }
 ```
 
-Метод `OnElementChanged` выполняет следующие настройки для экземпляра [`MKMapView`](https://developer.xamarin.com/api/type/MapKit.MKMapView/), если настраиваемый отрисовщик присоединен к новому элементу Xamarin.Forms:
+Метод `OnElementChanged` выполняет следующие настройки для экземпляра [`MKMapView`](xref:MapKit.MKMapView), если настраиваемый отрисовщик присоединен к новому элементу Xamarin.Forms:
 
-- Свойство [`GetViewForAnnotation`](https://developer.xamarin.com/api/property/MapKit.MKMapView.GetViewForAnnotation/) содержит метод `GetViewForAnnotation`. Этот метод вызывается в том случае, когда [на карте отображается местоположение заметки](#Displaying_the_Annotation) и используется для настройки заметки перед ее выводом на экран.
+- Свойство [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) содержит метод `GetViewForAnnotation`. Этот метод вызывается в том случае, когда [на карте отображается местоположение заметки](#Displaying_the_Annotation) и используется для настройки заметки перед ее выводом на экран.
 - Обработчики событий для событий `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` и `DidDeselectAnnotationView` регистрируются. Эти события вызываются в том случае, если пользователь [касается правого вспомогательного представления в выноске](#Tapping_on_the_Right_Callout_Accessory_View), а также когда пользователь [выбирает](#Selecting_the_Annotation) заметку и [отменяет ее выбор](#Deselecting_the_Annotation) соответственно. Подписка на эти события отменяется, если изменяется элемент Xamarin.Forms, к которому присоединен отрисовщик.
 
 <a name="Displaying_the_Annotation" />
@@ -236,8 +236,8 @@ namespace CustomRenderer.iOS
 
 Метод `GetViewForAnnotation` вызывается, когда на карте отображается местоположение заметки, и используется для настройки заметки перед ее выводом на экран. Заметка состоит из двух частей:
 
-- `MkAnnotation` — содержит заголовок, подзаголовок и местоположение заметки.
-- `MkAnnotationView` — содержит изображение, которое представляет заметку, а также может содержать выноску, которая отображается в том случае, если пользователь касается заметки.
+- `MkAnnotation` — содержит заголовок, подзаголовок и местоположение заметки.
+- `MkAnnotationView` — содержит изображение, которое представляет заметку, а также может содержать выноску, которая отображается в том случае, если пользователь касается заметки.
 
 Метод `GetViewForAnnotation` принимает объект `IMKAnnotation`, который содержит данные заметки, и возвращает объект `MKAnnotationView`, отображаемый на карте, как показано в следующем примере кода:
 
@@ -273,7 +273,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
 Этот метод позволяет вывести в качестве заметки настраиваемое изображение вместо определяемого системой закрепления, а также отобразить выноску с дополнительным содержимым слева и справа от заголовка и адреса заметки в том случае, если пользователь коснется заметки. Это реализуется следующим образом:
 
 1. Вызывается метод `GetCustomPin`, который возвращает данные настраиваемого закрепления для заметки.
-1. В целях экономии памяти представление заметки помещается в пул для повторного использования путем вызова [`DequeueReusableAnnotation`](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
+1. В целях экономии памяти представление заметки помещается в пул для повторного использования путем вызова [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*).
 1. Класс `CustomMKAnnotationView` расширяет класс `MKAnnotationView` с использованием свойств `Id` и `Url`, которые соответствуют аналогичным свойствам экземпляра `CustomPin`. Новый экземпляр `CustomMKAnnotationView` создается в том случае, если заметка имеет значение `null`:
     - Свойство `CustomMKAnnotationView.Image` содержит изображение, которое будет представлять заметку на карте.
     - Свойство `CustomMKAnnotationView.CalloutOffset` содержит объект `CGPoint`, который указывает, что выноска будет выровнена по центру относительно заметки.
@@ -281,7 +281,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
     - Свойство `CustomMKAnnotationView.RightCalloutAccessoryView` содержит кнопку *Сведения*, которая будет отображаться справа от заголовка и адреса заметки.
     - Свойство `CustomMKAnnotationView.Id` содержит свойство `CustomPin.Id`, возвращаемое методом `GetCustomPin`. Это позволяет идентифицировать заметку для [дальнейшей настройки выноски](#Selecting_the_Annotation), если это требуется.
     - Свойство `CustomMKAnnotationView.Url` содержит свойство `CustomPin.Url`, возвращаемое методом `GetCustomPin`. URL-адрес, по которому будет выполнен переход в том случае, если пользователь [коснется кнопки, отображаемой в правом вспомогательном представлении выноски](#Tapping_on_the_Right_Callout_Accessory_View).
-1. Свойству [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) присваивается значение `true`, которое задает отображение выноски в том случае, если пользователь коснется заметки.
+1. Свойству [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) присваивается значение `true`, которое задает отображение выноски в том случае, если пользователь коснется заметки.
 1. Возвращается заметка, которая будет отображаться на карте.
 
 <a name="Selecting_the_Annotation" />
@@ -403,8 +403,8 @@ namespace CustomRenderer.Droid
 
 Класс `CustomMapRenderer` реализует интерфейс `GoogleMap.IInfoWindowAdapter` для [настройки информационного окна](#Customizing_the_Info_Window). Этот интерфейс указывает на необходимость реализации следующих методов:
 
-- `public Android.Views.View GetInfoWindow(Marker marker)` — при вызове этого метода возвращается настраиваемое информационное окно для маркера. Если возвращается значение `null`, будет использоваться метод отрисовки окна по умолчанию. Если возвращается объект `View`, этот объект `View` будет помещен внутрь рамки информационного окна.
-- `public Android.Views.View GetInfoContents(Marker marker)` — при вызове этого метода возвращается объект `View` с содержимым информационного окна. Этот метод вызывается только в том случае, если метод `GetInfoWindow` возвращает `null`. Если этот метод возвращает `null`, будет использоваться метод отрисовки содержимого окна по умолчанию.
+- `public Android.Views.View GetInfoWindow(Marker marker)` — при вызове этого метода возвращается настраиваемое информационное окно для маркера. Если возвращается значение `null`, будет использоваться метод отрисовки окна по умолчанию. Если возвращается объект `View`, этот объект `View` будет помещен внутрь рамки информационного окна.
+- `public Android.Views.View GetInfoContents(Marker marker)` — при вызове этого метода возвращается объект `View` с содержимым информационного окна. Этот метод вызывается только в том случае, если метод `GetInfoWindow` возвращает `null`. Если этот метод возвращает `null`, будет использоваться метод отрисовки содержимого окна по умолчанию.
 
 В этом примере приложения выполняется настройка только содержимого информационного окна, поэтому метод `GetInfoWindow` возвращает `null`.
 

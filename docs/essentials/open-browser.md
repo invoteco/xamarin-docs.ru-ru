@@ -4,13 +4,14 @@ description: Класс Browser в Xamarin.Essentials позволяет при�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175321"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869591"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Браузер
 
@@ -63,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 Режим запуска определяет, как запускается браузер:
 
@@ -75,17 +76,17 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 С помощью `Intent` будет запрошено открытие Uri в обычном системном браузере.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Предпочитаемый режим системы
 
-С помощью [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) выполняется загрузка Uri с сохранением навигации.
+С помощью [SFSafariViewController](xref:SafariServices.SFSafariViewController) выполняется загрузка Uri с сохранением навигации.
 
 ## <a name="external"></a>Внешняя
 
 С помощью стандартного параметра `OpenUrl` в главном приложении запускается браузер по умолчанию за пределами приложения.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Всегда будет запускаться браузер, установленный у пользователя по умолчанию, независимо от `BrowserLaunchMode`.
 
@@ -93,5 +94,12 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="api"></a>API
 
-- [Исходный код класса Browser](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
-- [Документация по API Browser](xref:Xamarin.Essentials.Browser)
+- [Исходный код Browser](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
+- [Документация по API для Browser](xref:Xamarin.Essentials.Browser)
+
+## <a name="related-video"></a>Связанные видео
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

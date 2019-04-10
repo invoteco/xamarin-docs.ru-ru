@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2679756cd9a9a60c2d7ab637678ff1d8262b2403
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 4bfbd065c9b17ce402c5a15289c7ff608eb58b23
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669990"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870018"
 ---
 # <a name="creating-the-platform-video-players"></a>Создание видеопроигрывателей платформы
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Решение [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) содержит весь необходимый код для внедрения видеопроигрывателя для Xamarin.Forms. Оно также включает ряд страниц, где демонстрируется использование видеопроигрывателя в приложении. Весь код `VideoPlayer` и отрисовщики платформ находятся в папках проекта с именем `FormsVideoLibrary` и используют пространство имен `FormsVideoLibrary`. Благодаря этому вы сможете легко копировать файлы в собственное приложение и ссылаться на классы.
 
@@ -43,7 +43,7 @@ namespace FormsVideoLibrary
 
 ### <a name="the-ios-player-view-controller"></a>Контроллер представления проигрывателя в iOS
 
-При реализации видеопроигрывателя в iOS используется несколько классов. Сначала приложение создает класс [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/), а затем в качестве значения свойства [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) задает объекта типа [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). При назначении видеопроигрывателю источника видео требуются дополнительные классы.
+При реализации видеопроигрывателя в iOS используется несколько классов. Сначала приложение создает класс [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController), а затем в качестве значения свойства [`Player`](xref:AVKit.AVPlayerViewController.Player*) задает объекта типа [`AVPlayer`](xref:AVFoundation.AVPlayer). При назначении видеопроигрывателю источника видео требуются дополнительные классы.
 
 Как все отрисовщики, класс [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) в iOS содержит атрибут `ExportRenderer`, определяющий представление `VideoPlayer` с помощью отрисовщика.
 
@@ -318,7 +318,7 @@ namespace FormsVideoLibrary
 
 ### <a name="ios-playback-controls"></a>Элементы управления воспроизведением в iOS
 
-Для управления отображением элементов управления транспортировкой служит свойство класса `AVPlayerViewController` в iOS — [`ShowsPlaybackControls`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/). Это свойство задается в классе `VideoViewRenderer` iOS следующим образом:
+Для управления отображением элементов управления транспортировкой служит свойство класса `AVPlayerViewController` в iOS — [`ShowsPlaybackControls`](xref:AVKit.AVPlayerViewController.ShowsPlaybackControls*). Это свойство задается в классе `VideoViewRenderer` iOS следующим образом:
 
 ```csharp
 namespace FormsVideoLibrary.iOS

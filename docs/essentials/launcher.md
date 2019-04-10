@@ -5,14 +5,14 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 502ccaf8ef4fbeadb4b46f47668ac11f2747b89d
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 26ab3687e9bcfecbd003ddd0a97f3e46a0cd92b2
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870057"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: средство запуска
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Средство запуска
 
 Класс **Launcher** позволяет приложению открыть URI средствами системы. Это часто используется при глубокой привязке к пользовательским схемам URI другого приложения. Если нужно открыть в браузере веб-сайт, следует обратиться к API **[Browser](open-browser.md)**.
 
@@ -44,19 +44,19 @@ public class LauncherTest
 
 ## <a name="platform-differences"></a>Различия платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 Задача, возвращенная методом `CanOpenAsync`, выполняется немедленно.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 Если конечное приложение на этом устройстве никогда ранее не открывалось с помощью метода `OpenAsync` из вашего приложения, iOS однократно предложит пользователю разрешить открывать его с помощью вашего приложения.
 
 Задача, возвращенная методом `CanOpenAsync`, выполняется немедленно.
 
-Дополнительные сведения о реализации iOS доступны [здесь](https://developer.xamarin.com/api/member/UIKit.UIApplication.CanOpenUrl/p/Foundation.NSUrl/).
+Дополнительные сведения о реализации iOS доступны [здесь](xref:UIKit.UIApplication.CanOpenUrl*).
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Различия платформ отсутствуют.
 
@@ -64,5 +64,5 @@ public class LauncherTest
 
 ## <a name="api"></a>API
 
-- [Исходный код класса Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
-- [Документация по API Launcher](xref:Xamarin.Essentials.Launcher)
+- [Исходный код Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
+- [Документация по API для Launcher](xref:Xamarin.Essentials.Launcher)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e687a724c8455d954969f83b8ee48c87ca9dbb09
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669782"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870161"
 ---
 # <a name="custom-video-transport-controls"></a>Пользовательские элементы управления транспортировкой видео
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 К элементам управления транспортировкой в видеопроигрывателе относятся кнопки, которые выполняют функции **воспроизведения**, **паузы** и **остановки**. Эти кнопки обычно определяются по знакомым значкам, а не тексту. Как правило, функции **Воспроизведение** и **Пауза** объединены в одну кнопку.
 
@@ -360,7 +360,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Необходимо обратиться к двум свойствам `AVPlayer`: свойству [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) типа `AVPlayerStatus` и свойству [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) типа `AVPlayerTimeControlStatus`. Обратите внимание, что для задания свойства `Status` свойство `Element` (которое является `VideoPlayer`) должно быть приведено к типу `IVideoPlayerController`.
+Необходимо обратиться к двум свойствам `AVPlayer`: свойству [`Status`](xref:AVFoundation.AVPlayer.Status*) типа `AVPlayerStatus` и свойству [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) типа `AVPlayerTimeControlStatus`. Обратите внимание, что для задания свойства `Status` свойство `Element` (которое является `VideoPlayer`) должно быть приведено к типу `IVideoPlayerController`.
 
 ### <a name="the-android-status-setting"></a>Параметр состояния на платформе Android
 
@@ -540,7 +540,7 @@ namespace FormsVideoLibrary.UWP
 
 Именно этот способ используется в приведенной ниже разметке. В результате символ **воспроизведения** в iOS получает тот же объемный вид, что и кнопки **Пауза** и **Остановка**, но такой вариант не работает на платформах Android и UWP.
 
-На странице **Пользовательская транспортировка** свойству **AreTransportControlsEnabled** задается значение **false**. Здесь также содержится компонент `ActivityIndicator`, отображаемый при загрузке видео, и две кнопки. Объекты `DataTrigger` используются для включения и отключения `ActivityIndicator` и кнопок, а также для выбора первой кнопки — **Воспроизведение** и **Пауза**.
+На странице **Пользовательская транспортировка** свойству **AreTransportControlsEnabled** задается значение **false**. Здесь также содержится компонент `ActivityIndicator`, отображаемый при загрузке видео, и две кнопки. `DataTrigger` — эти объекты используются для включения и отключения `ActivityIndicator` и кнопок, а также для выбора первой кнопки — **Воспроизведение** или **Пауза**.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

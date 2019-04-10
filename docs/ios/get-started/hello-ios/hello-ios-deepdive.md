@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 12fcf6ff1b289c773e0dce03be4ac62105f6acd4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
+ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669470"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58751265"
 ---
 # <a name="hello-ios--deep-dive"></a>Подробный обзор примера приложения "Привет, iOS"
 
@@ -310,7 +310,7 @@ public partial class ViewController : UIViewController
 
 Наиболее важной ролью контроллера представления является реагирование на взаимодействие с пользователем, например нажатия кнопок, переходы между элементами и многое другое. Взаимодействие с пользователем проще всего обрабатывать, предоставив элемент управления для прослушивания вводимых пользователем данных и подключив обработчик событий для реагирования на эти данные. Например, кнопку можно настроить для реагирования на событие сенсорного ввода, как показано в приложении Phoneword.
 
-Теперь, когда вы достаточно узнали о представлениях и контроллерах представлений, давайте разберемся, как это работает.
+Давайте рассмотрим, как это работает.
 В проекте `Phoneword_iOS` в иерархию представлений содержимого была добавлена кнопка `TranslateButton`:
 
 [![](hello-ios-deepdive-images/image1.png "В иерархию представлений содержимого была добавлена кнопка TranslateButton")](hello-ios-deepdive-images/image1.png#lightbox)
@@ -361,7 +361,7 @@ public override void ViewDidLoad ()
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
 
-- **Включение и отключение кнопок**  — **кнопки** могут находиться в состоянии `Enabled` или `Disabled`. Отключенный элемент **Button** не реагирует на действия пользователя. Например, в следующем коде отключается объект `CallButton`:
+- **Включение и отключение кнопок ** — **кнопки** могут находиться в состоянии `Enabled` или `Disabled`. Отключенный элемент **Button** не реагирует на действия пользователя. Например, в следующем коде отключается объект `CallButton`:
 
     ```csharp
     CallButton.Enabled = false;

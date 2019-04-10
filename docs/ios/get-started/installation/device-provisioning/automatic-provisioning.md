@@ -8,31 +8,32 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 9f198336d3fc9cca3bc79c377749a1211ebbac55
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479684"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855176"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Автоматическая подготовка для Xamarin.iOS
 
-_Установив Xamarin.iOS для разработки приложений для iOS можно приступать к подготовке устройства iOS. В этом руководстве описано, как использовать функцию автоматического подписывания для запроса сертификатов и профилей разработки._
+_После успешной установки Xamarin.iOS следующим шагом в разработке приложений для iOS является подготовка устройства iOS. В этом руководстве описано, как использовать функцию автоматического подписывания для запроса сертификатов и профилей разработки._
 
 ## <a name="requirements"></a>Требования
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 - Visual Studio для Mac 7.3 или более поздней версии
 - Xcode 9 или более поздней версии
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-- Visual Studio 2017 версии 15.7 (или более поздней)
+- Visual Studio 2019
+- ИЛИ Visual Studio 2017 версии 15.7 (или более поздней)
 
 Вам потребуется подключение к узлу сборки Mac со следующими компонентами:
 
-- Xcode 9 или более поздней версии
+- Xcode 10 или более поздней версии
 
 -----
 
@@ -54,7 +55,7 @@ _Установив Xamarin.iOS для разработки приложений
 
 Чтобы автоматически подписать приложение для развертывания на устройстве iOS, выполните указанные ниже действия:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 1. Откройте проект iOS в Visual Studio для Mac.
 
@@ -72,9 +73,9 @@ _Установив Xamarin.iOS для разработки приложений
 
     Если автоматическое подписывание выполнить не удалось, на **панели автоматического подписывания** будет указана причина ошибки.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Свяжите Visual Studio 2017 с компьютером Mac, как описано в руководстве [Связывание с компьютером Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Свяжите Visual Studio 2019 с компьютером Mac, как описано в руководстве [Связывание с компьютером Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. В **обозревателе решений** щелкните правой кнопкой мыши имя проекта и выберите **Свойства**. Затем откройте вкладку **Подписывание пакета iOS**.
 
@@ -134,7 +135,7 @@ _Установив Xamarin.iOS для разработки приложений
 - [Бесплатная подготовка](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
 - [Распространение приложений](~/ios/deploy-test/app-distribution/index.md)
 - [Устранение неполадок](~/ios/deploy-test/troubleshooting.md)
-- [Руководство Apple. Распространение приложений](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+- [Руководство Apple по распространению приложений](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 
 ## <a name="related-video"></a>Связанные видео
 

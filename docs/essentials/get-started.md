@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 0ba748823f980f65d1a341d2b2c15610440bf05e
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: d8562cd74b661b5f72f373151b9aa0acc36f8477
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668300"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869758"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Начало работы с Xamarin.Essentials
 
@@ -37,11 +37,11 @@ Xamarin.Essentials предоставляется в виде пакета NuGet
 
 3. Добавьте пакет NuGet для **Xamarin.Essentials** в каждый из проектов:
 
-    # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+    # [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
     На панели обозревателя решений щелкните правой кнопкой мыши имя решения и выберите **Управление пакетами NuGet**. Найдите **Xamarin.Essentials** и установите пакет во **ВСЕ** проекты, в том числе для Android, iOS, универсальной платформы Windows и .NET Standard.
 
-    # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+    # [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
     На панели обозревателя решений щелкните правой кнопкой мыши имя проекта и выберите **Добавить > Add NuGet Packages... (Добавить пакеты NuGet...)**. Найдите **Xamarin.Essentials** и установите пакет во **ВСЕ** проекты, в том числе для Android, iOS и .NET Standard.
 
@@ -55,11 +55,11 @@ Xamarin.Essentials предоставляется в виде пакета NuGet
 
 5. Для Xamarin.Essentials нужно настроить в соответствии с конкретной платформой:
 
-    # <a name="androidtabandroid"></a>[Android](#tab/android)
+    # [<a name="android"></a>Android](#tab/android)
 
-    Xamarin.Essentials поддерживает Android начиная с минимальной версии 4.4, что соответствует уровню API 19. Но целевая версия Android для компиляции должна быть не ниже 8.1, что соответствует уровню API 27. (В Visual Studio эти две версии задаются в диалоговом окне свойств проекта для проекта Android, на вкладке "Манифест Android". В Visual Studio для Mac эти значения задаются в диалоговом окне свойств проекта для проекта Android, на вкладке "Приложение Android".) 
+    Xamarin.Essentials поддерживает Android с минимальной версии 4.4, что соответствует уровню API 19. Но целевая версия Android для компиляции должна быть не ниже 9.0, что соответствует уровню API 28. (В Visual Studio эти две версии задаются в диалоговом окне свойств проекта для проекта Android, на вкладке "Манифест Android". В Visual Studio для Mac эти значения задаются в диалоговом окне свойств проекта для проекта Android, на вкладке "Приложение Android".)
 
-    Xamarin.Essentials устанавливает версию 27.0.2.1 всех требуемых библиотек Xamarin.Android.Support. Все другие библиотеки Xamarin.Android.Support, которые использует приложение, также следует обновить до версии 27.0.2.1 с помощью диспетчера пакетов NuGet. Все библиотеки Xamarin.Android.Support, используемые в приложении, должны иметь одну и ту же версию (не ниже версии 27.0.2.1). Если вы столкнетесь с проблемами при добавлении пакета NuGet для Xamarin.Essentials или при обновлении пакетов NuGet в решении, воспользуйтесь [страницей устранения неполадок](troubleshooting.md).
+    Xamarin.Essentials устанавливает версию 28.0.0.1 всех требуемых библиотек Xamarin.Android.Support. Все другие библиотеки Xamarin.Android.Support, которые использует приложение, также следует обновить до версии 28.0.0.1 с помощью диспетчера пакетов NuGet. Все библиотеки Xamarin.Android.Support, используемые в приложении, должны иметь одну и ту же версию (не ниже версии 28.0.0.1). Если вы столкнетесь с проблемами при добавлении пакета NuGet для Xamarin.Essentials или при обновлении пакетов NuGet в решении, воспользуйтесь [страницей устранения неполадок](troubleshooting.md).
 
     В `MainLauncher` проекта Android или в любом запущенном действии `Activity` следует инициализировать Xamarin.Essentials в методе `OnCreate` следующим образом:
 
@@ -82,11 +82,11 @@ Xamarin.Essentials предоставляется в виде пакета NuGet
     }
     ```
 
-    # <a name="iostabios"></a>[iOS](#tab/ios)
+    # [<a name="ios"></a>iOS](#tab/ios)
 
     Дополнительная настройка не требуется.
 
-    # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+    # [<a name="uwp"></a>UWP](#tab/uwp)
 
     Дополнительная настройка не требуется.
 

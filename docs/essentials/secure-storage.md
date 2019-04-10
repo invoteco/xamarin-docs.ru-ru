@@ -1,18 +1,19 @@
 ---
-title: 'Xamarin.Essentials: безопасное хранилище'
+title: 'Xamarin.Essentials: Защищенное хранилище'
 description: В этом документе описан класс SecureStorage в Xamarin.Essentials, который организует безопасное хранение пар "ключ-значение". Здесь рассматривается использование класса, особенности реализации для платформ и существующие ограничения.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7ba7fc6cabc2e3684476c216ca65d3824a35e8aa
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: aa051a0f94853b39077738a7b22383192aa32e87
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898918"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870291"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: безопасное хранилище
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Защищенное хранилище
 
 Класс **SecureStorage** помогает обеспечить безопасное хранение пар "ключ-значение".
 
@@ -22,7 +23,7 @@ ms.locfileid: "52898918"
 
 Чтобы проверить функциональность класса **SecureStorage**, нужно создать описанную ниже конфигурацию для конкретной платформы.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 > [!TIP]
 > [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup) (Автоматическое резервное копирование для приложений) — это функция Android 6.0 (API уровня 23) и более поздних версий, которая создает резервные копии пользовательских данных из приложения (общие параметры, файлы во внутреннем хранилище приложения, некоторые другие файлы). Эти данные восстанавливаются при повторной установке приложения на том же или на новом устройстве. Это может повлиять на класс `SecureStorage`, который использует сохраненные общие параметры и не может быть расшифрован при восстановлении. Xamarin.Essentials автоматически учитывает этот случай и удаляет этот ключ, чтобы его можно было сбросить. Но вы можете принять дополнительные меры предосторожности и отключить автоматическое резервное копирование.
@@ -60,7 +61,7 @@ ms.locfileid: "52898918"
     </full-backup-content>
     ```
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 Если разработка ведется на **симуляторе iOS**, включите право **Keychain** (Цепочка ключей) и добавьте группу доступа к цепочке ключей для идентификатора пакета приложения. 
 
@@ -71,7 +72,7 @@ ms.locfileid: "52898918"
 > [!TIP]
 > При развертывании на устройство iOS это назначение не является обязательным, и его лучше удалить.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Дополнительная настройка не требуется.
 
@@ -129,7 +130,7 @@ SecureStorage.RemoveAll();
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 [Хранилище ключей Android](https://developer.android.com/training/articles/keystore.html) используется для хранения ключа шифрования, с помощью которого значения шифруются перед сохранением в [общие параметры](https://developer.android.com/training/data-storage/shared-preferences.html) с именем файла **[идентификатор_пакета_приложения].xamarinessentials**.  Ключ, используемый в файле общих параметров, представляет собой _хэш MD5_ от ключа, передаваемого в API-интерфейсы `SecureStorage`.
 
@@ -143,13 +144,13 @@ SecureStorage.RemoveAll();
 
 **SecureStorage** использует API-интерфейс [предпочтений](preferences.md) и применяет правила сохраняемости данных, которые описаны в документации по классу [Preferences](preferences.md#persistence). При обновлении устройств с API уровня 22 или ниже до API уровня 23 или выше сохраняется указанный тип шифрования, если приложение не было удалено и (или) не был вызван метод **RemoveAll**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
-Для безопасного хранения значений на устройствах iOS используется [цепочка ключей](https://developer.xamarin.com/api/type/Security.SecKeyChain/).  Для хранения значения используется `SecRecord` со значением `Service`, которое настраивается в файле **[идентификатор_пакета_приложения].xamarinessentials**.
+Для безопасного хранения значений на устройствах iOS используется [цепочка ключей](xref:Security.SecKeyChain).  Для хранения значения используется `SecRecord` со значением `Service`, которое настраивается в файле **[идентификатор_пакета_приложения].xamarinessentials**.
 
 В некоторых случаях данные цепочки ключей синхронизируется с iCloud, и тогда при удалении приложения сохраненные значения из iCloud и с других устройств пользователя не всегда удаляются.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Для безопасного шифрования значений на устройствах универсальной платформы Windows применяется [DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider).
 
@@ -166,4 +167,10 @@ SecureStorage.RemoveAll();
 ## <a name="api"></a>API
 
 - [Исходный код SecureStorage](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
-- [Документация по API SecureStorage](xref:Xamarin.Essentials.SecureStorage)
+- [Документация по API для SecureStorage](xref:Xamarin.Essentials.SecureStorage)
+
+## <a name="related-video"></a>Связанные видео
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Secure-Storage-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

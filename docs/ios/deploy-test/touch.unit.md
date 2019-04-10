@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: b995ed5cf8d8735e87fb18c3a69d43b5a079b82f
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: f488ebe1df814a476346de15c740093fc6de54df
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674987"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854695"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Модульное тестирование приложений Xamarin.iOS
 
@@ -58,7 +58,7 @@ public partial class AppDelegate : UIApplicationDelegate
 ```
 
 > [!NOTE]
-> Тип проекта модульного теста iOS не доступен в Visual Studio 2017 в Windows.
+> Тип проекта модульного теста iOS не доступен в Visual Studio 2019 или Visual Studio 2017 в Windows.
 
 ## <a name="writing-some-tests"></a>Написание некоторых тестов
 

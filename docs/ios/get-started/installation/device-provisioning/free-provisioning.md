@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 503dae8253b3c0bb82038dd54b5d97ff632b439b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 533ab09a73116402e39da65933f26b8f3065357c
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115046"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855072"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Бесплатная подготовка для приложений Xamarin.iOS
 
@@ -22,10 +22,10 @@ ms.locfileid: "50115046"
 Чтобы развернуть приложение на устройстве с помощью бесплатной подготовки, выполните следующие действия:
 
 - С помощью Xcode создайте *удостоверение подписывания* (сертификат разработчика и закрытый ключ) и *профиль подготовки* (содержащий явный идентификатор приложения и идентификатор UDID подключенного устройства iOS).
-- Используйте удостоверение подписывания и профиль подготовки, созданные с помощью Xcode, в Visual Studio для Mac или Visual Studio 2017 для развертывания приложения Xamarin.iOS.
+- Используйте удостоверение подписывания и профиль подготовки, созданные с помощью Xcode, в Visual Studio для Mac или Visual Studio 2019 для развертывания приложения Xamarin.iOS.
 
 > [!IMPORTANT]
-> [Автоматическая подготовка](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) позволяет Visual Studio для Mac или Visual Studio 2017 автоматически настроить устройство для тестирования. Однако автоматическая подготовка несовместима с бесплатной подготовкой. Чтобы использовать автоматическую подготовку, необходима платная учетная запись программы для разработчиков Apple.
+> [Автоматическая подготовка](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) позволяет Visual Studio для Mac или Visual Studio 2019 автоматически настроить устройство для тестирования. Однако автоматическая подготовка несовместима с бесплатной подготовкой. Чтобы использовать автоматическую подготовку, необходима платная учетная запись программы для разработчиков Apple.
 
 ## <a name="requirements"></a>Требования
 
@@ -87,7 +87,7 @@ ms.locfileid: "50115046"
 
 ### <a name="deploy-your-xamarinios-app"></a>Развертывание приложения Xamarin.iOS
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
 
 1. Подключите устройство iOS к узлу сборки Mac через USB или [беспроводное соединение](~/ios/deploy-test/wireless-deployment.md).
 2. В Visual Studio для Mac на **Панели решения** дважды щелкните файл **Info.plist**.
@@ -106,11 +106,11 @@ ms.locfileid: "50115046"
 9. Нажмите кнопку **OK**, чтобы сохранить параметры и закрыть окно **Параметры проекта**.
 10. Выберите устройство iOS и запустите приложение.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Проверьте, что среда Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Убедитесь, что среда Visual Studio 2019 или Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Подключите устройство iOS к узлу сборки Mac через USB или [беспроводное соединение](~/ios/deploy-test/wireless-deployment.md).
-3. В **Обозревателе решений** Visual Studio 2017 щелкните проект Xamarin.iOS правой кнопкой мыши и выберите **Свойства**.
+3. В **обозревателе решений** Visual Studio 2019 или Visual Studio 2017 щелкните проект Xamarin.iOS правой кнопкой мыши и выберите **Свойства**.
 4. Перейдите на вкладку **Подписывание пакета iOS**.
 5. Для параметра **Конфигурация** установите значение **Отладка**.
 6. Для параметра **Платформа** установите значение **iPhone**.
@@ -121,7 +121,7 @@ ms.locfileid: "50115046"
     ![Выбор удостоверения подписывания и профиля подготовки](free-provisioning-images/setprofile-w157.png "Выбор удостоверения подписывания и профиля подготовки")
 
     > [!TIP]
-    > Среда Xcode создала удостоверение подписывания и профиль подготовки и сохранила их на узле сборки Mac. Они будут доступны в Visual Studio 2017, так как эта среда [связана](~/ios/get-started/installation/windows/connecting-to-mac/index.md) с узлом сборки Mac. Если они отсутствуют в списке, может потребоваться перезапустить Visual Studio 2017.
+    > Среда Xcode создала удостоверение подписывания и профиль подготовки и сохранила их на узле сборки Mac. Они будут доступны в Visual Studio 2019 или Visual Studio 2017, так как эта среда [связана](~/ios/get-started/installation/windows/connecting-to-mac/index.md) с узлом сборки Mac. Если они отсутствуют в списке, может потребоваться перезапустить Visual Studio 2019 или Visual Studio 2017.
 
 10. Сохраните параметры проекта и закройте окно параметров.
 11. Выберите устройство iOS и запустите приложение.

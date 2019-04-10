@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 5f2617272cfdc84fa2b835ce44919d2599a1dce6
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855137"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Введение в Xamarin.iOS для Visual Studio
 
@@ -22,11 +22,9 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Разработка приложений для iOS в Visual Studio дает ряд преимуществ:
 
--  создание кроссплатформенных решений для приложений iOS, Android и Windows;
--  использование любимых средств Visual Studio (таких как **Resharper** и **Team Foundation Server**) для всех кроссплатформенных проектов, включая исходный код iOS;
--  работа в знакомой интегрированной среде (IDE) с использованием привязок Xamarin.iOS ко всем интерфейсам API Apple.
-
-<a name="Requirements_and_Installation" />
+- создание кроссплатформенных решений для приложений iOS, Android и Windows;
+- использование любимых средств Visual Studio (таких как **Resharper** и **Team Foundation Server**) для всех кроссплатформенных проектов, включая исходный код iOS;
+- работа в знакомой интегрированной среде (IDE) с использованием привязок Xamarin.iOS ко всем интерфейсам API Apple.
 
 ## <a name="requirements-and-installation"></a>Требования и установка
 
@@ -34,13 +32,13 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Доступно несколько конфигураций, из которых вы можете выбрать наиболее подходящую под ваши потребности. Эти конфигурации перечислены ниже:
 
--  Компьютер Mac используется в качестве главного компьютера разработки, а среда Visual Studio установлена на виртуальной машине Windows. Мы рекомендуем использовать для создания виртуальной машины такое программное обеспечение, как [Parallels](http://www.parallels.com/products/desktop/) или [VMWare](http://www.vmware.com/products/fusion/).
--  Компьютер Mac используется только в качестве узла сборки. В этом сценарии он подключается к той же сети, в которой находится компьютер Windows с установленными [необходимыми](~/get-started/installation/windows.md#installation) средствами.
+- Компьютер Mac используется в качестве главного компьютера разработки, а среда Visual Studio установлена на виртуальной машине Windows. Мы рекомендуем использовать для создания виртуальной машины такое программное обеспечение, как [Parallels](http://www.parallels.com/products/desktop/) или [VMWare](http://www.vmware.com/products/fusion/).
+- Компьютер Mac используется только в качестве узла сборки. В этом сценарии он подключается к той же сети, в которой находится компьютер Windows с установленными [необходимыми](~/get-started/installation/windows.md#installation) средствами.
 
 В любом случае необходимо выполнить указанные ниже действия:
 
 - [Установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Установите средства Xamarin в Windows](~/get-started/installation/windows.md)
+- [Установка средств Xamarin в Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Подключение к компьютеру Mac
 
@@ -55,11 +53,11 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Элементы управления, имеющие отношение к разработке приложений iOS с помощью Xamarin, обведены красным:
 
- [![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Элементы управления, имеющие отношение к разработке приложений с помощью Xamarin iOS, обведены красным")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Элементы управления, имеющие отношение к разработке приложений с помощью Xamarin iOS, обведены красным")
+[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Элементы управления, имеющие отношение к разработке приложений с помощью Xamarin iOS, обведены красным")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Элементы управления, имеющие отношение к разработке приложений с помощью Xamarin iOS, обведены красным")
 
--  **Запуск** — запускает отладку или выполнение приложения на выбранной платформе. Должен быть подключен компьютер Mac (см. индикатор состояния на панели инструментов iOS).
--  **Конфигурации решения** — позволяет выбрать нужную конфигурацию (например, отладка или выпуск).
--  **Платформы решения** — позволяет выбрать iPhone или iPhoneSimulator в качестве платформы развертывания.
+- **Запуск** — запускает отладку или выполнение приложения на выбранной платформе. Должен быть подключен компьютер Mac (см. индикатор состояния на панели инструментов iOS).
+- **Конфигурации решения** — позволяет выбрать нужную конфигурацию (например, отладка или выпуск).
+- **Платформы решения** — позволяет выбрать iPhone или iPhoneSimulator в качестве платформы развертывания.
 
 ### <a name="ios-toolbar"></a>Панель инструментов iOS
 
@@ -69,9 +67,9 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Далее описывается каждый ее элемент:
 
--  **Mac Agent или диспетчер подключений** — открывает диалоговое окно "Xamarin Mac Agent". Во время подключения этот значок будет *оранжевым*, а после установления подключения — *зеленым*.
--  **Показать симулятор iOS** — окно симулятора iOS на компьютере Mac открывается на переднем плане.
--  **Показать IPA-файл на сервере сборки** — на компьютере Mac открывается программа Finder в месте, где находится выходной файл IPA приложения.
+- **Mac Agent или диспетчер подключений** — открывает диалоговое окно "Xamarin Mac Agent". Во время подключения этот значок будет *оранжевым*, а после установления подключения — *зеленым*.
+- **Показать симулятор iOS** — окно симулятора iOS на компьютере Mac открывается на переднем плане.
+- **Показать IPA-файл на сервере сборки** — на компьютере Mac открывается программа Finder в месте, где находится выходной файл IPA приложения.
 
 ## <a name="ios-output-options"></a>Параметры вывода iOS
 
@@ -85,39 +83,39 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 - **Xamarin** — содержит сведения, относящиеся исключительно к Xamarin, например о подключении к компьютеру Mac и состоянии активации.
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Сведения, относящиеся исключительно к Xamarin, например о подключении к компьютеру Mac и состоянии активации")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Сведения, относящиеся исключительно к Xamarin, например о подключении к компьютеру Mac и состоянии активации")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Диагностика Xamarin** — содержит более подробные сведения о проекте Xamarin, например о взаимодействии с Android.
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Подробные сведения о проекте Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Подробные сведения о проекте Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Другие области вывода Visual Studio, такие как "Отладка" и "Сборка", также доступны в представлении "Вывод" и служат для отображения выходных данных отладки и MSBuild:
 
--  **Отладка**
+- **Отладка**
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Выходные данные отладки")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Выходные данные отладки")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Сборка** & **Порядок сборки**
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Выходные данные MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Выходные данные MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## <a name="ios-project-properties"></a>Свойства проекта iOS
 
 Чтобы получить доступ к свойствам проекта Visual Studio, можно щелкнуть его имя правой кнопкой мыши и выбрать в контекстном меню пункт *Свойства*. Это позволит настроить приложение iOS, как показано на снимке экрана ниже:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Настройка приложения iOS")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Настройка приложения iOS")
 
--  *Подписывание пакета iOS* — подключение к компьютеру Mac для заполнения удостоверений подписывания кода и профилей подготовки:
+- *Подписывание пакета iOS* — подключение к компьютеру Mac для заполнения удостоверений подписывания кода и профилей подготовки:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "Заполнение удостоверений подписывания кода и профилей подготовки")
+  ![Заполнение удостоверений подписывания кода и профилей подготовки](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png)
 
--  *Параметры IPA iOS* — файл IPA сохраняется в файловой системе Mac:
+- *Параметры IPA iOS* — файл IPA сохраняется в файловой системе Mac:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "Параметры IPA iOS")
+  ![Параметры IPA iOS](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png)
 
--  *Параметры запуска iOS* — настройка дополнительных параметров:
+- *Параметры запуска iOS* — настройка дополнительных параметров:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "Параметры запуска iOS")
+  ![Параметры запуска iOS](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png)
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>Создание проекта для приложений iOS
 
@@ -169,13 +167,13 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Начните отладку и перейдите к точке останова в приложении в симуляторе или на устройстве. При достижении точки останова строка выделяется и становятся доступны стандартные возможности отладки Visual Studio: вы можете выполнять код пошагово с заходом, обходом или выходом, просматривать локальные переменные или пользоваться окном "Интерпретация".
 
-На этом снимке экрана показан симулятор iOS, выполняющийся вместе со средой Visual Studio с использованием ПО Parallels в OS X:
+На этом снимке экрана показан симулятор iOS, выполняющийся вместе со средой Visual Studio с использованием ПО Parallels в macOS
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "На этом снимке экрана показан симулятор iOS, выполняющийся вместе со средой Visual Studio с использованием ПО Parallels в OS X")
+![На этом снимке экрана показан симулятор iOS, выполняющийся вместе со средой Visual Studio с использованием ПО Parallels в macOS](introduction-to-xamarin-ios-for-visual-studio-images/image19.png)
 
 ### <a name="examine-local-variables"></a>Просмотр локальных переменных
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image20.png "Просмотр локальных переменных во время отладки")
+![Просмотр локальных переменных во время отладки](introduction-to-xamarin-ios-for-visual-studio-images/image20.png)
 
 ## <a name="summary"></a>Сводка
 
@@ -186,4 +184,4 @@ Xamarin для Windows позволяет разрабатывать и тест
 - [Установка Xamarin.iOS](~/ios/get-started/installation/windows/index.md)
 - [Подготовка устройств](~/ios/get-started/installation/device-provisioning/index.md)
 - [Создание пользовательского интерфейса iOS в коде](~/ios/app-fundamentals/ios-code-only.md)
-- [Подключение компьютера Mac к среде Visual Studio с помощью XMA (видео)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [Подключение компьютера Mac к среде Visual Studio с помощью XMA (видео)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)

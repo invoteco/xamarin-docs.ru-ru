@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: e165e6c713028517d69fee92916c94bbf0e46f33
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329239"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509906"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/FormsGallery/)
+[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Представления Xamarin.Forms являются стандартными блоками кроссплатформенных мобильных пользовательских интерфейсов._
 
@@ -183,7 +183,7 @@ _Представления Xamarin.Forms являются стандартны�
 
 |     |     |
 | --- | --- |
-| [`ListView`](xref:Xamarin.Forms.ListView) является производным от [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) и отображает прокручиваемый список элементов данных, доступный для выбора. Задайте [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) свойство в коллекцию объектов, и набор [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, для форматирования. [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) Событие сигнализирует, что был сделан выбор, который доступен в виде [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойство.<br /><br />[Документация по API](xref:Xamarin.Forms.ListView) / [руководство](~/xamarin-forms/user-interface/listview/index.md) / [пример](https://developer.xamarin.com/samples/WorkingWithListview) | [![пример ListView](views-images/ListView.png "Пример ListView")](views-images/ListView-Large.png#lightbox "пример ListView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+| [`ListView`](xref:Xamarin.Forms.ListView) является производным от [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) и отображает прокручиваемый список элементов данных, доступный для выбора. Задайте [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) свойство в коллекцию объектов, и набор [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, для форматирования. [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) Событие сигнализирует, что был сделан выбор, который доступен в виде [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойство.<br /><br />[Документация по API](xref:Xamarin.Forms.ListView) / [руководство](~/xamarin-forms/user-interface/listview/index.md) / [пример](https://developer.xamarin.com/samples/WorkingWithListview) | [![пример ListView](views-images/ListView.png "Пример ListView")](views-images/ListView-Large.png#lightbox "пример ListView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="picker"></a>Средство выбора
@@ -205,5 +205,5 @@ _Представления Xamarin.Forms являются стандартны�
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
-- [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Образцы Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Документация по API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

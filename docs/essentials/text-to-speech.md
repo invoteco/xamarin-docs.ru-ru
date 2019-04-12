@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: преобразование текста в речь'
+title: 'Xamarin.Essentials: Преобразование текста в речь'
 description: Класс TextToSpeech в Xamarin.Essentials позволяет приложению использовать встроенные механизмы преобразования текста в речь, чтобы озвучивать текст на устройстве, а также запрашивать доступные языки, которые может поддерживать подсистема.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: a7f40fc652c6f02d68a9f01dcdd0f4132893a6ca
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 35ef922553cb91aa915c08df03414d1e5f3034cb
+ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59239931"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: преобразование текста в речь
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Преобразование текста в речь
 
 Класс **TextToSpeech** позволяет приложению использовать встроенные механизмы преобразования текста в речь, чтобы озвучивать текст на устройстве, а также запрашивать доступные языки, которые может поддерживать подсистема.
 
@@ -102,8 +102,8 @@ public async Task SpeakNow()
 {
     var settings = new SpeechOptions()
         {
-            Volume = .75,
-            Pitch = 1.0
+            Volume = .75f,
+            Pitch = 1.0f
         };
 
     await TextToSpeech.SpeakAsync("Hello World", settings);
@@ -131,8 +131,8 @@ public async Task SpeakNow()
 
     var settings = new SpeechOptions()
         {
-            Volume = .75,
-            Pitch = 1.0,
+            Volume = .75f,
+            Pitch = 1.0f,
             Locale = locale
         };
 

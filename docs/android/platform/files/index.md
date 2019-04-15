@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2978f0b2bcbdd463876784a9addd7dec055b8af9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116801"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574823"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Хранилище файлов и доступа с помощью Xamarin.Android
 
@@ -69,10 +69,9 @@ ms.locfileid: "50116801"
 | `ApplicationData` | **_Внутренняя\_ХРАНЕНИЯ_/.config** |
 | `Desktop` | **_Внутренняя\_ХРАНЕНИЯ_  /Desktop** |
 | `LocalApplicationData` | **_Внутренняя\_ХРАНЕНИЯ_/.local/share** |
-| `MyComputer` | **_Внутренняя\_ХРАНЕНИЯ_/.local/share** |
 | `MyDocuments` | **_ВНУТРЕННЯЯ\_ХРАНИЛИЩА_** |
 | `MyMusic` | **_Внутренняя\_ХРАНЕНИЯ_/Music** |
-| `MyPictures` | **_Внутренняя\_ХРАНЕНИЯ_/Music** |
+| `MyPictures` | **_Внутренняя\_ХРАНЕНИЯ_  /Pictures** |
 | `MyVideos` | **_Внутренняя\_ХРАНЕНИЯ_/Videos** |
 | `Personal` | **_ВНУТРЕННЯЯ\_ХРАНИЛИЩА_** |
 

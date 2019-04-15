@@ -1,50 +1,50 @@
 ---
-title: Создание кросс платформенных приложений
-description: В этом разделе описывается, сводку, а также шесть частей построение приложений с помощью платформы разработки Xamarin — из Поняв, как работает Xamarin к разработке приложений для мобильных устройств, тестирование и развертывание в различных хранилищах приложения.
+title: Создание кроссплатформенных приложений
+description: В этом разделе описывается, сводку, а также шести частей, создание приложений с помощью платформы разработки Xamarin — от понимания, как работает Xamarin для разработки мобильных приложений и затем протестировать и развернуть в различных магазинов приложений.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 3966b731531d617f105583210334a23071a6802b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 683400e24844308769f0562552641216d45e7d11
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780178"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574797"
 ---
-# <a name="building-cross-platform-applications"></a>Создание кросс платформенных приложений
+# <a name="building-cross-platform-applications"></a>Создание кроссплатформенных приложений
 
-Существует два варианта совместное использование кода между кросс платформенных мобильных приложений: общие проекты активов и переносимой библиотеки классов. Эти параметры являются [обсуждаемые здесь](~/cross-platform/app-fundamentals/code-sharing.md); Дополнительные сведения о [переносимой библиотеки классов](~/cross-platform/app-fundamentals/pcl.md) и [общие проекты](~/cross-platform/app-fundamentals/shared-projects.md) также доступна.
+Существует два варианта для совместного использования кода между кросс платформенных мобильных приложений: Общие проекты активов и переносимых библиотек классов. Эти параметры являются [рассматриваемые здесь](~/cross-platform/app-fundamentals/code-sharing.md); Дополнительные сведения о [переносимые библиотеки классов](~/cross-platform/app-fundamentals/pcl.md) и [проектах общих](~/cross-platform/app-fundamentals/shared-projects.md) также доступна.
 
 <a name="Sections" />
 
- [Обзор набора средств Visual Studio для Unity](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
+ [Обзор](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
- [Часть 1 – основные сведения о платформе Xamarin Mobile](~/cross-platform/app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
+ [Часть 1 – основные сведения о мобильной платформе Xamarin](~/cross-platform/app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 
  [Часть 2 — архитектура](~/cross-platform/app-fundamentals/building-cross-platform-applications/architecture.md)
 
- [Часть 3 – Настройка перекрестной Xamarin платформы решения](~/cross-platform/app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md)
+ [Часть 3 – Настройка кроссплатформенного решения Xamarin](~/cross-platform/app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md)
 
  [Часть 4 – Работа с несколькими платформами](~/cross-platform/app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md)
 
- [Часть 5 – совместное использование стратегии практические кода](~/cross-platform/app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md)
+ [Часть 5 – Практические стратегии совместного использования кода](~/cross-platform/app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md)
 
  [Часть 6. Тестирование и утверждение магазина приложений](~/cross-platform/app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md)
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
-## <a name="case-studies"></a>Примеры использования
+## <a name="case-studies"></a>Примеры внедрения
 
-Принципы, описанные в этом документе, помещаются в рекомендаций в демонстрационном приложении *Tasky*, а также [готовые приложения](https://xamarin.com/prebuilt) как [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
+Принципам, описанным в этом документе, помещаются в практику в приложении-примере *Tasky*, а также [предварительно созданные приложения](https://xamarin.com/prebuilt) как [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
  <a name="Tasky" />
 
 ### <a name="tasky"></a>Tasky
 
-Tasky — это приложение список дел простой для iOS, Android и Windows Phone.
-Он демонстрирует основные принципы создания кросс платформенные приложения с помощью Xamarin и использует локальную базу данных SQLite.
+Tasky простое приложение списка задач для iOS, Android и Windows Phone.
+Он демонстрирует основные принципы создания кросс платформенные приложения с помощью Xamarin и использует локальной базы данных SQLite.
 
  [![Список tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![tasky списка](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
@@ -52,19 +52,19 @@ Tasky — это приложение список дел простой для 
 
 ## <a name="summary"></a>Сводка
 
-В этом разделе представлены средства разработки приложений Xamarin и описывается создание приложений, предназначенных для нескольких мобильных платформ.
+В этом разделе представлены средства разработки приложений Xamarin и обсуждаются способы разработки приложений, предназначенных для нескольких платформ мобильных устройств.
 
-Он охватывает многоуровневой архитектуры структуры кода для повторного использования в нескольких платформ и описание различных программных шаблонов, которые могут использоваться в этой архитектуре.
+Он охватывает многоуровневой архитектуры структуры кода для повторного использования на разных платформах и описание шаблонов другом программном обеспечении, которые могут использоваться в пределах этой архитектуры.
 
-Примеры предоставляют общие функции приложения (например, файл и сетевые операции) и как они могут строиться кросс платформенных способом.
+Примеры приведены общие функции приложения (например, файл и сетевые операции) и как они могут строиться образом между различными платформами.
 
-Наконец он кратко рассматривается проверка и предоставляет ссылки на обучающий материал, помещает эти принципы в действие.
+Наконец она кратко рассматривается проверка и предоставляет ссылки на обучающий материал, помещает эти принципы в действие.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Параметры совместного использования кода](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Практический пример: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Варианты совместного использования кода](~/cross-platform/app-fundamentals/code-sharing.md)
+- [Пример внедрения: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Tasky пример приложения (github)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
-- [Разработка приложений для мобильных устройств Xamarin: Кросс платформенных C# и принципы работы с Xamarin.Forms](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/))
-- [Разработка мобильных приложений с помощью C#, Грег Shackles (O'Reilly)](http://shop.oreilly.com/product/0636920024002.do)
-- [Профессиональные кросс платформенной разработки мобильных приложений на языке C# Олсон Скотт, Джон Хантер, Бен Horgen, Goers Кенни (Wrox)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118157702.html)
+- [Разработка приложений Xamarin Mobile: Кросс платформенные C# и принципы работы Xamarin.Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Разработка мобильных приложений с C# , Грег Shackles (O'Reilly)](http://shop.oreilly.com/product/0636920024002.do)
+- [Профессиональные кросс платформенной мобильной разработки в C# по Олсон Скотт Хантер Джон, Бен Horgen, Кенни Вернувшиеся (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

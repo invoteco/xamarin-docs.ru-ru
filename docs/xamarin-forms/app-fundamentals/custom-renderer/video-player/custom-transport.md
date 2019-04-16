@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58870161"
 ---
 # <a name="custom-video-transport-controls"></a>Пользовательские элементы управления транспортировкой видео
 
-[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 К элементам управления транспортировкой в видеопроигрывателе относятся кнопки, которые выполняют функции **воспроизведения**, **паузы** и **остановки**. Эти кнопки обычно определяются по знакомым значкам, а не тексту. Как правило, функции **Воспроизведение** и **Пауза** объединены в одну кнопку.
 
@@ -540,7 +540,7 @@ namespace FormsVideoLibrary.UWP
 
 Именно этот способ используется в приведенной ниже разметке. В результате символ **воспроизведения** в iOS получает тот же объемный вид, что и кнопки **Пауза** и **Остановка**, но такой вариант не работает на платформах Android и UWP.
 
-На странице **Пользовательская транспортировка** свойству **AreTransportControlsEnabled** задается значение **false**. Здесь также содержится компонент `ActivityIndicator`, отображаемый при загрузке видео, и две кнопки. `DataTrigger` — эти объекты используются для включения и отключения `ActivityIndicator` и кнопок, а также для выбора первой кнопки — **Воспроизведение** или **Пауза**.
+На странице **Пользовательская транспортировка** свойству **AreTransportControlsEnabled** задается значение **false**. Здесь также содержится компонент `ActivityIndicator`, отображаемый при загрузке видео, и две кнопки. Объекты `DataTrigger` используются для включения и отключения `ActivityIndicator` и кнопок, а также для выбора первой кнопки — **Воспроизведение** и **Пауза**.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

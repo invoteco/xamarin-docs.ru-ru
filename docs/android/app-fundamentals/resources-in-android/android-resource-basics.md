@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f747c37362997563a35d9b94f8e677d4104ee1
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110138"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587768"
 ---
 # <a name="android-resource-basics"></a>Основы ресурсов Android
 
@@ -96,8 +96,8 @@ public partial class Resource
 
 При указании ссылки на ресурсы программно (в коде), они доступны через иерархии классов ресурсов, который использует следующий синтаксис:
 
-```xml
-@[<PackageName>.]Resource.<ResourceType>.<ResourceName>
+```csharp
+[<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
 -  **Имя пакета** &ndash; требуется пакет, который предоставляет ресурс и только в том случае, если используются ресурсы из других пакетов.
@@ -112,7 +112,7 @@ public partial class Resource
 Доступ к нужным ресурсам в XML-файл следующий специальный синтаксис:
 
 ```xml
-@[<PackageName>:]<ResourceType>/<ResourceName>.
+@[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
 -  **Имя пакета** &ndash; требуется пакет, который предоставляет ресурс и только в том случае, если используются ресурсы из других пакетов.
@@ -136,8 +136,7 @@ public partial class Resource
 </LinearLayout>
 ```
 
-В этом примере имеется [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) требующее drawable ресурса с именем **флаг**. `ImageView` Имеет его `src` атрибут **@drawable/flag**. В начале действия Android будет выглядеть в каталоге **ресурсов/Drawable** откроется файл с именем **flag.png** (расширение файла может быть другой формат изображения, например **flag.jpg**) загрузить этот файл и отобразить ее в `ImageView`.
+В этом примере имеется [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) требующее drawable ресурса с именем **флаг**. `ImageView` Имеет его `src` атрибут `@drawable/flag`. В начале действия Android будет выглядеть в каталоге **ресурсов/Drawable** откроется файл с именем **flag.png** (расширение файла может быть другой формат изображения, например **flag.jpg**) загрузить этот файл и отобразить ее в `ImageView`.
 При запуске этого приложения оно будет выглядеть примерно как на следующем изображении:
 
 ![Локализованные ImageView](android-resource-basics-images/03-localized-screenshot.png)
-

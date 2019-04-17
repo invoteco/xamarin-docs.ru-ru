@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 12066b25ff3e5f02cf4ad17e7c8cbfdb31395405
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 7c7a3e311a6c5f19242b51dd14f59bcdc9a75c64
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854890"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574719"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Установка Xamarin.iOS в Windows
 
@@ -32,6 +32,11 @@ _В этой статье описывается настройка компью
 - Доступный по сети компьютер Mac, на котором настроены средства сборки Apple и Xamarin.iOS. Visual Studio 2019 обращается к этому компьютеру по сети, чтобы использовать средства сборки Apple, которые необходимы для компиляции приложений в машинном коде iOS.
 
   - [Требования к системе Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
+
+  > [!TIP]
+  > Нет доступа к Mac?
+  >
+  > Если у вас нет доступа к Mac, вы можете использовать [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) или [MacStadium](https://www.macstadium.com/); обе службы предоставляют размещенное в облаке оборудование Mac, которое можно использовать для сборки проектов Xamarin.iOS.
 
 ## <a name="setup"></a>Установка
 
@@ -107,5 +112,5 @@ _В этой статье описывается настройка компью
 ## <a name="next-steps"></a>Следующие шаги
 
 - [Введение в Xamarin.iOS для Visual Studio](introduction-to-xamarin-ios-for-visual-studio.md)
-- [Настройка Visual Studio при разработке приложений для iOS](config-options.md)
+- [Настройка Visual Studio для разработки приложений для iOS](config-options.md)
 - [Подготовка устройств](~/ios/get-started/installation/device-provisioning/index.md)

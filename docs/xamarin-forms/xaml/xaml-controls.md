@@ -9,15 +9,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
 ms.openlocfilehash: a8a61ac505eab8c458c49bde9184d6e96583d37f
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59020268"
 ---
 # <a name="xaml-controls"></a>Элементы управления XAML
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/FormsGallery/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/FormsGallery/)
 
 Представления являются объектами пользовательского интерфейса, такие как метки, кнопки и ползунки, которые обычно называются *элементов управления* или *мини-приложения* в других графических сред программирования. Представления, поддерживаемых Xamarin.Forms являются производными от класса [ `View` ](xref:Xamarin.Forms.View) класса.
 
@@ -40,7 +40,7 @@ ms.locfileid: "59020268"
 | --- | --- |
 | <h3>Кнопка</h3>Отображает текст в прямоугольный объект.<p align="center">![Снимок экрана: кнопка](xaml-controls-images/Button.png "кнопки")</p>[API](xref:Xamarin.Forms.Button) / [руководство](~/xamarin-forms/user-interface/button.md) | <p valign="center"><pre>&lt;Button Text="Click Me!"<br />        Font="Large"<br />        BorderWidth="1"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand"<br />        Clicked="OnButtonClicked" /&gt;</pre></p> |
 | <h3>ImageButton</h3>Отображает изображение в объекте прямоугольной.<p align="center">![Снимок экрана ImageButton](xaml-controls-images/ImageButton.png "ImageButton")</p>[API](xref:Xamarin.Forms.ImageButton) / [руководство](~/xamarin-forms/user-interface/imagebutton.md) | <p valign="center"><pre>&lt;ImageButton Source="XamarinLogo.png"<br />             HorizontalOptions="Center"<br />             VerticalOptions="CenterAndExpand"<br />             Clicked="OnImageButtonClicked" /&gt;</pre></p> |
-| <h3>SearchBar</h3>Отображает панель поиска, поиска.<p align="center">![Снимок экрана SearchBar](xaml-controls-images/SearchBar.png "SearchBar")</p>[API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
+| <h3>Панель поиска</h3>Отображает панель поиска, поиска.<p align="center">![Снимок экрана SearchBar](xaml-controls-images/SearchBar.png "SearchBar")</p>[API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-for-setting-values"></a>Представления для задания значений
@@ -83,5 +83,5 @@ ms.locfileid: "59020268"
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
-- [Образцы Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Документация по API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

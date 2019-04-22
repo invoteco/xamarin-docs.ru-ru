@@ -113,6 +113,6 @@ sections:
           - title: API
             html: '<p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarin-forms">Документация по API Xamarin.Forms</a></p>'
           - title: Примеры
-            html: '<p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Образцы Xamarin.Forms</a></p>'
+            html: '<p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Примеры Xamarin.Forms</a></p>'
           - title: Books
-            html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">Электронная книга "Создание мобильных приложений"</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">Электронная книга "Шаблоны корпоративного приложения"</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Электронная книга "Графика SkiaSharp в Xamarin.Forms"</a></p>
+            html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">Электронная книга. Создание мобильных приложений</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">Электронная книга. Шаблоны корпоративного приложения</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Электронная книга "Графика SkiaSharp в Xamarin.Forms"</a></p>

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
 ms.openlocfilehash: 7e9bfa841db9f0a76f762bab22050377830d85de
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854877"
 ---
 # <a name="gtk-platform-setup"></a>Программа установки платформы GTK #
@@ -29,7 +29,7 @@ Xamarin.Forms теперь имеет поддержку GTK # приложен�
 
 GTK # для macOS и Linux устанавливается как часть [Mono](https://www.mono-project.com/download/stable/). GTK # для .NET можно установить в Windows с помощью [GTK # установщика](https://www.mono-project.com/download/stable/#download-win).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Выполните эти инструкции, чтобы добавить приложение GTK #, которое будет запускаться на рабочем столе Windows.
 
@@ -110,7 +110,7 @@ GTK # для macOS и Linux устанавливается как часть [Mo
 
     ![Игра GTK # жизни](gtk-images/win/gtk-gameoflife.png "GTK # игры жизненного цикла")
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 Выполните следующие действия, чтобы добавить приложение GTK #, которое будет запускаться на рабочем столе Mac:
 
@@ -209,7 +209,7 @@ GtkThemes.Init ();
 GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 ```
 
-### <a name="native-forms"></a>Исходные формы
+### <a name="native-forms"></a>Собственные формы
 
 Исходные формы позволяет Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страницы мог использоваться собственные проекты, включая проекты GTK #. Это можно сделать, создав экземпляр [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страницы и преобразование ее в собственном GTK # типа с помощью `CreateContainer` метод расширения:
 

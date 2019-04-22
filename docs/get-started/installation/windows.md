@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853980"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Установка Xamarin в Visual Studio 2019 г.
@@ -42,7 +42,7 @@ ms.locfileid: "58853980"
 Дополнительные сведения см. в руководстве [Установка Xamarin.iOS в Windows](~/ios/get-started/installation/windows/index.md). 
 
 1. [Установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-2. [Подключите Visual Studio к узлу сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+2. [Подключение Visual Studio к узлу сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [Настройка для разработки на базе iOS](~/ios/get-started/installation/device-provisioning/index.md) (требуется для запуска приложения на устройстве)
 5. [Удаленный симулятор iOS](~/tools/ios-simulator/index.md)
 6. [Введение в Xamarin.iOS для Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
@@ -51,7 +51,7 @@ ms.locfileid: "58853980"
 
 Дополнительные сведения см. в руководстве [Установка Xamarin.Android в Windows](~/android/get-started/installation/windows.md).
 
-1. [Xamarin.Android Configuration](~/android/get-started/installation/windows.md#configuration)
-2. [С помощью диспетчера пакетов SDK Xamarin Android](~/android/get-started/installation/android-sdk.md?ide=vs)
+1. [Конфигурация Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
+2. [Использование диспетчера пакетов SDK Android для Xamarin](~/android/get-started/installation/android-sdk.md?ide=vs)
 3. [Эмулятор SDK для Android](~/android/get-started/installation/android-emulator/index.md)
 4. [Настройка устройства для разработки](~/android/get-started/installation/set-up-device-for-development.md)

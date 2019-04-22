@@ -9,10 +9,10 @@ ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854839"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Беспроводное развертывание для приложений Xamarin.iOS и tvOS
@@ -27,14 +27,14 @@ ms.locfileid: "58854839"
 
 Чтобы применить развертывание по беспроводному соединению, вам потребуется следующее.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 - macOS 10.12.4.
 - Последняя версия Visual Studio для Mac
 - Xcode 9.0 или более поздней версии.
 - Устройство под управлением iOS 11.0 или tvOS 11.0, или более поздней версии.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Последняя версия Visual Studio
 - Устройство под управлением iOS 11.0 или tvOS 11.0, или более поздней версии.
@@ -105,7 +105,7 @@ ms.locfileid: "58854839"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Подключение беспроводного устройства с помощью Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+- [Pair a wireless device with Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad) (Подключение беспроводного устройства с помощью Xcode)
 
 ## <a name="related-video"></a>Связанные видео
 

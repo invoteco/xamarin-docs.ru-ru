@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
 ms.openlocfilehash: f4ff43ea51dc690daa716e69021f690511cdcc97
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854058"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Настройка пакета SDK для Android для Xamarin.Android
@@ -27,7 +27,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Диспетчер пакетов SDK для Android, предназначенный для Xamarin (устанавливается в составе рабочей нагрузки **Разработка мобильных приложений на .NET**), поможет вам скачать новейшие компоненты Android, необходимые для разработки приложения Xamarin.Android. Он заменяет автономный диспетчер пакетов SDK от Google, который был признан нерекомендуемым.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="requirements"></a>Требования
 
@@ -55,11 +55,11 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Чтобы запустить диспетчер пакетов SDK в Visual Studio, щелкните **Сервис > Android > Диспетчер пакетов SDK Android**:
 
-[![LЭлемент меню с расположением диспетчера пакетов SDK Android(android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
+[![Элемент меню с расположением диспетчера пакетов SDK Android](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 Диспетчер пакетов SDK для Android открывается на экране **Пакеты SDK и инструменты для Android**. Этот экран содержит две вкладки &ndash; **Платформы** и **Сервис**:
 
-[![SСнимок экрана с диспетчером пакетов SDK Android, открытым на вкладке "Платформы"(android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
+[![Снимок экрана с диспетчером пакетов SDK Android, открытым на вкладке "Платформы"](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 Экран **Пакеты SDK и инструменты для Android** более подробно описан в следующих разделах.
 
@@ -87,7 +87,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Например, чтобы скачать пакет эмулятора Android от Google, установите флажок рядом с элементом **Эмулятор Android** и нажмите кнопку **Применить изменения**:
 
-[![IУстановка эмулятора Android с вкладки "Сервис"(android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
+[![Установка эмулятора Android со вкладки "Сервис"](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 Может появиться диалоговое окно с сообщением _Для установки следующего пакета требуется принять условия лицензии_:
 
@@ -99,7 +99,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Вкладка **Платформы** содержит список версий пакетов SDK вместе с другими ресурсами (например, образами системы) для каждой платформы:
 
-[![SСнимок экрана области "Платформы"(android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
+[![Снимок экрана области "Платформы"](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 На этом экране указана версия Android (например, **Android 8.0**), кодовое название (**Oreo**), уровень API (например, **26**) и размеры компонентов платформы (например, **1 ГБ**). Вкладка **Платформы** позволяет вам устанавливать компоненты для целевого уровня API Android. Дополнительные сведения о версиях и уровнях API Android см. в разделе [Основные сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -108,11 +108,11 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Чтобы добавить в пакет SDK другую платформу, щелкайте поле рядом с ней, пока в нем не появился флажок (обозначающий установку всех компонентов), а затем нажмите кнопку **Применить изменения**:
 
-[![EПример добавления компонентов Android 7.1 Nougat в пакет SDK для Android(android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
+[![Пример добавления компонентов Android 7.1 Nougat в пакет SDK для Android](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 Чтобы установить только отдельные компоненты, щелкните один раз поле рядом с платформой. Затем можно выбрать любые отдельные компоненты, которые вам нужны:
 
-[![EПример добавления компонентов Android 7.1(android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
+[![Пример добавления компонентов Android 7.1](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 Обратите внимание, что число устанавливаемых компонентов отображается рядом с кнопкой **Применить изменения**. После нажатия кнопки **Применить изменения** вы увидите экран **Принятие условий лицензионного соглашения**, показанный ранее.
 Щелкните **Принять**, чтобы принять условия лицензионного соглашения. Это диалоговое окно может появиться несколько раз, если устанавливается несколько компонентов. В нижней части окна индикатор выполнения указывает ход скачивания и установки. После завершения скачивания и установки (это может занять несколько минут в зависимости от числа скачиваемых компонентов) добавленные компоненты помечаются флажком и указываются в списке **Установленные**.
@@ -121,14 +121,14 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 По умолчанию диспетчер пакетов SDK для Android скачивает компоненты и инструменты платформы из репозитория, управляемого Майкрософт. Если вам нужен доступ к экспериментальным альфа- и бета-версиям платформ и инструментов, которые еще не доступны в репозитории Майкрософт, вы можете переключить диспетчер пакетов SDK на использование репозитория Google. Для этого щелкните значок шестеренки в правом нижнем углу и выберите **"Репозиторий" > "Google (не поддерживается)"**:
 
-[![SВыбор репозитория Google(android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
+[![Выбор репозитория Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
 Если выбран репозиторий Google, на вкладке **Платформы** могут отобразиться дополнительные пакеты, недоступные ранее. (На снимке экрана выше при переходе на репозиторий Google был добавлен пакет **Android SDK Platform 28**.) Обратите внимание, что репозиторий Google является неподдерживаемым, поэтому использовать его для повседневной разработки не рекомендуется.
 
 Чтобы вернуться на поддерживаемый репозиторий платформ и инструментов, щелкните **Майкрософт (рекомендуется)**. Это восстановит список пакетов и инструментов по умолчанию.
 
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 ## <a name="requirements"></a>Требования
 
@@ -151,11 +151,11 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Чтобы запустить диспетчер пакетов SDK в Visual Studio для Mac, щелкните **Сервис > Диспетчер пакетов SDK**:
  
-[![LЭлемент меню с расположением диспетчера пакетов SDK Android(android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
+[![Элемент меню с расположением диспетчера пакетов SDK Android](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 **Диспетчер пакетов SDK Android** открывается в **окне параметров**, содержащем три вкладки — **Платформы**, **Сервис** и **Расположения**:
 
-[![SСнимок экрана с диспетчером пакетов SDK Android, открытым на вкладке "Платформы"(android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
+[![Снимок экрана с диспетчером пакетов SDK Android, открытым на вкладке "Платформы"](android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
 
 Вкладки диспетчера пакетов SDK для Android описаны в следующих разделах.
 
@@ -166,7 +166,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 При запуске диспетчер пакетов SDK автоматически определяет путь для каждого установленного пакета и указывает, что он был **обнаружен**, размещая зеленую галочку рядом с путем:
 
-[![SСнимок экрана вкладки "Расположения"(android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
+[![Снимок экрана вкладки "Расположения"](android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
 
 Нажмите кнопку **Сбросить к значениям по умолчанию**, чтобы диспетчер пакетов SDK искал пакеты SDK, NDK и JDK в расположениях по умолчанию. 
 
@@ -179,11 +179,11 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Например, чтобы скачать пакет эмулятора Android от Google, установите флажок рядом с элементом **Эмулятор Android** и нажмите кнопку **Применить изменения**:
 
-[![IУстановка эмулятора Android с вкладки "Сервис"(android-sdk-images/mac/04-tools-tab-m75-sml.png)](android-sdk-images/mac/04-tools-tab-m75.png#lightbox)
+[![Установка эмулятора Android со вкладки "Сервис"](android-sdk-images/mac/04-tools-tab-m75-sml.png)](android-sdk-images/mac/04-tools-tab-m75.png#lightbox)
 
 Может появиться диалоговое окно с сообщением _Для установки следующего пакета требуется принять условия лицензии_:
 
-[![LЭкран "Принятие условий лицензионного соглашения"(android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
+[![Экран "Принятие условий лицензионного соглашения"](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
 
 Щелкните **Принять**, чтобы принять условия лицензионного соглашения. В нижней части окна индикатор выполнения указывает ход скачивания и установки. После завершения установки вкладка **Сервис** указывает, что выбранные инструменты и дополнения установлены.
 
@@ -192,7 +192,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Вкладка **Платформы** содержит список версий пакетов SDK вместе с другими ресурсами (например, образами системы) для каждой платформы:
 
-[![SСнимок экрана области "Платформы"(android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
+[![Снимок экрана области "Платформы"](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
 
 На этом экране указана версия Android (например, **Android 8.1**), кодовое название (**Oreo**), уровень API (например, **27**) и размеры компонентов платформы (например, **1 ГБ**). Вкладка **Платформы** позволяет вам устанавливать компоненты для целевого уровня API Android. Дополнительные сведения о версиях и уровнях API Android см. в разделе [Основные сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -201,11 +201,11 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Чтобы добавить в пакет SDK другую платформу, щелкайте поле рядом с ней, пока в нем не появился флажок (обозначающий установку всех компонентов), а затем нажмите кнопку **Применить изменения**:
 
-[![EПример добавления всех компонентов платформы(android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
+[![Пример добавления всех компонентов платформы](android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
 
 Чтобы установить только отдельные компоненты, щелкните один раз поле рядом с платформой. Затем можно выбрать любые отдельные компоненты, которые вам нужны:
 
-[![EПример добавления отдельных компонентов(android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
+[![Пример добавления отдельных компонентов](android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
 
 Обратите внимание, что число устанавливаемых компонентов отображается рядом с кнопкой **Применить изменения**. После нажатия кнопки **Применить изменения** вы увидите экран **Принятие условий лицензионного соглашения**, показанный ранее.
 Щелкните **Принять**, чтобы принять условия лицензионного соглашения. Это диалоговое окно может появиться несколько раз, если устанавливается несколько компонентов. В нижней части окна индикатор выполнения указывает ход скачивания и установки. После завершения скачивания и установки (это может занять несколько минут в зависимости от числа скачиваемых компонентов) добавленные компоненты помечаются флажком и указываются в списке **Установленные**.
@@ -214,7 +214,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 По умолчанию диспетчер пакетов SDK для Android скачивает компоненты и инструменты платформы из репозитория, управляемого Майкрософт. Если вам нужен доступ к экспериментальным альфа- и бета-версиям платформ и инструментов, которые еще не доступны в репозитории Майкрософт, вы можете переключить диспетчер пакетов SDK на использование репозитория Google. Для этого щелкните значок шестеренки в правом нижнем углу и выберите **"Репозиторий" > "Google (не поддерживается)"**:
 
-[![SВыбор репозитория Google(android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
+[![Выбор репозитория Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
 Если выбран репозиторий Google, на вкладке **Платформы** могут отобразиться дополнительные пакеты, недоступные ранее. (На снимке экрана выше при переходе на репозиторий Google был добавлен пакет **Android SDK Platform 28**.) Обратите внимание, что репозиторий Google является неподдерживаемым, поэтому использовать его для повседневной разработки не рекомендуется.
 
@@ -231,4 +231,4 @@ _Visual Studio включает диспетчер пакетов SDK для A
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Общие сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md)
-- [Изменения в Android SDK Tools](~/android/troubleshooting/sdk-cli-tooling-changes.md)
+- [Изменения в инструментарии пакета SDK для Android](~/android/troubleshooting/sdk-cli-tooling-changes.md)

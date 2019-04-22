@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869992"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Сводка Глава 17. Совершенствование навыков работы в сетке
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 [ `Grid` ](xref:Xamarin.Forms.Grid) — Это набор мощных механизм, который упорядочивает его дочерние элементы в строки и столбцы ячеек. В отличие от HTML-код, аналогичный `table` элемент, `Grid` , предназначенное исключительно для целей макета, а не презентации.
 
@@ -108,4 +108,4 @@ ms.locfileid: "58869992"
 
 - [Глава 17 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Примеры Глава 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [Grid](~/xamarin-forms/user-interface/layouts/grid.md)
+- [Сетка](~/xamarin-forms/user-interface/layouts/grid.md)

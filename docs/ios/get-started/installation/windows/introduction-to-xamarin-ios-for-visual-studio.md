@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
 ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855137"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Введение в Xamarin.iOS для Visual Studio
@@ -38,7 +38,7 @@ Xamarin для Windows позволяет разрабатывать и тест
 В любом случае необходимо выполнить указанные ниже действия:
 
 - [Установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Установка средств Xamarin в Windows](~/get-started/installation/windows.md)
+- [Установите средства Xamarin в Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Подключение к компьютеру Mac
 
@@ -184,4 +184,4 @@ Xamarin для Windows позволяет разрабатывать и тест
 - [Установка Xamarin.iOS](~/ios/get-started/installation/windows/index.md)
 - [Подготовка устройств](~/ios/get-started/installation/device-provisioning/index.md)
 - [Создание пользовательского интерфейса iOS в коде](~/ios/app-fundamentals/ios-code-only.md)
-- [Подключение компьютера Mac к среде Visual Studio с помощью XMA (видео)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [Подключение компьютера Mac к среде Visual Studio с помощью XMA (видео)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)

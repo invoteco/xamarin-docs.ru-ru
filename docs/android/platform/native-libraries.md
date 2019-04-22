@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: 1b0771a0ccc2597ebd800468b82044e4020d9d94
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854617"
 ---
 # <a name="using-native-libraries"></a>Использование собственных библиотек
@@ -53,7 +53,7 @@ Xamarin.Android поддерживает использование собств
 2. Прокрутите вниз до раздела **параметры отладки**.
 3. В **отладчик** раскрывающемся меню выберите **C++** (вместо значения по умолчанию **.Net (Xamarin)**).
 
-Visual Studio C++ разработчики могут видеть [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) выборку, чтобы попробовать выполнить отладку C++ от 2019 г. Visual Studio или Visual Studio 2017 с Xamarin; и ссылаться на наш [блога](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) Дополнительные сведения.
+Visual Studio C++ разработчики могут видеть [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) образец, чтобы отладить C++ 2019 г. Visual Studio или Visual Studio 2017 с Xamarin; и ссылаться на наш [записи блога](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) для получения дополнительных сведений сведения.
 
 
 

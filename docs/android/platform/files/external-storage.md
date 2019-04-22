@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
 ms.openlocfilehash: 78051fce44239eea86948988a4d19ac37c5ea0d5
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854903"
 ---
 # <a name="external-storage"></a>Внешнее хранилище
@@ -140,17 +140,17 @@ Android считает, что доступ к внешнего хранилищ
 > [!NOTE]
 > Если пользователь разрешает `WRITE_EXTERNAL_STORAGE`, затем `READ_EXTERNAL_STORAGE` предоставляется также неявно. Нет необходимости запрашивать оба разрешения в **AndroidManifest.xml**.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Разрешения также могут быть добавлены с помощью **манифест Android** вкладке **свойства решения**:
 
 ![Обозреватель решений — необходимые разрешения для Visual Studio](./images/required-permissions.w157.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 Разрешения также могут быть добавлены с помощью **манифест Android** вкладке **панели свойств решения**:
 
-[![Sрешение панели - необходимые разрешения для Visual Studio для Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Панель решения — необходимые разрешения для Visual Studio для Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 
@@ -181,4 +181,4 @@ System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/file
 ## <a name="related-links"></a>Связанные ссылки
 
 * [Xamarin.Android локальные файлы образца на **monodroid-samples**](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles)
-* [Permissions In Xamarin.Android](~/android/app-fundamentals/permissions.md)
+* [Разрешения в Xamarin.Android](~/android/app-fundamentals/permissions.md)

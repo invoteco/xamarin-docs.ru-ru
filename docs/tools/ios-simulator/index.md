@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/02/2019
 ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854955"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Удаленный симулятор iOS для Windows
 
 Удаленный iOS Simulator для Windows позволяет тестировать свои приложения в симуляторе iOS в Windows наряду с 2019 г. Visual Studio и Visual Studio 2017.
 
-[![iСимулятор операционной системы, под управлением Windows](images/hero-sml.png "симулятору iOS под управлением Windows")](images/hero.png#lightbox)
+[![симулятор iOS под управлением Windows](images/hero-sml.png "симулятору iOS под управлением Windows")](images/hero.png#lightbox)
 
 ## <a name="getting-started"></a>Начало работы
 
@@ -38,13 +38,13 @@ ms.locfileid: "58854955"
 - [**Параметры** ](#settings) — отображает клавиатуры, расположение и другие параметры.
 - [**Другие варианты** ](#other-options) — можно открыть различные параметры симулятора, такие как поворот, жесты встряхивания и Touch ID.
 
-    [![iСимулятор ОС сопоставляет пример](images/maps-app-sml.png "примере сопоставляет симулятор iOS")](images/maps-app.png#lightbox)
+    [![симулятор iOS сопоставляет пример](images/maps-app-sml.png "примере сопоставляет симулятор iOS")](images/maps-app.png#lightbox)
 
 ## <a name="settings"></a>Параметры
 
 Если щелкнуть значок шестеренки панели инструментов, откроется **параметры** окна:
 
-[![iПараметры симулятора ОС](images/settings-sml.png "параметры симулятора iOS")](images/settings.png#lightbox)
+[![Параметры симулятора iOS](images/settings-sml.png "параметры симулятора iOS")](images/settings.png#lightbox)
 
 Эти параметры позволяют включить аппаратную клавиатуру, выберите расположение, устройство должно отчета (статические и скользящего расположений поддерживаются), включите Touch ID и сбросить содержимое и параметры для симулятора.
 
@@ -52,7 +52,7 @@ ms.locfileid: "58854955"
 
 На панели инструментов кнопку с многоточием показывает другие параметры, такие как поворот, жесты встряхивания и перезагрузки. Эти же параметры можно рассматривать как список, щелкнув правой кнопкой мыши окно симулятора:
 
-[![iДополнительные параметры симулятора ОС](images/more-sml.png "Дополнительные параметры симулятора iOS")](images/more.png#lightbox)
+[![Дополнительные параметры симулятора iOS](images/more-sml.png "Дополнительные параметры симулятора iOS")](images/more.png#lightbox)
 
 ## <a name="touchscreen-support"></a>Поддержка сенсорного экрана
 
@@ -64,6 +64,6 @@ ms.locfileid: "58854955"
 
 Чтобы отключить удаленный iOS Simulator для Windows, перейдите к **Сервис > Параметры > Xamarin > Параметры iOS** и снимите флажок **удаленный Simulator для Windows**.
 
-[![checkbox использовать симулятор](images/options-sml.png "флажок, чтобы использовать симулятор")](images/options.png#lightbox)
+[![флажок, чтобы использовать симулятор](images/options-sml.png "флажок, чтобы использовать симулятор")](images/options.png#lightbox)
 
 Этот параметр отключен, отладка откроется симулятора iOS на подключенном компьютере Mac узла сборки.

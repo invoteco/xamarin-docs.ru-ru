@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 26ab3687e9bcfecbd003ddd0a97f3e46a0cd92b2
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870057"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Средство запуска
@@ -44,11 +44,11 @@ public class LauncherTest
 
 ## <a name="platform-differences"></a>Различия платформ
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Задача, возвращенная методом `CanOpenAsync`, выполняется немедленно.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 Если конечное приложение на этом устройстве никогда ранее не открывалось с помощью метода `OpenAsync` из вашего приложения, iOS однократно предложит пользователю разрешить открывать его с помощью вашего приложения.
 
@@ -56,7 +56,7 @@ public class LauncherTest
 
 Дополнительные сведения о реализации iOS доступны [здесь](xref:UIKit.UIApplication.CanOpenUrl*).
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Различия платформ отсутствуют.
 
@@ -64,5 +64,5 @@ public class LauncherTest
 
 ## <a name="api"></a>API
 
-- [Исходный код Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
-- [Документация по API для Launcher](xref:Xamarin.Essentials.Launcher)
+- [Исходный код класса Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
+- [Документация по API Launcher](xref:Xamarin.Essentials.Launcher)

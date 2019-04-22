@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870421"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Сводка Глава 28. Расположение и карты
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > Заметки на этой странице указывать области, где различаются Xamarin.Forms материал, представленный в книге.
@@ -146,7 +146,7 @@ Android приложениях, которые извлекают из мест�
 
 `VisibleRegion` имеет тип [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), класс с четырьмя свойствами только для чтения:
 
-- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) типа [`Position`](xref:Xamarin.Forms.Maps.Position).
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) типа [`Position`](xref:Xamarin.Forms.Maps.Position)
 - [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) типа `double`, указывающее высоту отображаемую область карты
 - [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) типа `double`, указывающее ширину отображаемую область карты
 - [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) типа [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), показывающее размер наибольшего круговой области, видимой на карте

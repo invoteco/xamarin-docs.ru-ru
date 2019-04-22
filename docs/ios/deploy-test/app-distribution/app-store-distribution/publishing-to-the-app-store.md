@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855163"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Публикация приложений Xamarin.iOS в App Store
@@ -90,7 +90,7 @@ Apple проверяет публикуемые в App Store приложени
 
 В новых проектах Xamarin.iOS автоматически создаются _конфигурации сборки_ **Отладка** и **Выпуск**. Для корректной настройки сборки **Выпуск** выполните следующие действия:
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 1. На **Панели решения** откройте файл **Info.plist**. Выберите **Ручная подготовка**. Сохраните и закройте файл.
 2. Щелкните правой кнопкой мыши **имя проекта** на **Панели решения**, выберите **Параметры** и перейдите на вкладку **Сборка iOS**.
@@ -120,7 +120,7 @@ Apple проверяет публикуемые в App Store приложени
 
 15. Нажмите кнопку **ОK**, чтобы сохранить измененные свойства проекта.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Убедитесь, что среда Visual Studio 2019 или Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. В **обозревателе решений** щелкните правой кнопкой мыши **имя проекта** и выберите пункт **Свойства**.
@@ -172,7 +172,7 @@ Apple проверяет публикуемые в App Store приложени
 
 Когда вы настроите должным образом параметры сборки и iTunes Connect будет ожидать отправки, вы можете выполнить сборку приложения и отправить его в Apple.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 1. В Visual Studio для Mac выберите конфигурацию сборки **Выпуск** и устройство (не симулятор), для которого выполняется сборка.
 
@@ -231,7 +231,7 @@ Apple проверяет публикуемые в App Store приложени
     >
     > Сведения об устранении этой ошибки см. в [этой записи на форумах Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Сейчас Visual Studio 2017 не поддерживает рабочий процесс **Архивирование для публикации**, доступный в Visual Studio для Mac.

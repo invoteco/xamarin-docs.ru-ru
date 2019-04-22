@@ -9,10 +9,10 @@ ms.date: 02/12/2019
 featureFlags:
 - clicktale
 ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854006"
 ---
 <div id="main" class="v2">
@@ -82,7 +82,7 @@ ms.locfileid: "58854006"
         <ul class="pivots">
             <li>
                 <li>
-                <a href="#get-started">Приступая к работе</a>
+                <a href="#get-started">Начало работы</a>
                 <ul id="get-started">
                     <li>
                         <a href="#get-started1"></a>
@@ -95,7 +95,7 @@ ms.locfileid: "58854006"
                                                 <h3>Дополнительные сведения о Xamarin</h3>
                                                 <h4>Создание кроссплатформенных приложений Android и iOS с помощью Xamarin.Forms, используя C# и .NET в Visual Studio на платформе Windows и macOS.</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="~/cross-platform/get-started/introduction-to-mobile-development.md"><img  src="https://docs.microsoft.com/media/logos/logo_xamarin.svg" alt="" />Собственные приложения Xamarin</a></li>
+                                                    <li><a class="barLink" href="~/cross-platform/get-started/introduction-to-mobile-development.md"><img  src="https://docs.microsoft.com/media/logos/logo_xamarin.svg" alt="" />Основные приложения Xamarin</a></li>
                                                     <li><a class="barLink" href="~/cross-platform/desktop/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="" />Xamarin для разработчиков классических приложений .NET</a></li>
                                                     <li><a class="barLink" href="~/android/get-started/java-developers.md"><img  src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="" />Xamarin для разработчиков Java</a></li>
                                                     <li><a class="barLink" href="~/ios/get-started/objective-c-developers/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=" icon" />Xamarin для разработчиков Objective-C</a></li>
@@ -120,7 +120,7 @@ ms.locfileid: "58854006"
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/single-page.md">
                                                                         <img src="~/media/icons/i_xaml-forms.svg" alt="">
-Файл > Создать мобильное приложение </a>
+Файл > Новое мобильное приложение </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/multi-page.md">
@@ -186,7 +186,7 @@ ms.locfileid: "58854006"
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/entry/index.yml">
                                                                         <img src="~/media/icons/i_form-entry.svg" alt="">
-Ввод текст </a>
+Ввод текста </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/editor/index.yml">
@@ -743,24 +743,19 @@ Mac</a>
         <h2>Оставайтесь с нами</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/">
-Блог </a>
+                <a href="https://blog.xamarin.com/"> Блог </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/">
-Форумы </a>
+                <a href="https://forums.xamarin.com/"> Форумы </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq">
-Twitter </a>
+                <a href="https://twitter.com/xamarinhq"> Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin">
-Stack Overflow </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community">
-Сообщество разработчиков </a>
+                <a href="https://dotnet.microsoft.com/platform/community"> Сообщество разработчиков </a>
             </li>
         </ul>
     </div>

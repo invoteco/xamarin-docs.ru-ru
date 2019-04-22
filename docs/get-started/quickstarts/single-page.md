@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855124"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Создание приложения Xamarin.Forms одной страницы
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
 
 В этом кратком руководстве вы узнаете, как:
 
@@ -160,7 +160,7 @@ ms.locfileid: "58855124"
 
     ![](single-page-images/vs/android-start.png "Панель инструментов Visual Studio для Android")
 
-    [![](single-page-images/vs/notes-android.png "Приложение Notes в эмуляторе Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Заметки в эмуляторе Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Введите примечание и нажмите кнопку **Сохранить**.
 
@@ -310,7 +310,7 @@ ms.locfileid: "58855124"
 
     ![](single-page-images/vs/android-start.png "Панель инструментов Visual Studio для Android")
 
-    [![](single-page-images/vs/notes-android.png "Приложение Notes в эмуляторе Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Заметки в эмуляторе Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Введите примечание и нажмите кнопку **Сохранить**.
 
@@ -480,7 +480,7 @@ ms.locfileid: "58855124"
 
 5. На панели инструментов Visual Studio для Mac нажмите клавишу **Запустить** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном эмуляторе Android:
 
-      [![](single-page-images/vsmac/notes-android.png "Приложение Notes в эмуляторе Android")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![](single-page-images/vsmac/notes-android.png "Заметки в эмуляторе Android")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Введите примечание и нажмите кнопку **Сохранить**.
 
@@ -499,7 +499,7 @@ ms.locfileid: "58855124"
 Чтобы включить это одностраничное приложение в одностраничное приложение, перейдите к следующему руководству.
 
 > [!div class="nextstepaction"]
-> [Далее](multi-page.md)
+> [Вперед](multi-page.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 

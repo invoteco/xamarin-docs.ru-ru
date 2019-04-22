@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866362"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Использовать данные времени разработки с помощью средства предварительного просмотра XAML
@@ -36,7 +36,7 @@ mc:Ignorable="d"
 <Label Text={Binding Name} d:Text="Name" />
 ```
 
-[![Dданные времени оект с текстом в метку](xaml-previewer-images/designtimedata-label-sm.png "разработки времени данных с текстом метки")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Проектирование данных времени с текстом в метку](xaml-previewer-images/designtimedata-label-sm.png "разработки времени данных с текстом метки")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
  В этом примере без `d:Text`, средство предварительного просмотра XAML не будет указывать ничего для метки. Вместо этого показывается «Name» где метка будет иметь реальные данные во время выполнения.
 
@@ -46,7 +46,7 @@ mc:Ignorable="d"
 <d:Button Text="Design Time Button" />
 ```
 
-[![Dоект времени данных с помощью управления "Кнопка"](xaml-previewer-images/designtimedata-controls-sm.png "проектирования данных времени с помощью управления \"Кнопка\"")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Проектирование данных времени с помощью управления "Кнопка"](xaml-previewer-images/designtimedata-controls-sm.png "проектирования данных времени с помощью управления \"Кнопка\"")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 В этом примере кнопка отображается только во время разработки. Этот метод позволяет размещать заполнитель в для [пользовательского элемента управления, не поддерживается средством просмотра XAML](render-custom-controls.md).
 
@@ -57,7 +57,7 @@ mc:Ignorable="d"
 ```csharp
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![Dоект времени данных с изображениями](xaml-previewer-images/designtimedata-image-sm.png "проектирования данных временных iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Проектирование времени данных с изображениями](xaml-previewer-images/designtimedata-image-sm.png "проектирования данных временных iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Данные времени разработки для ListViews
 
@@ -83,7 +83,7 @@ ListViews — это популярный способ отображения д
 </StackLayout>
 ```
 
-[![Dоект времени данных с помощью ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "проектирования данных временных ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Проектирование данных времени с помощью ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "проектирования данных временных ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 В этом примере показано ListView три TextCells в средстве предварительного просмотра XAML. Вы можете изменить `x:String` к существующей модели данных в проекте.
 

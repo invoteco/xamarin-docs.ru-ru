@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869828"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Сочетания клавиш Siri в Xamarin.iOS
@@ -227,8 +227,7 @@ void HandleUserActivity()
 Чтобы просмотреть созданный код:
 
 - Откройте **AppDelegate.m**.
-- Добавьте Импорт пользовательских намерение заголовочный файл:
-`#import "OrderSoupIntent.h"`
+- Добавьте Импорт пользовательских намерение заголовочный файл: `#import "OrderSoupIntent.h"`
 - В любом методе в классе добавьте ссылку на `OrderSoupIntent`.
 - Щелкните правой кнопкой мыши `OrderSoupIntent` и выберите **перейти к определению**.
 - Щелкните правой кнопкой мыши, в файле вновь открыть **OrderSoupIntent.h**и выберите **Показать в Finder**.

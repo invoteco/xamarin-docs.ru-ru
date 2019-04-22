@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: db243a9c8dcb25f51bc7926a7aa239531e9c24f6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859014"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Средство предварительного просмотра XAML для Xamarin.Forms
@@ -31,7 +31,7 @@ _См. в разделе отображаются при вводе макеты
 
 Средство предварительного просмотра XAML можно открыть, щелкнув стрелки на панели представления разбиения. Если вы хотите изменить значение по умолчанию разбить поведение представления, используйте **Сервис > Параметры > Xamarin > форм предварительного просмотра** диалоговое окно. В этом диалоговом окне можно выбрать представление документа по умолчанию и ориентация разделения.
 
-[![Xamarin. Параметры просмотра Forms в Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "параметры предварительного просмотра Xamarin.Forms в Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Параметры предварительного просмотра Xamarin.Forms в Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "параметры предварительного просмотра Xamarin.Forms в Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 При открытии файла XAML, чтобы открыть редактор полноразмерное или "Далее" для средства предварительного просмотра, в зависимости от параметров, выбранных в **Сервис > Параметры > Xamarin > средство предварительного просмотра формы** диалоговое окно. Однако разбиение может изменяться для каждого файла в окне редактора.
 
@@ -39,11 +39,11 @@ _См. в разделе отображаются при вводе макеты
 
 Выберите ли вы хотите просмотреть код, средство предварительного просмотра XAML, или обеих дат, выбрав эти кнопки на разбиение область представления. Средняя кнопка меняет местами стороны средство предварительного просмотра, а также код Каковы на:
 
-[![Xamarin. Forms средства предварительного просмотра элементов управления для переключения между проектирования, источник и разделенное представление в Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "управляет Xamarin.Forms средства предварительного просмотра для переключения между проектирования, источник и разделенное представление в Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Элементы управления Xamarin.Forms средства предварительного просмотра для переключения между проектирования, источник и разделенное представление в Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "управляет Xamarin.Forms средства предварительного просмотра для переключения между проектирования, источник и разделенное представление в Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 Можно изменить ли экрана делится по вертикали или горизонтали, или полностью свернуть одной панели:
 
-[![Xamarin. Элементов управления средства просмотра панели ориентации Forms в Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "ориентацию элементов управления панели предварительного просмотра Xamarin.Forms в Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Элементы управления ориентация панели предварительного просмотра Xamarin.Forms в Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "ориентацию элементов управления панели предварительного просмотра Xamarin.Forms в Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ _См. в разделе отображаются при вводе макеты
 
 **Предварительной версии** кнопка отображается в редакторе при открытии страницы XAML. Показать или скрыть средство предварительного просмотра, нажав клавишу **предварительной версии** кнопки в правом верхнем углу любого окна документа XAML:
 
-[![Xamarin. Forms средства предварительного просмотра в Visual Studio для Mac](xaml-previewer-images/xamlp-list-sml.png "средства предварительного просмотра Xamarin.Forms в Visual Studio для Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Средство предварительного просмотра Xamarin.Forms в Visual Studio для Mac](xaml-previewer-images/xamlp-list-sml.png "средства предварительного просмотра Xamarin.Forms в Visual Studio для Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
 
 ::: zone-end
 

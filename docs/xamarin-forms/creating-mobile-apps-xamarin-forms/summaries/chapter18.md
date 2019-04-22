@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870226"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Сводка Глава 18. MVVM
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 Одним из лучших способов проектирования приложения является отделение пользовательского интерфейса от базового кода, который иногда называют *бизнес-логики*. Существует несколько методик, но тот, который предназначен для сред на основе XAML называется Model-View-ViewModel или MVVM.
 

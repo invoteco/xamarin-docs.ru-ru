@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870369"
 ---
 # <a name="xamarinios-api-design"></a>Проектирование API Xamarin.iOS
@@ -62,7 +62,7 @@ ms.locfileid: "58870369"
 
 - Собственные типы C#:
 
-  - [`NSString` becomes `string`](~/ios/internals/api-design/nsstring.md)
+  - [`NSString` становится `string`](~/ios/internals/api-design/nsstring.md)
   - Включить `int` и `uint` параметры, которые должны были перечислений в C# перечисления и перечисления C# с `[Flags]` атрибуты
   - А не зависящий от типа `NSArray` объекты, предоставляют массивов в качестве строго типизированных массивов.
   - Для событий и уведомлений предоставьте пользователям возможность выбора из:

@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
 ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855150"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Связывание с Mac при разработке для Xamarin.iOS
@@ -130,7 +130,7 @@ _В этом руководстве описывается использова�
 
     - На компьютере Mac откройте **System Preferences (Системные настройки) > Sharing (Общий доступ) > Remote Login (Удаленный вход)**:
 
-        [![TIP-адрес компьютера Mac в разделе "Системные настройки" > "Общий доступ"(images/sharing-ipaddress.png "IP-адрес компьютера Mac в разделе \"Системные настройки\" > \"Общий доступ\"")](images/sharing.png#lightbox)
+        [![IP-адрес компьютера Mac в разделе "Системные настройки" > "Общий доступ"](images/sharing-ipaddress.png "IP-адрес компьютера Mac в разделе \"Системные настройки\" > \"Общий доступ\"")](images/sharing.png#lightbox)
 
     - Кроме того, можно использовать командную строку. В окне терминала выполните эту команду: 
 
@@ -143,7 +143,7 @@ _В этом руководстве описывается использова�
 
 2. В диалоговом окне **Связать с Mac** Visual Studio 2019 выберите **Добавить компьютер Mac...**.
 
-    [![TКнопка "Добавить компьютер Mac" в диалоговом окне "Связать с Mac"(images/addtomac.png "Кнопка \"Добавить компьютер Mac\" в диалоговом окне \"Связать с Mac\"")](images/addtomac-large.png#lightbox)
+    [![Кнопка "Добавить компьютер Mac" в диалоговом окне "Связать с Mac"](images/addtomac.png "Кнопка \"Добавить компьютер Mac\" в диалоговом окне \"Связать с Mac\"")](images/addtomac-large.png#lightbox)
 
 3. Введите IP-адрес компьютера Mac и нажмите кнопку **Добавить**:
 
@@ -177,7 +177,7 @@ _В этом руководстве описывается использова�
 
 ||Проверка установки|Загрузка|Установка
 |---|---|---|---|
-|Mono|[![MУстановка Mono отсутствует(images/mono-missing.png "Установка Mono отсутствует")](images/mono-missing-large.png#lightbox)|[![DСкачивание Mono(images/mono-downloading.png "Скачивание Mono")](images/mono-downloading-large.png#lightbox)|[![IУстановка Mono(images/mono-installing.png "Установка Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Установка Mono отсутствует](images/mono-missing.png "Установка Mono отсутствует")](images/mono-missing-large.png#lightbox)|[![Загрузка Mono](images/mono-downloading.png "Загрузка Mono")](images/mono-downloading-large.png#lightbox)|[![Установка Mono](images/mono-installing.png "Установка Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,7 +192,7 @@ _В этом руководстве описывается использова�
 
 ||Проверка установки|Загрузка|Установка
 |---|---|---|---|
-|Xamarin.iOS|[![MУстановка Xamarin.iOS отсутствует(images/xamios-missing.png "Установка Xamarin.iOS отсутствует")](images/xamios-missing-large.png#lightbox)|[![DСкачивание Xamarin.iOS(images/xamios-downloading.png "Скачивание Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![IУстановка Xamarin.iOS(images/xamios-installing.png "Установка Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Установка Xamarin.iOS отсутствует](images/xamios-missing.png "Установка Xamarin.iOS отсутствует")](images/xamios-missing-large.png#lightbox)|[![Загрузка Xamarin.iOS](images/xamios-downloading.png "Загрузка Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Установка Xamarin.iOS](images/xamios-installing.png "Установка Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Средства и лицензии Xcode
 
@@ -200,7 +200,7 @@ _В этом руководстве описывается использова�
 
 ||Проверка установки|Принятие условий лицензионного соглашения|
 |---|---|---|
-|Xcode|[![MУстановка Xcode отсутствует(images/xcode-missing.png "Установка Xcode отсутствует")](images/xcode-missing-large.png#lightbox)|[![XКод лицензии(images/xcode-license.png "Лицензия Xcode")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![Установка Xcode отсутствует](images/xcode-missing.png "Установка Xcode отсутствует")](images/xcode-missing-large.png#lightbox)|[![Лицензия Xcode](images/xcode-license.png "Лицензия Xcode")](images/xcode-license-large.png#lightbox)|
 
 Кроме того, функция "Связать с Mac" установит или обновит различные пакеты, распространяемые с Xcode. Например:
 
@@ -228,7 +228,7 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 
 Параметры, передаваемые в `msbuild` в приведенном выше примере:
 
-- `ServerAddress` — IP-адрес узла сборки Mac.
+- `ServerAddress` — IP-адрес узла сборки Mac.
 - `ServerUser` — имя пользователя, используемое при входе в систему узла сборки Mac.
   Используйте системное имя пользователя, а не полное имя.
 - `ServerPassword` — пароль, используемый при входе в систему узла сборки Mac.
@@ -247,7 +247,7 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 ## <a name="next-steps"></a>Следующие шаги
 
 - [Устранение неполадок при подключении](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
-- [Xamarin Mac Build Agent — краткая лекция Xamarin University](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Введение в Xamarin.iOS для Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Удаленный симулятор iOS для Windows](~/tools/ios-simulator/index.md)
-- [Развертывание по беспроводному соединению](~/ios/deploy-test/wireless-deployment.md)
+- [Wireless Deployment](~/ios/deploy-test/wireless-deployment.md) (Развертывание по беспроводному доступу)

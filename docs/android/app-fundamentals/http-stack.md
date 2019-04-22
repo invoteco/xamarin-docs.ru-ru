@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
 ms.openlocfilehash: a3704552c8fc147588919ecdde2813e831237d89
-ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59239905"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient Stack и селектор реализации SSL/TLS для Android
@@ -25,16 +25,16 @@ ms.locfileid: "59239905"
 >
 > Чтобы продолжить работу с этих серверов и служб, приложений **следует обновить проекты Xamarin с `Android HttpClient` и `Native TLS 1.2` параметры, показано ниже, затем перестройте и повторно развертывать приложения** для вашей пользователи.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Конфигурация Xamarin.Android HttpClient **параметры проекта > Параметры Android**, нажмите кнопку **Дополнительно** кнопки.
 
 Ниже приведены рекомендуемые параметры для поддержки TLS 1.2:
 
-[![Visual Studio параметры Android](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
+[![Параметры Android Visual Studio](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 Используется конфигурация Xamarin.Android HttpClient **параметры проекта > Создать > сборка Android** параметры и щелкните **Общие** вкладки.
 
@@ -119,13 +119,13 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 Этот параметр проекта определяет, какие базовую библиотеку TLS будут использоваться все веб-запроса, оба `HttpClient` и `WebRequest`. По умолчанию выбирается протокол TLS 1.2:
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![TПоле со списком реализации LS/SSL в Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
+[![Поле со списком Реализация протоколов TLS/SSL в Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![TLS/SSL реализации с полем со списком в Visual Studio для Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
+[![Поле со списком Реализация протоколов TLS/SSL в Visual Studio для Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 
@@ -169,11 +169,11 @@ var client = new HttpClient();
 
 Эта переменная среды устанавливается путем добавления _файла среды_ в проект. Файл среды — это файл текстовом формате Unix с действием сборки **AndroidEnvironment**:
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Снимок экрана AndroidEnvironment действие построения в Visual Studio.](http-stack-images/tls03-vs.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Снимок экрана AndroidEnvironment построить действие в Visual Studio для Mac.](http-stack-images/tls03-xs.png)
 

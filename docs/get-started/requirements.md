@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
 ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854746"
 ---
 # <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
@@ -43,8 +43,8 @@ _Требования к платформе и системные требова
 
 Эти платформы не поддерживаются при использовании Xamarin.Forms 3.0:
 
-- *Windows 8.1 или Windows Phone 8.1 WinRT*
-- *Windows Phone Silverlight 8*
+- *Windows 8.1 или Windows Phone 8.1 WinRT;*
+- *Windows Phone 8 Silverlight.*
 
 ### <a name="android"></a>Android
 
@@ -52,19 +52,19 @@ _Требования к платформе и системные требова
 
 Кроме того, в целевой версии или версии компиляции для проектов Android **должен** быть выбран параметр *Использовать самую новую установленную платформу*. Однако минимальной версией может быть API 19, что позволяет поддерживать устройства, использующие Android 4.4 и более поздние версии. Эти значения задаются в разделе **Параметры проекта**.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-**Параметры проекта > приложение > Свойства приложения**
+**Параметры проекта > Приложение > Свойства приложения**
 
 ![Параметры сборки Android в Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-**Построение > Общие**
+**Сборка > Общие**
 
 ![Выберите последнюю требуемой версии .NET framework](requirements-images/options-general-sml.png)
 
-**Построение > приложение Android**
+**Сборка > Приложение Android**
 
 ![Выберите минимальное и целевой версии Android для приложения](requirements-images/options-android-sml.png)
 
@@ -95,6 +95,6 @@ Visual Studio для Mac можно использовать для разраб
 
 - Visual Studio 2019 рекомендуется (Visual Studio 2017 версии 15.8 минимальная)
 
-- [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
+- [Пакет средств разработки Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 [Приложение универсальной платформы Windows (UWP) можно добавить](~/xamarin-forms/platform/windows/installation/index.md) в существующее решение Xamarin.Forms в любое время.

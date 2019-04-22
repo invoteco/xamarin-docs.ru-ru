@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
 ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855241"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Введение в жизненный цикл разработки мобильного программного обеспечения
@@ -88,7 +88,7 @@ ms.locfileid: "58855241"
 
 Также решения о взаимодействии с пользователем необходимо принимать с учетом форм-фактора устройств. Так, экран планшета гораздо больше и, соответственно, может вмещать больше информации. Поэтому зачастую информация, которая выводится на телефоне на нескольких экранах, на планшете умещается на одном:
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Зачастую информация, которая выводится на телефоне на нескольких экранах, умещается на планшете на одном экране")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Зачастую информация, которая выводится на телефоне на нескольких экранах, на планшете умещается на одном")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 На современном рынке представлены устройства самых разных форм-факторов, включая промежуточные (например, между телефоном и планшетом).
 
@@ -147,7 +147,7 @@ ms.locfileid: "58855241"
 Благодаря этому разработчики получают более широкий, но при этом и более сложный, канал распространения приложений. [Google Play](https://play.google.com/store?hl=en) — это официальный магазин приложений Google, однако вы можете использовать и другие. Ниже приведены лишь некоторые из них:
 
 1.  [AppBrain](http://www.appbrain.com/)
-1.  [Amazon App Store для Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1.  [Amazon App Store для Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 

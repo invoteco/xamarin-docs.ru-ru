@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
+ms.openlocfilehash: 9c0e6d014f27651710bf3b8e713b2bf80322d628
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58796525"
 ---
-
 # <a name="android-frequently-asked-questions"></a>Часто задаваемые вопросы Android
 
 ## <a name="installation--setup"></a>Установка и настройка

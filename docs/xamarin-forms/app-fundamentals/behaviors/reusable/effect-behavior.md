@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 8c831dfa45c5028e4f1422467bf3be9210452335
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59019377"
 ---
 # <a name="reusable-effectbehavior"></a>Повторно используемая реакция на событие EffectBehavior
 
-[![DСкачать пример файла(~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 
 _Реакции на события удобно использовать для добавления эффекта в элемент управления, удаления стереотипного эффекта, обработки кода из файлов кода программной части. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для добавления эффекта в элемент управления._
 
@@ -168,7 +168,7 @@ label.Behaviors.Add (new EffectBehavior {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Произведенный эффект](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Реакция на событие для эффекта (пример)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
-- [Поведение](xref:Xamarin.Forms.Behavior)
+- [Реакция на событие](xref:Xamarin.Forms.Behavior)
 - [Реакция на событие&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

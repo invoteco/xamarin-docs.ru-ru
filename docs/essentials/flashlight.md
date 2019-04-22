@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870109"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Фонарик
@@ -22,7 +22,7 @@ ms.locfileid: "58870109"
 
 Чтобы получить доступ к функциям класса **Flashlight**, нужно создать описанную ниже конфигурацию для конкретной платформы.
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Требуются разрешения Flashlight и Camera, которые следует настроить в проекте Android. Для этого можно применить любой из следующих методов:
 
@@ -51,11 +51,11 @@ ms.locfileid: "58870109"
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 Дополнительная настройка не требуется.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Дополнительная настройка не требуется.
 
@@ -96,7 +96,7 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-### [<a name="android"></a>Android](#tab/android)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Класс Flashlight был оптимизирован на основе операционной системы устройства.
 
@@ -108,11 +108,11 @@ catch (Exception ex)
 
 Текстура поверхности камеры предусмотрена для включения или выключения режима `FlashMode` камеры. 
 
-### [<a name="ios"></a>iOS](#tab/ios)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](xref:AVFoundation.AVCaptureDevice) используется для включения и отключения таких режимов устройства, как Torch и Flash.
 
-### [<a name="uwp"></a>UWP](#tab/uwp)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) используется для обнаружения первого фонарика на обратной стороне устройства, который можно включить и выключить.
 
@@ -121,4 +121,4 @@ catch (Exception ex)
 ## <a name="api"></a>API
 
 - [Исходный код Flashlight](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [Документация по API для Flashlight](xref:Xamarin.Essentials.Flashlight)
+- [Документация по API Flashlight](xref:Xamarin.Essentials.Flashlight)

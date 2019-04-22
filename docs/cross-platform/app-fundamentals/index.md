@@ -7,40 +7,40 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: 35c210cc75033f2ad2c83ed6f5196f71d26d000f
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854188"
 ---
 # <a name="sharing-code-on-multiple-platforms"></a>Совместное использование кода на нескольких платформах
 
 В этой статье рассматривается различные параметры, доступные для совместного использования кода на платформах, включая Windows, Android, iOS и многое другое.
 
-## [<a name="code-sharing-overview"></a>Совместное использование Обзор кода](code-sharing.md)
+## <a name="code-sharing-overviewcode-sharingmd"></a>[Совместное использование Обзор кода](code-sharing.md)
 
 Дополнительные сведения о различных параметры, доступные для проектов Xamarin, включая стандартные библиотеки .NET и проектах общих совместного использования кода. Переносимые библиотеки классов, также поддерживаются, однако считается устаревшим в связи с .NET Standard.
 
-## [<a name="net-standard"></a>.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
+## <a name="net-standardcross-platformapp-fundamentalsnet-standardmd"></a>[.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
 
 .NET standard является предпочтительным при совместное использование кода несколькими платформами. Код создан для конкретной версии (2.0 обеспечивает лучший API совместимости с существующим кодом .NET Framework) и может быть принято элементом других проектов, которые поддерживают этот уровень или более поздней версии. Проектов .NET standard, поддерживаются в Visual Studio 2019 и 2019 г. Visual Studio для Mac.
 
-## [<a name="shared-projects"></a>Общие проекты](~/cross-platform/app-fundamentals/shared-projects.md)
+## <a name="shared-projectscross-platformapp-fundamentalsshared-projectsmd"></a>[Общие проекты](~/cross-platform/app-fundamentals/shared-projects.md)
 
 Общие проекты позволяют писать общий код, на который ссылается несколько проектов различных приложений. Код компилируется как часть каждого ссылающийся проект и могут включать директивы компилятора для внедрения функциональных возможностей платформы базы общего кода. В этой статье рассматриваются как общие проекты работают и как создать и использовать их с проектами Xamarin.
 
-## [<a name="portable-class-libraries"></a>Переносимые библиотеки классов](~/cross-platform/app-fundamentals/pcl.md)
+## <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Переносимые библиотеки классов](~/cross-platform/app-fundamentals/pcl.md)
 
 Проекты переносимой библиотеки классов можно создавать и распространять сборки, содержащие общий код для запуска на нескольких платформах. Для создания переносимой библиотеки классов (или «PCL») сначала выбрать какие платформы для целевой, а затем написать код для подмножество .NET Framework, которая доступна в профиле, определенных для этих платформ. PCL считается устаревшим в последних версиях Visual Studio; Разработчики, рекомендуется вместо этого использовать .NET Standard 2.0.
 
-## [<a name="nuget-projects-multiplatform-libraries-for-code-sharing"></a>Проекты NuGet: Обеспечивает реализацию многоплатформенных библиотек для совместного использования кода](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
+## <a name="nuget-projects-multiplatform-libraries-for-code-sharingcross-platformapp-fundamentalsnuget-multiplatform-librariesindexmd"></a>[Проекты NuGet: Обеспечивает реализацию многоплатформенных библиотек для совместного использования кода](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 
 Пакеты NuGet можно автоматически создавать из проектов переносимой библиотеки Классов или .NET standard; и проектах общих можно упаковать в пакеты NuGet «с подменой», с помощью отдельный тип проекта NuGet. В этом разделе описывается создание пакетов NuGet для каждого сценария совместного использования кода.
 
-## [<a name="manually-creating-nuget-packages-for-xamarin"></a>Вручную созданию пакетов NuGet для Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
+## <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Вручную созданию пакетов NuGet для Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 
 Советы по созданию пакетов NuGet, которые работают на платформе Xamarin.
 
-## [<a name="use-cc-libraries-in-cross-platform-xamarin-projects"></a>Использование библиотек C/C++ в проектах Xamarin кросс платформенные](~/cross-platform/cpp/index.md)
+## <a name="use-cc-libraries-in-cross-platform-xamarin-projectscross-platformcppindexmd"></a>[Использование библиотек C/C++ в проектах Xamarin кросс платформенные](~/cross-platform/cpp/index.md)
 
 Этот метод позволяет отделить развития библиотек C/C++, C# привязки в приложения Xamarin и NuGet. Функциональность обеспечивается библиотеки платформы машинный код C/C++, но изолированный от окончательного приложения Xamarin, позволяя производительности максимальное возможное с без дублирования кода весь код конкретной платформы. 

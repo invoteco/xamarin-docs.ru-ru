@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854708"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Основы XAML Xamarin.Forms
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 XAML (расширяемый язык разметки для приложений) позволяет разработчикам определить пользовательские интерфейсы приложений Xamarin.Forms с помощью разметки вместо кода. В приложении Xamarin.Forms XAML никогда не требуется, но часто бывает более емкий и визуально более согласованным, чем эквивалентный код и потенциально оснащен инструментами. XAML особенно хорошо подходит для использования с популярными архитектура приложений MVVM (Model-View-ViewModel): XAML определяет представление, связанного с ViewModel кода через привязки данных на основе XAML.
 
 ## <a name="xaml-basics-contents"></a>Содержимое основы XAML
 
-* [Обзор](#Overview)
+* [Обзор набора средств Visual Studio для Unity](#Overview)
 * [Часть 1. Начало работы с XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-* [Часть 2. Синтаксис Essential XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+* [Часть 2. Основной синтаксис XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [Часть 3. Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 * [Часть 4. Основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 * [Часть 5. От привязки данных к MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
@@ -109,4 +109,4 @@ XAML по существу является XML, но некоторые фун�
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 - [Создание книги мобильных приложений](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Образцы Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)

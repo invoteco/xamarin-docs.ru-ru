@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854981"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Выполнять навигации в приложении Xamarin.Forms многостраничных
 
-[![DЗагрузка примера](~/media/shared/download.png) Загрузка примера](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 В этом кратком руководстве вы узнаете, как:
 
@@ -613,7 +613,7 @@ ms.locfileid: "58854981"
 Чтобы изменить приложение таким образом, чтобы он хранит данные в локальную базу данных для SQLite.NET, перейдите к следующему руководству.
 
 > [!div class="nextstepaction"]
-> [Далее](database.md)
+> [Вперед](database.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -1,5 +1,5 @@
 ---
-title: Разметка Json MonoTouch.Dialog
+title: Разметка JSON MonoTouch.Dialog
 description: В этом документе описывается синтаксис JSON, который может использоваться для создания пользовательского интерфейса Xamarin.iOS с помощью MonoTouch.Dialog.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
@@ -8,13 +8,13 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870135"
 ---
-# <a name="monotouchdialog-json-markup"></a>Разметка Json MonoTouch.Dialog
+# <a name="monotouchdialog-json-markup"></a>Разметка JSON MonoTouch.Dialog
 
 На этой странице описываются разметка Json, принят в MonoTouch.Dialog [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
@@ -153,7 +153,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement
 
 -  `header` (необязательно)
 -  `footer` (необязательно)
--  `elements` array
+-  Массив `elements`
 
 
  <a name="header" />

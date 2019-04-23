@@ -1,17 +1,25 @@
+---
+ms.openlocfilehash: f0a7a0f66f78739ce191c257de91e4770e65282c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373435"
+---
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
-> - Создать [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms в XAML.
-> - Ответить на текст в изменении `Editor`.
-> - Настроить поведение `Editor`.
+> - Создавать [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms в XAML.
+> - Отвечать на текст в изменении `Editor`.
+> - Настраивать поведение `Editor`.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 ### <a name="prerequisites"></a>Предварительные требования
 
-Для работы с этим руководством у вас должен быть последний выпуск Visual Studio 2017 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**. Кроме того, вам потребуется компьютер Mac для сборки учебного приложения на iOS. Сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2017 к узлу сборки Mac см. в статье [Связывание с Mac для разработки Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Для работы с этим руководством у вас должен быть последний выпуск Visual Studio 2017 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**. Кроме того, вам потребуется компьютер Mac для сборки учебного приложения на iOS. Сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2017 к узлу сборки Mac см. в статье [Связывание с Mac для разработки Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-Прежде чем начать работу с этим руководством, ознакомьтесь со следующими руководствами:
+Прежде чем работать с этим учебником, вы должны выполнить:
 
 - Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
 - Руководство по [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
@@ -22,7 +30,7 @@
 
 Для работы с этим руководством вам нужно установить Visual Studio для Mac (последний выпуск) с поддержкой платформ Android и iOS. Кроме того, вам потребуется Xcode (последний выпуск). Дополнительные сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md).
 
-Прежде чем начать работу с этим руководством, ознакомьтесь со следующими руководствами:
+Прежде чем работать с этим учебником, вы должны выполнить:
 
 - Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
 - Руководство по [StackLayout](~/get-started/tutorials/stacklayout/index.yml).

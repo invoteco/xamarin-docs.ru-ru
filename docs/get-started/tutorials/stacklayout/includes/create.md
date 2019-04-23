@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a7b23e47269ecca4d36a344ce3589443a4a85e31
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382555"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **StackLayoutTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.

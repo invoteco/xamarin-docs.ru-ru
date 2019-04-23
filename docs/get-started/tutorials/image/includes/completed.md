@@ -1,4 +1,12 @@
-Поздравляем с завершением этого учебника, где вы научились:
+---
+ms.openlocfilehash: 5f98bd713e5dc33fd84050c07a62143259af2d41
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384563"
+---
+Поздравляем с завершением этого руководства, в котором вы научились:
 
 > [!div class="checklist"]
 > - Создавать [`Image`](xref:Xamarin.Forms.Image) Xamarin.Forms в XAML.

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f0c07199a8f839d8dc9d334ae06c96a9b363c36e
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61388880"
+---
 Запросы REST выполняются по протоколу HTTP с помощью тех же HTTP-команд, которые веб-браузеры используют для извлечения страниц и отправки данных на серверы. В этом упражнении вы создадите класс, который использует команду GET для извлечения данных из веб-API [OpenWeatherMap](https://openweathermap.org/). Этот веб-API может использоваться для получения данных прогноза погоды для указанного расположения. Для использования этого веб-API нужно зарегистрироваться для получения ключа API.
 
 > [!div class="nextstepaction"]

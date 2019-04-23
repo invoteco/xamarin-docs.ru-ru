@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ddc9d18b57eac099331f0814b5963fb207840380
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672486"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893248"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms карты
 
@@ -128,6 +128,15 @@ XML-представление для этих ключей в **Info.plist** п
 ![Разрешения, необходимые для Android](map-images/android-map-permissions.png "необходимые разрешения для Android")
 
 Последние два необходимы, так как приложения требуют подключения к сети для загрузки данных карты. Ознакомьтесь с Android [разрешения](https://developer.android.com/reference/android/Manifest.permission.html) для получения дополнительных сведений.
+
+Кроме того Android 9 удалил клиентская библиотека Apache HTTP из bootclasspath, и их не доступен для приложений, предназначенных для API 28 или более поздней версии. Необходимо добавить следующую строку `application` узел вашего **AndroidManifest.xml** файл, чтобы продолжать использовать клиент Apache HTTP в приложениях, предназначенных для API 28 или более поздней версии:
+
+```xml
+<application ...>
+    ...
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
 
 ### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
 

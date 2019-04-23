@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8bee6d7145cdc9bf22c01c12a4fb34cfb31cd9f4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187561"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **AppLifecycleTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.

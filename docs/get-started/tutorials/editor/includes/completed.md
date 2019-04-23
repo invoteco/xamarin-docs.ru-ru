@@ -1,4 +1,12 @@
-Поздравляем с завершением этого учебника, где вы научились:
+---
+ms.openlocfilehash: e114b674b0c106acfd07a101b22bbf4f437519e8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373418"
+---
+Поздравляем с завершением этого руководства, в котором вы научились:
 
 > [!div class="checklist"]
 > - Создавать [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms в XAML.

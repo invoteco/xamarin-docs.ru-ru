@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037631"
+---
 Ранее мы заполнили [`ListView`](xref:Xamarin.Forms.ListView) данными с помощью привязки данных. Однако несмотря на привязку данных к коллекции, где каждый объект в коллекции определял несколько элементов данных, только один элемент данных отображался для каждого объекта (свойство `Name` объекта `Monkey`).
 
 В этом упражнении вы измените проект **ListViewTutorial**, чтобы [`ListView`](xref:Xamarin.Forms.ListView) отображал несколько элементов данных в каждой строке.

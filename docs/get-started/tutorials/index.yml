@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 8df0acd20f07235608520c09897b6faf3e1eb99e
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57198750"
 documentType: LandingData
 title: Руководства по Xamarin.Forms
 metadata:
@@ -20,93 +14,93 @@ metadata:
 abstract:
   description: На это странице содержатся ссылки на руководства с общими сведениями о создании мобильных приложений с помощью Xamarin.Forms. Полную документацию по Xamarin.Forms см. в разделе <a href="/xamarin/xamarin-forms/">Документация по Xamarin.Forms</a>.
 sections:
-- title: Макеты
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+  - title: Макеты
     items:
-    - href: stacklayout/
-      html: Узнайте, как упорядочивать представления в виде распределения (горизонтально или вертикально) на основе одномерного массива.
-      image:
-        src: https://docs.microsoft.com/media/common/i_dashboard.svg
-        href: stacklayout/
-      title: StackLayout
-    - href: grid/
-      html: Узнайте, как упорядочивать представления в строки и столбцы, которые могут иметь пропорциональные или абсолютные размеры.
-      image:
-        src: https://docs.microsoft.com/media/common/i_table.svg
-        href: grid/
-      title: Grid
-- title: Представления
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: stacklayout/
+            html: 'Узнайте, как упорядочивать представления в виде распределения (горизонтально или вертикально) на основе одномерного массива.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: stacklayout/
+            title: StackLayout
+          - href: grid/
+            html: 'Узнайте, как упорядочивать представления в строки и столбцы, которые могут иметь пропорциональные или абсолютные размеры.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_table.svg'
+              href: grid/
+            title: Grid
+  - title: Представления
     items:
-    - href: label/
-      html: Узнайте, как настроить отображение текста в одной или нескольких строках.
-      image:
-        src: ~/media/icons/i_form-label.svg
-        href: label/
-      title: Метка
-    - href: button/
-      html: Узнайте, как реагировать на касание или нажатие кнопки, которое приводит к выполнению определенной задачи в приложении.
-      image:
-        src: https://docs.microsoft.com/media/common/i_button.svg
-        href: button/
-      title: Кнопка
-    - href: entry/
-      html: Узнайте, как принимать однострочные текстовые входные данные.
-      image:
-        src: ~/media/icons/i_form-entry.svg
-        href: entry/
-      title: Ввод
-    - href: editor/
-      html: Узнайте, как принимать многострочные текстовые входные данные.
-      image:
-        src: ~/media/icons/i_form-editor.svg
-        href: editor/
-      title: Редактор
-    - href: image/
-      html: Узнайте, как настроить отображение изображений на странице.
-      image:
-        src: https://docs.microsoft.com/media/common/i_account-management.svg
-        href: image/
-      title: Изображение
-    - href: listview/
-      html: Узнайте, как представлять списки данных.
-      image:
-        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
-        href: listview/
-      title: ListView
-- title: Принципы работы приложения
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: label/
+            html: 'Узнайте, как настроить отображение текста в одной или нескольких строках.'
+            image:
+              src: ~/media/icons/i_form-label.svg
+              href: label/
+            title: Метка
+          - href: button/
+            html: 'Узнайте, как реагировать на касание или нажатие кнопки, которое приводит к выполнению определенной задачи в приложении.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_button.svg'
+              href: button/
+            title: Кнопка
+          - href: entry/
+            html: 'Узнайте, как принимать однострочные текстовые входные данные.'
+            image:
+              src: ~/media/icons/i_form-entry.svg
+              href: entry/
+            title: Ввод
+          - href: editor/
+            html: 'Узнайте, как принимать многострочные текстовые входные данные.'
+            image:
+              src: ~/media/icons/i_form-editor.svg
+              href: editor/
+            title: Редактор
+          - href: image/
+            html: 'Узнайте, как настроить отображение изображений на странице.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
+              href: image/
+            title: Изображение
+          - href: listview/
+            html: 'Узнайте, как представлять списки данных.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_sharepoint-list.svg'
+              href: listview/
+            title: ListView
+  - title: Принципы работы приложения
     items:
-    - href: pop-ups/
-      html: Узнайте, как настроить отображение предупреждений и таблиц действий с помощью Xamarin.Forms, отвечать на простые вопросы пользователей и помочь пользователям в выполнении задач.
-      image:
-        src: https://docs.microsoft.com/media/common/i_alert.svg
-        href: pop-ups/
-      title: Всплывающие окна
-    - href: app-lifecycle/
-      html: Сведения о жизненном цикле приложений Xamarin.Forms и сохранении данных при изменениях состояния жизненного цикла.
-      image:
-        src: https://docs.microsoft.com/media/common/i_agile.svg
-        href: app-lifecycle/
-      title: Жизненный цикл приложения
-    - href: local-database/
-      html: Узнайте, как с помощью пакета NuGet для SQLite.NET внедрить операции из локальной базой данных в приложение.
-      image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
-        href: local-database/
-      title: Локальная база данных
-    - href: web-service/
-      html: Узнайте, как использовать веб-службы на основе REST из Xamarin.Forms.
-      image:
-        src: https://docs.microsoft.com/media/common/i_server.svg
-        href: web-service/
-      title: Веб-службы
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: pop-ups/
+            html: 'Узнайте, как настроить отображение предупреждений и таблиц действий с помощью Xamarin.Forms, отвечать на простые вопросы пользователей и помочь пользователям в выполнении задач.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_alert.svg'
+              href: pop-ups/
+            title: Всплывающие окна
+          - href: app-lifecycle/
+            html: Сведения о жизненном цикле приложений Xamarin.Forms и сохранении данных при изменениях состояния жизненного цикла.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
+              href: app-lifecycle/
+            title: Жизненный цикл приложения
+          - href: local-database/
+            html: 'Узнайте, как с помощью пакета NuGet для SQLite.NET внедрить операции из локальной базой данных в приложение.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
+              href: local-database/
+            title: Локальная база данных
+          - href: web-service/
+            html: 'Узнайте, как использовать веб-службы на основе REST из Xamarin.Forms.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_server.svg'
+              href: web-service/
+            title: Веб-службы

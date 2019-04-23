@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 31ba5d809c88f7042f7cd178dd152acdc6448e0b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037610"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **ListViewTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b18f6d88c5694415d2082a6db112143fc421471c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187555"
+---
 Поздравляем с завершением этого учебника, где вы научились:
 
 > [!div class="checklist"]

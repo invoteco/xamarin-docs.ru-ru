@@ -7,76 +7,70 @@ metadata:
   ms.author: crdun
   ms.date: 02/20/2018
   ms.topic: sample
-  ms.openlocfilehash: 58c8cf15dc196071268172980279cb19f269cc4a
-  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-  ms.translationtype: HT
-  ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/04/2018
-  ms.locfileid: "30762699"
 abstract:
-  description: Примеры приложений и демонстрации кода Xamarin Android, которые помогут приступить к созданию мобильных приложений с помощью C# и Xamarin.
+  description: 'Примеры приложений и демонстрации кода Xamarin Android, которые помогут приступить к созданию мобильных приложений с помощью C# и Xamarin.'
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/android/all/
-      text: Все примеры Xamarin.Android
+      - href: 'https://developer.xamarin.com/samples/android/all/'
+        text: Все примеры Xamarin.Android
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+  - title: null
     items:
-    - href: https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/
-      html: В этом примере показаны новые API материального исполнения, представленные в Android Lollipop.
-      image:
-        src: images/material-design.png
-        href: https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/
-      title: Материальное исполнение
-    - href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
-      html: Это решение использует NuGet Сервисов Google Play Xamarin, чтобы продемонстрировать несколько способов применения API карт.
-      image:
-        src: images/gps.png
-        href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
-      title: Сервисы Google Play
-    - href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
-      html: В этом примере показано, как совместно использовать ViewPager с PagerTabStrip, чтобы реализовать приложение, которое представляет собой серию математических задач на флэш-картах.
-      image:
-        src: images/flash.png
-        href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
-      title: Пейджер флэш-карт
-    - href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
-      html: Фрагменты являются автономными модульными компонентами, которые используются для решения проблем при написании приложений, которые могут выполняться на экранах разных размеров.
-      image:
-        src: images/fragments.png
-        href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
-      title: Фрагменты
-    - href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
-      html: Красочное приложение для рисования пальцами, использующее мультисенсорное отслеживание на Android.
-      image:
-        src: images/fingerpaint.png
-        href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
-      title: Рисование пальцами
-    - href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
-      html: Используйте этот пример, чтобы узнать как использовать новые мини-приложения CardView и RecyclerView, представленные в Android 5.0 Lollipop.
-      image:
-        src: images/recycler.png
-        href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
-      title: RecyclerViewer
-    - href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
-      html: Пример Android, заменяющий ActionBar новой панелью инструментов в Android 5.0 Lollipop.
-      image:
-        src: images/toolbar.png
-        href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
-      title: Toolbar
-    - href: https://developer.xamarin.com/samples/monodroid/wear/WatchFace/
-      html: Как реализовать пользовательское оформление экрана Android Wear.
-      image:
-        src: images/watchface.png
-        href: https://developer.xamarin.com/samples/monodroid/wear/WatchFace/
-      title: WatchFace
-    - href: https://developer.xamarin.com/samples/android/all/
-      html: Полный набор примеров приложений Xamarin.Android и образцов кода.
-      image:
-        src: ~/media/shared/sample-download.svg
-        href: https://developer.xamarin.com/samples/android/all/
-      title: Все примеры Xamarin.Android
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/'
+            html: 'В этом примере показаны новые API материального исполнения, представленные в Android Lollipop.'
+            image:
+              src: images/material-design.png
+              href: 'https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/'
+            title: Материальное исполнение
+          - href: 'https://developer.xamarin.com/samples/monodroid/GooglePlayServices/'
+            html: 'Это решение использует NuGet Сервисов Google Play Xamarin, чтобы продемонстрировать несколько способов применения API карт.'
+            image:
+              src: images/gps.png
+              href: 'https://developer.xamarin.com/samples/monodroid/GooglePlayServices/'
+            title: Сервисы Google Play
+          - href: 'https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/'
+            html: 'В этом примере показано, как совместно использовать ViewPager с PagerTabStrip, чтобы реализовать приложение, которое представляет собой серию математических задач на флэш-картах.'
+            image:
+              src: images/flash.png
+              href: 'https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/'
+            title: Пейджер флэш-карт
+          - href: 'https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/'
+            html: 'Фрагменты являются автономными модульными компонентами, которые используются для решения проблем при написании приложений, которые могут выполняться на экранах разных размеров.'
+            image:
+              src: images/fragments.png
+              href: 'https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/'
+            title: Фрагменты
+          - href: 'https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/'
+            html: 'Красочное приложение для рисования пальцами, использующее мультисенсорное отслеживание на Android.'
+            image:
+              src: images/fingerpaint.png
+              href: 'https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/'
+            title: Рисование пальцами
+          - href: 'https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/'
+            html: 'Используйте этот пример, чтобы узнать как использовать новые мини-приложения CardView и RecyclerView, представленные в Android 5.0 Lollipop.'
+            image:
+              src: images/recycler.png
+              href: 'https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/'
+            title: RecyclerViewer
+          - href: 'https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/'
+            html: 'Пример Android, заменяющий ActionBar новой панелью инструментов в Android 5.0 Lollipop.'
+            image:
+              src: images/toolbar.png
+              href: 'https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/'
+            title: Toolbar
+          - href: 'https://developer.xamarin.com/samples/monodroid/wear/WatchFace/'
+            html: Как реализовать пользовательское оформление экрана Android Wear.
+            image:
+              src: images/watchface.png
+              href: 'https://developer.xamarin.com/samples/monodroid/wear/WatchFace/'
+            title: WatchFace
+          - href: 'https://developer.xamarin.com/samples/android/all/'
+            html: Полный набор примеров приложений Xamarin.Android и образцов кода.
+            image:
+              src: ~/media/shared/sample-download.svg
+              href: 'https://developer.xamarin.com/samples/android/all/'
+            title: Все примеры Xamarin.Android

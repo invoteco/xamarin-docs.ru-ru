@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 63ddc7d34d0bcca4e86cb03b08a6040d20f8f037
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60857639"
 ---
 # <a name="contributing"></a>Добавление данных
 
@@ -73,7 +73,7 @@ ms.locfileid: "54479806"
 - **Прочтите** [руководство по стилю](../contributing-guidelines/template.md) и рекомендации по [стилю изложения](../contributing-guidelines/voice-tone.md).
 - **Используйте** файл [шаблона](../contributing-guidelines/template.md) в качестве отправной точки.
 - **Создайте** отдельную ветвь в вилке перед работой над статьей.
-- **Следуйте** [рабочему процессу GitHub Flow](https://guides.github.com/introduction/flow/).
+- **Следуйте**[рабочему процессу GitHub](https://guides.github.com/introduction/flow/).
 - Регулярно **публикуйте** записи о своей работе по добавлению данных.
 
 > [!NOTE]

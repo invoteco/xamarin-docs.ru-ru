@@ -7,64 +7,58 @@ metadata:
   ms.author: crdun
   ms.date: 02/17/2018
   ms.topic: sample
-  ms.openlocfilehash: 9a22147adbcd59fe7168af8e717d065d6d27b85e
-  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-  ms.translationtype: HT
-  ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/04/2018
-  ms.locfileid: "30776135"
 abstract:
-  description: Примеры приложений и демонстрации кода Xamarin.iOS, которые помогут начать создавать мобильные приложения с помощью Xamarin и C#.
+  description: "Примеры приложений и демонстрации кода Xamarin.iOS, которые помогут начать создавать мобильные приложения с помощью Xamarin и\_C#."
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/ios/all/
-      text: Все образцы Xamarin.iOS
+      - href: 'https://developer.xamarin.com/samples/ios/all/'
+        text: Все образцы Xamarin.iOS
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+  - title: null
     items:
-    - href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
-      html: Демонстрация дополненной реальности ARKit для размещения объектов на обнаруженных поверхностях.
-      image:
-        src: images/arkit.png
-        href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
-      title: ARKit (iOS 11)
-    - href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
-      html: 'Новые возможности iOS 11 в MapKit: группирование и разделение меток по уровню масштабирования.'
-      image:
-        src: images/mapkit.png
-        href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
-      title: MapKit (iOS 11)
-    - href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
-      html: Платформа iOS 11 Vision и CoreML, использующие модель, обученную с помощью пользовательской службы визуального распознавания Azure.
-      image:
-        src: images/coremlazure.png
-        href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
-      title: CoreML и Azure (iOS 11)
-    - href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
-      html: Как использовать контроллеры представления и свойства ContactsUI.
-      image:
-        src: images/contacts.png
-        href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
-      title: QuickContacts
-    - href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
-      html: Набор элементов управления пользовательского интерфейса в watchOS.
-      image:
-        src: images/watchos.png
-        href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
-      title: WatchKit Catalog
-    - href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
-      html: Демонстрирует, как использовать множество представлений и элементов управления на платформе UIKit в tvOS.
-      image:
-        src: images/tvosui.png
-        href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
-      title: UI Catalog для tvOS
-    - href: https://developer.xamarin.com/samples/ios/all/
-      html: Полный набор образцов приложений Xamarin.iOS и демонстраций кода.
-      image:
-        src: ~/media/shared/sample-download.svg
-        href: https://developer.xamarin.com/samples/ios/all/
-      title: Все образцы Xamarin.iOS
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/'
+            html: Демонстрация дополненной реальности ARKit для размещения объектов на обнаруженных поверхностях.
+            image:
+              src: images/arkit.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/'
+            title: "ARKit (iOS\_11)"
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/'
+            html: "Новые возможности iOS\_11 в MapKit: группирование и разделение меток по уровню масштабирования."
+            image:
+              src: images/mapkit.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/'
+            title: "MapKit (iOS\_11)"
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/'
+            html: "Платформа iOS\_11 Vision и CoreML, использующие модель, обученную с помощью пользовательской службы визуального распознавания Azure."
+            image:
+              src: images/coremlazure.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/'
+            title: "CoreML и Azure (iOS\_11)"
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/'
+            html: Как использовать контроллеры представления и свойства ContactsUI.
+            image:
+              src: images/contacts.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/'
+            title: QuickContacts
+          - href: 'https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/'
+            html: Набор элементов управления пользовательского интерфейса в watchOS.
+            image:
+              src: images/watchos.png
+              href: 'https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/'
+            title: "WatchKit\_Catalog"
+          - href: 'https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/'
+            html: 'Демонстрирует, как использовать множество представлений и элементов управления на платформе UIKit в tvOS.'
+            image:
+              src: images/tvosui.png
+              href: 'https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/'
+            title: "UI\_Catalog для\_tvOS"
+          - href: 'https://developer.xamarin.com/samples/ios/all/'
+            html: Полный набор образцов приложений Xamarin.iOS и демонстраций кода.
+            image:
+              src: ~/media/shared/sample-download.svg
+              href: 'https://developer.xamarin.com/samples/ios/all/'
+            title: Все образцы Xamarin.iOS

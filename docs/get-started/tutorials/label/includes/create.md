@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 84c4ed5c2e019750db80a6dd930c818dcc9e401c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896710"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **LabelTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.

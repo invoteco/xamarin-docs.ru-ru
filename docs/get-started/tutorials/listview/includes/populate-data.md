@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037590"
+---
 Объект [`ListView`](xref:Xamarin.Forms.ListView) заполняется данными с помощью свойства [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), которое имеет тип `IEnumerable`. Предыдущий шаг заполняет `ListView` в XAML массивом строк. Тем не менее обычно `ListView` будет заполняться данными из коллекции, определенной в коде программной части, которая реализует `IEnumerable`.
 
 В этом упражнении вы измените проект **ListViewTutorial** для заполнения [`ListView`](xref:Xamarin.Forms.ListView) данными из коллекции объектов, хранящейся в `List`.

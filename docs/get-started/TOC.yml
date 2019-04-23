@@ -1,93 +1,86 @@
-items:
 - name: Приступая к работе
   href: index.yml
-  items:
-  - name: Требования
-    href: requirements.md
-  - name: Установка
-    href: installation/index.md
-    items:
-    - name: Установка Xamarin в Windows
-      href: installation/windows.md
-      items:
-      - name: Установка предварительных версий Xamarin в Windows
-        href: installation/windows-preview.md
-    - name: Установка Visual Studio для Mac
-      href: /visualstudio/mac/installation/
-      items:
-      - name: Установка предварительных версий Xamarin в Mac
-        href: /visualstudio/mac/update/
-    - name: Инструкции по настройке брандмауэра Xamarin
-      href: installation/firewall.md
-    - name: Удаление Xamarin
-      href: installation/uninstalling-xamarin.md
-  - name: Первое приложение
-    href: first-app/index.md
-  - name: Краткие руководства
-    href: quickstarts/index.yml
-    items:
-    - name: Файл > Создать
-      href: quickstarts/single-page.md
-    - name: Многостраничное приложение
-      href: quickstarts/multi-page.md
-    - name: База данных
-      href: quickstarts/database.md
-    - name: Задание стиля
-      href: quickstarts/styling.md
-    - name: Подробный обзор
-      href: quickstarts/deepdive.md
-    expanded: true
-  - name: Учебники
-    href: tutorials/index.yml
-    items:
-    - name: Макет "стопка"
-      href: tutorials/stacklayout/index.yml
-    - name: Метка
-      href: tutorials/label/index.yml
-    - name: Кнопка
-      href: tutorials/button/index.yml
-    - name: Ввод текст
-      href: tutorials/entry/index.yml
-    - name: Текстовый редактор
-      href: tutorials/editor/index.yml
-    - name: Изображения
-      href: tutorials/image/index.yml
-    - name: Макет Grid
-      href: tutorials/grid/index.yml
-    - name: Списки
-      href: tutorials/listview/index.yml
-    - name: Всплывающие окна
-      href: tutorials/pop-ups/index.yml
-    - name: Жизненный цикл приложения
-      href: tutorials/app-lifecycle/index.yml
-    - name: Локальная база данных
-      href: tutorials/local-database/index.yml
-    - name: Веб-службы
-      href: tutorials/web-service/index.yml
-    expanded: true
-  - name: Дополнительные сведения о Xamarin
-    items:
-    - name: Приложения в машинном коде
-      href: ~/cross-platform/get-started/introduction-to-mobile-development.md
-    - name: Разработчики, использующие .NET
-      href: ~/cross-platform/desktop/index.md
-    - name: Разработчики, использующие ASP.NET
-      href: ~/cross-platform/desktop/index.md
-    - name: Разработчики, использующие Java
-      href: ~/android/get-started/java-developers.md
-    - name: Разработчики, использующие Swift
-      href: ~/ios/get-started/objective-c-developers/index.md
-    - name: Разработчики, использующие Objective-C
-      href: ~/ios/get-started/objective-c-developers/index.md
-    - name: Azure
-      href: ~/xamarin-forms/data-cloud/index.md
-    expanded: true
-  - name: Рекомендации по разработке
-    href: ~/cross-platform/index.yml
   expanded: true
-ms.openlocfilehash: 9acbdb260877a0cb835b5f9f05fe6faa0f0a3bb0
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57198510"
+  items:
+    - name: Требования
+      href: requirements.md
+    - name: Установка
+      href: installation/index.md
+      items:
+        - name: Установка Xamarin в Windows
+          href: installation/windows.md
+          items:
+            - name: Установка предварительных версий Xamarin в Windows
+              href: installation/windows-preview.md
+        - name: Установка Visual Studio для Mac
+          href: /visualstudio/mac/installation/
+          items:
+            - name: Установка предварительных версий Xamarin в Mac
+              href: /visualstudio/mac/update/
+        - name: Инструкции по настройке брандмауэра Xamarin
+          href: installation/firewall.md
+        - name: Удаление Xamarin
+          href: installation/uninstalling-xamarin.md
+    - name: Первое приложение
+      href: first-app/index.md
+    - name: Краткие руководства
+      href: quickstarts/index.yml
+      expanded: true
+      items:
+        - name: Файл > Создать
+          href: quickstarts/single-page.md
+        - name: Многостраничное приложение
+          href: quickstarts/multi-page.md
+        - name: База данных
+          href: quickstarts/database.md
+        - name: Задание стиля
+          href: quickstarts/styling.md
+        - name: Подробный обзор
+          href: quickstarts/deepdive.md
+    - name: Учебники
+      href: tutorials/index.yml
+      expanded: true
+      items:
+        - name: Макет "стопка"
+          href: tutorials/stacklayout/index.yml
+        - name: Метка
+          href: tutorials/label/index.yml
+        - name: Кнопка
+          href: tutorials/button/index.yml
+        - name: Ввод текст
+          href: tutorials/entry/index.yml
+        - name: Текстовый редактор
+          href: tutorials/editor/index.yml
+        - name: Изображения
+          href: tutorials/image/index.yml
+        - name: Макет Grid
+          href: tutorials/grid/index.yml
+        - name: Списки
+          href: tutorials/listview/index.yml
+        - name: Всплывающие окна
+          href: tutorials/pop-ups/index.yml
+        - name: Жизненный цикл приложения
+          href: tutorials/app-lifecycle/index.yml
+        - name: Локальная база данных
+          href: tutorials/local-database/index.yml
+        - name: Веб-службы
+          href: tutorials/web-service/index.yml
+    - name: Дополнительные сведения о Xamarin
+      expanded: true
+      items:
+        - name: Приложения в машинном коде
+          href: ~/cross-platform/get-started/introduction-to-mobile-development.md
+        - name: 'Разработчики, использующие .NET'
+          href: ~/cross-platform/desktop/index.md
+        - name: 'Разработчики, использующие ASP.NET'
+          href: ~/cross-platform/desktop/index.md
+        - name: 'Разработчики, использующие Java'
+          href: ~/android/get-started/java-developers.md
+        - name: 'Разработчики, использующие Swift'
+          href: ~/ios/get-started/objective-c-developers/index.md
+        - name: 'Разработчики, использующие Objective-C'
+          href: ~/ios/get-started/objective-c-developers/index.md
+        - name: Azure
+          href: ~/xamarin-forms/data-cloud/index.md
+    - name: Рекомендации по разработке
+      href: ~/cross-platform/index.yml

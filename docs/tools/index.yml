@@ -1,78 +1,72 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 2983dfd895aaaf8560b3e630faacf24b45dd05cd
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292055"
 documentType: LandingData
 title: Инструменты Xamarin
 metadata:
-  description: Инструменты, которые помогут при разработке приложений Xamarin.
+  description: 'Инструменты, которые помогут при разработке приложений Xamarin.'
   author: conceptdev
   ms.author: crdun
   ms.date: 08/08/2018
   ms.topic: landing-page
 abstract:
-  description: Инструменты, которые помогут при разработке приложений Xamarin.
+  description: 'Инструменты, которые помогут при разработке приложений Xamarin.'
   menu:
     items:
-    - href: https://visualstudio.com/
-      text: Visual Studio
-    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
-      text: Заметки о выпуске
+      - href: 'https://visualstudio.com/'
+        text: Visual Studio
+      - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+        text: Заметки о выпуске
 sections:
-- title: Инструменты
-  items:
-  - type: list
-    style: cards
-    className: cardsC
+  - title: Инструменты
     items:
-    - href: ~/tools/ios-simulator/index.md
-      html: Используйте iOS Simulator с помощью Visual Studio в Windows.
-      image:
-        src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
-        href: ~/tools/ios-simulator/index.md
-      title: Симулятор iOS для Windows
-    - href: ~/tools/inspector/index.md
-      html: Осваивайте и отлаживайте пользовательский интерфейс.
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/profiler/index.md
-      html: Определяйте и устраняйте проблемы с производительностью.
-      image:
-        src: ~/media/index/xamarin-tools-profiler.svg?branch=master
-        href: ~/tools/profiler/index.md
-      title: Xamarin Profiler
-    - href: ~/tools/workbooks/index.md
-      html: Изучайте C# и платформу Xamarin в интерактивном режиме.
-      image:
-        src: https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
-    - href: ~/tools/dotnet-embedding/index.md
-      html: Позволяет использовать код .NET в других языках программирования.
-      image:
-        src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
-        href: ~/tools/dotnet-embedding/index.md
-      title: Внедрение .NET
-- title: Платформы
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+      - type: list
+        style: cards
+        className: cardsC
+        items:
+          - href: ~/tools/ios-simulator/index.md
+            html: Используйте iOS Simulator с помощью Visual Studio в Windows.
+            image:
+              src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
+              href: ~/tools/ios-simulator/index.md
+            title: Симулятор iOS для Windows
+          - href: ~/tools/inspector/index.md
+            html: Осваивайте и отлаживайте пользовательский интерфейс.
+            image:
+              src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+              href: ~/tools/inspector/index.md
+            title: Xamarin Inspector
+          - href: ~/tools/profiler/index.md
+            html: Определяйте и устраняйте проблемы с производительностью.
+            image:
+              src: ~/media/index/xamarin-tools-profiler.svg?branch=master
+              href: ~/tools/profiler/index.md
+            title: Xamarin Profiler
+          - href: ~/tools/workbooks/index.md
+            html: 'Изучайте C# и платформу Xamarin в интерактивном режиме.'
+            image:
+              src: 'https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg'
+              href: ~/tools/workbooks/index.md
+            title: Xamarin Workbooks
+          - href: ~/tools/dotnet-embedding/index.md
+            html: Позволяет использовать код .NET в других языках программирования.
+            image:
+              src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
+              href: ~/tools/dotnet-embedding/index.md
+            title: Внедрение .NET
+  - title: Платформы
     items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.md
-      html: <p><a href="~/get-started/quickstarts/index.md">Начало работы</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/xamarin-forms/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/xamarin-forms/platform/index.md">Функции платформы</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Данные и облачные службы</a><br /><a href="~/xamarin-forms/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
-    - title: Android
-      href: ~/android/index.md
-      html: <p><a href="~/android/get-started/index.md">Начало работы</a><br /><a href="~/android/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/android/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/android/platform/index.md">Функции платформы</a><br /><a href="~/android/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/android/data-cloud/index.md">Данные и облачные службы</a><br /><a href="~/android/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
-    - title: iOS
-      href: ~/ios/index.md
-      html: <p><a href="~/ios/get-started/index.md">Начало работы</a><br /><a href="~/ios/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/ios/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/ios/platform/index.md">Функции платформы</a><br /><a href="~/ios/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/ios/data-cloud/index.md">Данные и облачные службы</a><br /><a href="~/ios/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
-    - title: Mac
-      href: ~/mac/index.md
-      html: <p><a href="~/mac/get-started/index.md">Начало работы</a><br /><a href="~/mac/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/mac/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/mac/platform/index.md">Функции платформы</a><br /><a href="~/mac/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/mac/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Xamarin.Forms
+            href: ~/xamarin-forms/index.md
+            html: <p><a href="~/get-started/quickstarts/index.md">Начало работы</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/xamarin-forms/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/xamarin-forms/platform/index.md">Функции платформы</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Данные и облачные службы</a><br /><a href="~/xamarin-forms/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
+          - title: Android
+            href: ~/android/index.md
+            html: <p><a href="~/android/get-started/index.md">Начало работы</a><br /><a href="~/android/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/android/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/android/platform/index.md">Функции платформы</a><br /><a href="~/android/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/android/data-cloud/index.md">Данные и облачные службы</a><br /><a href="~/android/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
+          - title: iOS
+            href: ~/ios/index.md
+            html: <p><a href="~/ios/get-started/index.md">Начало работы</a><br /><a href="~/ios/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/ios/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/ios/platform/index.md">Функции платформы</a><br /><a href="~/ios/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/ios/data-cloud/index.md">Данные и облачные службы</a><br /><a href="~/ios/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>
+          - title: Mac
+            href: ~/mac/index.md
+            html: <p><a href="~/mac/get-started/index.md">Начало работы</a><br /><a href="~/mac/app-fundamentals/index.md">Принципы работы приложения</a><br /><a href="~/mac/user-interface/index.md">Пользовательский интерфейс</a><br /><a href="~/mac/platform/index.md">Функции платформы</a><br /><a href="~/mac/deploy-test/index.md">Тестирование и развертывание</a><br /><a href="~/mac/internals/index.md">Дополнительные понятия и внутренние компоненты</a></p>

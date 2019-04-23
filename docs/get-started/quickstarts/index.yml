@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: fddfe37d306273f10d8f46531f403719119e325a
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57198290"
 documentType: LandingData
 title: Краткие руководства по Xamarin.Forms
 metadata:
@@ -20,39 +14,39 @@ metadata:
 abstract:
   description: На этой странице приведены ссылки на краткие руководства по созданию мобильных приложений с помощью Xamarin.Forms. Полную документацию по Xamarin.Forms см. в разделе <a href="/xamarin/xamarin-forms/">Документация по Xamarin.Forms</a>.
 sections:
-- title: Краткие руководства
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+  - title: Краткие руководства
     items:
-    - href: single-page.md
-      html: Узнайте, как с помощью Xamarin.Forms создать одностраничное кроссплатформенное приложение, которое позволяет ввести заметку и сохранить ее в хранилище устройства.
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: single-page.md
-      title: Создание одностраничного приложения Xamarin.Forms
-    - href: multi-page.md
-      html: Узнайте, как на основе одностраничного приложения, которое может хранить одну заметку, создать многостраничное приложение, позволяющее хранить несколько заметок.
-      image:
-        src: https://docs.microsoft.com/media/common/i_class.svg
-        href: multi-page.md
-      title: Навигация в многостраничном приложении Xamarin.Forms
-    - href: database.md
-      html: Узнайте, как хранить данные в локальной базе данных SQLite.NET.
-      image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
-        href: database.md
-      title: Хранение данных в локальной базе данных SQLite.NET
-    - href: styling.md
-      html: Узнайте, как изменить стиль кроссплатформенного приложения Xamarin.Forms с помощью стилей XAML.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: styling.md
-      title: Стилизация кроссплатформенного приложения Xamarin.Forms
-    - href: deepdive.md
-      html: Прочитайте об основах разработки приложений с помощью Xamarin.Forms, уделяя особое внимание приложению, которое разрабатывается по инструкциям из этих кратких руководств.
-      image:
-        src: https://docs.microsoft.com/media/common/i_overview.svg
-        href: deepdive.md
-      title: Подробное изучение кратких руководств
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: single-page.md
+            html: 'Узнайте, как с помощью Xamarin.Forms создать одностраничное кроссплатформенное приложение, которое позволяет ввести заметку и сохранить ее в хранилище устройства.'
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: single-page.md
+            title: Создание одностраничного приложения Xamarin.Forms
+          - href: multi-page.md
+            html: 'Узнайте, как на основе одностраничного приложения, которое может хранить одну заметку, создать многостраничное приложение, позволяющее хранить несколько заметок.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_class.svg'
+              href: multi-page.md
+            title: Навигация в многостраничном приложении Xamarin.Forms
+          - href: database.md
+            html: 'Узнайте, как хранить данные в локальной базе данных SQLite.NET.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
+              href: database.md
+            title: Хранение данных в локальной базе данных SQLite.NET
+          - href: styling.md
+            html: 'Узнайте, как изменить стиль кроссплатформенного приложения Xamarin.Forms с помощью стилей XAML.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: styling.md
+            title: Стилизация кроссплатформенного приложения Xamarin.Forms
+          - href: deepdive.md
+            html: 'Прочитайте об основах разработки приложений с помощью Xamarin.Forms, уделяя особое внимание приложению, которое разрабатывается по инструкциям из этих кратких руководств.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
+              href: deepdive.md
+            title: Подробное изучение кратких руководств

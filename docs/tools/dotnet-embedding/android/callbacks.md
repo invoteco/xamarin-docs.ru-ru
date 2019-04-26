@@ -6,11 +6,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215882"
 ---
 # <a name="callbacks-on-android"></a>Обратные вызовы на устройстве Android
 
@@ -157,7 +157,7 @@ class AbstractClassInvoker : AbstractClass
 
 ## <a name="interfaces"></a>интерфейсов,
 
-Интерфейсы являются так же как абстрактные классы, за исключением одного детализации: Xamarin.Android не создает Java для них. Это обусловлено тем, прежде чем внедрение .NET, не во многих сценариях, где будет реализовывать Java C# интерфейс.
+Интерфейсы являются так же как абстрактные классы, за исключением один элемент данных: Xamarin.Android не создает для них Java. Это обусловлено тем, прежде чем внедрение .NET, не во многих сценариях, где будет реализовывать Java C# интерфейс.
 
 Предположим, у нас есть следующие C# интерфейса:
 

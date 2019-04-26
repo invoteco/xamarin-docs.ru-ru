@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 835dccaea79467582f56fd4b8b6b3b8f42acd632
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392352"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Обновление приложения Xamarin.iOS в фоновом режиме
 
@@ -162,4 +162,4 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 В этом разделе мы рассмотрели различные варианты обновление содержимого в фоновом режиме для запуска задачи, которые не помещаются в категорию необходимости фона. Теперь давайте посмотрим, некоторые из этих интерфейсов API в действии.
 
- [Дальнейшие действия: Часть 4 - iOS фоновой обработке пошаговые руководства](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [Далее: Часть 4 - iOS фоновой обработке пошаговые руководства](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

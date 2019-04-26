@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382471"
 ---
 # <a name="the-translate-transform"></a>Преобразование переноса
 
@@ -136,7 +136,7 @@ using (SKPaint textPaint = new SKPaint())
 
 Второй пример вызывает [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix). В результате всех операций преобразования, чтобы вернуться к состоянию по умолчанию.
 
-Третий пример сохраняет состояние `SKCanvas` объекта с помощью вызова [ `Save` ](xref:SkiaSharp.SKCanvas.Save) и затем восстанавливает среду с помощью вызова [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Это наиболее универсальный способ управления преобразований для ряда операций рисования. Эти `Save` и `Restore` вызывает функцию как стек: вы можете вызвать `Save` несколько раз, а затем вызовите `Restore` в обратном последовательности, чтобы вернуться к предыдущим состояниям. `Save` Метод возвращает целое число, и вы можете передать целого числа для [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) эффективно вызывать `Restore` несколько раз. [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) Свойство возвращает число состояний, сохраненных в стеке.
+Третий пример сохраняет состояние `SKCanvas` объекта с помощью вызова [ `Save` ](xref:SkiaSharp.SKCanvas.Save) и затем восстанавливает среду с помощью вызова [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Это наиболее универсальный способ управления преобразований для ряда операций рисования. Эти `Save` и `Restore` вызывает функцию как стек: Можно вызвать `Save` несколько раз, а затем вызовите `Restore` в обратном последовательности, чтобы вернуться к предыдущим состояниям. `Save` Метод возвращает целое число, и вы можете передать целого числа для [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) эффективно вызывать `Restore` несколько раз. [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) Свойство возвращает число состояний, сохраненных в стеке.
 
 Можно также использовать [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) класс для восстанавливаемого состояния canvas. Конструктор этого класса предназначен для вызова `using` оператор; холста состояние восстанавливается автоматически в конце `using` блока. 
 

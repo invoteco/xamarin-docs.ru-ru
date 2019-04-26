@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
 ms.openlocfilehash: 06fd77293302a3d6d5d44def9d0a83e3f1a57ede
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61217758"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Введение в хранилище данных в приложениях Xamarin.iOS
 

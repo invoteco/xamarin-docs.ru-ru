@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: c409fcc018379401c1ab40573495da12a8220c5a
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61055201"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Пользовательские элементы управления в конструкторе Xamarin для iOS
 

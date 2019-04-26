@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 6f32d8f328232bdfc644da57bdb3201c60010063
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381913"
 ---
 # <a name="configuration-management"></a>Управление конфигурацией
 
@@ -34,16 +34,16 @@ Xamarin.Forms включает в себя постоянные словарь, 
 При использовании библиотеки Xam.Plugins.Settings один статический класс должен быть создан, будет содержать приложения и пользовательские параметры, необходимые приложению. В следующем примере кода показан класс параметры в мобильном приложении eShopOnContainers:
 
 ```csharp
-public static class Settings  
+public static class Settings  
 {  
-    private static ISettings AppSettings  
-    {  
-        get  
-        {  
-            return CrossSettings.Current;  
-        }  
-    }  
-    ...  
+    private static ISettings AppSettings  
+    {  
+        get  
+        {  
+            return CrossSettings.Current;  
+        }  
+    }  
+    ...  
 }
 ```
 
@@ -57,24 +57,24 @@ public static class Settings
 Каждый параметр состоит из ключа, значение по умолчанию и свойство. В следующем примере кода показаны все три элемента, для параметра пользователя, который представляет базовый URL-адрес для веб-служб, мобильное приложение eShopOnContainers подключается к:
 
 ```csharp
-public static class Settings  
+public static class Settings  
 {  
-    ...  
-    private const string IdUrlBase = "url_base";  
-    private static readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;  
-    ...  
+    ...  
+    private const string IdUrlBase = "url_base";  
+    private static readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;  
+    ...  
 
-    public static string UrlBase  
-    {  
-        get  
-        {  
-            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
-        }  
-        set  
-        {  
-            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
-        }  
-    }  
+    public static string UrlBase  
+    {  
+        get  
+        {  
+            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
+        }  
+        set  
+        {  
+            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
+        }  
+    }  
 }
 ```
 
@@ -85,33 +85,33 @@ public static class Settings
 Вместо этого, которые определяют значение по умолчанию внутри `Settings` класс, `UrlBaseDefault` строка получает свое значение из `GlobalSetting` класса. В следующем коде показано в примере `BaseEndpoint` свойство и `UpdateEndpoint` метод в этом классе:
 
 ```csharp
-public class GlobalSetting  
+public class GlobalSetting  
 {  
-    ...  
-    public string BaseEndpoint  
-    {  
-        get { return _baseEndpoint; }  
-        set  
-        {  
-            _baseEndpoint = value;  
-            UpdateEndpoint(_baseEndpoint);  
-        }  
-    }  
-    ...  
+    ...  
+    public string BaseEndpoint  
+    {  
+        get { return _baseEndpoint; }  
+        set  
+        {  
+            _baseEndpoint = value;  
+            UpdateEndpoint(_baseEndpoint);  
+        }  
+    }  
+    ...  
 
-    private void UpdateEndpoint(string baseEndpoint)  
-    {  
-        RegisterWebsite = string.Format("{0}:5105/Account/Register", baseEndpoint);  
-        CatalogEndpoint = string.Format("{0}:5101", baseEndpoint);  
-        OrdersEndpoint = string.Format("{0}:5102", baseEndpoint);  
-        BasketEndpoint = string.Format("{0}:5103", baseEndpoint);  
-        IdentityEndpoint = string.Format("{0}:5105/connect/authorize", baseEndpoint);  
-        UserInfoEndpoint = string.Format("{0}:5105/connect/userinfo", baseEndpoint);  
-        TokenEndpoint = string.Format("{0}:5105/connect/token", baseEndpoint);  
-        LogoutEndpoint = string.Format("{0}:5105/connect/endsession", baseEndpoint);  
-        IdentityCallback = string.Format("{0}:5105/xamarincallback", baseEndpoint);  
-        LogoutCallback = string.Format("{0}:5105/Account/Redirecting", baseEndpoint);  
-    }  
+    private void UpdateEndpoint(string baseEndpoint)  
+    {  
+        RegisterWebsite = string.Format("{0}:5105/Account/Register", baseEndpoint);  
+        CatalogEndpoint = string.Format("{0}:5101", baseEndpoint);  
+        OrdersEndpoint = string.Format("{0}:5102", baseEndpoint);  
+        BasketEndpoint = string.Format("{0}:5103", baseEndpoint);  
+        IdentityEndpoint = string.Format("{0}:5105/connect/authorize", baseEndpoint);  
+        UserInfoEndpoint = string.Format("{0}:5105/connect/userinfo", baseEndpoint);  
+        TokenEndpoint = string.Format("{0}:5105/connect/token", baseEndpoint);  
+        LogoutEndpoint = string.Format("{0}:5105/connect/endsession", baseEndpoint);  
+        IdentityCallback = string.Format("{0}:5105/xamarincallback", baseEndpoint);  
+        LogoutCallback = string.Format("{0}:5105/Account/Redirecting", baseEndpoint);  
+    }  
 }
 ```
 
@@ -123,55 +123,55 @@ public class GlobalSetting
 
 ![](configuration-management-images/settings-endpoint.png "Пользовательские параметры, предоставляемые в мобильном приложении eShopOnContainers")
 
-**Рис. 7-1**: пользовательские параметры, предоставляемые в мобильном приложении eShopOnContainers
+**Рис. 7-1**: Пользовательские параметры, предоставляемые в мобильном приложении eShopOnContainers
 
 Можно использовать привязку к данным, чтобы получить и задать параметры, предоставляемые `Settings` класса. Это достигается путем элементы управления для представления привязки к свойствам модели представления, которые в свою очередь доступа к свойствам в `Settings` класса и вызов свойства изменить уведомление, если изменилось значение параметров. Сведения о том, как мобильное приложение eShopOnContainers создает представление модели и связывает их с представлениями, см. в разделе [автоматическое создание модели представления с указателем модели представления](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
 В следующем коде показано в примере [ `Entry` ](xref:Xamarin.Forms.Entry) управления из `SettingsView` , позволяющий пользователю ввести URL-адрес базовой конечной точки для контейнерных микрослужб:
 
 ```xaml
-<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
+<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
 ```
 
 Это [ `Entry` ](xref:Xamarin.Forms.Entry) привязан элемент управления `Endpoint` свойство `SettingsViewModel` класса, используя двустороннюю привязку. В следующем примере кода показано свойство конечной точки:
 
 ```csharp
-public string Endpoint  
+public string Endpoint  
 {  
-    get { return _endpoint; }  
-    set  
-    {  
-        _endpoint = value;  
+    get { return _endpoint; }  
+    set  
+    {  
+        _endpoint = value;  
 
-        if(!string.IsNullOrEmpty(_endpoint))  
-        {  
-            UpdateEndpoint(_endpoint);  
-        }  
+        if(!string.IsNullOrEmpty(_endpoint))  
+        {  
+            UpdateEndpoint(_endpoint);  
+        }  
 
-        RaisePropertyChanged(() => Endpoint);  
-    }  
+        RaisePropertyChanged(() => Endpoint);  
+    }  
 }
 ```
 
-Когда `Endpoint` свойству `UpdateEndpoint` вызывается метод, возникает, если предоставленное значение является допустимым, а изменить свойство уведомления. В следующем коде показано в примере `UpdateEndpoint` метод:
+Когда `Endpoint` свойству `UpdateEndpoint` вызывается метод, возникает, если предоставленное значение является допустимым, а изменить свойство уведомления. Метод `UpdateEndpoint` показан в следующем примере кода:
 
 ```csharp
-private void UpdateEndpoint(string endpoint)  
+private void UpdateEndpoint(string endpoint)  
 {  
-    Settings.UrlBase = endpoint;  
+    Settings.UrlBase = endpoint;  
 }
 ```
 
 Этот метод обновляет `UrlBase` свойство в `Settings` класса со значением URL-адрес базовой конечной точки, введенный пользователем, что приведет к будут передаваться в хранилище с платформой.
 
-Когда `SettingsView` осуществляется переход, `InitializeAsync` метод в `SettingsViewModel` класс выполняется. В следующем примере кода показан этот метод.
+Когда `SettingsView` осуществляется переход, `InitializeAsync` метод в `SettingsViewModel` класс выполняется. Этот метод показан в следующем примере кода:
 
 ```csharp
-public override Task InitializeAsync(object navigationData)  
+public override Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Endpoint = Settings.UrlBase;  
-    ...  
+    ...  
+    Endpoint = Settings.UrlBase;  
+    ...  
 }
 ```
 

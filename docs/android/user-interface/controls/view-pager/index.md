@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: bb9795eb1e77a48b01556c553ae19613d6ab6de6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61267630"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -39,7 +39,7 @@ _ViewPager является менеджером макета, которая п
 
 ## <a name="requirements"></a>Требования
 
-Чтобы использовать `ViewPager` в проекте приложения, необходимо установить [библиотеки поддержки Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) пакета. Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: включая NuGet в проекте](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Чтобы использовать `ViewPager` в проекте приложения, необходимо установить [библиотеки поддержки Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) пакета. Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
  
 ## <a name="architecture"></a>Архитектура

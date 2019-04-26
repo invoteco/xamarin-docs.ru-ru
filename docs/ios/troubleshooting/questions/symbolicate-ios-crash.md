@@ -1,5 +1,5 @@
 ---
-title: Где найти dsym-файл для символьного выражения журналов о сбоях iOS?
+title: Где найти dSYM-файл, чтобы выразить символами журналы с данными об аварийном завершении iOS?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/09/2018
 ms.openlocfilehash: 0b8f3aa736cba6e70fbf346766499c23a9bbe270
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418225"
 ---
-# <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>Где найти dsym-файл для символьного выражения журналов о сбоях iOS?
+# <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>Где найти dSYM-файл, чтобы выразить символами журналы с данными об аварийном завершении iOS?
 
 При создании приложения iOS с помощью Visual Studio для Mac или Visual Studio 2017, dsym-файл, необходимый для символьного выражения отчетов о сбоях будут размещены в той же иерархии каталогов, как файл проекта приложения (CSPROJ-файл). Точное расположение зависит от параметров сборки проекта.
 

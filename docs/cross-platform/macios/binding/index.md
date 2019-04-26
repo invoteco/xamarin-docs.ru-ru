@@ -1,29 +1,29 @@
 ---
 title: Привязка Objective-C
-description: Этот документ содержит ссылки на различные руководства, описывающие способы создания привязки C# для кода Objective-C, что позволяет разработчикам использовать готовые библиотеки в приложениях Xamarin.
+description: Этот документ содержит ссылки на различные руководства, описывающие создание C# привязки для кода Objective-C, что позволяет разработчикам использовать готовые библиотеки в приложениях Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
 ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61266612"
 ---
 # <a name="binding-objective-c"></a>Привязка Objective-C
 
-Этот раздел содержит широкий набор документов, которые покрывают Создание привязок для библиотеки Objective-C, поэтому они могут вызываться из приложения C#, созданные с помощью Xamarin.iOS и Xamarin.Mac.
+Этот раздел содержит широкий набор документов, которые покрывают Создание привязок для библиотеки Objective-C, поэтому они могут вызываться из C# приложения, созданные с помощью Xamarin.iOS и Xamarin.Mac.
 
-##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Обзор набора средств Visual Studio для Unity](~/cross-platform/macios/binding/overview.md)
+##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Обзор](~/cross-platform/macios/binding/overview.md)
 
 Этот документ содержит некоторые из внутренних как выполняется привязка. Он представляет собой расширенный документ некоторые технические сведения.
 
 ##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Привязка библиотек Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
-В этом документе описывается процесс, используемый для создания привязки Objective-C API и как стили в Objective-C сопоставляются идиомы, используемые в .NET C#.
+В этом документе описан процесс, используемый для создания C# привязки Objective-C API и как стили в Objective-C сопоставляются идиомы, используемые в .NET.
 При связывании просто C API-интерфейсы, следует использовать стандартный механизм .NET для этого платформа P/Invoke.
 
 ##  <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Справочное руководство для определения привязки](~/cross-platform/macios/binding/binding-types-reference.md)
@@ -57,5 +57,5 @@ ms.locfileid: "37855160"
 
 - [iOS привязки](~/ios/platform/binding-objective-c/index.md)
 - [Привязка Mac](~/mac/platform/binding.md)
-- [Xamarin University курс: Создание библиотеку привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University курс: Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

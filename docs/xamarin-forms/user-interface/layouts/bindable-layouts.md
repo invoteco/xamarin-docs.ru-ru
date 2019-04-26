@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321577"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Привязываемые макетов в Xamarin.Forms
 
@@ -85,7 +85,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 
 ![Макет, связываемые с DataTemplate](bindable-layouts-images/top-followers.png "привязываемых макета с помощью шаблона данных")
 
-Дополнительные сведения о шаблонах данных см. в разделе [шаблоны Xamarin.Forms данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Выбор внешнего вида элемента во время выполнения
 

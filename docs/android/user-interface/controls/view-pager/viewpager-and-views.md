@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a8b7fa53d3384821d028e4a88ba22071a17e5bd9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61311609"
 ---
 # <a name="viewpager-with-views"></a>ViewPager с представлениями
 
@@ -29,7 +29,7 @@ _ViewPager является менеджером макета, которая п
 
 ## <a name="start-an-app-project"></a>Запуск проекта приложения
 
-Создайте новый проект Android с именем **TreePager** (см. в разделе [Привет, Android](~/android/get-started/hello-android/hello-android-quickstart.md) Дополнительные сведения о создании новых проектов Android). После этого запустите диспетчер пакетов NuGet. (Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: включая NuGet в проекте](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Найти и установить **библиотеки поддержки Android v4**: 
+Создайте новый проект Android с именем **TreePager** (см. в разделе [Привет, Android](~/android/get-started/hello-android/hello-android-quickstart.md) Дополнительные сведения о создании новых проектов Android). После этого запустите диспетчер пакетов NuGet. (Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Найти и установить **библиотеки поддержки Android v4**: 
 
 [![Снимок экрана of Support Nuget версии 4, выбранные в диспетчере пакетов NuGet](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 

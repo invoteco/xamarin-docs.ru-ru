@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: a40d0911b7dabc900a4c6e50c692e4f091f22be9
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61206360"
 ---
 # <a name="core-animation-in-xamarinios"></a>Core анимации в Xamarin.iOS
 
@@ -25,7 +25,7 @@ _В данной статье рассматриваются framework Core Anim
 
 <a name="Using_Core_Animation" />
 
-## <a name="core-animation"></a>Базовой анимации
+## <a name="core-animation"></a>Core Animation
 
 iOS использует платформу, Core Animation для создания эффектов анимации, такие как переход между представлениями, скользящий меню и прокрутка эффекты лишь некоторые из них. Для работы с анимацией двумя способами:
 

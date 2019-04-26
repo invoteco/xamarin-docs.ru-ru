@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/19/2016
 ms.openlocfilehash: c8ef76f24b017f5e3e6bec9d39534f3626e79147
-ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56321107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60893087"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>элементы управления пользовательского интерфейса в Xamarin watchOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "56321107"
 
 Программный имена всех элементов управления будет начинаться с префикса `WKInterface` (например) `WKInterfaceLabel`, `WKInterfaceButton`).
 
-|Элемент управления|Описание:|Снимок экрана|
+|Элемент управления|Описание|Снимок экрана|
 |---|---|---|
 |Метка|Используйте `SetText` и другие свойства, определяющие внешний вид текста в элементе управления label. `NSAttributedString` также поддерживается.<br />[Код каталога](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs)|![](Images/label.png)|
 |Кнопка|Создайте и задайте свойства в раскадровке. CTRL + перетащите, чтобы добавить `Action` реализовать обработчик для при его выборе.<br />[Код каталога](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ButtonDetailController.cs)|![](Images/button.png)|

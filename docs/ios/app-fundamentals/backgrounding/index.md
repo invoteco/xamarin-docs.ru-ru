@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/05/2018
 ms.openlocfilehash: a4f5112b6e77ab6e00453c19c766d1e905df1144
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946661"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Фоновый режим в Xamarin.iOS
 
@@ -29,7 +29,7 @@ _Фоновой обработки или фоновой обработки — 
 1.  [Общие сведения о фоновой обработке в iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
 1.  [Демонстрация жизненного цикла приложения](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
 1.  [Методы фоновой обработки в iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [Пошаговые руководства. Фоновый режим в iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1.  [Пошаговые руководства: фоновый режим в iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
 1.  [Руководство по фоновой обработке в iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## <a name="summary"></a>Сводка

@@ -1,5 +1,5 @@
 ---
-title: Введение в watchOS 3
+title: Введение в watchOS 3
 description: В этой статье рассматриваются все новые и измененные API-интерфейсы и функции, доступные в watchOS 3 для разработчиков Xamarin.
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
 ms.openlocfilehash: 0428a0df157e359ab34a6a71dbba31bdeb6962fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61224066"
 ---
-# <a name="introduction-to-watchos-3"></a>Введение в watchOS 3
+# <a name="introduction-to-watchos-3"></a>Введение в watchOS 3
 
 _В этой статье рассматриваются все новые и измененные API-интерфейсы и функции, доступные в watchOS 3 для разработчиков Xamarin._
 
@@ -151,7 +151,7 @@ watchOS 3 включает в себя несколько усовершенст
 - Приложения можно получить состояние цифровой корона с новым [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) класса и получать обновления при вращении корона с помощью [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) класса.
 - [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) теперь включает класс `ApplicationState` метод и [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) константа, приложение может использовать для отслеживания состояния среды выполнения приложения. `WKExtension` также предоставляет два новых метода, которые могут использоваться для планирования задач в фоновом режиме.
 - [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) теперь содержит новый `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` и `HandleBackgroundTasks` методы для отслеживания изменений в состояния приложения и обрабатывать обновления задачи в фоновом режиме.
-- Новый [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) добавлен класс для предоставления следующих типов распознавания жестов для приложения watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer ](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) и [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
+- Новый [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) обеспечивают следующие типы распознавания жестов для приложения watch добавлен класс: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) и [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - Новый [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) класс предоставляет интерфейс, любой HomeKit присоединенных IP-камеру.
 - Новый [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) класс позволяет приложению отображать фильм «poster», который заменяется работающей фильма, когда пользователь касается его.
 - Новый [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) класс позволяет приложению для представления как кнопка Apple Pay в пользовательском Интерфейсе, который будет инициировать запрос платежа шифрованию.

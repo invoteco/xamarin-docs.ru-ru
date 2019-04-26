@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076682"
 ---
 # <a name="resource-dictionaries"></a>Словари ресурсов
 
@@ -149,7 +149,7 @@ _Ресурсы XAML, определения объектов, которые м
 
 Тем не менее, обратите внимание, что на фон панели [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) по-прежнему желтый, так как [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) свойству присваивается значение `PageBackgroundColor` ресурс, определенный в приложении уровень `ResourceDictionary`.
 
-Вот еще один способ подумать о `ResourceDictionary` приоритет: синтаксического анализа XAML, когда обнаруживает `StaticResource`, он выполняет поиск совпадающего ключа, проходя вверх по визуальному дереву, используется первый из них найдет. Если этот поиск завершается на странице и ключ по-прежнему не был найден, средство синтаксического анализа XAML ищет `ResourceDictionary` подключен к `App` объекта. Если ключ не найден, возникает исключение.
+Вот еще один способ подумать о `ResourceDictionary` приоритет: Когда средство синтаксического анализа XAML обнаруживает `StaticResource`, он выполняет поиск совпадающего ключа, проходя вверх по визуальному дереву, используется первый из них найдет. Если этот поиск завершается на странице и ключ по-прежнему не был найден, средство синтаксического анализа XAML ищет `ResourceDictionary` подключен к `App` объекта. Если ключ не найден, возникает исключение.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Словари ресурсов автономного
 
@@ -195,7 +195,7 @@ _Ресурсы XAML, определения объектов, которые м
 
 Экземпляр `MyResourceDictionary` присваивается `Resources` свойство `ContentPage` объекта.
 
-Однако такой подход имеет некоторые ограничения: `Resources` свойство `ContentPage` ссылается только вот `ResourceDictionary`. В большинстве случаев требуется, в том числе другие `ResourceDictionary` экземпляров и возможно других ресурсов, а также.
+Однако такой подход имеет некоторые ограничения: `Resources` Свойство `ContentPage` ссылается только вот `ResourceDictionary`. В большинстве случаев требуется, в том числе другие `ResourceDictionary` экземпляров и возможно других ресурсов, а также.
 
 Эта задача требует объединенные словари ресурсов.
 

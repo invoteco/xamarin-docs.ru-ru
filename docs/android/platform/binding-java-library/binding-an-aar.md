@@ -1,5 +1,5 @@
 ---
-title: Привязка. AAR
+title: Привязка AAR-файла
 description: В этом пошаговом руководстве содержатся пошаговые инструкции по созданию библиотеку привязок Java Xamarin.Android из Android. AAR-файла.
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
 ms.openlocfilehash: 7f71ccf4ff61c176e73be6d3855136697a5c2130
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60958176"
 ---
-# <a name="binding-an-aar"></a>Привязка. AAR
+# <a name="binding-an-aar"></a>Привязка AAR-файла
 
 _В этом пошаговом руководстве содержатся пошаговые инструкции по созданию библиотеку привязок Java Xamarin.Android из Android. AAR-файла._
 
@@ -109,7 +109,7 @@ public class TextCounter
 
     [![Задать целевой уровень API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
-7.  Построить библиотеку привязок. Библиотека привязок проекта следует успешной сборки и выдает результат. Библиотеки DLL по следующему адресу: **AarBinding/bin/Debug/AarBinding.dll**
+7.  Построить библиотеку привязок. Библиотека привязок проекта следует успешной сборки и выдает результат. Библиотека DLL по следующему адресу: **AarBinding/bin/Debug/AarBinding.dll**
 
 
 

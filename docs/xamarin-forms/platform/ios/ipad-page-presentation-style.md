@@ -1,5 +1,5 @@
 ---
-title: iPad стиль презентации модальные страницы
+title: Стиль представления модальной страницы iPad
 description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать наборы специфические для платформы iOS стиль презентации модальные страницы на iPad.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: b99898301ed6469b6e0d62ae0077b96aa9c4f3eb
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896926"
 ---
-# <a name="ipad-modal-page-presentation-style"></a>iPad стиль презентации модальные страницы
+# <a name="ipad-modal-page-presentation-style"></a>Стиль представления модальной страницы iPad
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 

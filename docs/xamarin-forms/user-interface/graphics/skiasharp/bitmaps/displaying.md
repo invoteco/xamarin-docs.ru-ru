@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61204875"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Отображение точечных рисунков SkiaSharp
 
@@ -73,7 +73,7 @@ catch
 
 Обратите внимание, что `Stream` полученный из `GetStreamAsync` копируется в `MemoryStream`. Android не поддерживает `Stream` из `HttpClient` обрабатываемых основным потоком за исключением в асинхронные методы. 
 
-[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) Выполняет массу работы: `Stream` переданный ему объект ссылается на блок памяти, содержащий весь точечный рисунок в одной из распространенных форматов файлов точечного рисунка, обычно JPEG, PNG или GIF. `Decode` Метод должен определить формат и затем декодировать файл точечного рисунка в SkiaSharp в собственный формат внутреннего растрового изображения.
+[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) Выполняет массу работы: `Stream` Переданный ему объект ссылается на блок памяти, содержащий весь точечный рисунок в одной из распространенных форматов файлов точечного рисунка, обычно JPEG, PNG или GIF. `Decode` Метод должен определить формат и затем декодировать файл точечного рисунка в SkiaSharp в собственный формат внутреннего растрового изображения.
 
 После код вызывает метод `SKBitmap.Decode`, возможно, сделает `CanvasView` таким образом, чтобы `PaintSurface` обработчик может отображать вновь загруженных растрового изображения.
 

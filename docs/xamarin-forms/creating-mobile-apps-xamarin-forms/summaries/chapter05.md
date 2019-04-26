@@ -1,6 +1,6 @@
 ---
 title: Сводка Глава 5. Работа с размерами
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 5. Работа с размерами'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 5. Работа с размерами
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334434"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Сводка Глава 5. Работа с размерами
 

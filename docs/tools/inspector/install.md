@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
-ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373473"
 ---
 # <a name="inspector-installation-and-requirements"></a>Требования к установке инспектора и
 
@@ -86,7 +86,7 @@ Visual Studio
 
 Инспектор клиента
 
-- MAC: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 1.4.x также предоставляет возможность выбора файла журнала в Finder (macOS) или в обозревателе (Windows) непосредственно из главного меню:

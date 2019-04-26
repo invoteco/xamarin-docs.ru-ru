@@ -1,6 +1,6 @@
 ---
 title: Сводка главе 19. Представления коллекций
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка главе 19. Представления коллекций'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка главе 19. Представления коллекций
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 795478805b582b956ee491bdfecd84485c1bc30e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334530"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Сводка главе 19. Представления коллекций
 
@@ -113,7 +113,7 @@ Xamarin.Forms определяет три представления, котор
 
 ### <a name="grouping-the-listview-items"></a>Группирование элементов ListView
 
-`ListView` поддерживает группирование элементов и перехода между этими группами. `ItemsSource` Свойство должно иметь значение в коллекцию коллекций: объект, `ItemsSource` присваивается должен реализовать `IEnumerable`, и каждый элемент в коллекции необходимо также реализовать `IEnumerable`. Каждая группа должна содержать два свойства: текстовое описание группы и трехбуквенное сокращение.
+`ListView` поддерживает группирование элементов и перехода между этими группами. `ItemsSource` Свойство должно иметь значение в коллекцию коллекций: Объект, `ItemsSource` присваивается должен реализовать `IEnumerable`, и каждый элемент в коллекции необходимо также реализовать `IEnumerable`. Каждая группа должна содержать два свойства: текстовое описание группы и трехбуквенное сокращение.
 
 [ `NamedColorGroup` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library создает семь групп `NamedColor` объектов. [ **ColorGroupList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) примере показано, как использовать эти группы с помощью [ `IsGroupingEnabled` ](xref:Xamarin.Forms.ListView.IsGroupingEnabled) свойство `ListView` присвоено `true`и [ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding) и [ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding) свойства, привязаны к свойствам в каждой группе.
 

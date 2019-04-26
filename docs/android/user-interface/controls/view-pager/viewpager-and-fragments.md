@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61038424"
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager с фрагментами
 
@@ -29,7 +29,7 @@ _ViewPager является менеджером макета, которая п
 
 ## <a name="start-an-app-project"></a>Запуск проекта приложения
 
-Создайте новый проект Android с именем **FlashCardPager**. После этого запустите диспетчер пакетов NuGet (Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: включая NuGet в проекте](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Найти и установить **Xamarin.Android.Support.v4** пакета, как описано в [Viewpager и представления](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
+Создайте новый проект Android с именем **FlashCardPager**. После этого запустите диспетчер пакетов NuGet (Дополнительные сведения об установке пакетов NuGet см. в разделе [Пошаговое руководство: Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Найти и установить **Xamarin.Android.Support.v4** пакета, как описано в [Viewpager и представления](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
 
 
 

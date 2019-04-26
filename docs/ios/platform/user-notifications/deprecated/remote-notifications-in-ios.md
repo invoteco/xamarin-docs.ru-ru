@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087090"
 ---
 # <a name="push-notifications-in-ios"></a>Push-уведомлений в iOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "50110021"
 Push-уведомления, должны храниться краткое и только содержат достаточно данных для уведомления мобильного приложения о том, что его следует обратиться к серверному приложению для обновления. Например когда приходит новое электронное письмо, серверное приложение будет только уведомления мобильных приложения поступления новых сообщений электронной почты. Уведомление не будет содержать новое сообщение электронной почты, сама. Мобильное приложение затем извлечет новых сообщений электронной почты с сервера во время соответствующего
 
 В центре принудительной отправке уведомления в iOS — *Apple Push Notification шлюз Service (APNS)*. Это служба, предоставляемых компанией Apple, который отвечает за маршрутизации уведомления от сервера приложений на устройствах iOS.
-На рисунке ниже показана топология принудительной уведомления для iOS: ![](remote-notifications-in-ios-images/image4.png "это изображение иллюстрирует топологию уведомлений push для iOS")
+На следующем рисунке показана топология уведомлений Push-уведомлений для iOS: ![](remote-notifications-in-ios-images/image4.png "Этот образ топология отправки уведомлений для iOS")
 
 Удаленные уведомления, сами являются строки, которые соответствуют формату в формате JSON и протоколы, указанные в [полезные данные уведомления](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) раздел [локальных и Push-уведомлений руководство по программированию](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)в [документация для разработчиков iOS](https://developer.apple.com/devcenter/ios/index.action).
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
 ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60951775"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Привет, краткое руководство по tvOS
 
@@ -51,7 +51,7 @@ Xamarin.tvOS позволяет разрабатывать полностью с
 
 1. Запустите Visual Studio для Mac:
 
-    [![](hello-tvos-images/setup01.png "Visual Studio для Mac")](hello-tvos-images/setup01.png#lightbox)
+    [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
 2. Щелкните **новое решение...** ссылку в верхний левый угол экрана, чтобы открыть **новый проект** диалоговое окно.
 3. Выберите **tvOS** > **приложения** > **приложение с одним представлением** и нажмите кнопку **Далее** кнопки:
 

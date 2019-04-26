@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
 ms.openlocfilehash: 55e5627a492636efaa6eeb6b8c302d143b08e2cc
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400708"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Использование CocosSharp в Xamarin.Forms
 
@@ -22,7 +22,7 @@ _CocosSharp может использоваться для добавления 
 
 > [!VIDEO https://youtube.com/embed/eYCx63FeqVU]
 
-**Усовершенствовано в 2016 г: Cocos # в Xamarin.Forms**
+**Усовершенствовано в 2016 г. Кокосовые # в Xamarin.Forms**
 
 ## <a name="overview"></a>Обзор
 
@@ -30,7 +30,7 @@ CocosSharp — это гибкая и мощная технология для �
 
 * [Что такое CocosSharp](#what)
 * [Добавление пакетов CocosSharp Nuget](#nuget)
-* [Пошаговое руководство: Добавление CocosSharp в приложение Xamarin.Forms](#add)
+* [Пошаговое руководство: Добавление в приложение Xamarin.Forms CocosSharp](#add)
 
 <a name="what" />
 
@@ -74,7 +74,7 @@ Xamarin.Forms построена на основе собственного, с�
 
 <a name="add" />
 
-## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>Пошаговое руководство: Добавление CocosSharp в приложение Xamarin.Forms
+## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>Пошаговое руководство. Добавление в приложение Xamarin.Forms CocosSharp
 
 Выполните следующие действия, чтобы добавить простое представление CocosSharp в приложение Xamarin.Forms.
 

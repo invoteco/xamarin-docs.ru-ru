@@ -1,17 +1,17 @@
 ---
 title: Реальный пример, с помощью CocoaPods
-description: В этом документе показано, как использовать Sharpie цели для автоматического создания определения привязки C# из cocoapod для службы.
+description: В этом документе показано, как использовать Sharpie цели для автоматического создания C# определений из cocoapod для службы привязки.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
 ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200319"
 ---
 # <a name="real-world-example-using-cocoapods"></a>Реальный пример, с помощью CocoaPods
 
@@ -94,5 +94,5 @@ Done.
 - [Общие сведения о привязке Objective-C](~/cross-platform/macios/binding/overview.md)
 - [Привязка библиотек Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Пошаговое руководство: Привязка библиотек Objective-C iOS](~/ios/platform/binding-objective-c/walkthrough.md)
-- [Xamarin University курс: Создание библиотеку привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University курс: Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -1,6 +1,6 @@
 ---
 title: Сводка Глава 6. Нажатие кнопки
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 6. Нажатие кнопки'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 6. Нажатие кнопки
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 12c8cdc19f9e6765ca25ade97bcfdbffb7b60381
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334725"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Сводка Глава 6. Нажатие кнопки
 

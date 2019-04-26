@@ -1,5 +1,5 @@
 ---
-title: Вызываемые оболочки времени Android
+title: Вызываемые программы-оболочки Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61090905"
 ---
-# <a name="android-callable-wrappers"></a>Вызываемые оболочки времени Android
+# <a name="android-callable-wrappers"></a>Вызываемые программы-оболочки Android
 
 Android вызываемых оболочек (ACWs) являются обязательными, каждый раз, когда среда выполнения Android вызывает управляемый код. Эти оболочки необходимы, так как нет способа для регистрации классов с помощью КАРТИНОК (Android среда выполнения) во время выполнения. (В частности, [JNI DefineClass() функция](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) средой выполнения Android не поддерживается.} Вызываемые оболочки времени Android таким образом составляют для отсутствия поддержки регистрации типа среды выполнения. 
 

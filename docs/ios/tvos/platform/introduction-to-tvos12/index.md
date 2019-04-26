@@ -1,5 +1,5 @@
 ---
-title: Введение в tvOS 12
+title: Введение в tvOS 12
 description: Этот документ предоставляет высокоуровневый обзор новых и обновленных функций в tvOS 12 какие Xamarin предварительной версии в настоящее время предоставляет привязки C#.
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: f7fb8cc379a070b848c5154c9c1d4fbfc8186266
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932550"
 ---
-# <a name="introduction-to-tvos-12"></a>Введение в tvOS 12
+# <a name="introduction-to-tvos-12"></a>Введение в tvOS 12
 
 Этот документ содержит общий обзор новых и обновленных tvOS 12.
 

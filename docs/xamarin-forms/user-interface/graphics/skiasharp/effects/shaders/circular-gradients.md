@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218236"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Циклическая градиенты SkiaSharp
 
@@ -140,7 +140,7 @@ public partial class RadialGradientPage : ContentPage
 
 [![Радиальный градиент](circular-gradients-images/RadialGradient.png "радиального градиента")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-Во всех трех случаях градиента заполнит весь холст. На экране iOS слева градиента за пределами радиус продолжается с последний цвет, являющийся белый. Это результат `SKShaderTileMode.Clamp`. Экран Android показан результат `SKShaderTileMode.Repeat`: 100 в пикселях в центре градиента начинается снова в первый цвет, который является черной. Градиент повторяется каждые 100 пикселей radius. 
+Во всех трех случаях градиента заполнит весь холст. На экране iOS слева градиента за пределами радиус продолжается с последний цвет, являющийся белый. Это результат `SKShaderTileMode.Clamp`. Экран Android показан результат `SKShaderTileMode.Repeat`: С 100 пикселей в центре градиента снова начинается в первый цвет, который является черной. Градиент повторяется каждые 100 пикселей radius. 
 
 На правой показан экран универсальной платформы Windows как `SKShaderTileMode.Mirror` вызывает градиенты альтернативный направлениям. Первый градиент — от черного в центре белым радиус 100 пикселей. Следующему — белый из радиус 100 пикселей на черный в radius 200 пикселей, а далее градиента зеркально отображается снова.
 

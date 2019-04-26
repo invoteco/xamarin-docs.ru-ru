@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: d8a531e495a19be7437d4a600e758028594248ab
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953335"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>iOS API-интерфейсы игр в Xamarin.iOS
 
@@ -374,7 +374,7 @@ public override void ViewWillLayoutSubviews ()
 В дополнение к примерам, представленные выше, Apple предоставляет следующие примеры приложений, которые могут быть перекодированные для C# и Xamarin.iOS:
 
 - [FourInARow: С помощью стратегий GameplayKit Minmax для сопернику искусственного Интеллекта](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [AgentsCatalog: В системе агентов в GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [AgentsCatalog: При использовании системы агентов в GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
 - [DemoBots: Разработка кроссплатформенного игры с помощью SpriteKit и GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
@@ -429,7 +429,7 @@ MetalKit framework предоставляет набор вспомогател�
 
 Новая платформа ReplayKit компании Apple позволяет легко добавить запись игры в игру iOS и пользователи могут быстро и легко изменить и поделиться этим видео из в приложении.
 
-Дополнительные сведения см. в разделе Apple [будет социальных сетей, с помощью видео ReplayKit и Game Center](https://developer.apple.com/videos/wwdc/2015/?id=605) и их [DemoBots: создание кросс-платформенной игры с помощью SpriteKit и GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) примера приложения.
+Дополнительные сведения см. в разделе Apple [будет социальных сетей, с помощью видео ReplayKit и Game Center](https://developer.apple.com/videos/wwdc/2015/?id=605) и их [DemoBots: Создание кросс-платформенной игры с помощью SpriteKit и GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) примера приложения.
 
 ## <a name="scenekit"></a>SceneKit
 
@@ -445,7 +445,7 @@ Scene Kit — это граф сцены API, который упрощает р
 - `SCNView` И `SCNSceneRenderer` классы могут использоваться для включения состояния системы подготовки отчетов (на устройствах iOS, поддерживаемые).
 - `SCNAudioPlayer` И `SCNNode` классы можно использовать для добавления пространственных звуковые эффекты, которые автоматически отслеживать положение исполнителя в приложение iOS.
 
-Дополнительные сведения см. в разделе наших [документации SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) и Apple [ссылка на платформу SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) и [Fox: разработка игры с помощью Xcode сцены редактораSceneKit](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154)пример проекта.
+Дополнительные сведения см. в разделе наших [документации SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) и Apple [ссылка на платформу SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) и [Fox: Разработка игры с помощью редактора сцены Xcode SceneKit](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) пример проекта.
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -462,7 +462,7 @@ Sprite Kit, двухмерных игр платформы от Apple, имее�
 - Просто прокрутка поддержки игры с новыми узлами камеры (`SKCameraNode`) объектов.
 - На устройствах iOS, поддерживающих исходного состояния системы SpriteKit будут автоматически использовать его для подготовки к просмотру, даже если вы уже использовали пользовательские шейдеров OpenGL ES.
 
-Дополнительные сведения см. в разделе наших [документации SpriteKit](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [ссылка на платформу SpriteKit](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) и их [DemoBots: создание кросс-платформенной игры с помощью SpriteKit и GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) примера приложения.
+Дополнительные сведения см. в разделе наших [документации SpriteKit](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [ссылка на платформу SpriteKit](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) и их [DemoBots: Создание кросс-платформенной игры с помощью SpriteKit и GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) примера приложения.
 
 ## <a name="summary"></a>Сводка
 

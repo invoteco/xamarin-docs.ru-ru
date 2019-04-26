@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 9adf514e4fc510617e3f4d801569935ee4a03f25
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093797"
 ---
 # <a name="web-views-in-xamarinios"></a>Веб-представления в Xamarin.iOS
 
@@ -119,7 +119,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 iOS 9 улучшения позволяют пользователю легко вернуться к приложения с помощью кнопки "Назад" в левом верхнем углу страницы Safari.
 
-## <a name="app-transport-security"></a>Безопасность транспорта приложения
+## <a name="app-transport-security"></a>Защита транспорта приложения
 
 Безопасность транспорта приложения, или *ATS* появился компанией Apple в iOS 9, чтобы гарантировать соблюдение безопасное подключение рекомендации по всем каналам связи.
 

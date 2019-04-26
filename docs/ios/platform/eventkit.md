@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: ea03c8b382e2de29bd20ab1d696d7abb7733e182
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61369253"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit в Xamarin.iOS
 
@@ -127,7 +127,7 @@ App.Current.EventStore.RequestAccess (EKEntityType.Event,
 
 ### <a name="ekspan"></a>EKSpan
 
-*EKSpan* является перечислением, описывающий диапазон событий при изменении события, которые можно повторять и имеет два значения: *данный* и *FutureEvents*. `ThisEvent` означает, что любые изменения только произойдет определенное событие в серии, на который ссылается, тогда как `FutureEvents` будет влиять на это событие и все будущие повторения.
+*EKSpan* является перечислением, описывающий диапазон событий при изменении события, которые можно повторять и имеет два значения: *Данный* и *FutureEvents*. `ThisEvent` означает, что любые изменения только произойдет определенное событие в серии, на который ссылается, тогда как `FutureEvents` будет влиять на это событие и все будущие повторения.
 
 ## <a name="tasks"></a>Задачи
 

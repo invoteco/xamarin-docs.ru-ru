@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
 ms.openlocfilehash: e60892edfcf73f3e7cada8923e16bcc1be2c203e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876933"
 ---
 # <a name="getting-started-with-android"></a>Начало работы с Android
 
@@ -105,7 +105,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 
 Эта команда скопирует файл AAR в новый модуль с именем **hello_from_csharp**.
 
-![Проект Android Studio](android-images/androidstudioproject.png)
+![Android Studio Project](android-images/androidstudioproject.png)
 
 Чтобы использовать новый модуль из вашей **приложения**, щелкните правой кнопкой мыши и выберите пункт **открыть параметры модуля**. На **зависимости** вкладку, добавьте новый **зависимостей модуля** и выберите **: hello_from_csharp**.
 

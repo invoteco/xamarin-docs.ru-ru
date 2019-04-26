@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
 ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019593"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Данные пути SVG в SkiaSharp
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-[ **Точек и тире** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) статье описано, как можно использовать [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) метод для создания пунктирной линией. Первым аргументом является `float` массив, который обычно состоит из двух элементов: первый элемент — длина дефисы, а второй элемент — разрыв между дефисы. Когда `StrokeCap` свойству `SKStrokeCap.Round`, а затем скругленными конце штриха эффективно удлинить длина штриха, ширина мазков на обеих сторонах штриха. Таким образом установка первого элемента массива 0 создает пунктирной линией.
+[ **Точек и тире** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) статье описано, как можно использовать [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) метод для создания пунктирной линией. Первым аргументом является `float` массив, который обычно состоит из двух элементов: Первый элемент — длина дефисы, а второй элемент — разрыв между дефисы. Когда `StrokeCap` свойству `SKStrokeCap.Round`, а затем скругленными конце штриха эффективно удлинить длина штриха, ширина мазков на обеих сторонах штриха. Таким образом установка первого элемента массива 0 создает пунктирной линией.
 
 Расстояние между этими точками определяется второй элемент массива. Как вы вскоре увидите, эти два `SKPaint` объекты используются для создания кругов с радиусом 90 единиц. Длины окружности этот круг, таким образом, является 180π, это означает, что метки 60 минут должно отображаться каждые 3π единиц, который является второе значение в `float` массива в `minuteMarkPaint`. 12 часовые метки должны располагаться каждые 15π единиц, это значение во второй `float` массива.
 

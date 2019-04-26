@@ -1,5 +1,5 @@
 ---
-title: Отладка на устройстве Android Wear
+title: Отладка в устройстве Android Wear
 description: В этой статье объясняется, как выполнить отладку приложения Xamarin.Android Wear на устройстве Android Wear.
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 232fcd1d369eba1daad170986f2e2c4c913a3649
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307867"
 ---
-# <a name="debug-on-a-wear-device"></a>Отладка на устройстве Android Wear
+# <a name="debug-on-a-wear-device"></a>Отладка в устройстве Android Wear
 
 _В этой статье объясняется, как выполнить отладку приложения Xamarin.Android Wear на устройстве Android Wear._
 
@@ -77,7 +77,7 @@ _В этой статье объясняется, как выполнить от
 
     Если порт 4444 недоступен, можно использовать любой другой доступный порт, к которому у вас есть доступ. 
 
-    **Примечание**: Если перезапустить Visual Studio или Visual Studio для Mac, необходимо выполнить эти команды еще раз, чтобы установить подключение к устройству одежды.
+    **Примечание**. При перезапуске Visual Studio или Visual Studio для Mac, необходимо выполнить эти команды еще раз, чтобы установить подключение к устройству одежды.
 
 5.  При устройстве Android Wear появится запрос, подтвердите, что позволяет пользователям **отладки ADB**. В приложении Android Wear вы увидите, как изменить состояние:
 

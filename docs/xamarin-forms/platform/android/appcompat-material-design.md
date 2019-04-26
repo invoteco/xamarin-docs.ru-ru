@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
 ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293469"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Добавление AppCompat и материальное
 
@@ -136,7 +136,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 Ссылаться на [Hello инструментов](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) записи блога, чтобы узнать больше.
 
 
-### <a name="6-update-the-mainactivity"></a>6.  Обновление `MainActivity`
+### <a name="6-update-the-mainactivity"></a>6. Обновление `MainActivity`
 
 В существующих приложениях Xamarin.Forms **MainActivity.cs** класс будет наследовать от `FormsApplicationActivity`. Его необходимо заменить `FormsAppCompatActivity` для включения новых функциональных возможностей.
 

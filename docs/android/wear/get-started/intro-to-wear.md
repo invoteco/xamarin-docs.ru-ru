@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a35cb82f4f6d20e91f45a782c73d3ef811947c3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61284251"
 ---
 # <a name="introduction-to-android-wear"></a>Введение в Android Wear
 
@@ -129,7 +129,7 @@ Android Wear 2.0 дает ряд новых функций и возможнос
 Android Wear 2.0 является осуществить грандиозное обновление для Android Wear с момента его первого запуска в 2014 г. В следующих разделах рассматриваются основные функции Android Wear 2.0, и приводятся ссылки, чтобы помочь вам приступить к использованию этих новых функций в приложении. 
 
 
-#### <a name="complications"></a>Сложности
+#### <a name="complications"></a>Усложнения
 
 *Сложности* являются небольшой watch лиц мини-приложения, которые можно использовать с первого взгляда без необходимости проведения пальцем на циферблате. Сложности, аналогичны рабочим столом мини-приложений; они отображают сведения, такие как погода, батареи, событиями календаря и статистики пригодности приложений: 
 
@@ -186,7 +186,7 @@ Android Wear 2.0 является осуществить грандиозное 
 * [Motorola 360](https://moto360.motorola.com/)
 * [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
 * [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-* [Samsung шестеренки Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
+* [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
 * [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 * [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 

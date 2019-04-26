@@ -1,5 +1,5 @@
 ---
-title: Пользовательская кнопка
+title: Настраиваемая кнопка
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: b5ccefa1eb7e659584c1c82481bbd4473a3a8abc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076281"
 ---
-# <a name="custom-button"></a>Пользовательская кнопка
+# <a name="custom-button"></a>Настраиваемая кнопка
 
 В этом разделе вы создадите кнопка с пользовательским образом вместо текста, с помощью [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) мини-приложение и XML-файл, определяющий три различных изображений, используемых для различные состояния кнопок. При нажатии кнопки, короткое сообщение будет отображаться.
 

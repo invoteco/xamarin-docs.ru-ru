@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407658"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Часть 2. Синтаксис Essential XAML
 
@@ -143,7 +143,7 @@ _XAML предназначен главным образом для создан
 </Label>
 ```
 
-Еще один пример: `Grid` имеет два свойства с именем `RowDefinitions` и `ColumnDefinitions`. Эти два свойства имеют тип `RowDefinitionCollection` и `ColumnDefinitionCollection`, которые представляют собой коллекции `RowDefinition` и `ColumnDefinition` объектов. Необходимо использовать синтаксис элемента свойства для задания этих коллекций.
+Другой пример: `Grid` Имеет два свойства с именем `RowDefinitions` и `ColumnDefinitions`. Эти два свойства имеют тип `RowDefinitionCollection` и `ColumnDefinitionCollection`, которые представляют собой коллекции `RowDefinition` и `ColumnDefinition` объектов. Необходимо использовать синтаксис элемента свойства для задания этих коллекций.
 
 Здесь — это начало файла XAML для `GridDemoPage` класс, показывающий теги элемента свойства для `RowDefinitions` и `ColumnDefinitions` коллекций:
 

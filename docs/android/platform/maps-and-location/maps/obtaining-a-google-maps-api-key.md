@@ -1,5 +1,5 @@
 ---
-title: Получение Google Maps ключ API
+title: Получение ключа API Google Maps
 description: Как получить ключ API карт Google для добавления сопоставляет функциональные возможности приложения.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
 ms.openlocfilehash: bfeb9d8fa2a0b5a9b18ab8266500586e2e3b6c68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155432"
 ---
-# <a name="obtaining-a-google-maps-api-key"></a>Получение Google Maps ключ API
+# <a name="obtaining-a-google-maps-api-key"></a>Получение ключа API Google Maps
 
 Чтобы использовать функцию Google карты в Android, необходимо зарегистрироваться для получения ключа API для карт с помощью Google. До этого вы увидите только пустую сетку вместо карту в ваших приложениях. Необходимо получить ключ v2 Google Maps Android API - ключи из более старых Google Maps Android API ключа версии 1 не будет работать.
 

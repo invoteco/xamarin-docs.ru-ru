@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
 ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386645"
 ---
 # <a name="listview-performance"></a>Производительность элемента управления ListView
 
@@ -133,7 +133,7 @@ var listView = new ListView(ListViewCachingStrategy.RecycleElement);
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Настройка кэширования стратегии в подклассах ListView
 
-Установка `CachingStrategy` атрибута из XAML в подклассах [ `ListView` ](xref:Xamarin.Forms.ListView) не даст требуемое поведение, так как не `CachingStrategy` свойство `ListView`. Кроме того Если [XAMLC](~/xamarin-forms/xaml/xamlc.md) — включена, будет произведено следующее сообщение об ошибке: **не свойство, может быть привязано или событие найдено для «CachingStrategy»**
+Установка `CachingStrategy` атрибута из XAML в подклассах [ `ListView` ](xref:Xamarin.Forms.ListView) не даст требуемое поведение, так как не `CachingStrategy` свойство `ListView`. Кроме того Если [XAMLC](~/xamarin-forms/xaml/xamlc.md) — включена, будет произведено следующее сообщение об ошибке: **Нет свойство, свойство, используемое или событие найдено для «CachingStrategy»**
 
 Решение этой проблемы является указание конструктор для подкласса [ `ListView` ](xref:Xamarin.Forms.ListView) , принимающий [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) параметра и передает его в базовый класс:
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
 ms.openlocfilehash: fd48c7148aadd8d156544113e2d719295294bf40
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261289"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>Селектор реализации HttpClient и SSL/TLS для iOS и Mac OS
 
@@ -30,7 +30,7 @@ ms.locfileid: "40251213"
 
 1. Дважды щелкните **имя_проекта** в **обозревателе решений** чтобы открыть параметры проекта.
 2. Переключиться в режим **построения** параметров проекта (например, **сборка iOS** для приложения Xamarin.iOS).
-3. Из **реализация HttpClient** раскрывающемся списке выберите `HttpClient` введите одно из следующих: **NSUrlSession** (рекомендуется), **CFNetwork**, или  **Управляемые**.
+3. Из **реализация HttpClient** раскрывающемся списке выберите `HttpClient` введите одно из следующих: **NSUrlSession** (рекомендуется), **CFNetwork**, или **управляемый**.
 
 [![Выберите управляемый, CFNetwork или NSUrlSession реализация HttpClient](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
@@ -104,10 +104,10 @@ HttpClient client = new HttpClient(new NSUrlSessionHandler());
 Протокол SSL (Secure Socket Layer) и его "преемник", TLS (Transport Layer Security), обеспечивают поддержку HTTP и других сетевых подключений с помощью `System.Net.Security.SslStream`. Xamarin.iOS, Xamarin.tvOS или в Xamarin.Mac `System.Net.Security.SslStream` реализация будет вызывать Apple собственная реализация SSL/TLS, вместо того чтобы использовать управляемую реализацию, предоставляемые Mono. Собственная реализация Apple поддерживает TLS 1.2.
 
 > [!WARNING]
-> Предстоящий выпуск Xamarin.Mac 4.8 поддерживает только macOS 10.9 или более поздней версии.
-> Предыдущие версии Xamarin.Mac поддерживается macOS 10.7 или более поздней версии, но эти устаревшие версии macOS не достаточно TLS инфраструктуры для поддержки TLS 1.2. Для macOS 10.7 или macOS — 10.8 используйте Xamarin.Mac 4.6 или более ранней версии.
+> Будущий выпуск Xamarin.Mac 4.8 будет поддерживать только macOS 10.9 или более поздней версии.
+> Предыдущие версии Xamarin.Mac поддерживали macOS 10.7 или более поздней версии, но в этих версиях macOS нет достаточной инфраструктуры TLS для поддержки TLS 1.2. Для macOS 10.7 или macOS 10.8 используйте Xamarin.Mac 4.6 или более ранней версии.
 
-## <a name="app-transport-security"></a>Безопасность транспорта приложения
+## <a name="app-transport-security"></a>Защита транспорта приложения
 
 Apple _безопасность транспорта приложения_ (ATS) применяет безопасных соединений между Интернет-ресурсов (например, server серверной части приложения) и приложения. ATS гарантирует все Интернет-коммуникациями соответствия безопасное подключение рекомендации, тем самым предотвращая случайное раскрытие конфиденциальной информации, либо напрямую с помощью приложения или библиотеку, которая потребляет.
 

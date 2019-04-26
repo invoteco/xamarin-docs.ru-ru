@@ -1,5 +1,5 @@
 ---
-title: Можно ли использовать виртуальную Машину Mac с Xamarin?
+title: Можно ли использовать виртуальную машину Mac с Xamarin?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 386C9030-8865-48DE-8AF7-42909C7055E9
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: f0fc6ad7e6bf23fce2d742b4e0ed15da73549dc9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420857"
 ---
-# <a name="can-i-use-a-mac-vm-with-xamarin"></a>Можно ли использовать виртуальную Машину Mac с Xamarin? 
+# <a name="can-i-use-a-mac-vm-with-xamarin"></a>Можно ли использовать виртуальную машину Mac с Xamarin? 
 
 ## <a name="mac-hardware"></a>Оборудовании Mac
 Да; не забудьте выполнить условия использования Apple.

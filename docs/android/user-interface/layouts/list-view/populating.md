@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
 ms.openlocfilehash: 57c69223a01074ed15714026b7e9ec4e995808e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61171320"
 ---
 # <a name="populating-a-listview-with-data"></a>Заполнение ListView данными
 

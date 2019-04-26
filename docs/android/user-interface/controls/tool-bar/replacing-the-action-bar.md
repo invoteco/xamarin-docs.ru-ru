@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
 ms.openlocfilehash: 9e9fa1e2651661670f89baac7fcd438b3d14bfb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61201004"
 ---
 # <a name="replacing-the-action-bar"></a>Замена панели действий
 
@@ -283,7 +283,7 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 
 ![Ошибка, которая может возникнуть при пользовательской темы не используется](replacing-the-action-bar-images/03-theme-not-defined.png)
 
-Кроме того, сообщение об ошибке такие как следующие может быть получена: _Java.Lang.IllegalStateException: это действие уже предоставляемые декоративных окно Панель действий._ 
+Кроме того может создаваться сообщение об ошибке, например следующие: _Java.Lang.IllegalStateException: Это действие уже предоставляемые декоративных окно Панель действий._ 
 
 Чтобы исправить эту ошибку, убедитесь, что `android:theme` атрибут добавляется пользовательская тема `<application>` (в **Properties/AndroidManifest.xml**) как описано выше в [применить пользовательскую тему](#apply-the-custom-theme). Кроме того, эта ошибка может быть вызвана, если `Toolbar` макета или пользовательские темы не настроен должным образом.
 

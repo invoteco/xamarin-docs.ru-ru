@@ -1,5 +1,5 @@
 ---
-title: Управляющий элемент выбора даты
+title: Управляющий элемент выбора даты.
 description: Выбор календарных дат, используя DatePickerDialog и DialogFragment
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
 ms.openlocfilehash: 9f82317f6041de3952d11b391afffafe6fbd8761
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153537"
 ---
-# <a name="date-picker"></a>Управляющий элемент выбора даты
+# <a name="date-picker"></a>Управляющий элемент выбора даты.
 
 ## <a name="overview"></a>Обзор
 

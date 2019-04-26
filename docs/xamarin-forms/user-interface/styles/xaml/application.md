@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
 ms.openlocfilehash: 749e9bca87b2c9547b9733248d75718a4443ab88
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61160753"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Глобальные стили в Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Стили могут быть сделаны доступными глобал
 
 ## <a name="create-a-global-style-in-xaml"></a>Создание глобальных стиля в XAML
 
-По умолчанию используют все приложения Xamarin.Forms, созданные на основе шаблона **приложения** класс для реализации [ `Application` ](xref:Xamarin.Forms.Application) подкласс. Чтобы объявить [ `Style` ](xref:Xamarin.Forms.Style) на уровне приложения, в приложении [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) с помощью XAML, значение по умолчанию **приложения** класса должны быть заменены XAML **Приложения** класс и связанные с выделенным кодом. Дополнительные сведения см. в разделе [работа с класс App](~/xamarin-forms/app-fundamentals/application-class.md).
+По умолчанию все приложения Xamarin.Forms, создаваемые на основе шаблона, используют класс **App** для реализации подкласса [`Application`](xref:Xamarin.Forms.Application). Чтобы объявить [ `Style` ](xref:Xamarin.Forms.Style) на уровне приложения, в приложении [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) с помощью XAML, значение по умолчанию **приложения** класса должны быть заменены XAML **Приложения** класс и связанные с выделенным кодом. Дополнительные сведения см. в разделе [работа с класс App](~/xamarin-forms/app-fundamentals/application-class.md).
 
 В следующем коде показано в примере [ `Style` ](xref:Xamarin.Forms.Style) объявлен на уровне приложения:
 

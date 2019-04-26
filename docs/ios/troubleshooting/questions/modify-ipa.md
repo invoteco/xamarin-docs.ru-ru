@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420896"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Можно добавить файлы или удалить файлы из файла IPA-ФАЙЛ после его сборки в Visual Studio?
 
@@ -46,7 +46,7 @@ ms.locfileid: "50117412"
 
 9.  Удалить необходимые файлы из `.ipa`. Можно либо переместить их в корзину, с помощью поиска или удалить их в командной строке с использованием `Terminal.app`. Чтобы просмотреть содержимое `Payload/iPhone` файл в Finder, щелкните файл и выберите **Показать содержимое пакета**.
 
-10.  Используя тот же общий подход, как в шаге 3, найдите файл журнала в разделе `~/Library/Logs/Xamarin/MonoTouchVS/` , имеет имя проекта и `generated session id` в имени: ![](modify-ipa-images/build-log.png "найдите файл журнала сборки проекта в Finder")
+10.  Используя тот же общий подход, как в шаге 3, найдите файл журнала в разделе `~/Library/Logs/Xamarin/MonoTouchVS/` , имеет имя проекта и `generated session id` в имени: ![](modify-ipa-images/build-log.png "Найдите файл журнала сборки проекта в Finder")
 
 11.  Откройте журнал сборки в шаге 10, например, дважды щелкнув его.
 
@@ -88,4 +88,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 И в процессе проверки App Store будут сообщать, сообщение об ошибке:
 
-> Ошибка ITMS-90035: «Недопустимая подпись. Запечатанный ресурса отсутствует или является недопустимым. Двоичный файл по пути [iPhoneApp1.app/iPhoneApp1] содержит недопустимую подпись. Убедитесь, что вы выполнили вход с помощью сертификата распространения, а не нерегламентированных сертификат или сертификат разработки приложения. Проверьте параметры подписывания кода в Xcode на целевом уровне (который переопределяют любые значения на уровне проекта). Кроме того убедитесь, что пакет, который вы передаете был создан с помощью целевого выпуска в Xcode, а не симулятор целевого объекта. Если вы уверены, что указаны правильные параметры подписывания кода, выберите «Очистить все» в Xcode, удалить каталог «сборка» в средстве поиска и перестроить целевой выпуск. Дополнительные сведения см. в [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: «Недопустимая подпись. Запечатанный ресурса отсутствует или является недопустимым. Двоичный файл по пути [iPhoneApp1.app/iPhoneApp1] содержит недопустимую подпись. Убедитесь, что вы выполнили вход с помощью сертификата распространения, а не нерегламентированных сертификат или сертификат разработки приложения. Проверьте параметры подписывания кода в Xcode на целевом уровне (который переопределяют любые значения на уровне проекта). Кроме того убедитесь, что пакет, который вы передаете был создан с помощью целевого выпуска в Xcode, а не симулятор целевого объекта. Если вы уверены, что указаны правильные параметры подписывания кода, выберите «Очистить все» в Xcode, удалить каталог «сборка» в средстве поиска и перестроить целевой выпуск. Дополнительные сведения см. в [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

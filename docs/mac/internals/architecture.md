@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
 ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61034148"
 ---
 # <a name="xamarinmac-architecture"></a>Архитектура Xamarin.Mac
 
@@ -44,7 +44,7 @@ Xamarin.Mac приложения выполняются в среде выпол
 
 - Компьютер Mac под управлением Mac OS X 10.7 или более поздней версии.
 
-## <a name="compilation"></a>.NET
+## <a name="compilation"></a>Компиляция
 
 При компиляции любого приложения Xamarin платформы Mono C# (или F#) компилятор будет выполняться и будет компилироваться в C# и F# код в промежуточный язык Майкрософт (MSIL или IL). Затем использует Xamarin.Mac *Just in Time (JIT)* компилятора во время выполнения для компиляции машинного кода, позволяя выполнение на правильной архитектуры, при необходимости.
 

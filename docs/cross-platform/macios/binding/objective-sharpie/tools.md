@@ -7,17 +7,17 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
 ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261172"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Цели Sharpie средства и команды
 
 _Обзор средств, включенных с Sharpie цели и аргументы командной строки для их использования._
 
-<style type="text/css"> .Terminal синий {color: rgb(10,96,254);} .terminal зеленый {color: rgb(12,156,26);} .terminal пурпурный {цвет: rgb(152,12,103);} </style>
+<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
 
 
 После успешной цели Sharpie [установлен](~/cross-platform/macios/binding/objective-sharpie/get-started.md), откройте окно терминала и ознакомиться с <em>команды</em> Sharpie цель может предложить:
@@ -52,9 +52,9 @@ Available Tools:
 
 Цели Sharpie предоставляет следующие средства:
 
-|Средство|Описание:|
+|Средство|Описание|
 |--- |--- |
-|**xcode**|Сведения о текущей установке Xcode и версиях iOS и Mac пакеты SDK, которые доступны. Мы будем использовать в дальнейшем при создании наших привязки.|
+|**Xcode**|Сведения о текущей установке Xcode и версиях iOS и Mac пакеты SDK, которые доступны. Мы будем использовать в дальнейшем при создании наших привязки.|
 |**POD**|Выполняет поиск, настраивает, устанавливает (в локальном каталоге) и привязывает Objective-C [cocoapod для службы](https://cocoapods.org/) библиотек, доступных из главного репозитория спецификаций. Этот инструмент оценивает установленных cocoapod для службы автоматически определить правильные входные данные для передачи `bind` ниже средства. Новые возможности 3.0!|
 |**bind**|Анализирует файлы заголовков (`*.h`) в библиотеке Objective-C в исходный [ApiDefinition.cs и StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) файлов.|
 |**update**|Проверяет наличие более новых версиях Sharpie цели и загружает и запускает программу установки, если таковой доступен.|
@@ -88,5 +88,5 @@ Xcode Options:
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xamarin University курс: Создание библиотеку привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University курс: Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

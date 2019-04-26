@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61289143"
 ---
 # <a name="skiasharp-mask-filters"></a>Фильтры маска SkiaSharp
 
@@ -180,9 +180,9 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 
 [![Маскировать эксперимента размытия](mask-filters-images/MaskBlurExperiment.png "маскировать размытия эксперимента")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-На снимке экрана показан iOS `Solid` стиль: текстовые знаки по-прежнему присутствуют как сплошной черной strokes и размытия добавляется снаружи эти символы. 
+На снимке экрана показан iOS `Solid` стиля: Текстовые знаки по-прежнему присутствуют как сплошной черной strokes и размытия добавляется снаружи эти символы. 
 
-Android экрана в среднем отображает `Outer` стиль: символ штрихов, сами исключаются (как растровое изображение) и размытия окружает пустое место, где один раз применялось текстовых символов. 
+Android экрана в среднем отображает `Outer` стиля: Символ штрихов, сами исключаются (как растровое изображение) и размытия заключает пустое место, где один раз обнаружены символы текста. 
 
 На снимке экрана универсальной платформы Windows на справа показывает `Inner` стиля. Размытие поддерживается только для области обычно, текстовых символов.
 

@@ -1,6 +1,6 @@
 ---
-title: Собственные представления в Xamarin.Forms
-description: Собственные представления из Android, iOS и универсальной платформы Windows (UWP) могут существовать прямые ссылки из Xamarin.Forms, и они могут взаимодействовать с Xamarin.Forms представления.
+title: Исходные представления в Xamarin.Forms
+description: Исходные представления из iOS, Android и универсальной платформы Windows (UWP) можно непосредственно ссылаться из Xamarin.Forms, и они могут взаимодействовать с представления Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2294a023-d763-41de-a9da-c2bfc239a132
 ms.technology: xamarin-forms
@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
 ms.openlocfilehash: b2ce371767b5f22af421ab99cdb291b2dbcf1143
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290535"
 ---
-# <a name="native-views-in-xamarinforms"></a>Собственные представления в Xamarin.Forms
+# <a name="native-views-in-xamarinforms"></a>Исходные представления в Xamarin.Forms
 
-_Собственные представления из Android, iOS и универсальной платформы Windows (UWP) могут существовать прямые ссылки из Xamarin.Forms. Свойства и обработчики событий могут быть установлены для собственного представления, и они могут взаимодействовать с Xamarin.Forms представления._
+_Исходные представления из iOS, Android и универсальной платформы Windows (UWP) можно непосредственно ссылаться из Xamarin.Forms. На исходные представления можно задать свойства и обработчики событий, и они могут взаимодействовать с представления Xamarin.Forms._
 
 ## <a name="native-views-in-xamlxamlmd"></a>[Исходные представления в XAML](xaml.md)
 
-Собственные представления из iOS, Android и UWP могут существовать прямые ссылки с Xamarin.Forms страниц, созданных с помощью XAML.
+Исходные представления из iOS, Android и UWP можно непосредственно ссылаться из страницы Xamarin.Forms, созданные с помощью XAML.
 
 ## <a name="native-views-in-ccodemd"></a>[Исходные представления в C#](code.md)
 
-Собственные представления из iOS, Android и UWP могут существовать прямые ссылки с Xamarin.Forms страниц, созданных с помощью C#.
+Исходные представления из iOS, Android и UWP можно непосредственно ссылаться из страницы Xamarin.Forms, созданные с помощью C#.
 
 
 ## <a name="related-links"></a>Связанные ссылки

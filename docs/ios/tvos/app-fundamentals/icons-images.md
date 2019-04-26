@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418255"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Работа с tvOS, значков и изображений в Xamarin
 
@@ -237,7 +237,7 @@ tvOS работает с многослойные образы в следующ
 
 Потребуются следующие размеры содержимого:
 
-||Плакат (2:3)|Квадрат (1:1)|ВЫСОКОЙ ЧЕТКОСТИ (16:9)|
+||Плакат (2:3)|Квадрат (1:1)|HDTV (16:9)|
 |---|---|---|---|
 |Фактический размер|404x608px|608x608px|908x512px|
 |Размер зоны безопасности|380x570px|570x570px|852x479px|

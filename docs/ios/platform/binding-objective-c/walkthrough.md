@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Привязка библиотек Objective-C iOS
+title: Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 description: Эта статья содержит практические руководство по созданию привязку Xamarin.iOS для существующей библиотеки Objective-C, InfColorPicker. Здесь рассматриваются таким темам, как компиляция статической библиотеки Objective-C, привязки и использование привязки в приложении Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392198"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотек Objective-C iOS
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 
 _Эта статья содержит практические руководство по созданию привязку Xamarin.iOS для существующей библиотеки Objective-C, InfColorPicker. Здесь рассматриваются таким темам, как компиляция статической библиотеки Objective-C, привязки и использование привязки в приложении Xamarin.iOS._
 

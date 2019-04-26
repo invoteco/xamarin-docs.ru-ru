@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
 ms.openlocfilehash: 21e1a2c6ae5a9ad8b6acf520851ea92a340da887
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032503"
 ---
 # <a name="xamarinmac-registrar"></a>Регистратор Xamarin.Mac
 

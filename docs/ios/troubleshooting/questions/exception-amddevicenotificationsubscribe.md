@@ -1,5 +1,5 @@
 ---
-title: System.Exception AMDeviceNotificationSubscribe вернул...
+title: Возвращено исключение System.Exception AMDeviceNotificationSubscribe…
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 4fb0712366422e8810a2db60d40c3b85d9f4cd82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421948"
 ---
-# <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>System.Exception AMDeviceNotificationSubscribe вернул...
+# <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>Возвращено исключение System.Exception AMDeviceNotificationSubscribe…
 
 > [!IMPORTANT]
 > Эта проблема устранена в последних версиях Xamarin. Тем не менее, если эта проблема возникает на последнюю версию программного обеспечения, отправьте [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) благодаря полное управление версиями сведения и полный создавать выходные данные журнала.
@@ -63,4 +63,4 @@ AMDeviceNotificationSubscribe returned: 3892314211
 
 ## <a name="references"></a>Ссылки
 
-*   [Ошибка 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe вернул: 0xe8000063 [разрешить NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)
+*   [Ошибка 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe вернул: 0XE8000063 [РАЗРЕШИТЬ NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

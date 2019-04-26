@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
 ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61012813"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Удаленные уведомления с помощью Google Cloud Messaging
 
@@ -511,7 +511,7 @@ SendNotification (message);
 
 Давайте взглянем на назначение каждого из параметров в этот XML-код:
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---|---|
 |`com.google.android.gms.gcm.GcmReceiver`|Объявляет, что наше приложение реализует получатель GCM, который перехватывает и обрабатывает входящие сообщения push-уведомлений.|
 |`com.google.android.c2dm.permission.SEND`|Объявляет, что только серверы GCM может отправлять сообщения непосредственно в приложение.|

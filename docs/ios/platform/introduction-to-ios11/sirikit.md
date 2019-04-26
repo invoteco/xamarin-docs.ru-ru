@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/07/2017
 ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400332"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>SiriKit обновлений в iOS 11
 
@@ -118,7 +118,7 @@ SiriKit в iOS 11 добавляет эти новые и обновленные
 
 1. Щелкните правой кнопкой мыши на своем решении и выберите **Добавить > Добавить новый проект...** .
 2. Выберите **iOS > расширения > расширение Intents** шаблона.
-3. Будут добавлены два новых проектов: с намерением доступа и IntentUI. Настройки пользовательского интерфейса не является обязательным, поэтому в примере имеются только код в **намерение** проекта.
+3. Будут добавлены два новых проектов: С намерением доступа и IntentUI. Настройки пользовательского интерфейса не является обязательным, поэтому в примере имеются только код в **намерение** проекта.
 
 Проект расширения является, где все SiriKit запросы будут обрабатываться. Как отдельное расширение он не поддерживает автоматически любой способ обмена информацией с основного приложения — это обычно устраняется реализацией хранилища общих файлов с помощью групп приложений.
 
@@ -217,7 +217,7 @@ public void HandleCreateTaskList(INCreateTaskListIntent intent, Action<INCreateT
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Objective-C исключение.  Имя: NSInternalInconsistencyException причина: использование класса < INPreferences: 0x60400082ff00 > из приложения требует com.apple.developer.siri прав. Включена ли возможность Siri в проекте Xcode?_
+_Objective-C исключение.  Имя. NSInternalInconsistencyException причина: Использование класса < INPreferences: 0x60400082ff00 > из приложения требует com.apple.developer.siri прав. Включена ли возможность Siri в проекте Xcode?_
 
 - SiriKit установлен в **Entitlements.plist**.
 - **Entitlements.plist** настраивается в **параметры проекта > Создать > подписывание пакета iOS**.

@@ -1,5 +1,5 @@
 ---
-title: Какие пакеты Android SDK следует установить?
+title: Какие пакеты SDK для Android следует установить?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
 ms.openlocfilehash: 04a07d5b7f37222515136e5592f31a4583b02fe3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157368"
 ---
-# <a name="which-android-sdk-packages-should-i-install"></a>Какие пакеты Android SDK следует установить?
+# <a name="which-android-sdk-packages-should-i-install"></a>Какие пакеты SDK для Android следует установить?
 
 Установка пакета SDK для Android не включает автоматически все минимальный набор обязательных пакетов для разработки. Хотя индивидуальный разработчик должен изменяться, следующие пакеты обычно будут необходимы для разработки с помощью Xamarin.Android:
 
@@ -50,5 +50,5 @@ ms.locfileid: "50107538"
 Android SDK дополнения обычно не являются обязательными; но он полезен, которые следует учитывать их, так как они могут потребоваться в зависимости от ваш вариант использования.
 
 ## <a name="further-reading"></a>Дополнительные сведения
-В этом руководстве рассматриваются эти возможности и содержит более подробные сведения о различных пакетах SDK manager имеет доступного: [руководство по установке диспетчера пакетов SDK для Android](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
+В этом руководстве рассматриваются эти возможности и содержит более подробные сведения о различных пакетах SDK manager имеет доступного: [Руководство по установке диспетчера пакета SDK для Android](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
 

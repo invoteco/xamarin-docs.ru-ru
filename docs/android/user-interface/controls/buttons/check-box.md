@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: e03595e8d88a2f12341b9e339d0581c631224848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61268322"
 ---
 # <a name="checkbox"></a>CheckBox
 
@@ -49,7 +49,7 @@ checkbox.Click += (o, e) => {
 
 Запустите его.
 
-**Совет:** Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), используйте [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
+**Совет.** Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), используйте [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
 метод задания свойства или [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)
 метод.
 

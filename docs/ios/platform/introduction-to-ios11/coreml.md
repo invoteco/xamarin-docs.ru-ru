@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
 ms.openlocfilehash: 3a00a7256cace9cbcff3478d866646d48cfdc50b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61385077"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Общие сведения о CoreML в Xamarin.iOS
 
@@ -37,7 +37,7 @@ CoreML привносит машинного обучения для iOS-при�
 
 В свойствах файла модели его **действие при сборке** присваивается **CoreMLModel**. Это означает, что он будет скомпилирован в **.mlmodelc** файл при построении приложения.
 
-### <a name="2-load-the-model"></a>2. Загрузить модель
+### <a name="2-load-the-model"></a>2. Загрузите модель
 
 Загрузка модели с помощью `MLModel.Create` статический метод:
 

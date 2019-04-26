@@ -1,5 +1,5 @@
 ---
-title: Введение в iOS 12
+title: Введение в iOS 12
 description: Этот документ содержит подробное описание некоторые интерфейсы API iOS 12, для какой Xamarin предварительной версии выпуска предоставляет привязки C#.
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
 ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61035995"
 ---
-# <a name="introduction-to-ios-12"></a>Введение в iOS 12
+# <a name="introduction-to-ios-12"></a>Введение в iOS 12
 
 Этот документ содержит подробное описание некоторые интерфейсы API iOS 12, для какой Xamarin предварительной версии выпуска предоставляет привязки C#.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/03/2017
 ms.openlocfilehash: 85b0c9b0688e9fb310a8f427018a02fe629404bb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61225544"
 ---
 # <a name="watchos-complications-in-xamarin"></a>watchOS сложности в Xamarin
 
@@ -24,7 +24,7 @@ _watchOS позволяет разработчикам создавать пол
 
 Начните с изучения [документации Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) для определения, подходит ли приложение для сложностью. Существуют 5 `CLKComplicationFamily` типа отображения для выбора:
 
-[![](complications-images/all-complications-sml.png "5 доступных типов CLKComplicationFamily: циклическая небольшой, модульная небольшой, модульная больших, привлекающий небольшой, привлекающий больших")](complications-images/all-complications.png#lightbox)
+[![](complications-images/all-complications-sml.png "5 CLKComplicationFamily доступных типов: Круглый малый модульный малый модульный малый больших, привлекающий, привлекающий больших")](complications-images/all-complications.png#lightbox)
 
 Приложения можно реализовать только один стиль или все пять, в зависимости от отображаемых данных.
 Можно также поддерживают переход во времени, указав значения для прошлых и будущих значений времени, как пользователь перевернет цифровых корона.
@@ -33,7 +33,7 @@ _watchOS позволяет разработчикам создавать пол
 
 ## <a name="adding-a-complication"></a>Добавление усложнения
 
-### <a name="configuration"></a>Конфигурация
+### <a name="configuration"></a>Параметр Configuration
 
 Сложности можно добавить приложение просмотра во время создания или вручную добавлены в существующее решение.
 

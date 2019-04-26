@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 8b800d0c5639d4679b5e17c6c6a4689690529b85
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421169"
 ---
 # <a name="user-location-not-working-in-ios-8"></a>Расположение пользователя не работает в iOS 8
 
-В текстовом редакторе: Откройте вверх Info.plist и добавьте следующий код:
+В текстовом редакторе: Откройте Info.plist и добавьте следующие строки:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>

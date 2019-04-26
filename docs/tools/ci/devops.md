@@ -1,5 +1,5 @@
 ---
-title: DevOps с помощью Xamarin
+title: DevOps с Xamarin
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
 author: conceptdev
 ms.author: crdun
@@ -8,13 +8,13 @@ ms.workload:
 - xamarin
 ms.date: 10/23/2018
 ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293691"
 ---
-# <a name="devops-with-xamarin"></a>DevOps с помощью Xamarin
+# <a name="devops-with-xamarin"></a>DevOps с Xamarin
 
 Платформа Xamarin позволяет создавать кроссплатформенные мобильные приложения, предназначенные для Android, iOS и Windows, с помощью C#, .NET и Visual Studio. Платформа Xamarin дает возможность совместного использования большей части кода разными платформами, при этом лишь небольшая его часть должна соответствовать конкретной платформе.
 
@@ -26,7 +26,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="agile-tools"></a>Средства Agile
 
-Ссылка: **[Сведения о средствах Agile и гибком управлении проектами (Agile)](/azure/devops/boards/backlogs/overview?view=vsts)**
+Ссылка для справки: **[Гибкие инструменты и гибкого управления проектами](/azure/devops/boards/backlogs/overview?view=vsts)**
 
 Общий комментарий: все возможности планирования и отслеживания не зависят от типа проекта и языков программирования.
 
@@ -40,7 +40,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="modeling"></a>Моделирование
 
-Ссылка: **[Анализ и моделирование архитектуры](/visualstudio/modeling/analyze-and-model-your-architecture)**
+Ссылка для справки: **[Анализ и моделирование архитектуры](/visualstudio/modeling/analyze-and-model-your-architecture)**
 
 Функции разработки не зависят от языка программирования или работы с языками .NET, такими как C#. Аспекты, связанные с кодом, описаны в разделе [Роли архитектуры и схем моделирования в разработке программного обеспечения](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools).
 
@@ -77,7 +77,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 |Определения сборки с сценариями до и после сборки|Да||
 |Непрерывная интеграция, включая условный возврат|Да|Условный возврат доступен только для TFVC, так как Git работает с моделью запроса на включение внесенных изменений, а не с возвратом.|
 
-## <a name="test"></a>Проверка
+## <a name="test"></a>Тест
 
 |Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
@@ -90,7 +90,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="improve-code-quality"></a>Улучшите качество кода
 
-Ссылка: **[Улучшите качество кода](/visualstudio/test/improve-code-quality)**
+Ссылка для справки: **[Улучшение качества кода](/visualstudio/test/improve-code-quality)**
 
 |Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
@@ -102,7 +102,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="release-management"></a>Управление выпуском
 
-Ссылка для справки: **[Сборка и выпуск в Azure Pipelines и TFS](/azure/devops/pipelines/overview?view=vsts)**
+Ссылка для справки: **[Сборки и выпуска в конвейеры Azure и TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
@@ -112,7 +112,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="monitor-with-hockeyapp"></a>Мониторинг с HockeyApp
 
-Ссылка: **[Мониторинг с HockeyApp](https://www.hockeyapp.net/features/)**
+Ссылка для справки: **[Мониторинг с HockeyApp](https://www.hockeyapp.net/features/)**
 
 |Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|

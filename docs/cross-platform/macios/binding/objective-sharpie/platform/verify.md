@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: 4bca896afb4dfc96fd6c1d7cdf489feb6a879e31
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261232"
 ---
 # <a name="objective-sharpie-verify-attributes"></a>Цели Sharpie Проверка атрибутов
 
@@ -22,17 +22,17 @@ ms.locfileid: "37855033"
 После проверки того, что привязка является привязкой, исправьте или устранения его правильно, _удалить_ `[Verify]` атрибут из привязки.
 
 > [!IMPORTANT]
-> `[Verify]` атрибуты намеренно вызывать ошибки компиляции C#, таким образом, вам придется проверить привязку. Следует удалить `[Verify]` атрибут после просмотра (и возможно исправлен) код.
+> `[Verify]` атрибуты намеренно вызвать C# ошибки компиляции, что вам придется проверить привязку. Следует удалить `[Verify]` атрибут после просмотра (и возможно исправлен) код.
 
 ## <a name="verify-hints-reference"></a>Проверить ссылку подсказки
 
 Указание аргумент, предоставленный для атрибута может быть перекрестные ссылки на перечисленные ниже. Документация для любых созданных `[Verify]` атрибуты будут представлены на консоль, а также после завершения привязки.
 
-|`[Verify]` Указание|Описание:|
+|`[Verify]` Указание|Описание|
 |---|---|
 |InferredFromPreceedingTypedef|Имя этого объявления было выведено с Общепринято из немедленно выше `typedef` в собственного исходного кода. Убедитесь, что выводимые имя указано правильно, как это соглашение является неоднозначным.|
 |ConstantsInterfaceAssociation|Нет способа fool подтверждения для определения того, с какой интерфейс Objective-C в объявлении переменной extern могут быть связаны. Эти экземпляры связываются как `[Field]` свойств в частичного интерфейса в практически by конкретный интерфейс для создания более интуитивно понятный API, возможно, устраняя константы интерфейс полностью.|
-|MethodToProperty|Метод Objective-C были привязаны как свойство C# из-за соглашение, например приема без параметров и возвращает значение (отличное от void результат). Часто такие методы, как они должны быть привязаны как свойства для отображения лучше API, но иногда могут возникать ложные срабатывания и привязка фактически должен присутствовать соответствующий метод.|
+|MethodToProperty|Метод Objective-C были привязаны как C# свойство из-за соглашение, например приема без параметров и возвращает значение (отличное от void результат). Часто такие методы, как они должны быть привязаны как свойства для отображения лучше API, но иногда могут возникать ложные срабатывания и привязка фактически должен присутствовать соответствующий метод.|
 |StronglyTypedNSArray|Собственный `NSArray*` были привязаны как `NSObject[]`. Можно более строго типа array в привязке, основанные на ожидания задаются в документации по API (например комментарии в файле заголовка) или с помощью проверки содержимого массива путем тестирования. Например, сравнение NSArray * содержащий только NSNumber * instancescan может привязываться в виде `NSNumber[]` вместо `NSObject[]`.|
 
 Вы можете быстро получать документацию по использованию указание `sharpie verify-docs` средство, например:
@@ -43,5 +43,5 @@ sharpie verify-docs InferredFromPreceedingTypedef
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xamarin University курс: Создание библиотеку привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University курс: Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

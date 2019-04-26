@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
 ms.openlocfilehash: 5aabc3a3c2ffbcffc0e12379989f7eb43b03a902
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61399295"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Обработка сенсорного ввода в приложениях Xamarin.iOS
 
@@ -29,7 +29,7 @@ iOS инкапсулирует сенсорные данные в `UITouch` кл
 ## <a name="sections"></a>Разделы
 
 -  [Сенсорные технологии в iOS](touch-in-ios.md)
--  [Пошаговое руководство. Использование сенсорного ввода в iOS](ios-touch-walkthrough.md)
+-  [Пошаговое руководство: использование сенсорного ввода в iOS](ios-touch-walkthrough.md)
 -  [Мультисенсорное отслеживание](touch-tracking.md)
 
 Данное руководство служит краткое описание сенсорного ввода в iOS. Дополнительные сведения об использовании в iOS 3D Touch и обратной связи Haptic которого были введены в iOS 9 и 10 соответственно см. в конкретных приведенных ниже руководствах:

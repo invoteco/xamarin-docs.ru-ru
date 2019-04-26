@@ -1,5 +1,5 @@
 ---
-title: Как вручную установить библиотеки поддержки Android, необходимые для пакетов Xamarin.Android.Support?
+title: Как вручную установить вспомогательные библиотеки Android, необходимые для пакетов Xamarin.Android.Support?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 84ee33fe174c01656144e55bc3cbba7c773950fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153453"
 ---
-# <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Как вручную установить библиотеки поддержки Android, необходимые для пакетов Xamarin.Android.Support?
+# <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Как вручную установить вспомогательные библиотеки Android, необходимые для пакетов Xamarin.Android.Support?
 
 ## <a name="example-steps-for-xamarinandroidsupportv4"></a>Примеры действий по Xamarin.Android.Support.v4 
 
@@ -55,7 +55,7 @@ F16A3455987DBAE5783F058F19F7FCDF
 
 Копировать **android\_m2repository.zip** в **% LOCALAPPDATA %\\Xamarin\\zips\\**  папки. Переименуйте файл, чтобы использовать MD5-хэш из предыдущего вычисления шага хэша MD5. Пример:
 
-**% LOCALAPPDATA %\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
+**%LOCALAPPDATA%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
 
 (Необязательно) Распакуйте файл в **% LOCALAPPDATA %\\Xamarin\\Xamarin.Android.Support.v4\\23.4.0.0\\содержимого\\**  (создание **содержимого\\m2repository** подкаталог). Если пропустить этот шаг, затем первая сборка, использующий библиотеку займет немного больше времени, так как он потребуется для выполнения этого шага.
 Номер версии для подкаталог (**23.4.0.0** в этом примере) — это не совсем же версии пакета NuGet. Можно использовать `ildasm` найти правильный номер версии:

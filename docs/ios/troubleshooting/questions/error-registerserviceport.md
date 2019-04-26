@@ -1,5 +1,5 @@
 ---
-title: Ошибка конструктора с RegisterServicePort iOS
+title: Ошибка конструктора iOS RegisterServicePort
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 929A0080-B126-4744-BF88-A4A1EFBB6CC2
@@ -8,16 +8,16 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: fc4c143d6b5f7c211d24e6e3ed2ed3bb8d264410
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421974"
 ---
-# <a name="ios-designer-error-with-registerserviceport"></a>Ошибка конструктора с RegisterServicePort iOS
+# <a name="ios-designer-error-with-registerserviceport"></a>Ошибка конструктора iOS RegisterServicePort
 
 ## <a name="sample-error"></a>Пример ошибки
-> System.AggregateException: Произошла одна или несколько ошибок---> System.SystemException: RegisterServicePort (com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): возвращается ядра: -308 (-308): умер сервера (ipc/mig)
+> System.AggregateException: Произошла одна или несколько ошибок---> System.SystemException: RegisterServicePort(com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Возвращаемый ядра: -308 (-308): умер сервера (ipc/mig)
 
 ## <a name="explanation"></a>Объяснение
 Ошибки, связанные с `RegisterServicePort` и аналогичные сообщения об ошибках как выше обычно представляют собой проблему шпионского ПО и вредоносных программ на компьютере. Попробуйте [комментарий для этого отчета об ошибках](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) Дополнительные сведения и ссылки [обсуждения в форумах Apple](https://discussions.apple.com/thread/5596008) об удалении заражения. 

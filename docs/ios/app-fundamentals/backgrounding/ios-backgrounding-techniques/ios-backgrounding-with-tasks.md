@@ -1,5 +1,5 @@
 ---
-title: iOS Фоновая обработка задач
+title: Фоновая обработка в iOS с помощью задач
 description: В этом документе описывается использование фоновых задач для выполнения длительных задач, после размещения приложения в фоновом режиме.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170695"
 ---
-# <a name="ios-backgrounding-with-tasks"></a>iOS Фоновая обработка задач
+# <a name="ios-backgrounding-with-tasks"></a>Фоновая обработка в iOS с помощью задач
 
 Самый простой способ выполнения фоновой обработки в iOS является разбиение требований backgrounding на задачи и выполнить задачи в фоновом режиме. Задачи находятся в строгом ограничение по времени и обычно получают около 600 секунд (10 минут) время обработки после приложения были перемещены в фоновом режиме в iOS 6 и менее чем за 10 минут в iOS 7 и более поздние.
 

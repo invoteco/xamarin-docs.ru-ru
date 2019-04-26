@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: baceb59116dd907918b34eca4f44293051190954
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155651"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Расширения приложений дополнительные сообщения в Xamarin.iOS
 
@@ -181,7 +181,7 @@ public void SendMessage (MSMessage message)
 
 Расширение приложения сообщения могут отображаться в одном из двух различных режимов просмотра:
 
-[![](advanced-message-app-extensions-images/interactive08.png "Расширение приложения сообщения, отображаются в двух различных режимов просмотра: Compact & развернуто")](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive08.png "Расширение приложения сообщения, отображаются в двух различных режимов просмотра: Сжатие боль & расширенная")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -этот режим используется по умолчанию где расширение сообщение приложения занимает последние 25% представления сообщения. На компактный режим приложение имеет доступ к клавиатуре, горизонтальная прокрутка или распознавателей жестов проведите по экрану. Приложение может получить доступ к полю входных данных и вызовы `InsertMessage` сразу же будет отображаться для пользователя существует.
 - **Расширен** -расширение приложения сообщение заполняет все представление сообщения. Он не имеет доступа к полю входных данных, но имеет доступа к клавиатуры, горизонтальная прокрутка и проведите по экрану распознавателей жестов.

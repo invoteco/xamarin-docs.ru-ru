@@ -8,11 +8,11 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61415554"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Общие сведения о MonoTouch.Dialog для Xamarin.iOS
 

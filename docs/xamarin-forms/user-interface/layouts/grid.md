@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
 ms.openlocfilehash: 0d5df986caa01bba69b03d6502682889e78ecbc7
-ms.sourcegitcommit: ee464f165eee7b4485266c11f167be557a0bacb2
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300837"
 ---
 # <a name="xamarinforms-grid"></a>Сетка Xamarin.Forms
 
@@ -54,7 +54,7 @@ ms.locfileid: "58222319"
 - **Абсолютный** &ndash; размеров столбцов и строк с конкретного, фиксированные значения высоты и ширины. Значение и `GridUnitType.Absolute` в C# и как `#` в XAML, с помощью `#` выполняется нужное значение.
 
 > [!NOTE]
-> Значения ширины для столбцов устанавливаются как `*` по умолчанию в Xamarin.Forms, которое гарантирует, что столбец будет заполнять доступное пространство. Значения высоты строк также задаются как `*` по умолчанию. 
+> Значения ширины для столбцов устанавливаются как `*` по умолчанию в Xamarin.Forms, которое гарантирует, что столбец будет заполнять доступное пространство. Значения высоты строк также задаются как `*` по умолчанию.
 
 Рассмотрим приложение, которое требуется три строки и два столбца. Нижней строке должен быть ровно 200 пкс высоту и верхней строке должен быть дважды забыв посередине. Левый столбец должен быть достаточно широким, в соответствии с содержимым и правом столбце должен заполнить оставшееся место.
 
@@ -164,8 +164,8 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2);
 ```xaml
 <Grid ColumnSpacing="5">
   <Grid.ColumnDefinitions>
-    <ColumnDefinitions Width="*" />
-    <ColumnDefinitions Width="*" />
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="*" />
   </Grid.ColumnDefinitions>
 </Grid>
 ```

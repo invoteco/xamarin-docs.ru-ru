@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
 ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250625"
 ---
 # <a name="xamarinforms-stepper"></a>Несопоставимого Xamarin.Forms
 
@@ -182,7 +182,7 @@ double value = stepper.Value;
 </ContentPage>
 ```
 
-[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) Свойства первого [ `Label` ](xref:Xamarin.Forms.Label) привязан к [ `Value` ](xref:Xamarin.Forms.Stepper.Value) свойство [ `Stepper` ](xref:Xamarin.Forms.Stepper), так как [ `Text` ](xref:Xamarin.Forms.Label.Text) свойство второго `Label` с `StringFormat` спецификации. **Основных привязок несопоставимого** странице функций немного по-разному на двух предыдущих страницах: при первом отображении страницы, второй `Label` отображает текстовую строку со значением. Это является преимуществом с использованием привязки данных. Для отображения текста без привязки данных, необходимо специально инициализировать `Text` свойство `Label` или имитировать срабатывание [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) событие путем вызова обработчика событий из конструктора класса .
+[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) Свойства первого [ `Label` ](xref:Xamarin.Forms.Label) привязан к [ `Value` ](xref:Xamarin.Forms.Stepper.Value) свойство [ `Stepper` ](xref:Xamarin.Forms.Stepper), так как [ `Text` ](xref:Xamarin.Forms.Label.Text) свойство второго `Label` с `StringFormat` спецификации. **Основных привязок несопоставимого** странице функций немного по-разному на двух предыдущих страницах: При первом отображении страницы, второй `Label` отображает текстовую строку со значением. Это является преимуществом с использованием привязки данных. Для отображения текста без привязки данных, необходимо специально инициализировать `Text` свойство `Label` или имитировать срабатывание [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) событие путем вызова обработчика событий из конструктора класса .
 
 ## <a name="precautions"></a>Меры предосторожности
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: 53fcbbc408ae147405a3285d9391457051d6e16e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261205"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Создание привязки с помощью цели Sharpie
 
@@ -49,5 +49,5 @@ _В этом разделе содержатся вводные Sharpie цели
 - [Сведения о привязке](~/cross-platform/macios/binding/overview.md)
 - [Привязки типов справочное руководство](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin для разработчиков Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Xamarin University курс: Создание библиотеку привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University курс: Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

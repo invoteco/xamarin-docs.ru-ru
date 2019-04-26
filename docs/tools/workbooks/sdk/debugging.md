@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 86d9c6af93e7f59eb0e819730e46324688df7566
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293738"
 ---
 # <a name="debugging-integrations"></a>Отладка интеграции
 
@@ -23,7 +23,7 @@ ms.locfileid: "50106004"
 
 Журнал клиента находится в следующих расположениях в macOS и Windows:
 
-- MAC: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 Следует учитывать, что при загрузке интеграции через обычные `#r` механизм во время разработки сборки интеграции будут учтены как _зависимостей_ книги и упакованы с ним, если абсолютный путь не используется. Это может привести к изменения вступили в силу не распространение, как если бы перестроение интеграции не происходило никаких действий.

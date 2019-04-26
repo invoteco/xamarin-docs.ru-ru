@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61428279"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Привязка данных и ключ значение написание кода в Xamarin.Mac
 
@@ -173,7 +173,7 @@ Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
 
 Дополнительные сведения см. в разделе Apple [введение ключ-значение наблюдения руководство по программированию](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i).
 
-## <a name="data-binding"></a>привязка данных,
+## <a name="data-binding"></a>Привязка данных
 
 В следующих разделах будет показано, как использовать ключ значение кодирования и наблюдения совместимый класс ключ значение для привязки данных к элементам пользовательского интерфейса в конструктора Interface Builder, вместо чтения и записи значений, с помощью кода C#. Таким образом можно отделить вашей _модель данных_ из представлений, которые используются для их отображения, что делает приложение Xamarin.Mac, более гибкими и простыми для поддержания. Вы также значительно уменьшить объем кода, который должен быть написан.
 

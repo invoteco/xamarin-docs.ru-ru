@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61237690"
 ---
 # <a name="alerts-in-xamarinmac"></a>Оповещения в Xamarin.Mac
 
@@ -78,7 +78,7 @@ Apple предоставляет несколько свойств, которы
 
 <a name="Displaying_an_Alert" />
 
-## <a name="displaying-an-alert"></a>Отображение оповещения
+## <a name="displaying-an-alert"></a>Отображение предупреждения
 
 Существует два разных способа, что оповещение может быть отображается, свободные или электронную таблицу. Следующий код отображает оповещение как свободные:
 

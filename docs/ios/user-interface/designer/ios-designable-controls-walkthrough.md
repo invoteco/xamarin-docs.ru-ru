@@ -1,5 +1,5 @@
 ---
-title: Использование пользовательских элементов управления в конструкторе IOS
+title: Использование пользовательских элементов управления в конструкторе iOS
 description: В этом документе описывается, как создать пользовательский элемент управления и использовать его с помощью конструктора Xamarin для iOS. Показано, как сделать элемент управления в панели элементов конструктора iOS, реализовать элемент управления, таким образом, чтобы правильно отображаются и времени разработки и многое другое.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61154483"
 ---
-# <a name="using-custom-controls-with-the-ios-designer"></a>Использование пользовательских элементов управления в конструкторе IOS
+# <a name="using-custom-controls-with-the-ios-designer"></a>Использование пользовательских элементов управления в конструкторе iOS
 
 ## <a name="requirements"></a>Требования
 

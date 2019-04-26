@@ -1,5 +1,5 @@
 ---
-title: Сведения о wear
+title: Основные сведения о Wear
 description: Создание первого приложения для Android Wear и запустите его на устройстве или эмуляторе одежды. В этом пошаговом руководстве содержатся пошаговые инструкции по созданию небольшой проект Android Wear, которая выполняет нажатия кнопок и отображает счетчик нажмите кнопку на устройстве Android Wear. Здесь объясняется, как выполнить отладку приложения, с помощью эмулятора износа или устройстве Android Wear, подключенный через Bluetooth на телефоне с Android. Он также предоставляет набор отладки советы для Android Wear.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
 ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277452"
 ---
-# <a name="hello-wear"></a>Сведения о wear
+# <a name="hello-wear"></a>Основные сведения о Wear
 
 _Создание первого приложения для Android Wear и запустите его на устройстве или эмуляторе одежды. В этом пошаговом руководстве содержатся пошаговые инструкции по созданию небольшой проект Android Wear, которая выполняет нажатия кнопок и отображает счетчик нажмите кнопку на устройстве Android Wear. Здесь объясняется, как выполнить отладку приложения, с помощью эмулятора износа или устройстве Android Wear, подключенный через Bluetooth на телефоне с Android. Он также предоставляет набор отладки советы для Android Wear._
 

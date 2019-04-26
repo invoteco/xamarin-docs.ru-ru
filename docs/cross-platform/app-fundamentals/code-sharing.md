@@ -1,17 +1,17 @@
 ---
 title: Совместное использование Общие сведения о коде
-description: 'В этом документе сравнивается различных методов совместное использование кода между проектами кросс платформенных: общие проекты переносимых библиотек классов и .NET Standard, включая преимущества и недостатки каждого из них.'
+description: 'В этом документе сравнивается совместное использование кода между проектами кросс платформенных различных методов: Общие проекты переносимых библиотек классов и .NET Standard, включая преимущества и недостатки каждого из них.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
 ms.date: 08/06/2018
 ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
-ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39520289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61228112"
 ---
 # <a name="sharing-code-overview"></a>Совместное использование Общие сведения о коде
 
@@ -135,6 +135,6 @@ _В этом документе сравнивается различных ме
 - [Переносимые библиотеки классов](~/cross-platform/app-fundamentals/pcl.md)
 - [Общие проекты](~/cross-platform/app-fundamentals/shared-projects.md)
 - [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
-- [Практический пример: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Пример внедрения: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Пример tasky (github)](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
 - [Tasky пример, с помощью переносимой библиотеки Классов (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)

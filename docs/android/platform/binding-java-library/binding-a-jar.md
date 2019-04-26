@@ -1,5 +1,5 @@
 ---
-title: Привязка. JAR-ФАЙЛ
+title: Привязка JAR-файла
 description: В этом пошаговом руководстве содержатся пошаговые инструкции по созданию библиотеку привязок Java Xamarin.Android из Android. JAR-файл.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
 ms.openlocfilehash: 3c84b29807fd4a181ed867095645005bf9ba4df0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957364"
 ---
-# <a name="binding-a-jar"></a>Привязка. JAR-ФАЙЛ
+# <a name="binding-a-jar"></a>Привязка JAR-файла
 
 _В этом пошаговом руководстве содержатся пошаговые инструкции по созданию библиотеку привязок Java Xamarin.Android из Android. JAR-файл._
 
@@ -114,7 +114,7 @@ Picasso.With (this)
 [![Целевой API уровень API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
-Наконец создайте библиотеку привязок. Несмотря на то, что некоторые предупреждения могут отображаться, проект библиотеки привязки следует построить успешно и выдает результат. Библиотеки DLL по следующему адресу: **JarBinding/bin/Debug/JarBinding.dll**
+Наконец создайте библиотеку привязок. Несмотря на то, что некоторые предупреждения могут отображаться, проект библиотеки привязки следует построить успешно и выдает результат. Библиотека DLL по следующему адресу: **JarBinding/bin/Debug/JarBinding.dll**
     
 
 

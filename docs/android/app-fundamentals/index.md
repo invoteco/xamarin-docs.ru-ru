@@ -1,5 +1,5 @@
 ---
-title: Принципы работы приложения Xamarin.Android
+title: Xamarin.Android Application Fundamentals
 description: Основные понятия приложения
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 1d3bd071eeffb77f94a1b5f35f1df59f2d8c7a8a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61022202"
 ---
-# <a name="xamarinandroid-application-fundamentals"></a>Принципы работы приложения Xamarin.Android
+# <a name="xamarinandroid-application-fundamentals"></a>Xamarin.Android Application Fundamentals
 
 Этот раздел содержит указания на некоторые наиболее распространенных вещей задачи или концепции, которые разработчики должны иметь в виду при разработке приложений Android приложения.
 
@@ -77,7 +77,7 @@ Xamarin.Android поддерживает несколько архитектур
 
 
 
-##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android аудио](~/android/app-fundamentals/android-audio.md)
+##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android Audio](~/android/app-fundamentals/android-audio.md)
 
 ОС Android предоставляет расширенную поддержку мультимедиа, которая объединяет в себе аудио и видео. В этом руководстве рассматриваются аудио в Android и охватывает воспроизводить и записывать звук, с помощью встроенных аудио-плейер и классов средства записи, а также API низкого уровня аудио. Он также рассматривается работа с аудио события широковещательных другими приложениями, таким образом, разработчики могут создавать правильно работающие приложения.
 

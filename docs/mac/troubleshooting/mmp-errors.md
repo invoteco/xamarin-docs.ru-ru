@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: 640d1adc048bec167508d8c288b62d498f061b0d
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61233206"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Сообщения об ошибках Xamarin.Mac (mmp)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50234977"
 
 <a name="MM0000" />
 
-#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: Непредвиденная ошибка - файл ошибки сообщите в https://github.com/xamarin/xamarin-macios/issues/new
+#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: Непредвиденная ошибка — файл ошибки сообщите в https://github.com/xamarin/xamarin-macios/issues/new
 
 Произошла непредвиденная ошибка. Пожалуйста [отчет об ошибках](https://github.com/xamarin/xamarin-macios/issues/new) с как можно больше информации, включая:
 
@@ -47,7 +47,7 @@ ms.locfileid: "50234977"
 
 <a name="MM0008" />
 
-#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008: Необходимо указать один корневой сборки, которые находятся только {0} сборки: "{1}"
+#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008: Необходимо предоставить один корневой сборки, которые находятся только {0} сборки: "{1}"
 
 <a name="MM0010" />
 
@@ -119,7 +119,7 @@ ms.locfileid: "50234977"
 
 <a name="MM0079" />
 
-#### <a name="mm0079-internal-error---no-executable-was-copied-into-the-app-bundle-please-contact-supportxamarincom"></a>MM0079: Внутренняя ошибка - не исполняемый файл копируется в пакет приложений. Обратитесь в службу "support@xamarin.com"
+#### <a name="mm0079-internal-error---no-executable-was-copied-into-the-app-bundle-please-contact-supportxamarincom"></a>MM0079: Внутренняя ошибка - не исполняемый файл был скопирован в пакете приложений. Обратитесь в службу "support@xamarin.com"
 
 <a name="MM0080" />
 
@@ -130,7 +130,7 @@ ms.locfileid: "50234977"
 
 <a name="MM0091" />
 
-#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091: Требуется эта версия Xamarin.Mac * SDK (поставляется с Xcode *). Либо обновление Xcode, чтобы получить файлы обязательный заголовок или использовать динамические регистратор равным или поведение управляемых компоновщика платформа компоновки или ссылку только пакеты SDK (пытаться избежать новых интерфейсов API).
+#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091: Эта версия Xamarin.Mac требует * SDK (поставляется с Xcode *). Либо обновление Xcode, чтобы получить файлы обязательный заголовок или использовать динамические регистратор равным или поведение управляемых компоновщика платформа компоновки или ссылку только пакеты SDK (пытаться избежать новых интерфейсов API).
 
 Xamarin.Mac требует файлы заголовков, из пакета SDK версии, указанной в сообщении об ошибке для сборки приложения с помощью статических регистратора. Для устранения этой ошибки рекомендуется обновить Xcode, чтобы получить пакет SDK для, это будет включать все обязательные файлы заголовков. Если у вас несколько версий Xcode установлен, или нужно использовать Xcode в расположении по умолчанию, не забудьте задать правильное расположение Xcode в настройках вашей интегрированной среды разработки.
 
@@ -154,7 +154,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM0114" />
 
-#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114: Гибридную компиляцию AOT компиляции требуется все сборки для компиляции с помощью AOT.
+#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114: Компиляция AOT гибридного требует все сборки для компиляции с помощью AOT.
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx: копирование файла / символических ссылок (связанные проект)
 
@@ -190,9 +190,9 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM1407" />
 
-#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Несоответствие Xamarin.Mac ссылку "{0}«и выбранной целевой платформы»{1}".
+#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Несоответствие между Xamarin.Mac ссылку "{0}«и выбранной целевой платформы»{1}".
 
-### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Ошибки сбора (без компоновщика) сборки
+### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Ошибки сборки сбор (без компоновщика)
 
 <a name="MM1501" />
 
@@ -206,7 +206,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM1601" />
 
-#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: Не статической библиотеки (Неизвестный заголовок "{0}"): {1}.
+#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: Статическая библиотека (Неизвестный заголовок "{0}"): {1}.
 
 <a name="MM1602" />
 
@@ -220,7 +220,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 #### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: Файл типа {0} не является файлом MachO ({1}).
 
-## <a name="mm2xxx-linker"></a>MM2xxx: компоновщика
+## <a name="mm2xxx-linker"></a>MM2xxx: Компоновщик
 
 ### <a name="mm20xx-linker-general-errors"></a>MM20xx: Ошибки компоновщика (Общие)
 
@@ -238,7 +238,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM2004" />
 
-#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: Файл определений компоновщика Extra "{0}" не удалось найти.
+#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: Файл определения дополнительных компоновщика "{0}" не удалось найти.
 
 <a name="MM2005" />
 
@@ -266,7 +266,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Только первые {0} из {1} «Ссылается» предупреждений, отображаемых. ** Это сообщение относится к 2009 г. \*\*
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Только первый {0} из {1} «Ссылается» предупреждений, отображаемых. ** Это сообщение относится к 2009 г. \*\*
 
 <a name="MM2013" />
 
@@ -288,7 +288,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM202x" />
 
-#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x: Оптимизатор привязки не удалось обработки `...`.
+#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x: Сбой обработки привязки оптимизатор `...`.
 
 <a name="MM2100" />
 
@@ -296,7 +296,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM2103" />
 
-#### <a name="mm2103-error-processing-assembly--"></a>MM2103: Ошибка при обработке сборки "\*": *
+#### <a name="mm2103-error-processing-assembly--"></a>MM2103: Произошла ошибка при обработке сборки "\*": *
 
 Произошла непредвиденная ошибка при обработке сборки.
 
@@ -316,7 +316,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM3001" />
 
-#### <a name="mm3001-could-not-aot-the-assembly-0"></a>MM3001: Не удалось AOT сборки "{0}"
+#### <a name="mm3001-could-not-aot-the-assembly-0"></a>MM3001: Может не сборки AOT "{0}"
 
 <!-- 3002 used by mtouch -->
 <!-- 3003 used by mtouch -->
@@ -332,7 +332,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM3010" />
 
-#### <a name="mm3010-exclusion-of-aot-of-0-was-requested-but-was-not-found"></a>MM3010: Исключение AOT из "{0}" запрошено, но не найден
+#### <a name="mm3010-exclusion-of-aot-of-0-was-requested-but-was-not-found"></a>MM3010: При исключении AOT из "{0}" запрошено, но не найден
 
 ## <a name="mm4xxx-code-generation"></a>MM4xxx: создание кода
 
@@ -368,7 +368,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM5202" />
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.framework MDK отсутствует. Установите MDK для вашей версии Mono.framework из http://mono-project.com/Downloads
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.Framework MDK отсутствует. Установите MDK для вашей версии Mono.framework из http://mono-project.com/Downloads
 
 <a name="MM5203" />
 
@@ -384,7 +384,7 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM5218" />
 
-#### <a name="mm5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MM5218: Не может игнорировать динамический символ {символ} (--игнорировать dynamic-symbol = {symbol}), так как он не был обнаружен в качестве динамического символа.
+#### <a name="mm5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MM5218: Нельзя не учитывать динамический символ {символ} (--игнорировать dynamic-symbol = {symbol}), так как он не был обнаружен в качестве динамического символа.
 
 См. в разделе [предупреждение эквивалентное mtouch](~/ios/troubleshooting/mtouch-errors.md#MT5218).
 
@@ -417,11 +417,11 @@ Xamarin.Mac требует файлы заголовков, из пакета SD
 
 <a name="MM5306" />
 
-#### <a name="mm5306-missing-dependencies-please-install-xcode-command-line-tools-component"></a>MM5306: Отсутствуют зависимости. Установите компонент «Средства командной строки» Xcode
+#### <a name="mm5306-missing-dependencies-please-install-xcode-command-line-tools-component"></a>MM5306: Отсутствующие зависимости. Установите компонент «Средства командной строки» Xcode
 
 <a name="MM5308" />
 
-#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308: Xcode лицензионного соглашения может не были приняты.  Запустите Xcode.
+#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308: Возможно, лицензионное соглашение Xcode не были приняты.  Запустите Xcode.
 
 <a name="MM5309" />
 

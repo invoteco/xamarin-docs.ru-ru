@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: c907d55f09d334e167c831a19f9d0edc4c97732f
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38866526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61161900"
 ---
 # <a name="datapages-controls-reference"></a>Справочник по элементам управления DataPages
 
@@ -47,7 +47,7 @@ Xamarin.Forms DataPages Nuget включает в себя ряд элемент
 
 `HeroImage` Элемент управления имеет четыре свойства:
 
-* Text
+* Текста
 * Подробно
 * ImageSource
 * Аспект
@@ -110,7 +110,7 @@ Xamarin.Forms DataPages Nuget включает в себя ряд элемент
 
 Он будет содержать три свойства:
 
-* Text
+* Текста
 * Подробно
 * ImageSource
 
@@ -150,7 +150,7 @@ Xamarin.Forms DataPages Nuget включает в себя ряд элемент
 
 #### <a name="1-dataview-subclass"></a>1. Подкласс DataView
 
-Подкласс из `DataView` определяет привязываемые свойства для элемента управления.
+C# Подкласс `DataView` определяет привязываемые свойства для элемента управления.
 
 ```csharp
 public class CardView : DataView

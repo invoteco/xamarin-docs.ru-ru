@@ -1,5 +1,5 @@
 ---
-title: Введение в iOS 7
+title: Введение в iOS 7
 description: В этой статье рассматриваются основные новые интерфейсы API, впервые появился в iOS 7, включая переходы контроллера представления, усовершенствования UIView анимации, комплект средств для текста и UIKit Dynamics. Здесь также рассматриваются некоторые изменения в пользовательском интерфейсе и новые возможности многозадачность расширенная.
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: db2ce779962947e2121ff03280544a080e193e2e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037425"
 ---
-# <a name="introduction-to-ios-7"></a>Введение в iOS 7
+# <a name="introduction-to-ios-7"></a>Введение в iOS 7
 
 _В этой статье рассматриваются основные новые интерфейсы API, впервые появился в iOS 7, включая переходы контроллера представления, усовершенствования UIView анимации, комплект средств для текста и UIKit Dynamics. Здесь также рассматриваются некоторые изменения в пользовательском интерфейсе и новые возможности многозадачность расширенная._
 

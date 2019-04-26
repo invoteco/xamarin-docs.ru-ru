@@ -1,6 +1,6 @@
 ---
 title: Сводка информации в главе 22. Анимация
-description: 'Создание мобильных приложений с помощью Xamarin.Forms: сводка информации в главе 22. Анимация'
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка информации в главе 22. Анимация
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61333213"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Сводка информации в главе 22. Анимация
 

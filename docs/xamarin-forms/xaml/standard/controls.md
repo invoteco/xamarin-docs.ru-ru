@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175182"
 ---
 # <a name="xaml-standard-preview-controls"></a>Элементы управления XAML Standard (Предварительная версия)
 

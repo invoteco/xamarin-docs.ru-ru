@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
 ms.openlocfilehash: b251fa13c4b436a837f71b5362ae85dffd245092
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61408849"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Использование UrhoSharp в Xamarin.Forms
 
@@ -43,7 +43,7 @@ UrhoSharp можно использовать для отображения гр
 
 Повторите описанные выше действия для проектов для конкретной платформы (например, iOS и Android).
 
-## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Пошаговое руководство: Добавление UrhoSharp в приложение Xamarin.Forms
+## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Пошаговое руководство. Добавление в приложение Xamarin.Forms UrhoSharp
 
 В следующих шагах описано в примере UrhoSharp в Xamarin.Forms кода:
 

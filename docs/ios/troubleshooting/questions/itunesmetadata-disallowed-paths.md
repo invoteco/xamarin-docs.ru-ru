@@ -1,5 +1,5 @@
 ---
-title: 'Почему Отправка приложения завершается ошибкой: запрещенные пути ("iTunesMetadata.plist"), расположенный...?'
+title: 'Почему отправка приложения завершается ошибкой: Запрещенные пути ("iTunesMetadata.plist"), расположенный...?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: AE1BBDC6-4D3A-4471-876B-FE28B6E59A24
@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: a4d2769bb0cb4e119f1c90353657471b44eb6c7c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420909"
 ---
-# <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--"></a>Почему Отправка приложения завершается ошибкой: запрещенные пути ("iTunesMetadata.plist"), расположенный...?
+# <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--"></a>Почему отправка приложения завершается ошибкой: Запрещенные пути ("iTunesMetadata.plist"), расположенный...?
 
-> Ошибка: Ошибка ITMS-90047: «запрещенные пути («iTunesMetadata.plist»), посетите: Payload/iPhoneApp1.app»
+> ОШИБКА: ERROR ITMS-90047: «Запрещенные пути («iTunesMetadata.plist»), посетите: Полезные данные/iPhoneApp1.app»
 
 Эта ошибка является результатом изменения в процесс проверки Apple App Store для запрещения встретились проблемы, такие как [ошибки 29180](https://bugzilla.xamarin.com/show_bug.cgi?id=29180). Этот возникла следующая ошибка _не_ относятся к конкретной версии Xamarin, установки, поэтому для снижения будет _не_ справки.
 

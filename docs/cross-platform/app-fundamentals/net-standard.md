@@ -8,11 +8,11 @@ ms.author: crdun
 ms.custom: video
 ms.date: 07/18/2018
 ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191364"
 ---
 # <a name="net-standard-library-code-sharing"></a>Совместное использование кода библиотеки .NET standard
 
@@ -52,7 +52,7 @@ ms.locfileid: "50105835"
 
 Внутри можно изменить версию `netstandard` , изменив `Target Framework` значение в раскрывающемся списке.
 
-**Кроме того:** можно изменить `.csproj` напрямую, чтобы изменить это значение.
+**Кроме того:** Можно изменить `.csproj` напрямую, чтобы изменить это значение.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -78,7 +78,7 @@ ms.locfileid: "50105835"
 
 ![Изменение стандартных целевых платформ .NET в свойствах проекта](net-standard-images/vs03-w157.png "так же, как другие проекты ссылаются на библиотеку .NET Standard")
 
-**Кроме того:** можно изменить `.csproj` непосредственно для редактирования `TargetFramework` элемент и изменений, какая из версий лучше целевыми (например) `<TargetFramework>netstandard2.0</TargetFramework>`).
+**Кроме того:** Можно изменить `.csproj` непосредственно для редактирования `TargetFramework` элемент и изменений, какая из версий лучше целевыми (например) `<TargetFramework>netstandard2.0</TargetFramework>`).
 
 ### <a name="using-a-net-standard-library-project"></a>С использованием проекта библиотеки .NET Standard
 

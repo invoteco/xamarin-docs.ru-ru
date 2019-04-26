@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 48caa70cf2bd408f8afc673b400f7d5a4369e108
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230852"
 ---
 # <a name="objective-c-support"></a>Поддержка Objective-C
 
@@ -43,7 +43,7 @@ API-интерфейсы, которые предоставляют `System.Stri
 
 Передача `--nativeexception` как аргумент `objcgen` преобразует управляемые исключения в исключения Objective-C, которые могут быть перехвачено и обработано. 
 
-### <a name="comparison"></a>Оператор
+### <a name="comparison"></a>Сравнение
 
 Управляемые типы, реализующие `IComparable` (или его универсальная версия `IComparable<T>`) создаст Objective-C понятное методы, возвращающие `NSComparisonResult` и примите `nil` аргумент. Это делает более понятное для разработчиков Objective-C сгенерированном API. Пример:
 

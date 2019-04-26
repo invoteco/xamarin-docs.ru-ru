@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
 ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61168078"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Создание HTML-представления с помощью шаблонов Razor
 
@@ -86,7 +86,7 @@ webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 
 Действие сборки для всех статических файлов содержимого должен быть **BundleResource**:
 
- ![Действие при сборке проекта iOS: BundleResource](images/image2_250x131.png)
+ ![действие построения для проекта iOS: BundleResource](images/image2_250x131.png)
 
 #### <a name="android"></a>Android
 
@@ -102,7 +102,7 @@ webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8"
 
 Действие сборки для всех статических файлов содержимого должен быть **AndroidAsset**.
 
- ![Действие при сборке проекта Android: AndroidAsset](images/image4_250x71.png)
+ ![Действие построения для проекта Android: AndroidAsset](images/image4_250x71.png)
 
 ### <a name="calling-c-from-html-and-javascript"></a>Вызов C# из HTML и Javascript
 

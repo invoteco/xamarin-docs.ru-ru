@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
 ms.openlocfilehash: 1a98cf854ffdd1d4904981f85fd8e33ad486743c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61417378"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Советы по устранению неполадок для Xamarin.iOS 
 
@@ -212,7 +212,7 @@ int count = ((ICollection<Foo>) array).Count;
 
 Подключите журналы XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP} .log**, и **компоненты-{TIMESTAMP} .log**(в более старых версиях XS/MonoDevelop, просто отправьте **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
- **Примечание. Выше ошибка была исправлена в окончательной XS 2.2**
+ **ПРИМЕЧАНИЕ. Выше ошибка была исправлена в окончательной XS 2.2**
 
 ## <a name="compiled-application-is-very-large"></a>Скомпилированное приложение очень велик.
 

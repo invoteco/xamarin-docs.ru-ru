@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381887"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Взаимодействие между слабо связанными компонентами
 
@@ -28,7 +28,7 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) клас
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Многоадресная рассылка публикации и подписки функциональные возможности")
 
-**Рис. 4-1:** многоадресной рассылки публикации и подписки функциональные возможности
+**Рис. 4-1.** Многоадресная рассылка публикации и подписки функциональные возможности
 
 Издатели отправляют сообщения с помощью [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) метод, пока подписчики прослушивать сообщения с помощью [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) метод. Кроме того, подписчики может также отменить подписку на сообщения подписок, при необходимости с [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) метод.
 
@@ -55,16 +55,16 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) клас
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) сообщения, строки, которые используются для идентификации сообщений. В следующем примере кода показаны сообщения, определенные в мобильном приложении eShopOnContainers:
 
 ```csharp
-public class MessengerKeys  
+public class MessengerKeys  
 {  
-    // Add product to basket  
-    public const string AddProduct = "AddProduct";  
+    // Add product to basket  
+    public const string AddProduct = "AddProduct";  
 
-    // Filter  
-    public const string Filter = "Filter";  
+    // Filter  
+    public const string Filter = "Filter";  
 
-    // Change selected Tab programmatically  
-    public const string ChangeTab = "ChangeTab";  
+    // Change selected Tab programmatically  
+    public const string ChangeTab = "ChangeTab";  
 }
 ```
 
@@ -75,7 +75,7 @@ public class MessengerKeys
 Издатели уведомления подписчиков сообщения с одним из [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) перегрузки. В следующем примере кода демонстрируется публикация `AddProduct` сообщение:
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
 ```
 
 В этом примере [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) метод задает три аргумента:
@@ -94,12 +94,12 @@ MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
 Подписчики может зарегистрироваться для получения сообщения с помощью одного из [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) перегрузки. В следующем примере кода показано, как подписывается на мобильное приложение eShopOnContainers и обрабатывает, `AddProduct` сообщение:
 
 ```csharp
-MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-    this, MessageKeys.AddProduct, async (sender, arg) =>  
+MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+    this, MessageKeys.AddProduct, async (sender, arg) =>  
 {  
-    BadgeCount++;  
+    BadgeCount++;  
 
-    await AddCatalogItemAsync(arg);  
+    await AddCatalogItemAsync(arg);  
 });
 ```
 
@@ -115,7 +115,7 @@ MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(
 Подписчики могут отменить подписку на сообщения, которые больше не хотите получать. Это достигается с помощью одного из [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) перегружает, как показано в следующем примере кода:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
 ```
 
 В этом примере [ `Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) синтаксис метода отражает аргументы типа, указанный при подписке на получение `AddProduct` сообщения.

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: 7e91645fb92814c88c3711645ea294ac701b67ac
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032557"
 ---
 # <a name="macos-platform-features"></a>функции платформы macOS
 

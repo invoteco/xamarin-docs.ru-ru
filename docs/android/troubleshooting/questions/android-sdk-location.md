@@ -1,5 +1,5 @@
 ---
-title: Где можно задать моей расположения пакета SDK для Android?
+title: Где можно задать свои расположения пакета SDK для Android?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 11/16/2017
 ms.openlocfilehash: c004fb7717f78750e7ac1e8dc1856a32ba808638
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227690"
 ---
-# <a name="where-can-i-set-my-android-sdk-locations"></a>Где можно задать моей расположения пакета SDK для Android?
+# <a name="where-can-i-set-my-android-sdk-locations"></a>Где можно задать свои расположения пакета SDK для Android?
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

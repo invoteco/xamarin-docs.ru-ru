@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157197"
 ---
 # <a name="general-frequently-asked-questions"></a>Общие вопросы и ответы
 
@@ -23,7 +23,7 @@ ms.locfileid: "39350824"
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[API отражения PCL](pcl-reflection.md)
 Корпорация Майкрософт разработала новый интерфейс API отражения для использования в переносимые библиотеки классов. Если у вас есть некоторые существующего кода отражения, который вы хотите переместить в переносимую библиотеку Классов, он может не работать.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Практический пример PCL. Как устранять проблемы, связанные с System.Diagnostics.Tracing для пакета NuGet потока данных библиотеки параллельных задач Майкрософт](pcl-case-study.md)
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Практический пример PCL. Как устранить проблемы, связанные с System.Diagnostics.Tracing для пакета NuGet потоков данных TPL Microsoft?](pcl-case-study.md)
 Xamarin.iOS и Xamarin.Android не следует реализовывать каждый профиль PCL, они позволяют как ссылки на 100%. Для практического удобства в Visual Studio для Mac, Visual Studio и диспетчер пакетов NuGet проекты Xamarin разрешает использовать несколько профилей, которые имеют только неполные реализаций. Например, ни Xamarin.iOS и Xamarin.Android в настоящее время включает в себя полную реализацию типы в `System.Diagnostics.Tracing` переносимой библиотеки Классов пространства имен. Это можно обойти, переключившись в проект приложения для ссылки на portable-net45 + win8 + wp8 + wpa81 версию библиотеки потоков данных TPL.
 
 ## <a name="nuget-packages--xamarin-components"></a>Пакеты NuGet и компоненты Xamarin

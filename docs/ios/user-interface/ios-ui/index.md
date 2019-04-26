@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: efb88ada8a4b4c36dd49de137eb64acd63552968
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382340"
 ---
 # <a name="user-interfaces-in-ios"></a>Пользовательские интерфейсы в iOS
 
@@ -26,7 +26,7 @@ Apple группы связанных части функциональных в
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Параметры макета](~/ios/user-interface/ios-ui/layout-options.md)
 
-Существует два различных механизма контроля размещения, когда размер или поворачивать представления: автоматическое изменение размера и Автомакет.
+Существует два различных механизма контроля размещения, когда размер или поворачивать представления: Автоматическое изменение размера и Автомакет.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Обеспечение обратной связи Haptic](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

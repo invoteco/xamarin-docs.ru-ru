@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
 ms.openlocfilehash: db24c8677b0a3099193132575e92bc43a4c31dea
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61251037"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Кодировки интернационализации в Xamarin.iOS
 
@@ -29,10 +29,10 @@ ms.locfileid: "50675566"
 Можно выбрать один из следующих:
 
 -  ККЯ: Chineese, японского и корейского языков
--  mideast: арабский, иврит, турецком и Latin5.
--  другие: кириллица, балтийская, вьетнамский, украинский и тайский
--  редко: кодировки EBCDIC и других редких кодовые страницы
--  Западная: романские языки, Пасхи и Западная Европа
+-  mideast: Арабский, иврит, турецком и Latin5.
+-  Другие: Кириллица, балтийская, вьетнамский, украинский и тайский
+-  редко: Кодировки EBCDIC и других редких кодовые страницы
+-  Запад: Романские языки, Пасхи и Западная Европа
 -  все
 
 

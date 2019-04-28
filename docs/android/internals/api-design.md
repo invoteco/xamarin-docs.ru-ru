@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60954289"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Принципы проектирования API Xamarin.Android
 
@@ -319,7 +319,7 @@ public class Resource {
 
 Например, рассмотрим [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
-В таких случаях мы для группирования связанных констант в перечислении .NET и переназначить метод выполнить перечисление.
+В таких случаях мы ןס для группирования связанных констант в перечислении .NET и переназначить метод выполнить перечисление.
 Таким образом, мы могут предложить выделение IntelliSense из возможных значений.
 
 Приведенный выше пример выглядит следующим образом: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).

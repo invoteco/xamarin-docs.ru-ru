@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
-ms.openlocfilehash: 2a208d39454a33adc849bcccc66802361693e82e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 7cbc14e0a912fe9c55ff672796e839a8dcdfd9b5
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61419319"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347106"
 ---
 # <a name="can-i-use-an-older-version-of-xcode-or-xamarinios"></a>Можно ли использовать более старую версию Xcode или Xamarin.iOS
 
@@ -53,7 +53,7 @@ ms.locfileid: "61419319"
 Как правило, Xamarin.iOS поддерживает более старых версий Xcode всякий раз, когда возможно. Включают несколько потенциальных проблем:
 
 - Более новые Xamarin.iOS могут поддерживать некоторые функции и интерфейсы API не существует в выбранной Xcode. 
-- **Статический регистратора** требуются файлы заголовков Xcode для создания приложений, что приводит к [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) или [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109)"ошибки, если отсутствуют интерфейсы API.
+- **Статический регистратора** требуются файлы заголовков Xcode для создания приложений, что приводит к [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) или [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109) ошибки, если отсутствуют интерфейсы API.
   - В большинстве случаев включение управляемых компоновщик поможет (путем удаления управляемых привязок для нового API) Если неиспользуемые.
 - Bitcode сборки (для tvOS и watchOS) может произойти сбой отправки в App Store, если не используется цепочка инструментов Xcode 9.0 и более.
 

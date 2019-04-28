@@ -1,77 +1,255 @@
 ---
 title: Проверка подлинности пользователей с Azure Active Directory B2C
-description: Azure Active Directory B2C является это облаке решение управления удостоверениями для мобильных приложений и веб-потребитель. В этой статье показано, как интегрировать систему управления удостоверениями пользователей мобильного приложения с помощью библиотеки проверки подлинности Майкрософт и Azure Active Directory B2C.
+description: Azure Active Directory B2C обеспечивает управление идентификаторами облака для мобильных приложений и веб-потребитель. В этой статье показано, как использовать Azure Active Directory B2C для интеграции управления удостоверениями в мобильное приложение с помощью библиотеки проверки подлинности Майкрософт.
 ms.prod: xamarin
 ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.date: 04/17/2019
+ms.openlocfilehash: db44e09e9caa5c35a5e107cfed80d1d30fd7eb7d
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331503"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347130"
 ---
-# <a name="authenticating-users-with-azure-active-directory-b2c"></a>Проверка подлинности пользователей с Azure Active Directory B2C
+# <a name="authenticate-users-with-azure-active-directory-b2c"></a>Проверка подлинности пользователей с Azure Active Directory B2C
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 
-_Azure Active Directory B2C является это облаке решение управления удостоверениями для мобильных приложений и веб-потребитель. В этой статье показано, как интегрировать систему управления удостоверениями пользователей мобильного приложения с помощью библиотеки проверки подлинности Майкрософт и Azure Active Directory B2C._
-
-![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
-
-> [!NOTE]
-> [Библиотека проверки подлинности Майкрософт](https://www.nuget.org/packages/Microsoft.Identity.Client) находится на стадии предварительной версии, но подходит для использования в рабочей среде. Тем не менее может критические изменения в API, формат внутреннего кэша и другие механизмы библиотеку, которая может повлиять на приложение.
+_Azure Active Directory B2C обеспечивает управление идентификаторами облака для мобильных приложений и веб-потребитель. В этой статье показано, как использовать Azure Active Directory B2C для интеграции управления удостоверениями в мобильное приложение с помощью библиотеки проверки подлинности Майкрософт._
 
 ## <a name="overview"></a>Обзор
 
-Azure Active Directory B2C — это служба управления удостоверениями для клиентских приложений, позволяющее пользователям войти в приложение с:
-
-- С помощью их существующих учетных записей социальных сетей (Microsoft, Google, Facebook, Amazon, LinkedIn).
-- Создавать новые учетные данные (адрес электронной почты и пароль, или имя пользователя и пароль). Эти учетные данные, называются *локального* учетных записей.
+Azure Active Directory B2C (ADB2C) — это служба управления удостоверениями для клиентских приложений. Она позволяет пользователям входить ваше приложение, с помощью существующих учетных записей социальных сетей или пользовательские учетные данные, такие как адрес электронной почты или имя пользователя и пароль. Пользовательские учетные данные учетных записей, называются _локального_ учетных записей.
 
 Процесс для интеграции службы управления удостоверениям Azure Active Directory B2C в мобильные приложения выглядит следующим образом:
 
-1. Создание клиента Azure Active Directory B2C. Дополнительные сведения см. в разделе [создание клиента Azure Active Directory B2C на портале Azure](/azure/active-directory-b2c/active-directory-b2c-get-started/).
-1. Регистрации вашего мобильного приложения в клиенте Azure Active Directory B2C. Процесс регистрации назначает **идентификатор приложения** , однозначно определяющий приложение и **URL-адрес перенаправления** , можно использовать для направления ответов к приложению. Дополнительные сведения см. в разделе [Azure Active Directory B2C: Регистрация приложения](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
-1. Создайте политику регистрации и входа в систему. Эта политика будет определять действия, которые пользователь должен выполнить во время регистрации и входа в систему и также определяет содержимое токенов, которые должно получить приложение при успешном регистрации или входа в систему. Дополнительные сведения см. в разделе [Azure Active Directory B2C: Встроенные политики](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
-1. Используйте [библиотека проверки подлинности Майкрософт](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) в мобильное приложение для запуска рабочего процесса проверки подлинности в клиенте Azure Active Directory B2C.
+1. Создание клиента Azure Active Directory B2C
+1. Регистрации вашего мобильного приложения в клиенте Azure Active Directory B2C
+1. Создание политик для регистрации и входа в систему и забыли пароль маршруты пользователей
+1. Используйте библиотеки аутентификации Майкрософт (MSAL) для запуска рабочего процесса проверки подлинности в клиенте Azure Active Directory B2C.
 
 > [!NOTE]
-> А также интеграции управления удостоверениями Azure Active Directory B2C в мобильные приложения, MSAL также может использоваться для интеграции управления удостоверениями Azure Active Directory в мобильных приложениях. Это можно сделать путем регистрации мобильного приложения с Azure Active Directory в [портал регистрации приложений](https://apps.dev.microsoft.com/). Процесс регистрации назначает **идентификатор приложения** , однозначно определяющий приложения, который должен быть указан с помощью MSAL. Дополнительные сведения см. в разделе [как зарегистрировать приложение с конечной точкой версии 2.0](/azure/active-directory/develop/active-directory-v2-app-registration/), и [проверки подлинности Your мобильных приложений с помощью Microsoft библиотеки проверки подлинности](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) в блоге Xamarin.
+> Azure Active Directory B2C поддерживает несколько поставщиков удостоверений, включая Microsoft, GitHub, Facebook, Twitter и многое другое. Дополнительные сведения о возможностях Azure Active Directory B2C, см. в разделе [документация Azure Active Directory B2C](/azure/active-directory-b2c/).
+>
+> Библиотека проверки подлинности Майкрософт поддерживает несколько архитектур приложений и платформ. Сведения о возможностях MSAL, см. в разделе [библиотека проверки подлинности Майкрософт](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) на сайте GitHub.
 
-MSAL для выполнения проверки подлинности использует веб-браузере устройства. Это повышает удобство использования приложения, так как пользователям нужно только войти после каждого устройства, повышение ставки конвертации входа и авторизации потоки в приложении. Браузер на устройстве также обеспечивает повышенную безопасность. Как только пользователь завершит процесс проверки подлинности, элемент управления будет отправлять приложения из вкладку веб-браузера. Это достигается путем регистрации схему URL-адрес для URL-адрес перенаправления, который возвращается из процесса проверки подлинности и затем обнаружить и обработать пользовательский URL-адрес, после его отправки. Дополнительные сведения о выборе схему URL-адрес, см. в разделе [Выбор URI перенаправления собственного приложения](/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri/).
+## <a name="configure-an-azure-active-directory-b2c-tenant"></a>Настройка клиента Azure Active Directory B2C
 
-> [!NOTE]
-> Механизм для регистрации схему URL-адрес в операционную систему и обработке схеме конкретной платформы.
+Чтобы запустить пример проекта, необходимо создать клиент Azure Active Directory B2C. Дополнительные сведения см. в разделе [создание клиента Azure Active Directory B2C на портале Azure](/azure/active-directory-b2c/active-directory-b2c-get-started/).
 
-Каждый запрос, который отправляется с клиентом Azure Active Directory B2C, определяет *политики*. Политики описывают процесс идентификации пользователя, например регистрации или входа в систему. Например политику регистрации позволяет определить поведение клиента Azure Active Directory B2C можно настроить следующие параметры:
+После создания клиента, вам потребуется **имя_клиента** и **идентификатор клиента** Настройка мобильного приложения. Идентификатор клиента и имя определяются по доменам, сгенерированное при создании URL-адрес клиента. Если URL-адрес созданного клиента `https://contoso20190410tenant.onmicrosoft.com/` **идентификатор_клиента** является `contoso20190410tenant.onmicrosoft.com` и **имя_клиента** является `contoso20190410tenant`. Найти домен клиента на портале Azure, щелкнув **фильтр каталога и подписки** в верхнем меню. На следующем рисунке показан в каталоге Azure и кнопка "Фильтр" для подписки и домен клиента:
 
-- Типы учетных записей, которые пользователи могут использовать для входа в приложение.
-- Данные нужно получить от пользователя во время регистрации.
-- Многофакторная проверка подлинности.
-- Содержимое страницы регистрации.
-- Токен утверждений, мобильное приложение получает при выполнении политики.
+[![Имя клиента в Azure представление фильтра каталог и подписка](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
 
-Клиент Azure Active Directory может содержать несколько политик различных типов, которые затем могут использоваться в приложении, при необходимости. Кроме того политики можно использовать в приложениях, позволяет определять и изменять процесс идентификации пользователя без изменения кода. Дополнительные сведения о политиках см. в разделе [Azure Active Directory B2C: Встроенные политики](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+В образце проекта, изменение **Constants.cs** в файле `tenantName` и `tenantId` поля. Ниже показано, как эти значения должны быть заданы при доменом клиента являются `https://contoso20190410tenant.onmicrosoft.com/`, замените эти значения значениями из вашего портала:
 
-## <a name="setup"></a>Установка
+```csharp
+public static class Constants
+{
+    static readonly string tenantName = "contoso20190410tenant";
+    static readonly string tenantId = "contoso20190410tenant.onmicrosoft.com";
+    ...
+}
+```
 
-Необходимо добавить к библиотеке NuGet библиотеки аутентификации Майкрософт (MSAL) для проекта переносимой библиотеки классов (PCL) и платформы проектов в решение Xamarin.Forms. Следующие разделы содержат дополнительные инструкции по установке для взаимодействия с клиентом Azure Active Directory B2C из мобильных приложений с помощью MSAL.
+## <a name="register-your-mobile-application-with-azure-active-directory-b2c"></a>Регистрация мобильного приложения в Azure Active Directory B2C
 
-### <a name="portable-class-library"></a>Переносимая библиотека классов
+Мобильное приложение должно быть зарегистрировано клиента перед их подключении и проверки подлинности пользователей. Процесс регистрации назначает уникальный **идентификатор приложения** приложению и **URL-адрес перенаправления** , направляет ответов к приложению после проверки подлинности. Дополнительные сведения см. в разделе [Azure Active Directory B2C: Регистрация приложения](/azure/active-directory-b2c/active-directory-b2c-app-registration/). Следует знать **идентификатор приложения** присваиваемый приложению, которое указано после имени приложения в области отображения свойств. На следующем снимке экрана показан где найти идентификатор приложения:
 
-PCL, которые используют MSAL потребуется использовать Profile7 перенаправления. Дополнительные сведения о переносимых библиотеках классов см. в разделе [Введение в переносимые библиотеки классов](~/cross-platform/app-fundamentals/pcl.md).
+[![Идентификатор приложения в области отображения свойств приложения Azure](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
+
+Библиотека проверки подлинности Майкрософт ожидает **URL-адрес перенаправления** для приложения до вашего **идентификатор приложения** начинаются с текста «msal», после чего конечной точке с именем «auth». Если идентификатор приложения — «1234abcd», полный URL-адрес должен быть `msal1234abcd://auth`. Убедитесь, что приложение включил **Native client** параметр и создайте **пользовательский URI перенаправления** с помощью идентификатор приложения, как показано на следующем снимке экрана:
+
+![Пользовательские URI перенаправления в области отображения свойств приложения Azure](azure-ad-b2c-images/azure-redirect-uri.png)
+
+URL-адрес будет использоваться далее в обоих Android **ApplicationManifest.xml** и iOS **Info.plist**.
+
+В образце проекта, изменение **Constants.cs** в файле `clientId` на вашей **идентификатор приложения**. В следующем коде показано как это значение должно быть установлено Если идентификатор приложения — `1234abcd`:
+
+```csharp
+public static class Constants
+{
+    static readonly string tenantName = "contoso20190410tenant";
+    static readonly string tenantId = "contoso20190410tenant.onmicrosoft.com";
+    static readonly string clientId = "1234abcd";
+    ...
+}
+```
+
+## <a name="create-sign-up-and-sign-in-policies-and-forgot-password-policies"></a>Создание политики регистрации и входа в систему и забыли политики паролей
+
+Политика — это среда, в которые пользователи подключаются через для выполнения задачи, такие как создание учетной записи или сброса пароля. Политики также определяет содержимое токенов, которые приложение получает при выходе пользователя из интерфейса. Необходимо настроить политики для обоих учетной записи, регистрации и входа в систему и сбросить пароль. Azure имеет встроенные политики, которые упрощают создание распространенных политик. Дополнительные сведения см. в разделе [Azure Active Directory B2C: Встроенные политики](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+
+После завершения установки политики, должны иметь две политики **маршруты пользователей (политики)** представления на портале Azure. Снимке экрана ниже показаны два настроенных политик на портале Azure:
+
+![Просмотреть два настроенных политик в потоках пользователя Azure (политики)](azure-ad-b2c-images/azure-application-policies.png)
+
+В образце проекта, изменение **Constants.cs** в файле `policySignin` и `policyPassword` поля, чтобы их имена соответствовали именам, выбранной на этапе настройки политики:
+
+```csharp
+public static class Constants
+{
+    static readonly string tenantName = "contoso20190410tenant";
+    static readonly string tenantId = "contoso20190410tenant.onmicrosoft.com";
+    static readonly string clientId = "1234abcd";
+    static readonly string policySignin = "B2C_1_signupsignin1";
+    static readonly string policyPassword = "B2C_1_passwordreset";
+    ...
+}
+```
+
+## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Использование библиотеки проверки подлинности Майкрософт (MSAL) для проверки подлинности
+
+Общий проект .NET Standard и платформы проектов в решение Xamarin.Forms, необходимо добавить пакет NuGet библиотеки аутентификации Майкрософт (MSAL). Предоставляет MSAL `PublicClientApplication` для упрощения процесса проверки подлинности с помощью Azure Active Directory B2C. В образце проекта, кода программной части для **App.xaml** определяет статические свойства для `AuthenticationClient` и `UiParent` и создает экземпляр `AuthenticationClient` в конструкторе. Второй параметр, переданный `PublicClientApplication` используется по умолчанию **центра**, или политики, который будет использоваться для проверки подлинности пользователей. Следующий пример демонстрирует способы создания экземпляра `PublicClientApplication`:
+
+```csharp
+public partial class App : Application
+{
+    public static PublicClientApplication AuthenticationClient { get; private set; }
+
+    public static UIParent UiParent { get; set; } = null;
+
+    public App()
+    {
+        InitializeComponent();
+        AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+        MainPage = new NavigationPage(new LoginPage());
+    }
+
+    ...
+```
+
+`OnAppearing` Обработчик событий в **LoginPage.xaml.cs** кода программной части вызовы `AcquireTokenSilentAsync` обновить токен проверки подлинности для пользователей, зарегистрированных в перед. Процесс проверки подлинности перенаправляет `LogoutPage` успеха и не выполняет никаких действий в случае сбоя. В следующем примере показано процесс автоматической повторной проверки подлинности в `OnAppearing`:
+
+```csharp
+public partial class LoginPage : ContentPage
+{
+    ...
+
+    protected override async void OnAppearing()
+    {
+        try
+        {
+            IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
+
+            AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
+                Constants.Scopes,
+                accounts.FirstOrDefault());
+            await Navigation.PushAsync(new LogoutPage(result));
+        }
+        catch
+        {
+            // Do nothing - the user isn't logged in
+        }
+        base.OnAppearing();
+    }
+
+    ...
+}
+```
+
+`OnLoginButtonClicked` Обработчик событий (вызываемых при нажатии кнопки входа) вызовов `AcquireTokenAsync`. Библиотеку MSAL автоматически открывает браузер мобильного устройства и переходит на страницу входа. URL-адрес входа, называется **центра**, представляет собой сочетание имени клиента и определить политики в **Constants.cs** файла. Если пользователь выбирает забыли параметр password, они будут возвращены в приложение с помощью исключение, которое запускает забыли пароль качества. В следующем примере показано процесс проверки подлинности:
+
+```csharp
+public partial class LoginPage : ContentPage
+{
+    ...
+
+    async void OnLoginButtonClicked(object sender, EventArgs e)
+    {
+        AuthenticationResult result;
+        try
+        {
+            result = await App.AuthenticationClient.AcquireTokenAsync(
+                Constants.Scopes,
+                string.Empty,
+                UIBehavior.SelectAccount,
+                string.Empty,
+                App.UiParent);
+            await Navigation.PushAsync(new LogoutPage(result));
+        }
+        catch (MsalException ex)
+        {
+            if (ex.Message != null && ex.Message.Contains("AADB2C90118"))
+            {
+                result = await OnForgotPassword();
+                await Navigation.PushAsync(new LogoutPage(result));
+            }
+            else if (ex.ErrorCode != "authentication_canceled")
+            {
+                await DisplayAlert("An error has occurred", "Exception message: " + ex.Message, "Dismiss");
+            }
+        }
+    }
+
+    ...
+}
+```
+
+`OnForgotPassword` Метод похож на процесс входа в систему, но реализует пользовательскую политику. `OnForgotPassword` использует другой перегрузке `AcquireTokenAsync`, который позволяет указать определенный **центр**. В следующем примере показано, как указан настраиваемый **центра** при получении маркера:
+
+```csharp
+public partial class LoginPage : ContentPage
+{
+    ...
+    async Task<AuthenticationResult> OnForgotPassword()
+    {
+        try
+        {
+            return await App.AuthenticationClient.AcquireTokenAsync(
+                Constants.Scopes,
+                string.Empty,
+                UIBehavior.SelectAccount,
+                string.Empty,
+                null,
+                Constants.AuthorityPasswordReset,
+                App.UiParent
+                );
+        }
+        catch (MsalException)
+        {
+            // Do nothing - ErrorCode will be displayed in OnLoginButtonClicked
+            return null;
+        }
+    }
+}
+```
+
+Заключительная часть проверки подлинности — это процесс выхода. `OnLogoutButtonClicked` Метод вызывается, когда пользователь нажимает кнопку выхода. Он перебирает все учетные записи и гарантирует, что токены стали недействительными. Следующий пример демонстрирует выхода реализации:
+
+```csharp
+public partial class LogoutPage : ContentPage
+{
+    ...
+    async void OnLogoutButtonClicked(object sender, EventArgs e)
+    {
+        IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
+
+        while (accounts.Any())
+        {
+            await App.AuthenticationClient.RemoveAsync(accounts.First());
+            accounts = await App.AuthenticationClient.GetAccountsAsync();
+        }
+
+        await Navigation.PopAsync();
+    }
+}
+```
 
 ### <a name="ios"></a>iOS
 
-В iOS, настраиваемой схемой URL-адрес, который был зарегистрирован с помощью Azure Active Directory B2C необходимо зарегистрировать в **Info.plist**, как показано на следующем снимке экрана:
+В iOS, настраиваемой схемой URL-адрес, который был зарегистрирован с помощью Azure Active Directory B2C необходимо зарегистрировать в **Info.plist**. MSAL ожидает, что схема URL-адреса, чтобы соответствовать определенному шаблону, описанные ранее в [регистрации мобильного приложения в Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). На следующем рисунке показан пользовательский схема URL-адреса в **Info.plist**.
 
-![](azure-ad-b2c-images/customurl-ios.png "Регистрация схемы URL-адрес пользовательского в iOS")
+![«Регистрация схему URL-адрес в iOS»](azure-ad-b2c-images/customurl-ios.png)
 
-По завершении запроса авторизации Azure Active Directory B2C перенаправляет URL-адрес зарегистрированного перенаправления. Так как URL-адрес использует схему приводит запуск мобильного приложения iOS, передачи в URL-адрес в качестве параметра запуска, где он обрабатывается `OpenUrl` переопределить приложения `AppDelegate` класс, который показан в следующем коде Пример:
+MSAL также требуется правам цепочки ключей в iOS, зарегистрированных в **Entitilements.plist**, как показано на следующем снимке экрана:
+
+![«Установка прав приложения в iOS»](azure-ad-b2c-images/entitlements-ios.png)
+
+По завершении запроса авторизации Azure Active Directory B2C перенаправляет URL-адрес зарегистрированного перенаправления. Пользовательские схемы URL-адрес приводит к iOS запуск мобильного приложения и передав URL-адрес в качестве параметра запуска, где он обрабатывается `OpenUrl` переопределить приложения `AppDelegate` класса и возвращает управление ее интерфейс в MSAL. `OpenUrl` Реализация показана в следующем примере кода:
 
 ```csharp
 using Microsoft.Identity.Client;
@@ -85,161 +263,71 @@ namespace TodoAzure.iOS
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {
             AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
-            return true;
+            return base.OpenUrl(app, url, options);
         }
     }
 }
 ```
-
-Код в `OpenURL` метод гарантирует, что элемент управления возвращается к MSAL, после завершения интерактивной часть рабочего процесса проверки подлинности.
 
 ### <a name="android"></a>Android
 
-В Android настраиваемой схемой URL-адрес, который был зарегистрирован с помощью Azure Active Directory B2C необходимо зарегистрировать в **AndroidManifest.xml**, добавив `<activity>` элемент внутри существующего `<application>` элемент. `<activity>` Элемент указывает `IntentFilter` на `Activity` , обрабатывает схему и показано в следующем примере:
+В Android настраиваемой схемой URL-адрес, который был зарегистрирован с помощью Azure Active Directory B2C необходимо зарегистрировать в **AndroidManifest.xml**. MSAL ожидает, что схема URL-адреса, чтобы соответствовать определенному шаблону, описанные ранее в [регистрации мобильного приложения в Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). В следующем примере показан пользовательский схема URL-адреса в **AndroidManifest.xml**.
 
 ```xml
-<application ...>
-  <activity android:name="microsoft.identity.client.BrowserTabActivity">
-    <intent-filter>
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data android:scheme="INSERT_URL_SCHEME_HERE" android:host="auth" />
-    </intent-filter>
-  </activity>
-</application>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.adb2cauthorization">
+  <uses-sdk android:minSdkVersion="15" />
+  <application android:label="ADB2CAuthorization">
+    <activity android:name="microsoft.identity.client.BrowserTabActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />"
+      </intent-filter>
+    </activity>"
+  </application>
+</manifest>
 ```
 
-По завершении запроса авторизации Azure Active Directory B2C перенаправляет URL-адрес зарегистрированного перенаправления. Так как URL-адрес использует схему приводит к Android, запустив мобильное приложение, передачи в URL-адрес в качестве параметра запуска, где оно обрабатывается `microsoft.identity.client.BrowserTabActivity`. Обратите внимание, что `data android:scheme` свойство должно иметь значение пользовательских схему URL-адреса, который регистрируется с помощью приложения Azure Active Directory B2C.
-
-Кроме того `MainActivity` класса должны быть изменены, как показано в следующем примере кода:
+`MainActivity` Класса необходимо изменить, чтобы предоставить `UiParent` приложению во время `OnCreate` вызова. По завершении запроса авторизации Azure Active Directory B2C перенаправляет зарегистрированной схемы URL-адрес из **AndroidManifest.xml**. Зарегистрированные схемы URI приводит к Android вызова `OnActivityResult` с URL-адрес как параметр запуска, где он обрабатывается `SetAuthenticationContinuationEventArgs`.
 
 ```csharp
-using Microsoft.Identity.Client;
-
-namespace TodoAzure.Droid
+public class MainActivity : FormsAppCompatActivity
 {
-    ...
-    public class MainActivity : FormsAppCompatActivity
+    protected override void OnCreate(Bundle bundle)
     {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
+        TabLayoutResource = Resource.Layout.Tabbar;
+        ToolbarResource = Resource.Layout.Toolbar;
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
-            LoadApplication(new App());
-            App.UiParent = new UIParent(this);
-        }
+        base.OnCreate(bundle);
 
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
-            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
-        }
+        Forms.Init(this, bundle);
+        LoadApplication(new App());
+        App.UiParent = new UIParent(this);
+    }
+
+    protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+    {
+        base.OnActivityResult(requestCode, resultCode, data);
+        AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
     }
 }
-
 ```
-
-`OnCreate` Метод изменяется путем назначения `UIParent` экземпляр `App.UiParent` свойство. Это гарантирует, что поток проверки подлинности происходит в контексте текущего действия.
-
-Код в `OnActivityResult` метод гарантирует, что элемент управления возвращается к MSAL, после завершения интерактивной часть рабочего процесса проверки подлинности.
 
 ### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
 
-На универсальной платформе Windows без дополнительной настройки необходимо использовать MSAL.
+Без дополнительной настройки необходим для использования MSAL на универсальной платформе Windows
 
-## <a name="initialization"></a>Инициализация
+## <a name="run-the-project"></a>Запуск проекта
 
-Библиотека проверки подлинности Майкрософт используются члены `PublicClientApplication` класса для запуска рабочего процесса проверки подлинности. Пример приложения объявляются и инициализируются `public` свойство этого типа с именем `ADB2CClient`в `AuthenticationProvider` класса. В следующем примере кода показано, как это свойство инициализируется:
+Запустите приложение на устройстве виртуальным или физическим. При касании **входа** кнопку следует откройте браузер и перейдите на страницу, где можно войти или создать учетную запись. После выполнения входа в систему, вы будете перенаправлены на страницу выхода из приложения. На следующем рисунке показан вход пользователя на экране, работающие на Android и iOS:
 
-```csharp
-ADB2CClient = new PublicClientApplication(Constants.ClientID, Constants.Authority);
-```
-
-При регистрации мобильного приложения с клиентом Azure Active Directory B2C, процесс регистрации, назначенным **идентификатор приложения**. Этот идентификатор должен быть указан в `PublicClientApplication` конструктор, вместе с `Authority` константа, которая состоит из базового URL-адреса и политики Azure Active Directory B2C для выполнения.
-
-## <a name="signing-in"></a>Вход
-
-На следующем снимке экрана показан экран входа в приложении-примере:
-
-![](azure-ad-b2c-images/login.png "Страница входа")
-
-Вход с помощью поставщиков удостоверений в социальных сетях или локальную учетную запись, разрешены. Хотя Microsoft, Google и Facebook, как показано выше, используются в качестве поставщиков удостоверений социальных сетей, можно использовать и другие поставщики удостоверений.
-
-В следующем примере кода показано, как вызывается процесс входа в систему:
-
-```csharp
-using Microsoft.Identity.Client;
-
-public async Task<bool> LoginAsync(bool useSilent = false)
-{
-    ...
-    AuthenticationResult authenticationResult = await ADB2CClient.AcquireTokenAsync(
-        Constants.Scopes,
-        GetUserByPolicy(ADB2CClient.Users, Constants.PolicySignUpSignIn),
-        App.UiParent);
-    ...
-}
-
-```
-
-`AcquireTokenAsync` Метод запускает веб-браузере устройства и отображает параметры проверки подлинности, определенные в политике Azure Active Directory B2C, который задается параметром политики, ссылка на через `Constants.Authority` константы. Эта политика определяет действия, которые пользователь должен выполнить во время регистрации и входа в систему и утверждения, что получить приложение при успешной регистрации или входа в систему.
-
-Результат `AcquireTokenAsync` является вызов метода `AuthenticationResult` экземпляра. Если проверка подлинности успешна, `AuthenticationResult` маркер идентификации, который будет кэшироваться локально, будет содержать экземпляр. Если проверка подлинности завершилась неудачно, `AuthenticationResult` экземпляра будет содержать данные, который указывает на причину сбоя проверки подлинности.
-
-В примере приложения, если проверка подлинности успешна `TodoList` перемещении по странице.
-
-## <a name="silent-re-authentication"></a>Автоматическая повторная проверка подлинности
-
-Когда `LoginPage` в образце приложения на экране предпринята попытка получить маркер пользователя без отображения пользовательского интерфейса проверки подлинности. Это достигается за счет `AcquireTokenSilentAsync` метод, как показано в следующем примере кода:
-
-```csharp
-public async Task<bool> LoginAsync(bool useSilent = false)
-{
-    ...
-    AuthenticationResult authenticationResult;
-
-    if (useSilent)
-    {
-        authenticationResult = await ADB2CClient.AcquireTokenSilentAsync(
-            Constants.Scopes,
-            GetUserByPolicy(ADB2CClient.Users, Constants.PolicySignUpSignIn),
-            Constants.Authority,
-            false);
-    }
-    ...
-}
-```
-
-`AcquireTokenSilentAsync` Метод пытается получить маркер пользователя из кэша, не требуя от пользователя для входа в систему. Это обрабатывает сценарий, где маркер подходит могут уже присутствовать в кэше из предыдущих сеансов. При успешном выполнении, попытка получить маркер `TodoList` перемещении по странице. Если для получения маркера не удалось, ничего не происходит, и пользователю будет предоставлена возможность для запуска нового рабочего процесса проверки подлинности.
-
-## <a name="signing-out"></a>Выход
-
-В следующем примере кода показано, как вызывается процесс выхода:
-
-```csharp
-public async Task<bool> LogoutAsync()
-{
-    ...
-    foreach (var user in ADB2CClient.Users)
-    {
-        ADB2CClient.Remove(user);
-    }
-    ...
-}
-```
-
-Это очищает все токены проверки подлинности из локального кэша.
-
-## <a name="summary"></a>Сводка
-
-В этой статье было показано, как интегрировать систему управления удостоверениями пользователей мобильного приложения с помощью библиотеки аутентификации Майкрософт (MSAL) и Azure Active Directory B2C. Azure Active Directory B2C является это облаке решение управления удостоверениями для мобильных приложений и веб-потребитель.
-
+![«Azure ADB2C экран входа в Android и iOS»](azure-ad-b2c-images/login.png)
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [AzureADB2CAuth (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Библиотека аутентификации Майкрософт](https://www.nuget.org/packages/Microsoft.Identity.Client)
+- [Документация по библиотеке проверки подлинности Майкрософт](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61036172"
 ---
 # <a name="ios-app-architecture"></a>Архитектура приложения iOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "51526667"
 
 [ ![](architecture-images/ios-arch-small.png "На этой схеме показан общий обзор архитектуры вперед от времени (AOT) компиляции")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>Машинного и управляемого кода: описание
+## <a name="native-and-managed-code-an-explanation"></a>Машинного и управляемого кода: Объяснение
 
 При разработке для Xamarin условия *машинного и управляемого* кода часто используются. [Управляемый код](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) приведен код, который имеет свое выполнение, управляет [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), или в случае Xamarin: среда выполнения Mono. Это так называемый промежуточный язык.
 

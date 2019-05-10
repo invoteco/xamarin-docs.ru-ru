@@ -6,12 +6,12 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5e503a82a2b666bf6f8d7d7166475e94546e7
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199784"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978404"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Приступая к работе с целевой Sharpie
 
@@ -58,8 +58,3 @@ ms.locfileid: "61199784"
 
 **НОВЫЕ ФУНКЦИИ!** версия 3.0 также предоставляет средство для привязки, легко [CocoaPods](https://cocoapods.org) через `sharpie pod` команды.
 Если доступен библиотеку, которую вы хотите использовать CocoaPod, мы рекомендуем сначала пытается создать привязку cocoapod для службы с целью Sharpie (а не пытается выполнить привязку непосредственно к источнику).
-
-## <a name="related-links"></a>Связанные ссылки
-
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

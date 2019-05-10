@@ -1,27 +1,24 @@
 ---
-title: Задать макет CollectionView Xamarin.Forms
+title: Макет CollectionView Xamarin.Forms
 description: По умолчанию CollectionView будет отображения элементов в вертикальном списке. Тем не менее можно указать вертикальные и горизонтальные списки и сеток.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 8ed365ed41ac31c66d41f1a32a7a16929cdc6770
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 5543bcc93f3c38b56a4a6caa0ea23b8ccf434e1c
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367690"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048239"
 ---
-# <a name="specify-xamarinforms-collectionview-layout"></a>Задать макет CollectionView Xamarin.Forms
+# <a name="xamarinforms-collectionview-layout"></a>Макет CollectionView Xamarin.Forms
 
-![Предварительный просмотр](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` В настоящее время доступна в предварительной версии, а не имеет части плановой функциональных возможностей. Кроме того API может измениться, как реализация завершилась.
 
 `CollectionView` определяет следующие свойства, которые управляют макета:
 
@@ -43,7 +40,7 @@ ms.locfileid: "61367690"
 - `SnapPointsAlignment`, типа `SnapPointsAlignment`, выравнивание точек прикрепления с элементами.
 - `SnapPointsType`, типа `SnapPointsType`, определяет поведение точки прикрепления во время прокрутки.
 
-Эти свойства поддерживаются [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) объектов, что означает, что свойства могут быть целями привязки данных. Дополнительные сведения о точки прикрепления, см. в разделе [привязать точки](scrolling.md#snap-points) в [прокрутки элемента в представлении](scrolling.md) руководства.
+Эти свойства поддерживаются [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) объектов, что означает, что свойства могут быть целями привязки данных. Дополнительные сведения о точки прикрепления, см. в разделе [привязать точки](scrolling.md#snap-points) в [прокрутка CollectionView Xamarin.Forms](scrolling.md) руководства.
 
 `ItemsLayoutOrientation` Перечисление определяет следующие члены:
 
@@ -344,7 +341,7 @@ CollectionView collectionView = new CollectionView
 - `MeasureFirstItem` — только первый элемент основана на числах, все последующие элементы, получает тот же размер, что первый элемент.
 
 > [!IMPORTANT]
-> `MeasureFirstItem` Изменения размера стратегии следует использовать в ситуациях, когда размер элемента должен быть однородными для всех элементов и приведет к увеличению производительности.
+> `MeasureFirstItem` Изменения размера стратегии приведет к увеличению производительности при использовании в ситуациях, где размер элемента должен быть универсальный код для всех элементов.
 
 В следующем примере кода показана установка `ItemSizingStrategy` свойство:
 
@@ -365,8 +362,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> Элемент, изменение размера стратегии в настоящее время является только реализуется на iOS.
+
 ## <a name="related-links"></a>Связанные ссылки
 
 - [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Локализация справа налево](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Прокрутки элемента в представлении](scrolling.md)
+- [Прокрутка Xamarin.Forms CollectionView](scrolling.md)

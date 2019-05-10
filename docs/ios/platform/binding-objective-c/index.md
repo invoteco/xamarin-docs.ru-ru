@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8c4dcbe0baf74479e94f8663280e7654b4d58a9d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346945"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978157"
 ---
 # <a name="binding-ios-libraries"></a>Привязка библиотек iOS
 
@@ -38,15 +38,13 @@ ms.locfileid: "61346945"
 Эта страница содержит пошаговое руководство по созданию проекта привязки iOS с помощью с открытым исходным кодом [ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) проекта Objective-C в качестве примера. **InfColorPicker** библиотека предоставляет контроллер многократно используемых представления, которые позволяют пользователю выбирать цвета в его представление HSB, выбора цвета более понятные.
 Цели Sharpie будет использоваться для помощи в процессе привязки.
 
-## <a name="xamarin-university-lightning-lecture"></a>Лекции молнии Xamarin University
+## <a name="video"></a>Видео
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS привязками в C/C++, с [Xamarin University](https://university.xamarin.com/)**
+**iOS привязками в C /C++ видео**
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Привязка Objective-C](~/cross-platform/macios/binding/index.md)
 - [Привязка Mac](~/mac/platform/binding.md)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

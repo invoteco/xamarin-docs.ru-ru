@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 965f56f7996cc7cf8a06e4201cc4bcf2ea35fb71
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 04/10/2019
+ms.openlocfilehash: fd67072953f0fc4e448fee7edeec84760ebbda9a
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343301"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048317"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Использование расширения разметки XAML
 
@@ -27,6 +27,7 @@ ms.locfileid: "61343301"
 - [`x:Null`](#null) – значение атрибута `null` значение.
 - [`OnPlatform`](#onplatform) — настраивать внешний вид пользовательского интерфейса на каждой платформы.
 - [`OnIdiom`](#onidiom) — настраивать внешний вид пользовательского интерфейса на идиому устройства, приложения на основе.
+- [`DataTemplate`](#datatemplate-markup-extension) — Преобразует тип в [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
 
 Дополнительные расширения разметки XAML Исторически поддерживаются в других реализациях XAML и также поддерживаются в Xamarin.Forms. Более подробно они описаны в других статьях:
 
@@ -503,7 +504,7 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="onidiom-markup-extension"></a>Расширение разметки OnIdiom
 
-`OnIdiom` Расширения разметки позволяет настраивать внешний вид пользовательского интерфейса на идиому устройства, приложения на основе. Этот режим поддерживается [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) класс, который определяет следующие свойства:
+`OnIdiom` Расширение разметки позволяет настраивать внешний вид пользовательского интерфейса на идиому устройства, приложения на основе. Этот режим поддерживается [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) класс, который определяет следующие свойства:
 
 - `Default` типа `object`, присвоено значение по умолчанию для применения к свойствам, которые представляют стили устройства.
 - `Phone` типа `object`, установленным в значение для применения на телефонах.
@@ -537,6 +538,25 @@ public partial class TypeDemoPage : ContentPage
 
 [![Демонстрация OnIdiom](consuming-images/onidiomdemo-small.png "Демонстрация OnIdiom")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 
+## <a name="datatemplate-markup-extension"></a>Расширение разметки DataTemplate
+
+`DataTemplate` Расширение разметки можно выполнить преобразование типа в [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate). Этот режим поддерживается `DataTemplateExtension` класс, определяющий `TypeName` свойство типа `string`, то есть присвоено имя типа быть преобразован в `DataTemplate`. `TypeName` Свойство является свойством содержимого из `DataTemplateExtension`. Таким образом, для выражений разметки XAML, выраженными с помощью фигурных скобок, то можно исключить `TypeName=` часть выражения.
+
+> [!NOTE]
+> Средство синтаксического анализа XAML позволяет `DataTemplateExtension` класса, чтобы сократить до `DataTemplate`.
+
+Типичное использование этого расширения разметки находится в приложении оболочки, как показано в следующем примере:
+
+```xaml
+<ShellContent Title="Monkeys"
+              Icon="monkey.png"
+              ContentTemplate="{DataTemplate views:MonkeysPage}" />
+```
+
+В этом примере `MonkeysPage` преобразуется из [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) для [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), которое задается для параметра `ShellContent.ContentTemplate` свойство. Это гарантирует, что `MonkeysPage` только для создания, когда происходит переход на страницу, а не при запуске приложения.
+
+Дополнительные сведения о приложениях оболочки, см. в разделе [Xamarin.Forms оболочки](~/xamarin-forms/app-fundamentals/shell/index.md).
+
 ## <a name="define-your-own-markup-extensions"></a>Определить собственные расширения разметки
 
 Если возникла необходимость расширения разметки XAML, которые не доступны в Xamarin.Forms, вы можете [создать свой собственный](creating.md).
@@ -548,3 +568,4 @@ public partial class TypeDemoPage : ContentPage
 - [Словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Динамические стили](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Привязка данных](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms оболочки](~/xamarin-forms/app-fundamentals/shell/index.md).

@@ -6,13 +6,13 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/01/2019
+ms.openlocfilehash: 89afb106320ce77e86a66f2c78bd6e32de8c38f3
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61189799"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64986985"
 ---
 # <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
 
@@ -25,10 +25,10 @@ _Требования к платформе и системные требова
 Приложения Xamarin.Forms могут быть написаны для следующих операционных систем:
 
 - iOS 8 или более поздние версии;
-- Android 4.4 (API 19) или более поздние версии ([подробнее](#android));
+- Android 5.0 (API 21) или более поздней версии ([подробности](#android))
 - универсальная платформа Windows для Windows 10 ([подробнее](#windows10));
 
-Предполагается, что разработчики знакомы с [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) и [общими проектами](~/cross-platform/app-fundamentals/shared-projects.md).
+Предполагается, что разработчики имеющих опыт работы с [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ### <a name="additional-platform-support"></a>Поддержка дополнительных платформ
 
@@ -38,13 +38,6 @@ _Требования к платформе и системные требова
 - macOS
 - GTK#
 - WPF
-
-### <a name="platforms-from-earlier-versions"></a>Платформы для более ранних версий
-
-Эти платформы не поддерживаются при использовании Xamarin.Forms 3.0:
-
-- *Windows 8.1 или Windows Phone 8.1 WinRT;*
-- *Windows Phone 8 Silverlight.*
 
 ### <a name="android"></a>Android
 
@@ -98,3 +91,10 @@ Visual Studio для Mac можно использовать для разраб
 - [Пакет средств разработки Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 [Приложение универсальной платформы Windows (UWP) можно добавить](~/xamarin-forms/platform/windows/installation/index.md) в существующее решение Xamarin.Forms в любое время.
+
+## <a name="deprecated-platforms"></a>Устаревших платформах
+
+Эти платформы не поддерживаются при использовании Xamarin.Forms 3.0 или более поздней версии:
+
+- *Windows 8.1 или Windows Phone 8.1 WinRT;*
+- *Windows Phone 8 Silverlight.*

@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266612"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978458"
 ---
 # <a name="binding-objective-c"></a>Привязка Objective-C
 
@@ -45,17 +45,13 @@ ms.locfileid: "61266612"
 
 ### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Примеры привязок](https://github.com/mono/monotouch-bindings)
 
-Коллекцию привязок независимых производителей, которые можно использовать ссылку, при создании новых проектов привязки.
+Коллекция привязок независимых производителей, которые могут использоваться в качестве ссылки при создании новых проектов привязки.
 
 ## <a name="mac"></a>Mac
 
 Исторически [привязки Mac](~/mac/platform/binding.md) была очень вручную. Сейчас [загружаемые preview](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) поддержки проект привязки Mac в будущих выпусках Visual Studio для Mac.
 
-
-
 ## <a name="related-links"></a>Связанные ссылки
 
 - [iOS привязки](~/ios/platform/binding-objective-c/index.md)
 - [Привязка Mac](~/mac/platform/binding.md)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

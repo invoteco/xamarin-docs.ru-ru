@@ -1,27 +1,24 @@
 ---
-title: Прокрутки элемента в представлении
+title: Прокрутка Xamarin.Forms CollectionView
 description: Когда пользователь вставляет, чтобы инициировать прокрутки, конечное положение прокрутки можно управлять, чтобы полностью отображаются элементы. Кроме того CollectionView определяет два метода ScrollTo, которые программно прокрутки элементов в представлении.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: da7f379076b8e193deddc99e9004f051ba006cbb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367661"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048166"
 ---
-# <a name="scroll-an-item-into-view"></a>Прокрутки элемента в представлении
+# <a name="xamarinforms-collectionview-scrolling"></a>Прокрутка Xamarin.Forms CollectionView
 
-![Предварительный просмотр](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` В настоящее время доступна в предварительной версии, а не имеет части плановой функциональных возможностей. Кроме того API может измениться, как реализация завершилась.
 
 `CollectionView` Определяет два `ScrollTo` методы, которые прокрутки элементов в представлении. Одной из перегрузок прокручивает элемент по указанному индексу в представление, пока другой прокрутке указанного элемента. Обе перегрузки имеют дополнительные аргументы, которые можно задать, чтобы указать точную позицию элемента, после завершения прокрутки и следует ли анимировать прокрутки.
 

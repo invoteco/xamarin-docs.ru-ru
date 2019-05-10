@@ -1,27 +1,24 @@
 ---
-title: Заполнение Xamarin.Forms CollectionView с данными
+title: Xamarin.Forms CollectionView Data
 description: CollectionView заполняется данными, установив его свойство ItemsSource к любой коллекции, реализующий интерфейс IEnumerable.
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 57012202d981b96dba42f3017a19f2e32e4982ec
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 1350d5a5a0845029b7ef6a06647ad4c56f0f8135
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367035"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048269"
 ---
-# <a name="populate-xamarinforms-collectionview-with-data"></a>Заполнение Xamarin.Forms CollectionView с данными
+# <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView Data
 
-![Предварительный просмотр](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` В настоящее время доступна в предварительной версии, а не имеет части плановой функциональных возможностей. Кроме того API может измениться, как реализация завершилась.
 
 `CollectionView` определяет следующие свойства, которые определяют данные для отображения и его внешний вид:
 
@@ -188,8 +185,66 @@ public class Monkey
 
 Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
+## <a name="choose-item-appearance-at-runtime"></a>Выберите внешний вид элемента во время выполнения
+
+Внешний вид каждого элемента в `CollectionView` можно выбрать во время выполнения в зависимости значения элемента, задав `CollectionView.ItemTemplate` свойства [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) объекта:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AmericanMonkeyTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="OtherMonkeyTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:MonkeyDataTemplateSelector x:Key="MonkeySelector"
+                                             AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
+                                             OtherMonkey="{StaticResource OtherMonkeyTemplate}" />
+    </ContentPage.Resources>
+
+    <CollectionView ItemsSource="{Binding Monkeys}"
+                    ItemTemplate="{StaticResource MonkeySelector}" />
+</ContentPage>
+```
+
+Ниже приведен аналогичный код C#:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ItemTemplate = new MonkeyDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+`ItemTemplate` Свойству `MonkeyDataTemplateSelector` объекта. В следующем примере показан `MonkeyDataTemplateSelector` класса:
+
+```csharp
+public class MonkeyDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate AmericanMonkey { get; set; }
+    public DataTemplate OtherMonkey { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        return ((Monkey)item).Location.Contains("America") ? AmericanMonkey : OtherMonkey;
+    }
+}
+```
+
+`MonkeyDataTemplateSelector` Класс определяет `AmericanMonkey` и `OtherMonkey` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) свойства, заданные для различные шаблоны данных. `OnSelectTemplate` Переопределить возвращает `AmericanMonkey` шаблон, который отображает monkey имя и расположение в сине-зеленый, если имя monkey содержит «Америка». Когда monkey не может содержать «Америка», `OnSelectTemplate` переопределить возвращает `OtherMonkey` шаблон, который отображает monkey имя и расположение в silver:
+
+[![Снимок экрана из CollectionView среды выполнения элемента выбора шаблона, в iOS и Android](populate-data-images/datatemplateselector.png "Выбор шаблона элементов среды выполнения в CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Выбор шаблона элементов среды выполнения в CollectionView")
+
+Дополнительные сведения о селекторах шаблон данных, см. в разделе [создать Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+
 ## <a name="related-links"></a>Связанные ссылки
 
 - [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Привязка данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Шаблоны Xamarin.Forms данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Создание Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

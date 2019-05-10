@@ -1,32 +1,30 @@
 ---
-title: Установка режима выбора Xamarin.Forms CollectionView
+title: Выбор Xamarin.Forms CollectionView
 description: По умолчанию выбор CollectionView отключен. Тем не менее можно включить одиночное и множественное выделение.
 ms.prod: xamarin
 ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/18/2019
-ms.openlocfilehash: 441afb9348a85de61d35574bb9121c7de713a897
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 1ffed60253889491636fa105dd444ced9c2bedf5
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367776"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048211"
 ---
-# <a name="set-collectionview-selection-mode"></a>Установка режима выбора CollectionView
+# <a name="xamarinforms-collectionview-selection"></a>Выбор Xamarin.Forms CollectionView
 
-![Предварительный просмотр](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` В настоящее время доступна в предварительной версии, а не имеет части плановой функциональных возможностей. Кроме того API может измениться, как реализация завершилась.
 
 `CollectionView` определяет следующие свойства, определяющие выбор элементов:
 
 - `SelectionMode`, типа `SelectionMode`, режим выделения.
 - `SelectedItem`, типа `object`, элемент, выбранный в списке. Это свойство имеет `null` значение, если элемент не выбран.
+- `SelectedItems`, типа `IList<object>`, выбранные элементы в списке. Это свойство доступно только для чтения и имеет `null` значение при отсутствии выбранных элементов.
 - `SelectionChangedCommand`, типа `ICommand`, который выполняется при изменении выделенного элемента.
 - `SelectionChangedCommandParameter`, типа `object`, который является параметром, который передается `SelectionChangedCommand`.
 
@@ -38,7 +36,7 @@ ms.locfileid: "61367776"
 - `Single` — Указывает, что элемент можно выбрать, с выбранным элементом выделена.
 - `Multiple` — Указывает, что несколько элементов можно выбрать, с выбранными элементами выделена.
 
-`CollectionView` Определяет `SelectionChanged` событие, возникающее, когда `SelectedItem` изменения свойств, из-за пользователя, выбирающего элемент, из списка, или когда приложение задает свойство. `SelectionChangedEventArgs` Объект, который прилагается к `SelectionChanged` событий имеет два свойства: тип `IReadOnlyList<object>`:
+`CollectionView` Определяет `SelectionChanged` событие, возникающее, когда `SelectedItem` изменения свойств, из-за пользователя, выбирающего элемент, из списка, или когда приложение задает свойство. Кроме того, это событие также возникает, когда `SelectedItems` изменения свойств. `SelectionChangedEventArgs` Объект, который прилагается к `SelectionChanged` событий имеет два свойства: тип `IReadOnlyList<object>`:
 
 - `PreviousSelection` — список элементов, которые были выбраны, прежде чем изменить выбор.
 - `CurrentSelection` — список элементов, которые выбираются после изменения выделения.
@@ -73,8 +71,8 @@ collectionView.SelectionChanged += OnCollectionViewSelectionChanged;
 ```csharp
 void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
-    string previous = (previousSelectedItems.FirstOrDefault() as Monkey)?.Name;
-    string current = (currentSelectedItems.FirstOrDefault() as Monkey)?.Name;
+    string previous = (e.PreviousSelection.FirstOrDefault() as Monkey)?.Name;
+    string current = (e.CurrentSelection.FirstOrDefault() as Monkey)?.Name;
     ...
 }
 ```
@@ -86,7 +84,50 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 [![Снимок экрана CollectionView вертикальный список одного выделения, в iOS и Android](selection-images/single-selection.png "CollectionView вертикальный список одного выделения")](selection-images/single-selection-large.png#lightbox "CollectionView вертикального списка с одним Выбор")
 
-## <a name="pre-selection"></a>Предварительный Выбор
+## <a name="multiple-selection"></a>Выбор нескольких элементов
+
+Когда `SelectionMode` свойству `Multiple`, несколько элементов в `CollectionView` могут быть выбраны. При выборе элементов, `SelectedItems` будет установлено для выбранных элементов. При изменении свойства, `SelectionChangedCommand` выполняется (со значением `SelectionChangedCommandParameter` , передаваемые `ICommand`) и `SelectionChanged` вызывает событие.
+
+В следующем примере показан XAML `CollectionView` , может отвечать на несколько элементов:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                SelectionMode="Multiple"
+                SelectionChanged="OnCollectionViewSelectionChanged">
+    ...
+</CollectionView>
+```
+
+Ниже приведен аналогичный код C#:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    SelectionMode = SelectionMode.Multiple
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+collectionView.SelectionChanged += OnCollectionViewSelectionChanged;
+```
+
+В этом примере кода `OnCollectionViewSelectionChanged` выполняется обработчик события при `SelectionChanged` событие с обработчиком событий, извлечение данных о ранее выбранных элементов и элементам, выделенным:
+
+```csharp
+void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    var previous = e.PreviousSelection;
+    var current = e.CurrentSelection;
+    ...
+}
+```
+
+> [!IMPORTANT]
+> `SelectionChanged` Событие может генерироваться от изменений, которые происходят в результате изменения `SelectionMode` свойство.
+
+На следующих снимках экрана показано несколько элементов в `CollectionView`:
+
+[![Снимок экрана вертикальный список CollectionView Выбор нескольких элементов, в iOS и Android](selection-images/multiple-selection.png "CollectionView вертикальном списке Выбор нескольких элементов")](selection-images/multiple-selection-large.png#lightbox "CollectionView вертикального списка с Выбор нескольких элементов")
+
+## <a name="single-pre-selection"></a>Единый предварительный выбор
 
 При `SelectionMode` свойству `Single`, один элемент в `CollectionView` можно также предварительно выбран, задав `SelectedItem` свойство к элементу. В следующем примере показан XAML `CollectionView` , предварительно выбирает один элемент:
 
@@ -145,6 +186,43 @@ public class MonkeysViewModel : INotifyPropertyChanged
 Таким образом, если `CollectionView` появится, будет выбран профиль четвертый элемент в списке:
 
 [![Снимок экрана CollectionView вертикальный список одного предварительного выделения, в iOS и Android](selection-images/single-pre-selection.png "CollectionView вертикальный список одного предварительного выделения")](selection-images/single-pre-selection-large.png#lightbox "CollectionView вертикальный список одного предварительного выделения")
+
+## <a name="multiple-pre-selection"></a>Несколько предварительный выбор
+
+Когда `SelectionMode` свойству `Multiple`, несколько элементов в `CollectionView` можно также предварительно выбран. В следующем примере показан XAML `CollectionView` , позволяющее предварительный выбор нескольких элементов:
+
+```xaml
+<CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Monkeys}"
+                SelectionMode="Multiple">
+    ...
+</CollectionView>
+```
+
+Ниже приведен аналогичный код C#:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    SelectionMode = SelectionMode.Multiple
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+Несколько элементов в `CollectionView` можно, добавив их в предварительно выбрать `SelectedItems` свойство:
+
+```csharp
+collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(1).FirstOrDefault());
+collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(3).FirstOrDefault());
+collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(4).FirstOrDefault());
+```
+
+> [!NOTE]
+> `SelectedItems` Свойство доступно только для чтения, и поэтому не можно использовать два вида данных, привязка к предварительное выделение.
+
+Таким образом, если `CollectionView` появится второй, в-четвертых, и будут выбраны заранее, пятая элементов в списке:
+
+[![Снимок экрана CollectionView вертикальный список нескольких предварительного выделения, в iOS и Android](selection-images/multiple-pre-selection.png "CollectionView вертикальный список с несколькими предварительный выбор")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView по вертикали список с несколькими предварительный выбор")
 
 ## <a name="change-selected-item-color"></a>Изменение цвета выбранного элемента
 

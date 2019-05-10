@@ -1,27 +1,24 @@
 ---
-title: Отобразить EmptyView, когда данных недоступен.
+title: Xamarin.Forms CollectionView EmptyView
 description: В CollectionView можно указать пустое представление, предоставляющий отзыв для пользователя, когда данные недоступны для отображения. Пустое представление может быть строка, представление или несколько представлений.
 ms.prod: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: a430387bba83887045e5687c99d9295d4be373e4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 78e9ddcb1d9dd91dadea94016b206867ac9508e6
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019486"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048196"
 ---
-# <a name="display-an-emptyview-when-data-is-unavailable"></a>Отобразить EmptyView, когда данных недоступен.
+# <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
 
-![Предварительный просмотр](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` В настоящее время доступна в предварительной версии, а не имеет части плановой функциональных возможностей. Кроме того API может измениться, как реализация завершилась.
 
 `CollectionView` определяет следующие свойства, которые могут использоваться для предоставления отзывов пользователей, при отсутствии данных для отображения:
 
@@ -260,8 +257,80 @@ void ToggleEmptyView(bool isToggled)
 
 Дополнительные сведения о словарях ресурсов, см. в разделе [словари ресурсов Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
+## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Выберите EmptyViewTemplate во время выполнения
+
+Внешний вид `EmptyView` можно выбрать во время выполнения в зависимости от его значения, задав `CollectionView.EmptyViewTemplate` свойства [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) объекта:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AdvancedTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="BasicTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:SearchTermDataTemplateSelector x:Key="SearchSelector"
+                                                 DefaultTemplate="{StaticResource AdvancedTemplate}"
+                                                 OtherTemplate="{StaticResource BasicTemplate}" />
+    </ContentPage.Resources>
+
+    <StackLayout Margin="20">
+        <SearchBar x:Name="searchBar"
+                   SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                   Placeholder="Filter" />
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
+                        EmptyViewTemplate="{StaticResource SearchSelector}" />
+    </StackLayout>
+</ContentPage>
+```
+
+Ниже приведен аналогичный код C#:
+
+```csharp
+SearchBar searchBar = new SearchBar { ... };
+CollectionView collectionView = new CollectionView
+{
+    EmptyView = searchBar.Text,
+    EmptyViewTemplate = new SearchTermDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+`EmptyView` Свойству [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство и `EmptyViewTemplate` свойству `SearchTermDataTemplateSelector` объекта.
+
+При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции `CollectionView` фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) определяется `SearchTermDataTemplateSelector` объекта задано как `EmptyViewTemplate` свойства и отображается.
+
+В следующем примере показан `SearchTermDataTemplateSelector` класса:
+
+```csharp
+public class SearchTermDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate OtherTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        string query = (string)item;
+        return query.ToLower().Equals("xamarin") ? OtherTemplate : DefaultTemplate;
+    }
+}
+```
+
+`SearchTermTemplateSelector` Класс определяет `DefaultTemplate` и `OtherTemplate` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) свойства, заданные для различные шаблоны данных. `OnSelectTemplate` Переопределить возвращает `DefaultTemplate`, который отображает сообщение для пользователя, когда поисковый запрос не соответствует «xamarin». Когда поисковый запрос «xamarin», `OnSelectTemplate` переопределить возвращает `OtherTemplate`, отображающий основные сообщение для пользователя:
+
+[![Снимок экрана составе CollectionView среды выполнения пустое представление шаблона выделения, в iOS и Android](emptyview-images/datatemplateselector.png "Выбор шаблона пустое представление среды выполнения в CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "пустое представление шаблонов среды выполнения Выбор в CollectionView")
+
+Дополнительные сведения о селекторах шаблон данных, см. в разделе [создать Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+
 ## <a name="related-links"></a>Связанные ссылки
 
 - [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Шаблоны Xamarin.Forms данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Словари ресурсов Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Создание Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

@@ -6,27 +6,26 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 04/12/2018
-ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/02/2019
+ms.openlocfilehash: 7f7afacaf8154cd425fcd1c1638a512d5bc32ffd
+ms.sourcegitcommit: 53480ed32a126f88eec82e8c8ee5ed8d30616c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012813"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "65017702"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Удаленные уведомления с помощью Google Cloud Messaging
 
-_Это пошаговое руководство содержит пошаговое объяснение того, как использовать Google Cloud Messaging для реализации удаленных уведомлений (также называемые Push-уведомления) в приложениях Xamarin.Android. Здесь описываются различные классы, которые необходимо реализовать для обмена данными с Google Cloud Messaging (GCM), также содержатся сведения о задании разрешений в манифесте Android для доступа к службе GCM, а он демонстрирует end-to-end обмена сообщениями с программой тестового примера._
+> [!WARNING]
+> Google устаревшим GCM с 10 апреля 2018 г. Следующие документы и примеры проектов могут больше не поддерживается. GCM сервер и клиентские API-интерфейсы Google удаляется как можно скорее 29 мая 2019 г. Google рекомендует перенос приложения GCM для Firebase Cloud Messaging (FCM). Дополнительные сведения о прекращении GCM и миграции, см. в разделе [Google Cloud Messaging — рекомендуется использовать](https://developers.google.com/cloud-messaging/).
+>
+> Чтобы начать работу с удаленных уведомлений, с помощью Firebase Cloud Messaging с помощью Xamarin, см. в разделе [удаленные уведомления с помощью FCM](remote-notifications-with-fcm.md).
 
-> [!NOTE]
-> GCM была заменена [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
-> GCM сервер и клиентские API-интерфейсы [стали нерекомендуемыми](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) и больше не будут доступны как можно скорее 11 апреля 2019 г.
+_Это пошаговое руководство содержит пошаговое объяснение того, как использовать Google Cloud Messaging для реализации удаленных уведомлений (также называемые Push-уведомления) в приложениях Xamarin.Android. Здесь описываются различные классы, которые необходимо реализовать для обмена данными с Google Cloud Messaging (GCM), также содержатся сведения о задании разрешений в манифесте Android для доступа к службе GCM, а он демонстрирует end-to-end обмена сообщениями с программой тестового примера._
 
 ## <a name="gcm-notifications-overview"></a>Общие сведения о уведомления GCM
 
 В этом пошаговом руководстве мы создадим приложение Xamarin.Android, которое использует Google Cloud Messaging (GCM) для реализации удаленных уведомлений (также известный как *Push-уведомления*). Мы реализуем различные службы намерения и прослушиватель, использующие GCM для удаленного обмена сообщениями, и мы протестируем нашей реализации с программой командной строки, которая имитирует сервер приложений. 
-
-Обратите внимание, что Firebase Cloud Messaging (FCM) — это новая версия GCM &ndash; Google рекомендует FCM, а не GCM. Если вы используете GCM, рекомендуется обновление до FCM. Дополнительные сведения о FCM, см. в разделе [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md). 
 
 Прежде чем вы сможете продолжить в этом пошаговом руководстве, необходимо получить необходимые учетные данные, используемые серверы GCM от Google; Этот процесс описан в [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md). В частности, необходимо будет *ключ API* и *кода отправителя* для вставки в примере код, представленный в этом пошаговом руководстве. 
 

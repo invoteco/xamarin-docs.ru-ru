@@ -6,12 +6,12 @@ ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: df8d4508db14116a5b36e893f161ac891d58dc46
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b991f6105c6053f473b049d195aaef63cbcdd57
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266374"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977679"
 ---
 # <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions & StructsAndEnums Files
 
@@ -34,7 +34,3 @@ ms.locfileid: "61266374"
 
 Ссылаться на [Справочник по типам привязки](~/cross-platform/macios/binding/binding-types-reference.md) Дополнительные сведения о содержимое этих файлов.
 
-## <a name="related-links"></a>Связанные ссылки
-
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: fcdd712313becd1335479013f44886086dde7bff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 686ce3b46f268b650c63cace2a29b9d501a4063c
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261250"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977597"
 ---
 # <a name="binding-troubleshooting"></a>Привязка Устранение неполадок
 
@@ -55,9 +55,4 @@ ms.locfileid: "61261250"
 
 - Простой пример, воспроизводящий проблему, если это возможно. Такая помощь будет **бесценной**. 
 - Полная трассировка стека после сбоя.
-- Код C#, относящийся к проявлению сбоя. 
-
-## <a name="related-links"></a>Связанные ссылки
-
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- Код C#, относящийся к проявлению сбоя.

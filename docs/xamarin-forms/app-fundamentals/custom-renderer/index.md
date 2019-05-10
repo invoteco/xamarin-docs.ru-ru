@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666383"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978128"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Пользовательские отрисовщики Xamarin.Forms
 
@@ -58,8 +58,6 @@ Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell) — это ячейка
 
 В этой статье показано, как написать отрисовщики, чтобы реализовать пользовательский элемент управления `VideoPlayer`, который может воспроизводить видео из Интернета, видео, внедренные в качестве ресурсов приложения, или видео, хранящиеся в библиотеке видео на устройстве пользователя. Демонстрируется несколько методов, включая реализации методов и привязываемые свойства только для чтения.
 
-
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Пользовательские отрисовщики (видео от Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

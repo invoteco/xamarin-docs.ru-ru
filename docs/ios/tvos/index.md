@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: ada563fee78e579906e7f765a0120d8bfff67402
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: acbf000d0700e29fcd6155a35c26fee08f12b7e5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395421"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978016"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Введение в tvOS в Xamarin
 
@@ -27,7 +27,7 @@ Apple этого был выпущен 5-го поколения оборудо�
 
 > [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
 
-**tvOS с помощью Xamarin, [Xamarin University](https://university.xamarin.com/)**
+**tvOS с видео Xamarin**
 
 ## <a name="documentation"></a>Документация
 

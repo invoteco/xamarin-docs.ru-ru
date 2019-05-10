@@ -7,13 +7,13 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: ca87e5997fa05e014be56f85087ce3e7ffe1ab12
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 04/11/2019
+ms.openlocfilehash: 7dc9a0c0d7330588dc4a6d3f3dedd4b72211f019
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250891"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048026"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
 
@@ -417,6 +417,19 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
 |`width`|`VisualElement`|_Double_ \| `initial`|`min-width: 320;`|
 
+> [!NOTE]
+> `initial` значение является допустимым для всех свойств. Он очищает значение (Сброс к значениям по умолчанию), установленного из другой стиль.
+
+В настоящее время поддерживаются следующие свойства:
+
+- `all: initial`.
+- Свойства макета (поле или сетки).
+- Собирательные свойства, такие как `font`, и `border`.
+
+Кроме того, не `inherit` наследования значения и поэтому не поддерживается. Поэтому невозможно например, задать `font-size` свойства в макете и ожидать, что все [ `Label` ](xref:Xamarin.Forms.Label) экземпляров в макете, чтобы наследовать значение. Единственным исключением является `direction` свойство, которое имеет значение по умолчанию из `inherit`.
+
+### <a name="xamarinforms-specific-properties"></a>Конкретные свойства Xamarin.Forms
+
 Также поддерживаются следующие свойства CSS Xamarin.Forms для конкретных (в **значения** столбцов, типы являются _курсивом_, тогда как строковые литералы являются `gray`):
 
 |Свойство.|Применение|Значения|Пример|
@@ -434,16 +447,23 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 |`-xf-thumb-color`|`Slider`|_Цвет_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_Double_ \| `initial` |`-xf-spacing: 8;`|
 
-> [!NOTE]
-> `initial` значение является допустимым для всех свойств. Он очищает значение (Сброс к значениям по умолчанию), установленного из другой стиль.
+### <a name="xamarinforms-shell-specific-properties"></a>Конкретные свойства оболочки Xamarin.Forms
 
-В настоящее время поддерживаются следующие свойства:
+Также поддерживаются следующие свойства CSS Xamarin.Forms оболочки для конкретных (в **значения** столбцов, типы являются _курсивом_, тогда как строковые литералы являются `gray`):
 
-- `all: initial`.
-- Свойства макета (поле или сетки).
-- Собирательные свойства, такие как `font`, и `border`.
-
-Кроме того, не `inherit` наследования значения и поэтому не поддерживается. Поэтому невозможно например, задать `font-size` свойства в макете и ожидать, что все [ `Label` ](xref:Xamarin.Forms.Label) экземпляров в макете, чтобы наследовать значение. Единственным исключением является `direction` свойство, которое имеет значение по умолчанию из `inherit`.
+|Свойство|Применение|Значения|Пример|
+|---|---|---|---|
+|`-xf-flyout-background`|`Shell`|_Цвет_ \| `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_Цвет_ \| `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_Цвет_ \| `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_Цвет_ \| `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_Цвет_ \| `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_Цвет_ \| `initial` |`-xf-shell-unselected: limegreen;`|
 
 ### <a name="color"></a>Цвет
 
@@ -484,7 +504,7 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS, по [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 CSS видео**
 
 ## <a name="related-links"></a>Связанные ссылки
 

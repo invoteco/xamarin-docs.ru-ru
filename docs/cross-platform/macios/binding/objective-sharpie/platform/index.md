@@ -6,12 +6,12 @@ ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 8eaff208632d907d8c630f696adbbc1856f4bc57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8ce6e7d8ca432c4da19e7d60fbd98bfb4780c682
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261244"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977693"
 ---
 # <a name="objective-sharpie-features"></a>Цели Sharpie функции
 
@@ -29,9 +29,3 @@ ms.locfileid: "61261244"
 ## <a name="verifyverifymd"></a>[**Проверка**](verify.md)
 
 Добавление цели Sharpie `Verify` атрибуты, которые указывают, что вам нужно вручную проверьте и обновите созданную привязку. 
-
-## <a name="related-links"></a>Связанные ссылки
-
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Курс Xamarin University. Создание библиотеки привязки Objective-C с помощью цели Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
-

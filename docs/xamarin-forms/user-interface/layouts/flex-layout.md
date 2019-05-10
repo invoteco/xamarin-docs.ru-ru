@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 70e99e77cbb0bc32e920be2c8165e22007af478d
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 512aa2b54ec22acf8308b3452bfeee2318097b57
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347217"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978150"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -738,7 +738,7 @@ button {
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Xamarin.Forms 3.0 гибкий макет, по [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 Flex Layout видео**
 
 ## <a name="related-links"></a>Связанные ссылки
 

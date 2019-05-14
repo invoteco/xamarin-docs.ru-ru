@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 31303114ddd829b596569981b5812b91c4e95b30
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61186505"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557444"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin.Forms
 
@@ -157,7 +157,7 @@ var label =
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) — размер шрифта для текста в элементе управления span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) — цвет для текста в элементе управления span. Это свойство является устаревшим и будет заменен `TextColor` свойство.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) — Множитель, который следует применить к высота строки по умолчанию диапазона. Дополнительные сведения см. в разделе [высота строки](#line-height).
-- [`Text`](xref:Xamarin.Forms.Span.Text)  — стиль, применяемый к нему.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  — стиль, применяемый к нему.
 - [`Text`](xref:Xamarin.Forms.Span.Text) — текст диапазона.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) — цвет для текста в элементе управления span.
 - `TextDecorations` -оформление для применения к тексту в элементе управления span. Дополнительные сведения см. в разделе [оформление текста](#text-decorations).

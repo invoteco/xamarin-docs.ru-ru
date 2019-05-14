@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6dd55f5c4316ed8f1d4f16d9e282cc2647350518
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9bde539286b69569b4928bc28b20faecee0f5209
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61245400"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557389"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Работа с потоком пользовательского интерфейса в Xamarin.iOS
 
@@ -61,7 +61,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Вы должны не используется далее в примерах в этом документе, но это важная концепция запоминать, когда приложение выполнит сетевые запросы, использует Центр уведомлений или других методов, которые требуют завершения обработчик, который будет выполняться на другом поток.
+Не нужно будет использовать это далее в примерах в этом документе, но он является очень важным понятием, которое следует помнить, если приложение выполняет сетевые запросы, использует Центр уведомлений или других методов, которые требуют завершения обработчик, который будет выполняться на другом поток.
 
  <a name="Async_Await_Example" />
 

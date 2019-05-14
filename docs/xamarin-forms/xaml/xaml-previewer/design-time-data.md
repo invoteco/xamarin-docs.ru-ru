@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876359"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557433"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Использовать данные времени разработки с помощью средства предварительного просмотра XAML
 
@@ -22,7 +22,7 @@ _Некоторые раскладки трудно визуализироват
 
 Данные времени разработки является фиктивными данными, которые устанавливаются для упрощения ваших элементов управления для визуализации в средстве предварительного просмотра XAML. Чтобы начать работу, добавьте следующие строки кода в заголовок страницы XAML:
 
-```csharp
+```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -32,17 +32,17 @@ mc:Ignorable="d"
 
 Например можно добавить текст к метке, обычно имеет связанные с ним данные.
 
-```csharp
-<Label Text={Binding Name} d:Text="Name" />
+```xaml
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Проектирование данных времени с текстом в метку](xaml-previewer-images/designtimedata-label-sm.png "разработки времени данных с текстом метки")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
- В этом примере без `d:Text`, средство предварительного просмотра XAML не будет указывать ничего для метки. Вместо этого показывается «Name» где метка будет иметь реальные данные во время выполнения.
+В этом примере без `d:Text`, средство предварительного просмотра XAML не будет указывать ничего для метки. Вместо этого показывается «Name»! где метка будет иметь реальные данные во время выполнения.
 
 Можно использовать `d:` с любой атрибут для элемента управления Xamarin.Forms, как цвета, размеры шрифтов и интервал. Можно даже добавить к самим элементом управления:
 
-```csharp
+```xaml
 <d:Button Text="Design Time Button" />
 ```
 
@@ -54,7 +54,7 @@ mc:Ignorable="d"
 
 Можно задать время разработки источника для изображений, которые привязаны к странице или динамически загружаться. В проект Android, добавьте образа, который нужно отобразить в средстве предварительного просмотра XAML для **ресурсы > Drawable** папки. В проекте iOS, добавлении образа **ресурсы** папки. Для демонстрации этого образа в средстве предварительного просмотра XAML во время разработки:
 
-```csharp
+```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 [![Проектирование времени данных с изображениями](xaml-previewer-images/designtimedata-image-sm.png "проектирования данных временных iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
@@ -63,7 +63,7 @@ mc:Ignorable="d"
 
 ListViews — это популярный способ отображения данных в мобильном приложении. Но их сложно представить, без реальных данных. Чтобы использовать данные времени разработки с ними, необходимо создать массив времени разработки для использования в качестве ItemsSource. Средство предварительного просмотра XAML отображает то, что в этот массив в вашей ListView во время разработки.
 
-```csharp
+```xaml
 <StackLayout>
     <ListView ItemsSource="{Binding Items}">
         <d:ListView.ItemsSource>
@@ -87,8 +87,7 @@ ListViews — это популярный способ отображения д
 
 В этом примере показано ListView три TextCells в средстве предварительного просмотра XAML. Вы можете изменить `x:String` к существующей модели данных в проекте.
 
-Ссылаться на [Монтеманьо Hanselman.Forms приложения](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) более сложный пример.
-
+Ссылаться на [Монтеманьо Hanselman.Forms приложения](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) более сложный пример.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>Альтернативный способ. Жестко задавать статические ViewModel
 

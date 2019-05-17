@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370655"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804897"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-`StackLayout` организует представлений в одномерный массив строки («стек»), горизонтально или вертикально. Представления в `StackLayout` можно изменять, зависит от пространства в компоновку, используя параметры макета. Размещение определяется порядок представления добавленных для макета и параметры макета представлений.
+[StackLayout](xref:Xamarin.Forms.StackLayout) организует представлений в одномерный массив строки («стек»), горизонтально или вертикально. Представления в `StackLayout` можно изменять, зависит от пространства в компоновку, используя параметры макета. Размещение определяется порядок представления добавленных для макета и параметры макета представлений.
 
 [![](stack-layout-images/layouts-sml.png "Макеты Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "макеты Xamarin.Forms")
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: cf04c3e89e3effdd317fa98beb46f9075a1defcd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7a5c09bfe46b9e775383889e07fd93094ba9bf68
+ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61301970"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65731525"
 ---
 # <a name="native-views-in-xaml"></a>Исходные представления в XAML
 
@@ -37,8 +37,8 @@ _Исходные представления из iOS, Android и универс
 1. Добавление `xmlns` объявление пространства имен в файле XAML для пространства имен, которое содержит собственного представления.
 1. Создайте экземпляр собственного представления в файле XAML.
 
-> [!NOTE]
-> XAMLC должен быть отключен для всех страниц XAML, использующие собственные представления.
+> [!IMPORTANT]
+> Скомпилированный XAML необходимо отключить для всех страниц XAML, использующие собственные представления. Это можно сделать с помощью оформления вспомогательном классе страницы XAML с `[XamlCompilation(XamlCompilationOptions.Skip)]` атрибута. Дополнительные сведения о компиляции XAML, см. в разделе [компиляции XAML в Xamarin.Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Чтобы сослаться на собственного представления из файла кода, необходимо использовать общий ресурс проекта (SAP) и поместите код конкретной платформы с помощью директив условной компиляции. Дополнительные сведения см. в разделе [ссылки на исходные представления из кода](#native_view_code).
 

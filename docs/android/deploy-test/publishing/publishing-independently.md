@@ -6,25 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 04cc7a911290d3c2f92fc1bbef474822d2891b2b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d7135611c3c0a13794b1ed538d62a0788227b7bd
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114558"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977751"
 ---
 # <a name="publishing-independently"></a>Независимая публикация
 
 Приложение можно опубликовать, не обращаясь в существующие Магазины Android. В этом разделе рассматриваются альтернативные методы публикации и уровни лицензирования Xamarin.Android.
 
-
 ## <a name="xamarin-licensing"></a>Лицензирование Xamarin
 
-Для разработки, развертывания и распространения приложений Xamarin.Android доступны четыре лицензии:
+Для разработки, развертывания и распространения приложений Xamarin.Android доступны такие лицензии:
 
 -   **Visual Studio Community** &ndash; для учащихся, небольших команд и разработчиков OSS, использующих Windows.
 
--   **Visual Studio Professional** &ndash; для индивидуальных разработчиков или небольших команд (только для Windows). Эта лицензия предлагает стандартную подписку или подписку на облачную службу, доступ к дополнительным материалам Xamarin University и не накладывает ограничения на использование.
+-   **Visual Studio Professional** &ndash; для индивидуальных разработчиков или небольших команд (только для Windows). Эта лицензия предлагает стандартную подписку или подписку на облачную службу и не имеет ограничений на использование.
 
 -   **Visual Studio Enterprise** &ndash; для команд любого размера (только для Windows). Эта лицензия предлагает возможности корпоративного уровня, стандартную подписку или подписку на облачную службу.
 

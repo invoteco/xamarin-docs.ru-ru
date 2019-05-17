@@ -1,15 +1,16 @@
 ---
-ms.openlocfilehash: 6f72c951f28940c5382e3ed321cbd982cdafcfbf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.topic: include
+ms.openlocfilehash: 5a3909fd766225a1d87cdb1ba12992dd6b27bb33
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61303316"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64987084"
 ---
 ||Рекомендованное|Примечания|
 |---|---|---|
-|**Операционная система**|macOS High Sierra|Для [Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876) требуется macOS High Sierra или более новая версия.|
-|**Xamarin.iOS**|Пакет SDK для iOS 11,|Пакет SDK для iOS 11 поставляется вместе с [Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876).|
+|**Операционная система**|macOS Mojave (10.14)|Для [Xcode 10](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes) требуется macOS High Sierra (10.13) или последующей версии.|
+|**Xamarin.iOS**|Пакет SDK для iOS 12|Пакет SDK для iOS 12 поставляется вместе с Xcode 10.|
 |**Xamarin.Android**|Android 6.0 / API уровня 23|При необходимости вы можете создавать приложения для старых версий Android, используя последнюю версию пакета SDK, или выполняя сборку со старыми версиями пакета SDK.|
 |**Xamarin.Forms**||<ul><li>Приложение Xamarin.Forms, созданное в macOS, может включать проекты iOS, Android и macOS, на которые распространяются описанные выше требования пакета SDK.</li><li>Проекты Xamarin.Forms для Windows или UWP не могут быть созданы в macOS.</li></ul>|
-|**Xamarin.Mac**|Пакет SDK для macOS High Sierra (10.13)|Пакет SDK для macOS High Sierra (10.13) поставляется вместе с [Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876) и требуется для сборки приложений, которые используют новейшие API macOS.|
+|**Xamarin.Mac**|пакет SDK для macOS Mojave (10.14)|Пакет SDK для macOS Mojave (10.14) поставляется вместе с Xcode 10. Он необходим для сборки приложений, которые используют новейшие API macOS.|

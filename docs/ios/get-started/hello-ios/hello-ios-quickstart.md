@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: ed59f32711bae56672d1d7f114fbb80a906d67ce
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0b063619387d9984e24f6987234605b626289e2d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855293"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978301"
 ---
 # <a name="hello-ios--quickstart"></a>Краткое руководство по приложению "Привет, iOS"
 
@@ -26,7 +26,7 @@ ms.locfileid: "58855293"
 
 Для разработки на iOS с помощью Xamarin требуется следующее:
 
-- Компьютер Mac под управлением macOS HIgh Sierra 10.13 или более поздней версии.
+- Компьютер Mac под управлением macOS High Sierra 10.13 или последующей версии.
 - Последняя версия Xcode и пакета SDK iOS из [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 
 ::: zone pivot="macos"

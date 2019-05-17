@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: c4098bfe40a252da2adbe7a7a2cd4c0f105ad1c8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e74231133c0a52ba0fe4e5589f09aab15e1b9924
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050417"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978604"
 ---
 # <a name="right-to-left-localization"></a>Локализация справа налево
 
@@ -150,7 +150,7 @@ using System.Resources;
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Поддержка написания справа налево в Xamarin.Forms 3.0 с использованием [Xamarin University](https://university.xamarin.com/)**
+**Видеоролик о поддержке написания справа налево в Xamarin.Forms 3.0**
 
 ## <a name="related-links"></a>Связанные ссылки
 

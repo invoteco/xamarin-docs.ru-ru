@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
-ms.date: 07/24/2018
-ms.openlocfilehash: c03e9782fe80a88c70df6b7780c43778f673d10d
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.date: 04/26/2018
+ms.openlocfilehash: 3f51b61cd7dcc3c7b17881b3576aa2c22a45e470
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854565"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64987085"
 ---
 # <a name="system-requirements"></a>Требования к системе
 
@@ -45,7 +45,7 @@ ms.locfileid: "58854565"
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> Xamarin.Mac 4.8 поддерживает только macOS 10.9 () или более поздней версии.
+> Xamarin.Mac 4.8 поддерживает только macOS 10.9 (Mavericks) и последующие версии.
 > Предыдущие версии Xamarin.Mac поддерживали macOS 10.7 или более поздней версии, но в этих версиях macOS нет достаточной инфраструктуры TLS для поддержки TLS 1.2. Для macOS 10.7 или macOS 10.8 используйте Xamarin.Mac 4.6 или более ранней версии.
 
 ## <a name="windows-requirements"></a>Требования к Windows

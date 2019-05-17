@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: cdca5294ea12bf8907ea5f6242efea00f384e77e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 7eeb1aebd0a95ae9ecbcc39e70a3931ee76fb0ce
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048287"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Базовые классы отрисовщика и собственные элементы управления
 
@@ -30,6 +30,9 @@ _Каждый элемент управления Xamarin.Forms имеет со�
 - **iOS** — Xamarin.Forms.Maps.iOS
 - **Android** — Xamarin.Forms.Maps.Android
 - **Универсальная платформа Windows (UWP)**  — Xamarin.Forms.Maps.UWP
+
+> [!NOTE]
+> Сведения о создании пользовательских отрисовщиков для приложений оболочки см. в статье [о пользовательских отрисовщиках в оболочке Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
 ## <a name="pages"></a>Pages
 
@@ -104,7 +107,3 @@ _Каждый элемент управления Xamarin.Forms имеет со�
 ## <a name="summary"></a>Сводка
 
 В этой статье были перечислены классы отрисовщиков и собственных элементов управления, которые реализуют каждую страницу, макет, представление и ячейку Xamarin.Forms. Каждый элемент управления Xamarin.Forms имеет сопутствующий отрисовщик для каждой платформы, который создает экземпляр собственного элемента управления.
-
-## <a name="related-links"></a>Связанные ссылки
-
-- [Пользовательские отрисовщики (видео от Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

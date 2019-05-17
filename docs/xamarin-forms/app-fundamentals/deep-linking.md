@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208060"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978506"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Индексирование приложения и создание прямых ссылок
 
@@ -23,7 +23,7 @@ _Индексирование приложения позволяет прило
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**Создание прямых ссылок с помощью Xamarin.Forms и Azure — статья [Xamarin University](https://university.xamarin.com/)**
+**Видеоролик о создании прямых ссылок с помощью Xamarin.Forms и Azure**
 
 
 Функции индексирования приложения и создания прямых ссылок Xamarin.Forms предоставляют API для публикации метаданных для индексирования приложения при навигации пользователей по приложениям. Затем индексированное содержимое становится доступным для поиска в поиске Spotlight, Google или поиске в Интернете. При касании результата поиска, который содержит прямую ссылку, будет активировано событие, обрабатываемое приложением. Оно, как правило, используется для перехода на страницу, на которую ссылается прямая ссылка.

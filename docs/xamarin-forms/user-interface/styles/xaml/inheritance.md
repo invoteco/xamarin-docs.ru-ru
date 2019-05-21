@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: bef48db93ae76346802b6569080bb1e54e3e51b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c0b38453c5e573a13a51b6c001d3324936a8b7fb
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61394017"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926876"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Наследование стилей в Xamarin.Forms
 
@@ -62,7 +62,7 @@ _Стили можно наследовать другие стили, чтоб�
 </ContentPage>
 ```
 
-`baseStyle` Целевых объектов [ `View` ](xref:Xamarin.Forms.View) экземпляров и задает [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) и [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) свойства. `baseStyle` Не задано непосредственно в любом элементе управления. Вместо этого `labelStyle` и `buttonStyle` наследовать от него, параметров дополнительных связываемые свойства. `labelStyle` И `buttonStyle` применяются к [ `Label` ](xref:Xamarin.Forms.Label) экземпляров и [ `Button` ](xref:Xamarin.Forms.Button) экземпляра, установив их [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) свойства. Это приводит к появлению, показано на следующем снимке экрана:
+`baseStyle` Целевых объектов [ `View` ](xref:Xamarin.Forms.View) экземпляров и задает [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) и [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) свойства. `baseStyle` Не задано непосредственно в любом элементе управления. Вместо этого `labelStyle` и `buttonStyle` наследовать от него, параметров дополнительных связываемые свойства. `labelStyle` И `buttonStyle` применяются к [ `Label` ](xref:Xamarin.Forms.Label) экземпляров и [ `Button` ](xref:Xamarin.Forms.Button) экземпляра, установив их [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства. Это приводит к появлению, показано на следующем снимке экрана:
 
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
@@ -110,7 +110,7 @@ _Стили можно наследовать другие стили, чтоб�
 
 ## <a name="style-inheritance-in-c35"></a>Наследование стилей в C&#35;
 
-Эквивалент C# страницы, где [ `Style` ](xref:Xamarin.Forms.Style) экземпляров назначенные непосредственно [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) необходимых элементов управления, показан в следующем примере кода:
+Эквивалент C# страницы, где [ `Style` ](xref:Xamarin.Forms.Style) экземпляров назначенные непосредственно [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) необходимых элементов управления, показан в следующем примере кода:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -153,7 +153,7 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-`baseStyle` Целевых объектов [ `View` ](xref:Xamarin.Forms.View) экземпляров и задает [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) и [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) свойства. `baseStyle` Не задано непосредственно в любом элементе управления. Вместо этого `labelStyle` и `buttonStyle` наследовать от него, параметров дополнительных связываемые свойства. `labelStyle` И `buttonStyle` применяются к [ `Label` ](xref:Xamarin.Forms.Label) экземпляров и [ `Button` ](xref:Xamarin.Forms.Button) экземпляра, установив их [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) свойства.
+`baseStyle` Целевых объектов [ `View` ](xref:Xamarin.Forms.View) экземпляров и задает [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) и [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) свойства. `baseStyle` Не задано непосредственно в любом элементе управления. Вместо этого `labelStyle` и `buttonStyle` наследовать от него, параметров дополнительных связываемые свойства. `labelStyle` И `buttonStyle` применяются к [ `Label` ](xref:Xamarin.Forms.Label) экземпляров и [ `Button` ](xref:Xamarin.Forms.Button) экземпляра, установив их [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства.
 
 ## <a name="related-links"></a>Связанные ссылки
 

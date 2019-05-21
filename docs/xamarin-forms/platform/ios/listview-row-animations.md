@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2019
-ms.openlocfilehash: 50480f5b21c6f0c855ff6f9aa22b6126c6a6787c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac71be25492866b1cf2b12d3343c2f4095fc738d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945717"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925792"
 ---
 # <a name="listview-row-animations-on-ios"></a>ListView строка анимаций в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Эта определяет специфические для платформы iOS ли строка анимаций отключены при [ `ListView` ](xref:Xamarin.Forms.ListView) обновляется коллекция элементов. Он используется в XAML, задав `ListView.RowAnimationsEnabled` свойство, используемое для `false`:
 
@@ -48,6 +48,6 @@ listView.On<iOS>().SetRowAnimationsEnabled(false);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

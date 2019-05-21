@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d2a94347448af031f50341729d77c7385225d107
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 59b9025b58af4d7080d0506d4994cb72bf4f096d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60855055"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924752"
 ---
 # <a name="listview-selectionmode-on-windows"></a>ListView SelectionMode в Windows
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 На универсальной платформе Windows, по умолчанию Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView) использует собственные `ItemClick` событий реагировать на взаимодействие, а не собственного `Tapped` событий. Она предоставляет возможности, специальных возможностей, позволяющих работать с Windows экранного диктора и клавиатуры `ListView`. Тем не менее, но также и отображает все жесты касания внутри `ListView` вышел из строя.
 
@@ -57,6 +57,6 @@ listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Inaccessible);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

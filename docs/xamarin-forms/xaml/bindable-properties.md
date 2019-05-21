@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 0251d06ff68185990ed8b7acb46389c59c71a99a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d3e1c8a2b17ba41e3c9d212948f42023c15205ac
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075225"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926231"
 ---
 # <a name="bindable-properties"></a>Привязываемые свойства
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _В Xamarin.Forms функциональные возможности параметров среды выполнения (CLR) расширен с помощью свойства связывания. Может быть привязано — это специальный тип свойства, где значение свойства отслеживается системой свойств Xamarin.Forms. В этой статье содержатся вводные привязываемые свойства, а также показано, как создавать и использовать их._
 
@@ -226,7 +226,7 @@ public static readonly BindableProperty SizeProperty =
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пространства имен языка XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Чтобы команда поведение события (пример)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [Чтобы команда поведение события (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [Обратный вызов проверки (пример)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
 - [Приведение значение обратного вызова (пример)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)

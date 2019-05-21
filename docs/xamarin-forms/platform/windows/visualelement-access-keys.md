@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: f14014b257ee5061b6dd074719c3ca27577c6013
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60854952"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926852"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Ключи доступа VisualElement на Windows
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Ключи доступа, сочетания клавиш, повышении практичности и доступности приложений на универсальной платформе Windows (UWP), предоставляя интуитивно понятного для пользователей, для быстрого перехода и взаимодействия с приложения видимого пользовательского интерфейса клавиатуры, а не с помощью сенсорного ввода или мышь. Они являются сочетаниями клавишу Alt и один или несколько буквенно-цифровых ключей, обычно нажата последовательно. Сочетания клавиш автоматически поддерживаются для ключей доступа, использующих один буквенно-цифровой символ.
 
@@ -104,6 +104,6 @@ button4.On<Windows>()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

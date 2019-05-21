@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 69c730462d6b277f8ec5a4eb7390aaeb50575a39
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 04cbdaac50b0ea77659d7c495dcd1a9e6d43335c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857562"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926985"
 ---
 # <a name="platform-specifics"></a>Особенности платформы
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 _Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов._
 
@@ -277,7 +277,7 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [ShadowPlatformSpecific (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 - [Особенности платформы iOS](~/xamarin-forms/platform/ios/index.md)
 - [Android особенностей платформы](~/xamarin-forms/platform/android/index.md)

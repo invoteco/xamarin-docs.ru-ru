@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: a78911a13ca3682a18b0911d020d98445b4f560c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afeae9d893b2ebe161943286d348f7a7a1074b0b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371002"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925385"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Параметры макета в Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutOptions/)
 
 _Каждое представление Xamarin.Forms имеет HorizontalOptions и VerticalOptions свойства, типа LayoutOptions. В этой статье объясняется влияние каждого значения LayoutOptions на выравнивание и расширения представления._
 
@@ -160,5 +160,5 @@ Content = new StackLayout
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [LayoutOptions (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+- [LayoutOptions (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutOptions/)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

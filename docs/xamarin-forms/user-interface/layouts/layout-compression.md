@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 4609593337cc0d003c5b35ef4570f11e27b14f7b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4b37435c9cec7549c04c35a81ec31d3a2236e7c1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371757"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925474"
 ---
 # <a name="layout-compression"></a>Сжатие макета
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutCompression/)
 
 _Сжатие макета позволяет удалить указанные макеты из визуального дерева с целью повышения скорости отрисовки страниц. В этой статье объясняется, как включить сжатие макета и необходимые преимущества для использования._
 
@@ -123,4 +123,4 @@ CompressedLayout.SetIsHeadless(stackLayout, true);
 
 - [Создание пользовательского макета](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Быстрые отрисовщики](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)
+- [LayoutCompression (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutCompression/)

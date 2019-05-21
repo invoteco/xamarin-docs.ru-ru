@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 130f4e3efdd7b3792f6458ad28fc85654e6e38c8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c1fb596abb580cf42edda21ab71f2c70de59a547
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857436"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924562"
 ---
 # <a name="attached-properties"></a>Вложенные свойства
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 
 _Присоединенное свойство — это специальный тип привязки свойства, определенные в одном классе, но присоединен к другим объектам и распознается в XAML как атрибут, содержащий класс и имя свойства, разделенные точкой. В этой статье содержатся вводные присоединенных свойств и показано, как создавать и использовать их._
 
@@ -126,7 +126,7 @@ ShadowEffect.SetHasShadow (label, true);
 </Style>
 ```
 
-[ `Style` ](xref:Xamarin.Forms.Style) Могут применяться к [ `Label` ](xref:Xamarin.Forms.Label) , задав его [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) свойства `Style` экземпляра с помощью `StaticResource`расширения разметки, как показано в следующем примере кода:
+[ `Style` ](xref:Xamarin.Forms.Style) Могут применяться к [ `Label` ](xref:Xamarin.Forms.Label) , задав его [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства `Style` экземпляра с помощью `StaticResource`расширения разметки, как показано в следующем примере кода:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -147,6 +147,6 @@ ShadowEffect.SetHasShadow (label, true);
 
 - [Привязываемые свойства](~/xamarin-forms/xaml/bindable-properties.md)
 - [Пространства имен языка XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Эффект тени (пример)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Эффект тени (пример)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

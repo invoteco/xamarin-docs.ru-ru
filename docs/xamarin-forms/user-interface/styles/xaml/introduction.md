@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 4048ec78d48b810b39d46fbcb7708860c478cce3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc0173df1d4318af7db945d1c5ed6654282e31f5
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023434"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926998"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Введение в стили Xamarin.Forms
 
@@ -107,7 +107,7 @@ public class NoStylesPageCS : ContentPage
 
 Каждый [ `Style` ](xref:Xamarin.Forms.Style) экземпляр может быть *явные*, или *неявное*:
 
-- *Явные* [ `Style` ](xref:Xamarin.Forms.Style) экземпляр определяется путем указания [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) и `x:Key` значение, а также задать целевого элемента [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) свойства `x:Key` ссылки. Дополнительные сведения о *явные* стили, см. в разделе [явные стили](~/xamarin-forms/user-interface/styles/explicit.md).
+- *Явные* [ `Style` ](xref:Xamarin.Forms.Style) экземпляр определяется путем указания [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) и `x:Key` значение, а также задать целевого элемента [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства `x:Key` ссылки. Дополнительные сведения о *явные* стили, см. в разделе [явные стили](~/xamarin-forms/user-interface/styles/explicit.md).
 - *Неявное* [ `Style` ](xref:Xamarin.Forms.Style) экземпляр определяется путем указания только [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType). `Style` Экземпляр затем автоматически применяются ко всем элементам этого типа. Обратите внимание, подклассы `TargetType` , не получают автоматически `Style` применения. Дополнительные сведения о *неявное* стили, см. в разделе [неявные стили](~/xamarin-forms/user-interface/styles/implicit.md).
 
 При создании [ `Style` ](xref:Xamarin.Forms.Style), [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) свойство всегда является обязательным. В следующем коде показано в примере *явные* стиля (Примечание `x:Key`) создан в XAML:

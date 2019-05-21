@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 56109cc9064de4b995e75ceb967abe4995504660
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b9f39cd33d660999cfa00f2003edab7af731ca7c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953400"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925717"
 ---
 # <a name="main-thread-control-updates-on-ios"></a>Основной поток управления обновлений на iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Этот iOS платформы позволяет структурой элементов управления и Подготовка к просмотру обновлений, выполняемых в основном потоке, а не выполняется в фоновом потоке. Он понадобится редко, но в некоторых случаях может предотвратить сбои. Его использования в XAML, задав `Application.HandleControlUpdatesOnMainThread` свойство, используемое для `true`:
 
@@ -42,6 +42,6 @@ Xamarin.Forms.Application.Current.On<iOS>().SetHandleControlUpdatesOnMainThread(
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

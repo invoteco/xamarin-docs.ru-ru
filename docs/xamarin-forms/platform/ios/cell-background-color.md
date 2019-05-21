@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 396e674bb3e5642f7c54455ee9e30ba5bf232f18
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b1e2fe534c8b7d0c3346a18d1b82d797e52dba1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61030088"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926763"
 ---
 # <a name="cell-background-color-on-ios"></a>Цвет фона ячейки в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Этот iOS платформы задает цвет фона по умолчанию [ `Cell` ](xref:Xamarin.Forms.Cell) экземпляров. Он используется в XAML, задав `Cell.DefaultBackgroundColor` свойство, используемое для [ `Color` ](xref:Xamarin.Forms.Color):
 
@@ -60,6 +60,6 @@ viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

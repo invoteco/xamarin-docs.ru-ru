@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 21c4c289a3fd30db890be6811875412ce4913cf5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: aeefa22c8a17611579c56b3105be860c12a8711c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250639"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925379"
 ---
 # <a name="picker-item-selection-on-ios"></a>Выбор элемента в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Этот iOS специфические для платформы контролирует, когда происходит выбор элементов в [ `Picker` ](xref:Xamarin.Forms.Picker), позволяя пользователю указать, что выбор элементов срабатывает при просмотре элементов в элементе управления или только в том случае, когда **сделать** нажата кнопка. Он используется в XAML, задав `Picker.UpdateMode` присоединенное свойство в значение `UpdateMode` перечисления:
 
@@ -67,6 +67,6 @@ switch (picker.On<iOS>().UpdateMode())
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

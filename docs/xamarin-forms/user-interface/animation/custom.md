@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 157e044fd96cdeff87d8fb56029fe625b7312bf4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 012fd6e5d9650a58018ccb7456ce48dcc0048405
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345744"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925008"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Пользовательской анимации в Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/custom/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Custom/)
 
 _Класс анимации является стандартным блоком все Xamarin.Forms анимации, с помощью методов расширения в классе ViewExtensions, создание одного или нескольких объектов анимации. В этой статье показано, как использовать класс анимации для создания и Отмена анимации, синхронизации нескольких анимаций и создание анимации, анимации свойств, не анимировано в существующие методы анимации._
 
@@ -184,6 +184,6 @@ await boxView.ColorTo(Color.Blue, Color.Red, c => boxView.Color = c, 4000);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пользовательской анимации (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/custom/)
+- [Пользовательской анимации (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Custom/)
 - [Анимация](xref:Xamarin.Forms.Animation)
 - [AnimationExtensions](xref:Xamarin.Forms.AnimationExtensions)

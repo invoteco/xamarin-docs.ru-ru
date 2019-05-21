@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 98eba6dea1fb528aa15a1fb242b0fb0eb7dada56
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66bd6c1ca2ccc3e5335a790950cbf1a792a7df82
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61258616"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925408"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Видимость полосы состояние страницы в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Этот iOS платформы используется для задания видимость строки состояния на [ `Page` ](xref:Xamarin.Forms.Page), а также возможность управлять как строка состояния или исключается из `Page`. Он используется в XAML, задав `Page.PrefersStatusBarHidden` присоединенное свойство в значение `StatusBarHiddenMode` перечисления и при необходимости `Page.PreferredStatusBarUpdateAnimation` присоединенное свойство в значение `UIStatusBarAnimation` перечисления:
 
@@ -53,6 +53,6 @@ On<iOS>().SetPrefersStatusBarHidden(StatusBarHiddenMode.True)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 3b23a1a07741cd048ea034b2b39b5f9cde902dc6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bab38ebbef7083fa55e9942ad6826566e3ea5fdb
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61020197"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971083"
 ---
 # <a name="xamarinforms-button"></a>Кнопка Xamarin.Forms
 
@@ -429,7 +429,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 > [!NOTE]
 > `Button` Класс также имеет [ `Margin` ](xref:Xamarin.Forms.View.Margin) и [ `Padding` ](xref:Xamarin.Forms.Button.Padding) свойства, которые управляют поведением макета `Button`. Дополнительные сведения см. в разделе [поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-Последствия шесть из этих свойств (за исключением `FontFamily` и `FontAttributes`) показаны в **внешний вид кнопки** страницы. Еще одно свойство, [ `Image` ](xref:Xamarin.Forms.Button.Image), рассматривается в разделе [ **с помощью точечных рисунков с кнопкой**](#image-button).
+Последствия шесть из этих свойств (за исключением `FontFamily` и `FontAttributes`) показаны в **внешний вид кнопки** страницы. Еще одно свойство, [ `Image` ](xref:Xamarin.Forms.Button.ImageSource), рассматривается в разделе [ **с помощью точечных рисунков с кнопкой**](#image-button).
 
 Все представления и данные привязки в **внешний вид кнопки** страницы определены в файле XAML:
 
@@ -748,9 +748,9 @@ public partial class ToggleButtonDemoPage : ContentPage
 
 ## <a name="using-bitmaps-with-buttons"></a>С помощью точечных рисунков с кнопками
 
-`Button` Класс определяет [ `Image` ](xref:Xamarin.Forms.Button.Image) свойство, которое позволяет отображать растровое изображение на `Button`, отдельно или в сочетании с текстом. Можно также указать расположение изображения и текста.
+`Button` Класс определяет [ `ImageSource` ](xref:Xamarin.Forms.Button.Image) свойство, которое позволяет отображать растровое изображение на `Button`, отдельно или в сочетании с текстом. Можно также указать расположение изображения и текста.
 
-`Image` Свойство имеет тип [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), что означает, что точечные рисунки должны храниться в качестве ресурсов в проекты для отдельных платформ, а не в проекте библиотеки .NET Standard.
+`ImageSource` Свойство имеет тип [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), что означает, что точечные рисунки могут быть загружены из файла, внедренного ресурса, URI или потока.
 
 Каждой платформы, поддерживаемых Xamarin.Forms позволяет образов для сохранения в несколько размеров для различных разрешением различных устройств, которые приложение может работать на. Эти несколько точечные рисунки имеют с именем или хранятся таким образом, что операционной системы можно выбрать наиболее подходящий для видео устройство разрешением экрана.
 
@@ -781,7 +781,7 @@ public partial class ToggleButtonDemoPage : ContentPage
 
 Все они были переданы **действие при построении** из **содержимого**.
 
-Можно указать как `Text` и `Image` свойства, располагаются на `Button` с помощью [ `ContentLayout` ](xref:Xamarin.Forms.Button.ContentLayout) свойство `Button`. Это свойство имеет тип [ `ButtonContentLayout` ](xref:Xamarin.Forms.Button.ButtonContentLayout), который является классом, внедренные в `Button`. [Конструктор](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) имеет два аргумента:
+Можно указать как `Text` и `ImageSource` свойства, располагаются на `Button` с помощью [ `ContentLayout` ](xref:Xamarin.Forms.Button.ContentLayout) свойство `Button`. Это свойство имеет тип [ `ButtonContentLayout` ](xref:Xamarin.Forms.Button.ButtonContentLayout), который является классом, внедренные в `Button`. [Конструктор](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) имеет два аргумента:
 
 - Является членом [ `ImagePosition` ](xref:Xamarin.Forms.Button.ButtonContentLayout.ImagePosition) перечисления: `Left`, `Top`, `Right`, или `Bottom` , указывающее, как растровое изображение отображается относительно текста.
 - Объект `double` интервалы между точечный рисунок и текст.
@@ -794,7 +794,7 @@ public partial class ToggleButtonDemoPage : ContentPage
 Button button = new Button
 {
     Text = "button text",
-    Image = new FileImageSource
+    ImageSource = new FileImageSource
     {
         File = "image filename"
     },
@@ -806,7 +806,7 @@ Button button = new Button
 
 ```xaml
 <Button Text="button text"
-        Image="image filename"
+        ImageSource="image filename"
         ContentLayout="Right, 20" />
 ```
 
@@ -816,22 +816,22 @@ Button button = new Button
 
 ```xaml
 <Button>
-    <Button.Image>
+    <Button.ImageSource>
         <OnPlatform x:TypeArguments="FileImageSource">
             <On Platform="iOS, Android" Value="MonkeyFace.png" />
             <On Platform="UWP" Value="Assets/MonkeyFace.png" />
         </OnPlatform>
-    </Button.Image>
+    </Button.ImageSource>
 </Button>
 ```
 
 Если точечные рисунки универсальной платформы Windows хранятся в корневом каталоге проекта, можно значительно упростить эту разметку:
 
 ```xaml
-<Button Image="MonkeyFace.png" />
+<Button ImageSource="MonkeyFace.png" />
 ```
 
-Чтобы избежать много повторяющихся разметки в **ImageButtonDemo.xaml** файл, неявным `Style` также определяется для задания `Image` свойство. Это `Style` автоматически применяется к пяти других `Button` элементов. Ниже приведен полный файл XAML.
+Чтобы избежать много повторяющихся разметки в **ImageButtonDemo.xaml** файл, неявным `Style` также определяется для задания `ImageSource` свойство. Это `Style` автоматически применяется к пяти других `Button` элементов. Ниже приведен полный файл XAML.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -844,7 +844,7 @@ Button button = new Button
 
         <FlexLayout.Resources>
             <Style TargetType="Button">
-                <Setter Property="Image">
+                <Setter Property="ImageSource">
                     <OnPlatform x:TypeArguments="FileImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
@@ -854,12 +854,12 @@ Button button = new Button
         </FlexLayout.Resources>
 
         <Button>
-            <Button.Image>
+            <Button.ImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
-            </Button.Image>
+            </Button.ImageSource>
         </Button>
 
         <Button Text="Default" />

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e65124df4b20a50091ad93e18621f8e6707ebbe
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250795"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970550"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms "ползунок"
 
@@ -49,10 +49,10 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) является гори�
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) панель цветов слева от бегунка.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) панель Цвет правой стороны от бегунка.
 - [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) Это цвет бегунка.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) Представляет изображение, используемое для ползунка, тип [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource).
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) Представляет изображение, используемое для ползунка, тип [ `ImageSource` ](xref:Xamarin.Forms.ImageSource).
 
 > [!NOTE]
-> `ThumbColor` И `ThumbImage` свойства являются взаимоисключающими. Если заданы оба свойства, `ThumbImage` свойство будет иметь приоритет.
+> `ThumbColor` И `ThumbImageSource` свойства являются взаимоисключающими. Если заданы оба свойства, `ThumbImageSource` свойство будет иметь приоритет.
 
 ## <a name="basic-slider-code-and-markup"></a>Базовый код ползунок и разметки
 

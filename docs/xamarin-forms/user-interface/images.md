@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 996e6469347a50523964a5b855804b0041ff8d21
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61041137"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970982"
 ---
 # <a name="images-in-xamarinforms"></a>Образы в Xamarin.Forms
 
@@ -102,13 +102,13 @@ Retina версии образа до iOS 9, можно поместить в **
 
 Некоторые элементы управления имеют свойства, которые отображают изображения, такие как:
 
-- [`Page`](xref:Xamarin.Forms.Page) — Любой странице тип, производный от `Page` имеет [ `Icon` ](xref:Xamarin.Forms.Page.Icon) и [ `BackgroundImage` ](xref:Xamarin.Forms.Page.BackgroundImage) свойства, которые можно назначить ссылку на локальный файл. При определенных обстоятельствах, например, когда [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) отображает [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), отображается значок, если поддерживается платформой.
+- [`Page`](xref:Xamarin.Forms.Page) — Любой странице тип, производный от `Page` имеет [ `IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) и [ `BackgroundImageSource` ](xref:Xamarin.Forms.Page.BackgroundImageSource) свойства, которые можно назначить файла, внедренного ресурса, URI или потока. При определенных обстоятельствах, например, когда [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) отображает [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), отображается значок, если поддерживается платформой.
 
   > [!IMPORTANT]
-  > В iOS [ `Page.Icon` ](xref:Xamarin.Forms.Page.Icon) свойство не может быть заполнен из образа в наборе средств каталога изображений. Вместо этого загрузки изображений значков для `Page.Icon` свойства из **ресурсы** папки в проекте iOS.
+  > В iOS [ `Page.IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) свойство не может быть заполнен из образа в наборе средств каталога изображений. Вместо этого загрузки изображений значков для `Page.IconImageSource` свойства из файла, внедренного ресурса, URI или потока.
 
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) — Имеет [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) свойство, которое можно присвоить ссылку на локальный файл.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell) — Имеет [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) свойство, которое может быть присвоено изображения, полученные из локального файла, внедренного ресурса или URI.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) — Имеет [ `IconImageSource` ](xref:Xamarin.Forms.MenuItem.IconImageSource) свойство, которое можно задать на изображение, которое загружается из файла, внедренного ресурса, URI или потока.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) — Имеет [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) свойство, которое может быть присвоено изображения, полученные из файла, внедренного ресурса, URI или потока.
 
 ## <a name="embedded-images"></a>Внедренные изображения
 

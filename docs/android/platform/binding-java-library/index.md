@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957451"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970214"
 ---
 # <a name="binding-a-java-library"></a>Привязка библиотеки Java
 
@@ -70,7 +70,7 @@ using Com.Company.Package;
 
 * **Существуют ли любых внешних зависимостей для библиотеки?** &ndash; Любые зависимости Java, необходимые для библиотеки Android должен быть включен в проект Xamarin.Android, как **ReferenceJar** или как **EmbeddedReferenceJar**. Все собственные сборки необходимо добавить в проект привязки, как **EmbeddedNativeLibrary**.  
 
-* **Какая версия Android API поддерживает целевой библиотеки Android?** &ndash; Невозможно «понизить» уровня Android API; Убедитесь, что проект привязки Xamarin.Android предназначен тот же API, уровень (или выше) как библиотеки Android.
+* **Какая версия Android API-интерфейса не Android целевой библиотеки?** &ndash; Невозможно «понизить» уровня Android API; Убедитесь, что проект привязки Xamarin.Android предназначен тот же API, уровень (или выше) как библиотеки Android.
 
 * **Какую версию JDK использовалась для компиляции библиотеки?** &ndash; Ошибок привязки может возникнуть, если библиотеки Android создана с помощью другой версии JDK, чем используется для Xamarin.Android. Если это возможно выполните повторную компиляцию библиотеки Android, используя ту же версию JDK, который используется для установки Xamarin.Android.
 

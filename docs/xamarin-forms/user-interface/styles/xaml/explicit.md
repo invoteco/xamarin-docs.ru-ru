@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 12420f0559d27becb839307d6a1ed4489c895e7d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7a149a41a6e50d3b18da166d9c7cb61e36f2d0e7
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926885"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970454"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Явные стили в Xamarin.Forms
 
@@ -27,7 +27,7 @@ _Явный стиль — это приложения, выборочно пр�
 В следующем коде показано в примере *явные* стили, объявленных в XAML, на странице `ResourceDictionary` и применены на страницу [ `Label` ](xref:Xamarin.Forms.Label) экземпляров:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelRedStyle" TargetType="Label">
@@ -75,7 +75,7 @@ _Явный стиль — это приложения, выборочно пр�
 В дополнение к созданию *явные* стили на уровне страницы, они также могут создаваться на уровне управления, как показано в следующем примере кода:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>

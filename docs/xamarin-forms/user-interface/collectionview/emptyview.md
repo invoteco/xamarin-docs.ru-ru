@@ -7,43 +7,41 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 78e9ddcb1d9dd91dadea94016b206867ac9508e6
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: b5d368a091248ec4cbec3930b878580cf6d18fa8
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048196"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971124"
 ---
 # <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
 
-![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
-
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
-`CollectionView` определяет следующие свойства, которые могут использоваться для предоставления отзывов пользователей, при отсутствии данных для отображения:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства, которые могут использоваться для предоставления отзывов пользователей, при отсутствии данных для отображения:
 
-- `EmptyView`, типа `object`, строку, привязки или представление, которое будет, которые отображаются после `ItemsSource` свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство `null` или пустым. Значение по умолчанию — `null`.
-- `EmptyViewTemplate`, типа [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), шаблон, используемый для форматирования указанного `EmptyView`. Значение по умолчанию — `null`.
+- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), типа `object`, строку, привязки или представление, которое будет, которые отображаются после [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство `null` или пустым. Значение по умолчанию — `null`.
+- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), типа [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), шаблон, используемый для форматирования указанного `EmptyView`. Значение по умолчанию — `null`.
 
 Эти свойства поддерживаются [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) объектов, что означает, что свойства могут быть целями привязки данных.
 
-Сценарии использования основной параметр `EmptyView` свойства при отображении отзывы пользователей, когда операция фильтрации на `CollectionView` дает нет данных и отображение отзывы пользователей, пока данные извлекаются из веб-службы.
+Основных варианта применения параметра [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) свойства при отображении отзывы пользователей, когда операция фильтрации на [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) выдает нет данных и отображение отзывов пользователей при данные извлекаются из веб-службы.
 
 > [!NOTE]
-> `EmptyView` Может быть установлено для представления, включающего интерактивное содержимое, если это необходимо.
+> [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) Может быть установлено для представления, включающего интерактивное содержимое, если это необходимо.
 
 Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>Отображение строки в том случае, когда данные недоступны
 
-`EmptyView` Свойство может устанавливаться в строку, которая будет отображается, когда `ItemsSource` свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство `null` или пустым. Следующий XAML показан пример такого сценария.
+[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) Свойство может устанавливаться в строку, которая будет отображается, когда [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство является `null` или пустым. Следующий XAML показан пример такого сценария.
 
 ```xaml
 <CollectionView ItemsSource="{Binding EmptyMonkeys}"
                 EmptyView="No items to display" />
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -53,13 +51,13 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 ```
 
-Результатом является то, что, так как коллекции с привязкой данных `null`, задать строку в качестве `EmptyView` отображается значение свойства:
+Результатом является то, что, так как коллекции с привязкой данных `null`, задать строку в качестве [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) отображается значение свойства:
 
 [![Снимок экрана CollectionView вертикальный список с пустым представления текста, в iOS и Android](emptyview-images/null-itemssource.png "CollectionView вертикального списка с пустым представления текста")](emptyview-images/null-itemssource-large.png#lightbox "CollectionView вертикального списка с пустым текстом представление")
 
 ## <a name="display-views-when-data-is-unavailable"></a>Отображение представлений в том случае, когда данные недоступны
 
-`EmptyView` Может быть установлено на представление, которое будет иметь отображается, когда `ItemsSource` свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство `null` или пустым. Это может быть одно представление или представление, содержащее несколько дочерних представлений. В следующем примере показан XAML `EmptyView` свойство присвоено представление, содержащее несколько дочерних представлений:
+[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) Может быть установлено на представление, которое будет иметь отображается, когда [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство является `null` или пустым. Это может быть одно представление или представление, содержащее несколько дочерних представлений. В следующем примере показан XAML `EmptyView` свойство присвоено представление, содержащее несколько дочерних представлений:
 
 ```xaml
 <StackLayout Margin="20">
@@ -92,7 +90,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 </StackLayout>
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -110,13 +108,13 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции `CollectionView` фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) задать в качестве `EmptyView` отображается значение свойства:
+При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) задать в качестве [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) отображается значение свойства:
 
 [![Снимок экрана CollectionView вертикальный список с помощью пользовательских пустое представление, в iOS и Android](emptyview-images/filter-multiple-views.png "CollectionView вертикального списка с помощью пользовательского представления пустой")](emptyview-images/filter-multiple-views-large.png#lightbox "CollectionView вертикального списка с пользовательским пустое представление")
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Отобразить шаблонного пользовательского типа, когда данные недоступны
 
-`EmptyView` Может быть установлено для пользовательского типа, шаблон которого — отображается, когда `ItemsSource` свойство `null`, или когда коллекции, заданный параметром `ItemsSource` свойство является `null` или пустой. `EmptyViewTemplate` Свойству может быть присвоено [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) , определяющий внешний вид `EmptyView`. Следующий XAML показан пример такого сценария.
+[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) Может быть установлено для пользовательского типа, шаблон которого — отображается, когда [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) свойство `null`, или когда коллекции, заданный параметром `ItemsSource`свойство `null` или пустым. [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) Свойству может быть присвоено [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) , определяющий внешний вид `EmptyView`. Следующий XAML показан пример такого сценария.
 
 ```xaml
 <StackLayout Margin="20">
@@ -147,7 +145,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </StackLayout>
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -176,16 +174,16 @@ public class FilterData : BindableObject
 }
 ```
 
-`EmptyView` Свойству `FilterData` объекта и `Filter` свойство данных привязывает к [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции `CollectionView` фильтруется по условию поиска хранимых в `Filter` свойство. Если данные не дает операции фильтрации [ `Label` ](xref:Xamarin.Forms.Label) определенные в [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), для которой включено как `EmptyViewTemplate` отображается значение свойства:
+[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) Свойству `FilterData` объекта и `Filter` свойство данных привязывает к [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) фильтруется по условию поиска хранимых в `Filter` свойство. Если данные не дает операции фильтрации [ `Label` ](xref:Xamarin.Forms.Label) определенные в [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), для которой включено как [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) значение свойства отображается:
 
 [![Снимок экрана CollectionView вертикальный список с помощью шаблона пустое представление, в iOS и Android](emptyview-images/emptyviewtemplate.png "CollectionView вертикального списка с помощью шаблона пустое представление")](emptyview-images/emptyviewtemplate-large.png#lightbox "CollectionView вертикального списка с пустое представление шаблона")
 
 > [!NOTE]
-> При отображении шаблонного пользовательского типа, когда данные недоступны, `EmptyViewTemplate` свойству может быть присвоено представление, содержащее несколько дочерних представлений.
+> При отображении шаблонного пользовательского типа, когда данные недоступны, [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) свойству может быть присвоено представление, содержащее несколько дочерних представлений.
 
 ## <a name="choose-an-emptyview-at-runtime"></a>Выберите EmptyView во время выполнения
 
-Представления, которые будут отображаться как `EmptyView` при недоступности данных, могут быть определены как [ `ContentView` ](xref:Xamarin.Forms.ContentView) объекты в [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). `EmptyView` Затем можно задать свойства для конкретного `ContentView`в зависимости от бизнес-логику, во время выполнения. В следующем примере XAML показан пример такого сценария:
+Представления, которые будут отображаться как [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) при недоступности данных, могут быть определены как [ `ContentView` ](xref:Xamarin.Forms.ContentView) объекты в [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). `EmptyView` Затем можно задать свойства для конкретного `ContentView`в зависимости от бизнес-логику, во время выполнения. В следующем примере XAML показан пример такого сценария:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -242,7 +240,7 @@ public class FilterData : BindableObject
 </ContentPage>
 ```
 
-Этот XAML определяет два [ `ContentView` ](xref:Xamarin.Forms.ContentView) объектов на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), с помощью [ `Switch` ](xref:Xamarin.Forms.Switch) объекта, управление которой `ContentView` как будет установлен объект `EmptyView` значение свойства. Когда [ `Switch` ](xref:Xamarin.Forms.Switch) переключена, `OnEmptyViewSwitchToggled` выполнения обработчика событий `ToggleEmptyView` метод:
+Этот XAML определяет два [ `ContentView` ](xref:Xamarin.Forms.ContentView) объектов на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), с помощью [ `Switch` ](xref:Xamarin.Forms.Switch) объекта, управление которой `ContentView` как будет установлен объект [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) значение свойства. Когда [ `Switch` ](xref:Xamarin.Forms.Switch) переключена, `OnEmptyViewSwitchToggled` выполнения обработчика событий `ToggleEmptyView` метод:
 
 ```csharp
 void ToggleEmptyView(bool isToggled)
@@ -251,7 +249,7 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-`ToggleEmptyView` Метода задает `EmptyView` свойство `collectionView` одному из двух [ `ContentView` ](xref:Xamarin.Forms.ContentView) объектов, хранящихся в [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), основываясь на значении [ `Switch.IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) свойство. При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции `CollectionView` фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации `ContentView` объекта в качестве `EmptyView` свойство отображается:
+`ToggleEmptyView` Метода задает [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) свойство `collectionView` одному из двух [ `ContentView` ](xref:Xamarin.Forms.ContentView) объектов, хранящихся в [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), основываясь на значении [ `Switch.IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) свойство. При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации `ContentView` объекта в качестве `EmptyView` свойство отображается:
 
 [![Снимок экрана CollectionView вертикальный список с местами пустой представлениями, iOS и Android](emptyview-images/swap.png "CollectionView вертикального списка с местами пустой представлениями")](emptyview-images/swap-large.png#lightbox "CollectionView вертикального списка с поменять местами пустой представления")
 
@@ -259,7 +257,7 @@ void ToggleEmptyView(bool isToggled)
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Выберите EmptyViewTemplate во время выполнения
 
-Внешний вид `EmptyView` можно выбрать во время выполнения в зависимости от его значения, задав `CollectionView.EmptyViewTemplate` свойства [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) объекта:
+Внешний вид [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) можно выбрать во время выполнения в зависимости от его значения, задав [ `CollectionView.EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) свойства [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) объекта:
 
 ```xaml
 <ContentPage ...
@@ -290,7 +288,7 @@ void ToggleEmptyView(bool isToggled)
 </ContentPage>
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -302,9 +300,9 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-`EmptyView` Свойству [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство и `EmptyViewTemplate` свойству `SearchTermDataTemplateSelector` объекта.
+[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) Свойству [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство и [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) свойству `SearchTermDataTemplateSelector` объекта.
 
-При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции `CollectionView` фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) определяется `SearchTermDataTemplateSelector` объекта задано как `EmptyViewTemplate` свойства и отображается.
+При [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, отображаемого элементом коллекции [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) фильтруется по условию поиска хранимых в [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) свойство. Если данные не дает операции фильтрации [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) определяется `SearchTermDataTemplateSelector` объекта задано как [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) свойства и отображается.
 
 В следующем примере показан `SearchTermDataTemplateSelector` класса:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: 471e09f236be505190ad2c08169bd445dcfca0a3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365679"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971021"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>функции платформы iOS в Xamarin.Forms
 
@@ -45,6 +45,7 @@ ms.locfileid: "61365679"
 - Управление, является ли прозрачные панели навигации. Дополнительные сведения см. в разделе [полупрозрачность панель навигации в iOS](navigation-bar-translucent.md).
 - Управление цветом ли текст строки состояния на [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) настраивается в соответствии с яркость панели навигации. Дополнительные сведения см. в разделе [режим цвет текста панели NavigationPage в iOS](status-bar-text-color.md).
 - Управление, отображается ли заголовок страницы как крупным заголовком на панели навигации страницы. Дополнительные сведения см. в разделе [крупных названий страниц в iOS](page-large-title.md).
+- Задание видимости домашней индикатора на [ `Page` ](xref:Xamarin.Forms.Page). Дополнительные сведения см. в разделе [Главная видимость индикатора на устройстве iOS](page-home-indicator.md).
 - Установка видимость полосы состояния [ `Page` ](xref:Xamarin.Forms.Page). Дополнительные сведения см. в разделе [видимость полосы состояние страницы в iOS](page-status-bar-visibility.md).
 - Обеспечение содержимое этой страницы находится на области экрана, которое безопасно для всех устройств iOS. Дополнительные сведения см. в разделе [безопасном направляющая макета области в iOS](page-safe-area-layout.md).
 - Настройка стиля представления модальные страницы на iPad. Дополнительные сведения см. в разделе [iPad стиль презентации модальные страницы](ipad-page-presentation-style.md).

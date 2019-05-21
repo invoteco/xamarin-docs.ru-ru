@@ -7,16 +7,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 329c139d1f38946527e565980492060e4dc9683e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ad96fa84a9d60aeeaef1cf568a4971f5ffe7a13f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926430"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970618"
 ---
 # <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Панель инструментов TabbedPage размещения и цвет в Android
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+
+> [!IMPORTANT]
+> Особенности платформы, которые установить цвет элемента панели инструментов на [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) устарели и были заменены [ `SelectedTabColor` ](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) и [ `UnselectedTabColor` ](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor)свойства. Дополнительные сведения см. в разделе [Создание TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#creating-a-tabbedpage).
 
 Эти особенности платформы позволяют задать положение и цвет элемента панели инструментов на [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Они используются в XAML, задав [ `TabbedPage.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.ToolbarPlacementProperty) присоединенное свойство в значение [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) перечисления и [ `TabbedPage.BarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarItemColorProperty) и [ `TabbedPage.BarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarSelectedItemColorProperty) присоединенных свойств для [ `Color` ](xref:Xamarin.Forms.Color):
 

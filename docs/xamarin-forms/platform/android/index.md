@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: 3bd606ae87c524202fd5ea7c141223042e90ec1a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dc02fdc8754db4ae97c29ba2a496804b2263abdc
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363049"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970734"
 ---
 # <a name="android-platform-features"></a>Возможности на платформе Android
 
@@ -34,6 +34,7 @@ ms.locfileid: "61363049"
 - Включение тени `ImageButton`. Дополнительные сведения см. в разделе [ImageButton Drop тени в Android](imagebutton-drop-shadow.md).
 - Включение быстрой прокрутке в [ `ListView` ](xref:Xamarin.Forms.ListView) Дополнительные сведения см. в разделе [ListView быстрой прокрутке в Android](listview-fast-scrolling.md).
 - Управление ли [ `WebView` ](xref:Xamarin.Forms.WebView) можно отобразить смешанное содержимое. Дополнительные сведения см. в разделе [WebView смешанного содержимого в Android](webview-mixed-content.md).
+- Включение масштабирования на [ `WebView` ](xref:Xamarin.Forms.WebView). Дополнительные сведения см. в разделе [масштаб веб-представление Android](webview-zoom-controls.md).
 
 Следующие функциональные возможности платформы предоставляется для страницы Xamarin.Forms в Android:
 

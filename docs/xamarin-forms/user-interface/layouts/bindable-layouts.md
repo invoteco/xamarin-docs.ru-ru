@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61321577"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970965"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Привязываемые макетов в Xamarin.Forms
 
@@ -31,8 +31,10 @@ ms.locfileid: "61321577"
 
 `Layout<T>` Предоставляет [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) коллекции, к которому добавляются дочерние элементы макета. При `BinableLayout.ItemsSource` свойство коллекции элементов и служба подключен к [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-производном классе, каждый элемент в коллекции добавляется `Layout<T>.Children` коллекции для отображения макета. `Layout<T>`-Производном классе затем обновит его дочерние представления, при изменении коллекции. Дополнительные сведения о цикле макета Xamarin.Forms см. в разделе [Создание пользовательского макета](~/xamarin-forms/user-interface/layouts/custom.md).
 
+Привязываемые макеты следует использовать только в том случае, когда коллекция элементов для отображения небольших и прокрутку и выбор не требуется. Во время прокрутки может быть предоставлено упаковки привязываемых макета в [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), это не рекомендуется, поскольку привязываемых макетов не хватает виртуализацию пользовательского интерфейса. Прокрутка требуется, если прокручиваемые представление, которое включает виртуализацию пользовательского интерфейса, такие как [ `ListView` ](xref:Xamarin.Forms.ListView) или [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), следует использовать. Чтобы наблюдать за Эта рекомендация может привести к проблемам с производительностью.
+
 > [!IMPORTANT]
-> Привязываемые макеты следует использовать только в том случае, когда коллекция элементов для отображения небольших и прокрутку и выбор не требуется. Во время прокрутки может быть предоставлено упаковки привязываемых макета в [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), это не рекомендуется, поскольку привязываемых макетов не хватает виртуализацию пользовательского интерфейса. Прокрутка требуется, если прокручиваемые представление, которое включает виртуализацию пользовательского интерфейса, такие как [ `ListView` ](xref:Xamarin.Forms.ListView) или `CollectionView`, следует использовать. Чтобы наблюдать за Эта рекомендация может привести к проблемам с производительностью.
+>Хотя технически возможно, для присоединения макете привязываемые к любому классу макет, который является производным от [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) класс, не всегда удобно сделать, особенно для [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) , [ `Grid` ](xref:Xamarin.Forms.Grid), и [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) классы. Например, рассмотрим ситуацию, в которой хотите отображать коллекцию данных в [ `Grid` ](xref:Xamarin.Forms.Grid) с помощью связывания макета, где каждый элемент в коллекции является объект содержащий несколько свойств. Каждая строка в `Grid` должен отображать объект из коллекции, с соответствующими столбцами `Grid` отображения одного из свойств объекта. Так как [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) для связывания макета может содержать только один объект, она необходима для этого объекта является классом макет, содержащий несколько представлений, что каждый отображения одного из свойств объекта в определенном `Grid` столбца. Хотя этот сценарий можно осознать с макетами привязки, это приводит к родительской `Grid` содержащий дочерний элемент `Grid` для каждого элемента в привязанной коллекции, который является очень неэффективным и проблемных использования `Grid` макета.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Заполнение макете связывания с данными
 
@@ -42,7 +44,7 @@ ms.locfileid: "61321577"
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 IEnumerable<string> items = ...;
@@ -72,7 +74,7 @@ BindableLayout.SetItemsSource(grid, items);
 </StackLayout>
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 DataTemplate circleImageTemplate = ...;
@@ -97,7 +99,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
             ... />
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 DataTemplateSelector dataTemplateSelector = new TechItemTemplateSelector { ... };

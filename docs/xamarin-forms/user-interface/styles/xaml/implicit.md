@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 67b8bac62cacb091323d084e1c7cec9accc30844
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0be5c788b5be3d01234cc9a3124fa6a01ded2394
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61394345"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971130"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Неявные стили в Xamarin.Forms
 
@@ -27,7 +27,7 @@ _Неявный стиль, которое используется для вс�
 В следующем коде показано в примере *неявное* стиль, объявленных в XAML, на странице `ResourceDictionary`и применяется к странице [ `Entry` ](xref:Xamarin.Forms.Entry) экземпляров:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
@@ -62,7 +62,7 @@ _Неявный стиль, которое используется для вс�
 В дополнение к созданию *неявное* стили на уровне страницы, они также могут создаваться на уровне управления, как показано в следующем примере кода:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>
@@ -135,7 +135,7 @@ public class ImplicitStylesPageCS : ContentPage
 
 Поместив этот стиль на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) приведет к его применяется ко всем [ `Button` ](xref:Xamarin.Forms.Button) экземпляров на странице, а также любых элементов управления, которые являются производными от `Button`. Тем не менее если [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) свойство отображается как не задано, стиль будет применяться только к `Button` экземпляров.
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 var buttonStyle = new Style(typeof(Button))

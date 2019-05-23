@@ -7,20 +7,28 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 2ee7b2c203251e519af088a550e7e26f30aa62c8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 889c78ea6849cdd094d34ed0cf74ceebd33ce51d
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971102"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005137"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Общие сведения о Xamarin.Forms CollectionView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
+
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) Просмотр для представления списков данных с помощью спецификации другой макет. Оно предоставляет предоставляют более гибкий и эффективной альтернативой для [ `ListView` ](xref:Xamarin.Forms.ListView). Например, ниже снимках экрана, `CollectionView` , использующий два столбца вертикальную сетку, и что позволяет выделение нескольких элементов:
 
 [![Снимок экрана: макет CollectionView вертикальной сетки, в iOS и Android](introduction-images/verticalgrid-multipleselection.png "CollectionView вертикальную сетку макета Выбор нескольких элементов")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView вертикальную сетку макета с Выбор нескольких элементов")
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) доступен в Xamarin.Forms 4.0. Тем не менее, он является в настоящее время экспериментальным и может использоваться только, добавив следующую строку кода, чтобы ваши `AppDelegate` класс на iOS или для вашей `MainActivity` класс на устройствах Android, перед вызовом метода `Forms.Init`:
+
+```csharp
+Forms.SetFlags("CollectionView_Experimental");
+```
 
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) доступен только в iOS и Android.
@@ -57,4 +65,4 @@ ms.locfileid: "65971102"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)

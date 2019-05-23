@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b5d368a091248ec4cbec3930b878580cf6d18fa8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 6bf24cb81bbd40c7e3f5b0f65ed2a2af7cbbe98b
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971124"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005326"
 ---
 # <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
+
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства, которые могут использоваться для предоставления отзывов пользователей, при отсутствии данных для отображения:
 
@@ -328,7 +330,7 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 - [Шаблоны Xamarin.Forms данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Словари ресурсов Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Создание Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

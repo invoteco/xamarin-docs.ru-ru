@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: 779b39441893324e38843e036614484443e37574
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: b70a842a2f677bf0343ea7db1e9627fa2087bf71
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971288"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005337"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
@@ -174,7 +174,7 @@ _Представления Xamarin.Forms являются стандартны�
 
 |     |     |
 | --- | --- |
-| [`CollectionView`](xref:Xamarin.Forms.CollectionView) прокручиваемый список элементов доступный для выбора данных, используя спецификации другой макет. Оно предоставляет предоставляют более гибкий и эффективной альтернативой для [ `ListView` ](xref:Xamarin.Forms.ListView). Задайте `ItemsSource` свойство в коллекцию объектов, и набор `ItemTemplate` свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, которые необходимо отформатировать. `SelectionChanged` Событие сигнализирует, что был сделан выбор, который доступен в виде `SelectedItem` свойство.<br /><br />[Руководство по](~/xamarin-forms/user-interface/collectionview/index.md) / [образца](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Пример CollectionView](views-images/CollectionView.png "пример CollectionView")](views-images/CollectionView-Large.png#lightbox "пример CollectionView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
+| [`CollectionView`](xref:Xamarin.Forms.CollectionView) прокручиваемый список элементов доступный для выбора данных, используя спецификации другой макет. Оно предоставляет предоставляют более гибкий и эффективной альтернативой для [ `ListView` ](xref:Xamarin.Forms.ListView). Задайте `ItemsSource` свойство в коллекцию объектов, и набор `ItemTemplate` свойства [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) объект, описывающий, как элементы, которые необходимо отформатировать. `SelectionChanged` Событие сигнализирует, что был сделан выбор, который доступен в виде `SelectedItem` свойство.<br /><br />[Руководство по](~/xamarin-forms/user-interface/collectionview/index.md) / [образца](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/) | [![Пример CollectionView](views-images/CollectionView.png "пример CollectionView")](views-images/CollectionView-Large.png#lightbox "пример CollectionView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />

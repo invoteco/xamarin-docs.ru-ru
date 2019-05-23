@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 68e28fcbe6a64834d3b594f7f639a1cdd990370d
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: d2729250c0f991564ae70ddf6a15b40425ed6c46
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970572"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005269"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView Data
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
+
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства, которые определяют данные для отображения и его внешний вид:
 
@@ -242,7 +244,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 - [Привязка данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Шаблоны Xamarin.Forms данных](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Создание Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

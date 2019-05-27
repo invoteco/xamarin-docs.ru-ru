@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384733"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193811"
 ---
 В Xamarin.Forms есть модальный всплывающий элемент (оповещение), позволяющий выводить предупреждения или задавать простые вопросы пользователю. В этом упражнении вы воспользуетесь методом [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) из класса [`Page`](xref:Xamarin.Forms.Page), чтобы выводить оповещения для пользователя, а также задать простой вопрос.
 
@@ -67,7 +67,7 @@ ms.locfileid: "61384733"
 
     Обратите внимание, что после выбора ответа на вопрос он поступает в окно **вывода** Visual Studio.
 
-    Дополнительные сведения об отображении оповещений см. в разделе [Вывод оповещения](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) в руководстве [Отображение всплывающих окон](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Дополнительные сведения об отображении оповещений см. в разделе [о выводе оповещения](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) в руководстве [по отображению всплывающих окон](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -128,4 +128,4 @@ ms.locfileid: "61384733"
 
     Обратите внимание, что после выбора ответа на вопрос он поступает в окно **вывода** Visual Studio для Mac.
 
-    Дополнительные сведения об отображении оповещений см. в разделе [Вывод оповещения](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) в руководстве [Отображение всплывающих окон](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Дополнительные сведения об отображении оповещений см. в разделе [о выводе оповещения](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) в руководстве [по отображению всплывающих окон](~/xamarin-forms/user-interface/pop-ups.md).

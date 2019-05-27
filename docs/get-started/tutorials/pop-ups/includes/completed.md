@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: eaac96ae4c5b8cb960f52ce635a132f534a5846c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 467855da6a691d1661f04e12f481db83b1848717
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193818"
 ---
 Поздравляем с завершением этого учебника, где вы научились:
 
@@ -22,5 +22,5 @@ ms.locfileid: "61384728"
 ## <a name="related-links"></a>Связанные ссылки
 
 - [PopupsTutorial (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/PopupsTutorial)
-- [Отображение всплывающих элементов (руководство)](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md)
+- [Отображение всплывающих элементов (руководство)](~/xamarin-forms/user-interface/pop-ups.md)
 - [API страницы](xref:Xamarin.Forms.Page)

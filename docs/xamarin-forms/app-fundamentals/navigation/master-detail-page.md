@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: c60eecd5ebd0f518514cd77d8dd963568d1a1d43
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666913"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970915"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Страница "Основной вид и подробности" Xamarin.Forms
 
@@ -111,7 +111,7 @@ public class MainPageCS : MasterDetailPage
              xmlns:local="using:MasterDetailPageNavigation"
              x:Class="MasterDetailPageNavigation.MasterPage"
              Padding="0,40,0,0"
-             Icon="hamburger.png"
+             IconImageSource="hamburger.png"
              Title="Personal Organiser">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
@@ -145,7 +145,7 @@ public class MainPageCS : MasterDetailPage
 
 Объект [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) присваивается свойству [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) для отображения каждого объекта `MasterPageItem`. Объект `DataTemplate` содержит объект [`ViewCell`](xref:Xamarin.Forms.ViewCell), который состоит из объектов [`Image`](xref:Xamarin.Forms.Image) и [`Label`](xref:Xamarin.Forms.Label). Объект [`Image`](xref:Xamarin.Forms.Image) отображает значение свойства `IconSource`, а объект [`Label`](xref:Xamarin.Forms.Label) отображает значение свойства `Title` для каждого объекта `MasterPageItem`.
 
-Для этой страницы заданы свойства [`Title`](xref:Xamarin.Forms.Page.Title) и [`Icon`](xref:Xamarin.Forms.Page.Icon). Если у страницы сведений есть заголовок, на ней появится значок. Чтобы реализовать это в iOS, необходимо упаковать экземпляр страницы сведений в экземпляр [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
+Для этой страницы заданы свойства [`Title`](xref:Xamarin.Forms.Page.Title) и [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource). Если у страницы сведений есть заголовок, на ней появится значок. Чтобы реализовать это в iOS, необходимо упаковать экземпляр страницы сведений в экземпляр [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
 
 > [!NOTE]
 > Для страницы [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) должно быть задано свойство [`Title`](xref:Xamarin.Forms.Page.Title), иначе возникнет исключение.
@@ -198,7 +198,7 @@ public class MasterPageCS : ContentPage
       SeparatorVisibility = SeparatorVisibility.None
     };
 
-    Icon = "hamburger.png";
+    IconImageSource = "hamburger.png";
     Title = "Personal Organiser";
     Content = new StackLayout
     {
@@ -239,7 +239,7 @@ public partial class MainPage : MasterDetailPage
 
 Метод `OnItemSelected` выполняет следующие действия:
 
-- Извлекает объект [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) из экземпляра [`ListView`](xref:Xamarin.Forms.ListView) и, если он не имеет значение `null`, устанавливает в качестве страницы сведений новый экземпляр типа страницы, хранящегося в свойстве `TargetType` объекта `MasterPageItem`. Тип страницы упаковывается в экземпляр [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), чтобы обеспечить возможность ссылаться на значок посредством свойства [`Icon`](xref:Xamarin.Forms.Page.Icon) на объекте `MasterPage`, который отображается на главной странице в iOS.
+- Извлекает объект [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) из экземпляра [`ListView`](xref:Xamarin.Forms.ListView) и, если он не имеет значение `null`, устанавливает в качестве страницы сведений новый экземпляр типа страницы, хранящегося в свойстве `TargetType` объекта `MasterPageItem`. Тип страницы упаковывается в экземпляр [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), чтобы обеспечить возможность ссылаться на значок посредством свойства [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) на объекте `MasterPage`, который отображается на главной странице в iOS.
 - Элемент, выбранный в объекте [`ListView`](xref:Xamarin.Forms.ListView), получает значение `null`. Это позволяет гарантировать, что в следующий раз при отображении объекта `MasterPage` не будет выбран ни один из элементов объекта `ListView`.
 - Для отображения страницы сведений пользователю свойства [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) присваивается значение `false`. Это свойство определяет, отображается ли главная страница или страница сведений. Если оно имеет значение `true`, отображается главная страница. Значение `false` позволяет отобразить страницу сведений.
 

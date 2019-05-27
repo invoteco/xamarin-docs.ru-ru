@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: b9838ddb9771cb6ce757a4080520a5edd720531a
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: e0bc4b988905f03edbc66a252cc47a05c441f2c9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574745"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925831"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Защищенное хранилище
 
@@ -51,7 +51,7 @@ ms.locfileid: "59574745"
     </application>
     ```
 
-2. Создайте новый файл XML с именем **auto_backup_rules.xml** в каталоге **Resources/xml**. Затем настройте следующее содержимое, которое включает все общие параметры, кроме `SecureStorage`:
+2. Создайте файл XML с именем **auto_backup_rules.xml** в каталоге **Resources/xml** с действием сборки **AndroidResource**. Затем настройте следующее содержимое, которое включает все общие параметры, кроме `SecureStorage`:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +132,7 @@ SecureStorage.RemoveAll();
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-[Хранилище ключей Android](https://developer.android.com/training/articles/keystore.html) используется для хранения ключа шифрования, с помощью которого значения шифруются перед сохранением в [общие параметры](https://developer.android.com/training/data-storage/shared-preferences.html) с именем файла **[идентификатор_пакета_приложения].xamarinessentials**.  Ключ, используемый в файле общих параметров, представляет собой _хэш MD5_ от ключа, передаваемого в API-интерфейсы `SecureStorage`.
+[Хранилище ключей Android](https://developer.android.com/training/articles/keystore.html) используется для хранения ключа шифрования, с помощью которого значения шифруются перед сохранением в [общие параметры](https://developer.android.com/training/data-storage/shared-preferences.html) с именем файла **[идентификатор_пакета_приложения].xamarinessentials**.  Ключ (не криптографический, а _ключ_ для _значения_), используемый в файле общих параметров, представляет собой _хэш MD5_ ключа, передаваемого в API `SecureStorage`.
 
 ## <a name="api-level-23-and-higher"></a>API уровня 23 и более поздних версий
 

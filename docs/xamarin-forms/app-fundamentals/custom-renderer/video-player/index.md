@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 1677f86379310ee6d5e0973108f85db2a328cd23
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5b48340233304f44b30fb9083b30be5c6c165b18
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53048835"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925990"
 ---
 # <a name="implementing-a-video-player"></a>Реализация видеопроигрывателя
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 Иногда нужно, чтобы видеофайлы воспроизводились в приложении Xamarin.Forms. В этой серии статей объясняется, как написать пользовательские отрисовщики для iOS, Android и универсальной платформы Windows (UWP) для класса Xamarin.Forms `VideoPlayer`.
 
-В примере [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) все файлы, реализующие и поддерживающие `VideoPlayer`, находятся в папках `FormsVideoLibrary` и идентифицируется с пространством имен `FormsVideoLibrary` или пространствами имен, которые начинаются с `FormsVideoLibrary`. Такая упорядоченность и именование позволяют легко копировать файлы видеопроигрывателя в собственное решение Xamarin.Forms.
+В примере [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) все файлы, реализующие и поддерживающие `VideoPlayer`, находятся в папках `FormsVideoLibrary` и идентифицируется с пространством имен `FormsVideoLibrary` или пространствами имен, которые начинаются с `FormsVideoLibrary`. Такая упорядоченность и именование позволяют легко копировать файлы видеопроигрывателя в собственное решение Xamarin.Forms.
 
 `VideoPlayer` может воспроизводить видео файлы из источников трех типов:
 
@@ -72,4 +72,4 @@ ms.locfileid: "53048835"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

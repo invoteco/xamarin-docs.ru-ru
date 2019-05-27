@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 05ce2536c04306c2881ccc5dfa5e2016c9025b11
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054494"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005216"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Всплывающее меню оболочки Xamarin.Forms
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
-
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Всплывающее меню выполняет роль главного меню для приложения оболочки. Его можно вызвать специальным значком или жестом пальцем от края экрана. Всплывающее меню состоит из необязательного заголовка, вложенных элементов всплывающего меню и необязательных пунктов меню.
 
@@ -183,8 +181,8 @@ Shell.Current.FlyoutIsPresented = false;
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    <views:CatsPage Icon="cat.png" />
-    <views:DogsPage Icon="dog.png" />
+    <views:CatsPage IconImageSource="cat.png" />
+    <views:DogsPage IconImageSource="dog.png" />
 </Shell>
 ```
 
@@ -360,23 +358,18 @@ Shell.Current.CurrentItem = aboutItem;
 > [!NOTE]
 > Класс `MenuItem` имеет событие [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) и свойство [`Command`](xref:Xamarin.Forms.MenuItem.Command). Это означает, что объекты `MenuItem` позволяют выполнять действия в ответ на касание `MenuItem`. Сюда относятся такие сценарии, как навигация и открытие веб-браузера на определенной веб-странице.
 
-Коллекция `Shell.MenuItems` определяет список объектов [`MenuItem`](xref:Xamarin.Forms.MenuItem), которые будут отображаться во всплывающем меню. Эту коллекцию можно заполнить объектами `MenuItem`, как показано в следующем примере:
+Объекты [`MenuItem`](xref:Xamarin.Forms.MenuItem) можно добавить в всплывающее окно, как показано в следующем примере:
 
 ```xaml
-<Shell ...
-       x:Name="self">
+<Shell ...>
     ...            
-    <Shell.MenuItems>
-        <MenuItem Text="Random"
-                  Icon="random.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding RandomPageCommand}" />
-        <MenuItem Text="Help"
-                  Icon="help.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding HelpCommand}"
-                  CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
-    </Shell.MenuItems>    
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
 </Shell>
 ```
 
@@ -384,7 +377,10 @@ Shell.Current.CurrentItem = aboutItem;
 
 [![Снимок экрана всплывающего меню с объектами MenuItem для iOS и Android](flyout-images/flyout.png "Всплывающее меню оболочки с объектами MenuItem")](flyout-images/flyout-large.png#lightbox "Всплывающее меню оболочки с объектами MenuItem")
 
-Первый объект [`MenuItem`](xref:Xamarin.Forms.MenuItem) выполняет `ICommand` с именем `RandomPageCommand`, который ведет на случайную страницу в приложении. Второй объект `MenuItem` выполняет `ICommand` с именем `HelpCommand`, который открывает в веб-браузере URL-адрес, заданный свойством `CommandParameter`. [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для каждого `MenuItem` получает значение производного объекта `Shell`.
+Первый объект [`MenuItem`](xref:Xamarin.Forms.MenuItem) выполняет `ICommand` с именем `RandomPageCommand`, который ведет на случайную страницу в приложении. Второй объект `MenuItem` выполняет `ICommand` с именем `HelpCommand`, который открывает в веб-браузере URL-адрес, заданный свойством `CommandParameter`.
+
+> [!NOTE]
+> [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для каждого элемента `MenuItem` наследуется от производного объекта `Shell`.
 
 ## <a name="define-menuitem-appearance"></a>Определение внешнего вида MenuItem
 
@@ -415,8 +411,8 @@ Shell.Current.CurrentItem = aboutItem;
 [![Снимок экрана шаблонных объектов в MenuItem для iOS и Android](flyout-images/menuitem-templated.png "Шаблонные объекты MenuItem в оболочке")](flyout-images/menuitem-templated-large.png#lightbox "Шаблонные объекты MenuItem в оболочке")
 
 > [!NOTE]
-> Оболочка предоставляет свойства [`Text`](xref:Xamarin.Forms.MenuItem.Text) и [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `MenuItemTemplate`.
+> Оболочка предоставляет свойства [`Text`](xref:Xamarin.Forms.MenuItem.Text) и [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `MenuItemTemplate`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b1709330678a201521fd226d473cd334bcd86f94
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054274"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005169"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Навигация в оболочке Xamarin.Forms
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
-
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Оболочка Xamarin.Forms предоставляет улучшенные возможности навигации по интерфейсу на основе URI, позволяя переходить на любую страницу в приложении без соблюдения строгой иерархии. Кроме того, они также дают возможность перехода назад без необходимости прохода всех страниц в стеке навигации.
 
@@ -274,7 +272,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-Этот пример кода получает выбранного слона в параметре `CollectionView` и переходит по маршруту `elephantdetails`, передавая `elephantName` как параметр запроса. Обратите внимание, что к параметрам запроса навигации применяется URL-кодирование, поэтому "Indian Elephant" передается как "Indian%20Elephant".
+Этот пример кода получает значения выбранного слона в параметре [`CollectionView`](xref:Xamarin.Forms.CollectionView) и переходит по маршруту `elephantdetails`, передавая `elephantName` как параметр запроса. Обратите внимание, что к параметрам запроса навигации применяется URL-кодирование, поэтому "Indian Elephant" передается как "Indian%20Elephant".
 
 Чтобы получать данные, класс той страницы, на которую осуществляется переход, или класс [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) этой страницы должен иметь атрибут `QueryPropertyAttribute` для каждого параметра запроса:
 
@@ -341,4 +339,4 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

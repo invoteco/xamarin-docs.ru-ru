@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0ed4d86054ada0918feccb123ac3a0de8ccf899b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870304"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926717"
 ---
 # <a name="customizing-a-map-pin"></a>Настройка закрепления карты
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
 
 _В этой статье содержатся сведения о создании настраиваемого отрисовщика для элемента управления Map, который отображает собственную карту с настраиваемым закреплением и настраиваемым представлением закрепленных данных на каждой платформе._
 
@@ -663,4 +663,4 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 - [Элемент управления Maps](~/xamarin-forms/user-interface/map.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [API карт](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Настраиваемое закрепление (пример)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Настраиваемое закрепление (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)

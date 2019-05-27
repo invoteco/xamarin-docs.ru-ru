@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7bd4a87843852e940da96f688371ddbecbf7e0b4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cdeaae6cb83062f0d84a3605582b9779c9f36145
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153978"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178046"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Основы сообщений расширение приложения в Xamarin.iOS
 
@@ -133,7 +133,7 @@ Apple предлагает тестирование графические ак�
 
 1. Запустите Visual Studio.
 2. Откройте решение, чтобы добавить расширение сообщения приложения.
-3. Выберите ** расширения iOS > расширение iMessage (iOS) ** и щелкните **Далее** кнопки:
+3. Выберите **расширения iOS > расширение iMessage (iOS)** и нажмите кнопку **Далее** кнопки:
 
     [![Выберите расширение iMessage (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 

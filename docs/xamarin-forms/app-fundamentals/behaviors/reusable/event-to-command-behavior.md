@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 1c2aea9a5dead1962cfd4bb71d1a1211e8b98ee9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1bb3f319eb104a7425c3be820f5c91efe300737f
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056711"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925164"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>Повторно используемый EventToCommandBehavior
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _Реакции на события можно использовать для сопоставления команд с элементами управления, которые не были предназначены для взаимодействия с командами. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для выполнения команды при возникновении события._
 
@@ -35,7 +35,7 @@ _Реакции на события можно использовать для �
 - **Converter** — реализация [`IValueConverter`](xref:Xamarin.Forms.IValueConverter), которая изменит формат аргумента события при его передаче между *источником* и *целевым объектом* модулем привязки.
 
 > [!NOTE]
-> `EventToCommandBehavior` — это пользовательский класс, который можно найти в [примере реакции на событие EventToCommand](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/). Он не входит в Xamarin.Forms.
+> `EventToCommandBehavior` — это пользовательский класс, который можно найти в [примере реакции на событие EventToCommand](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/). Он не входит в Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Создание реакции на событие
 
@@ -208,6 +208,6 @@ selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Реакция на событие EventToCommand (пример)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [Реакция на событие EventToCommand (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [Реакция на событие](xref:Xamarin.Forms.Behavior)
 - [Реакция на событие&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 184aa18ac8c0f27ce92a23b06b9dd0364f977abc
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5c67684f7d8cb763d4698de86c904e2887185361
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050888"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925186"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Выделение маршрута на карте
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
 
 _В этой статье содержатся сведения о добавлении наложения в виде ломаной линии на карту. Наложение в виде ломаной линии — это ряд соединенных линейных сегментов, которые обычно используются для отображения маршрута на карте или создания любой необходимой фигуры._
 
@@ -304,6 +304,6 @@ namespace MapOverlay.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Наложение на карте в виде ломаной линии (пример)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
+- [Наложение на карте в виде ломаной линии (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
 - [Настройка закрепления карты](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

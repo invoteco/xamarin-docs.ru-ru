@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 7699b39a6df6c64ae9a481d9171f23dc6a8eba57
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 40f955d39799598093060f3230629a099885e4a2
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054194"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970778"
 ---
 # <a name="xamarinforms-shell"></a>Оболочка Xamarin.Forms
-
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
 
 ## <a name="introductionintroductionmd"></a>[Введение](introduction.md)
 

@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 20d9fb79d03990824dd884b62138a3e29b3ee04f
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: f6662f20485c6671edcb5a1654569cdd8498607e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054484"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005211"
 ---
 # <a name="xamarinforms-shell"></a>Оболочка Xamarin.Forms
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
-
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Оболочка Xamarin.Forms упрощает разработку мобильных приложений, предоставляя основные возможности, которые необходимы для большинства мобильных приложений, такие как:
 
@@ -30,48 +28,7 @@ ms.locfileid: "65054484"
 Кроме того, приложения оболочки получают более высокую скорость отрисовки и снижение потребления памяти.
 
 > [!IMPORTANT]
-> Оболочку можно внедрить в уже существующие приложения для iOS и Android, сразу же получив преимущества улучшения навигации, производительности и расширяемости.
-
-Оболочка сейчас является экспериментальной и может использоваться только путем добавления `Forms.SetFlags("Shell_Experimental");` в ваш проект платформы до вызова метода `Forms.Init`.
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
+> Оболочка Xamarin.Forms доступна только в iOS и Android. Оболочку можно внедрить в уже существующие приложения для iOS и Android, сразу же получив преимущества улучшения навигации, производительности и расширяемости.
 
 ## <a name="shell-navigation-experience"></a>Возможности навигации оболочки
 
@@ -181,11 +138,11 @@ namespace Xaminals
 
 Класс `Shell` определяет следующие свойства, которые определяют внешний вид приложения оболочки:
 
-- Присоединенное свойство `ShellBackgroundColor` с типом `Color` определяет цвет фона для хрома оболочки. Этот цвет не применяется под содержимым оболочки.
-- Присоединенное свойство `ShellDisabledColor` с типом `Color` определяет цвет затененного текста и отключенных значков.
-- Присоединенное свойство `ShellForegroundColor` с типом `Color` определяет цвет теней для текста и значков.
-- Присоединенное свойство `ShellTitleColor` с типом `Color` определяет цвет для заголовка активной страницы.
-- Присоединенное свойство `ShellUnselectedColor` с типом `Color` определяет цвет невыделенного текста и значков для хрома оболочки.
+- Присоединенное свойство `BackgroundColor` с типом `Color` определяет цвет фона для хрома оболочки. Этот цвет не применяется под содержимым оболочки.
+- Присоединенное свойство `DisabledColor` с типом `Color` определяет цвет затененного текста и отключенных значков.
+- Присоединенное свойство `ForegroundColor` с типом `Color` определяет цвет теней для текста и значков.
+- Присоединенное свойство `TitleColor` с типом `Color` определяет цвет для заголовка активной страницы.
+- Присоединенное свойство `UnselectedColor` с типом `Color` определяет цвет невыделенного текста и значков для хрома оболочки.
 
 Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
 
@@ -196,7 +153,6 @@ namespace Xaminals
 Класс `Shell` определяет следующие свойства, которые формируют макет содержимого для приложения оболочки:
 
 - Присоединенное свойство `NavBarIsVisible` с типом `boolean`определяет, будет ли видна панель навигации при отображении страницы. Это свойство задается отдельно для каждой страницы, а по умолчанию используется значение `true`.
-- Присоединенное свойство `SetPaddingInsets` с типом `bool`определяет, будет ли отображаться содержимое страницы под хромом оболочки. Это свойство задается отдельно для каждой страницы, а по умолчанию используется значение `false`.
 - Присоединенное свойство `TabBarIsVisible` с типом `bool`определяет, будет ли видна панель вкладок при отображении страницы. Это свойство задается отдельно для каждой страницы, а по умолчанию используется значение `true`.
 - Присоединенное свойство `TitleView` с типом `View`определяет `TitleView` для страницы. Это свойство задается отдельно для каждой страницы.
 
@@ -204,5 +160,5 @@ namespace Xaminals
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Особые свойства оболочки Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

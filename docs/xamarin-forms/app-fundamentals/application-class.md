@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
-ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
+ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078424"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971219"
 ---
 # <a name="xamarinforms-app-class"></a>Класс App Xamarin.Forms
 
@@ -32,7 +32,9 @@ ms.locfileid: "56078424"
 Чтобы создать класс **App** с помощью XAML, необходимо заменить класс **App** по умолчанию классом **App** XAML и соответствующим кодом программной части, как показано в следующем примере кода:
 
 ```xaml
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Photos.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Photos.App">
 
 </Application>
 ```
@@ -51,7 +53,7 @@ public partial class App : Application
 }
 ```
 
-Помимо задания свойства [`MainPage`](xref:Xamarin.Forms.Application.MainPage), в коде программной части также должен вызываться метод `InitializeComponent` для загрузки и анализа соответствующего кода XAML.
+Помимо задания свойства [`MainPage`](xref:Xamarin.Forms.Application.MainPage), в коде программной части должен вызываться метод `InitializeComponent` для загрузки и анализа соответствующего кода XAML.
 
 ## <a name="mainpage-property"></a>Свойство MainPage
 
@@ -111,8 +113,6 @@ if (Application.Current.Properties.ContainsKey("id"))
 
 Ссылки на использование словаря `Properties` можно найти в главах [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) и [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) книги о **создании мобильных приложений с помощью Xamarin.Forms**, а также в соответствующих [примерах](https://github.com/xamarin/xamarin-forms-book-preview-2).
 
-
-
 ## <a name="the-application-class"></a>Класс Application
 
 Полная реализация класса `Application` приведена ниже для справки:
@@ -143,13 +143,12 @@ public class App : Xamarin.Forms.Application
         Debug.WriteLine ("OnResume");
     }
 }
-
 ```
 
 Затем в каждом проекте конкретной платформы создается экземпляр этого класса, который затем передается в метод `LoadApplication`. Там `MainPage` загружается и отображается для пользователя.
 Код для каждой из платформ приведен в разделах ниже. Последние шаблоны решений Xamarin.Forms уже содержат весь этот код, предварительно настроенный для вашего приложения.
 
-### <a name="ios-project"></a>Проект на платформе iOS
+### <a name="ios-project"></a>Проект iOS
 
 Класс `AppDelegate` iOS наследует от `FormsApplicationDelegate`. Он должен:
 
@@ -173,7 +172,7 @@ public partial class AppDelegate :
 }
 ```
 
-### <a name="android-project"></a>Проект на платформе Android
+### <a name="android-project"></a>Проект Android
 
 Класс `MainActivity` Android наследует от `FormsAppCompatActivity`. В переопределении `OnCreate` метод `LoadApplication` вызывается с помощью экземпляра класса `App`.
 
@@ -193,7 +192,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### <a name="universal-windows-project-uwp-for-windows-10"></a>Универсальный проект Windows (UWP) для Windows 10
+### <a name="universal-windows-project-uwp-for-windows-10"></a>Проект для универсальной платформы Windows (UWP) для Windows 10
 
 Главная страница в проекте UWP должна быть производной от `WindowsPage`:
 

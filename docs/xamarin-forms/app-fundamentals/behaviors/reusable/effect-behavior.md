@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 8c831dfa45c5028e4f1422467bf3be9210452335
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 840fa1b40858ccf3bff15f7027735ce98081d23c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59019377"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925128"
 ---
 # <a name="reusable-effectbehavior"></a>Повторно используемая реакция на событие EffectBehavior
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
 
 _Реакции на события удобно использовать для добавления эффекта в элемент управления, удаления стереотипного эффекта, обработки кода из файлов кода программной части. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для добавления эффекта в элемент управления._
 
@@ -32,7 +32,7 @@ _Реакции на события удобно использовать для
 Дополнительные сведения об эффектах см. в статье [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> `EffectBehavior` — это пользовательский класс, который можно найти в [примере реакции на событие для эффекта](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/). Он не входит в Xamarin.Forms.
+> `EffectBehavior` — это пользовательский класс, который можно найти в [примере реакции на событие для эффекта](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/). Он не входит в Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Создание реакции на событие
 
@@ -169,6 +169,6 @@ label.Behaviors.Add (new EffectBehavior {
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Реакция на событие для эффекта (пример)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+- [Реакция на событие для эффекта (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
 - [Реакция на событие](xref:Xamarin.Forms.Behavior)
 - [Реакция на событие&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

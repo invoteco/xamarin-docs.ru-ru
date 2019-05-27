@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672564"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971249"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Свойства автоматизации в Xamarin.Forms
 
@@ -149,7 +149,7 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-На iOS и универсальной платформе Windows (UWP), чтобы задать текст средства чтения с экрана, который будет произноситься для выключателя в [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), используйте либо свойства `AutomationProperties.Name` и `AutomationProperties.HelpText` класса `MasterDetailPage`, либо свойство `Icon` страницы `Master`.
+На iOS и универсальной платформе Windows (UWP), чтобы задать текст средства чтения с экрана, который будет произноситься для выключателя в [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), используйте либо свойства `AutomationProperties.Name` и `AutomationProperties.HelpText` класса `MasterDetailPage`, либо свойство `IconImageSource` страницы `Master`.
 
 На Android, чтобы задать текст средства чтения с экрана, который будет произноситься для выключателя в [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), добавьте в проект Android следующие строковые ресурсы:
 
@@ -161,11 +161,11 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 </resources>
 ```
 
-Затем назначьте нужную строку свойству `AutomationId` в свойстве `Icon` страницы `Master`:
+Затем назначьте нужную строку свойству `AutomationId` в свойстве `IconImageSource` страницы `Master`:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

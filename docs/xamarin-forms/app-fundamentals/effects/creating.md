@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 0d9f3c9e0608e87258b7f53af3c567155da824d1
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d0b109e03938fde3225c893bc8309448e543944b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782491"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925551"
 ---
 # <a name="creating-an-effect"></a>Создание эффекта
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)
 
 _Эффекты упрощают настройку элемента управления. В этой статье показано, как создать эффект, который изменяет цвет фона элемента управления Entry, когда элемент управления получает фокус._
 
@@ -262,4 +262,4 @@ public HomePageCS ()
 - [Эффект](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [Эффект цвета фона (пример)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
-- [Эффект фокуса (пример)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+- [Эффект фокуса (пример)](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: be7263ad0c9112aa640a4558d7fdbaf2a16ce079
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 650c341ab4b599a4eaf0cab81ba6f9129699e15d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57981683"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926024"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Создание реакций на события Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
 
 _Режимы Xamarin.Forms являются производными от класса Behavior или Behavior&lt;T&gt;. В этой статье содержатся сведения о создании и использовании реакций на события Xamarin.Forms._
 
@@ -174,7 +174,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 </Style>
 ```
 
-Чтобы применить [`Style`](xref:Xamarin.Forms.Style) к элементу управления [`Entry`](xref:Xamarin.Forms.Entry), для его свойства [`Style`](xref:Xamarin.Forms.VisualElement.Style) следует задать значение экземпляра `Style` с помощью расширения разметки `StaticResource`, как показано в следующем примере кода:
+Чтобы применить [`Style`](xref:Xamarin.Forms.Style) к элементу управления [`Entry`](xref:Xamarin.Forms.Entry), для его свойства [`Style`](xref:Xamarin.Forms.NavigableElement.Style) следует задать значение экземпляра `Style` с помощью расширения разметки `StaticResource`, как показано в следующем примере кода:
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" Style="{StaticResource NumericValidationStyle}">
@@ -211,7 +211,7 @@ entry.Behaviors.Clear();
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Реакция на событие Xamarin.Forms (пример)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
-- [Применение реакции на событие Xamarin.Forms с помощью стиля (пример)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
+- [Реакция на событие Xamarin.Forms (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
+- [Применение реакции на событие Xamarin.Forms с помощью стиля (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehaviorStyle/)
 - [Реакция на событие](xref:Xamarin.Forms.Behavior)
 - [Реакция на событие<T>](xref:Xamarin.Forms.Behavior`1)

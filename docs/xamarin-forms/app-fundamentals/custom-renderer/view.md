@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 88be56cae52e881792ec7a187ef7e158790e8a1b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057974"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926595"
 ---
 # <a name="implementing-a-view"></a>Реализация представления
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
 
 _Настраиваемые элементы управления пользовательского интерфейса Xamarin.Forms должны быть производными от класса View, который используется для размещения макетов и элементов управления на экране. Эта статья описывает, как создать настраиваемый отрисовщик для пользовательского элемента управления Xamarin.Forms, который используется для отображения видеопотока для предварительного просмотра с камеры устройства._
 
@@ -56,13 +56,13 @@ public class CameraPreview : View
 }
 ```
 
-Пользовательский элемент управления `CameraPreview` создается в проекте переносимой библиотеки классов (PCL) и определяет API для элемента управления. Пользовательский элемент управления предоставляет свойство `Camera`, используемое для управления отображением видеопотока с передней или задней камеры на устройстве. Если при создании элемента управления значение свойства `Camera` не указано, по умолчанию используется задняя камера.
+Пользовательский элемент управления `CameraPreview` создается в проекте библиотеки .NET Standard и определяет API для элемента управления. Пользовательский элемент управления предоставляет свойство `Camera`, используемое для управления отображением видеопотока с передней или задней камеры на устройстве. Если при создании элемента управления значение свойства `Camera` не указано, по умолчанию используется задняя камера.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Использование пользовательского элемента управления
 
-На пользовательский элемент управления `CameraPreview` можно ссылаться в XAML в проекте PCL, объявив пространство имен для его расположения и используя префикс пространства имен в пользовательском элементе управления. В следующем примере кода показано, как пользовательский элемент управления `CameraPreview` может использоваться страницей XAML:
+На пользовательский элемент управления `CameraPreview` можно ссылаться в XAML в проекте библиотеки .NET Standard, объявив пространство имен для его расположения и используя префикс пространства имен в пользовательском элементе управления. В следующем примере кода показано, как пользовательский элемент управления `CameraPreview` может использоваться страницей XAML.
 
 ```xaml
 <ContentPage ...
@@ -334,4 +334,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CustomRendererView (пример)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+- [CustomRendererView (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)

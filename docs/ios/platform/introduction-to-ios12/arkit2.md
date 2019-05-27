@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 81d9ab12a4b8e8184e0a61dc9b6d53d72004d25c
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399200"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213328"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 в Xamarin.iOS
 
@@ -300,7 +300,7 @@ ARKit 2 поддерживает «окружающей среды тексту�
 Для использования среды текстурирования:
 
 * Ваш [ `SCNMaterial` ](xref:SceneKit.SCNMaterial) необходимо использовать объекты [ `SCNLightingModel.PhysicallyBased` ](xref:SceneKit.SCNLightingModel.PhysicallyBased) и присвойте ей значение в диапазоне от 0 до 1 для [ `Metalness.Contents` ](xref:SceneKit.SCNMaterial.Metalness) и [ `Roughness.Contents` ](xref:SceneKit.SCNMaterialProperty.Contents) и
-* Необходимо задать конфигурацию отслеживания [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [AREnvironmentTexturing.Automatic "](xref:ARKit.AREnvironmentTexturing.Automatic) :
+* Необходимо задать конфигурацию отслеживания [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [ `AREnvironmentTexturing.Automatic` ](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -323,7 +323,7 @@ var configuration = new ARWorldTrackingConfiguration
 
 ### <a name="shared-and-persistent-ar-experiences"></a>Общие и возможности постоянных AR
 
-Является другим основным дополнением к ARKit 2 [ `ARWorldMap` ](xref:ARKit.ARWorldMap) класс, который позволяет совместно использовать или сохранения данных отслеживания мира. Получить текущую карту мира с [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) или [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
+Является другим основным дополнением к ARKit 2 [ `ARWorldMap` ](xref:ARKit.ARWorldMap) класс, который позволяет совместно использовать или сохранения данных отслеживания мира. Получить текущую карту мира с [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) или [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>)` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage

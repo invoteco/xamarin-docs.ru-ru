@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054314"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005162"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Вкладки оболочки Xamarin.Forms
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
-
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Следующим уровнем навигации после всплывающего меню в приложении оболочки является нижняя панель вкладок. Если же всплывающий элемент закрыт, верхним уровнем навигации в приложении считаются вкладки на нижней панели.
 
@@ -112,8 +110,8 @@ ms.locfileid: "65054314"
        x:Class="Xaminals.AppShell"
        FlyoutBehavior="Disabled">
     <FlyoutItem>
-        <views:CatsPage Icon="cat.png" />
-        <views:DogsPage Icon="dog.png" />
+        <views:CatsPage IconImageSource="cat.png" />
+        <views:DogsPage IconImageSource="dog.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -228,7 +226,7 @@ ms.locfileid: "65054314"
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
-        <views:MonkeysPage Icon="monkey.png" />
+        <views:MonkeysPage IconImageSource="monkey.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -268,11 +266,11 @@ ms.locfileid: "65054314"
 
 Класс `Shell` предоставляет следующие свойства, которые определяют внешний вид вкладок:
 
-- Присоединенное свойство `ShellTabBarBackgroundColor` с типом `Color`определяет цвет фона для панели вкладок. Если это свойство не задано, используется значение свойства `ShellBackgroundColor`.
-- Присоединенное свойство `ShellTabBarDisabledColor` с типом `Color`определяет цвет для отключенных вкладок на панели. Если это свойство не задано, используется значение свойства `ShellDisabledColor`.
-- Присоединенное свойство `ShellTabBarForegroundColor` с типом `Color`определяет цвет переднего плана для панели вкладок. Если это свойство не задано, используется значение свойства `ShellForegroundColor`.
-- Присоединенное свойство `ShellTabBarTitleColor` с типом `Color`определяет цвет заголовков для панели вкладок. Если это свойство не задано, используется значение свойства `ShellTitleColor`.
-- Присоединенное свойство `ShellTabBarUnselectedColor` с типом `Color`определяет цвет невыбранных вкладок на панели. Если это свойство не задано, используется значение свойства `ShellUnselectedColor`.
+- Присоединенное свойство `TabBarBackgroundColor` с типом `Color`определяет цвет фона для панели вкладок. Если это свойство не задано, используется значение свойства `BackgroundColor`.
+- Присоединенное свойство `TabBarDisabledColor` с типом `Color`определяет цвет для отключенных вкладок на панели. Если это свойство не задано, используется значение свойства `DisabledColor`.
+- Присоединенное свойство `TabBarForegroundColor` с типом `Color`определяет цвет переднего плана для панели вкладок. Если это свойство не задано, используется значение свойства `ForegroundColor`.
+- Присоединенное свойство `TabBarTitleColor` с типом `Color`определяет цвет заголовков для панели вкладок. Если это свойство не задано, используется значение свойства `TitleColor`.
+- Присоединенное свойство `TabBarUnselectedColor` с типом `Color`определяет цвет невыбранных вкладок на панели. Если это свойство не задано, используется значение свойства `UnselectedColor`.
 
 Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
 
@@ -281,11 +279,11 @@ ms.locfileid: "65054314"
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -294,6 +292,6 @@ ms.locfileid: "65054314"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Навигация в оболочке Xamarin.Forms](navigation.md)
 - [Особые свойства оболочки Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

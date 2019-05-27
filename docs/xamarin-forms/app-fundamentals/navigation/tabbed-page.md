@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329303"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970927"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Страница с вкладками Xamarin.Forms
 
@@ -44,9 +44,18 @@ _Xamarin.Forms TabbedPage состоит из списка вкладок и б�
 
 - В форм-факторах планшетов Windows вкладки видны не всегда, и пользователю требуется провести вниз (или щелкнуть правой кнопкой мыши, если подключена мышь), чтобы просмотреть вкладки в `TabbedPage` (как показано ниже).
 
-![](tabbed-page-images/windows-tabs.png "Вкладки TabbedPage в Windows")
+    ![](tabbed-page-images/windows-tabs.png "Вкладки TabbedPage в Windows")
 
 ## <a name="creating-a-tabbedpage"></a>Создание TabbedPage
+
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) определяет следующие свойства:
+
+- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor) с типом [`Color`](xref:Xamarin.Forms.Color) — цвет фона панели вкладок;
+- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor) с типом [`Color`](xref:Xamarin.Forms.Color) — цвет текста на панели вкладок;
+- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) с типом [`Color`](xref:Xamarin.Forms.Color) — цвет выбранной вкладки;
+- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) с типом [`Color`](xref:Xamarin.Forms.Color) — цвет невыбранной вкладки.
+
+Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть к ним можно применить стиль и их можно указывать в качестве целевых для привязки данных.
 
 Создать [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) можно двумя способами:
 
@@ -70,7 +79,7 @@ _Xamarin.Forms TabbedPage состоит из списка вкладок и б�
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
+    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -86,7 +95,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.Icon = "schedule.png";
+    navigationPage.IconImageSource = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -148,7 +157,7 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -204,7 +213,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        Icon = "monkeyicon.png",
+        IconImageSource = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {

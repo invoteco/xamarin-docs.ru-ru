@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 06b4f4b612d0cb44e467a9da6dbee3194338027d
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 5ddbb6f3d1c1ebf16ca5534b7effd1993c3d8b26
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869966"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804909"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Адрес эл. почты
 
@@ -19,6 +19,9 @@ ms.locfileid: "58869966"
 ## <a name="get-started"></a>Начало работы
 
 [!include[](~/essentials/includes/get-started.md)]
+
+> [!TIP]
+> Чтобы использовать API электронной почты в iOS, запустите его на физическом устройстве, в противном случае будет создано исключение.
 
 ## <a name="using-email"></a>Использование Email
 

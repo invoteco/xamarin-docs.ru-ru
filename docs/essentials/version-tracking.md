@@ -1,18 +1,19 @@
 ---
-title: 'Xamarin.Essentials: VersionTracking'
+title: 'Xamarin.Essentials: Отслеживание версий'
 description: Класс VersionTracking в Xamarin.Essentials позволяет проверить версию и номера сборки приложений, а также просмотреть дополнительные сведения, например, запущено ли приложение впервые или получение сведений о предыдущей сборке для текущей версии и многое другое.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7d3877577523ed17c78fd5d2ad02923bd3d821e2
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 05/28/2019
+ms.custom: video
+ms.openlocfilehash: 3728a209c99712fad6b3dbf9bc59a2c1a3c7bcd5
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898843"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354116"
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: VersionTracking
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Отслеживание версий
 
 Класс **VersionTracking** позволяет проверить версию и номера сборки приложений, а также просмотреть дополнительные сведения, например, запущено ли приложение впервые или получение сведений о предыдущей сборке для текущей версии и многое другое.
 
@@ -80,3 +81,9 @@ var buildHistory = VersionTracking.BuildHistory;
 
 - [Исходный код для отслеживания версий](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
 - [Документация по API отслеживания версий](xref:Xamarin.Essentials.VersionTracking)
+
+## <a name="related-video"></a>Связанные видео
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Version-Tracking-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

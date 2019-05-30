@@ -4,13 +4,14 @@ description: Класс Geocoding в Xamarin.Essentials предоставляе
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: bc08554f0060ca5de8d7ffc90ea5c65463b93f3b
-ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.date: 05/28/2019
+ms.custom: video
+ms.openlocfilehash: 157eb3116f09268790036f8983543114e7a58276
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972602"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354112"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Геокодирование
 
@@ -124,3 +125,9 @@ catch (Exception ex)
 
 - [Исходный код Geocoding](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
 - [Документация по API Geocoding](xref:Xamarin.Essentials.Geocoding)
+
+## <a name="related-video"></a>Связанные видео
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Geocoding-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

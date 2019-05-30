@@ -8,13 +8,13 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 04/02/2019
-ms.openlocfilehash: 5dc37212facbc5b58b807d3fbcba8650a5b065f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/23/2019
+ms.openlocfilehash: 3b25be2c929e0f072af2ff563d49ceaf07cae058
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61352033"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252347"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Создание первого приложения Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Просмотрите это видео и следуйте инструкци
 
 ::: zone pivot="windows"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ## <a name="step-by-step-instructions-for-windows"></a>Пошаговые инструкции для Windows
 
@@ -74,6 +74,12 @@ _Просмотрите это видео и следуйте инструкци
     > [!TIP]
     > Можно создавать и отлаживать приложения iOS из Visual Studio с компьютером Mac, подключенным к сети. Дополнительные сведения см. в [инструкциях по установке](~/ios/get-started/installation/windows/index.md).
 
+## <a name="build-an-ios-app-in-visual-studio-2019"></a>Создание приложения iOS в Visual Studio 2019 г.
+
+В этом видео рассматривается процесс построения и тестирования приложения iOS с помощью Visual Studio 2019 на Windows:
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
+
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
@@ -85,7 +91,7 @@ _Просмотрите это видео и следуйте инструкци
 
 Выполните следующие действия, как показано в видео.
 
-1. Выберите **Файл > Создать > Проект...** или нажмите кнопку **Создать проект...**, а затем выберите **Visual C# > Кроссплатформенные > Мобильное приложение (Xamarin.Forms)**:
+1. Выберите **Файл > Создать > Проект...** или нажмите кнопку **Создать проект...** , а затем выберите **Visual C# > Кроссплатформенные > Мобильное приложение (Xamarin.Forms)** :
 
     [![Мобильное приложение (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 

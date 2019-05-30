@@ -115,6 +115,7 @@
 #### [Создать приложение оболочки](app-fundamentals/shell/create.md)
 #### [Всплывающее меню](app-fundamentals/shell/flyout.md)
 #### [Вкладки](app-fundamentals/shell/tabs.md)
+#### [Конфигурация страницы](app-fundamentals/shell/configuration.md)
 #### [Навигация](app-fundamentals/shell/navigation.md)
 #### [Поиск](app-fundamentals/shell/search.md)
 #### [Пользовательские отрисовщики](app-fundamentals/shell/customrenderers.md)

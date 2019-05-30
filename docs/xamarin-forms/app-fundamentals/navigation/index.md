@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 202f044ebd7dd5b110b94d2aa60eeb7151150607
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f67ab15466da118d12c280d597972d2d11f8e600
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994732"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178113"
 ---
 # <a name="xamarinforms-navigation"></a>Навигация в Xamarin.Forms
 
@@ -39,7 +39,3 @@ Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) пред
 ## <a name="modal-pagesmodalmd"></a>[Модальные страницы](modal.md)
 
 Xamarin.Forms также поддерживает модальные страницы. На модальной странице пользователь должен выполнить отдельную задачу, причем он не может уйти с этой страницы, пока задача не будет выполнена или отменена.
-
-## <a name="displaying-pop-upspop-upsmd"></a>[Отображение всплывающих элементов](pop-ups.md)
-
-В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. Эти элементы интерфейса можно использовать, чтобы задавать пользователям простые вопросы и помогать им выполнять задачи.

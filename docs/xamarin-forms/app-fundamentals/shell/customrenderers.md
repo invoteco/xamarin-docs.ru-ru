@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: ecb68d662c64b65346ffd04f0d3d3cd525533151
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970791"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178031"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Пользовательские отрисовщики в оболочке Xamarin.Forms
 
@@ -42,6 +42,8 @@ ms.locfileid: "65970791"
 | iOS | Android |
 | --- | --- |
 | `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+
+Классы `FlyoutItem` и `TabBar` являются псевдонимами для класса `ShellItem`, а класс `Tab` — для класса `ShellSection`. Таким образом, методы `CreateShellItemRenderer` и `CreateShellSectionRenderer` должны быть переопределены при создании пользовательского отрисовщика для объектов `FlyoutItem` и `Tab` соответственно.
 
 > [!IMPORTANT]
 > Для iOS и Android существуют дополнительные классы отрисовщика оболочки, такие как `ShellSectionRenderer` и `ShellItemRenderer`. Но эти дополнительные классы отрисовщика создаются путем переопределения класса `ShellRenderer`. Это означает, что любое поведение этих дополнительных классов отрисовщика можно переопределить, создавая для них подклассы и экземпляры этого подкласса в соответствующем переопределении производного класса `ShellRenderer`.

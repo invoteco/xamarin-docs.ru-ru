@@ -1,46 +1,50 @@
 ---
 title: Макет оболочки Xamarin.Forms
-description: Следующим уровнем навигации после всплывающего меню в приложении оболочки является нижняя панель вкладок. Если вкладка содержит более одной страницы, перемещение по ним осуществляется с помощью верхней панели вкладок.
+description: Следующим уровнем навигации после всплывающего меню в приложении оболочки является нижняя панель вкладок. Или же навигация по приложению может начинаться с нижней панели вкладок без использования всплывающего меню. В обоих случаях, если нижняя вкладка содержит более одной страницы, перемещение по ним осуществляется с помощью верхней панели вкладок.
 ms.prod: xamarin
 ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/23/2019
+ms.openlocfilehash: cd3bfd9186c87594fc42702e2d62b33e68973db6
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005162"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252297"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Вкладки оболочки Xamarin.Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
-Следующим уровнем навигации после всплывающего меню в приложении оболочки является нижняя панель вкладок. Если же всплывающий элемент закрыт, верхним уровнем навигации в приложении считаются вкладки на нижней панели.
+Когда шаблон навигации для приложения предусматривает всплывающее меню, следующим уровнем навигации в приложении будет нижняя панель вкладок. Кроме того, когда всплывающее меню закрыто, верхним уровнем навигации в приложении будет нижняя панель вкладок.
 
-Каждый объект `FlyoutItem` может содержать один или несколько объектов `Tab`, где каждый объект `Tab` представляет вкладку на нижней панели. Каждый объект `Tab` может содержать один или несколько объектов `ShellContent`, где каждый объект `ShellContent` отображает один объект [`ContentPage`](xref:Xamarin.Forms.ContentPage). Если `Tab` содержит более одного объекта `ShellContent`, перемещение по объектам `ContentPage` осуществляется с помощью верхней панели вкладок.
+Или же навигация по приложению может начинаться с нижней панели вкладок без использования всплывающего меню. В этом случае дочерний элемент объекта `Shell` должен быть объектом `TabBar`, представляющим нижнюю панель вкладок.
 
-В каждом объекте `ContentPage` можно перейти к дополнительным объектам `ContentPage`. Дополнительные сведения о навигации, см. в статье [о навигации в оболочке Xamarin.Forms](navigation.md).
+> [!NOTE]
+> Тип `TabBar` отключает всплывающее меню.
+
+Каждый объект `FlyoutItem` или `TabBar` может содержать один или несколько объектов `Tab`, где каждый объект `Tab` представляет вкладку на нижней панели. Каждый объект `Tab` может содержать один или несколько объектов `ShellContent`, где каждый объект `ShellContent` отображает один объект [`ContentPage`](xref:Xamarin.Forms.ContentPage). Если `Tab` содержит более одного объекта `ShellContent`, перемещение по объектам `ContentPage` осуществляется с помощью верхней панели вкладок.
+
+В каждом объекте [`ContentPage`](xref:Xamarin.Forms.ContentPage) можно перейти к дополнительным объектам `ContentPage`. Дополнительные сведения о навигации, см. в статье [о навигации в оболочке Xamarin.Forms](navigation.md).
 
 ## <a name="single-page-application"></a>Одностраничное приложение
 
-Простейшее приложение оболочки содержит одну страницу, и для его создания достаточно добавить один объект `Tab` в объект `FlyoutItem`. В объекте `Tab` следует присвоить объекту `ShellContent` значение объекта [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Простейшее приложение оболочки содержит одну страницу, и для его создания достаточно добавить один объект `Tab` в объект `TabBar`. В объекте `Tab` следует присвоить объекту `ShellContent` значение объекта [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab>
             <ShellContent>
                 <views:CatsPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -48,12 +52,10 @@ ms.locfileid: "66005162"
 
 [![Снимок экрана с одностраничным приложением оболочки для iOS и Android](tabs-images/single-page-app.png "Одностраничное приложение оболочки")](tabs-images/single-page-app-large.png#lightbox "Одностраничное приложение оболочки")
 
-В одностраничном приложении всплывающий элемент не нужен, поэтому свойство `Shell.FlyoutBehavior` получает значение `Disabled`.
-
 > [!NOTE]
 > При необходимости панель навигации можно спрятать, присвоив присоединенному свойству `Shell.NavBarIsVisible` в объекте [`ContentPage`](xref:Xamarin.Forms.ContentPage) значение `false`.
 
-Оболочка содержит операторы неявного преобразования, которые позволяют упростить визуальную иерархию оболочки без добавления новых представлений в визуальное дерево. Это возможно благодаря тому, что производный объект `Shell` может содержать только объекты `FlyoutItem`, которые могут содержать только объекты `Tab`, которые могут содержать только объекты `ShellContent`. Эти операторы неявного преобразования позволяют удалить из предыдущего примера объекты `FlyoutItem`, `Tab` и `ShellContent`:
+Оболочка содержит операторы неявного преобразования, которые позволяют упростить визуальную иерархию оболочки без добавления новых представлений в визуальное дерево. Это возможно, так как производный объект `Shell` может содержать только объекты `FlyoutItem` или объект `TabBar`, которые могут содержать только объекты `Tab`, которые, в свою очередь, могут содержать только объекты `ShellContent`. Эти операторы неявного преобразования позволяют удалить из предыдущего примера объекты `TabBar`, `Tab` и `ShellContent`:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -65,22 +67,21 @@ ms.locfileid: "66005162"
 </Shell>
 ```
 
-Это неявное преобразование автоматически заключает объект [`ContentPage`](xref:Xamarin.Forms.ContentPage) в объект `ShellContent`, который заключается в объект `Tab`, который заключается в объект `FlyoutItem`.
+Это неявное преобразование автоматически заключает объект [`ContentPage`](xref:Xamarin.Forms.ContentPage) в объект `ShellContent`, который заключается в объект `Tab`, который заключается в объект `FlyoutItem`. В одностраничном приложении всплывающий элемент не нужен, поэтому свойство `Shell.FlyoutBehavior` получает значение `Disabled`.
 
 > [!IMPORTANT]
 > В приложении оболочки каждый [`ContentPage`](xref:Xamarin.Forms.ContentPage), который является дочерним элементом объекта `ShellContent`, создается во время запуска приложения. Такой метод добавления объектов `ShellContent` приводит к созданию дополнительных страниц во время запуска приложения, что может замедлять запуск. Но оболочка может создавать страницы и по требованию, реагируя на переходы. Подробные сведения см. в разделе [об эффективной загрузке страниц](tabs.md#efficient-page-loading).
 
 ## <a name="bottom-tabs"></a>Нижние вкладки
 
-Объекты `Tab` отображаются в виде нижних вкладок, если существует несколько объектов `Tab` в одном объекте `FlyoutItem`:
+Объекты `Tab` отображаются в виде нижних вкладок, если существует несколько объектов `Tab` в одном объекте `TabBar`:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Cats"
              Icon="cat.png">
             <ShellContent>
@@ -93,7 +94,7 @@ ms.locfileid: "66005162"
                 <views:DogsPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -107,12 +108,11 @@ ms.locfileid: "66005162"
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <views:CatsPage IconImageSource="cat.png" />
         <views:DogsPage IconImageSource="dog.png" />
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -131,7 +131,9 @@ ms.locfileid: "66005162"
 - `Icon` с типом `ImageSource` определяет значок, который отображается в частях хрома, не являющихся всплывающими элементами.
 - `IsChecked` с типом `boolean` определяет, выделен ли этот элемент во всплывающем элементе в настоящий момент.
 - `IsEnabled` с типом `boolean` определяет, можно ли выбрать элемент в хроме.
-- `Items` с типом `ShellContentCollection` определяет все содержимое в `Tab`.
+- `IsTabStop` с типом `bool` указывает, включается ли `Tab` в навигацию по клавише TAB. Значение по умолчанию — `true`, а если оно равно `false`, элемент `Tab` игнорируется инфраструктурой навигации по клавише TAB, независимо от значения `TabIndex`.
+- `Items` с типом `IList<ShellContent>` определяет все содержимое в `Tab`.
+- `TabIndex` с типом `int` обозначает порядок, в котором объекты `Tab` получают фокус при переходе пользователя между элементами посредством нажатия клавиши TAB. Это свойство по умолчанию имеет значение 0.
 - `Title` с типом `string` определяет заголовок, отображаемый на вкладке в пользовательском интерфейсе.
 
 ## <a name="shell-content"></a>Содержимое оболочки
@@ -142,9 +144,8 @@ ms.locfileid: "66005162"
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Cats"
              Icon="cat.png">
             <ShellContent>
@@ -157,11 +158,11 @@ ms.locfileid: "66005162"
                 <views:DogsPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
-В каждом объекте `ContentPage` можно перейти к дополнительным объектам `ContentPage`. Дополнительные сведения о навигации, см. в статье [о навигации в оболочке Xamarin.Forms](navigation.md).
+В каждом объекте [`ContentPage`](xref:Xamarin.Forms.ContentPage) можно перейти к дополнительным объектам `ContentPage`. Дополнительные сведения о навигации, см. в статье [о навигации в оболочке Xamarin.Forms](navigation.md).
 
 ### <a name="shellcontent-class"></a>Класс ShellContent
 
@@ -180,15 +181,14 @@ ms.locfileid: "66005162"
 
 ## <a name="bottom-and-top-tabs"></a>Нижние и верхние вкладки
 
-Если `Tab` содержит более одного объекта `ShellContent`, вверху добавляется еще одна панель вкладок, с помощью которой осуществляется перемещение по объектам `ContentPage`:
+Если `Tab` содержит более одного объекта `ShellContent`, вверху добавляется еще одна панель вкладок, с помощью которой осуществляется перемещение по объектам [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Domestic"
              Icon="domestic.png">
             <ShellContent>
@@ -204,7 +204,7 @@ ms.locfileid: "66005162"
                 <views:MonkeysPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -218,16 +218,15 @@ ms.locfileid: "66005162"
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Domestic"
              Icon="domestic.png">
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
         <views:MonkeysPage IconImageSource="monkey.png" />
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -242,8 +241,7 @@ ms.locfileid: "66005162"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
        x:Class="Xaminals.AppShell">    
-    <FlyoutItem Title="Animals"
-                FlyoutDisplayOptions="AsMultipleItems">
+    <TabBar>
         <Tab Title="Domestic"
              Icon="paw.png">
             <ShellContent Title="Cats"
@@ -256,7 +254,7 @@ ms.locfileid: "66005162"
         <ShellContent Title="Monkeys"
                       Icon="monkey.png"
                       ContentTemplate="{DataTemplate views:MonkeysPage}" />
-    </FlyoutItem>    
+    </TabBar>    
 </Shell>
 ```
 
@@ -264,17 +262,17 @@ ms.locfileid: "66005162"
 
 ## <a name="tab-appearance"></a>Внешний вид вкладок
 
-Класс `Shell` предоставляет следующие свойства, которые определяют внешний вид вкладок:
+Класс `Shell` предоставляет следующие присоединенные свойства, которые определяют внешний вид вкладок:
 
-- Присоединенное свойство `TabBarBackgroundColor` с типом `Color`определяет цвет фона для панели вкладок. Если это свойство не задано, используется значение свойства `BackgroundColor`.
-- Присоединенное свойство `TabBarDisabledColor` с типом `Color`определяет цвет для отключенных вкладок на панели. Если это свойство не задано, используется значение свойства `DisabledColor`.
-- Присоединенное свойство `TabBarForegroundColor` с типом `Color`определяет цвет переднего плана для панели вкладок. Если это свойство не задано, используется значение свойства `ForegroundColor`.
-- Присоединенное свойство `TabBarTitleColor` с типом `Color`определяет цвет заголовков для панели вкладок. Если это свойство не задано, используется значение свойства `TitleColor`.
-- Присоединенное свойство `TabBarUnselectedColor` с типом `Color`определяет цвет невыбранных вкладок на панели. Если это свойство не задано, используется значение свойства `UnselectedColor`.
+- `TabBarBackgroundColor` с типом `Color` определяет цвет фона для панели вкладок. Если это свойство не задано, используется значение свойства `BackgroundColor`.
+- `TabBarDisabledColor` с типом `Color` определяет цвет отключенных вкладок на панели. Если это свойство не задано, используется значение свойства `DisabledColor`.
+- `TabBarForegroundColor` с типом `Color` определяет цвет переднего плана для панели вкладок. Если это свойство не задано, используется значение свойства `ForegroundColor`.
+- `TabBarTitleColor` с типом `Color` определяет цвет заголовков для панели вкладок. Если это свойство не задано, используется значение свойства `TitleColor`.
+- `TabBarUnselectedColor` с типом `Color` определяет цвет невыбранных вкладок на панели. Если это свойство не задано, используется значение свойства `UnselectedColor`.
 
-Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
+Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных, а также задавать им стиль.
 
-Это означает, что ко вкладкам можно применить стили XAML. В следующем примере показан стиль XAML, который задает разные свойства для цветов вкладки:
+В следующем примере показан стиль XAML, который задает разные свойства для цветов вкладки:
 
 ```xaml
 <Style x:Key="BaseStyle"
@@ -294,4 +292,4 @@ ms.locfileid: "66005162"
 
 - [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Навигация в оболочке Xamarin.Forms](navigation.md)
-- [Особые свойства оболочки Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
+- [Особые свойства каскадных таблиц стилей оболочки Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

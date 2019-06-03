@@ -6,15 +6,15 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: e97dbb993cb108245636ae459a572e18b13d6817
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/24/2019
+ms.openlocfilehash: df8ecba2527015dd6a7e2fd324b34306295b94d3
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005200"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213318"
 ---
-# <a name="xamarinforms-shell"></a>Оболочка Xamarin.Forms
+# <a name="xamarinforms-shell-search"></a>Поиск в оболочке Xamarin.Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
@@ -22,50 +22,11 @@ ms.locfileid: "66005200"
 
 [![Снимок экрана с SearchHandler в оболочке для iOS и Android](search-images/searchhandler.png "SearchHandler в оболочке")](search-images/searchhandler-large.png#lightbox "SearchHandler в оболочке")
 
-Когда в такое поле поиска вводится запрос, область поисковых подсказок может заполняться данными:
+При вводе запроса в поле поиска обновляется свойство `Query`, а при каждом обновлении выполняется метод `OnQueryChanged`. Этот метод может быть переопределен для заполнения данными области поисковых подсказок:
 
 [![Снимок экрана с результатами поиска SearchHandler в оболочке для iOS и Android](search-images/search-suggestions.png "Результаты поиска SearchHandler в оболочке")](search-images/search-suggestions-large.png#lightbox "Результаты поиска SearchHandler в оболочке")
 
-Приложение может реагировать на выбор результатов поиска, например переходить на другую страницу.
-
-## <a name="searchhandler-class"></a>Класс SearchHandler
-
-Класс `SearchHandler` предоставляет следующие свойства, которые определяют его внешний вид и поведение.
-
-- `ClearIcon` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource) обозначает отображаемый значок очистки поля поиска.
-- `ClearIconHelpText` с типом `string` — доступный текст справки для значка очистки.
-- `ClearIconName` с типом `string` — имя значка очистки, которое используется со средствами чтения с экрана.
-- `ClearPlaceholderCommand` с типом `ICommand`, который выполняется при касании `ClearPlaceholderIcon`.
-- `ClearPlaceholderCommandParameter` с типом `object`, который передается как параметр в `ClearPlaceholderCommand`.
-- `ClearPlaceholderEnabled` с типом `bool`, который определяет возможность выполнять `ClearPlaceholderCommand`. Значение по умолчанию — `true`.
-- `ClearPlaceholderHelpText` с типом `string` — доступный текст справки возле значка заполнителя очистки.
-- `ClearPlaceholderIcon` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource) — значок заполнителя очистки, отображаемый при пустом поле поиска.
-- `ClearPlaceholderName` с типом `string` — имя значка заполнителя очистки для использования со средствами чтения с экрана.
-- `Command` с типом `ICommand`, который выполняется при подтверждении поискового запроса.
-- `CommandParameter` с типом `object`, который передается как параметр в `Command`.
-- `DisplayMemberName` с типом `string` обозначает имя или путь к свойству, которое отображается для каждого элемента данных в коллекции `ItemsSource`.
-- `IsSearchEnabled` с типом `bool`, который представляет состояние активности поля поиска. Значение по умолчанию — `true`.
-- `ItemsSource` с типом `IEnumerable` определяет коллекцию элементов, которые отображаются в области поисковых подсказок. По умолчанию имеет значение `null`.
-- `ItemTemplate` с типом [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) определяет шаблон, применяемый к каждому элементу в коллекции элементов, которые отображаются в области поисковых подсказок.
-- `Placeholder` с типом `string` — текст для отображения при пустом поле поиска.
-- `Query` с типом `string` — введенный пользователем текст в поле поиска.
-- `QueryIcon` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource) — значок, напоминающий пользователю о том, что доступна функция поиска.
-- `QueryIconHelpText` с типом `string` — доступный текст справки для значка запроса.
-- `QueryIconName` с типом `string` — имя значка запроса, которое используется со средствами чтения с экрана.
-- `SearchBoxVisibility` с типом `SearchBoxVisibility` определяет видимость поля поиска. По умолчанию поле поиска является видимым и полностью развернутым.
-- `SelectedItem` с типом `object` — выбранный элемент в результатах поиска. Это свойство доступно только для чтения и по умолчанию имеет значение `null`.
-- `ShowsResults` с типом `bool` обозначает, нужно ли ожидать результаты поиска в области поисковых подсказок при вводе текста. Значение по умолчанию — `false`.
-
-Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
-
-Кроме того, класс `SearchHandler` также предоставляет следующие переопределяемые методы:
-
-- `OnClearPlaceholderClicked` вызывается каждый раз при касании `ClearPlaceholderIcon`;
-- `OnItemSelected` вызывается каждый раз, когда пользователь выбирает результат поиска;
-- `OnQueryChanged` вызывается при изменении свойства `Query`;
-- `OnQueryConfirmed` вызывается каждый раз, когда пользователь нажимает клавишу ВВОД или подтверждает запрос в поле поиска.
-
-Когда пользователь вводит запрос в поле поиска, обновляется свойство `Query`, и при каждом обновлении выполняется метод `OnQueryChanged`. Этот метод можно использовать для обновления области поисковых подсказок, которая отображается под полем поиска. Когда пользователь выбирает результат из области поисковых подсказок, выполняется метод `OnItemSelected`.
+При выборе результата из области поисковых подсказок выполняется метод `OnItemSelected`. Этот метод может быть переопределен, чтобы вызвать соответствующую реакцию, например переход на страницу подробных сведений.
 
 ## <a name="create-a-searchhandler"></a>Создание SearchHandler
 
@@ -215,9 +176,9 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
-## <a name="searchbox-visibility"></a>Видимость SearchBox
+## <a name="search-box-visibility"></a>Видимость поля поиска
 
-Когда в верхней части страницы добавляется поле поиска, оно по умолчанию является видимым и полностью развернутым. Тем не менее, это поведение можно изменить, задав в свойстве `SearchHandler.SearchBoxVisibility` один из членов перечисления `SearchBoxVisibility`:
+Когда в верхней части страницы добавляется `SearchHandler`, поле поиска по умолчанию является видимым и полностью развернутым. Тем не менее, это поведение можно изменить, задав в свойстве `SearchHandler.SearchBoxVisibility` один из членов перечисления `SearchBoxVisibility`:
 
 - `Hidden` — поле поиска не отображается и недоступно;
 - `Collapsible` — поле поиска является скрытым, пока пользователь не выполнит действие, открывающее его;
@@ -235,6 +196,133 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
     ...
 </ContentPage>
 ```
+
+## <a name="search-box-focus"></a>Фокус поля поиска
+
+При касании поля поиска отображается экранная клавиатура, а в поле поиска появляется фокус ввода. Это можно также реализовать программным образом, вызвав метод `Focus`, который пытается задать фокус ввода в поле поиска и возвращает `true` при успешном выполнении. Когда поле поиска получает фокус, активируется событие `Focus` и вызывается переопределяемый метод `OnFocused`.
+
+Когда в поле поиска есть фокус ввода, касание экрана в любом другом месте скрывает экранную клавиатуру и поле теряет фокус ввода. Это можно также реализовать программным образом, вызвав метод `Unfocus`. Когда поле поиска теряет фокус, активируется событие `Unfocused` и вызывается переопределяемый метод `OnUnfocus`.
+
+Состояние фокуса в поле поиска можно получить с помощью свойства `IsFocused`, которое возвращает `true`, если `SearchHandler` в этот момент имеет фокус ввода.
+
+## <a name="searchhandler-appearance"></a>Внешний вид SearchHandler
+
+Класс `SearchHandler` предоставляет следующие свойства, которые определяют его внешний вид:
+
+- `BackgroundColor` с типом `Color` определяет цвет фона для текста поля поиска.
+- `CancelButtonColor` с типом `Color` определяет цвет кнопки "Отмена".
+- `FontAttributes` с типом `FontAttributes` указывает, является ли шрифт поля поиска наклонным или жирным.
+- `FontFamily` с типом `string` определяет семейство шрифтов, используемое для текста поля поиска.
+- `FontSize` с типом `double` определяет размер шрифта для текста поля поиска.
+- `HorizontalTextAlignment` с типом `TextAlignment` определяет горизонтальное выравнивание для текста поля поиска.
+- `PlaceholderColor` с типом `Color` определяет цвет текста заполнителя в поле поиска.
+- `TextColor` с типом `Color` определяет цвет текста в поле поиска.
+
+## <a name="searchhandler-keyboard"></a>Клавиатура SearchHandler
+
+Клавиатуру, отображаемую при взаимодействии пользователя с `SearchHandler`, можно задать программно с помощью свойства `Keyboard`, используя следующие свойства класса [`Keyboard`](xref:Xamarin.Forms.Keyboard):
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) — это текстовая клавиатура с эмодзи.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) — это клавиатура по умолчанию.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) используется для ввода адресов электронной почты.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) — цифровая клавиатура.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) предназначена для ввода текста, если нет заданных [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags).
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) — клавиатура для ввода телефонных номеров.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) — текстовая клавиатура.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) — клавиатура для ввода путей к файлам и веб-адресов.
+
+Это можно сделать в XAML следующим образом:
+
+```xaml
+<SearchHandler Keyboard="Email" />
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+SearchHandler searchHandler = new SearchHandler { Keyboard = Keyboard.Email };
+```
+
+Класс [`Keyboard`](xref:Xamarin.Forms.Keyboard) также имеет фабричный метод [`Create`](xref:Xamarin.Forms.Keyboard.Create*), который может использоваться для настройки клавиатуры, задавая регистр букв, проверку орфографии и режим подсказок. Значения перечисления [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) задаются как аргументы метода, при этом возвращается настроенное свойство `Keyboard`. Перечисление `KeyboardFlags` имеет такие значения:
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) указывает, что клавиатура не имеет никаких дополнительных функций.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) указывает, что первые слова во всех вводимых предложениях автоматически начинаются с прописных букв.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) указывает, что для вводимого текста выполняется проверка орфографии.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) указывает, что для вводимых слов предлагается завершение.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) указывает, что все слова автоматически начинаются с прописных букв.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) указывает, что все символы автоматически пишутся прописными буквами.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) указывает, что автоматическая подстановка прописных букв не выполняется.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) указывает, что для вводимого текста выполняется проверка орфографии, завершение слов и автоматическое написание предложений с прописной буквы.
+
+В следующем примере кода XAML показано, как настроить значение по умолчанию [`Keyboard`](xref:Xamarin.Forms.Keyboard), чтобы включить предложение завершения слов и написание всех символов прописными буквами:
+
+```xaml
+<SearchHandler Placeholder="Enter search terms">
+    <SearchHandler.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </SearchHandler.Keyboard>
+</SearchHandler>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+SearchHandler searchHandler = new SearchHandler { Placeholder = "Enter search terms" };
+searchHandler.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
+
+## <a name="searchhandler-reference"></a>Справочные данные по SearchHandler
+
+Класс `SearchHandler` предоставляет следующие свойства, которые определяют его внешний вид и поведение.
+
+- `BackgroundColor` с типом `Color` определяет цвет фона для текста поля поиска.
+- `CancelButtonColor` с типом `Color` определяет цвет кнопки "Отмена".
+- `ClearIcon` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource) обозначает отображаемый значок очистки поля поиска.
+- `ClearIconHelpText` с типом `string` — доступный текст справки для значка очистки.
+- `ClearIconName` с типом `string` — имя значка очистки, которое используется со средствами чтения с экрана.
+- `ClearPlaceholderCommand` с типом `ICommand`, который выполняется при касании `ClearPlaceholderIcon`.
+- `ClearPlaceholderCommandParameter` с типом `object`, который передается как параметр в `ClearPlaceholderCommand`.
+- `ClearPlaceholderEnabled` с типом `bool`, который определяет возможность выполнять `ClearPlaceholderCommand`. Значение по умолчанию — `true`.
+- `ClearPlaceholderHelpText` с типом `string` — доступный текст справки возле значка заполнителя очистки.
+- `ClearPlaceholderIcon` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource) — значок заполнителя очистки, отображаемый при пустом поле поиска.
+- `ClearPlaceholderName` с типом `string` — имя значка заполнителя очистки для использования со средствами чтения с экрана.
+- `Command` с типом `ICommand`, который выполняется при подтверждении поискового запроса.
+- `CommandParameter` с типом `object`, который передается как параметр в `Command`.
+- `DisplayMemberName` с типом `string` обозначает имя или путь к свойству, которое отображается для каждого элемента данных в коллекции `ItemsSource`.
+- `FontAttributes` с типом `FontAttributes` указывает, является ли шрифт поля поиска наклонным или жирным.
+- `FontFamily` с типом `string` определяет семейство шрифтов, используемое для текста поля поиска.
+- `FontSize` с типом `double` определяет размер шрифта для текста поля поиска.
+- `HorizontalTextAlignment` с типом `TextAlignment` определяет горизонтальное выравнивание для текста поля поиска.
+- `IsFocused` с типом `bool` указывает, имеет ли сейчас `SearchHandler` фокус ввода.
+- `IsSearchEnabled` с типом `bool`, который представляет состояние активности поля поиска. Значение по умолчанию — `true`.
+- `ItemsSource` с типом `IEnumerable` определяет коллекцию элементов, которые отображаются в области поисковых подсказок. По умолчанию имеет значение `null`.
+- `ItemTemplate` с типом [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) определяет шаблон, применяемый к каждому элементу в коллекции элементов, которые отображаются в области поисковых подсказок.
+- `Keyboard` с типом `Keyboard` является клавиатурой для `SearchHandler`.
+- `Placeholder` с типом `string` — текст для отображения при пустом поле поиска.
+- `PlaceholderColor` с типом `Color` определяет цвет текста заполнителя в поле поиска.
+- `Query` с типом `string` — введенный пользователем текст в поле поиска.
+- `QueryIcon` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource) — значок, напоминающий пользователю о том, что доступна функция поиска.
+- `QueryIconHelpText` с типом `string` — доступный текст справки для значка запроса.
+- `QueryIconName` с типом `string` — имя значка запроса, которое используется со средствами чтения с экрана.
+- `SearchBoxVisibility` с типом `SearchBoxVisibility` определяет видимость поля поиска. По умолчанию поле поиска является видимым и полностью развернутым.
+- `SelectedItem` с типом `object` — выбранный элемент в результатах поиска. Это свойство доступно только для чтения и по умолчанию имеет значение `null`.
+- `ShowsResults` с типом `bool` обозначает, нужно ли ожидать результаты поиска в области поисковых подсказок при вводе текста. Значение по умолчанию — `false`.
+- `TextColor` с типом `Color` определяет цвет текста в поле поиска.
+
+Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
+
+Кроме того, класс `SearchHandler` также предоставляет следующие переопределяемые методы:
+
+- `OnClearPlaceholderClicked` вызывается каждый раз при касании `ClearPlaceholderIcon`;
+- `OnItemSelected` вызывается каждый раз, когда пользователь выбирает результат поиска;
+- `OnFocused` вызывается, когда `SearchHandler` получает фокус ввода.
+- `OnQueryChanged` вызывается при изменении свойства `Query`;
+- `OnQueryConfirmed` вызывается каждый раз, когда пользователь нажимает клавишу ВВОД или подтверждает запрос в поле поиска.
+- `OnUnfocus` вызывается, когда `SearchHandler` теряет фокус ввода.
 
 ## <a name="related-links"></a>Связанные ссылки
 

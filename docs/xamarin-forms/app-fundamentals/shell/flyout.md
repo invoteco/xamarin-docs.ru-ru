@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/23/2019
+ms.openlocfilehash: 51d8764854db2fb62a412fab6e1e48c8beabbf1f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005216"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178062"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Всплывающее меню оболочки Xamarin.Forms
 
@@ -133,7 +133,9 @@ Shell.Current.FlyoutIsPresented = false;
 
 ## <a name="flyout-items"></a>Элементы всплывающего меню
 
-Каждый подкласс объекта `Shell` должен содержать один или несколько объектов `FlyoutItem`, где каждый объект `FlyoutItem` представляет один элемент всплывающего меню. Следующий пример создает всплывающее меню с заголовком и двумя элементами:
+Если шаблон навигации по приложению включает всплывающее меню, производный объект `Shell` должен содержать один или несколько объектов `FlyoutItem`, где каждый объект `FlyoutItem` представляет один такой элемент. Каждый объект `FlyoutItem` должен быть дочерним для объекта `Shell`.
+
+Следующий пример создает всплывающее меню с заголовком и двумя элементами:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -170,7 +172,7 @@ Shell.Current.FlyoutIsPresented = false;
 > [!NOTE]
 > Если заголовок всплывающего меню отсутствует, элементы всплывающего меню отображаются от самого верха всплывающего меню. В противном случае они отображаются под заголовком всплывающего меню.
 
-Оболочка содержит операторы неявного преобразования, которые позволяют упростить визуальную иерархию оболочки без добавления новых представлений в визуальное дерево. Это возможно благодаря тому, что производный объект `Shell` может содержать только объекты `FlyoutItem`, которые могут содержать только объекты `Tab`, которые могут содержать только объекты `ShellContent`. Эти операторы неявного преобразования позволяют удалить из предыдущего примера объекты `FlyoutItem`, `Tab` и `ShellContent`:
+Оболочка содержит операторы неявного преобразования, которые позволяют упростить визуальную иерархию оболочки без добавления новых представлений в визуальное дерево. Это возможно, так как производный объект `Shell` может содержать только объекты `FlyoutItem` или объект `TabBar`, которые могут содержать только объекты `Tab`, которые, в свою очередь, могут содержать только объекты `ShellContent`. Эти операторы неявного преобразования позволяют удалить из предыдущего примера объекты `FlyoutItem`, `Tab` и `ShellContent`:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -193,11 +195,11 @@ Shell.Current.FlyoutIsPresented = false;
 
 ### <a name="flyoutitem-class"></a>Класс FlyoutItem
 
-Класс `FlyoutItem` включает следующие свойства, которые определяют его внешний вид и поведение.
+Класс `FlyoutItem` включает следующие свойства, которые определяют внешний вид и поведение всплывающего меню:
 
 - `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. Значение по умолчанию — `AsSingleItem`.
 - `CurrentItem` с типом `Tab` обозначает выбранный элемент.
-- `Items` с типом `ShellSectionCollection` определяет все вкладки в `FlyoutItem`.
+- `Items` с типом `IList<Tab>` определяет все вкладки в `FlyoutItem`.
 - `FlyoutIcon` с типом `ImageSource` — значок, который используется для элемента. Если это свойство не установлено, по умолчанию ему присваивается значение свойства `Icon`.
 - `Icon` с типом `ImageSource` определяет значок, который отображается в частях хрома, не относящихся к всплывающему меню.
 - `IsChecked` с типом `boolean` определяет, выделен ли этот элемент во всплывающем элементе в настоящий момент.
@@ -268,7 +270,7 @@ Shell.Current.FlyoutIsPresented = false;
 </Shell>
 ```
 
-В этом примере элементы всплывающего меню создаются для объекта `Tab`, производного от объекта `FlyoutItem`, и объектов `Shellontent`, производных от объекта `FlyoutItem`. Это связано с тем, что каждый объект `ShellContent`, производный от объекта `FlyoutItem`, автоматически упаковывается в объект `Tab`. Кроме того, элемент всплывающего меню создается для последнего объекта `ShellContent`, который упаковывается в объект `Tab`, а затем в объект `FlyoutItem`.
+В этом примере элементы всплывающего меню создаются для объекта `Tab`, производного от объекта `FlyoutItem`, и объектов `ShellContent`, производных от объекта `FlyoutItem`. Это связано с тем, что каждый объект `ShellContent`, производный от объекта `FlyoutItem`, автоматически упаковывается в объект `Tab`. Кроме того, элемент всплывающего меню создается для последнего объекта `ShellContent`, который упаковывается в объект `Tab`, а затем в объект `FlyoutItem`.
 
 Все это создает такие элементы всплывающего меню:
 
@@ -276,7 +278,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 ## <a name="define-flyoutitem-appearance"></a>Определение внешнего вида FlyoutItem
 
-Внешний вид каждого `FlyoutItem` можно настроить, присвоив свойству `Shell.ItemTemplate` значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+Внешний вид каждого объекта `FlyoutItem` можно настроить, присвоив присоединенному свойству `Shell.ItemTemplate` значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <Shell ...>
@@ -288,7 +290,7 @@ Shell.Current.FlyoutIsPresented = false;
                     <ColumnDefinition Width="0.2*" />
                     <ColumnDefinition Width="0.8*" />
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
+                <Image Source="{Binding FlyoutIcon}"
                        Margin="5"
                        HeightRequest="45" />
                 <Label Grid.Column="1"
@@ -306,7 +308,7 @@ Shell.Current.FlyoutIsPresented = false;
 [![Снимок экрана шаблонных объектов FlyoutItem для iOS и Android](flyout-images/flyoutitem-templated.png "Шаблонные объекты FlyoutItem в оболочке")](flyout-images/flyoutitem-templated-large.png#lightbox "Шаблонные объекты FlyoutItem в оболочке")
 
 > [!NOTE]
-> Оболочка предоставляет свойства `Title` и `Icon` для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `ItemTemplate`.
+> Оболочка предоставляет свойства `Title` и `FlyoutIcon` для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `ItemTemplate`.
 
 ## <a name="flyoutitem-tab-order"></a>Последовательность табуляции для FlyoutItem
 
@@ -353,7 +355,7 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="menu-items"></a>Пункты меню
 
-Пункты меню могут отображаться во всплывающем меню под элементами всплывающего меню. Каждый пункт меню представлен объектом [`MenuItem`](xref:Xamarin.Forms.MenuItem).
+Во всплывающее меню можно при необходимости добавлять пункты меню, каждый из которых представлен объектом [`MenuItem`](xref:Xamarin.Forms.MenuItem). Положение объектов `MenuItem` во всплывающем меню определяется порядком их объявления в визуальной иерархии оболочки. Таким образом, любые объекты `MenuItem`, объявленные перед объектами `FlyoutItem`, отображаются в верхней части всплывающего меню, а любые объекты `MenuItem`, объявленные после объектов `FlyoutItem`, — в его нижней части.
 
 > [!NOTE]
 > Класс `MenuItem` имеет событие [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) и свойство [`Command`](xref:Xamarin.Forms.MenuItem.Command). Это означает, что объекты `MenuItem` позволяют выполнять действия в ответ на касание `MenuItem`. Сюда относятся такие сценарии, как навигация и открытие веб-браузера на определенной веб-странице.
@@ -373,7 +375,7 @@ Shell.Current.CurrentItem = aboutItem;
 </Shell>
 ```
 
-Этот код добавляет во всплывающее меню два объекта [`MenuItem`](xref:Xamarin.Forms.MenuItem):
+Этот код добавляет во всплывающее меню два объекта [`MenuItem`](xref:Xamarin.Forms.MenuItem) под всеми его пунктами:
 
 [![Снимок экрана всплывающего меню с объектами MenuItem для iOS и Android](flyout-images/flyout.png "Всплывающее меню оболочки с объектами MenuItem")](flyout-images/flyout-large.png#lightbox "Всплывающее меню оболочки с объектами MenuItem")
 
@@ -384,34 +386,84 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="define-menuitem-appearance"></a>Определение внешнего вида MenuItem
 
-Внешний вид каждого `MenuItem` можно настроить, присвоив свойству `Shell.MenuItemTemplate` значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+Внешний вид каждого объекта `MenuItem` можно настроить, присвоив присоединенному свойству `Shell.MenuItemTemplate` значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
-<Shell.MenuItemTemplate>
-    <DataTemplate>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*" />
-                <ColumnDefinition Width="0.8*" />
-            </Grid.ColumnDefinitions>
-            <Image Source="{Binding Icon}"
-                   Margin="5"
-                   HeightRequest="45" />
-            <Label Grid.Column="1"
-                   Text="{Binding Text}"
-                   FontAttributes="Italic"
-                   VerticalTextAlignment="Center" />
-        </Grid>
-    </DataTemplate>
-</Shell.MenuItemTemplate>
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />  
+</Shell>
 ```
 
-Этот пример отображает заголовок каждого объекта `MenuItem` курсивом:
+В этом примере `MenuItemTemplate` на уровне оболочки задается для каждого объекта `MenuItem`, чтобы заголовок каждого объекта `MenuItem` отображался курсивом:
 
 [![Снимок экрана шаблонных объектов в MenuItem для iOS и Android](flyout-images/menuitem-templated.png "Шаблонные объекты MenuItem в оболочке")](flyout-images/menuitem-templated-large.png#lightbox "Шаблонные объекты MenuItem в оболочке")
 
 > [!NOTE]
 > Оболочка предоставляет свойства [`Text`](xref:Xamarin.Forms.MenuItem.Text) и [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `MenuItemTemplate`.
+
+Так как `Shell.MenuItemTemplate` является присоединенным свойством, для отдельных объектов `MenuItem` можно задавать разные шаблоны:
+
+```xaml
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              Icon="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell">
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                ...
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+</Shell>
+```
+
+В этом примере `MenuItemTemplate` на уровне оболочки задается для первого объекта `MenuItem`, а для второго объекта `MenuItem` задается встроенный шаблон `MenuItemTemplate`.
 
 ## <a name="related-links"></a>Связанные ссылки
 

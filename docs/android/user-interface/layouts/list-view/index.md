@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2560a451f3a6e7dd09b687f9db8c0c070598def6
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170811"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740657"
 ---
 # <a name="listview"></a>ListView
 
@@ -227,15 +227,15 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [AccessoryViews (пример)](https://developer.xamarin.com/samples/AccessoryViews/)
-- [BasicTableAndroid (пример)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (пример)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [BuiltInViews (пример)](https://developer.xamarin.com/samples/BuiltInViews/)
-- [CustomRowView (пример)](https://developer.xamarin.com/samples/CustomRowView/)
-- [FastScroll (пример)](https://developer.xamarin.com/samples/FastScroll/)
-- [SectionIndex (пример)](https://developer.xamarin.com/samples/SectionIndex/)
-- [SimpleCursorTableAdapter (пример)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
-- [CursorTableAdapter (пример)](https://developer.xamarin.com/samples/CursorTableAdapter/)
+- [AccessoryViews (пример)](https://developer.xamarin.com/samples/monodroid/AccessoryViews/)
+- [BasicTableAndroid (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
+- [BasicTableAdapter (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
+- [BuiltInViews (пример)](https://developer.xamarin.com/samples/monodroid/BuiltInViews/)
+- [CustomRowView (пример)](https://developer.xamarin.com/samples/monodroid/CustomRowView/)
+- [FastScroll (пример)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
+- [SectionIndex (пример)](https://developer.xamarin.com/samples/monodroid/SectionIndex/)
+- [SimpleCursorTableAdapter (пример)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
+- [CursorTableAdapter (пример)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
 - [Учебник по жизненному циклу действия](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Работа с таблицами и ячейками (в Xamarin.iOS)](~/ios/user-interface/controls/tables/index.md)
 - [Ссылки на класс ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)

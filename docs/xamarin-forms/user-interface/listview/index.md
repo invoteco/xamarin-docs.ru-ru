@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ec988508aaff1b433008add0bfbf0f2ad5f2dcf3
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: f9a3f6301005210d221f3223607e82adc0971a32
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970936"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741017"
 ---
 # <a name="xamarinforms-listview"></a>ListView Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/WorkingWithListview)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) — Это представление для представления списков данных, особенно длинных списках, требующих прокрутки.
 
@@ -62,7 +62,7 @@ ListView поддерживает ряд стилей взаимодействи
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Работа с ListView (пример)](https://developer.xamarin.com/samples/WorkingWithListview)
+- [Работа с ListView (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
 - [Двусторонней привязки (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
 - [Встроенные в ячейках (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
 - [Пользовательские ячейки (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)

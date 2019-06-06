@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: ddc9d18b57eac099331f0814b5963fb207840380
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 166927f2168015cb4786502d841e01b2faeb0c51
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169595"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741004"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms карты
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/WorkingWithMaps/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 
 _Xamarin.Forms использует карту собственного API-интерфейсы на каждой платформе._
 
 Xamarin.Forms.Maps использует карту собственного API-интерфейсы на каждой платформе. Это обеспечивает быстрый, знакомы карт для пользователей, но также означает, что некоторые шаги по настройке необходимо следовать требованиям API каждой платформы.
 После настройки конфигурации `Map` работает так же, как и любой другой элемент Xamarin.Forms в общем коде контроль.
 
-Элемент управления map был использован в [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) пример, как показано ниже.
+Элемент управления map был использован в [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) пример, как показано ниже.
 
  [![Карты в образце MobileCRM](map-images/maps-zoom-sml.png "пример элемента управления Map")](map-images/maps-zoom.png#lightbox "пример элемента управления Map")
 
@@ -138,7 +138,7 @@ XML-представление для этих ключей в **Info.plist** п
 </application>
 ```
 
-### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
+### <a name="universal-windows-platform"></a>Универсальная платформа Windows
 
 Для работы с картами на универсальной платформе Windows необходимо создать маркер авторизации. Дополнительные сведения см. в разделе [запроса ключа проверки подлинности карты](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) на сайте MSDN.
 
@@ -298,6 +298,6 @@ MyMap.MoveToRegion(
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)
+- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 - [Пользовательское средство отрисовки карты](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)

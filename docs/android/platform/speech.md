@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: e88f6e24cbf4c8b2f0c0486c6408e234e87066cc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3d4c29a7d206b826046fd1f79e0513e85ea57898
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61228598"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740670"
 ---
 # <a name="android-speech"></a>Android речи
 
@@ -39,7 +39,7 @@ Google предоставляет разработчику широкий наб
 
 Простое определение понимания является возможность определить, тон и контекста сказанного подлинное значение. Для интерпретации просто означает, что слова и вывода их в другой форме.
 
-Рассмотрим следующий простой пример, используемый в повседневной диалога: 
+Рассмотрим следующий простой пример, используемый в повседневной диалога:
 
 <kbd>Привет как дела?</kbd>
 
@@ -161,7 +161,8 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
-Этот код вызывает [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) для проверки, если языковой пакет для заданного языкового стандарта уже присутствует на устройстве. Этот метод возвращает [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), который указывает, доступен ли переданный язык. Если `LanguageAvailableResult` указывает, что язык `NotSupported`, то есть пакет не голоса (даже для загрузки) для этого языка. Если `LanguageAvailableResult` присваивается `MissingData`, то может возникнуть ситуация скачать новый языковой пакет, как описано ниже в шаге 4.
+Этот код вызывает [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) для проверки, если языковой пакет для заданного языкового стандарта уже присутствует на устройстве.
+Этот метод возвращает [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), который указывает, доступен ли переданный язык. Если `LanguageAvailableResult` указывает, что язык `NotSupported`, то есть пакет не голоса (даже для загрузки) для этого языка. Если `LanguageAvailableResult` присваивается `MissingData`, то может возникнуть ситуация скачать новый языковой пакет, как описано ниже в шаге 4.
 
 ### <a name="step-3---setting-the-speed-and-pitch"></a>Шаг 3 - Установка скорости и шаг
 
@@ -233,7 +234,7 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Преобразование текста в речь (пример)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
 - [Преобразование речи в текст (пример)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
 - [Пространство имен Android.Speech](https://developer.xamarin.com/api/namespace/Android.Speech/)

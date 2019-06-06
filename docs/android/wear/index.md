@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: ca8b554e03c4e8339922ca99619245a45bd08e1d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dda00760399572d714300f1487391212c6fa0998
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61286687"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740868"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -46,15 +46,15 @@ Android Wear — это версия Android, предназначенный д�
 
 ## <a name="samples"></a>Примеры
 
-Вы найдете ряд [примеры](https://developer.xamarin.com/samples/android/Android%20Wear/) с помощью Android Wear (или перейти непосредственно к [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)). 
+Вы найдете ряд [примеры](https://developer.xamarin.com/samples/android/Android%20Wear/) с помощью Android Wear (или перейти непосредственно к [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
 |Пример|Описание|Снимок экрана|
 |--- |--- |--- |
-|[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Простой пример с основами носимого проектов, включая GridViewPager и интерактивные уведомления.|![Снимок экрана Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Простой демонстрационный элемента управления WatchViewStub, который определяет экран фигуры и автоматически загружает подходящего макета.  См. в разделе, как работает WatchViewStub в **Resources/layout/main_activity.xml** макета.|![Снимок экрана WatchViewStub](images/watchview.png)|
-|[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Демонстрация страниц износа уведомлений, в виде набора команд действия. Уведомления создаются в RecipeService.cs.|![Снимок экрана RecipeAssistant](images/recipeassist.png)|
-|[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Интересные пример взаимодействия с «личного помощника» вызывается Eliza, с помощью износа интерактивные уведомления для создания диалога, используя стандартные ответы.|![Снимок экрана ElizaChat](images/eliza.png)|
-|[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager реализует шаблон 2D навигации, где пользователь предъявляет по вертикали и по горизонтали, чтобы просматривать параметры и содержимое.|![Снимок экрана GridViewPager](images/gridviewpager.png)|
+|[SkeletonWear](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)|Простой пример с основами носимого проектов, включая GridViewPager и интерактивные уведомления.|![Снимок экрана Skeletonwear](images/skeleton.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/)|Простой демонстрационный элемента управления WatchViewStub, который определяет экран фигуры и автоматически загружает подходящего макета. См. в разделе, как работает WatchViewStub в **Resources/layout/main_activity.xml** макета.|![Снимок экрана WatchViewStub](images/watchview.png)|
+|[RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/)|Демонстрация страниц износа уведомлений, в виде набора команд действия. Уведомления создаются в RecipeService.cs.|![Снимок экрана RecipeAssistant](images/recipeassist.png)|
+|[ElizaChat](https://developer.xamarin.com/samples/monodroid/wear/ElizaChat/)|Интересные пример взаимодействия с «личного помощника» вызывается Eliza, с помощью износа интерактивные уведомления для создания диалога, используя стандартные ответы.|![Снимок экрана ElizaChat](images/eliza.png)|
+|[GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)|GridViewPager реализует шаблон 2D навигации, где пользователь предъявляет по вертикали и по горизонтали, чтобы просматривать параметры и содержимое.|![Снимок экрана GridViewPager](images/gridviewpager.png)|
 |[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace является пользовательский оформлений стиле аналоговый час, минуту и второй руки. В этом примере демонстрируется создание службы лиц Контрольные значения, который отображает текущее время и окружения режиме дескрипторов и видимость событий изменения. Он включает в себя широковещательный приемник, который прослушивает изменения часового пояса и автоматически обновляет время соответствующим образом.|![Снимок экрана WatchFace](images/gridviewpager.png)|
 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61409869"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740949"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Работа с watchOS родительское приложение в Xamarin
 
@@ -35,7 +35,7 @@ ms.locfileid: "61409869"
 
 ## <a name="run-code"></a>Выполните код
 
-Связи между расширением watch и iPhone в родительское приложение демонстрируется в [GpsWatch пример](https://developer.xamarin.com/samples/GpsWatch).
+Связи между расширением watch и iPhone в родительское приложение демонстрируется в [GpsWatch пример](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
 Расширение контрольных значений можно запросить в родительское приложение iOS, то часть обработки на его имени с помощью `OpenParentApplication` метод.
 
 Это особенно полезно в тех случаях, для долго выполняющихся задач (включая сетевые запросы) - только родительского приложения iOS можно воспользоваться фоновую обработку для выполнения этих задач и сохранения полученных данных в расположении, доступном для расширения контрольных значений.

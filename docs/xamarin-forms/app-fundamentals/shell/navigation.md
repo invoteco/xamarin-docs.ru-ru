@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: 9f48659a8af7bb74cc33ec0929f41b2a881e1978
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005169"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469510"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Навигация в оболочке Xamarin.Forms
 
@@ -213,11 +213,11 @@ bears
 
 | Свойство. | Тип | Описание |
 |---|---|---|
-| Текущие | `ShellNavigationState` | URI текущей страницы. |
-| Исходный код | `ShellNavigationSource` | Тип выполненного перехода. |
-| целевого объекта | `ShellNavigationState`  | URI, представляющий целевой объект навигации. |
-| CanCancel  | `bool` | Значение, указывающее, возможна ли отмена перехода. |
-| Отменено  | `bool` | Значение, указывающее, была ли навигация отменена. |
+| `Current` | `ShellNavigationState` | URI текущей страницы. |
+| `Source` | `ShellNavigationSource` | Тип выполненного перехода. |
+| `Target` | `ShellNavigationState`  | URI, представляющий целевой объект навигации. |
+| `CanCancel`  | `bool` | Значение, указывающее, возможна ли отмена перехода. |
+| `Cancelled`  | `bool` | Значение, указывающее, была ли навигация отменена. |
 
 Кроме того, класс `ShellNavigatingEventArgs` предоставляет метод `Cancel` для отмены навигации.
 
@@ -228,9 +228,9 @@ bears
 
 | Свойство. | Тип | Описание |
 |---|---|---|
-| Текущие | `ShellNavigationState` | URI текущей страницы. |
-| Назад| `ShellNavigationState` | URI предыдущей страницы. |
-| Исходный код  | `ShellNavigationSource` | Тип выполненного перехода. |
+| `Current` | `ShellNavigationState` | URI текущей страницы. |
+| `Previous`| `ShellNavigationState` | URI предыдущей страницы. |
+| `Source`  | `ShellNavigationSource` | Тип выполненного перехода. |
 
 > [!NOTE]
 > Событие `Navigating` создается переопределяемым методом `OnNavigated` в классе `Shell`.

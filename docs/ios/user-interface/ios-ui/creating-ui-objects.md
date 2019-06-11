@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: c24b2c2f0742ee2c6814d9821f3c0603c6e48a96
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: 65ebbddfa1a315a478ceb43162b3c80eba2d8cc1
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804918"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827799"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Создание объектов пользовательского интерфейса в Xamarin.iOS
 
@@ -173,4 +173,4 @@ public override void ViewDidLoad () {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Элементы управления (пример)](https://developer.xamarin.com/samples/Controls/)
+- [Элементы управления (пример)](https://developer.xamarin.com/samples/monotouch/Controls/)

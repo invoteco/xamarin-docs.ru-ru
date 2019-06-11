@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: 5ccefdb5e527e67338714896905734c74278d00a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a82d96cf3f290dd28d163dd6f147a9dc28dfaa81
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61392537"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827601"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>События, протоколы и делегаты в Xamarin.iOS
 
@@ -385,7 +385,7 @@ map.DidSelectAnnotationView += (s,e) => {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Протоколы, делегаты и события (пример)](https://developer.xamarin.com/samples/Protocols_Delegates_Events/)
+- [Протоколы, делегаты и события (пример)](https://developer.xamarin.com/samples/monotouch/Protocols_Delegates_Events/)
 - [Привет, iOS](~/ios/get-started/hello-ios/index.md)
 - [Типы привязки Objective-C](~/ios/platform/binding-objective-c/index.md)
 - [В язык программирования Objective-C](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)

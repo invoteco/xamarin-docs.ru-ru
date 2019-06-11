@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f359da6b8744e03cfcbd77d48f5f77f216e828f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a837d680a21b9cdbc39e42f5fa3520622e0b49aa
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250655"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827185"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Изображения и значки в Xamarin.iOS
 
@@ -64,6 +64,6 @@ Apple добавлено несколько улучшений iOS 10.3, раз�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Работа с образами (пример)](https://developer.xamarin.com/samples/WorkingWithImages/)
+- [Работа с образами (пример)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Пользовательский значок и правила создания образа](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

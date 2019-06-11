@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 14711f9cc2c34d72765e28db158379bc2a26849b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9331c7e6920f94d2ff0dddc50eb8f1ff9817d982
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61201092"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827852"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Создание приложения Xamarin.iOS с помощью API элементов
 
@@ -146,9 +146,7 @@ public class Task
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MTDWalkthrough (пример)](https://developer.xamarin.com/samples/MTDWalkthrough/)
-- [Презентация - Мигель de Icaza создает на экран входа iOS с MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
-- [Презентация - легко создавать пользовательские интерфейсы iOS с помощью MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
+- [MTDWalkthrough (пример)](https://developer.xamarin.com/samples/monotouch/MTDWalkthrough/)
 - [Введение в контроллер представления MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Пошаговое руководство по API отражения](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Пошаговое руководство элемент JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

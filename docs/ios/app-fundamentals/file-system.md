@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10f4f53e71a47521076538bf9eb12b86c1e478a6
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61393679"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827519"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Доступ к файловой системе в Xamarin.iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/)
 
 Можно использовать Xamarin.iOS и `System.IO` классы в *библиотеки базовых классов (BCL) .NET* для доступа к файловой системе iOS. Класс `File` позволяет создавать, удалять и считывать файлы, а класс и `Directory` — создавать, удалять или перечислять содержимое каталогов. Можно также использовать `Stream` подклассов, которые может предоставить большую степень контроля над операции с файлами (например, сжатие или позицию поиска в файле).
 
@@ -169,7 +169,7 @@ iOS для этого используется знак косой черты «
 
 ## <a name="application-sandbox"></a>Приложение "песочницы"
 
-Доступ приложения к файловой системе (и другие ресурсы, такие как функции сети и оборудования) ограничена по соображениям безопасности. Это ограничение называется *приложения "песочницы"*. С точки зрения файловой системе приложение ограничено Создание и удаление файлов и каталогов в своем домашнем каталоге.
+Доступ приложения к файловой системе (и другие ресурсы, такие как функции сети и оборудования) ограничена по соображениям безопасности. Это ограничение называется *приложения "песочницы"* . С точки зрения файловой системе приложение ограничено Создание и удаление файлов и каталогов в своем домашнем каталоге.
 
 Корневой каталог — это уникальное расположение в файловой системе, где хранятся ваши приложения и все его данные. Нельзя выбрать (или изменить) расположение домашнего каталога для приложения; Тем не менее iOS и Xamarin.iOS предоставляют свойства и методы для управления файлами и каталогами внутри.
 
@@ -356,6 +356,6 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример кода файловой системы](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+- [Пример кода файловой системы](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/)
 - [Руководство по программированию в системе файл](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [Регистрация файла типы поддерживает ваше приложение](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

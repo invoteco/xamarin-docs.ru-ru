@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61079445"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827344"
 ---
 # <a name="collection-views-in-xamarinios"></a>Представления коллекций в Xamarin.iOS
 
@@ -1299,6 +1299,6 @@ public override void AwakeFromNib ()
 
 - [Примеры iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Пример представления коллекции](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (пример)](https://developer.xamarin.com/samples/SimpleCollectionView/)
+- [SimpleCollectionView (пример)](https://developer.xamarin.com/samples/monotouch/SimpleCollectionView/)
 - [События, протоколы и делегаты](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Работа с таблицами и ячейками](~/ios/user-interface/controls/tables/index.md)

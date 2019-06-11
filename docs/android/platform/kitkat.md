@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b3981572e4d2629fd88d1e255fc7459bfe8912f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f957bd5b361d7287353542186916c7f934ee0490
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60950324"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827787"
 ---
 # <a name="kitkat-features"></a>Функции KitKat
 
@@ -564,7 +564,7 @@ class HceService : HostApduService
 }
 ```
 
-Выше службы предоставляет способ чтения NFC для взаимодействия с приложением, но читатель NFC по-прежнему имеет нет способа узнать, что эта служба эмулирующий карточке NFC, требуемые для сканирования. Чтобы помочь идентифицировать службу чтения NFC, можно назначить службе уникальный *идентификатор приложения (AID)*. Мы вспомогательные средства, а также другие метаданные о службе HCE, укажите в файле ресурсов xml зарегистрировано `MetaData` атрибутов (см. приведенный выше код). Этот файл ресурса указывает идентификатор действия один или несколько фильтров — уникальный идентификатор строки в шестнадцатеричном формате, которые соответствуют вспомогательные элементы из одного или нескольких устройств чтения NFC:
+Выше службы предоставляет способ чтения NFC для взаимодействия с приложением, но читатель NFC по-прежнему имеет нет способа узнать, что эта служба эмулирующий карточке NFC, требуемые для сканирования. Чтобы помочь идентифицировать службу чтения NFC, можно назначить службе уникальный *идентификатор приложения (AID)* . Мы вспомогательные средства, а также другие метаданные о службе HCE, укажите в файле ресурсов xml зарегистрировано `MetaData` атрибутов (см. приведенный выше код). Этот файл ресурса указывает идентификатор действия один или несколько фильтров — уникальный идентификатор строки в шестнадцатеричном формате, которые соответствуют вспомогательные элементы из одного или нескольких устройств чтения NFC:
 
 ```xml
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
@@ -713,6 +713,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример KitKat](https://developer.xamarin.com/samples/KitKat/)
+- [Пример KitKat](https://developer.xamarin.com/samples/monodroid/KitKat/)
 - [Android 4.4 API-интерфейсов](https://developer.android.com/about/versions/android-4.4.html)
 - [Android KitKat](https://developer.android.com/about/versions/kitkat.html)

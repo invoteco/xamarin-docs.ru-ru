@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 76f98f1e660f22ec25c48407f2e87cec60ff12ef
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61181293"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827682"
 ---
 # <a name="location-services"></a>Службы определения местоположения
 
@@ -355,8 +355,8 @@ else
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Расположение (пример)](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (пример)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [Расположение (пример)](https://developer.xamarin.com/samples/monodroid/Location/)
+- [FusedLocationProvider (пример)](https://developer.xamarin.com/samples/monodroid/FusedLocationProvider/)
 - [Службы Google Play](https://developer.android.com/google/play-services/index.html)
 - [Класс критериев](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [Класс LocationManager](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 96fd6d32f37dd90422f05caf33cfda9a65683fd2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0bae98a204ba3478834894d6c093259a8b2139b2
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61308075"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827720"
 ---
 # <a name="setup-and-installation"></a>Настройка и установка
 
@@ -123,4 +123,4 @@ _В этой статье рассматриваются действия по �
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [SkeletonWear (пример)](https://developer.xamarin.com/samples/SkeletonWear/)
+- [SkeletonWear (пример)](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)

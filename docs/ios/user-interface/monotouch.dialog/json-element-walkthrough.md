@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: cd80217b39ecca2cc7b49437b9469aaa1107208b
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: e1eae07fab4a74a4f47f565d4c4ca0b7f6bc1aa9
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827222"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039666"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Использование JSON для создания пользовательского интерфейса в Xamarin.iOS
 
@@ -42,27 +42,27 @@ _Контроллер представления MonoTouch.Dialog (машинн�
 
 Например следующий код JSON описывает разделы и элементы для сведения о задаче:
 
-```csharp
+```json
 {
     "title": "Task",
     "sections": [
         {
-          "elements" : [
-            {
-                "id" : "task-description",
-                "type": "entry",
-                "placeholder": "Enter task description"
-            },
-            {
-                "id" : "task-duedate",
-                "type": "date",
-                "caption": "Due Date",
-                "value": "00:00"
-            }
-         ]
+            "elements" : [
+                {
+                    "id" : "task-description",
+                    "type": "entry",
+                    "placeholder": "Enter task description"
+                },
+                {
+                    "id" : "task-duedate",
+                    "type": "date",
+                    "caption": "Due Date",
+                    "value": "00:00"
+                }
+            ]
         }
     ]
-  }
+}
 ```
 
 Обратите внимание, что выше JSON-ФАЙЛ включает в себя идентификатор для каждого элемента. Любой элемент может включать код, чтобы сослаться на него во время выполнения. Мы увидим, как он используется в данный момент, когда мы покажем, как загрузить JSON в коде.
@@ -79,14 +79,13 @@ var taskElement = JsonElement.FromFile ("task.json");
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
+    ++n;
 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
+    var taskElement = JsonElement.FromFile ("task.json");
 
-        var taskElement = JsonElement.FromFile ("task.json");
-
-        _rootElement [0].Add (taskElement);
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -96,28 +95,27 @@ _addButton.Clicked += (sender, e) => {
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
+    ++n;
 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
+    var taskElement = JsonElement.FromFile ("task.json");
 
-        var taskElement = JsonElement.FromFile ("task.json");
+    taskElement.Caption = task.Name;
 
-        taskElement.Caption = task.Name;
+    var description = taskElement ["task-description"] as EntryElement;
 
-        var description = taskElement ["task-description"] as EntryElement;
+    if (description != null) {
+        description.Caption = task.Name;
+        description.Value = task.Description;       
+    }
 
-        if (description != null) {
-                description.Caption = task.Name;
-                description.Value = task.Description;       
-        }
+    var duedate = taskElement ["task-duedate"] as DateElement;
 
-        var duedate = taskElement ["task-duedate"] as DateElement;
-
-        if (duedate != null) {                
-                duedate.DateValue = task.DueDate;
-        }
-        _rootElement [0].Add (taskElement);
+    if (duedate != null) {                
+        duedate.DateValue = task.DueDate;
+    }
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -125,37 +123,37 @@ _addButton.Clicked += (sender, e) => {
 
 ГЛАВНОГО ЦЕЛЕВОГО СЕРВЕРА D также поддерживает динамическое JSON из внешнего URL-адреса, просто передав URL-адрес в конструктор класса `JsonElement`. ГЛАВНОГО ЦЕЛЕВОГО СЕРВЕРА D будет расширяться иерархии, объявленные в JSON по запросу, как переход между экранами. Например рассмотрим файл JSON, как показано ниже, расположенный в корневом локальном веб-сервера:
 
-```csharp
+```json
 {
     "type": "root",
     "title": "home",
     "sections": [
-       {
-         "header": "Nested view!",
-         "elements": [
-           {
-             "type": "boolean",
-             "caption": "Just a boolean",
-             "id": "first-boolean",
-             "value": false
-           },
-           {
-             "type": "string",
-             "caption": "Welcome to the nested controller"
-           }
-         ]
-       }
-     ]
+        {
+            "header": "Nested view!",
+            "elements": [
+                {
+                    "type": "boolean",
+                    "caption": "Just a boolean",
+                    "id": "first-boolean",
+                    "value": false
+                },
+                {
+                    "type": "string",
+                    "caption": "Welcome to the nested controller"
+                }
+            ]
+        }
+    ]
 }
 ```
 
 Мы можем загрузить это с помощью `JsonElement` как в следующем коде:
 
 ```csharp
-_rootElement = new RootElement ("Json Example"){
-        new Section (""){ new JsonElement ("Load from url",
-                "http://localhost/sample.json")
-        }
+_rootElement = new RootElement ("Json Example") {
+    new Section ("") {
+        new JsonElement ("Load from url", "http://localhost/sample.json")
+    }
 };
 ```
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 982f19eef7b98a05535298430bdfdbe6e54bac10
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 6e64f9c7d0fcebbbc92171f92a5e0ac2f18ce451
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827446"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039708"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Общие сведения о MonoTouch.Dialog для Xamarin.iOS
 
@@ -120,16 +120,16 @@ public class Expense
 
 ```csharp
 var root = new RootElement ("Meals") {
-    new Section ("Dinner"){
-            new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
-                new Section () {
-                    new RadioElement ("Ice Cream", "dessert"),
-                    new RadioElement ("Milkshake", "dessert"),
-                    new RadioElement ("Chocolate Cake", "dessert")
-                }
+    new Section ("Dinner") {
+        new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
+            new Section () {
+                new RadioElement ("Ice Cream", "dessert"),
+                new RadioElement ("Milkshake", "dessert"),
+                new RadioElement ("Chocolate Cake", "dessert")
             }
         }
     }
+};
 ```
 
 В приведенном выше примере когда пользователь нажимает на «Dessert», контроллер представления MonoTouch.Dialog будет создать новую страницу и перейдите к нему с корневым элементом будет «Dessert» и создать группу переключателей с тремя значениями.
@@ -151,14 +151,14 @@ var root = new RootElement ("Meals") {
 Как правило, используются только строки, но для создания пользовательских интерфейсах можно использовать любой UIView как верхний или нижний колонтитул. Строка либо можно использовать для создания их следующим образом:
 
 ```csharp
-var section = new Section ("Header", "Footer")
+var section = new Section ("Header", "Footer");
 ```
 
 Использовать представления, просто передайте конструктору представлений:
 
 ```csharp
 var header = new UIImageView (Image.FromFile ("sample.png"));
-var section = new Section (header)
+var section = new Section (header);
 ```
 
 ### <a name="getting-notified"></a>Получение уведомления
@@ -170,8 +170,7 @@ var section = new Section (header)
 
 ```csharp
 new Section () {
-        new StringElement ("Demo Callback", 
-                delegate { Console.WriteLine ("Handled"); })
+    new StringElement ("Demo Callback", delegate { Console.WriteLine ("Handled"); })
 }
 ```
 
@@ -180,18 +179,14 @@ new Section () {
 В сочетании с `Element.Value` свойств, обратный вызов можно получить значение, заданное в других элементах. Рассмотрим следующий пример кода:
 
 ```csharp
-var element = new EntryElement (task.Name, "Enter task description",
-        task.Description);
+var element = new EntryElement (task.Name, "Enter task description", task.Description);
                 
-var taskElement = new RootElement (task.Name){
-        new Section () { element },
-        new Section () { 
-                new DateElement ("Due Date", task.DueDate)
-        },
-        new Section ("Demo Retrieving Element Value") {
-                new StringElement ("Output Task Description", 
-                        delegate { Console.WriteLine (element.Value); })
-        }
+var taskElement = new RootElement (task.Name) {
+    new Section () { element },
+    new Section () { new DateElement ("Due Date", task.DueDate) },
+    new Section ("Demo Retrieving Element Value") {
+        new StringElement ("Output Task Description", delegate { Console.WriteLine (element.Value); })
+    }
 };
 ```
 
@@ -223,10 +218,9 @@ var taskElement = new RootElement (task.Name){
 Чтобы использовать `StringElement` как кнопка, предоставьте делегат.
 
 ```csharp
-new StringElement (
-        "Click me",
-        () => { new UIAlertView("Tapped", "String Element Tapped"
-, null, "ok", null).Show(); })
+new StringElement ("Click me", () => { 
+    new UIAlertView("Tapped", "String Element Tapped", null, "ok", null).Show();
+});
 ```
 
  [![](images/image8.png "Чтобы использовать StringElement как кнопка, предоставьте делегат")](images/image8.png#lightbox)
@@ -281,7 +275,7 @@ new StringElement (
 Объект `RadioElement` требует `RadioGroup` в `RootElement`.
 
 ```csharp
-mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
+mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
  [![](images/image14.png "RadioElement требует RadioGroup в RootElement")](images/image14.png#lightbox)
@@ -289,7 +283,7 @@ mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
  `RootElements` также используются для координации radio элементов. `RadioElement` Члены могут охватывать несколько разделов (например для реализации примерно селектор кольцо тон и отдельные пользовательские мелодии из системы мелодии звонка). Представление "Сводка" отображается элемент переключатель, выбранное в настоящий момент. Чтобы использовать это, создайте `RootElement` с помощью конструктора, группы, следующим образом:
 
 ```csharp
-var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
+var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
 ```
 
 Имя группы в `RadioGroup` используется для отображения значения, выбранного в страницу (если таковые имеются) и значение, которое в данном случае равен нулю, — это индекс первого выбранного элемента.
@@ -359,16 +353,13 @@ var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
 
 ```csharp
 public class SampleOwnerDrawnElement : OwnerDrawnElement
- {
+{
     public SampleOwnerDrawnElement (string text) : base(UITableViewCellStyle.Default, "sampleOwnerDrawnElement")
     {
         this.Text = text;
     }
 
-    public string Text
-    {
-        get;set;    
-    }
+    public string Text { get; set; }
 
     public override void Draw (RectangleF bounds, CGContext context, UIView view)
     {
@@ -383,7 +374,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
     {
         return 44.0f;
     }
- }
+}
 ```
 
 ### <a name="json-element"></a>Элемент JSON
@@ -453,9 +444,9 @@ dvc.ReloadComplete ();
 string uriString = "http://some-server.com/some image url";
 
 var rootElement = new RootElement("Image Loader") {
-        new Section(){
-                new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
-        }
+    new Section() {
+        new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
+    }
 };
 ```
 
@@ -467,12 +458,11 @@ ImageLoader-класс предоставляет метод очистки, к�
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {
-from x in new string [] { "one", "two", "three" }
-select new Section (x) {
-from y in "Hello:World".Split (':')
-select (Element) new StringElement (y,
-delegate { Debug.WriteLine("cell tapped"); })
-}
+    from x in new string [] { "one", "two", "three" }
+    select new Section (x) {
+        from y in "Hello:World".Split (':')
+        select (Element) new StringElement (y, delegate { Debug.WriteLine("cell tapped"); })
+    }
 };
 ```
 
@@ -488,38 +478,40 @@ delegate { Debug.WriteLine("cell tapped"); })
 
 ```csharp
 // To release any heavy resources that you might have
-    void Dispose (bool disposing);
+void Dispose (bool disposing);
 
-    // To retrieve the UITableViewCell for your element
-    // you would need to prepare the cell to be reused, in the
-    // same way that UITableView expects reusable cells to work
-    UITableViewCell GetCell (UITableView tv)
+// To retrieve the UITableViewCell for your element
+// you would need to prepare the cell to be reused, in the
+// same way that UITableView expects reusable cells to work
+UITableViewCell GetCell (UITableView tv);
 
-    // To retrieve a "summary" that can be used with
-    // a root element to render a summary one level up.  
-    string Summary ()
-    // To detect when the user has tapped on the cell
-    void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path)
-    // If you support search, to probe if the cell matches the user input
-    bool Matches (string text)
+// To retrieve a "summary" that can be used with
+// a root element to render a summary one level up.  
+string Summary ();
+
+// To detect when the user has tapped on the cell
+void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path);
+
+// If you support search, to probe if the cell matches the user input
+bool Matches (string text);
 ```
 
 Если ваш элемент может иметь переменный размер, необходимо реализовать `IElementSizing` интерфейс, который содержит один метод:
 
 ```csharp
 // Returns the height for the cell at indexPath.Section, indexPath.Row
-    float GetHeight (UITableView tableView, NSIndexPath indexPath);
+float GetHeight (UITableView tableView, NSIndexPath indexPath);
 ```
 
 Если вы планируете для реализации вашей `GetCell` , вызывая `base.GetCell(tv)` и настройка возвращенную ячейку, необходимо также переопределить `CellKey` ключом, который будет уникальной для элемента, возвращаемого свойства следующим образом:
 
 ```csharp
 static NSString MyKey = new NSString ("MyKey");
-    protected override NSString CellKey {
-        get {
-            return MyKey;
-        }
+protected override NSString CellKey {
+    get {
+        return MyKey;
     }
+}
 ```
 
 Это работает для большинства элементов, но не для `StringElement` и `StyledStringElement` как их использовать свои собственные набор ключей для различных сценариев подготовки к просмотру. Пришлось бы реплицировать код в этих классах.
@@ -533,9 +525,9 @@ static NSString MyKey = new NSString ("MyKey");
 Например, если вы хотите изменить стиль списка должен быть `Grouped` или `Plain`, можно задать это значение путем изменения свойства при создании контроллера, следующим образом:
 
 ```csharp
-var myController = new DialogViewController (root, true){
-        Style = UITableViewStyle.Grouped;
-    }
+var myController = new DialogViewController (root, true) {
+    Style = UITableViewStyle.Grouped;
+}
 ```
 
 Для создания расширенных настроек из `DialogViewController`, такие как установка фоном, как подкласс его и переопределения соответствующих методов, как показано в следующем примере:

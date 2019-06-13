@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc6842871a2f59c9851e90adbc6609707a7ecd1f
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395162"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039655"
 ---
 # <a name="monotouchdialog-json-markup"></a>Разметка JSON MonoTouch.Dialog
 
@@ -20,58 +20,58 @@ ms.locfileid: "61395162"
 
 Сообщите нам, начните с примером. Ниже приведен полный файл Json, который может быть передан в JsonElement.
 
-```csharp
+```json
 {     
-  "title": "Json Sample",
-  "sections": [ 
-      {
-          "header": "Booleans",
-          "footer": "Slider or image-based",
-          "id": "first-section",
-          "elements": [
-              { 
-                  "type" : "boolean",
-                  "caption" : "Demo of a Boolean",
-                  "value"   : true
-              }, {
-                  "type": "boolean",
-                  "caption" : "Boolean using images",
-                  "value"   : false,
-                  "on"      : "favorite.png",
-                  "off"     : "~/favorited.png"
-              }, {
-                      "type": "root",
-                      "title": "Tap for nested controller",
-                      "sections": [ {
-                         "header": "Nested view!",
-                         "elements": [
-                           {
-                             "type": "boolean",
-                             "caption": "Just a boolean",
-                             "id": "the-boolean",
-                             "value": false
-                           },
-                           {
-                             "type": "string",
-                             "caption": "Welcome to the nested controller"
-                           }
-                         ]
-                       }
-                     ]
-                   }
-          ]
-      }, {
-          "header": "Entries",
-          "elements" : [
-              {
-                  "type": "entry",
-                  "caption": "Username",
-                  "value": "",
-                  "placeholder": "Your account username"
-              }
-          ]
-      }
-  ]
+    "title": "Json Sample",
+    "sections": [ 
+        {
+            "header": "Booleans",
+            "footer": "Slider or image-based",
+            "id": "first-section",
+            "elements": [
+                { 
+                    "type": "boolean",
+                    "caption": "Demo of a Boolean",
+                    "value": true
+                }, {
+                    "type": "boolean",
+                    "caption": "Boolean using images",
+                    "value": false,
+                    "on": "favorite.png",
+                    "off": "~/favorited.png"
+                }, {
+                    "type": "root",
+                    "title": "Tap for nested controller",
+                    "sections": [
+                        {
+                            "header": "Nested view!",
+                            "elements": [
+                                {
+                                    "type": "boolean",
+                                    "caption": "Just a boolean",
+                                    "id": "the-boolean",
+                                    "value": false
+                                }, {
+                                    "type": "string",
+                                    "caption": "Welcome to the nested controller"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "header": "Entries",
+            "elements" : [
+                {
+                    "type": "entry",
+                    "caption": "Username",
+                    "value": "",
+                    "placeholder": "Your account username"
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -86,7 +86,7 @@ var jsonElement = JsonElement.FromFile ("demo.json");
 
 var firstSection = jsonElement ["first-section"] as Section;
 
-var theBoolean = jsonElement ["the-boolean"] as BooleanElement
+var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 ```
 
  <a name="Root_Element_Syntax" />
@@ -192,38 +192,38 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement
 
 Элементы визуализации основаны на C# StringElement и StyledStringElement и их можно отображать информацию разными способами и можно визуализировать их разными способами. Самый простой элементы могут создаваться следующим образом:
 
-```csharp
+```json
 {
-        "type": "string",
-        "caption": "Json Serializer",
+    "type": "string",
+    "caption": "Json Serializer"
 }
 ```
 
 При этом будут отображены простую строку с все значения по умолчанию: шрифт, фон, цвет текста и оформления. Можно подключить действия к этим элементам и сделать их ведут себя как кнопки, задав `"ontap"` свойство или `"onaccessorytap"` свойства:
 
-```csharp
+```json
 {
-    "type":    "string",
-        "caption": "View Photos",
-        "ontap:    "Acme.PhotoLibrary.ShowPhotos"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos"
 }
 ```
 
 Выше вызовет метод «ShowPhotos» в классе «Acme.PhotoLibrary». `"onaccessorytap"` Аналогичен предыдущему, но он будет вызван только если пользователь нажимает на аксессуары вместо коснувшись ячейки. Чтобы включить эту функцию, необходимо также задать периферийного устройства:
 
-```csharp
+```json
 {
-    "type":     "string",
-        "caption":  "View Photos",
-        "ontap:     "Acme.PhotoLibrary.ShowPhotos",
-        "accessory: "detail-disclosure",
-        "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos",
+    "accessory": "detail-disclosure",
+    "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
 }
 ```
 
 Подготовка к просмотру элементов можно отобразить две строки за один раз, один заголовок и другое значение. О том, как подготавливаются к просмотру эти строки зависит от стиля, это можно сделать с помощью `"style"` свойство. Значение по умолчанию будет отображаться заголовок слева, а значение справа. Стиль для получения дополнительных сведений см. в разделе. Цвета кодируются с помощью символа «#», следуют шестнадцатеричные числа, представляющие значения красного, зеленого, синего и может быть альфа-значения. Краткая форма (3 или 4 шестнадцатеричных цифр), которое представляет значения RGB или RGBA можно закодировать содержимое. Или длинной форме (6 или 8 цифр), которые представляют значения RGB или RGBA. Сокращенная версия является сокращением для записи же шестнадцатеричную цифру дважды. Поэтому константа «#1bc» результате красный = 0x11, green = 0xbb и синий = 0xcc. Если отсутствует значение альфа, цвета непрозрачен. Ниже представлено несколько примеров.
 
-```csharp
+```json
 "background": "#f00"
 "background": "#fa08f880"
 ```
@@ -364,19 +364,19 @@ class Foo {
 
 Логическими элементами следует выбрать тип `"bool"`, может содержать `"caption"` для отображения и `"value"` задано значение true или false. Если `"on"` и `"off"` свойств, они считаются образов. Образы разрешаются относительно текущего рабочего каталога в приложении. Если вы хотите ссылаться на файлы относительно пакета, можно использовать `"~"` как ярлык для представления каталога пакета приложения. Например `"~/favorite.png"` будет favorite.png, содержащийся в файле пакета. Пример:
 
-```csharp
+```json
 { 
-    "type" : "boolean",
-    "caption" : "Demo of a Boolean",
-    "value"   : true
+    "type": "boolean",
+    "caption": "Demo of a Boolean",
+    "value": true
 },
 
 {
     "type": "boolean",
-    "caption" : "Boolean using images",
-    "value"   : false,
-    "on"      : "favorite.png",
-    "off"     : "~/favorited.png"
+    "caption": "Boolean using images",
+    "value": false,
+    "on": "favorite.png",
+    "off": "~/favorited.png"
 }
 ```
 
@@ -394,30 +394,30 @@ class Foo {
 
 Чтобы разрешить пользователю вводить данные, используйте элементы записи. Используется тип для элементов записи `"entry"` или `"password"`. `"caption"` Задано значение текста для отображения справа и `"value"` присваивается начальное значение присвоено значение записи. `"placeholder"` Используется для отображения подсказку пользователю для пустой записи (он показан затенены). Далее приводятся некоторые примеры.
 
-```csharp
+```json
 {
-        "type": "entry",
-        "caption": "Username",
-        "value": "",
-        "placeholder": "Your account username"
+    "type": "entry",
+    "caption": "Username",
+    "value": "",
+    "placeholder": "Your account username"
 }, {
-        "type": "password",
-        "caption": "Password",
-        "value": "",
-        "placeholder": "You password"
+    "type": "password",
+    "caption": "Password",
+    "value": "",
+    "placeholder": "You password"
 }, {
-        "type": "entry",
-        "caption": "Zip Code",
-        "value": "01010",
-        "placeholder": "your zip code",
-        "keyboard": "numbers"
+    "type": "entry",
+    "caption": "Zip Code",
+    "value": "01010",
+    "placeholder": "your zip code",
+    "keyboard": "numbers"
 }, {
-        "type": "entry",
-        "return-key": "route",
-        "caption": "Entry with 'route'",
-        "placeholder": "captialization all + no corrections",
-        "capitalization": "all",
-        "autocorrect": "no"
+    "type": "entry",
+    "return-key": "route",
+    "caption": "Entry with 'route'",
+    "placeholder": "captialization all + no corrections",
+    "capitalization": "all",
+    "autocorrect": "no"
 }
 ```
 
@@ -515,22 +515,22 @@ class Foo {
 
 Типы элементов `"datetime"`, `"date"` и `"time"` используются для отображения даты с временем, значения даты или времени. Эти элементы принимают в качестве параметров заголовок и значение. Значения могут записываться в любом формате, поддерживаемом функцией .NET DateTime.Parse. Пример
 
-```csharp
+```json
 "header": "Dates and Times",
 "elements": [
-        {
-                "type": "datetime",
-                "caption": "Date and Time",
-                "value": "Sat, 01 Nov 2008 19:35:00 GMT"
-        }, {
-                "type": "date",
-                "caption": "Date",
-                "value": "10/10"
-        }, {
-                "type": "time",
-                "caption": "Time",
-                "value": "11:23"
-                }                       
+    {
+        "type": "datetime",
+        "caption": "Date and Time",
+        "value": "Sat, 01 Nov 2008 19:35:00 GMT"
+    }, {
+        "type": "date",
+        "caption": "Date",
+        "value": "10/10"
+    }, {
+        "type": "time",
+        "caption": "Time",
+        "value": "11:23"
+    }                       
 ]
 ```
 
@@ -541,10 +541,10 @@ class Foo {
 
 Можно создать ячейки, шифрованию будет внедрена UIWebView, который выполняет визуализацию содержимого указанный URL-адрес, локальных или удаленных с помощью `"html"` типа. Только два свойства для данного элемента, `"caption"` и `"url"`:
 
-```csharp
+```json
 {
-        "type": "html",
-        "caption": "Miguel's blog",
-        "url": "https://tirania.org/blog" 
+    "type": "html",
+    "caption": "Miguel's blog",
+    "url": "https://tirania.org/blog" 
 }
 ```

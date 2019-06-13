@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: becdd842f46cc7100bd7d9a6fd7347b541685c35
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036487"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039632"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Общие подклассы nsobject в Xamarin.iOS
 
@@ -107,7 +107,7 @@ class Generic<T, U> : NSObject where T: NSObject
 
 Рассмотрим это определение класса, который предоставляет конструктор, принимающий `IntPtr` (Xamarin.iOS способ создания C# объекта из собственного экземпляра Objective-C):
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}
@@ -121,7 +121,7 @@ class Generic<T> : NSObject where T : NSObject
 
 Эту проблему можно обойти, создав специализированный подкласс универсального типа.   Пример:
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}

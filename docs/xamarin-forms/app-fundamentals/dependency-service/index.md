@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: f07b26ed06e85e1b20a29459d2f8f0d2626a2855
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8a56ca7fcb6bfb6d463d1830e53210cf46fa499a
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054872"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741037"
 ---
 # <a name="xamarinforms-dependencyservice"></a>DependencyService в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/UsingDependencyService)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 _Xamarin.Forms позволяет разработчикам определять поведение в проектах для конкретных платформы. Затем DependencyService находит подходящую реализацию платформы, а общий код получает доступ к встроенной функциональности._
 
@@ -31,6 +31,6 @@ _Xamarin.Forms позволяет разработчикам определят�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Использование DependencyService (пример)](https://developer.xamarin.com/samples/UsingDependencyService)
-- [DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
+- [Использование DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 - [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

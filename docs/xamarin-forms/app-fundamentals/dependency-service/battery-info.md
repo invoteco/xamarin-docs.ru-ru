@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 08278c2bc380892706320dbd0e69642257b73005
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 2c9fae211e6a88944c94ca265409865b3252a10a
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233787"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740932"
 ---
 # <a name="checking-battery-status"></a>Проверка состояния батареи
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/DependencyService)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 
 В этой статье приводятся пошаговые инструкции по созданию приложения, проверяющего состояние батареи. В статье используется подключаемый модуль Battery, разработанный Джеймсом Монтеманьо (James Montemagno). Дополнительные сведения см. в [репозитории GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
 
@@ -478,6 +478,6 @@ public MainPage ()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [DependencyService (пример)](https://developer.xamarin.com/samples/DependencyService)
-- [Использование DependencyService (пример)](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
+- [Использование DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

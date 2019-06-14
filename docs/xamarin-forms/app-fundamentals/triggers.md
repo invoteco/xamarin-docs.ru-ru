@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 7a273d43ce43ca2946e1ff3177fc4575cd92a534
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 901bf683f59574d71c035b9635abaa3441152252
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050612"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741060"
 ---
 # <a name="xamarinforms-triggers"></a>Триггеры Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/WorkingWithTriggers)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 
 Триггеры позволяют декларативно задавать действия в XAML, которые изменяют внешний вид элементов управления при изменении событий или свойств.
 
@@ -333,5 +333,5 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример триггеров](https://developer.xamarin.com/samples/WorkingWithTriggers)
+- [Пример триггеров](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 - [Документация по API Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)

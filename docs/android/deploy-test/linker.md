@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 07f1fbae6c4fbfcfad45fc96970339e34b5de040
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3f22556948fc87dc604870f5a8625b80a4a0b29d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102845"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827199"
 ---
 # <a name="linking-on-android"></a>Компоновка в Android
 
 На платформе Xamarin.Android используется *компоновщик* для уменьшения размера приложений. Компоновщик применяет статический анализ приложения и определяет, какие сборки, типы и члены фактически используются приложением. Компоновщик применяет алгоритм *сборщика мусора*, проверяя все ссылки на сборки, типы и члены, пока не составит полный список используемых сборок, типов, и найти элементы. Затем он *удаляет* все, что осталось за пределом этого списка.
 
-Давайте рассмотрим этот механизм на примере приложения [Привет, Android](https://developer.xamarin.com/samples/HelloM4A/).
+Давайте рассмотрим этот механизм на примере приложения [Привет, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/).
 
-|Конфигурация|Размер 1.2.0|Размер 4.0.1|
+|Параметр Configuration|Размер 1.2.0|Размер 4.0.1|
 |---|---|---|
 |Сборка выпуска без компоновщика|14.0 МБ|16.0 МБ|
 |Сборка выпуска с компоновщиком|4.2 МБ|2.9 МБ|
@@ -90,7 +90,7 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 ### <a name="preserving-code"></a>Сохранение кода
 
-Иногда компоновщик удаляет код, который нужно сохранить. Пример:
+Иногда компоновщик удаляет код, который нужно сохранить. Например:
 
 -   Возможно, код вызывается динамически через `System.Reflection.MemberInfo.Invoke`.
 

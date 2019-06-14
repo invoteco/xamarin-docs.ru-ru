@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: a63d0d4c90bff36e55d98b731217133fe5958c1f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: d8763c6fe8e330181c836bc8d10923ea676a07c1
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051475"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740945"
 ---
 # <a name="checking-device-orientation"></a>Проверка ориентации устройства
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/UsingDependencyService)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 В этой статье приводятся инструкции по использованию [`DependencyService`](xref:Xamarin.Forms.DependencyService) для проверки ориентации устройства из общего кода с помощью собственных интерфейсов API на каждой платформе. Это пошаговое руководство основано на подключаемом модуле `DeviceOrientation`, разработанном Али Озгюром (Ali Özgür). Дополнительные сведения см. в [репозитории GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation).
 
@@ -224,6 +224,6 @@ public MainPage ()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Использование DependencyService (пример)](https://developer.xamarin.com/samples/UsingDependencyService)
-- [DependencyService (пример)](https://developer.xamarin.com/samples/DependencyService/DependencyServiceSample/)
+- [Использование DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 - [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

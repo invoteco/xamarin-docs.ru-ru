@@ -240,7 +240,8 @@
 ### [Вибрация](~/essentials/vibrate.md?context=xamarin/ios)
 ### [Устранение неполадок](~/essentials/troubleshooting.md?context=xamarin/ios)
 
-## [Данные и облачные службы](data-cloud/index.md)
+## Данные и облачные службы
+### [Обзор](data-cloud/index.md)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios)
 #### [Начало работы](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios)
 ##### [Шаг 1. Регистрация](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios)
@@ -258,7 +259,8 @@
 ### [CloudKit](data-cloud/intro-to-cloudkit.md)
 
 ### [Введение в веб-службы](~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios)
-## [Развертывание и тестирование](deploy-test/index.md)
+## Развертывание и тестирование
+### [Обзор](deploy-test/index.md)
 ### [Распространение приложений](deploy-test/app-distribution/index.md)
 #### [Распространение через Магазин приложений](deploy-test/app-distribution/app-store-distribution/index.md)
 ##### [Настройка приложения в iTunes Connect](deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
@@ -292,7 +294,8 @@
 ### [Пошаговое руководство: использование средства Apple Instruments](deploy-test/walkthrough-apples-instrument.md)
 ### [Производительность](deploy-test/performance.md)
 ### [Устранение неполадок](deploy-test/troubleshooting.md)
-## [Платформа Apple](~/cross-platform/macios/index.md?context=xamarin/ios)
+## Платформа Apple
+### [Обзор iOS и macOS](~/cross-platform/macios/index.md?context=xamarin/ios)
 ### [Управление учетными записями Apple](~/cross-platform/macios/apple-account-management.md?context=xamarin/ios)
 ### [Unified API](~/cross-platform/macios/unified/index.md?context=xamarin/ios)
 #### [Обзор](~/cross-platform/macios/unified/overview.md?context=xamarin/ios)
@@ -326,7 +329,8 @@
 ### [Работа с собственными типами в кроссплатформенных приложениях](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios)
 ### [HttpClient и селектор реализации SSL и TLS](~/cross-platform/macios/http-stack.md?context=xamarin/ios)
 ### [Оптимизация сборки](~/cross-platform/macios/optimizations.md?context=xamarin/ios)
-## [Дополнительные понятия и внутренние компоненты](internals/index.md)
+## Дополнительные понятия и внутренние компоненты
+### [Обзор](internals/index.md)
 ### [API](internals/api.md)
 ### [Структура API](internals/api-design/index.md)
 #### [NSString](internals/api-design/nsstring.md)
@@ -339,8 +343,10 @@
 ### [Новый RefCount](internals/newrefcount.md)
 ### [Селекторы Objective-C](internals/objective-c-selectors.md)
 ### [Регистратор](internals/registrar.md)
-## [Устранение неполадок](troubleshooting/index.md)
+## Устранение неполадок
+### [Обзор](troubleshooting/index.md)
 ### [Советы по устранению неполадок](troubleshooting/troubleshooting.md)
+### [Предварительная версия Xcode 11](~/ios/platform/ios13/troubleshooting/index.md)
 ### [Правила анализа Xamarin.iOS](troubleshooting/xamarin-ios-analysis.md)
 ### [Сообщения об ошибке (mtouch)](troubleshooting/mtouch-errors.md)
 ### [Часто задаваемые вопросы](troubleshooting/questions/index.md)
@@ -368,7 +374,8 @@
 #### [System.Exception AMDeviceNotificationSubscribe вернул...](troubleshooting/questions/exception-amddevicenotificationsubscribe.md)
 #### [MDocArchiveToMsxDocConverter.exe не найден, rver.BaseCommand.OnRequest](troubleshooting/questions/mdocarchivetomsxdocconverter-not-found.md)
 #### [Как задать переменные среды выполнения Mono для проектов iOS в Xamarin Studio?](troubleshooting/questions/xs-mono-runtime.md)
-## [watchOS](watchos/index.md)
+## watchOS
+### [Обзор](watchos/index.md)
 ### [Начало работы](watchos/get-started/index.md)
 #### [Введение в watchOS](watchos/get-started/intro-to-watchos.md)
 #### [Установка и настройка](watchos/get-started/installation.md)
@@ -405,7 +412,8 @@
 #### [Apple Watch](watchos/deploy-test/device.md)
 #### [Магазин приложений](watchos/deploy-test/appstore.md)
 ### [Устранение неполадок](watchos/troubleshooting.md)
-## [tvOS](tvos/index.md)
+## tvOS
+### [Обзор](tvos/index.md)
 ### [Начало работы](tvos/get-started/index.md)
 #### [Установка поддержки tvOS](tvos/get-started/installation.md)
 #### [Краткое руководство по созданию приложения "Hello, tvOS"](tvos/get-started/hello-tvos.md)

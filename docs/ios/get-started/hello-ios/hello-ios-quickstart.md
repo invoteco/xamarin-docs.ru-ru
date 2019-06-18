@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0b063619387d9984e24f6987234605b626289e2d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 5fbe711cb8ad4902da047a2027fc05e9956de863
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978301"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039716"
 ---
 # <a name="hello-ios--quickstart"></a>Краткое руководство по приложению "Привет, iOS"
 
@@ -283,7 +283,7 @@ Xamarin.iOS работает со следующими конфигурация�
 
     ![](hello-ios-quickstart-images/image001-.png "Начальный экран")
 
-    Создайте новое решение Xamarin.iOS в разделе **Файл > Создать > Проект... > Visual C# > iPhone & iPad > Приложение iOS (Xamarin**:
+    Создайте решение Xamarin.iOS, выбрав **Файл > Создать > Проект... > Visual C# > 	iPhone и iPad > Приложение iOS (Xamarin)** :
 
     ![Выберите тип проекта приложения iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Выберите тип проекта приложения iOS (Xamarin)")
 

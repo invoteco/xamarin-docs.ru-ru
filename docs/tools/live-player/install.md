@@ -1,41 +1,33 @@
 ---
-title: Установка Xamarin Live Player
-description: В этом документе описывается, как установить Xamarin Live Player и использовать его для динамического изменения к запущенному приложению.
+title: Xamarin Live Player конфигурации Visual Studio
+description: В этом документе описывается, как использовать Xamarin Live Player для динамического изменения к запущенному приложению.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2018
-ms.openlocfilehash: f9cfc69c2cd711460233e609d63bcbb8eb172ccf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: a29a637526c2829b44ae89d505dac37a648dee77
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61405159"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157748"
 ---
-# <a name="xamarin-live-player-setup"></a>Установка Xamarin Live Player
-
-Xamarin Live Player позволяет вносить изменения в реальном времени в приложении и воспроизводятся динамическую на устройстве. Ваш код выполняется внутри приложения Xamarin Live Player – здесь не нужно настроить эмуляторы или развертывание с помощью кабелей! В этой статье описывается, как настроить Xamarin Live Player.
+# <a name="xamarin-live-player-visual-studio-configuration"></a>Xamarin Live Player конфигурации Visual Studio
 
 ![Предварительная версия](~/media/shared/preview.png)
 
-> [!NOTE]
-> Динамический просмотр проигрыватель доступен только в Visual Studio 2017.
+> [!WARNING]
+> Xamarin Player Предварительный просмотр завершен. Приложение больше не доступно. Приведенные ниже инструкции предназначены для пользователей использовать предварительную версию с помощью Visual Studio 2017.
 
-## <a name="1-get-the-android-app"></a>1. Получить приложения Android
+> [!TIP]
+> Можно использовать [средства предварительного просмотра XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) в 2019 г. Visual Studio или Visual Studio для Mac, чтобы просмотреть экран проектов при их изменении.
 
-Xamarin Live Player доступна для Android по intalling непосредственно из [HockeyApp](https://aka.ms/xlp-hockeyapp).
+# <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+## <a name="using-xamarin-live-player"></a>С помощью Xamarin Live Player
 
-## <a name="2-get-visual-studio-2017"></a>2. Получить Visual Studio 2017
-
-Требуется Xamarin Live Player:
-
-- Visual Studio 2017 15.4 или более поздней версии.
-- Компьютер с Visual Studio и устройство в той же сети Wi-Fi.
-
-## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. С помощью Xamarin Live Player в первый раз
+Требуется приложение Xamarin Live Player на вашем устройстве. Больше не доступен для загрузки.
 
 1. Откройте **Visual Studio 2017**.
 2. Перейдите к **Сервис > Параметры...**  и выберите **Xamarin > другие** вкладки.
@@ -68,15 +60,9 @@ Xamarin Live Player доступна для Android по intalling непоср�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-## <a name="2-get-visual-studio-for-mac"></a>2. Получить Visual Studio для Mac
+## <a name="using-xamarin-live-player"></a>С помощью Xamarin Live Player
 
-Требуется Xamarin Live Player:
-
-- OS X 10.11 macOS версии 10.12 или более поздней версии
-- Visual Studio для Mac
-- Mac и устройство в той же сети Wi-Fi
-
-## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. С помощью Xamarin Live Player в первый раз
+Требуется приложение Xamarin Live Player на вашем устройстве. Больше не доступен для загрузки.
 
 1. Откройте **Visual Studio для Mac**.
 2. Перейдите к **Visual Studio > Параметры...**  и выберите **проектов > Xamarin Live Player (Предварительная версия)** вкладки.
@@ -117,5 +103,4 @@ Xamarin Live Player доступна для Android по intalling непоср�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры для использования с Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
 - [Устранение неполадок](~/tools/live-player/troubleshooting.md)

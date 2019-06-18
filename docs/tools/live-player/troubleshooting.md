@@ -5,20 +5,23 @@ ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2018
-ms.openlocfilehash: 5eb0dcead230e0bb2e7d99241e5d8e5a4115f838
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: bf0186b55b14d9797397b98390f4d825d669d0f4
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61175400"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157692"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Устранение неполадок Xamarin Live Player
 
 ![Предварительная версия](~/media/shared/preview.png)
 
-> [!NOTE]
-> Динамический просмотр проигрыватель доступен только в Visual Studio 2017.
+> [!WARNING]
+> Xamarin Player Предварительный просмотр завершен. Приложение больше не доступно. Приведенные ниже инструкции предоставляются для пользователей использовать предварительную версию с помощью Visual Studio 2017...
+
+> [!TIP]
+> Можно использовать [средства предварительного просмотра XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) в 2019 г. Visual Studio или Visual Studio для Mac, чтобы просмотреть экран проектов при их изменении.
 
 В этой статье описываются ограничения Live Player и некоторых распространенных проблем с действия по их устранению.
 
@@ -163,4 +166,3 @@ public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Установка](~/tools/live-player/install.md)
-- [Примеры для использования с Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

@@ -5,22 +5,23 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2017
-ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: fce0eeae4ef5776842ea1b45c36163118042dc49
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279520"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157729"
 ---
 # <a name="xamarin-live-player-app"></a>Приложение Xamarin Live Player
 
 ![Предварительная версия](~/media/shared/preview.png)
 
-> [!NOTE]
-> Динамический просмотр проигрыватель доступен только в Visual Studio 2017.
+> [!WARNING]
+> Xamarin Player Предварительный просмотр завершен. Приложение больше не доступно. Приведенные ниже инструкции предназначены для пользователей использовать предварительную версию с помощью Visual Studio 2017.
 
-После установки приложения на телефоне, выполните [инструкции по установке](~/tools/live-player/install.md) для подключения к компьютеру. Попробуйте выполнить одно из [примеры приложений](~/tools/live-player/samples.md) чтобы заставить ее работать.
+> [!TIP]
+> Можно использовать [средства предварительного просмотра XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) в 2019 г. Visual Studio или Visual Studio для Mac, чтобы просмотреть экран проектов при их изменении.
 
 При запуске приложение Xamarin Live Player выглядит следующим образом:
 
@@ -56,7 +57,7 @@ ms.locfileid: "61279520"
 
 Для подключения устройства в первый раз, следуйте инструкциям в [требования и настройка](~/tools/live-player/install.md). Можно связать несколько устройств и управлять ими с помощью интегрированной среды разработки.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
 В Visual Studio, выберите **средства > Xamarin Live Player > Управление устройствами...**
 
@@ -95,4 +96,4 @@ ms.locfileid: "61279520"
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Устранение неполадок](~/tools/live-player/troubleshooting.md)
-- [Примеры для использования с Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+

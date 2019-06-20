@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557207"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194941"
 ---
 # <a name="contributing"></a>Добавление данных
 
@@ -70,13 +70,13 @@ ms.locfileid: "65557207"
 Ниже приведен краткий список основных правил, которые следует учитывать при дополнении документации по .NET.
 
 - Запросы на включение внесенных изменений **не должны** быть большими. Просто задайте вопрос по проблеме и начните обсуждение, чтобы мы могли принять ваше предложение и вам не пришлось тратить время.
-- **Прочтите** [руководство по стилю](../contributing-guidelines/template.md) и рекомендации по [стилю изложения](../contributing-guidelines/voice-tone.md).
-- **Используйте** файл [шаблона](../contributing-guidelines/template.md) в качестве отправной точки.
+- **Прочтите** [руководство по стилю](contributing-guidelines/template.md) и рекомендации по [стилю изложения](contributing-guidelines/voice-tone.md).
+- **Используйте** файл [шаблона](contributing-guidelines/template.md) в качестве отправной точки.
 - **Создайте** отдельную ветвь в вилке перед работой над статьей.
 - **Следуйте**[рабочему процессу GitHub](https://guides.github.com/introduction/flow/).
 - Регулярно **публикуйте** записи о своей работе по добавлению данных.
 
 > [!NOTE]
-> Вы можете заметить, что сейчас в некоторых разделах учитываются не все указанные здесь и в [руководстве по стилю](./contributing-guidelines/template.md) рекомендации. Мы работаем над обеспечением согласованности в рамках всего сайта. 
+> Вы можете заметить, что сейчас в некоторых разделах учитываются не все указанные здесь и в [руководстве по стилю](contributing-guidelines/template.md) рекомендации. Мы работаем над обеспечением согласованности в рамках всего сайта. 
 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 6141b84af56d7680e2b294317ba97fb6943e17c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1bd61474daedd8bd330c0370948d6dee6f8ea50e
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106056"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194946"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Общие сведения о распространении приложений Xamarin.iOS
 
@@ -37,7 +37,8 @@ _В этом документе содержатся общие сведения
 ## <a name="app-store-distribution"></a>Распространение через App Store
 
 > [!IMPORTANT]
-> Корпорация Apple [объявила](https://developer.apple.com/news/?id=05072018a), что начиная с июля 2018 г. все публикуемые в App Store приложения и обновления должны быть собраны с использованием пакета SDK для iOS 11 и должны [поддерживать дисплей iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Корпорация Apple [объявила](https://developer.apple.com/ios/submit/), что начиная с марта 2019 г. все публикуемые в App Store приложения и обновления должны быть собраны с использованием пакета SDK для iOS 12.1 или более поздних версий, входящего в Xcode версии 10.1 и выше.
+> Кроме того, приложения должны поддерживать размеры экранов iPhone XS и iPad Pro с диагональю 12,9 дюйма.
 
 Это основной способ распространения приложений iOS на устройствах iOS потребителям. Все приложения, отправляемые в Магазин приложений, требуют утверждения Apple.
 

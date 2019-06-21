@@ -7,19 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 5e75a7872081d82c289db0312bbc7d84bce77b4e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1542ae5d7dbdf008dd5b300dfb5820c3f04ae682
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171404"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268891"
 ---
 # <a name="introduction-to-ios-11"></a>Введение в iOS 11
-
-_Попробуйте новый iOS 11 API-интерфейсов с помощью Xamarin._
-
-> [!NOTE]
-> Перед началом работы ознакомьтесь с [Приступая к работе](get-started.md) страницы инструкции о том, как установить Xcode 9.
 
 ![Пример ARKit](images/arkit.png) ![Размещение объектов AR](images/arkit2.png) ![Пример CoreML](images/coreml.png) ![Пример MapKit](images/mapkit.png) ![Пример машинного зрения прямоугольников](images/vision1.png) ![Пример машинного зрения лиц](images/vision2.png) ![Пример перетаскивания](images/drag-drop.png) ![Пример перетаскивания](images/drag-drop2.png) ![Пример SiriKit](images/sirikit.png)
 
@@ -86,12 +81,6 @@ Siri теперь поддерживает еще больше взаимоде�
 * [Пример PDKFit мини-приложения](https://developer.xamarin.com/samples/monotouch/ios11/PDFAnnotationWidgetsAdvanced)
 * [Пример PDFKit водяного знака](https://developer.xamarin.com/samples/monotouch/ios11/PDFDocumentWatermark)
 
-## <a name="more-information"></a>Дополнительные сведения
-
-Дополнительные сведения о iOS 11 зайдите [новые возможности в iOS 11](https://developer.apple.com/ios/) документации.
-
-
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Новые возможности в iOS 11 (Apple)](https://developer.apple.com/ios/)
 - [Образцы Xamarin iOS 11](https://developer.xamarin.com/samples/ios/iOS11/)

@@ -1,5 +1,5 @@
 ---
-title: Веб-изменения в iOS 11
+title: Изменения WebKit и Safari в iOS 11
 description: В этом документе рассматриваются изменения, внесенные в WebKit и платформу служб Safari в iOS 11. Он описывает способы работы с Задание стиля обновлений в SFSafariViewController и новых возможностях WKWebView.
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/12/2017
-ms.openlocfilehash: ba691a6605dcf7e86a76ed13d4c8ef5f0984ff6e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ced73b1f3f5b8207ae1258dcb01a78c94df217d
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399732"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268918"
 ---
-# <a name="web-changes-in-ios-11"></a>Веб-изменения в iOS 11
+# <a name="webkit-and-safari-changes-in-ios-11"></a>Изменения WebKit и Safari в iOS 11
 
 iOS 11 предлагает новый вариант браузера Safari — Safari 11.0 — включая изменения WebKit и SafariServices. В этом руководстве рассматриваются эти изменения.
 

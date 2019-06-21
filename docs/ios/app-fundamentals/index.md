@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 120bbfe0d5fa91e632fc56ee05431f5555653360
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61248521"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268594"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Принципы работы приложения Xamarin.iOS
 
@@ -33,6 +33,10 @@ ms.locfileid: "61248521"
 ## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Создание приложений iOS в коде](~/ios/app-fundamentals/ios-code-only.md)
 
 В этой статье рассматривается создание приложений iOS полностью в коде, с помощью Visual Studio и Visual Studio для Mac. В этом примере показан запуск из пустой шаблон проекта для создания экрана приложения в контроллере путем создания представлений иерархии на основе UIKit. Затем рассматривается создание пользовательских представлений, которые могут быть загружены в контроллере.
+
+## <a name="exception-marshalingiosplatformexception-marshalingmd"></a>[Маршалинг исключений](~/ios/platform/exception-marshaling.md)
+
+Описывает способ маршалинга Objective-C и управляемые исключения между кадрами машинного и управляемого кода.
 
 ## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[События, протоколы и делегаты](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 

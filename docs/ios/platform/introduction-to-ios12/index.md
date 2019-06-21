@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
-ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ac19571bc1f1163539a48ea2689c743445d8047
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035995"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268873"
 ---
 # <a name="introduction-to-ios-12"></a>Введение в iOS 12
 
@@ -42,7 +42,7 @@ Core ML 2 уменьшает размер приложения через мод
 
 Платформа естественного языка позволяет приложениям выполнять различные виды анализа языка. К примеру его можно определить части речи и определить язык, представленный блок текста.
 
-## <a name="vision-framework"></a>Framework концепции
+## <a name="vision-frameworkiosplatformintroduction-to-ios11visionmd"></a>[Framework концепции](~/ios/platform/introduction-to-ios11/vision.md)
 
 Платформа Vision включает обнаружение улучшенные лиц, которые можно обнаружить лица в разных направлениях. Кроме того изменения запроса можно выбрать конкретную редакцию алгоритм framework концепции.
 
@@ -81,7 +81,3 @@ iOS 11.3 появился [болезни](https://www.apple.com/healthcare/heal
 
 - OpenGL ES [разработчиков](https://developer.apple.com/ios/whats-new/) внедрить исходного состояния системы.
 - [`UIWebView`](xref:UIKit.UIWebView), [для `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
-
-## <a name="related-links"></a>Связанные ссылки
-
-- [Подготовьтесь к iOS 12 (Apple)](https://developer.apple.com/ios/)

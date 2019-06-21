@@ -1,5 +1,5 @@
 ---
-title: Возможности на платформе iOS
+title: Обзор функций платформы iOS
 description: Этот документ содержит ссылки на различные руководства, описывающие функции, представленные в разных версиях iOS и других функций платформы iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
@@ -7,50 +7,32 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: fff6620732ffcaccd13dde7ae31ab03a5106da16
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9628821be5a979777614eb4f7ad8605087093ed3
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364428"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268842"
 ---
-# <a name="ios-platform-features"></a>функции платформы iOS
+# <a name="ios-platform-features-overview"></a>Обзор функций платформы iOS
 
-## <a name="introduction-to-ios-12iosplatformintroduction-to-ios12indexmd"></a>[Введение в iOS 12](~/ios/platform/introduction-to-ios12/index.md)
+Это страница содержит перечень последних iOS выпусков, а также некоторых платформ Apple выделение можно открыть с помощью Xamarin.iOS.
 
-В этом документе описываются iOS 12 функции, доступные для использования при создании приложений Xamarin.iOS.
+## <a name="ios-releases"></a>Освобождает iOS
 
-## <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[Введение в iOS 11](~/ios/platform/introduction-to-ios11/index.md)
-
-В этом документе описаны новые и обновленные функции в iOS 11 и Xcode 9, такие как ARKit, Core ML, Core NFC, перетаскивание, MapKit, PDFKit, SiriKit и концепции. Он содержит ссылки на руководства, описывающие способы использования этих возможностей с помощью Xamarin.iOS.
-
-## <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[Введение в iOS 10](~/ios/platform/introduction-to-ios10/index.md)
-
-iOS 10 включает в себя несколько новых интерфейсов API и служб, которые дают возможность разрабатывать приложения с помощью новых функций и возможностей. В iOS 10 приложения имеют новые возможности, такие как расширение карты "," сообщения "," Phone "и" Siri. В этом разделе показано обоснованный, чтобы воспользоваться преимуществами этих функций в приложении Xamarin.iOS.
-
-## <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[Введение в iOS 9](~/ios/platform/introduction-to-ios9/index.md)
-
-В этом разделе определяет изменения, внесенные в iOS 9, при обновлении с iOS 8 и способы использования этих возможностей в приложении Xamarin.iOS.
-
-## <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[Введение в iOS 8](~/ios/platform/introduction-to-ios8.md)
-
-iOS 8 сделанных большое число изменений в операционную систему iOS 7. Здесь мы покажем, что это такое и как их использовать.
-
-## <a name="introduction-to-ios-7iosplatformintroduction-to-ios7indexmd"></a>[Введение в iOS 7](~/ios/platform/introduction-to-ios7/index.md)
-
-Основные новые интерфейсы API появился в iOS 7 включая контроллер представления переходы, усовершенствования анимации UIView UIKit Dynamics и текст пакета.
-
-## <a name="introduction-to-ios-6iosplatformintroduction-to-ios6indexmd"></a>[Введение в iOS 6](~/ios/platform/introduction-to-ios6/index.md)
-
-Объяснение функций, реализованных в iOS 6, включая представления коллекций, передайте Kit, комплект для проведения мероприятия и платформа для социальных сетей.
+|  |  |
+|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Введение в iOS 12](~/ios/platform/introduction-to-ios12/index.md) | В этом документе описывается iOS 12 функций, доступных для использования при buildingXamarin.iOS приложений.|
+| [Введение в iOS 11](~/ios/platform/introduction-to-ios11/index.md) | В этом документе описаны новые и обновленные функции в iOS 11 и Xcode 9, такие как ARKit, Core ML, Core NFC, перетаскивание, MapKit, PDFKit, SiriKit и концепции. Он содержит ссылки на руководства, описывающие способы использования этих featureswith Xamarin.iOS. |
+| [Введение в iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 включает в себя несколько новых интерфейсов API и служб, которые дают возможность разрабатывать приложения с помощью новых функций и возможностей. В iOS 10 приложения имеют новые возможности, такие как расширение карты "," сообщения "," Phone "и" Siri. В этом разделе показано обоснованный, чтобы воспользоваться преимуществами этих функций в приложении Xamarin.iOS. |
+| [Введение в iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | В этом разделе определяет изменения, внесенные в iOS 9, при обновлении с iOS 8 и способы использования этих возможностей в приложении Xamarin.iOS. |
+| [Введение в iOS 8](~/ios/platform/introduction-to-ios8.md)         | iOS 8 сделанных большое число изменений в операционную систему iOS 7. Здесь мы покажем, что это такое и как их использовать. |
+| [Введение в iOS 7](~/ios/platform/introduction-to-ios7/index.md)   | Основные новые интерфейсы API появился в iOS 7 включая контроллер представления переходы, усовершенствования анимации UIView UIKit Dynamics и текст пакета. |
+| [Введение в iOS 6](~/ios/platform/introduction-to-ios6/index.md)   | Объяснение функций, реализованных в iOS 6, включая представления коллекций, передайте Kit, комплект для проведения мероприятия и платформа для социальных сетей. |
 
 ## <a name="apple-payiosplatformapple-paymd"></a>[Apple Pay](~/ios/platform/apple-pay.md)
 
 Apple Pay была введена вместе с iOS 8, что позволяет пользователям оплачивать физические товары, таких как еда, развлечения и в группах через свои устройства с iOS. Он доступен на iPhone 6 "и" iPhone 6 плюс, а также может быть связан с Apple Watch за покупки в магазине. При использовании на устройстве iPhone, он использует Touch ID как способ подтверждения и авторизовать транзакций для пользователя кредитной или дебетовой карты.
-
-## <a name="3d-touchiosplatform3d-touchmd"></a>[Трехмерные сенсорные технологии](~/ios/platform/3d-touch.md)
-
-В этой статье содержатся и общие сведения об использовании новых 3D Touch интерфейсов API, добавляемый давление конфиденциальных жесты приложений Xamarin.iOS, запущенных на новом iPhone 6s и iPhone 6s Plus устройств.
 
 ## <a name="callkitiosplatformcallkitmd"></a>[CallKit](~/ios/platform/callkit.md)
 
@@ -138,6 +120,10 @@ iOS 10 включает новый API распознавания речи, ко
 
 Комплект для текста является новый API, который предлагает мощные текст функции макета и подготовки к просмотру. Он опирается на низком уровне framework основного текста, но гораздо проще в использовании, чем основного текста.
 
+## <a name="3d-touchiosplatform3d-touchmd"></a>[Трехмерные сенсорные технологии](~/ios/platform/3d-touch.md)
+
+В этой статье содержатся и общие сведения об использовании новых 3D Touch интерфейсов API, добавляемый давление конфиденциальных жесты приложений Xamarin.iOS, запущенных на новом iPhone 6s и iPhone 6s Plus устройств.
+
 ## <a name="touch-idiosplatformtouchidmd"></a>[Технология Touch ID](~/ios/platform/touchid.md)
 
 Touch ID впервые появился в iOS 7, как средство проверки подлинности пользователя — аналогичен секретный код. Тем не менее он был ограничен разблокировки устройства, с помощью App Store, с помощью iTunes и проверки подлинности только к цепочке ключей iCloud.
@@ -152,16 +138,12 @@ iOS 10 и macOS Sierra улучшает поддержку форматы пик
 
 ## <a name="binding-objective-cbinding-objective-cindexmd"></a>[Привязка Objective-C](binding-objective-c/index.md)
 
-При работе на iOS, возможны случаи, где вы хотите использовать сторонние библиотеки Objective-C. В такой ситуации можно использовать для создания привязки C# в собственные библиотеки Objective-C проектов MonoTouch элемента привязки. Проект использует те же средства, которые мы используем для вызова API для iOS на C#. &nbsp;В этом документе описывается привязка Objective-C API-интерфейсы.
+При работе на iOS, возможны случаи, где вы хотите использовать сторонние библиотеки Objective-C. В такой ситуации можно использовать для создания привязки C# в собственные библиотеки Objective-C проектов MonoTouch элемента привязки. Проект использует те же средства, которые мы используем для вызова API для iOS для C#. В этом документе описывается, как для привязки Objective-C API-интерфейсы.
 
 ## <a name="referencing-native-librariesnative-interopmd"></a>[Ссылки на собственные библиотеки](native-interop.md)
 
-Xamarin.iOS поддерживает связывание с собственные библиотеки C и библиотек Objective-C. В этом документе рассматриваются как связать ваши собственные библиотеки C, к проекту Xamarin.iOS. 
+Xamarin.iOS поддерживает связывание с собственные библиотеки C и библиотек Objective-C. В этом документе рассматриваются как связать ваши собственные библиотеки C, к проекту Xamarin.iOS.
 
 ## <a name="embedded-frameworksembedded-frameworksmd"></a>[Внедренные платформы](embedded-frameworks.md)
 
 Объясняется, как для внедрения платформы пользователя Objective-C в приложений Xamarin.iOS.
-
-## <a name="exception-marshalingexception-marshalingmd"></a>[Маршалинг исключений](exception-marshaling.md)
-
-Описывает способ маршалинга Objective-C и управляемые исключения между кадрами машинного и управляемого кода.

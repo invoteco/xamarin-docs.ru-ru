@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2018
-ms.openlocfilehash: 77589d0d644c366fc0feacd874929c7456b4ae30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 71799e4299f01a881c6bc265baa7ad721ec5fc79
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398802"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268881"
 ---
 # <a name="get-started-with-ios-12-tvos-12-and-watchos-5"></a>Начало работы с iOS 12, tvOS 12 и watchOS 5
 
@@ -26,7 +26,7 @@ ms.locfileid: "61398802"
 
 3. **Обновление Visual Studio для Mac и Visual Studio 2017** — убедитесь, что у вас есть последняя стабильная версия Xamarin.
 
-4. _(необязательно)_  **Установите iOS 12 на устройствах iOS** —
+4. _(необязательно) _ **Установите iOS 12 на устройствах iOS** —
 
    Для приложений, которые используют API, появившихся с Xcode 10 тестирование устройств, зарегистрированных разработчиков Apple можно [загрузить](https://developer.apple.com/download) и установите операционную систему на своих устройствах.
 
@@ -40,4 +40,4 @@ ms.locfileid: "61398802"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Скачать Xcode 10](https://developer.apple.com/download/)
+- [Скачать Xcode](https://developer.apple.com/download/)

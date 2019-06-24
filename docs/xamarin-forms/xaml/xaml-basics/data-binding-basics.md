@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 4a24c8dbb9ab4e23afa03de4ae2dbc55ddfb5fa4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171847"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309518"
 ---
 # <a name="part-4-data-binding-basics"></a>Часть 4. Основы привязки данных
 
@@ -253,6 +253,9 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
     </ListView.ItemTemplate>
 </ListView>
 ```
+
+> [!NOTE]
+> Источник привязки для ячейки и ячейки, дочерние элементы — `ListView.ItemsSource` коллекции.
 
 `Label` Элементу присваивается `View` свойство `ViewCell`. ( `ViewCell.View` Теги не требуются, так как `View` свойство является свойством содержимого из `ViewCell`.) Эта разметка отображает `FriendlyName` свойства каждого `NamedColor` объекта:
 

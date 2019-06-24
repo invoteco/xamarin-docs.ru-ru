@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 56f8632c9cc7d170b4c6594fd51e6aa3e92ad02b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 53d2a0aae3398ea31676fbc3dab95d500dfe2104
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61191248"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309504"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Стиль кросс платформенные приложения Xamarin.Forms
 
@@ -120,7 +120,7 @@ ms.locfileid: "61191248"
 
     Сохраните изменения в **NotesPage.xaml** , нажав клавишу **CTRL + S**и закройте файл.
 
-5. В **панели решения**в **заметки** проекта, дважды щелкните **NoteEntryPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+5. В **обозревателе решений**в **заметки** проекта, дважды щелкните **NoteEntryPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -222,7 +222,7 @@ ms.locfileid: "61191248"
 
     Сохраните изменения в **App.xaml** , выбрав **файл > Сохранить** (или нажав  **&#8984; + S**) и закройте файл.
 
-3. В **обозревателе решений**в **заметки** проекта, дважды щелкните **NotesPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+3. В **панели решения**в **заметки** проекта, дважды щелкните **NotesPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -261,7 +261,7 @@ ms.locfileid: "61191248"
 
     Сохраните изменения в **NotesPage.xaml** , выбрав **файл > Сохранить** (или нажав  **&#8984; + S**) и закройте файл.
 
-5. В **обозревателе решений**в **заметки** проекта, дважды щелкните **NoteEntryPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+5. В **панели решения**в **заметки** проекта, дважды щелкните **NoteEntryPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>

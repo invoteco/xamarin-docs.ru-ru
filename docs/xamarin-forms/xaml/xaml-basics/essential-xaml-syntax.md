@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60add066d581afffeaa200769efcdff9e0644535
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407658"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309513"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Часть 2. Синтаксис Essential XAML
 
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-Вы также можете выполнить что-то подобное в XAML с помощью `OnPlatform` и `On` классы. Во-первых, включите элементы свойства для `Padding` свойство в верхней части страницы:
+Вы также можете выполнить что-то подобное в XAML с помощью [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) и [ `On` ](xref:Xamarin.Forms.On) классы. Во-первых, включите элементы свойства для `Padding` свойство в верхней части страницы:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -523,11 +523,12 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
+> [!NOTE]
+> `OnPlatform` Расширение разметки может также использоваться в XAML для настройки внешнего вида пользовательского интерфейса на каждой платформы. Он предоставляет те же функции, что `OnPlatform` и `On` классов, но с более кратким представлением. Дополнительные сведения см. в разделе [расширение разметки OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+
 ## <a name="summary"></a>Сводка
 
 С помощью свойств элементов и вложенные свойства большая часть основной синтаксис XAML установлено. Тем не менее иногда необходимо задать свойства к объектам косвенных способом, например, из словаря ресурсов. Этот подход описан в следующей части часть [3. Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

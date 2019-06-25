@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a4c842ea7fd37ade9be0a9cb3e3ff7e50a6d1491
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 163b82590e95a1587836502883cd5f9f2afbe19c
+ms.sourcegitcommit: 6e04246207aa743820029e8c217a43cfdd24f991
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61328194"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67352112"
 ---
 # <a name="consuming-web-services"></a>Использование веб-служб
 
-_Эта руководстве показано, как соединиться с различных веб-служб для обеспечения создания, чтения, обновления и удаления (CRUD) для приложения Xamarin.Forms. Рассматриваются связи с службами ASMX, WCF services, службы REST и мобильных приложений Azure.
+_В этом руководстве показано, как взаимодействуют различные веб-службы для обеспечения создания, чтения, обновления и удаления (CRUD) для приложения Xamarin.Forms. Рассматриваются связи с службами ASMX, WCF services, службы REST и мобильных приложений Azure._
 
 ## <a name="consuming-an-aspnet-web-service-asmxxamarin-formsdata-cloudconsumingasmxmd"></a>[Использование службы веб-ASP.NET (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md)
 

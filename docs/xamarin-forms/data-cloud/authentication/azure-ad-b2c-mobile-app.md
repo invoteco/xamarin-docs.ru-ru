@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2019
-ms.openlocfilehash: 4c3cc489f7c65636ad9f2b5541e552665b10980e
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: 2f9cfceee4765dea946dfdac974ac2d56595ef94
+ms.sourcegitcommit: 9aaae4f0af096cd136b3dcfbb9af591ba307dc25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557262"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398696"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>Интеграция Azure Active Directory B2C с мобильными приложениями Azure
 
@@ -115,9 +115,9 @@ public async Task<bool> LoginAsync(bool useSilent = false)
     ...
 
     var payload = new JObject();
-    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.IdToken))
+    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.AccessToken))
     {
-        payload["access_token"] = authenticationResult.IdToken;
+        payload["access_token"] = authenticationResult.AccessToken;
     }
 
     User = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(
@@ -131,9 +131,9 @@ public async Task<bool> LoginAsync(bool useSilent = false)
 
 Библиотеки аутентификации Майкрософт (MSAL) используется для запуска рабочего процесса проверки подлинности с клиентом Azure Active Directory B2C. `AcquireTokenAsync` Метод запускает веб-браузере устройства и отображает параметры проверки подлинности, определенные в политике Azure Active Directory B2C, который задается параметром политики, ссылка на через `Constants.AuthoritySignin` константы. Эта политика определяет интерфейс для входа в систему и регистрации пользователя и утверждения, которые приложение получает при успешной проверке подлинности.
 
-Результат `AcquireTokenAsync` является вызов метода `AuthenticationResult` экземпляра. Если проверка подлинности успешна, `AuthenticationResult` маркер идентификации, который будет кэшироваться локально, будет содержать экземпляр. Если проверка подлинности завершилась неудачно, `AuthenticationResult` экземпляра будет содержать данные, который указывает на причину сбоя проверки подлинности. Сведения о том, как использовать MSAL для обмена данными с клиентом Azure Active Directory B2C, см. в разделе [проверки подлинности пользователей с помощью Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md).
+Результат `AcquireTokenAsync` является вызов метода `AuthenticationResult` экземпляра. Если проверка подлинности успешна, `AuthenticationResult` экземпляра будет содержать маркер доступа, который будет кэширован локально. Если проверка подлинности завершилась неудачно, `AuthenticationResult` экземпляра будет содержать данные, который указывает на причину сбоя проверки подлинности. Сведения о том, как использовать MSAL для обмена данными с клиентом Azure Active Directory B2C, см. в разделе [проверки подлинности пользователей с помощью Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md).
 
-Когда `CurrentClient.LoginAsync` вызова метода, экземпляра мобильных приложений Azure получает маркер идентификации, заключенное в `JObject`. Наличие допустимых маркеров означает, что экземпляр мобильных приложений Azure не нужно запустить свой собственный поток проверки подлинности OAuth 2.0. Вместо этого `CurrentClient.LoginAsync` возвращает `MobileServiceUser` экземпляр, который будет храниться в `MobileServiceClient.CurrentUser` свойство. Это свойство предоставляет `UserId` и `MobileServiceAuthenticationToken` свойства. Они представляют собой прошедшего проверку подлинности пользователя и маркер, который можно использовать до истечения срока его действия. Маркер проверки подлинности будут включены во все запросы к экземпляру мобильных приложений Azure, выполните действия, требующие разрешения пользователя, прошедшего проверку подлинности приложения Xamarin.Forms.
+Когда `CurrentClient.LoginAsync` вызова метода, экземпляра мобильных приложений Azure получает маркер доступа, в оболочку `JObject`. Наличие допустимых маркеров означает, что экземпляр мобильных приложений Azure не нужно запустить свой собственный поток проверки подлинности OAuth 2.0. Вместо этого `CurrentClient.LoginAsync` возвращает `MobileServiceUser` экземпляр, который будет храниться в `MobileServiceClient.CurrentUser` свойство. Это свойство предоставляет `UserId` и `MobileServiceAuthenticationToken` свойства. Они представляют собой прошедшего проверку подлинности пользователя и маркер, который можно использовать до истечения срока его действия. Маркер проверки подлинности будут включены во все запросы к экземпляру мобильных приложений Azure, выполните действия, требующие разрешения пользователя, прошедшего проверку подлинности приложения Xamarin.Forms.
 
 ### <a name="signing-out"></a>Выход
 

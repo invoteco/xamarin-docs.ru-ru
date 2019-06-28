@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: db44e09e9caa5c35a5e107cfed80d1d30fd7eb7d
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 06f5716c8decb21de39fd46abe734b5fdcd6bd43
+ms.sourcegitcommit: 0f78ec17210b915b43ddab75937de8063e472c70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347130"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67417947"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Проверка подлинности пользователей с Azure Active Directory B2C
 
@@ -103,19 +103,26 @@ public static class Constants
 
 ## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Использование библиотеки проверки подлинности Майкрософт (MSAL) для проверки подлинности
 
-Общий проект .NET Standard и платформы проектов в решение Xamarin.Forms, необходимо добавить пакет NuGet библиотеки аутентификации Майкрософт (MSAL). Предоставляет MSAL `PublicClientApplication` для упрощения процесса проверки подлинности с помощью Azure Active Directory B2C. В образце проекта, кода программной части для **App.xaml** определяет статические свойства для `AuthenticationClient` и `UiParent` и создает экземпляр `AuthenticationClient` в конструкторе. Второй параметр, переданный `PublicClientApplication` используется по умолчанию **центра**, или политики, который будет использоваться для проверки подлинности пользователей. Следующий пример демонстрирует способы создания экземпляра `PublicClientApplication`:
+Общий проект .NET Standard и платформы проектов в решение Xamarin.Forms, необходимо добавить пакет NuGet библиотеки аутентификации Майкрософт (MSAL). Включает в себя MSAL `PublicClientApplicationBuilder` класс, который создает объект, соблюдая `IPublicClientApplication` интерфейс. MSAL использует `With` предложений для передачи дополнительных параметров методов конструктора и проверки подлинности.
+
+В образце проекта, кода программной части для **App.xaml** определяет статические свойства с именем `AuthenticationClient` и `UIParent`и создает экземпляр `AuthenticationClient` объекта в конструкторе. `WithIosKeychainSecurityGroup` Предложение предоставляет имя группы безопасности для приложений iOS. `WithB2CAuthority` Предложение предоставляет значение по умолчанию **центра**, или политики, который будет использоваться для проверки подлинности пользователей. Следующий пример демонстрирует способы создания экземпляра `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
 {
-    public static PublicClientApplication AuthenticationClient { get; private set; }
+    public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-    public static UIParent UiParent { get; set; } = null;
+    public static object UIParent { get; set; } = null;
 
     public App()
     {
         InitializeComponent();
-        AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+
+        AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+            .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+            .WithB2CAuthority(Constants.AuthoritySignin)
+            .Build();
+
         MainPage = new NavigationPage(new LoginPage());
     }
 
@@ -133,11 +140,13 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            // Look for existing account
             IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
 
-            AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
-                Constants.Scopes,
-                accounts.FirstOrDefault());
+            AuthenticationResult result = await App.AuthenticationClient
+                .AcquireTokenSilent(Constants.Scopes, accounts.FirstOrDefault())
+                .ExecuteAsync();
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch
@@ -163,12 +172,12 @@ public partial class LoginPage : ContentPage
         AuthenticationResult result;
         try
         {
-            result = await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                App.UiParent);
+            result = await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .ExecuteAsync();
+    
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)
@@ -199,15 +208,12 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            return await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                null,
-                Constants.AuthorityPasswordReset,
-                App.UiParent
-                );
+            return await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .WithB2CAuthority(Constants.AuthorityPasswordReset)
+                .ExecuteAsync();
         }
         catch (MsalException)
         {
@@ -290,7 +296,7 @@ namespace TodoAzure.iOS
 </manifest>
 ```
 
-`MainActivity` Класса необходимо изменить, чтобы предоставить `UiParent` приложению во время `OnCreate` вызова. По завершении запроса авторизации Azure Active Directory B2C перенаправляет зарегистрированной схемы URL-адрес из **AndroidManifest.xml**. Зарегистрированные схемы URI приводит к Android вызова `OnActivityResult` с URL-адрес как параметр запуска, где он обрабатывается `SetAuthenticationContinuationEventArgs`.
+`MainActivity` Класса необходимо изменить, чтобы предоставить `UIParent` объект приложения в ходе `OnCreate` вызова. По завершении запроса авторизации Azure Active Directory B2C перенаправляет зарегистрированной схемы URL-адрес из **AndroidManifest.xml**. Зарегистрированные схемы URI приводит к Android вызова `OnActivityResult` метода с URL-адрес как параметр запуска, где он обрабатывается `SetAuthenticationContinuationEventArgs` метод.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -304,7 +310,7 @@ public class MainActivity : FormsAppCompatActivity
 
         Forms.Init(this, bundle);
         LoadApplication(new App());
-        App.UiParent = new UIParent(this);
+        App.UIParent = this;
     }
 
     protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -315,7 +321,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
+### <a name="universal-windows-platform"></a>Универсальная платформа Windows
 
 Без дополнительной настройки необходим для использования MSAL на универсальной платформе Windows
 

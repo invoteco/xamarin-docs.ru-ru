@@ -6,13 +6,13 @@ ms.assetid: ABCBAFF7-FD04-4038-997E-5B86684060E0
 ms.technology: xamarin-forms
 author: conceptdev
 ms.author: crdun
-ms.date: 08/08/2018
-ms.openlocfilehash: 31eff96bd4e6d7ac47f149710f1c16a2cd1b3ca9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/10/2019
+ms.openlocfilehash: d9785862878cb7af577bc0365e8395b285abb46c
+ms.sourcegitcommit: 0f78ec17210b915b43ddab75937de8063e472c70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61319562"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67417960"
 ---
 # <a name="serverless-computing-with-xamarinforms"></a>Бессерверными вычислениями с помощью Xamarin.Forms
 
@@ -21,3 +21,7 @@ _Создавайте приложения с широкими функцион�
 ## <a name="azure-functionsazure-functionsmd"></a>[Функции Azure](azure-functions.md)
 
 Приступить к работе, создав свою первую функцию Azure, взаимодействующего с помощью Xamarin.Forms.
+
+## <a name="azure-signalr-service-and-azure-function-apps-with-xamarinformsazure-signalrmd"></a>[Служба Azure SignalR и приложения-функции Azure с помощью Xamarin.Forms](azure-signalr.md)
+
+Xamarin.Forms используется служба Azure SignalR и приложений-функций Azure создать приложение чата без сервера.

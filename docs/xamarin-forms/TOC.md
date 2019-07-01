@@ -336,6 +336,7 @@
 #### [Поиск Azure](data-cloud/search/azure-search.md)
 ### [Бессерверные приложения](data-cloud/serverless/index.md)
 #### [Функции Azure](data-cloud/serverless/azure-functions.md)
+#### [Служба Azure SignalR с Xamarin.Forms](data-cloud/serverless/azure-signalr.md)
 ### [Хранение данных в базе данных документов](data-cloud/cosmosdb/index.md)
 #### [Использование базы данных документов Azure Cosmos DB](data-cloud/cosmosdb/consuming.md)
 #### [Проверка подлинности пользователей с помощью базы данных документов Azure Cosmos DB](data-cloud/cosmosdb/authentication.md)

@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/12/2019
 ms.custom: video
-ms.openlocfilehash: 3511850391b2be809daf2b70e81fa5b591db8dfa
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: c186f5c61bd2fa3df305be92a03135e57e302d02
+ms.sourcegitcommit: 6e04246207aa743820029e8c217a43cfdd24f991
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240348"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67352131"
 ---
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: буфер обмена
 
@@ -46,6 +46,9 @@ await Clipboard.SetTextAsync("Hello World");
 ```csharp
 var text = await Clipboard.GetTextAsync();
 ```
+
+> [!TIP]
+> Доступ к буферу обмена должен осуществляться в основном потоке пользовательского интерфейса. Подробные сведения о том, как вызвать методы в основном потоке пользовательского интерфейса, см. в статье об API [MainThread](~/essentials/main-thread.md).
 
 ## <a name="api"></a>API
 

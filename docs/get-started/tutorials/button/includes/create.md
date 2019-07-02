@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: a7a5d51b8931aa9dffd2c16b4ead51371390f033
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 854212951844d2443c5d1b332d94b533673640c4
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61372990"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277420"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Для работы с этим руководством у вас должен быть последний выпуск Visual Studio 2019 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**. Кроме того, вам потребуется компьютер Mac для сборки учебного приложения на iOS. Сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **ButtonTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.
 
@@ -37,6 +39,8 @@ ms.locfileid: "61372990"
     Обратите внимание, что по умолчанию [`Button`](xref:Xamarin.Forms.Button) обычно занимает все выделенное для него пространство — в этом случае полную ширину своего родительского элемента ([`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+
+Для работы с этим руководством вам нужно установить Visual Studio для Mac (последний выпуск) с поддержкой платформ Android и iOS. Кроме того, вам потребуется Xcode (последний выпуск). Дополнительные сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md).
 
 1. Запустите Visual Studio для Mac и создайте пустое приложение Xamarin.Forms **ButtonTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.
 

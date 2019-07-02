@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 846ff203a26f38fdaabe5a5dd6eff1c6a6b39b08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3130c20d39e0140695eed92ffa4941d6bafe796e
+ms.sourcegitcommit: b4c9c574b771ae0265171ca5e938aed1c5e35028
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343469"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67394549"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -16,9 +16,9 @@ ms.locfileid: "61343469"
            Completed="OnEntryCompleted" />
     ```
 
-    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) для обработчика событий `OnEntryTextChanged`, а [`Completed`](xref:Xamarin.Forms.Entry.Completed) — для обработчика `OnEntryCompleted`. Оба обработчика событий будут созданы на следующем шаге.
+    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) для обработчика событий `OnEntryTextChanged`, а [`Completed`](xref:Xamarin.Forms.Entry.Completed) — для обработчика `OnEntryCompleted`. На следующем шаге создаются оба обработчика событий.
 
-1. В **обозревателе решений** в проекте **LabelTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в **MainPage.xaml.cs** добавьте обработчики событий `OnEntryTextChanged` и `OnEntryCompleted` в класс.
+1. В **обозревателе решений** в проекте **EntryTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в файле **MainPage.xaml.cs** добавьте обработчики событий `OnEntryTextChanged` и `OnEntryCompleted` в класс.
 
     ```csharp
     void OnEntryTextChanged(object sender, TextChangedEventArgs e)
@@ -58,9 +58,9 @@ ms.locfileid: "61343469"
            Completed="OnEntryCompleted" />
     ```
 
-    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) для обработчика событий `OnEntryTextChanged`, а [`Completed`](xref:Xamarin.Forms.Entry.Completed) — для обработчика `OnEntryCompleted`. Оба обработчика событий будут созданы на следующем шаге.
+    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) для обработчика событий `OnEntryTextChanged`, а [`Completed`](xref:Xamarin.Forms.Entry.Completed) — для обработчика `OnEntryCompleted`. На следующем шаге создаются оба обработчика событий.
 
-1. На **Панели решения** в проекте **LabelTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в **MainPage.xaml.cs** добавьте обработчики событий `OnEntryTextChanged` и `OnEntryCompleted` в класс.
+1. На **Панели решения** в проекте **EntryTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в файле **MainPage.xaml.cs** добавьте обработчики событий `OnEntryTextChanged` и `OnEntryCompleted` в класс.
 
     ```csharp
     void OnEntryTextChanged(object sender, TextChangedEventArgs e)

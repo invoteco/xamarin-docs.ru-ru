@@ -1,11 +1,19 @@
 ---
-ms.openlocfilehash: 32b9941aa700d5834616a04f8b3e15054c6137d9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 164befeb08d7cb6691cb037b1f6b7f31c390afea
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037571"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277415"
 ---
+Прежде чем работать с этим учебником, вы должны выполнить:
+
+- Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
+- Руководство по [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
+- Руководство по [Grid](~/get-started/tutorials/grid/index.yml).
+- Руководство по [Label](~/get-started/tutorials/label/index.yml).
+- Руководство по [Image](~/get-started/tutorials/image/index.yml).
+
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
@@ -14,30 +22,6 @@ ms.locfileid: "61037571"
 > - Реагировать на выбор элементов `ListView`.
 > - Настраивать внешний вид ячеек `ListView`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+С помощью Visual Studio 2019 или Visual Studio для Mac вы создадите простое приложение, демонстрирующее, как настроить внешний вид [`ListView`](xref:Xamarin.Forms.ListView). На следующих снимках экрана показано готовое приложение.
 
-### <a name="prerequisites"></a>Предварительные требования
-
-Для работы с этим руководством у вас должен быть последний выпуск Visual Studio 2017 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**. Кроме того, вам потребуется компьютер Mac для сборки учебного приложения на iOS. Сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2017 к узлу сборки Mac см. в статье [Связывание с Mac для разработки Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Прежде чем работать с этим учебником, вы должны выполнить:
-
-- Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
-- Руководство по [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Руководство по [Grid](~/get-started/tutorials/grid/index.yml).
-- Руководство по [Label](~/get-started/tutorials/label/index.yml).
-- Руководство по [Image](~/get-started/tutorials/image/index.yml).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Предварительные требования
-
-Для работы с этим руководством вам нужно установить Visual Studio для Mac (последний выпуск) с поддержкой платформ Android и iOS. Кроме того, вам потребуется Xcode (последний выпуск). Дополнительные сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md).
-
-Прежде чем работать с этим учебником, вы должны выполнить:
-
-- Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
-- Руководство по [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Руководство по [Grid](~/get-started/tutorials/grid/index.yml).
-- Руководство по [Label](~/get-started/tutorials/label/index.yml).
-- Руководство по [Image](~/get-started/tutorials/image/index.yml).
+[![Снимок экрана: ListView с элементами по шаблону данных](../images/customize-cell-appearance-reduced.png "ListView с данными по шаблону")](../images/customize-cell-appearance-large.png#lightbox "ListView с данными по шаблону")

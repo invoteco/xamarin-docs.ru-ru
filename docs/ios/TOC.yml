@@ -1,0 +1,1009 @@
+- name: Xamarin.iOS
+  href: index.yml
+  expanded: true
+  items:
+    - name: Начало работы
+      items:
+        - name: Начало работы с Xamarin.iOS
+          href: get-started/index.md
+        - name: Настройка и установка
+          items:
+            - name: Установка Xamarin.iOS
+              href: get-started/installation/index.md
+            - name: Mac
+              href: get-started/installation/mac.md
+            - name: Windows
+              items:
+                - name: Установка Xamarin.iOS в Windows
+                  href: get-started/installation/windows/index.md
+                - name: "Связывание с компьютером\_Mac"
+                  items:
+                    - name: Связывание с Mac при разработке для Xamarin.iOS
+                      href: get-started/installation/windows/connecting-to-mac/index.md
+                    - name: Устранение неполадок при подключении
+                      href: get-started/installation/windows/connecting-to-mac/troubleshooting.md
+                - name: Введение в Xamarin.iOS для Visual Studio
+                  href: get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md
+                - name: "Настройка Visual\_Studio"
+                  href: get-started/installation/windows/config-options.md
+            - name: Настройка устройства для разработки
+              items:
+                - name: Подготовка устройства для Xamarin.iOS
+                  href: get-started/installation/device-provisioning/index.md
+                - name: Автоматическая подготовка
+                  href: get-started/installation/device-provisioning/automatic-provisioning.md
+                - name: Подготовка вручную
+                  href: get-started/installation/device-provisioning/manual-provisioning.md
+                - name: Бесплатная подготовка
+                  href: get-started/installation/device-provisioning/free-provisioning.md
+        - name: Создание первого приложения
+          items:
+            - name: 'Привет, iOS'
+              href: get-started/hello-ios/index.md
+            - name: "Часть\_1. Краткое руководство"
+              href: get-started/hello-ios/hello-ios-quickstart.md
+            - name: "Часть\_2. Подробные сведения"
+              href: get-started/hello-ios/hello-ios-deepdive.md
+        - name: Расширение приложения
+          items:
+            - name: 'Привет, iOS (несколько экранов)'
+              href: get-started/hello-ios-multiscreen/index.md
+            - name: "Часть\_1. Краткое руководство"
+              href: get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
+            - name: "Часть\_2. Подробные сведения"
+              href: get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md
+        - name: 'Разработчики, использующие Objective-C'
+          items:
+            - name: Xamarin для разработчиков Objective-C
+              href: get-started/objective-c-developers/index.md
+            - name: 'Начальное руководство по C# для разработчиков Objective-C'
+              href: get-started/objective-c-developers/primer.md
+    - name: Принципы работы приложений
+      items:
+        - name: Обзор
+          href: app-fundamentals/index.md
+        - name: Специальные возможности
+          href: app-fundamentals/accessibility.md
+        - name: Защита транспорта приложения
+          href: app-fundamentals/ats.md
+        - name: Фоновая обработка
+          href: app-fundamentals/backgrounding/index.md
+          items:
+            - name: Общие сведения о фоновой обработке в iOS
+              href: app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md
+            - name: Демонстрация жизненного цикла приложения
+              href: app-fundamentals/backgrounding/application-lifecycle-demo.md
+            - name: Методы фоновой обработки в iOS
+              href: app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md
+              items:
+                - name: Фоновая обработка в iOS с помощью задач
+                  href: app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md
+                - name: Регистрация приложений для запуска в фоновом режиме
+                  href: app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md
+                - name: Обновление приложения в фоновом режиме
+                  href: app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md
+            - name: Пошаговое руководство. Фоновый режим в iOS
+              href: app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md
+              items:
+                - name: Пошаговое руководство. Расположение в фоновом режиме
+                  href: app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md
+                - name: Пошаговое руководство. Фоновая передача и NSURLSession
+                  href: app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md
+            - name: Руководство по фоновой обработке в iOS
+              href: app-fundamentals/backgrounding/ios-backgrounding-guidance.md
+        - name: Создание пользовательского интерфейса iOS в коде
+          href: app-fundamentals/ios-code-only.md
+        - name: Маршалинг исключений
+          href: platform/exception-marshaling.md
+        - name: 'События, протоколы и делегаты'
+          href: app-fundamentals/delegates-protocols-and-events.md
+        - name: Файловая система
+          href: app-fundamentals/file-system.md
+        - name: Изображения и значки
+          href: app-fundamentals/images-icons/index.md
+          items:
+            - name: Отображение изображения
+              href: app-fundamentals/images-icons/displaying-an-image.md
+            - name: Значки приложения
+              href: app-fundamentals/images-icons/app-icons.md
+            - name: Значок App Store
+              href: app-fundamentals/images-icons/app-store-icon.md
+            - name: Альтернативные значки приложений
+              href: app-fundamentals/images-icons/alternate-app-icons.md
+            - name: Экраны запуска
+              href: app-fundamentals/images-icons/launch-screens.md
+            - name: Типы настраиваемых документов
+              href: app-fundamentals/images-icons/custom-document-types.md
+        - name: Локализация
+          href: app-fundamentals/localization/index.md
+          items:
+            - name: Кодировки интернационализации
+              href: app-fundamentals/localization/encodings.md
+        - name: Списки свойств
+          href: app-fundamentals/property-lists.md
+        - name: Компоненты обеспечения безопасности и конфиденциальности
+          href: app-fundamentals/security-privacy.md
+        - name: Потоки
+          href: app-fundamentals/threading.md
+        - name: Сенсорные технологии
+          href: app-fundamentals/touch/index.md
+          items:
+            - name: Сенсорные технологии в iOS
+              href: app-fundamentals/touch/touch-in-ios.md
+            - name: Пошаговое руководство. Использование сенсорного ввода в iOS
+              href: app-fundamentals/touch/ios-touch-walkthrough.md
+            - name: Мультисенсорное отслеживание
+              href: app-fundamentals/touch/touch-tracking.md
+        - name: Пользовательские значения по умолчанию
+          href: app-fundamentals/user-defaults.md
+    - name: Пользовательский интерфейс
+      items:
+        - name: Обзор
+          href: user-interface/index.md
+        - name: Конструктор iOS
+          href: user-interface/designer/index.md
+          items:
+            - name: Основные сведения о конструкторе iOS
+              href: user-interface/designer/introduction.md
+            - name: Пользовательские элементы управления в конструкторе iOS
+              href: user-interface/designer/ios-designable-controls-overview.md
+            - name: Пошаговое руководство. Использование пользовательских элементов управления в конструкторе iOS
+              href: user-interface/designer/ios-designable-controls-walkthrough.md
+            - name: Автоматический макет в конструкторе iOS
+              href: user-interface/designer/designer-auto-layout.md
+        - name: Раскадровки
+          href: user-interface/storyboards/index.md
+          items:
+            - name: Унифицированные раскадровки
+              href: user-interface/storyboards/unified-storyboards.md
+        - name: Пользовательские интерфейсы в iOS
+          href: user-interface/ios-ui/index.md
+          items:
+            - name: API внешнего вида
+              href: user-interface/ios-ui/introduction-to-the-appearance-api.md
+            - name: Создание объектов пользовательского интерфейса
+              href: user-interface/ios-ui/creating-ui-objects.md
+            - name: Параметры макета
+              href: user-interface/ios-ui/layout-options.md
+            - name: Обеспечение обратной связи Haptic
+              href: user-interface/ios-ui/haptic-feedback.md
+            - name: Работа с потоком пользовательского интерфейса
+              href: user-interface/ios-ui/ui-thread.md
+            - name: Обзор контроллеров представления
+              href: user-interface/ios-ui/view-controllers/index.md
+              items:
+                - name: Переходы контроллера представления
+                  href: user-interface/ios-ui/view-controllers/transitions.md
+        - name: Элементы управления
+          href: user-interface/controls/index.md
+          items:
+            - name: Предупреждения
+              href: user-interface/controls/alerts.md
+            - name: Кнопки
+              href: user-interface/controls/buttons.md
+            - name: Представление коллекции
+              href: user-interface/controls/uicollectionview.md
+            - name: Образы
+              href: user-interface/controls/image.md
+            - name: Ручные элементы управления камерой
+              href: user-interface/controls/intro-to-manual-camera-controls.md
+            - name: Карты
+              href: user-interface/controls/ios-maps/index.md
+              items:
+                - name: Заметки и наложения
+                  href: user-interface/controls/ios-maps/ios-maps-walkthrough.md
+            - name: Подписи
+              href: user-interface/controls/labels.md
+            - name: Средство выбора
+              href: user-interface/controls/picker.md
+            - name: Индикаторы активности и хода выполнения
+              href: user-interface/controls/progress-activity-indicator.md
+            - name: Панель поиска
+              href: user-interface/controls/searchbar.md
+            - name: 'Ползунки, переключатели и сегментированные элементы управления'
+              href: user-interface/controls/slider-switch-segmented-controls.md
+            - name: Представление стека
+              href: user-interface/controls/uistackview.md
+            - name: Таблицы и ячейки
+              href: user-interface/controls/tables/index.md
+              items:
+                - name: Компоненты и функции таблиц
+                  href: user-interface/controls/tables/table-parts-and-functionality.md
+                - name: Заполнение таблицы данными
+                  href: user-interface/controls/tables/populating-a-table-with-data.md
+                - name: Настройка вида таблицы
+                  href: user-interface/controls/tables/customizing-table-appearance.md
+                - name: Редактирование
+                  href: user-interface/controls/tables/editing.md
+                - name: Работа с действиями строк
+                  href: user-interface/controls/tables/row-action.md
+                - name: Работа с таблицами в конструкторе iOS
+                  href: user-interface/controls/tables/creating-tables-in-a-storyboard.md
+                - name: Автоматическое изменение высоты строки
+                  href: user-interface/controls/tables/autosizing-row-height.md
+            - name: Панели вкладок и контроллеры панелей вкладок
+              href: user-interface/controls/creating-tabbed-applications.md
+            - name: Текстовый ввод
+              href: user-interface/controls/text-input.md
+            - name: Веб-представления
+              href: user-interface/controls/uiwebview.md
+        - name: Программные ограничения макета
+          href: user-interface/programmatic-layout-constraints.md
+        - name: MonoTouch.Dialog
+          href: user-interface/monotouch.dialog/index.md
+          items:
+            - name: Пошаговое руководство. Создание приложения с помощью API элементов
+              href: user-interface/monotouch.dialog/elements-api-walkthrough.md
+            - name: Пошаговое руководство. Использование JSON для создания пользовательского интерфейса
+              href: user-interface/monotouch.dialog/json-element-walkthrough.md
+            - name: Разметка JSON MonoTouch.Dialog
+              href: user-interface/monotouch.dialog/monotouch.dialog-json-markup.md
+            - name: Пошаговое руководство. Создание приложения с помощью API отражения
+              href: user-interface/monotouch.dialog/reflection-api-walkthrough.md
+    - name: Функции платформы
+      items:
+        - name: Обзор
+          href: platform/index.md
+        - name: iOS 12
+          items:
+            - name: "Введение в iOS\_12"
+              href: platform/introduction-to-ios12/index.md
+            - name: Начало работы
+              href: platform/introduction-to-ios12/get-started.md
+            - name: Устранение неполадок
+              href: platform/introduction-to-ios12/troubleshooting.md
+        - name: iOS 11
+          items:
+            - name: "Введение в iOS\_11"
+              href: platform/introduction-to-ios11/index.md
+            - name: "Обновление приложения до iOS\_11"
+              href: platform/introduction-to-ios11/updating-your-app/index.md
+              items:
+                - name: Изменения архитектуры
+                  href: platform/introduction-to-ios11/updating-your-app/architecture-changes.md
+                - name: Обновления визуального проектирования
+                  href: platform/introduction-to-ios11/updating-your-app/visual-design.md
+                - name: Изменения App Store
+                  href: platform/introduction-to-ios11/updating-your-app/app-store-changes.md
+            - name: Устранение неполадок
+              href: platform/introduction-to-ios11/troubleshooting.md
+        - name: iOS 10
+          items:
+            - name: "Введение в iOS\_10"
+              href: platform/introduction-to-ios10/index.md
+            - name: "Дополнительные изменения платформы iOS\_10"
+              href: platform/introduction-to-ios10/additional-framework-changes.md
+        - name: iOS 9
+          items:
+            - name: "Введение в iOS\_9"
+              href: platform/introduction-to-ios9/index.md
+            - name: Совместимость с iOS 9
+              href: platform/introduction-to-ios9/ios9.md
+            - name: "Дополнительные изменения платформы iOS\_9"
+              href: platform/introduction-to-ios9/additional-framework-changes.md
+            - name: Устранение неполадок
+              href: platform/introduction-to-ios9/troubleshooting.md
+        - name: iOS 8
+          href: platform/introduction-to-ios8.md
+        - name: iOS 7
+          items:
+            - name: "Введение в iOS\_7"
+              href: platform/introduction-to-ios7/index.md
+            - name: Обзор пользовательского интерфейса iOS 7
+              href: platform/introduction-to-ios7/ios7-ui.md
+        - name: iOS 6
+          href: platform/introduction-to-ios6/index.md
+        - name: Apple Pay
+          href: platform/apple-pay.md
+        - name: ARKit
+          items:
+            - name: ARKit в iOS 11
+              href: platform/introduction-to-ios11/arkit/index.md
+            - name: ARKit 2
+              href: platform/introduction-to-ios12/arkit2.md
+            - name: ARKit и UrhoSharp
+              href: platform/introduction-to-ios11/arkit/urhosharp.md
+        - name: Привязка Objective-C
+          href: platform/binding-objective-c/index.md
+          items:
+            - name: Пошаговое руководство. Привязка библиотеки Objective-C в iOS
+              href: platform/binding-objective-c/walkthrough.md
+        - name: CallKit
+          href: platform/callkit.md
+        - name: Контакты и ContactsUI
+          href: platform/contacts.md
+        - name: CoreML
+          items:
+            - name: CoreML в iOS 11
+              href: platform/introduction-to-ios11/coreml.md
+            - name: Core ML 2
+              href: platform/introduction-to-ios12/coreml.md
+        - name: CoreNFC
+          href: platform/introduction-to-ios11/corenfc.md
+        - name: Средство выбора документов
+          href: platform/document-picker.md
+        - name: Перетаскивание
+          href: platform/introduction-to-ios11/drag-and-drop.md
+        - name: EventKit
+          href: platform/eventkit.md
+        - name: Расширения iOS
+          href: platform/extensions.md
+        - name: Внедренные платформы
+          href: platform/embedded-frameworks.md
+        - name: Сжатие файлов
+          href: platform/file-compression.md
+        - name: Графика и анимация в iOS
+          items:
+            - name: Обзор
+              displayName: Graphics and animation in iOS overview
+              href: platform/graphics-animation-ios/index.md
+            - name: CoreImage
+              href: platform/graphics-animation-ios/introduction-to-coreimage.md
+            - name: Core Graphics
+              href: platform/graphics-animation-ios/core-graphics.md
+            - name: Core Animation
+              href: platform/graphics-animation-ios/core-animation.md
+            - name: Концепция
+              href: platform/introduction-to-ios11/vision.md
+            - name: Пошаговое руководство. Графика и анимация
+              href: platform/graphics-animation-ios/graphics-animation-walkthrough.md
+        - name: Handoff
+          href: platform/handoff.md
+        - name: HealthKit
+          href: platform/healthkit.md
+        - name: HomeKit
+          href: platform/homekit.md
+        - name: API-интерфейсы игр iOS
+          items:
+            - name: Обзор
+              displayName: iOS Gaming API overview
+              href: platform/gaming/index.md
+            - name: SceneKit
+              href: platform/gaming/scenekit.md
+            - name: SpriteKit
+              href: platform/gaming/spritekit.md
+        - name: MapKit
+          href: platform/introduction-to-ios11/mapkit.md
+        - name: Интеграция приложения для обмена сообщениями
+          items:
+            - name: Обзор
+              href: platform/message-app-integration/index.md
+            - name: Основные сведения о расширении приложения для обмена сообщениями
+              href: platform/message-app-integration/intro-to-message-app-extensions.md
+            - name: Дополнительные расширения приложения для обмена сообщениями
+              href: platform/message-app-integration/advanced-message-app-extensions.md
+        - name: Многозадачность для iPad
+          href: platform/multitasking.md
+        - name: Естественный язык
+          href: platform/introduction-to-ios12/natural-language.md
+        - name: PassKit
+          href: platform/passkit.md
+        - name: PhotoKit
+          href: platform/photokit.md
+        - name: Ссылка на собственные библиотеки
+          href: platform/native-interop.md
+        - name: API поиска
+          items:
+            - name: Обзор
+              href: platform/search/index.md
+            - name: NSUserActivity
+              href: platform/search/nsuseractivity.md
+            - name: Полезные сведения
+              href: platform/search/corespotlight.md
+            - name: Веб-разметка
+              href: platform/search/web-markup.md
+            - name: Улучшенные возможности поиска приложения
+              href: platform/search/app-search-enhancements.md
+            - name: Упреждающие предложения
+              href: platform/search/proactive-suggestions.md
+            - name: Улучшенные возможности мини-приложения начального экрана и экрана поиска
+              href: platform/search/widgets.md
+        - name: SiriKit
+          items:
+            - name: Обзор
+              href: platform/sirikit/index.md
+            - name: Основные сведения о понятиях SiriKit
+              href: platform/sirikit/understanding-sirikit.md
+            - name: Реализация SiriKit
+              href: platform/sirikit/implementing-sirikit.md
+            - name: Обновления SiriKit в iOS 11
+              href: platform/introduction-to-ios11/sirikit.md
+            - name: Сочетания клавиш для Siri в iOS 12
+              href: platform/introduction-to-ios12/siri-shortcuts.md
+        - name: Платформа для социальных сетей
+          href: platform/social-framework.md
+        - name: Распознавание речи
+          href: platform/speech.md
+        - name: StoreKit и покупки из приложений
+          items:
+            - name: Обзор
+              displayName: In-App Purchasing overview
+              href: platform/in-app-purchasing/index.md
+            - name: Основные сведения о покупке из приложения и ее настройка
+              href: platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md
+            - name: "Обзор Store\_Kit и получение сведений о продукте"
+              href: platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md
+            - name: Приобретение готовых к использованию продуктов
+              href: platform/in-app-purchasing/purchasing-consumable-products.md
+            - name: Приобретение неготовых к использованию продуктов
+              href: platform/in-app-purchasing/purchasing-non-consumable-products.md
+            - name: Транзакции и проверки
+              href: platform/in-app-purchasing/transactions-and-verification.md
+            - name: Проверка приложения для запросов
+              href: platform/request-app-review.md
+            - name: Подписки и отчетность
+              href: platform/in-app-purchasing/subscriptions-and-reporting.md
+            - name: Изменения в StoreKit в iOS 6
+              href: platform/introduction-to-ios6/changes-to-storekit.md
+        - name: TextKit
+          href: platform/textkit.md
+        - name: Трехмерные сенсорные технологии
+          href: platform/3d-touch.md
+        - name: Технология Touch ID
+          href: platform/touchid.md
+        - name: Платформа уведомлений пользователя
+          items:
+            - name: Обзор
+              href: platform/user-notifications/index.md
+            - name: Оптимизированные уведомления пользователя
+              href: platform/user-notifications/enhanced-user-notifications.md
+            - name: Дополнительные уведомления пользователя
+              href: platform/user-notifications/advanced-user-notifications.md
+            - name: Обновления уведомления в iOS 12
+              href: platform/introduction-to-ios12/notifications/index.md
+              items:
+                - name: Критические оповещения
+                  href: platform/introduction-to-ios12/notifications/critical-alerts.md
+                - name: Кнопки действий динамических уведомлений
+                  href: platform/introduction-to-ios12/notifications/dynamic-actions.md
+                - name: Сгруппированные уведомления
+                  href: platform/introduction-to-ios12/notifications/grouped.md
+                - name: Интерактивные уведомления
+                  href: platform/introduction-to-ios12/notifications/interactive.md
+                - name: Управление уведомлениями
+                  href: platform/introduction-to-ios12/notifications/management.md
+                - name: Предварительные уведомления
+                  href: platform/introduction-to-ios12/notifications/provisional.md
+            - name: Нерекомендуемые технологии уведомлений
+              href: platform/user-notifications/deprecated/index.md
+              items:
+                - name: Локальные уведомления
+                  href: platform/user-notifications/deprecated/local-notifications-in-ios.md
+                - name: Пошаговое руководство. Использование локальных уведомлений в Xamarin.iOS
+                  href: platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md
+                - name: Удаленные уведомления
+                  href: platform/user-notifications/deprecated/remote-notifications-in-ios.md
+        - name: WebKit и Safari
+          href: platform/introduction-to-ios11/web.md
+        - name: Широкая цветовая палитра
+          href: platform/wide-color.md
+    - name: Xamarin.Essentials
+      items:
+        - name: Сведения о Xamarin.Essentials
+          href: ~/essentials/index.md?context=xamarin/ios
+        - name: Приступая к работе
+          href: ~/essentials/get-started.md?context=xamarin/ios
+        - name: Акселерометр
+          href: ~/essentials/accelerometer.md?context=xamarin/ios
+        - name: Сведения о приложении
+          href: ~/essentials/app-information.md?context=xamarin/ios
+        - name: Барометр
+          href: ~/essentials/barometer.md?context=xamarin/ios
+        - name: Батарея
+          href: ~/essentials/battery.md?context=xamarin/ios
+        - name: буфер обмена
+          href: ~/essentials/clipboard.md?context=xamarin/ios
+        - name: Преобразователи цвета
+          href: ~/essentials/color-converters.md?context=xamarin/ios
+        - name: Компас
+          href: ~/essentials/compass.md?context=xamarin/ios
+        - name: Подключение
+          href: ~/essentials/connectivity.md?context=xamarin/ios
+        - name: Обнаружение тряски
+          href: ~/essentials/detect-shake.md?context=xamarin/ios
+        - name: Сведения о дисплее устройства
+          href: ~/essentials/device-display.md?context=xamarin/ios
+        - name: Сведения об устройстве
+          href: ~/essentials/device-information.md?context=xamarin/ios
+        - name: Адрес эл. почты
+          href: ~/essentials/email.md?context=xamarin/ios
+        - name: Вспомогательные методы для файловой системы
+          href: ~/essentials/file-system-helpers.md?context=xamarin/ios
+        - name: Фонарик
+          href: ~/essentials/flashlight.md?context=xamarin/ios
+        - name: Геокодирование
+          href: ~/essentials/geocoding.md?context=xamarin/ios
+        - name: Геопозиционирование
+          href: ~/essentials/geolocation.md?context=xamarin/ios
+        - name: Гироскоп
+          href: ~/essentials/gyroscope.md?context=xamarin/ios
+        - name: Средство запуска
+          href: ~/essentials/launcher.md?context=xamarin/ios
+        - name: Магнитометр
+          href: ~/essentials/magnetometer.md?context=xamarin/ios
+        - name: Главный поток
+          href: ~/essentials/main-thread.md?context=xamarin/ios
+        - name: Карты
+          href: ~/essentials/maps.md?context=xamarin/ios
+        - name: Открыть браузер
+          href: ~/essentials/open-browser.md?context=xamarin/ios
+        - name: Датчик ориентации
+          href: ~/essentials/orientation-sensor.md?context=xamarin/ios
+        - name: Телефон
+          href: ~/essentials/phone-dialer.md?context=xamarin/ios
+        - name: 'Расширения платформы (размер, прямоугольник, точка)'
+          href: ~/essentials/platform-extensions.md?context=xamarin/ios
+        - name: Параметры
+          href: ~/essentials/preferences.md?context=xamarin/ios
+        - name: Защищенное хранилище
+          href: ~/essentials/secure-storage.md?context=xamarin/ios
+        - name: Общий доступ
+          href: ~/essentials/share.md?context=xamarin/ios
+        - name: SMS
+          href: ~/essentials/sms.md?context=xamarin/ios
+        - name: Преобразование текста в речь
+          href: ~/essentials/text-to-speech.md?context=xamarin/ios
+        - name: Преобразователи единиц
+          href: ~/essentials/unit-converters.md?context=xamarin/ios
+        - name: Отслеживание версий
+          href: ~/essentials/version-tracking.md?context=xamarin/ios
+        - name: Вибрация
+          href: ~/essentials/vibrate.md?context=xamarin/ios
+        - name: Устранение неполадок
+          href: ~/essentials/troubleshooting.md?context=xamarin/ios
+    - name: Данные и облачные службы
+      items:
+        - name: Обзор
+          href: data-cloud/index.md
+        - name: Azure Active Directory
+          href: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios
+          items:
+            - name: Начало работы
+              href: ~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios
+              items:
+                - name: Шаг 1. Регистровое
+                  href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios
+                - name: Шаг 2. Настроить
+                  href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/ios
+            - name: Доступ к API Graph
+              href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/ios
+        - name: Мобильные приложения Azure
+          href: ~/cross-platform/data-cloud/mobile-apps.md
+        - name: Доступ к данным
+          href: data-cloud/data/index.md
+          items:
+            - name: Вступление
+              href: data-cloud/data/introduction.md
+            - name: Параметр Configuration
+              href: data-cloud/data/configuration.md
+            - name: Использование ORM для SQLite.NET
+              href: data-cloud/data/using-sqlite-orm.md
+            - name: Использование ADO.NET
+              href: data-cloud/data/using-adonet.md
+            - name: Использование данных в приложении
+              href: data-cloud/data/using-data-in-an-app.md
+        - name: System.Data
+          href: data-cloud/system.data.md
+        - name: iCloud
+          href: data-cloud/introduction-to-icloud.md
+        - name: CloudKit
+          href: data-cloud/intro-to-cloudkit.md
+        - name: Введение в веб-службы
+          href: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios
+    - name: Развертывание и тестирование
+      items:
+        - name: Обзор
+          href: deploy-test/index.md
+        - name: Распространение приложений
+          href: deploy-test/app-distribution/index.md
+          items:
+            - name: Распространение через App Store
+              href: deploy-test/app-distribution/app-store-distribution/index.md
+              items:
+                - name: "Настройка приложения в iTunes\_Connect"
+                  href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
+                - name: Публикация в Магазине приложений
+                  href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
+            - name: Собственное (корпоративное) распространение
+              href: deploy-test/app-distribution/in-house-distribution.md
+            - name: Прямое распространение
+              href: deploy-test/app-distribution/ad-hoc-distribution.md
+            - name: Файл iTunesMetadata.plist
+              href: deploy-test/app-distribution/itunesmetadata.md
+            - name: Поддержка IPA
+              href: deploy-test/app-distribution/ipa-support.md
+        - name: Подписывание и подготовка кода
+          href: deploy-test/provisioning/index.md
+          items:
+            - name: Работа с возможностями
+              href: deploy-test/provisioning/capabilities/index.md
+              items:
+                - name: Возможности Wallet
+                  href: deploy-test/provisioning/capabilities/wallet-capabilities.md
+                - name: Возможности iCloud
+                  href: deploy-test/provisioning/capabilities/icloud-capabilities.md
+                - name: Возможности Apple Pay
+                  href: deploy-test/provisioning/capabilities/apple-pay-capabilities.md
+                - name: Возможности групп приложений
+                  href: deploy-test/provisioning/capabilities/app-groups-capabilities.md
+            - name: Работа с разрешениями
+              href: deploy-test/provisioning/entitlements.md
+            - name: Справочник по ключам и значениям в файле Info.plist
+              href: deploy-test/provisioning/infoplist-reference.md
+            - name: Инструменты fastlane
+              href: deploy-test/provisioning/fastlane/index.md
+              items:
+                - name: cert
+                  href: deploy-test/provisioning/fastlane/cert.md
+                - name: sigh
+                  href: deploy-test/provisioning/fastlane/sigh.md
+                - name: match
+                  href: deploy-test/provisioning/fastlane/match.md
+        - name: Компиляция для разных устройств
+          href: deploy-test/compiling-for-different-devices.md
+        - name: Среда
+          href: deploy-test/environment.md
+        - name: Механизм сборки iOS
+          href: deploy-test/ios-build-mechanics.md
+        - name: mtouch
+          href: deploy-test/mtouch.md
+        - name: Компоновщик
+          href: deploy-test/linker.md
+        - name: Развертывание по беспроводному соединению
+          href: deploy-test/wireless-deployment.md
+        - name: TestFlight
+          href: deploy-test/testflight.md
+        - name: Отладка
+          href: deploy-test/debugging-in-xamarin-ios.md
+        - name: Модульное тестирование
+          href: deploy-test/touch.unit.md
+        - name: Профилирование приложений Xamarin.iOS с помощью Instruments
+          href: deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md
+        - name: Пошаговое руководство. Использование средства Apple Instruments
+          href: deploy-test/walkthrough-apples-instrument.md
+        - name: Производительность
+          href: deploy-test/performance.md
+        - name: Устранение неполадок
+          href: deploy-test/troubleshooting.md
+    - name: Платформа Apple
+      items:
+        - name: Общие сведения об iOS и macOS
+          href: ~/cross-platform/macios/index.md?context=xamarin/ios
+        - name: Управление учетными записями Apple
+          href: ~/cross-platform/macios/apple-account-management.md?context=xamarin/ios
+        - name: Unified API
+          href: ~/cross-platform/macios/unified/index.md?context=xamarin/ios
+          items:
+            - name: Обзор
+              href: ~/cross-platform/macios/unified/overview.md?context=xamarin/ios
+            - name: Обновление имеющихся приложений
+              href: ~/cross-platform/macios/unified/updating-apps.md?context=xamarin/ios
+            - name: Обновление имеющихся приложений iOS
+              href: ~/cross-platform/macios/unified/updating-ios-apps.md?context=xamarin/ios
+            - name: Обновление имеющихся приложений Mac
+              href: ~/cross-platform/macios/unified/updating-mac-apps.md?context=xamarin/ios
+            - name: Обновление имеющихся приложений Xamarin.Forms
+              href: ~/cross-platform/macios/unified/updating-xamarin-forms-apps.md?context=xamarin/ios
+            - name: Миграция привязки в Unified API
+              href: ~/cross-platform/macios/unified/update-binding.md?context=xamarin/ios
+            - name: Советы по обновлению кода в Unified API
+              href: ~/cross-platform/macios/unified/updating-tips.md?context=xamarin/ios
+        - name: Привязка Objective-C
+          href: ~/cross-platform/macios/binding/index.md?context=xamarin/ios
+          items:
+            - name: Обзор
+              href: ~/cross-platform/macios/binding/overview.md?context=xamarin/ios
+            - name: Привязка библиотек Objective-C
+              href: ~/cross-platform/macios/binding/objective-c-libraries.md?context=xamarin/ios
+            - name: Справочник по типам привязки
+              href: ~/cross-platform/macios/binding/binding-types-reference.md?context=xamarin/ios
+            - name: Objective Sharpie
+              href: ~/cross-platform/macios/binding/objective-sharpie/index.md?context=xamarin/ios
+              items:
+                - name: Начало работы
+                  href: ~/cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin/ios
+                - name: Средства и команды
+                  href: ~/cross-platform/macios/binding/objective-sharpie/tools.md?context=xamarin/ios
+                - name: Функции
+                  href: ~/cross-platform/macios/binding/objective-sharpie/platform/index.md?context=xamarin/ios
+                  items:
+                    - name: ApiDefinitions и StructsAndEnums
+                      href: ~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md?context=xamarin/ios
+                    - name: Привязка собственных платформ
+                      href: ~/cross-platform/macios/binding/objective-sharpie/platform/native-frameworks.md?context=xamarin/ios
+                    - name: Проверка атрибутов
+                      href: ~/cross-platform/macios/binding/objective-sharpie/platform/verify.md?context=xamarin/ios
+                - name: Примеры
+                  href: ~/cross-platform/macios/binding/objective-sharpie/examples/index.md?context=xamarin/ios
+                  items:
+                    - name: Xcode
+                      href: ~/cross-platform/macios/binding/objective-sharpie/examples/xcode.md?context=xamarin/ios
+                    - name: CocoaPod
+                      href: ~/cross-platform/macios/binding/objective-sharpie/examples/cocoapod.md?context=xamarin/ios
+                    - name: Расширенный (руководство)
+                      href: ~/cross-platform/macios/binding/objective-sharpie/examples/advanced.md?context=xamarin/ios
+                - name: История выпусков
+                  href: ~/cross-platform/macios/binding/objective-sharpie/releases.md?context=xamarin/ios
+            - name: Устранение неполадок
+              href: ~/cross-platform/macios/binding/troubleshooting.md?context=xamarin/ios
+        - name: Собственные ссылки
+          href: ~/cross-platform/macios/native-references.md?context=xamarin/ios
+        - name: Собственные типы
+          href: ~/cross-platform/macios/nativetypes.md?context=xamarin/ios
+        - name: "Особенности 32-\_и 64-разрядных платформ"
+          href: ~/cross-platform/macios/32-and-64/index.md?context=xamarin/ios
+          items:
+            - name: Обновление единых приложений Xamarin.Mac для 64-разрядных платформ
+              href: ~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/ios
+        - name: Работа с собственными типами в кроссплатформенных приложениях
+          href: ~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios
+        - name: HttpClient и селектор реализации SSL и TLS
+          href: ~/cross-platform/macios/http-stack.md?context=xamarin/ios
+        - name: Оптимизация сборки
+          href: ~/cross-platform/macios/optimizations.md?context=xamarin/ios
+    - name: Дополнительные понятия и внутренние компоненты
+      items:
+        - name: Обзор
+          href: internals/index.md
+        - name: API
+          href: internals/api.md
+        - name: Структура API
+          href: internals/api-design/index.md
+          items:
+            - name: NSString
+              href: internals/api-design/nsstring.md
+            - name: Общие подклассы NSObject
+              href: internals/api-design/nsobject-generics.md
+        - name: Доступные сборки
+          href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/ios
+        - name: С плавающей запятой
+          href: internals/floating-point.md
+        - name: Создание кода для XIB-файлов
+          href: internals/xib-code-generation.md
+        - name: Архитектура iOS
+          href: internals/architecture.md
+        - name: Ограничения
+          href: internals/limitations.md
+        - name: Новый RefCount
+          href: internals/newrefcount.md
+        - name: Селекторы Objective-C
+          href: internals/objective-c-selectors.md
+        - name: регистратор
+          href: internals/registrar.md
+    - name: Устранение неполадок
+      items:
+        - name: Обзор
+          href: troubleshooting/index.md
+        - name: Советы по устранению неполадок
+          href: troubleshooting/troubleshooting.md
+        - name: "Предварительная версия Xcode\_11"
+          href: ~/ios/platform/ios13/troubleshooting/index.md
+        - name: Правила анализа Xamarin.iOS
+          href: troubleshooting/xamarin-ios-analysis.md
+        - name: Сообщения об ошибках (mtouch)
+          href: troubleshooting/mtouch-errors.md
+        - name: Вопросы и ответы
+          href: troubleshooting/questions/index.md
+          items:
+            - name: Можно ли использовать Xcode прежних версий?
+              href: troubleshooting/questions/old-version-xcode.md
+            - name: "Отладка с\_Xcode"
+              href: troubleshooting/questions/debugging-with-xcode.md
+            - name: Можно ли использовать виртуальную машину Mac с Xamarin?
+              href: troubleshooting/questions/mac-vm.md
+            - name: Скачивание предыдущей версии Xcode
+              href: troubleshooting/questions/previous-xcode.md
+            - name: Где можно задать свои расположения пакета SDK для iOS?
+              href: troubleshooting/questions/ios-sdk.md
+            - name: Повторное включение параметров разработчика после обновления iOS
+              href: troubleshooting/questions/update-developer-options.md
+            - name: Расположение пользователя не работает в iOS 8
+              href: troubleshooting/questions/ios8-user-location.md
+            - name: 'Где найти dSYM-файл, чтобы выразить символами журналы с данными об аварийном завершении iOS?'
+              href: troubleshooting/questions/symbolicate-ios-crash.md
+            - name: "Недопустимый пакет\_— в этой отправке обнаружены запрещенные для внедрения в Bitcode параметры"
+              href: troubleshooting/questions/invalid-bundle-bitcode.md
+            - name: Изменение выходного пути IPA-файла
+              href: troubleshooting/questions/ipa-output-path.md
+            - name: Копирование выходных IPA-файлов в папку сброса TFS
+              href: troubleshooting/questions/ipa-tfs.md
+            - name: Добавление или удаление файлов из IPA-файла после его сборки в Visual Studio
+              href: troubleshooting/questions/modify-ipa.md
+            - name: Создание XCARCHIVE-архива из Visual Studio
+              href: troubleshooting/questions/create-xcarchive.md
+            - name: Почему отправка приложения завершается ошибкой "Обнаружены запрещенные пути ( "iTunesMetadata.plist" ) в..."?
+              href: troubleshooting/questions/itunesmetadata-disallowed-paths.md
+            - name: Ошибка конструктора iOS RegisterServicePort
+              href: troubleshooting/questions/error-registerserviceport.md
+            - name: Почему сборка iOS завершается ошибкой "В цепочке ключей не удалось найти допустимые ключи подписывания кода iPhone"?
+              href: troubleshooting/questions/no-codesigning-keys.md
+            - name: 'Почему приложение iOS 9 завершается ошибкой "System.Exception: не удалось маршалировать объект Objective-C"?'
+              href: troubleshooting/questions/exception-marshal-obj-c.md
+            - name: 'Ошибка выполнения: не удалось найти или загрузить сборку mscorlib.dll'
+              href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: Размер IPA-файла составляет 0 байт
+              href: troubleshooting/questions/ipa-zero-bytes.md
+            - name: 'Ошибка IBTool: не удалось завершить операцию.'
+              href: troubleshooting/questions/error-ibtool.md
+            - name: 'Ошибка MT1009: не удалось скопировать сборку'
+              href: troubleshooting/questions/error-mt1009.md
+            - name: Возвращено исключение System.Exception AMDeviceNotificationSubscribe…
+              href: troubleshooting/questions/exception-amddevicenotificationsubscribe.md
+            - name: 'MDocArchiveToMsxDocConverter.exe не найден, rver.BaseCommand.OnRequest'
+              href: troubleshooting/questions/mdocarchivetomsxdocconverter-not-found.md
+            - name: Как задать переменные среды выполнения Mono для проектов iOS в Xamarin Studio?
+              href: troubleshooting/questions/xs-mono-runtime.md
+    - name: watchOS
+      items:
+        - name: Обзор
+          href: watchos/index.md
+        - name: Начало работы
+          href: watchos/get-started/index.md
+          items:
+            - name: Введение в watchOS
+              href: watchos/get-started/intro-to-watchos.md
+            - name: Установка и настройка
+              href: watchos/get-started/installation.md
+            - name: 'Привет, watchOS'
+              href: watchos/get-started/hello-watch.md
+            - name: Ссылки проекта
+              href: watchos/get-started/project-references.md
+        - name: Принципы работы приложения
+          href: watchos/app-fundamentals/index.md
+          items:
+            - name: Родительское приложение
+              href: watchos/app-fundamentals/parent-app.md
+            - name: Группы приложений
+              href: watchos/app-fundamentals/app-groups.md
+            - name: Значки
+              href: watchos/app-fundamentals/icons.md
+            - name: Макет
+              href: watchos/app-fundamentals/layout.md
+            - name: Локализация
+              href: watchos/app-fundamentals/localization.md
+            - name: Навигация
+              href: watchos/app-fundamentals/navigation.md
+            - name: Размеры экрана
+              href: watchos/app-fundamentals/screen-sizes.md
+            - name: Параметры
+              href: watchos/app-fundamentals/settings.md
+        - name: Пользовательский интерфейс
+          href: watchos/user-interface/index.md
+          items:
+            - name: Изображение
+              href: watchos/user-interface/image.md
+            - name: Таблица
+              href: watchos/user-interface/table.md
+            - name: Меню (Force Touch)
+              href: watchos/user-interface/menu.md
+            - name: Текстовый ввод
+              href: watchos/user-interface/text-input.md
+        - name: Функции платформы
+          href: watchos/platform/index.md
+          items:
+            - name: "Введение в watchOS\_5"
+              href: watchos/platform/introduction-to-watchos5/index.md
+            - name: "Введение в watchOS\_4"
+              href: watchos/platform/introduction-to-watchos4.md
+            - name: "Введение в watchOS\_3"
+              href: watchos/platform/introduction-to-watchos3/index.md
+              items:
+                - name: Дополнительные изменения платформы watchOS 3
+                  href: watchos/platform/introduction-to-watchos3/additional-framework-changes.md
+                - name: Устранение неполадок
+                  href: watchos/platform/introduction-to-watchos3/troubleshooting.md
+            - name: Apple Pay
+              href: watchos/platform/apple-pay.md
+            - name: Фоновые задачи
+              href: watchos/platform/background-tasks.md
+            - name: Уведомления
+              href: watchos/platform/notifications.md
+            - name: Усложнения
+              href: watchos/platform/complications.md
+            - name: Упреждающие предложения
+              href: watchos/platform/proactive-suggestions.md
+            - name: Быстрые методы взаимодействия
+              href: watchos/platform/quick-interaction-techniques.md
+            - name: Усовершенствования приложения для тренировок
+              href: watchos/platform/workout-apps.md
+        - name: Тестирование и развертывание
+          href: watchos/deploy-test/index.md
+          items:
+            - name: Apple Watch
+              href: watchos/deploy-test/device.md
+            - name: App Store
+              href: watchos/deploy-test/appstore.md
+        - name: Устранение неполадок
+          href: watchos/troubleshooting.md
+    - name: tvOS
+      items:
+        - name: Обзор
+          href: tvos/index.md
+        - name: Начало работы
+          href: tvos/get-started/index.md
+          items:
+            - name: Установка поддержки tvOS
+              href: tvos/get-started/installation.md
+            - name: 'Краткое руководство по созданию приложения "Hello, tvOS"'
+              href: tvos/get-started/hello-tvos.md
+        - name: Принципы работы приложения
+          href: tvos/app-fundamentals/index.md
+          items:
+            - name: Работа со значками и изображениями
+              href: tvos/app-fundamentals/icons-images.md
+            - name: Работа с навигацией и фокусом
+              href: tvos/app-fundamentals/navigation-focus.md
+            - name: Ресурсы и хранилище данных
+              href: tvos/app-fundamentals/resources-data-storage.md
+            - name: Воспроизведение звука с помощью AVAudioPlayer
+              href: tvos/app-fundamentals/sounds.md
+        - name: Функции платформы
+          href: tvos/platform/index.md
+          items:
+            - name: "Введение в tvOS\_12"
+              href: tvos/platform/introduction-to-tvos12/index.md
+            - name: "Введение в tvOS\_11"
+              href: tvos/platform/introduction-to-tvos11.md
+            - name: "Введение в tvOS\_10"
+              href: tvos/platform/introduction-to-tvos10/index.md
+              items:
+                - name: "Дополнительные изменения платформы iOS\_10"
+                  href: tvos/platform/introduction-to-tvos10/additional-framework-changes.md
+                - name: Устранение неполадок
+                  href: tvos/platform/introduction-to-tvos10/troubleshooting.md
+            - name: "Введение в tvOS\_9"
+              href: tvos/platform/tvos9.md
+            - name: Контроллеры Siri Remote и контроллеры Siri с функцией Bluetooth
+              href: tvos/platform/remote-bluetooth.md
+            - name: Стили пользовательского интерфейса
+              href: tvos/platform/user-interface-styles.md
+        - name: Пользовательский интерфейс
+          href: tvos/user-interface/index.md
+          items:
+            - name: Предупреждения
+              href: tvos/user-interface/alerts.md
+            - name: Кнопки
+              href: tvos/user-interface/buttons.md
+            - name: Представления коллекций
+              href: tvos/user-interface/collection-views.md
+            - name: Панели навигации
+              href: tvos/user-interface/navigation-bars.md
+            - name: Элементы управления страницей
+              href: tvos/user-interface/page-controls.md
+            - name: Индикаторы хода выполнения
+              href: tvos/user-interface/progress-indicators.md
+            - name: Сегментированные элементы управления
+              href: tvos/user-interface/segmented-controls.md
+            - name: Разделенные представления
+              href: tvos/user-interface/split-views.md
+            - name: Представление стека
+              href: tvos/user-interface/stacked-views.md
+            - name: Панели вкладок
+              href: tvos/user-interface/tab-bars.md
+            - name: Представления таблиц
+              href: tvos/user-interface/table-views.md
+            - name: Поля для текста и поиска
+              href: tvos/user-interface/text-fields-and-search.md
+        - name: Развертывание и тестирование
+          href: tvos/deploy-test/index.md
+          items:
+            - name: Распространение приложений
+              href: tvos/deploy-test/app-distribution/index.md
+              items:
+                - name: Настройка приложения tvOS в iTunes Connect
+                  href: tvos/deploy-test/app-distribution/itunes-connect.md
+                - name: Публикация в App Store Apple TV
+                  href: tvos/deploy-test/app-distribution/app-store-publishing.md
+        - name: Устранение неполадок
+          href: tvos/troubleshooting.md
+        - name: Внутренние компоненты
+          href: tvos/internals/index.md
+          items:
+            - name: Сборки
+              href: tvos/internals/assemblies.md
+            - name: Инфраструктуры
+              href: tvos/internals/frameworks.md
+    - name: Заметки о выпуске
+      href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
+    - name: Примеры
+      href: samples/index.yml

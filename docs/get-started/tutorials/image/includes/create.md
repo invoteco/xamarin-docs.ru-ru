@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 550828327eb6b72c1c9712e54e6e36c9e30bd1f0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df2fa04deafc4438798593d3f25b85ec17363996
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384580"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277416"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Для работы с этим руководством у вас должен быть последний выпуск Visual Studio 2019 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**. Кроме того, вам потребуется компьютер Mac для сборки учебного приложения на iOS. Сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **ImageTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.
 
@@ -44,6 +46,8 @@ ms.locfileid: "61384580"
     > Просмотр [`Image`](xref:Xamarin.Forms.Image) автоматически кэширует скачанные изображения на 24 часа. Дополнительные сведения см. в разделе [Downloaded image caching](~/xamarin-forms/user-interface/images.md#downloaded-image-caching) (Кэширование скачанного изображения) в руководстве [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md) (Изображения в Xamarin.Forms).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+
+Для работы с этим руководством вам нужно установить Visual Studio для Mac (последний выпуск) с поддержкой платформ Android и iOS. Кроме того, вам потребуется Xcode (последний выпуск). Дополнительные сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md).
 
 1. Запустите Visual Studio для Mac и создайте пустое приложение Xamarin.Forms **ImageTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.
 

@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 84c4ed5c2e019750db80a6dd930c818dcc9e401c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ec74a049adaa72010bf0566691e4d1f066058d4a
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896710"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277414"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Для работы с этим руководством у вас должен быть последний выпуск Visual Studio 2019 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**. Кроме того, вам потребуется компьютер Mac для сборки учебного приложения на iOS. Сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Запустите Visual Studio и создайте пустое приложение Xamarin.Forms **LabelTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.
 
@@ -36,6 +38,8 @@ ms.locfileid: "60896710"
     [![Снимок экрана метки, выровненной по центру, в iOS и Android](../images/create-label.png "Метка по центру")](../images/create-label-large.png#lightbox "Метка по центру")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+
+Для работы с этим руководством вам нужно установить Visual Studio для Mac (последний выпуск) с поддержкой платформ Android и iOS. Кроме того, вам потребуется Xcode (последний выпуск). Дополнительные сведения об установке платформы Xamarin см. в статье [Установка Xamarin](~/get-started/installation/index.md).
 
 1. Запустите Visual Studio для Mac и создайте пустое приложение Xamarin.Forms **LabelTutorial**. Убедитесь, что в качестве механизма общего кода в приложении используется .NET Standard.
 

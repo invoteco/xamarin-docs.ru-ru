@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 625a860469c82da6e6986b03b8c3e55503433e67
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d09188373d11b33f3b3d78b92faa46bf754797f6
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926673"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268985"
 ---
 # <a name="implementing-a-hybridwebview"></a>Реализация HybridWebView
 
@@ -172,22 +172,24 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-Собственный элемент управления должен создаваться только один раз, когда свойству `Control` задано значение `null`. Элемент управления следует настраивать и подписывать на обработчики событий только при присоединении пользовательского отрисовщика к новому элементу Xamarin.Forms. Аналогично, от всех обработчиков событий, на которые были созданы подписки, следует отписываться только при изменении элемента с подключенным отрисовщиком. Реализовав этот подход, вы сможете создать пользовательский отрисовщик, на который не влияют утечки памяти.
+Собственный элемент управления должен создаваться только один раз, когда свойству `Control` задано значение `null`.  Кроме того, элемент управления следует создавать, настраивать и подписывать на обработчики событий только при присоединении пользовательского отрисовщика к новому элементу Xamarin.Forms. Аналогично, от всех обработчиков событий, на которые были созданы подписки, следует отписываться только при изменении элемента с подключенным отрисовщиком. Реализовав этот подход, вы сможете создать пользовательский отрисовщик, на который не влияют утечки памяти.
+
+> [!IMPORTANT]
+> Метод `SetNativeControl` должен вызываться, только если `e.NewElement` не равен `null`.
 
 Каждый класс пользовательского отрисовщика дополняется атрибутом `ExportRenderer`, который регистрирует отрисовщик в Xamarin.Forms. Атрибут принимает два параметра — имя типа отрисовываемого пользовательского элемента управления Xamarin.Forms и имя типа пользовательского отрисовщика. Префикс `assembly` в атрибуте указывает, что атрибут применяется ко всей сборке.
 
@@ -271,16 +273,6 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                userController = new WKUserContentController ();
-                var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
-                userController.AddUserScript (script);
-                userController.AddScriptMessageHandler (this, "invokeAction");
-
-                var config = new WKWebViewConfiguration { UserContentController = userController };
-                var webView = new WKWebView (Frame, config);
-                SetNativeControl (webView);
-            }
             if (e.OldElement != null) {
                 userController.RemoveAllUserScripts ();
                 userController.RemoveScriptMessageHandler ("invokeAction");
@@ -288,6 +280,16 @@ namespace CustomRenderer.iOS
                 hybridWebView.Cleanup ();
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                    userController = new WKUserContentController ();
+                    var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
+                    userController.AddUserScript (script);
+                    userController.AddScriptMessageHandler (this, "invokeAction");
+
+                    var config = new WKWebViewConfiguration { UserContentController = userController };
+                    var webView = new WKWebView (Frame, config);
+                    SetNativeControl (webView);
+                }
                 string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
                 Control.LoadRequest (new NSUrlRequest (new NSUrl (fileName, false)));
             }
@@ -305,14 +307,14 @@ namespace CustomRenderer.iOS
 
 Это достигается следующим образом:
 
-- При условии, что свойство `Control` является `null`, выполняются следующие операции:
-  - Создается экземпляр [`WKUserContentController`](xref:WebKit.WKUserContentController), который позволяет размещать сообщения и внедрять сценарии пользователя в веб-страницу.
-  - Экземпляр [`WKUserScript`](xref:WebKit.WKUserScript) создается для внедрения функции JavaScript `invokeCSharpAction` в веб-страницу после загрузки веб-страницы.
-  - Метод [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) добавляет экземпляр [`WKUserScript`](xref:WebKit.WKUserScript) к контроллеру содержимого.
-  - Метод [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) добавляет обработчик сообщений сценария с именем `invokeAction` в экземпляр [`WKUserContentController`](xref:WebKit.WKUserContentController), который приводит к определению функции JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` во всех фреймах всех веб-представлений, которые будут использовать экземпляр `WKUserContentController`.
-  - Создается экземпляр [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration), и экземпляр [`WKUserContentController`](xref:WebKit.WKUserContentController) устанавливается в качестве контроллера содержимого.
-  - Создается экземпляр элемента управления [`WKWebView`](xref:WebKit.WKWebView), и вызывается метод `SetNativeControl`, чтобы назначить ссылку на элемент управления `WKWebView` свойству `Control`.
 - Если настраваемый отрисовщик подключен к новому элементу Xamarin.Forms:
+  - При условии, что свойство `Control` является `null`, выполняются следующие операции:
+    - Создается экземпляр [`WKUserContentController`](xref:WebKit.WKUserContentController), который позволяет размещать сообщения и внедрять сценарии пользователя в веб-страницу.
+    - Экземпляр [`WKUserScript`](xref:WebKit.WKUserScript) создается для внедрения функции JavaScript `invokeCSharpAction` в веб-страницу после загрузки веб-страницы.
+    - Метод [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) добавляет экземпляр [`WKUserScript`](xref:WebKit.WKUserScript) к контроллеру содержимого.
+    - Метод [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) добавляет обработчик сообщений сценария с именем `invokeAction` в экземпляр [`WKUserContentController`](xref:WebKit.WKUserContentController), который приводит к определению функции JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` во всех фреймах всех веб-представлений, которые будут использовать экземпляр `WKUserContentController`.
+    - Создается экземпляр [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration), и экземпляр [`WKUserContentController`](xref:WebKit.WKUserContentController) устанавливается в качестве контроллера содержимого.
+    - Создается экземпляр элемента управления [`WKWebView`](xref:WebKit.WKWebView), и вызывается метод `SetNativeControl`, чтобы назначить ссылку на элемент управления `WKWebView` свойству `Control`.
   - Метод [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) загружает HTML-файл, указанный свойством `HybridWebView.Uri`. Код указывает, что файл сохранен в папке `Content` проекта. Когда веб-страница отображается, функция JavaScript `invokeCSharpAction` внедряется в веб-страницу.
 - Когда элемент, к которому присоединен отрисовщик, меняется:
   - Ресурсы освобождаются.
@@ -352,13 +354,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                var webView = new Android.Webkit.WebView(_context);
-                webView.Settings.JavaScriptEnabled = true;
-                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
-                SetNativeControl(webView);
-            }
             if (e.OldElement != null)
             {
                 Control.RemoveJavascriptInterface("jsBridge");
@@ -367,6 +362,13 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    var webView = new Android.Webkit.WebView(_context);
+                    webView.Settings.JavaScriptEnabled = true;
+                    webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                    SetNativeControl(webView);
+                }
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }
@@ -397,10 +399,10 @@ public class JavascriptWebViewClient : WebViewClient
 
 Когда пользователь вводит свое имя и нажимает элемент HTML `button`, выполняется функция JavaScript `invokeCSharpAction`. Это достигается следующим образом:
 
-- При условии, что свойство `Control` является `null`, выполняются следующие операции:
-  - Создается собственный экземпляр [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/), JavaScript включается в элементе управления, а экземпляр `JavascriptWebViewClient` задается как реализация `WebViewClient`.
-  - Вызывается метод `SetNativeControl`, чтобы назначить ссылку на элемент управления [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) свойству `Control`.
 - Если настраваемый отрисовщик подключен к новому элементу Xamarin.Forms:
+  - При условии, что свойство `Control` является `null`, выполняются следующие операции:
+    - Создается собственный экземпляр [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/), JavaScript включается в элементе управления, а экземпляр `JavascriptWebViewClient` задается как реализация `WebViewClient`.
+    - Вызывается метод `SetNativeControl`, чтобы назначить ссылку на элемент управления [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) свойству `Control`.
   - Метод [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) вставляет новый экземпляр `JSBridge` в главный фрейм контекста JavaScript веб-преставления, называя его `jsBridge`. Это открывает доступ к методам в классе `JSBridge` из JavaScript.
   - Метод [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) загружает HTML-файл, указанный свойством `HybridWebView.Uri`. Код указывает, что файл сохранен в папке `Content` проекта.
   - В классе `JavascriptWebViewClient` функция JavaScript `invokeCSharpAction` внедряется в веб-страницу после завершения загрузки страницы.
@@ -456,10 +458,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
-            }
             if (e.OldElement != null)
             {
                 Control.NavigationCompleted -= OnWebViewNavigationCompleted;
@@ -467,6 +465,10 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
+                }
                 Control.NavigationCompleted += OnWebViewNavigationCompleted;
                 Control.ScriptNotify += OnWebViewScriptNotify;
                 Control.Source = new Uri(string.Format("ms-appx-web:///Content//{0}", Element.Uri));
@@ -494,9 +496,9 @@ namespace CustomRenderer.UWP
 
 Это достигается следующим образом:
 
-- При условии, что свойство `Control` является `null`, выполняются следующие операции:
-  - Вызывается метод `SetNativeControl`, чтобы создать экземпляр нового собственного элемента управления `WebView` и назначить ссылку на него свойству `Control`.
 - Если настраваемый отрисовщик подключен к новому элементу Xamarin.Forms:
+  - При условии, что свойство `Control` является `null`, выполняются следующие операции:
+    - Вызывается метод `SetNativeControl`, чтобы создать экземпляр нового собственного элемента управления `WebView` и назначить ссылку на него свойству `Control`.
   - Обработчики событий для событий `NavigationCompleted` и `ScriptNotify` регистрируются. Событие `NavigationCompleted` возникает, когда собственный элемент управления `WebView` завершил загрузку текущего содержимого или произошел сбой навигации. Событие `ScriptNotify` возникает, когда содержимое в собственном элементе управления `WebView` использует JavaScript для передачи строки в приложение. Веб-страница активирует событие `ScriptNotify` путем вызова `window.external.notify` с передачей параметра `string`.
   - Свойство `WebView.Source` получает значение URI HTML-файла, который задается свойством `HybridWebView.Uri`. Код предполагает, что файл сохранен в папке `Content` проекта. Когда веб-страница отобразится, событие `NavigationCompleted` сработает и метод `OnWebViewNavigationCompleted` будет вызван. Функция JavaScript `invokeCSharpAction` будет внедрена в веб-страницу с помощью метода `WebView.InvokeScriptAsync`, если навигация успешно завершена.
 - Когда элемент, к которому присоединен отрисовщик, меняется:

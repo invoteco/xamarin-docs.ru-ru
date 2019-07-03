@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 347d0eebf7340bb8dc7234275d0f58acf7ab16c6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b445c1f8d3d440ecf609d5f3c1b7cc7147343fe0
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061035"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268607"
 ---
 # <a name="xamarinforms-performance"></a>Производительность Xamarin.Forms
 
@@ -300,21 +300,23 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-Собственный элемент управления должен создаваться только один раз, когда свойству `Control` задано значение `null`. Элемент управления следует настраивать и подписывать на обработчики событий только при присоединении пользовательского отрисовщика к новому элементу Xamarin.Forms. Аналогично отписываться от обработчиков событий следует только при изменении элемента с подключенным отрисовщиком. Реализовав этот подход, вы сможете создать эффективно работающий настраиваемый отрисовщик, на который не влияют утечки памяти.
+Собственный элемент управления должен создаваться только один раз, когда свойству `Control` задано значение `null`. Кроме того, элемент управления следует создавать, настраивать и подписывать на обработчики событий только при присоединении пользовательского отрисовщика к новому элементу Xamarin.Forms. Аналогично отписываться от обработчиков событий следует только при изменении элемента с подключенным отрисовщиком. Реализовав этот подход, вы сможете создать эффективно работающий настраиваемый отрисовщик, на который не влияют утечки памяти.
+
+> [!IMPORTANT]
+> Метод `SetNativeControl` должен вызываться, только если `e.NewElement` не равен `null`.
 
 Дополнительные сведения о настраиваемых отрисовщиках см. в статье [Настройка элементов управления на каждой платформе](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 

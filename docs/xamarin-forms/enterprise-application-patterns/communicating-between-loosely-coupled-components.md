@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9848d2b832990032bc7eb7f2e3a93c896457134c
+ms.sourcegitcommit: e95296f9e516975f5f32d822c323a71fd84007b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61381887"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538695"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Взаимодействие между слабо связанными компонентами
 
@@ -43,7 +43,7 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) клас
 > [!NOTE]
 > Хотя [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) класс разрешает обмен данными между слабо связанных классов, не предлагается только архитектурные решения этой проблемы. Например обмен данными между модель представления и представления также достигается ядром привязки и через уведомления об изменении свойств. Кроме того обмен данными между двумя моделями представления также достигается путем передачи данных во время перехода.
 
-В мобильном приложении eShopOnContainers[ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) используется для обновления в пользовательском Интерфейсе в ответ на действие в другом классе. Таким образом сообщения публикуются в потоке пользовательского интерфейса с подписчиками, получения сообщения в одном потоке.
+В мобильном приложении eShopOnContainers [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) используется для обновления в пользовательском Интерфейсе в ответ на действие в другом классе. Таким образом сообщения публикуются в потоке пользовательского интерфейса с подписчиками, получения сообщения в одном потоке.
 
 > [!TIP]
 > Маршалинг в поток пользовательского интерфейса, при выполнении пользовательского интерфейса обновлений. Если сообщение, которое отправляется из фонового потока требуется для обновления пользовательского интерфейса, обработать сообщение в потоке пользовательского интерфейса в подписчике, вызвав [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) метод.

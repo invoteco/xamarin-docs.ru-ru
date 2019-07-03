@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: cf6ab8266b0798ccbf29078313bbc7454125a1af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a626532ac507185b6c01abb5327efa7015c787f5
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026811"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512898"
 ---
 # <a name="xamarinforms-material-visual"></a>Материал Xamarin.Forms Visual
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
 
 [Материальное](https://material.io) — это система признанная проектирования, разработанную компанией Google, которое предписывает размер, цвет, интервалы и другие аспекты как представления и макеты вид и поведение.
 
@@ -35,6 +35,7 @@ Visual материал Xamarin.Forms можно применять правил
 Материала модулей подготовки отчетов в настоящее время включены в [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) пакет NuGet для следующих представлений:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- `CheckBox`
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
@@ -111,6 +112,7 @@ contentPage.Visual = VisualMarker.Material;
 Материала модулей подготовки отчетов можно при необходимости настроить, так же, как модули подготовки отчетов по умолчанию посредством следующих базовых классов:
 
 - `MaterialButtonRenderer`
+- `MaterialCheckBoxRenderer`
 - `MaterialEntryRenderer`
 - `MaterialFrameRenderer`
 - `MaterialProgressBarRenderer`

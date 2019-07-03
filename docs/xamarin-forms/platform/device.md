@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/12/2019
+ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359886"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512874"
 ---
 # <a name="xamarinforms-device-class"></a>Класс устройств Xamarin.Forms
 
@@ -20,9 +20,7 @@ ms.locfileid: "61359886"
 
 [ `Device` ](xref:Xamarin.Forms.Device) Класс содержит несколько свойств и методов, чтобы помочь разработчикам настраивать макет и функций на каждой платформы.
 
-В дополнение к методам и свойствам для целевого кода по отдельным типам оборудования и размеры `Device` класс включает [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) метод, который должен использоваться при взаимодействии с помощью пользовательского интерфейса элементов управления из фоновые потоки.
-
-<a name="providing-platform-values" />
+В дополнение к методам и свойствам для целевого кода по отдельным типам оборудования и размеры `Device` класс включает методы, которые могут использоваться для взаимодействия с элементами управления пользовательского интерфейса из фоновых потоков. Дополнительные сведения см. в разделе [взаимодействие с пользовательским Интерфейсом, из фоновых потоков](#interact-with-the-ui-from-background-threads).
 
 ## <a name="providing-platform-specific-values"></a>Предоставление значений платформы
 
@@ -68,8 +66,6 @@ layout.Margin = new Thickness(5, top, 5, 0);
 > Предоставляя некорректное `Platform` значение в атрибута `On` не приведут к ошибке. Вместо этого код будет выполняться без значения платформы, которые применяются.
 
 Кроме того `OnPlatform` расширение разметки, которая может использоваться в XAML для настройки внешнего вида пользовательского интерфейса на каждой платформы. Дополнительные сведения см. в разделе [расширение разметки OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
-
-<a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
@@ -135,8 +131,6 @@ this.FlowDirection = Device.FlowDirection;
 
 Дополнительные сведения о направлении, см. в разделе [справа налево локализации](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
-<a name="Device_Styles" />
-
 ## <a name="devicestyles"></a>Device.Styles
 
 [ `Styles` Свойство](~/xamarin-forms/user-interface/styles/index.md) содержит определения встроенных стилей, которые могут применяться для некоторых элементов управления (такие как `Label`) `Style` свойство. Ниже приведены доступные стили.
@@ -147,8 +141,6 @@ this.FlowDirection = Device.FlowDirection;
 * ListItemTextStyle
 * SubtitleStyle
 * TitleStyle
-
-<a name="Device_GetNamedSize" />
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
@@ -163,8 +155,6 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-<a name="Device_OpenUri" />
-
 ## <a name="deviceopenuri"></a>Device.OpenUri
 
 `OpenUri` Метод может использоваться для запуска операций на базовой платформы, такие как открытие URL-адрес собственного веб-браузера (**Safari** в iOS или **Internet** в Android).
@@ -176,8 +166,6 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 [Пример WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) включает пример использования `OpenUri` открывать URL-адреса и сработать телефонные звонки.
 
 [Пример Maps](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) также использует `Device.OpenUri` для отображения карт и направлений, используя собственные **сопоставляет** приложения на iOS и Android.
-
-<a name="Device_StartTimer" />
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
@@ -192,26 +180,31 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Если код внутри таймер взаимодействует с помощью пользовательского интерфейса (такие как установка текст `Label` или отображая оповещение) должно выполняться внутри `BeginInvokeOnMainThread` выражение (см. ниже).
 
-<a name="Device_BeginInvokeOnMainThread" />
+## <a name="interact-with-the-ui-from-background-threads"></a>Взаимодействовать с пользовательским Интерфейсом, из фоновых потоков
 
-## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
+Большинство операционных систем, включая iOS, Android и универсальной платформы Windows, используйте однопоточную модель для кода, включающих пользовательский интерфейс. Этот поток часто называется *основной поток* или *поток пользовательского интерфейса*. Следствием этой модели является то, что весь код, который обращается к элементы пользовательского интерфейса необходимо запустить для основного потока приложения.
 
-Элементы пользовательского интерфейса не должны быть доступны фоновые потоки, например код, выполняемый в таймер или обработчик завершения асинхронной операции, такие как веб-запросов. Любой код фона, который необходимо обновить пользовательский интерфейс, которые должны быть вставлены в [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Это является эквивалентом `InvokeOnMainThread` на iOS, `RunOnUiThread` в Android и `Dispatcher.RunAsync` на универсальной платформе Windows.
+Иногда приложения использовать фоновые потоки для выполнения потенциально длительных операций, таких как извлечение данных из веб-службы. Если код, выполняемый в фоновом потоке нужен доступ к элементам управления, его необходимо запустить этот код в основном потоке.
 
-Код Xamarin.Forms является:
+`Device` Класс включает в себя следующие `static` элементы из потоков фона интерфейса методы, которые могут использоваться для взаимодействия с пользователем:
+
+| Метод | Аргументы | Returns | Цель |
+|---|---|---|---|
+| `BeginInvokeOnMainThread` | `Action` | `void` | Вызывает `Action` в основном потоке и не ожидает ее завершения. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Вызывает `Func<T>` на основной поток и ожидает его завершения. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Вызывает `Action` на основной поток и ожидает его завершения. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Вызывает `Func<Task<T>>` на основной поток и ожидает его завершения. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Вызывает `Func<Task>` на основной поток и ожидает его завершения. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Возвращает `SynchronizationContext` для основного потока. |
+
+Ниже приведен пример использования `BeginInvokeOnMainThread` метод:
 
 ```csharp
-Device.BeginInvokeOnMainThread ( () => {
-  // interact with UI elements
+Device.BeginInvokeOnMainThread (() =>
+{
+    // interact with UI elements
 });
 ```
-
-Обратите внимание что методы, с помощью `async/await` не обязательно должны использовать `BeginInvokeOnMainThread` ли он из основного потока пользовательского интерфейса.
-
-## <a name="summary"></a>Сводка
-
-Xamarin.Forms `Device` класс обеспечивает точный контроль функциональные возможности и макеты на каждой платформы — даже общего кода (проектов библиотек .NET Standard или общие проекты).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

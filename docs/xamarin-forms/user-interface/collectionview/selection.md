@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b026bd181571d689d3e19f2a815a52406f6f9da4
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: dc01cf6bea9fe614cbfb53dcc4417ffb0e602c6f
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005303"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512755"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Выбор Xamarin.Forms CollectionView
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства, определяющие выбор элементов:
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), типа [ `SelectionMode` ](xref:Xamarin.Forms.SelectionMode), режим выделения.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), типа `object`, элемент, выбранный в списке. Это свойство имеет `null` значение, если элемент не выбран.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), типа `IList<object>`, выбранные элементы в списке. Это свойство доступно только для чтения и имеет `null` значение при отсутствии выбранных элементов.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), типа `object`, элемент, выбранный в списке. Это свойство имеет режим привязки по умолчанию `TwoWay`и имеет `null` значение, если элемент не выбран.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), типа `IList<object>`, выбранные элементы в списке. Это свойство имеет режим привязки по умолчанию `OneWay`и имеет `null` значение при отсутствии выбранных элементов.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand), типа `ICommand`, который выполняется при изменении выделенного элемента.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter), типа `object`, который является параметром, который передается `SelectionChangedCommand`.
 
@@ -55,7 +55,7 @@ ms.locfileid: "66005303"
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -98,7 +98,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -134,12 +134,12 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
                 SelectionMode="Single"
-                SelectedItem="{Binding SelectedMonkey, Mode=TwoWay}">
+                SelectedItem="{Binding SelectedMonkey}">
     ...
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -147,10 +147,13 @@ CollectionView collectionView = new CollectionView
     SelectionMode = SelectionMode.Single
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMonkey", BindingMode.TwoWay);
+collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMonkey");
 ```
 
-[ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) Свойство данных привязывает к `SelectedMonkey` свойство связанное представление модели, которые имеют тип `Monkey`. Объект `TwoWay` привязка используется, поэтому, если пользователь изменяет выбранный элемент, значение `SelectedMonkey` будет установлено к выбранному `Monkey` объекта. `SelectedMonkey` Свойство определено в `MonkeysViewModel` и укажите четвертый элемент `Monkeys` коллекции:
+> [!NOTE]
+> [ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) Свойство имеет режим привязки по умолчанию `TwoWay`.
+
+[ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) Свойство данных привязывает к `SelectedMonkey` свойство связанное представление модели, которые имеют тип `Monkey`. По умолчанию `TwoWay` привязка используется, поэтому, если пользователь изменяет выбранный элемент, значение `SelectedMonkey` будет установлено к выбранному `Monkey` объекта. `SelectedMonkey` Свойство определено в `MonkeysViewModel` и укажите четвертый элемент `Monkeys` коллекции:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -194,12 +197,13 @@ public class MonkeysViewModel : INotifyPropertyChanged
 ```xaml
 <CollectionView x:Name="collectionView"
                 ItemsSource="{Binding Monkeys}"
-                SelectionMode="Multiple">
+                SelectionMode="Multiple"
+                SelectedItems="{Binding SelectedMonkeys}">
     ...
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -207,22 +211,56 @@ CollectionView collectionView = new CollectionView
     SelectionMode = SelectionMode.Multiple
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-```
-
-Несколько элементов в [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) можно, добавив их в предварительно выбрать [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) свойство:
-
-```csharp
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(1).FirstOrDefault());
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(3).FirstOrDefault());
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(4).FirstOrDefault());
+collectionView.SetBinding(SelectableItemsView.SelectedItemsProperty, "SelectedMonkeys");
 ```
 
 > [!NOTE]
-> [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) Свойство доступно только для чтения, и поэтому не можно использовать два вида данных, привязка к предварительное выделение.
+> [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) Свойство имеет режим привязки по умолчанию `OneWay`.
+
+[ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) Свойство данных привязывает к `SelectedMonkeys` свойство связанное представление модели, которые имеют тип `ObservableCollection<object>`. `SelectedMonkeys` Свойство определено в `MonkeysViewModel` и укажите в секунду, четвертая и пятая элементы на `Monkeys` коллекции:
+
+```csharp
+namespace CollectionViewDemos.ViewModels
+{
+    public class MonkeysViewModel : INotifyPropertyChanged
+    {
+        ...
+        ObservableCollection<object> selectedMonkeys;
+        public ObservableCollection<object> SelectedMonkeys
+        {
+            get
+            {
+                return selectedMonkeys;
+            }
+            set
+            {
+                if (selectedMonkeys != value)
+                {
+                    selectedMonkeys = value;
+                }
+            }
+        }
+
+        public MonkeysViewModel()
+        {
+            ...
+            SelectedMonkeys = new ObservableCollection<object>()
+            {
+                Monkeys[1], Monkeys[3], Monkeys[4]
+            };
+        }
+        ...
+    }
+}
+```
 
 Таким образом, когда [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) появится второй, в-четвертых, и будут выбраны заранее, пятая элементов в списке:
 
 [![Снимок экрана CollectionView вертикальный список нескольких предварительного выделения, в iOS и Android](selection-images/multiple-pre-selection.png "CollectionView вертикальный список с несколькими предварительный выбор")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView по вертикали список с несколькими предварительный выбор")
+
+## <a name="clearing-selections"></a>Очистка выбранных элементов
+
+[ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) И [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) свойства можно очистить, задав их или объекты, они привязки, к `null`.
 
 ## <a name="change-selected-item-color"></a>Изменение цвета выбранного элемента
 
@@ -280,7 +318,7 @@ collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(4).FirstOrDefault());
                 SelectionMode="None" />
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView

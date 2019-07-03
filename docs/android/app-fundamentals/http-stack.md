@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: a3704552c8fc147588919ecdde2813e831237d89
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e6d8ccea7331f53d2e7262630689075a8b9a1ff1
+ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019375"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522967"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient Stack и селектор реализации SSL/TLS для Android
 
@@ -112,7 +112,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 ```
 
 > [!NOTE]
-> Базовое устройство Android должно поддерживать протокол TLS 1.2 (т. е. Android 4.1 и более поздние версии)
+> Базовое устройство Android должно поддерживать протокол TLS 1.2 (т. е. Android 4.1 и более поздние версии). Обратите внимание на то, что Официальная поддержка TLS 1.2 находится в Android 5.0 и более поздних. Тем не менее некоторые устройства поддерживают TLS 1.2 в Android 4.1 и более поздних.
 
 
 ## <a name="ssltls-implementation-build-option"></a>Параметр сборки реализация SSL/TLS
@@ -135,7 +135,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 var client = new HttpClient();
 ```
 
-Если было задано реализация HttpClient **управляемый** и реализация TLS было присвоено **собственный TLS 1.2 +**, то `client` объекта будет автоматически использовать управляемый `HttpClientHandler` и Протокол TLS 1.2 (предоставляемый библиотекой BoringSSL) для его HTTP-запросов.
+Если было задано реализация HttpClient **управляемый** и реализация TLS было присвоено **собственный TLS 1.2 +** , то `client` объекта будет автоматически использовать управляемый `HttpClientHandler` и Протокол TLS 1.2 (предоставляемый библиотекой BoringSSL) для его HTTP-запросов.
 
 Тем не менее если **реализация HttpClient** присваивается `AndroidHttpClient`, затем все `HttpClient` объектов будет использовать основной класс Java `java.net.URLConnection` и будут затронуты процедурой **Реализация протоколов TLS/SSL** значение. `WebRequest` объекты будет использовать библиотеку BoringSSL.
 

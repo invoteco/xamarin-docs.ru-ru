@@ -6,19 +6,19 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a64a54d763edc4f02383af686fc8e9386daad572
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 07/01/2019
+ms.openlocfilehash: 786cea04718022847bba2ecffed8f377dd49bd8b
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005243"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512803"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Макет CollectionView Xamarin.Forms
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
+![](~/media/shared/preview.png "Этот API в настоящее время в предварительной версии")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства, которые управляют макета:
 
@@ -47,9 +47,15 @@ ms.locfileid: "66005243"
 - `Vertical` Указывает, что [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) расширяется по вертикали, так как элементы добавляются.
 - `Horizontal` Указывает, что [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) расширяются горизонтально при добавлении элементов.
 
-[ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) Класс наследует от [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) класса и определяет статические `VerticalList` и `HorizontalList` членов. Эти элементы можно создать вертикальные или горизонтальные списки, соответственно. Кроме того `ListItemsLayout` объект может быть создан, указав [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) член перечисления в качестве аргумента.
+[ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) Класс наследует от [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) класса и определяет `ItemSpacing` свойство типа `double`, представляющий пустое пространство вокруг каждого элемента. Значение по умолчанию этого свойства равно 0, а его значение всегда должно быть больше или равно 0. `ListItemsLayout` Класс также определяет статические `Vertical` и `Horizontal` членов. Эти элементы можно создать вертикальные или горизонтальные списки, соответственно. Кроме того `ListItemsLayout` объект может быть создан, указав [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) член перечисления в качестве аргумента.
 
-[ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) Класс наследует от [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) класса и определяет `Span` свойство типа `int`, который представляет количество столбцов или строк, отображаемых в сетке. Значение по умолчанию `Span` свойства-1, и его значение всегда должно быть больше или равно 1.
+[ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) Класс наследует от [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) класса и определяет следующие свойства:
+
+- `VerticalItemSpacing`, типа `double`, который представляет вертикальный пустого пространства вокруг каждого элемента. Значение по умолчанию этого свойства равно 0, а его значение всегда должно быть больше или равно 0.
+- `HorizontalItemSpacing`, типа `double`, который представляет горизонтальное пустого пространства вокруг каждого элемента. Значение по умолчанию этого свойства равно 0, а его значение всегда должно быть больше или равно 0.
+- `Span`, типа `int`, который представляет количество столбцов или строк, отображаемых в сетке. Значение по умолчанию этого свойства равно 1, и его значение всегда должно быть больше или равно 1.
+
+Эти свойства поддерживаются [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) объектов, что означает, что свойства могут быть целями привязки данных.
 
 > [!NOTE]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) использует собственный макет ядер для выполнения макета.
@@ -90,11 +96,11 @@ ms.locfileid: "66005243"
 </CollectionView>
 ```
 
-Однако для полноты информации [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) можно задать для отображения элементов в вертикальном списке, задав его [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) свойство статического `ListItemsLayout.VerticalList` член:
+Однако для полноты информации [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) можно задать для отображения элементов в вертикальном списке, задав его [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) свойства `VerticalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
-                ItemsLayout="{x:Static ListItemsLayout.VerticalList}">
+                ItemsLayout="VerticalList">
     ...
 </CollectionView>
 ```
@@ -114,13 +120,13 @@ ms.locfileid: "66005243"
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.VerticalList
+    ItemsLayout = ListItemsLayout.Vertical
 };
 ```
 
@@ -130,11 +136,11 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="horizontal-list"></a>Горизонтальный список
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) можно отобразить элементы в список по горизонтали, задав его [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) свойство статического `ListItemsLayout.HorizontalList` член:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) можно отобразить элементы в список по горизонтали, задав его [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) свойства `HorizontalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
-                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                ItemsLayout="HorizontalList">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -182,13 +188,13 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.HorizontalList
+    ItemsLayout = ListItemsLayout.Horizontal
 };
 ```
 
@@ -238,7 +244,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -294,7 +300,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -307,6 +313,80 @@ CollectionView collectionView = new CollectionView
 По умолчанию горизонтального [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) будут доступны элементы в одну строку. Тем не менее, в этом примере устанавливается `GridItemsLayout.Span` значение 4. Это приводит к сетке четыре строки по мере добавления новых элементов увеличивается по горизонтали:
 
 [![Снимок экрана: макет CollectionView горизонтальной сетки, в iOS и Android](layout-images/horizontal-grid.png "CollectionView горизонтальной сетки макета")](layout-images/horizontal-grid-large.png#lightbox "CollectionView горизонтальной сетки макета")
+
+## <a name="item-spacing"></a>Интервалы между элементами
+
+По умолчанию каждый элемент в [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) не имеет пустое пространство вокруг него. Это поведение можно изменить, установив свойства на макет элементов, используемый `CollectionView`.
+
+Когда [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) задает его [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) свойства [ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) объекта, `ListItemsLayout.ItemSpacing` свойству может быть присвоено `double` значение, представляющее пустого пространства вокруг каждого элемента:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+        <ListItemsLayout ItemSpacing="20">
+            <x:Arguments>
+                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
+            </x:Arguments>
+        </ListItemsLayout>
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
+> [!NOTE]
+> `ListItemsLayout.ItemSpacing` Свойство имеет набор обратного вызова проверки, что гарантирует, что значение свойства всегда равно, больше или равно 0.
+
+Ниже приведен аналогичный код C#:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ...
+    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    {
+        ItemSpacing = 20
+    }
+};
+```
+
+Этот код приводит список вертикальной один столбец, содержащий интервал 20 вокруг каждого элемента:
+
+[![Снимок экрана CollectionView с интервалы между элементами, в iOS и Android](layout-images/vertical-list-spacing.png "интервалы между элементами CollectionView")](layout-images/vertical-list-spacing-large.png#lightbox "CollectionView интервалы между элементами")
+
+Когда [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) задает его [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) свойства [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) объекта, `GridItemsLayout.VerticalItemSpacing` и `GridItemsLayout.HorizontalItemSpacing` свойства могут быть значение `double` значения, представляющие пустое пространство по вертикали и горизонтали вокруг каждого элемента:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Vertical"
+                        Span="2"
+                        VerticalItemSpacing="20"
+                        HorizontalItemSpacing="30" />
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
+> [!NOTE]
+> `GridItemsLayout.VerticalItemSpacing` И `GridItemsLayout.HorizontalItemSpacing` свойства имеют обратные вызовы проверки задать, чтобы гарантировать, что значения свойств, всегда больше или равно 0.
+
+Ниже приведен аналогичный код C#:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ...
+    ItemsLayout = new GridItemsLayout(2, ItemsLayoutOrientation.Vertical)
+    {
+        VerticalItemSpacing = 20,
+        HorizontalItemSpacing = 30
+    }
+};
+```
+
+Этот код приводит к вертикальной сетки из двух столбцов, интервал по вертикали 20 вокруг каждого элемента и интервал по горизонтали 30 вокруг каждого элемента:
+
+[![Снимок экрана CollectionView с интервалы между элементами, в iOS и Android](layout-images/vertical-grid-spacing.png "интервалы между элементами CollectionView")](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView интервалы между элементами")
 
 ## <a name="item-sizing"></a>Изменение размера элемента
 
@@ -327,7 +407,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -336,9 +416,6 @@ CollectionView collectionView = new CollectionView
     ItemSizingStrategy = ItemSizingStrategy.MeasureFirstItem
 };
 ```
-
-> [!NOTE]
-> Элемент, изменение размера стратегии в настоящее время является только реализуется на iOS.
 
 ## <a name="dynamic-resizing-of-items"></a>Динамическое изменение размера элементов
 

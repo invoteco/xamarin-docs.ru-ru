@@ -6,13 +6,13 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/04/2019
-ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/28/2019
+ms.openlocfilehash: de77be818abbe1250946ee2ce1599235b79d8c01
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61093717"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512976"
 ---
 # <a name="fonts-in-xamarinforms"></a>Шрифты в Xamarin.Forms
 
@@ -50,18 +50,7 @@ var about = new Label {
 label.FontSize = 24;
 ```
 
-Можно также использовать `NamedSize` перечисления, который имеет четыре встроенных параметров; Xamarin.Forms выбирает оптимальный размер для каждой платформы.
-
--  **Micro**
--  **Небольшой**
--  **Средний**
--  **Большой**
-
-`NamedSize` Перечисления можно использовать везде, где `FontSize` можно задать с помощью `Device.GetNamedSize` метод для преобразования значения `double`:
-
-```csharp
-label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-```
+Xamarin.Forms также определяет поля в [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) перечисление, представляющие размеры определенный шрифт. Дополнительные сведения о размерах шрифта именованный см. в разделе [именованные размеры шрифта](#named-font-sizes).
 
 <a name="FontAttributes" />
 
@@ -111,7 +100,7 @@ Xamarin.Forms элементы управления, отображаемый т
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) может также использоваться в XAML для отрисовки шрифта на каждой платформе. В следующем примере используется пользовательский шрифт в iOS (<span style="font-family:MarkerFelt-Thin">тонкой MarkerFelt</span>) и определяет только размер и атрибуты на других платформах:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) может также использоваться в XAML для отрисовки шрифта на каждой платформе. В следующем примере используется пользовательский шрифт в iOS (<span style="font-family:MarkerFelt-Thin">тонкой MarkerFelt</span>) и определяет только размер и атрибуты на других платформах:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -126,6 +115,32 @@ Xamarin.Forms элементы управления, отображаемый т
 ```
 
 При указании пользовательского шрифта, настоятельно рекомендуется использовать `OnPlatform`, как трудно найти шрифт, который доступен на всех платформах.
+
+## <a name="named-font-sizes"></a>Размеры шрифта именованный
+
+Xamarin.Forms определяет поля в [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) перечисление, представляющие размеры определенный шрифт. В следующей таблице показаны `NamedSize` элементы и их размеры по умолчанию на iOS, Android и универсальной платформы Windows (UWP):
+
+| Член | iOS | Android | UWP |
+| --- | --- | --- | --- |
+| `Default` | 16 | 14 | 14 |
+| `Micro` | 11 | 10 | 15.667 |
+| `Small` | 13 | 14 | 18.667 |
+| `Medium` | 16 | 17 | 22.667 |
+| `Large` | 20 | 22 | 32 |
+| `Body` | 17 | 16 | 14 |
+| `Header` | 17 | 96 | 46 |
+| `Title` | 28 | 24 | 24 |
+| `Subtitle` | 22 | 16 | 20 |
+| `Caption` | 12 | 12 | 12 |
+
+Размеры шрифта именованный можно задать с помощью XAML и кода. Кроме того `Device.GetNamedSize` метод может вызываться для возврата `double` , представляющий размер шрифта именованный:
+
+```csharp
+label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
+```
+
+> [!NOTE]
+> В iOS и Android размеры шрифта именованный будет автомасштабирования на основе параметров специальных возможностей операционной системы. Это поведение можно отключить на устройствах iOS с конкретной платформы. Дополнительные сведения см. в разделе [специальных возможностей масштабирования с именем размеры шрифтов, в iOS](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
 
 <a name="Using_a_Custom_Font" />
 
@@ -185,7 +200,7 @@ new Label
 
 ### <a name="xaml"></a>XAML
 
-Можно также использовать [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#providing-platform-values) в XAML для отображения пользовательского шрифта:
+Можно также использовать [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) в XAML для отображения пользовательского шрифта:
 
 ```xaml
 <Label Text="Hello Forms with XAML">

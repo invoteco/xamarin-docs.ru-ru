@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 3f0156926f8d7a31e2e80318d7b05a909f158653
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cc19e2a4ea85391f585120f85b222b95ef63543f
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359178"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512854"
 ---
 # <a name="xamarinforms-platform-features"></a>Функции платформы Xamarin.Forms
 
@@ -24,7 +24,7 @@ Xamarin.Forms расширяется и позволяет объединять 
 
 ## <a name="device-classdevicemd"></a>[Класс устройства](device.md)
 
-Как использовать `Device` класс для создания поведения конкретной платформы в общий код и пользовательский интерфейс (в том числе с помощью XAML). Также рассматривается `BeginInvokeOnMainThread` что важно при изменении элементов управления пользовательского интерфейса из фоновых потоков.
+В этом руководстве описывается использование `Device` класс для создания поведения конкретной платформы в общий код и пользовательский интерфейс (в том числе с помощью XAML) и способы взаимодействия с элементами управления пользовательского интерфейса из фоновых потоков.
 
 ## <a name="iosiosindexmd"></a>[iOS](ios/index.md)
 

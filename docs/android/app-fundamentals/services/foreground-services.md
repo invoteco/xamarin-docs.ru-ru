@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: df917896f901060a5518076afa859d34a03f4d6d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b1cc043ac94fb48e3e7fe6b7ba647cfb19a4c7eb
+ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012388"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522935"
 ---
 # <a name="foreground-services"></a>Службы переднего плана
 
@@ -22,7 +22,7 @@ ms.locfileid: "61012388"
 Этот метод расширения C# является примером того, как для запуска службы переднего плана. В Android 8.0 и более поздних версий будет использоваться `StartForegroundService` метод, в противном случае более старой версии `StartService` будет использоваться метод.  
 
 ```csharp
-public static void StartForegroundServiceComapt<T>(this Context context, Bundle args = null) where T : Service
+public static void StartForegroundServiceCompat<T>(this Context context, Bundle args = null) where T : Service
 {
     var intent = new Intent(context, typeof(T));
     if (args != null) 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7aa9d298c2219dff60ca8ca1f917c72194ad21ca
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971021"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512685"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>функции платформы iOS в Xamarin.Forms
 
@@ -56,6 +56,7 @@ ms.locfileid: "65971021"
 
 Предоставляются следующие функциональные возможности платформы для Xamarin.Forms [ `Application` ](xref:Xamarin.Forms.Application) класс на устройствах iOS:
 
+- Отключение специальных возможностей масштабирования для размеров шрифта именованный. Дополнительные сведения см. в разделе [специальных возможностей масштабирования с именем размеры шрифтов, в iOS](named-font-size-scaling.md).
 - Включение структурой элементов управления и Подготовка к просмотру обновлений, выполняемых в основном потоке. Дополнительные сведения см. в разделе [основной поток управления обновлений на iOS](main-thread-updates-ui.md).
 - Включение [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) в области прокрутки для записи и совместно использовать жест pan с представления с прокруткой. Дополнительные сведения см. в разделе [одновременных распознавания жестов Pan в iOS](application-pan-gesture.md).
 

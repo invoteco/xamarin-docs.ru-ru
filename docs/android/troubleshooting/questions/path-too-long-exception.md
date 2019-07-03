@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: 4cb3e13ebbe3d9e8aed153528a35ab16c92e2145
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 443c3cc742ceb919e64a781e18c5a97c342abb44
+ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153334"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522919"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Как устранить ошибку PathTooLongException?
 
@@ -26,14 +26,14 @@ ms.locfileid: "61153334"
 
 В Windows (где Максимальная длина пути составляет [260 символов](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), **PathTooLongException** может создаваться во время построения проекта, если созданного пути превышает максимальную длину. 
 
-## <a name="fix"></a>Исправление
+## <a name="fix"></a>Fix
 
-Начиная с Xamarin.Android 8.0, `UseShortFileNames` MSBuild может быть установлено для обхода этой ошибки. Если присвоить этому свойству `True` (по умолчанию используется `False`), процесс сборки использует более короткие имена пути, чтобы уменьшить вероятность создания **PathTooLongException**.
+`UseShortFileNames` MSBuild свойству `True` обойти эту ошибку, по умолчанию. Если присвоить этому свойству `True`, процесс сборки использует более короткие имена пути, чтобы уменьшить вероятность создания **PathTooLongException**.
 Например, если `UseShortFileNames` присваивается `True`, указанном выше пути сокращено до пути, аналогичную следующей:
 
 **C:\\некоторые\\Directory\\решение\\проекта\\obj\\Отладка\\lp\\1\\jl\\активы**
 
-Чтобы задать это свойство, добавьте следующее свойство MSBuild для проекта **.csproj** файла:
+Чтобы вручную задать это свойство, добавьте следующее свойство MSBuild для проекта **.csproj** файла:
 
 ```xml
 <PropertyGroup>

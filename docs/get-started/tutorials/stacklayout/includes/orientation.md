@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a7c2aa15521b89e4930746dc5421ce67fa26b2b9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382579"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67560019"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -47,3 +47,8 @@ ms.locfileid: "61382579"
     [![Снимок экрана горизонтальных дочерних представлений StackLayout в iOS и Android](../images/orientation.png "StackLayout с горизонтальным расположением экземпляров меток")](../images/orientation-large.png#lightbox "StackLayout с горизонтальным расположением экземпляров меток")
 
     Обратите внимание, что экземпляры [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout) теперь выровнены по горизонтали, а не по вертикали.
+
+-----
+
+> [!div class="nextstepaction"]
+> [У меня возникла проблема](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+2+Feedback&template=tutorial_template.md)

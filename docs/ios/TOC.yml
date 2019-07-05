@@ -244,6 +244,14 @@
       items:
         - name: Обзор
           href: platform/index.md
+        - name: "iOS\_13 (предварительная версия)"
+          items:
+            - name: "Введение в iOS\_13"
+              href: platform/ios13/index.md
+            - name: Начало работы
+              href: platform/ios13/get-started.md
+            - name: Устранение неполадок
+              href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
           items:
             - name: "Введение в iOS\_12"
@@ -776,8 +784,6 @@
           href: troubleshooting/index.md
         - name: Советы по устранению неполадок
           href: troubleshooting/troubleshooting.md
-        - name: "Предварительная версия Xcode\_11"
-          href: ~/ios/platform/ios13/troubleshooting/index.md
         - name: Правила анализа Xamarin.iOS
           href: troubleshooting/xamarin-ios-analysis.md
         - name: Сообщения об ошибках (mtouch)

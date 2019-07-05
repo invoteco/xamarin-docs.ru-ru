@@ -42,8 +42,8 @@ sections:
             href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-            text: iOS 12
-            href: ~/ios/platform/introduction-to-ios12/index.md
+            text: "iOS\_13 (предварительная версия)"
+            href: ~/ios/platform/ios13/index.md
   - title: Направляющие
     items:
       - type: list
@@ -110,7 +110,7 @@ sections:
               src: ~/media/icons/i_tvos.svg
               href: ~/ios/tvos/
             title: tvOS
-  - title: Ссылка
+  - title: Справочники
     items:
       - type: list
         style: cards

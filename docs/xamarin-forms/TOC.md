@@ -231,6 +231,7 @@
 #### [Масштабирование WebView](platform/android/webview-zoom-controls.md)
 ### [Класс устройства](platform/device.md)
 ### [iOS](platform/ios/index.md)
+#### [Специальные возможности: масштабирование для именованных размеров шрифта](platform/ios/named-font-size-scaling.md)
 #### [Цвет фона ячейки](platform/ios/cell-background-color.md)
 #### [Цвет курсора для записи](platform/ios/entry-cursor-color.md)
 #### [Размер шрифта для записи](platform/ios/entry-font-size.md)

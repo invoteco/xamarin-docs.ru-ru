@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 4ac6344165730bc8c348c16fe8f3a932d4ac3548
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268620"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558675"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Геопозиционирование
 
@@ -79,7 +79,7 @@ using Xamarin.Essentials;
 
 В API геолокации пользователю также будет предложено предоставить разрешения при необходимости.
 
-Вы можете получить последнее известное [расположение](xref:Xamarin.Essentials.Location) устройства, вызвав метод `GetLastKnownLocationAsync`. Зачастую эта операция быстрее, чем выполнение всего запроса, но не так точна.
+Вы можете получить последнее известное [расположение](xref:Xamarin.Essentials.Location) устройства, вызвав метод `GetLastKnownLocationAsync`. Зачастую эта операция быстрее, чем выполнение всего запроса, но не так точна и может вернуть `null`, если расположение для кэширования отсутствует.
 
 ```csharp
 try

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: a667f952eead5bed8305f4c9f4201fd6235b883a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ee8d6966b9eac2dad6a36c215bf7aa5bdf79a867
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239975"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512992"
 ---
 # <a name="xamarinforms-control-templates"></a>Шаблоны элементов управления Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Шаблоны элементов управления обеспечивают
 
 Шаблоны элементов управления Xamarin.Forms дают возможность легко применять темы к страницам приложения и отменять их во время выполнения. В этой статье приводятся общие сведения о шаблонах элементов управления.
 
-## <a name="creating-a-controltemplatecreatingmd"></a>[Создание ControlTemplate](creating.md)
+## <a name="create-a-controltemplatecreatingmd"></a>[Создание шаблона ControlTemplate](creating.md)
 
 Шаблоны элементов управления можно определять на уровне приложения или на уровне страницы. В этой статье содержатся сведения о создании и использовании шаблонов элементов управления.
 

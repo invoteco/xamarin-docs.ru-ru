@@ -6,21 +6,21 @@ ms.assetid: A9AEB052-FBF5-4589-9BD4-6D6F62BED7F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 86e10f068af14e65b55885488252af756a90652e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.date: 06/14/2019
+ms.openlocfilehash: 0642f304589d30284bc8d3577c0383099e349033
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926960"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513049"
 ---
-# <a name="creating-a-controltemplate"></a>Создание шаблона ControlTemplate
+# <a name="create-a-controltemplate"></a>Создание шаблона ControlTemplate
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
 
 _Шаблоны элементов управления можно определять на уровне приложения или на уровне страницы. В этой статье содержатся сведения о создании и использовании шаблонов элементов управления._
 
-## <a name="creating-a-controltemplate-in-xaml"></a>Создание ControlTemplate в XAML
+## <a name="create-a-controltemplate-in-xaml"></a>Создание шаблона ControlTemplate в XAML
 
 Чтобы определить шаблон [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) на уровне приложения, необходимо добавить [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) в класс `App`. По умолчанию все приложения Xamarin.Forms, создаваемые на основе шаблона, используют класс **App** для реализации подкласса [`Application`](xref:Xamarin.Forms.Application). Чтобы объявить шаблон `ControlTemplate` на уровне приложения в словаре `ResourceDictionary` приложения на основе XAML, необходимо заменить класс **App** по умолчанию классом **App** XAML и соответствующим кодом программной части, как показано в следующем примере кода.
 
@@ -104,7 +104,7 @@ void OnButtonClicked (object sender, EventArgs e)
 > [!NOTE]
 > На странице `ContentPage` могут быть одновременно заданы свойства `Content` и `ControlTemplate`. В этом случае, если шаблон `ControlTemplate` содержит экземпляр `ContentPresenter`, содержимое, присвоенное свойству `Content`, будет отображаться объектом `ContentPresenter` в `ControlTemplate`.
 
-### <a name="setting-a-controltemplate-with-a-style"></a>Задание ControlTemplate с помощью стиля
+### <a name="set-a-controltemplate-with-a-style"></a>Настройка шаблона ControlTemplate с использованием стиля
 
 Шаблон [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) можно также применять с помощью стиля [`Style`](xref:Xamarin.Forms.Style) для расширения возможностей настройки тем. Для этого можно создать *неявный* или *явный* стиль для целевого представления в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) и задать свойство `ControlTemplate` целевого представления в экземпляре [`Style`](xref:Xamarin.Forms.Style). В следующем примере кода показан *неявный* стиль, добавленный в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) на уровне приложения.
 
@@ -126,7 +126,7 @@ void OnButtonClicked (object sender, EventArgs e)
 
 Дополнительные сведения о стилях см. в статье [Стили](~/xamarin-forms/user-interface/styles/index.md).
 
-### <a name="creating-a-controltemplate-at-page-level"></a>Создание ControlTemplate на уровне страницы
+### <a name="create-a-controltemplate-at-page-level"></a>Создание шаблона ControlTemplate на уровне страницы
 
 Экземпляры [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) можно создавать не только на уровне приложения, но и на уровне страницы, как показано в следующем примере кода.
 
@@ -150,7 +150,7 @@ void OnButtonClicked (object sender, EventArgs e)
 
 Когда шаблон [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) добавляется на уровне страницы, объект [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) добавляется в [`ContentPage`](xref:Xamarin.Forms.ContentPage), после чего экземпляры `ControlTemplate` включаются в `ResourceDictionary`.
 
-## <a name="creating-a-controltemplate-in-c35"></a>Создание ControlTemplate на C&#35;
+## <a name="create-a-controltemplate-in-c35"></a>Создание шаблона ControlTemplate в C&#35;
 
 Чтобы определить шаблон [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) на уровне приложения, необходимо создать `class`, представляющий `ControlTemplate`. Этот класс должен быть производным от [макета](~/xamarin-forms/user-interface/layouts/index.md), используемого для шаблона, как показано в следующем примере кода.
 
@@ -208,10 +208,43 @@ public class HomePageCS : ContentPage
 
 Свойству [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) присваивается экземпляр [`StackLayout`](xref:Xamarin.Forms.StackLayout), который определяет содержимое, отображаемое на странице [`ContentPage`](xref:Xamarin.Forms.ContentPage). Оно будет отображаться объектом [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter), содержащимся в шаблоне `TealTemplate`. Для изменения темы на `AquaTheme` во время выполнения используется описанный выше механизм.
 
-## <a name="summary"></a>Сводка
+## <a name="get-a-named-element-from-a-template"></a>Извлечение именованного элемента из шаблона
 
-В этой статье было показано, как создавать и использовать шаблоны элементов управления. Шаблоны элементов управления можно определять на уровне приложения или на уровне страницы.
+Когда экземпляр шаблона элемента управления будет создан, из него можно извлекать именованные элементы. Это можно сделать с помощью метода `GetTemplateChild`, который возвращает именованный элемент в созданном экземпляре визуального дерева [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate).
 
+Когда экземпляр шаблона элемента управления будет создан, вызовется метод шаблона `OnApplyTemplate`. Следовательно, метод `GetTemplateChild` должен вызываться из переопределения `OnApplyTemplate` на производной странице [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage), например [`ContentPage`](xref:Xamarin.Forms.ContentPage), или в производном представлении [`TemplatedView`](xref:Xamarin.Forms.TemplatedView), например [`ContentView`](xref:Xamarin.Forms.ContentView).
+
+> [!IMPORTANT]
+> Метод `GetTemplateChild` должен вызываться только после вызова метода `OnApplyTemplate`.
+
+В следующем примере показан шаблон пользовательского элемента управления:
+
+```xaml
+<controls:MyCustomControl ...>
+    <controls:MyCustomControl.ControlTemplate>
+         <ControlTemplate>
+              <Label x:Name="myLabel" />
+         </ControlTemplate>
+    <controls:MyCustomControl.ControlTemplate>
+</controls:MyCustomControl>
+```
+
+Элемент [`Label`](xref:Xamarin.Forms.Label) именованный, поэтому его можно извлечь из кода программной части для пользовательского элемента управления. Для этого нужно вызвать метод `GetTemplateChild` из переопределения `OnApplyTemplate` для пользовательского элемента управления:
+
+```csharp
+class MyCustomControl : ContentView
+{
+    Label myLabel;
+
+    protected override OnApplyTemplate()
+    {  
+        myLabel = GetTemplateChild("myLabel");
+    }
+    //...
+}
+```
+
+В этом примере извлекается объект [`Label`](xref:Xamarin.Forms.Label) с именем `myLabel`. После этого объект `myLabel` станет доступным для использования классом `MyCustomControl`.
 
 ## <a name="related-links"></a>Связанные ссылки
 

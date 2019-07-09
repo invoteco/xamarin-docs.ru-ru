@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
-ms.openlocfilehash: 8d2513ba1c2ae2769e81659c98f3897f33d83fbf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 420f52a055dc1c03a017723ab34c2fc3b5363656
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218042"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650232"
 ---
 # <a name="xamarinios-data-access"></a>Доступ к данным Xamarin.iOS
 
@@ -30,7 +30,7 @@ Xamarin.iOS поддерживает интерфейсы API для досту�
 
 Оба примера решения содержат iOS и Android примеры проектов приложений.
 
-Приложения Xamarin.Forms. в статье [работы с базами данных](~/xamarin-forms/app-fundamentals/databases.md) которой описана работа с SQLite в библиотеке переносимой библиотеки Классов с помощью Xamarin.Forms.
+Приложения Xamarin.Forms. в статье [работы с базами данных](~/xamarin-forms/data-cloud/data/databases.md) которой описана работа с SQLite в библиотеке переносимой библиотеки Классов с помощью Xamarin.Forms.
 
 ## <a name="sections"></a>Разделы
 
@@ -53,4 +53,4 @@ Xamarin.iOS поддерживает интерфейсы API для досту�
 - [DataAccess Basic (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS рецепты данных](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Доступ к данным Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Доступ к данным Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

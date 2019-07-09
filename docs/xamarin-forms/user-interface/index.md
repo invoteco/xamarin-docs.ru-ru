@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: c98e1cd9f4095e8310150ceeebd994af2c9b7f87
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512928"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649570"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Представления интерфейса пользователя Xamarin.Forms
 
@@ -99,6 +99,10 @@ Xamarin.Forms предоставляет элемент управления п�
 ## <a name="stylesstylesindexmd"></a>[Стили](styles/index.md)
 
 Шрифт, цвет и другие атрибуты могут быть сгруппированы в стили, которые могут совместно использоваться элементы управления, макеты или с помощью ResourceDictionaries всего приложения.
+
+## <a name="switchswitchmd"></a>[Коммутатор](switch.md)
+
+`Switch` — Это тип кнопки, можно переключаться между, включение и отключение состояния.
 
 ## <a name="tableviewtableviewmd"></a>[TableView](tableview.md)
 

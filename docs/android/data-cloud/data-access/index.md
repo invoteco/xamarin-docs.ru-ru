@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08720734de73af12d8a7383fa7d523dc350c4462
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6858e290d93007d6054ba0ef63dce86e6e2e53e3
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61011359"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649622"
 ---
 # <a name="xamarinandroid-data-access"></a>Доступ к данным Xamarin.Android
 
@@ -35,7 +35,7 @@ Xamarin.Android поддерживает интерфейсы API для дос�
 
 Оба примера решения содержат iOS и Android примеры проектов приложений.
 
-Приложения Xamarin.Forms. в статье [работы с базами данных](~/xamarin-forms/app-fundamentals/databases.md) которой описана работа с SQLite в библиотеке переносимой библиотеки Классов с помощью Xamarin.Forms.
+Приложения Xamarin.Forms. в статье [работы с базами данных](~/xamarin-forms/data-cloud/data/databases.md) которой описана работа с SQLite в библиотеке переносимой библиотеки Классов с помощью Xamarin.Forms.
 
 В этом разделе рассматриваются доступ к данным в Xamarin.Android, используя в качестве ядра базы данных SQLite. Базы данных может осуществляться «напрямую», с помощью синтаксиса ADO.NET, или можно включить ORM для SQLite.NET и выполнения операций с данными в C#.
 
@@ -49,4 +49,4 @@ Xamarin.Android поддерживает интерфейсы API для дос�
 - [DataAccess Basic (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Рецепты данных для Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Доступ к данным Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Доступ к данным Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 7ecf7244fb2ccbe0e4163c89941f9de5138ba713
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10b5a1696b0416bfda115627f7c7b8c2fbd20fcb
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018541"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649588"
 ---
 # <a name="using-adonet-with-android"></a>Использование ADO.NET с Android
 
@@ -61,7 +61,7 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-При выполнении SQL непосредственно в базе данных следует принять обычные меры не вносить недопустимых запросов, таких как попытка создать таблицу, которая уже существует. Хранить список со структурой вашей базы данных, чтобы не вызвать `SqliteException` например **уже существует в таблице ошибок SQLite [элементов]**.
+При выполнении SQL непосредственно в базе данных следует принять обычные меры не вносить недопустимых запросов, таких как попытка создать таблицу, которая уже существует. Хранить список со структурой вашей базы данных, чтобы не вызвать `SqliteException` например **уже существует в таблице ошибок SQLite [элементов]** .
 
 ## <a name="basic-data-access"></a>Основные данные доступа
 
@@ -220,4 +220,4 @@ using (var contents = connection.CreateCommand ()) {
 - [DataAccess Basic (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Рецепты данных для Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Доступ к данным Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Доступ к данным Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

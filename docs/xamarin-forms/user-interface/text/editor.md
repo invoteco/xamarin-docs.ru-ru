@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: bf7a1461a26a860c77a913edabb94d76b4ca2a6a
-ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
+ms.openlocfilehash: 97bb5ec954f36e48d8ae115baf8738862e5a8358
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493346"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649544"
 ---
 # <a name="xamarinforms-editor"></a>Редактор Xamarin.Forms
 
@@ -264,7 +264,7 @@ public partial class EditorPage : ContentPage
 
 ### <a name="completed"></a>Завершено
 
-`Completed` Событие используется для реагирования на завершение взаимодействия с `Editor`. `Completed` вызывается, когда пользователь завершает входных данных с полем, введя клавиша return на клавиатуре. Обработчик для события представляет собой Универсальное событие обработчика, используя отправителя и `EventArgs`:
+`Completed` Событие используется для реагирования на завершение взаимодействия с `Editor`. `Completed` вызывается, когда пользователь завершает входных данных с полем, введя клавиша return на клавиатуре (или нажав клавишу Tab на UWP). Обработчик для события представляет собой Универсальное событие обработчика, используя отправителя и `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)

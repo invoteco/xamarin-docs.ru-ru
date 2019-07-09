@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61389142"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649637"
 ---
 # <a name="xamarinforms-webview"></a>Веб-представления Xamarin.Forms
 
@@ -109,6 +109,9 @@ browser.Source = htmlSource;
 
 В приведенном выше коде `@` используется для пометки HTML как строка литерала, то есть все обычные escape-символы учитываются.
 
+> [!NOTE]
+> Может потребоваться задать `WidthRequest` и `HeightRequest` свойства [ `WebView` ](xref:Xamarin.Forms.WebView) для просмотра HTML-содержимое, в зависимости от макета `WebView` является дочерним элементом. Например, это необходимо в [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
+
 ### <a name="local-html-content"></a>Локальное содержимое HTML
 
 Веб-представление может отображать содержимое HTML, CSS и Javascript, встроенным в приложении. Пример:
@@ -140,7 +143,7 @@ body,p,h1 {
 
 Обратите внимание на то, что шрифты, указанные в таблице выше CSS будет необходимо настроить для каждой платформы, как не каждая платформа имеет шрифты.
 
-Для отображения локального содержимого с помощью `WebView`, вам потребуется открыть HTML-файл, как и любое другое, а затем загрузить содержимое в виде строки в `Html` свойство `HtmlWebViewSource`. Дополнительные сведения о открытия файлов, см. в разделе [работа с файлами](~/xamarin-forms/app-fundamentals/files.md).
+Для отображения локального содержимого с помощью `WebView`, вам потребуется открыть HTML-файл, как и любое другое, а затем загрузить содержимое в виде строки в `Html` свойство `HtmlWebViewSource`. Дополнительные сведения о открытия файлов, см. в разделе [работа с файлами](~/xamarin-forms/data-cloud/data/files.md).
 
 На следующих снимках экрана показано отображение локального содержимого на каждой платформе результат:
 
@@ -237,7 +240,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 }
 ```
 
-#### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
+#### <a name="universal-windows-platform"></a>Универсальная платформа Windows
 
 В проектах универсальной платформы Windows (UWP), поместите HTML, CSS и изображений в корневую папку проекта с действием сборки *содержимого*.
 

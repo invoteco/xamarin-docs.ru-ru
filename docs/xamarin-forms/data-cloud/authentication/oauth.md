@@ -1,5 +1,5 @@
 ---
-title: Проверка подлинности пользователей с помощью поставщика удостоверений
+title: AuthenticateUsers с помощью поставщика удостоверений
 description: В этой статье описываются способы использования Xamarin.Auth для управления процессом проверки подлинности в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 786f1503fcc0cc07f76a7cdc55731d341607429f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331117"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650406"
 ---
-# <a name="authenticating-users-with-an-identity-provider"></a>Проверка подлинности пользователей с помощью поставщика удостоверений
+# <a name="authenticate-users-with-an-identity-provider"></a>Проверка подлинности пользователей с помощью поставщика удостоверений
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
 _Xamarin.Auth — это кроссплатформенный пакет SDK для проверки подлинности пользователей и хранения учетной записью. Он включает в себя структур проверки подлинности OAuth, которые предоставляют поддержку использования поставщиков удостоверений, например Google, Майкрософт, Facebook и Twitter. В этой статье описываются способы использования Xamarin.Auth для управления процессом проверки подлинности в приложении Xamarin.Forms._
 

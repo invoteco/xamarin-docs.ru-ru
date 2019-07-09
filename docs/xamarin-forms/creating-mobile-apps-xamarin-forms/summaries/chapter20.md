@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333726"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650464"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Сводка Глава 20. Асинхронный и файловый ввод-вывод
 
@@ -83,7 +83,7 @@ ms.locfileid: "61333726"
 Это означает, что необходимо использовать [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (впервые было рассказано в [ **Глава 9. Вызовы API конкретных платформ** ](chapter09.md) для реализации файлового ввода-вывода.
 
 > [!NOTE]
-> Переносимые библиотеки классов были заменены библиотеки .NET Standard 2.0 и .NET Standard 2.0 поддерживает [ `System.IO` ](xref:System.IO) типы для всех платформ Xamarin.Forms. Нет необходимости использовать `DependencyService` для выполнения большинства задач файлового ввода-вывода. См. в разделе [обработка файлов в Xamarin.Forms](~/xamarin-forms/app-fundamentals/files.md) для более современный подход к файлового ввода-вывода.
+> Переносимые библиотеки классов были заменены библиотеки .NET Standard 2.0 и .NET Standard 2.0 поддерживает [ `System.IO` ](xref:System.IO) типы для всех платформ Xamarin.Forms. Нет необходимости использовать `DependencyService` для выполнения большинства задач файлового ввода-вывода. См. в разделе [обработка файлов в Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md) для более современный подход к файлового ввода-вывода.
 
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Первый снимок при кросс платформенных файлового ввода-вывода
 
@@ -173,4 +173,4 @@ ms.locfileid: "61333726"
 
 - [Глава 20 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
 - [Глава 20-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
-- [Работа с файлами](~/xamarin-forms/app-fundamentals/files.md)
+- [Работа с файлами](~/xamarin-forms/data-cloud/data/files.md)

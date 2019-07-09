@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: d3f07a72ee26d6be4fafa72137dc9b6c3a724e00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61330661"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650402"
 ---
-# <a name="authenticating-a-restful-web-service"></a>Проверка подлинности веб-службу RESTful
+# <a name="authenticate-a-restful-web-service"></a>Проверка подлинности веб-службу RESTful
 
 _Протокол HTTP поддерживает использование следующих механизмов проверки подлинности для управления доступом к ресурсам. Обычная проверка подлинности обеспечивает доступ к ресурсам только клиентам, которые имеют правильные учетные данные. В этой статье показано, как использовать обычную проверку подлинности для защиты доступа к ресурсам службы веб-RESTful._
 
@@ -86,5 +86,5 @@ public class RestService : IRestService
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Использование веб-службу RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Использование веб-службу RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

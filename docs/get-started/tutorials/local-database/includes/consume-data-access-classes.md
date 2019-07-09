@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7fbd2a81c30726bc6c38586186e9334ddd4ea282
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193266"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659892"
 ---
 В этом упражнении будет создан пользовательский интерфейс, который используется для работы с ранее созданными классами доступа к данным.
 
@@ -76,7 +76,7 @@ ms.locfileid: "61193266"
 
     [![Снимок экрана сохраняемости данных SQLite.NET локальной базы данных на iOS и Android](../images/consume-data-access-classes.png "Сохраняемость данных локальной базы данных")](../images/consume-data-access-classes-large.png#lightbox "Сохраняемость данных локальной базы данных")
 
-    Дополнительные сведения о локальных базах данных в Xamarin.Forms см. в статье [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/app-fundamentals/databases.md)
+    Дополнительные сведения о локальных базах данных в Xamarin.Forms см. в статье [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/data-cloud/data/databases.md)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -146,4 +146,4 @@ ms.locfileid: "61193266"
 
     [![Снимок экрана сохраняемости данных SQLite.NET локальной базы данных на iOS и Android](../images/consume-data-access-classes.png "Сохраняемость данных локальной базы данных")](../images/consume-data-access-classes-large.png#lightbox "Сохраняемость данных локальной базы данных")
 
-    Дополнительные сведения о локальных базах данных в Xamarin.Forms см. в статье [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/app-fundamentals/databases.md)
+    Дополнительные сведения о локальных базах данных в Xamarin.Forms см. в статье [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/data-cloud/data/databases.md)

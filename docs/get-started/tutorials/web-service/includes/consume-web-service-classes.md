@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe38e13ff4b6c89905769d5ef0e5163a538e1e86
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61388895"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659894"
 ---
 В этом упражнении вы создадите пользовательский интерфейс для использования класса `RestService`, который, в свою очередь, получает данные из веб-API [OpenWeatherMap](https://openweathermap.org/).
 
@@ -191,7 +191,7 @@ ms.locfileid: "61388895"
 
     Кроме того, [`Entry`](xref:Xamarin.Forms.Entry) имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту с помощью назначенного имени.
 
-    Дополнительные сведения об использовании веб-служб на базе REST в Xamarin.Forms см. в разделе [Использование веб-службы RESTful (руководство)](~/xamarin-forms/data-cloud/consuming/rest.md).
+    Дополнительные сведения об использовании веб-служб на базе REST в Xamarin.Forms см. в разделе [Использование веб-службы RESTful (руководство)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 1. На **панели решений** в проекте **WebServiceTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем удалите из **MainPage.xaml.cs** весь шаблонный код и замените его приведенным ниже:
 
@@ -250,4 +250,4 @@ ms.locfileid: "61388895"
     > [!IMPORTANT]
     > Ваш личный ключ API OpenWeatherMap должен быть задан как значение константы `OpenWeatherMapAPIKey` в классе `Constants`.
 
-    Дополнительные сведения об использовании веб-служб на базе REST в Xamarin.Forms см. в разделе [Использование веб-службы RESTful (руководство)](~/xamarin-forms/data-cloud/consuming/rest.md).
+    Дополнительные сведения об использовании веб-служб на базе REST в Xamarin.Forms см. в разделе [Использование веб-службы RESTful (руководство)](~/xamarin-forms/data-cloud/web-services/rest.md).

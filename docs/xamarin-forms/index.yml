@@ -87,11 +87,11 @@ sections:
               href: ~/essentials/index.md?context=xamarin/xamarin-forms
             title: Xamarin.Essentials
           - href: ~/xamarin-forms/data-cloud/
-            html: 'Локальное и удаленное хранение данных, извлечение данных и другие облачные службы.'
+            html: 'Локальное и удаленное хранение данных, извлечение данных и другие облачные службы Azure.'
             image:
               src: ~/media/icons/i_data-cloud.svg
               href: ~/xamarin-forms/data-cloud/
-            title: Данные и облачные службы
+            title: Данные и облачные службы Azure
           - href: ~/xamarin-forms/deploy-test/
             html: 'Инструкции по созданию и развертыванию приложений, а также советы по их предварительному тестированию!'
             image:
@@ -104,7 +104,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
               href: ~/xamarin-forms/internals/
             title: Дополнительные понятия и внутренние компоненты
-  - title: Ссылка
+  - title: Справочники
     items:
       - type: list
         style: cards

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c10935f4623fd4455ec5cf8a80c6473c0f69d9b9
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60954289"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674690"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Принципы проектирования API Xamarin.Android
 
@@ -219,7 +219,7 @@ class CubeWallpaper : WallpaperService {
 Обратите внимание как `CubeWallpaper.CubeEngine` вкладывается в `CubeWallpaper`, `CubeWallpaper` наследует от содержащего класса из `WallpaperService.Engine`, и `CubeWallpaper.CubeEngine` имеет конструктор, принимающий объявляющий тип-- `CubeWallpaper` в этом случае--все как указано выше.
 
 
-### <a name="interfaces"></a>интерфейсов,
+### <a name="interfaces"></a>Интерфейсы
 
 Java-интерфейсов может содержать три набора элементов, два из которых вызвать проблемы с помощью C#:
 
@@ -240,7 +240,7 @@ Java-интерфейсов, преобразуются в двух типов:
 
 Например, рассмотрим [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) интерфейс.
 *Parcelable* интерфейс содержит методы, вложенные типы и константы. *Parcelable* методы интерфейса помещаются в [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) интерфейс.
-*Parcelable* константы интерфейса помещаются в [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) типа. Вложенный [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) и [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) типов в настоящее время не вывода из-за ограничения в поддержке универсальных типов; Если они поддерживались, они будут представлены *Android.OS.IParcelableClassLoaderCreator* и *Android.OS.IParcelableCreator* интерфейсов. Например, вложенные [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) интерфейс привязан как [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) интерфейс.
+*Parcelable* константы интерфейса помещаются в [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) типа. Вложенный [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) и [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) типов в настоящее время не вывода из-за ограничения в поддержке универсальных типов; Если они поддерживались, они будут представлены *Android.OS.IParcelableClassLoaderCreator* и *Android.OS.IParcelableCreator* интерфейсов. Например, вложенные [android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) интерфейс привязан как [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) интерфейс.
 
 
 > [!NOTE]
@@ -260,7 +260,7 @@ Java-интерфейсов, преобразуются в двух типов:
 Для *android.os.Parcelable* интерфейс, это означает, что теперь будет [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) тип должен содержать константы. Например [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) константа будет привязан как [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) константы, а не как  *ParcelableConsts.ContentsFileDescriptor* константы.
 
 Для интерфейсов, содержащий константы, которые реализуют другие интерфейсы содержащий еще несколько констант теперь создается объединение все константы. Например [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) интерфейс реализует [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) интерфейс. Тем не менее, предшествующих 1.9 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) тип не имеет доступа к константы, объявленных в [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
-В результате выражения Java *MediaStore.Video.VideoColumns.TITLE* необходимо привязать к выражение C# *MediaStore.Video.MediaColumnsConsts.Title* это трудно обнаруживать без чтения множество документации по Java. В версии 1.9, будет эквивалентное выражение C# [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
+В результате выражения Java *MediaStore.Video.VideoColumns.TITLE* необходимо привязать к выражение C# *MediaStore.Video.MediaColumnsConsts.Title* это трудно обнаруживать без чтения множество документации по Java. В версии 1.9, эквивалент C# будет выражение [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Кроме того, рассмотрите [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) тип, который реализует Java *Parcelable* интерфейс. Так как он реализует интерфейс, все константы в этом интерфейсе доступны «через» тип пакета, например *Bundle.CONTENTS_FILE_DESCRIPTOR* является вполне допустимым выражением Java.
 Ранее это выражение, чтобы перенести C# потребовалось бы рассмотреть все интерфейсы, реализуемые от какого типа *CONTENTS_FILE_DESCRIPTOR* поступили. Начиная с Xamarin.Android 1.9, классы, реализующие интерфейсы Java, которые содержат константы будет иметь вложенную *InterfaceConsts* тип, который будет содержать все константы наследуемого интерфейса. Таким образом, перевод *Bundle.CONTENTS_FILE_DESCRIPTOR* для [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
@@ -319,7 +319,7 @@ public class Resource {
 
 Например, рассмотрим [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
-В таких случаях мы ןס для группирования связанных констант в перечислении .NET и переназначить метод выполнить перечисление.
+В таких случаях мы ן для группирования связанных констант в перечислении .NET и переназначить метод выполнить перечисление.
 Таким образом, мы могут предложить выделение IntelliSense из возможных значений.
 
 Приведенный выше пример выглядит следующим образом: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).

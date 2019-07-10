@@ -7,16 +7,16 @@ ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 5d6cf6b36d4f454d3124a33ab9cb289e40e0e1ed
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed80a423506f96972ddf80075379ed6e6dccd0a1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160619"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675133"
 ---
 # <a name="skiasharp-platform-specific-notes"></a>Заметки о платформе SkiaSharp
 
-В приведенных ниже примерах выделить буферы образа вручную, это делается для иллюстрации общий шаблон платформы, используемого для рисования на существующий RBGA буфер, предоставляемый платформой.
+В приведенных ниже примерах выделить буферы образа вручную, это делается для иллюстрации общий шаблон платформы, используемого для рисования на существующий RGBA буфер, предоставляемый платформой.
 
 Необходимо использовать эту идиому, если вы не хотите.  Нет перегрузку, которая создает и обслуживает резервного хранилища для образа для вас.
 

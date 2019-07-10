@@ -6,12 +6,12 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: 2117eb91f25f2fb890b419fa7c4235b8f646729d
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354070"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675026"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Часть 3 - Настройка решения Xamarin кросс платформенные
 
@@ -104,7 +104,7 @@ ms.locfileid: "66354070"
 
 Архитектура приложения показана на следующей схеме:
 
- [ ![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "На этой схеме показана архитектура приложения")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "На этой схеме показана архитектура приложения")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 На этом снимке экрана показан файл установки решения с помощью общего проекта Core, iOS и проектах приложений Android. Общий проект содержит код, относящиеся к каждому из архитектурных уровней (код бизнеса, службы, данных и доступа к данным):
 

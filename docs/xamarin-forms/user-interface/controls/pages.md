@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 42cbc6f50da34cbbc594dfef1dec49619202c191
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 7b99e876c666160bdfd4392915901ea6535e68e1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741071"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674828"
 ---
 # <a name="xamarinforms-pages"></a>Страницы Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Страницы Xamarin.Forms представляют экраны кросс
 
 Все типы страниц, которые описаны ниже, являются производными от Xamarin.Forms [ `Page` ](xref:Xamarin.Forms.Page) класса. Эти визуальные элементы занимают всего или большей части экрана. Объект `Page` представляет объект `ViewController` в iOS и `Page` в универсальной платформы Windows. В Android, каждая страница занимает экран, похожий `Activity`, но страницы Xamarin.Forms являются *не* `Activity` объектов.
 
-[ ![](pages-images/pages-sml.png "Типы страницы Xamarin.Forms")](pages-images/pages.png#lightbox "типы страницы Xamarin.Forms")
+[![](pages-images/pages-sml.png "Типы страницы Xamarin.Forms")](pages-images/pages.png#lightbox "типы страницы Xamarin.Forms")
 
 ## <a name="pages"></a>Pages
 

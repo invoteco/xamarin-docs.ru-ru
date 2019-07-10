@@ -6,16 +6,16 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 25eec247a0cb664897541a0e6e818a77018fda43
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187783"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674992"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure и Xamarin
 
-[ ![](images/evolve-mikej-azure-sml.png "Функции служб приложений Azure можно легко добавлять в приложения Xamarin, включая Облачное хранилище данных и кросс платформенные Push-уведомлений")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Функции служб приложений Azure можно легко добавлять в приложения Xamarin, включая Облачное хранилище данных и кросс платформенные Push-уведомлений")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 [Усовершенствовано в 2016 г. Разработка подключенных приложений с помощью Azure и Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -28,7 +28,7 @@ ms.locfileid: "61187783"
 Имеется коллекция [документация по мобильным приложениям Azure](~/cross-platform/data-cloud/mobile-apps.md) , в котором описаны процесс реализации [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 Xamarin также предлагает пакеты NuGet обмена сообщениями Azure для [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) и [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) для реализации Push-уведомлений в разных платформах.
 
-Настройте свои приложения на [портала службы приложений](https://portal.azure.com/) для доступа к мобильным приложениям, веб-API, хранения и многое другое. Дополнительные сведения о [как служб приложений отличаются](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) и смотреть в [эти видеоматериалы от корпорации Майкрософт](http://azure.microsoft.com/campaigns/azure-march-announcement/).
+Настройте свои приложения на [портала службы приложений](https://portal.azure.com/) для доступа к мобильным приложениям, веб-API, хранения и многое другое. Дополнительные сведения о [как служб приложений отличаются](https://azure.microsoft.com/updates/whats-new-with-azure-app-service/) и смотреть в [эти видеоматериалы от корпорации Майкрософт](https://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Проверка подлинности Active Directory
 
@@ -61,5 +61,5 @@ Xamarin также предлагает пакеты NuGet обмена сооб
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример Azure переносимой библиотеки Классов (с @paulbatum) (пример)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Портал Azure](http://azure.microsoft.com/)
+- [Портал Azure](https://azure.microsoft.com/)
 - [Мобильный клиент для Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

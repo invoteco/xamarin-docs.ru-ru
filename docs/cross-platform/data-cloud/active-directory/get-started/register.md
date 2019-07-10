@@ -6,12 +6,12 @@ ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7f1e743eea81edc0aa45b49f6acb6a9fd461bc80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fd3cb0e8201a6e84c726b211852013bd5f35fba1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188284"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675109"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>Шаг 1. Регистрация приложения для использования Azure Active Directory
 
@@ -19,11 +19,11 @@ ms.locfileid: "61188284"
 
 2. После входа в систему перейдите на страницу **Active Directory** раздел (1) и выберите каталог, где вы хотите зарегистрировать приложение (2)
 
-  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "раздел и выберите каталог, где вы хотите зарегистрировать приложение")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
+  [![](register-images/01.-active-directory-in-azure-portal-sml.jpg "раздел и выберите каталог, где вы хотите зарегистрировать приложение")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
 3. Нажмите кнопку **добавить** Чтобы создать новое приложение, затем выберите **добавить приложение, разрабатываемое моей организацией**
 
-  [ ![](register-images/02.-add-new-application-sml.jpg "Добавить приложение, разрабатываемое моей организацией")](register-images/02.-add-new-application.jpg#lightbox)
+  [![](register-images/02.-add-new-application-sml.jpg "Добавить приложение, разрабатываемое моей организацией")](register-images/02.-add-new-application.jpg#lightbox)
 
 4. На следующем экране Присвойте приложению имя (например) XAM-DEMO).
   Обязательно выберите **собственное клиентское приложение** как тип приложения.

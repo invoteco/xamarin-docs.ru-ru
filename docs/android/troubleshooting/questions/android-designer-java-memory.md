@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c42be49aff56453bb1bc3b3c732cad151ccd62e0
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60946742"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674462"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Настройка параметров памяти Java для конструктора Android
 
@@ -35,7 +35,7 @@ ms.locfileid: "60946742"
 
 1.  Откройте решение в Visual Studio.
 
-2.  Выберите каждый проект Android по одному в обозревателе решений и нажмите кнопку [Показать все файлы](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) дважды для каждого проекта. Вы можете пропустить проектов, которые не содержат `.axml` файлы макета. Этот шаг гарантирует, что каждый каталог проекта содержит `.csproj.user` файла.
+2.  Выберите каждый проект Android по одному в обозревателе решений и нажмите кнопку [Показать все файлы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) дважды для каждого проекта. Вы можете пропустить проектов, которые не содержат `.axml` файлы макета. Этот шаг гарантирует, что каждый каталог проекта содержит `.csproj.user` файла.
 
 3.  Выйдите из Visual Studio.
 

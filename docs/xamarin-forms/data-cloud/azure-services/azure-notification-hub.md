@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: 474398922bf00e3a430166d8b2e073d200e6ed6e
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: fb2f108ba115690ca181738486fd8310f26bb909
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659331"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674520"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Отправлять и получать Push-уведомлений с помощью центров уведомлений Azure и Xamarin.Forms
 
@@ -538,7 +538,7 @@ public static class DispatcherConstants
 }
 ```
 
-Необходимо настроить **DispatcherConstants.cs** в соответствии с конфигурацией вашего центра уведомлений Azure. Значение `SubscriptionTags` свойства должны совпадать со значениями, используемых в клиентских приложениях. `NotificationHubName` Свойство — имя экземпляра концентратора уведомлений Azure. `FullAccessConnectionString` Свойство является ключом доступа, найти в центре уведомлений **политики доступа**. На следующем снимке экрана показан расположение `NotificationHubName` и `FullAccessConnectionString` свойства на портале Azure:
+Необходимо настроить **DispatcherConstants.cs** согласно конфигурации центра уведомлений Azure. Значение `SubscriptionTags` свойства должны совпадать со значениями, используемых в клиентских приложениях. `NotificationHubName` Свойство — имя экземпляра концентратора уведомлений Azure. `FullAccessConnectionString` Свойство является ключом доступа, найти в центре уведомлений **политики доступа**. На следующем снимке экрана показан расположение `NotificationHubName` и `FullAccessConnectionString` свойства на портале Azure:
 
 ![Снимок экрана имя центра уведомлений Azure и FullAccessConnectionString](azure-notification-hub-images/notification-hub-full-access-policy.png "имя центра уведомлений Azure и FullAccessConnectionString")
 

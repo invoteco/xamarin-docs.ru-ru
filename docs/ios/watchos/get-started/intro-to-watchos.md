@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: faa52c80fdb776f2c6c7320874b0d08720b4e4ec
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218865"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675248"
 ---
 # <a name="introduction-to-watchos"></a>Введение в watchOS
 
@@ -29,7 +29,7 @@ ms.locfileid: "61218865"
 
 В watchOS 1 приложения код расширения выполняется на iPhone, Apple Watch, фактически внешнему дисплею. приложения для watchOS 2 и 3 выполнять полностью в Apple Watch. На следующей схеме показано это различие:
 
-[ ![](intro-to-watchos-images/arch-sml.png "На этой диаграмме отображается разница между watchOS 1 и watchOS 2 (и более)")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "На этой диаграмме отображается разница между watchOS 1 и watchOS 2 (и более)")](intro-to-watchos-images/arch.png#lightbox)
 
 Независимо от того, какую версию watchOS предназначено в Visual Studio для Mac в панели решения законченное решение будет выглядеть следующим образом:
 

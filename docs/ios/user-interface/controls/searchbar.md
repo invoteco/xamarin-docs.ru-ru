@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 3c46aa1244699671d46560b0029197981a86d005
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 75abb943dbc56d7b4213e0c36c19ff338182ae8a
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61341577"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674869"
 ---
 # <a name="search-bars-in-xamarinios"></a>Панели поиска в Xamarin.iOS
 
@@ -65,7 +65,7 @@ searchBar.SearchButtonClicked += (sender, e) => {
             };
 ```
 
-Сведения об управлении представлением панель поиска и результаты поиска, см. [поиска контроллера ](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) рецепт.
+Сведения об управлении представлением панель поиска и результаты поиска, см. [поиска контроллера](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) рецепт.
 
 ## <a name="using-the-search-bar-in-the-designer"></a>Используя панель поиска в конструкторе
 

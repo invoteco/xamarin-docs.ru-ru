@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5417050daa84197dd7dc2a270ae054a3a73fd3bc
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037493"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675079"
 ---
 # <a name="xamarinios-api-design"></a>Проектирование API Xamarin.iOS
 
@@ -113,7 +113,7 @@ Xamarin.iOS отражает в C# иерархию классов, от Objecti
 
 Хотя Mono обеспечит сбор мусора для всех объектов, `Foundation.NSObject` реализует [System.IDisposable](xref:System.IDisposable) интерфейс. Это означает, что можно явно освободить ресурсы из любой заданной NSObject без ожидания для сборщика мусора для операций в. Это важно при использовании высоких NSObjects, например, UIImages, который может содержать указатели для больших блоков данных.
 
-Если ваш тип должен осуществлять детерминированную финализацию, переопределить [NSObject.Dispose(bool) метод](xref:Foundation.NSObject.Dispose(System.Boolean)) параметра Dispose является «bool disposing», и если задать значение true, он означает, что метод Dispose вызывается, поскольку пользователь явно вызываемые Dispose (). в объекте. Если значение равно false, это означает, что метод Dispose (bool disposing) вызывается из метода завершения в потоке метода завершения. []()
+Если ваш тип должен осуществлять детерминированную финализацию, переопределить [NSObject.Dispose(bool) метод](xref:Foundation.NSObject.Dispose(System.Boolean)) параметра Dispose является «bool disposing», и если задать значение true, он означает, что метод Dispose вызывается, поскольку пользователь явно вызываемые Dispose (). в объекте. Если значение равно false, это означает, что метод Dispose (bool disposing) вызывается из метода завершения в потоке метода завершения.
 
 
 ##### <a name="categories"></a>Категории

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8fe2c2765676db52c23fd7c475f218f14697caf
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61413068"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675231"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Работа с параметрами в Xamarin watchOS
 
@@ -36,7 +36,7 @@ Apple Watch приложения могут использовать те же �
 
 3. Добавьте новый раздел `ApplicationGroupContainerIdentifier` для **Root.plist** со значением, равным эту группу приложений, которые вы настроили, (например) `group.com.xamarin.WatchSettings` в примере):
 
-   [ ![](settings-images/settings-appgroup-sml.png "Добавьте раздел ApplicationGroupContainerIdentifier файла \"root.plist\"")](settings-images/settings-appgroup.png#lightbox)
+   [![](settings-images/settings-appgroup-sml.png "Добавьте раздел ApplicationGroupContainerIdentifier файла \"root.plist\"")](settings-images/settings-appgroup.png#lightbox)
 
 4. Изменить **Settings-Watch.bundle/Root.plist** должен содержать параметры, которые вы хотите использовать - файле шаблона содержит группу.
   TextField, переключатель и ползунка по умолчанию (который можно удалить и заменить со своими параметрами):

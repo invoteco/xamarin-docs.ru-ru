@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 426c5ef5cc32877546ebb88cb485a81723816e6e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036172"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675065"
 ---
 # <a name="ios-app-architecture"></a>Архитектура приложения iOS
 
-Приложений Xamarin.iOS запуск в среде выполнения Mono и использование полной компиляции Ahead из времени (AOT) компиляции C# код на языке ассемблера ARM. Эта команда запускает side-by-side с [среде выполнения Objective-c](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Обе эти среды выполнения выполняются на основе UNIX-подобных ядро, в частности [XNU](https://en.wikipedia.org/wiki/XNU)и предоставлять различные интерфейсы API для пользовательского кода, что позволяет разработчикам получать доступ к базовой системы машинного или управляемого.
+Приложений Xamarin.iOS запуск в среде выполнения Mono и использование полной компиляции Ahead из времени (AOT) компиляции C# код на языке ассемблера ARM. Эта команда запускает side-by-side с [среде выполнения Objective-c.](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Обе эти среды выполнения выполняются на основе UNIX-подобных ядро, в частности [XNU](https://en.wikipedia.org/wiki/XNU)и предоставлять различные интерфейсы API для пользовательского кода, что позволяет разработчикам получать доступ к базовой системы машинного или управляемого.
 
 На следующей схеме показан общий обзор этой архитектуры:
 
-[ ![](architecture-images/ios-arch-small.png "На этой схеме показан общий обзор архитектуры вперед от времени (AOT) компиляции")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "На этой схеме показан общий обзор архитектуры вперед от времени (AOT) компиляции")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>Машинного и управляемого кода: Объяснение
 

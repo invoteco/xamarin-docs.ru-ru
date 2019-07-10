@@ -1,19 +1,24 @@
 ---
-title: "Введение в iOS\_6"
-description: 'Этот документ содержит ссылки на руководства, описывающие возможности, представленные в iOS 6. Представления коллекций, PassKit, платформа для социальных сетей, и изменения в StoreKit обсуждаются.'
+title: Введение в iOS 6
+description: Этот документ содержит ссылки на руководства, описывающие возможности, представленные в iOS 6. Представления коллекций, PassKit, платформа для социальных сетей, и изменения в StoreKit обсуждаются.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
+ms.openlocfilehash: be017103c5a3a2c890f49e4a510d20fcd0c03094
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675106"
 ---
-
 # <a name="introduction-to-ios-6"></a>Введение в iOS 6
 
 _iOS 6 включает множество новых технологий для разработки приложений, которая позволяет использовать Xamarin.iOS 6 для C# разработчиков._
 
-[ ![](images/ios6-large.jpg "Логотип iOS 6")](images/ios6-large.jpg#lightbox)
+[![](images/ios6-large.jpg "Логотип iOS 6")](images/ios6-large.jpg#lightbox)
 
 Благодаря iOS 6 и Xamarin.iOS 6 разработчики получили широкий набор возможностей в их распоряжении, для создания приложений iOS, включая объекты, что целевой объект iPhone 5.
 В этом документе приводится перечень доступны более интересных новых возможностей и ссылки на статьи, для каждого раздела справки. Кроме того он затрагивает несколько изменений, которые будут важны, так как разработчики перемещают iOS 6 и новое разрешение iPhone 5.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 1e40b0a71317d8c9cb3de391a0b941a5bb081956
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 61d9c5b1c7b81bfc8a20932ce1d188cd0cb0f980
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048158"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650431"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Основы разработки приложения Xamarin.Forms
 
@@ -52,10 +52,6 @@ ms.locfileid: "65048158"
 
 Эффекты позволяют настраивать собственные элементы управления на каждой платформе. Они обычно используются для незначительных изменений в стиле.
 
-## <a name="filesfilesmd"></a>[Файлы](files.md)
-
-Обработку файлов в Xamarin.Forms можно выполнить с помощью кода в библиотеке .NET Standard или внедренных ресурсов.
-
 ## <a name="gesturesgesturesindexmd"></a>[Жесты](gestures/index.md)
 
 Класс [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) Xamarin.Forms поддерживает жесты касания, сжатия и сдвига в элементах управления пользовательского интерфейса.
@@ -63,10 +59,6 @@ ms.locfileid: "65048158"
 ## <a name="localizationlocalizationindexmd"></a>[Локализация](localization/index.md)
 
 Встроенную платформу локализации .NET можно использовать в кроссплатформенных многоязыковых приложениях в Xamarin.Forms.
-
-## <a name="local-databasesdatabasesmd"></a>[Локальные базы данных](databases.md)
-
-Xamarin.Forms поддерживает приложения на основе базы данных с использованием ядра СУБД SQLite, которое позволяет загружать и сохранять объекты в общем коде.
 
 ## <a name="messaging-centermessaging-centermd"></a>[Центр обмена сообщениями](messaging-center.md)
 

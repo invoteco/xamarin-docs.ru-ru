@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: e7b8ae57f127b4c9397ab4e5f7e097fa330e827a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925572"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650657"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Индексирование приложения и создание прямых ссылок
 
@@ -34,7 +34,7 @@ _Индексирование приложения позволяет прило
 
 Каждый экземпляр `TodoItem`, созданный пользователем, индексируется. Механизм поиска, определяемый платформой, может использоваться для поиска индексированных данных из приложения. Когда пользователь выбирает элемент в результатах поиска для приложения, приложение запускается, осуществляется переход к `TodoItemPage` и отображается элемент `TodoItem`, на который ссылается прямая ссылка.
 
-Дополнительные сведения об использовании базы данных SQLite см. в разделе, посвященном [локальным базам данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md).
+Дополнительные сведения об использовании базы данных SQLite см. в разделе, посвященном [локальным базам данных Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
 > Функции индексирования приложения и создания прямых ссылок Xamarin.Forms доступны только на платформах iOS и Android и требуют как минимум версии iOS 9 и API 23 соответственно.

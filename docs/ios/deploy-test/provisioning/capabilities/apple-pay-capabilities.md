@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b9a5b70b46447ab6eb7143322dd0d2e5dc55200d
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112357"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675146"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Возможности Apple Pay в Xamarin.iOS
 
@@ -62,7 +62,7 @@ _Добавление возможностей в приложения част�
 
 3.  Введите имя для ИД приложения и понятный идентификатор приложения:    
    
-    ![Окно сведений об ИД приложения ](apple-pay-capabilities-images/image35.png)
+    ![Окно сведений об ИД приложения](apple-pay-capabilities-images/image35.png)
 
 4.  В "Службах приложений" выберите Apple Pay:    
   

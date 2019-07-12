@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2c6c71f5ed46cc1cae66c5d1f412898825805cc6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187567"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67841448"
 ---
 Подкласс [`Application`](xref:Xamarin.Forms.Application) имеет статический словарь [`Properties`](xref:Xamarin.Forms.Application.Properties), который можно использовать для хранения данных в изменениях состояния жизненного цикла. Словарь использует ключ `string` и хранит значение `object`. Словарь сохраняется на устройстве автоматически и будет заполнен повторно при перезапуске приложения.
 
@@ -20,9 +20,7 @@ ms.locfileid: "61187567"
     ```csharp
     using System;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace AppLifecycleTutorial
     {
         public partial class App : Application
@@ -126,9 +124,7 @@ ms.locfileid: "61187567"
     ```csharp
     using System;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace AppLifecycleTutorial
     {
         public partial class App : Application

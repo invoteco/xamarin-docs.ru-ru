@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62b577393a498587ee2e2e899d20bfeec7988c4e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034789"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832376"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Сочетания клавиш Siri в Xamarin.iOS
 
@@ -218,7 +218,7 @@ void HandleUserActivity()
 - Ответ **свойства** можно использовать, чтобы настроить сообщение, передается обратно пользователю. **OrderSoup** намерений ответ имеет **soup** и **waitTime** свойства.
 - **Шаблоны ответов** указать различные успешных и неудачных сообщений, которые могут использоваться для указания состояния после завершения задачи объекта intent.
 - **Успех** должен быть установлен флажок для ответов, означает успех операции.
- - **OrderSoupIntent** использует доступ предоставлен, ответ **soup** и **waitTime** свойства, чтобы предоставить понятные и полезные сообщение, описывающее, когда будут готовы порядок полный курс по работе.
+- **OrderSoupIntent** использует доступ предоставлен, ответ **soup** и **waitTime** свойства, чтобы предоставить понятные и полезные сообщение, описывающее, когда будут готовы порядок полный курс по работе.
 
 ### <a name="generating-code-for-the-custom-intent"></a>Создание кода для пользовательского намерение
 
@@ -645,7 +645,7 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 
 - Создание группы приложений для обмена данными между приложением Chef полный курс по работе и его расширения. Например: **group.com.yourcompanyname.SoupChef**
 
-- Создайте три идентификаторов приложений: один для самого приложения, для расширения Intents и для расширения интерфейса Intents UI. Пример:
+- Создайте три идентификаторов приложений: один для самого приложения, для расширения Intents и для расширения интерфейса Intents UI. Например:
 
     - Приложение: **com.yourcompanyname.SoupChef**
         - Чтобы этот идентификатор приложения назначьте SiriKit и **группы приложений** возможности.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: c900ab714fed2bb1e02367ba39ad3c5a0a76121e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60eaad98e2d5469e9c43e6b4ad889080e1aa63ba
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408377"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832067"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>ссылки на проект в Xamarin watchOS
 
@@ -26,16 +26,16 @@ _Объяснение связь между приложением iOS, прил
 
 - **приложение для iPhone** ссылки **приложении для Apple Watch**
 
-![](project-references-images/catalog-reference1.png "приложение для iPhone, ссылается на приложения Watch")
+  ![](project-references-images/catalog-reference1.png "приложение для iPhone, ссылается на приложения Watch")
 
 - **Просмотрите приложения** ссылки **расширение приложения Watch**
 
-![](project-references-images/catalog-reference2.png "приложение для iPhone, ссылается на приложения Watch")
+  ![](project-references-images/catalog-reference2.png "приложение для iPhone, ссылается на приложения Watch")
 
 
- - **Расширение приложения Watch** не ссылается ни один из других проектов
+- **Расширение приложения Watch** не ссылается ни один из других проектов
 
-![](project-references-images/catalog-reference3.png "Расширение приложения Watch не ссылается на другие проекты")
+  ![](project-references-images/catalog-reference3.png "Расширение приложения Watch не ссылается на другие проекты")
 
 
 
@@ -44,17 +44,17 @@ _Объяснение связь между приложением iOS, прил
 Необходимо также убедитесь, что ваш **идентификаторов пакета** указаны правильно.
 Все три проекта должен иметь *же* префикс идентификатора, с проектами две контрольные значения, предопределенные расширения `watchkitextension` и `watchkitapp`, как показано ниже (для **WatchKitCatalog** пример).
 
- - Проект единого Xamarin.iOS: `com.xamarin.WatchKitCatalog`
+- Проект единого Xamarin.iOS: `com.xamarin.WatchKitCatalog`
 
- - Проект расширения WatchKit- `com.xamarin.WatchKitCatalog.watchkitextension`
+- Проект расширения WatchKit- `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Проект приложения Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
+- Проект приложения Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Также убедитесь, что они **Info.plist** параметры настроены правильно:
 
- - В проект приложения Watch `WKCompanionAppBundleIdentifier` совпадает идентификатор пакета приложения родительского или контейнера (т. е., запущенным на iPhone);
+- В проект приложения Watch `WKCompanionAppBundleIdentifier` совпадает идентификатор пакета приложения родительского или контейнера (т. е., запущенным на iPhone);
 
- - Расширение пакета средств просмотра проекта **идентификатор пакета WKApp** совпадает идентификатор пакета в проект приложения Watch.
+- Расширение пакета средств просмотра проекта **идентификатор пакета WKApp** совпадает идентификатор пакета в проект приложения Watch.
 
 Идентификаторы можно изменить, дважды щелкнув **Info.plist** файла в каждом проекте.
 

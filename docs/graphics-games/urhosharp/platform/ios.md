@@ -6,14 +6,14 @@ ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: f15ae458c6bd613b59700908ad7c121315e377ab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3efdbfcfdd670525dbf3198deb17c4631a889c56
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61302651"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832460"
 ---
-# <a name="urhosharp-ios-and-tvos-support"></a>UrhoSharp iOS и tvOS поддержки
+# <a name="urhosharp-ios-and-tvos-support"></a>Поддержка iOS и tvOS UrhoSharp
 
 Хотя Urho является переносимой библиотеке классов и разрешает один и тот же API для использования на различных платформах для логики игр по-прежнему необходимо инициализировать Urho в конкретного драйвера, платформы, а в некоторых случаях, вам потребуется воспользоваться преимуществами определенных функций платформы .
 
@@ -74,4 +74,3 @@ window.AddSubview (view);
 ```csharp
 new MyGame().Run ();
 ```
-

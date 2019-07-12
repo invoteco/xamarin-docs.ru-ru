@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 232fcd1d369eba1daad170986f2e2c4c913a3649
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 816ec5c861b5889e1735eab6293ed10318c53644
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61307867"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831878"
 ---
 # <a name="debug-on-a-wear-device"></a>Отладка в устройстве Android Wear
 
@@ -77,7 +77,8 @@ _В этой статье объясняется, как выполнить от
 
     Если порт 4444 недоступен, можно использовать любой другой доступный порт, к которому у вас есть доступ. 
 
-    **Примечание**. При перезапуске Visual Studio или Visual Studio для Mac, необходимо выполнить эти команды еще раз, чтобы установить подключение к устройству одежды.
+    > [!NOTE]
+    > При перезапуске Visual Studio или Visual Studio для Mac, необходимо выполнить эти команды еще раз, чтобы установить подключение к устройству одежды.
 
 5.  При устройстве Android Wear появится запрос, подтвердите, что позволяет пользователям **отладки ADB**. В приложении Android Wear вы увидите, как изменить состояние:
 

@@ -7,18 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 0fff9b7ce4b78e29409d1cc7a55e7f447baf722c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649570"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831096"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Представления интерфейса пользователя Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Как использовать представления, предоставляемые Xamarin.Forms_
+
+## <a name="activityindicatoractivityindicatormd"></a>[ActivityIndicator](activityindicator.md)
+
+`ActivityIndicator` Является элементом анимированных, который указывает пользователям, что приложение участвует в длительной операции, без предоставления какого-либо указания хода выполнения.
 
 ## <a name="animationanimationindexmd"></a>[Анимация](animation/index.md)
 
@@ -87,6 +91,10 @@ Xamarin.Forms предоставляет элемент управления п�
 ## <a name="pickerpickerindexmd"></a>[Средство выбора](picker/index.md)
 
 [ `Picker` ](xref:Xamarin.Forms.Picker) Представление является элемент управления для выбора элемента из списка данных.
+
+## <a name="progressbarprogressbarmd"></a>[ProgressBar](progressbar.md)
+
+[ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar) Является элемент управления, который визуально представляет ход выполнения в виде горизонтальной полосы, заполняемую основанное на свойстве, число с плавающей запятой.
 
 ## <a name="sliderslidermd"></a>[Slider](slider.md)
 

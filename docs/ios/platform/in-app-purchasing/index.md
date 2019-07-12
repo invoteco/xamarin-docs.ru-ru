@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4b301c18ea0e69c818cf65b3b7df1cc8351350f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4165f9e6c3088a41d6bd746b1912a64570c553a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402459"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832558"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Приобретение в Xamarin.iOS в приложении
 
@@ -34,17 +34,17 @@ ms.locfileid: "61402459"
 
 ## <a name="contents"></a>Описание
 
- * [Основные сведения о покупке из приложения и ее конфигурация](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+* [Основные сведения о покупке из приложения и ее конфигурация](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Общие сведения о StoreKit и извлечение сведений о продукте](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+* [Общие сведения о StoreKit и извлечение сведений о продукте](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
- * [Приобретение готовых к использованию продуктов](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+* [Приобретение готовых к использованию продуктов](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
- * [Приобретение неготовых к использованию продуктов](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+* [Приобретение неготовых к использованию продуктов](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
- * [Транзакции и проверки](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+* [Транзакции и проверки](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
- * [Подписки и отчетность](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+* [Подписки и отчетность](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## <a name="summary"></a>Сводка
 

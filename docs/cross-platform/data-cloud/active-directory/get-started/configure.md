@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2a9baab9215ae2d30e4daf6800a116c95165da42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6135740095395d5cd7bde9abc1cbbab1e1072161
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188305"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832244"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Шаг 2. Настройка доступа к службе для мобильного приложения
 
@@ -21,7 +21,7 @@ ms.locfileid: "61188305"
 
   ![](configure-images/2.1-configure.png "На вкладке \"Настройка\" найдите разрешения для других приложений раздел")
 
-2.  Щелкните **добавить приложение** кнопки. В следующем всплывающем окне вы увидите список всех приложений, которые защищены с помощью Azure Active Directory. Выберите приложения, которые требуется предоставить доступ из мобильного приложения.
+2. Щелкните **добавить приложение** кнопки. В следующем всплывающем окне вы увидите список всех приложений, которые защищены с помощью Azure Active Directory. Выберите приложения, которые требуется предоставить доступ из мобильного приложения.
 
   ![](configure-images/2.2-add-application.png "Выберите приложения, которые требуется предоставить доступ из мобильного приложения")
 

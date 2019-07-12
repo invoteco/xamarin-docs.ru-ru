@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 1a98cf854ffdd1d4904981f85fd8e33ad486743c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 38c0ece3e8f0361f3c891713e53b033351512f94
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61417378"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829919"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Советы по устранению неполадок для Xamarin.iOS 
 
@@ -109,7 +109,7 @@ public partial class MyImageView : UIView {
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
-## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>Тип {Foo} не содержит определение для `GetNativeField' and no extension method `GetNativeField "типа {Foo} найден
+## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>Тип {Foo} не содержит определение для `GetNativeField` и метод расширения `GetNativeField` типа найден {Foo}
 
 Если вы получаете эту ошибку в конструктора созданные файлы (*. xib.designer.cs), это означает, что одно из следующих действий:
 
@@ -389,14 +389,15 @@ Visual Studio для параметров сборки Mac iPhone проекта
 ```
 .. .то, возможно, один (или более) устаревшие сборки в каталоге приложения симулятора. Такие сборки может существует, так как Apple iOS simulator, добавляет и обновляет файлов, но никогда не удаляет их. Если это происходит, самым простым решением является выбор «Сбросить и содержимого и параметры...» в меню симулятора.   
 
-**Предупреждение:** это удалит все файлы, приложения и данные в симуляторе.   При следующем выполнении приложения, Visual Studio для Mac он будет развернут в симуляторе и будет существовать сборка не старые, устаревшие, чтобы вызвать сбой.
+> [!WARNING]
+> Это удалит все файлы, приложения и данные в симуляторе.   При следующем выполнении приложения, Visual Studio для Mac он будет развернут в симуляторе и будет существовать сборка не старые, устаревшие, чтобы вызвать сбой.
 
 ## <a name="simulator-hangs-during-application-installation"></a>Симулятор зависает при установке приложения
 
 Это может произойти, когда включать имена приложений "." (точка) в имени.
 Это запрещено как имя исполняемого файла в CFBundleExecutable -, даже если он работает во многих других случаях (например, устройства).
 
- * "Значение не может включать любое расширение, по имени.» - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+ \* "Значение не может включать любое расширение, по имени.» - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Ошибка: «Не поддерживается тип настраиваемого атрибута 0x43» при двойном щелчке xib-файлы
 

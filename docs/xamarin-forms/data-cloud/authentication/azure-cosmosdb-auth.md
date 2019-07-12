@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 52f4e33e051c99b7002120c055c79036828d60dd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 6e55b3b9b0f204992de684ba09f3d9ff2552ce00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658871"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832364"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Проверка подлинности пользователей с помощью базы данных документов Azure Cosmos DB и Xamarin.Forms
 
@@ -96,9 +96,9 @@ _Базы данных документов Azure Cosmos DB поддержива
 1. Создание приложения Facebook. Дополнительные сведения см. в разделе [регистрация и настройка приложения](https://developers.facebook.com/docs/apps/register) в центре разработчиков Facebook.
 1. Добавление имени для входа Facebook продукта в приложение. Дополнительные сведения см. в разделе [Добавление имени для входа Facebook для приложения или веб-сайт](https://developers.facebook.com/docs/facebook-login) в центре разработчиков Facebook.
 1. Настройка имени для входа Facebook следующим образом:
-  - Включение имени входа клиента OAuth.
-  - Включение имени входа OAuth Web.
-  - Набор допустимых OAuth URI перенаправления, который URI веб-приложения службы приложений, с помощью `/.auth/login/facebook/callback` добавляется.
+   - Включение имени входа клиента OAuth.
+   - Включение имени входа OAuth Web.
+   - Набор допустимых OAuth URI перенаправления, который URI веб-приложения службы приложений, с помощью `/.auth/login/facebook/callback` добавляется.
 
   Следующем снимке экрана показана эта конфигурация:
 
@@ -114,12 +114,12 @@ _Базы данных документов Azure Cosmos DB поддержива
 
 1. На портале Azure перейдите к веб-приложения службы приложений.
 1. На портале Azure откройте проверки подлинности / авторизации колонке и выполните следующие действия:
-  - Проверка подлинности службы приложений должно быть включено.
-  - Действие, выполняемое, когда запрос не прошел проверку подлинности должно быть присвоено **входа с помощью Facebook**.
+    - Проверка подлинности службы приложений должно быть включено.
+    - Действие, выполняемое, когда запрос не прошел проверку подлинности должно быть присвоено **входа с помощью Facebook**.
 
-  Следующем снимке экрана показана эта конфигурация:
+    Следующем снимке экрана показана эта конфигурация:
 
-  [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "Параметры проверки подлинности для веб-приложения службы приложений")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "параметры проверки подлинности для веб-приложения службы приложений")
+    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "Параметры проверки подлинности для веб-приложения службы приложений")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "параметры проверки подлинности для веб-приложения службы приложений")
 
 Веб-приложения службы приложений также должны быть настроены для взаимодействия с приложением Facebook, чтобы включить поток проверки подлинности. Это можно сделать, выбрав поставщика удостоверений Facebook и введя **идентификатор приложения** и **секрет приложения** значения из настроек приложения Facebook в центре разработчиков Facebook. Дополнительные сведения см. в разделе [информации от Facebook, добавьте в приложение](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
@@ -131,10 +131,10 @@ _Базы данных документов Azure Cosmos DB поддержива
 
 1. Откройте решение Xamarin.Forms.
 1. Откройте `Constants.cs` и обновите значения из следующих констант:
-  - `EndpointUri` — Это значение должно быть URL-адрес учетной записи Cosmos DB из колонки "ключи" учетной записи Cosmos DB.
-  - `DatabaseName` — значение должно быть имя базы данных документов.
-  - `CollectionName` — значение должно быть имя базы данных коллекции документов (в этом случае `UserItems`).
-  - `ResourceTokenBrokerUrl` — Это значение должно быть URL-адрес веб-приложения брокера токена ресурса в колонке обзора учетной записи службы приложение.
+    - `EndpointUri` — Это значение должно быть URL-адрес учетной записи Cosmos DB из колонки "ключи" учетной записи Cosmos DB.
+    - `DatabaseName` — значение должно быть имя базы данных документов.
+    - `CollectionName` — значение должно быть имя базы данных коллекции документов (в этом случае `UserItems`).
+    - `ResourceTokenBrokerUrl` — Это значение должно быть URL-адрес веб-приложения брокера токена ресурса в колонке обзора учетной записи службы приложение.
 
 ## <a name="initiating-login"></a>Инициализация имени входа
 

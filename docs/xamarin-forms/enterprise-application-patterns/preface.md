@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 82f1455ff5e5ac06b50664e1d4d533d4964b7a0e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298888"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831131"
 ---
 # <a name="preface-to-enterprise-app-development"></a>Префикс для разработки корпоративных приложений
 
@@ -26,7 +26,7 @@ ms.locfileid: "61298888"
 
 Это руководство предназначено для читателей, которые уже знакомы с Xamarin.Forms. Подробное введение в Xamarin.Forms, см. в разделе [документации Xamarin.Forms](~/xamarin-forms/index.yml), и [Создание мобильных приложений с помощью Xamarin.Forms](https://aka.ms/xamebook).
 
-Руководство представляет собой дополнение к [Микрослужбы .NET: Архитектура для упакованных в контейнеры приложений .NET](https://aka.ms/microservicesebook), которой посвящен разработке и развертыванию контейнерных микрослужб. Другие руководства следует ознакомиться включают [проектирование и Разработка современных веб-приложений с ASP.NET Core и Microsoft Azure](http://aka.ms/WebAppEbook), [Docker жизненный цикл контейнерного приложения с платформы и средствМайкрософт](http://aka.ms/dockerlifecycleebook), и [платформы и средств для разработки мобильных приложений Майкрософт](http://aka.ms/MobAppDev/StndPDF).
+Руководство представляет собой дополнение к [Микрослужбы .NET: Архитектура для упакованных в контейнеры приложений .NET](https://aka.ms/microservicesebook), которой посвящен разработке и развертыванию контейнерных микрослужб. Другие руководства следует ознакомиться включают [проектирование и Разработка современных веб-приложений с ASP.NET Core и Microsoft Azure](https://aka.ms/WebAppEbook), [Docker жизненный цикл контейнерного приложения с платформы и средствМайкрософт](https://aka.ms/dockerlifecycleebook), и [платформы и средств для разработки мобильных приложений Майкрософт](https://aka.ms/MobAppDev/StndPDF).
 
 ## <a name="who-should-use-this-guide"></a>Кому следует использовать это руководство
 

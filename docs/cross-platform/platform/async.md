@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0a72dead1b6c001f1514f1a089df9b407eb90644
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cca147f0c5dd1a217f464ffbed2a1ad2618c9b80
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037375"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830196"
 ---
 # <a name="async-support-overview"></a>Обзор поддержки асинхронного выполнения
 
@@ -23,7 +23,7 @@ _C#5 представлен параметр два ключевых слова 
 
 В этом документе представлены новые async и await ключевые слова, проходит через несколько простых примеров реализации асинхронных методов в Xamarin.iOS и Xamarin.Android.
 
-Более полное описание новой асинхронной возможности C# 5 (включая много примеров и различных сценариях использования) см. в документации MSDN [асинхронное программирование с использованием Async и Await](https://msdn.microsoft.com/library/vstudio/hh191443.aspx).
+Более полное описание новой асинхронной возможности C# 5 (включая много примеров и различных сценариях использования) см. в статье [асинхронного программирования](https://docs.microsoft.com/dotnet/csharp/async).
 
 Пример приложения создает простой асинхронный веб-запроса (без блокировки основного потока), а затем обновляет пользовательский Интерфейс с Скачанный html и количество символов.
 
@@ -69,7 +69,7 @@ C#5 функции требуют 3.0 Mono, который включен в Xam
 
 После завершения задачи, метод возобновляет выполнение в той же точке в коде. Сюда входят, возврат к области try блока try-catch-finally (при его наличии). await не может использоваться в блоке catch или finally.
 
-Дополнительные сведения о [await в библиотеке MSDN](https://msdn.microsoft.com/library/vstudio/hh156528.aspx).
+Дополнительные сведения о [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) на сайте документации Майкрософт.
 
 ## <a name="exception-handling"></a>Обработка исключений
 
@@ -85,7 +85,7 @@ C#5 функции требуют 3.0 Mono, который включен в Xam
 
 Затем задача задача отменяет сама себя и подтверждает отмену.
 
-Дополнительные сведения об отмене см. в разделе [Отмена асинхронной задачи](https://msdn.microsoft.com/library/vstudio/jj155761.aspx) на сайте MSDN.
+Дополнительные сведения об отмене см. в разделе [Настройка асинхронного приложения (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application).
 
 ## <a name="example"></a>Пример
 
@@ -201,10 +201,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 - [Данные (iOS) (пример)](https://developer.xamarin.com/samples/monotouch/Data/)
 - [HttpClient (iOS) (пример)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) (пример)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [Веб-семинар: C#Async в iOS и Android (видео)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [Асинхронное программирование с помощью Async и Await (MSDN)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx)
-- [Тонкая настройка асинхронного приложения (MSDN)](https://msdn.microsoft.com/library/vstudio/jj155761.aspx)
-- [Await и пользовательский Интерфейс и взаимоблокировки. Вот это да! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
-- [Обработка задач по мере их завершения (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
+- [Асинхронное программирование](https://docs.microsoft.com/dotnet/csharp/async)
+- [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application) (Тонкая настройка асинхронного приложения в C#)
+- [Await и пользовательский Интерфейс и взаимоблокировки. Вот это да!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
+- [Обработка задач по мере их завершения)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) (Асинхронный шаблон, основанный на задачах (TAP))
 - [Асинхронность в C# 5 (блог Эрика Липперта) — о введении ключевых слов](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

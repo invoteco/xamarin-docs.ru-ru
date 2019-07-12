@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61283461"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832518"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Диалоговые окна в Xamarin.Mac
 
@@ -413,7 +413,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 ## <a name="creating-a-preferences-dialog"></a>Создание диалоговое окно предпочтений
 
-Прежде чем мы макета представления предпочтений в конструктор Interface Builder, необходимо добавить тип пользовательского segue обработать смену out предпочтений. Добавьте новый класс в проект и назовите его `ReplaceViewSeque `. Измените класс и это должно выглядеть следующим образом:
+Прежде чем мы макета представления предпочтений в конструктор Interface Builder, необходимо добавить тип пользовательского segue обработать смену out предпочтений. Добавьте новый класс в проект и назовите его `ReplaceViewSeque`. Измените класс и это должно выглядеть следующим образом:
 
 ```csharp
 using System;

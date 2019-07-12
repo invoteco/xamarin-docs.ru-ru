@@ -6,12 +6,12 @@ ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4d506232903d4a94ac20a1fb9f93a39884d9099c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e471aaca2a7a5f247b21dd1c1863a01b062a716
+ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61213718"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67855742"
 ---
 # <a name="updating-existing-ios-apps"></a>Обновление имеющихся приложений iOS
 
@@ -31,7 +31,7 @@ Xamarin предоставляет средства для Visual Studio для 
 
 ## <a name="automated-updating"></a>Автоматическое обновление
 
-После устранения предупреждения, выделите существующий проект iOS в Visual Studio для Mac или Visual Studio и выберите **переходу на единый API Xamarin.iOS** из **проекта** меню. Пример:
+После устранения предупреждения, выделите существующий проект iOS в Visual Studio для Mac или Visual Studio и выберите **переходу на единый API Xamarin.iOS** из **проекта** меню. Например:
 
 ![](updating-ios-apps-images/beta-tool1.png "Выберите \"Миграция\" единый API Xamarin.iOS из меню \"проект\"")
 
@@ -115,4 +115,3 @@ Xamarin предоставляет средства для Visual Studio для 
 - [Советы по обновлению кода в Unified API](~/cross-platform/macios/unified/updating-tips.md)
 - [Работа с собственными типами в кроссплатформенных приложениях](~/cross-platform/macios/native-types-cross-platform.md)
 - [Классический и отличия Unified API](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
-- [Миграция на единый API (видео)](http://university.xamarin.com/lightninglectures/migrating-to-the-unified-api)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61237107"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830674"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Песочница приложения Xamarin.Mac
 
@@ -195,7 +195,7 @@ public override void AwakeFromNib ()
 "Песочница" приложений включить, установив флажок в параметрах проектах. Выполните следующие действия:
 
 1. В **панели решения**, дважды щелкните **Entitlements.plist** файл, чтобы открыть его для редактирования.
-2. Выберите оба варианта **включите права** и **включить приложение "песочницы"**: 
+2. Выберите оба варианта **включите права** и **включить приложение "песочницы"** : 
 
     [![Редактирование назначений и включение "песочницы"](sandboxing-images/sign17.png "редактирование назначений и включение \"песочницы\"")](sandboxing-images/sign17-large.png#lightbox)
 3. Сохраните изменения.
@@ -226,7 +226,7 @@ public override void AwakeFromNib ()
 
 ### <a name="debugging-a-sandboxed-app"></a>Отладка приложения «песочницы»
 
-Отладчик подключается к приложений Xamarin.Mac по протоколу TCP, это означает, что по умолчанию при включении "песочницы", он не сможет подключиться к приложению, поэтому при попытке запустить приложение без необходимых разрешений, которые включены, отобразится сообщение об ошибке *«не удалось подключиться к отладчик»*. 
+Отладчик подключается к приложений Xamarin.Mac по протоколу TCP, это означает, что по умолчанию при включении "песочницы", он не сможет подключиться к приложению, поэтому при попытке запустить приложение без необходимых разрешений, которые включены, отобразится сообщение об ошибке *«не удалось подключиться к отладчик»* . 
 
 [![Задайте необходимые параметры](sandboxing-images/debug01.png "задайте необходимые параметры")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -389,7 +389,7 @@ _Powerbox_ — macOS технология безопасности, которы
 
 Кроме того следующие изменения наследования, в месте:
 
-- **Приложения без «песочницы»** - `NSOpenPanel` `NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
+- **Приложения без «песочницы»**  - `NSOpenPanel` `NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
 
 ### <a name="security-scoped-bookmarks-and-persistent-resource-access"></a>Закладки, уровня безопасности и доступа к ресурсам постоянных
 
@@ -460,7 +460,7 @@ Exception Type:  EXC_BAD_INSTRUCTION (SIGILL)
 
 1. Откройте приложение "Терминал" (в `/Applications/Utilities`).
 2. Откройте окно Finder для Apple подписанную версию приложения Xamarin.Mac.
-3. Тип `asctl container acl add -file ` в окне терминала.
+3. Тип `asctl container acl add -file` в окне терминала.
 4. Перетащите значок приложения Xamarin.Mac из окна поиска и разместите его в окне терминала.
 5. Полный путь к файлу будет добавляться в команду в терминале.
 6. Нажмите клавишу **ввод** для выполнения команды.

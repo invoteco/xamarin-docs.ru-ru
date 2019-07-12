@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 86f41bf227b97ef24651f482ff133a065226ee14
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035884"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830401"
 ---
 # <a name="limitations-of-xamarinios"></a>Ограничения Xamarin.iOS
 
@@ -74,7 +74,8 @@ class Foo<T> : UIView {
 -  TransparentProxy системе удаленного взаимодействия или все, что приведет к среде выполнения динамически создавать код. 
 
 
- **Внимание!** Не следует путать **Reflection.Emit** с **отражения**. Reflection.Emit — о создании кода динамически и у этого кода JIT-компилироваться и компилируются в машинный код. Из-за ограничения в отношении операций ввода-вывода (без JIT-компиляции) не поддерживается.
+  > [!IMPORTANT]
+  > Не следует путать **Reflection.Emit** с **отражения**. Reflection.Emit — о создании кода динамически и у этого кода JIT-компилироваться и компилируются в машинный код. Из-за ограничения в отношении операций ввода-вывода (без JIT-компиляции) не поддерживается.
 
 Но весь API отражения, включая Type.GetType («someClass»), методы, список свойств, получение, атрибуты и значения работает нормально.
 

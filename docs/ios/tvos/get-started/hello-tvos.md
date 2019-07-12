@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60951775"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832483"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Привет, краткое руководство по tvOS
 
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Нам нужно использовать `ViewDidLoad `, вместо другого метода, такого как `Initialize`, так как `ViewDidLoad ` называется *после* ОС загрузит и пользовательский интерфейс из `.storyboard` файла. Если мы пытались получить доступ к элементу управления метки до `.storyboard` были полностью загружены и создания файла, то получили бы `NullReferenceException` ошибка, так как элемент управления label бы еще не создан.
+Нам нужно использовать `ViewDidLoad`, вместо другого метода, такого как `Initialize`, так как `ViewDidLoad` называется *после* ОС загрузит и пользовательский интерфейс из `.storyboard` файла. Если мы пытались получить доступ к элементу управления метки до `.storyboard` были полностью загружены и создания файла, то получили бы `NullReferenceException` ошибка, так как элемент управления label бы еще не создан.
 
 Далее нам нужно добавить код для реагирования на нажатие кнопки пользователем. Добавьте следующий код частичного класса, созданного:
 

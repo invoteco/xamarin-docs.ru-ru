@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 1c5b2635dca6aa74fd0dfb92d7e62e6da3140538
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9a34cfab0c3ed045968f48ac6c67b2f4b66990cc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60902854"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832455"
 ---
 # <a name="xamarinforms-themes"></a>Темы Xamarin.Forms
 
@@ -26,7 +26,8 @@ ms.locfileid: "60902854"
 
 Ссылаться на ["светлой" теме](light.md) и ["темной" теме](dark.md) страниц инструкции о том, как добавить их в приложение, или ознакомьтесь с возможностями [пример пользовательской темы](custom.md).
 
-**ВАЖНО:** Вы также должны выполнить действия по [загружать темы сборки (см. ниже)](#loadtheme) , добавив некоторые стандартный код для iOS `AppDelegate` и Android `MainActivity`. Это будет улучшена в будущих предварительной версии.
+> [!IMPORTANT]
+> Вы также должны выполнить действия по [загружать темы сборки (см. ниже)](#loadtheme) , добавив некоторые стандартный код для iOS `AppDelegate` и Android `MainActivity`. Это будет улучшена в будущих предварительной версии.
 
 
 ## <a name="control-appearance"></a>Внешний вид элемента управления

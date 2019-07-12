@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a50a2014e28becacb2c9f4965b7f3377be57ab16
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019078"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830323"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Удаленные уведомления с помощью Firebase Cloud Messaging
 
@@ -682,6 +682,7 @@ using System.Collections.Generic;
 Добавьте следующий метод в `MyFirebaseMessagingService`:
 
 <a name="sendnotification-method"></a>
+
 ```csharp
 void SendNotification(string messageBody, IDictionary<string, string> data)
 {
@@ -711,7 +712,7 @@ void SendNotification(string messageBody, IDictionary<string, string> data)
 
 Чтобы отличить это уведомление из уведомлений в фоновом режиме, этот код помечает уведомления со значком, отличается от значка приложения. Добавьте файл [ic\_stat\_ic\_notification.png](remote-notifications-with-fcm-images/ic-stat-ic-notification.png) для **ресурсы/drawable** и включить ее в **FCMClient** проекта .
 
-`SendNotification` Использует метод ` NotificationCompat.Builder` Чтобы создать уведомление, и `NotificationManagerCompat` служит для запуска уведомления. Уведомление содержит `PendingIntent` , позволит пользователю открыть приложение и просмотреть содержимое строка, переданная в `messageBody`. Дополнительные сведения о `NotificationCompat.Builder`, см. в разделе [локальных уведомлений](~/android/app-fundamentals/notifications/local-notifications.md).
+`SendNotification` Использует метод `NotificationCompat.Builder` Чтобы создать уведомление, и `NotificationManagerCompat` служит для запуска уведомления. Уведомление содержит `PendingIntent` , позволит пользователю открыть приложение и просмотреть содержимое строка, переданная в `messageBody`. Дополнительные сведения о `NotificationCompat.Builder`, см. в разделе [локальных уведомлений](~/android/app-fundamentals/notifications/local-notifications.md).
 
 Вызовите `SendNotification` метод в конце `OnMessageReceived` метод:
 
@@ -771,7 +772,7 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-Чтобы отменить регистрацию устройства в полностью FCM, удалить идентификатор экземпляра, вызвав [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) метод [идентификатора экземпляра Firebase](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) класса. Пример:
+Чтобы отменить регистрацию устройства в полностью FCM, удалить идентификатор экземпляра, вызвав [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) метод [идентификатора экземпляра Firebase](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) класса. Например:
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();

@@ -6,12 +6,12 @@ ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99e8f8bf04465d0d61086139ba9889eae141207e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6269a7f2fa097136f492657d0ba7c6a1f056c38c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160612"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832321"
 ---
 # <a name="programming-urhosharp-with-f"></a>Программирование UrhoSharp с помощьюF#
 
@@ -97,20 +97,13 @@ type AppDelegate () =
         true
 ```
 
-`ApplicationOptions.Default` Предоставляет значения по умолчанию для приложения альбомной ориентации. Передавать их `ApplicationOptions` конструктора по умолчанию для вашей `Application` подкласс (Обратите внимание, что при определении `HelloWorld` класса строке `inherit Application(o)` вызывает конструктор базового класса). 
+`ApplicationOptions.Default` Предоставляет значения по умолчанию для приложения альбомной ориентации. Передавать их `ApplicationOptions` конструктора по умолчанию для вашей `Application` подкласс (Обратите внимание, что при определении `HelloWorld` класса строке `inherit Application(o)` вызывает конструктор базового класса).
 
-`Run` Метод вашей `Application` инициирует программы. Он определяется как возврат `int`, который можно передать в `ignore`. 
+`Run` Метод вашей `Application` инициирует программы. Он определяется как возврат `int`, который можно передать в `ignore`.
 
-Программы должен выглядеть так:
+Программы должны выглядеть на этом снимке экрана:
 
-![](fsharp-images/helloworldfsharp.png "Программы должны выглядеть так")
-
-
-
-
-
-
-
+![Снимок экрана программы](fsharp-images/helloworldfsharp.png)
 
 ## <a name="related-links"></a>Связанные ссылки
 

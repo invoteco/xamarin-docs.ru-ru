@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/22/2016
-ms.openlocfilehash: 1b379bef98e498df4c58ba7209aa46b0b2542fe1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 322acff3279d0513266c7d9883726cac726334f7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031425"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830559"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac - macOS Sierra Устранение неполадок
 
@@ -52,7 +52,7 @@ _В этой статье предоставляет некоторые сове
 Известные проблемы:
 
 - Вызов `NSObject.ValueForKey` будет `null` ключа приведет к возникновению исключения.
-- Оба `NSURLSession` и NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http:// "URL-адреса.
+- Оба `NSURLSession` и `NSURLConnection` RC4 комплекты шифров в процессе подтверждения TLS для больше не `http://` URL-адреса.
 - Приложения может зависнуть, если они изменяют суперпредставления geometry в любом `ViewWillLayoutSubviews` или `LayoutSubviews` методы.
 - Для всех подключений SSL/TLS симметричного шифрования RC4 теперь отключено по умолчанию. Кроме того Защита транспорта API больше не поддерживает SSLv3, и рекомендуется, что приложение остановить использование шифрования SHA-1 и 3DES как можно скорее.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d145a8a3cd8bc321f0fce76a8831fca681ad29a0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61077976"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830580"
 ---
 # <a name="cardview"></a>CardView
 
@@ -174,8 +174,8 @@ _Мини-приложения Cardview является компонентом 
 
 
 #### <a name="padding"></a>Заполнение
-`
-CardView` предлагает пять атрибуты поля для размещения содержимого в карточке. Вы можете задать их в макете XML или аналогичные методы можно вызывать в коде:
+
+`CardView` предлагает пять атрибуты поля для размещения содержимого в карточке. Вы можете задать их в макете XML или аналогичные методы можно вызывать в коде:
 
 [![Схема CardView атрибуты внутренних полей](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 

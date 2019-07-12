@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc9396a8cb667b8170c4b3511b9fe8423741e6b1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420896"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829928"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Можно добавить файлы или удалить файлы из файла IPA-ФАЙЛ после его сборки в Visual Studio?
 
@@ -32,7 +32,7 @@ ms.locfileid: "61420896"
 
 4.  Откройте новую `Terminal.app` окна.
 
-5.  Тип `cd ` в окне Terminal.app и затем перетаскивание `generated session id` в папку `Terminal.app` окна:
+5.  Тип `cd` в окне Terminal.app и затем перетаскивание `generated session id` в папку `Terminal.app` окна:
 
     ![](modify-ipa-images/session-id-folder.png "Поиск папки идентификатор сеанса, созданный в Finder")
 
@@ -52,7 +52,7 @@ ms.locfileid: "61420896"
 
 12.  Найдите строку, которая включает в себя `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Тип `/usr/bin/codesign ` в окно Terminal.app из шага 8.
+13.  Тип `/usr/bin/codesign` в окно Terminal.app из шага 8.
 
 14.  Скопируйте все аргументы, начиная с `-v` из строки в шаг 12 и вставлять их в окно Terminal.app.
 

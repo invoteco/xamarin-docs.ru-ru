@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a4c58139b0ddbaaedf5769eeac6585bac4c013e4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277972"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832113"
 ---
 # <a name="accessing-remote-data"></a>Доступ к удаленным данным
 
@@ -154,7 +154,7 @@ public async Task<IActionResult> Items(
 
 #### <a name="making-a-post-request"></a>Формирование запроса POST
 
-`BasketService` Класс используется для управления извлечения данных и обновления процесс с микрослужбой basket. В `RegisterDependencies` метод в `ViewModelLocator` класс, `BasketService` класс регистрируется как сопоставление типов для `IBasketService` типа с помощью контейнера внедрения зависимостей Autofac. Теперь, когда экземпляр `BasketViewModel` создается класс, его конструктор принимает `IBasketService` тип, который разрешает Autofac, возвращение экземпляра `BasketService `класса. Дополнительные сведения о внедрения зависимостей, см. в разделе [введение внедрения зависимостей](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+`BasketService` Класс используется для управления извлечения данных и обновления процесс с микрослужбой basket. В `RegisterDependencies` метод в `ViewModelLocator` класс, `BasketService` класс регистрируется как сопоставление типов для `IBasketService` типа с помощью контейнера внедрения зависимостей Autofac. Теперь, когда экземпляр `BasketViewModel` создается класс, его конструктор принимает `IBasketService` тип, который разрешает Autofac, возвращение экземпляра `BasketService` класса. Дополнительные сведения о внедрения зависимостей, см. в разделе [введение внедрения зависимостей](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
 Рис. 10-2 показано взаимодействие классов, которые отправляют данных корзины, отображаемых объектом `BasketView`, чтобы микрослужба корзины.
 

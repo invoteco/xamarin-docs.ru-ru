@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4a4376291ff56433c8cd9785989af2983a80c1c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160567"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832151"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler Устранение неполадок
 
@@ -56,7 +56,7 @@ ms.locfileid: "61160567"
 В следующем списке перечислены распространенные подводные камни, поиске их решений и советы и рекомендации по использованию Profiler.
 
 > [!NOTE]
-> **Примечание**. Вы должны быть Visual Studio **Enterprise** подписчика, чтобы разблокировать эту функцию в любом Visual Studio Enterprise на Windows или Visual Studio для Mac.
+> Вы должны быть Visual Studio **Enterprise** подписчика, чтобы разблокировать эту функцию в любом Visual Studio Enterprise на Windows или Visual Studio для Mac.
 
 #### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>Я не вижу параметр профилировщика iOS, или он неактивен [Visual Studio и Visual Studio для Mac]
 

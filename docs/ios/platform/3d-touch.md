@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abd9fe85be412539fd51d0e6164c79ce346377a7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279255"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832094"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Введение в 3D Touch в Xamarin.iOS
 
@@ -105,7 +105,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
 
 ### <a name="handling-peek-and-pop"></a>Обработка Peek и Pop
 
-На устройстве iOS, который может обрабатывать 3D Touch, можно использовать экземпляр `UIViewControllerPreviewingDelegate` класс для управления отображением **Показать** и **Pop** элемента сведений. Например, если бы нам контроллер представления таблицы с именем `MasterViewController ` нам удалось использовать следующий код для поддержки **Показать** и **Pop**:
+На устройстве iOS, который может обрабатывать 3D Touch, можно использовать экземпляр `UIViewControllerPreviewingDelegate` класс для управления отображением **Показать** и **Pop** элемента сведений. Например, если бы нам контроллер представления таблицы с именем `MasterViewController` нам удалось использовать следующий код для поддержки **Показать** и **Pop**:
 
 ```csharp
 using System;

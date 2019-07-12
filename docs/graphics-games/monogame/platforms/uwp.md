@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7db73759cb4a1b1a8d7fe40426b03a163c3ebdc4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161249"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831064"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Создание проекта MonoGame UWP
 
@@ -90,9 +90,9 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ## <a name="referencing-content-in-uwp-projects"></a>Ссылки на содержимое в проектах универсальной платформы Windows
 
-Содержимое в проектах MonoGame можно ссылаться непосредственно из файла или с помощью [конвейера содержимого MonoGame](~/graphics-games/cocossharp/content-pipeline/index.md). Небольших проектов игр выгоден простота из файла. Крупные проекты будут усовершенствованы благодаря использованию конвейера содержимого для оптимизации содержимого, чтобы уменьшить размер и время загрузки. В отличие от XNA на Xbox 360 `System.IO.File` класс доступен в приложениях UWP один Xbox.
+Содержимое в проектах MonoGame можно ссылаться непосредственно из файла или с помощью [конвейера содержимого MonoGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Небольших проектов игр выгоден простота из файла. Крупные проекты будут усовершенствованы благодаря использованию конвейера содержимого для оптимизации содержимого, чтобы уменьшить размер и время загрузки. В отличие от XNA на Xbox 360 `System.IO.File` класс доступен в приложениях UWP один Xbox.
 
-Дополнительные сведения о загрузке содержимого с помощью конвейера содержимого см. в разделе [руководство по содержимому конвейера](~/graphics-games/cocossharp/content-pipeline/index.md).
+Дополнительные сведения о загрузке содержимого с помощью конвейера содержимого см. в разделе [руководство по содержимому конвейера](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 ### <a name="loading-content-from-file"></a>Загрузка содержимого из файла
 

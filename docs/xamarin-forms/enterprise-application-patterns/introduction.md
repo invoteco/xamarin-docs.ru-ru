@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 9deb685c92092ceb0e1c775a1e53ac1bce5a4a57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fbb4047b95fd70f829cd79e4ea26b2958273297
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61299996"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831181"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Введение в разработку приложений предприятия
 
@@ -72,7 +72,7 @@ ms.locfileid: "61299996"
 -   Одностраничное приложение (SPA) разработаны с Angular 2 и Typescript. Этот подход для веб-приложений позволяет избежать выполнения обращение к серверу с каждой операцией.
 -   Мобильного приложения, разработанные с помощью Xamarin.Forms, который поддерживает iOS, Android и универсальной платформы Windows (UWP).
 
-Сведения о веб-приложений, см. в разделе [проектирование и Разработка современных веб-приложений с ASP.NET Core и Microsoft Azure](http://aka.ms/WebAppEbook).
+Сведения о веб-приложений, см. в разделе [проектирование и Разработка современных веб-приложений с ASP.NET Core и Microsoft Azure](https://aka.ms/WebAppEbook).
 
 Образец приложения включает следующие службы серверной части:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 490331663d94a1e3130fc794a11a52acdacca014
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013392"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829748"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Службы привязки в Xamarin.Android
 
@@ -230,7 +230,7 @@ namespace BoundServiceDemo
 
 ## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Запуск и привязка к службе с явной целью
 
-Чтобы использовать связанные службы, клиент (например, действие) необходимо создать экземпляр объекта, реализующего `Android.Content.IServiceConnection` и вызвать `BindService` метод.` BindService` Возвращает `true` Если служба привязана к, `false` Если это не так. Метод `BindService` принимает три следующих параметра.
+Чтобы использовать связанные службы, клиент (например, действие) необходимо создать экземпляр объекта, реализующего `Android.Content.IServiceConnection` и вызвать `BindService` метод. `BindService` Возвращает `true` Если служба привязана к, `false` Если это не так. Метод `BindService` принимает три следующих параметра.
 
 * **`Intent`**  &ndash; Намерение необходимо явно определить какая служба для подключения к.
 * **`IServiceConnection` Объект** &ndash; этот объект — это посредник, который предоставляет методы обратного вызова для уведомления клиента, когда запущено и остановлено привязанную службу.

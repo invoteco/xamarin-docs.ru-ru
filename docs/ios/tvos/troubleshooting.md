@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 60b54ffdce5f6bda2324c08bd3159eefeb5bc7f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6830df267aa0b9c4f12fbd53520206ea94fc8a38
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270254"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831897"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Устранение неполадок приложения tvOS, созданные с помощью Xamarin
 
@@ -40,7 +40,7 @@ _В этой статье рассматриваются известные пр
 
 ### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>Недопустимый исполняемый файл — исполняемый файл не содержит bitcode
 
-При попытке отправить на Xamarin.tvOS приложение для Apple TV App Store, может появиться сообщение об ошибке в форме _«Недопустимый исполняемый файл — исполняемый файл не содержит bitcode»_.
+При попытке отправить на Xamarin.tvOS приложение для Apple TV App Store, может появиться сообщение об ошибке в форме _«Недопустимый исполняемый файл — исполняемый файл не содержит bitcode»_ .
 
 Чтобы решить эту проблему, сделайте следующее:
 
@@ -80,7 +80,7 @@ Section
 
 Необходимо убедиться, что статические третьим лицам (`.a`) вы используете библиотеки были построены tvOS библиотеки (не iOS) и что они также включает сведения о bitcode.
 
-Для приложений или библиотек, которые включают допустимые bitcode `size` будет больше единицы. Существуют ситуации, где библиотеки может иметь маркер bitcode, но не содержат допустимые bitcode. Пример:
+Для приложений или библиотек, которые включают допустимые bitcode `size` будет больше единицы. Существуют ситуации, где библиотеки может иметь маркер bitcode, но не содержат допустимые bitcode. Например:
 
 **Недопустимый Bitcode**
 
@@ -138,7 +138,7 @@ _«Приложения, которые содержат только срез a
 
 ### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>Недопустимый пакет — приложение, которое поддерживает игровые устройства управления также должен поддерживать удаленного Apple TV
 
-или 
+или диспетчер конфигурации служб 
 
 ### <a name="invalid-bundle--apple-tv-apps-with-the-gamecontroller-framework-must-include-the-gcsupportedgamecontrollers-key-in-the-apps-infoplist"></a>Недопустимый пакет — приложений Apple TV с помощью платформы игровое должны содержать ключ GCSupportedGameControllers в файле Info.plist приложения
 
@@ -151,7 +151,7 @@ _Была обнаружена одна или несколько проблем
 
 _Недопустимый пакет — приложение, которое поддерживает игровые устройства управления также должен поддерживать удаленного Apple TV._
 
-или 
+или диспетчер конфигурации служб 
 
 _Недопустимый пакет — приложений Apple TV с помощью платформы игровое должны содержать ключ GCSupportedGameControllers в файле Info.plist приложения._
 
@@ -184,7 +184,7 @@ _Недопустимый пакет — приложений Apple TV с пом
 
 _Несовместимая целевая платформа:. NetPortable, Version = версии 4.5 профиль = Profile78_
 
-Чтобы решить эту проблему, добавьте XML-файл называется ` Xamarin.TVOS.xml` со следующим содержимым:
+Чтобы решить эту проблему, добавьте XML-файл называется `Xamarin.TVOS.xml` со следующим содержимым:
 
 ```xml
 <Framework Identifier="Xamarin.TVOS" MinimumVersion="1.0" Profile="*" DisplayName="Xamarin.TVOS"/>

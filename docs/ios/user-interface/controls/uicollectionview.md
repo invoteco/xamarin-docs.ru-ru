@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 890c11908b11b18d6ca626820f1a835d817870da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827344"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829866"
 ---
 # <a name="collection-views-in-xamarinios"></a>Представления коллекций в Xamarin.iOS
 
@@ -739,10 +739,10 @@ public override void ViewDidLoad ()
 
 Здесь мы используем несколько новых методов, которые добавляются в представление коллекции для внедрения и управления операции перетаскивания:
 
- - `BeginInteractiveMovementForItem` — Помечает начало операции перемещения.
- - `UpdateInteractiveMovementTargetPosition` -Отправляется по мере обновления расположение этого элемента.
- - `EndInteractiveMovement` -Отмечает конец перемещения элемента.
- - `CancelInteractiveMovement` — Помечает пользовательской отменой операции перемещения.
+- `BeginInteractiveMovementForItem` — Помечает начало операции перемещения.
+- `UpdateInteractiveMovementTargetPosition` -Отправляется по мере обновления расположение этого элемента.
+- `EndInteractiveMovement` -Отмечает конец перемещения элемента.
+- `CancelInteractiveMovement` — Помечает пользовательской отменой операции перемещения.
 
 При запуске приложения, операция перетаскивания будет работать аналогично по умолчанию перетащите распознаватель жестов, входящий в состав представления коллекции.
 
@@ -1217,78 +1217,78 @@ public override void AwakeFromNib ()
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionView` класс для iOS 9:
 
- - `BeginInteractiveMovementForItem` — Помечает начало операции перетаскивания.
- - `CancelInteractiveMovement` — Сообщает коллекции представление, что пользователь отменил операцию перетаскивания.
- - `EndInteractiveMovement` — Сообщает коллекции представление, что пользователь завершил операцию перетаскивания.
- - `GetIndexPathsForVisibleSupplementaryElements` — Возвращает `indexPath` из верхний или нижний колонтитул в разделе представления коллекции.
- - `GetSupplementaryView` – Возвращает заданный верхний или нижний колонтитул.
- - `GetVisibleSupplementaryViews` — Возвращает список всех видимых заголовка и нижние колонтитулы.
- - `UpdateInteractiveMovementTargetPosition` — Сообщает коллекции представление перемещено пользователем или перемещается элемент во время операции перетаскивания.
+- `BeginInteractiveMovementForItem` — Помечает начало операции перетаскивания.
+- `CancelInteractiveMovement` — Сообщает коллекции представление, что пользователь отменил операцию перетаскивания.
+- `EndInteractiveMovement` — Сообщает коллекции представление, что пользователь завершил операцию перетаскивания.
+- `GetIndexPathsForVisibleSupplementaryElements` — Возвращает `indexPath` из верхний или нижний колонтитул в разделе представления коллекции.
+- `GetSupplementaryView` – Возвращает заданный верхний или нижний колонтитул.
+- `GetVisibleSupplementaryViews` — Возвращает список всех видимых заголовка и нижние колонтитулы.
+- `UpdateInteractiveMovementTargetPosition` — Сообщает коллекции представление перемещено пользователем или перемещается элемент во время операции перетаскивания.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewController` класс в iOS 9:
 
- - `InstallsStandardGestureForInteractiveMovement` — Если `true` будет использоваться новый распознаватель жестов, автоматически поддерживает перетаскивание для изменения порядка.
- - `CanMoveItem` — Информирует представление коллекции, если данный элемент может быть перетащите перед началом записи.
- - `GetTargetContentOffset` — Используется для получения смещения элемент данной коллекции.
- - `GetTargetIndexPathForMove` — Возвращает `indexPath` данного элемента для операции перетаскивания.
- - `MoveItem` — Перемещает порядок данного элемента в списке.
+- `InstallsStandardGestureForInteractiveMovement` — Если `true` будет использоваться новый распознаватель жестов, автоматически поддерживает перетаскивание для изменения порядка.
+- `CanMoveItem` — Информирует представление коллекции, если данный элемент может быть перетащите перед началом записи.
+- `GetTargetContentOffset` — Используется для получения смещения элемент данной коллекции.
+- `GetTargetIndexPathForMove` — Возвращает `indexPath` данного элемента для операции перетаскивания.
+- `MoveItem` — Перемещает порядок данного элемента в списке.
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewDataSource` класс в iOS 9:
 
- - `CanMoveItem` — Информирует представление коллекции, если данный элемент может быть перетащите перед началом записи.
- - `MoveItem` — Перемещает порядок данного элемента в списке.
+- `CanMoveItem` — Информирует представление коллекции, если данный элемент может быть перетащите перед началом записи.
+- `MoveItem` — Перемещает порядок данного элемента в списке.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewDelegate` класс в iOS 9:
 
- - `GetTargetContentOffset` — Используется для получения смещения элемент данной коллекции.
- - `GetTargetIndexPathForMove` — Возвращает `indexPath` данного элемента для операции перетаскивания.
+- `GetTargetContentOffset` — Используется для получения смещения элемент данной коллекции.
+- `GetTargetIndexPathForMove` — Возвращает `indexPath` данного элемента для операции перетаскивания.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewFlowLayout` класс в iOS 9:
 
- - `SectionFootersPinToVisibleBounds` — Придерживается этого же разделе нижние колонтитулы в границы представления коллекции видимым.
- - `SectionHeadersPinToVisibleBounds` — Придерживается этого же заголовки разделов в границы представления коллекции видимым.
+- `SectionFootersPinToVisibleBounds` — Придерживается этого же разделе нижние колонтитулы в границы представления коллекции видимым.
+- `SectionHeadersPinToVisibleBounds` — Придерживается этого же заголовки разделов в границы представления коллекции видимым.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewLayout` класс в iOS 9:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` — Возвращает контекст недействительности данных в конце операции перетаскивания, когда пользователь завершает Перетаскивание или отменяет ее.
- - `GetInvalidationContextForInteractivelyMovingItems` — Возвращает контекст недействительности данных в начале операции перетаскивания.
- - `GetLayoutAttributesForInteractivelyMovingItem` — Возвращает атрибуты разметки для данного элемента при перетаскивании элемента.
- - `GetTargetIndexPathForInteractivelyMovingItem` — Возвращает `indexPath` элемента, который находится в заданной точке при перетаскивании элемента.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` — Возвращает контекст недействительности данных в конце операции перетаскивания, когда пользователь завершает Перетаскивание или отменяет ее.
+- `GetInvalidationContextForInteractivelyMovingItems` — Возвращает контекст недействительности данных в начале операции перетаскивания.
+- `GetLayoutAttributesForInteractivelyMovingItem` — Возвращает атрибуты разметки для данного элемента при перетаскивании элемента.
+- `GetTargetIndexPathForInteractivelyMovingItem` — Возвращает `indexPath` элемента, который находится в заданной точке при перетаскивании элемента.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewLayoutAttributes` класс в iOS 9:
 
- - `CollisionBoundingPath` — Возвращает путь столкновений двух элементов при выполнении операции перетаскивания.
- - `CollisionBoundsType` — Возвращает тип конфликта (как `UIDynamicItemCollisionBoundsType`), произошло во время операции перетаскивания.
+- `CollisionBoundingPath` — Возвращает путь столкновений двух элементов при выполнении операции перетаскивания.
+- `CollisionBoundsType` — Возвращает тип конфликта (как `UIDynamicItemCollisionBoundsType`), произошло во время операции перетаскивания.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewLayoutInvalidationContext` класс в iOS 9:
 
- - `InteractiveMovementTarget` — Возвращает конечный элемент операции перетаскивания.
- - `PreviousIndexPathsForInteractivelyMovingItems` — Возвращает `indexPaths` других элементов, участвующих в перетащите для изменения порядка операций.
- - `TargetIndexPathsForInteractivelyMovingItems` — Возвращает `indexPaths` элементов, которые изменят порядок в результате выполнения операции перетаскивания для изменения порядка.
+- `InteractiveMovementTarget` — Возвращает конечный элемент операции перетаскивания.
+- `PreviousIndexPathsForInteractivelyMovingItems` — Возвращает `indexPaths` других элементов, участвующих в перетащите для изменения порядка операций.
+- `TargetIndexPathsForInteractivelyMovingItems` — Возвращает `indexPaths` элементов, которые изменят порядок в результате выполнения операции перетаскивания для изменения порядка.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 Чтобы были внесены следующие изменения или дополнения `UICollectionViewSource` класс в iOS 9:
 
- - `CanMoveItem` — Информирует представление коллекции, если данный элемент может быть перетащите перед началом записи.
- - `GetTargetContentOffset` — Возвращает смещения, которые перемещаются с помощью операции перетаскивания для изменения порядка элементов.
- - `GetTargetIndexPathForMove` — Возвращает `indexPath` элемента, который будет перемещен во время операции перетаскивания для изменения порядка.
- - `MoveItem` — Перемещает порядок данного элемента в списке.
+- `CanMoveItem` — Информирует представление коллекции, если данный элемент может быть перетащите перед началом записи.
+- `GetTargetContentOffset` — Возвращает смещения, которые перемещаются с помощью операции перетаскивания для изменения порядка элементов.
+- `GetTargetIndexPathForMove` — Возвращает `indexPath` элемента, который будет перемещен во время операции перетаскивания для изменения порядка.
+- `MoveItem` — Перемещает порядок данного элемента в списке.
 
 ## <a name="summary"></a>Сводка
 

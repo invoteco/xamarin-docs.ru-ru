@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 22ac6a3776e5fa5de2fc238efe90c435190e8005
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087090"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832074"
 ---
 # <a name="push-notifications-in-ios"></a>Push-уведомлений в iOS
 
@@ -21,7 +21,7 @@ ms.locfileid: "61087090"
 
 Push-уведомления, должны храниться краткое и только содержат достаточно данных для уведомления мобильного приложения о том, что его следует обратиться к серверному приложению для обновления. Например когда приходит новое электронное письмо, серверное приложение будет только уведомления мобильных приложения поступления новых сообщений электронной почты. Уведомление не будет содержать новое сообщение электронной почты, сама. Мобильное приложение затем извлечет новых сообщений электронной почты с сервера во время соответствующего
 
-В центре принудительной отправке уведомления в iOS — *Apple Push Notification шлюз Service (APNS)*. Это служба, предоставляемых компанией Apple, который отвечает за маршрутизации уведомления от сервера приложений на устройствах iOS.
+В центре принудительной отправке уведомления в iOS — *Apple Push Notification шлюз Service (APNS)* . Это служба, предоставляемых компанией Apple, который отвечает за маршрутизации уведомления от сервера приложений на устройствах iOS.
 На следующем рисунке показана топология уведомлений Push-уведомлений для iOS: ![](remote-notifications-in-ios-images/image4.png "Этот образ топология отправки уведомлений для iOS")
 
 Удаленные уведомления, сами являются строки, которые соответствуют формату в формате JSON и протоколы, указанные в [полезные данные уведомления](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) раздел [локальных и Push-уведомлений руководство по программированию](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)в [документация для разработчиков iOS](https://developer.apple.com/devcenter/ios/index.action).
@@ -67,7 +67,7 @@ Push-уведомлений необходимо соблюдать следую
 
     [![](remote-notifications-in-ios-images/image10new.png "Создайте сертификат для ИД приложения")](remote-notifications-in-ios-images/image8.png#lightbox)
 
-4.  Выберите ли вы бы хотели использовать сертификат разработки или рабочей среде:
+4. Выберите ли вы бы хотели использовать сертификат разработки или рабочей среде:
 
     [![](remote-notifications-in-ios-images/image11new.png "Выберите сертификат разработки или рабочей среде")](remote-notifications-in-ios-images/image11new.png#lightbox)
 

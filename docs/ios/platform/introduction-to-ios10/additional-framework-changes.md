@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364337"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831210"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Изменения платформы дополнительных iOS 10
 
@@ -132,10 +132,10 @@ iOS 10 вносит следующие усовершенствования fram
 
 Платформа ModelIO в iOS 10 были внесены следующие улучшения:
 
- - Теперь поддерживается формат файла долл. США.
- - Подпись поля расстояние, добавлена поддержка [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) класса.
- - Используйте новый `MDLLightProbeIrradianceDataSource` класс, помогающий в свет выборки данных размещения.
- - Используйте новый `MDLMaterialPropertyGraph` класса для упрощения поддержки среды выполнения изменения в модели.
+- Теперь поддерживается формат файла долл. США.
+- Подпись поля расстояние, добавлена поддержка [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) класса.
+- Используйте новый `MDLLightProbeIrradianceDataSource` класс, помогающий в свет выборки данных размещения.
+- Используйте новый `MDLMaterialPropertyGraph` класса для упрощения поддержки среды выполнения изменения в модели.
 
 ## <a name="photos-enhancements"></a>Усовершенствования фотографий
 

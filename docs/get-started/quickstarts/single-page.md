@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 83c71962ceb4a30c2e05d44fffe4d64b54e4883d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61194485"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831933"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Создание приложения Xamarin.Forms одной страницы
 
@@ -38,7 +38,7 @@ ms.locfileid: "61194485"
 - Знание C#.
 - (необязательно) Связанном компьютере Mac, чтобы создать приложение на iOS.
 
-Дополнительные сведения об этих требованиях см. в разделе [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении 2019 г. Visual Studio к узлу сборки Mac, см. в разделе [связывание с компьютером Mac для разработки Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Дополнительные сведения об этих требованиях см. в разделе [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2019"></a>Начало работы с Visual Studio 2019 г.
 
@@ -65,7 +65,7 @@ ms.locfileid: "61194485"
 
 5. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **Notes**, чтобы открыть его:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Открытие файла MainPage.xaml")
+    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Открытие файла MainPage.xaml")
 
 6. Удалите из **MainPage.xaml** весь шаблонный код и замените его приведенным ниже.
 
@@ -102,7 +102,7 @@ ms.locfileid: "61194485"
 
 7. В **обозревателе решений** в проекте **Notes** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Открытие файла MainPage.xaml.cs")
+    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Открытие файла MainPage.xaml.cs")
 
 8. Удалите из **MainPage.xaml.cs** весь шаблонный код и замените его приведенным ниже.
 
@@ -192,7 +192,7 @@ ms.locfileid: "61194485"
 - Знание C#.
 - (необязательно) Связанном компьютере Mac, чтобы создать приложение на iOS.
 
-Дополнительные сведения об этих требованиях см. в разделе [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении 2019 г. Visual Studio к узлу сборки Mac, см. в разделе [связывание с компьютером Mac для разработки Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Дополнительные сведения об этих требованиях см. в разделе [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2017"></a>Начало работы с Visual Studio 2017
 
@@ -200,7 +200,7 @@ ms.locfileid: "61194485"
 
     ![](single-page-images/vs/new-solution.png "Создание проекта")
 
-2. В диалоговом окне **Новый проект** щелкните **Кроссплатформенный**, выберите шаблон **Мобильное приложение (Xamarin.Forms)**, присвойте параметру "Имя" значение **Notes**, выберите подходящее расположение для проекта и нажмите кнопку **ОК**:
+2. В диалоговом окне **Новый проект** щелкните **Кроссплатформенный**, выберите шаблон **Мобильное приложение (Xamarin.Forms)** , присвойте параметру "Имя" значение **Notes**, выберите подходящее расположение для проекта и нажмите кнопку **ОК**:
 
     ![](single-page-images/vs/new-project.png "Шаблоны кроссплатформенных проектов")
 

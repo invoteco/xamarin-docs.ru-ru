@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031488"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832292"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Введение в раскадровки в Xamarin.Mac
 
@@ -56,9 +56,9 @@ _В этой статье содержатся общие сведения о р
 
 В пределах заданного сцены, можно сделать все, что бы обычно обработанных каждым участником `.xib` файлы: 
 
- - Место subviews и элементы управления (например, кнопки и текстовые поля).
- - Определите элемент позиций и ограничения автоматического макета.
- - Подключения действия и источники, чтобы предоставить элементы пользовательского интерфейса в код.
+- Место subviews и элементы управления (например, кнопки и текстовые поля).
+- Определите элемент позиций и ограничения автоматического макета.
+- Подключения действия и источники, чтобы предоставить элементы пользовательского интерфейса в код.
 
 <a name="Working-with-Segues" />
 

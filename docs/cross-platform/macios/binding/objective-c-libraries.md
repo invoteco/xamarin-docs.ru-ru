@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 206379b162c7778663ee2baf64dfeb1d33666ab4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827485"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831468"
 ---
 # <a name="binding-objective-c-libraries"></a>Привязка библиотек Objective-C
 
@@ -267,7 +267,7 @@ string Text { get; [NullAllowed] set; }
 При настройке привязки для пользовательского элемента управления, следует учитывать следующие факторы:
 
 1. **Свойства привязки должны быть статическими** — при определении привязки свойств, [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) атрибут должен использоваться.
- 2. **Имена свойств должны точно соответствовать** -имя, используемое для привязки свойства должно соответствовать имени свойства в пользовательском элементе управления точно.
+2. **Имена свойств должны точно соответствовать** -имя, используемое для привязки свойства должно соответствовать имени свойства в пользовательском элементе управления точно.
 3. **Типы свойств должны точно соответствовать** -тип переменной, используемый для привязки свойства точно совпадать с типом свойства в пользовательский элемент управления.
 4. **Точки останова и getter/setter** — поместить точки останова в метод получения значения или никогда не будет достигнута методов задания свойства.
 5. **Обратите внимание, обратные вызовы** -необходимо будет использовать обратные вызовы наблюдения для получения уведомлений об изменениях в значениях свойств пользовательских элементов управления.
@@ -479,7 +479,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>Привязка Objective-C списки аргументов
 
-Objective-C поддерживает переменное число аргументов. Пример:
+Objective-C поддерживает переменное число аргументов. Например:
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -522,7 +522,7 @@ public void AppendWorkers(params Worker[] workers)
 
 Обычно эти поля содержат значения строками или целыми числами, которые должна указывать ссылка. Обычно они используются как строка, представляющая отправки определенных уведомлений и как ключи в словарях.
 
-Чтобы привязать поле, добавьте свойство в файл определения интерфейса и снабдить свойство с [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) атрибута. Этот атрибут принимает один параметр: имя C символа для уточняющего запроса. Пример:
+Чтобы привязать поле, добавьте свойство в файл определения интерфейса и снабдить свойство с [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) атрибута. Этот атрибут принимает один параметр: имя C символа для уточняющего запроса. Например:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -632,7 +632,7 @@ interface MyType {
 Вы можете дополнить методы (возвращаемое значение), параметры и свойства с [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute). Единственным ограничением является то, что член **не должны** находиться внутри [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
 или [ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) интерфейс.
 
-Пример:
+Например:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -651,7 +651,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) также поддерживает массивы `NSNumber` `NSValue` и `NSString`(перечисления).
 
-Пример:
+Например:
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -682,7 +682,7 @@ CAScroll [] SupportedScrollModes { get; set; }
 
 Этот атрибут может использоваться без аргументов для уведомлений, которые содержат полезные данные не найдены, или можно указать `System.Type` , ссылающийся на другой интерфейс в определении API, обычно с именем, заканчивающимся «EventArgs». Генератор приводит к отключению интерфейса в класс, который наследуется от класса `EventArgs` и будет включать все свойства в списке. [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) Атрибут должен использоваться в классе EventArgs в списке имя ключа, используемый для поиска словаря Objective-C, чтобы получить значение.
 
-Пример:
+Например:
 
 ```csharp
 interface MyClass {
@@ -1337,7 +1337,7 @@ c.Loaded += delegate (sender, args){
 Приведенный выше пример будет связан `libMyLibrary.a`, `libSystemLibrary.dylib` и `CFNetwork` библиотеки framework в окончательный исполняемый файл.
 
 Или можно воспользоваться преимуществами уровня сборки [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), который можно вставить в файлах контракта (такие как `AssemblyInfo.cs`).
-При использовании [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), будет необходимо иметь вашей собственной библиотеки, доступные во время внесения привязки, как это будет внедрение собственной библиотеки с помощью приложения. Пример:
+При использовании [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), будет необходимо иметь вашей собственной библиотеки, доступные во время внесения привязки, как это будет внедрение собственной библиотеки с помощью приложения. Например:
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

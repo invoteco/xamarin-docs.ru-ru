@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb8aabb3649da3818c1b020508b78a03f513963b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218490"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830682"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Установка и использование watchOS в Xamarin
 
@@ -144,7 +144,7 @@ watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
 Существует два режима для запуска приложения WatchKit:
 
- - Обычное приложение режиме (по умолчанию), и
+- Обычное приложение режиме (по умолчанию), и
 - [Уведомления](~/ios/watchos/platform/notifications.md) (требуется полезные данные уведомления теста в формате JSON).
 
 ### <a name="xcode-8-support"></a>Поддержка Xcode 8
@@ -178,8 +178,9 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 При использовании Xcode 6 только iPhone 5, 5 iPhone, iPhone 6 и iPhone 6 Plus можно активировать для любого внешнего дисплея **Apple Watch - 38 мм** или **Apple Watch - 42 мм** где будет приложения watch отображается.
 
-**Примечание.** Помните, что на экране Контрольное значение не отображается автоматически в симуляторе iOS при использовании Xcode 6.
-Используйте **оборудования > внешних отображает** меню, чтобы показывать окно контрольных значений.
+> [!NOTE]
+> Помните, что на экране Контрольное значение не отображается автоматически в симуляторе iOS при использовании Xcode 6.
+> Используйте **оборудования > внешних отображает** меню, чтобы показывать окно контрольных значений.
 
 <a name="custommodes" />
 
@@ -212,8 +213,8 @@ Visual Studio для Mac можно запустить приложение watc
 
 ![](installation-images/debug-sml.png "На этом снимке экрана показана точка останова отладки попадании в приложении для Apple watch")
 
-После запуска инструкций вы получите приложение для Apple watch на **iOS Simulator (Watch)**.
-Режим уведомлений можно выбрать **Отладка > Открыть журнал системы** (**CMD + /**) и использовать `Console.WriteLine` в коде.
+После запуска инструкций вы получите приложение для Apple watch на **iOS Simulator (Watch)** .
+Режим уведомлений можно выбрать **Отладка > Открыть журнал системы** (**CMD + /** ) и использовать `Console.WriteLine` в коде.
 
 ### <a name="debugging-lifecycle-event-handlers"></a>Отладка обработчики событий жизненного цикла
 

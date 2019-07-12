@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f6a7f8859340dcc8e48b6a4e6f56847168f4b71e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019252"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829766"
 ---
 # <a name="android-localization"></a>Android локализации
 
@@ -252,7 +252,9 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Тестирование устройств
 
 Чтобы протестировать на устройстве, изменить язык в **параметры** приложения.
-**Совет.** Запишите значков и расположение элементов меню, таким образом, вы можете вернуться язык исходное значение.
+
+> [!TIP]
+> Запишите значков и расположение элементов меню, таким образом, вы можете вернуться язык исходное значение.
 
 
 ## <a name="summary"></a>Сводка

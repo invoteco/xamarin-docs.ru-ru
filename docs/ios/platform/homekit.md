@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371623"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831546"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit в Xamarin.iOS
 
@@ -285,7 +285,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 
 [![](homekit-images/accessory01.png "Поиск нового вспомогательного компонента")](homekit-images/accessory01.png#lightbox)
 
-Вызовите `AddAccessory` метод для добавления выбранного периферийного устройства домашнюю коллекцию. Пример:
+Вызовите `AddAccessory` метод для добавления выбранного периферийного устройства домашнюю коллекцию. Например:
 
 ```csharp
 // Add the requested accessory to the home
@@ -318,7 +318,7 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 Для данного примера мы будем обеспечить вещей простой и работают с домашней стандартные напрямую, вместо их объединения в зале или зоны.
 
-`HMHome` Объект содержит список назначенных периферийного устройства, которое будет представлено пользователю в его `Accessories` свойство. Пример:
+`HMHome` Объект содержит список назначенных периферийного устройства, которое будет представлено пользователю в его `Accessories` свойство. Например:
 
 [![](homekit-images/accessory04.png "Пример периферийного устройства")](homekit-images/accessory04.png#lightbox)
 
@@ -384,77 +384,77 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 `HMCharacteristicType` Перечисление содержит набор значений метаданных характеристики, которые невозможно определить или изменить следующим образом:
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - Яркость
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactState
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - currentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - Цветовой тон
- - Identify
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - Журналы
- - Изготовитель
- - Модель
- - MotionDetected
- - name
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - Насыщенность
- - Серийный номер
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - Версия
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- Яркость
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactState
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- currentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- Цветовой тон
+- Identify
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- Журналы
+- Изготовитель
+- Модель
+- MotionDetected
+- name
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- Насыщенность
+- Серийный номер
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- Версия
 
 ### <a name="working-with-a-characteristics-value"></a>Работа с характеристика значением
 
@@ -667,7 +667,7 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 Статья описывает основные компоненты, необходимые для работы с HomeKit "Стандартные", в приложении Xamarin.iOS. Однако существуют некоторые дополнительные возможности HomeKit, не охваченных в этом введении:
 
 - **Комнаты** -HomeKit включены стандартные могут при необходимости организованы в комнатах конечным пользователем. Это позволяет HomeKit присутствует стандартные способом, который облегчает пользователю понять и работать с. Дополнительные сведения о создании и обслуживании комнаты, см. в разделе Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) документации.
-- **Зоны** -комнаты при необходимости могут быть организованы в зонах конечным пользователем. Зоны ссылается на коллекцию помещениях, пользователь может обрабатывать как единое целое. Пример: Быть установлен, Downstairs или подвала. Опять же это позволяет HomeKit для представления и работать с стандартные способом, который лучше всего подходит для конечного пользователя. Дополнительные сведения о создании и обслуживании зоны, см. в разделе Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) документации.
+- **Зоны** -комнаты при необходимости могут быть организованы в зонах конечным пользователем. Зоны ссылается на коллекцию помещениях, пользователь может обрабатывать как единое целое. Например: Быть установлен, Downstairs или подвала. Опять же это позволяет HomeKit для представления и работать с стандартные способом, который лучше всего подходит для конечного пользователя. Дополнительные сведения о создании и обслуживании зоны, см. в разделе Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) документации.
 - **Действия и задает действие** -действия, изменить характеристики службы периферийных устройств и могут быть сгруппированы в наборы. Наборов действий в качестве сценарии для управления группой стандартные и координировать их действия. Например сценарий «Просмотра Телевизора» может закрыть сложность, свет и включите телевизора и звуковой системы. Дополнительные сведения о создании и обслуживании действий и наборов действий, см. в разделе Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) и [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) документации.
 - **Триггеры** - триггер может активировать одно или дополнительные действия задается при заданные условия будут соблюдены. Например включите portch света и блокировать все внешние двери, если он возвращает темный за пределами. Дополнительные сведения о создании и обслуживании триггеры, см. в разделе Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) документации.
 
@@ -677,9 +677,9 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 
 Перед отправкой HomeKit включенного приложения Xamarin.iOS в iTunes Connect для выпуска в iTunes App Store, убедитесь, что выполнены требования Apple для приложений HomeKit включен:
 
- - Основное назначение приложения _необходимо_ быть автоматизации дома, при использовании HomeKit framework.
- - Маркетинговый текст приложения необходимо уведомить пользователей, что используется HomeKit и предоставлять политики конфиденциальности.
- - Сбор сведений о пользователе или использовании HomeKit рекламных целях запрещено.
+- Основное назначение приложения _необходимо_ быть автоматизации дома, при использовании HomeKit framework.
+- Маркетинговый текст приложения необходимо уведомить пользователей, что используется HomeKit и предоставлять политики конфиденциальности.
+- Сбор сведений о пользователе или использовании HomeKit рекламных целях запрещено.
 
 Для полной просмотрите рекомендации, см. в разделе Apple [приложения Store просмотрите рекомендации](https://developer.apple.com/app-store/review/guidelines/).
 

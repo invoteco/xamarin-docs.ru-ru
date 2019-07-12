@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ef16224b9ef060ff8643211b8e1f0c767c518bdf
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61047863"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67841401"
 ---
 
 Следующую команду, чтобы указать построение выпуска решения **SOLUTION_FILE.sln** для iPhone. Расположение IPA-ФАЙЛ можно задать, указав `IpaPackageDir` свойства в командной строке:
 
- - На компьютере Mac с помощью **xbuild**:
+- На компьютере Mac с помощью **xbuild**:
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
@@ -18,7 +18,7 @@ ms.locfileid: "61047863"
 
 **Xbuild** команды обычно находится в каталоге **/Library/Frameworks/Mono.framework/Commands**.
 
- - В Windows, с помощью **msbuild**:
+- В Windows, с помощью **msbuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 

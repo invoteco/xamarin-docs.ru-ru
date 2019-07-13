@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dab1b0f7bf7aabb4dfcfbfdcb5e202baa48e664d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61418255"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865168"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Работа с tvOS, значков и изображений в Xamarin
 
@@ -181,7 +181,7 @@ tvOS работает с многослойные образы в следующ
 5. Щелкните **1 x, Apple TV запись** и выберите файл изображения.
 6. Повторите приведенные выше действия для `Front` и `Middle` активы.
 7. Повторите эти шаги, чтобы определить `App Icon - Large` активов.
-4. Сохраните изменения.
+8. Сохраните изменения.
 
 <a name="Top-Shelf-Image" />
 
@@ -218,8 +218,8 @@ tvOS работает с многослойные образы в следующ
 3. Щелкните `Top Shelf Image` активов: 
 
     [![](icons-images-images/asset07.png "Изображение для верхней панели активов")](icons-images-images/asset07.png#lightbox)
-5. Щелкните **1 x, Apple TV запись** и выберите файл изображения.
-6. Сохраните изменения.
+4. Щелкните **1 x, Apple TV запись** и выберите файл изображения.
+5. Сохраните изменения.
 
 <a name="Dynamic-Top-Shelf-Content" />
 

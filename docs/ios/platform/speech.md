@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: c1f488213f9b3be945fd98e09f630c243d0b0d62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8af7474036eb0fd6e2236cf52e96b8d12c8bc44e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382866"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865706"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Распознавание речи в Xamarin.iOS
 
@@ -105,21 +105,21 @@ Apple включает в себя API доступности, чтобы опр
 2. Переключиться в режим **источника** представления: 
 
     [![](speech-images/speech02.png "В представлении источника")](speech-images/speech02.png#lightbox)
-3. Щелкните **добавьте новую запись**, введите `NSSpeechRecognitionUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Пример: 
+3. Щелкните **добавьте новую запись**, введите `NSSpeechRecognitionUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Например: 
 
     [![](speech-images/speech03.png "Добавление NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. Если приложение будет обрабатывать динамические расшифровка дикторского текста для аудио, также требуется Описание использования микрофона. Щелкните **добавьте новую запись**, введите `NSMicrophoneUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Пример: 
+4. Если приложение будет обрабатывать динамические расшифровка дикторского текста для аудио, также требуется Описание использования микрофона. Щелкните **добавьте новую запись**, введите `NSMicrophoneUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Например: 
 
     [![](speech-images/speech04.png "Добавление NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
-4. Сохраните изменения в файле.
+5. Сохраните изменения в файле.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Дважды щелкните `Info.plist` файл, чтобы открыть его для редактирования.
-3. Щелкните **добавьте новую запись**, введите `NSSpeechRecognitionUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Пример: 
+2. Щелкните **добавьте новую запись**, введите `NSSpeechRecognitionUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Например: 
 
     [![](speech-images/speech03w.png "Добавление NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. Если приложение будет обрабатывать динамические расшифровка дикторского текста для аудио, также требуется Описание использования микрофона. Щелкните **добавьте новую запись**, введите `NSMicrophoneUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Пример: 
+3. Если приложение будет обрабатывать динамические расшифровка дикторского текста для аудио, также требуется Описание использования микрофона. Щелкните **добавьте новую запись**, введите `NSMicrophoneUsageDescription` для **свойство**, `String` для **тип** и **Описание использования** как **значение**. Например: 
 
     [![](speech-images/speech04w.png "Добавление NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Сохраните изменения в файле.
@@ -243,7 +243,7 @@ public void RecognizeFile (NSUrl url)
 
 ### <a name="recognizing-live-speech"></a>Распознавание речи в режиме реального времени
 
-Если приложение хочет распознать речь в реальном времени, это очень похоже на распознавание речи предварительно записанные. Пример:
+Если приложение хочет распознать речь в реальном времени, это очень похоже на распознавание речи предварительно записанные. Например:
 
 ```csharp
 using System;

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e38ca07aeef1cbd8e121421ebcbad2207a1bb823
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830674"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865988"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Песочница приложения Xamarin.Mac
 
@@ -87,13 +87,13 @@ _В этой статье рассматриваются песочница пр
 8. Добавьте следующий оператор using: `using WebKit;`
 9. Сделать `ViewDidLoad` внешний метод следующим образом: 
 
-```csharp
-public override void AwakeFromNib ()
-{
-    base.AwakeFromNib ();
-    webView.MainFrame.LoadRequest(new NSUrlRequest(new NSUrl("http://www.apple.com")));
-}
-```
+    ```csharp
+    public override void AwakeFromNib ()
+    {
+        base.AwakeFromNib ();
+        webView.MainFrame.LoadRequest(new NSUrlRequest(new NSUrl("http://www.apple.com")));
+    }
+    ```
 
 10. Сохраните изменения.
 
@@ -164,14 +164,14 @@ public override void AwakeFromNib ()
 3. Далее дважды щелкните **Entitlements.plist** файл и убедитесь, наши **iCloud Store ключ-значение** и **контейнеры iCloud** соответствовать всем наш идентификатор приложения, мы создали выше (пример: `com.appracatappra.MacSandbox`): 
 
     [![Редактирование файла Entitlements.plist](sandboxing-images/sign17.png "редактирования файла Entitlements.plist")](sandboxing-images/sign17-large.png#lightbox)
-3. Сохраните изменения.
-4. В **панели решения**, дважды щелкните файл проекта, чтобы открыть его параметры для редактирования:  
+4. Сохраните изменения.
+5. В **панели решения**, дважды щелкните файл проекта, чтобы открыть его параметры для редактирования:  
 
     ![Editign параметры решения](sandboxing-images/sign14.png "Editign параметры решения")
-5. Выберите **подписывание Mac**, затем проверьте **подписывания пакета приложения** и **подписать пакет установщика**. В разделе **профиль подготовки**, выберите ту, мы создали выше: 
+6. Выберите **подписывание Mac**, затем проверьте **подписывания пакета приложения** и **подписать пакет установщика**. В разделе **профиль подготовки**, выберите ту, мы создали выше: 
 
     ![Установка профиля подготовки](sandboxing-images/sign15.png "Установка профиля подготовки")
-6. Нажмите кнопку **сделать** кнопки.
+7. Нажмите кнопку **сделать** кнопки.
 
 > [!IMPORTANT]
 > Может потребоваться перезапустить Visual Studio для Mac получить ее распознать новый идентификатор приложения и профиль подготовки, который был установлен в Xcode.

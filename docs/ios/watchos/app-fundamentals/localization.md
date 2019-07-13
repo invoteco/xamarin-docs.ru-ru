@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 1362767bf9a80af1eac37d316bd99a6ab364063f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414040"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865953"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Работа с watchOS локализации в Xamarin
 
@@ -127,19 +127,19 @@ displayText.SetText (localizedDisplay);
 
 1. Вы можете изменить `Image` управления путем изменения его значения в строковое имя изображения, уже существует в приложении для Apple Watch, например:
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. Можно переместить изображения из расширения watch с помощью `FromBundle` приложение будет автоматически выбран правильный рисунок для выбранного пользователем языка. В этом примере решения — это образ **language@2x.png** на этих языках, отображается папка и ее на `DetailController` следующим образом:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-    displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  Обратите внимание, что необходимо указать **@2x** применительно к имени файла изображения.
+    Обратите внимание, что необходимо указать **@2x** применительно к имени файла изображения.
 
 Второй метод также применяется, если вы скачаете образ с удаленного сервера для подготовки к просмотру в watch; Тем не менее в этом случае следует убедиться, что образ, который можно скачать правильно локализуется в соответствии с предпочтениями пользователя.
 

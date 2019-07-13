@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 70ca9a73c83bed5233b77a6f7be80a13f04f2bcb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fbef8f60a31511be926ee2adf5e239ad8955b208
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61360850"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864527"
 ---
 # <a name="updating-component-references-to-nuget"></a>Обновление ссылок на компоненты в NuGet
 
@@ -39,7 +39,7 @@ ms.locfileid: "61360850"
 
 1. Откройте **.csproj** файл. Чтобы сделать это, щелкните правой кнопкой мыши имя проекта и выберите **выгрузить проект**. 
 
-2. Снова щелкните правой кнопкой мыши выгруженного проекта и выберите **изменить CSPROJ {your-project-name}**.
+2. Снова щелкните правой кнопкой мыши выгруженного проекта и выберите **изменить CSPROJ {your-project-name}** .
 
 3. Найти все ссылки в файле `XamarinComponentReference`. Он должен выглядеть аналогично приведенному ниже:
 
@@ -180,7 +180,7 @@ _Он может содержать зависимости NuGet, но их мо
 1. Щелкните правой кнопкой мыши **пакетов** узел и выберите **добавить пакеты...** .
 2. Поиск для замены NuGet по имени или автора:
 
-  ![](component-nuget-images/nuget-search-sml.png)
+    ![](component-nuget-images/nuget-search-sml.png)
 
 3. Нажмите клавишу **добавьте пакет**.
 

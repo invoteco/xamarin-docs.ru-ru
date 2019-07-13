@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 723970a4ad7e2ced85147dbcc6c22f9a45519121
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674992"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864606"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure и Xamarin
 
@@ -41,7 +41,7 @@ Xamarin также предлагает пакеты NuGet обмена сооб
 Вы можете легко регулировать [веб-сайта Azure](https://trywebsites.azurewebsites.net/) и создайте приложение на основе веб-API для подключения к приложениям Xamarin.
 
 
-###  <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Введение в веб-служб](~/cross-platform/data-cloud/web-services/index.md)
+### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Введение в веб-служб](~/cross-platform/data-cloud/web-services/index.md)
 
 В этом учебнике рассказывается, как интегрировать REST, WCF и SOAP веб-технологиями служб с помощью мобильных приложений Xamarin. Он проверяет различные реализации службы, оценивает доступные инструменты и библиотеки, чтобы интегрировать их и предоставляет образец шаблона для использования службы данных. Наконец он предоставляет общий обзор Создание RESTful веб-службы для использования с помощью мобильного приложения Xamarin.
 

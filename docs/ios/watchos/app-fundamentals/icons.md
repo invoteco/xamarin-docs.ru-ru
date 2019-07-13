@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/26/2018
-ms.openlocfilehash: 435af10484827826d53b767c2738e3945e0bae42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 75b5d1f941921a84d96579a4b0d0666ae0c2522d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345244"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864987"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Работа с watchOS значки в Xamarin
 
@@ -55,28 +55,28 @@ Apple Watch решений требуется два набора значков
 
 1. Щелкните правой кнопкой мыши на проекте приложения Watch и выберите **файл > Добавить > новый файл... > iOS > каталог активов** добавляемый каталог ресурсов проекта.
 
- ![](icons-images/newasset.png "Добавьте каталог ресурсов в проект")
+    ![](icons-images/newasset.png "Добавьте каталог ресурсов в проект")
 
 2. Дважды щелкните **AppIcon.appiconset/Contents.json** файла
 
-  ![](icons-images/xcassets-iconset-sml.png "Содержимое AppIcon")
+    ![](icons-images/xcassets-iconset-sml.png "Содержимое AppIcon")
 
 3. Добавьте все изображения watchOS, как показано на следующем снимке экрана:
 
-  [![](icons-images/appicons-sml.png "Добавьте все изображения watchOS, как показано на следующем снимке экрана")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Добавьте все изображения watchOS, как показано на следующем снимке экрана")](icons-images/appicons.png#lightbox)
 
-  Ссылаться на [логотипу Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) для размера (размеры также отображаются на экране). Помните, автоматически обрезается эти значки для подготовки к просмотру в кружке.
+    Ссылаться на [логотипу Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) для размера (размеры также отображаются на экране). Помните, автоматически обрезается эти значки для подготовки к просмотру в кружке.
 
-  Значок списка должен выглядеть следующим образом:
+    Значок списка должен выглядеть следующим образом:
 
-  ![](icons-images/xcassets-complete-sml.png "Значок списка в обозревателе решений")
+    ![](icons-images/xcassets-complete-sml.png "Значок списка в обозревателе решений")
 
 4. Чтобы каталог активов, включенными в приложение, добавьте следующий раздел и значение **Info.plist приложения Watch**:
 
-```xml
-<key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcon.appiconset</string>
-```
+    ```xml
+    <key>XSAppIconAssets</key>
+    <string>Images.xcassets/AppIcon.appiconset</string>
+    ```
 
 Можно проверить значки настроены правильно, проверив [приложение "Параметры" Apple Watch](~/ios/watchos/app-fundamentals/settings.md) в симуляторе iPhone или создание [уведомления](~/ios/watchos/platform/notifications.md) и подтверждения того, значок появляется уведомление экран.
 

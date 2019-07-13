@@ -7,22 +7,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/03/2016
-ms.openlocfilehash: 4ddf884f9980de61a27bc636be7c848881a13139
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f3c058d898bca17264374cf253345babd3a65072
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61176977"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864244"
 ---
 # <a name="maps-and-location"></a>Карты и расположение
 
 
-##  <a name="location-servicesandroidplatformmaps-and-locationlocationmd"></a>[Службы расположений](~/android/platform/maps-and-location/location.md)
+## <a name="location-servicesandroidplatformmaps-and-locationlocationmd"></a>[Службы расположений](~/android/platform/maps-and-location/location.md)
 
 Это руководство представляет сетевом расположении в приложениях Android, а также показано, как получить из местоположения пользователя с помощью API Android расположение службы, а также включенные поставщика расположения доступны с помощью API служб расположения Google.
 
 
-##  <a name="mapsandroidplatformmaps-and-locationmapsindexmd"></a>[Карты](~/android/platform/maps-and-location/maps/index.md)
+## <a name="mapsandroidplatformmaps-and-locationmapsindexmd"></a>[Карты](~/android/platform/maps-and-location/maps/index.md)
 
 В этой статье описывается использование карты и расположение с помощью Xamarin.Android. Этот интерфейс охватывает все от использования приложения встроенные карты напрямую с помощью Google сопоставляет Android API версии 2. Кроме того здесь объясняется, как использовать единый интерфейс API для работы с помощью службы определения местоположения, что позволяет приложению получить расположение исправлениям посредством tower расположение ячейки, Wi-Fi или GPS.
 

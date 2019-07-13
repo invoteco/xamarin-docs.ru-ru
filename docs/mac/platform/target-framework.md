@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 15c93126f80917df45a5b80fb84397dc6ef0d5fd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9e20b4966e9e6cb8a4ce3ad6724cf0ba2565c33
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075639"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865867"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Целевая платформа для Xamarin.Mac
 
@@ -44,7 +44,7 @@ _В этой статье рассматриваются целевых плат
 2. В **обозревателе решений** дважды щелкните файл проекта, чтобы открыть диалоговое окно **Параметры проекта**.
 3. Из **Общие** выберите тип **требуемой версии .NET Framework** , соответствует потребностям вашего приложения:
 
-  [![В окне параметров проекта для выбора целевой платформы](target-framework-images/select-target-full.png "в окне параметров проекта для выбора целевой платформы")](target-framework-images/select-target-full-large.png#lightbox)
+    [![В окне параметров проекта для выбора целевой платформы](target-framework-images/select-target-full.png "в окне параметров проекта для выбора целевой платформы")](target-framework-images/select-target-full-large.png#lightbox)
 
 4. Чтобы сохранить внесенные изменения, нажмите кнопку **OK**.
 

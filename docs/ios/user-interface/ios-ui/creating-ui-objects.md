@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 65ebbddfa1a315a478ceb43162b3c80eba2d8cc1
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: a80bf876e239e1788a371a1f09d36d73247d4611
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827799"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865004"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Создание объектов пользовательского интерфейса в Xamarin.iOS
 
@@ -88,7 +88,7 @@ using UIKit;
 
 Дополнительные сведения о том, как конструктора Interface Builder интегрируется с Visual Studio для Mac, см. [создание кода для Xib](~/ios/internals/xib-code-generation.md#generated) документа.
 
-##  <a name="using-c"></a>С помощьюC#
+## <a name="using-c"></a>С помощьюC#
 
 Если принято решение для программного создания объекта интерфейса пользователя с помощью C# (в представлении или контроллер представления, например), выполните следующие действия:
 

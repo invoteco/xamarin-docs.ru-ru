@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: ba3c2b07e7f35bf9fd84d10b74d034a02ca6a73d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 65f7c6d8a573501ffec4aa1b8eaf28ff1e6479e8
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153292"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864224"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Не обновляется файл Resource.designer.cs Android
 
@@ -24,13 +24,13 @@ ms.locfileid: "61153292"
 
 ## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Два возможных подхода к исправлению файла проекта
 
-### <a name="either"></a>Варианты
+**Либо:**
 
-1) Создайте новый проект приложения Xamarin.Android, задать все свойства проекта в соответствии с старый проект и добавьте все ресурсы, исходные файлы, т. д. обратно в проект.
+1. Создайте новый проект приложения Xamarin.Android, задать все свойства проекта в соответствии с старый проект и добавьте все ресурсы, исходные файлы, т. д. обратно в проект.
 
-### <a name="or"></a>OR
+   **ИЛИ**
 
-2) Создайте резервную копию исходного проекта CSPROJ-файл, откройте его в текстовом редакторе и добавьте обратно в отсутствующие элементы из аккуратно созданные csproj-файла.
+2. Создайте резервную копию исходного проекта CSPROJ-файл, откройте его в текстовом редакторе и добавьте обратно в отсутствующие элементы из аккуратно созданные csproj-файла.
 
 ### <a name="if-this-does-not-solve-the-problem"></a>Если это не устранит проблему
 

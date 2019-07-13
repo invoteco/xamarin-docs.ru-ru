@@ -6,27 +6,27 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 923ec41443feff67d851a0c2f3cba1b948aed580
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978458"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864412"
 ---
 # <a name="binding-objective-c"></a>Привязка Objective-C
 
 Этот раздел содержит широкий набор документов, которые покрывают Создание привязок для библиотеки Objective-C, поэтому они могут вызываться из C# приложения, созданные с помощью Xamarin.iOS и Xamarin.Mac.
 
-##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Обзор](~/cross-platform/macios/binding/overview.md)
+## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Обзор](~/cross-platform/macios/binding/overview.md)
 
 Этот документ содержит некоторые из внутренних как выполняется привязка. Он представляет собой расширенный документ некоторые технические сведения.
 
-##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Привязка библиотек Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
+## <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Привязка библиотек Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 В этом документе описан процесс, используемый для создания C# привязки Objective-C API и как стили в Objective-C сопоставляются идиомы, используемые в .NET.
 При связывании просто C API-интерфейсы, следует использовать стандартный механизм .NET для этого платформа P/Invoke.
 
-##  <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Справочное руководство для определения привязки](~/cross-platform/macios/binding/binding-types-reference.md)
+## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Справочное руководство для определения привязки](~/cross-platform/macios/binding/binding-types-reference.md)
 
 Это руководство, описывающее все атрибуты, доступные для авторов привязки для управления процессом создания привязки.
 

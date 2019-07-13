@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 696432fb51060a236780eedee0b60661e3a86712
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831909"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865190"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Стандартные элементы управления в Xamarin.Mac
 
@@ -603,16 +603,16 @@ AppKit предоставляет несколько типов представ
 2. Перетащите **увидеть контроллер** из **инспектор библиотеки** на **редактор интерфейса**: 
 
     [![](standard-controls-images/content02.png "Выбрав контроллер представления из библиотеки")](standard-controls-images/content02.png#lightbox)
-4. Определить размер и макет **пользовательское представление**: 
+3. Определить размер и макет **пользовательское представление**: 
 
     [![](standard-controls-images/content04.png "Изменение макета")](standard-controls-images/content04.png#lightbox)
-5. Щелкните и перетащите из источника всплывающего окна на **контроллер представления**: 
+4. Щелкните и перетащите из источника всплывающего окна на **контроллер представления**: 
 
     [![](standard-controls-images/content05.png "Перетаскивание для создания объекта перехода")](standard-controls-images/content05.png#lightbox)
-6. Выберите **контекстном** во всплывающем меню: 
+5. Выберите **контекстном** во всплывающем меню: 
 
     [![](standard-controls-images/content06.png "Выбор типа перехода")](standard-controls-images/content06.png#lightbox)
-7. Сохранить изменения и вернуться в Visual Studio для Mac синхронизировать с Xcode.
+6. Сохранить изменения и вернуться в Visual Studio для Mac синхронизировать с Xcode.
 
 <a name="Tab_Views" />
 

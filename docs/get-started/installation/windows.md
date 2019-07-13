@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 92ddbfb48131bdaf8ba12cef86e09e4c575200e9
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61271593"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865617"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Установка Xamarin в Visual Studio 2019 г.
 
@@ -44,8 +44,8 @@ ms.locfileid: "61271593"
 1. [Установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Подключение Visual Studio к узлу сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [Настройка для разработки на базе iOS](~/ios/get-started/installation/device-provisioning/index.md) (требуется для запуска приложения на устройстве)
-5. [Удаленный симулятор iOS](~/tools/ios-simulator/index.md)
-6. [Введение в Xamarin.iOS для Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
+4. [Удаленный симулятор iOS](~/tools/ios-simulator/index.md)
+5. [Введение в Xamarin.iOS для Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
 ### <a name="android"></a>Android
 

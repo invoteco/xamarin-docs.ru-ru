@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3eccba01f235382b7969a2f4a122c09ce9b4127b
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ab6236198d0a5826fc613d1f3839bafdb980d235
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832351"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865645"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Изменения платформы дополнительных tvOS 10
 
@@ -25,7 +25,7 @@ ms.locfileid: "67832351"
 Платформа AVFoundation включает следующие улучшения:
 
 - В tvOS 10, приложение больше не реализует различные [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) поведения на основе типа содержимого. Просто задайте `Rate` свойство и AVFoundation определяют при достаточно содержимое доступно для воспроизведения без замедляется работа.
- - Новый `AVPlayerLooper` класс упрощает цикл данной части носителей во время воспроизведения.
+- Новый `AVPlayerLooper` класс упрощает цикл данной части носителей во время воспроизведения.
 
 <a name="AVKit-Framework-Enhancements" />
 

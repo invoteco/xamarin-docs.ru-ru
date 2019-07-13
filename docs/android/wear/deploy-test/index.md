@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: db3f9b1c8eaed89046dd10621d5c942b21fae159
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 07dbd86e420c6e643ff80dfbbbc0d5b3f0154fe1
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276358"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864861"
 ---
 # <a name="deployment-and-testing"></a>Развертывание и тестирование
 
@@ -27,7 +27,7 @@ ms.locfileid: "61276358"
 
 Как настроить устройство Android Xamarin.Android Wear приложения могут развертываться на него непосредственно из Visual Studio или Visual Studio для Mac.
 
-##  <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Упаковка приложений Wear](~/android/wear/deploy-test/packaging.md)
+## <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Упаковка приложений Wear](~/android/wear/deploy-test/packaging.md)
 
 Как приложения Xamarin.Android износа пакета для распространения в Google Play.
 

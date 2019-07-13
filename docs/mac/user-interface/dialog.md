@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f53c1afd7c3f835bff2aae507b9937067bde4bec
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832518"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865734"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Диалоговые окна в Xamarin.Mac
 
@@ -127,10 +127,10 @@ macOS предоставляет стандартный печати и стра
 6. Создание **модального перехода** из главного окна приложения на новый контроллер представления, перетащив элемент управления в элементе пользовательского интерфейса, который открывается диалоговое окно, в диалоговом окне. Назначить **идентификатор** `ModalSegue`: 
 
     [![](dialog-images/new06.png "Модального перехода")](dialog-images/new06.png#lightbox)
-6. Проводной доступ к любой **действия** и **розеток**: 
+7. Проводной доступ к любой **действия** и **розеток**: 
 
     [![](dialog-images/new04.png "Настройка действий")](dialog-images/new04.png#lightbox)
-6. Сохранить изменения и вернуться в Visual Studio для Mac синхронизировать с Xcode.
+8. Сохранить изменения и вернуться в Visual Studio для Mac синхронизировать с Xcode.
 
 Сделать `CustomDialogController.cs` внешний файл следующим образом:
 
@@ -265,19 +265,19 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 2. Перетащите новый **контроллер представления** в области конструктора:
 
     [![](dialog-images/new01.png "Выбрав контроллер представления из библиотеки")](dialog-images/new01.png#lightbox)
-2. Разработка пользовательского интерфейса.
+3. Разработка пользовательского интерфейса.
 
     [![](dialog-images/sheet01.png "Дизайн пользовательского интерфейса")](dialog-images/sheet01.png#lightbox)
-3. Создание **Segue лист** из главное окно на новый контроллер представления: 
+4. Создание **Segue лист** из главное окно на новый контроллер представления: 
 
     [![](dialog-images/sheet02.png "Выбор типа перехода таблицы стилей")](dialog-images/sheet02.png#lightbox)
-4. В **инспектор удостоверений**, назовите контроллер представления **класс** `SheetViewController`: 
+5. В **инспектор удостоверений**, назовите контроллер представления **класс** `SheetViewController`: 
 
     [![](dialog-images/sheet03.png "Задание имени класса")](dialog-images/sheet03.png#lightbox)
-5. Определите необходимые **розеток** и **действия**: 
+6. Определите необходимые **розеток** и **действия**: 
 
     [![](dialog-images/sheet04.png "Определение необходимых переменных экземпляров и действий")](dialog-images/sheet04.png#lightbox)
-6. Сохранить изменения и вернуться в Visual Studio для Mac для синхронизации.
+7. Сохранить изменения и вернуться в Visual Studio для Mac для синхронизации.
 
 Далее следует изменить `SheetViewController.cs` файл и это должно выглядеть следующим образом:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 9daedbe9bba5a2923a247104c4e69ae2e1b635aa
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831546"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865775"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit в Xamarin.iOS
 
@@ -59,20 +59,20 @@ HomeKit позволяет упорядочить все устройства а
 
     [![](homekit-images/provision01.png "Включить HomeKit службу для данного ИД")](homekit-images/provision01.png#lightbox)
 5. Сохраните изменения.
-4. Щелкните **профили подготовки** > **разработки** и создание нового профиля подготовки для приложения: 
+6. Щелкните **профили подготовки** > **разработки** и создание нового профиля подготовки для приложения: 
 
     [![](homekit-images/provision02.png "Создание нового профиля подготовки для приложения")](homekit-images/provision02.png#lightbox)
-5. Скачайте и установите новый профиль подготовки или использовать Xcode, чтобы загрузить и установить профиль.
-6. Измените параметры проекта Xamarin.iOS и убедитесь, что вы используете только что созданный профиль подготовки: 
+7. Скачайте и установите новый профиль подготовки или использовать Xcode, чтобы загрузить и установить профиль.
+8. Измените параметры проекта Xamarin.iOS и убедитесь, что вы используете только что созданный профиль подготовки: 
 
     [![](homekit-images/provision03.png "Выберите только что созданный профиль подготовки")](homekit-images/provision03.png#lightbox)
-7. Далее следует изменить ваш **Info.plist** файл и убедитесь, что вы используете идентификатор приложения, который использовался для создания профиля подготовки: 
+9. Далее следует изменить ваш **Info.plist** файл и убедитесь, что вы используете идентификатор приложения, который использовался для создания профиля подготовки: 
 
     [![](homekit-images/provision04.png "Задать идентификатор приложения ")](homekit-images/provision04.png#lightbox)
-8. И, наконец, изменить ваш **Entitlements.plist** файл и убедитесь, что **HomeKit** прав был выбран: 
+10. И, наконец, изменить ваш **Entitlements.plist** файл и убедитесь, что **HomeKit** прав был выбран: 
 
     [![](homekit-images/provision05.png "Включить HomeKit назначением")](homekit-images/provision05.png#lightbox)
-9. Сохраните изменения ко всем файлам.
+11. Сохраните изменения ко всем файлам.
 
 Эти параметры заданы приложение теперь может получить доступ к API-интерфейсы HomeKit Framework. Подробные сведения о подготовке, см. в разделе наших [подготовки устройств](~/ios/get-started/installation/device-provisioning/index.md) и [подготовки приложений](~/ios/get-started/installation/device-provisioning/index.md) руководства.
 

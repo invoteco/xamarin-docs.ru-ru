@@ -8,22 +8,22 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: 15f6d97a9411536df41e0653dbb3a3861cd0257e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e2868828b7c4fce29413d136db6e9b02b74c10ee
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031364"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865813"
 ---
 # <a name="xamarinmac-troubleshooting"></a>Устранение неполадок Xamarin.Mac 
 
 _Документы в этом разделе рассматриваются возможности, предназначенные для устранения неполадок с Xamarin.Mac._
 
-##  <a name="troubleshooting-tipsmactroubleshootingtroubleshootingmd"></a>[Советы по устранению неполадок](~/mac/troubleshooting/troubleshooting.md)
+## <a name="troubleshooting-tipsmactroubleshootingtroubleshootingmd"></a>[Советы по устранению неполадок](~/mac/troubleshooting/troubleshooting.md)
 
 Советы по устранению неполадок и рекомендации.
 
-##  <a name="errors-messages-mmpmactroubleshootingmmp-errorsmd"></a>[Сообщения об ошибках (mmp)](~/mac/troubleshooting/mmp-errors.md)
+## <a name="errors-messages-mmpmactroubleshootingmmp-errorsmd"></a>[Сообщения об ошибках (mmp)](~/mac/troubleshooting/mmp-errors.md)
 
 Ошибки справочное руководство по, показывающая наиболее распространенных ошибок, возникающих при создании приложений Xamarin.Mac.
 

@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d695df9c59a5f95441092d6d7b44d5feda941bd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6371c2af15eab9c5124212eefd9cf70d07b945d4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267757"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864721"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Создание новой библиотеки многоплатформенного для NuGet
 
@@ -30,25 +30,25 @@ ms.locfileid: "61267757"
 
 2. Выберите **многоплатформенные библиотеки** из **Многоплатформенность > Библиотека** раздел:
 
-  [![](single-codebase-images/mulitplatform-library-sml.png "Настройка библиотеки единой базой кода несколькими платформами")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Настройка библиотеки единой базой кода несколькими платформами")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Введите **имя** и **описание**и выберите **единый для всех платформ**:
 
-  [![](single-codebase-images/single-configure-sml.png "Настройка библиотеки единой базой кода несколькими платформами")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Настройка библиотеки единой базой кода несколькими платформами")](single-codebase-images/single-configure.png#lightbox)
 
 4. Завершите работу мастера. Отдельная библиотека проект создается в решении.
 
 5. Щелкните правой кнопкой мыши новый проект библиотеки, а затем выберите **параметры**. **Сборки > Общие** позволяет **требуемой версии .NET Framework** задаваемый — выберите в профиле переносимой библиотеки PCL .NET или .NET Standard версии:
 
-  [![](single-codebase-images/single-choose-type-sml.png "Выберите для типа библиотеки PCL или .NET Standard")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Выберите для типа библиотеки PCL или .NET Standard")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. Кроме того, в **параметры проекта** открытое окно **пакет NuGet > метаданных** раздела и введите [необходимые метаданные](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (а также любые необязательные метаданные):
 
-  [![](single-codebase-images/single-metadata-sml.png "Введите необходимые метаданные")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Введите необходимые метаданные")](single-codebase-images/single-metadata.png#lightbox)
 
 7. Проект библиотеки правой кнопкой мыши и выберите **создать пакет NuGet** (или сборки или развертывания решения) и **.nupkg** будет сохранен файл пакета NuGet в **/bin/** папка (отладки или выпуска, в зависимости от конфигурации):
 
-  ![](single-codebase-images/create-nuget-package.png "Файл пакета NuGet сохраняется в папке bin отладки или выпуска, в зависимости от конфигурации")
+   ![](single-codebase-images/create-nuget-package.png "Файл пакета NuGet сохраняется в папке bin отладки или выпуска, в зависимости от конфигурации")
 
 
 ## <a name="verifying-the-output"></a>Проверка выходных данных

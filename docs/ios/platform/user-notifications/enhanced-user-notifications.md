@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0f77f9014cf7bfad510927f0f12a3e70b387036f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afa20a264e2509a5658cd0d8f90da3148315e803
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61424384"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865729"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Оптимизированные уведомления пользователя в Xamarin.iOS
 
@@ -150,7 +150,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 // Get current notification settings
 UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
     var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
-}); 
+});    
 ``` 
 
 ### <a name="configuring-the-remote-notifications-environment"></a>Настройка среды удаленные уведомления
@@ -176,11 +176,11 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Дважды щелкните `Entitlements.plist` файл **обозревателе решений** чтобы открыть его для редактирования.
-3. Нажмите кнопку **+** , чтобы добавить новый ключ.
-4. Введите `aps-environment` для **свойство**, оставьте **тип** как `String` и введите либо `development` или `production` для **значение**: 
+2. Нажмите кнопку **+** , чтобы добавить новый ключ.
+3. Введите `aps-environment` для **свойство**, оставьте **тип** как `String` и введите либо `development` или `production` для **значение**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "Свойство aps-environment")](enhanced-user-notifications-images/setup02.png#lightbox)
-5. Сохраните изменения в файле.
+4. Сохраните изменения в файле.
 
 -----
 
@@ -242,7 +242,7 @@ content.Badge = 1;
 С указанным содержимым создания уведомления, приложение должно установить расписание появится уведомление для пользователя, задав *триггера*. iOS 10 предоставляет четыре различных типа триггера:
 
 - **Push-уведомление** — используется исключительно с удаленных уведомлений и активируется, когда отправляет уведомление APNs упаковать приложение, работающее на устройстве.
-- **Интервал времени** -позволяет локальное уведомление для планирования на момент времени, начало интервала с сейчас и конечным некоторые будущем. Например `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);` 
+- **Интервал времени** -позволяет локальное уведомление для планирования на момент времени, начало интервала с сейчас и конечным некоторые будущем. Например: `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
 - **Календарь дату** -позволяет локальных уведомлений для планирования в определенную дату и время.
 - **На основе расположения** -позволяет локальных уведомлений для планирования, когда устройство iOS является или оставив в определенном географическом расположении или в заданной близость к любой маяки Bluetooth.
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>Обработка уведомлений приложения переднего плана
 
-Новое в iOS 10, приложение может обрабатывать уведомления по-разному когда он находится на переднем плане и инициируется уведомление. Предоставляя `UNUserNotificationCenterDelegate` и реализация `WillPresentNotification` метод, приложение может принять на себя ответственность за отображение уведомления. Пример:
+Новое в iOS 10, приложение может обрабатывать уведомления по-разному когда он находится на переднем плане и инициируется уведомление. Предоставляя `UNUserNotificationCenterDelegate` и реализация `WillPresentNotification` метод, приложение может принять на себя ответственность за отображение уведомления. Например:
 
 ```csharp
 using System;
@@ -431,7 +431,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 
 После создания и зарегистрирован в системе набор пользовательских действий и категорий, они могут быть представлены из локальных или удаленных уведомлений.
 
-Для удаленного уведомления, задайте `category` в удаленном полезные данные уведомления, соответствует одной из категорий, созданной ранее. Пример:
+Для удаленного уведомления, задайте `category` в удаленном полезные данные уведомления, соответствует одной из категорий, созданной ранее. Например:
 
 ```csharp
 {
@@ -442,7 +442,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-Для локальных уведомлений `CategoryIdentifier` свойство `UNMutableNotificationContent` объекта. Пример:
+Для локальных уведомлений `CategoryIdentifier` свойство `UNMutableNotificationContent` объекта. Например:
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -458,7 +458,7 @@ content.CategoryIdentifier = "message";
 
 ### <a name="handling-dismiss-actions"></a>Обработка закрыть действия
 
-Как уже говорилось выше, как Отклонить действие могут отправляться в приложение при закрытии пользователем уведомление. Поскольку эта возможность не стандартного действия, параметр необходимо задать при создании категории. Пример:
+Как уже говорилось выше, как Отклонить действие могут отправляться в приложение при закрытии пользователем уведомление. Поскольку эта возможность не стандартного действия, параметр необходимо задать при создании категории. Например:
 
 ```csharp
 var categoryID = "message";
@@ -471,7 +471,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>Обработка ответов на действия
 
-Когда пользователь взаимодействует с настраиваемые действия и категории, которые были созданы выше, приложение должно выполнить поставленную задачу. Это делается путем указания `UNUserNotificationCenterDelegate` и реализация `UserNotificationCenter` метод. Пример:
+Когда пользователь взаимодействует с настраиваемые действия и категории, которые были созданы выше, приложение должно выполнить поставленную задачу. Это делается путем указания `UNUserNotificationCenterDelegate` и реализация `UserNotificationCenter` метод. Например:
 
 ```csharp
 using System;
@@ -561,7 +561,7 @@ namespace MonkeyNotification
 > [!IMPORTANT]
 > Идентификатор пакета для расширения службы следует соответствуют идентификатору пакета основного приложения с помощью `.appnameserviceextension` в конце. Например, если идентификатор пакета из основного приложения `com.xamarin.monkeynotify`, расширение службы должен иметь идентификатор пакета из `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Здесь следует установить автоматически в том случае, когда расширение добавляется в решение. 
 
-Имеется один основной класс в расширение Notification Service, который необходимо изменить, чтобы обеспечить требуемую функциональность. Пример:
+Имеется один основной класс в расширение Notification Service, который необходимо изменить, чтобы обеспечить требуемую функциональность. Например:
 
 ```csharp
 using System;
@@ -616,7 +616,7 @@ namespace MonkeyChatServiceExtension
 
 ### <a name="triggering-a-service-extension"></a>Запуск расширения службы
 
-С расширением службы создания и доставки с помощью приложения ее можно включить, изменив удаленного полезные данные уведомления, отправляемые устройству. Пример:
+С расширением службы создания и доставки с помощью приложения ее можно включить, изменив удаленного полезные данные уведомления, отправляемые устройству. Например:
 
 ```csharp
 {

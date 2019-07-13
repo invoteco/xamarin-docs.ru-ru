@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267832"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864696"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Создание NuGet из имеющиеся проекты библиотеки
 
@@ -21,13 +21,13 @@ ms.locfileid: "61267832"
 
 2. Перейдите к **пакетов NuGet > метаданных** раздела и ввести все [необходимые сведения](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) в **Общие** вкладку:
 
-  [![](existing-library-images/existing-metadata-sml.png "Введите необходимые метаданные")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "Введите необходимые метаданные")](existing-library-images/existing-metadata.png#lightbox)
 
 3. При необходимости [добавления дополнительных метаданных](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) в **сведения** вкладки.
 
 4. После настройки метаданных можно правой кнопкой мыши проект и выберите **создать пакет NuGet** и **.nupkg** будет сохранен файл пакета NuGet в **/bin/** папка (отладки или выпуска, в зависимости от конфигурации).
 
-  ![](existing-library-images/create-nuget-package.png "Выберите создать пакет NuGet из контекстного меню")
+   ![](existing-library-images/create-nuget-package.png "Выберите создать пакет NuGet из контекстного меню")
 
 5. Создание пакета NuGet на _каждые_ сборки или развертывания, перейдите к **пакет NuGet > построения** раздел и их **Создание пакета NuGet при сборке проекта**:
 

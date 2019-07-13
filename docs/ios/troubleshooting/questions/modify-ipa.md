@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: bc9396a8cb667b8170c4b3511b9fe8423741e6b1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 047ee06522d4b2c07937e0e1bd9985248a164f01
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829928"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865018"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Можно добавить файлы или удалить файлы из файла IPA-ФАЙЛ после его сборки в Visual Studio?
 
@@ -24,55 +24,55 @@ ms.locfileid: "67829928"
 
 В этом примере предположим, что имя проекта Xamarin.iOS `iPhoneApp1` и `generated session id` — `cc530d20d6b19da63f6f1c6f67a0a254`
 
-1.  Построение `.ipa` файл в обычном режиме из Visual Studio.
+1. Построение `.ipa` файл в обычном режиме из Visual Studio.
 
-2.  Переключение к узлу сборки Mac.
+2. Переключение к узлу сборки Mac.
 
-3.  Найти сборку в `~/Library/Caches/Xamarin/mtbs/builds` папку. Можно вставить этот путь в **Finder > Перейти > Перейти к папке** для просмотра папки в Finder. Найдите папку, которая совпадает с именем проекта. В этой папке найдите папку, соответствующую `generated session id` построения. Скорее всего, это будет во вложенную папку, время последнего изменения.
+3. Найти сборку в `~/Library/Caches/Xamarin/mtbs/builds` папку. Можно вставить этот путь в **Finder > Перейти > Перейти к папке** для просмотра папки в Finder. Найдите папку, которая совпадает с именем проекта. В этой папке найдите папку, соответствующую `generated session id` построения. Скорее всего, это будет во вложенную папку, время последнего изменения.
 
-4.  Откройте новую `Terminal.app` окна.
+4. Откройте новую `Terminal.app` окна.
 
-5.  Тип `cd` в окне Terminal.app и затем перетаскивание `generated session id` в папку `Terminal.app` окна:
+5. Тип `cd` в окне Terminal.app и затем перетаскивание `generated session id` в папку `Terminal.app` окна:
 
     ![](modify-ipa-images/session-id-folder.png "Поиск папки идентификатор сеанса, созданный в Finder")
 
-6.  Тип возвращаемого значения ключа для изменения каталога, в `generated session id` папку.
+6. Тип возвращаемого значения ключа для изменения каталога, в `generated session id` папку.
 
-7.  Распакуйте `.ipa` файл во временную `old/` папки, используя следующую команду. Настройка `Ad-Hoc` и `iPhoneApp1` имена, необходимые для вашего проекта.
+7. Распакуйте `.ipa` файл во временную `old/` папки, используя следующую команду. Настройка `Ad-Hoc` и `iPhoneApp1` имена, необходимые для вашего проекта.
 
     > Это также касается - xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa старый /
 
-8.  Сохранить `Terminal.app` открытое окно.
+8. Сохранить `Terminal.app` открытое окно.
 
-9.  Удалить необходимые файлы из `.ipa`. Можно либо переместить их в корзину, с помощью поиска или удалить их в командной строке с использованием `Terminal.app`. Чтобы просмотреть содержимое `Payload/iPhone` файл в Finder, щелкните файл и выберите **Показать содержимое пакета**.
+9. Удалить необходимые файлы из `.ipa`. Можно либо переместить их в корзину, с помощью поиска или удалить их в командной строке с использованием `Terminal.app`. Чтобы просмотреть содержимое `Payload/iPhone` файл в Finder, щелкните файл и выберите **Показать содержимое пакета**.
 
-10.  Используя тот же общий подход, как в шаге 3, найдите файл журнала в разделе `~/Library/Logs/Xamarin/MonoTouchVS/` , имеет имя проекта и `generated session id` в имени: ![](modify-ipa-images/build-log.png "Найдите файл журнала сборки проекта в Finder")
+10. Используя тот же общий подход, как в шаге 3, найдите файл журнала в разделе `~/Library/Logs/Xamarin/MonoTouchVS/` , имеет имя проекта и `generated session id` в имени: ![](modify-ipa-images/build-log.png "Найдите файл журнала сборки проекта в Finder")
 
-11.  Откройте журнал сборки в шаге 10, например, дважды щелкнув его.
+11. Откройте журнал сборки в шаге 10, например, дважды щелкнув его.
 
-12.  Найдите строку, которая включает в себя `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
+12. Найдите строку, которая включает в себя `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Тип `/usr/bin/codesign` в окно Terminal.app из шага 8.
+13. Тип `/usr/bin/codesign` в окно Terminal.app из шага 8.
 
-14.  Скопируйте все аргументы, начиная с `-v` из строки в шаг 12 и вставлять их в окно Terminal.app.
+14. Скопируйте все аргументы, начиная с `-v` из строки в шаг 12 и вставлять их в окно Terminal.app.
 
-15.  Изменить последний аргумент должен быть `.app` пакета, расположенными в пределах `old/Payload/` папку, а затем выполните команду.
+15. Изменить последний аргумент должен быть `.app` пакета, расположенными в пределах `old/Payload/` папку, а затем выполните команду.
 
-```bash
-/usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
-```
+    ```bash
+    /usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
+    ```
 
-16.  Изменение в `old/` каталог в окне терминала:
+16. Изменение в `old/` каталог в окне терминала:
 
-```bash
-cd old
-```
+    ```bash
+    cd old
+    ```
 
-17.  Архивировать содержимое каталога в новый `.ipa` файлов с помощью `zip` команды. Вы можете изменить `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` аргумент для вывода `.ipa` файл везде, где угодно:
+17. Архивировать содержимое каталога в новый `.ipa` файлов с помощью `zip` команды. Вы можете изменить `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` аргумент для вывода `.ipa` файл везде, где угодно:
 
-```bash
-zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
-```
+    ```bash
+    zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
+    ```
 
 ## <a name="common-error-messages"></a>Распространенные сообщения об ошибках
 

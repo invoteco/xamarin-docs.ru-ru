@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2016
-ms.openlocfilehash: 7b0c2d99412f7a34c0e9c95a282d5d74dbe8dd78
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 63134298e437e7ac9b99ac4d716f6265752651c3
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085667"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865683"
 ---
 # <a name="deprecated-notification-technologies-in-xamarinios"></a>Технологии нерекомендуемых уведомлений в Xamarin.iOS
 
@@ -25,19 +25,19 @@ ms.locfileid: "61085667"
 
 <a name="Local Notifications In iOS" />
 
-##  <a name="local-notifications-in-ioslocal-notifications-in-iosmd"></a>[Локальные уведомления в iOS](local-notifications-in-ios.md)
+## <a name="local-notifications-in-ioslocal-notifications-in-iosmd"></a>[Локальные уведомления в iOS](local-notifications-in-ios.md)
 
 В этом разделе описывается, как реализовать локальных уведомлений в Xamarin.iOS. Он будет объясняются различные элементы пользовательского интерфейса iOS уведомления о и рассматриваются API-Интерфейс связанных с созданием и отображение уведомления.
 
 <a name="Local Notifications Walkthrough" />
 
-##  <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[Пошаговое руководство. Использование локальных уведомлений в Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
+## <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[Пошаговое руководство. Использование локальных уведомлений в Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
 
 В этом разделе мы рассмотрим способы использования локальных уведомлений в приложении Xamarin.iOS. Его мы рассмотрим основы создания и публикации, появится предупреждение, когда приложение получит уведомление.
 
 <a name="Remote Notifications In iOS" />
 
-##  <a name="remote-notifications-in-iosremote-notifications-in-iosmd"></a>[Удаленные уведомления в iOS](remote-notifications-in-ios.md)
+## <a name="remote-notifications-in-iosremote-notifications-in-iosmd"></a>[Удаленные уведомления в iOS](remote-notifications-in-ios.md)
 
 В этом разделе будут рассмотрены Push-уведомлений в iOS. В нем представлены Apple Push-уведомления шлюза Service (APNS) и роль, которую он играет в публикации уведомлений в приложения iOS. Здесь объясняется, как для создания сертификатов безопасности, необходимые для включения Push-уведомлений и обсудить. Наконец в этом разделе рассматриваются некоторые задачи по обслуживанию, серверы приложений необходимо выполнить для отслеживания клиентских мобильных устройств.
 

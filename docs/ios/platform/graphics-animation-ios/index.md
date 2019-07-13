@@ -7,29 +7,29 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: c553bd6d81e43913b6322b2ff85972a81b87f6cf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ab0a42fd717d62657e53fcc5c90669168860fdff
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945705"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865752"
 ---
 # <a name="graphics-and-animation-in-ios"></a>Графика и анимация в iOS
 
 ![Images/00_final_app.PNG](images/00-final-app.png "Запустите пример приложения")
 
-##  <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Образ основных компонентов](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
+## <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Образ основных компонентов](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 
 CoreImage — это новая платформа, впервые появился в iOS 5, который предоставляет ряд встроенных фильтров и эффекты для применения к изображения и видео, включая обнаружение лиц.
 
-##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
+## <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
 В этой статье рассматривается платформа iOS двухмерной графики, которая предоставляет поддержку низкого уровня рисования. В этом примере показано использование Core Graphics для рисования geometry, изображения и PDF-файлы.
 
-##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
+## <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
 
 В данной статье рассматриваются framework Core Animation, показывающий, как она позволяет использовать высокий уровень производительности, плавности анимации в UIKit, а также как использовать его напрямую для элемента управления анимации более низкого уровня.
 
-##  <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[С помощью двухмерной графики и анимации Core](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
+## <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[С помощью двухмерной графики и анимации Core](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 
 В этой статье демонстрируется Пошаговое создание приложения, использующего двухмерной графики и анимации Core. Он показывает способ рисования на экране в ответ на сенсорного ввода пользователя, а также демонстрируется порядок анимации свойства изображение, чтобы пройти вдоль контура.

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9377dcca1cd72b68a0e5b6a5ac5ac4d12d25d50c
+ms.sourcegitcommit: 41b44f2e9bde3b174e7c08605bff65aff594dcd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672655"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690920"
 ---
 # <a name="cross-platform-performance"></a>Кроссплатформенная производительность
 

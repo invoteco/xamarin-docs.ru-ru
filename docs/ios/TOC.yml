@@ -491,6 +491,8 @@
           href: ~/essentials/index.md?context=xamarin/ios
         - name: Приступая к работе
           href: ~/essentials/get-started.md?context=xamarin/ios
+        - name: Поддержка платформы и компонентов
+          href: ~/essentials/platform-feature-support.md?context=xamarin/ios
         - name: Акселерометр
           href: ~/essentials/accelerometer.md?context=xamarin/ios
         - name: Сведения о приложении
@@ -912,6 +914,58 @@
               href: watchos/platform/quick-interaction-techniques.md
             - name: Усовершенствования приложения для тренировок
               href: watchos/platform/workout-apps.md
+        - name: Xamarin.Essentials для watchOS
+          items:
+            - name: Сведения о Xamarin.Essentials
+              href: ~/essentials/index.md?context=xamarin/watchos
+            - name: Приступая к работе
+              href: ~/essentials/get-started.md?context=xamarin/watchos
+            - name: Поддержка платформы и компонентов
+              href: ~/essentials/platform-feature-support.md?context=xamarin/watchos
+            - name: Акселерометр
+              href: ~/essentials/accelerometer.md?context=xamarin/watchos
+            - name: Сведения о приложении
+              href: ~/essentials/app-information.md?context=xamarin/watchos
+            - name: Барометр
+              href: ~/essentials/barometer.md?context=xamarin/watchos
+            - name: Батарея
+              href: ~/essentials/battery.md?context=xamarin/watchos
+            - name: Преобразователи цвета
+              href: ~/essentials/color-converters.md?context=xamarin/watchos
+            - name: Подключение
+              href: ~/essentials/connectivity.md?context=xamarin/watchos
+            - name: Обнаружение тряски
+              href: ~/essentials/detect-shake.md?context=xamarin/watchos
+            - name: Сведения об устройстве
+              href: ~/essentials/device-information.md?context=xamarin/watchos
+            - name: Вспомогательные методы для файловой системы
+              href: ~/essentials/file-system-helpers.md?context=xamarin/watchos
+            - name: Геокодирование
+              href: ~/essentials/geocoding.md?context=xamarin/watchos
+            - name: Гироскоп
+              href: ~/essentials/gyroscope.md?context=xamarin/watchos
+            - name: Магнитометр
+              href: ~/essentials/magnetometer.md?context=xamarin/watchos
+            - name: Главный поток
+              href: ~/essentials/main-thread.md?context=xamarin/watchos
+            - name: Карты
+              href: ~/essentials/maps.md?context=xamarin/watchos
+            - name: Датчик ориентации
+              href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
+            - name: 'Расширения платформы (размер, прямоугольник, точка)'
+              href: ~/essentials/platform-extensions.md?context=xamarin/watchos
+            - name: Параметры
+              href: ~/essentials/preferences.md?context=xamarin/watchos
+            - name: Защищенное хранилище
+              href: ~/essentials/secure-storage.md?context=xamarin/watchos
+            - name: Преобразование текста в речь
+              href: ~/essentials/text-to-speech.md?context=xamarin/watchos
+            - name: Преобразователи единиц
+              href: ~/essentials/unit-converters.md?context=xamarin/watchos
+            - name: Отслеживание версий
+              href: ~/essentials/version-tracking.md?context=xamarin/watchos
+            - name: Устранение неполадок
+              href: ~/essentials/troubleshooting.md?context=xamarin/watchos
         - name: Тестирование и развертывание
           href: watchos/deploy-test/index.md
           items:
@@ -963,6 +1017,42 @@
               href: tvos/platform/remote-bluetooth.md
             - name: Стили пользовательского интерфейса
               href: tvos/platform/user-interface-styles.md
+        - name: Xamarin.Essentials для tvOS
+          items:
+            - name: Сведения о Xamarin.Essentials
+              href: ~/essentials/index.md?context=xamarin/tvos
+            - name: Приступая к работе
+              href: ~/essentials/get-started.md?context=xamarin/tvos
+            - name: Поддержка платформы и компонентов
+              href: ~/essentials/platform-feature-support.md?context=xamarin/tvos
+            - name: Сведения о приложении
+              href: ~/essentials/app-information.md?context=xamarin/tvos
+            - name: Преобразователи цвета
+              href: ~/essentials/color-converters.md?context=xamarin/tvos
+            - name: Подключение
+              href: ~/essentials/connectivity.md?context=xamarin/tvos
+            - name: Сведения об устройстве
+              href: ~/essentials/device-information.md?context=xamarin/tvos
+            - name: Вспомогательные методы для файловой системы
+              href: ~/essentials/file-system-helpers.md?context=xamarin/tvos
+            - name: Геокодирование
+              href: ~/essentials/geocoding.md?context=xamarin/tvos
+            - name: Главный поток
+              href: ~/essentials/main-thread.md?context=xamarin/tvos
+            - name: 'Расширения платформы (размер, прямоугольник, точка)'
+              href: ~/essentials/platform-extensions.md?context=xamarin/tvos
+            - name: Параметры
+              href: ~/essentials/preferences.md?context=xamarin/tvos
+            - name: Защищенное хранилище
+              href: ~/essentials/secure-storage.md?context=xamarin/tvos
+            - name: Преобразование текста в речь
+              href: ~/essentials/text-to-speech.md?context=xamarin/tvos
+            - name: Преобразователи единиц
+              href: ~/essentials/unit-converters.md?context=xamarin/tvos
+            - name: Отслеживание версий
+              href: ~/essentials/version-tracking.md?context=xamarin/tvos
+            - name: Устранение неполадок
+              href: ~/essentials/troubleshooting.md?context=xamarin/tvos
         - name: Пользовательский интерфейс
           href: tvos/user-interface/index.md
           items:

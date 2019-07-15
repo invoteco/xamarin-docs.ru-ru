@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b34ac82cf240b892e60707d76c82da64ff232a20
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 8c79075c9e01ef5da73255b152b4cbbd676b4f4e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827424"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674733"
 ---
 # <a name="building-abi-specific-apks"></a>Создание пакетов APK для конкретного ABI
 
@@ -154,7 +154,7 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 
 1. [Компиляция сборки выпуска](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L63) для проекта Xamarin.Android, предназначенной для конкретного ABI и использующей **AndroidManifest.XML**, созданный на предыдущем шаге.
 
-1. [Подписывание APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) с помощью рабочего хранилища ключей.
+1. [Подписывание APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) с помощью рабочего хранилища ключей.
 
 1. [Оптимизация](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) APK для архива.
 
@@ -174,7 +174,7 @@ $ rake build
 
 
 > [!NOTE]
-> Процесс сборки, описанный в этом руководстве, можно реализовать во многих системах сборки. Например, такой режим точно поддерживают [PowerShell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) и [Fake](http://fsharp.github.io/FAKE/), но мы пока не можем предложить для них готовых примеров.
+> Процесс сборки, описанный в этом руководстве, можно реализовать во многих системах сборки. Например, такой режим точно поддерживают [PowerShell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) и [Fake](http://fsharp.github.io/FAKE/), но мы пока не можем предложить для них готовых примеров.
 
 
 ## <a name="summary"></a>Сводка

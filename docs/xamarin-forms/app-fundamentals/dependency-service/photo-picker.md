@@ -7,26 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 5c4d43723bc23d8a16be8fec0a895a31ab8bcfdc
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 36601b02bb2984d9350166dedac0d650d9642f91
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233969"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650647"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Выбор фотографии в библиотеке рисунков
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
 
-Эта статья описывает создание приложения, позволяющего пользователю выбрать фотографию в библиотеке рисунков на телефоне. Так как Xamarin.Forms не содержит эту функцию, требуется использовать [`DependencyService`](xref:Xamarin.Forms.DependencyService) для доступа к собственным API на каждой платформе.  В этой статье рассматриваются следующие этапы использования `DependencyService` для выполнения этой задачи:
-
-- **[Создание интерфейса](#Creating_the_Interface)** &ndash; сведения о создании интерфейса в общем коде.
-- **[Реализация в iOS](#iOS_Implementation)** &ndash; сведения о реализации интерфейса в машинном коде для iOS.
-- **[Реализация в Android](#Android_Implementation)** &ndash; сведения о реализации интерфейса в машинном коде для Android.
-- **[Реализация на универсальной платформе Windows](#UWP_Implementation)**  — сведения о реализации интерфейса в машинном коде для универсальной платформы Windows (UWP).
-- **[Реализация в общем коде](#Implementing_in_Shared_Code)**  — сведения об использовании `DependencyService` для вызова собственной реализации из общего кода.
-
-<a name="Creating_the_Interface" />
+Эта статья описывает создание приложения, позволяющего пользователю выбрать фотографию в библиотеке рисунков на телефоне. Так как Xamarin.Forms не содержит эту функцию, требуется использовать [`DependencyService`](xref:Xamarin.Forms.DependencyService) для доступа к собственным API на каждой платформе.
 
 ## <a name="creating-the-interface"></a>Создание интерфейса
 
@@ -45,8 +37,6 @@ namespace DependencyServiceSample
 Метод `GetImageStreamAsync` определен как асинхронный, так как должен быстро возвращать данные, но он не может возвратить объект `Stream` для выбранной фотографии, пока пользователь не просмотрит библиотеку рисунков и не выберет один из них.
 
 Этот интерфейс реализуется на всех платформах с помощью кода, учитывающего особенности конкретной платформы.
-
-<a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>Реализация в iOS
 
@@ -153,9 +143,6 @@ namespace DependencyServiceSample.iOS
 <string>Picture Picker uses photo library</string>
 ```
 
-
-<a name="Android_Implementation" />
-
 ## <a name="android-implementation"></a>Реализация в Android
 
 Реализация для Android использует методики, описанные в разделе [**Выбор изображения**](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image) и [примере кода](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image). Однако метод, вызываемый при выборе пользователем изображения из библиотеки рисунков, представляет собой переопределение `OnActivityResult` в классе, производном от `Activity`. Поэтому нормальный класс [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) в проекте Android был дополнен полем, свойством и переопределением метода `OnActivityResult`:
@@ -228,9 +215,7 @@ namespace DependencyServiceSample.Droid
 
 Этот метод обращается к классу `MainActivity` по нескольким причинам: за свойством `Instance`, за полем `PickImageId`, за свойством `TaskCompletionSource` и для вызова `StartActivityForResult`. Этот метод определен классом `FormsAppCompatActivity`, который является базовым классом для `MainActivity`.
 
-<a name="UWP_Implementation" />
-
-## <a name="uwp-implementation"></a>Реализация в универсальной платформе Windows
+## <a name="uwp-implementation"></a>Реализация на универсальной платформе Windows
 
 В отличие от реализаций для iOS и Android, реализации средства выбора фотографий для универсальной платформы Windows не требуется класс `TaskCompletionSource`. Класс [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/UWP/PicturePickerImplementation.cs) использует класс [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) для получения доступа к библиотеке фотографий. Так как метод `PickSingleFileAsync` объекта `FileOpenPicker` сам является асинхронным, метод `GetImageStreamAsync` может просто использовать `await` с этим методом (и другими асинхронными методами) и возвращать объект `Stream`:
 
@@ -269,8 +254,6 @@ namespace DependencyServiceSample.UWP
     }
 }
 ```
-
-<a name="Implementing_in_Shared_Code" />
 
 ## <a name="implementing-in-shared-code"></a>Реализация в общем коде
 
@@ -322,7 +305,6 @@ pickPictureButton.Clicked += async (sender, e) =>
 ```
 
 При касании элемента `Image` страница возвращается в нормальное состояние.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 0a40d50d02008439e81d5db19bcda0647203e2da
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d2f4031eeddbaa206f38b7b1c2bb49d21482c175
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414438"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864949"
 ---
 # <a name="tvos-app-distribution-overview"></a>Общие сведения о распространении приложений tvOS
 
@@ -29,7 +29,7 @@ _В этом документе содержатся общие сведения
 
 1. [**Магазин приложений**](#Apple-TV-App-Store-Distribution)
 2. [**Внутреннее (корпоративное) распространение**](#In-House-Distribution) 
-2. [**Прямое распространение**](#Ad_Hoc_Distribution) 
+3. [**Прямое распространение**](#Ad_Hoc_Distribution) 
 
 Для реализации всех этих сценариев требуется подготовить приложения с помощью соответствующего *профиля подготовки*. Профили подготовки — это файлы, содержащие сведения о подписывании кода, а также идентификатор приложения и подходящий механизм распространения. Для распространения не через Магазин приложений они также содержат сведения о том, на каких устройствах можно развертывать приложения.
 

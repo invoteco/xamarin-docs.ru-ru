@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 1c3c3a63de40a63f040870505b086d67fe160773
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8b0686a91f18b41aa8e2e7db071123c0d96723a0
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421199"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290105"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>Можно изменить путь к выходной IPA-файл?
 
@@ -45,7 +45,7 @@ ms.locfileid: "61421199"
 2. Присвоить папке поставленной DestinationFolder. Как обычно вы можете использовать свойства MSBuild (например, $(OutputPath)) в этот аргумент, при необходимости.
 
 ## <a name="notes"></a>Примечания
-- `CreateIpaDependsOn` Свойство определено в `Xamarin.iOS.Common.targets` файл, который является частью Xamarin.iOS. Он ведет себя, как описано в разделе *переопределение свойств «DependsOn»* на [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
+- `CreateIpaDependsOn` Свойство определено в `Xamarin.iOS.Common.targets` файл, который является частью Xamarin.iOS. Он ведет себя, как описано в разделе [переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) статьи [как: Расширение процесса построения Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - Можно использовать **переместить** задач вместо **копирования** задач при желании вы. Если выбран этот вариант и создаете на Windows, необходимо использовать имя полного задачи `<Microsoft.Build.Tasks.Move>` во избежание неоднозначности с XamarinVS задачи сборки.
 
@@ -79,6 +79,6 @@ ms.locfileid: "61421199"
 2. Задайте `DestinationFolder` к требуемой папке выходных данных. Как обычно вы можете использовать свойства MSBuild (например `$(OutputPath)`) в этот аргумент, при необходимости.
 
 ## <a name="notes"></a>Примечания
-- `CreateIpaDependsOn` Свойство определено в `Xamarin.iOS.Common.targets` файл, который является частью Xamarin.iOS. Он ведет себя, как описано в разделе *переопределение свойств «DependsOn»* на [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
+- `CreateIpaDependsOn` Свойство определено в `Xamarin.iOS.Common.targets` файл, который является частью Xamarin.iOS. t ведет себя так, как описано в разделе [переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) статьи [как: Расширение процесса построения Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - Можно использовать **переместить** задач вместо **копирования** задач при желании вы. Если выбран этот вариант и создаете на Windows, необходимо использовать имя полного задачи `<Microsoft.Build.Tasks.Move>` во избежание неоднозначности с XamarinVS задачи сборки.

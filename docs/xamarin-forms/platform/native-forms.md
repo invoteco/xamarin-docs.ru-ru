@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: f0ad4e3271ac8c1f8d30a0440b38d8a46c57783e
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: 9c427dc48f6fe19098c312bad16d9630bb480264
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687116"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290162"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms в проектах Xamarin Native
 
@@ -119,6 +119,9 @@ public void NavigateToNoteEntryPage(Note note)
 [![Снимок экрана приложения Xamarin.iOS, которое использует пользовательский Интерфейс определен в XAML](native-forms-images/ios-noteentrypage.png "приложение Xamarin.iOS с пользовательским Интерфейсом XAML")](native-forms-images/ios-noteentrypage-large.png#lightbox "приложения Xamarin.iOS с помощью пользовательского интерфейса XAML")
 
 При `NoteEntryPage` отображается, коснувшись обратной стрелки появится всплывающее `UIViewController` для `NoteEntryPage` класса из `UINavigationController`, возвращая пользователю `UIViewController` для `NotesPage` класса.
+
+> [!WARNING]
+> Popping из `UIViewController` из собственного навигации iOS стека не удаляет автоматически из `UIViewController`s. Он отвечает за разработчика, чтобы убедиться, что любой `UIViewController` , больше не используется имеет его `Dispose()` вызван метод, в противном случае `UIViewController` и вложенных `Page` будут изолированы и не собираются сборщиком мусора, приводит к утечке памяти.
 
 ## <a name="android"></a>Android
 

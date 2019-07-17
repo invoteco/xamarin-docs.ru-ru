@@ -9,11 +9,11 @@
         - name: Требования
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Введение в разработку мобильных приложений
+        - name: Что такое Xamarin?
           href: get-started/introduction-to-mobile-development.md
-        - name: Введение в жизненный цикл разработки программного обеспечения (SDLC) для мобильных устройств
+        - name: "Жизненный цикл разработки мобильного\_ПО"
           href: get-started/introduction-to-mobile-sdlc.md
-        - name: Создание кроссплатформенных приложений
+        - name: Пошаговое руководство по созданию кроссплатформенного приложения
           href: app-fundamentals/building-cross-platform-applications/index.md
           items:
             - name: Обзор
@@ -75,10 +75,10 @@
               href: platform/fsharp/overview.md
             - name: 'Примеры F#'
               href: platform/fsharp/samples.md
-        - name: Visual Basic.NET
+        - name: Visual Basic
           href: platform/visual-basic/index.md
           items:
-            - name: Xamarin iOS и Android
+            - name: Xamarin Android и iOS
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md

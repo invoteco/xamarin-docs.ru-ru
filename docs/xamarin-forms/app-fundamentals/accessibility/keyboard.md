@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971264"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830348"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Специальные возможности клавиатуры в Xamarin.Forms
 
@@ -66,10 +66,10 @@ ms.locfileid: "65971264"
 
 Следующие правила применяются при использовании последовательности табуляции по умолчанию или задании свойства `TabIndex`:
 
- - Экземпляры [`VisualElement`](xref:Xamarin.Forms.VisualElement) с `TabIndex`, равным 0, добавляются в последовательность табуляции с учетом порядка их объявления в XAML или дочерних коллекциях.
- - Экземпляры [`VisualElement`](xref:Xamarin.Forms.VisualElement) с `TabIndex` больше 0 добавляются в последовательность табуляции с учетом их значения `TabIndex`.
- - Экземпляры [`VisualElement`](xref:Xamarin.Forms.VisualElement) с `TabIndex` меньше 0 добавляются в последовательность табуляции и отображаются до любого нулевого значения.
- - Конфликты для `TabIndex`, устраняемые в порядке объявления.
+- Экземпляры [`VisualElement`](xref:Xamarin.Forms.VisualElement) с `TabIndex`, равным 0, добавляются в последовательность табуляции с учетом порядка их объявления в XAML или дочерних коллекциях.
+- Экземпляры [`VisualElement`](xref:Xamarin.Forms.VisualElement) с `TabIndex` больше 0 добавляются в последовательность табуляции с учетом их значения `TabIndex`.
+- Экземпляры [`VisualElement`](xref:Xamarin.Forms.VisualElement) с `TabIndex` меньше 0 добавляются в последовательность табуляции и отображаются до любого нулевого значения.
+- Конфликты для `TabIndex`, устраняемые в порядке объявления.
 
 После определения последовательности табуляции нажатие клавиши TAB будет переключать фокус между элементами управления в порядке по возрастанию `TabIndex` с возвратом в начало после достижения конечного элемента управления.
 

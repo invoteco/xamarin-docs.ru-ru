@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 4fc3f0d98d1ead29b450763b7c260af7c40af7b5
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: dfff2c22c17fddb4bbd1feb79e08949e62d8f9bc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650478"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832213"
 ---
 # <a name="xamarinforms-dependencyservice-introduction"></a>Общие сведения о классе Xamarin.Forms DependencyService
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 
 Класс [`DependencyService`](xref:Xamarin.Forms.DependencyService) — это указатель служб, который позволяет приложениям Xamarin.Forms вызывать собственные функции платформы из общего кода.
 
@@ -156,5 +156,5 @@ DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Использование класса DependencyService (пример)](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+- [Использование класса DependencyService (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 - [Регистрация и разрешение класса Xamarin.Forms DependencyService](registration-and-resolution.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1bd61474daedd8bd330c0370948d6dee6f8ea50e
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: d533996a9c4e86efa360bf2ed71165571c7ca260
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194946"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865821"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Общие сведения о распространении приложений Xamarin.iOS
 
@@ -28,7 +28,7 @@ _В этом документе содержатся общие сведения
 
 1. [**Магазин приложений**](#App_Store_Distribution)
 2. [**Внутреннее (корпоративное) распространение**](#In-House_Distribution)
-2. [**Прямое распространение**](#Ad_Hoc_Distribution)
+3. [**Прямое распространение**](#Ad_Hoc_Distribution)
 
 Для реализации всех этих сценариев требуется подготовить приложения с помощью соответствующего *профиля подготовки*. Профили подготовки — это файлы, содержащие сведения о подписывании кода, а также идентификатор приложения и подходящий механизм распространения. Для распространения не через Магазин приложений они также содержат сведения о том, на каких устройствах можно развертывать приложения.
 

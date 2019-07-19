@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство по фрагментам Xamarin.Android — часть 1
+title: Пошаговое руководство по Xamarin. Android. часть 1
 ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
@@ -7,51 +7,51 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 984e72f2b3ee11bcc0902663893509e5687fc099
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4471f5ec199ef52a2dcb68ab85cc9a1209eb4802
+ms.sourcegitcommit: 9a2a21974d35353c3765eb683ef2fd7161c1d94a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026447"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329976"
 ---
-# <a name="fragments-walkthrough-ndash-phone"></a>Фрагменты пошаговое &ndash; телефона
+# <a name="fragments-walkthrough-ndash-phone"></a>Пошаговое руководство &ndash; по телефону
 
-Это первая часть Пошаговое руководство, которое будет создано приложение Xamarin.Android, которое предназначено устройство Android в книжной ориентации. В этом пошаговом руководстве будут рассмотрены способы создания фрагментов в Xamarin.Android и добавление их к выборке.
+Это первая часть пошагового руководства, в котором будет создано приложение Xamarin. Android, предназначенное для устройства Android в книжной ориентации. В этом пошаговом руководстве рассказывается, как создавать фрагменты в Xamarin. Android и как добавлять их в образец.
 
 [![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
 Для этого приложения будут созданы следующие классы:
 
-1. `PlayQuoteFragment` &nbsp; Этот фрагмент будет отображать предложения из play, верные. Оно будет размещено `PlayQuoteActivity`.
-1. `Shakespeare` &nbsp; Этот класс будет содержать два массива жестко закодировано как свойства.
-1. `TitlesFragment` &nbsp; Этот фрагмент будет отображаться список заголовков, которые были записаны верные играет. Оно будет размещено `MainActivity`.
-1. `PlayQuoteActivity` &nbsp; `TitlesFragment` Запустится `PlayQuoteActivity` в ответ на пользователя, выбирающего play в `TitlesFragment`.
+1. `PlayQuoteFragment`&nbsp; В этом фрагменте будет отображаться цитата от воспроизведения с помощью Уильям Шекспир. Он будет размещен в `PlayQuoteActivity`.
+1. `Shakespeare`&nbsp; Этот класс будет содержать два жестко зафиксированных массива в качестве свойств.
+1. `TitlesFragment`&nbsp; В этом фрагменте отображается список воспроизведений, которые были записаны с помощью Уильям Шекспир. Он будет размещен в `MainActivity`.
+1. `PlayQuoteActivity`запустится в ответ на пользователя, который выбирает воспроизведение в `TitlesFragment`. &nbsp; `TitlesFragment` `PlayQuoteActivity`
 
 ## <a name="1-create-the-android-project"></a>1. Создание проекта Android
 
-Создайте новый проект Xamarin.Android с именем **FragmentSample**.
+Создайте новый проект Xamarin. Android с именем **фрагментсампле**.
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Создание нового проекта Xamarin.Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
+[![Создание нового проекта Xamarin. Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Создание нового проекта Xamarin.Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
+[![Создание нового проекта Xamarin. Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
 
-Рекомендуется выбрать **современной разработки** в этом пошаговом руководстве.
+Для этого пошагового руководства рекомендуется выбрать **современный процесс разработки** .
 
-После создания проекта, переименуйте файл **layout/Main.axml** для **layout/activity_main.axml**.
+После создания проекта переименуйте файл **Layout/Main. axml** в **Layout/activity_main. axml**.
 
 -----
 
 ## <a name="2-add-the-data"></a>2. Добавление данных
 
-Данные для этого приложения, которые будут храниться в двух массивах жестко заданные строки, являющихся свойствами элемента имя класса `Shakespeare`:
+Данные для этого приложения будут храниться в двух жестко зафиксированных строковых массивах, являющихся `Shakespeare`свойствами имени класса:
 
-* `Shakespeare.Titles` &nbsp; Этот массив будет содержать список воспроизведения из верные. Это источник данных для `TitlesFragment`.
-* `Shakespeare.Dialogue` &nbsp; Этот массив будет содержать список цитаты из одной из воспроизведения, содержащихся в `Shakespeare.Titles`. Это источник данных для `PlayQuoteFragment`.
+* `Shakespeare.Titles`&nbsp; Этот массив будет содержать список воспроизводимых элементов из Уильям Шекспир. Это источник данных для `TitlesFragment`.
+* `Shakespeare.Dialogue`Этот массив будет содержать список кавычек из одного из воспроизводимых элементов, содержащихся в `Shakespeare.Titles`. &nbsp; Это источник данных для `PlayQuoteFragment`.
 
-Добавьте новый C# класс **FragmentSample** проект и назовите его **Shakespeare.cs**. В этом файле, создайте новый C# класс с именем `Shakespeare` со следующим содержимым
+Добавьте новый C# класс в проект **фрагментсампле** и назовите его **Shakespeare.CS**. Внутри этого файла создайте новый C# класс с именем `Shakespeare` со следующим содержимым.
 
 ```csharp
 class Shakespeare
@@ -80,21 +80,21 @@ class Shakespeare
 }
 ```
 
-## <a name="3-create-the-playquotefragment"></a>3. Создание PlayQuoteFragment
+## <a name="3-create-the-playquotefragment"></a>3. Создание Плайкуотефрагмент
 
-`PlayQuoteFragment` Является фрагментом, Android, который будет отображать предложения для воспроизведения Шекспира, которая была выбрана пользователем ранее в приложении, этот фрагмент не будет использовать файл макета Android; вместо этого он динамически создаст его пользовательский интерфейс. Добавьте новый `Fragment` класс с именем `PlayQuoteFragment` в проект:
+`PlayQuoteFragment` — Это фрагмент Android, который будет отображать цитату для Шекспир Play, выбранного пользователем ранее в приложении, этот фрагмент не будет использовать файл макета Android. вместо этого он будет динамически создавать пользовательский интерфейс. Добавьте новый `Fragment` класс с именем `PlayQuoteFragment` в проект:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Добавьте новый C# класса](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
+[![Добавить новый C# класс](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Добавьте новый C# класса](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
+[![Добавить новый C# класс](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
 
 -----
 
-Затем измените код для фрагмента, чтобы он напоминал этот фрагмент кода:
+Затем измените код фрагмента так, чтобы он соответствовал следующему фрагменту кода:
 
 ```csharp
 public class PlayQuoteFragment : Fragment
@@ -129,28 +129,28 @@ public class PlayQuoteFragment : Fragment
 }
 ```
 
-Это стандартная практика приложений Android с целью предоставления фабричный метод, который создает экземпляр фрагмента. Это гарантирует, что фрагмент будет создан с необходимыми параметрами для нормальной работы. В этом пошаговом руководстве, приложение должно использовать `PlayQuoteFragment.NewInstance` метод, чтобы создать новый фрагмент при каждом выборе предложения. `NewInstance` Метод принимает один параметр &ndash; индекс квоты для отображения.
+Это распространенный шаблон в приложениях Android для предоставления фабричного метода, который будет создавать экземпляр фрагмента. Это гарантирует, что фрагмент будет создан с необходимыми параметрами для правильной работы. В этом пошаговом руководстве предполагается, что приложение `PlayQuoteFragment.NewInstance` будет использовать метод для создания нового фрагмента при каждом выборе квоты. Метод принимает один параметр &ndash; , который будет содержать индекс цитаты. `NewInstance`
 
-`OnCreateView` Метод будет вызываться системой Android, когда наступает время для подготовки к просмотру в фрагменте на экране. Он вернет Android `View` объект, являющийся фрагмента. Этот фрагмент не использует файл макета для создания представления. Вместо этого он программным образом создаст представление путем создания экземпляра **TextView** для хранения кавычки и будет отображать мини-приложения в **ScrollView**.
+`OnCreateView` Метод будет вызываться Android, когда пора отобразить фрагмент на экране. Он вернет объект Android `View` , являющийся фрагментом. Этот фрагмент не использует файл макета для создания представления. Вместо этого он будет программно создавать представление, создавая экземпляр **TextView** для хранения цитаты и выводит это мини-приложение в **скроллвиев**.
 
 > [!NOTE]
-> Фрагмент вложенные классы должны иметь открытый конструктор по умолчанию, не имеющий параметров.
+> Подклассы фрагментов должны иметь открытый конструктор по умолчанию, не имеющий параметров.
 
-## <a name="4-create-the-playquoteactivity"></a>4. Создание PlayQuoteActivity
+## <a name="4-create-the-playquoteactivity"></a>4. Создание Плайкуотеактивити
 
-Фрагменты должны размещаться внутри действия, то для этого приложения требуется действие, которое будет размещаться `PlayQuoteFragment`. Действие будет динамически добавить фрагмент макета во время выполнения. Добавьте новое действие для приложения и назовите его `PlayQuoteActivity`:
+Фрагменты должны размещаться внутри действия, поэтому для этого приложения требуется действие, в `PlayQuoteFragment`котором будет размещаться. Действие динамически добавит фрагмент в свой макет во время выполнения. Добавьте новое действие в приложение и назовите его `PlayQuoteActivity`:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Добавьте действие Android для проекта](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
+[![Добавление действия Android в проект](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Добавьте действие Android для проекта](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
+[![Добавление действия Android в проект](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
 
 -----
 
-Редактировать код в `PlayQuoteActivity`:
+Измените код в `PlayQuoteActivity`:
 
 ```csharp
 [Activity(Label = "PlayQuoteActivity")]
@@ -170,21 +170,21 @@ public class PlayQuoteActivity : Activity
 }
 ```
 
-При `PlayQuoteActivity` будет создан, он будет создавать новый `PlayQuoteFragment` и загрузки этого фрагмента в его корневым представлением, в контексте `FragmentTransaction`. Обратите внимание на то, что это действие не загружается файл макета Android для пользовательского интерфейса. Вместо этого новый `PlayQuoteFragment` добавляется к корневым представлением приложения. Идентификатор ресурса `Android.Resource.Id.Content` используется для ссылки на представление корневого действия, не зная ее определенный идентификатор.
+При `PlayQuoteActivity` создании создается экземпляр нового `PlayQuoteFragment` и загрузка этого фрагмента в его корневом представлении `FragmentTransaction`в контексте. Обратите внимание, что это действие не загружает файл макета Android для пользовательского интерфейса. Вместо этого в корневое представление приложения добавляется новый `PlayQuoteFragment` . Идентификатор `Android.Resource.Id.Content` ресурса используется для ссылки на корневое представление действия, не зная его конкретный идентификатор.
 
-## <a name="5-create-titlesfragment"></a>5. Создание TitlesFragment
+## <a name="5-create-titlesfragment"></a>5. Создание Титлесфрагмент
 
-`TitlesFragment` Будет специализированный фрагмент, известный как подкласс `ListFragment` инкапсулирующий логику для отображения `ListView` в фрагменте. Объект `ListFragment` предоставляет `ListAdapter` свойство (используемые `ListView` для отображения содержимого) и обработчик событий с именем `OnListItemClick` разрешающее фрагмента, чтобы обработка щелчка мыши на строку, которая отображается в `ListView`.
+Класс создаст специализированный фрагмент, известный как, `ListFragment` который инкапсулирует логику для отображения `ListView` в фрагменте. `TitlesFragment` `ListFragment` `ListView` `OnListItemClick` Предоставляет свойство(используетсядляотображенияегосодержимого)иобработчиксобытийсименем,которыйпозволяетфрагментуреагироватьнанажатиястроки,отображаемой.`ListAdapter` `ListView`
 
-Чтобы начать работу, добавьте новый фрагмент в проект и назовите его **TitlesFragment**:
+Чтобы приступить к работе, добавьте новый фрагмент в проект и назовите его **титлесфрагмент**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Добавление Android фрагмента в проект](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
+[![Добавить фрагмент Android в проект](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Добавление Android фрагмента в проект](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
+[![Добавить фрагмент Android в проект](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
 
 -----
 
@@ -231,13 +231,13 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-При создании действия Android будет вызывать `OnActivityCreated` метод фрагмента; именно для этого адаптера списка для `ListView` создается.  `ShowQuoteFromPlay` Метод будет запустить экземпляр `PlayQuoteActivity` для отображения квоты для выбранного Google play.
+При создании действия Android вызовет `OnActivityCreated` метод фрагмента; именно здесь создается адаптер списка `ListView` для.  Метод запускает экземпляр объекта, `PlayQuoteActivity` чтобы отобразить цитату для выбранного воспроизведения. `ShowQuoteFromPlay`
 
-## <a name="display-titlesfragment-in-mainactivity"></a>Отображение TitlesFragment в MainActivity
+## <a name="display-titlesfragment-in-mainactivity"></a>Отображение Титлесфрагмент в MainActivity
 
-Последним шагом является отображение `TitlesFragment` в `MainActivity`. Действие не загружается динамически фрагмента. Вместо этого фрагмента статически загрузит ее объявления в файле макета с помощью действия `fragment` элемент. Фрагмент для загрузки определяется посредством задания `android:name` атрибута к классу фрагмента (включая пространство имен типа). Например, чтобы использовать `TitlesFragment`, затем `android:name` будет иметь значение `FragmentSample.TitlesFragment`.
+Последним шагом будет отображение `TitlesFragment` в. `MainActivity` Действие не загружает фрагмент динамически. Вместо этого фрагмент будет статически загружен путем объявления его в файле макета действия с помощью `fragment` элемента. Фрагмент для загрузки определяется путем присвоения `android:name` атрибуту класса Fragment (включая пространство имен типа). Например, для использования свойства `TitlesFragment` `android:name` будет установлено значение `FragmentSample.TitlesFragment`.
 
-Измените файл макета **activity_mail.axml**, замените существующий код XML со следующими:
+Измените файл макета **activity_main. axml**, заменив существующий XML следующим кодом:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -256,9 +256,9 @@ public class TitlesFragment : ListFragment
 ```
 
 > [!NOTE]
-> `class` Атрибут является допустимым заменой `android:name`. Нет формальных рекомендаций на форму, которая является предпочтительной, существует множество примеров баз кода, которые будут использовать `class` взаимозаменяемо с `android:name`.
+> Атрибут является допустимым подстановкой `android:name`для. `class` Никаких формальных рекомендаций относительно того, какая форма предпочтительна, существует множество примеров кода, которые будут использовать `class` взаимозаменяемость с. `android:name`
 
-Существуют без изменения кода, необходимые для MainActivity. Код в этом классе должен быть очень похожа на этот фрагмент кода:
+Нет изменений кода, необходимых для MainActivity. Код в этом классе должен быть очень похож на следующий фрагмент кода:
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
@@ -274,8 +274,8 @@ public class MainActivity : Activity
 
 ## <a name="run-the-app"></a>Запуск приложения
 
-Теперь, когда код готов, запустите приложение на устройстве, чтобы увидеть его в действии.
+Теперь, когда код завершен, запустите приложение на устройстве, чтобы увидеть его в действии.
 
-[![Снимки экрана приложения, работающие на телефоне.](./walkthrough-images/05-app-screenshots-sml.png)](./walkthrough-images/05-app-screenshots.png#lightbox)
+[![Снимки экрана приложения, работающего на телефоне.](./walkthrough-images/05-app-screenshots-sml.png)](./walkthrough-images/05-app-screenshots.png#lightbox)
 
-[Часть 2 из этого пошагового руководства](./walkthrough-landscape.md) будет optimtize этого приложения для устройств под управлением в альбомной ориентации.
+[Часть 2 этого пошагового руководства](./walkthrough-landscape.md) оптимтизе это приложение для устройств, работающих в альбомном режиме.

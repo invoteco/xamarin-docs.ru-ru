@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c1e1b2d7bfb43c256c71abb62e7d85a05b096419
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103586"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865532"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Внутреннее распространение для приложений Xamarin.iOS
 
@@ -53,7 +53,7 @@ _Этот документ содержит краткий обзор распр
 
 1. Перейдите к разделу *Certificates, Identifiers & Profiles* (Сертификаты, профили и идентификаторы) в Центре разработчиков Apple.
 2. В разделе *Certificates* (Сертификаты) выберите **Production** (Производство).
-3. Нажмите кнопку **+**, чтобы создать новый сертификат.
+3. Нажмите кнопку **+** , чтобы создать новый сертификат.
 4. В разделе *Production* (Производство) установите флажок **In-House and Ad Hoc** (Собственный и прямой):
 
    [![](in-house-distribution-images/createcertmanually01.png "Выбор элемента \"Собственный и прямой\"")](in-house-distribution-images/createcertmanually01.png#lightbox)
@@ -74,13 +74,13 @@ _Этот документ содержит краткий обзор распр
 
 1. Выберите свою команду и щелкните *View Details* (Показать подробности):
 
-    [![](in-house-distribution-images/selectteam.png "Выбор своей команды")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Выбор своей команды")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Затем нажмите кнопку **Create** (Создать) рядом с полем **iOS Distribution Certificate** (Сертификат распространения iOS):
 
    [![](in-house-distribution-images/selectcert.png "Создание сертификата распространения iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Далее щелкните **знак "плюс" (+)** и выберите пункт **iOS App Store**:
+3. Далее щелкните **знак "плюс" (+)** и выберите пункт **iOS App Store**:
 
    [![](in-house-distribution-images/selectcert.png "Выбор пункта \"iOS App Store\"")](in-house-distribution-images/selectcert.png#lightbox)
 
@@ -119,11 +119,11 @@ _Этот документ содержит краткий обзор распр
 
    [![](in-house-distribution-images/distribute04.png "Выбор сертификата распространения, необходимого для подписи приложения")](in-house-distribution-images/distribute04.png#lightbox)
 
-6. Нажмите кнопку **Continue** (Продолжить) и введите **имя** нового профиля распространения:
+5. Нажмите кнопку **Continue** (Продолжить) и введите **имя** нового профиля распространения:
 
    [![](in-house-distribution-images/distribute06.png "Ввод имени нового профиля распространения")](in-house-distribution-images/distribute06.png#lightbox)
 
-7. Нажмите кнопку **Generate** (Создать), чтобы создать профиль и завершить процесс.
+6. Нажмите кнопку **Generate** (Создать), чтобы создать профиль и завершить процесс.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

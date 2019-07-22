@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e89b8585371ab2560ae510fdb49f284e358818c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 23bf62688da4e2e82cb3e0fadc9a3b7c13ab1a7d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108916"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865514"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Общие сведения о Fastlane для iOS
 
@@ -50,35 +50,35 @@ Fastlane — это проект с открытым кодом, призван
 3. Установите Fastlane, распаковав файл и дважды щелкнув исполняемый файл `install`. Если возникнет ошибка с указанием, что файл невозможно открыть, так как он получен от неизвестного разработчика, нажмите кнопку "OK" и выполните следующие действия:
     - Щелкните исполняемый файл `install`, удерживая клавишу CTRL. Откроется следующее диалоговое окно:
 
-      ![](images/fastlane-image12.png "Диалоговое окно установки")
-    
+     ![](images/fastlane-image12.png "Диалоговое окно установки")
+
     - Нажмите кнопку "OK", чтобы начать установку инструментов Fastlane
 
 4. В терминале откроется диалоговое окно, показанное ниже. Нажмите клавишу `y`:
 
-  ![](images/fastlane-image13.png "Окно терминала")
- 
-4. Перед первым использованием Fastlane выполните команду `which fastlane`. Путь должен выглядеть следующим образом: 
+   ![](images/fastlane-image13.png "Окно терминала")
+
+5. Перед первым использованием Fastlane выполните команду `which fastlane`. Путь должен выглядеть следующим образом: 
 
     ```bash
     /Users/[user]/.fastlane/bin
     ```
 
-5. Если путь совпадает с указанным выше, все готово к работе.
+6. Если путь совпадает с указанным выше, все готово к работе.
 
-     Если нет, сделайте следующее. В macOS откройте `.bash_profile` (скрытый текстовый файл в основном каталоге) с помощью следующей команды:
+     Если нет, выполните следующее:  В macOS откройте `.bash_profile` (скрытый текстовый файл в основном каталоге) с помощью следующей команды:
 
     ```bash
     open ~/.bash_profile
     ```
 
-6. Добавьте следующую переменную среды PATH и сохраните файл: 
+7. Добавьте следующую переменную среды PATH и сохраните файл: 
 
     ```bash
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-7.  Запустите `which fastlane` еще раз и проверьте, что путь выглядит так: `/Users/[user]/.fastlane/bin`
+8.  Запустите `which fastlane` еще раз и проверьте, что путь выглядит так: `/Users/[user]/.fastlane/bin`
 
 
 ## <a name="updating-fastlane"></a>Обновление Fastlane

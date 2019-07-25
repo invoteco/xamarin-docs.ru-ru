@@ -24,7 +24,7 @@ ms.locfileid: "61424614"
 * Представление части демонстрируется использование `RepresentationManager` для улучшения визуализации с помощью встроенных представлений.
 * `Person` Объекта и его связанные визуализации JavaScript демонстрируют использование `ISerializableObject` без прохождения через представление поставщика.
 
-Также см. в разделе [SkiaSharp] [ skiasharp] пример реальной интегрированного решения, которое использует существующую [представления](~/tools/workbooks/sdk/representations.md) предоставляемые Xamarin Workbooks для подготовки к просмотру его типы.
+Также см. в разделе [SkiaSharp][skiasharp] пример реальной интегрированного решения, которое использует существующую [представления](~/tools/workbooks/sdk/representations.md) предоставляемые Xamarin Workbooks для подготовки к просмотру его типы.
 
 [KitchenSink]: https://github.com/xamarin/Workbooks/tree/master/SDK/Samples/KitchenSink
 [skiasharp]: https://github.com/mono/SkiaSharp/tree/master/source/SkiaSharp.Workbooks

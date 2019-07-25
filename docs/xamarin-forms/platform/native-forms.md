@@ -90,7 +90,7 @@ public class AppDelegate : UIApplicationDelegate
 
 Один раз `FinishedLaunching` успешного выполнения метода, определенного пользовательского интерфейса в Xamarin.Forms `NotesPage` класс будет отображаться, как показано на следующем снимке экрана:
 
-[ ![Снимок экрана приложения Xamarin. iOS, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/ios-notespage.png "-приложении Xamarin. iOS с помощью пользовательского интерфейса XAML") ] (native-forms-images/ios-notespage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. iOS, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/ios-notespage.png "-приложении Xamarin. iOS с помощью пользовательского интерфейса XAML")](native-forms-images/ios-notespage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
 
 При взаимодействии с пользовательским интерфейсом, например нажатием кнопки **+** [`Button`](xref:Xamarin.Forms.Button), будет создан `NotesPage` следующий обработчик событий в коде программной части:
 
@@ -117,7 +117,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 `NavigateToNoteEntryPage` Метод преобразует Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница для производной `UIViewController` с `CreateViewController` метод расширения и наборы `Title` свойство `UIViewController`. `UIViewController` Затем помещается в `UINavigationController` по `PushViewController` метод. Таким образом, пользовательский Интерфейс определен в Xamarin.Forms `NoteEntryPage` класс будет отображаться, как показано на следующем снимке экрана:
 
-[ ![Снимок экрана приложения Xamarin. iOS, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/ios-noteentrypage.png "-приложении Xamarin. iOS с помощью пользовательского интерфейса XAML") ] (native-forms-images/ios-noteentrypage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. iOS, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/ios-noteentrypage.png "-приложении Xamarin. iOS с помощью пользовательского интерфейса XAML")](native-forms-images/ios-noteentrypage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
 
 При `NoteEntryPage` отображается, коснувшись обратной стрелки появится всплывающее `UIViewController` для `NoteEntryPage` класса из `UINavigationController`, возвращая пользователю `UIViewController` для `NotesPage` класса.
 
@@ -173,7 +173,7 @@ public class MainActivity : AppCompatActivity
 
 Один раз `OnCreate` успешного выполнения метода, определенного пользовательского интерфейса в Xamarin.Forms `NotesPage` класс будет отображаться, как показано на следующем снимке экрана:
 
-[ ![Снимок экрана приложения Xamarin. Android, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/android-notespage.png "-приложении Xamarin. Android с помощью пользовательского интерфейса XAML") ] (native-forms-images/android-notespage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. Android, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/android-notespage.png "-приложении Xamarin. Android с помощью пользовательского интерфейса XAML")](native-forms-images/android-notespage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
 
 При взаимодействии с пользовательским интерфейсом, например нажатием кнопки **+** [`Button`](xref:Xamarin.Forms.Button), будет создан `NotesPage` следующий обработчик событий в коде программной части:
 
@@ -203,7 +203,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 `NavigateToNoteEntryPage` Метод преобразует Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница для производной `Fragment` с `CreateSupportFragment` метод расширения и добавляет `Fragment` в тот фрагмент обратно в стек. Таким образом, пользовательский Интерфейс определен в Xamarin.Forms `NoteEntryPage` будет отображаться, как показано на следующем снимке экрана:
 
-[ ![Снимок экрана приложения Xamarin. Android, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/android-noteentrypage.png "-приложении Xamarin. Android с помощью пользовательского интерфейса XAML") ] (native-forms-images/android-noteentrypage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. Android, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/android-noteentrypage.png "-приложении Xamarin. Android с помощью пользовательского интерфейса XAML")](native-forms-images/android-noteentrypage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
 
 При `NoteEntryPage` отображается, коснувшись обратной стрелки появится всплывающее `Fragment` для `NoteEntryPage` из фрагмента стек переходов назад, возвращая пользователю `Fragment` для `NotesPage` класса.
 
@@ -290,7 +290,7 @@ public sealed partial class MainPage : Page
 
 Один раз `MainPage` конструктор выполнен, пользовательский Интерфейс определен в Xamarin.Forms `NotesPage` класс будет отображаться, как показано на следующем снимке экрана:
 
-[ ![Снимок экрана приложения UWP, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный с]помощью приложения UWP в XAML Xamarin. Forms(native-forms-images/uwp-notespage.png "с помощью пользовательского интерфейса XAML Xamarin. Forms") ] (native-forms-images/uwp-notespage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
+[![Снимок экрана приложения UWP, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный с](native-forms-images/uwp-notespage.png " помощью приложения UWP в XAML Xamarin. Forms с помощью пользовательского интерфейса XAML Xamarin. Forms")](native-forms-images/uwp-notespage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
 
 При взаимодействии с пользовательским интерфейсом, например нажатием кнопки **+** [`Button`](xref:Xamarin.Forms.Button), будет создан `NotesPage` следующий обработчик событий в коде программной части:
 
@@ -315,7 +315,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 Навигация в универсальной платформы Windows обычно выполняется с помощью `Frame.Navigate` метод, который принимает `Page` аргумент. Xamarin.Forms определяет `Frame.Navigate` метод расширения, который принимает [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производный экземпляр страницы. Таким образом, когда `NavigateToNoteEntryPage` выполняет метод, пользовательский Интерфейс, определенный в Xamarin.Forms `NoteEntryPage` будет отображаться, как показано на следующем снимке экрана:
 
-[ ![Снимок экрана приложения UWP, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный с]помощью приложения UWP в XAML Xamarin. Forms(native-forms-images/uwp-noteentrypage.png "с помощью пользовательского интерфейса XAML Xamarin. Forms") ] (native-forms-images/uwp-noteentrypage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
+[![Снимок экрана приложения UWP, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный с](native-forms-images/uwp-noteentrypage.png " помощью приложения UWP в XAML Xamarin. Forms с помощью пользовательского интерфейса XAML Xamarin. Forms")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
 
 При `NoteEntryPage` отображается, коснувшись обратной стрелки появится всплывающее `FrameworkElement` для `NoteEntryPage` из стек переходов назад в приложении, возвращая пользователю `FrameworkElement` для `NotesPage` класса.
 

@@ -1,37 +1,37 @@
 ---
 title: Проверка подлинности по отпечаткам
-description: В этом руководстве описывается добавление проверки подлинности по отпечатку пальца, представленные в Android 6.0 в приложение Xamarin.Android.
+description: В этом руководство описано, как добавить проверку подлинности отпечатков пальцев, представленную в Android 6,0, в приложение Xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7917f0cc03a4079d6b2adaba37fdc0332f8626c8
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023474"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510609"
 ---
 # <a name="fingerprint-authentication"></a>Проверка подлинности по отпечаткам
 
-_В этом руководстве описывается добавление проверки подлинности по отпечатку пальца, представленные в Android 6.0 в приложение Xamarin.Android._
+_В этом руководство описано, как добавить проверку подлинности отпечатков пальцев, представленную в Android 6,0, в приложение Xamarin. Android._
 
 
-## <a name="fingerprint-authentication-overview"></a>Обзор проверки подлинности по отпечатку пальца
+## <a name="fingerprint-authentication-overview"></a>Обзор проверки подлинности отпечатков пальцев
 
-Поступление сканеров отпечатков пальцев на устройствах Android предоставляет приложениям вместо традиционных имени пользователя и пароля метод проверки подлинности пользователя. Использование отпечатков для аутентификации пользователя делает приложение использование безопасности, обеспечивающий меньшее вмешательство по сравнению имени пользователя и пароля.
+Появление сканеров отпечатков пальцев на устройствах Android предоставляет приложениям альтернативу традиционному методу проверки подлинности пользователя и пароля. Использование отпечатков пальцев для проверки подлинности пользователя позволяет приложению обеспечить безопасность менее агрессивной, чем имя пользователя и пароль.
 
-API-интерфейсы FingerprintManager ориентироваться на устройства с сканер отпечатков пальцев, и вы выполняете уровень API 23 (Android 6.0) или более поздней версии. API-интерфейсы находятся в `Android.Hardware.Fingerprints` пространства имен. Библиотека поддержки Android v4 предоставляет версии отпечатка API-интерфейсы, предназначенные для более старых версиях Android. Совместимость API-интерфейсы находятся в `Android.Support.v4.Hardware.Fingerprint` пространства имен, распространяются через [пакет Xamarin.Android.Support.v4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+API-интерфейсы Финжерпринтманажер предназначены для устройств с сканером отпечатков пальцев и работают на уровне API 23 (Android 6,0) или более поздней версии. API-интерфейсы находятся в `Android.Hardware.Fingerprints` пространстве имен. В библиотеке поддержки Android версии v4 предусмотрена версия API-интерфейсов отпечатков пальцев, предназначенных для старых версий Android. Интерфейсы API совместимости находятся в `Android.Support.v4.Hardware.Fingerprint` пространстве имен и распространяются с помощью [пакета NuGet Xamarin. Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-[FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (и его аналог библиотека поддержки [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) является основным классом для с помощью отпечатков пальцев, сканирование оборудования. Этот класс представляет собой оболочку пакета SDK для Android, вокруг служба уровня системы, которая управляет взаимодействиями с оборудования. Он отвечает за запуск сканер отпечатков пальцев, а также для ответов на отзывы от сканера. Этот класс имеет довольно простой интерфейс с помощью только три члена:
+[Финжерпринтманажер](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (и его аналог библиотеки поддержки, [финжерпринтманажеркомпат](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) является основным классом для использования оборудования сканирования отпечатков пальцев. Этот класс является пакет SDK для Android оболочкой для службы уровня системы, которая управляет взаимодействием с самим оборудованием. Он отвечает за запуск сканера отпечатков пальцев и реагирование на отзыв от сканера. Этот класс имеет довольно простой интерфейс с тремя членами:
 
-* **`Authenticate`** &ndash; Этот метод будет инициализировать средство проверки оборудования и запустить службу в фоновом режиме, Ожидание пользователю просканировать отпечатки пальцев.
-* **`EnrolledFingerprints`** &ndash; Это свойство будет возвращать `true` . Если пользователь зарегистрировал один или несколько отпечатков с устройством.
-* **`HardwareDetected`** &ndash; Это свойство используется, чтобы определить, поддерживает ли устройство сканирования отпечатков пальцев.
+* **`Authenticate`** &ndash; Этот метод инициализирует средство проверки оборудования и запускает службу в фоновом режиме, ожидая, как пользователь проверит свой отпечаток.
+* **`EnrolledFingerprints`** Это свойство возвращает `true` значение, если пользователь зарегистрировал один или несколько отпечатков пальцев с устройством. &ndash;
+* **`HardwareDetected`** &ndash; Это свойство используется для определения того, поддерживает ли устройство сканирование отпечатков пальцев.
 
-`FingerprintManager.Authenticate` Метод используется в приложении Android для запуска сканер отпечатков пальцев. Ниже приведен пример того, как вызывать его с помощью библиотеки поддержки совместимости API-интерфейсы:
+`FingerprintManager.Authenticate` Метод используется приложением Android для запуска сканера отпечатков пальцев. В следующем фрагменте кода приведен пример того, как вызвать его с помощью API-интерфейсов совместимости библиотеки поддержки:
 
 ```csharp
 // context is any Android.Content.Context instance, typically the Activity 
@@ -44,13 +44,13 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
                                );
 ```
 
-В этом руководстве описывается, как использовать `FingerprintManager` API-интерфейсы для улучшения приложений Android с проверкой подлинности по отпечатку пальца. Его мы рассмотрим, как создать экземпляр и создать `CryptoObject` для обеспечения безопасности в результате сканер отпечатков пальцев. Мы рассмотрим, как приложения должны подкласс `FingerprintManager.AuthenticationCallback` и реакция на отзывы от сканер отпечатков пальцев. Наконец, мы увидим, как зарегистрировать пальца на устройстве или эмуляторе Android и способы использования **adb** для имитации сканирования отпечатков пальцев.
+В этом руководство рассказывается, как использовать `FingerprintManager` API для улучшения приложения Android с проверкой подлинности отпечатков пальцев. В нем рассматривается создание экземпляров и создание `CryptoObject` для защиты результатов от сканера отпечатков пальцев. Мы рассмотрим, как приложение должно создавать подкласс `FingerprintManager.AuthenticationCallback` и отвечать на отзывы от сканера отпечатков пальцев. Наконец, мы посмотрим, как зарегистрировать отпечаток на устройстве или эмуляторе Android и как использовать **ADB** для имитации сканирования отпечатков пальцев.
 
 ## <a name="requirements"></a>Требования
 
-Требуется при проверке подлинности по отпечатку пальца Android 6.0 (уровень API 23) или выше, а также устройства с помощью сканер отпечатков пальцев. 
+Для проверки подлинности отпечатков пальцев требуется Android 6,0 (API уровня 23) или более поздней версии и устройство со сканером отпечатков пальцев. 
 
-Отпечаток пальца уже должны быть зарегистрированы с устройством для каждого пользователя, который должен пройти проверку подлинности. Это включает в себя настройку блокировки экрана, который использует пароля, ПИН-код, проведите по экрану или шаблон распознавание лиц. Существует возможность имитировать некоторые функциональные возможности проверки подлинности по отпечатку пальца в эмуляторе Android.  Дополнительные сведения об этих двух темах см. в разделе [регистрация отпечатка пальца](enrolling-fingerprint.md) раздел. 
+Отпечаток пальца должен быть уже зарегистрирован на устройстве для каждого пользователя, который должен пройти проверку подлинности. Это включает в себя настройку блокировки экрана, которая использует пароль, ПИН-код, схему прокрутки или распознавание лиц. Некоторые функции проверки подлинности отпечатков пальцев можно имитировать в Android Emulator.  Дополнительные сведения об этих двух разделах см. в разделе [Регистрация](enrolling-fingerprint.md) отпечатка пальца. 
 
 
 
@@ -59,10 +59,10 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Отпечаток пальца руководстве пример приложения](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
-- [Пример диалогового окна по отпечатку пальца](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
+- [Пример приложения для программы для отпечатка пальца](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
+- [Пример диалогового окна отпечатка](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
 - [Запрос разрешений во время выполнения](https://developer.android.com/training/permissions/requesting.html)
-- [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
-- [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
-- [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
-- [API отпечатков пальцев и платежей (видео)](https://youtu.be/VOn7VrTRlA4)
+- [Android. Hardware. отпечаток](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
+- [Android. support. v4. Hardware. отпечатков](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
+- [Android.Content.Context](xref:Android.Content.Context)
+- [API отпечатков и платежей (видео)](https://youtu.be/VOn7VrTRlA4)

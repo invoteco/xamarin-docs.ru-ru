@@ -1,63 +1,63 @@
 ---
-title: Обновление существующих приложений в Unified API
-description: Этот документ содержит ссылки на различные руководства, описывающие способ обновления приложения Xamarin на единый API. Здесь рассматриваются приложения Xamarin.iOS, приложения Xamarin.Mac. Приложения Xamarin.Forms, собственные типы в кросс платформенных приложений и проектов привязки.
+title: Обновление существующих приложений до Unified API
+description: В этом документе содержатся ссылки на различные руководства, в которых описывается обновление приложений Xamarin на Unified API. В нем обсуждаются приложения Xamarin. iOS, приложения Xamarin. Mac. Приложения Xamarin. Forms, собственные типы в кросс-платформенных приложениях и привязки проектов.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 7730d19e4f261a0e414e4946fd0add5312f5d030
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 61562eed8867b7a2e12b3d2e96feed28d957696b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864359"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511207"
 ---
-# <a name="updating-existing-apps-to-the-unified-api"></a>Обновление существующих приложений в Unified API
+# <a name="updating-existing-apps-to-the-unified-api"></a>Обновление существующих приложений до Unified API
 
 > [!IMPORTANT]
-> Классический API Xamarin, перед на единый API, является устаревшим.
-> - Последняя версия Xamarin.iOS, для поддержки классический API (monotouch.dll) был Xamarin.iOS 9.10.
-> - Xamarin.Mac по-прежнему поддерживает классический API, но больше не обновляется. Так как она устарела, разработчикам следует переместить свои приложения на единый API.
+> Classic API Xamarin, который предшествует Unified API, является устаревшим.
+> - Последняя версия Xamarin. iOS для поддержки Classic API (с помощью файла. dll) была Xamarin. iOS 9,10.
+> - Xamarin. Mac по-прежнему поддерживает Classic API, но больше не обновляется. Поскольку это не рекомендуется, разработчики должны переместить свои приложения на Unified API.
 
 ## <a name="how-to-update-your-apps"></a>Обновление приложений
 
-Чтобы обновить приложения трех этапов:
+Обновление приложений выполняется в три этапа.
 
-1. Исправьте все предупреждения компилятора в существующем коде, особенно для тех, относящиеся к устаревшие интерфейсы API.
+1. Исправьте все предупреждения компилятора в существующем коде, в частности те, которые относятся к устаревшим API.
 
-2. Используйте средство миграции, встроенных в Visual Studio для Mac, чтобы обновить файлы проекта и пространства имен.
+2. Используйте встроенное средство миграции, чтобы Visual Studio для Mac для обновления файлов проекта и пространств имен.
 
-3. Исправление, остальные ошибки компилятора, относящиеся к новому [64 типы](~/cross-platform/macios/nativetypes.md) и [другие API-интерфейсы](~/cross-platform/macios/unified/overview.md#deprecated-typos) , были изменены. Ознакомьтесь с [эти советы](~/cross-platform/macios/unified/updating-tips.md) Дополнительные сведения о обновления вручную, которые могут потребоваться.
+3. Исправьте оставшиеся ошибки компилятора, относящиеся к новым [типам 64-](~/cross-platform/macios/nativetypes.md) и [другим API](~/cross-platform/macios/unified/overview.md#deprecated-typos) , которые были изменены. Ознакомьтесь с [этими советами](~/cross-platform/macios/unified/updating-tips.md) , чтобы получить дополнительные сведения о ручных обновлениях, которые могут потребоваться.
 
-Для каждого продукта, помогут вам обновить приложения Unified API и поддержка 64-разрядных доступны определенные руководства:
+Для каждого продукта доступны специальные руководства, которые помогут вам обновить приложения до Unified API и 64-разрядной поддержки:
 
-### <a name="xamarinios-appscross-platformmaciosunifiedupdating-ios-appsmd"></a>[Приложения Xamarin.iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
+### <a name="xamarinios-appscross-platformmaciosunifiedupdating-ios-appsmd"></a>[Приложения Xamarin. iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
 
-Можно обновить существующие приложения Xamarin.iOS на единый API, с помощью инструмента автоматического перемещения, встроенных в Visual Studio для Mac. Некоторые дополнительные исправления могут затем быть обязательными, как описано в [эти инструкции](~/cross-platform/macios/unified/updating-ios-apps.md) и [советы](~/cross-platform/macios/unified/updating-tips.md).
+Существующие приложения Xamarin. iOS можно обновить до Unified API, используя средство автоматической миграции, встроенное в для Visual Studio для Mac. После этого могут потребоваться некоторые дополнительные исправления, как описано в [этих инструкциях](~/cross-platform/macios/unified/updating-ios-apps.md) и [советах](~/cross-platform/macios/unified/updating-tips.md).
 
-### <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Приложения Xamarin.Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
+### <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Приложения Xamarin. Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
 
-Существующие приложения Xamarin.Mac можно обновить на единый API, с помощью инструмента автоматического перемещения, встроенных в Visual Studio для Mac. Некоторые дополнительные исправления могут затем быть обязательными, как описано в [эти инструкции](~/cross-platform/macios/unified/updating-mac-apps.md) и [советы](~/cross-platform/macios/unified/updating-tips.md).
+Существующие приложения Xamarin. Mac можно обновить до Unified API, используя средство автоматической миграции, встроенное в для Visual Studio для Mac. После этого могут потребоваться некоторые дополнительные исправления, как описано в [этих инструкциях](~/cross-platform/macios/unified/updating-mac-apps.md) и [советах](~/cross-platform/macios/unified/updating-tips.md).
 
-### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Приложения Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Приложения Xamarin. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
-Следуйте этим инструкциям, чтобы заменить существующее решение Xamarin.Forms в проект iOS для использования на единый API. Единой API поддерживается только в Xamarin.Forms 1.3 и более поздние версии, поэтому [инструкциям](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) также объясняется, как выполнить обновление до версии 1.3 приложение Xamarin.Forms. Эти [советы](~/cross-platform/macios/unified/updating-tips.md) может помочь обновление любой машинный код для iOS в пользовательские модули подготовки отчетов или служб зависимостей.
+Выполните эти инструкции, чтобы обновить существующее решение Xamarin. Forms с помощью проекта iOS для использования Unified API. Поддержка Unified API доступна только в Xamarin. Forms 1,3 и более поздних версиях, поэтому [в инструкциях](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) также объясняется, как обновить приложение Xamarin. Forms до версии 1,3. Эти [Советы](~/cross-platform/macios/unified/updating-tips.md) могут помочь в обновлении любого собственного кода iOS в пользовательских модулях подготовки отчетов или службах зависимостей.
 
 ## <a name="working-with-native-types-in-cross-platform-appscross-platformmaciosnativetypesmd"></a>[Работа с собственными типами в кроссплатформенных приложениях](~/cross-platform/macios/nativetypes.md)
 
-В этой статье рассматривается использование нового iOS Unified API, собственные типы (nint, nuint, nfloat) в приложении кросс платформенных, где код используется совместно с устройства без iOS, например, Android или ОС Windows Phone. Он позволяет понять, когда следует использовать собственные типы и предоставляет несколько возможных решений для случаев, где необходимо использовать новый тип с кросс платформенного кода.
+В этой статье рассматривается использование новых типов iOS Unified API Native Type (НИНТ, нуинт, нфлоат) в кросс-платформенном приложении, где код используется для устройств, не относящихся к iOS, таких как Android или Windows Phoneные ОС. Он предоставляет подробные сведения о том, когда следует использовать собственные типы и предоставляет несколько возможных решений для случаев, когда новый тип должен использоваться с кодом кросс-платформенного кода.
 
-## <a name="update-bindings-to-the-unified-api"></a>Обновить привязки в Unified API
+## <a name="update-bindings-to-the-unified-api"></a>Обновление привязок к Unified API
 
-Клиенты, которые созданы привязки для библиотек Objective-C будет необходимо обновить проект привязки в соответствии с изменениями в основной API (где некоторые типы теперь будет 64-разрядных).
-Следуйте указаниям, приведенным к [обновить существующий проект привязки для поддержки на единый API](~/cross-platform/macios/unified/update-binding.md).
+Клиентам, которые создали привязки к библиотекам цели-C, потребуется обновить проект привязки для отражения изменений в базовом API (где некоторые типы теперь будут 64-разрядными).
+Выполните эти инструкции, чтобы [обновить существующий проект привязки для поддержки Unified API](~/cross-platform/macios/unified/update-binding.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Обновление приложения для iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
-- [Обновление приложения Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
-- [Обновление приложений Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
-- [Обновление привязки](~/cross-platform/macios/unified/update-binding.md)
-- [Обновление советы](~/cross-platform/macios/unified/updating-tips.md)
-- [Классический и отличия Unified API](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Обновление приложений iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
+- [Обновление приложений Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
+- [Обновление приложений Xamarin. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+- [Обновление привязок](~/cross-platform/macios/unified/update-binding.md)
+- [Обновление советов](~/cross-platform/macios/unified/updating-tips.md)
+- [Различия между классическими и Unified APIми](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

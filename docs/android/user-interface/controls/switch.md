@@ -1,43 +1,41 @@
 ---
-title: Параметр
-description: Как использовать мини-приложение Switch в приложениях Xamarin.Android
+title: Параметр Xamarin. Android
+description: Использование мини-приложения коммутатора в приложении Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: ef400aaa31992b577762ad695418b865882e2e2d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7ff10433ffe11965ccfb8c9a46a785b8cb0304e6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075785"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510174"
 ---
-# <a name="switch"></a>Параметр
+# <a name="xamarinandroid-switch"></a>Параметр Xamarin. Android
 
-`Switch` Мини-приложения (см. ниже) позволяет пользователю переключаться между двумя состояниями, как в или ВЫКЛЮЧАЕТСЯ. `Switch` Значение по умолчанию — OFF. Мини-приложения приведен ниже в ON и OFF состояния.
+`Switch` Мини-приложение (показанное ниже) позволяет пользователю переключаться между двумя состояниями, например включать или выключать. Значение `Switch` по умолчанию — OFF. Мини-приложение отображается в обоих состояниях:
 
-[![Снимки экрана коммутатора мини-приложение в состояниях и ВЫКЛЮЧЕНИЕ](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
+[![Снимки экрана мини-приложения переключателя в состоянии OFF и ON](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
+## <a name="creating-a-switch"></a>Создание переключателя
 
-## <a name="creating-a-switch"></a>Создания коммутатора
-
-Чтобы создать параметр, просто объявите `Switch` элемента в XML следующим образом:
+Чтобы создать переключатель, просто объявите `Switch` элемент в XML следующим образом:
 
 ```xml
 <Switch android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 ```
 
-Это создает базовый переключатель, как показано ниже:
+При этом создается базовый коммутатор, как показано ниже.
 
-[![Снимок экрана демонстрационное приложение, отображение переключателя в состоянии OFF](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
-
+[![Снимок экрана демонстрационного приложения, отображающего параметр в состоянии OFF](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
 ## <a name="changing-default-values"></a>Изменение значений по умолчанию
 
-Текст, который отображает элемент управления для состояния ON и OFF и значение по умолчанию можно настроить. Например, чтобы сделать параметр по умолчанию в значение ON и чтение нет/Да вместо OFF или ON, можно установить `checked`, `textOn`, и `textOff` атрибуты в следующий код XML.
+Текст, отображаемый элементом управления для состояний включения и ВЫКЛЮЧЕНия, и значение по умолчанию можно настроить. Например, чтобы параметру по умолчанию было присвоено значение ON, а для свойства Read/Yes — значение OFF/ `checked`On `textOn`, можно `textOff` задать атрибуты, и в следующем коде XML.
 
 ```xml
 <Switch android:layout_width="wrap_content"
@@ -49,9 +47,9 @@ ms.locfileid: "61075785"
 
 
 
-## <a name="providing-a-title"></a>Указав заголовок
+## <a name="providing-a-title"></a>Указание заголовка
 
-`Switch` Мини-приложение также поддерживает в том числе текстовую метку, задав `text` следующим образом:
+Мини-приложение также поддерживает включение текстовой метки, `text` настроив атрибут следующим образом: `Switch`
 
 ```xml
 <Switch android:text="Is Xamarin.Android great?"
@@ -64,10 +62,10 @@ ms.locfileid: "61075785"
 
 Эта разметка создает следующий снимок экрана во время выполнения:
 
-[![Снимок экрана демонстрационное приложение с текстом, горизонтально перед коммутатора мини-приложения](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
+[![Снимок экрана демонстрационного приложения с текстом по горизонтали перед мини-приложением-переключателем](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
-Когда `Switch`его значение изменяется, он выдает `CheckedChange` событий.
-Например, в следующем коде мы записи этого события и представлять `Toast` мини-приложения с сообщением, основываясь на `isChecked` значение `Switch`, передаваемый в обработчик событий, как часть `CompoundButton.CheckedChangeEventArg` аргумент.
+При изменении значения `CheckedChange` возникает событие. `Switch`
+Например, в следующем коде мы Сообразим это событие и представим `Toast` мини-приложение с сообщением на `isChecked` основе значения `Switch`, которое передается в обработчик событий как часть `CompoundButton.CheckedChangeEventArg` аргумента.
 
 ```csharp
 Switch s = FindViewById<Switch> (Resource.Id.monitored_switch);
@@ -82,5 +80,5 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [SwitchDemo (пример)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
-- [Учебник по макету вкладку](~/android/user-interface/layouts/tab-layout/index.md)
+- [Свитчдемо (пример)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
+- [Учебник по макету вкладок](~/android/user-interface/layouts/tab-layout/index.md)

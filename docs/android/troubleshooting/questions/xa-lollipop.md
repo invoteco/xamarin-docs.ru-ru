@@ -7,71 +7,71 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: db0cb221ee18998fbb98449ae03c442c84bcfcd7
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: fb357f0342aef68cd2e20d8f8d83474686593743
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829704"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510941"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>В какой версии Xamarin.Android добавлена поддержка Lollipop?
 
 > [!NOTE]
-> В этом руководстве, первоначально был написан для предварительной версии Android L.
+> Это руководством изначально было написано для предварительной версии Android L.
 
--   [Xamarin.Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) добавлена поддержка Android L предварительной версии.
--   [Xamarin.Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) добавлена поддержка Android Lollipop.
+-   В [Xamarin. Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) добавлена поддержка Android L Preview.
+-   В [Xamarin. Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) добавлена поддержка интерфейса поддержки Android.
 
-Xamarin поддерживает только активно текущий стабильный выпуск средства Xamarin. Информация ниже, предоставляется «как-является» для более старых версий средств. Последние сведения о выпусках Xamarin, проверьте [здесь](http://releases.xamarin.com/).
+Xamarin активно поддерживает текущий стабильный выпуск инструментов Xamarin. Приведенные ниже сведения предоставляются "как есть" для более старых версий инструментов. Последние сведения о выпусках Xamarin см. [здесь](http://releases.xamarin.com/).
 
-## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>«Отсутствуют android.jar для уровень API 21» в предварительной версии Android L
+## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>Отсутствие Android. jar для API уровня 21 в предварительной версии Android L
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Может появиться следующее сообщение об ошибке (или схожий):
+Может отобразиться следующее сообщение об ошибке (или похожее):
 
 ```cmd
 Error 1 Could not find android.jar for API Level 21.
 ```
 
-Это сообщение означает, что платформа SDK для Android для API 21 уровень не установлен. Либо установите диспетчер пакетов SDK Android (**средства > открыть диспетчер Android SDK Manager...** ), или измените проект Xamarin.Android для установленной версии API.
+Это сообщение означает, что платформа пакет SDK для Android для уровня API 21 не установлена. Либо установите его в пакет SDK для Android Manager (**средства > открыть диспетчер пакет SDK для Android...** ), либо измените проект Xamarin. Android, чтобы он нацелились на установленную версию API.
 
 Существует несколько обходных путей для этой проблемы:
 
-1. Изменить проект, чтобы он предназначен для API 19 или более ранней.
+1. Измените проект так, чтобы он нацелились на API 19 или ниже.
 
-2. Переименуйте папку android-21 от android 21 для android-L. (В лучшем случае это должно использоваться только как временное решение, и он может не работать очень хорошо.)
+2. Переименуйте папку Android-21 с Android-21 на Android-L. (Лучше всего использовать его только как временное исправление, и оно может работать не слишком хорошо.)
 
-   **% LOCALAPPDATA %\\Android\\android-sdk\\платформ\\android-21**
+   **% LocalAppData%\\\\Android Android — платформы\\\\SDK для Android — 21**
 
-3. Временно понизить обратно к предварительной версии Android API 21 уровень "L" [1]:
+3. Временное понижение до уровня API Android 21 "L" Preview [1]:
 
-    1.  Удалить **% LOCALAPPDATA %\\Android\\android-sdk\\платформ\\android-21** 
-    2.  Извлечения [1] на **C:\\пользователей\\&lt;username&gt;\\AppData\\локального\\Android\\android-sdk\\платформ**  для создания **android-L** папки.
+    1.  Удаление **% LocalAppData%\\Android\\Android-SDK\\Platforms\\Android-21** 
+    2.  Извлечение [1] в **C:\\пользователи\\&lt;имя&gt;пользователя\\AppData\\локальныйAndroidAndroid\\—платформы\\SDK для создания\\** папка **Android-L** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Может появиться следующее сообщение об ошибке (или схожий):
+Может отобразиться следующее сообщение об ошибке (или похожее):
 
 ```bash
 /Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets: 
 Error: Could not find android.jar for API Level 21.**
 ```
 
-Это означает, что платформа SDK для Android для API 21 уровень не установлен. Либо установите диспетчер пакетов SDK для Android (Сервис > Диспетчер пакетов SDK...), или измените проект Xamarin.Android для установленной версии API.
+Это означает, что платформа пакет SDK для Android для уровня API 21 не установлена. Установите его в пакет SDK для Android Manager (Tools > SDK Manager...) или измените проект Xamarin. Android, указав версию API, которая установлена.
 
 Существует несколько обходных путей для этой проблемы:
 
-1. Изменить проект, чтобы он предназначен для API 19 или более ранней.
+1. Измените проект так, чтобы он нацелились на API 19 или ниже.
 
-2. Переименуйте папку android-21 от android 21 для android-L. (В лучшем случае это должно использоваться только как временное решение, и он может не работать очень хорошо.)
+2. Переименуйте папку Android-21 с Android-21 на Android-L. (Лучше всего использовать его только как временное исправление, и оно может работать не слишком хорошо.)
 
-   **~/Library/Developer/Xamarin/Android-SDK-MacOSX/Android-21**
+   **~/Library/Developer/Xamarin/android-sdk-macosx/android-21**
 
-3. Временно понизить обратно к предварительной версии Android API 21 уровень "L" [1]:
+3. Временное понижение до уровня API Android 21 "L" Preview [1]:
 
-    1.  Удалить **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
-    2.  Извлечения [1] на **/Users/username/Library/Developer/Xamarin/android-sdk-macosx** для создания **android-L** папки.
+    1.  Удалить **/Users/username/Library/Developer/Xamarin/Android-SDK-MacOSX/Android-21**
+    2.  Извлечение [1] в **/усерс/усернаме/либрари/девелопер/ксамарин/андроид-СДК-макоскс** для создания папки **Android-L** .
 
 -----
 

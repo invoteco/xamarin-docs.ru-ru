@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: d1ec628de3481820f320a5a8e6ef88fcbaab75a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 142541dcc35b55e43b54eeb729c486ac9fc88b54
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61189741"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510075"
 ---
-# <a name="using-a-contentprovider"></a>Использование ContentProvider
+# <a name="using-a-contentprovider-with-xamarinandroid"></a>Использование ContentProvider с Xamarin. Android
 
-CursorAdapters также может использоваться для отображения данных из ContentProvider.
-Поставщиков содержимого позволяют получить доступ к данным, доступных в других приложениях (включая Android системные данные, такие как контакты, мультимедиа и информации календаря).
+Курсорадаптерс также можно использовать для вывода данных из ContentProvider.
+Контентпровидерс позволяют получать доступ к данным, предоставляемым другими приложениями (включая данные системы Android, такие как контакты, носители и сведения о календаре).
 
-С помощью LoaderManager CursorLoader является предпочтительным способом доступа к ContentProvider. LoaderManager появился в Android 3.0 (уровень API 11, Honeycomb) для перемещения блокирующих задачах вне основного потока, и с помощью CursorLoader позволяет данные загружаются в потоке перед привязанным к ListView для отображения.
+Предпочтительный способ доступа к ContentProvider — с Курсорлоадер с помощью Лоадерманажер. Лоадерманажер был введен в Android 3,0 (API уровня 11, Хонэйкомб) для перемещения задач блокировки из основного потока, а использование Курсорлоадер позволяет загружать данные в поток перед привязкой к ListView для показа.
 
-Ссылаться на [введение поставщиков содержимого](~/android/platform/content-providers/index.md) Дополнительные сведения.
+Дополнительные сведения см. в статье [Введение в контентпровидерс](~/android/platform/content-providers/index.md) .
 

@@ -1,48 +1,38 @@
 ---
-title: Уведомлений в Xamarin.Android
+title: Уведомления в Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b98ee5afbd65d5cf32bc6e3151284678e248cf47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4d7901e703544d52bb0e4a377875847b9af0c0a
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61014255"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509344"
 ---
-# <a name="notifications-in-xamarinandroid"></a>Уведомлений в Xamarin.Android
+# <a name="notifications-in-xamarinandroid"></a>Уведомления в Xamarin. Android
 
+В этом разделе объясняется, как реализовать уведомления в Xamarin. Android. В нем описываются различные элементы пользовательского интерфейса уведомления Android и обсуждаются API, связанные с созданием и отображением уведомлений.
 
-## <a name="overview"></a>Обзор
+## <a name="local-notifications-in-androidlocal-notificationsmd"></a>[Локальные уведомления в Android](local-notifications.md)
 
-В этом разделе объясняется, как реализовать уведомления в Xamarin.Android. Он описывает различные элементы пользовательского интерфейса уведомление Android и описываются API связанных с созданием и отображение уведомления.
+В этом разделе объясняется, как реализовать локальные уведомления в Xamarin. Android. Здесь описываются различные элементы пользовательского интерфейса уведомления Android и обсуждаются интерфейсы API, связанные с созданием и отображением уведомлений.
 
-
-## <a name="sections"></a>Разделы
-
-### <a name="local-notifications-in-androidlocal-notificationsmd"></a>[Локальные уведомления в Android](local-notifications.md)
-
-В этом разделе объясняется, как реализовать локальных уведомлений в Xamarin.Android. Он описывает различные элементы пользовательского интерфейса уведомление Android и рассматриваются API-Интерфейс связанных с созданием и отображение уведомления. 
-
-### <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Пошаговое руководство. Использование локальных уведомлений в Xamarin.Android](local-notifications-walkthrough.md)  
+## <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Пошаговое руководство. Использование локальных уведомлений в Xamarin. Android](local-notifications-walkthrough.md)  
  
-В этом пошаговом руководстве описывается использование локальных уведомлений в приложение Xamarin.Android. Он демонстрирует основные принципы создания и публикации уведомления. При щелчке уведомления на панели уведомлений о запуске второго действия. 
+В этом пошаговом руководстве описывается, как использовать локальные уведомления в приложении Xamarin. Android. В нем демонстрируются основы создания и публикации уведомления. Когда пользователь щелкает уведомление в ящике уведомлений, он начинает второе действие. 
 
+## <a name="further-reading"></a>Дополнительные сведения
 
-## <a name="for-further-reading"></a>Дополнительные сведения
+[Firebase облачные сообщения](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) — это служба, которая упрощает обмен сообщениями между мобильными приложениями и серверных приложений. Firebase Cloud Messaging можно использовать для реализации удаленных уведомлений (также называемых Push-уведомлениями) в приложениях Xamarin. Android.
 
-[Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) — это служба, которая облегчает обмен сообщениями между мобильные приложения и серверные приложения. Firebase Cloud Messaging можно использовать для реализации удаленных уведомлений (также называемые Push-уведомления) в приложениях Xamarin.Android.
+[Уведомления](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; Этот раздел для разработчиков Android представляет собой полное справочное по для уведомлений Android. Он содержит раздел "рекомендации по проектированию", который помогает разрабатывать уведомления таким образом, чтобы они соответствовали правилам интерфейса пользователя Android. Он предоставляет дополнительные сведения о пресервиинг навигации при запуске действия, а также объясняет, как отображать ход выполнения в уведомлении и управлять воспроизведением мультимедиа на экране блокировки.
 
-[Уведомления](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; разделе This разработчика Android — полное руководство для уведомлений Android. Она включает рекомендации раздел, который поможет вам разработать уведомлений, таким образом, чтобы они соответствуют рекомендациям Android пользовательского интерфейса для макета. Предоставляет дополнительные сведения о навигации preserviing, при запуске действия, и здесь объясняется, как отображение хода выполнения в уведомлений и управления воспроизведением мультимедиа на экране блокировки. 
-
-[NotificationListenerService](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/) &ndash; Android эта служба делает возможным для вашего приложения на прослушивание (и взаимодействовать с) учтены все уведомления на устройстве Android, а не только уведомления, которые ваше приложение будет зарегистрировано для получения. Обратите внимание на то, что пользователю необходимо явно предоставить разрешения приложению для того, чтобы иметь возможность прослушивать уведомления на устройстве.
-
-
-
-
+[Нотификатионлистенерсервице](xref:Android.Service.Notification.NotificationListenerService) &ndash; Эта служба Android позволяет приложению прослушивать все уведомления, размещенные на устройстве Android, а также взаимодействовать с ними, а не только с уведомлениями, зарегистрированными для получения приложения.
+Обратите внимание, что пользователь должен явно предоставить приложению разрешение на прослушивание уведомлений на устройстве.
 
 ## <a name="related-links"></a>Связанные ссылки
 

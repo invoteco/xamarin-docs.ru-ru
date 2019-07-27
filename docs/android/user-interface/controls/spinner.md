@@ -1,31 +1,31 @@
 ---
-title: Spinner
+title: Счетчик Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 004089E9-7C1D-2285-765A-B69143091F2A
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 90b4755cdb4b8248c2b731d070d720076d4dda40
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2c7f0de2347e614b8c24de32bf3f88362a212a94
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60946055"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510413"
 ---
-# <a name="spinner"></a>Spinner
+# <a name="xamarinandroid-spinner"></a>Счетчик Xamarin. Android
 
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) Это мини-приложения, который представляет стрелку раскрывающегося списка для выбора элементов. В этом руководстве объясняется, как создать простое приложение, которое отображает список вариантов в "Счетчик", следуют изменения, которые отображают другие значения, связанные с выбранный вариант выбора.
+[`Spinner`](xref:Android.Widget.Spinner)— Это мини-приложение, представляющее раскрывающийся список для выбора элементов. В этом руководство объясняется, как создать простое приложение, отображающее список вариантов в счетчике, за которым следуют изменения, отображающие другие значения, связанные с выбранным выбором.
 
-## <a name="basic-spinner"></a>Основные "Счетчик"
+## <a name="basic-spinner"></a>Базовый счетчик
 
-В первой части этого руководства вы создадите простой "Счетчик" мини-приложение со списком различных планет. При выборе планеты всплывающее сообщение Отображение выбранного элемента:
+В первой части этого руководства вы создадите простое мини-приложение счетчика, которое отображает список планет. Когда выбрана Планета, всплывающее сообщение отображает выбранный элемент:
 
-[![Снимки экрана HelloSpinner приложения](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
+[![Примеры снимков экрана приложения Хеллоспиннер](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
 
-Создайте новый проект с именем **HelloSpinner**.
+Запустите новый проект с именем **хеллоспиннер**.
 
-Откройте **Resources/Layout/Main.axml** и вставьте следующий код XML:
+Откройте файл Resources **/Layout/Main. axml** и вставьте следующий код XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,9 +49,9 @@ ms.locfileid: "60946055"
 </LinearLayout>
 ```
 
-Обратите внимание, что [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) `android:text` атрибут и [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/)в `android:prompt` атрибут оба ссылаются на один и тот же ресурс строки. Этот текст ведет себя как заголовок мини-приложения. При применении к [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/), текст заголовка будет отображаться в диалоговом окне выбора, который отображается после выбора мини-приложения.
+Обратите внимание [`TextView`](xref:Android.Widget.TextView), `android:text` что атрибут и [`Spinner`](xref:Android.Widget.Spinner) `android:prompt` атрибут атрибута ссылаются на один и тот же строковый ресурс. Этот текст ведет себя в качестве заголовка для мини-приложения. При применении к параметру [`Spinner`](xref:Android.Widget.Spinner)текст заголовка будет отображаться в диалоговом окне выбора, которое появляется при выборе мини-приложения.
 
-Изменить **Resources/Values/Strings.xml** и измените файл следующим образом:
+Измените **Resources/Values/strings. XML** и измените файл, чтобы он выглядел следующим образом:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,17 +71,16 @@ ms.locfileid: "60946055"
 </resources>
 ```
 
-Второй `<string>` элемент определяет строку заголовка, который ссылается [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) и [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) в макете выше.
-`<string-array>` Элемент определяет список строк, которые будут отображаться как список в [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) мини-приложения.
+Второй `<string>` элемент определяет строку заголовка, на которую ссылается объект [`TextView`](xref:Android.Widget.TextView) и [`Spinner`](xref:Android.Widget.Spinner) в приведенном выше макете.
+Элемент определяет список строк, которые будут отображаться [`Spinner`](xref:Android.Widget.Spinner) в виде списка в мини-приложении. `<string-array>`
 
-Теперь откройте **MainActivity.cs** и добавьте следующие `using` инструкции:
+Теперь откройте **MainActivity.CS** и добавьте следующий `using` оператор:
 
 ```csharp
 using System;
 ```
 
-Затем вставьте следующий код для [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
-метод:
+Затем вставьте следующий код для [`OnCreate()`](xref:Android.App.Activity.OnCreate*)метода):
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -102,13 +101,13 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-После `Main.axml` макета задается в виде содержимого [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) мини-приложения регистрируются в макете с [ `FindViewById<>(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/p/System.Int32/).
-В [`CreateFromResource()`](https://developer.xamarin.com/api/member/Android.Widget.ArrayAdapter.CreateFromResource/p/Android.Content.Context/System.Int32/System.Int32/)
-Затем метод создает новый [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/), который связывает каждого элемента в массиве строк исходный вид для [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) (то есть, как каждый элемент будет отображаться в "Счетчик", при выборе) . `Resource.Array.planets_array` Ссылки Идентификаторов `string-array` определенный выше и `Android.Resource.Layout.SimpleSpinnerItem` код ссылается на один макет для стандартных "Счетчик" внешний вид, определенные платформой.
-[`SetDropDownViewResource`](https://developer.xamarin.com/api/member/Android.Widget.ArrayAdapter.SetDropDownViewResource/p/System.Int32/)
-вызывается для определения внешнего вида, для каждого элемента, при открытии мини-приложения. Наконец [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) присваивается связать все элементы с [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) , задав [ `Adapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter) свойство.
+После того как [`Spinner`](xref:Android.Widget.Spinner) [`FindViewById<>(int)`](xref:Android.App.Activity.FindViewById*)макет будет установлен в качестве представления содержимого, Мини-приложение будет захвачено из макета с помощью. `Main.axml`
+Тот[`CreateFromResource()`](xref:Android.Widget.ArrayAdapter.CreateFromResource*)
+затем создает новый [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)объект, который привязывает каждый элемент в массиве строк к начальному внешнему виду для [`Spinner`](xref:Android.Widget.Spinner) объекта (то есть каждый элемент будет отображаться в счетчике при выборе). Идентификатор ссылается на `string-array` указанный выше, а `Android.Resource.Layout.SimpleSpinnerItem` идентификатор ссылается на макет для стандартного внешнего вида, определенного платформой. `Resource.Array.planets_array`
+[`SetDropDownViewResource`](xref:Android.Widget.ArrayAdapter.SetDropDownViewResource*)
+вызывается для определения внешнего вида каждого элемента при открытии мини-приложения. Наконец, [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) [`Adapter`](xref:Android.Widget.ArrayAdapter) свойство задается для связывания всех его элементов [`Spinner`](xref:Android.Widget.Spinner) с путем установки свойства.
 
-Теперь предоставляют метод обратного вызова, который notifys приложения, когда элемент выбран из [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/). Вот, как будет выглядеть этот метод:
+Теперь Предоставьте метод обратного вызова, который оповещает приложение о выборе элемента из [`Spinner`](xref:Android.Widget.Spinner). Вот как должен выглядеть этот метод:
 
 ```csharp
 private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
@@ -119,32 +118,32 @@ private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventA
 }
 ```
 
-При выборе элемента, отправитель приводится к [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) таким образом, чтобы получить доступ к элементам. С помощью `Position` свойство `ItemEventArgs`, можно найти текст выбранного объекта и использовать ее для показа [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/).
+При выборе элемента отправитель приводится к [`Spinner`](xref:Android.Widget.Spinner) типу, что позволяет получить доступ к элементам. С помощью `ItemEventArgs` [`Toast`](xref:Android.Widget.Toast)свойства в можно узнать текст выбранного объекта и использовать его для вывода. `Position`
 
-Запуск приложения; он должен выглядеть следующим образом:
+Запустите приложение. Он должен выглядеть следующим образом:
 
-[![Снимок экрана с примером "Счетчик", с помощью режима Mars, которые выбраны в качестве планете](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png#lightbox)
+[![Снимок экрана. Пример счетчика с выбранным режимом MARS в качестве планеты](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png#lightbox)
 
-## <a name="spinner-using-keyvalue-pairs"></a>С помощью пары ключ/значение "Счетчик"
+## <a name="spinner-using-keyvalue-pairs"></a>Счетчик с использованием пар "ключ-значение"
 
-Часто бывает необходимо использовать `Spinner` для отображения ключевых значений, которые связаны с каким-либо данных, используемых приложением. Так как `Spinner` работает непосредственно с помощью пары "ключ значение", необходимо хранить отдельно пары "ключ/значение", заполнить `Spinner` со значениями ключа, затем использовать положение выбранный ключ в "Счетчик" для поиска значения связанные данные. 
+Часто необходимо использовать `Spinner` для вывода значений ключей, связанных с некоторыми типами данных, используемыми приложением. Поскольку `Spinner` не работает непосредственно с парами "ключ-значение", необходимо сохранить пару "ключ-значение" отдельно, заполнить `Spinner` значениями ключа, а затем использовать расположение выбранного ключа в счетчике для поиска связанного значения данных. 
 
-В следующих шагах **HelloSpinner** приложения изменяется для отображения средней температуры для выбранного планеты:
+На следующих шагах приложение **хеллоспиннер** изменяется для вывода средней температуры для выбранной планеты:
 
-Добавьте следующий `using` инструкцию, чтобы **MainActivity.cs**:
+Добавьте следующую `using` инструкцию в **MainActivity.CS**:
 
 ```csharp
 using System.Collections.Generic;
 ```
 
-Добавьте следующую переменную экземпляра к `MainActivity` класса.
-Этот список будет содержать пары ключ/значение для планеты и их средней температуры:
+Добавьте в `MainActivity` класс следующую переменную экземпляра.
+Этот список будет содержать пары "ключ-значение" для планет и их средние температуры:
 
 ```csharp
 private List<KeyValuePair<string, string>> planets;
 ```
 
-В `OnCreate` метод, добавьте следующий код перед `adapter` объявляется:
+В метод добавьте следующий код перед `adapter` объявлением: `OnCreate`
 
 ```csharp
 planets = new List<KeyValuePair<string, string>>
@@ -160,9 +159,9 @@ planets = new List<KeyValuePair<string, string>>
 };
 ```
 
-Этот код создает простой хранилище для планеты и их связанные средней температуры. (В реальном приложении базы данных обычно используется для хранения ключей и связанных с ними данных.)
+Этот код создает простое хранилище для планет и связанных с ними значений температуры. (В реальном приложении база данных обычно используется для хранения ключей и связанных с ними данных.)
 
-Сразу после приведенный выше код добавьте следующие строки для извлечения ключей и поместить их в список (в порядке):
+Сразу после приведенного выше кода добавьте следующие строки, чтобы извлечь ключи и поместить их в список (по порядку):
 
 ```csharp
 List<string> planetNames = new List<string>();
@@ -170,14 +169,14 @@ foreach (var item in planets)
     planetNames.Add (item.Key);
 ```
 
-Передайте этот список, чтобы `ArrayAdapter` конструктор (вместо `planets_array` ресурсов):
+Передайте этот список `ArrayAdapter` конструктору (вместо `planets_array` ресурса):
 
 ```csharp
 var adapter = new ArrayAdapter<string>(this,
     Android.Resource.Layout.SimpleSpinnerItem, planetNames);
 ```
 
-Изменить `spinner_ItemSelected` таким образом выбранному положению используется для поиска значения (температуры), связанные с выбранной планете:
+Измените `spinner_ItemSelected` таким образом, чтобы выбранное расположение использовалось для поиска значения (температуры), связанного с выбранной Планета.
 
 ```csharp
 private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -189,17 +188,15 @@ private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventAr
 }
 ```
 
-Запуск приложения; тост должен выглядеть следующим образом:
+Запустите приложение. всплывающее уведомление должно выглядеть следующим образом:
 
-[![Пример выбора планеты, отображение температуры](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
-   
-  
+[![Пример выбора планеты с отображением температуры](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
 
 ## <a name="resources"></a>Ресурсы
 
--   [`Resource.Layout`](https://developer.xamarin.com/api/type/Android.Resource+Layout/) 
--   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 
--   [`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) 
+- [`Resource.Layout`](xref:Android.Resource.Layout)
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`Spinner`](xref:Android.Widget.Spinner)
 
-*Некоторые части этой страницы, изменения с учетом работы создана и совместно используется Android откройте исходный проект и используются в соответствии с условиями, описанными в*
-[*лицензии Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
+*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
+описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/).

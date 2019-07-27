@@ -1,25 +1,25 @@
 ---
-title: Создание CryptoObject
+title: Создание Криптубжект
 ms.prod: xamarin
 ms.assetid: 4D159B80-FFF4-4136-A7F0-F8A5C6B86838
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1305a8a1f39d34b5e91e478a769750911afb2b3e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8e5d4cf50874a0976c1dd10e35e7bd84518f14c4
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953192"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511146"
 ---
-# <a name="creating-a-cryptoobject"></a>Создание CryptoObject
+# <a name="creating-a-cryptoobject"></a>Создание Криптубжект
 
-Целостность результатов проверки подлинности по отпечатку пальца важно приложения &ndash; это, как приложение знает, удостоверение пользователя. Это теоретически возможно наличие вредоносных программ сторонних перехватывать и изменять результаты, возвращенные сканер отпечатков пальцев. В этом разделе будут рассмотрены один из способов сохранения допустимости результатов отпечатков пальцев. 
+Целостность результатов проверки подлинности отпечатков пальцев важна &ndash; для приложения, так как приложение знает удостоверение пользователя. Теоретически вредоносные программы сторонних производителей могут перехватывать и изменять результаты, возвращаемые сканером отпечатков пальцев. В этом разделе рассматривается один прием, позволяющий сохранить достоверность результатов отпечатка. 
 
-`FingerprintManager.CryptoObject` Является оболочкой API-интерфейсов криптографии Java и используется `FingerprintManager` для защиты целостности запроса на аутентификацию. Как правило `Javax.Crypto.Cipher` объект — это механизм для шифрования результатов сканер отпечатков пальцев. `Cipher` Самого объекта будет использоваться ключ, созданный с помощью хранилища ключей Android API-интерфейсы.
+Является оболочкой `FingerprintManager` для API-интерфейсов шифрования Java и используется для защиты целостности запроса проверки подлинности. `FingerprintManager.CryptoObject` Как правило, `Javax.Crypto.Cipher` объект — это механизм для шифрования результатов проверки отпечатков пальцев. Сам `Cipher` объект будет использовать ключ, созданный приложением с помощью API-интерфейсов хранилища для Android.
 
-Чтобы понять, как все эти классы работают вместе, сначала взглянем на следующий код, который демонстрирует способ создания `CryptoObject`и описывается более подробно:
+Чтобы понять, как все эти классы работают вместе, давайте сначала рассмотрим следующий код, демонстрирующий создание `CryptoObject`, а затем более подробное описание.
 
 ```csharp
 public class CryptoObjectHelper
@@ -99,40 +99,40 @@ public class CryptoObjectHelper
 }
 ```
 
-В примере кода будет создана новая `Cipher` для каждого `CryptoObject`, с помощью ключа, который был создан для приложения. Ключ определяется `KEY_NAME` переменной, заданной в начале `CryptoObjectHelper` класса. Метод `GetKey` будет попробовать и получить ключ, с помощью API хранилища ключей Android. Если ключ отсутствует, то метод `CreateKey` будет создан новый ключ для приложения.
+В примере кода создается новый `Cipher` объект для каждого `CryptoObject`с использованием ключа, созданного приложением. Ключ определяется `KEY_NAME` переменной, заданной в начале `CryptoObjectHelper` класса. Метод `GetKey` попытается получить ключ с помощью API-интерфейсов хранилища ключей Android. Если ключ не существует, метод `CreateKey` создаст новый ключ для приложения.
 
-Шифр создается с помощью вызова `Cipher.GetInstance`, принимающий _преобразования_ (строковое значение, указывающее шифрования как для шифрования и расшифровки данных). Вызов `Cipher.Init` завершит инициализацию шифр, предоставив ключ из приложения. 
+Шифр создается с помощью вызова `Cipher.GetInstance`, принимающего _Преобразование_ (строковое значение, которое сообщает шифру о шифровании и расшифровке данных). Вызов метода приведет `Cipher.Init` к завершению инициализации шифра путем предоставления ключа из приложения. 
 
-Важно понимать, что существуют ситуации, где Android, может сделать недействительным ключ: 
+Важно понимать, что в некоторых ситуациях Android может сделать ключ недействительным. 
 
-* Новый отпечаток будет зарегистрирован с устройством.
-* Существуют не отпечатки пальцев, зарегистрировано устройство.
-* Пользователь отключил блокировки экрана.
-* Пользователь изменил блокировки экрана (тип screenlock или использовать шаблон или ПИН-код).
+* На устройстве был зарегистрирован новый отпечаток.
+* На устройстве не зарегистрированы отпечатки пальцев.
+* Пользователь отключил блокировку экрана.
+* Пользователь изменил блокировку экрана (тип скринлокк или используемый ПИН-код/шаблон).
 
-В этом случае `Cipher.Init` вызовет [ `KeyPermanentlyInvalidatedException` ](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). Приведенный выше образец кода будет перехватывать это исключение, удалите раздел и затем создать новую.
+`Cipher.Init` [В`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)этом случае вызовет исключение. Приведенный выше пример кода будет выполнять треппинг этого исключения, удалить ключ, а затем создать новый.
 
-Далее разделе описано, как создать ключ и сохранить его на устройстве.
+В следующем разделе рассказывается, как создать ключ и сохранить его на устройстве.
 
 ## <a name="creating-a-secret-key"></a>Создание секретного ключа
 
-`CryptoObjectHelper` Класс использует Android [ `KeyGenerator` ](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) создайте ключ и сохранить его на устройстве. `KeyGenerator` Класс можно создать ключ, но при этом требуется некоторые метаданные о типе создаваемого ключа. Эти сведения предоставляются с помощью экземпляра [ `KeyGenParameterSpec` ](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) класса. 
+Класс использует Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) для создания ключа и сохранения его на устройстве. `CryptoObjectHelper` `KeyGenerator` Класс может создать ключ, но ему необходимы некоторые метаданные о типе создаваемого ключа. Эти сведения предоставляются экземпляром [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) класса. 
 
-Объект `KeyGenerator` создается с помощью `GetInstance` метод фабрики. В примере кода используется [ _Advanced Encryption Standard_ ](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) в качестве алгоритма шифрования. AES будет разбить данные на блоки фиксированного размера и шифрования, каждый из этих блоков.
+Экземпляр создается с помощью метода Factory `GetInstance` `KeyGenerator` . В примере кода в качестве алгоритма шифрования используется [_AES_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_). AES будет разбивать данные на блоки фиксированного размера и шифровать каждый из этих блоков.
 
-Далее, `KeyGenParameterSpec` создается с помощью `KeyGenParameterSpec.Builder`. `KeyGenParameterSpec.Builder` Заключает в оболочку следующие сведения о ключе, который должен быть создан:
+`KeyGenParameterSpec` Затем создается с помощью `KeyGenParameterSpec.Builder`. В `KeyGenParameterSpec.Builder` оболочке переносится следующая информация о создаваемом ключе:
 
 * Имя ключа.
-* Ключ должен быть допустимым как для шифрования и расшифровки.
-* В образце кода `BLOCK_MODE` присваивается _сцепления блоков шифра_ (`KeyProperties.BlockModeCbc`), это означает, что каждый блок является XORed с предыдущего блока (Создание зависимостей между каждый блок). 
-* `CryptoObjectHelper` Использует [ _открытый ключ шифрования Standard #7_ ](https://tools.ietf.org/html/rfc2315) (_PKCS7_) для создания байты, которые будут заполняемое блоки, чтобы убедиться, что все они не будут одинакового размера. .
-* `SetUserAuthenticationRequired(true)` означает, что прежде чем можно будет использовать ключ необходим, проверку подлинности.
+* Ключ должен быть допустимым для шифрования и расшифровки.
+* В образце кода `BLOCK_MODE` для параметра задается значение _шифра цепочки блоков_ (`KeyProperties.BlockModeCbc`), означающее, что каждый блок ксоред с предыдущим блоком (создание зависимостей между каждым блоком). 
+* Использует стандарт [_криптографии с открытым ключом #7_](https://tools.ietf.org/html/rfc2315) (PKCS7) для создания байтов, которые будут выдавать блоки, чтобы убедиться, что они имеют одинаковый размер. `CryptoObjectHelper`
+* `SetUserAuthenticationRequired(true)`означает, что для использования ключа требуется проверка подлинности пользователя.
 
-Один раз `KeyGenParameterSpec` будет создан, он используется для инициализации `KeyGenerator`, который создаст ключ и безопасно хранить его на устройстве. 
+После создания `KeyGenParameterSpec` объект используется для `KeyGenerator`инициализации, что приведет к созданию ключа и безопасно сохранить его на устройстве. 
 
-## <a name="using-the-cryptoobjecthelper"></a>С помощью CryptoObjectHelper
+## <a name="using-the-cryptoobjecthelper"></a>Использование Криптубжекселпер
 
-Теперь, когда образец кода большую часть логики для создания инкапсулированные `CryptoWrapper` в `CryptoObjectHelper` класса, давайте вернемся к кода с самого начала данного руководства и использовать `CryptoObjectHelper` шифр создать и запустить сканер отпечатков пальцев: 
+Теперь, когда пример кода содержит большую часть логики для создания `CryptoWrapper` `CryptoObjectHelper` класса, давайте перейдем к коду с начала `CryptoObjectHelper` этого учебника и используем для создания шифра и запуска сканера отпечатков пальцев: 
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
@@ -153,19 +153,19 @@ protected void FingerPrintAuthenticationExample()
 }
 ```
 
-Теперь, когда мы узнали, как создать `CryptoObject`, позволяет перейти к см. в разделе как `FingerprintManager.AuthenticationCallbacks` используются для передачи результатов работы службы сканер отпечатков пальцев в приложение Android.
+Теперь, когда мы увидели `CryptoObject`, как создать, можно перейти к статье, чтобы увидеть, `FingerprintManager.AuthenticationCallbacks` как используется для передачи результатов службы сканера отпечатков пальцев в приложение Android.
 
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Шифра](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
-- [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
-- [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
-- [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
-- [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
-- [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
+- [Шифр](xref:Javax.Crypto.Cipher)
+- [Финжерпринтманажер. Криптубжект](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
+- [Финжерпринтманажеркомпат. Криптубжект](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
+- [кэйженератор](xref:Javax.Crypto.KeyGenerator)
+- [кэйженпараметерспек](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
+- [Кэйженпараметерспек. Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [кэйперманентлинвалидатедексцептион](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
 - [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [RFC 2315 - PCKS #7](https://tools.ietf.org/html/rfc2315)
+- [RFC 2315-ПККС #7](https://tools.ietf.org/html/rfc2315)

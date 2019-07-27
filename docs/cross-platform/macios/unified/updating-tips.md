@@ -1,37 +1,37 @@
 ---
 title: Советы по обновлению кода в Unified API
-description: В этом документе рассматриваются распространенные ошибки и полезные рекомендации, при обновлении приложения с помощью Xamarin Unified API.
+description: В этом документе обсуждаются распространенные ошибки и советы, полезные при обновлении приложения для использования Unified API Xamarin.
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 62ef02d276e9c98e07f5e0d1b9ddec1b0874a99a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: c0e4152574cf400f5b77b504955b248dd8477a7c
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829627"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509511"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Советы по обновлению кода в Unified API
 
-При обновлении более старые решения Xamarin на единый API, могут возникнуть следующие ошибки.
+При обновлении старых решений Xamarin до Unified API могут возникать следующие ошибки.
 
-## <a name="nsinvalidargumentexception-could-not-find-storyboard-error"></a>Не удалось найти NSInvalidArgumentException раскадровки ошибки
+## <a name="nsinvalidargumentexception-could-not-find-storyboard-error"></a>Нсинвалидаргументексцептион не удалось найти ошибку раскадровки
 
-Существует [ошибки](https://bugzilla.xamarin.com/show_bug.cgi?id=25569) в текущей версии Visual Studio для Mac, которая может происходить после преобразование проекта в Unified API-интерфейсы с помощью инструмента автоматического перемещения. После обновления, если вы получаете сообщение об ошибке в форме:
+В текущей версии Visual Studio для Mac есть [Ошибка](https://bugzilla.xamarin.com/show_bug.cgi?id=25569) , которая может возникнуть после использования средства автоматической миграции для преобразования проекта в единые API. Если после обновления появится сообщение об ошибке в форме:
 
 ```console
 Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not find a storyboard named 'xxx' in bundle NSBundle...
 ```
 
-Необходимо выполнить следующую команду, чтобы решить эту проблему, найдите следующий файл целевой сборки действий.
+Чтобы решить эту проблему, можно выполнить следующие действия. для этого нужно найти следующий целевой файл сборки:
 
 ```console
 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/Xamarin.iOS.Common.targets
 ```
 
-В этом файле, вам потребуется найти следующее объявление целевой объект.
+В этом файле необходимо найти следующее объявление целевого объекта:
 
 ```xml
 <Target Name="_CopyContentToBundle"
@@ -48,98 +48,98 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
         Outputs = "@(_BundleResourceWithLogicalName -> '$(_AppBundlePath)%(LogicalName)')" >
 ```
 
-Сохраните файл, перезагрузите Visual Studio для Mac и выполнить чистую и перестроение проекта. Решением этой проблемы необходимо освободить компанией Xamarin чуть ниже.
+Сохраните файл, перезагрузите Visual Studio для Mac и выполните очистку & перестроения проекта. Исправление для этой проблемы должно быть выпущено Xamarin вскоре.
 
 ## <a name="useful-tips"></a>Полезные советы
 
-После использования средства миграции, по-прежнему возможны некоторые ошибки компилятора, требуя ручного вмешательства.
-Возможно, потребуется вручную исправить излишними:
+После использования средства миграции могут возникать некоторые ошибки компилятора, требующие вмешательства вручную.
+Некоторые вещи, которые может потребоваться исправить вручную, включают:
 
-* Сравнение `enum`s может потребоваться `(int)` приведения.
+* Для `enum`сравнения с может `(int)` потребоваться приведение.
 
-* `NSDictionary.IntValue` Теперь возвращает `nint`, имеется `Int32Value` который можно использовать вместо этого.
+* `NSDictionary.IntValue`теперь возвращает `nint`, `Int32Value` что можно использовать вместо него.
 
-* `nfloat` и `nint` типы не могут быть помечены `const`;   `static readonly nint` является разумным альтернативой.
+* `nfloat`типы `nint` и не могут быть `const`помечены.   `static readonly nint` является разумной альтернативой.
 
-* Вещи, которые ранее были непосредственно в `MonoTouch.` стали обычно в пространстве имен `ObjCRuntime.` пространства имен (например: `MonoTouch.Constants.Version` теперь `ObjCRuntime.Constants.Version`).
+* Элементы, `MonoTouch.` которые были непосредственно использованы в пространстве имен, теперь обычно находятся `ObjCRuntime.` в `MonoTouch.Constants.Version` пространстве имен (например, теперь `ObjCRuntime.Constants.Version`).
 
-* Код, который выполняет сериализацию объектов может быть поврежден, при попытке сериализации `nint` и `nfloat` типов. Не забудьте проверить код сериализации работает неправильно после миграции.
+* Код, который сериализует объекты, может прерываться при попытке `nfloat` сериализации `nint` и типов. Убедитесь, что код сериализации работает правильно после миграции.
 
-* Иногда автоматизированные средства промахов код внутри `#if #else` директивы условной компиляции. В этом случае необходимо вручную внести исправления (см. описание ошибок приводится ниже).
+* Иногда автоматизированное средство пропустило код `#if #else` внутри директив условной компиляции. В этом случае необходимо внести исправления вручную (см. типичные ошибки ниже).
 
-* Вручную экспортированных методов, с помощью `[Export]` может не устраняться автоматически с помощью средства миграции, например в snippert этот код, необходимо вручную обновить тип возвращаемого значения на `nfloat`:
+* Экспортированные вручную методы `[Export]` с помощью могут не быть автоматически исправлены средством миграции, например в этом коде снипперт необходимо вручную обновить `nfloat`тип возвращаемого значения следующим образом:
 
     ```csharp
     [Export("tableView:heightForRowAtIndexPath:")]
     public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
     ```
 
-* На единый API не поддерживает неявное преобразование между NSDate и DateTime платформы .NET, так как он не преобразования без потери данных. Чтобы избежать ошибок, связанных с `DateTimeKind.Unspecified` преобразовать .NET `DateTime` для локальных или UTC до приведения к `NSDate`.
+* Unified API не обеспечивает неявное преобразование между Нсдате и .NET DateTime, так как оно не является преобразованием без потерь. Значение, чтобы предотвратить ошибки `DateTimeKind.Unspecified` , связанные с `DateTime` преобразованием .NET в локальные или `NSDate`UTC перед приведением к.
 
-* Категория Objective-C методы теперь создаются как методы расширения в единый API. Например, код, который ранее использовал `UIView.DrawString` теперь будет ссылаться на `NSString.DrawString` в единый API.
+* Методы категории цели-C теперь создаются как методы расширения в Unified API. Например, код, который использовался `UIView.DrawString` ранее, теперь `NSString.DrawString` будет ссылаться на Unified API.
 
-* Кода, используя классы AVFoundation с `VideoSettings` следует изменить для использования `WeakVideoSettings` свойство. Для этого требуется `Dictionary`, который доступен как свойство для классов параметров, например:
+* Код, использующий `VideoSettings` классы авфаундатион с, должен `WeakVideoSettings` измениться на использование свойства. Для этого требуется `Dictionary`объект, который доступен как свойство в классах параметров, например:
 
     ```csharp
     vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
     ```
 
-* NSObject `.ctor(IntPtr)` конструктор было изменено с открытым, чтобы защищенные ([для предотвращения неправильного использования](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
+* Конструктор нсобжект `.ctor(IntPtr)` был изменен с Public на protected ([для предотвращения неправильного использования](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
-* `NSAction` было [заменить](~/cross-platform/macios/unified/overview.md#NSAction) с помощью standard .NET `Action`. Некоторые делегаты simple (один параметр) также были заменены `Action<T>`.
+* `NSAction`была [заменена](~/cross-platform/macios/unified/overview.md#NSAction) на стандартную платформу `Action`.NET. Некоторые простые делегаты (один параметр) также были заменены `Action<T>`на.
 
-Наконец, см. [различия единый API классической v](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) для поиска изменений к интерфейсам API в коде. Поиск [эту страницу](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) поможет найти классический API-интерфейсов и что они были обновлены до.
+Наконец, ознакомьтесь с [классическими отличиями v Unified API](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) , чтобы найти изменения в интерфейсах API в коде. Поиск на [этой странице](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) поможет найти классические API и то, до чего они были обновлены.
 
 > [!NOTE]
-> `MonoTouch.Dialog` Пространство имен остается неизменным после миграции. Если код использует **MonoTouch.Dialog** должны продолжать использовать это пространство имен — сделать *не* изменить `MonoTouch.Dialog` для `Dialog`!
+> `MonoTouch.Dialog` Пространство имен остается неизменным после миграции. Если в коде используется **однокасаниное. диалоговое окно** следует продолжать использовать это пространство имен  — не `MonoTouch.Dialog` изменять `Dialog`на!
 
-## <a name="common-compiler-errors"></a>Типичные ошибки компилятора
+## <a name="common-compiler-errors"></a>Распространенные ошибки компилятора
 
-Ниже перечислены другие примеры распространенных ошибок вместе с решением:
+Ниже приведены другие примеры распространенных ошибок, а также решение.
 
-**Ошибки CS0012: Тип «MonoTouch.UIKit.UIView» определен в сборке, которая не используется.**
+**Ошибка CS0012: Тип "with Touch. UIKit. UIView" определен в сборке, на которую нет ссылок.**
 
-Исправление: Обычно это означает, что проект ссылается на компонент или пакет NuGet, который не было создано с помощью на единый API. Следует удалить и повторно добавить все компоненты и NuGet пакеты. Если это не устранит ошибку, внешнюю библиотеку может пока не поддерживает единый API.
+Исправно Обычно это означает, что проект ссылается на компонент или пакет NuGet, который не был построен с помощью Unified API. Следует удалить и повторно добавить все компоненты и пакеты NuGet. Если это не устраняет ошибку, возможно, внешняя библиотека пока не поддерживает Unified API.
 
-**Ошибка MT0034: Не может содержать «monotouch.dll» и «Xamarin.iOS.dll» в том же проекте Xamarin.iOS - «Xamarin.iOS.dll» указывается явным образом, хотя ссылается «monotouch.dll» "Xamarin.Mobile, Version = 0.6.3.0, язык и региональные параметры = neutral, PublicKeyToken = null".**
+**Ошибка MT0034: Не допускается одновременное включение "неtouch. dll" и "Xamarin. iOS. dll" в один и тот же проект Xamarin. iOS — "Xamarin. iOS. dll" обращается явно, а "Xamarin. Mobile" Version = 0.6.3.0, Culture = Neutral, PublicKeyToken = null ".**
 
-Исправление: Удалить компонент, который вызывает эту ошибку и снова добавить в проект.
+Исправно Удалите компонент, который вызывает эту ошибку, и повторно добавьте его в проект.
 
-**Ошибки CS0234: Имя типа или пространства имен «Foundation» не существует в пространстве имен «MonoTouch». Возможно, отсутствует ссылка на сборку?**
+**Ошибка CS0234: Тип или имя пространства имен "Foundation" не существует в пространстве имен "with Touch". Пропущена ли ссылка на сборку?**
 
-Исправление: Средство автоматической миграции в Visual Studio для Mac *следует* обновить все `MonoTouch.Foundation` ссылки на `Foundation`, однако в некоторых случаях их потребуется обновить вручную. Похожие ошибки может отображаться для других пространств имен в `MonoTouch`, такие как `UIKit`.
+Исправно Средство автоматической миграции в Visual Studio для Mac *должно* обновить все `MonoTouch.Foundation` ссылки на `Foundation`, однако в некоторых случаях их потребуется обновить вручную. Аналогичные ошибки могут отображаться для других пространств имен, ранее содержащихся `MonoTouch`в, `UIKit`например.
 
-**Ошибка CS0266: Не удается неявно преобразовать тип «double» для «System.float»**
+**Ошибка CS0266: Невозможно неявно преобразовать тип "double" в "System. float"**
 
-FIX: измените тип и привести к `nfloat`. Эта ошибка также может возникать для других типов с 64-разрядные эквиваленты (такие как `nint`,)
+Исправление. Измените тип и приведите `nfloat`к типу. Эта ошибка также может возникать для других типов с 64-разрядными эквивалентами (например `nint`,).
 
 ```csharp
 nfloat scale = (nfloat)Math.Min(rect.Width, rect.Height);
 ```
 
-**Ошибка CS0266: Не удается неявно преобразовать тип «CoreGraphics.CGRect» для «System.Drawing.RectangleF». Существует явное преобразование (отсутствует приведение?)**
+**Ошибка CS0266: Невозможно неявно преобразовать тип "Кореграфикс. Кгрект" в "System. Drawing. Ректанглеф". Существует явное преобразование (возможно, отсутствует приведение?)**
 
-Исправление: Изменение экземпляров для `RectangleF` для `CGRect`, `SizeF` для `CGSize`, и `PointF` для `CGPoint`. Пространство имен `using System.Drawing;` следует заменить `using CoreGraphics;` (если он еще не существует).
+Исправно Измените `RectangleF` экземпляры `CGRect`на ,`SizeF` и на`PointF` . `CGSize` `CGPoint` Пространство имен `using System.Drawing;` должно быть заменено `using CoreGraphics;` на (если оно еще не указано).
 
-**Ошибка CS1502: Наиболее подходящий перегруженный метод "CoreGraphics.CGContext.SetLineDash (System.nfloat, System.nfloat[])" содержит недопустимые аргументы**
+**ошибка CS1502: Наиболее подходящий перегруженный метод для "Кореграфикс. Кгконтекст. Сетлинедаш (System. нфлоат, System. нфлоат [])" имеет несколько недопустимых аргументов**
 
-Исправление: Измените тип массива на `nfloat[]` и явным образом приведите `Math.PI`.
+Исправно Измените тип массива на `nfloat[]` и явно приведите `Math.PI`к типу.
 
 ```csharp
 grphc.SetLineDash (0, new nfloat[] { 0, 3 * (nfloat)Math.PI });
 ```
 
-**Ошибка CS0115: «WordsTableSource.RowsInSection (UIKit.UITableView, int)» помечен как переопределение, но не найден подходящий метод для переопределения**
+**Ошибка CS0115: "Вордстаблесаурце. Ровсинсектион (UIKit. Уитаблевиев, int)" помечен как переопределение, но не найден подходящий метод для переопределения**
 
-Исправление: Изменение типа возвращаемого значения и параметра для `nint`. Обычно это происходит в переопределения методов, например на `UITableViewSource`, в том числе `RowsInSection`, `NumberOfSections`, `GetHeightForRow`, `TitleForHeader`, `GetViewForHeader`и т. д.
+Исправно Измените возвращаемое значение и типы параметров на `nint`. Это обычно происходит `UITableViewSource`в переопределениях методов, включая `NumberOfSections` `GetHeightForRow` `RowsInSection`,,, `TitleForHeader` `GetViewForHeader`, и т. д.
 
 ```csharp
 public override nint RowsInSection (UITableView tableview, nint section) {
 ```
 
-**Ошибка CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)`: возвращаемый тип должен быть «System.nint», чтобы соответствовать переопределенному члену `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)`**
+**Ошибка CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)`: возвращаемый тип должен быть "System. НИНТ", чтобы соответствовать переопределенному члену`UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)`**
 
-Исправление: Если тип возвращаемого значения изменяется на `nint`, привести возвращаемое значение к `nint`.
+Исправно Когда тип возвращаемого значения изменяется на `nint`, приведите возвращаемое значение `nint`к.
 
 ```csharp
 public override nint NumberOfSections (UITableView tableView)
@@ -148,28 +148,28 @@ public override nint NumberOfSections (UITableView tableView)
 }
 ```
 
-**Ошибка CS1061: Тип «CoreGraphics.CGPath» не содержит определение для «AddElipseInRect»**
+**Ошибка CS1061: Тип "Кореграфикс. Кгпас" не содержит определения для "Адделипсеинрект"**
 
-Исправление: Проверка орфографии для `AddEllipseInRect`. Среди других изменений имени:
+Исправно Исправьте орфографию в `AddEllipseInRect`. Другие изменения имен включают:
 
-* Измените «Color.Black» `NSColor.Black`.
-* Измените MapKit «AddAnnotation» `AddAnnotations`.
-* Измените AVFoundation «DataUsingEncoding» `Encode`.
-* Измените AVFoundation «AVMetadataObject.TypeQRCode» `AVMetadataObjectType.QRCode`.
-* Измените AVFoundation «VideoSettings» `WeakVideoSettings`.
-* Изменить PopViewControllerAnimated для `PopViewController`.
-* Измените CoreGraphics «CGBitmapContext.SetRGBFillColor» `SetFillColor`.
+* Измените цвет. Black на `NSColor.Black`.
+* Измените Мапкит "Адданнотатион" на `AddAnnotations`.
+* Измените Авфаундатион "Датаусинженкодинг" на `Encode`.
+* Измените Авфаундатион ' Авметадатаобжект. Типекркоде ' на `AVMetadataObjectType.QRCode`.
+* Измените Авфаундатион "Видеосеттингс" на `WeakVideoSettings`.
+* Измените Попвиевконтроллераниматед на `PopViewController`.
+* Измените Кореграфикс ' Кгбитмапконтекст. Сетргбфиллколор ' на `SetFillColor`.
 
-**Ошибка CS0546: невозможно переопределить, поскольку «MapKit.MKAnnotation.Coordinate» не имеет функции доступа set (CS0546)**
+**Ошибка CS0546: не удается переопределить, так как "Мапкит. Мканнотатион. координировать" не имеет метода доступа set, доступного для переопределения (CS0546)**
 
-При создании пользовательские примечания о путем создания подклассов MKAnnotation координат поле имеет не метод задания только метода получения.
+При создании пользовательской заметки с помощью подкласса Мканнотатион поле координаты не имеет метода задания, а только метода получения.
 
-[Исправить](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
+[Исправление](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
 
-* Добавить поле для отслеживания координаты
-* возвращать это поле в методе получения координат свойства
-* Переопределите метод SetCoordinate и задать поля
-* Вызов SetCoordinate в ваш конструктор с параметром переданный координат
+* Добавление поля для отслеживания координат
+* возвратить это поле в методе получения свойства координаты
+* Переопределите метод Сеткурдинате и задайте поле
+* Вызовите Сеткурдинате в ctor с помощью переданного параметра координаты.
 
 Он должен выглядеть следующим образом:
 
@@ -201,9 +201,9 @@ class BasicPinAnnotation : MKAnnotation
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Обновление приложений](~/cross-platform/macios/unified/updating-apps.md)
-- [Обновление приложения для iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
-- [Обновление приложения Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
-- [Обновление приложений Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
-- [Обновление привязки](~/cross-platform/macios/unified/update-binding.md)
+- [Обновление приложений iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
+- [Обновление приложений Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
+- [Обновление приложений Xamarin. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+- [Обновление привязок](~/cross-platform/macios/unified/update-binding.md)
 - [Работа с собственными типами в кроссплатформенных приложениях](~/cross-platform/macios/native-types-cross-platform.md)
-- [Классический и отличия Unified API](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Различия между классическими и Unified APIми](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

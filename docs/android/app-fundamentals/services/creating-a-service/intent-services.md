@@ -1,36 +1,36 @@
 ---
-title: Службы Intent в Xamarin.Android
+title: Службы с намерением в Xamarin. Android
 ms.prod: xamarin
 ms.assetid: A5B86FE4-C8E2-4B0A-84CA-EF8F5119E31B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1301f34ad1f7a0069c542ba81bf237a673fd239d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4c868623ae08ac1366c1c9ea55c8d635f0a6a061
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013141"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509138"
 ---
-# <a name="intent-services-in-xamarinandroid"></a>Службы Intent в Xamarin.Android
+# <a name="intent-services-in-xamarinandroid"></a>Службы с намерением в Xamarin. Android
 
-## <a name="intent-services-overview"></a>Обзор службы Intent
+## <a name="intent-services-overview"></a>Общие сведения о службах намерения
 
-Обе работы и привязку службы запускаются в основном потоке, это означает, что для сохранения производительности smooth, служба должна выполнять работу асинхронно. Одним из самых простых способов решения этой проблемы является с _рабочей очереди процессора шаблон_, где заданий для выполнения помещается в очередь, которая обрабатывается одним потоком. 
+Запущенные и привязанные службы выполняются в основном потоке, что означает, что для обеспечения плавности производительности службе необходимо асинхронно выполнять работу. Одним из самых простых способов решения этой проблемы является _шаблон обработчика рабочей очереди_, где работа, которую необходимо выполнить, помещается в очередь, обслуживаемую одним потоком.
 
-[ `IntentService` ](https://developer.xamarin.com/api/type/Android.App.IntentService/) Является подклассом `Service` класс, предоставляющий Android конкретной реализации этого шаблона. Он будет управлять работой постановка в очередь, запуска рабочего потока для службы очереди, и запросы на извлечение отключать очереди для запуска в рабочем потоке. `IntentService` Незаметно остановиться и удалить рабочий поток, при отсутствии больше работы в очереди.
- 
-Отправке работы в очереди, создав `Intent` и неудачами, `Intent` для `StartService` метод.
+`Service` Класс [`IntentService`](xref:Android.App.IntentService) является подклассом класса, который предоставляет реализацию этого шаблона для Android. Он будет управлять работой очередей, запускать рабочий поток для обслуживания очереди и выдавать запросы из очереди для выполнения в рабочем потоке. Компонент `IntentService` будет беззвучно останавливаться и удалять рабочий поток, если в очереди больше нет работы.
 
-Невозможно остановить или прервать `OnHandleIntent` метод `IntentService` во время его работы. Благодаря этой структуре `IntentService` должны храниться без отслеживания состояния &ndash; его не следует полагаться на активное подключение или подключения от остальной части приложения. `IntentService` Предназначен для statelessly обработки рабочих запросов.
+Работа отправляется в очередь путем создания `Intent` и последующей `Intent` передачи в `StartService` метод.
 
-Существует два требования для создания подклассов `IntentService`:
+Невозможно остановить или прервать `OnHandleIntent` выполнение метода `IntentService` во время его работы. В `IntentService` связи с этим проект должен храниться без &ndash; отслеживания состояния, он не должен полагаться на активное соединение или связь с остальной частью приложения. `IntentService` Стателессли предназначен для обработки рабочих запросов.
 
-1. Новый тип (создан путем создания подклассов `IntentService`) только переопределяет `OnHandleIntent` метод.
-2. Конструктор для нового типа требует строку, которая используется для именования рабочий поток, который будет обрабатывать запросы. Имя этот рабочий поток в основном используется при отладке приложения.
+Для подклассов `IntentService`существует два требования.
 
-В следующем коде показан `IntentService` реализацию переопределенный `OnHandleIntent` метод:
+1. Новый тип (созданный подклассом `IntentService`) `OnHandleIntent` переопределяет только метод.
+2. Конструктору для нового типа требуется строка, которая используется для именования рабочего потока, который будет выполнять запросы. Имя этого рабочего потока в основном используется при отладке приложения.
+
+В следующем коде показана `IntentService` реализация с переопределенным `OnHandleIntent` методом:
 
 ```csharp
 [Service]
@@ -39,7 +39,7 @@ public class DemoIntentService: IntentService
     public DemoIntentService () : base("DemoIntentService")
     {
     }
-    
+
     protected override void OnHandleIntent (Android.Content.Intent intent)
     {
         Console.WriteLine ("perform some long running work");
@@ -49,7 +49,7 @@ public class DemoIntentService: IntentService
 }
 ```
 
-Работа отсылается `IntentService` путем создания экземпляра `Intent` и последующего вызова [ `StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/) метод с этой целью как параметр. Цель передаются в службу в качестве параметра `OnHandleIntent` метод. В этом фрагменте кода приведен пример отправки рабочего запроса к объекту Intent. 
+Работа отправляется в объект `IntentService` путем создания экземпляра `Intent` и последующего вызова [`StartService`](xref:Android.Content.Context.StartService*) метода с этим намерением в качестве параметра. Цель будет передаваться в службу в качестве параметра в `OnHandleIntent` методе. Этот фрагмент кода является примером отправки рабочего запроса в цель: 
 
 ```csharp
 // This code might be called from within an Activity, for example in an event
@@ -63,19 +63,18 @@ downloadIntent.Put
 StartService(downloadIntent);
 ```
 
-`IntentService` Можно извлечь значения из намерения, как показано в этом фрагменте кода:  
+`IntentService` Может извлекать значения из цели, как показано в следующем фрагменте кода:  
 
 ```csharp
 protected override void OnHandleIntent (Android.Content.Intent intent)
 {
     string fileToDownload = intent.GetStringExtra("file_to_download");
-    
+
     Log.Debug("DemoIntentService", $"File to download: {fileToDownload}.");
 }
 ```
 
-
 ## <a name="related-links"></a>Связанные ссылки
 
-- [IntentService](https://developer.xamarin.com/api/type/Android.App.IntentService/)
-- [StartService](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)
+- [IntentService](xref:Android.App.IntentService)
+- [StartService](xref:Android.Content.Context.StartService*)

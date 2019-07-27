@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: ef16224b9ef060ff8643211b8e1f0c767c518bdf
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e383bbccd4e76be8a208f5680e5cf21e45a0dbc3
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67841401"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511925"
 ---
 
-Следующую команду, чтобы указать построение выпуска решения **SOLUTION_FILE.sln** для iPhone. Расположение IPA-ФАЙЛ можно задать, указав `IpaPackageDir` свойства в командной строке:
+Следующая командная строка позволяет указать сборку выпуска решения **SOLUTION_FILE. sln** для iPhone. Расположение IPA можно задать, указав `IpaPackageDir` свойство в командной строке:
 
-- На компьютере Mac с помощью **xbuild**:
+- На компьютере Mac с помощью **Xbuild**:
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
            /p:IpaPackageDir="$HOME/Builds" \
            /t:Build MyProject.sln
 
-**Xbuild** команды обычно находится в каталоге **/Library/Frameworks/Mono.framework/Commands**.
+Команда **Xbuild** обычно находится в каталоге **/либрари/фрамеворкс/моно.фрамеворк/коммандс**.
 
-- В Windows, с помощью **msbuild**:
+- В Windows с помощью **MSBuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 
@@ -27,7 +27,6 @@ ms.locfileid: "67841401"
             /t:Build MyProject.sln
 
 
-**MSBuild** не будет автоматически расширяться `$( )` выражения, переданный с помощью командной строки. По этой причине рекомендуется использовать полный путь при задании `IpaPackageDir` в командной строке.
+**MSBuild** не будет автоматически развертывать `$( )` выражения, переданные в командной строке. По этой причине рекомендуется использовать полный путь при задании в `IpaPackageDir` командной строке.
 
-
-См. в разделе [заметки о выпуске для iOS 9.8](https://developer.xamarin.com/releases/ios/xamarin.ios_9/xamarin.ios_9.8/#New_MSBuild_property_IpaPackageDir_to_customize_.ipa_output_location) Дополнительные сведения о `IpaPackageDir` свойство.
+Дополнительные сведения о `IpaPackageDir` свойстве см. в заметках о выпуске [iOS 9,8](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_9/xamarin.ios_9.8.md#new-msbuild-property-ipapackagedir-to-customize-ipa-output-location) .

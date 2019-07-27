@@ -1,45 +1,45 @@
 ---
-title: Приступая к работе с проверкой подлинности по отпечатку пальца
+title: начало работы с проверкой подлинности отпечатков пальцев
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 3082dfcd6d0ffbc6404a89a10819e60b57b9c61c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c433d4d7920b024795e2e8344b452e25d8f58cf4
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023837"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510647"
 ---
-# <a name="getting-started-with-fingerprint-authentication"></a>Приступая к работе с проверкой подлинности по отпечатку пальца
+# <a name="getting-started-with-fingerprint-authentication"></a>начало работы с проверкой подлинности отпечатков пальцев
 
-Чтобы начать работу, давайте сначала рассмотрим, как настроить проект Xamarin.Android, чтобы приложение не может использовать проверку подлинности по отпечатку пальца:
+Чтобы приступить к работе, давайте сначала рассмотрим настройку проекта Xamarin. Android, чтобы приложение могло использовать проверку подлинности отпечатков пальцев:
 
-1. Обновление **AndroidManifest.xml** для объявления разрешениях, необходимых для API-интерфейсы отпечатков пальцев.
-2. Получить ссылку на `FingerprintManager`.
-3. Проверьте, что устройство является возможность сканирования отпечатков пальцев.
+1. Обновите **AndroidManifest. XML** , чтобы объявить разрешения, необходимые для API-интерфейсов отпечатков пальцев.
+2. Получите ссылку `FingerprintManager`на.
+3. Убедитесь, что устройство поддерживает сканирование отпечатков пальцев.
 
-## <a name="requesting-permissions-in-the-application-manifest"></a>Манифест запроса разрешений в приложении
+## <a name="requesting-permissions-in-the-application-manifest"></a>Запрос разрешений в манифесте приложения
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Приложение Android необходимо запросить `USE_FINGERPRINT` разрешения в манифесте. Снимке экрана ниже показано, как добавить это разрешение для приложения в Visual Studio:
+Приложение Android должно запрашивать `USE_FINGERPRINT` разрешение в манифесте. На следующем снимке экрана показано, как добавить это разрешение в приложение в Visual Studio:
 
-[![Разрешение использования\_отпечатков ПАЛЬЦЕВ на экране манифеста Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
+[![\_Включение отпечатка пальца на экране манифеста Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Приложение Android необходимо запросить `USE_FINGERPRINT` разрешения в манифесте. Снимке экрана ниже показано, как добавлять это разрешение для приложения в Visual Studio для Mac:
+Приложение Android должно запрашивать `USE_FINGERPRINT` разрешение в манифесте. На следующем снимке экрана показано, как добавить это разрешение в приложение в Visual Studio для Mac:
 
-[![Включение UseFingerprint на экране приложения Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
+[![Включение Усефинжерпринт на экране приложения Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 
-## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Получение экземпляра FingerprintManager
+## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Получение экземпляра Финжерпринтманажер
 
-После этого приложение должно получить экземпляр `FingerprintManager` или `FingerprintManagerCompat` класса. Для совместимости с более старых версиях Android, приложение Android следует использовать API совместимости найдены в пакете NuGet поддержки Android версии 4. Следующий фрагмент кода демонстрирует, как получить соответствующий объект из операционной системы: 
+Затем приложение должно получить экземпляр `FingerprintManager` `FingerprintManagerCompat` класса или. Чтобы обеспечить совместимость с более старыми версиями Android, приложение Android должно использовать API совместимости, который находится в пакете NuGet для поддержки Android версии 4. В следующем фрагменте кода показано, как получить соответствующий объект из операционной системы: 
 
 ```csharp
 // Using the Android Support Library v4
@@ -49,15 +49,15 @@ FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(cont
 FingerprintManager fingerprintManager = context.GetSystemService(Context.FingerprintService) as FingerprintManager;
 ```  
 
-В предыдущем фрагменте `context` является любой Android `Android.Content.Context`. Как правило, это действие, которое выполняет проверку подлинности.
+В предыдущем фрагменте кода `context` — это любой Android. `Android.Content.Context` Обычно это действие, выполняющее проверку подлинности.
 
 ## <a name="checking-for-eligibility"></a>Проверка допустимости
 
-Приложение должно выполнить несколько проверок, чтобы убедиться, что существует возможность использовать проверку подлинности по отпечатку пальца. В целом существует пять условия, которые приложение использует для проверки права:  
+Приложение должно выполнить несколько проверок, чтобы обеспечить возможность использования проверки подлинности отпечатков пальцев. В итоге существует пять условий, которые приложение использует для проверки допустимости:  
 
-**Уровень API 23** &ndash; к API-интерфейсам отпечатков пальцев необходим уровень API 23 или более поздней версии. `FingerprintManagerCompat` Класс будет реализовать проверку уровня API для вас. По этой причине рекомендуется использовать **библиотеки поддержки Android v4** и `FingerprintManagerCompat`; это будет учетная запись для одного из этих проверок.
+**API уровня 23** &ndash; Для интерфейсов API отпечатков пальцев требуется уровень API 23 или выше. `FingerprintManagerCompat` Класс будет переносить проверку на уровне API. По этой причине рекомендуется использовать **библиотеку поддержки Android версии 4** , а `FingerprintManagerCompat`в этом случае будет использоваться одна из этих проверок.
 
-**Оборудование** &ndash; при первом запуске приложения, оно должно проверить наличие сканер отпечатков пальцев:
+**Оборудование** &ndash; Когда приложение запускается впервые, оно должно проверять наличие сканера отпечатков пальцев:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -67,7 +67,7 @@ if (!fingerprintManager.IsHardwareDetected)
 }
 ```
 
-**Устройство не защищено** &ndash; пользователь должен иметь устройства, защищенные с помощью блокировки экрана. Если пользователь не содержит защищенные устройства с помощью блокировки экрана и безопасность важна в приложение, затем пользователь уведомляется блокировка экрана должен быть настроен. В следующем фрагменте кода показано, как проверить это Предварительное требование:
+**Устройство защищено** &ndash; Пользователь должен защитить устройство с помощью блокировки экрана. Если пользователь не защищает устройство с помощью блокировки экрана, и для приложения важна безопасность, пользователь должен получать уведомления о необходимости настройки блокировки экрана. В следующем фрагменте кода показано, как проверить это пред-рекуисте:
 
 ```csharp
 KeyguardManager keyguardManager = (KeyguardManager) GetSystemService(KeyguardService);
@@ -76,7 +76,7 @@ if (!keyguardManager.IsKeyguardSecure)
 }
 ```
 
-**Зарегистрированных отпечатков** &ndash; пользователь должен иметь по крайней мере один отпечатков пальцев, зарегистрированные в операционной системе. Эта проверка разрешение должно выполняться перед каждой попытки проверки подлинности:
+**Зарегистрированные** отпечатки пальца &ndash; Пользователь должен иметь по крайней мере один отпечаток, зарегистрированный в операционной системе. Эта проверка разрешений должна выполняться до каждой попытки проверки подлинности:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -87,7 +87,7 @@ if (!fingerprintManager.HasEnrolledFingerprints)
 }
 ```
 
-**Разрешения** &ndash; приложения должны запрашивать разрешение пользователя перед использованием приложения. Для Android 5.0 и ниже пользователь предоставляет разрешение условием установки приложения. Android 6.0 введена новая модель разрешение проверки разрешений во время выполнения. В этом фрагменте кода приведен пример того, как для проверки разрешений на базе Android 6.0:
+**Разрешения** &ndash; Приложение должно запросить разрешение у пользователя перед использованием приложения. Для Android 5,0 и более низкого уровня пользователь предоставляет разрешение в качестве условия установки приложения. В Android 6,0 появилась новая модель разрешений, которая проверяет разрешения во время выполнения. Этот фрагмент кода является примером проверки разрешений на Android 6,0:
 
 ```csharp
 // The context is typically a reference to the current activity.
@@ -103,15 +103,15 @@ else
 }
 ```
 
-Проверка всех этих условий, каждый раз, это приложение предлагает варианты проверки подлинности будет гарантируют, что пользователь получает удобства работы пользователей. Изменения или обновления к устройству или операционной системы может повлиять на доступность проверки подлинности по отпечатку пальца. Если вы решили кэшировать результаты любого из этих проверок, не забудьте принять во внимание следующие сценарии обновления.
+Проверка всех этих условий каждый раз, когда приложение предлагает варианты проверки подлинности, обеспечит лучшее взаимодействие с пользователем. Изменения или обновления устройства или операционной системы могут повлиять на доступность проверки подлинности отпечатков пальцев. Если вы решили кэшировать результаты какой бы то ни было из этих проверок, следите за сценариями обновления.
 
-Дополнительные сведения о том, как запросить разрешения в Android 6.0 см. в руководстве по Android [запрос прав доступа во время выполнения](https://developer.android.com/training/permissions/requesting.html).
+Дополнительные сведения о том, как запросить разрешения в Android 6,0, см. в документации по Android, [запрашивающей разрешения во время выполнения](https://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Контекст](https://developer.xamarin.com/api/type/Android.Content.Context/)
-- [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
-- [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
-- [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
-- [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
+- [Локального](xref:Android.Content.Context)
+- [KeyguardManager](xref:Android.App.KeyguardManager)
+- [контексткомпат](https://developer.android.com/reference/android/support/v4/content/ContextCompat)
+- [финжерпринтманажер](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [финжерпринтманажеркомпат](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
 - [Запрос разрешений во время выполнения](https://developer.android.com/training/permissions/requesting.html)

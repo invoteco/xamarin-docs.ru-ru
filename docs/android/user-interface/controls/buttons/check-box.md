@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9f2fd10e5cfe28206d323b2769517c2584919232
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f6f594d86cab8b1173ee9f67402862e1ec2890b2
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829722"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510370"
 ---
 # <a name="checkbox"></a>CheckBox
 
-В этом разделе вы создадите флажок для выбора элементов, с помощью [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox)
-мини-приложение. При нажатии флажок, появится всплывающее сообщение о текущее состояние флажка.
+В этом разделе вы создадите флажок для выбора элементов, используя[`CheckBox`](xref:Android.Widget.CheckBox)
+». При нажатии этого флажка всплывающее сообщение будет указывать текущее состояние флажка.
 
-Откройте **Resources/layout/Main.axml** файл и добавьте [ `CheckBox` ](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/) элемент (внутри [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout)):
+Откройте файл **Resources/Layout/Main. axml** и добавьте [`CheckBox`](xref:Android.Widget.CheckBox) элемент (внутри него [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
 ```xml
 <CheckBox android:id="@+id/checkbox"
@@ -27,8 +27,8 @@ ms.locfileid: "67829722"
         android:text="check it out" />
 ```
 
-Чтобы сделать что-то, при изменении состояния, добавьте следующий код в конец [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-метод:
+Чтобы сделать что-то при изменении состояния, добавьте следующий код в конец элемента[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Method
 
 ```csharp
 CheckBox checkbox = FindViewById<CheckBox>(Resource.Id.checkbox);
@@ -41,18 +41,18 @@ checkbox.Click += (o, e) => {
 };
 ```
 
-Здесь фиксируется [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/)
-элемент из макета, затем обрабатывает событие щелчка, который определяет действие, которое необходимо выполнить при нажатии флажок. При нажатии [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-свойство вызывается новое состояние флажка. Если проверки, а затем [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-Отображает сообщение «Выбранные», в противном случае отображается «Не выбран». В [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/)
-обрабатывает свои собственные изменения состояния, поэтому необходимо запрашивать текущее состояние.
+Это захватывает[`CheckBox`](xref:Android.Widget.CheckBox)
+, а затем обрабатывает событие щелчка, которое определяет действие, выполняемое при нажатии на флажок. При нажатии кнопки[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+свойство вызывается для проверки нового состояния флажка. Если он установлен, то[`Toast`](xref:Android.Widget.Toast)
+Отображает сообщение "выбрано", в противном случае отображается значение "не выбрано". Тот[`CheckBox`](xref:Android.Widget.CheckBox)
+обрабатывает свои собственные изменения состояния, поэтому необходимо только запросить текущее состояние.
 
 Запустите его.
 
 > [!TIP]
-> Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), используйте [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
-> метод задания свойства или [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)
+> Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference), используйте[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> метод задания свойства или[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > метод.
 
-*Некоторые части этой страницы, изменения с учетом работы создана и совместно используется Android откройте исходный проект и используются в соответствии с условиями, описанными в*
-[*лицензии Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
+*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
+описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/).

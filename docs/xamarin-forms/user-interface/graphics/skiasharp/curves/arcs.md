@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c93441bff02322fb938a67806ba7f5163c8c969e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61088928"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511907"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Три способа нарисовать дугу
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Эти методы аналогичны Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) и [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) методы. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) метод аналогичен, но будет ограничен дуг на длину окружности круга, а не обобщить как эллипс.
+Эти методы идентичны методам Android [`AddArc`](xref:Android.Graphics.Path.AddArc*) и [`ArcTo`] XREF: Android. Graphics. Path. аркто *). IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) метод аналогичен, но будет ограничен дуг на длину окружности круга, а не обобщить как эллипс.
 
 Оба метода начинаются с `SKRect` значение, которое определяет расположение и размер эллипса:
 
@@ -58,7 +58,7 @@ public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean fo
 
 ![](arcs-images/anglearc.png "Угол дуги сама по себе")
 
-`startAngle` Или `sweepAngle` аргументов может быть отрицательным: Дуги по часовой стрелке для положительных значений из `sweepAngle` и против часовой стрелки для отрицательных значений.
+Аргументы `startAngle` или`sweepAngle` могут быть отрицательными: Дуга по часовой стрелке используется для положительных `sweepAngle` значений и против часовой стрелки для отрицательных значений.
 
 Тем не менее `AddArc` does *не* определить закрытый профиль. При вызове метода `LineTo` после `AddArc`, линия берет начало от конца дуги к моменту `LineTo` метода и это справедливо для `ArcTo`.
 
@@ -521,7 +521,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 ![](arcs-images/ellipticalarcellipse1.png "Первый набор эллиптической дуги")
 
-Можно отличить эти две дуги двумя способами: Top дуги больше, чем нижней дуги, а как дуга которого отображается слева направо, верхнем дуги по часовой стрелке хотя нижней дуга рисуется против часовой стрелки.
+Эти две дуги могут различаться двумя способами: Верхняя дуга больше, чем нижняя дуга, и по мере того, как дуга рисуется слева направо, верхняя дуга рисуется в направлении по часовой стрелке, а нижняя дуга рисуется в направлении по часовой стрелке.
 
 Можно также в соответствии с эллипса между двумя точками другим способом:
 
@@ -535,10 +535,10 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 Эти четыре дуги различаются по четыре комбинации [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) и [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) аргументов типа перечисления в `ArcTo` метод:
 
-- Red: SKPathArcSize.Large и SKPathDirection.Clockwise
-- Зеленый цвет: SKPathArcSize.Small и SKPathDirection.Clockwise
-- Синий: SKPathArcSize.Small и SKPathDirection.CounterClockwise
-- Пурпурный: SKPathArcSize.Large и SKPathDirection.CounterClockwise
+- отмечен Скпасарксизе. Large и Скпасдиректион. по часовой стрелке
+- зеленого Скпасарксизе. Малый и Скпасдиректион. по часовой стрелке
+- выделен Скпасарксизе. Малый и Скпасдиректион. против часовой стрелки
+- цвет Скпасарксизе. Large и Скпасдиректион. против часовой стрелки
 
 Если мозаичный эллипс не достаточное для размещения между двумя точками, затем он равномерно масштабируется, пока она не будет достаточно большим. Только два уникальных дуги в этом случае подключиться двумя точками. Их можно отличить с `SKPathDirection` параметра.
 

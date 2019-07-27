@@ -1,5 +1,5 @@
 ---
-title: AuthenticateUsers с помощью поставщика удостоверений
+title: Аусентикатеусерс с поставщиком удостоверений
 description: В этой статье описываются способы использования Xamarin.Auth для управления процессом проверки подлинности в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650406"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508252"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Проверка подлинности пользователей с помощью поставщика удостоверений
 
@@ -171,7 +171,7 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
 
 #### <a name="android"></a>Android
 
-В Android схему URL-адрес зарегистрирован, указав [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) атрибут `Activity` , обрабатывающий схемы. По завершении запроса на авторизацию поставщик удостоверений перенаправляет URL-адрес перенаправления для приложения. Как URL-адрес использует схему приводит к Android, запустив приложение, передачи в URL-адрес в качестве параметра запуска, где он обрабатывается `OnCreate` метод `Activity` зарегистрированном для обработки пользовательских схема URL-адреса. В следующем примере кода показан класс из примера приложения, который обрабатывает пользовательские схемы URL-адрес:
+В Android схему URL-адрес зарегистрирован, указав [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) атрибут `Activity` , обрабатывающий схемы. По завершении запроса на авторизацию поставщик удостоверений перенаправляет URL-адрес перенаправления для приложения. Как URL-адрес использует схему приводит к Android, запустив приложение, передачи в URL-адрес в качестве параметра запуска, где он обрабатывается `OnCreate` метод `Activity` зарегистрированном для обработки пользовательских схема URL-адреса. В следующем примере кода показан класс из примера приложения, который обрабатывает пользовательские схемы URL-адрес:
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -197,7 +197,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-`DataSchemes` Свойство [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) должно быть присвоено идентификатор обратном клиента, полученный из идентификатора клиента Android для проекта на [консоли Google API](http://console.developers.google.com).
+`DataSchemes` Свойство [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) должно быть присвоено идентификатор обратном клиента, полученный из идентификатора клиента Android для проекта на [консоли Google API](http://console.developers.google.com).
 
 `OnCreate` Метод преобразует URL-адрес, полученных из `Android.Net.Url` к типу .NET `Uri`, перед обработкой URL-адрес перенаправления с `OnPageLoading` метод открытой `OAuth2Authenticator` объекта. В результате Xamarin.Auth закрыть вкладку веб-браузера, а синтаксический анализ полученных данных OAuth.
 

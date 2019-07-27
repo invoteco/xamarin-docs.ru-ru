@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 0613411e5436a0ea8ed08bf4af52dae84a9a701c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed346b33ac92f6a1c73cdd3b29fb70ba17c5e91
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61307964"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509670"
 ---
 # <a name="user-profile"></a>Профиль пользователя
 
-Android поддерживается перечисление контакты с [ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/) поставщика, так как API уровня 5. Например, список контактов сложнее, чем с помощью [ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/) класса, как показано в следующем примере кода:
+В Android поддерживается перечисление контактов с поставщиком [контактсконтракт](xref:Android.Provider.ContactsContract) с момента API уровня 5. Например, список контактов прост с использованием класса [контактконтрактс. Contacts](xref:Android.Provider.ContactsContract.Contacts) , как показано в следующем примере кода:
 
 ```csharp
 // Get the URI for the user's contacts:
@@ -45,18 +45,16 @@ if (cursor != null)
 }
 ```
 
-Начиная с Android 4 (API уровня 14), [ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/) класс доступен через `ContactsContract` поставщика. `ContactsContact.Profile` Предоставляет доступ к личного профиля для владельца устройства, включая контактные данные, такие как владелец устройства имя и номер телефона.
-
+Начиная с Android 4 (API уровня 14) класс [контактсконтакт. Profile](xref:Android.Provider.ContactsContract.Profile) доступен через `ContactsContract` поставщик. `ContactsContact.Profile` Предоставляет доступ к личному профилю для владельца устройства, который содержит контактные данные, такие как имя владельца устройства и номер телефона.
 
 ## <a name="required-permissions"></a>Необходимые разрешения
 
-Для чтения и записи контактные данные, приложения должны запрашивать `READ_CONTACTS` и `WRITE_CONTACTS` разрешения, соответственно.
-Кроме того, чтобы прочитать и изменить профиль пользователя, приложения должны запрашивать `READ_PROFILE` и `WRITE_PROFILE` разрешения.
-
+Для чтения и записи контактных данных приложения должны запрашивать `READ_CONTACTS` разрешения `WRITE_CONTACTS` и соответственно.
+Кроме того, для чтения и изменения профиля пользователя приложения должны запрашивать `READ_PROFILE` разрешения и. `WRITE_PROFILE`
 
 ## <a name="updating-profile-data"></a>Обновление данных профиля
 
-После задания этих разрешений приложение может использовать обычный Android методы для взаимодействия с данными профиля пользователя. Например, чтобы обновить отображаемое имя профиля, вызовите [ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update) с `Uri` извлечь с помощью [ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/) свойства, как показано ниже:
+После установки этих разрешений приложение может использовать обычные методы Android для взаимодействия с данными профиля пользователя. Например, чтобы обновить отображаемое имя профиля, вызовите [ContentResolver. Update](xref:Android.Content.ContentResolver.Update*) с параметром `Uri` , полученным через свойство [контактсконтракт. Profile. контентравконтактсури](xref:Android.Provider.ContactsContract.Profile.ContentRawContactsUri) , как показано ниже:
 
 ```csharp
 var values = new ContentValues ();
@@ -68,7 +66,7 @@ ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, 
 
 ## <a name="reading-profile-data"></a>Чтение данных профиля
 
-Выполнив запрос к [ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/) операций чтения обратно данные профиля. Например следующий код будет считывать отображаемое имя профиля пользователя:
+Выполнив запрос к [контактсконтакт. Profile. контентури](xref:Android.Provider.ContactsContract.Profile.ContentUri) , он считывает данные профиля. Например, следующий код будет считывать отображаемое имя профиля пользователя:
 
 ```csharp
 // Read the profile
@@ -90,26 +88,24 @@ if (cursor != null)
 }
 ```
 
-## <a name="navigating-to-the-user-profile"></a>Перейдите к профилю пользователя
+## <a name="navigating-to-the-user-profile"></a>Переход к профилю пользователя
 
-Наконец, чтобы перейти к профилю пользователя, создайте объект Intent с `ActionView` действия и `ContactsContract.Profile.ContentUri` затем передать его в `StartActivity` метод следующим образом:
+Наконец, чтобы выполнить переход к профилю пользователя, создайте намерение с `ActionView` действием `ContactsContract.Profile.ContentUri` и `StartActivity` затем передайте его в метод следующим образом:
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
-    ContactsContract.Profile.ContentUri);           
+    ContactsContract.Profile.ContentUri);
 StartActivity (intent);
 ```
 
-При запуске приведенный выше код, профиль пользователя отображается в том случае, как показано на следующем снимке экрана:
+При выполнении приведенного выше кода профиль пользователя отображается, как показано на следующем снимке экрана:
 
-[![Снимок экрана: Отображение профиля пользователя John Doe профиля](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[![Снимок экрана: профиль, отображающий профиль пользователя Джон Петров](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
-Работа с профилем пользователя аналогична взаимодействия с другими данными в Android, и он обеспечивает дополнительный уровень персонализации устройства.
-
-
+Работа с профилем пользователя аналогична взаимодействию с другими данными в Android и обеспечивает дополнительный уровень персонализации устройств.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [ContactsProviderDemo (пример)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
-- [Знакомство с Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4.0](https://developer.android.com/sdk/android-4.0.html)
+- [Контактспровидердемо (пример)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
+- [Знакомство со Южным Сандвичевым](http://www.android.com/about/ice-cream-sandwich/)
+- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

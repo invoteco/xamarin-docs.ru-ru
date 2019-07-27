@@ -1,46 +1,46 @@
 ---
-title: Вызываемые программы-оболочки Android
+title: Вызываемые оболочки Android для Xamarin. Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8bd3f11698260b944bd29fcd9551825cb76e506
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61090905"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511186"
 ---
-# <a name="android-callable-wrappers"></a>Вызываемые программы-оболочки Android
+# <a name="android-callable-wrappers-for-xamarinandroid"></a>Вызываемые оболочки Android для Xamarin. Android
 
-Android вызываемых оболочек (ACWs) являются обязательными, каждый раз, когда среда выполнения Android вызывает управляемый код. Эти оболочки необходимы, так как нет способа для регистрации классов с помощью КАРТИНОК (Android среда выполнения) во время выполнения. (В частности, [JNI DefineClass() функция](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) средой выполнения Android не поддерживается.} Вызываемые оболочки времени Android таким образом составляют для отсутствия поддержки регистрации типа среды выполнения. 
+Вызываемые оболочки Android (АКВС) требуются всякий раз, когда среда выполнения Android вызывает управляемый код. Эти оболочки являются обязательными, так как в среде выполнения не существует способа регистрации классов с помощью графики (среда выполнения Android). (В частности, [функция JNI дефинекласс ()](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) не поддерживается средой выполнения Android.} Таким же вызываемые оболочки Android составляют отсутствие поддержки регистрации типов во время выполнения. 
 
-*Каждый раз* Android кода необходимо выполнить `virtual` или метод, который является интерфейса `overridden` или реализуется в управляемом коде, Xamarin.Android необходимо указать учетную запись-посредник для Java, чтобы этот метод передается в соответствующий управляемый тип. Эти типы прокси-сервера Java имеют код Java, который имеет «одного» базового класса и в списке интерфейсов Java, что управляемые типы, реализация же конструкторы и объявление переопределенного базового класса и методов интерфейса. 
+*Каждый раз* Код Android должен выполнять `virtual` метод интерфейса или `overridden` , реализованный в управляемом коде, Xamarin. Android должен предоставить прокси-сервер Java, чтобы этот метод был отправлен в соответствующий управляемый тип. Эти типы прокси Java — это код Java, имеющий тот же базовый класс и список интерфейсов Java, что и управляемый тип, реализующий те же конструкторы и объявляющие переопределенный базовый класс и методы интерфейса. 
 
-Android вызываемые оболочки создаются **monodroid.exe** программы во время [процесс сборки](~/android/deploy-test/building-apps/build-process.md): они создаются для всех типов, которые (прямо или косвенно) наследовать [ Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/). 
+Вызываемые оболочки Android создаются программой **monodroid. exe** во время [процесса сборки](~/android/deploy-test/building-apps/build-process.md): они формируются для всех типов, которые (прямо или косвенно) наследуют [Java. lang. Object](xref:Java.Lang.Object). 
 
 
 
-## <a name="android-callable-wrapper-naming"></a>Именование Android вызываемой оболочки
+## <a name="android-callable-wrapper-naming"></a>Имя вызываемой оболочки Android
 
-Имена пакетов для вызываемых оболочек времени Android основаны на контрольной суммы MD5 имени выполняется экспорт типа с указанием сборки. Этот способ именования делает возможным для одного имени полного типа должны быть доступны с помощью различных сборок без нарушения ошибка упаковки. 
+Имена пакетов для вызываемых оболочек Android основаны на MD5SUM имени экспортируемого типа с указанием сборки. Такая методика именования позволяет сделать то же полное имя типа доступным для разных сборок, не вводя ошибку упаковки. 
 
-Из-за такая схема именования контрольной суммы MD5 недоступны непосредственно к типам по имени. Например, следующая `adb` команда не будет работать, так как имя типа `my.ActivityType` не создается по умолчанию: 
+Из-за этой схемы именования MD5SUM вы не можете напрямую обращаться к типам по имени. Например, следующая `adb` команда не будет работать, так как имя `my.ActivityType` типа не создается по умолчанию: 
 
 ```shell
 adb shell am start -n My.Package.Name/my.ActivityType
 ```
 
-Кроме того может появиться примерно такие ошибки при попытке сослаться на тип по имени:
+Кроме того, при попытке ссылки на тип по имени могут отобразиться следующие ошибки:
 
 ```shell
 java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivity"
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Если вы *сделать* требуется доступ к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, ниже приведен код, который объявляет действие полное доменное имя, которое `My.ActivityType`:
+Если требуется  доступ к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, вот код, объявляющий действие с полным именем `My.ActivityType`:
 
 ```csharp
 namespace My {
@@ -51,7 +51,7 @@ namespace My {
 }
 ```
 
-`ActivityAttribute.Name` Свойство может быть присвоено явно объявлять имя этого действия: 
+`ActivityAttribute.Name` Свойство можно задать, чтобы явно объявить имя этого действия: 
 
 ```csharp
 namespace My {
@@ -62,23 +62,23 @@ namespace My {
 }
 ```
 
-После добавления этого параметра свойства `my.ActivityType` возможен по имени из внешнего кода, а также из `adb` сценариев. `Name` Атрибут можно задать для множества различных типов, в том числе `Activity`, `Application`, `Service`, `BroadcastReceiver`, и `ContentProvider`: 
+После добавления `my.ActivityType` этого параметра свойства к нему можно получить доступ по имени из внешнего кода и из `adb` скриптов. `Service` `Application` `Activity` `ContentProvider` `BroadcastReceiver`Атрибут может быть задан для многих различных типов, включая,,, и: `Name` 
 
--   [ActivityAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Name/)
--   [ApplicationAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Name/)
--   [ServiceAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ServiceAttribute.Name/)
--   [BroadcastReceiverAttribute.Name](https://developer.xamarin.com/api/property/Android.Content.BroadcastReceiverAttribute.Name/)
--   [ContentProviderAttribute.Name](https://developer.xamarin.com/api/property/Android.Content.ContentProviderAttribute.Name/)
+-   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+-   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+-   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+-   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+-   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
-На основе контрольной суммы MD5 именования ACW впервые появился в Xamarin.Android 5.0. Дополнительные сведения о именование атрибутов, см. в разделе [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/). 
+Именование АКВ на основе MD5SUM было введено в Xamarin. Android 5,0. Дополнительные сведения об именовании атрибутов см. в разделе [регистераттрибуте](xref:Android.Runtime.RegisterAttribute). 
 
 
 
 ## <a name="implementing-interfaces"></a>Реализация интерфейсов
 
-Бывают случаи, когда необходимо реализовать интерфейс как Android, такие как [Android.Content.IComponentCallbacks](https://developer.xamarin.com/api/type/Android.Content.IComponentCallbacks/). Так как все Android классы и интерфейс расширения [Android.Runtime.IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) интерфейс, возникает вопрос: каким образом мы реализуем `IJavaObject`? 
+Иногда может потребоваться реализовать интерфейс Android, например [Android. Content. икомпоненткаллбаккс](xref:Android.Content.IComponentCallbacks). Поскольку все классы и интерфейс Android расширяют интерфейс [Android. Runtime. ижаваобжект](xref:Android.Runtime.IJavaObject) , возникает вопрос: как реализовать `IJavaObject`? 
 
-Ответ на вопрос был выше: причина, по всем типам Android необходимо реализовать `IJavaObject` — таким образом, чтобы Xamarin.Android Android вызываемой оболочки для Android, т. е. прокси-сервера Java для заданного типа. Так как **monodroid.exe** ищет только `Java.Lang.Object` подклассов, и `Java.Lang.Object` реализует `IJavaObject,` ответ очевиден: подкласс `Java.Lang.Object`: 
+На этот вопрос был получен ответ: причина, по которой все типы Android `IJavaObject` должны быть реализованы, заключается в том, что Xamarin. Android имеет вызываемую оболочку Android для предоставления в Android, т. е. прокси-сервер Java для данного типа. Так как **monodroid. exe** ищет `Java.Lang.Object` подклассы и `Java.Lang.Object` реализует `IJavaObject,` ответ, очевидно: подкласс `Java.Lang.Object`: 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -98,9 +98,9 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 
 ## <a name="implementation-details"></a>Сведения о реализации
 
-*В оставшейся части этой странице представлен детали реализации может быть изменена без предварительного уведомления* (и представленные здесь только потому, что разработчики будут узнать о том, что). 
+*Оставшаяся часть этой страницы содержит сведения о реализации, которые могут быть изменены без предварительного уведомления* . (и предоставляется здесь только потому, что разработчикам интересно, что происходит.) 
 
-Например, даны следующие C# источника:
+Например, при наличии следующего C# источника:
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ namespace Mono.Samples.HelloWorld
 }
 ```
 
-**Mandroid.exe** программы формирует следующие Android вызываемой оболочки: 
+Программа **аргументы mandroid. exe** создаст следующую вызываемую оболочку Android: 
 
 ```java
 package mono.samples.helloWorld;
@@ -155,4 +155,4 @@ public class HelloAndroid
 }
 ```
 
-Обратите внимание на то, что базовый класс сохраняется, и `native` объявления метода предоставляются для каждого метода, которая переопределяется в рамках управляемого кода. 
+Обратите внимание, что базовый класс сохраняется, `native` а объявления методов предоставляются для каждого метода, переопределяемого в управляемом коде. 

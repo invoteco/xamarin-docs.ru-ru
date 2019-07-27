@@ -1,49 +1,44 @@
 ---
-title: Использование ListView в Xamarin.Android
-description: ListView является достаточно важным элементом пользовательского интерфейса приложений Android; он используется везде из кратких списков из меню параметров для длинные списки контактов или "Избранное" internet. Он предоставляет простой способ для представления прокручиваемого списка строк, которые могут быть в формате с помощью встроенного стиля или настроить разными способами.
+title: Использование ListView в Xamarin. Android
+description: ListView является важным компонентом пользовательского интерфейса приложений Android; Он используется везде из коротких списков вариантов меню с длинными списками контактов или Интернет-избранного. Он предоставляет простой способ представления прокручиваемого списка строк, которые могут быть либо форматированы встроенным стилем, либо настроены с большой настройкой.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 2560a451f3a6e7dd09b687f9db8c0c070598def6
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 653b6e3d41f9acb4ee3e9ee3626e72220687ccb8
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740657"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510086"
 ---
-# <a name="listview"></a>ListView
+# <a name="xamarinandroid-listview"></a>ListView Xamarin. Android
 
-_ListView является достаточно важным элементом пользовательского интерфейса приложений Android; он используется везде из кратких списков из меню параметров для длинные списки контактов или "Избранное" internet. Он предоставляет простой способ для представления прокручиваемого списка строк, которые могут быть в формате с помощью встроенного стиля или настроить разными способами._
-
+_ListView является важным компонентом пользовательского интерфейса приложений Android; Он используется везде из коротких списков вариантов меню с длинными списками контактов или Интернет-избранного. Он предоставляет простой способ представления прокручиваемого списка строк, которые могут быть либо форматированы встроенным стилем, либо настроены с большой настройкой._
 
 ## <a name="overview"></a>Обзор
 
-Представления списка и адаптеры включены в наиболее основные стандартные блоки приложений Android. `ListView` Класс предоставляет гибкий способ представления данных, будь то контекстного меню или прокручиваемого списка. Он предоставляет удобные функции например прокрутки, индексирует и выбора одного или нескольких для построения мобильной пользовательские интерфейсы для приложений. Экземпляру `ListView` требуется *адаптер*, позволяющий заполнять его данными из представлений строк.
+Представления списков и адаптеры включены в самые фундаментальные стандартные блоки приложений Android. `ListView` Класс предоставляет гибкий способ представления данных, будь то короткое меню или длинный список с прокруткой. Она предоставляет возможности для удобства использования, такие как Быстрая прокрутка, индексы и отдельные или множественные выборки, которые позволяют создавать удобные для мобильных приложений пользовательские интерфейсы. Экземпляру `ListView` требуется *адаптер*, позволяющий заполнять его данными из представлений строк.
 
-В этом руководстве объясняется, как реализовать `ListView` и различных `Adapter` классы в Xamarin.Android. Он также демонстрирует способы настройки внешнего вида `ListView`, и он обсуждается Важность повторного использования строки для снижения потребления памяти. Есть также некоторые обсуждение влияние на жизненный цикл действия `ListView` и `Adapter` использовать. Если вы работаете над кросс платформенных приложений с помощью Xamarin.iOS, `ListView` управления структурно аналогичные iOS `UITableView` (и Android `Adapter` аналогичен `UITableViewSource`).
+В этом руководство объясняется, `ListView` как реализовать и `Adapter` различные классы в Xamarin. Android. В нем также показано `ListView`, как настроить внешний вид, и в нем обсуждается важность повторного использования строк для уменьшения потребления памяти. Кроме того, существует несколько обсуждений влияния `ListView` и `Adapter` использования жизненного цикла действия. При работе с приложениями на `ListView` разных платформах с помощью Xamarin. iOS элемент управления структурно напоминает iOS `UITableView` (и `UITableViewSource`Android `Adapter` аналогичен).
 
-Во-первых, представляет краткий учебник `ListView` с примера базовый код. Далее приведены ссылки на дополнительные разделы по использованию `ListView` в реальных приложениях.
-
+Во-первых, в кратком `ListView` учебнике описывается базовый пример кода. Далее приведены ссылки на более сложные разделы, помогающие использовать `ListView` их в реальных приложениях.
 
 > [!NOTE]
-> `RecyclerView` Мини-приложение представляет собой более сложных и гибкую версию `ListView`. Так как `RecyclerView` должна быть преемником `ListView` (и `GridView`), мы рекомендуем использовать `RecyclerView` вместо `ListView` для разработки новых приложений. Дополнительные сведения см. в разделе [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
+> Мини-приложение — это более сложная и гибкая `ListView`версия. `RecyclerView` Так `RecyclerView` как предназначено для `ListView` последователя (и `GridView`) `ListView` , рекомендуется использовать `RecyclerView` вместо для разработки новых приложений. Дополнительные сведения см. в разделе [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
+## <a name="listview-tutorial"></a>Руководство по ListView
 
+[`ListView`](xref:Android.Widget.ListView)является[`ViewGroup`](xref:Android.Views.ViewGroup)
+, создающий список прокручиваемых элементов. Элементы списка автоматически вставляются в список с помощью [`IListAdapter`](xref:Android.Widget.IListAdapter).
 
-## <a name="listview-tutorial"></a>Учебник по ListView
+В этом руководстве вы создадите прокручиваемый список названий стран, которые считываются из массива строк. При выборе элемента списка в всплывающем сообщении будет отображаться позиция элемента в списке.
 
-[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) — [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
-Создает список элементов для прокрутки. Элементы списка автоматически вставляются в список с помощью [ `IListAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.IListAdapter/).
+Запустите новый проект с именем **хеллолиствиев**.
 
-В этом руководстве вы создадите прокручиваемый список названия стран, которые считываются из массива строк. При выборе элемента списка, появляется всплывающее сообщение позицию элемента в списке.
-
-
-Создайте новый проект с именем **HelloListView**.
-
-Создание XML-файл с именем **list_item.xml** и сохраните его в **ресурсы/макета/** папки. Вставьте следующее:
+Создайте XML-файл с именем **list_item. XML** и сохраните его в папке resources **/Layout/** . Вставьте следующее:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -55,17 +50,16 @@ _ListView является достаточно важным элементом 
 </TextView>
 ```
 
-Этот файл определяет макет для каждого элемента, который будет помещен в [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
+Этот файл определяет макет для каждого элемента, который будет помещен в [`ListView`](xref:Android.Widget.ListView).
 
-Откройте `MainActivity.cs` и измените класс для расширения [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (а не [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
+Откройте `MainActivity.cs` и измените класс для расширения [`ListActivity`](xref:Android.App.ListActivity) (вместо [`Activity`](xref:Android.App.Activity)):
 
 ```csharp
 public class MainActivity : ListActivity
 {
 ```
 
-Вставьте следующий код для [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
-метод:
+Вставьте следующий код для [`OnCreate()`](xref:Android.App.Activity.OnCreate*)метода):
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -83,33 +77,33 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Обратите внимание на то, что это не загружает файл макета для действия (это обычно делается с [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32))).
-Вместо этого параметр [`ListAdapter`](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/)
-автоматически добавляет свойство [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-во весь экран из [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/).
-Этот метод принимает [ `ArrayAdapter<T>` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter%601/), который управляет массив элементов списка, которые будут помещены в [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
-В [`ArrayAdapter<T>`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter%601/)
-Конструктор принимает приложения [ `Context` ](https://developer.xamarin.com/api/type/Android.Content.Context/), описание макета для каждого элемента списка (созданный на предыдущем шаге) и `T[]` или [`Java.Util.IList<T>`](https://developer.xamarin.com/api/type/Java.Util.IList/)
-Массив объектов для вставки в [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-(определение приводится ниже.)
+Обратите внимание, что при этом не загружается файл макета для действия (обычно с [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)помощью)).
+Вместо этого установите для свойства[`ListAdapter`](xref:Android.App.ListActivity.ListAdapter)
+свойство автоматически добавляет элемент[`ListView`](xref:Android.Widget.ListView)
+для заполнения всего экрана [`ListActivity`](xref:Android.App.ListActivity).
+Этот метод принимает объект [`ArrayAdapter<T>`](xref:Android.Widget.ArrayAdapter`1), который управляет массивом элементов списка, которые будут помещены [`ListView`](xref:Android.Widget.ListView)в.
+Тот[`ArrayAdapter<T>`](xref:Android.Widget.ArrayAdapter`1)
+Конструктор принимает приложение [`Context`](xref:Android.Content.Context), описание макета для каждого элемента списка (созданного на предыдущем шаге), `T[]` а также[`Java.Util.IList<T>`](xref:Java.Util.IList)
+Массив объектов для вставки в[`ListView`](xref:Android.Widget.ListView)
+(определяется далее).
 
-В [`TextFilterEnabled`](https://developer.xamarin.com/api/property/Android.Widget.AbsListView.TextFilterEnabled/)
-Фильтрация для текста включает свойство [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/), таким образом, когда пользователь начинает ввод, список будет отфильтрован.
+Тот[`TextFilterEnabled`](xref:Android.Widget.AbsListView.TextFilterEnabled)
+свойство включает фильтрацию текста для [`ListView`](xref:Android.Widget.ListView), чтобы при вводе пользователем текста список был отфильтрован.
 
-В [`ItemClick`](https://developer.xamarin.com/api/event/Android.Widget.AdapterView.ItemClick/)
-событие можно подписаться обработчики для щелчков мышью. Когда элемент в [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-является нажатии обработчик вызывается и [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-отображается сообщение, на основе текста щелкнутого элемента.
+Тот[`ItemClick`](xref:Android.Widget.AdapterView.ItemClick)
+событие может использоваться для подписки обработчиков на нажатия. Когда элемент в элементе[`ListView`](xref:Android.Widget.ListView)
+вызывается обработчик и[`Toast`](xref:Android.Widget.Toast)
+выводится сообщение с использованием текста из элемента, который был выбран.
 
-Можно использовать схемы элемента списка, предоставляемых платформой вместо определения свой собственный файл макета для [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/).
-Например, попробуйте использовать `Android.Resource.Layout.SimpleListItem1` вместо `Resource.Layout.list_item`.
+Можно использовать макеты элементов списка, предоставляемые платформой, а не определять собственный файл макета для [`ListAdapter`](xref:Android.App.ListActivity.ListAdapter).
+Например, попробуйте использовать `Android.Resource.Layout.SimpleListItem1` `Resource.Layout.list_item`вместо.
 
-Добавьте следующий `using` инструкции:
+Добавьте следующую `using` инструкцию:
 
 ```csharp
 using System;
 ```
-Добавьте следующий массив строк как член `MainActivity`:
+Затем добавьте следующий массив строк в качестве члена `MainActivity`:
 
 ```csharp
 static readonly string[] countries = new String[] {
@@ -157,14 +151,14 @@ static readonly string[] countries = new String[] {
   };
 ```
 
-Это массив строк, которые будут помещены в [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
+Это массив строк, которые будут помещены [`ListView`](xref:Android.Widget.ListView)в.
 
-Запустите приложение. Можно в списке или ввести отфильтровать их, затем щелкните элемент, чтобы просмотреть сообщение. Результат должен быть примерно таким:
+Запустите приложение. Можно прокрутить список или ввести, чтобы отфильтровать его, а затем щелкнуть элемент, чтобы просмотреть сообщение. Результат должен быть примерно таким:
 
-[![Пример снимка экрана с ListView с названия стран](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
+[![Пример снимка экрана ListView с названиями стран](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
-Обратите внимание, что с помощью жестко строковый массив не является рекомендуемым способом разработки. Один используется в этом руководстве для простоты для демонстрации [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-мини-приложение. Наилучшим решением будет ссылаться на массив строк, определенного внешнего ресурса, например со `string-array` ресурсов в проекте **Resources/Values/Strings.xml** файла. Пример:
+Обратите внимание, что использование жестко запрограммированного массива строк не является лучшим подходом к проектированию. Он используется в этом руководстве для простоты, чтобы продемонстрировать[`ListView`](xref:Android.Widget.ListView)
+». Рекомендуется ссылаться на массив строк, определенный внешним ресурсом, например с `string-array` ресурсом в файле resources **/Values/strings. XML** . Например:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -182,35 +176,35 @@ static readonly string[] countries = new String[] {
 </resources>
 ```
 
-Для использования этих ресурсов строк для [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter%601/), замены исходного [`ListAdapter`](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/)
-Строка со следующими:
+Чтобы использовать эти строки ресурсов для [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter`1), замените исходный элемент[`ListAdapter`](xref:Android.App.ListActivity.ListAdapter)
+строка со следующим:
 
 ```csharp
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
+
 Запустите приложение. Результат должен быть примерно таким:
 
-[![Пример снимка экрана с ListView с помощью меньшего размера список имен](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
+[![Пример снимка экрана ListView с меньшим списком имен](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
+## <a name="going-further-with-listview"></a>Дальнейшие переходы с помощью ListView
 
-## <a name="going-further-with-listview"></a>Продвигаясь дальше с ListView
+В остальных разделах (связанных ниже) подробно рассматривается работа с `ListView` классом и типы адаптеров различных типов, которые можно использовать с ним. Эта структура выглядит следующим образом:
 
-Остальные разделы (ссылка ниже) воспользоваться исчерпывающие работа с `ListView` класс и различные типы типы адаптеров, которые можно использовать с ним. Эта структура выглядит следующим образом:
+-   **Визуальный вид** &ndash; Части элементауправленияи`ListView` принципы их работы.
 
--   **Внешний вид** &ndash; части `ListView` управления и как они работают.
+-   **Классы** Общие сведения о классах, `ListView`используемых для вывода. &ndash;
 
--   **Классы** &ndash; Общие сведения о классах, используемый для отображения `ListView`.
+-   **Отображение данных в ListView** Как отобразить простой список данных, как реализовать `ListView's` функции для удобства использования, как использовать разные встроенные макеты строк и как адаптеры сохраняют память путем повторного использования представлений строк. &ndash;
 
--   **Отображение данных в ListView** &ndash; как для отображения простой список данных, как реализовать `ListView's` удобные функции; как использовать различные встроенные строки макеты; и как адаптеры освободить память, повторное использование представлений строк.
+-   **Пользовательский внешний вид** &ndash; Изменение стиля`ListView` с пользовательскими макетами, шрифтами и цветами.
 
--   **Пользовательское оформление** &ndash; изменять стиль `ListView` пользовательские макеты, шрифты и цвета.
+-   **Использование SQLite** Сведения о том, как отображать данные из базы данных `CursorAdapter`SQLite с помощью. &ndash;
 
--   **С помощью SQLite** &ndash; способ отображения данных из базы данных SQLite с `CursorAdapter`.
+-   **Жизненный цикл действия** Рекомендации по проектированию `ListView` при реализации действий, включая, где в жизненном цикле следует заполнять данные и когда следует освобождать ресурсы. &ndash;
 
--   **Жизненный цикл действия** &ndash; рекомендации по проектированию при реализации `ListView` действий, в том числе, где в жизненном цикле необходимо заполнить данные и когда следует освободить ресурсы.
-
-Обсуждение (разбить на части шесть) начинается с обзором `ListView` сам по себе класс перед тем как представить все более сложные примеры его использования.
+Обсуждение (разбитое на шесть частей) начинается с обзора `ListView` самого класса перед тем, как Познакомьтесь с более сложными примерами его использования.
 
 -   [Компоненты ListView и функции](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
 -   [Заполнение ListView данными](~/android/user-interface/layouts/list-view/populating.md)
@@ -222,24 +216,24 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 ## <a name="summary"></a>Сводка
 
-Этот набор разделов появился `ListView` и приведены некоторые примеры того, как использовать встроенные функции `ListActivity`. Это обсуждалось пользовательские реализации `ListView` , отводимое цветных макеты и использует базу данных SQLite и кратко рассмотрели релевантность жизненный цикл действия вашей `ListView` реализации.
+В этом наборе разделов `ListView` представлено несколько примеров использования встроенных функций `ListActivity`. В нем обсуждаются пользовательские реализации `ListView` , разрешенные для цветных макетов и использования базы данных SQLite, и они кратко затронули важность жизненного `ListView` цикла действия в реализации.
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [AccessoryViews (пример)](https://developer.xamarin.com/samples/monodroid/AccessoryViews/)
-- [BasicTableAndroid (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
-- [BasicTableAdapter (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
-- [BuiltInViews (пример)](https://developer.xamarin.com/samples/monodroid/BuiltInViews/)
-- [CustomRowView (пример)](https://developer.xamarin.com/samples/monodroid/CustomRowView/)
-- [FastScroll (пример)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
-- [SectionIndex (пример)](https://developer.xamarin.com/samples/monodroid/SectionIndex/)
-- [SimpleCursorTableAdapter (пример)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
-- [CursorTableAdapter (пример)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
-- [Учебник по жизненному циклу действия](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Работа с таблицами и ячейками (в Xamarin.iOS)](~/ios/user-interface/controls/tables/index.md)
-- [Ссылки на класс ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-- [Ссылки на класс ListActivity](https://developer.xamarin.com/api/type/Android.App.ListActivity/)
-- [Ссылки на класс BaseAdapter](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/)
-- [Ссылки на класс ArrayAdapter](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
-- [Ссылки на класс CursorAdapter](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/)
+- [Акцессоривиевс (пример)](https://developer.xamarin.com/samples/monodroid/AccessoryViews/)
+- [Басиктаблеандроид (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
+- [Басиктаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
+- [Буилтинвиевс (пример)](https://developer.xamarin.com/samples/monodroid/BuiltInViews/)
+- [Кустомроввиев (пример)](https://developer.xamarin.com/samples/monodroid/CustomRowView/)
+- [Фастскролл (пример)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
+- [Сектиониндекс (пример)](https://developer.xamarin.com/samples/monodroid/SectionIndex/)
+- [Симплекурсортаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
+- [Курсортаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
+- [Учебник по жизненному циклу действий](~/android/app-fundamentals/activity-lifecycle/index.md)
+- [Работа с таблицами и ячейками (в Xamarin. iOS)](~/ios/user-interface/controls/tables/index.md)
+- [Ссылка на класс ListView](xref:Android.Widget.ListView)
+- [Справочник по классам Листактивити](xref:Android.App.ListActivity)
+- [Справочник по классам Басеадаптер](xref:Android.Widget.BaseAdapter)
+- [Справочник по классам ArrayAdapter](xref:Android.Widget.ArrayAdapter)
+- [Справочник по классам Курсорадаптер](xref:Android.Widget.CursorAdapter)

@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ea8af3c84bb53434489d230d159a27b6b9d500d8
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830259"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510352"
 ---
 # <a name="radiobutton"></a>RadioButton
 
-В этом разделе вы создадите два взаимоисключающими переключателей (Включение один запрет на другой), с помощью [`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/)
-и [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
-мини-приложения. При нажатии одной из кнопок переключателей, отобразится всплывающее сообщение.
+В этом разделе вы создадите два взаимоисключающих переключателя (что позволяет отключить друг друга), используя[`RadioGroup`](xref:Android.Widget.RadioGroup)
+перетаскивани[`RadioButton`](xref:Android.Widget.RadioButton)
+мини-приложения. При нажатии любого из этих переключателей появится всплывающее сообщение.
 
 
-Откройте **Resources/layout/Main.axml** файл и добавьте два [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s, вложенные в [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) (внутри [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+Откройте файл **Resources/Layout/Main. axml** и добавьте [`RadioButton`](xref:Android.Widget.RadioButton)два файла [`RadioGroup`](xref:Android.Widget.RadioGroup) , вложенные в (внутри [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
 ```xml
 <RadioGroup
@@ -38,10 +38,10 @@ ms.locfileid: "67830259"
 </RadioGroup>
 ```
 
-Очень важно, [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s группируются по [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) элемент таким образом, можно выбрать не более одного за раз. Эта логика автоматически обрабатываются системой Android. Если в одном [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
-в выбранной группе, все другие автоматически невыделенные.
+Важно, [`RadioButton`](xref:Android.Widget.RadioButton)чтобы объекты группируются вместе [`RadioGroup`](xref:Android.Widget.RadioGroup) по элементу, чтобы одновременно можно было выбрать не более одного. Эта логика автоматически обрабатывается системой Android. Когда один[`RadioButton`](xref:Android.Widget.RadioButton)
+в группе выбраны все остальные флажки автоматически отменяются.
 
-Сделать что-то при каждой [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) — флажок установлен, необходимо написать обработчик событий:
+Чтобы сделать что-то [`RadioButton`](xref:Android.Widget.RadioButton) при выборе каждого из них, необходимо написать обработчик событий:
 
 ```csharp
 private void RadioButtonClick (object sender, EventArgs e)
@@ -51,12 +51,12 @@ private void RadioButtonClick (object sender, EventArgs e)
 }
 ```
 
-Во-первых отправитель, который передается в будет преобразована в RadioButton.
-Затем [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-сообщение отображается текст выбранного переключателя.
+Во-первых, передаваемый отправитель преобразуется в RadioButton.
+Затем элемент[`Toast`](xref:Android.Widget.Toast)
+сообщение отображает текст выбранного переключателя.
 
-Теперь, в нижней части [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-метод, добавьте следующий код:
+Теперь в нижней части[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Добавьте следующее:
 
 ```csharp
 RadioButton radio_red = FindViewById<RadioButton>(Resource.Id.radio_red);
@@ -66,14 +66,14 @@ radio_red.Click += RadioButtonClick;
 radio_blue.Click += RadioButtonClick;
 ```
 
-Это соответствует каждая из [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s из макета и добавляет handlerto созданное событие каждый.
+Это захватывает каждый из объектов [`RadioButton`](xref:Android.Widget.RadioButton)из макета и добавляет только что созданное событие хандлерто.
 
 Запустите приложение.
 
 > [!TIP]
-> Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), используйте [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-> метод задания свойства или [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> Если необходимо изменить состояние самостоятельно (например, при загрузке сохраненного [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)), используйте[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> метод задания свойства или[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > метод.
 
-*Некоторые части этой страницы, изменения с учетом работы создана и совместно используется Android откройте исходный проект и используются в соответствии с условиями, описанными в*
-[*лицензии Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/). 
+*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
+описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/). 

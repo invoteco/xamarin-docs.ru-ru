@@ -1,31 +1,31 @@
 ---
-title: С помощью RelativeLayout в Xamarin.Android
-description: Как использовать RelativeLayout в приложениях Xamarin.Android
+title: Использование RelativeLayout в Xamarin. Android
+description: Использование RelativeLayout в приложении Xamarin. Android
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: af2972ecc92435836a75013e6203ba47c2c04627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a53baed9d5f291628d7d1a8da05739e43412d473
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61303635"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509715"
 ---
-# <a name="relativelayout"></a>RelativeLayout
+# <a name="xamarinandroid-relativelayout"></a>Xamarin. Android RelativeLayout
 
-[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) — [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) , отображающий дочерний [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-элементы в относительные позиции. Положение [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) может быть задан относительно одноуровневых элементов (например, относительно левой части или ниже данного элемента) или в помещает относительно [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
-область (например, выровненный по нижнему краю слева центра).
+[`RelativeLayout`](xref:Android.Widget.RelativeLayout)[`ViewGroup`](xref:Android.Views.ViewGroup) , отображающий дочерний элемент[`View`](xref:Android.Views.View)
+элементы в относительном положении. Положение [`View`](xref:Android.Views.View) объекта может быть задано относительно родственных элементов (например, в левом или нижнем углу заданного элемента) или в позициях, относящихся к элементу[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+область (например, выравнивание по нижнему краю, слева от центра).
 
-Объект [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) — очень мощная служебная программа, разработке пользовательского интерфейса, так как позволяет избавиться от вложенных [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s. Если вы с помощью нескольких вложенных [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-группы, можно заменить их одним [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/).
+— Это очень мощная служебная программа для разработки пользовательского интерфейса, так как она [`ViewGroup`](xref:Android.Views.ViewGroup)может исключить вложенные элементы. [`RelativeLayout`](xref:Android.Widget.RelativeLayout) Если вы можете найти себя с помощью нескольких вложенных[`LinearLayout`](xref:Android.Widget.LinearLayout)
+группы, возможно, вы сможете заменить их одним [`RelativeLayout`](xref:Android.Widget.RelativeLayout)из них.
 
-Создайте новый проект с именем **HelloRelativeLayout**.
+Запустите новый проект с именем **хеллорелативелайаут**.
 
-Откройте **Resources/Layout/Main.axml** файл и вставьте следующий текст:
+Откройте файл **Resources/Layout/Main. axml** и вставьте в него следующее:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,13 +60,13 @@ ms.locfileid: "61303635"
 </RelativeLayout>
 ```
 
-Обратите внимание, что каждый из `android:layout_*` атрибуты, такие как `layout_below`, `layout_alignParentRight`, и `layout_toLeftOf`.
-При использовании [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/), эти атрибуты можно использовать для описания того, как вы хотите разместить каждый [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/). Каждый из этих атрибутов определяют различные виды относительное положение. Некоторые атрибуты использовать идентификатор ресурса того же уровня [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) определить свой собственный относительное положение. Например, последний [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) определен на более низких взятия слева и выравниваются с-top-of [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) с Идентификатором `ok` (который является предыдущей [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)).
+Обратите внимание на `android:layout_*` каждый атрибут, `layout_below`например, `layout_alignParentRight`, и `layout_toLeftOf`.
+При использовании [`RelativeLayout`](xref:Android.Widget.RelativeLayout)можно использовать эти атрибуты, чтобы описать, как их следует [`View`](xref:Android.Views.View)располагать. Каждый из этих атрибутов определяет другой тип относительного положения. Некоторые атрибуты используют идентификатор ресурса одноуровневого [`View`](xref:Android.Views.View) элемента для определения его собственной относительной координаты. Например, Последнее [`Button`](xref:Android.Widget.Button) определяется в соответствии с левым и равным-Top-of, [`View`](xref:Android.Views.View) определяемым идентификатором `ok` (который является предыдущим [`Button`](xref:Android.Widget.Button)).
 
-Все доступные макета атрибуты определены в [ `RelativeLayout.LayoutParams` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/).
+Все доступные атрибуты макета определяются в [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams).
 
-Убедитесь, что вы загружаете этот макет в [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-метод:
+Убедитесь, что вы загрузили этот макет в[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Method
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -76,21 +76,19 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/p/System.Int32/) Метод загружает файл макета для [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), указанного по Идентификатору ресурса &mdash; `Resource.Layout.Main` ссылается на **ресурсы/макета / Main.AXML** файл макета.
+[`Activity`](xref:Android.App.Activity) &mdash; `Resource.Layout.Main`  Метод загружает файл макета для, заданный идентификатором ресурса, относится к файлу макета RESOURCES/Layout/Main. axml. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
 
-Запустите приложение. Вы должны увидеть следующий результат:
+Запустите приложение. Вы должны увидеть следующий макет:
 
-[![Снимок экрана относительный макета с использованием текстового представления, EditText и две кнопки](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
-
+[![Снимок экрана относительного макета с TextView, EditText и двумя кнопками](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
 ## <a name="resources"></a>Ресурсы
 
--   [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
--   [`RelativeLayout.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
--   [`EditText`](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
--   [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)
+- [`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+- [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams)
+- [`TextView`](xref:Android.Widget.TextView)
+- [`EditText`](xref:Android.Widget.EditText)
+- [`Button`](xref:Android.Widget.Button)
 
-
-*Некоторые части этой страницы, изменения с учетом работы создана и совместно используется Android откройте исходный проект и используются в соответствии с условиями, описанными в*
-[*лицензии Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
+*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
+описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/).

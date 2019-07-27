@@ -1,39 +1,39 @@
 ---
-title: Панель переходов
+title: Панель навигации Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 9455cac81a0f9ea81e08cf63397e45c1698e1c1b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 70e009ed1a017b2336b6acb443a4d9cd87ff3e68
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153650"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510268"
 ---
-# <a name="navigation-bar"></a>Панель переходов
+# <a name="xamarinandroid-navigation-bar"></a>Панель навигации Xamarin. Android
 
-Android 4 появилась новая функция интерфейса пользователя системы, называемая *панель навигации*, который предоставляет элементы управления навигацией на устройствах, не включающие кнопок для **Главная**, **обратно** , и **меню**.
-На следующем рисунке показан на панели навигации с простых Nexus устройства:
+В Android 4 появилась новая функция пользовательского интерфейса системы, называемая *панелью навигации*, которая предоставляет элементы управления навигацией на устройствах, которые не включают аппаратные кнопки для **домашних**, **задних**и **меню**.
+На следующем снимке экрана показана панель навигации из устройства для создания хранилища:
 
- [![Пример того, в панели навигации в Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
+ [![Пример панели навигации Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
-Доступны несколько новые флаги, управляющие видимостью панели навигации и ее элементов управления, а также видимости полосы системы, которая была введена в Android 3. Флаги определяются в `Android.View.View` класса и перечислены ниже:
+Доступно несколько новых флагов, контролирующих видимость панели навигации и ее элементов управления, а также видимость системной панели, представленной в Android 3. Флаги определены в `Android.View.View` классе и перечислены ниже:
 
--   `SystemUiFlagVisible` &ndash; Делает видимыми на панели навигации. 
--   `SystemUiFlagLowProfile` &ndash; Dims элементов управления на панели навигации. 
--   `SystemUiFlagHideNavigation` &ndash; Скрытие панели навигации. 
+-   `SystemUiFlagVisible`&ndash; Делает панель навигации видимой. 
+-   `SystemUiFlagLowProfile`&ndash; Затемнение элементов управления на панели навигации. 
+-   `SystemUiFlagHideNavigation`&ndash; Скрывает панель навигации. 
 
 
-Эти флаги могут применяться для любого представления в иерархии представлений, задав `SystemUiVisibility` свойство. Если это свойство установлено несколько представлений, система объединяет их с помощью операции OR и применяет их до тех пор, пока окно, в котором устанавливаются флаги сохраняет фокус. При удалении представления, также удаляются все флаги, которые будут установлены.
+Эти флаги можно применить к любому представлению в иерархии представлений, задав `SystemUiVisibility` свойство. Если для нескольких представлений задано это свойство, система объединяет их с операцией или и применяет их до тех пор, пока в окне, в котором установлены флаги, остается фокус. При удалении представления все установленные флаги также будут удалены.
 
-В следующем примере показано простое приложение, в которых щелкнув любую кнопку меняет `SystemUiVisibility`:
+В следующем примере показано простое приложение, `SystemUiVisibility`при щелчке на любой из кнопок изменяется:
 
- [![Демонстрация Visible половинной и скрытые SystemUiVisibility снимки экрана](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
+ [![Снимки экрана, демонстрирующие видимые, низкие профили и скрытые Системуивисибилити](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
-Код для изменения `SystemUiVisibility` присваивает свойству `TextView` из каждой кнопки щелкните обработчик событий, как показано ниже:
+Код для изменения `SystemUiVisibility` задает свойство `TextView` для обработчика событий нажатия для каждой кнопки, как показано ниже:
 
 ```csharp
 var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
@@ -56,7 +56,7 @@ visibleButton.Click += delegate {
 }
 ```
 
-Кроме того `SystemUiVisibility` изменить вызывает `SystemUiVisibilityChange` событий. Так же, как параметр `SystemUiVisibility` свойство, обработчик `SystemUiVisibilityChange` событий могут быть зарегистрированы для любого представления в иерархии. Например, приведенный ниже код использует `TextView` экземпляр для регистрации для события:
+Кроме того, `SystemUiVisibility` изменение `SystemUiVisibilityChange` вызывает событие. Как и при задании `SystemUiVisibility` свойства, обработчик `SystemUiVisibilityChange` события может быть зарегистрирован для любого представления в иерархии. Например, приведенный ниже код использует `TextView` экземпляр для регистрации события:
 
 ```csharp
 tv.SystemUiVisibilityChange +=
@@ -69,6 +69,6 @@ tv.SystemUiVisibilityChange +=
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [SystemUIVisibilityDemo (пример)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
-- [Знакомство с Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4.0](https://developer.android.com/sdk/android-4.0.html)
+- [Системуивисибилитидемо (пример)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
+- [Знакомство со Южным Сандвичевым](http://www.android.com/about/ice-cream-sandwich/)
+- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

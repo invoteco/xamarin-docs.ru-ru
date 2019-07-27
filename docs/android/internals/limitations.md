@@ -1,42 +1,40 @@
 ---
-title: Xamarin.Android vs. Desktop — различия в среду выполнения Mono
+title: Xamarin. Android и Настольные системы — различия в среде выполнения Mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 115d715214d7af3174c41d9d82e894ce429dab42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 18e6e82011460a51a96df4694f15b36c5ec94ab5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953348"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510710"
 ---
 # <a name="limitations"></a>Ограничения
 
-Так как приложения в Android требуют создания прокси-типов Java во время сборки, не можно создать весь код во время выполнения.
+Поскольку приложениям в Android требуется создавать типы прокси Java во время процесса сборки, невозможно создать весь код во время выполнения.
 
-Существуют следующие ограничения Xamarin.Android, по сравнению с рабочего стола Mono:
+Это ограничения Xamarin. Android по сравнению с рабочим столом Mono:
 
+## <a name="limited-dynamic-language-support"></a>Ограниченная поддержка динамических языков
 
-## <a name="limited-dynamic-language-support"></a>Поддержка ограниченного динамического языка
+ [Вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) необходимы каждый раз, когда исполняющая среда Android должна вызывать управляемый код. Вызываемые оболочки Android создаются во время компиляции на основе статического анализа IL. Чистый результат этого: *нельзя* использовать динамические языки (IronPython, IronRuby и т. д.) в любом сценарии, где требуется подкласс типов Java (включая косвенные подклассы), так как не существует способа извлечения этих динамических типов во время компиляции. создание необходимых вызываемых оболочек Android.
 
- [Android вызываемых оболочек](~/android/platform/java-integration/android-callable-wrappers.md) необходимы в любое время, в среде выполнения Android необходимо вызывать управляемый код. Android вызываемые оболочки создаются во время компиляции, на основе статического анализа IL. В результате выполнения этого: вы *нельзя* использовать динамических языков (IronPython, IronRuby и др.) в любом сценарии, где необходима подклассов для них типы Java (включая косвенных подклассы), так как не существует способа извлечения этих динамических типов во время компиляции для создания необходимых Android вызываемых оболочек.
+## <a name="limited-java-generation-support"></a>Ограниченная поддержка создания Java
 
-
-## <a name="limited-java-generation-support"></a>Поддержка создания ограниченного Java
-
-[Android вызываемых оболочек](~/android/platform/java-integration/android-callable-wrappers.md) вам нужно создать кода Java для вызова управляемого кода. *По умолчанию*, вызываемых оболочек времени Android будет содержать только (определенные) объявленных конструкторов и методов, которые переопределяют виртуальный метод Java (т. е. он имеет [ `RegisterAttribute` ](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)) или реализовать (Java) метод интерфейса Аналогичным образом имеет интерфейс `Attribute`).
+Чтобы код Java мог вызывать управляемый код, необходимо создать вызываемые [оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) . *По умолчанию*вызываемые оболочки Android будут содержать только (определенные) объявленные конструкторы и методы, которые переопределяют виртуальный метод Java (т [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute). е. он имеет) или реализуют метод интерфейса `Attribute`Java (интерфейс аналогичен).
   
-До выхода версии 4.1 можно объявить без дополнительных методов. Выпустив 4.1 [ `Export` и `ExportField` настраиваемые атрибуты можно использовать для объявления методов Java и полей в Android вызываемая оболочка](~/android/platform/java-integration/working-with-jni.md).
+До выпуска 4,1 дополнительные методы не могут быть объявлены. В выпуске [ `Export` 4,1 пользовательские атрибуты `ExportField` и можно использовать для объявления методов и полей Java в вызываемой оболочке Android](~/android/platform/java-integration/working-with-jni.md).
 
-### <a name="missing-constructors"></a>Отсутствуют конструкторы
+### <a name="missing-constructors"></a>Отсутствующие конструкторы
 
-Конструкторы остаются непростой задачей, если не [ `ExportAttribute` ](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute) используется. Алгоритм создания конструкторов Android вызываемая оболочка является конструктор Java, который будет использовано если:
+Конструкторы остаются сложными, [`ExportAttribute`](xref:Java.Interop.ExportAttribute) если не используется. Алгоритм создания конструкторов вызываемой оболочки Android заключается в том, что конструктор Java будет выдаваться в следующих случаях:
 
-1. Отсутствует сопоставление Java для всех типов параметров
-2. Базовый класс объявляет такой же конструктор &ndash; это необходимо, так как Android вызываемая оболочка *необходимо* вызова в соответствующий конструктор базового класса; (так как нет простого способа не может использоваться без аргументов по умолчанию определить значения, которые должны быть использовать в Java).
+1. Существует сопоставление Java для всех типов параметров
+2. Базовый класс объявляет тот же конструктор &ndash; , который является обязательным, поскольку вызываемая оболочка Android *должна* вызывать соответствующий конструктор базового класса; никакие аргументы по умолчанию не используются (так как простого способа определить, какие значения следует использовать в Java).
 
 Например, рассмотрим следующий класс.
 
@@ -49,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Хотя это выглядит совершенно логично, полученный Android вызываемая оболочка *в сборках выпуска* не будет содержать конструктор по умолчанию. Следовательно при попытке запустить эту службу (например [ `Context.StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)), то возникнет ошибка:
+Хотя это выглядит совершенно логично, полученная обертка Android *в сборках выпуска* не будет содержать конструктор по умолчанию. Следовательно, при попытке запустить эту службу (например [`Context.StartService`](xref:Android.Content.Context.StartService*), произойдет сбой:
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -72,7 +70,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-Обойти это можно объявить конструктор по умолчанию, создавать его с `ExportAttribute`и задайте [ `ExportAttribute.SuperStringArgument` ](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/): 
+Обходной путь заключается в объявлении конструктора по умолчанию, оформлении его с `ExportAttribute`помощью и [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)установке: 
 
 ```csharp
 [Service]
@@ -87,12 +85,12 @@ class MyIntentService : IntentService {
 ```
 
 
-### <a name="generic-c-classes"></a>Универсальный C# классы
+### <a name="generic-c-classes"></a>Универсальные C# классы
 
-Универсальный C# классы поддерживаются только частично. Существуют следующие ограничения:
+Универсальные C# классы поддерживаются только частично. Существуют следующие ограничения.
 
 
--   Универсальные типы не имеете права использовать `[Export]` или `[ExportField`]. Попытка выполнить такую операцию будет создавать `XA4207` ошибки.
+-   Универсальные типы не могут `[Export]` использовать `[ExportField`или]. Попытка сделать это приведет к `XA4207` возникновению ошибки.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -105,7 +103,7 @@ class MyIntentService : IntentService {
     }
     ```
 
--   Универсальные методы не могут использовать `[Export]` или `[ExportField]`:
+-   Универсальные методы не могут `[Export]` использовать `[ExportField]`или:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -120,7 +118,7 @@ class MyIntentService : IntentService {
     }
     ```
 
--   `[ExportField]` не может использоваться в методах, которые возвращают `void`:
+-   `[ExportField]`не может использоваться в методах, которые `void`возвращают:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -133,8 +131,8 @@ class MyIntentService : IntentService {
     }
     ```
 
--   Экземпляры универсальных типов _не должны_ создать из кода Java.
-    Они могут создаваться только безопасно из управляемого кода:
+-   Экземпляры универсальных типов _не должны_ создаваться из кода Java.
+    Их можно только безопасно создать из управляемого кода:
 
     ```csharp
     [Activity (Label="Die!", MainLauncher=true)]
@@ -147,17 +145,15 @@ class MyIntentService : IntentService {
     }
     ```
 
+## <a name="partial-java-generics-support"></a>Частичная поддержка универсальных шаблонов Java
 
-## <a name="partial-java-generics-support"></a>Поддержка универсальных шаблонов частичного Java
-
-Java, которые поддерживают универсальные шаблоны привязки ограничено. В частности, члены класса универсального экземпляра, который является производным от другого универсального класса (не создан), остаются в виде Java.Lang.Object. Например [Android.Content.Intent.GetParcelableExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.GetParcelableExtra/p/System.String/) метод возвращает Java.Lang.Object. Это связано с удаленных универсальных шаблонов Java.
-У нас есть некоторые классы, которые не применяются это ограничение, но они настраиваются вручную.
-
+Поддержка привязки универсальных шаблонов Java ограничена. В частности, члены класса универсального экземпляра, производного от другого универсального класса (без экземпляра), остаются доступными как Java. lang. Object. Например, метод [Android. Content. намерения. жетпарцелабликстра](xref:Android.Content.Intent.GetParcelableExtra*) возвращает Java. lang. Object. Это обусловлено стиранием универсальных шаблонов Java.
+У нас есть некоторые классы, которые не применяют это ограничение, но они корректируются вручную.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Вызываемые программы-оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md)
 - [Работа с JNI](~/android/platform/java-integration/working-with-jni.md)
-- [ExportAttribute](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/)
-- [SuperString](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/)
-- [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)
+- [експортаттрибуте](xref:Java.Interop.ExportAttribute)
+- [Строка](xref:Java.Interop.ExportAttribute.SuperArgumentsString)
+- [регистераттрибуте](xref:Android.Runtime.RegisterAttribute)

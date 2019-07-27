@@ -6,46 +6,46 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 1e9a71de7725c8382e133d85977407bcc859fc58
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f8a542b58fa891b63f43d1c87dea911b83e01949
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013729"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509321"
 ---
 # <a name="using-android-assets"></a>Использование ресурсов Android
 
-_Активы_ позволяют включать произвольные файлы, такие как текст, xml, шрифты, музыки и видео в приложение. При попытке включить эти файлы как «resources» Android будет обрабатывать их в своей системе ресурсов, и вы не сможете получить необработанные данные. Если вы хотите получить доступ к данным без изменений, ресурсы — один из способов сделать это.
+_Ресурсы_ предоставляют возможность включать в приложение произвольные файлы, такие как текст, XML, шрифты, музыка и видео. Если вы попытаетесь включить эти файлы как "Resources", Android обработает их в своей системе ресурсов и вы не сможете получить необработанные данные. Если вы хотите получить доступ к данным без вмешательства пользователя, ресурсы являются одним из способов сделать это.
 
-Ресурсы, которые добавлены в проект будет отображаться так же, как файловая система, которая может считывать из приложения с помощью [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
-В этой простой демонстрации, мы собираемся добавить ресурс файла текста для проектов, прочитайте его с помощью `AssetManager`и отображает его на текстового представления.
+Ресурсы, добавленные в проект, будут отображаться так же, как файловая система, способная выполнять чтение из приложения с помощью [ассетманажер](xref:Android.Content.Res.AssetManager).
+В этой простой демонстрации мы добавим к нашему проекту ресурс текстового файла, прочесть его с помощью `AssetManager`и отобразить в TextView.
 
 
-## <a name="add-asset-to-project"></a>Добавить ресурс к проекту
+## <a name="add-asset-to-project"></a>Добавить ресурс в проект
 
-Средства go в `Assets` папку проекта. Добавьте новый текстовый файл в эту папку с именем `read_asset.txt`. Поместите в него какой-либо текст, как «Я поступил из ресурса!».
+Ресурсы находятся в `Assets` папке проекта. Добавьте в эту папку новый текстовый файл с именем `read_asset.txt`. Поместите в него некоторый текст, например "я пришел от ресурса!".
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio должен иметь набор **действие при построении** этот файл **AndroidAsset**:
+Visual Studio должно задать для этого файла **действие сборки** **AndroidAsset**:
 
-![При выборе режима построения AndroidAsset](android-assets-images/asset-properties-vs.png) 
+![Установка для действия сборки значения AndroidAsset](android-assets-images/asset-properties-vs.png) 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Visual Studio для Mac должен иметь набор **действие при построении** этот файл **AndroidAsset**:
+Visual Studio для Mac должен задать для этого файла **действие сборки** **AndroidAsset**:
 
-[![При выборе режима построения AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
+[![Установка для действия сборки значения AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
-Выбрав правильный **BuildAction** гарантирует, что файл упаковываются в пакет APK во время компиляции.
+Если выбрать правильное **действие** , это гарантирует, что файл будет УПАКОВАН в APK во время компиляции.
 
 
-## <a name="reading-assets"></a>Средства чтения
+## <a name="reading-assets"></a>Чтение ресурсов
 
-Активы считываются с помощью [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). Экземпляр `AssetManager` доступен, обратившись к [активы](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) свойство `Android.Content.Context`, такие как действие.
-В следующем коде мы откроем наших **read_asset.txt** активов, чтение и отображение его с помощью текстового представления.
+Ресурсы считываются с помощью [ассетманажер](xref:Android.Content.Res.AssetManager). Экземпляр `AssetManager` объекта доступен при доступе к свойству [Assets](xref:Android.Content.Context.Assets) в `Android.Content.Context`, такому как действие.
+В следующем коде мы откроем ресурс **read_asset. txt** , прочтите его содержимое и отобразите с помощью TextView.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -72,12 +72,12 @@ protected override void OnCreate (Bundle bundle)
 
 ## <a name="running-the-application"></a>Запуск приложения
 
-Запустите приложение и вы должны увидеть следующее:
+Запустите приложение, и вы должны увидеть следующее:
 
-![Снимок экрана с примером](android-assets-images/screenshot.png)
+![Пример снимка экрана](android-assets-images/screenshot.png)
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)
-- [Контекст](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [ассетманажер](xref:Android.Content.Res.AssetManager)
+- [Локального](xref:Android.Content.Context)

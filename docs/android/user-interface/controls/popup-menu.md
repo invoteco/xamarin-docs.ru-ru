@@ -1,29 +1,29 @@
 ---
-title: Во всплывающем меню
-description: Как добавить в контекстном меню, к которому привязана к конкретному представлению.
+title: Всплывающее меню
+description: Добавление всплывающего меню, привязанного к определенному представлению.
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 1e74c8b7745936f6e9a8890fd26acafe2f2fb6d5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e7665ee1d3506fb4b6a237a7c6906d9bfb3e9cb1
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61288662"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510214"
 ---
-# <a name="popup-menu"></a>Во всплывающем меню
+# <a name="xamarinandroid-popup-menu"></a>Всплывающее меню Xamarin. Android
 
-[PopupMenu](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/) (также называется _контекстное меню_) — это меню, к которому привязана к конкретному представлению. В следующем примере одно действие содержит кнопку. Когда пользователь нажимает кнопку, отображается три элемента всплывающего меню:
+[Всплывающее меню](xref:Android.Widget.PopupMenu) (также называемое _контекстным меню_) — это меню, привязанное к определенному представлению. В следующем примере одно действие содержит кнопку. Когда пользователь нажмет кнопку, отображается всплывающее меню из трех элементов:
 
-[![Пример приложения с помощью кнопки и три элемента всплывающего меню](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[![Пример приложения с кнопкой и всплывающим меню с тремя элементами](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
 ## <a name="creating-a-popup-menu"></a>Создание всплывающего меню
 
-Первым шагом является создание файла ресурсов меню для меню и поместите его в **ресурсы/меню**. К примеру, следующий код XML-код для трех элементов меню, которое выводится в предыдущем снимке экрана, **Resources/menu/popup_menu.xml**:
+Первый шаг — создать файл ресурсов меню и поместить его в меню **ресурсы** Например, следующий код XML является кодом для меню из трех элементов, отображаемого на предыдущем снимке экрана, **Resources/Menu/popup_menu. XML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -37,9 +37,9 @@ ms.locfileid: "61288662"
 </menu>
 ```
 
-Создайте экземпляр `PopupMenu` и привязать его к виду. При создании экземпляра `PopupMenu`, вы передаете конструктору ссылку `Context` а также представления, к которому будет присоединен меню. Таким образом во всплывающем меню привязанный к этому представлению во время ее создания.
+Затем создайте экземпляр `PopupMenu` и прикрепите его к представлению. При создании экземпляра `PopupMenu`вы передаете его конструктору ссылку на, `Context` а также представление, к которому будет присоединено меню. В результате всплывающее меню привязывается к этому представлению во время его создания.
 
-В следующем примере `PopupMenu` создается в обработчик событий click для кнопки (которая называется `showPopupMenu`). Эта кнопка также имеет представление, к которому `PopupMenu` привязан, как показано в следующем примере кода:
+В следующем примере `PopupMenu` создается в обработчике события Click для кнопки (с именем `showPopupMenu`). Эта кнопка также является представлением, к которому `PopupMenu` привязан объект, как показано в следующем примере кода:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -47,7 +47,7 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-Наконец, во всплывающем меню должен быть *увеличенную* меню ресурсом, который был создан ранее. В следующем примере вызов меню [Inflate](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/) добавляется метод и его [Показать](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/) вызывается метод, чтобы отобразить ее:
+Наконец, всплывающее меню должно быть *сведено* к ресурсу меню, созданному ранее. В следующем примере добавляется вызов метода [Deflate](xref:Android.Views.LayoutInflater.Inflate*) в меню, а для его отображения вызывается метод [демонстрации](xref:Android.Widget.PopupMenu.Show) :
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -60,7 +60,7 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="handling-menu-events"></a>Обработка событий меню
 
-Когда пользователь выбирает пункт меню, [MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/) щелкните событие будет вызываться и меню будет закрыто. При касании в любом месте за пределами меню будет просто закройте его. В любом случае после закрытия меню его [DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/) будет вызываться. Следующий код добавляет обработчики событий для обоих `MenuItemClick` и `DismissEvent` события:
+Когда пользователь выбирает пункт меню, будет вызвано событие щелчка [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) , и меню будет закрыто. Касание в любом месте вне меню просто откроет его. В любом случае при закрытии меню будет вызвано его [дисмиссевент](xref:Android.Widget.PopupMenu.Dismiss) . Следующий код добавляет обработчики событий для `MenuItemClick` событий и: `DismissEvent`
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -82,4 +82,4 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PopupMenuDemo (пример)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
+- [Попупменудемо (пример)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)

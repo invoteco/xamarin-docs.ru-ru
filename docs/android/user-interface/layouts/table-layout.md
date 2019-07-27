@@ -1,27 +1,27 @@
 ---
-title: TableLayout
+title: Xamarin. Android Таблелайаут
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9a5186fe49edc81f5d6ec8ca297146a27a0274fa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61305169"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509683"
 ---
-# <a name="tablelayout"></a>TableLayout
+# <a name="xamarinandroid-tablelayout"></a>Xamarin. Android Таблелайаут
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) — [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
-отображающий дочерний [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+[`TableLayout`](xref:Android.Widget.TableLayout)является[`ViewGroup`](xref:Android.Views.ViewGroup)
+, отображающий дочерний элемент[`View`](xref:Android.Views.View)
 элементы в строках и столбцах.
 
-Создайте новый проект с именем **HelloTableLayout**.
+Запустите новый проект с именем **хеллотаблелайаут**.
 
-Откройте **Resources/Layout/Main.axml** файл и вставьте следующий текст:
+Откройте файл **Resources/Layout/Main. axml** и вставьте в него следующее:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,13 +102,13 @@ ms.locfileid: "61305169"
 </TableLayout>
 ```
 
-Обратите внимание на то, как это напоминает структуру HTML-таблицы. В [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
-Элемент аналогичен HTML `<table>` элемента; [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/)
-Подобно `<tr>` элементу; но для ячеек, можно использовать любой тип [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) элемент. В этом примере [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
-используется для каждой ячейки. Между некоторые из строк, также имеется простой [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/), который используется для отрисовки горизонтальной линии.
+Обратите внимание, что это напоминает структуру HTML-таблицы. Тот[`TableLayout`](xref:Android.Widget.TableLayout)
+элемент подобен HTML- `<table>` элементу;[`TableRow`](xref:Android.Widget.TableRow)
+параметр подобен `<tr>` элементу, но для ячеек можно использовать любой [`View`](xref:Android.Views.View) тип элемента. В этом примере[`TextView`](xref:Android.Widget.TextView)
+используется для каждой ячейки. В некоторых строках также имеется базовый [`View`](xref:Android.Views.View)элемент, который используется для рисования горизонтальной линии.
 
-Убедитесь, что ваш **HelloTableLayout** действие загружает этот макет в [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-метод:
+Убедитесь, что действие **хеллотаблелайаут** загружает этот макет в[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Method
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -118,21 +118,21 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) Метод загружает файл макета для [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), указанного по Идентификатору ресурса &mdash; `Resource.Layout.Main` ссылается на **ресурсы/макета / Main.AXML** файл макета.
+[`Activity`](xref:Android.App.Activity) &mdash; `Resource.Layout.Main`  Метод) загружает файл макета для, заданный идентификатором ресурса, относится к файлу макета RESOURCES/Layout/Main. axml. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
 
 Запустите приложение. Вы должны увидеть следующее:
 
-[![Снимок экрана с примером приложения TableLayout, отображение нескольких строк таблицы](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[![Пример снимка экрана приложения Таблелайаут, отображающего несколько строк таблицы](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 
 
 ## <a name="references"></a>Ссылки
 
--   [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 
+-   [`TableLayout`](xref:Android.Widget.TableLayout) 
 
--   [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 
+-   [`TableRow`](xref:Android.Widget.TableRow) 
 
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
+-   [`TextView`](xref:Android.Widget.TextView) 
 
-*Некоторые части этой страницы, изменения с учетом работы создана и совместно используется Android откройте исходный проект и используются в соответствии с условиями, описанными в*
-[*лицензии Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
+*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
+описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/).

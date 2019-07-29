@@ -51,7 +51,7 @@ sections:
         className: cardsB
         items:
           - href: ~/android/get-started/index.md
-            html: 'Руководства, которые помогут вам начать работу с Xamarin.Android. Убедитесь в том, что все установлено правильно, и создайте свое первое приложение Mac.'
+            html: 'Руководства, которые помогут вам начать работу с Xamarin.Android. Убедитесь в том, что все установлено правильно, и создайте свое первое приложение Android.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/android/get-started/index.md
@@ -104,15 +104,15 @@ sections:
               src: ~/media/icons/i_android-wear.svg
               href: ~/android/wear/
             title: Android Wear
-  - title: Ссылка
+  - title: Справочник
     items:
       - type: list
         style: cards
         className: cardsD
         items:
           - title: API
-            href: 'https://developer.xamarin.com/api/root/MonoAndroid-lib/'
-            html: '<p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Документация по API Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Библиотека базовых классов</a></p>'
+            href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9'
+            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Документация по API Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Библиотека базовых классов</a></p>'
           - title: Примеры
             href: 'https://developer.xamarin.com/samples/android/all/'
             html: '<p><a href="https://developer.xamarin.com/samples/android/all/">Примеры Android</a></p>'

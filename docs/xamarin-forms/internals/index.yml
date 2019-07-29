@@ -1,0 +1,39 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Дополнительные понятия и внутренние компоненты
+metadata:
+  title: Дополнительные понятия и внутренние компоненты
+  description: Ознакомьтесь с дополнительными концепциями и внутренними возможностями Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/23/2019
+abstract:
+  description: Ознакомьтесь с дополнительными концепциями и внутренними возможностями Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: dependency-resolution.md
+            html: 'Узнайте, как внедрить метод разрешения зависимостей в Xamarin.Forms, чтобы приложение могло управлять созданием и временем существования пользовательских отрисовщиков, эффектов и реализаций DependencyService.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: dependency-resolution.md
+            title: Разрешение зависимостей
+          - href: fast-renderers.md
+            html: 'Узнайте, как быстрые отрисовщики сокращают затраты на отрисовку элементов управления Xamarin.Forms на платформе Android путем сведения итоговой иерархии собственных элементов управления.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
+              href: fast-renderers.md
+            title: Быстрые отрисовщики
+          - href: net-standard.md
+            html: "Узнайте, как преобразовать приложение Xamarin.Forms для использования .NET Standard\_2.0."
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_NETstandard.svg'
+              href: net-standard.md
+            title: .NET Standard

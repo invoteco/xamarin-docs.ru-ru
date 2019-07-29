@@ -7,28 +7,28 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 0837deccdb535c178e8b00b052efeb7c9bd49679
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 94a0bddcb3a9a1e7236bed4b4c95fc38e1f9f0dd
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864120"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510439"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Как автоматизировать тестовый проект Android NUnit?
 
 > [!NOTE]
-> В этом руководстве объясняется, как автоматизировать тестовый проект Android NUnit, не проект Xamarin.UITest. Xamarin.UITest руководства можно найти [здесь](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+> В этом руководство объясняется, как автоматизировать проект тестирования для Android на NUnit, а не проект Xamarin. UITest. Руководства по Xamarin. UITest можно найти [здесь](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
-При создании **приложение модульного тестирования (Android)** проект в Visual Studio (или **Android модульный тест** проект в Visual Studio для Mac), этот проект, будут запускаться автоматически тестов по умолчанию.
-Чтобы запустить тесты NUnit на целевом устройстве, можно создать [Android.App.Instrumentation](https://developer.xamarin.com/api/type/Android.App.Instrumentation/) подкласс, в котором запущена с помощью следующей команды: 
+При создании проекта **приложения модульного тестирования (Android)** в Visual Studio (или проекте **модульного теста Android** в Visual Studio для Mac) этот проект не будет автоматически выполнять тесты по умолчанию.
+Для выполнения тестов NUnit на целевом устройстве можно создать подкласс [Android. app. Instrumentation](xref:Android.App.Instrumentation) , запущенный с помощью следующей команды: 
 
 ```shell
 adb shell am instrument 
 ```
 
-Следующие шаги поясняют, этот процесс:
+Этот процесс описывается в следующих шагах:
 
-1.  Создайте новый файл с именем **TestInstrumentation.cs**: 
+1.  Создайте новый файл с именем **TestInstrumentation.CS**: 
 
     ```cs 
     using System;
@@ -54,11 +54,11 @@ adb shell am instrument
         }
     }
     ```
-    В этом файле [Xamarin.Android.NUnitLite.TestSuiteInstrumentation](https://developer.xamarin.com/api/type/Xamarin.Android.NUnitLite.TestSuiteInstrumentation/) (из **Xamarin.Android.NUnitLite.dll**) является подклассом для создания `TestInstrumentation`.
+    В этом файле `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (из **Xamarin. Android. NUnitLite. dll**) создается подкласс для создания. `TestInstrumentation`
 
-2.  Реализуйте [TestInstrumentation](https://developer.xamarin.com/api/constructor/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.TestSuiteInstrumentation/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) конструктор и [AddTests](https://developer.xamarin.com/api/member/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.AddTests%28%29) метод. `AddTests` Метод элементы управления, какие тесты все равно выполняются.
+2.  Реализуйте `AddTests` конструктор и метод. `TestInstrumentation` `AddTests` Метод определяет, какие тесты фактически выполняются.
 
-3.  Изменить `.csproj` файл, чтобы добавить **TestInstrumentation.cs**. Например:
+3.  Измените файл, добавив **TestInstrumentation.cs.** `.csproj` Например:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -74,25 +74,25 @@ adb shell am instrument
     </Project>
     ```
 
-4.  Используйте следующую команду для запуска модульных тестов. Замените `PACKAGE_NAME` с именем пакета приложения (имя пакета можно найти в приложении `/manifest/@package` атрибут находится в **AndroidManifest.xml**):
+4.  Используйте следующую команду для запуска модульных тестов. Замените `PACKAGE_NAME` на имя пакета приложения (имя пакета можно найти в `/manifest/@package` атрибуте приложения, расположенном в **файле AndroidManifest. XML**):
 
     ```shell
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-5.  При необходимости можно изменить `.csproj` добавляемый файл `RunTests` целевой объект MSBuild. Это дает возможность вызвать модульных тестов с помощью команды следующего вида:
+5.  При необходимости можно изменить `.csproj` файл, `RunTests` добавив целевой объект MSBuild. Это дает возможность вызывать модульные тесты с помощью команды, как в следующем примере:
 
     ```shell
     msbuild /t:RunTests Project.csproj
     ```
-    (Следует отметить, что этот новый целевой объект не является обязательным; в более ранних `adb` команда может использоваться вместо `msbuild`.)
+    (Обратите внимание, что использование этого нового целевого объекта не является `adb` обязательным. можно использовать более раннюю `msbuild`команду вместо.)
 
-Дополнительные сведения об использовании `adb shell am instrument` команду для запуска модульных тестов, см. в разделе разработчика Android [запуск тестов с помощью ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) раздела.
+Дополнительные сведения об использовании `adb shell am instrument` команды для выполнения модульных тестов см. в разделе Android Developer [Tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
 
 > [!NOTE]
-> С помощью [Xamarin.Android 5.0](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) release, по умолчанию имена пакетов для вызываемых оболочек времени Android будет основываться на контрольной суммы MD5 имени выполняется экспорт типа с указанием сборки. Это позволяет полное доменное имя, совпадающее должен предоставляться из двух разных сборках и не возникает ошибка упаковки. Поэтому убедитесь, что используется `Name` свойство `Instrumentation` атрибут для создания имени для чтения ACW или класс.
+> В версии [Xamarin. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) имена пакетов по умолчанию для вызываемых оболочек Android будут основываться на md5sum имени экспортируемого типа с указанием сборки. Это позволяет предоставлять одно и то же полное имя из двух разных сборок и не возвращать ошибку упаковки. Поэтому убедитесь, что `Name` свойство `Instrumentation` атрибута используется для создания имени АКВ или класса, доступного для чтения.
 
-_Имя ACW должен использоваться в `adb` Приведенная выше команда_.
-Переименование рефакторинга C# класс таким образом потребуется изменение `RunTests` команду, чтобы использовать правильное имя ACW.
+_В`adb` приведенной выше команде необходимо использовать имя АКВ_.
+Для переименования и рефакторинга C# класса потребуется изменить `RunTests` команду так, чтобы она использовала правильное имя АКВ.
 

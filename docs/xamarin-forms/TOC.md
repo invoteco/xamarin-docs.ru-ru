@@ -180,6 +180,7 @@
 #### [Задание свойства ItemsSource средства выбора](user-interface/picker/populating-itemssource.md)
 #### [Добавление данных в коллекцию элементов средства выбора](user-interface/picker/populating-items.md)
 ### [ProgressBar](user-interface/progressbar.md)
+### [SearchBar](user-interface/searchbar.md)
 ### [Slider](user-interface/slider.md)
 ### [Шаговый переключатель](user-interface/stepper.md)
 ### [Стили](user-interface/styles/index.md)

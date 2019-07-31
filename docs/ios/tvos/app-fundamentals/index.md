@@ -1,58 +1,58 @@
 ---
-title: принципы работы приложения tvOS
-description: В этом разделе описываются наиболее распространенные задачи и основные понятия, что разработчики должны иметь в виду при написании приложений Xamarin.tvOS.
+title: Основы приложений tvOS
+description: В этом разделе представлены наиболее распространенные задачи и понятия, которые необходимо учитывать разработчикам при написании приложений Xamarin. tvOS.
 ms.prod: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 8fe5b508bb92d11bc1a76c96ece0b89fd06dd402
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cc1a4ae46eb07c789e5f451fec1db201826ffb21
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61415745"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652165"
 ---
-# <a name="tvos-application-fundamentals"></a>принципы работы приложения tvOS
+# <a name="tvos-application-fundamentals"></a>Основы приложений tvOS
 
-_В этом разделе описываются наиболее распространенные задачи и основные понятия, что разработчики должны иметь в виду при написании приложений Xamarin.tvOS._
+_В этом разделе представлены наиболее распространенные задачи и понятия, которые необходимо учитывать разработчикам при написании приложений Xamarin. tvOS._
 
 <a name="Xamarin.tvOS-Application-Fundamentals" />
 
-## <a name="xamarintvos-application-fundamentals"></a>Принципы работы приложения Xamarin.tvOS
+## <a name="xamarintvos-application-fundamentals"></a>Основы приложений Xamarin. tvOS
 
-В документе, в этом разделе приведены опыт основные понятия и возможности tvOS, который вы будете работать с при создании приложения-Xamarin.tvOS.
+Документы в этом разделе содержат сведения об основных понятиях и функциях tvOS, с которыми вы будете работать при создании приложения Xamarin. tvOS.
 
-Настоятельно рекомендуется работать через [по Tvos краткое руководство по](~/ios/tvos/get-started/hello-tvos.md) во-первых, так как он охватывает основные понятия и методы, которые мы будем использовать в каждой статье.
+Мы настоятельно рекомендуем сначала проработать с [Привет, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md) , так как в нем рассматриваются основные понятия и методы, которые мы будем использовать в каждой статье.
 
 <a name="Working-with-Icons-and-Images" />
 
 ### <a name="working-with-icons-and-imagesiostvosapp-fundamentalsicons-imagesmd"></a>[Работа со значками и изображениями](~/ios/tvos/app-fundamentals/icons-images.md)
 
-В этой статье рассматривается проектирование и работа со значками и изображениями внутри приложения Xamarin.tvOS.
+В этой статье описывается проектирование и работа со значками и изображениями в приложении Xamarin. tvOS.
 
 <a name="Working-with-Navigation-and-Focus" />
 
 ### <a name="working-with-navigation-and-focusiostvosapp-fundamentalsnavigation-focusmd"></a>[Работа с навигацией и фокусом](~/ios/tvos/app-fundamentals/navigation-focus.md)
 
-В этой статье рассматриваются концепции фокус и как она используется для представления и обработки переходов внутри приложения Xamarin.tvOS.
+В этой статье рассматривается понятие фокуса и его использование для представления и управления навигацией в приложении Xamarin. tvOS.
 
 <a name="Resources-and-Data-Storage" />
 
 ### <a name="resources-and-data-storageiostvosapp-fundamentalsresources-data-storagemd"></a>[Ресурсы и хранилище данных](~/ios/tvos/app-fundamentals/resources-data-storage.md)
 
-В отличие от устройств iOS новый Apple TV не поддерживает постоянное локальное хранилище для приложений tvOS. В этой статье рассматривается работа с ресурсы и хранилище постоянных данных в приложении Xamarin.tvOS.
+В отличие от устройств iOS, новый Apple TV не предоставляет постоянное локальное хранилище для приложений tvOS. В этой статье рассматривается работа с ресурсами и хранением постоянных данных в приложении Xamarin. tvOS.
 
 <a name="Playing-Sound-with-AVAudioPlayer" />
 
 ### <a name="playing-sound-with-avaudioplayeriostvosapp-fundamentalssoundsmd"></a>[Воспроизведение звука с помощью AVAudioPlayer](~/ios/tvos/app-fundamentals/sounds.md)
 
-В этой статье показано, как использовать вспомогательный класс для управления воспроизведением звукового помощью AVAudioPlayer использование в приложении Xamarin.tvOS.
+В этой статье показано, как использовать вспомогательный класс для управления воспроизведением звука с помощью помощью avaudioplayer в приложении Xamarin. tvOS.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Примеры tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Человека направляющие интерфейса tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Приложение руководство по программированию для tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Руководства по tvOSму интерфейсу](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Руководством по программированию приложений для tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

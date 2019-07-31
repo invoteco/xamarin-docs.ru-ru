@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 264bdcc9a7a0d73ebe3385246ee6dfae3d9a850f
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: f49416eddb69e2900eb427f27057cd8f1cb9ceb5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740994"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654689"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Работа с watchOS навигации в Xamarin
 
@@ -53,7 +53,7 @@ DismissController();
 
 Как и в iOS, left-edge-жеста перетаскивания переходит обратно в родительский контроллер в стеке иерархической навигации.
 
-Оба [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) и [WatchTables](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) примеры содержат иерархической навигации.
+Оба [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) и [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) примеры содержат иерархической навигации.
 
 ### <a name="pushing-and-popping-in-code"></a>Перемещая и выталкивая в коде
 
@@ -117,5 +117,5 @@ PresentController (controllerNames, contexts);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchKitCatalog (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (пример)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

@@ -1,86 +1,85 @@
 ---
 title: Введение в iOS 11
-description: Этот документ содержит ссылки на различные руководства, описывающие возможности iOS 11, включая ARKit, CoreML, MapKit, PDFKit, SiriKit, framework концепции и многое другое.
+description: В этом документе содержатся ссылки на различные руководства, в которых описываются функции iOS 11, включая ARKit, CoreML, Мапкит, Пдфкит, SiriKit, концепцию инфраструктуры и многое другое.
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 1542ae5d7dbdf008dd5b300dfb5820c3f04ae682
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 648b03dc34daa8906adab316c552a9615649800d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268891"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655824"
 ---
 # <a name="introduction-to-ios-11"></a>Введение в iOS 11
 
-![Пример ARKit](images/arkit.png) ![Размещение объектов AR](images/arkit2.png) ![Пример CoreML](images/coreml.png) ![Пример MapKit](images/mapkit.png) ![Пример машинного зрения прямоугольников](images/vision1.png) ![Пример машинного зрения лиц](images/vision2.png) ![Пример перетаскивания](images/drag-drop.png) ![Пример перетаскивания](images/drag-drop2.png) ![Пример SiriKit](images/sirikit.png)
+![Пример ARKit](images/arkit.png) ![Объекты, размещенные в AR](images/arkit2.png) ![Пример CoreML](images/coreml.png) ![Пример Мапкит](images/mapkit.png) ![Пример прямоугольников концепции](images/vision1.png) ![Пример лиц с видением](images/vision2.png) ![Пример перетаскивания](images/drag-drop.png) ![Пример перетаскивания](images/drag-drop2.png) ![Пример SiriKit](images/sirikit.png)
 
-iOS 11 включает в себя множество новых компонентов и усовершенствований для разнообразных платформ:
+iOS 11 включает в себя множество новых и усовершенствованных возможностей в различных платформах:
 
-## <a name="preparing-your-app-for-ios-11updating-your-appindexmd"></a>[Подготовка приложений для iOS 11](updating-your-app/index.md)
+## <a name="preparing-your-app-for-ios-11updating-your-appindexmd"></a>[Подготовка приложения для iOS 11](updating-your-app/index.md)
 
-Apple представила архитектуру обновления, новые визуальные изменения и процесс обновленные iTunes Connect для iOS 11. Используйте это руководство, чтобы убедиться в том, что приложение Xamarin.iOS подготовлена для нового выпуска.
+В Apple появились обновления архитектуры, новые визуальные изменения и обновленный процесс iTunes Connect для iOS 11. Используйте это руководством, чтобы убедиться, что приложение Xamarin. iOS подготовлено для нового выпуска.
 
 ## <a name="arkitarkitindexmd"></a>[ARKit](arkit/index.md)
 
-ARKit Открытие дополненная реальность на устройства iOS, в котором пользователям взаимодействовать с внешним миром через камеры устройства.
-С помощью Xamarin, можно также использовать [ARKit с UrhoSharp](arkit/urhosharp.md).
+ARKit расширяет возможности iOS, позволяя пользователям взаимодействовать с миром через камеру устройства.
+С помощью Xamarin можно также использовать [ARKit с UrhoSharp](arkit/urhosharp.md).
 
 ## <a name="coremlcoremlmd"></a>[CoreML](coreml.md)
 
-Модели машинного обучения можно интегрировать в приложения iOS 11 с CoreML. Платформа CoreML предоставляет простой API для включения в проекты приложений, чтобы разрешить проблемы для анализа существующих моделей прямо в приложение.
+Модели машинного обучения можно интегрировать в приложения iOS 11 с помощью CoreML. Платформа CoreML предоставляет простой API для внедрения существующих моделей в проекты приложений, чтобы разрешить анализ проблем непосредственно в приложении.
 
 ## <a name="corenfccorenfcmd"></a>[CoreNFC](corenfc.md)
 
-iPhone 7 и более новых устройствах может считывать теги рядом с полем связи действия (NFC), для включения приложений для обнаружения с тегами продуктов, мест или вещи в мире вокруг них.
+устройства iPhone 7 и более поздних версий могут читать Теги NFC, позволяя приложениям обнаруживать в мире продукты, места и т. д.
 
 ## <a name="drag-and-dropdrag-and-dropmd"></a>[Перетаскивание](drag-and-drop.md)
 
-Framework перетаскивания обеспечивает поддержку всего операций ввода-вывода для перемещения данных по сенсорного ввода. На устройстве iPad можно перетащить как внутри, так и между различные приложения; Хотя на iPhone, можно перетаскивать только в пределах одного приложения. Предусмотрена поддержка для разных вариантов настройки, включая сложные типы данных, анимации и обработки мультисенсорные жесты.
+Платформа перетаскивания предоставляет поддержку iOS для перемещения данных по сенсорному экрану. На iPad можно перетаскивать как внутри, так и между различными приложениями. на iPhone можно перетащить только в пределах одного приложения. Существует поддержка различных типов настройки, включая расширенные типы данных, анимацию и обработку жестов Мультисенсорная.
 
 ## <a name="mapkitmapkitmd"></a>[MapKit](mapkit.md)
 
-MapKit имеет ряд улучшений, включая поддержку автоматического маркера, группирование и добавление компас к представлению.
+Мапкит имеет ряд усовершенствований, включая поддержку автоматического группирования маркеров и добавление компаса в представление.
 
-## <a name="pdfkit"></a>PDFKit
+## <a name="pdfkit"></a>пдфкит
 
-PDFKit теперь доступна в iOS 11, перевод PDF создания и изменения в приложения возможности.
+Пдфкит теперь доступен в iOS 11, обеспечивая возможности создания и редактирования PDF-файлов в приложениях.
 
 ## <a name="sirikitsirikitmd"></a>[SiriKit](sirikit.md)
 
-Siri теперь поддерживает еще больше взаимодействия, включая списки и примечания и другие усовершенствования, такие как имена альтернативные приложений.
+Siri теперь поддерживает еще больше взаимодействий, включая списки и примечания, а также другие улучшения, такие как альтернативные имена приложений.
 
 ## <a name="visionvisionmd"></a>[Vision](vision.md)
 
-Предоставляет разнообразные изображения функций обработки и анализа на устройства iOS, включая обнаружение лиц и распознавания, моделей CoreML, новые интерфейсы API обнаружения штрихкода, текст и период обнаружения и общими объект обнаружения и отслеживания.
+Предоставляет разнообразные функции обработки изображений и анализа в iOS, включая обнаружение и распознавание лиц, CoreML модели, новые API-интерфейсы обнаружения штрихкодов, обнаружение текста и горизонта, а также более общее обнаружение и отслеживание объектов.
 
 ## <a name="samples"></a>Примеры
 
-Мы сотрудничаем с C# [примеры](https://developer.xamarin.com/samples/ios/iOS11/) для начала работы:
+У нас есть несколько C# [примеров](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11) , которые помогут вам приступить к работе:
 
-* [Пример ARKit](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
-* [ARKit размещение объектов](https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/)
+* [Пример ARKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
+* [ARKit размещения объектов](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 * [ARKit и UrhoSharp](arkit/urhosharp.md)
-* [Пример CoreML](https://developer.xamarin.com/samples/monotouch/ios11/CoreML)
-* [Образец распознавания образов CoreML](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition)
-* [CoreML с Azure пользовательской модели](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel)
-* [Пример модуля чтения CoreNFC тега](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
-* [Перетаскивание таблицы представления](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView)
-* [Перетаскивание представления коллекции](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCollectionView)
-* [Перетаскивание пользовательское представление](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCustomView)
-* [DragBoard Drag & Drop образца](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropDragBoard)
-* [Пример MapKit](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample)
-* [Пример SiriKit](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)
-* [Обновленный пример framework фотографий](https://developer.xamarin.com/samples/monotouch/ios11/SamplePhotoApp/)
-* [Концепции и CoreML пример](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision)
-* [Образец обнаружения прямоугольники компьютерного зрения](https://developer.xamarin.com/samples/monotouch/ios11/VisionRects)
-* [Образец обнаружения лиц компьютерного зрения](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces)
-* [Пример PDKFit мини-приложения](https://developer.xamarin.com/samples/monotouch/ios11/PDFAnnotationWidgetsAdvanced)
-* [Пример PDFKit водяного знака](https://developer.xamarin.com/samples/monotouch/ios11/PDFDocumentWatermark)
+* [Пример распознавания изображений CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+* [CoreML с настраиваемой моделью Azure](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+* [Пример средства чтения тегов Коренфк](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
+* [Перетащить & представление таблицы](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
+* [Перетаскивание представления коллекции &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+* [Перетаскивание пользовательского представления &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
+* [Пример перетаскивания & Драгбоард](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
+* [Пример Мапкит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
+* [Пример SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+* [Пример обновленной платформы фото](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
+* [Пример & концепции CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
+* [Пример обнаружения прямоугольников концепции](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
+* [Пример обнаружения лиц с видением](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+* [Пример мини-приложений Пдкфит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
+* [Пример водяного знака Пдфкит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Образцы Xamarin iOS 11](https://developer.xamarin.com/samples/ios/iOS11/)
+- [Примеры Xamarin iOS 11](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11)

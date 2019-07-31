@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: ad20ba50b8ff0f7dcbba3e8d297b2281544a373b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804897"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657088"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-[StackLayout](xref:Xamarin.Forms.StackLayout) организует представлений в одномерный массив строки («стек»), горизонтально или вертикально. Представления в `StackLayout` можно изменять, зависит от пространства в компоновку, используя параметры макета. Размещение определяется порядок представления добавленных для макета и параметры макета представлений.
+[StackLayout](xref:Xamarin.Forms.StackLayout) организует представления в одномерной линии ("Stack"), горизонтальной или вертикальной. Представления в `StackLayout` можно изменять, зависит от пространства в компоновку, используя параметры макета. Размещение определяется порядок представления добавленных для макета и параметры макета представлений.
 
 [![](stack-layout-images/layouts-sml.png "Макеты Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "макеты Xamarin.Forms")
 
@@ -226,5 +226,5 @@ Title="StackLayouts">
 ## <a name="related-links"></a>Связанные ссылки
 
 - [LayoutOptions](~/xamarin-forms/user-interface/layouts/layout-options.md)
-- [Макет (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Пример BusinessTumble (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Макет (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Пример BusinessTumble (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

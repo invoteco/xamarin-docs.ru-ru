@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: f97cd3030b865b53b82845ff8941e3f0a10f0320
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169855"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657176"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _ImageButton отображает изображение и реагирует на касание или щелчок, который направляет приложению выполнения определенной задачи._
 
@@ -25,7 +25,7 @@ _ImageButton отображает изображение и реагирует �
 > [!NOTE]
 > Хотя [ `Button` ](xref:Xamarin.Forms.Button) определяет представление [ `Image` ](xref:Xamarin.Forms.Button.Image) свойство, которое позволяет отображать изображение на `Button`, это свойство предназначено для использования при отображении небольшой значок рядом с полем `Button` текста.
 
-В примерах кода в этом руководстве, взяты из [FormsGallery пример](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/).
+В примерах кода в этом руководстве, взяты из [FormsGallery пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery).
 
 ## <a name="setting-the-image-source"></a>Установка источника изображения
 
@@ -276,4 +276,4 @@ public class ImageButtonDemoPage : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [Пример FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

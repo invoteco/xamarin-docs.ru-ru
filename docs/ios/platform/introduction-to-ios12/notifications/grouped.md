@@ -1,36 +1,36 @@
 ---
-title: Сгруппированные уведомлений в Xamarin.iOS
-description: С помощью iOS 12 существует возможность группы уведомлений в центре уведомлений или на экране блокировки с приложения или потока. В этом документе описываются способы отправки потоками и несвязанным уведомлений с помощью Xamarin.iOS.
+title: Сгруппированные уведомления в Xamarin. iOS
+description: IOS 12 позволяет группировать уведомления в центре уведомлений или на экране блокировки по приложениям или потокам. В этом документе описывается, как отправлять потоковые и несвязанные уведомления с помощью Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: 6798c4c5fa7502ba5e99cb8bc209468acaa4a9ec
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3edaabe287bc2b37d2ec5a759ada9f59441c6d3a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402425"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652576"
 ---
-# <a name="grouped-notifications-in-xamarinios"></a>Сгруппированные уведомлений в Xamarin.iOS
+# <a name="grouped-notifications-in-xamarinios"></a>Сгруппированные уведомления в Xamarin. iOS
 
-По умолчанию iOS 12 помещает все уведомления приложения в группе. Блокировка экрана и центр уведомлений отображения в виде стека с последнего уведомления в верхней части этой группы. Пользователей можно развернуть в группу, чтобы все уведомления, она содержит и отклонить группы в целом см. в разделе.
+По умолчанию iOS 12 размещает все уведомления приложения в группе. На экране блокировки и в центре уведомлений эта группа отображается в виде стека с самым последним уведомлением в верхней части. Пользователи могут развернуть группу, чтобы просмотреть все уведомления, которые она содержит, и закрыть группу в целом.
 
-Приложения также могут группы уведомлений потоком, что упрощает для пользователей поиск и взаимодействовать с нужной информации им интересны.
+Приложения также могут группировать уведомления по потокам, что упрощает пользователям поиск и взаимодействие с конкретными сведениями, в которых они интересуются.
 
-## <a name="sample-app-groupednotifications"></a>Пример приложения. GroupedNotifications
+## <a name="sample-app-groupednotifications"></a>Пример приложения: граупеднотификатионс
 
-Чтобы узнать, как использовать сгруппированные уведомления с помощью Xamarin.iOS, взгляните на [GroupedNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/GroupedNotifications) примера приложения.
+Чтобы узнать, как использовать сгруппированные уведомления с Xamarin. iOS, ознакомьтесь с примером приложения [граупеднотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications) .
 
-Этот пример приложения имитирует диалоги с различных друзьями, отправки уведомления для каждого сообщения и сгруппировать их потоком. Он также демонстрирует, как несвязанным land уведомления в группе уровня приложения.
+Этот пример приложения имитирует беседы с различными друзьями, отправляя уведомление для каждого сообщения и группируя их по потоку. Здесь также показано, как непотоковые уведомления помещаются в группу уровня приложения.
 
-Фрагменты кода, в этом руководстве, взяты из этого примера приложения.
+Фрагменты кода в этом пошаговом окне поступают из этого примера приложения.
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>Запросить авторизацию и разрешить уведомления переднего плана
 
-Приложения для отправки локального уведомления, оно должно запросить разрешение на это. В примере приложения [ `AppDelegate` ](xref:UIKit.UIApplicationDelegate), [ `FinishedLaunching` ](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) метод запрашивает это разрешение:
+Прежде чем приложение сможет отправлять локальные уведомления, оно должно запросить разрешение для этого. В примере приложения [`AppDelegate`](xref:UIKit.UIApplicationDelegate) [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) метод запрашивает это разрешение:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,7 +46,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-[ `Delegate` ](xref:UserNotifications.UNUserNotificationCenter.Delegate) (Задайте выше) для [ `UNUserNotificationCenter` ](xref:UserNotifications.UNUserNotificationCenter) решает ли приложение переднего плана отобразится уведомление о входящих путем вызова обработчик завершения, передаваемый [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
+Значение [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (приведенное выше) [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) определяет, должно ли приложение переднего плана отображать входящее уведомление путем вызова обработчика завершения, переданного в [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
 [Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
@@ -56,18 +56,18 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 }
 ```
 
-[ `UNNotificationPresentationOptions.Alert` ](xref:UserNotifications.UNNotificationPresentationOptions) Параметр указывает, что приложение должно отображать сообщение, но не воспроизведение звука или обновить эмблему.
+[`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) Параметр указывает, что приложение должно отображать предупреждение, но не воспроизводить звук или обновлять эмблему.
 
-## <a name="threaded-notifications"></a>Многопоточные уведомления
+## <a name="threaded-notifications"></a>Потоковые уведомления
 
-Выберите пример приложения **сообщение с Алисой** кнопку несколько раз, чтобы их отправки уведомлений для диалога с именем Анна друзьям.
-Так как этот диалог уведомления входят в том же потоке, блокировка экрана и центр уведомлений сгруппировать их вместе.
+Повторно Коснитесь сообщения примера приложения **с помощью кнопки Алисы** , чтобы отправить уведомление для диалога с дружественным именем Alice.
+Так как уведомления этого диалога являются частью одного потока, на экране блокировки и в центре уведомлений группируются все эти сообщения.
 
-Чтобы начать диалог с другой другом, коснитесь **выберите запись нового друга** кнопки. Уведомления для этого диалога, появляются в отдельную группу.
+Чтобы начать беседу с другим дружественным, коснитесь кнопки **выбрать новую дружественную команду** . Уведомления для этого диалога отображаются в отдельной группе.
 
-### <a name="threadidentifier"></a>ThreadIdentifier
+### <a name="threadidentifier"></a>среадидентифиер
 
-Любое время, в примере приложения запускает новый поток, он создает идентификатор, уникальный поток:
+Каждый раз, когда пример приложения запускает новый поток, он создает уникальный идентификатор потока:
 
 ```csharp
 void StartNewThread()
@@ -77,13 +77,13 @@ void StartNewThread()
 }
 ```
 
-Чтобы отправить уведомление потоками, пример приложения:
+Для отправки потокового уведомления пример приложения:
 
-- Проверяет, имеет ли приложение авторизации для отправки уведомления.
-- Создает [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-объект для уведомления содержимого и устанавливает его [`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
-Идентификатор потока, созданный ранее.
-- Создает запрос и планирует уведомления:
+- Проверяет, имеет ли приложение разрешение на отправку уведомления.
+- Создает объект[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+объект для содержимого уведомления и задает его свойство[`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
+в созданный выше идентификатор потока.
+- Создает запрос и планирует уведомление:
 
 ```csharp
 async partial void ScheduleThreadedNotification(UIButton sender)
@@ -119,29 +119,29 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 }
 ```
 
-Все уведомления из одного приложения с тем же идентификатором потока будут отображаться в той же группе уведомлений.
+Все уведомления из одного приложения с одним идентификатором потока будут отображаться в одной группе уведомлений.
 
 > [!NOTE]
-> Чтобы задать идентификатор потока на удаленных уведомлений, добавьте `thread-id` ключа уведомления полезные данные JSON. См. в разделе Apple [созданием удаленного уведомления](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) документа для получения дополнительных сведений.
+> Чтобы задать идентификатор потока для удаленного уведомления, добавьте `thread-id` ключ в полезные данные JSON уведомления. Дополнительные сведения см. [в статье Создание удаленного документа уведомления](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) Apple.
 
-### <a name="summaryargument"></a>SummaryArgument
+### <a name="summaryargument"></a>суммаряргумент
 
-`SummaryArgument` Указывает влияние текст сводки, который отображается в левом нижнем углу группы уведомлений, к которому относится уведомление уведомление. iOS объединяет текст сводки из уведомлений в той же группе для создания в целом сводное описание.
+`SummaryArgument`Указывает, как уведомление повлияет на текст сводки, отображаемый в левом нижнем углу группы уведомлений, к которой относится уведомление. iOS объединяет сводный текст из уведомлений в той же группе, чтобы создать общее сводное описание.
 
-Пример приложения использует автора сообщения в качестве аргумента сводки. При таком подходе текст сводки для группы шесть уведомлений с помощью Алиса может быть **5 Дополнительные уведомления от Алисы и мне**.
+В примере приложения в качестве аргумента сводки используется автор сообщения. При таком подходе текст сводки для группы из шести уведомлений с Алисой может представлять собой **5 дополнительных уведомлений от Алисы и Me**.
 
-## <a name="unthreaded-notifications"></a>Несвязанным уведомления
+## <a name="unthreaded-notifications"></a>Несвязанные уведомления
 
-Каждое нажатие примера приложения **напоминания о встрече** кнопка отправляет один из различных уведомления памятки встречи. Так как эти напоминания не являются структурированными, они отображаются в группе уведомления на уровне приложения на экране блокировки и в центре уведомлений.
+Каждое касание кнопки **напоминания о встрече** примера приложения отправляет одно из различных уведомлений о встречах. Так как эти напоминания не являются потоками, они отображаются в группе уведомлений уровня приложения на экране блокировки и в центре уведомлений.
 
-Отправка несвязанным уведомления, пример приложения `ScheduleUnthreadedNotification` метод использует аналогичный код, как описано выше.
-Тем не менее, она не присваивает `ThreadIdentifier` на `UNMutableNotificationContent` объекта.
+Для отправки несвязанного уведомления `ScheduleUnthreadedNotification` метод примера приложения использует аналогичный код, как показано выше.
+Однако он не задает `ThreadIdentifier` `UNMutableNotificationContent` объект для объекта.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример приложения — GroupedNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/GroupedNotifications)
-- [Платформа уведомлений пользователя в Xamarin.iOS](~/ios/platform/user-notifications/index.md)
-- [Новые возможности в уведомления для пользователей (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [С помощью сгруппированные уведомления (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/711/)
-- [Рекомендации и новые возможности в уведомления для пользователей (WWDC 2017 г.)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Пример приложения — Граупеднотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
+- [Платформа уведомлений пользователей в Xamarin. iOS](~/ios/platform/user-notifications/index.md)
+- [Новые возможности уведомлений пользователей (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Использование сгруппированных уведомлений (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/711/)
+- [Рекомендации и новые возможности уведомлений пользователей (ВВДК 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
 - [Создание удаленного уведомления (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

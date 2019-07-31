@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 31303114ddd829b596569981b5812b91c4e95b30
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: 5c12b5a5c0e558403362bd12baddfb8201f40759
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557444"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642924"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Отображаемый текст в Xamarin.Forms_
 
@@ -146,7 +146,7 @@ var label =
 
 ## <a name="formatted-text"></a>Форматированный текст
 
-Предоставлять метки [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) свойство, которое позволяет представления текста с использованием нескольких шрифтов и цветов в одном представлении.
+Метки предоставляют [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) свойство, которое позволяет просматривать текст с несколькими шрифтами и цветами в одном и том же представлении.
 
 `FormattedText` Свойство имеет тип [ `FormattedString` ](xref:Xamarin.Forms.FormattedString), который состоит из одного или нескольких [ `Span` ](xref:Xamarin.Forms.Span) экземпляров, настроенных с помощью [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) свойство . Следующие `Span` свойства можно использовать, чтобы задать внешний вид:
 
@@ -157,13 +157,13 @@ var label =
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) — размер шрифта для текста в элементе управления span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) — цвет для текста в элементе управления span. Это свойство является устаревшим и будет заменен `TextColor` свойство.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) — Множитель, который следует применить к высота строки по умолчанию диапазона. Дополнительные сведения см. в разделе [высота строки](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style)  — стиль, применяемый к нему.
+- [`Style`](xref:Xamarin.Forms.Span.Style)— стиль, применяемый к диапазону.
 - [`Text`](xref:Xamarin.Forms.Span.Text) — текст диапазона.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) — цвет для текста в элементе управления span.
 - `TextDecorations` -оформление для применения к тексту в элементе управления span. Дополнительные сведения см. в разделе [оформление текста](#text-decorations).
 
 > [!NOTE]
-> [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor), [ `Text` ](xref:Xamarin.Forms.Span.Text), И [ `Text` ](xref:Xamarin.Forms.Span.Text) привязываемые свойства использовать режим привязки по умолчанию [ `OneWay` ](xref:Xamarin.Forms.BindingMode). Дополнительные сведения об этом режиме привязки см. в разделе [режима привязки по умолчанию](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) в [режим привязки](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) руководства.
+> Свойства, и [`OneWay`](xref:Xamarin.Forms.BindingMode) [`Text`](xref:Xamarin.Forms.Span.Text) [,допускающиепривязку,имеютрежимпривязкипоумолчанию.`Text`](xref:Xamarin.Forms.Span.Text) [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) Дополнительные сведения об этом режиме привязки см. в описании [режима привязки по умолчанию](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) в разделе " [режим привязки](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) ".
 
 Кроме того [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) свойство может использоваться для определения коллекции распознавателей жестов, которые будет отвечать на жесты на [ `Span` ](xref:Xamarin.Forms.Span).
 
@@ -298,14 +298,14 @@ var label = new Label
 
 ## <a name="hyperlinks"></a>Гиперссылки
 
-Текст, отображаемый элементом [ `Label` ](xref:Xamarin.Forms.Label) и [ `Span` ](xref:Xamarin.Forms.Span) экземпляров можно превратить в гиперссылки с следующий подход:
+Текст, [`Label`](xref:Xamarin.Forms.Label) отображаемый экземплярами и [`Span`](xref:Xamarin.Forms.Span) , можно преобразовать в гиперссылки с помощью следующего подхода:
 
-1. Задайте `TextColor` и `TextDecoration` свойства [ `Label` ](xref:Xamarin.Forms.Label) или [ `Span` ](xref:Xamarin.Forms.Span).
-1. Добавить [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) для [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) коллекцию [ `Label` ](xref:Xamarin.Forms.Label) или [ `Span` ](xref:Xamarin.Forms.Span), чей [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) свойство привязывается к `ICommand`, а [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) свойство содержит URL-адрес, чтобы открыть.
-1. Определение `ICommand` , будет выполняться [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer).
-1. Написать код, который будет выполняться `ICommand`.
+1. Задайте свойства `TextDecoration` [иобъекта`Label`](xref:Xamarin.Forms.Label) или [.`Span`](xref:Xamarin.Forms.Span) `TextColor`
+1. [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) [Добавьтев`Label`](xref:Xamarin.Forms.Label) [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) коллекцию объекта [или`Span`,](xref:Xamarin.Forms.Span)свойство [которого`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) привязано к ,свойствокоторогосодержитURL-адресдляоткрытия.`ICommand` [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers)
+1. Определите объект `ICommand` , который будет выполняться [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
+1. Напишите код, который будет выполняться `ICommand`.
 
-В следующем примере кода, взятом из [демонстрации Hyperlink](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) образце показано [ `Label` ](xref:Xamarin.Forms.Label) , содержимое которого имеет значение из нескольких [ `Span` ](xref:Xamarin.Forms.Span) экземпляров:
+В следующем примере кода, взятом из примера [демонстрации гиперссылок](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , показано [`Label`](xref:Xamarin.Forms.Label) , содержимое которого задается из нескольких [`Span`](xref:Xamarin.Forms.Span) экземпляров:
 
 ```xaml
 <Label>
@@ -326,13 +326,13 @@ var label = new Label
 </Label>
 ```
 
-В этом примере, первый и третий [ `Span` ](xref:Xamarin.Forms.Span) одинакового текста, а второй `Span` представляет tappable гиперссылку. Он имеет цвет изменится на синий, а подчеркивание текста. Это создает гиперссылки, как показано на следующем снимке экрана:
+В этом примере первый и третий [`Span`](xref:Xamarin.Forms.Span) экземпляры состоят из текста, а вторая `Span` — для касания. Цвет текста установлен синим цветом и имеет подчеркивание текста. При этом создается внешний вид гиперссылки, как показано на следующих снимках экрана:
 
-[![Гиперссылки](label-images/hyperlinks-small.png "гиперссылки")](label-images/hyperlinks-large.png#lightbox)
+[![Гиперссылки](label-images/hyperlinks-small.png "Гиперссылки")](label-images/hyperlinks-large.png#lightbox)
 
-При выборе элемента гиперссылки, [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) ответит, выполнив `ICommand` определяется его [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) свойство. Кроме того, URL-адрес, определяемое [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) свойства будут передаваться `ICommand` как параметр.
+При нажатии этой гиперссылки объект [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) будет отвечать, выполняя объект, `ICommand` определенный [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) ее свойством. Кроме того, URL-адрес, заданный [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) свойством, будет передан в `ICommand` качестве параметра.
 
-Содержит код программной части для страницы XAML `TapCommand` реализации:
+Код программной части для страницы XAML содержит `TapCommand` реализацию:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -352,13 +352,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-`TapCommand` Выполняет `OpenBrowser` , передавая [ `TapGestureRecognizer.CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) значение свойства в качестве параметра. В свою очередь, вызывает этот метод [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) метод, чтобы открыть URL-адрес в веб-браузере. Таким образом общий эффект, что при гиперссылки шифрованию на странице, откроется браузер и осуществляется переход URL-адрес, связанный с гиперссылкой.
+Выполняет метод, передавая [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) значение свойства в качестве параметра. `OpenBrowser` `TapCommand` В свою очередь, этот метод вызывает [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) метод, чтобы открыть URL-адрес в браузере. Таким образом, общий результат заключается в том, что при касании гиперссылки на странице появляется веб-браузер, и открывается URL-адрес, связанный с гиперссылкой.
 
-### <a name="creating-a-reusable-hyperlink-class"></a>Создание многократно используемых hyperlink класса
+### <a name="creating-a-reusable-hyperlink-class"></a>Создание повторно используемого класса гиперссылки
 
-Предыдущий подход к созданию гиперссылки требуется написание повторяющегося кода, каждый раз, чтобы требовать гиперссылки в приложении. Тем не менее, обе [ `Label` ](xref:Xamarin.Forms.Label) и [ `Span` ](xref:Xamarin.Forms.Span) допускается создание подклассов классов для создания `HyperlinkLabel` и `HyperlinkSpan` классов, в которой распознаватель жестов и форматированием кода также добавлена туда.
+Предыдущий подход к созданию гиперссылки требует написания повторяющегося кода каждый раз, когда требуется гиперссылка в приложении. Однако классы [`Span`](xref:Xamarin.Forms.Span) `HyperlinkLabel` и могут быть созданы в виде подклассов для создания классов `HyperlinkSpan` и с добавлением в него кода для распознавания и форматирования текста. [`Label`](xref:Xamarin.Forms.Label)
 
-В следующем примере кода, взятом из [демонстрации Hyperlink](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) образце показано `HyperlinkSpan` класса:
+В следующем примере кода, взятом из примера [демонстрации гиперссылок](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , показан `HyperlinkSpan` класс:
 
 ```csharp
 public class HyperlinkSpan : Span
@@ -384,9 +384,9 @@ public class HyperlinkSpan : Span
 }
 ```
 
-`HyperlinkSpan` Класс определяет `Url` свойство и связанные с ней [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty), и конструктор задает внешний вид гиперссылок и [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) , будут отвечать При выборе элемента гиперссылки. При `HyperlinkSpan` шифрованию, `TapGestureRecognizer` ответит, выполнив [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) метод, чтобы открыть URL-адрес, определяемое `Url` свойство, в веб-браузере.
+Класс определяет свойство и связывается [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), и конструктор задает внешний вид гиперссылки и объект [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) , который будет реагировать при касании гиперссылки. `Url` `HyperlinkSpan` При нажатии `TapGestureRecognizer` `Url` [на`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) будет полученответ,выполнивметод,чтобыоткрытьURL-адрес,заданныйсвойством,ввеб-браузере.`HyperlinkSpan`
 
-`HyperlinkSpan` Класса может быть поглощен добавления экземпляра класса в XAML:
+`HyperlinkSpan` Класс можно использовать, добавив в XAML экземпляр класса:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -415,8 +415,8 @@ public class HyperlinkSpan : Span
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Текст (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Гиперссылки (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Hyperlinks)
+- [Текст (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Гиперссылки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
 - [Создание мобильных приложений с помощью Xamarin.Forms, Глава 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Метка API](xref:Xamarin.Forms.Label)
 - [Диапазон API](xref:Xamarin.Forms.Span)

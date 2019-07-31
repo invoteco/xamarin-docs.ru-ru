@@ -1,78 +1,78 @@
 ---
-title: Приобретение готовых к использованию продуктов в Xamarin.iOS
-description: В этом документе описываются готовых к использованию продуктов в Xamarin.iOS. Готовых к использованию продуктов — одноразовых части функции, такие как валюты в игре.
+title: Покупка потребляемых продуктов в Xamarin. iOS
+description: В этом документе описываются потребляемые продукты в Xamarin. iOS. Потребляемые продукты являются единым набором функций, таких как «валюта в игре».
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b55465a700974e0ce5ceb8893d96311d920e04ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 818412cef7359e134dea51e76567aa65bba8e613
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61366712"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651635"
 ---
-# <a name="purchasing-consumable-products-in-xamarinios"></a>Приобретение готовых к использованию продуктов в Xamarin.iOS
+# <a name="purchasing-consumable-products-in-xamarinios"></a>Покупка потребляемых продуктов в Xamarin. iOS
 
-Готовых к использованию продуктов, которые проще всего реализовать, так как нет необходимости «восстановить». Они полезны для таких продуктов, как валюты в игре или одноразовых определенную функцию. Пользователей можно повторно купить готовых к использованию продуктов over и over еще раз.
+Использование потребляемых продуктов проще всего реализовать, так как нет необходимости в восстановлении. Они полезны для таких продуктов, как используемая в игре валюта или единая функция использования. Пользователи могут повторно приобрести потребляемые продукты повторно.
 
-## <a name="built-in-product-delivery"></a>Встроенные продукта доставки
+## <a name="built-in-product-delivery"></a>Встроенная Доставка продуктов
 
-Примером кода в этом документе демонстрируется встроенные продуктов: коды продуктов «зашиты» в приложение так, как они тесно связаны в код, чтобы разблокировать компонент после оплаты. Процесс покупки можно представить следующим образом:   
+В образце кода, прилагаемом к этому документу, показаны встроенные продукты — идентификаторы продуктов жестко связаны с приложением, так как они тесно связаны с кодом, который разблокирует функцию после оплаты. Процесс покупки можно выработать следующим образом:   
    
-[![Закупок визуализации процесса](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
+[![Визуализация процесса покупки](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
- Ниже приведен базовый рабочий процесс.   
+ Базовый рабочий процесс:   
    
- 1. Приложение добавляет `SKPayment` в очередь. При необходимости, пользователю будет предложено ввести свой идентификатор Apple, а запрос на подтверждение оплаты.   
+ 1. Приложение добавляет объект `SKPayment` в очередь. При необходимости пользователю будет предложено ввести идентификатор Apple ID и появится запрос на подтверждение оплаты.   
    
  2. StoreKit отправляет запрос на сервер для обработки.   
    
- 3. После завершения транзакции, сервер отвечает с уведомлением о транзакции.   
+ 3. По завершении транзакции сервер отвечает за получение транзакции.   
    
- 4. `SKPaymentTransactionObserver` Подкласс получает приемки и обрабатывает его.   
+ 4. `SKPaymentTransactionObserver` Подкласс получает уведомление и обрабатывает его.   
    
- 5. Приложение позволяет продукта (путем обновления `NSUserDefaults` или другой механизм) и затем вызывает его StoreKit `FinishTransaction`.
+ 5. Приложение включает продукт (путем обновления `NSUserDefaults` или какого-либо другого механизма), а затем вызывает `FinishTransaction`StoreKit.
 
-Есть другой тип рабочего процесса — *продуктов Server-Delivered* — то есть обсуждается далее в документе (см. в разделе *проверки поступления и продуктов Server-Delivered*).
+Существует другой тип рабочего процесса — *доставленные серверные продукты* , которые обсуждаются далее в документе (см. раздел *Проверка поступления и серверные продукты*).
 
-## <a name="consumable-products-example"></a>Пример готовых к использованию продуктов
+## <a name="consumable-products-example"></a>Пример использования продуктов
 
-[Кода InAppPurchaseSample](https://developer.xamarin.com/samples/monotouch/StoreKit/) содержит проект с именем *расходных* , реализует базовый «в игре валюта» (называемые «повозиться кредиты»). Пример показано, как реализовать два продукта покупки в приложении, обеспечивающая купить как «monkey кредиты» нужно – в реальном приложении также будет каким-либо образом суммы расходов их!   
+[Код инапппурчасесампле](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) содержит проект с именем *расходных материалов* , который реализует базовую валюту "в игре" (называемую "обезьяной". В этом примере показано, как реализовать два продукта, приобретенных в приложении, чтобы позволить пользователю купить столько «кредитов», сколько нужно. в реальных приложениях это также будет быть каким-то способом.   
    
    
    
- Приложение отображается на этих снимках экрана — каждой покупки, добавляет дополнительные «monkey кредиты» баланс пользователя:   
+ Приложение отображается на этих снимках экрана — каждая покупка добавляет к балансу пользователя дополнительные "кредиты".   
    
    
    
- [![Каждой покупки, добавляет дополнительные кредиты monkey баланс пользователей](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
+ [![Каждая покупка добавляет кредитные кредиты в баланс пользователей](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
- Взаимодействие между пользовательские классы, StoreKit и App Store будет выглядеть следующим образом:   
+ Взаимодействие между пользовательскими классами, StoreKit и App Store, выглядит следующим образом:   
    
    
    
- [![Взаимодействие между пользовательские классы, StoreKit и App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
+ [![Взаимодействие между пользовательскими классами, StoreKit и App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
 ### <a name="viewcontroller-methods"></a>Методы ViewController
 
-Помимо свойства и методы, необходимые для получения сведений о продуктах контроллер представления требуется дополнительное уведомление наблюдателей для прослушивания уведомлений, связанных с покупки. Это просто `NSObjects` , будут зарегистрированы и удалены в `ViewWillAppear` и `ViewWillDisappear` соответственно.
+В дополнение к свойствам и методам, необходимым для получения сведений о продукте, контроллеру представления требуются дополнительные наблюдатели уведомлений для прослушивания уведомлений, связанных с покупкой. Это только `NSObjects` то, что будет зарегистрировано и удалено `ViewWillDisappear` в `ViewWillAppear` и соответственно.
 
 ```csharp
 NSObject succeededObserver, failedObserver;
 ```
 
-Конструктор также создает `SKProductsRequestDelegate` подкласс ( `InAppPurchaseManager`), в свою очередь создает и регистрирует `SKPaymentTransactionObserver` ( `CustomPaymentObserver`).   
+Конструктор также `SKProductsRequestDelegate` создаст подкласс ( `InAppPurchaseManager`), который, в `SKPaymentTransactionObserver` свою очередь, создает и регистрирует ( `CustomPaymentObserver`).   
    
    
    
- В первой части обработки транзакции покупки в приложении должен обрабатывать нажатие кнопки, когда пользователь хочет приобрести что-то, как показано в следующем коде из примера приложения:
+ Первая часть обработки транзакции покупки в приложении заключается в обработке нажатия кнопки, когда пользователь хочет купить что-либо, как показано в следующем коде из примера приложения:
 
 ```csharp
 buy5Button.TouchUpInside += (sender, e) => {
@@ -85,7 +85,7 @@ buy10Button.TouchUpInside += (sender, e) => {
 
    
    
- Во второй части пользовательского интерфейса обрабатывает уведомления, то транзакция выполнена успешно, в данном случае путем обновления отображается баланс:
+ Вторая часть пользовательского интерфейса обрабатывает уведомление о том, что транзакция была успешной, в данном случае путем обновления отображаемого баланса:
 
 ```csharp
 priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
@@ -94,7 +94,7 @@ priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseMan
 });
 ```
 
-Заключительную часть пользовательского интерфейса отображается сообщение, если транзакция отменяется для какой-либо причине. В примере кода в окне вывода просто записывается сообщение:
+Последняя часть пользовательского интерфейса отображает сообщение, если транзакция отменяется по какой-либо причине. В примере кода сообщение просто записывается в окно вывода:
 
 ```csharp
 failedObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionFailedNotification,
@@ -103,11 +103,11 @@ failedObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseMa
 });
 ```
 
-В дополнение к этим методам в контроллере представления, готовых к использованию продукта транзакции покупки требуется код на `SKProductsRequestDelegate` и `SKPaymentTransactionObserver`.
+Помимо этих методов на контроллере представления, для используемой транзакции покупки продукта также требуется код в `SKProductsRequestDelegate` `SKPaymentTransactionObserver`и.
 
-### <a name="inapppurchasemanager-methods"></a>Методы InAppPurchaseManager
+### <a name="inapppurchasemanager-methods"></a>Методы Инапппурчасеманажер
 
-В образце кода реализуется несколько приобрести связанных методов класса InAppPurchaseManager, включая `PurchaseProduct` метод, который создает `SKPayment` экземпляра и добавляет его в очередь для обработки:
+В примере кода реализован ряд методов, связанных с покупкой, для класса инапппурчасеманажер, включая `PurchaseProduct` метод, который `SKPayment` создает экземпляр и добавляет его в очередь для обработки:
 
 ```csharp
 public void PurchaseProduct(string appStoreProductId)
@@ -117,11 +117,11 @@ public void PurchaseProduct(string appStoreProductId)
 }
 ```
 
-Добавление платежа в очередь является асинхронной операцией. Приложение получает управление, пока StoreKit обрабатывает транзакции и отправляет его на серверах компании Apple. Это на этом этапе будет проверять, iOS, пользователь вошел в App Store и запрашивать ей идентификатор Apple ID и пароля, при необходимости.   
+Добавление платежа в очередь является асинхронной операцией. Приложение восстанавливает управление, пока StoreKit обрабатывает транзакцию и отправляет ее на серверы Apple. На этом этапе iOS будет проверять, что пользователь вошел в App Store, и при необходимости запрашивать идентификатор Apple ID и пароль.   
    
    
    
- Предполагая, что пользователь успешно проходит аутентификацию с помощью App Store и соглашается с тем к транзакции, `SKPaymentTransactionObserver` будет получен ответ в StoreKit и вызвать следующий метод для выполнения транзакции и завершить его.
+ Предполагая, что пользователь успешно прошел проверку подлинности в магазине приложений и соглашается с `SKPaymentTransactionObserver` транзакцией, он получает ответ StoreKit и вызывает следующий метод для выполнения транзакции и ее завершения.
 
 ```csharp
 public void CompleteTransaction (SKPaymentTransaction transaction)
@@ -133,7 +133,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 }
 ```
 
-Последний шаг — чтобы уведомить о StoreKit успешно выполненное транзакции, путем вызова `FinishTransaction`:
+Последний шаг заключается в том, чтобы уведомить StoreKit о том, что вы успешно выполнили транзакцию `FinishTransaction`, вызвав:
 
 ```csharp
 public void FinishTransaction(SKPaymentTransaction transaction, bool wasSuccessful)
@@ -153,11 +153,11 @@ public void FinishTransaction(SKPaymentTransaction transaction, bool wasSuccessf
 }
 ```
 
-После поставки продукта `SKPaymentQueue.DefaultQueue.FinishTransaction` должен вызываться для удаления транзакции из очереди оплаты.
+После доставки продукта необходимо вызвать метод `SKPaymentQueue.DefaultQueue.FinishTransaction` , чтобы удалить транзакцию из очереди платежей.
 
-### <a name="skpaymenttransactionobserver-custompaymentobserver-methods"></a>Методы SKPaymentTransactionObserver (CustomPaymentObserver)
+### <a name="skpaymenttransactionobserver-custompaymentobserver-methods"></a>Методы Скпайменттрансактионобсервер (Кустомпайментобсервер)
 
-Вызовы StoreKit `UpdatedTransactions` метод, когда он получает ответ от серверы Apple и передает массив `SKPaymentTransaction` объекты для проверки кода. Метод перебирает каждую транзакцию и выполняет другую функцию, исходя из состояния транзакции (как показано ниже):
+StoreKit вызывает `UpdatedTransactions` метод при получении ответа от серверов Apple и передает в код `SKPaymentTransaction` массив объектов для проверки. Метод выполняет цикл по каждой транзакции и осуществляет другую функцию на основе состояния транзакции (как показано ниже):
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -179,11 +179,11 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 }
 ```
 
-`CompleteTransaction` Метод изложено ранее в этом разделе — она сохраняет сведения о покупке для `NSUserDefaults`, завершает транзакцию с StoreKit и наконец уведомляет пользовательский Интерфейс для обновления.
+Метод был рассмотрен ранее в этом разделе — он сохраняет сведения о приобретении в `NSUserDefaults`, завершает транзакцию с помощью StoreKit и, наконец, сообщает пользовательскому интерфейсу об обновлении. `CompleteTransaction`
 
 ### <a name="purchasing-multiple-products"></a>Приобретение нескольких продуктов
 
-Если имеет смысл в приложении на покупку нескольких продуктов, используйте `SKMutablePayment` класса и установите в поле Quantity:
+Если в приложении есть смысл приобрести несколько продуктов, используйте `SKMutablePayment` класс и задайте поле Quantity:
 
 ```csharp
 public void PurchaseProduct(string appStoreProductId)
@@ -194,7 +194,7 @@ public void PurchaseProduct(string appStoreProductId)
 }
 ```
 
-Код, обрабатывающий завершенной транзакции также необходимо запросить свойство количество правильно выполнить покупки:
+Код, обрабатывающий завершенную транзакцию, должен также запросить свойство Quantity, чтобы правильно удовлетворить покупку:
 
 ```csharp
 public void CompleteTransaction (SKPaymentTransaction transaction)
@@ -211,17 +211,17 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 }
 ```
 
-Пользователь приобретает несколько экземпляров, оповещение подтверждение StoreKit будет отображать количество, цена за единицу и общая стоимость они будет взиматься плата, как показано на следующем снимке экрана:
+Когда пользователь приобретает несколько количеств, в оповещении StoreKit будет отражено количество, Цена за единицу и Общая цена, на которую будет произведена плата, как показано на следующем снимке экрана:
 
 [![Подтверждение покупки](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
-## <a name="handling-network-outages"></a>Обработка сбоев сети
+## <a name="handling-network-outages"></a>Обработка простоев сети
 
-Покупки из приложений требуют работающее подключение к сети для StoreKit для взаимодействия с серверами Apple. Если сетевое подключение не доступен, то покупки из приложений будет недоступна.
+Для покупок из приложений требуется работающее сетевое подключение для StoreKit, чтобы взаимодействовать с серверами Apple. Если сетевое подключение недоступно, покупка в приложении будет недоступна.
 
 ### <a name="product-requests"></a>Запросы продукта
 
-Если сеть недоступна, делая `SKProductRequest`, `RequestFailed` метод `SKProductsRequestDelegate` подкласс ( `InAppPurchaseManager`) будет вызываться, как показано ниже:
+Если сеть недоступна во время создания `SKProductRequest` `RequestFailed` , будет вызван метод `SKProductsRequestDelegate` подкласса ( `InAppPurchaseManager`), как показано ниже:
 
 ```csharp
 public override void RequestFailed (SKRequest request, NSError error)
@@ -234,7 +234,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 }
 ```
 
-Затем ViewController прослушивает уведомление и отображает сообщение в кнопках покупку:
+Затем ViewController прослушивает уведомление и выводит сообщение на кнопки покупки:
 
 ```csharp
 requestObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerRequestFailedNotification,
@@ -245,15 +245,15 @@ requestObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseM
 });
 ```
 
-Так как сетевое подключение может быть временной на мобильных устройствах, приложения может хотите отслеживать состояние сети, используя платформу SystemConfiguration и повторите попытку, когда доступно соединение сети. Обратитесь к Apple или, что использует его.
+Так как сетевое подключение может быть временным на мобильных устройствах, приложениям может потребоваться мониторинг состояния сети с помощью платформы SystemConfiguration Framework и повторная попытка, когда будет доступно сетевое подключение. Обратитесь к Apple или в том, на котором он используется.
 
 ### <a name="purchase-transactions"></a>Транзакции покупки
 
-Сохранит очереди StoreKit оплаты и прямой покупки запрашиваемый, если это возможно, поэтому последствия сбоя в работе сети будет зависят от того, при сбое сети во время покупки.   
+По возможности очередь оплаты StoreKit будет хранить и пересылать запросы на покупку, поэтому воздействие сбоя сети будет зависеть от того, когда в процессе приобретения произошел сбой сети.   
    
    
    
- Если ошибка возникает во время транзакции, `SKPaymentTransactionObserver` подкласс ( `CustomPaymentObserver`) будет иметь `UpdatedTransactions` метод с именем и `SKPaymentTransaction` класс будет в состоянии сбоя.
+ Если во время транзакции происходит `SKPaymentTransactionObserver` ошибка, то подкласс ( `CustomPaymentObserver`) будет иметь `UpdatedTransactions` вызываемый метод, а `SKPaymentTransaction` класс будет находиться в состоянии Failed.
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -275,7 +275,7 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 }
 ```
 
-`FailedTransaction` Метод обнаруживает ли ошибка вызвана Отмена пользователем, как показано ниже:
+`FailedTransaction` Метод определяет, была ли ошибка вызвана отменой пользователем, как показано ниже:
 
 ```csharp
 public void FailedTransaction (SKPaymentTransaction transaction)
@@ -289,13 +289,13 @@ public void FailedTransaction (SKPaymentTransaction transaction)
 }
 ```
 
-Даже если транзакция дает сбой, `FinishTransaction` метод должен вызываться для удаления транзакции из очереди оплаты:
+Даже если транзакция завершается неудачно, `FinishTransaction` необходимо вызвать метод, чтобы удалить транзакцию из очереди платежей:
 
 ```csharp
 SKPaymentQueue.DefaultQueue.FinishTransaction(transaction);
 ```
 
-В примере кода затем отправляет уведомление, чтобы ViewController может отобразить сообщение. Приложения не должно отображать дополнительный сообщение, если пользователь отменяет транзакцию. Другие коды ошибок, которые могут возникнуть включают:
+Затем в примере кода отправляется уведомление, чтобы ViewController мог отобразить сообщение. Приложения не должны показывать дополнительное сообщение, если пользователь отменил транзакцию. Ниже перечислены другие коды ошибок, которые могут возникнуть.
 
 ```csharp
 FailedTransaction Code=0 Cannot connect to iTunes Store
@@ -304,17 +304,17 @@ FailedTransaction Code=5020 Forget Your Password?
 Applications may detect and respond to specific error codes, or handle them in the same way.
 ```
 
-## <a name="handling-restrictions"></a>Обработка ограничений
+## <a name="handling-restrictions"></a>Ограничения обработки
 
-**Параметры > Общие > ограничения** особенностью iOS позволяет заблокировать некоторые возможности устройства.   
+**Параметры > общие > ограничения** в iOS позволяют пользователям блокировать определенные функции устройства.   
    
    
    
- Вы можете запросить, разрешено ли пользователю для совершения покупок в приложении с помощью `SKPaymentQueue.CanMakePayments` метод. Если он возвращает значение false затем пользователь не может получить доступ к покупки из приложений. StoreKit автоматически отобразит сообщение об ошибке для пользователя при попытке выполнения покупки. Установив это значение приложения вместо этого можно скрыть кнопки покупки или выполнить определенное действие, чтобы помочь пользователю.   
+ Вы можете запросить, разрешено ли пользователю делать покупки в приложении с помощью `SKPaymentQueue.CanMakePayments` метода. Если этот параметр возвращает значение false, пользователь не может получить доступ к покупкам в приложении. StoreKit автоматически отображает пользователю сообщение об ошибке при попытке покупки. Проверив это значение, приложение может скрыть кнопки покупки или предпринять другие действия, чтобы помочь пользователю.   
    
    
    
- В `InAppPurchaseManager.cs` файл `CanMakePayments` метод создает оболочку для функции StoreKit следующим образом:
+ `InAppPurchaseManager.cs` В`CanMakePayments` файле метод создает оболочку для функции StoreKit следующим образом:
 
 ```csharp
 public bool CanMakePayments()
@@ -323,15 +323,15 @@ public bool CanMakePayments()
 }
 ```
 
-Чтобы протестировать этот метод, используйте **ограничения** компонент iOS, чтобы отключить **покупки из приложений**:   
+Чтобы протестировать этот метод, используйте функцию " **ограничения** " в iOS, чтобы отключить **покупки в приложении**:   
    
    
    
- [![Использовать функцию ограничения операций ввода-вывода для отключения покупки из приложений](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
+ [![Использование функции ограничений в iOS для отключения покупок в приложении](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
- Этот пример кода из `ConsumableViewController` реагирует на `CanMakePayments` возвращает значение false, отобразив **AppStore отключена** текст на кнопках отключено.
+ В этом примере кода `ConsumableViewController` из реагирует на `CanMakePayments` возвращение значения false путем отображения **AppStore отключенного** текста на отключенных кнопках.
 
 ```csharp
 // only if we can make payments, request the prices
@@ -347,22 +347,22 @@ if (iap.CanMakePayments()) {
 }
 ```
 
-Приложение выглядит это when **покупки из приложений** функция ограничен — кнопки покупки будут отключены.   
+Приложение выглядит следующим образом, если функция " **покупки в приложении** " ограничена — кнопки "Покупка" отключены.   
    
    
    
- [![Приложение выглядит при покупки в приложении, функция ограничения покупки кнопки отключены](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
+ [![Приложение выглядит следующим образом, если функция "покупки в приложении" ограничена, кнопки "Покупка" отключены](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
 
-Сведения о продукте по-прежнему может быть, запрашиваемые при `CanMakePayments` имеет значение false, поэтому приложение по-прежнему можно получить и отобразить цены. Это означает, что если мы удалили `CanMakePayments` проверки из кода, кнопки покупки придется по-прежнему будет активным, хотя при попытке покупку пользователь увидит сообщение, **покупки из приложений не допускаются** (созданных в ходе StoreKit Когда очередь оплата осуществляется):   
+Сведения о продукте по-прежнему могут `CanMakePayments` быть запрошены, если значение равно false, поэтому приложение по-прежнему может получать и отображать цены. Это означает, что при удалении `CanMakePayments` проверки из кода кнопки покупки по-прежнему будут активны, однако при появлении попытки покупки пользователь увидит сообщение о том, что **покупки в приложении не разрешены** (создаются с помощью StoreKit, когда очередь платежей доступ):   
    
    
    
- [![Покупки из приложений не допускаются.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
+ [![Покупки из приложения не разрешены](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    
- Реальные приложения может занять другой подход к обработке ограниченного использования программ, таких как скрытие кнопки полностью и возможно предлагает более подробное сообщение чем оповещение, которое StoreKit показано автоматически.
+ Реальные приложения могут использовать другой подход к обработке ограничений, например, полностью скрыть кнопки и, возможно, предложить более подробное сообщение, чем предупреждение, которое StoreKit показано автоматически.
 

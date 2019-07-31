@@ -7,16 +7,16 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4fae33f7de8c6022b2298c462ea510ec8ed623f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382471"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657196"
 ---
 # <a name="the-translate-transform"></a>Преобразование переноса
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Сведения об использовании преобразования переноса необходимо сдвинуть графики SkiaSharp_
 
@@ -38,7 +38,7 @@ public void Translate (Single dx, Single dy)
 public void Translate (SKPoint point)
 ```
 
-**Накапливаются перевод** странице [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) пример программы показано, что несколько вызовов из `Translate` метода являются накопительными. [ `AccumulatedTranslatePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) Класс отображает 20 версии же прямоугольника, каждого из них смещение от предыдущей прямоугольника ровно настолько, чтобы они растянуть по диагонали. Вот `PaintSurface` обработчик событий:
+**Накапливаются перевод** странице [ **SkiaSharpForms** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) пример программы показано, что несколько вызовов из `Translate` метода являются накопительными. [ `AccumulatedTranslatePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) Класс отображает 20 версии же прямоугольника, каждого из них смещение от предыдущей прямоугольника ровно настолько, чтобы они растянуть по диагонали. Вот `PaintSurface` обработчик событий:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -136,7 +136,7 @@ using (SKPaint textPaint = new SKPaint())
 
 Второй пример вызывает [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix). В результате всех операций преобразования, чтобы вернуться к состоянию по умолчанию.
 
-Третий пример сохраняет состояние `SKCanvas` объекта с помощью вызова [ `Save` ](xref:SkiaSharp.SKCanvas.Save) и затем восстанавливает среду с помощью вызова [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Это наиболее универсальный способ управления преобразований для ряда операций рисования. Эти `Save` и `Restore` вызывает функцию как стек: Можно вызвать `Save` несколько раз, а затем вызовите `Restore` в обратном последовательности, чтобы вернуться к предыдущим состояниям. `Save` Метод возвращает целое число, и вы можете передать целого числа для [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) эффективно вызывать `Restore` несколько раз. [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) Свойство возвращает число состояний, сохраненных в стеке.
+Третий пример сохраняет состояние `SKCanvas` объекта с помощью вызова [ `Save` ](xref:SkiaSharp.SKCanvas.Save) и затем восстанавливает среду с помощью вызова [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Это наиболее универсальный способ управления преобразований для ряда операций рисования. Эти `Save` функции `Restore` и вызывают функцию вроде стека: Можно вызвать `Save` несколько раз, а затем вызвать `Restore` в обратной последовательности, чтобы вернуться к предыдущим состояниям. `Save` Метод возвращает целое число, и вы можете передать целого числа для [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) эффективно вызывать `Restore` несколько раз. [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) Свойство возвращает число состояний, сохраненных в стеке.
 
 Можно также использовать [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) класс для восстанавливаемого состояния canvas. Конструктор этого класса предназначен для вызова `using` оператор; холста состояние восстанавливается автоматически в конце `using` блока. 
 
@@ -307,4 +307,4 @@ public class HendecagramAnimationPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

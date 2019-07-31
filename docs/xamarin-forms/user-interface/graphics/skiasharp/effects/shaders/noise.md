@@ -7,16 +7,16 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4801aa12acf8eca2384cc5b41d677f7cb0bdd90d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dea7f5e51a864922d56f7b65d19b21a889cbc650
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61292956"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656157"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp шум и составление
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Для поиска в понятном и естественном обычно простой векторной графики. Прямых линий, кривых smooth и сплошным цветом не напоминать дефекты реальных объектов. При работе в графическом объекте компьютерных фильма 1982 _Tron_, компьютер по обработке и анализу Перлина Алексей приступил к разработке алгоритмы, которые используются для предоставления более реалистичный текстуры эти образы случайных процессов. В 1997 году Алексей Перлина выиграла награду Academy для технических награду. Впоследствии получило название шума Перлина начал свою работу, и он поддерживается в SkiaSharp. Ниже приведен пример:
 
@@ -44,7 +44,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 `seed` Параметра является отправной точкой для генератора случайных чисел. Несмотря на то, что указано как значение с плавающей запятой, дробь усекается до того, как он используется 0 совпадает со значением 1.
 
-**Шума Перлина** странице в [ **SkiaSharpFormsDemos**)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образец позволяет экспериментировать с различными значениями `baseFrequency` и `numOctaves` аргументы. Ниже приведен файл XAML.
+**Шума Перлина** странице в [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образец позволяет экспериментировать с различными значениями `baseFrequency` и `numOctaves` аргументы. Ниже приведен файл XAML.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -399,4 +399,4 @@ public static SKShader CreateCompose (SKShader dstShader, SKShader srcShader, SK
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,58 +1,58 @@
 ---
-title: Общие сведения о CoreML в Xamarin.iOS
-description: В этом документе описывается CoreML, позволяющий машинного обучения в iOS. В этом документе описывается, как приступить к работе с CoreML и способы его использования с помощью платформы компьютерного зрения.
+title: Общие сведения о CoreML в Xamarin. iOS
+description: В этом документе описывается CoreML, который обеспечивает машинное обучение в iOS. В этом документе описывается, как приступить к работе с CoreML и его использованию с инфраструктурой концепции.
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: 3a00a7256cace9cbcff3478d866646d48cfdc50b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c2092cd9e7beb233c9478869ebff91d85b5b30c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61385077"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649609"
 ---
-# <a name="introduction-to-coreml-in-xamarinios"></a>Общие сведения о CoreML в Xamarin.iOS
+# <a name="introduction-to-coreml-in-xamarinios"></a>Общие сведения о CoreML в Xamarin. iOS
 
-CoreML привносит машинного обучения для iOS-приложений можно воспользоваться преимуществами моделей обученной машинного обучения для выполнения всех видов задач, от проблем для распознавания изображений.
+CoreML переносит машинное обучение в iOS — приложения могут воспользоваться обученными моделями машинного обучения для выполнения всех задач, от решения проблем до распознавания изображений.
 
-В данном разделе рассматриваются следующие вопросы:
+Это введение охватывает следующие аспекты:
 
-- [Приступая к работе с CoreML](#coreml)
-- [С помощью CoreML с помощью платформы компьютерного зрения](#coremlvision)
+- [начало работы с CoreML](#coreml)
+- [Использование CoreML с инфраструктурой концепции](#coremlvision)
 
 <a name="coreml" />
 
-## <a name="getting-started-with-coreml"></a>Приступая к работе с CoreML
+## <a name="getting-started-with-coreml"></a>начало работы с CoreML
 
-Эти шаги описывают способы добавления CoreML в проект iOS. Ссылаться на [Mars Habitat Pricer образец](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/) для практического примера.
+Эти шаги описывают добавление CoreML в проект iOS. Практический пример см. в образце Habitatного расценок для [Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) .
 
-![Снимок экрана прогнозирования цены Habitat режима MARS](coreml-images/marspricer-heading.png)
+![Снимок экрана примера прогноза цен habitat для Mars](coreml-images/marspricer-heading.png)
 
-### <a name="1-add-the-coreml-model-to-the-project"></a>1. Добавьте в проект модели CoreML
+### <a name="1-add-the-coreml-model-to-the-project"></a>1. Добавление модели CoreML в проект
 
-Добавление модели CoreML (файл с **.mlmodel** расширение) для **ресурсы** каталог проекта. 
+Добавьте модель CoreML (файл с расширением **млмодел** ) в каталог **ресурсов** проекта. 
 
-В свойствах файла модели его **действие при сборке** присваивается **CoreMLModel**. Это означает, что он будет скомпилирован в **.mlmodelc** файл при построении приложения.
+В свойствах файла модели его **действие сборки** имеет значение **коремлмодел**. Это означает, что при сборке приложения она будет скомпилирована в файл **. млмоделк** .
 
 ### <a name="2-load-the-model"></a>2. Загрузите модель
 
-Загрузка модели с помощью `MLModel.Create` статический метод:
+Загрузите модель с помощью `MLModel.Create` статического метода:
 
 ```csharp
 var assetPath = NSBundle.MainBundle.GetUrlForResource("NameOfModel", "mlmodelc");
 model = MLModel.Create(assetPath, out NSError error1);
 ```
 
-### <a name="3-set-the-parameters"></a>3. Задайте параметры
+### <a name="3-set-the-parameters"></a>3. Задание параметров
 
-Параметры модели передаются в нее с помощью класс контейнера, который реализует `IMLFeatureProvider`.
+Параметры модели передаются и исправляются с помощью класса контейнера `IMLFeatureProvider`, реализующего интерфейс.
 
-Классы поставщика функции ведут себя как словарь строки и `MLFeatureValue`s, где каждое значение функция может быть простая строка или число, массив или данных или буфер пикселя, содержащий изображение.
+Классы поставщиков функций ведут себя как словарь строк и `MLFeatureValue`s, где каждое значение функции может быть простой строкой или числом, массивом или данными или буфером пикселей, содержащим изображение.
 
-Ниже приведен код для поставщика функцию одним значением:
+Ниже показан код для поставщика функций с одним значением:
 
 ```csharp
 public class MyInput : NSObject, IMLFeatureProvider
@@ -67,11 +67,11 @@ public class MyInput : NSObject, IMLFeatureProvider
   }
 ```
 
-С помощью классов следующим образом, входные параметры можно указать способом, который понятен CoreML. Имена функций (таких как `myParam` в примере кода) должен соответствовать модели ожидает.
+С помощью таких классов входные параметры могут быть предоставлены способом, понятным CoreML. Имена функций (например `myParam` , в примере кода) должны соответствовать предполагаемой модели.
 
-### <a name="4-run-the-model"></a>4. Запустить модель
+### <a name="4-run-the-model"></a>4. Запуск модели
 
-С помощью модели необходимо, поставщик функций для создания экземпляра и параметры набор, затем, `GetPrediction` вызвать метод:
+Для использования модели необходимо, чтобы был создан экземпляр поставщика компонентов и были заданы параметры, а затем `GetPrediction` вызывался метод:
 
 ```csharp
 var input = new MyInput {MyParam = 13};
@@ -80,7 +80,7 @@ var outFeatures = model.GetPrediction(inputFeatures, out NSError error2);
 
 ### <a name="5-extract-the-results"></a>5. Извлечение результатов
 
-Результат прогноза `outFeatures` также является экземпляром `IMLFeatureProvider`; выходные данные значения может осуществляться с использованием `GetFeatureValue` с именем каждого параметра выходные данные (такие как `theResult`), как показано в этом примере:
+Результат `outFeatures` прогноза также является `IMLFeatureProvider`экземпляром; к выходным значениям можно обращаться с использованием `GetFeatureValue` `theResult`имени каждого выходного параметра (например,), как показано в следующем примере:
 
 ```csharp
 var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 6227020800
@@ -88,17 +88,17 @@ var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 622702
 
 <a name="coremlvision" />
 
-## <a name="using-coreml-with-the-vision-framework"></a>С помощью CoreML с помощью платформы компьютерного зрения
+## <a name="using-coreml-with-the-vision-framework"></a>Использование CoreML с инфраструктурой концепции
 
-CoreML может также использоваться в сочетании с помощью платформы концепции для выполнения операций в образе, таких как распознавание фигур, идентификация объектов и других задач.
+CoreML также можно использовать вместе с инфраструктурой концепции для выполнения операций на изображении, таких как распознавание фигур, идентификация объектов и другие задачи.
 
-Следующие шаги описывают, как CoreML и концепции используются совместно в [CoreMLVision пример](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/). Пример объединяет [распознавания прямоугольники](~/ios/platform/introduction-to-ios11/vision.md#rectangles) из .NET framework концепции с _MNINSTClassifier_ модели CoreML для идентификации рукописных цифр на фотографиях.
+Описанные ниже действия описывают, как CoreML и концепция используются вместе в [примере коремлвисион](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). Этот пример сочетает [Распознавание прямоугольников](~/ios/platform/introduction-to-ios11/vision.md#rectangles) от концепции инфраструктуры с моделью _мнинстклассифиер_ CoreML для идентификации рукописной цифры на фотографии.
 
-![Распознавание изображений, номер 3](coreml-images/vision3.png) ![Распознавание изображений, номер 5](coreml-images/vision5.png)
+![Распознавание изображений с номером 3](coreml-images/vision3.png) ![Распознавание изображений с номером 5](coreml-images/vision5.png)
 
-### <a name="1-create-a-vision-coreml-model"></a>1. Создание модели CoreML компьютерного зрения
+### <a name="1-create-a-vision-coreml-model"></a>1. Создание модели CoreML концепции
 
-Модели CoreML _MNISTClassifier_ загружается и затем помещается в `VNCoreMLModel` которого делает модели доступными для задач компьютерного зрения. Этот код также создает две концепции запросов: сначала для поиска прямоугольники, изображения, а затем для обработки прямоугольника с помощью модели CoreML:
+CoreML модель _мнистклассифиер_ загружается и затем упаковывается в `VNCoreMLModel` , что делает модель доступной для задач представления. Этот код также создает два запроса концепции: первый — для поиска прямоугольников в изображении, а затем для обработки прямоугольника с помощью модели CoreML:
 
 ```csharp
 // Load the ML model
@@ -113,11 +113,11 @@ RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 ClassificationRequest = new VNCoreMLRequest(model, HandleClassification);
 ```
 
-По-прежнему необходимо реализовать класс `HandleRectangles` и `HandleClassification` методов для запросов концепции, показано в шагах 3 и 4 ниже.
+Классу по-прежнему требуется реализовать `HandleRectangles` методы `HandleClassification` и для запросов к концепции, показанные в шагах 3 и 4 ниже.
 
-### <a name="2-start-the-vision-processing"></a>2. Начать обработку компьютерного зрения
+### <a name="2-start-the-vision-processing"></a>2. Начать обработку концепции
 
-Следующий код запускает обработку запроса. В **CoreMLVision** образец, этот код запускается после пользователь выбрал изображения:
+Следующий код начинает обработку запроса. В примере **коремлвисион** этот код выполняется после выбора пользователем изображения:
 
 ```csharp
 // Run the rectangle detector, which upon completion runs the ML classifier.
@@ -127,13 +127,13 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Этот обработчик передает `ciImage` в Framework концепции `VNDetectRectanglesRequest` , созданного на шаге 1.
+Этот обработчик передает объект `ciImage` в инфраструктуру `VNDetectRectanglesRequest` концепции, созданную на шаге 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Обрабатывать результаты обработки компьютерного зрения
+### <a name="3-handle-the-results-of-vision-processing"></a>3. Обработка результатов обработки концепции
 
-После завершения обнаружения прямоугольник выполняет `HandleRectangles` метод, который обрезает его, чтобы извлечь первый прямоугольник, преобразует прямоугольник изображение в оттенки серого и передает его модели CoreML для классификации.
+После завершения обнаружения прямоугольника он выполняет `HandleRectangles` метод, который обрезает изображение для извлечения первого прямоугольника, преобразует изображение прямоугольника в оттенки серого и передает его в модель CoreML для классификации.
 
-`request` Параметр, переданный в этот метод содержит сведения о запросе концепции и с помощью `GetResults<VNRectangleObservation>()` метод, он возвращает список прямоугольников, найденные в образе. Первый прямоугольник `observations[0]` извлекается и передается модели CoreML:
+Параметр, переданный в этот метод, содержит подробные сведения о запросе концепции и `GetResults<VNRectangleObservation>()` метод, который возвращает список прямоугольников, найденных в изображении. `request` Первый прямоугольник `observations[0]` извлекается и передается в модель CoreML:
 
 ```csharp
 void HandleRectangles(VNRequest request, NSError error) {
@@ -149,11 +149,11 @@ void HandleRectangles(VNRequest request, NSError error) {
 }
 ```
 
-`ClassificationRequest` Был инициализирован на шаге 1, чтобы использовать `HandleClassification` метода, определенного на следующем шаге.
+Был инициализирован на шаге 1 для использования метода, `HandleClassification` определенного на следующем шаге. `ClassificationRequest`
 
-### <a name="4-handle-the-coreml"></a>4. Дескриптор CoreML
+### <a name="4-handle-the-coreml"></a>4. Работа с CoreML
 
-`request` Параметр, переданный этому методу содержит сведения о запросе CoreML и с помощью `GetResults<VNClassificationObservation>()` метод, он возвращает список возможных результатов, упорядоченные по достоверности (самый высокий достоверности первого):
+Параметр, переданный в этот метод, содержит сведения о запросе CoreML и `GetResults<VNClassificationObservation>()` метод, который возвращает список возможных результатов, упорядоченных по достоверности (с наибольшей достоверностью): `request`
 
 ```csharp
 void HandleClassification(VNRequest request, NSError error){
@@ -169,19 +169,19 @@ void HandleClassification(VNRequest request, NSError error){
 
 ## <a name="samples"></a>Примеры
 
-Существует три примера CoreML, чтобы повторить:
+Существует три примера CoreML, которые можно попробовать:
 
-* [Пример прогнозирования цены Habitat Mars](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/) имеет простые числовые входы и выходы.
+* [Образец прогнозируемого Habitat цен на Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) имеет простые числовые входные и выходные данные.
 
-* [Vision и CoreML пример](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/) принимает параметр, изображения и основан на идеологии компьютерного зрения для идентификации square регионов в образе, которые передаются в модели CoreML, распознает одиночными цифрами.
+* [Образец & CoreML "концепция](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) " принимает параметр Image и использует инфраструктуру видения для идентификации квадратных областей в изображении, которые передаются в модель CoreML, распознающую одиночные цифры.
 
-* Наконец [пример распознавания изображений CoreML](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/) использует CoreML для идентификации компонентов в фотографию. По умолчанию он использует меньшее **SqueezeNet** модель (5 МБ), но оно было записано, чтобы вы можете скачать и включить большее **VGG16** модели (553 МБ). Дополнительные сведения см. в разделе [файле readme](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+* Наконец, [Пример распознавания изображений CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) использует CoreML для поиска компонентов в фотографии. По умолчанию используется меньшая модель **скуизенет** (5 МБ), но она была написана так, чтобы можно было загрузить и внедрить более крупную модель **VGG16** (553MB). Дополнительные сведения см. в [файле сведений для примера](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Машинное обучение (Apple)](https://developer.apple.com/machine-learning/)
-- [Пример CoreML (режим Mars Habitat) (пример)](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/)
-- [CoreML и визуальных (номер распознавание) (пример)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/)
-- [Распознавание изображений CoreML (пример)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/)
-- [CoreML методологиях Azure Custom (пример)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel)
-- [Знакомство с CoreML (WWDC) (видео)](https://developer.apple.com/videos/play/wwdc2017/703/)
+- [Пример CoreML (режим MARS Habitat) (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
+- [CoreML и концепция (Распознавание номеров) (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
+- [Распознавание изображений CoreML (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [CoreML с Пользовательское визуальное распознавание Azure (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [Введение в CoreML (ВВДК) (видео)](https://developer.apple.com/videos/play/wwdc2017/703/)

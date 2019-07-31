@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 263cbb4aed47794a09341bb8c78c4835510e50c0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 521df49a7698bc149d6bca7460cff2df74402bda
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408098"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657022"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
 _Представление Xamarin.Forms, которое позволяет пользователю выбрать дату._
 
@@ -92,7 +92,7 @@ DatePicker datePicker = new DatePicker
 
 ## <a name="datepicker-in-an-application"></a>DatePicker в приложении
 
-[ **DaysBetweenDates** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker) пример включает в себя два `DatePicker` представлений на его странице. Их можно использовать для выбора двух дат, и программа вычисляет количество дней в указанном интервале дат. Программа не изменить параметры `MinimumDate` и `MaximumDate` свойства, поэтому необходимо указать две даты от 1900 до 2100.
+[ **DaysBetweenDates** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) пример включает в себя два `DatePicker` представлений на его странице. Их можно использовать для выбора двух дат, и программа вычисляет количество дней в указанном интервале дат. Программа не изменить параметры `MinimumDate` и `MaximumDate` свойства, поэтому необходимо указать две даты от 1900 до 2100.
 
 Ниже приведен файл XAML.
 
@@ -196,5 +196,5 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример DaysBetweenDates](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+- [Пример DaysBetweenDates](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 - [DatePicker API](xref:Xamarin.Forms.DatePicker)

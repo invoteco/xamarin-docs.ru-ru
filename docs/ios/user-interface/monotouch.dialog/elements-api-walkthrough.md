@@ -1,50 +1,50 @@
 ---
-title: Создание приложения Xamarin.iOS с помощью API элементов
-description: В этой статье основан на сведения, представленные во введении к статье MonoTouch диалоговое окно. Он предоставляет пошаговое руководство, которое показывает, как использовать MonoTouch.Dialog (главный целевой сервер. (Г) элементы API можно быстро приступить к сборке приложения с помощью машинного перевода. Г.
+title: Создание приложения Xamarin. iOS с помощью API элементов
+description: Эта статья посвящена информации, приведенной в статье Общие сведения о диалоговом окне с ограниченным касанием. В нем представлено пошаговое руководство, в котором показано, как использовать «некасание» (MT. D). API элементов, чтобы быстро приступить к созданию приложения с помощью MT. Четырехмерного.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 1b4263e37e6d95c03e88905319cfe0ee167cb30b
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: 82320b069156828101d17e79ca48a8933b8a8777
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039690"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655082"
 ---
-# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Создание приложения Xamarin.iOS с помощью API элементов
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Создание приложения Xamarin. iOS с помощью API элементов
 
-_В этой статье основан на сведения, представленные во введении к статье MonoTouch диалоговое окно. Он предоставляет пошаговое руководство, которое показывает, как использовать MonoTouch.Dialog (главный целевой сервер. (Г) элементы API можно быстро приступить к сборке приложения с помощью машинного перевода. Г._
+_Эта статья посвящена информации, приведенной в статье Общие сведения о диалоговом окне с ограниченным касанием. В нем представлено пошаговое руководство, в котором показано, как использовать «некасание» (MT. D). API элементов, чтобы быстро приступить к созданию приложения с помощью MT. Четырехмерного._
 
-В этом пошаговом руководстве мы будем использовать главный целевой сервер. D элементы API для создания стиля «основной-подробности» приложения, который отображает список задач. Когда пользователь выбирает <span class="ui"> + </span> кнопки на панели навигации, новая строка добавляется в таблицу для задачи. Выбрав строку будет перейдите на экране сведений, который позволяет обновить описание задачи и срок, как показано ниже:
+В этом пошаговом руководстве мы будем использовать MT. D элементов API для создания стиля приложения "основной/подробности", отображающего список задач. Когда пользователь нажимает <span class="ui">+</span> кнопку на панели навигации, в таблицу добавляется новая строка для задачи. Выбор строки приведет к переходу на экран сведений, который позволяет обновить описание задачи и дату выполнения, как показано ниже:
 
- [![](elements-api-walkthrough-images/01-task-list-app.png "Выбрав строку перейдет на экран сведений, которое позволило бы обновить описание задачи и срок")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "Выбор строки приведет к переходу на экран сведений, который позволяет обновить описание задачи и дату выполнения.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- ## <a name="setting-up-mtd"></a>Настройка главного целевого сервера D
+ ## <a name="setting-up-mtd"></a>Настройка MT. Четырехмерного
 
-ГЛАВНОГО ЦЕЛЕВОГО СЕРВЕРА D распространяется вместе с Xamarin.iOS. Чтобы использовать его, щелкните правой кнопкой мыши **ссылки** Xamarin.iOS узел проекта в Visual Studio 2017 или Visual Studio для Mac и добавьте ссылку на **MonoTouch.Dialog 1** сборки. Затем добавьте `using MonoTouch.Dialog` инструкций в источнике кода при необходимости.
+Машин. D распространяется с помощью Xamarin. iOS. Чтобы использовать его, щелкните правой кнопкой мыши узел **ссылки** проекта Xamarin. iOS в Visual Studio 2017 или Visual Studio для Mac и добавьте ссылку на сборку " **котушь. Dialog-1** ". Затем добавьте `using MonoTouch.Dialog` в исходный код инструкции, если это необходимо.
 
-## <a name="elements-api-walkthrough"></a>Пошаговое руководство элементы API
+## <a name="elements-api-walkthrough"></a>Пошаговое руководство по API элементов
 
-В [Общие сведения о диалоговом окне MonoTouch](~/ios/user-interface/monotouch.dialog/index.md) статьи, мы получили основательного понимания различные части главного целевого сервера Г. Воспользуемся API элементов, чтобы собрать их все вместе в приложение.
+В статье [Общие сведения о диалоговом окне с](~/ios/user-interface/monotouch.dialog/index.md) ограниченным касанием мы получили полное представление о различных частях MT. Четырехмерного. Давайте будем использовать API Elements, чтобы объединить их в приложение.
 
-## <a name="setting-up-the-multi-screen-application"></a>Настройка нескольких экранов приложения
+## <a name="setting-up-the-multi-screen-application"></a>Настройка приложения для нескольких экранов
 
-Чтобы начать процесс создания экрана, создает контроллер представления MonoTouch.Dialog `DialogViewController`, а затем добавляет `RootElement`.
+Чтобы начать процесс создания экрана, `DialogViewController`можно создать, а затем `RootElement`добавить.
 
-Чтобы создать приложение с несколькими экранами с MonoTouch.Dialog, нам нужно:
+Чтобы создать Многоэкранное приложение с помощью одноуровневого диалогового окна, необходимо выполнить следующие действия.
 
-1.  Создание `UINavigationController.`
-1.  Создание `DialogViewController.`
-1.  Добавление `DialogViewController` как корень  `UINavigationController.` 
-1.  Добавление `RootElement` для  `DialogViewController.`
-1.  Добавить `Sections` и `Elements` для  `RootElement.` 
+1.  Создайте`UINavigationController.`
+1.  Создайте`DialogViewController.`
+1.  Добавьте в `DialogViewController` качестве корня`UINavigationController.` 
+1.  `RootElement` Добавьте в`DialogViewController.`
+1.  Добавьте `Sections` и `Elements` в`RootElement.` 
 
-### <a name="using-a-uinavigationcontroller"></a>С помощью UINavigationController
+### <a name="using-a-uinavigationcontroller"></a>Использование Уинавигатионконтроллер
 
-Для создания приложения в стиле навигации, нам нужно создать `UINavigationController`, а затем добавьте его как `RootViewController` в `FinishedLaunching` метод `AppDelegate`. Чтобы сделать `UINavigationController` работать с MonoTouch.Dialog, мы добавим `DialogViewController` для `UINavigationController` как показано ниже:
+Чтобы создать приложение в стиле навигации, `UINavigationController`необходимо создать объект, а затем добавить его `RootViewController` как `AppDelegate`в `FinishedLaunching` метод класса. Чтобы сделать `UINavigationController` работу с котушь. Dialog, `DialogViewController` добавьте в, `UINavigationController` как показано ниже:
 
 ```csharp
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
@@ -64,27 +64,27 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 }
 ```
 
-Приведенный выше код создает экземпляр класса `RootElement` и передает его в `DialogViewController`. `DialogViewController` Всегда имеет `RootElement` в верхней части иерархии. В этом примере `RootElement` создается со строкой «To Do List, «который служит в качестве заголовка панели навигации контроллера навигации. На этом этапе выполнение приложения должны выводиться на экран, показанный ниже:
+Приведенный выше код создает экземпляр класса `RootElement` и передает его `DialogViewController`в. `DialogViewController` Всегда`RootElement` имеет в верхней части иерархии. В этом примере `RootElement` создается со строкой «Do List», которая служит заголовком на панели навигации контроллера навигации. На этом этапе при запуске приложения появится экран, показанный ниже:
 
- [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Запуск приложения будет представлять экран, показанный здесь")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "При запуске приложения появится показанный здесь экран")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
-Давайте посмотрим, как использовать MonoTouch.Dialog в иерархическую структуру `Sections` и `Elements` Чтобы добавить дополнительные экраны.
+Давайте посмотрим, как использовать иерархическую структуру `Sections` диалогового окна и `Elements` добавить дополнительные экраны.
 
-### <a name="creating-the-dialog-screens"></a>Создание экранов диалоговое окно
+### <a name="creating-the-dialog-screens"></a>Создание экранов диалогового окна
 
-Объект `DialogViewController` является `UITableViewController` подкласс, использующего контроллер представления MonoTouch.Dialog для добавления экранов. Контроллер представления MonoTouch.Dialog создает экраны, добавляя `RootElement` для `DialogViewController`, как было показано выше. `RootElement` Может иметь `Section` экземпляры, представляющие части таблицы.
-Разделы, состоящего из элементов, другие разделы, или даже другой `RootElements`. Путем вложения `RootElements`, MonoTouch.Dialog автоматически создает приложение навигации в стиле, как мы увидим Далее.
+`DialogViewController` Представляетсобойподкласс,которыйможноиспользовать`UITableViewController` для добавления экранов. Очень касание. диалоговое окно создает экраны, `DialogViewController`добавляя `RootElement` в, как мы видели выше. `RootElement` Может иметь`Section` экземпляры, представляющие разделы таблицы.
+Разделы состоят из элементов, других разделов или даже других `RootElements`. Вложенное `RootElements`диалоговое окно автоматически создает приложение в стиле навигации, как будет показано далее.
 
-### <a name="using-dialogviewcontroller"></a>С помощью DialogViewController
+### <a name="using-dialogviewcontroller"></a>Использование Диалогвиевконтроллер
 
-`DialogViewController`, `UITableViewController` Имеет подкласс, `UITableView` как ее представление. В этом примере мы хотим добавить элементы в таблицу каждый раз <span class="ui"> + </span> нажатии кнопки. Так как `DialogViewController` был добавлен `UINavigationController`, мы можем использовать `NavigationItem` `RightBarButton` свойство, добавляемое <span class="ui"> + </span> кнопку, как показано ниже:
+Объект, являющийся подклассом, имеет `UITableView` в качестве своего представления. `UITableViewController` `DialogViewController` В этом примере мы хотим добавлять элементы в таблицу при каждом <span class="ui">+</span> нажатии кнопки. Так как `DialogViewController` объект был добавлен `UINavigationController`в `NavigationItem`, `RightBarButton` мы можем использовать свойство, чтобы добавить <span class="ui">+</span> кнопку, как показано ниже:
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-Когда мы создали `RootElement` ранее, мы передали ей один `Section` экземпляр таким образом, мы может добавлять элементы в виде <span class="ui"> + </span> нажатии кнопки пользователем. Для выполнения задачи в этом случае обработчик для кнопки можно использовать следующий код:
+Когда мы создали `RootElement` ранее, мы передали ему единственный `Section` экземпляр, чтобы мы <span class="ui">+</span> могли добавлять элементы при нажатии кнопки пользователем. Чтобы сделать это в обработчике событий для кнопки, можно использовать следующий код:
 
 ```csharp
 _addButton.Clicked += (sender, e) => {                
@@ -104,7 +104,7 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
-Этот код создает новый `Task` объекта при каждом нажатии кнопки. Ниже приведен простой реализации `Task` класса:
+Этот код создает новый `Task` объект каждый раз при нажатии кнопки. Ниже показана простая реализация `Task` класса.
 
 ```csharp
 public class Task
@@ -121,33 +121,33 @@ public class Task
 }
 ```
 
-Задачи `Name` свойство используется для создания `RootElement`его заголовок, а также переменной-счетчику `n` которое увеличивается для каждой новой задачи. Контроллер представления MonoTouch.Dialog включает элементы в строки, которые добавляются к `TableView` при каждом `taskElement` добавляется.
+`Name` Свойство задачи используется для `RootElement`создания заголовка и переменной счетчика с именем `n` , которая увеличивается для каждой новой задачи. Однокасание. диалоговое окно преобразует элементы в строки, добавляемые в `TableView` при добавлении `taskElement` каждого из них.
 
-## <a name="presenting-and-managing-dialog-screens"></a>Представления и управление диалоговых экранов
+## <a name="presenting-and-managing-dialog-screens"></a>Представление экранов диалоговых окон и управление ими
 
-Мы использовали `RootElement` , чтобы контроллер представления MonoTouch.Dialog будет автоматически создавать новый экран для сведения о каждой задаче и перейти к нему, если выбрана строка.
+Мы использовали, `RootElement` чтобы в диалоговом окне было автоматически создано новое окно для сведений о каждой задаче и переходить к ней при выборе строки.
 
-На экране сведений задач сама состоит из двух разделов; Каждый из этих разделов содержит один элемент. Первый элемент создается на основе `EntryElement` для предоставления к редактируемой строки для задачи `Description` свойство. При выборе элемента клавиатуры для редактирования текста представляется, как показано ниже:
+Экран сведений о задаче состоит из двух разделов. Каждый из этих разделов содержит один элемент. Первый элемент создается из объекта `EntryElement` для предоставления редактируемой строки для `Description` свойства задачи. При выборе элемента клавиатура для редактирования текста представлена, как показано ниже:
 
- [![](elements-api-walkthrough-images/03-create-task.png "При выборе элемента клавиатуры для редактирования текста представляется, как показано")](elements-api-walkthrough-images/03-create-task.png#lightbox)
+ [![](elements-api-walkthrough-images/03-create-task.png "Если элемент выбран, для редактирования текста отображается клавиатура, как показано")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
-Второй раздел содержит `DateElement` , позволяет нам управлять задачи `DueDate` свойство. Выбор даты автоматически загружает элемент управления DatePicker, как показано:
+Второй раздел содержит объект `DateElement` , позволяющий управлять `DueDate` свойством задачи. При выборе даты автоматически загружается средство выбора даты, как показано ниже.
 
- [![](elements-api-walkthrough-images/04-date-picker.png "Выбор даты автоматически загружает управляющий элемент выбора даты как")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
+ [![](elements-api-walkthrough-images/04-date-picker.png "При выборе даты автоматически загружается средство выбора даты")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
-В обоих `EntryElement` и `DateElement` случаев (или для любого элемента ввода данных в контроллер представления MonoTouch.Dialog), любые изменения значения сохраняются автоматически. Мы покажем это, изменив дату и затем переходы назад и вперед между экрана корневой и различные сведения о задаче, в котором значения в экраны сведения сохраняются.
+В обоих `EntryElement` `DateElement` случаях (или для любого элемента ввода данных в виде однокасания. Dialog) любые изменения значений сохраняются автоматически. Это можно продемонстрировать, изменив дату, а затем перейдя между корневым экраном и различными сведениями о задачах, где значения на экранах сведений сохраняются.
 
 ## <a name="summary"></a>Сводка
 
-В этой статье представлено пошаговое руководство, которое было показано, как использовать API MonoTouch.Dialog элементов. Статья описывает основные шаги, чтобы создать приложение с несколькими экранами с главного целевого сервера D, включая способы использования `DialogViewController` и добавление элементов и разделы для создания экранов. Кроме того он показал, как использовать главного целевого сервера D в сочетании с `UINavigationController`.
+В этой статье представлено пошаговое руководство, в котором показано, как использовать API элементов с элементами управления "только для касания". В нем описаны основные шаги по созданию многоэкранного приложения с помощью MT. D, включая использование `DialogViewController` и добавление элементов и разделов для создания экранов. Кроме того, в нем было показано, как использовать MT. D в сочетании с `UINavigationController`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MTDWalkthrough (пример)](https://developer.xamarin.com/samples/monotouch/MTDWalkthrough/)
-- [Введение в контроллер представления MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
+- [Мтдвалксраугх (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
+- [Введение в бескасание. Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Пошаговое руководство по API отражения](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [Пошаговое руководство элемент JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
-- [Диалоговое окно MonoTouch на Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [TweetStation приложения](https://github.com/migueldeicaza/TweetStation)
-- [Ссылки на класс UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Ссылки на класс UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Пошаговое руководство по элементу JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
+- [Диалоговое окно с несенсорным касанием на GitHub](https://github.com/migueldeicaza/MonoTouch.Dialog)
+- [Приложение Твитстатион](https://github.com/migueldeicaza/TweetStation)
+- [Справочник по классам Уитаблевиевконтроллер](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Справочник по классам Уинавигатионконтроллер](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

@@ -7,16 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9054539b08da89c0f7d8a93150866fb1b41e63f1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162578"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642779"
 ---
 # <a name="the-non-separable-blend-modes"></a>Режимы нелинейно разделяемых blend
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Как было показано в этой статье [ **режимы смешения SkiaSharp отделяемых**](separable.md), отделяемых blend режимы выполнения операций над каналов красного, зеленого и синего отдельно. Режимы нелинейно разделяемых blend — нет. Работающие на уровни тона, насыщенности и яркости цвета blend нелинейно разделяемых режимах можно изменить цвета интересными способами.
 
@@ -28,7 +28,7 @@ ms.locfileid: "61162578"
 
 Модель цвета HSL, которые обсуждались в этой статье [ **интеграция с Xamarin.Forms** ](../../basics/integration.md) и примера программы в этой статье позволяет Экспериментирование с помощью цвета HSL. Можно создать `SKColor` с использованием значений цветового тона, насыщенности и яркости с помощью статического [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) метод.
 
-Цветовой тон представляет главный длина волны цвета. Hue диапазон значений от 0 до 360 и переключение между базами данных-источниками сложения и вычитания: Красная используется значение 0, желтый — 60, зеленый — 120, голубой 180, синий — 240, пурпурный — 300 и цикл возвращается к красным в 360.
+Цветовой тон представляет главный длина волны цвета. Значения оттенка находятся в диапазоне от 0 до 360 и проходят через аддитивные и вычитаемые первичные цвета: Красный цвет — значение 0, желтый — 60, зеленый — 120, голубой — 180, синий — 240, пурпурный — 300, а цикл — к красному в 360.
 
 Если цвет отсутствует главный &mdash; приведен пример цвет оттенком серого или черным или белым &mdash; цветовой тон не указано, и обычно присвоено значение 0. 
 
@@ -198,7 +198,7 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 Вскоре вы увидите приложение этот режим blend.
 
-Наконец `SKBlendModes.Luminosity` режим blend является противоположностью `SKBlendModes.Color`. Она сохраняет оттенок и насыщенность назначения, но использует яркость источника. `Luminosity` Режим blend — самый Загадочный пакета: Ползунки оттенок и насыщенность, влияют на изображение, но хотя бы на средний яркость изображения не уникален:
+Наконец `SKBlendModes.Luminosity` режим blend является противоположностью `SKBlendModes.Color`. Она сохраняет оттенок и насыщенность назначения, но использует яркость источника. Режим `Luminosity` Blend является наиболее mysteriousм пакета: Ползунки «Цветовой тон» и «насыщенность» влияют на изображение, но даже на средней яркости изображение не имеет отношения.
 
 [![Режимы нелинейно разделяемых Blend - яркость](non-separable-images/NonSeparableBlendModes-Luminosity.png "режимов нелинейно разделяемых Blend — яркость")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
@@ -208,11 +208,11 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 ## <a name="a-matte-for-a-separable-mode"></a>Подложки для разделяемых режима
 
-Вот один из точечных рисунков, включена как ресурс в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца. Имя файла — **Banana.jpg**:
+Вот один из точечных рисунков, включена как ресурс в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца. Имя файла — **Banana.jpg**:
 
 ![Банан Monkey](non-separable-images/Banana.jpg "Monkey банан")
 
-Существует возможность создания подложки, охватывающая только банан. Это также к ресурсу в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца. Имя файла — **BananaMatte.png**:
+Существует возможность создания подложки, охватывающая только банан. Это также к ресурсу в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца. Имя файла — **BananaMatte.png**:
 
 ![Матовый банан](non-separable-images/BananaMatte.png "матовой банан")
 
@@ -292,4 +292,4 @@ public class BlueBananaPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

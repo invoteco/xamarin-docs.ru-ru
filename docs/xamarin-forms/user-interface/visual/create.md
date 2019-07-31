@@ -1,45 +1,45 @@
 ---
-title: Создайте в модуль подготовки Xamarin.Forms Visual
-description: Создание визуальных элементов Xamarin.Forms, чтобы выборочно применять к объектам VisualElement без необходимости подкласс представления Xamarin.Forms.
+title: Создание визуального модуля подготовки Xamarin. Forms
+description: Создание визуальных элементов Xamarin. Forms для выборочного применения к объектам Висуалелемент без необходимости подклассировать представления Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: a11c2045fa6119d0689834c35794bc8913c80bd6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 71836021b29094911f9d1ad43639ed103fa18b73
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023778"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652820"
 ---
-# <a name="create-a-xamarinforms-visual-renderer"></a>Создайте в модуль подготовки Xamarin.Forms Visual
+# <a name="create-a-xamarinforms-visual-renderer"></a>Создание визуального модуля подготовки Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-Xamarin.Forms Visual включает модули подготовки отчетов, будет создан и выборочно применять к [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) объектов без необходимости подкласс представления Xamarin.Forms. Модуль подготовки отчетов, который указывает `IVisual` тип как часть его `ExportRendererAttribute`, будет использоваться для подготовки к просмотру, использующим представления, а не стандартный модуль подготовки отчетов. Во время выбора модуля подготовки отчетов `Visual` свойства представления проверен и включены в процесс выбора модуля подготовки отчетов.
+С помощью Xamarin. Forms визуальные модули подготовки отчетов создаются и выборочно [`VisualElement`](xref:Xamarin.Forms.VisualElement) применяются к объектам без необходимости подклассировать представления Xamarin. Forms. Модуль подготовки отчетов, указывающий `IVisual` тип (как часть его `ExportRendererAttribute`), будет использоваться для визуализации входящих в представления, а не для модуля подготовки к просмотру по умолчанию. Во время выбора модуля подготовки отчетов `Visual` свойства представления проверен и включены в процесс выбора модуля подготовки отчетов.
 
 > [!IMPORTANT]
-> В настоящее время [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) свойство нельзя изменить после завершения отображения представления, но это приведет к изменению в будущих выпусках.
+> В настоящее время свойство не может быть изменено после подготовки представления, но оно будет изменено в следующем выпуске. [`Visual`](xref:Xamarin.Forms.VisualElement.Visual)
 
-Процесс создания и использования в модуль подготовки Xamarin.Forms Visual не:
+Процесс создания и использования визуального модуля подготовки Xamarin. Forms:
 
-1. Создание платформы модули подготовки отчетов для необходимого представления. Дополнительные сведения см. в разделе [создание модулей подготовки отчетов](#create-platform-renderers).
-1. Создать тип, который является производным от `IVisual`. Дополнительные сведения см. в разделе [создать тип IVisual](#create-an-ivisual-type).
-1. Зарегистрировать `IVisual` тип как часть `ExportRendererAttribute` который оформляет модулей подготовки отчетов. Дополнительные сведения см. в разделе [зарегистрировать тип IVisual](#register-the-ivisual-type).
-1. Использовать Visual модуля подготовки отчетов, задав [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) свойства в представлении, чтобы `IVisual` имя. Дополнительные сведения см. в разделе [использовать средства визуализации компоненту Visual](#consume-the-visual-renderer).
-1. [необязательно] Регистрация имени для `IVisual` типа. Дополнительные сведения см. в разделе [регистрация имени для типа IVisual](#register-a-name-for-the-ivisual-type).
+1. Создайте модули подготовки платформы для требуемого представления. Дополнительные сведения см. в разделе [Создание модулей подготовки](#create-platform-renderers)отчетов.
+1. Создайте тип, производный от `IVisual`. Дополнительные сведения см. в разделе [Создание типа IVisual](#create-an-ivisual-type).
+1. `ExportRendererAttribute` Зарегистрируйте `IVisual` тип как часть объекта, который будет оформлять модули подготовки отчетов. Дополнительные сведения см. [в статье регистрация типа IVisual](#register-the-ivisual-type).
+1. Использовать визуальный модуль визуализации, задав [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) `IVisual` для свойства представления имя. Дополнительные сведения см. [в разделе использование визуального модуля подготовки](#consume-the-visual-renderer)отчетов.
+1. используемых Зарегистрируйте имя для `IVisual` типа. Дополнительные сведения см. [в статье регистрация имени для типа IVisual](#register-a-name-for-the-ivisual-type).
 
-## <a name="create-platform-renderers"></a>Создание платформы модули подготовки отчетов
+## <a name="create-platform-renderers"></a>Создание модулей подготовки платформы
 
-Сведения о создании класса визуализации, см. в разделе [пользовательские Отрисовщики](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Тем не менее Обратите внимание на то, что в модуль подготовки Xamarin.Forms Visual применяется к представлению без необходимости подкласс представления.
+Дополнительные сведения о создании класса модуля подготовки отчетов см. в разделе [пользовательские модули подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов. Однако обратите внимание, что визуальный модуль обработки Xamarin. Forms применяется к представлению без необходимости создавать подкласс представления.
 
-Создание пользовательского модуля подготовки отчетов классов, описанную в этой статье [ `Button` ](xref:Xamarin.Forms.Button) , отображающий текст с тенью.
+Перечисленные здесь классы модуля подготовки отчетов реализуют пользовательский [`Button`](xref:Xamarin.Forms.Button) интерфейс, который отображает текст с тенью.
 
 ### <a name="ios"></a>iOS
 
-В следующем примере кода показано, модуль подготовки отчетов кнопки для iOS:
+В следующем примере кода показано средство визуализации кнопок для iOS:
 
 ```csharp
 public class CustomButtonRenderer : ButtonRenderer
@@ -64,7 +64,7 @@ public class CustomButtonRenderer : ButtonRenderer
 
 ### <a name="android"></a>Android
 
-В следующем примере кода показано, модуль подготовки отчетов кнопки для Android:
+В следующем примере кода показано средство визуализации кнопок для Android:
 
 ```csharp
 public class CustomButtonRenderer : Xamarin.Forms.Platform.Android.AppCompat.ButtonRenderer
@@ -92,7 +92,7 @@ public class CustomButtonRenderer : Xamarin.Forms.Platform.Android.AppCompat.But
 
 ## <a name="create-an-ivisual-type"></a>Создание типа IVisual
 
-В library кроссплатформенная создать тип, который является производным от `IVisual`:
+В межплатформенной библиотеке Создайте тип, производный от `IVisual`:
 
 ```csharp
 public class CustomVisual : IVisual
@@ -100,11 +100,11 @@ public class CustomVisual : IVisual
 }
 ```
 
-`CustomVisual` Типа, можно зарегистрировать для классов отрисовки, разрешая [ `Button` ](xref:Xamarin.Forms.Button) объектов можно согласиться на использование модулей подготовки отчетов.
+Затем тип можно зарегистрировать в классах модуля подготовки отчетов, [`Button`](xref:Xamarin.Forms.Button) позволяя объектам использовать модули подготовки отчетов. `CustomVisual`
 
-## <a name="register-the-ivisual-type"></a>Зарегистрировать тип IVisual
+## <a name="register-the-ivisual-type"></a>Регистрация типа IVisual
 
-В проектах платформы, снабдить классов отрисовки с `ExportRendererAttribute`:
+В проектах платформы добавьте классы модуля подготовки отчетов с `ExportRendererAttribute`помощью:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
@@ -117,11 +117,11 @@ public class CustomButtonRenderer : ButtonRenderer
 }
 ```
 
-В этом примере `ExportRendererAttribute` указывает, что `CustomButtonRenderer` класс будет использоваться для подготовки к просмотру использование [ `Button` ](xref:Xamarin.Forms.Button) объектов, с помощью `IVisual` тип зарегистрирован в качестве третьего аргумента. Модуль подготовки отчетов, который указывает `IVisual` тип как часть его `ExportRendererAttribute`, будет использоваться для подготовки к просмотру, использующим представления, а не стандартный модуль подготовки отчетов.
+В этом примере `ExportRendererAttribute` объект указывает `CustomButtonRenderer` , что класс будет [`Button`](xref:Xamarin.Forms.Button) использоваться для визуализации используемых объектов с `IVisual` типом, зарегистрированным в качестве третьего аргумента. Модуль подготовки отчетов, указывающий `IVisual` тип (как часть его `ExportRendererAttribute`), будет использоваться для визуализации входящих в представления, а не для модуля подготовки к просмотру по умолчанию.
 
-## <a name="consume-the-visual-renderer"></a>Использование Visual модуля подготовки отчетов
+## <a name="consume-the-visual-renderer"></a>Использование визуального модуля подготовки отчетов
 
-Объект [ `Button` ](xref:Xamarin.Forms.Button) объекта, можно выбрать использование классов отрисовки, установив его [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) свойства `Custom`:
+Объект может использовать классы модуля подготовки отчетов, установив для `Custom`его [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) свойства значение: [`Button`](xref:Xamarin.Forms.Button)
 
 ```xaml
 <Button Visual="Custom"
@@ -132,32 +132,32 @@ public class CustomButtonRenderer : ButtonRenderer
 ```
 
 > [!NOTE]
-> Преобразователь типов в XAML, избавляет от необходимости включать «Visual» суффикс в [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) значение свойства. Тем не менее можно также указать полное имя типа.
+> В XAML преобразователь типов устраняет необходимость включения "визуального" суффикса в [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) значение свойства. Однако можно также указать полное имя типа.
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 Button button = new Button { Text = "CUSTOM BUTTON", ... };
 button.Visual = new CustomVisual();
 ```
 
-Во время выбора модуля подготовки отчетов [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) свойство [ `Button` ](xref:Xamarin.Forms.Button) проверен и включены в процесс выбора модуля подготовки отчетов. Если модуль подготовки отчетов не находится, будет использоваться модуль подготовки отчетов по умолчанию Xamarin.Forms.
+Во время [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) выбора модуля визуализации свойство [`Button`](xref:Xamarin.Forms.Button) объекта проверяется и включается в процесс выбора модуля подготовки отчетов. Если модуль подготовки отчетов не размещается, будет использоваться модуль подготовки Xamarin. Forms по умолчанию.
 
-Далее на снимках экрана показано создаваемые [ `Button` ](xref:Xamarin.Forms.Button), который отображает текст с тенью:
+На следующих снимках экрана показан [`Button`](xref:Xamarin.Forms.Button)отображаемый объект, который отображает текст с тенью:
 
-[![Снимок экрана настраиваемой кнопки с текстом тени, iOS и Android](material-visual-images/custom-button.png "кнопка с текстовой тени")](material-visual-images/custom-button-large.png#lightbox)
+[![Снимок экрана пользовательской кнопки с теневым текстом в iOS и Android](material-visual-images/custom-button.png "Кнопка с тенью текста")](material-visual-images/custom-button-large.png#lightbox)
 
 ## <a name="register-a-name-for-the-ivisual-type"></a>Регистрация имени для типа IVisual
 
-[ `VisualAttribute` ](xref:Xamarin.Forms.VisualAttribute) Можно использовать при необходимости зарегистрировать другое имя для `IVisual` типа. Этот подход используется для разрешения конфликтов имен между различных библиотеках Visual или в ситуациях, где нужно ссылаться на визуальный элемент с именем, отличным от имени типа.
+Можно использовать для необязательной регистрации другого имени `IVisual` для типа. [`VisualAttribute`](xref:Xamarin.Forms.VisualAttribute) Этот подход можно использовать для разрешения конфликтов имен между различными визуальными библиотеками или в ситуациях, когда нужно просто ссылаться на визуальный элемент по имени, отличному от имени его типа.
 
-[ `VisualAttribute` ](xref:Xamarin.Forms.VisualAttribute) Должны быть определены на уровне сборки в кросс платформенной библиотекой или в проект платформы:
+[`VisualAttribute`](xref:Xamarin.Forms.VisualAttribute) Должен быть определен на уровне сборки в межплатформенной библиотеке или в проекте платформы:
 
 ```csharp
 [assembly: Visual("MyVisual", typeof(CustomVisual))]
 ```
 
-`IVisual` Тип затем может быть востребован зарегистрированного имени:
+Затем `IVisual` тип можно использовать с помощью зарегистрированного имени:
 
 ```xaml
 <Button Visual="MyVisual"
@@ -165,10 +165,10 @@ button.Visual = new CustomVisual();
 ```
 
 > [!NOTE]
-> При использовании визуального помощью зарегистрированного имени, любые суффиксы «Visual» должен быть включен.
+> При использовании визуального элемента с помощью его зарегистрированного имени необходимо добавить любой "визуальный" суффикс.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Материалы Visual (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
-- [Материал Xamarin.Forms Visual](material-visual.md)
+- [Визуальный элемент "материал" (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Визуальный элемент материалов Xamarin. Forms](material-visual.md)
 - [Пользовательские отрисовщики](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 7b13a192f883ea667977f4d9ae3eea41d8c65e24
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: f8fb026cd9a8dfbfd5abf13c9b11463bf84f7e0b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971172"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647238"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Глобальные стили в Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Стили могут быть сделаны доступными глобально, добавив их в словарь ресурсов приложения. Это помогает избежать дублирования стилей всех страниц или элементов управления._
 
-## <a name="create-a-global-style-in-xaml"></a>Создание глобальных стиля в XAML
+## <a name="create-a-global-style-in-xaml"></a>Создание глобального стиля в XAML
 
 По умолчанию все приложения Xamarin.Forms, создаваемые на основе шаблона, используют класс **App** для реализации подкласса [`Application`](xref:Xamarin.Forms.Application). Чтобы объявить [ `Style` ](xref:Xamarin.Forms.Style) на уровне приложения, в приложении [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) с помощью XAML, значение по умолчанию **приложения** класса должны быть заменены XAML **Приложения** класс и связанные с выделенным кодом. Дополнительные сведения см. в разделе [работа с класс App](~/xamarin-forms/app-fundamentals/application-class.md).
 
@@ -102,7 +102,7 @@ _Стили могут быть сделаны доступными глобал
 
 [![](application-images/application-styles-2.png "Переопределение пример стилей")](application-images/application-styles-2-large.png#lightbox "переопределение пример стилей")
 
-## <a name="create-a-global-style-in-c35"></a>Создание глобальных стиля в C&#35;
+## <a name="create-a-global-style-in-c35"></a>Создание глобального стиля в C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) экземпляры можно добавить в приложение [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) коллекции в C# путем создания нового [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)и затем добавив `Style` экземпляры `ResourceDictionary`, как в следующем примере кода показан:
 
@@ -153,8 +153,8 @@ public class ApplicationStylesPageCS : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Основные стили (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Работа с использованием стилей (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Основные стили (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Работа с использованием стилей (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Стиль](xref:Xamarin.Forms.Style)
 - [Метод задания](xref:Xamarin.Forms.Setter)

@@ -6,41 +6,41 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 9fcabc90875dda28ecdd5d94f1ca2f263ffe4886
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60954203"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643765"
 ---
 # <a name="android-beam"></a>Android Beam
 
-Android луч — это технология рядом с полем связи действия (NFC), представленные в Android 4.0, который позволяет приложениям обмениваться информацией по NFC, когда в непосредственной близости.
+Устройства с Android — это технология NFC, появившаяся в Android 4,0, которая позволяет приложениям обмениваться информацией через NFC при близком близком расположении.
 
-[![Схема, иллюстрирующая два устройства в непосредственной близости общего доступа к данным](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[![Схема, иллюстрирующая использование двух устройств в закрытой информации о близком доступе](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
-Android луч работает с помощью принудительной отправки сообщений через NFC, когда два устройства находятся в диапазоне. Устройства, около 4cm друг от друга могут обмениваться данными, с помощью Android луч. Действие на одном устройстве, создает сообщение и действие (или действия), может обрабатывать принудительной отправкой. Если указанное действие находится на переднем плане и устройства находятся в диапазоне, Android луч будет отправлять сообщения на втором устройстве. Для получающим устройством объект Intent был вызван, содержащий данные сообщения.
+Технология Android поддерживает передачу сообщений через NFC, если два устройства находятся в радиусе действия. Устройства, связанные с 4cm, могут обмениваться данными с помощью устройств с Android. Действие на одном устройстве создает сообщение и указывает действие (или действия), которое может выполнять его принудительную отправку. Если указанное действие находится на переднем плане, а устройства находятся в диапазоне, устройство Android отправляет сообщение на второе. На принимающем устройстве вызывается намерение, содержащее данные сообщения.
 
-Android поддерживает два типа Настройка сообщений с Android луч:
+Android поддерживает два способа настройки сообщений с помощью устройства Android:
 
--   `SetNdefPushMessage` — Перед инициируется Android луч, приложение может вызвать SetNdefPushMessage для указания NdefMessage для принудительной отправки NFC и действие, которое принудительной отправкой. Этот механизм используется наилучшим образом в том случае, если сообщение не изменяется во время использования приложения.
+-   `SetNdefPushMessage`— Перед инициацией устройства Android приложение может вызвать Сетндефпушмессаже, чтобы указать Ндефмессаже для отправки через NFC, и действие, которое отправляет его. Этот механизм лучше использовать, если сообщение не изменяется во время использования приложения.
 
--   `SetNdefPushMessageCallback` -Если инициируется Android луч, приложение может обрабатывать обратный вызов для создания NdefMessage. Этот механизм позволяет создавать сообщения, пока они не устройства находятся в диапазоне. Он поддерживает сценарии, где сообщение может отличаться в зависимости от того, что происходит в приложении.
+-   `SetNdefPushMessageCallback`— Когда инициируется образ Android, приложение может реализовать обратный вызов для создания Ндефмессаже. Этот механизм позволяет отложить создание сообщений до тех пор, пока устройства не будут находиться в диапазоне. Он поддерживает сценарии, в которых сообщение может изменяться в зависимости от того, что происходит в приложении.
 
 
-В любом случае для отправки данных с помощью Android луч приложение отправляет `NdefMessage`, упаковка данных в нескольких `NdefRecords`. Давайте рассмотрим ключевые моменты, которые необходимо решить перед активируется Android луч. Во-первых, мы будем работать с стиль обратного вызова для создания `NdefMessage`.
+В любом случае, чтобы отправлять данные с помощью устройства Android, приложение отправляет `NdefMessage`пакет, упаковывая данные в несколько. `NdefRecords` Давайте рассмотрим ключевые моменты, которые необходимо устранить, прежде чем можно будет активировать образ Android. Во `NdefMessage`первых, мы будем работать с стилем обратного вызова для создания.
 
 
 ## <a name="creating-a-message"></a>Создание сообщения
 
-Зарегистрировать обратные вызовы с `NfcAdapter` в действии `OnCreate` метод. Например, при условии, что `NfcAdapter` с именем `mNfcAdapter` объявляется как переменную класса в действии, можно написать следующий код, чтобы создать обратный вызов, который создает сообщение:
+Можно зарегистрировать обратные вызовы с `NfcAdapter` помощью в `OnCreate` методе действия. Например, если `NfcAdapter` имя `mNfcAdapter` объявлено как переменная класса в действии, можно написать следующий код для создания обратного вызова, который будет формировать сообщение:
 
 ```csharp
 mNfcAdapter = NfcAdapter.GetDefaultAdapter (this);
 mNfcAdapter.SetNdefPushMessageCallback (this, this);
 ```
 
-Действие, которое реализует `NfcAdapter.ICreateNdefMessageCallback`, передается `SetNdefPushMessageCallback` описанного выше метода. Если инициируется Android луч, система будет вызывать `CreateNdefMessage`, из которого можно создать действие `NdefMessage` как показано ниже:
+Действие, которое реализует `NfcAdapter.ICreateNdefMessageCallback`, передается `SetNdefPushMessageCallback` в метод выше. Когда инициируется образ Android, система выполнит вызов `CreateNdefMessage`, из которого действие может `NdefMessage` создать, как показано ниже:
 
 ```csharp
 public NdefMessage CreateNdefMessage (NfcEvent evt)
@@ -68,21 +68,21 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 
 ## <a name="receiving-a-message"></a>Получение сообщения
 
-На принимающей стороне, система вызывает объект Intent с `ActionNdefDiscovered` действия, из которого можно извлечь NdefMessage следующим образом:
+На принимающей стороне система вызывает намерение с `ActionNdefDiscovered` действием, откуда мы можем извлечь ндефмессаже следующим образом:
 
 ```csharp
 IParcelable [] rawMsgs = intent.GetParcelableArrayExtra (NfcAdapter.ExtraNdefMessages);
 NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
-Полный пример кода, использующего Android луч, показано выполнение на снимке экрана ниже, см. в разделе [Android луч Демонстрация](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) в коллекции примеров.
+Полный пример кода, в котором используется образ Android, показанный на снимке экрана ниже, см. в демонстрационном ролике по [Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) в галерее примеров.
 
-[![Снимки экрана из Android луч демонстрационной версии](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
+[![Пример снимков экрана с демонстрационной версией Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Android луч Demo (пример)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
-- [Знакомство с Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4.0](https://developer.android.com/sdk/android-4.0.html)
+- [Демонстрация для Android (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
+- [Знакомство со Южным Сандвичевым](http://www.android.com/about/ice-cream-sandwich/)
+- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

@@ -7,16 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df45908af9e2d13dcaeff732e8e8b1b49c523934
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218236"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647658"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Циклическая градиенты SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [ `SKShader` ](xref:SkiaSharp.SKShader) Класс определяет статические методы для создания четырех различных типов градиентов. [ **Линейный градиент SkiaSharp** ](linear-gradient.md) статье [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) метод. В этой статье рассматриваются три других типов градиентов, которые основаны на кругов.
 
@@ -54,7 +54,7 @@ public static SKShader CreateRadialGradient (SKPoint center,
 
 Если вы используете `CreateRadialGradient` для заполнения круг, можно задать центр градиента центр окружности и радиус градиента радиус круга. В этом случае `SKShaderTileMode` аргумент не влияет на отрисовку градиента. Но если область, заполняемую градиента больше, чем элемент управления circle, определяется градиента, а затем `SKShaderTileMode` аргумент имеет существенное влияние на то, что происходит за пределами круг.
 
-Последствия `SKShaderMode` демонстрируется в **Радиальный градиент** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца. Создает файл XAML для этой страницы `Picker` , можно выбрать один из трех элементов `SKShaderTileMode` перечисления:
+Последствия `SKShaderMode` демонстрируется в **Радиальный градиент** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца. Создает файл XAML для этой страницы `Picker` , можно выбрать один из трех элементов `SKShaderTileMode` перечисления:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ public partial class RadialGradientPage : ContentPage
 
 [![Радиальный градиент](circular-gradients-images/RadialGradient.png "радиального градиента")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-Во всех трех случаях градиента заполнит весь холст. На экране iOS слева градиента за пределами радиус продолжается с последний цвет, являющийся белый. Это результат `SKShaderTileMode.Clamp`. Экран Android показан результат `SKShaderTileMode.Repeat`: С 100 пикселей в центре градиента снова начинается в первый цвет, который является черной. Градиент повторяется каждые 100 пикселей radius. 
+Во всех трех случаях градиента заполнит весь холст. На экране iOS слева градиента за пределами радиус продолжается с последний цвет, являющийся белый. Это результат `SKShaderTileMode.Clamp`. На экране Android показан результат `SKShaderTileMode.Repeat`: В 100 пикселей от центра градиент начинается снова с первого цвета, который является черным. Градиент повторяется каждые 100 пикселей radius. 
 
 На правой показан экран универсальной платформы Windows как `SKShaderTileMode.Mirror` вызывает градиенты альтернативный направлениям. Первый градиент — от черного в центре белым радиус 100 пикселей. Следующему — белый из радиус 100 пикселей на черный в radius 200 пикселей, а далее градиента зеркально отображается снова.
 
@@ -620,4 +620,4 @@ public class ConicalSpecularHighlightPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

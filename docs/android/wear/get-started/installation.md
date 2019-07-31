@@ -1,126 +1,126 @@
 ---
-title: 'Установка и настройка Wear onXamarin.Android ОС '
-description: В этой статье рассматриваются действия по установке и сведения о конфигурации, необходимые для подготовки ваши компьютеры и устройства для разработки приложений Android Wear. К концу этой статьи у вас будет рабочая Установка износа Xamarin.Android будет интегрирована в Visual Studio для Mac и/или Microsoft Visual Studio и вы будете готовы приступить к созданию своего первого приложения Xamarin.Android одежды.
+title: 'Установка и настройка износа ОС Онксамарин. Android '
+description: В этой статье рассматриваются этапы установки и сведения о конфигурации, необходимые для подготовки компьютера и устройств для разработки в Android. К концу этой статьи вы получите рабочую установку Xamarin. Android износа, интегрированную в Visual Studio для Mac и (или) Microsoft Visual Studio, и вы будете готовы приступить к созданию первого приложения "износ Xamarin. Android".
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 0bae98a204ba3478834894d6c093259a8b2139b2
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 0099414529027a9a6e52b79393cfa6f0f3bc24d6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827720"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647807"
 ---
 # <a name="setup-and-installation"></a>Настройка и установка
 
-_В этой статье рассматриваются действия по установке и сведения о конфигурации, необходимые для подготовки ваши компьютеры и устройства для разработки приложений Android Wear. К концу этой статьи у вас будет рабочая Установка износа Xamarin.Android будет интегрирована в Visual Studio для Mac и/или Microsoft Visual Studio и вы будете готовы приступить к созданию своего первого приложения Xamarin.Android одежды._
+_В этой статье рассматриваются этапы установки и сведения о конфигурации, необходимые для подготовки компьютера и устройств для разработки в Android. К концу этой статьи вы получите рабочую установку Xamarin. Android износа, интегрированную в Visual Studio для Mac и (или) Microsoft Visual Studio, и вы будете готовы приступить к созданию первого приложения "износ Xamarin. Android"._
 
 ## <a name="requirements"></a>Требования
 
-Для создания приложений на базе Xamarin Android Wear требуется следующее:
+Для создания приложений "износ Android" на основе Xamarin необходимо следующее:
 
--   **Visual Studio или Visual Studio для Mac** &ndash; Visual Studio 2017 Community или более поздней.
+-   **Visual Studio или Visual Studio для Mac** &ndash; Требуется Visual Studio 2017 Community или более поздней версии.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 4.17 или более поздней версии необходимо установить и настроить Visual Studio или Visual Studio для Mac.
+-   **Xamarin. Android** &ndash; Xamarin. Android 4,17 или более поздней версии должен быть установлен и настроен с помощью Visual Studio или Visual Studio для Mac.
 
--   **Пакет SDK для Android** -пакета SDK для Android 5.0.1 (API 21) или более поздней версии необходимо установить через диспетчер пакетов SDK для Android.
+-   **Пакет SDK для Android** -пакет SDK для Android 5.0.1 (API 21) или более поздней версии должен быть установлен с помощью диспетчера пакет SDK для Android.
 
--   **Java Developer Kit** &ndash; требует разработки Xamarin Android [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) при разработке для API уровня 24 или более поздней версии (JDK 1.8 также поддерживает уровни API ниже 24).
+-   **Пакет Java Developer Kit** Для разработки Xamarin Android требуется [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) , если вы разрабатываете для API уровня 24 или выше (JDK 1,8 также поддерживает уровни API, предшествующие 24). &ndash;
 
-Вы можете продолжать использовать [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) при разработке специально для уровень API 23 или более ранней версии.
+Вы можете продолжать использовать [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) при разработке специально для API уровня 23 или более ранней версии.
 
 > [!IMPORTANT]
 > Xamarin.Android не поддерживает пакет JDK 9.
 
 ## <a name="installation"></a>Установка
 
-После установки Xamarin.Android, выполните следующие действия, чтобы вы будете готовы сборку и тестирование приложений Android Wear: 
+После установки Xamarin. Android выполните следующие действия, чтобы приступить к созданию и тестированию приложений для работы с Android. 
 
-1.  Установка необходимых средств и пакета SDK для Android.
-2.  Настройте тестовое устройство.
-3.  Создание первого приложения для Android Wear.
+1.  Установите необходимые пакет SDK для Android и средства.
+2.  Настройка тестового устройства.
+3.  Создайте свое первое приложение "износ Android".
 
 Эти действия описаны в следующих разделах.
 
 
-### <a name="install-android-sdk-and-tools"></a>Установка средств и пакета SDK для Android 
+### <a name="install-android-sdk-and-tools"></a>Установка пакет SDK для Android и средств 
 
-Запустите **диспетчер Android SDK**: 
+Запустите **диспетчер пакет SDK для Android**: 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Как запустить диспетчер пакетов SDK для Android в Visual Studio](installation-images/vs/sdk-menu.png)
+![Запуск диспетчера пакет SDK для Android в Visual Studio](installation-images/vs/sdk-menu.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![Как запустить диспетчер пакетов SDK для Android в Visual Studio для Mac](installation-images/xs/sdk-menu.png)
+![Запуск диспетчера пакет SDK для Android в Visual Studio для Mac](installation-images/xs/sdk-menu.png)
 
 -----
 
 
-Убедитесь, что следующий пакет SDK для Android и установить средства:
+Убедитесь, что установлены следующие пакет SDK для Android и средства:
 
-* Android SDK Tools v 24.0.0 или более поздней версии, и
-* Android 4.4W (API20), или
+* Android SDK Tools v 24.0.0 или более поздней версии и
+* Android 4.4 W (API20) или
 * Android 5.0.1 (API21) или более поздней версии.
 
-Если у вас нет последних SDK и средства, установленные, скачивание необходимых средств SDK *и* биты API (вам может потребоваться прокрутить некоторое время, чтобы найти их &ndash; ниже показан выбор API): 
+Если вы не установили последнюю версию пакета SDK и средств, скачайте необходимые средства SDK *и* биты API (для поиска &ndash; выбранных интерфейсов API может потребоваться прокрутить немного): 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Снимок экрана: диспетчер пакетов SDK пример включения Android 5.0.1 компонентов](installation-images/vs/sdk-select.png)
+![Пример снимка экрана диспетчера SDK по включению компонентов 5.0.1 для Android](installation-images/vs/sdk-select.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![Снимок экрана примере диспетчер пакетов SDK для Android 4.4 и 5.0.1 компонентов](installation-images/xs/sdk-select.png)
+![Пример снимка экрана диспетчера SDK для включения компонентов Android 4,4 и 5.0.1](installation-images/xs/sdk-select.png)
 
 -----
 
 
 ## <a name="configuration"></a>Параметр Configuration
 
-Перед использованием протестировать приложение, необходимо настроить эмулятор Android Wear либо само устройство Android Wear. 
+Прежде чем можно будет использовать тест приложения, необходимо настроить эмулятор износа Android или фактическое устройство "износ Android". 
 
 
-### <a name="android-wear-emulator"></a>Эмулятор Android Wear
+### <a name="android-wear-emulator"></a>Эмулятор износа Android
 
-Прежде чем использовать эмулятор Android Wear, необходимо настроить Android Wear виртуальных устройств Android (AVD) с помощью **диспетчер эмуляторов Google**:
+Перед использованием эмулятора износа Android необходимо настроить виртуальное устройство Android "износа Android" (AVD) с помощью **диспетчера эмуляторов Google**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Как запустить диспетчер эмуляторов Android из Visual Studio](installation-images/vs/emulator-menu.png)
+![Запуск диспетчера Android Emulator из Visual Studio](installation-images/vs/emulator-menu.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![Как запустить диспетчер эмуляторов Android из Visual Studio для Mac](installation-images/xs/emulator-menu.png)
+![Запуск Android Emulator Manager из Visual Studio для Mac](installation-images/xs/emulator-menu.png)
 
 -----
 
-Дополнительные сведения о настройке эмулятора Android Wear см. в разделе [отладки Android Wear на эмуляторе](~/android/wear/deploy-test/debug-on-emulator.md).
+Дополнительные сведения о настройке эмулятора износа для Android см. [в разделе Отладка износа Android в эмуляторе](~/android/wear/deploy-test/debug-on-emulator.md).
 
 
-### <a name="android-wear-device"></a>Устройство Android Wear
+### <a name="android-wear-device"></a>Устройство "износ Android"
 
-При наличии на устройстве Android Wear, таких как Android Wear Smartwatch, можно отлаживать приложение на этом устройстве, вместо того чтобы использовать симулятор. Сведения о разработке с устройством одежды, см. в разделе [отладка на устройстве Wear](~/android/wear/deploy-test/debug-on-device.md).
+Если вы используете устройство Android, например "износ Android", вы можете выполнить отладку приложения на этом устройстве вместо использования эмулятора. Сведения о разработке с помощью устройства "износ" см. [в разделе Отладка на устройстве с износом](~/android/wear/deploy-test/debug-on-device.md).
 
 
-## <a name="create-your-first-android-wear-app"></a>Создание первого приложения для Android Wear
+## <a name="create-your-first-android-wear-app"></a>Создание первого приложения "износ Android"
 
-Выполните [Wear Hello,](~/android/wear/get-started/hello-wear.md) инструкциям, чтобы создать свое первое приложение контрольных значений.
+Следуйте инструкциям по [привету,](~/android/wear/get-started/hello-wear.md) чтобы создать свое первое контрольное приложение.
 
 
 ## <a name="packaging-your-app"></a>Упаковка приложения
 
-Приложения Android wear всегда распространяются с помощью дополнительного приложения для телефона Android. 
+Приложения "износ Android" всегда распространяются с помощью вспомогательного приложения для телефона Android. 
 
-При добавлении приложения Android Wear как ссылка на главное приложение Android, он автоматически предполагается, что в проект Android Wear и создаст все необходимые XML и метаданные для вас. Кроме того он будет проверьте соответствие пакета и номера версий, можно легко переводить приложения в Google Play. 
+При добавлении приложения "износ Android" в качестве ссылки на основное приложение Android оно автоматически считается проектом "износ Android" и будет создавать все необходимые XML-и метаданные. Кроме того, он проверяет соответствие номеров пакетов и версий, чтобы вы могли легко поставлять приложения в Google Play. 
 
-Дополнительные сведения об упаковке приложений одежды, см. в разделе [работа с упаковкой](~/android/wear/deploy-test/packaging.md).
+Дополнительные сведения о пакетировании приложений для износа см. в разделе [Работа с упаковкой](~/android/wear/deploy-test/packaging.md).
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [SkeletonWear (пример)](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)
+- [Скелетонвеар (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)

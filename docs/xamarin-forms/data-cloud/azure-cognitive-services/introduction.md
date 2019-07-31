@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о Cognitive Services Xamarin.Forms и Azure
+title: Общие сведения о Xamarin. Forms и Azure Cognitive Services
 description: В этой статье введение в пример приложения, которое демонстрирует способ вызова некоторые интерфейсы API Microsoft Cognitive Service.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 36aa53a6d257d8f5311cab84485e608bef3e97f8
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 52774b387644b14e3d4612dffa6d3c3b28a37f25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659271"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652311"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Общие сведения о Cognitive Services Xamarin.Forms и Azure
+# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Общие сведения о Xamarin. Forms и Azure Cognitive Services
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Cognitive Services — это набор API-интерфейсов, пакетов SDK и службы, доступные разработчикам сделать свои приложения более интеллектуальных, добавив функции, такие как распознавание лиц, речи и понимание языка. В этой статье введение в пример приложения, в котором показано, как вызывать некоторые интерфейсы API Microsoft Cognitive Service._
 
@@ -50,7 +50,7 @@ _Microsoft Cognitive Services — это набор API-интерфейсов, 
 
 `RateAppPage` Пользователь может сделать фотографию их сторону, которой были отправлены в API распознавания лиц с отображением возвращаемый распознавания эмоций.
 
-## <a name="understand-the-application-anatomy"></a>Понимать структуру приложений
+## <a name="understand-the-application-anatomy"></a>Общие сведения о структуре приложения
 
 Проект общего кода для примера приложения состоит из пяти основных папок:
 
@@ -62,7 +62,7 @@ _Microsoft Cognitive Services — это набор API-интерфейсов, 
 |Utils|Содержит `Timer` класс, используемый методом `AuthenticationService` класса, чтобы обновить маркер доступа JWT каждые 9 минут.|
 |Представления|Содержит страницы для приложения.|
 
-Проект общего кода также содержит некоторые важные файлы:
+Проект общего кода также содержит несколько важных файлов:
 
 |Файл|Цель|
 |--- |--- |
@@ -80,7 +80,7 @@ _Microsoft Cognitive Services — это набор API-интерфейсов, 
 
 Кроме того эти пакеты NuGet также устанавливают свои собственные зависимости.
 
-### <a name="model-the-data"></a>Моделирования данных
+### <a name="model-the-data"></a>Моделирование данных
 
 В примере приложения используется `TodoItem` класс для моделирования данных, отображаются и хранятся в локальной базе данных SQLite. Следующий пример кода демонстрирует класс `TodoItem`:
 
@@ -96,7 +96,7 @@ public class TodoItem
 
 `ID` Свойство используется для уникальной идентификации каждого `TodoItem` экземпляр и снабжен SQLite атрибутами, которые делают свойства заданы с автоматическим приращением первичного ключа в базе данных.
 
-### <a name="invoke-database-operations"></a>Вызова операций базы данных
+### <a name="invoke-database-operations"></a>Вызов операций базы данных
 
 `TodoItemRepository` Класс реализует операции с базой данных, а экземпляр класса может осуществляться через `App.TodoManager` свойство. `TodoItemRepository` Класс предоставляет следующие методы для вызова операций базы данных:
 
@@ -105,15 +105,15 @@ public class TodoItem
 - **SaveItemAsync** — создает или обновляет элемент в локальной базе данных SQLite.
 - **DeleteItemAsync** — Удаляет указанный элемент из локальной базы данных SQLite.
 
-### <a name="platform-project-implementations"></a>Реализации платформы проекта
+### <a name="platform-project-implementations"></a>Реализации проекта платформы
 
-`Services` Папка в проекте с общим кодом содержит `IFileHelper` и `IAudioRecorderService` интерфейсы, используемые `DependencyService` класса классы, реализующие интерфейсы в проектах платформы.
+Папка в проекте общего кода `IFileHelper` содержит интерфейсы и `IAudioRecorderService` , которые используются `DependencyService` классом для нахождение классов, реализующих интерфейсы в проектах платформы. `Services`
 
 `IFileHelper` Интерфейс реализуется `FileHelper` класс в каждом проекте платформы. Этот класс состоит из единственного метода `GetLocalFilePath`, который возвращает путь к локальному файлу для хранения базы данных SQLite.
 
 `IAudioRecorderService` Интерфейс реализуется `AudioRecorderService` класс в каждом проекте платформы. Этот класс состоит из `StartRecording`, `StopRecording`и вспомогательные методы, которые используют интерфейсы API платформы записывать звук из микрофон устройства и сохраните его в формате WAV. В iOS `AudioRecorderService` использует `AVFoundation` API записывать звук. В Android `AudioRecordService` использует `AudioRecord` API записывать звук. В универсальной платформы Windows (UWP), `AudioRecorderService` использует `AudioGraph` API записывать звук.
 
-### <a name="invoke-cognitive-services"></a>Когнитивные службы вызова неуправляемого кода
+### <a name="invoke-cognitive-services"></a>Вызов вызываемых служб
 
 Пример приложения вызывает следующие Microsoft Cognitive Services:
 
@@ -125,4 +125,4 @@ public class TodoItem
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Документация по Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/documentation)
-- [Cognitive Services TODO (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Cognitive Services TODO (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

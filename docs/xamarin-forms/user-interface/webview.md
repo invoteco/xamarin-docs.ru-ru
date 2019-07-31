@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: a56764771f3106f73809a51616e90fa30692a4d4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649637"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656267"
 ---
 # <a name="xamarinforms-webview"></a>Веб-представления Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) — Это представление для отображения HTML-содержимого и веб-приложения. В отличие от `OpenUri`, которая перенаправит пользователя на веб-браузер на устройстве, `WebView` отображает HTML содержимое внутри своего приложения.
 
@@ -110,7 +110,7 @@ browser.Source = htmlSource;
 В приведенном выше коде `@` используется для пометки HTML как строка литерала, то есть все обычные escape-символы учитываются.
 
 > [!NOTE]
-> Может потребоваться задать `WidthRequest` и `HeightRequest` свойства [ `WebView` ](xref:Xamarin.Forms.WebView) для просмотра HTML-содержимое, в зависимости от макета `WebView` является дочерним элементом. Например, это необходимо в [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
+> Может потребоваться установить `WidthRequest` свойства и `HeightRequest` объекта [`WebView`](xref:Xamarin.Forms.WebView) для просмотра `WebView` содержимого HTML в зависимости от макета, который является дочерним для. Например, это необходимо в [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 
 ### <a name="local-html-content"></a>Локальное содержимое HTML
 
@@ -334,25 +334,25 @@ public partial class InAppBrowserXaml : ContentPage
 
 Веб-представления вызывает следующие события для реагирования на изменения в состоянии:
 
-- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) — событие, возникающее при веб-представления загрузит новую страницу.
-- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) — событие, возникающее при загрузке страницы и навигации был остановлен.
-- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) — событие, возникающее при выполнении запроса на перезагрузку текущего содержимого.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating)— событие, создаваемое, когда WebView начинает загрузку новой страницы.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated)— событие, возникающее при загрузке страницы и остановке навигации.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested)— событие, создаваемое при запросе на перезагрузку текущего содержимого.
 
-[ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs) Объект, который прилагается к [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) событий имеет четыре свойства:
+[`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs) Объект, [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) сопровождающий событие, имеет четыре свойства:
 
-- `Cancel` — Указывает, следует ли для отмены перехода.
-- `NavigationEvent` — произошедшего события навигации.
-- `Source` — элемент, который выполняется переход.
-- `Url` — Цель навигации.
+- `Cancel`— Указывает, следует ли отменить навигацию.
+- `NavigationEvent`— событие навигации, которое было вызвано.
+- `Source`— элемент, который выполнил навигацию.
+- `Url`— Назначение навигации.
 
-[ `WebNavigatedEventArgs` ](xref:Xamarin.Forms.WebNavigatedEventArgs) Объект, который прилагается к [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) событий имеет четыре свойства:
+[`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) Объект, [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) сопровождающий событие, имеет четыре свойства:
 
-- `NavigationEvent` — произошедшего события навигации.
-- `Result` — Описывает результат панели навигации с помощью [ `WebNavigationResult` ](xref:Xamarin.Forms.WebNavigationResult) член перечисления. Допустимые значения: `Cancel`, `Failure`, `Success` и `Timeout`.
-- `Source` — элемент, который выполняется переход.
-- `Url` — Цель навигации.
+- `NavigationEvent`— событие навигации, которое было вызвано.
+- `Result`— Описывает результат навигации с помощью [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) элемента перечисления. Допустимые значения: `Cancel`, `Failure`, `Success` и `Timeout`.
+- `Source`— элемент, который выполнил навигацию.
+- `Url`— Назначение навигации.
 
-Если предполагается использование веб-страницы, занять много времени для загрузки, рассмотрите возможность использования [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) и [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) событий для реализации индикатора состояния. Пример:
+Если предполагается использование веб-страниц, загрузка которых занимает много времени, рассмотрите возможность использования [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) событий и [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) для реализации индикатора состояния. Например:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -482,7 +482,7 @@ AbsoluteLayout *без* WidthRequest & HeightRequest:
 
 ## <a name="invoking-javascript"></a>Вызов JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) включает в себя возможность вызвать функцию JavaScript из C#и возвращает никакого результата для вызова C# кода. Это осуществляется с помощью [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) метод, который показан в следующем примере из [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) пример:
+[`WebView`](xref:Xamarin.Forms.WebView) включает в себя возможность вызвать функцию JavaScript из C#и возвращает никакого результата для вызова C# кода. Это осуществляется с помощью [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) метод, который показан в следующем примере из [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) пример:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -516,5 +516,5 @@ function factorial(num) {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Работа с WebView (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
-- [Веб-представления (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)
+- [Работа с WebView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [Веб-представления (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)

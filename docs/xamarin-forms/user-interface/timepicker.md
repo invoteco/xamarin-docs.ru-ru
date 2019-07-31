@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms TimePicker
-description: Элемента управления TimePicker является представление Xamarin.Forms, которое позволяет пользователю для выбора времени. В этой статье объясняется, как использовать TimePicker в приложении Xamarin.Forms.
+description: TimePicker — это представление Xamarin. Forms, которое позволяет пользователю выбрать время. В этой статье объясняется, как использовать TimePicker в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: 1b929b507d738cb4000bab20cfab5480b2222ed2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d5c4cc6600c8192718257abf4ef1cbec49c12eee
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61024145"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656487"
 ---
 # <a name="xamarinforms-timepicker"></a>Xamarin.Forms TimePicker
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 
 _Представление Xamarin.Forms, которое позволяет пользователю для выбора времени._
 
@@ -79,7 +79,7 @@ TimePicker timePicker = new TimePicker
 
 ## <a name="timepicker-in-an-application"></a>TimePicker в приложении
 
-[ **SetTimer** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/) пример включает в себя [ `TimePicker` ](xref:Xamarin.Forms.TimePicker), [ `Entry` ](xref:Xamarin.Forms.Entry), и [ `Switch` ](xref:Xamarin.Forms.Switch) представлений на его странице. `TimePicker` Можно использовать для выбора времени, и время, происходит, отображается диалоговое окно предупреждения, напоминая пользователем текста в `Entry`, в который `Switch` изменяется на противоположное. Ниже приведен файл XAML.
+[ **SetTimer** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) пример включает в себя [ `TimePicker` ](xref:Xamarin.Forms.TimePicker), [ `Entry` ](xref:Xamarin.Forms.Entry), и [ `Switch` ](xref:Xamarin.Forms.Switch) представлений на его странице. `TimePicker` Можно использовать для выбора времени, и время, происходит, отображается диалоговое окно предупреждения, напоминая пользователем текста в `Entry`, в который `Switch` изменяется на противоположное. Ниже приведен файл XAML.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -179,5 +179,5 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример SetTimer](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+- [Пример SetTimer](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 - [TimePicker API](xref:Xamarin.Forms.TimePicker)

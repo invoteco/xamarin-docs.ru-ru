@@ -7,16 +7,16 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 885bba381e1371d273000fa0d970b465e9ca9c0b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4414ce498bdf69e82269137c35af8f27b9e5f541
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61410757"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649564"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Сохранение растровых изображений SkiaSharp в файлы
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 После приложения SkiaSharp создал или изменил Битовая карта, приложение может потребоваться сохранить растровое изображение к библиотеке фотографий пользователя:
 
@@ -46,7 +46,7 @@ ms.locfileid: "61410757"
 
 Кроме того [ `SKCodec` ](xref:SkiaSharp.SKCodec) класс имеет два метода с именем `Create` , можно создать `SKCodec` от сжатые исходные и позволяют приложению получить более важную роль в процессе декодирования. ( `SKCodec` Класс показан в этой статье [ **анимации точечных рисунков SkiaSharp** ](animating.md#gif-animation) в связи с декодирование анимированный GIF-файл.)
 
-При кодировании растрового изображения, необходимые дополнительные сведения: Кодировщику необходимо знать, что формат файла определенного приложения хочет использовать (JPEG или PNG или иное). При необходимости с потерями формат кодирования, также необходимо знать требуемый уровень качества.
+При кодировании точечного рисунка требуются дополнительные сведения: Кодировщику необходимо иметь представление о конкретном формате файла, который приложение хочет использовать (JPEG или PNG или что-то другое). При необходимости с потерями формат кодирования, также необходимо знать требуемый уровень качества.
 
 `SKBitmap` Класс определяет одно [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) метод со следующим синтаксисом:
 
@@ -68,7 +68,7 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 Если вы хотите файл совместно с другими приложениями, его необходимо сохранить в библиотеке фотографий пользователя. Эта задача требует кода для конкретных платформ и использование Xamarin.Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService).
 
-**SkiaSharpFormsDemo** в проекте [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) приложение определяет `IPhotoLibrary` интерфейс, используемый с `DependencyService` класса. Это определяет синтаксис `SavePhotoAsync` метод:
+**SkiaSharpFormsDemo** в проекте [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) приложение определяет `IPhotoLibrary` интерфейс, используемый с `DependencyService` класса. Это определяет синтаксис `SavePhotoAsync` метод:
 
 ```csharp
 public interface IPhotoLibrary
@@ -280,7 +280,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 
 `SKManagedWStream` Класс является производным от `SKWStream` (что означает «доступный для записи поток»). `Encode` Метод записывает файл закодированного растрового изображения в этом потоке. Комментарии в этом коде ссылаются на проверку, что может потребоваться выполнить.
 
-**Сохранить форматы файлов** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) приложение использует аналогичный код, чтобы можно было экспериментировать с сохранения точечных рисунков в различных форматах.
+**Сохранить форматы файлов** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) приложение использует аналогичный код, чтобы можно было экспериментировать с сохранения точечных рисунков в различных форматах.
 
 Файл XAML содержит `SKCanvasView` , отображает точечный рисунок, а остальная часть страницы содержит все, что приложение должно вызвать `Encode` метод `SKBitmap`. Он имеет `Picker` членами `SKEncodedImageFormat` перечисления, `Slider` качества аргумента для форматов с потерями точечного рисунка, два `Entry` представления, имя файла и имя папки и `Button` для сохранения файла.
 
@@ -471,7 +471,7 @@ public partial class SaveFileFormatsPage : ContentPage
 
 [ **Рисование пальцем в SkiaSharp** ](../paths/finger-paint.md) статье было показано, как использовать сенсорный ввод, отслеживания для реализации простых красочное программы. Программа поддерживается только один цвет и ширину только одним росчерком, но удалена весь рисунок в коллекцию `SKPath` объектов.
 
-**Рисование пальцами с Сохранить** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образец также сохраняет весь рисунок в коллекцию `SKPath` объектов, но также Выполняет визуализацию рисунок на точечного рисунка, который он может сэкономить к библиотеке фотографий.
+**Рисование пальцами с Сохранить** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образец также сохраняет весь рисунок в коллекцию `SKPath` объектов, но также Выполняет визуализацию рисунок на точечного рисунка, который он может сэкономить к библиотеке фотографий.
 
 Большая часть этой программы похож на исходный **Рисование пальцами** программы. Одним из улучшений является то, что файл XAML теперь создает экземпляры кнопки **Очистить** и **Сохранить**:
 
@@ -698,7 +698,7 @@ public partial class FingerPaintSavePage : ContentPage
 
 [![Пальца Paint Сохранить](saving-images/FingerPaintSave.png "пальца Paint сохранить")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-Очень похожий прием используется в [ **программа SpinPaint** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/) образца. Это также красочное программы, за исключением того, что пользователь рисует вращающийся диска, который затем воспроизводит макеты на его четырех квадрантов. Цвет рисования изменения пальцем диск находится в состоянии:
+Очень похожий прием используется в [ **программа SpinPaint** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) образца. Это также красочное программы, за исключением того, что пользователь рисует вращающийся диска, который затем воспроизводит макеты на его четырех квадрантов. Цвет рисования изменения пальцем диск находится в состоянии:
 
 [![Запустить Paint](saving-images/SpinPaint.png "запустить рисования")](saving-images/SpinPaint-Large.png#lightbox)
 
@@ -707,5 +707,5 @@ public partial class FingerPaintSavePage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [Программа SpinPaint (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Программа SpinPaint (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)

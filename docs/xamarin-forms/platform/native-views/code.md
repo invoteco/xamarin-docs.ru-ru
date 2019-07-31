@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 8587cade1c5b4a6882f21603ee869f94f38fd04a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ebaf5bf2fcb82dd98147819ea9e089dcd427affc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61086097"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644454"
 ---
 # <a name="native-views-in-c"></a>Исходные представления в C#
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeEmbedding/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Исходные представления из iOS, Android и UWP можно непосредственно ссылаться из страницы Xamarin.Forms, созданные с помощью C#. В этой статье показано, как добавить исходные представления в макете Xamarin.Forms, созданные с помощью C# и переопределение макет пользовательские представления, чтобы исправить их измерения использования API._
 
@@ -72,7 +72,7 @@ contentView.Content = textView.ToView();
 
 Предполагается, что `stackLayout` и `contentView` ранее были созданы экземпляры в XAML или C#.
 
-### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
+### <a name="universal-windows-platform"></a>Универсальная платформа Windows
 
 В следующем примере кода показано, как добавить `TextBlock` для [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) и [ `ContentView` ](xref:Xamarin.Forms.ContentView):
 
@@ -229,7 +229,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 ![](code-images/android-good-measurement.png "Android пользовательский элемент управления с помощью пользовательских GetDesiredSize делегата")
 
-### <a name="universal-windows-platform"></a>Универсальная платформа Windows 
+### <a name="universal-windows-platform"></a>Универсальная платформа Windows
 
 В следующем коде показано в примере `CustomControl` класс, унаследованный от `Panel`:
 
@@ -323,5 +323,5 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [NativeEmbedding (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeEmbedding/)
+- [NativeEmbedding (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 - [Исходные формы](~/xamarin-forms/platform/native-forms.md)

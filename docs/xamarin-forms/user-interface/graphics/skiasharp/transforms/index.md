@@ -7,16 +7,16 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a57e50f098c92dbfcdcaa3139565d2ba0e291e3d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 39de35c8e43ebf2b3db25724ad761e3576ba5057
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61347769"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644955"
 ---
 # <a name="skiasharp-transforms"></a>Преобразование Skiasharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Дополнительные сведения о преобразованиях для отображения графики SkiaSharp_
 
@@ -49,9 +49,9 @@ Xamarin.Forms также поддерживает преобразований, 
 
 Преобразование skiasharp, относительно верхнего левого угла `SKCanvas` во время преобразования Xamarin.Forms являются относительно верхнего левого угла `VisualElement` к которому они применяются. Это различие очень важно при применении масштабирования и поворота преобразования, так как эти преобразования всегда относительны состоянию на определенный момент.
 
-Действительно разница заключается в том, что преобразование skiasharp *методы* во время преобразования Xamarin.Forms *свойства*. Это семантического различия за пределы различии: Преобразование skiasharp выполняют операцию во время Xamarin.Forms преобразует набор состояние. Преобразование skiasharp применяются к объектам впоследствии графических элементов, но не на графические объекты, которые рисуются перед применением преобразования. Напротив Xamarin.Forms преобразование применяется к ранее отображаемого элемента, как только свойство имеет значение. Преобразование skiasharp являются накопительными, так как эти методы вызываются; Xamarin.Forms преобразований заменяются в том случае, когда свойству с другим значением.
+Действительно разница заключается в том, что преобразование skiasharp *методы* во время преобразования Xamarin.Forms *свойства*. Это семантическое различие, не превышающее синтаксические различия: Преобразования SkiaSharp выполняют операцию, пока преобразования Xamarin. Forms устанавливают состояние. Преобразование skiasharp применяются к объектам впоследствии графических элементов, но не на графические объекты, которые рисуются перед применением преобразования. Напротив Xamarin.Forms преобразование применяется к ранее отображаемого элемента, как только свойство имеет значение. Преобразование skiasharp являются накопительными, так как эти методы вызываются; Xamarin.Forms преобразований заменяются в том случае, когда свойству с другим значением.
 
-Все примеры программ, в этом разделе отображаются в **преобразует SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) программы. Исходный код можно найти в [ **преобразует** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) папку решения.
+Все примеры программ, в этом разделе отображаются в **преобразует SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программы. Исходный код можно найти в [ **преобразует** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) папку решения.
 
 ## <a name="the-translate-transformtranslatemd"></a>[Преобразование переноса](translate.md)
 
@@ -89,4 +89,4 @@ Xamarin.Forms также поддерживает преобразований, 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

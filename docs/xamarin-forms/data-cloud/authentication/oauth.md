@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 12f34e7bc77fd3978ccfdfb57cc95747123c5603
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508252"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657234"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Проверка подлинности пользователей с помощью поставщика удостоверений
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
 _Xamarin.Auth — это кроссплатформенный пакет SDK для проверки подлинности пользователей и хранения учетной записью. Он включает в себя структур проверки подлинности OAuth, которые предоставляют поддержку использования поставщиков удостоверений, например Google, Майкрософт, Facebook и Twitter. В этой статье описываются способы использования Xamarin.Auth для управления процессом проверки подлинности в приложении Xamarin.Forms._
 
@@ -267,7 +267,7 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [OAuthNativeFlow (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+- [OAuthNativeFlow (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 - [OAuth 2.0 для собственных приложений](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
 - [С помощью OAuth 2.0 для доступа к API Google](https://developers.google.com/identity/protocols/OAuth2)
 - [Xamarin.Auth (NuGet)](https://www.nuget.org/packages/xamarin.auth/)

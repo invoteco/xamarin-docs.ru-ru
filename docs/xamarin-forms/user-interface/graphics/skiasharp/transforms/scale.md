@@ -7,16 +7,16 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2e9259bed6ad0ae5a926cb75ea74c1f379897220
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61190595"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649279"
 ---
 # <a name="the-scale-transform"></a>Преобразование масштаба
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Обнаружение преобразование SkiaSharp масштабирования для масштабирования объектов для различных размеров_
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Может возникнуть вопрос: Как коэффициенты масштабирования влияют на значение, возвращаемое из `MeasureText` метод `SKPaint`? Все дело: Нет. `Scale` — Это метод `SKCanvas`. Он не влияет на все с `SKPaint` объекта, пока не будет использовать этот объект для отрисовки, что-то на холсте.
+Может возникнуть вопрос: Как коэффициенты масштабирования влияют на значение, возвращаемое `MeasureText` `SKPaint`методом? Ответ: Нет. `Scale` — Это метод `SKCanvas`. Он не влияет на все с `SKPaint` объекта, пока не будет использовать этот объект для отрисовки, что-то на холсте.
 
 Как вы видите, все, что отображается после `Scale` вызова увеличивается пропорционально:
 
@@ -251,7 +251,7 @@ using (SKPaint strokePaint = new SKPaint
 
 [![](scale-images/anisotropicscaling-small.png "Тройной снимок экрана страницы анизотропная масштабирование")](scale-images/anisotropicscaling-large.png#lightbox "тройной снимок экрана страницы анизотропная масштабирование")
 
-Другим способом, можно представить себе `Scale` и `Translate` вызовов является для определения эффекта в обратном порядке: `Translate` Вызов сдвигает путь, поэтому он становится полностью видимым, но ориентирована в левом верхнем углу холста. `Scale` Метод затем увеличивает этого типа "звезда" относительно верхнего левого угла.
+Другой способ подумать о `Scale` вызовах и `Translate` заключается в определении воздействия в обратную последовательность: `Translate` Вызов сдвигает путь, чтобы он стал полностью видимым, но ориентированным в левом верхнем углу холста. `Scale` Метод затем увеличивает этого типа "звезда" относительно верхнего левого угла.
 
 На самом деле похоже, что звездочки немного больше, чем холста. Проблема заключается в ширину штриха. `Bounds` Свойство `SKPath` указывает размеры координаты в кодировке в пути, и это, программа использует для его масштабирования. При подготовке к просмотру путь с определенной толщина, готовый для просмотра путь больше, чем холста.
 
@@ -347,4 +347,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

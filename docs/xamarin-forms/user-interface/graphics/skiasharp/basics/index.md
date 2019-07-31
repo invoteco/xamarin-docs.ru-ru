@@ -7,22 +7,22 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 15bdfe43a84927f60300539bce9c27d12b87d19e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7f4f02c62da1807438cc3f9e81a89b62684a91a2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019790"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657096"
 ---
 # <a name="skiasharp-drawing-basics"></a>Основы рисования в SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Познакомьтесь с основами координаты и основные понятия графики SkiaSharp_
 
-После добавления пакета SkiaSharp NuGet в Xamarin.Forms приложение, можно начать использование SkiaSharp графики. [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) решение включает в себя множество страниц, демонстрирующих SkiaSharp приемы программирования на все более сложных занятиях.
+После добавления пакета SkiaSharp NuGet в Xamarin.Forms приложение, можно начать использование SkiaSharp графики. [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) решение включает в себя множество страниц, демонстрирующих SkiaSharp приемы программирования на все более сложных занятиях.
 
-Все примеры программ, в этом разделе отображаются под заголовком **основы рисования в SkiaSharp** на домашней странице [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) программы и в [ **Основы** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) папку решения.
+Все примеры программ, в этом разделе отображаются под заголовком **основы рисования в SkiaSharp** на домашней странице [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программы и в [ **Основы** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) папку решения.
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[Рисование простого кружка](circle.md)
 
@@ -55,4 +55,4 @@ _Познакомьтесь с основами координаты и осно
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

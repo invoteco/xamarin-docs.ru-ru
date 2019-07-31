@@ -1,24 +1,24 @@
 ---
-title: Повышение прав VisualElement в Android
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать Android конкретных платформ, управляющий несанкционированному VisualElements приложений, предназначенных для API 21 или более поздней версии.
+title: Повышение прав Висуалелемент в Android
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать зависящую от платформы Android платформу, которая управляет повышением уровня Висуалелементс в приложениях, предназначенных для API 21 или более поздней версии.
 ms.prod: xamarin
 ms.assetid: 5BFD6175-2BBD-41CD-B8F9-521B4750B708
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: c7cc6b560ea91dca89c468271b89d1dcedfcda53
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 243e351f29b056a6d4a567b8e39240a87f37aec2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65927025"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651882"
 ---
-# <a name="visualelement-elevation-on-android"></a>Повышение прав VisualElement в Android
+# <a name="visualelement-elevation-on-android"></a>Повышение прав Висуалелемент в Android
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Это Android специфические для платформы, используемых для управления повышения прав, то есть Z-порядка визуальных элементов в приложениях, предназначенных для API 21 или более поздней версии. Повышение прав визуальный элемент, определяет порядок его отображения, с помощью визуальных элементов с более высоким значением Z, occluding визуальные элементы с более низкие значения Z. Он используется в XAML, задав `VisualElement.Elevation` вложенное свойство, чтобы `boolean` значение:
+Эта платформа для Android используется для управления повышением или Z-порядком визуальных элементов в приложениях, предназначенных для API 21 или более поздней версии. Повышение прав визуальный элемент, определяет порядок его отображения, с помощью визуальных элементов с более высоким значением Z, occluding визуальные элементы с более низкие значения Z. Он используется в XAML, задав `VisualElement.Elevation` вложенное свойство, чтобы `boolean` значение:
 
 ```xaml
 <ContentPage ...
@@ -87,7 +87,7 @@ public class AndroidElevationPageCS : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API АндроидспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [АндроидспеЦифик. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

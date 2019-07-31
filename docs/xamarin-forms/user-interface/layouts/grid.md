@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 78a84fd8d4f380739a9f080a1a5aad7c5942d0c9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 38206812fbd746a63c5bff18111779c25deedc66
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511879"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648523"
 ---
 # <a name="xamarinforms-grid"></a>Сетка Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`Grid`](xref:Xamarin.Forms.Grid) поддерживает упорядочение по строкам и столбцам представлений. Строки и столбцы можно присвоить пропорционально размеры или абсолютные размеры. `Grid` Макет не следует путать с помощью традиционных таблиц и не предназначен для представления табличных данных. `Grid` не поддерживает концепцию строки, столбца или ячейки. В отличие от таблиц HTML `Grid` предназначен исключительно для расположения содержимого.
 
@@ -384,5 +384,5 @@ public CalculatorGridCode ()
 
 - [Создание мобильных приложений с помощью Xamarin.Forms, Глава 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
 - [Сетка](xref:Xamarin.Forms.Grid)
-- [Макет (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Пример BusinessTumble (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Макет (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Пример BusinessTumble (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

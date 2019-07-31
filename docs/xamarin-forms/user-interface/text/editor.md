@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 97bb5ec954f36e48d8ae115baf8738862e5a8358
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 1f9cd0acd201f124f4a4577fec23dce52aee627d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649544"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657507"
 ---
 # <a name="xamarinforms-editor"></a>Редактор Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Ввод многострочного текста_
 
@@ -59,9 +59,9 @@ var text = MyEditor.Text;
 var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
 
-### <a name="preventing-text-entry"></a>Предотвращение ввод текста
+### <a name="preventing-text-entry"></a>Предотвращение ввода текста
 
-Пользователи могут быть защищены от изменения текста в [ `Editor` ](xref:Xamarin.Forms.Editor) , задав `IsReadOnly` свойство, которое имеет значение по умолчанию из `false`, `true`:
+Пользователям может быть запрещено изменять текст [`Editor`](xref:Xamarin.Forms.Editor) в, `IsReadOnly` задавая свойство, которое по умолчанию `false`имеет значение, равным `true`:
 
 ```xaml
 <Editor Text="This is a read-only Editor"
@@ -73,7 +73,7 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 ```
 
 > [!NOTE]
-> `IsReadonly` Свойство не приводит к изменению внешнего вида [ `Editor` ](xref:Xamarin.Forms.Editor), в отличие от `IsEnabled` свойство, которое также изменяет внешний вид `Editor` к серому.
+> Свойство не изменяет внешний вид [`Editor`](xref:Xamarin.Forms.Editor), в отличие от `IsEnabled` свойства `Editor` , которое также изменяет внешний вид изображения на серый. `IsReadonly`
 
 ### <a name="limiting-input-length"></a>Ограничение длины входных
 
@@ -189,9 +189,9 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 
 ### <a name="enabling-and-disabling-text-prediction"></a>Включение и отключение прогнозирования текста
 
-`IsTextPredictionEnabled` Свойство, управляет ли прогнозирование текста и автоматическое исправление текста включен. По умолчанию задано значение `true`. Как пользователь вводит текст, представляется word прогнозов.
+`IsTextPredictionEnabled` Свойство определяет, включена ли функция прогнозирования текста и автоматического исправления текста. По умолчанию задано значение `true`. Как пользователь вводит текст, представляется word прогнозов.
 
-Тем не менее, для некоторых сценариев входа текст, например ввода имени пользователя, прогнозирование текста и текста исправление обеспечивает взаимодействие с отрицательным и следует отключить, задав `IsTextPredictionEnabled` свойства `false`:
+Однако для некоторых сценариев ввода текста, таких как ввод имени пользователя, прогнозирование текста и автоматическое исправление текста обеспечивают негативную работу и должны быть отключены путем присвоения `IsTextPredictionEnabled` `false`свойству значения:
 
 ```xaml
 <Editor ... IsTextPredictionEnabled="false" />
@@ -202,7 +202,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
 
 > [!NOTE]
-> При `IsTextPredictionEnabled` свойству `false`, и пользовательских сочетаний не используется, прогнозирование текста и автоматическое исправление текста отключено. Тем не менее если [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) было задано, прогнозирование текста отключает, `IsTextPredictionEnabled` свойство учитывается. Таким образом, свойство не может использоваться для прогнозирования текста для `Keyboard` , явно отключает его.
+> Если свойство имеет `false`значение, а пользовательская клавиатура не используется, прогнозирование текста и автоматическое исправление текста отключаются. `IsTextPredictionEnabled` Тем не менее если [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) было задано, прогнозирование текста отключает, `IsTextPredictionEnabled` свойство учитывается. Таким образом, свойство не может использоваться для прогнозирования текста для `Keyboard` , явно отключает его.
 
 ### <a name="colors"></a>Цвета
 
@@ -260,11 +260,11 @@ public partial class EditorPage : ContentPage
 - [Завершено](xref:Xamarin.Forms.Editor.Completed) &ndash; вызывается, когда пользователь завершен входные данные с помощью возвращаемого значения клавиши на клавиатуре.
 
 > [!NOTE]
-> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) Класс, из которого [ `Entry` ](xref:Xamarin.Forms.Entry) наследует, также имеет [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) и [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)события.
+> Класс, от которого [`Entry`](xref:Xamarin.Forms.Entry) наследует, также имеет [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) события и [`Unfocused`.](xref:Xamarin.Forms.VisualElement.Unfocused) [`VisualElement`](xref:Xamarin.Forms.VisualElement)
 
 ### <a name="completed"></a>Завершено
 
-`Completed` Событие используется для реагирования на завершение взаимодействия с `Editor`. `Completed` вызывается, когда пользователь завершает входных данных с полем, введя клавиша return на клавиатуре (или нажав клавишу Tab на UWP). Обработчик для события представляет собой Универсальное событие обработчика, используя отправителя и `EventArgs`:
+`Completed` Событие используется для реагирования на завершение взаимодействия с `Editor`. `Completed`вызывается, когда пользователь заканчивает ввод с полем, вводя ключ возврата на клавиатуре (или нажав клавишу TAB в UWP). Обработчик для события представляет собой Универсальное событие обработчика, используя отправителя и `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -360,5 +360,5 @@ Title="Editor Demo">
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Текст (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Текст (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Редактор API](xref:Xamarin.Forms.Editor)

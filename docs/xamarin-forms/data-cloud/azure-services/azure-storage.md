@@ -1,22 +1,22 @@
 ---
-title: Store и доступ к данным в службе хранилища Azure Xamarin.Forms
-description: Хранилище Azure — это масштабируемая облачная система хранения, которая может использоваться для хранения структурированных и неструктурированных данных. В этой статье объясняется, как с помощью Xamarin.Forms сохранять текст и двоичные данные в хранилище Azure и способах доступа к данным.
+title: Хранение данных в службе хранилища Azure и доступ к ним из Xamarin. Forms
+description: Хранилище Azure — это масштабируемая облачная система хранения, которая может использоваться для хранения структурированных и неструктурированных данных. В этой статье объясняется, как использовать Xamarin. Forms для хранения текстовых и двоичных данных в службе хранилища Azure, а также как получить доступ к данным.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 044ff7448cc302da4d0efdf88325c40b9db0315c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658631"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649714"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Store и доступ к данным в службе хранилища Azure Xamarin.Forms
+# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Хранение данных в службе хранилища Azure и доступ к ним из Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Хранилище Azure — это масштабируемая облачная система хранения, которая может использоваться для хранения структурированных и неструктурированных данных. В этой статье показано, как с помощью Xamarin.Forms сохранять текст и двоичные данные в хранилище Azure и способах доступа к данным._
 
@@ -260,8 +260,8 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Служба хранилища Azure (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+- [Служба хранилища Azure (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Общие сведения о хранилище](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Использование хранилища BLOB-объектов из Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [С помощью подписи коллективного доступа (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure хранилища (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Хранилище Windows Azure (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

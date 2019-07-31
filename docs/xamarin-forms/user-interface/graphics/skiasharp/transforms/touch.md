@@ -7,16 +7,16 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 407fe78618c5e5fcd8732d9ff3cea50561ca78f3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876870"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655551"
 ---
 # <a name="touch-manipulations"></a>Манипуляции сенсорного ввода
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Используйте матрицы преобразования для реализации перетаскивания сенсорного ввода, как уменьшение и поворота_
 
@@ -273,7 +273,7 @@ public partial class BitmapScalingPage : ContentPage
 
 Первый разница в этой программе является логику проверки нажатия. Предыдущей программы, использующие `Contains` метод `SKRect` для определения того, является ли сенсорной точки в преобразованный прямоугольник, соответствующий растрового изображения. Но как пользователь управляет точечного рисунка, растровое изображение может быть повернут, и `SKRect` не может представлять должным образом поворачивается прямоугольник. Может опасения, что логика проверки нажатия должен реализовывать довольно сложной аналитическую геометрию в этом случае.
 
-Тем не менее ярлык доступен: Определение, находится точка в пределах преобразованный прямоугольник совпадает со значением ли обратная преобразованная точка находится внутри границы подвергнутый прямоугольника. Это гораздо проще, вычисление и логику можно продолжать использовать удобный `Contains` метод:
+Однако доступно сочетание клавиш: Определение того, находится ли точка в границах преобразованного прямоугольника, аналогична определению того, находится ли обратная преобразованная точка в пределах границ непреобразованного прямоугольника. Это гораздо проще, вычисление и логику можно продолжать использовать удобный `Contains` метод:
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage
@@ -703,7 +703,7 @@ class TouchManipulationBitmap
 
 В `Moved` и `Released` события, вызывает метод `Manipulate`. В таких случаях `touchDictionary` содержит один или несколько `TouchManipulationInfo` объектов. Если `touchDictionary` содержит один элемент, вполне вероятно, `PreviousPoint` и `NewPoint` значения не равны и представляют перемещение пальца. Если несколько пальца касаются растрового изображения, словарь содержит более одного элемента, но только один из этих элементов имеет другие `PreviousPoint` и `NewPoint` значения. Все остальные, имеют `PreviousPoint` и `NewPoint` значения.
 
-Это важно: `Manipulate` Метод можно предположить, что он обрабатывает перемещение только одним пальцем. Во время этого вызова другие пальцы нет скользящее, а если они действительно при перемещении (как, вероятнее всего), в будущих вызовах будет обрабатываться перемещения `Manipulate`.
+Это важно: `Manipulate` Метод может предположить, что он обрабатывает перемещение только одного пальца. Во время этого вызова другие пальцы нет скользящее, а если они действительно при перемещении (как, вероятнее всего), в будущих вызовах будет обрабатываться перемещения `Manipulate`.
 
 `Manipulate` Метод сначала копирует словаря в массив для удобства. Игнорирует ничего, кроме первых двух записей. Если более чем двумя пальцами пытаетесь управлять точечного рисунка, остальные игнорируются. `Manipulate` Окончательный членом `TouchManipulationBitmap`:
 
@@ -1272,5 +1272,5 @@ else
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Вызов событий из эффектов](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

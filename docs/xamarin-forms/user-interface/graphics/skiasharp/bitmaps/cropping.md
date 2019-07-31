@@ -7,16 +7,16 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: cf31f3bd6f84a040d21420e865737417c374d947
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 50174844100eb852ac7daf5ce3f33b02b490ceb2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61078495"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646658"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Обрезка точечные рисунки SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [ **Создание и точечные рисунки SkiaSharp Рисование** ](drawing.md) статье описано, как `SKBitmap` объект может быть передан `SKCanvas` конструктор. Любой рисования методу, вызванному для причины, чтобы холст рисунок для отображения изображения на точечный рисунок. К ним методов рисования относятся `DrawBitmap`, что означает, что этот метод можно использовать передача всех или части одного точечного рисунка для другого точечного рисунка, возможно с помощью преобразований.
 
@@ -445,7 +445,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## <a name="hosting-the-photo-cropper-canvas-view"></a>Размещение представлении photo cropper canvas
 
-С помощью этих двух классов, обрабатывающих обрезки **Обрезка Photo** странице в **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложение имеет очень мало работы. Файл XAML создает экземпляр `Grid` узел `PhotoCropperCanvasView` и **сделать** кнопки:
+С помощью этих двух классов, обрабатывающих обрезки **Обрезка Photo** странице в **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложение имеет очень мало работы. Файл XAML создает экземпляр `Grid` узел `PhotoCropperCanvasView` и **сделать** кнопки:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -536,7 +536,7 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 Xamarin.Forms версию знаменитый головоломки 14-15 появился в главе 22 книги [ _Создание мобильных приложений с помощью Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) и можно загрузить как [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Тем не менее, головоломки становится интереснее (и часто более сложной задачей) когда он основан на изображение из библиотеке фотографий.
 
-Эта версия 14-15 головоломки является частью **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложения и состоит из ряда страниц под названием **головоломки Photo**.
+Эта версия 14-15 головоломки является частью **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложения и состоит из ряда страниц под названием **головоломки Photo**.
 
 **PhotoPuzzlePage1.xaml** файл состоит из `Button`:
 
@@ -584,7 +584,7 @@ public partial class PhotoPuzzlePage1 : ContentPage
 
 Это возможно, фотографии, выбранные из библиотеки, не является ориентированной, так как он были доступны в библиотеке фотографий, но повернуть или ногами. (Это особенно проблемы с устройствами iOS.) По этой причине `PhotoPuzzlePage2` позволяет поворачивать изображение желаемой ориентацией. Файл XAML содержит три кнопки с надписью **90&#x00B0; справа** (по часовой стрелке) это означает, что **90&#x00B0; слева** (против часовой стрелки), и **сделать**.
 
-Файл с выделенным кодом реализует логику поворот точечного рисунка, показанный в статье  **[создания и рисования в SkiaSharp точечные рисунки](drawing.md#rotating-bitmaps)**. Пользователь может сменить изображение на 90 градусов по часовой стрелке или против часовой стрелки любое количество раз: 
+Файл с выделенным кодом реализует логику поворот точечного рисунка, показанный в статье  **[создания и рисования в SkiaSharp точечные рисунки](drawing.md#rotating-bitmaps)** . Пользователь может сменить изображение на 90 градусов по часовой стрелке или против часовой стрелки любое количество раз: 
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -765,4 +765,4 @@ imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

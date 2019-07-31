@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: f854ac363fe3e5b9dc3df046c9fab592b97bc962
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675260"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655460"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Распознавание речи, используя API распознавания речи Microsoft
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Speech API — это API на основе облака, который алгоритмы обработки устной. В этой статье объясняется, как с помощью REST API распознавания речи Microsoft преобразуйте звуковые данные в текст в приложении Xamarin.Forms._
 
@@ -114,7 +114,7 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-Основные конфигурации, выполненной по `GenerateRequestUri` метод заключается в установке языкового стандарта звукового содержимого. Список поддерживаемых языков, см. в разделе [поддерживаемые языки](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
+Основные конфигурации, выполненной по `GenerateRequestUri` метод заключается в установке языкового стандарта звукового содержимого. Список поддерживаемых языковых стандартов см. в разделе [Поддерживаемые языки](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
 
 ### <a name="sending-the-request"></a>Отправка запроса
 
@@ -170,5 +170,5 @@ async Task<string> SendRequestAsync(Stream fileStream, string url, string bearer
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Документация по API распознавания речи Microsoft](/azure/cognitive-services/speech/home/).
-- [Использование веб-службу RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Cognitive Services TODO (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Использование веб-службы RESTFUL](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Cognitive Services TODO (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

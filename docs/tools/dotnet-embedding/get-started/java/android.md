@@ -1,41 +1,41 @@
 ---
 title: Начало работы с Android
-description: В этом документе описывается, как приступить к использованию внедрение .NET с Android. В нем описывается установка внедрение .NET, Создание проекта библиотеки Android, используя созданные выходные данные в проекте Android Studio и других факторов.
+description: В этом документе описывается, как приступить к использованию внедрения .NET с Android. В нем обсуждается установка внедрения .NET, создание проекта библиотеки Android, использование созданных выходных данных в проекте Android Studio и другие соображения.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: e60892edfcf73f3e7cada8923e16bcc1be2c203e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df29a7f595973a0447899666838e21418ff69330
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876933"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650076"
 ---
 # <a name="getting-started-with-android"></a>Начало работы с Android
 
-В дополнение к требованиям, предъявляемым [Приступая к работе с Java](~/tools/dotnet-embedding/get-started/java/index.md) руководства, вам также потребуется:
+В дополнение к требованиям, приведенным в учебнике Приступая к [работе с Java](~/tools/dotnet-embedding/get-started/java/index.md) , вам также потребуется:
 
-* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) с Java 1.8
+* [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии
+* [Android Studio 3. x](https://developer.android.com/studio/index.html) с Java 1,8
 
-Как обзор происходит следующее:
+В качестве обзора мы будем делать следующее:
 
-* Создание C# проект библиотеки Android
-* Установка с помощью NuGet внедрение .NET
-* Выполните внедрение .NET в сборке библиотеки Android
+* Создание проекта C# Библиотеки Android
+* Установка внедрения .NET с помощью NuGet
+* Запуск внедрения .NET в сборку библиотеки Android
 * Используйте созданный файл AAR в проекте Java в Android Studio
 
-## <a name="create-an-android-library-project"></a>Создайте проект библиотеки Android
+## <a name="create-an-android-library-project"></a>Создание проекта библиотеки Android
 
-Откройте Visual Studio для Windows или Mac, создайте новый проект библиотеки классов Android, назовите его **hello из c#** и сохраните его для **~/Projects/hello-from-csharp** или **%USERPROFILE%\ Projects\hello из c#**.
+Откройте Visual Studio для Windows или Mac, создайте новый проект библиотеки классов Android, присвойте ему имя **Hello-from-CSharp**и сохраните его в **~/прожектс/Хелло-Фром-кшарп** или **%усерпрофиле%\прожектс\хелло-Фром-кшарп**.
 
-Добавьте новое действие Android с именем **HelloActivity.cs**, а затем макет Android в **Resource/layout/hello.axml**.
+Добавьте новое действие Android с именем **HelloActivity.CS**, за которым следует макет Android в **ресурсе, макете или Hello. axml**.
 
-Добавьте новый `TextView` макет и изменение текста на что-нибудь разработок.
+Добавьте новый `TextView` в макет и измените текст на что-нибудь приятно.
 
-Источник макет должен выглядеть следующим образом:
+Ваш источник макета должен выглядеть примерно так:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -53,7 +53,7 @@ ms.locfileid: "60876933"
 </LinearLayout>
 ```
 
-В действии, убедитесь, что при вызове `SetContentView` с новому макету:
+В действии убедитесь, что вы вызываете `SetContentView` с новым макетом:
 
 ```csharp
 [Activity(Label = "HelloActivity"),
@@ -70,15 +70,15 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> Не забывайте `[Register]` атрибута. Дополнительные сведения см. в разделе [ограничения](#current-limitations-on-android).
+> Не забудьте `[Register]` атрибут. Дополнительные сведения см. в разделе [ограничения](#current-limitations-on-android).
 
-Выполните построение проекта. Итоговой сборки будут сохранены в `bin/Debug/hello-from-csharp.dll`.
+Выполните построение проекта. Результирующая сборка будет сохранена в `bin/Debug/hello-from-csharp.dll`.
 
-## <a name="installing-net-embedding-from-nuget"></a>Установка внедрение .NET из NuGet
+## <a name="installing-net-embedding-from-nuget"></a>Установка внедрения .NET из NuGet
 
-Следуйте этим [инструкции](~/tools/dotnet-embedding/get-started/install/install.md) для установки и настройки внедрение .NET для вашего проекта.
+Выполните эти [инструкции](~/tools/dotnet-embedding/get-started/install/install.md) , чтобы установить и настроить внедрение .NET для проекта.
 
-Вызова команды, которые нужно настроить будет выглядеть следующим образом:
+Вызов команды, который следует настроить, будет выглядеть следующим образом:
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio для Mac
 
@@ -94,24 +94,24 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 "$(SolutionDir)packages\Embeddinator-4000.0.2.0.80\tools\Embeddinator-4000.exe" "$(TargetPath)" --gen=Java --platform=Android --outdir=%E4K_OUTPUT% -c
 ```
 
-## <a name="use-the-generated-output-in-an-android-studio-project"></a>Использовать созданные выходные данные в проекте Android Studio
+## <a name="use-the-generated-output-in-an-android-studio-project"></a>Использование созданных выходных данных в проекте Android Studio
 
-1. Откройте Android Studio и создайте новый проект с **пустое действие**.
-2. Щелкните правой кнопкой мыши ваш **приложения** модуль и выберите **New > модуль**.
-3. Выберите **импорта. JAR /. Пакет AAR**.
-4. Найдите с помощью обозревателя directory **~/Projects/hello-from-csharp/output/hello_from_csharp.aar** и нажмите кнопку **Готово**.
+1. Откройте Android Studio и создайте новый проект с **пустым действием**.
+2. Щелкните правой кнопкой мыши модуль **приложения** и выберите пункт **Создать > модуль**.
+3. Выберите **Импорт. JAR/. Пакет AAR**.
+4. С помощью обозревателя каталогов перейдите на вкладку **~/Projects/Hello-from-CSharp/Output/hello_from_csharp.AAR** и нажмите кнопку **Готово**.
 
 ![Импорт AAR в Android Studio](android-images/androidstudioimport.png)
 
-Эта команда скопирует файл AAR в новый модуль с именем **hello_from_csharp**.
+Файл AAR будет скопирован в новый модуль с именем **hello_from_csharp**.
 
-![Android Studio Project](android-images/androidstudioproject.png)
+![Android Studio проект](android-images/androidstudioproject.png)
 
-Чтобы использовать новый модуль из вашей **приложения**, щелкните правой кнопкой мыши и выберите пункт **открыть параметры модуля**. На **зависимости** вкладку, добавьте новый **зависимостей модуля** и выберите **: hello_from_csharp**.
+Чтобы использовать новый модуль из **приложения**, щелкните правой кнопкой мыши и выберите **открыть параметры модуля**. На вкладке **зависимости** добавьте новую **зависимость модуля** и выберите **: hello_from_csharp**.
 
-![Android Studio зависимостей](android-images/androidstudiodependencies.png)
+![Зависимости Android Studio](android-images/androidstudiodependencies.png)
 
-В действии, добавьте новый `onResume` метод и используйте следующий код для запуска C# действия:
+В действии добавьте новый `onResume` метод и используйте следующий код для запуска C# действия:
 
 ```java
 import hello_from_csharp.*;
@@ -128,11 +128,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### <a name="assembly-compression-important"></a>Сжатие сборки (*важно*)
+### <a name="assembly-compression-important"></a>Сжатие сборок (*важно*)
 
-Для внедрение .NET в проект Android Studio, необходим один дальнейших изменениях.
+Для внедрения .NET в проекте Android Studio требуется еще одно изменение.
 
-Откройте в нем **build.gradle** файл и добавьте следующее изменение:
+Откройте файл **Build. gradle** приложения и добавьте следующее изменение:
 
 ```groovy
 android {
@@ -143,9 +143,9 @@ android {
 }
 ```
 
-Xamarin.Android сейчас загружает сборки .NET непосредственно из пакета APK, но он требует сборки не будет сжат.
+Xamarin. Android в настоящее время загружает сборки .NET непосредственно из APK, но требует, чтобы сборки не были сжаты.
 
-Если вы не настроили, приложение о сбоях при запуске и на консоль выводятся примерно следующее:
+Если эта программа не установлена, приложение аварийно завершит работу при запуске и выведет на консоль примерно следующее:
 
 ```shell
 com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavailable>'. Assuming this is part of Fast Deployment. Exiting...
@@ -153,33 +153,33 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 ## <a name="run-the-app"></a>Запуск приложения
 
-После запуска приложения:
+При запуске приложения:
 
-![Hello из C# пример, в эмуляторе](android-images/hello-from-csharp-android.png)
+![Приветствие C# из примера, выполняемого в эмуляторе](android-images/hello-from-csharp-android.png)
 
 Обратите внимание на то, что произошло здесь:
 
-* У нас есть C# класс, `HelloActivity`, Java, подклассы
+* У нас есть C# класс, `HelloActivity`который подклассировать Java
 * У нас есть файлы ресурсов Android
 * Мы использовали их из Java в Android Studio
 
-Для этого примера для работы всех следующих настраиваются в конечного пакета APK:
+Чтобы этот пример работал, в окончательной APK настраиваются все следующие значения:
 
-* Xamarin.Android настраивается на запуск приложения
-* Сборки .NET, включенные в **активы/сборок**
-* **AndroidManifest.xml** изменений для вашей C# действия и т. д.
-* Android ресурсы и ресурсы из библиотеки .NET
-* [Вызываемые оболочки времени Android](~/android/platform/java-integration/android-callable-wrappers.md) для любого `Java.Lang.Object` подкласс
+* Xamarin. Android настраивается при запуске приложения
+* Сборки .NET, включаемые в **активы или сборки**
+* Изменения **AndroidManifest. XML** для ваших C# действий и т. д.
+* Ресурсы и активы Android из библиотек .NET
+* [Вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) для `Java.Lang.Object` любого подкласса
 
-Если вы ищете дополнительным пошаговым руководством, ознакомьтесь с следующий видеоролик, который показывает, внедрение Чарльз Петцольд [FingerPaint Демонстрация](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/) в проекте Android Studio:
+Если вы ищете дополнительное пошаговое руководство, ознакомьтесь с приведенным ниже видео, в котором демонстрируется внедрение [демонстрационного финжерпаинта](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) Чарльз Петцольд в проект Android Studio.
 
-[![Embeddinator до 4000 для Android](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
+[![Ембеддинатор-4000 для Android](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
 
-## <a name="using-java-18"></a>С помощью Java 1.8
+## <a name="using-java-18"></a>Использование Java 1,8
 
-На момент написания этой статьи, лучше всего использовать Android Studio 3.0 ([загрузить здесь](https://developer.android.com/studio/index.html)).
+Начиная с этого, лучшим вариантом является использование Android Studio 3,0 ([скачать здесь](https://developer.android.com/studio/index.html)).
 
-Чтобы включить Java 1.8 в модуль приложения **build.gradle** файла:
+Чтобы включить Java 1,8 в файле **Build. gradle** модуля приложения, выполните следующие действия.
 
 ```groovy
 android {
@@ -191,9 +191,9 @@ android {
 }
 ```
 
-Вы также можете рассмотреть [тестовый проект Android Studio](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) для получения дополнительных сведений. 
+Дополнительные сведения см. в [Android Studio тестовом проекте](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) . 
 
-Если вы хотите использовать стабильную 2.3.x Android Studio, необходимо включить устаревшие Джек цепочки инструментов:
+Если вы хотите использовать Android Studio 2.3. x стабильны, необходимо включить устаревшие цепочки инструментовы разъемов:
 
 ```groovy
 android {
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Текущие ограничения в Android
 
-Прямо сейчас, если вы подкласс `Java.Lang.Object`, Xamarin.Android создаст заглушку Java (Android вызываемую оболочку) вместо внедрения .NET. По этой причине необходимо выполнить те же правила для экспорта C# для Java как Xamarin.Android. Пример:
+Прямо сейчас, если вы подпишете подкласс `Java.Lang.Object`, Xamarin. Android создаст заглушку Java (вызываемую оболочку Android) вместо внедрения .NET. Поэтому необходимо следовать тем же правилам для экспорта C# в Java как Xamarin. Android. Пример:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -223,8 +223,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-* `[Register]` необходимо сопоставить с требуемой именем пакета Java
-* `[Export]` необходимо, чтобы сделать метод видимым для Java
+* `[Register]`требуется для соответствия требуемому имени пакета Java
+* `[Export]`требуется для того, чтобы метод был виден Java
 
 Мы можем использовать `ViewSubclass` в Java следующим образом:
 
@@ -235,36 +235,36 @@ ViewSubclass v = new ViewSubclass(this);
 v.apply("Hello");
 ```
 
-Дополнительные сведения о [интеграции Java с помощью Xamarin.Android](~/android/platform/java-integration/index.md).
+Узнайте больше об [интеграции Java с Xamarin. Android](~/android/platform/java-integration/index.md).
 
 ## <a name="multiple-assemblies"></a>Несколько сборок
 
-Внедрение в одну сборку прост; Однако это гораздо более вероятно, будет иметь более одного C# сборки. Много раз будет иметь зависимости от пакетов NuGet, таких как библиотеки поддержки Android или сервисы Google Play, дальнейшей усложняют ситуацию.
+Внедрение одной сборки является простой задачей. Однако гораздо более вероятно, что у вас будет несколько C# сборок. Многие случаи зависят от пакетов NuGet, таких как библиотеки поддержки Android или Сервисы Google Play, которые еще более усложняют.
 
-Это приводит к дилемму, так как внедрение .NET должен включать множество типов файлов в окончательный AAR, такие как:
+Это вызывает дилеммой, так как внедрение .NET должно включать в окончательный AAR множество типов файлов, например:
 
-* Ресурсов Android
 * Ресурсы Android
-* Android собственные библиотеки
-* Источник java, Android
+* Ресурсы для Android
+* Собственные библиотеки Android
+* Источник Android Java
 
-Скорее всего вы хотите включить эти файлы из библиотеки поддержки Android или сервисы Google Play в вашей AAR, но предпочитаете использовать в Android Studio официальной версии от Google.
+Скорее всего, вы не хотите включать эти файлы из библиотеки поддержки Android или Сервисы Google Play в AAR, но вместо этого использовать официальную версию из Google в Android Studio.
 
 Ниже приведен рекомендуемый подход.
 
-* Передайте внедрение .NET любую сборку, вы являетесь владельцем (иметь источник) и хотите вызвать из Java
-* Передайте внедрение .NET любую сборку, необходимо Android, собственные библиотеки и ресурсы из
-* Добавление зависимостей Java, таких как Android поддерживает библиотеку или сервисы Google Play в Android Studio
+* Передайте .NET внедрение любой сборки, которой вы владеете (имеет источник) и хотите вызвать из Java
+* Передайте .NET внедрять любую сборку, в которую потребуются ресурсы Android, собственные библиотеки или ресурсы из
+* Добавьте зависимости Java, такие как библиотека поддержки Android или Сервисы Google Play, в Android Studio
 
-Поэтому команда может быть:
+Поэтому команда может выглядеть следующим образом:
 
 ```shell
 mono Embeddinator-4000.exe --gen=Java --platform=Android -c -o output YourMainAssembly.dll YourDependencyA.dll YourDependencyB.dll
 ```
 
-Что-то следует исключить из NuGet, если только вы узнаете, он содержит ресурсов Android "," ресурсы "," в проект Android Studio и т. д. Можно также опустить зависимости, которые необходимо вызвать из Java и компоновщик _следует_ включать разделы библиотеки, которые необходимы.
+Вы должны исключить что-либо из NuGet, если оно содержит ресурсы Android, ресурсы и т. д., которые понадобятся вам в проекте Android Studio. Можно также опустить зависимости, которые не нужно вызывать из Java, а компоновщик _должен_ включать необходимые части библиотеки.
 
-Чтобы добавить зависимые компоненты Java в Android Studio вашего **build.gradle** файл может выглядеть так:
+Чтобы добавить любые зависимости Java, необходимые в Android Studio, файл **Build. gradle** может выглядеть следующим образом:
 
 ```groovy
 dependencies {
@@ -277,10 +277,10 @@ dependencies {
 
 ## <a name="further-reading"></a>Дополнительные сведения
 
-* [Обратные вызовы на устройстве Android](~/tools/dotnet-embedding/android/callbacks.md)
-* [Предварительное исследование Android](~/tools/dotnet-embedding/android/index.md)
-* [Ограничения внедрение .NET](~/tools/dotnet-embedding/limitations.md)
-* [Вносящая вклад в проект с открытым кодом](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [Обратные вызовы на Android](~/tools/dotnet-embedding/android/callbacks.md)
+* [Предварительные исследования Android](~/tools/dotnet-embedding/android/index.md)
+* [Ограничения внедрения .NET](~/tools/dotnet-embedding/limitations.md)
+* [Вклад в проект с открытым исходным кодом](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Коды ошибок и описания](~/tools/dotnet-embedding/errors.md)
 
 ## <a name="related-links"></a>Связанные ссылки

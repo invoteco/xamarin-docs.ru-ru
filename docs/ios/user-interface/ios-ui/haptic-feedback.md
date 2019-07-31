@@ -1,53 +1,53 @@
 ---
-title: Связи Haptic в Xamarin.iOS
-description: В этом документе описывается, как для обеспечения обратной связи haptic в приложении Xamarin.iOS. В нем описывается UIImpactFeedbackGenerator UINotificationFeedbackGenerator и UISelectionFeedbackGenerator.
+title: Предоставление обратной связи Хаптик в Xamarin. iOS
+description: В этом документе описывается, как обеспечить обратную связь хаптик в приложении Xamarin. iOS. В нем обсуждаются Уиимпактфидбаккженератор, Уинотификатионфидбаккженератор и Уиселектионфидбаккженератор.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b2c381c59ba1574e80babc2c7e68535a3deffe35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9054135713837374dade958b3ccb35cc239bdb94
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384623"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655879"
 ---
-# <a name="providing-haptic-feedback-in-xamarinios"></a>Связи Haptic в Xamarin.iOS
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Предоставление обратной связи Хаптик в Xamarin. iOS
 
 <a name="Overview" />
 
 ## <a name="overview"></a>Обзор
 
-На iPhone 7 и iPhone 7 и Apple включила haptic ответы, предоставляющие дополнительные способы физически взаимодействовать пользователь. Обеспечение обратной связи haptic (часто называют просто Haptics) использует смысле сенсорного ввода (через force, вибрация или перемещения) в пользовательском интерфейсе конструктора. Используйте эти новые параметры tactile отзывов для привлечет внимание пользователя и подчеркивает их действия.
+На iPhone 7 и iPhone 7 Plus компания Apple включила новые ответы хаптик, которые предоставляют дополнительные способы физического привлечения пользователя. Обратная связь хаптик (часто именуемая просто AS Хаптикс) использует сенсорное касание (с помощью Force, вибрации или движения) в разработке пользовательского интерфейса. Используйте эти новые параметры обратной связи тактиле для получения внимания пользователя и подготовьте свои действия.
 
 Будут подробно рассмотрены следующие темы:
 
-- [Об обратной связи Haptic](#About-Haptic-Feedback)
-- [UIImpactFeedbackGenerator](#UIImpactFeedbackGenerator)
-- [UINotificationFeedbackGenerator](#UINotificationFeedbackGenerator)
-- [UISelectionFeedbackGenerator](#UISelectionFeedbackGenerator)
+- [О Хаптик отзыва](#About-Haptic-Feedback)
+- [уиимпактфидбаккженератор](#UIImpactFeedbackGenerator)
+- [уинотификатионфидбаккженератор](#UINotificationFeedbackGenerator)
+- [уиселектионфидбаккженератор](#UISelectionFeedbackGenerator)
 
 <a name="About-Haptic-Feedback" />
 
-## <a name="about-haptic-feedback"></a>Об обратной связи Haptic
+## <a name="about-haptic-feedback"></a>О Хаптик отзыва
 
-Несколько встроенных элементов пользовательского интерфейса уже обеспечивают связи haptic, такие как средства выбора, коммутаторы и ползунков. iOS 10 теперь добавлена возможность программно запускать с помощью конкретный подкласс haptics `UIFeedbackGenerator` класса.
+Несколько встроенных элементов пользовательского интерфейса уже предоставляют хаптик отзывы, такие как подборки, переключатели и ползунки. iOS 10 теперь добавляет возможность программного запуска хаптикс с помощью конкретного `UIFeedbackGenerator` подкласса класса.
 
-Разработчик может использовать одно из следующих `UIFeedbackGenerator` подклассам программно триггера обратной связи haptic:
+Разработчик может использовать один из следующих `UIFeedbackGenerator` подклассов для программного запуска обратной связи хаптик:
 
-- `UIImpactFeedbackGenerator` — Используйте этот генератор обратной связи в дополнение к действие или задачи, такие как представления «thud» при представлении слайдов в месте, или если два на экране объекта конфликтуют.
-- `UINotificationFeedbackGenerator` — Используйте этот генератор обратной связи для получения уведомлений, таких как завершение, сбои или любой другой тип предупреждения.
-- `UISelectionFeedbackGenerator` — Используйте этот генератор обратной связи для выделения активно изменение, например выбора элемента из списка.
+- `UIImpactFeedbackGenerator`— Используйте этот генератор обратной связи, чтобы дополнить действие или задачу, например выпустить "суд" при наличии слайдов представления или при конфликте двух объектов на экране.
+- `UINotificationFeedbackGenerator`— Используйте этот генератор обратной связи для таких уведомлений, как завершение действия, сбой или предупреждение любого другого типа.
+- `UISelectionFeedbackGenerator`— Используйте этот генератор обратной связи для изменяемого выбора, например комплектации элемента из списка.
 
 <a name="UIImpactFeedbackGenerator" />
 
-### <a name="uiimpactfeedbackgenerator"></a>UIImpactFeedbackGenerator
+### <a name="uiimpactfeedbackgenerator"></a>уиимпактфидбаккженератор
 
-Используйте этот генератор обратной связи в дополнение к действие или задачи, такие как представления «thud» при представлении слайдов в месте, или если два на экране объекта конфликтуют.
+Используйте этот генератор обратной связи, чтобы дополнить действие или задачу, например выпустить «суд» при наличии слайдов представления или при конфликте двух объектов на экране.
 
-Используйте следующий код, чтобы отзыв влияние триггера:
+Используйте следующий код, чтобы активировать отзыв о влиянии:
 
 ```csharp
 using UIKit;
@@ -61,23 +61,23 @@ impact.Prepare ();
 impact.ImpactOccurred ();
 ```
 
-Когда разработчик создает новый экземпляр класса `UIImpactFeedbackGenerator` класса, они предоставляют `UIImpactFeedbackStyle` указание степень обратной связи, как:
+Когда разработчик создает новый экземпляр класса, `UIImpactFeedbackGenerator` он `UIImpactFeedbackStyle` предоставляет стойкость отзыва следующим образом:
 
 - `Heavy`
 - `Medium`
 - `Light`
 
-`Prepare` Метод `UIImpactFeedbackGenerator` вызывается для информирования системы, что связи haptic будет возникать таким образом, чтобы его можно свести к минимуму задержки.
+`Prepare` Метод`UIImpactFeedbackGenerator` вызывается для информирования системы о том, что хаптик обратная связь, чтобы она могла максимально сокращать задержку.
 
-`ImpactOccurred` Метод затем активирует обратной связи haptic.
+Затем `ImpactOccurred` метод активирует хаптик отзыв.
 
 <a name="UINotificationFeedbackGenerator" />
 
-### <a name="uinotificationfeedbackgenerator"></a>UINotificationFeedbackGenerator
+### <a name="uinotificationfeedbackgenerator"></a>уинотификатионфидбаккженератор
 
-Используйте этот генератор обратной связи для получения уведомлений, таких как завершение, сбои или любой другой тип предупреждения.
+Используйте этот генератор обратной связи для таких уведомлений, как завершение действия, сбой или предупреждение любого другого типа.
 
-Используйте указанный ниже код для отправки уведомлений триггера:
+Чтобы активировать отзыв уведомлений, используйте следующий код:
 
 ```csharp
 using UIKit;
@@ -91,9 +91,9 @@ notification.Prepare ();
 notification.NotificationOccurred (UINotificationFeedbackType.Error);
 ```
 
-Новый экземпляр класса `UINotificationFeedbackGenerator` создается класс и его `Prepare` метод вызывается для информирования системы, что связи haptic будет возникать таким образом, чтобы его можно свести к минимуму задержки.
+Создается новый экземпляр `UINotificationFeedbackGenerator` класса и вызывается его `Prepare` метод для информирования системы о том, что хаптик обратная связь, чтобы она могла максимально сокращать задержку.
 
-`NotificationOccurred` Вызывается для активации обратной связи haptic с заданной `UINotificationFeedbackType` из:
+Вызывается для инициации обратной связи хаптик с заданным `UINotificationFeedbackType`: `NotificationOccurred`
 
 - `Success`
 - `Warning`
@@ -101,11 +101,11 @@ notification.NotificationOccurred (UINotificationFeedbackType.Error);
 
 <a name="UISelectionFeedbackGenerator" />
 
-### <a name="uiselectionfeedbackgenerator"></a>UISelectionFeedbackGenerator
+### <a name="uiselectionfeedbackgenerator"></a>уиселектионфидбаккженератор
 
-Используйте этот генератор обратной связи для выделения активно изменение, например выбора элемента из списка.
+Используйте этот генератор обратной связи для активно изменяемого выбора, например комплектации элемента из списка.
 
-Используйте следующий код, чтобы отзывы о выборе триггера:
+Используйте следующий код, чтобы активировать отзыв о выборе:
 
 ```csharp
 using UIKit;
@@ -119,14 +119,14 @@ selection.Prepare ();
 selection.SelectionChanged ();
 ```
 
-Новый экземпляр класса `UISelectionFeedbackGenerator` создается класс и его `Prepare` метод вызывается для информирования системы, что связи haptic будет возникать таким образом, чтобы его можно свести к минимуму задержки.
+Создается новый экземпляр `UISelectionFeedbackGenerator` класса и вызывается его `Prepare` метод для информирования системы о том, что хаптик обратная связь, чтобы она могла максимально сокращать задержку.
 
-`SelectionChanged` Метод затем активирует обратной связи haptic.
+Затем `SelectionChanged` метод активирует хаптик отзыв.
 
 ## <a name="summary"></a>Сводка
 
-В этой статье подробно рассматривается новых видов связи haptic в iOS 10 и способы их реализации в Xamarin.iOS.
+В этой статье были рассмотрены новые типы отзывов о хаптик, доступные в iOS 10, и способы их реализации в Xamarin. iOS.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Примеры iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

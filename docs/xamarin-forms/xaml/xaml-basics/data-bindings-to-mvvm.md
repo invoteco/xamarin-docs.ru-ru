@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 11bca4bc74316f87ab7b329c897efcd4b768bc03
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61174596"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657105"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Часть 5. От привязки данных до MVVM
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Шаблон архитектуры Model-View-ViewModel (MVVM) была изобретена с XAML в виду. Шаблон обеспечивает разделение уровней программного обеспечения и три — пользовательский интерфейс XAML, именем представления. базовые данные, называется моделью; а посредником между представлением и моделью, называются ViewModel. View и ViewModel часто соединены через привязки данных, определенные в файле XAML. BindingContext для представления обычно является экземпляром ViewModel._
 
@@ -35,7 +35,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` представляет собой очень специальное свойство: При задании `BindingContext` на элементе, он наследует все дочерние элементы этого элемента. Это означает, что все дочерние `StackLayout` этот же `BindingContext`, и они могут содержать простые привязки к свойствам этого объекта.
+`BindingContext`— очень специальное свойство: При задании `BindingContext` для элемента он наследуется всеми дочерними элементами этого элемента. Это означает, что все дочерние `StackLayout` этот же `BindingContext`, и они могут содержать простые привязки к свойствам этого объекта.
 
 В **One-Shot DateTime** программы, два дочерних содержат привязки к свойствам, `DateTime` значение, а два других дочерних элементов содержат привязок, которые отсутствуют пути привязки. Это означает, что `DateTime` само значение используется для `StringFormat`:
 
@@ -298,7 +298,7 @@ namespace XamlSamples
 
 ## <a name="commanding-with-viewmodels"></a>Выполнение команд с помощью модели ViewModel
 
-Во многих случаях шаблон MVVM ограничен манипуляции элементов данных: Объекты пользовательского интерфейса в представлении параллельные объекты данных в модели представления.
+Во многих случаях шаблон MVVM ограничен манипуляцией элементов данных: Объекты интерфейса пользователя в объектах представления Parallel Data в ViewModel.
 
 Тем не менее иногда представления должен содержать кнопки, вызова различных действий в ViewModel. Но не может содержать ViewModel `Clicked` обработчики для кнопок, так как, будет привязана ViewModel парадигме конкретного пользовательского интерфейса.
 
@@ -581,7 +581,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>Реализация меню навигации
 
-[XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/) программа, которая содержит весь исходный код в этой серии статей использует модель представления для его домашней страницы. Этого ViewModel — это определение класса с коротким три свойства с именем `Type`, `Title`, и `Description` , содержащие тип каждого из образцов страниц, название и краткое описание. Кроме того, ViewModel определяет статическое свойство с именем `All` , являющийся коллекцией всех страниц в программе:
+[XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) программа, которая содержит весь исходный код в этой серии статей использует модель представления для его домашней страницы. Этого ViewModel — это определение класса с коротким три свойства с именем `Type`, `Title`, и `Description` , содержащие тип каждого из образцов страниц, название и краткое описание. Кроме того, ViewModel определяет статическое свойство с именем `All` , являющийся коллекцией всех страниц в программе:
 
 ```csharp
 public class PageDataViewModel
@@ -702,7 +702,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Конференция Xamarin Evolve 2016: MVVM, ставшая простой благодаря Xamarin.Forms и Prism**
+**Xamarin развивается 2016: MVVM стало простым с помощью Xamarin. Forms и Prism**
 
 ## <a name="summary"></a>Сводка
 
@@ -711,7 +711,7 @@ XAML — это мощное средство для определения по
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Часть 1. Начало работы с XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Часть 2. Основной синтаксис XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Часть 3. Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

@@ -1,22 +1,22 @@
 ---
 title: Особенности платформы
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать и создание особенностей платформы.
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать и создавать зависящие от платформы.
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 04cbdaac50b0ea77659d7c495dcd1a9e6d43335c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f6190b9c0d29d57d6d509bdff25e2ce3572e3a3c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926985"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646839"
 ---
 # <a name="platform-specifics"></a>Особенности платформы
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов._
 
@@ -34,11 +34,11 @@ _Особенности платформы позволяют использов
 
 Особенности платформы востребован `On<T>` текучего кода API из [ `IPlatformElementConfiguration` ](xref:Xamarin.Forms.IPlatformElementConfiguration`2) объектов. Благодаря этому несколько особенностей платформы должен быть вызван на один и тот же объект с каскадным метод.
 
-Дополнительные сведения о предоставляемых Xamarin.Forms особенностей платформы, см. в разделе [iOS особенностей платформы](~/xamarin-forms/platform/ios/index.md), [Android особенностей платформы](~/xamarin-forms/platform/android/index.md), и [Windows особенностей платформы](~/xamarin-forms/platform/windows/index.md).
+Дополнительные сведения о конкретных платформах, предоставляемых Xamarin. Forms, см. в разделе [особенности платформы iOS](~/xamarin-forms/platform/ios/index.md), [особенности платформы Android](~/xamarin-forms/platform/android/index.md)и [особенности платформы Windows](~/xamarin-forms/platform/windows/index.md).
 
 ## <a name="creating-platform-specifics"></a>Создание особенностей платформы
 
-Поставщики могут создавать свои собственные особенности платформы с эффектами. Эффект предоставляет определенных функциональных возможностей, которые затем передаются через конкретную платформу. Результатом является эффект, можно было более легко через XAML и текучего кода API.
+Поставщики могут создавать собственные платформы с применением эффектов. Эффект предоставляет определенных функциональных возможностей, которые затем передаются через конкретную платформу. Результатом является эффект, можно было более легко через XAML и текучего кода API.
 
 Процесс создания конкретной платформы выглядит следующим образом:
 
@@ -53,15 +53,15 @@ _Особенности платформы позволяют использов
 > [!NOTE]
 > Он является предусмотрено, что этот способ будет использоваться поставщиков для создания собственных особенностей платформы, для упрощения потребления пользователями. Хотя пользователи могут начать создавать свои собственные особенности платформы, следует отметить, что он требует больше кода, чем создание и использование эффекта.
 
-[Пример приложения](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) демонстрирует `Shadow` платформы, добавляющий тени к тексту, отображаемому элементом [ `Label` ](xref:Xamarin.Forms.Label) управления:
+[Пример приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) демонстрирует `Shadow` конкретную платформу, которая добавляет тень к [`Label`](xref:Xamarin.Forms.Label) тексту, отображаемому элементом управления:
 
 ![](images/screenshots.png "Тени от платформы")
 
-[Пример приложения](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) реализует `Shadow` платформы на каждой платформе, для простоты понимания. Тем не менее помимо Каждая реализация эффект платформой, реализация класса теневой копии мало чем отличается для каждой платформы. Таким образом это руководство посвящено реализации класса теневой копии и связанные влияет на единую платформу.
+В [примере приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) для каждой `Shadow` платформы реализована конкретная платформа для простоты понимания. Тем не менее помимо Каждая реализация эффект платформой, реализация класса теневой копии мало чем отличается для каждой платформы. Таким образом это руководство посвящено реализации класса теневой копии и связанные влияет на единую платформу.
 
 Дополнительные сведения об эффектах см. в разделе [Настройка элементов управления с эффектами](~/xamarin-forms/app-fundamentals/effects/index.md).
 
-### <a name="creating-a-platform-specific-class"></a>Создание класса платформы
+### <a name="creating-a-platform-specific-class"></a>Создание класса, зависящего от платформы
 
 Конкретную платформу создается как `public static` класса:
 
@@ -77,7 +77,7 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 
 В следующих разделах рассматривается реализация `Shadow` эффект от платформы и связанные с ней.
 
-#### <a name="adding-an-attached-property"></a>Добавление вложенного свойства
+#### <a name="adding-an-attached-property"></a>Добавление присоединенного свойства
 
 Необходимо добавить вложенное свойство `Shadow` платформы — разрешить использование через XAML:
 
@@ -191,7 +191,7 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 
 `IsShadowed` И `SetIsShadowed` методы расширения вызова get и set для `IsShadowed` вложенное свойство зависимостей, соответственно. Каждый метод расширения работает `IPlatformElementConfiguration<iOS, FormsElement>` тип, который указывает, что специфические для платформы может быть вызвана [ `Label` ](xref:Xamarin.Forms.Label) экземпляров из iOS.
 
-#### <a name="creating-the-effect"></a>Создание эффекта
+#### <a name="creating-the-effect"></a>Создание результата
 
 `Shadow` Добавляет платформы `MyCompany.LabelShadowEffect` для [ `Label` ](xref:Xamarin.Forms.Label), а затем удаляет его. В следующем коде показано в примере `LabelShadowEffect` реализации для проекта iOS:
 
@@ -252,7 +252,7 @@ namespace ShadowPlatformSpecific.iOS
 
 Дополнительные сведения о создании эффекта см. в разделе [Создание эффекта](~/xamarin-forms/app-fundamentals/effects/creating.md) и [передача параметров эффект как вложенные свойства](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md).
 
-### <a name="consuming-the-platform-specific"></a>Использование конкретных платформ
+### <a name="consuming-the-platform-specific"></a>Использование конкретной платформы
 
 `Shadow` Платформы потребляется в XAML, задав `Shadow.IsShadowed` вложенное свойство, чтобы `boolean` значение:
 
@@ -277,11 +277,11 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
-- [ShadowPlatformSpecific (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
 - [Особенности платформы iOS](~/xamarin-forms/platform/ios/index.md)
-- [Android особенностей платформы](~/xamarin-forms/platform/android/index.md)
+- [Особенности платформы Android](~/xamarin-forms/platform/android/index.md)
 - [Особенности платформы Windows](~/xamarin-forms/platform/windows/index.md)
 - [Настройка элементов управления с эффектами](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Вложенные свойства](~/xamarin-forms/xaml/attached-properties.md)
-- [PlatformConfiguration API](xref:Xamarin.Forms.PlatformConfiguration)
+- [API Платформконфигуратион](xref:Xamarin.Forms.PlatformConfiguration)

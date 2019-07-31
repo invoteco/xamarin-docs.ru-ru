@@ -7,22 +7,22 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: c71f0c0e5224c3fc4615d570487ed63c957c5556
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 09f2c2c0367b50146a564b370f555a1ed804371e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61344798"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642548"
 ---
 # <a name="skiasharp-curves-and-paths"></a>Пути и кривые SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Сведения об использовании для рисования кривых и использовать возможности пути SkiaSharp_
 
 Изучение [ `SKPath` ](xref:SkiaSharp.SKPath) методы и свойства началась в [ **строки и пути SkiaSharp** ](../paths/index.md) статьи. Здесь статей по-прежнему с методами, добавлять кривые к `SKPath` , а также использовать другие средства мощные путь. Вы увидите, как можно указать весь путь в краткую текстовую строку, как использовать эффекты пути и как внутренние компоненты пути во всех подробностях.
 
-Все примеры программ, в этом разделе можно найти в **пути и кривые SkiaSharp** странице [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) программы, а затем в [  **Кривые** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) папку решения.
+Все примеры программ, в этом разделе можно найти в **пути и кривые SkiaSharp** странице [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программы, а затем в [  **Кривые** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) папку решения.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Три способа нарисовать дугу](arcs.md)
 
@@ -56,4 +56,4 @@ _Сведения об использовании для рисования кр
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

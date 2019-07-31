@@ -1,38 +1,38 @@
 ---
-title: Настройка вида таблицы в Xamarin.iOS
-description: В этом документе описывается настройка вида таблицы в Xamarin.iOS. В нем описывается стили ячеек, "Стандартные", разделители ячейки и ячейки пользовательские макеты.
+title: Настройка внешнего вида таблицы в Xamarin. iOS
+description: В этом документе описывается настройка внешнего вида таблицы в Xamarin. iOS. В нем обсуждаются стили ячеек, принадлежности, разделители ячеек и пользовательские макеты ячеек.
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e86918d29e12d2f34dd3008b8c1d8e47471c24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cad7378e3d569454606a9d472cf30c42956553e4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61225786"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644944"
 ---
-# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Настройка вида таблицы в Xamarin.iOS
+# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Настройка внешнего вида таблицы в Xamarin. iOS
 
-Чтобы изменить внешний вид таблицы проще всего использовать стиль другую ячейку. Можно изменить стиль ячейки, который используется при создании каждой ячейки в `UITableViewSource` `GetCell` метод.
+Самый простой способ изменить внешний вид таблицы — использовать другой стиль ячейки. Можно изменить стиль ячейки, используемый при создании каждой ячейки в `UITableViewSource` `GetCell` методе.
 
 ## <a name="cell-styles"></a>Стили ячеек
 
-Существует четыре встроенных стилей:
+Существует четыре встроенных стиля:
 
--  **По умолчанию** — поддерживает `UIImageView`.
--  **Подзаголовок** — поддерживает `UIImageView` и подзаголовок.
--  **Значение1** — справа выровненные подзаголовок поддерживает `UIImageView`.
--  **Value2** — заголовок по правому краю и подзаголовок по левому краю (но не изображения).
+-  **По умолчанию** — `UIImageView`поддерживает.
+-  **Подзаголовок** — поддерживает `UIImageView` подзаголовок.
+-  **Значение1** — подзаголовок с `UIImageView`правом краю, поддерживает.
+-  **Значение2** — заголовок по правому краю, а подзаголовок — по левому краю (без изображения).
 
 
-Этих снимках экрана показано, как выглядит каждого стиля:
+На этих снимках экрана показано, как выглядит каждый стиль:
 
- [![](customizing-table-appearance-images/image7.png "Этих снимках экрана показано, как выглядит каждого стиля")](customizing-table-appearance-images/image7.png#lightbox)
+ [![](customizing-table-appearance-images/image7.png "На этих снимках экрана показано, как выглядит каждый стиль")](customizing-table-appearance-images/image7.png#lightbox)
 
-Образец **CellDefaultTable** содержит код для создания этих экранов. Стиль ячейки, задается в `UITableViewCell` конструктор, следующим образом:
+Пример **целлдефаулттабле** содержит код для создания этих экранов. Стиль ячейки задается в `UITableViewCell` конструкторе следующим образом:
 
 ```csharp
 cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
@@ -41,7 +41,7 @@ cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
 //cell = new UITableViewCell (UITableViewCellStyle.Value2, cellIdentifier);
 ```
 
-[Поддерживаемые свойства](xref:UIKit.UITableViewCell) ячейки, которую затем можно задать стиль:
+Затем можно задать [Поддерживаемые свойства](xref:UIKit.UITableViewCell) стиля ячейки:
 
 ```csharp
 cell.TextLabel.Text = tableItems[indexPath.Row].Heading;
@@ -49,21 +49,21 @@ cell.DetailTextLabel.Text = tableItems[indexPath.Row].SubHeading;
 cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].ImageName); // don't use for Value2
 ```
 
-## <a name="accessories"></a>Стандартные
+## <a name="accessories"></a>Принадлежност
 
-Ячейки может иметь следующие стандартные, добавлен справа от представления:
+В ячейки могут быть добавлены следующие аксессуары справа от представления:
 
--   **Флажок** — может использоваться для указания выбором в таблице.
--   **DetailButton** — реагирует на касание независимо от остальной части ячейки, позволяя ресурсам выполнить другую функцию, которая касается ячейки сам (например, открытие контекстного меню или новое окно, которое не является частью `UINavigationController` стека).
--   **DisclosureIndicator** — обычно используется, чтобы указать, что касается ячейки будет открыть другое представление.
--   **DetailDisclosureButton** — сочетание `DetailButton` и `DisclosureIndicator`.
+-   **Флажок** — можно использовать для указания множественного выбора в таблице.
+-   **Детаилбуттон** — реагирует на касание независимо от остальной части ячейки, позволяя ей выполнять различные функции для обращения к самой ячейке (например, открытие всплывающего окна или нового окна, которое не является частью `UINavigationController` стека).
+-   **Дисклосуреиндикатор** — обычно используется для указания того, что при прикосновении к ячейке откроется другое представление.
+-   **Детаилдисклосуребуттон** — сочетание `DetailButton` и `DisclosureIndicator`.
 
 
-Это, как они выглядят:
+Вот как они выглядят:
 
- [![](customizing-table-appearance-images/image8.png "Пример \"Стандартные\"")](customizing-table-appearance-images/image8.png#lightbox)
+ [![](customizing-table-appearance-images/image8.png "Образцы аксессуаров")](customizing-table-appearance-images/image8.png#lightbox)
 
-Для отображения одного из этих компонентов, можно задать `Accessory` свойство в `GetCell` метод:
+Чтобы отобразить одно из этих аксессуаров, можно задать `Accessory` свойство `GetCell` в методе:
 
 ```csharp
 cell.Accessory = UITableViewCellAccessory.Checkmark;
@@ -72,7 +72,7 @@ cell.Accessory = UITableViewCellAccessory.Checkmark;
 //cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
 ```
 
-Когда `DetailButton` или `DetailDisclosureButton` отображаются, необходимо также переопределить `AccessoryButtonTapped` для выполнения некоторых операций, когда он был затронут.
+Когда отображаются `DetailDisclosureButton` `AccessoryButtonTapped` или, необходимо также переопределить, чтобы выполнить какое-либо действие, когда оно затронуто. `DetailButton`
 
 ```csharp
 public override void AccessoryButtonTapped (UITableView tableView, NSIndexPath indexPath)
@@ -85,18 +85,18 @@ public override void AccessoryButtonTapped (UITableView tableView, NSIndexPath i
 }
 ```
 
-Образец **CellAccessoryTable** показан пример использования "Стандартные".
+В примере **целлакцессоритабле** показан пример с использованием аксессуаров.
 
-## <a name="cell-separators"></a>Разделители ячейки
+## <a name="cell-separators"></a>Разделители ячеек
 
-Ячейка разделителями являются ячеек таблицы, используемый для разделения таблицы. В таблице свойств.
+Разделители ячеек — это ячейки таблицы, используемые для разделения таблицы. Свойства задаются для таблицы.
 
 ```csharp
 TableView.SeparatorColor = UIColor.Blue;
 TableView.SeparatorStyle = UITableViewCellSeparatorStyle.DoubleLineEtched;
 ```
 
-Можно также добавить эффект размытия или естественность для разделителя:
+Можно также добавить к разделителю эффект размытия или вибрация:
 
 ```csharp
 // blur effect
@@ -114,22 +114,22 @@ TableView.SeparatorEffect = UIVibrancyEffect.FromBlurEffect(effect);
 TableView.SeparatorInset.InsetRect(new CGRect(4, 4, 150, 2));
 ```
 
-## <a name="creating-custom-cell-layouts"></a>Создание пользовательской ячейки макетов
+## <a name="creating-custom-cell-layouts"></a>Создание пользовательских макетов ячеек
 
-Чтобы изменить визуальный стиль таблицы, необходимо предоставить пользовательские ячейки для отображения. Пользовательской ячейки могут иметь различные цвета и управления разметки.
+Чтобы изменить визуальный стиль таблицы, необходимо предоставить пользовательские ячейки для отображения. Пользовательская ячейка может иметь разные цвета и макеты элементов управления.
 
-В примере CellCustomTable реализуется `UITableViewCell` подкласс, который определяет пользовательский макет элемента `UILabel`s и `UIImage` различные шрифты и цвета. Итоговый ячейки будет выглядеть следующим образом:
+В примере целлкустомтабле реализуется `UITableViewCell` подкласс, который определяет пользовательский `UILabel`макет s и `UIImage` с различными шрифтами и цветами. Итоговые ячейки выглядят следующим образом:
 
- [![](customizing-table-appearance-images/image9.png "Макеты пользовательских ячеек")](customizing-table-appearance-images/image9.png#lightbox)
+ [![](customizing-table-appearance-images/image9.png "Пользовательские макеты ячеек")](customizing-table-appearance-images/image9.png#lightbox)
 
-Пользовательский класс ячейки с состоит из только три метода:
+Класс пользовательской ячейки состоит только из трех методов:
 
--   **Конструктор** — создает элементы управления пользовательского интерфейса и задает свойства пользовательский стиль (например) начертание шрифта, размера и цвета).
--   **UpdateCell** — метод, который `UITableView.GetCell` использовать для задания свойств в ячейке.
--   **LayoutSubviews** — задать расположение элементов управления пользовательского интерфейса. В примере каждая ячейка имеет тот же макет, но более сложные ячейки (особенно с различными размерами) может потребоваться позиций другой макет в зависимости от содержимого, отображаемого.
+-   **Конструктор** — создает элементы управления пользовательского интерфейса и задает свойства пользовательского стиля (например, начертание, размер и цвет шрифта).
+-   **Упдатецелл** — метод `UITableView.GetCell` , используемый для задания свойств ячейки.
+-   **Лайаутсубвиевс** — задает расположение элементов управления пользовательского интерфейса. В примере каждая ячейка имеет одинаковый макет, но более сложная ячейка (особенно с различными размерами) может потребовать различных макетов в зависимости от отображаемого содержимого.
 
 
-Полный образец кода в **CellCustomTable > CustomVegeCell.cs** ниже:
+Полный пример кода в **целлкустомтабле > CustomVegeCell.CS** приведен ниже.
 
 ```csharp
 public class CustomVegeCell : UITableViewCell  {
@@ -170,7 +170,7 @@ public class CustomVegeCell : UITableViewCell  {
 }
 ```
 
-`GetCell` Метод `UITableViewSource` должно быть изменено для создания пользовательской ячейки:
+`GetCell` Метод`UITableViewSource` нужно изменить, чтобы создать пользовательскую ячейку:
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -189,4 +189,4 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WorkingWithTables (пример)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [Воркингвистаблес (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

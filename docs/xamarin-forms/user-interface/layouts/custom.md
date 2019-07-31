@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 56f7a5308d15425bdedd7d9098882a072d90d1f7
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347057"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645205"
 ---
 # <a name="creating-a-custom-layout"></a>Создание пользовательского макета
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms определяет четыре класса макета — StackLayout, AbsoluteLayout, RelativeLayout и сетки, и каждый упорядочивает его дочерние элементы по-разному. Тем не менее иногда это необходимо для организации содержимого страницы, с использованием макета, не поддерживаемых Xamarin.Forms. В этой статье объясняется, как создать класс пользовательского макета, а также демонстрирует класс WrapLayout, с учетом ориентации, который упорядочивает его дочерние элементы горизонтально по странице и затем создает оболочку для отображения последующих дочерних элементов для дополнительных строк._
 
@@ -427,7 +427,7 @@ async Task<ImageList> GetImageListAsync()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WrapLayout (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
+- [WrapLayout (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Пользовательские макеты](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Создание пользовательских макетов в Xamarin.Forms (видео)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
 - [Макет<T>](xref:Xamarin.Forms.Layout`1)

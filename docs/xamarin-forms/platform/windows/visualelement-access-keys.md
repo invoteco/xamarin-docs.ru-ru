@@ -1,28 +1,28 @@
 ---
-title: Ключи доступа VisualElement на Windows
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать Windows конкретных платформ, указывающее ключ доступа для VisualElement.
+title: Ключи доступа Висуалелемент в Windows
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу Windows, которая задает ключ доступа для Висуалелемент.
 ms.prod: xamarin
 ms.assetid: 771AF785-76B8-4372-89F5-E4D521D21E0C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ce1d682678c17bb24e7a4fd528c84554465c4fa6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926852"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656842"
 ---
-# <a name="visualelement-access-keys-on-windows"></a>Ключи доступа VisualElement на Windows
+# <a name="visualelement-access-keys-on-windows"></a>Ключи доступа Висуалелемент в Windows
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Ключи доступа, сочетания клавиш, повышении практичности и доступности приложений на универсальной платформе Windows (UWP), предоставляя интуитивно понятного для пользователей, для быстрого перехода и взаимодействия с приложения видимого пользовательского интерфейса клавиатуры, а не с помощью сенсорного ввода или мышь. Они являются сочетаниями клавишу Alt и один или несколько буквенно-цифровых ключей, обычно нажата последовательно. Сочетания клавиш автоматически поддерживаются для ключей доступа, использующих один буквенно-цифровой символ.
+Ключи доступа — это сочетания клавиш, которые улучшают удобство использования и доступность приложений на универсальная платформа Windows (UWP), предоставляя интуитивно понятный способ быстрого перехода к видимому пользовательскому интерфейсу приложения и взаимодействия с ним с помощью клавиатуры, а не с помощью сенсорного ввода или мышь. Они являются сочетаниями клавишу Alt и один или несколько буквенно-цифровых ключей, обычно нажата последовательно. Сочетания клавиш автоматически поддерживаются для ключей доступа, использующих один буквенно-цифровой символ.
 
 Сочетания клавиш доступа представляют собой перемещаемые эмблемы, отображаемого рядом с элементами управления, которые включают ключи доступа. Каждый совет ключа доступа содержит буквенно-цифровые ключи, активирующих сопоставленного элемента управления. Когда пользователь нажимает клавишу Alt, отображаются сочетания клавиш доступа.
 
-Можно указать ключ доступа для этой универсальной платформы Windows с платформой [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Он используется в XAML, задав [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) присоединенного свойства, чтобы буквы или цифры и при необходимости задавая [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) присоединенное свойство в значение [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) перечисления, [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) вложенное свойство, чтобы `double`и [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) присоединенное свойство `double`:
+Эта платформа, относящаяся к платформе UWP, используется для указания ключа доступа [`VisualElement`](xref:Xamarin.Forms.VisualElement)для. Он используется в XAML, задав [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) присоединенного свойства, чтобы буквы или цифры и при необходимости задавая [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) присоединенное свойство в значение [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) перечисления, [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) вложенное свойство, чтобы `double`и [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) присоединенное свойство `double`:
 
 ```xaml
 <TabbedPage ...
@@ -104,6 +104,6 @@ button4.On<Windows>()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
+- [API ВиндовсспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 105d06c7cea23ac0873c8de68d7ad1ad62ae1ffc
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61251454"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665715"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Создание пользовательских интерфейсов iOS в коде в Xamarin.iOS
 
@@ -89,10 +89,10 @@ Visual Studio для Mac не поддерживает пустой шаблон
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -118,10 +118,10 @@ public class AppDelegate : UIApplicationDelegate
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -132,7 +132,7 @@ public class AppDelegate : UIApplicationDelegate
 
 ## <a name="adding-a-controller"></a>Добавление контроллера
 
-Приложение может содержать большое количество контроллеров представления, но он должен иметь один корневой контроллер представления для управления контроллерами представления.  Добавление контроллера в окно путем создания `UIViewController` экземпляра и установив значение `window.RootViewController` свойства:
+Приложение может содержать большое количество контроллеров представления, но он должен иметь один корневой контроллер представления для управления контроллерами представления.  Добавление контроллера в окно путем создания `UIViewController` экземпляра и установив значение `Window.RootViewController` свойства:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -632,4 +632,4 @@ Apple рекомендует .xib или Storyboard-файл используе�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [SimpleLogin (пример)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)

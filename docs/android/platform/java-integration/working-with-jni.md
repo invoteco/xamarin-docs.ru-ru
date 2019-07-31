@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0b7ad7b8c97a5cd5952afd16b8c0afeff1dafe59
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fc06514be70d64f200a22fa96a7644c7d97be012
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510543"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643523"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>Работа с JNI и Xamarin. Android
 
@@ -158,7 +158,7 @@ public class HelloAndroid extends android.app.Activity {
 
 -   `ExportFieldAttribute`&ndash; указывает имя поля. Он находится в методе, который работает как инициализатор поля. Его можно использовать с `android.os.Parcelable`.
 
-В примере проекта [експортаттрибуте](https://developer.xamarin.com/samples/monodroid/ExportAttribute/) показано, как использовать эти атрибуты.
+В примере проекта [експортаттрибуте](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) показано, как использовать эти атрибуты.
 
 
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>Устранение неполадок Експортаттрибуте и Експортфиелдаттрибуте
@@ -455,7 +455,7 @@ partial class ManagedAdder : Adder {
 }
 ```
 
-Здесь тип имеет `Adder` псевдоним для типа Java.  `Adder` C# Атрибут используется для указания JNI имени `mono.android.test.Adder` типа `DoNotGenerateAcw` Java, а свойство используется для запрета создания АКВ. `[Register]` Это приведет к созданию АКВ для `ManagedAdder` типа, который правильно подклассет `mono.android.test.Adder` тип. Если свойство не использовалось, процесс сборки Xamarin. Android создавал бы новый `mono.android.test.Adder` тип Java. `RegisterAttribute.DoNotGenerateAcw` Это приведет к ошибкам компиляции, так как `mono.android.test.Adder` тип будет представлен дважды в двух отдельных файлах.
+Здесь тип имеет `Adder` псевдоним для типа Java. `Adder` C# Атрибут используется для указания JNI имени `mono.android.test.Adder` типа `DoNotGenerateAcw` Java, а свойство используется для запрета создания АКВ. `[Register]` Это приведет к созданию АКВ для `ManagedAdder` типа, который правильно подклассет `mono.android.test.Adder` тип. Если свойство не использовалось, процесс сборки Xamarin. Android создавал бы новый `mono.android.test.Adder` тип Java. `RegisterAttribute.DoNotGenerateAcw` Это приведет к ошибкам компиляции, так как `mono.android.test.Adder` тип будет представлен дважды в двух отдельных файлах.
 
 
 
@@ -1014,7 +1014,7 @@ new JValue (currentSum));
 
 Многие методы жниенв возвращают *ссылки на объекты* *JNI* , которые похожи `GCHandle`на s. JNI предоставляет три различных типа ссылок на объекты: локальные ссылки, глобальные ссылки и слабые глобальные ссылки. Все три представляются как `System.IntPtr`, *но* (в соответствии с разделом типов функций JNI) `IntPtr`не `JNIEnv` все возвращенные методы являются ссылками. Например, [жниенв. жетмесодид](xref:Android.Runtime.JNIEnv.GetMethodID*) возвращает `IntPtr`, но не возвращает ссылку на объект `jmethodID`, он возвращает. Дополнительные сведения см. в [документации по функции JNI](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html) .
 
-Локальные ссылки создаются большинством  методов создания ссылок.
+Локальные ссылки создаются большинством методов создания ссылок.
 Android допускает существование ограниченного числа локальных ссылок в любое заданное время, обычно 512. Локальные ссылки можно удалить с помощью [жниенв. делетелокалреф](xref:Android.Runtime.JNIEnv.DeleteLocalRef*).
 В отличие от JNI, не все методы Reference Жниенв, возвращающие ссылки на объекты, возвращают локальные ссылки. [Жниенв. FindClass](xref:Android.Runtime.JNIEnv.FindClass*) возвращает *глобальную* ссылку. Настоятельно рекомендуется удалять локальные ссылки как можно быстрее, возможно, путем создания [объекта Java. lang. Object](xref:Java.Lang.Object) вокруг объекта и указания `JniHandleOwnership.TransferLocalRef` в [Java. lang. Object (дескриптор IntPtr, перемещение жнихандлеовнершип). ](xref:Java.Lang.Object#ctor*)конструктор.
 

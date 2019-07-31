@@ -1,31 +1,31 @@
 ---
-title: Демонстрация жизненного цикла приложения для Xamarin.iOS
-description: В этом документе рассматриваются различные события жизненного цикла, обрабатываемые делегата приложения в приложении iOS, демонстрирующий, как и когда эти события обрабатываются.
+title: Демонстрация жизненного цикла приложения для Xamarin. iOS
+description: В этом документе рассматриваются различные события жизненного цикла, обрабатываемые делегатом приложения в приложении iOS, демонстрирующие, когда и как обрабатываются эти события.
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/17/2018
-ms.openlocfilehash: 3beb511c03b328ecea824bf89355d056df003f3e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4eefbd63a91c6fd9eeed7a6e5043db5a2ee9105b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60946197"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649376"
 ---
-# <a name="application-lifecycle-demo-for-xamarinios"></a>Демонстрация жизненного цикла приложения для Xamarin.iOS
+# <a name="application-lifecycle-demo-for-xamarinios"></a>Демонстрация жизненного цикла приложения для Xamarin. iOS
 
-В этой статье и [пример кода](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/) показано состояний четыре приложения в iOS, а роль `AppDelegate` методы в уведомление получить изменения состояния приложения. Каждый раз, когда приложение изменяет состояние, приложение выведет обновления для консоли:
+В этой статье и [образце кода](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) демонстрируются четыре состояния приложений в iOS, а также роль `AppDelegate` методов уведомления приложения о том, что состояния изменяются. Приложение будет печатать обновления в консоли при каждом изменении состояния приложения:
 
 [![](application-lifecycle-demo-images/image3-sml.png "Пример приложения")](application-lifecycle-demo-images/image3.png#lightbox)
 
-[![](application-lifecycle-demo-images/image4.png "Каждый раз, когда приложение изменяет состояние, приложение выведет обновления для консоли")](application-lifecycle-demo-images/image4.png#lightbox)
+[![](application-lifecycle-demo-images/image4.png "Приложение будет печатать обновления в консоли при каждом изменении состояния приложения")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## <a name="walkthrough"></a>Пошаговое руководство
 
-1. Откройте **жизненного цикла** в проекте **LifecycleDemo** решения.
-1. Откройте `AppDelegate` класса. Методы жизненного цикла, чтобы указать, когда приложение изменяет состояние добавлено ведение журнала:
+1. Откройте проект **жизненного цикла** в решении **лифецикледемо** .
+1. `AppDelegate` Откройте класс. В методы жизненного цикла добавлено ведение журнала, указывающее, когда приложение изменило состояние:
 
     ```csharp
     public override void OnActivated(UIApplication application)
@@ -51,13 +51,13 @@ ms.locfileid: "60946197"
     }
     ```
 
-1. Запустите приложение в симуляторе или на устройстве. `OnActivated` вызывается при запуске приложения. Приложение теперь находится в _Active_ состояния.
-1. Нажмите кнопку «Home» на симулятор или устройство, чтобы перевести приложение в фоновом режиме. `OnResignActivation` и `DidEnterBackground` будет вызываться как переход приложения из `Active` для `Inactive` в `Backgrounded` состояние. Так как не включена приложение код для выполнения в фоновом режиме, оно считается _приостановлено_ в памяти.
-1. Перейдите обратно к приложению для обеспечения ее на передний план. `WillEnterForeground` и `OnActivated` оба вызывается:
+1. Запустите приложение в симуляторе или на устройстве. `OnActivated`будет вызываться при запуске приложения. Теперь приложение находится в активном состоянии.
+1. Нажмите кнопку "домой" на симуляторе или устройстве, чтобы перенести приложение в фоновый режим. `OnResignActivation`и `DidEnterBackground` будут вызываться при переходе приложения из `Active` в `Inactive` `Backgrounded` состояние и. Так как для выполнения в фоновом режиме не задан код приложения, приложение считается приостановленным в памяти.
+1. Вернитесь к приложению, чтобы вернуть его на передний план. `WillEnterForeground`и `OnActivated` оба будут вызваны:
 
-    ![](application-lifecycle-demo-images/image4.png "Изменения состояния, выводимого на консоль")
+    ![](application-lifecycle-demo-images/image4.png "Изменения состояния, выводимые на консоль")
 
-    Следующую строку кода в контроллер представления выполняется в том случае, когда приложение вошел переднего плана в фоновом режиме и изменяет текст, отображаемый на экране.
+    Следующая строка кода в контроллере представления выполняется, когда приложение перешел на передний план из фона и изменяет текст, отображаемый на экране:
 
     ```csharp
     UIApplication.Notifications.ObserveWillEnterForeground ((sender, args) => {
@@ -65,16 +65,16 @@ ms.locfileid: "60946197"
     });
     ```
 
-1. Нажмите клавишу **Главная** кнопку, чтобы поместить приложение в фоновом режиме. Затем дважды щелкните **Главная** , чтобы открыть приложение переключателя. На iPhone X, проведите по экрану вверх в нижней части экрана:
+1. Нажмите кнопку **Главная** , чтобы перевести приложение в фоновый режим. Затем дважды коснитесь кнопки " **Главная** ", чтобы открыть переключатель приложения. На iPhone X проведите вверх от нижней части экрана:
 
-    [![Переключатель приложения](application-lifecycle-demo-images/app-switcher-sml.png "переключателя приложений")](application-lifecycle-demo-images/app-switcher.png#lightbox)
+    [![Переключатель приложений](application-lifecycle-demo-images/app-switcher-sml.png "Переключатель приложений")](application-lifecycle-demo-images/app-switcher.png#lightbox)
   
-1. Найдите приложение в переключателе приложения и проведите вверх, чтобы удалить его (в iOS 11, длинное нажатие пока красный значки появляются в углу):
+1. Выберите приложение в переключателе приложений и проведите вверх, чтобы удалить его (в iOS 11, длинное нажатие, пока Красные значки не появятся в углу):
 
-    [![Проведите по экрану снятия выполняемому приложению](application-lifecycle-demo-images/app-switcher-swipe-sml.png "считывание снятия выполняемому приложению")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
+    [![Проведите вверх, чтобы удалить работающее приложение](application-lifecycle-demo-images/app-switcher-swipe-sml.png "Проведите вверх, чтобы удалить работающее приложение")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
 
-iOS, чтобы закрыть приложение. Обратите внимание, что `WillTerminate` не вызывается, поскольку приложение уже _приостановлено_ в фоновом режиме.
+iOS завершит работу приложения. Обратите `WillTerminate` внимание, что не вызывается, так как приложение уже _приостановлено_ в фоновом режиме.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [LifecycleDemo (пример)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [Лифецикледемо (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)

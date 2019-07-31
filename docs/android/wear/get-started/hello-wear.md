@@ -1,68 +1,68 @@
 ---
 title: Основные сведения о Wear
-description: Создание первого приложения для Android Wear и запустите его на устройстве или эмуляторе одежды. В этом пошаговом руководстве содержатся пошаговые инструкции по созданию небольшой проект Android Wear, которая выполняет нажатия кнопок и отображает счетчик нажмите кнопку на устройстве Android Wear. Здесь объясняется, как выполнить отладку приложения, с помощью эмулятора износа или устройстве Android Wear, подключенный через Bluetooth на телефоне с Android. Он также предоставляет набор отладки советы для Android Wear.
+description: Создайте свое первое приложение "износ Android" и запустите его в эмуляторе или на устройстве. В этом пошаговом руководстве приводятся пошаговые инструкции по созданию небольшого проекта "износа Android", который обрабатывает нажатия кнопки и отображает счетчик щелчков на устройстве износа. В нем объясняется, как выполнить отладку приложения с помощью эмулятора износа или устройства, которое подключено через Bluetooth к телефону Android. Он также предоставляет набор советов по отладке для износа Android.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 056ab7a9fe4bcb7f07a9a7cd7c841a3d9f7574b6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277452"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648028"
 ---
 # <a name="hello-wear"></a>Основные сведения о Wear
 
-_Создание первого приложения для Android Wear и запустите его на устройстве или эмуляторе одежды. В этом пошаговом руководстве содержатся пошаговые инструкции по созданию небольшой проект Android Wear, которая выполняет нажатия кнопок и отображает счетчик нажмите кнопку на устройстве Android Wear. Здесь объясняется, как выполнить отладку приложения, с помощью эмулятора износа или устройстве Android Wear, подключенный через Bluetooth на телефоне с Android. Он также предоставляет набор отладки советы для Android Wear._
+_Создайте свое первое приложение "износ Android" и запустите его в эмуляторе или на устройстве. В этом пошаговом руководстве приводятся пошаговые инструкции по созданию небольшого проекта "износа Android", который обрабатывает нажатия кнопки и отображает счетчик щелчков на устройстве износа. В нем объясняется, как выполнить отладку приложения с помощью эмулятора износа или устройства, которое подключено через Bluetooth к телефону Android. Он также предоставляет набор советов по отладке для износа Android._
 
-![Снимок экрана приложения износа завершения этого руководства](hello-wear-images/example.png)
+![Снимок экрана приложения "износ", которое будет выполнено в этом учебнике](hello-wear-images/example.png)
 
-## <a name="your-first-wear-app"></a>Ваше первое приложение Wear
+## <a name="your-first-wear-app"></a>Ваше первое приложение для износа
 
-Выполните следующие действия, чтобы создать свое первое приложение Xamarin.Android одежды.
+Выполните следующие действия, чтобы создать первое приложение "износ Xamarin. Android":
 
-### <a name="1-create-a-new-android-project"></a>1. Создайте новый проект Android
+### <a name="1-create-a-new-android-project"></a>1. Создание нового проекта Android
 
-Создайте новый **приложение Android Wear**:
+Создайте новое **приложение "износ Android**":
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Создание Android Wear приложения в диалоговом окне нового проекта](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![Создание нового приложения "износ Android" в диалоговом окне "Создание проекта"](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Создание Android Wear приложения в диалоговом окне нового решения](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![Создание нового приложения "износ Android" в диалоговом окне "Создание решения"](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
 
-Этот шаблон автоматически включает **Носимого библиотеки Android Xamarin** NuGet (и зависимости) таким образом вы получаете доступ к износа конкретных мини-приложения. Если вы не видите шаблон одежды, просмотрите [установки и настройки](~/android/wear/get-started/installation.md) руководство еще раз проверьте, что вы установили поддерживаемым пакетом SDK для Android. 
+Этот шаблон автоматически включает в себя Microsoft **Xamarin Android носимого пользователем Library** NuGet (и зависимости), поэтому у вас будет доступ к мини-приложениям, которые относятся к износу. Если шаблон "недействительность" не отображается, ознакомьтесь с руководством по [установке и настройке](~/android/wear/get-started/installation.md) , чтобы убедиться, что вы установили поддерживаемую пакет SDK для Android. 
 
-### <a name="2-choose-the-correct-target-framework"></a>2. Выберите правильное **требуемой версии .NET Framework**
+### <a name="2-choose-the-correct-target-framework"></a>2. Выберите правильную **целевую платформу**
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Убедитесь, что **минимум Android к целевому объекту** присваивается **Android 5.0 (Lollipop)** или более поздней версии: 
+Убедитесь, что для параметра **Минимальная Целевая версия Android** установлено значение **Android 5,0 (без описания операций)** или более поздней версии: 
 
-[![Задание целевой платформы Android 5.0, в Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![Настройка требуемой версии .NET Framework для Android 5,0 в Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Установите требуемую версию .NET framework **Android 5.0 (Lollipop)** или более поздней версии:
+Убедитесь, что для целевой платформы задано значение **Android 5,0 (без описания операций)** или более поздней версии:
 
-[![Задание целевой платформы Android 5.0, в Visual Studio для Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![Настройка целевой платформы на Android 5,0 в Visual Studio для Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
-Дополнительные сведения об установке требуемой версии .NET framework, см. в разделе [уровнях API Android понимание](~/android/app-fundamentals/android-api-levels.md).
+Дополнительные сведения о настройке целевой платформы см. в разделе [Основные сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md).
 
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. Изменить **Main.axml** макета
+### <a name="3-edit-the-mainaxml-layout"></a>3. Изменение макета **Main. axml**
 
-Настройте макет, содержащий `TextView` и `Button` примера: 
+Настройте макет таким образом, чтобы `TextView` он содержал `Button` и для образца: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,9 +103,9 @@ android:layout_height="match_parent">
 </FrameLayout>
 ```
 
-### <a name="4-edit-the-mainactivitycs-source"></a>4. Изменить **MainActivity.cs** источника
+### <a name="4-edit-the-mainactivitycs-source"></a>4. Изменение источника **MainActivity.CS**
 
-Добавьте код для увеличения значения счетчика и отобразить ее при каждом нажатии кнопки. 
+Добавьте код для увеличения счетчика и отобразит его при нажатии кнопки: 
 
 ```csharp
 [Activity (Label = "WearTest", MainLauncher = true, Icon = "@drawable/icon")]
@@ -129,51 +129,51 @@ public class MainActivity : Activity
 }
 ```
 
-### <a name="5-setup-an-emulator-or-device"></a>5. Программа установки, в эмуляторе или на устройстве
+### <a name="5-setup-an-emulator-or-device"></a>5. Настройка эмулятора или устройства
 
-Следующий шаг настройки эмулятора или устройства для развертывания и запуска приложения. Если вы еще не знакомы с процессом развертывания и запуска приложений Xamarin.Android в целом, см. в разделе [Привет, Android: Краткое руководство](~/android/get-started/hello-android/hello-android-quickstart.md).
+Следующий шаг — Настройка эмулятора или устройства для развертывания и запуска приложения. Если вы еще не знакомы с процессом развертывания и запуска приложений Xamarin. Android в целом, ознакомьтесь с кратким руководством по [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
-Если у вас устройство Android Wear, таких как Android Wear Smartwatch, можно запустить приложение на эмуляторе. Сведения об отладке приложений износа в эмуляторе, см. в разделе [отладки Android Wear на эмуляторе](~/android/wear/deploy-test/debug-on-emulator.md).
+Если у вас нет такого устройства Android, как Android Смартватч, можно запустить приложение в эмуляторе. Сведения об отладке приложений износа в эмуляторе см. [в разделе Отладка износа Android в эмуляторе](~/android/wear/deploy-test/debug-on-emulator.md).
 
-При наличии на устройстве Android Wear, таких как Android Wear Smartwatch запуском приложения на устройстве, а не с помощью эмулятора. Дополнительные сведения об отладке на устройстве Android Wear см. в разделе [отладка на устройстве Wear](~/android/wear/deploy-test/debug-on-device.md).
+Если вы используете устройство Android, например "износ Android", вы можете запустить приложение на устройстве, а не в эмуляторе. Дополнительные сведения об отладке на устройстве с износом см. в разделе [Отладка на устройстве с износом](~/android/wear/deploy-test/debug-on-device.md).
 
 
-### <a name="6-run-the-android-wear-app"></a>6. Запуск приложения Android Wear
+### <a name="6-run-the-android-wear-app"></a>6. Запуск приложения "износ Android"
 
-Устройство Android Wear появятся в раскрывающееся меню устройства. Должно быть выбрано правильное устройство Android Wear или AVD перед запуском отладки. После выбора устройства, щелкните кнопку воспроизведения, чтобы развернуть приложение на эмуляторе или устройстве.
+Устройство "износ Android" должно отобразиться в меню устройства. Прежде чем начать отладку, обязательно выберите правильное устройство "износ Android" или AVD. Выбрав устройство, нажмите кнопку Воспроизвести, чтобы развернуть приложение в эмуляторе или на устройстве.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Выбор в меню Visual Studio устройства AVD, Wear](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![Выбор "износа AVD" в меню "устройство" Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Выбор AVD, Wear в Visual Studio для Mac меню устройства](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![Выбор "износа AVD" в меню "устройство" Visual Studio для Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
-Может появиться **минутку...**  сообщение (или другой вставки панели), сначала: 
+В первую очередь может появиться сообщение **только** о минуте (или на другом экране внутреннего): 
 
-![Посмотрите, как эмулятор отображает минутку...](hello-wear-images/please-wait.png)
+![Просмотр эмулятора просмотра всего за минуту...](hello-wear-images/please-wait.png)
 
-Если вы используете эмулятор Контрольные значения, может занять некоторое время для запуска приложения. При использовании Bluetooth, занимает больше времени, чтобы развернуть приложение, чем через USB. (Например, занимает около 5 минут развернуть это приложение часы LG G, подключенных к Bluetooth на телефон Nexus 5.)
+При использовании эмулятора наблюдения может потребоваться некоторое время для запуска приложения. При использовании Bluetooth требуется больше времени на развертывание приложения, чем на USB. (Например, это займет около 5 минут, чтобы развернуть это приложение в LG G Watch, подключенном к адаптеру хранилища на основе Bluetooth).
 
-После успешного развертывания приложения на экране устройства износа должен отображаться экран следующим образом:
+После успешного развертывания приложения на экране устройства «износ» появится экран следующего вида:
 
-[![Начальный экран приложения Wear](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![Начальный экран приложения "износ"](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
-Коснитесь **CLICK ME!** кнопка на устройстве Android Wear и см. в разделе инкремент счетчика каждой кнопки:
+Коснитесь элемента **Click Me!** на лицевой стороне устройства «износ» и увидите шаг счетчика с каждым касанием:
 
-[![Снимок экрана Wear приложения после 3 щелчков](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![Снимок экрана приложения "износ" после трех щелчков](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Ознакомьтесь с [Wear примеры](https://developer.xamarin.com/samples/android/Android%20Wear/) включая Android Wear приложений с помощью карт разрабатываются дополнительные приложения телефона.
+Ознакомьтесь с [примерами износа](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) , включая приложения "износ Android", с сопутствующими телефонными приложениями.
 
-Когда будете готовы для распространения приложения, см. в разделе [работа с упаковкой](~/android/wear/deploy-test/packaging.md).
+Когда вы будете готовы к распространению приложения, см. статью [Работа с упаковкой](~/android/wear/deploy-test/packaging.md).
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Щелкните мне приложение (пример)](https://developer.xamarin.com/samples/monodroid/wear/WearTest/)
+- [Щелкните приложение Me (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-weartest)

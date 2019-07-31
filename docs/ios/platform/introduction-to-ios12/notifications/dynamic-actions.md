@@ -1,44 +1,44 @@
 ---
-title: Кнопки действий динамического уведомлений в Xamarin.iOS
-description: С помощью iOS 12 расширение notification content можно добавлять, удалять и обновлять действие кнопки, отображаемые вместе с уведомления. В этом документе описывается использование кнопки действий динамического уведомлений с помощью Xamarin.iOS.
+title: Кнопки динамических действий с уведомлениями в Xamarin. iOS
+description: В iOS 12 расширение содержимого уведомлений может добавлять, удалять и обновлять кнопки действий, отображаемые вместе с уведомлением. В этом документе описывается использование кнопок действий динамического уведомления с помощью Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1a4380e321035b8948f9b40bdce052161025d5f3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876062"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652584"
 ---
-# <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Кнопки действий динамического уведомлений в Xamarin.iOS
+# <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Кнопки динамических действий с уведомлениями в Xamarin. iOS
 
-В iOS 12 уведомления можно динамически добавлять, удалять и обновлять свои кнопки соответствующее действие. Подобная настройка позволяет предоставлять пользователям действия, которые непосредственно относятся к содержимому уведомления и взаимодействие пользователя с ним.
+В iOS 12 уведомления могут динамически добавлять, удалять и обновлять связанные кнопки действий. Такая настройка позволяет предоставлять пользователям действия, которые непосредственно важны для содержимого уведомления, и взаимодействия пользователя с ним.
 
-## <a name="sample-app-redgreennotifications"></a>Пример приложения. RedGreenNotifications
+## <a name="sample-app-redgreennotifications"></a>Пример приложения: редгриннотификатионс
 
-Фрагменты кода в этом руководстве взяты из [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) пример приложения, который показывает, как использовать Xamarin.iOS для работы с кнопками действие уведомления в iOS 12.
+Фрагменты кода в этом руководстве взяты из примера приложения [редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , в котором демонстрируется использование Xamarin. iOS для работы с кнопками действий с уведомлениями в iOS 12.
 
-Этот пример приложения отправляет два вида локальных уведомлений: красный и зеленый.
-После того, как приложение отправки уведомления, используйте 3D Touch для просмотра его пользовательский интерфейс. Затем используйте кнопки действий уведомления для поворота изображения, которые в нем отображаются. Как поворачивает изображение, **Отменить поворот** кнопка появляется и исчезает при необходимости.
+Этот пример приложения отправляет два типа локальных уведомлений: красный и зеленый.
+После того как приложение отправит уведомление, используйте трехмерное касание для просмотра его настраиваемого пользовательского интерфейса. Затем используйте кнопки действия уведомления для поворота отображаемого изображения. При повороте изображения кнопка **сброса вращения** появляется и исчезает при необходимости.
 
-Фрагменты кода, в этом руководстве, взяты из этого примера приложения.
+Фрагменты кода в этом пошаговом окне поступают из этого примера приложения.
 
 ## <a name="default-action-buttons"></a>Кнопки действий по умолчанию
 
-Категория уведомления определяет его кнопки действий по умолчанию.
+Категория уведомлений определяет кнопки действий по умолчанию.
 
-Создайте и зарегистрируйте категории уведомлений при запуске приложения.
-Например, в [пример приложения](#sample-app-redgreennotifications), `FinishedLaunching` метод `AppDelegate` делает следующее:
+Создание и регистрация категорий уведомлений во время запуска приложения.
+Например, в [примере приложения](#sample-app-redgreennotifications) `FinishedLaunching` метод `AppDelegate` выполняет следующие действия:
 
-- Определяет одну категорию для красного уведомлений, а другой — для зеленого уведомления
-- Регистрирует эти категории путем вызова [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
-метод `UNUserNotificationCenter`
-- Присоединяет один [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
-для каждой категории
+- Определяет одну категорию для красных уведомлений, а другая — для экологичных уведомлений.
+- Регистрирует эти категории, вызывая метод[`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
+метода`UNUserNotificationCenter`
+- Присоединяет один элемент[`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
+к каждой категории
 
 В следующем примере кода показано, как это работает:
 
@@ -74,14 +74,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-На основе этого кода, все уведомления [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
-оно будет «красный category» или «зеленый category», по умолчанию, show **повернуть 20°** кнопкой действия.
+На основе этого кода все уведомления, для которых[`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
+"Красная-Category" или "Зеленая-Category", по умолчанию отображается кнопка действия " **повернуть 20 °** ".
 
-## <a name="in-app-handling-of-notification-action-buttons"></a>Обработка кнопки действий для уведомлений в приложении
+## <a name="in-app-handling-of-notification-action-buttons"></a>Обработка в приложении кнопок действий уведомления
 
-`UNUserNotificationCenter` имеет `Delegate` свойство типа [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
+`UNUserNotificationCenter`имеет свойство типа [`IUNUserNotificationCenterDelegate`.](xref:UserNotifications.IUNUserNotificationCenterDelegate) `Delegate`
 
-В примере приложения `AppDelegate` устанавливается как делегат центра уведомлений для пользователей в `FinishedLaunching`:
+В примере приложения `AppDelegate` задается как делегат центра уведомлений пользователя в `FinishedLaunching`:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -95,8 +95,8 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-Затем `AppDelegate` реализует [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
-Чтобы обработать действие касания кнопки:
+`AppDelegate` Затем реализует[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
+для управления отводами кнопок действий:
 
 ```csharp
 [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -119,29 +119,29 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
         }
 ```
 
-Эта реализация `DidReceiveNotificationResponse` не обрабатывает уведомления **повернуть 20°** кнопкой действия. Вместо этого расширение notification content обрабатывает нажатия этой кнопки. Дополнительно в следующем разделе рассматривается обработка кнопки действие уведомления.
+Эта реализация `DidReceiveNotificationResponse` не обрабатывает кнопку действия " **повернуть 20 °** " уведомления. Вместо этого в этой кнопке обрабатываются расширения содержимого уведомления. В следующем разделе далее обсуждается обработка кнопок действий с уведомлениями.
 
-## <a name="action-buttons-in-the-notification-content-extension"></a>Кнопки действий в расширение notification content
+## <a name="action-buttons-in-the-notification-content-extension"></a>Кнопки действий в расширении содержимого уведомлений
 
-Расширение notification content содержит контроллер представления, который определяет пользовательский интерфейс для уведомления.
+Расширение содержимого уведомлений содержит контроллер представления, который определяет пользовательский интерфейс для уведомления.
 
-Можно использовать в этом контроллере представления `GetNotificationActions` и `SetNotificationActions` методов в его [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
-свойство для доступа и изменения кнопки действий уведомления.
+Этот контроллер представления может использовать `GetNotificationActions` методы и `SetNotificationActions` для его[`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
+свойство для доступа и изменения кнопок действия уведомления.
 
-В примере приложения контроллер представления расширение notification content изменяет кнопки действий только в том случае, при ответе на коснуться кнопки действия уже существующие.
+В примере приложения контроллер представления расширения содержимого уведомления изменяет кнопки действий только при ответе на нажатие уже существующего действия.
 
 > [!NOTE]
-> Расширение содержимого может отвечать на действия нажатия кнопки в контроллер представления уведомление [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) метод, объявленный как часть [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
+> Расширение содержимого уведомления может реагировать на нажатие кнопки действия в [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) методе контроллера представления, объявленном как часть [иуннотификатионконтентекстенсион](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
-> На то, что она имеет одно имя с `DidReceiveNotificationResponse` метод [описанных выше](#in-app-handling-of-notification-action-buttons), это другой метод.
+> Хотя он использует имя с `DidReceiveNotificationResponse` [описанным выше](#in-app-handling-of-notification-action-buttons)методом, это другой метод.
 >
-> После расширение notification content обработав путем нажатия кнопки, можно ли определить основного приложения для обработки этого же нажатия кнопки. Чтобы сделать это, необходимо передать соответствующее значение [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) к очередной обработчик завершения:
+> После того как расширение содержимого уведомлений заканчивает обработку нажатия кнопки, оно может выбрать, следует ли сообщить основному приложению об обработке этой же кнопки. Для этого необходимо передать соответствующее значение [уннотификатионконтентекстенсионреспонсеоптион](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) в обработчик завершения:
 >
-> - `Dismiss` Указывает, что интерфейс уведомлений должно быть закрыто и что основное приложение не нужно обрабатывать нажатия кнопки.
-> - `DismissAndForwardAction` Указывает, что интерфейс уведомлений должно быть закрыто и основного приложения необходимо также обрабатывать нажатия кнопки.
-> - `DoNotDismiss` Указывает, что интерфейс уведомлений не должно быть закрыто и что основное приложение не нужно обрабатывать нажатия кнопки.
+> - `Dismiss`Указывает, что интерфейс уведомления должен быть закрыт, и что основному приложению не нужно обрабатывать нажатие кнопки.
+> - `DismissAndForwardAction`Указывает, что интерфейс уведомления должен быть закрыт, и что основное приложение также должно обрабатывать касание кнопки.
+> - `DoNotDismiss`Указывает, что интерфейс уведомления не должен быть закрыт, и что основному приложению не нужно обрабатывать нажатие кнопки.
 
-Модуль содержимого `DidReceiveNotificationResponse` метод определяет, какая кнопка была касание, поворачивает изображение в интерфейс уведомлений и отображение или скрытие **Сброс** кнопки действия:
+`DidReceiveNotificationResponse` Метод расширения содержимого определяет, какая кнопка действия была нажата, поворачивает изображение в интерфейсе уведомления и отображает или скрывает кнопку **сброса** действия:
 
 ```csharp
 [Export("didReceiveNotificationResponse:completionHandler:")]
@@ -184,14 +184,14 @@ public void DidReceiveNotificationResponse(UNNotificationResponse response, Acti
 }
 ```
 
-В этом случае метод передает `UNNotificationContentExtensionResponseOption.DoNotDismiss` к очередной обработчик завершения. Это значит, что интерфейс уведомления останется открытым.
+В этом случае метод передает `UNNotificationContentExtensionResponseOption.DoNotDismiss` его обработчику завершения. Это означает, что интерфейс уведомления останется открытым.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример приложения — RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Платформа уведомлений пользователя в Xamarin.iOS](~/ios/platform/user-notifications/index.md)
-- [Объявление типов практические уведомлений](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
-- [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Новые возможности в уведомления для пользователей (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Рекомендации и новые возможности в уведомления для пользователей (WWDC 2017 г.)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Пример приложения — Редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Платформа уведомлений пользователей в Xamarin. iOS](~/ios/platform/user-notifications/index.md)
+- [Объявление типов уведомлений с действиями пользователя](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
+- [Усернотификатионс (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
+- [Новые возможности уведомлений пользователей (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Рекомендации и новые возможности уведомлений пользователей (ВВДК 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
 - [Создание удаленного уведомления (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

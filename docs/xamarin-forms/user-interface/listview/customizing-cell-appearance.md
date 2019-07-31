@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 1e57764dacf7ae0599df46f13bd4f5505c4cc4a2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ecb9e84473778f5185276a854bfbf2fdfcbb6528
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370835"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654847"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Настройка внешнего вида ячейки ListView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
-[`ListView`](xref:Xamarin.Forms.ListView) Представляет прокручиваемые списки, которые можно настраивать с помощью объекта `ViewCell`s. `ViewCells` можно использовать для отображения текста и изображений, указывающее состояние true или false и при получении входных данных пользователя.
+[`ListView`](xref:Xamarin.Forms.ListView)представляет прокручиваемые списки, которые можно настроить с `ViewCell`помощью s. `ViewCells` можно использовать для отображения текста и изображений, указывающее состояние true или false и при получении входных данных пользователя.
 
 <a name="Built_in_Cells" />
 
@@ -115,7 +115,7 @@ x:Class="demoListView.ImageCellPage">
 - Пользовательской ячейки вложен в `DataTemplate`, который находится внутри `ListView.ItemTemplate`. Это же процессе, что с помощью любую другую ячейку.
 - `ViewCell` — Тип пользовательской ячейки. Дочерним элементом элемента `DataTemplate` элемент должен быть или являются производными от типа `ViewCell`.
 - Обратите внимание, что его в `ViewCell`, макет находится под управлением `StackLayout`. Этот макет позволяет настроить цвет фона. Обратите внимание, что любое свойство `StackLayout` то есть привязки может привязать внутри пользовательских ячейки, несмотря на то, что этот процесс не показан здесь.
-- Внутри `ViewCell`, макет может управляться любой макет Xamarin.Forms. 
+- `ViewCell`Внутри макет может управляться любым макетом Xamarin. Forms. 
 
 ### <a name="cnum"></a>C&num;
 
@@ -258,6 +258,6 @@ var listView = new ListView {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Встроенные в ячейках (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [Пользовательские ячейки (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [Привязка контекст изменен (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BindingContextChanged)
+- [Встроенные в ячейках (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [Пользовательские ячейки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [Привязка контекст изменен (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)

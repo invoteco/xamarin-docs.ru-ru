@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: e53f6dce47dd7db60267d21c8d816ece554dc46c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9855255464b32b99d78d7a1cdb24acce22d01648
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61320016"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654761"
 ---
 # <a name="listview-data-sources"></a>Источники данных ListView
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
 Объект [ `ListView` ](xref:Xamarin.Forms.ListView) используется для отображения списков данных. Вы узнаете о заполнении ListView с данными, и как можно привязать к выбранному элементу.
 
@@ -58,10 +58,6 @@ listView.ItemsSource = new string[]
   "monomodal",
   "mononucleosis"
 };
-
-//monochrome will not appear in the list because it was added
-//after the list was populated.
-listView.ItemsSource.Add("monochrome");
 ```
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView отображения списка строк")
@@ -88,7 +84,7 @@ employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 Дополнительные сведения о привязке данных см. в разделе [основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) которого является четвертой частью [серия статей основы XAML Xamarin.Forms](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Привязка ячеек
-Свойства ячеек (и дочерних ячеек) могут быть привязаны к свойствам объектов в `ItemsSource`. Например ListView может использоваться для представления списка сотрудников.
+Свойства ячеек (и дочерних ячеек) могут быть привязаны к свойствам объектов в `ItemsSource`. Например, `ListView` можно использовать для представления списка сотрудников.
 
 Класса "Сотрудник":
 
@@ -99,10 +95,12 @@ public class Employee
 }
 ```
 
-`ObservableCollection<Employee>` создается и задается как `ListView`в `ItemsSource`:
+Создается и задается `ListView`как `ItemsSource`: `ObservableCollection<Employee>`
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+public ObservableCollection<Employee> Employees { get { return employees; }}
+
 public EmployeeListPage()
 {
   //defined in XAML to follow
@@ -131,11 +129,12 @@ public EmployeeListPage()
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
-x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
-Title="Employee List">
-  <ListView x:Name="EmployeeView">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
+             x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
+             Title="Employee List">
+  <ListView x:Name="EmployeeView"
+            ItemsSource="{Binding Employees}">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding DisplayName}" />
@@ -145,11 +144,7 @@ Title="Employee List">
 </ContentPage>
 ```
 
-Обратите внимание на то, что привязка была настроена в коде для простоты, несмотря на то, что он может привязаны в XAML.
-
-Предыдущий часть XAML определяет `ContentPage` , содержащий `ListView`. Источник данных `ListView` задается с помощью `ItemsSource` атрибута. Макет каждой строки в `ItemsSource`определяется внутри `ListView.ItemTemplate` элемент.
-
-Это результат:
+В этом примере XAML определяется `ContentPage` объект, `ListView`содержащий. Источник данных `ListView` задается с помощью `ItemsSource` атрибута. Макет каждой строки в `ItemsSource` задается `ListView.ItemTemplate` в элементе. Это приводит к следующим снимкам экрана:
 
 ![](data-and-databinding-images/bound-data.png "С помощью привязки данных ListView")
 
@@ -169,4 +164,4 @@ Title="Employee List">
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Двусторонней привязки (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+- [Двусторонней привязки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

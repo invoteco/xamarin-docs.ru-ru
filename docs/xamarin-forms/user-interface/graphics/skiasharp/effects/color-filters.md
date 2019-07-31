@@ -7,16 +7,16 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: 71c0495520a5dd596be2e9cafec6b63e316fb627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5aa8b2e85d5a7d547af5333dcaf350025b86cc26
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342471"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647699"
 ---
 # <a name="skiasharp-color-filters"></a>Фильтры цвет SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Фильтры цвет может выполнить преобразование цветов в точечный рисунок (или другого изображения) другие цвета для эффектов, например постеризации:
 
@@ -120,7 +120,7 @@ ms.locfileid: "61342471"
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-где `matrix` представляет собой массив 20 `float` значения. При создании массива в C#, легко форматирование чисел, поэтому они напоминают матрицу 4 × 5. Это показано в **матрицы черно-белая** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) пример:
+где `matrix` представляет собой массив 20 `float` значения. При создании массива в C#, легко форматирование чисел, поэтому они напоминают матрицу 4 × 5. Это показано в **матрицы черно-белая** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) пример:
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -163,7 +163,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-`DrawBitmap` Метод, используемый в этом коде — от **BitmapExtension.cs** состав файл [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца. 
+`DrawBitmap` Метод, используемый в этом коде — от **BitmapExtension.cs** состав файл [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца. 
 
 Ниже приведен результат, под управлением iOS, Android и универсальной платформы Windows.
 
@@ -232,7 +232,7 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-Массивы всегда содержать 256 записи. В `CreateTable` метод с одной таблицей, той же таблицы используется для красного, зеленого и синего компонентов. Это таблица простого поиска: Если исходного цвета (R, G, B), а конечный цвет (R ", B", "G"), а затем компонентов назначения получаются путем индексирования `table` с компоненты источника:
+Массивы всегда содержать 256 записи. В `CreateTable` метод с одной таблицей, той же таблицы используется для красного, зеленого и синего компонентов. Это простая таблица поиска: Если исходный цвет имеет значение (r, G, b), а целевой цвет — (r ', B ', G '), то целевые компоненты получаются путем индексирования `table` с исходными компонентами:
 
 `R' = table[R]`
 
@@ -300,4 +300,4 @@ public class PosterizeTablePage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

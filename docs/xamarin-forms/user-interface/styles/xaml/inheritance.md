@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c5fa46a67496123eb105ae12404d5607032f5ac1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 24f6eac93dd3095df70bbb326388cd9ed47f395c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971152"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657059"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Наследование стилей в Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Стили можно наследовать другие стили, чтобы сократить дублирование и включить повторное использование._
 
@@ -69,7 +69,7 @@ _Стили можно наследовать другие стили, чтоб�
 > [!NOTE]
 > Неявный стиль может быть производным от явный стиль, но явный стиль не может быть производным от неявного стиля.
 
-### <a name="respecting-the-inheritance-chain"></a>Соблюдение цепочке наследования
+### <a name="respecting-the-inheritance-chain"></a>Уважение цепочки наследования
 
 Стиль может наследовать только от стили на том же уровне или выше в иерархии представлений. Это означает следующее.
 
@@ -158,8 +158,8 @@ public class StyleInheritancePageCS : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Основные стили (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Работа с использованием стилей (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Основные стили (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Работа с использованием стилей (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Стиль](xref:Xamarin.Forms.Style)
 - [Метод задания](xref:Xamarin.Forms.Setter)

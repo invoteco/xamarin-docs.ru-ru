@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: e959f0d3cafa9e856458472668244fcd33ba4f81
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fea96ab645b2d01b774f691402a5796eec1f1dba
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510228"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644969"
 ---
 # <a name="android-time-picker"></a>Средство выбора времени Android
 
@@ -282,4 +282,4 @@ is24HourFormat = true;
 - [TimePicker](xref:Android.Widget.TimePicker)
 - [тимепиккердиалог](xref:Android.App.TimePickerDialog)
 - [Тимепиккердиалог. Ионтимесетлистенер](xref:Android.App.TimePickerDialog.IOnTimeSetListener)
-- [Тимепиккердемо (пример)](https://developer.xamarin.com/samples/monodroid/UserInterface/TimePickerDemo)
+- [Тимепиккердемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-timepickerdemo)

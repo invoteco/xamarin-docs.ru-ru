@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7717e247ca3b3ecf82e1814ab43e8351b4f75ba6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510443"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643039"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Актионбар для Xamarin. Android
 
@@ -87,7 +87,7 @@ this.ActionBar.AddTab (tab);
 
 ### <a name="image-sharing-example"></a>Пример общего доступа к изображению
 
-Например, ниже приведен снимок экрана панели действий с пунктом меню для совместного использования изображения (взято из примера [шареактионпровидер](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ). Когда пользователь отменяет пункт меню на панели действий, Шареактионпровидер загружает приложение для решения намерений, связанных с `ShareActionProvider`. В этом примере приложение для обмена сообщениями использовалось ранее, поэтому оно отображается на панели действий.
+Например, ниже приведен снимок экрана панели действий с пунктом меню для совместного использования изображения (взято из примера [шареактионпровидер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) ). Когда пользователь отменяет пункт меню на панели действий, Шареактионпровидер загружает приложение для решения намерений, связанных с `ShareActionProvider`. В этом примере приложение для обмена сообщениями использовалось ранее, поэтому оно отображается на панели действий.
 
 [![Снимок экрана: значок приложения обмена сообщениями на панели действий](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
@@ -150,7 +150,7 @@ Intent CreateIntent ()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Общий доступ к вкладкам Hello (пример)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
-- [Демонстрация Шареактионпровидер (пример)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Общий доступ к вкладкам Hello (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
+- [Демонстрация Шареактионпровидер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 - [Знакомство со Южным Сандвичевым](http://www.android.com/about/ice-cream-sandwich/)
 - [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

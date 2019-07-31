@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60897289"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645910"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS уведомления в Xamarin
 
@@ -69,11 +69,11 @@ ms.locfileid: "60897289"
 
 Уведомления могут поступать с удаленного сервера ([службы Push-уведомлений Apple](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), или APNS) или могут создаваться локально в приложении iOS.
 
-Ссылаться на [Пошаговое руководство по уведомлениям iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) пример создания локальных уведомлений и [WatchNotifications пример](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) рабочий пример.
+Ссылаться на [Пошаговое руководство по уведомлениям iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) пример создания локальных уведомлений и [WatchNotifications пример](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) рабочий пример.
 
 Необходимо иметь локальные уведомления `AlertTitle` отображение на Apple Watch - `AlertTitle` строка отображается в интерфейсе внешний вид, Short. Как `AlertTitle` и `AlertBody` отображаются в списке уведомлений; и `AlertBody` интерфейса внешний вид, долго.
 
-На этом снимке экрана показано `AlertTitle` отображаются в списке уведомлений и `AlertBody` долго внешний вид интерфейса (с помощью [пример кода](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
+На этом снимке экрана показано `AlertTitle` отображаются в списке уведомлений и `AlertBody` долго внешний вид интерфейса (с помощью [пример кода](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
 
 ![](notifications-images/watch-notificationslist-sml.png "На этом снимке экрана показано AlertTitle, отображаемых в списке уведомлений") ![](notifications-images/watch-notificationcontroller-sml.png "AlertBody долго внешний вид интерфейса")
 
@@ -126,7 +126,7 @@ Visual Studio для Mac будет отображаются дополните�
 
 ### <a name="example-notification-payload"></a>Пример полезных данных уведомления
 
-В [каталога контрольного значения Kit](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) существует пример приведен пример полезных данных JSON файла **NotificationPayload.json** (перечислены ниже).
+В [каталога контрольного значения Kit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) существует пример приведен пример полезных данных JSON файла **NotificationPayload.json** (перечислены ниже).
 
 ```csharp
 {
@@ -151,6 +151,6 @@ Visual Studio для Mac будет отображаются дополните�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchNotifications (локальных уведомлений) (пример)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchNotifications (локальных уведомлений) (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
+- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Документация Apple Watch Kit уведомления](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

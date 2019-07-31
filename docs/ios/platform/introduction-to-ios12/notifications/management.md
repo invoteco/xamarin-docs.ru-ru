@@ -1,35 +1,35 @@
 ---
-title: Управление уведомлений в Xamarin.iOS
-description: В этом документе описывается, как использовать Xamarin.iOS, чтобы воспользоваться преимуществами новых возможностей управления уведомлений, добавленных в iOS 12.
+title: Управление уведомлениями в Xamarin. iOS
+description: В этом документе описывается использование Xamarin. iOS для использования новых функций управления уведомлениями, появившихся в iOS 12.
 ms.prod: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: 0157a685ac990c0626cd4d6001ef853c6a28b993
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 69b6876a22e511d1c14a795d7b81c3a638492468
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035278"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652389"
 ---
-# <a name="notification-management-in-xamarinios"></a>Управление уведомлений в Xamarin.iOS
+# <a name="notification-management-in-xamarinios"></a>Управление уведомлениями в Xamarin. iOS
 
-В iOS 12 операционная система может прямая ссылка из центра уведомлений и параметрам приложения для экрана управления уведомлений приложения. Этот экран пользователи должны иметь возможность согласиться и за пределы различные типы уведомлений, которые приложение отправляет.
+В iOS 12 операционная система может получить глубокую ссылку из центра уведомлений и приложения параметров на экран управления уведомлениями приложения. Этот экран должен дать пользователям возможность принять и отказаться от различных типов уведомлений, которые отправляет приложение.
 
-## <a name="sample-app-redgreennotifications"></a>Пример приложения. RedGreenNotifications
+## <a name="sample-app-redgreennotifications"></a>Пример приложения: редгриннотификатионс
 
-Чтобы увидеть пример того, как работает управление уведомлениями об, взгляните на [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) примера приложения.
+Чтобы увидеть пример работы управления уведомлениями, ознакомьтесь с примером приложения [редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) .
 
-Этот пример приложения отправляет два типа уведомлений — красный и зеленый — и предоставляет экран, на котором пользователи могут принять или отклонить обоих этих типов.
+Этот пример приложения отправляет два типа уведомлений — красный и зеленый — и предоставляет экран, позволяющий пользователям принять или отказаться от любого из этих типов.
 
-Фрагменты кода, в этом руководстве, взяты из этого примера приложения.
+Фрагменты кода в этом пошаговом окне поступают из этого примера приложения.
 
-## <a name="notification-management-screen"></a>Экран управления уведомлений
+## <a name="notification-management-screen"></a>Экран управления уведомлениями
 
-В примере приложения `ManageNotificationsViewController` определяет пользовательский интерфейс, который позволяет пользователям независимо друг от друга Включение и отключение уведомлений красный и зеленый уведомлений. Это стандартный [`UIViewController`](xref:UIKit.UIViewController)
-содержащий [ `UISwitch` ](xref:UIKit.UISwitch) для каждого типа уведомления. Включение и выключение коммутатора для каждого типа уведомлений сохраняет, пользовательские параметры по умолчанию, пользовательские настройки для этого типа уведомлений:
+В примере приложения `ManageNotificationsViewController` определяет пользовательский интерфейс, который позволяет пользователям независимо включать и отключать красные уведомления и зеленые уведомления. Это Стандартный[`UIViewController`](xref:UIKit.UIViewController)
+, [`UISwitch`](xref:UIKit.UISwitch) содержащий для каждого типа уведомления. При переключении переключателя для любого типа сохранений уведомлений в настройках пользователя по умолчанию предпочтения пользователя для этого типа уведомлений:
 
 ```csharp
 partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
@@ -39,13 +39,13 @@ partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
 ```
 
 > [!NOTE]
-> На экран управления уведомлений также проверяет ли пользователь полностью отключает уведомления для приложения. Если Да, он скрывает переключатели для типов индивидуальное уведомление. Чтобы сделать это, на экран управления уведомлений:
+> На экране управления уведомлениями также проверяется, полностью отключил ли пользователь уведомления для приложения. В этом случае переключатели для отдельных типов уведомлений скрываются. Для этого на экране управления уведомлениями выполните следующие действия.
 >
-> - Вызовы [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) и проверяет [ `AuthorizationStatus` ](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) свойство.
-> - Скрывает переключатели для типов индивидуальное уведомление, если уведомления были полностью отключены для приложения.
-> - Повторно проверяет, были ли уведомления отключены каждый раз, когда приложение перемещает на передний план, так как пользователь может включить или отключить уведомления в параметрах iOS в любое время.
+> - Вызывает [`UNUserNotificationCenter.Current.GetNotificationSettingsAsync`](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) и проверяет [`AuthorizationStatus`](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) свойство.
+> - Скрывает переключатели для отдельных типов уведомлений, если для приложения были полностью отключены уведомления.
+> - Повторно проверяет, были ли отключены уведомления при каждом перемещении приложения на передний план, так как пользователь может в любое время включить или отключить уведомления в параметрах iOS.
 
-В примере приложения `ViewController` класс, который отправляет уведомления, проверки пользовательские настройки до отправки локального уведомления для убедитесь, что уведомление типа пользователь действительно хочет получать:
+`ViewController` Класс примера приложения, который отправляет уведомления, проверяет предпочтения пользователя перед отправкой локального уведомления, чтобы убедиться, что уведомление относится к типу, который пользователь действительно хочет получить:
 
 ```csharp
 partial void HandleTapRedNotificationButton(UIButton sender)
@@ -58,14 +58,14 @@ partial void HandleTapRedNotificationButton(UIButton sender)
 
 ## <a name="deep-link"></a>Прямая ссылка
 
-iOS прямые ссылки на экран управления уведомлений приложения из центра уведомлений и параметры уведомлений приложения в настройках приложения. Для этого приложения необходимо:
+глубокие ссылки iOS на экран управления уведомлениями приложения из центра уведомлений и параметры уведомлений приложения в приложении "Параметры". Чтобы упростить это, приложение должно:
 
-- Что доступно экран управления уведомление путем передачи `UNAuthorizationOptions.ProvidesAppNotificationSettings` запрос авторизации для получения уведомлений приложения.
-- Реализуйте `OpenSettings` метода из [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
+- Укажите, что экран управления уведомлениями доступен, передав `UNAuthorizationOptions.ProvidesAppNotificationSettings` запрос на авторизацию уведомления приложения.
+- [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate)Реализуйте `OpenSettings` метод из.
 
 ### <a name="authorization-request"></a>Запрос авторизации
 
-Чтобы указать операционную систему, доступности экран управления уведомления, приложения должны передавать `UNAuthorizationOptions.ProvidesAppNotificationSettings` параметра (вместе с другими уведомлений параметров доставки ей) `RequestAuthorization` метод `UNUserNotificationCenter`.
+Чтобы указать операционной системе, что доступен экран управления уведомлениями, приложение должно передать `UNAuthorizationOptions.ProvidesAppNotificationSettings` параметр (вместе с другими нужными параметрами доставки уведомлений) `RequestAuthorization` методу `UNUserNotificationCenter`в.
 
 Например, в примере приложения `AppDelegate`:
 
@@ -80,11 +80,11 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-### <a name="opensettings-method"></a>Метод OpenSettings
+### <a name="opensettings-method"></a>Метод Опенсеттингс
 
-`OpenSettings` Вызывается системой для прямая ссылка на экран управления уведомлений приложения, метод должен перейти пользователь непосредственно на этом экране.
+`OpenSettings` Метод, вызываемый системой для глубокой ссылки на экран управления уведомлениями приложения, должен непосредственно перейти к этому экрану.
 
-В примере приложения, этот метод выполняет переход к `ManageNotificationsViewController` при необходимости:
+В примере приложения этот метод выполняет перехода `ManageNotificationsViewController` в случае необходимости:
 
 ```csharp
 [Export("userNotificationCenter:openSettingsForNotification:")]
@@ -105,9 +105,9 @@ public void OpenSettings(UNUserNotificationCenter center, UNNotification notific
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример приложения — RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Платформа уведомлений пользователя в Xamarin.iOS](~/ios/platform/user-notifications/index.md)
-- [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Новые возможности в уведомления для пользователей (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Рекомендации и новые возможности в уведомления для пользователей (WWDC 2017 г.)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Пример приложения — Редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Платформа уведомлений пользователей в Xamarin. iOS](~/ios/platform/user-notifications/index.md)
+- [Усернотификатионс (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
+- [Новые возможности уведомлений пользователей (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Рекомендации и новые возможности уведомлений пользователей (ВВДК 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
 - [Создание удаленного уведомления (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

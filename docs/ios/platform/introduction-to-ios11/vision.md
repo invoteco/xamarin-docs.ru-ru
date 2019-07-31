@@ -1,56 +1,56 @@
 ---
-title: Framework концепции в Xamarin.iOS
-description: В этом документе описывается использование iOS 11 Vision Framework в Xamarin.iOS. В частности, здесь рассматриваются обнаружения прямоугольник и обнаружение лиц.
+title: Инфраструктура концепции в Xamarin. iOS
+description: В этом документе описывается, как использовать платформу для работы с iOS 11 в Xamarin. iOS. В частности, он описывает обнаружение прямоугольников и обнаружение лиц.
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: 291cbdb93cfb6ac123d740e98065ba877bb44da5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c7fd1a933ba166b7c1b708bc102b84ce407b18fd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61159690"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648361"
 ---
-# <a name="vision-framework-in-xamarinios"></a>Framework концепции в Xamarin.iOS
+# <a name="vision-framework-in-xamarinios"></a>Инфраструктура концепции в Xamarin. iOS
 
-Framework концепции добавлен ряд возможностей для iOS 11, в том числе обработки нового образа:
+Инфраструктура концепции добавляет ряд новых функций обработки изображений в iOS 11, включая:
 
-- [Обнаружение прямоугольника](#rectangles)
-- [Обнаружение лиц](#faces)
-- Машинное обучение анализ образов (подробно [CoreML](~/ios/platform/introduction-to-ios11/coreml.md))
+- [Определение прямоугольника](#rectangles)
+- [обнаружение лиц](#faces)
+- Анализ изображений Машинное обучение (рассматривается в [CoreML](~/ios/platform/introduction-to-ios11/coreml.md))
 - Определение штрихкода
-- Анализ выравнивание изображения
+- Анализ выравнивания изображений
 - Обнаружение текста
-- Период обнаружения
-- Обнаружение объектов и отслеживание
+- Обнаружение горизонта
+- Отслеживание & обнаружения объектов
 
-![Нельзя было сфотографировать с обнаружено три прямоугольника](vision-images/found-rectangles-tiny.png) ![Нельзя было сфотографировать с двумя обнаруженные лица:](vision-images/xamarin-home-faces-tiny.png)
+![Фотография с обнаруженными тремя прямоугольниками](vision-images/found-rectangles-tiny.png) ![Обнаружена фотография с двумя лицами](vision-images/xamarin-home-faces-tiny.png)
 
-Прямоугольник обнаружения и обнаружения лиц рассматриваются более подробно ниже.
+Обнаружение и обнаружение лиц прямоугольников рассматриваются более подробно ниже.
 
 <a name="rectangles" />
 
-## <a name="rectangle-detection"></a>Обнаружение прямоугольника
+## <a name="rectangle-detection"></a>Определение прямоугольника
 
-[VisionRects пример](https://developer.xamarin.com/samples/monotouch/ios11/VisionRectangles/) показано, как обработка изображения и рисовать прямоугольники обнаруженных на нем.
+В [примере висионректс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) показано, как обработать изображение и нарисовать обнаруженные на нем прямоугольники.
 
-### <a name="1-initialize-the-vision-request"></a>1. Инициализации запроса компьютерного зрения
+### <a name="1-initialize-the-vision-request"></a>1. Инициализация запроса концепции
 
-В `ViewDidLoad`, создание `VNDetectRectanglesRequest` , ссылающийся на `HandleRectangles` метод, который будет вызываться в конце каждого запроса:
+В `ViewDidLoad`создайте объект `VNDetectRectanglesRequest` , который ссылается `HandleRectangles` на метод, который будет вызываться в конце каждого запроса:
 
-`MaximumObservations` Свойства также должен быть установлен, в противном случае он будет по умолчанию 1 и возвращается только один результат.
+`MaximumObservations` Свойство также должно быть задано, в противном случае будет использоваться значение по умолчанию 1, и будет возвращен только один результат.
 
 ```csharp
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 RectangleRequest.MaximumObservations = 10;
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Начать обработку компьютерного зрения
+### <a name="2-start-the-vision-processing"></a>2. Начать обработку концепции
 
-Следующий код запускает обработку запроса. В **VisionRects** образец, этот код запускается после пользователь выбрал изображения:
+Следующий код начинает обработку запроса. В примере **висионректс** этот код выполняется после выбора пользователем изображения:
 
 ```csharp
 // Run the rectangle detector
@@ -60,11 +60,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Этот обработчик передает `ciImage` в Framework концепции `VNDetectRectanglesRequest` , созданного на шаге 1.
+Этот обработчик передает объект `ciImage` в инфраструктуру `VNDetectRectanglesRequest` концепции, созданную на шаге 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Обрабатывать результаты обработки компьютерного зрения
+### <a name="3-handle-the-results-of-vision-processing"></a>3. Обработка результатов обработки концепции
 
-После завершения обнаружения прямоугольник платформа выполняет `HandleRectangles` метод, который сводку, показанный ниже:
+После завершения обнаружения прямоугольника платформа выполняет `HandleRectangles` метод, а также сводку, показанную ниже.
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -86,40 +86,40 @@ private void HandleRectangles(VNRequest request, NSError error){
 }
 ```
 
-### <a name="4-display-the-results"></a>4. Отобразить результаты
+### <a name="4-display-the-results"></a>4. Отображение результатов
 
-`OverlayRectangles` Метод в **VisionRectangles** образец содержит три функции:
+Метод в примере висионректанглес имеет три функции: `OverlayRectangles`
 
-- Подготовка к просмотру исходного изображения
-- Рисование прямоугольника, чтобы указать, где была обнаружена каждого из них, и
-- Добавление текстовую метку для каждого прямоугольника с помощью CoreGraphics.
+- Подготовка к просмотру исходного изображения,
+- Рисование прямоугольника для указания места обнаружения каждого из них и
+- Добавление текстовой метки для каждого прямоугольника с помощью Кореграфикс.
 
-Представление [источника образца](https://developer.xamarin.com/samples/monotouch/ios11/VisionRectangles/) для конкретный метод CoreGraphics.
+Просмотрите [Источник образца](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) для точного метода кореграфикс.
 
-![Нельзя было сфотографировать с обнаружено три прямоугольника](vision-images/found-rectangles-phone-sml.png)
+![Фотография с обнаруженными тремя прямоугольниками](vision-images/found-rectangles-phone-sml.png)
 
 ### <a name="5-further-processing"></a>5. Дальнейшая обработка
 
-Прямоугольник в обнаружении часто только первый шаг в цепочке операций, таких как с [в этом примере CoreMLVision](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), где прямоугольников передаются модели CoreML проанализировать рукописных цифр.
+Обнаружение прямоугольника часто является просто первым шагом в цепочке операций, например в [этом коремлвисион примере](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), где прямоугольники передаются в модель CoreML для анализа рукописных цифр.
 
 
 <a name="faces" />
 
-## <a name="face-detection"></a>Обнаружение лиц
+## <a name="face-detection"></a>обнаружение лиц
 
-[Пример VisionFaces](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces/) работает таким же образом, чтобы **VisionRectangles** пример, с использованием другой класс запроса компьютерного зрения.
+[Пример висионфацес](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) работает аналогично образцу **висионректанглес** , используя другой класс запроса концепции.
 
-### <a name="1-initialize-the-vision-request"></a>1. Инициализации запроса компьютерного зрения
+### <a name="1-initialize-the-vision-request"></a>1. Инициализация запроса концепции
 
-В `ViewDidLoad`, создание `VNDetectFaceRectanglesRequest` , ссылающийся на `HandleRectangles` метод, который будет вызываться в конце каждого запроса.
+В `ViewDidLoad`создайте объект `VNDetectFaceRectanglesRequest` , который ссылается `HandleRectangles` на метод, который будет вызываться в конце каждого запроса.
 
 ```csharp
 FaceRectangleRequest = new VNDetectFaceRectanglesRequest(HandleRectangles);
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Начать обработку компьютерного зрения
+### <a name="2-start-the-vision-processing"></a>2. Начать обработку концепции
 
-Следующий код запускает обработку запроса. В **VisionFaces** примера, этот код запускается после пользователь выбрал изображения:
+Следующий код начинает обработку запроса. В примере **висионфацес** этот код выполняется после выбора пользователем изображения:
 
 ```csharp
 // Run the face detector
@@ -129,11 +129,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Этот обработчик передает `ciImage` в Framework концепции `VNDetectFaceRectanglesRequest` , созданного на шаге 1.
+Этот обработчик передает объект `ciImage` в инфраструктуру `VNDetectFaceRectanglesRequest` концепции, созданную на шаге 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Обрабатывать результаты обработки компьютерного зрения
+### <a name="3-handle-the-results-of-vision-processing"></a>3. Обработка результатов обработки концепции
 
-После завершения обнаружения лиц, обработчик выполняет `HandleRectangles` метод, который выполняет обработку ошибок и отображает границы обнаруженных лиц, а также вызывает `OverlayRectangles` для рисования ограничивающие прямоугольники на исходное изображение:
+После завершения обнаружения распознавания лиц обработчик выполняет `HandleRectangles` метод, который выполняет обработку ошибок и отображает границы обнаруженных лиц и `OverlayRectangles` вызывает метод для рисования ограничивающих прямоугольников на исходном изображении:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -160,25 +160,25 @@ private void HandleRectangles(VNRequest request, NSError error){
 }
 ```
 
-### <a name="4-display-the-results"></a>4. Отобразить результаты
+### <a name="4-display-the-results"></a>4. Отображение результатов
 
-`OverlayRectangles` Метод в **VisionFaces** образец содержит три функции:
+Метод в примере висионфацес имеет три функции: `OverlayRectangles`
 
-- Подготовка к просмотру исходного изображения
-- Рисование прямоугольника на каждом лице обнаружена, и
-- Добавление текстовую метку для каждого лица, с помощью CoreGraphics.
+- Подготовка к просмотру исходного изображения,
+- Рисование прямоугольника для каждого обнаруженного лица и
+- Добавление текстовой метки для каждой грани с помощью Кореграфикс.
 
-Представление [источника образца](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces/) для конкретный метод CoreGraphics.
+Просмотрите [Источник образца](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) для точного метода кореграфикс.
 
-![Нельзя было сфотографировать с двумя обнаруженные лица:](vision-images/found-faces-phone-sml.png)
+![Обнаружена фотография с двумя лицами](vision-images/found-faces-phone-sml.png)
 
 ### <a name="5-further-processing"></a>5. Дальнейшая обработка
 
-Платформа Vision включает дополнительные возможности для обнаружения лиц функции, такие как глаза и рот. Используйте `VNDetectFaceLandmarksRequest` тип, который будет возвращать `VNFaceObservation` результаты, как и в шаге 3 выше, но с дополнительными `VNFaceLandmark` данных.
+Инфраструктура концепции включает дополнительные возможности для определения возможностей лиц, таких как глаза и рот. Используйте тип, который `VNFaceObservation` возвратит результаты, как на шаге 3 выше, но с дополнительными `VNFaceLandmark` данными. `VNDetectFaceLandmarksRequest`
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Прямоугольники Vision (пример)](https://developer.xamarin.com/samples/monotouch/ios11/VisionRectangles/)
-- [Концепция лиц (пример)](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces/)
-- [Усовершенствования в образ Core - фильтры, исходного состояния системы, концепции и более (WWDC) (видео)](https://developer.apple.com/videos/play/wwdc2017/510/)
+- [Прямоугольники концепции (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles)
+- [Лица с видением (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [Усовершенствования в основном образе — фильтры, металл, концепция и многое другое (ВВДК) (видео)](https://developer.apple.com/videos/play/wwdc2017/510/)

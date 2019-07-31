@@ -1,43 +1,43 @@
 ---
-title: Создание приложения Xamarin.iOS с помощью API отражения
-description: В этом документе описывается MonoTouch.Dialog основанное на атрибутах API отражения, который создает пользовательский Интерфейс на основе классов с атрибутами.
+title: Создание приложения Xamarin. iOS с помощью API отражения
+description: В этом документе описан API-интерфейс отражения на основе атрибутов, который создает пользовательский интерфейс на основе классов, оформленных атрибутами.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: fac19cd7273b5b396946fc1867049db19348c853
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: 9dc98480d57dc7d4883306e9f4fc530599af9bd7
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039677"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652419"
 ---
-# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Создание приложения Xamarin.iOS с помощью API отражения
+# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Создание приложения Xamarin. iOS с помощью API отражения
 
-Главный целевой сервер. API отражения D позволяет классам быть снабжен атрибутом атрибуты этого главного целевого сервера D использует автоматически создавать экраны. API-интерфейса отражения предоставляет привязку между этими классами и отображаемые на экране. Несмотря на то, что этот API не обеспечивает детального контроля, который выполняет элементы API, он уменьшает сложность, автоматически создав out элемент иерархию, основанную на классе оформления.
+MT. API отражения D позволяет декорированию классов с помощью атрибутов, которые MT. D использует для автоматического создания экранов. API отражения обеспечивает привязку между этими классами и то, что отображается на экране. Хотя этот API не предоставляет детализированный элемент управления, который делает API элементов, он сокращает сложность за счет автоматического создания иерархии элементов на основе декорирования классов.
 
-## <a name="setting-up-mtd"></a>Настройка главного целевого сервера D
+## <a name="setting-up-mtd"></a>Настройка MT. Четырехмерного
 
-ГЛАВНОГО ЦЕЛЕВОГО СЕРВЕРА D распространяется вместе с Xamarin.iOS. Чтобы использовать его, щелкните правой кнопкой мыши **ссылки** Xamarin.iOS узел проекта в Visual Studio 2017 или Visual Studio для Mac и добавьте ссылку на **MonoTouch.Dialog 1** сборки. Затем добавьте `using MonoTouch.Dialog` инструкций в источнике кода при необходимости.
+Машин. D распространяется с помощью Xamarin. iOS. Чтобы использовать его, щелкните правой кнопкой мыши узел **ссылки** проекта Xamarin. iOS в Visual Studio 2017 или Visual Studio для Mac и добавьте ссылку на сборку " **котушь. Dialog-1** ". Затем добавьте `using MonoTouch.Dialog` в исходный код инструкции, если это необходимо.
 
 ## <a name="getting-started-with-the-reflection-api"></a>Приступая к работе с API отражения
 
-С помощью API отражения осуществляется простым:
+Использовать API отражения очень просто:
 
-1.  Создание класса декорировать с помощью машинного перевода. Атрибуты D.
-1.  Создание `BindingContext` экземпляра, передавая ему экземпляр приведенного выше класса. 
-1.  Создание `DialogViewController` , передавая ему `BindingContext’s` `RootElement` . 
+1.  Создание класса, снабженного MT. Атрибуты D.
+1.  `BindingContext` Создание экземпляра, передавая ему экземпляр указанного выше класса. 
+1.  `DialogViewController` Создание, передавая `BindingContext’s` `RootElement` ему. 
 
 
-Давайте рассмотрим пример, чтобы продемонстрировать способы использования API отражения. В этом примере мы создадим отдельный экран ввода данных, как показано ниже:
+Рассмотрим пример, иллюстрирующий использование API отражения. В этом примере мы создадим простой экран ввода данных, как показано ниже:
 
- [![](reflection-api-walkthrough-images/01-expense-entry.png "В этом примере мы создадим отдельный экран ввода данных следующим образом")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "В этом примере мы создадим простой экран ввода данных, как показано ниже.")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
-## <a name="creating-a-class-with-mtd-attributes"></a>Создание класса с помощью машинного перевода. Атрибуты D
+## <a name="creating-a-class-with-mtd-attributes"></a>Создание класса с помощью MT. Атрибуты D
 
-Первое, что нам нужно использовать API отражения — это класс, декорированные с помощью атрибутов. Эти атрибуты будут использоваться главного целевого сервера D внутренним образом для создания объектов из элементов API. Например рассмотрим следующее определение класса:
+В первую очередь нам нужно использовать API отражения — это класс, дополненный атрибутами. Эти атрибуты будут использоваться MT. D — внутренне создание объектов из API элементов. Например, рассмотрим следующее определение класса:
 
 ```csharp
 public class Expense
@@ -58,23 +58,23 @@ public class Expense
 }
 ```
 
-`SectionAttribute` Приведет к части `UITableView` создается с строковый аргумент, используемый для заполнения раздела заголовка. После объявления раздела каждого поля, что следующий за ним будут включены в этом разделе, пока не объявлен другой раздел.
-Тип элемента пользовательского интерфейса, созданные для поля будут зависеть от типа поля и главный целевой сервер. Атрибут типа D, дополнив его.
+В `SectionAttribute` результате будут созданы разделы `UITableView` , содержащие строковый аргумент, используемый для заполнения заголовка раздела. После объявления раздела все поля, следующие за ним, будут включаться в этот раздел, пока не будет объявлен другой раздел.
+Тип элемента пользовательского интерфейса, созданного для поля, будет зависеть от типа поля и MT. Атрибут D.
 
-Например `Name` поле является `string` и он снабжен `EntryAttribute`. Это приводит к строке, добавляемого в таблицу с указанным заголовком и поле ввода текста. Аналогичным образом `IsApproved` поле является `bool` с `CheckboxAttribute`, полученный в строке таблицы с флажком в правом углу ячейки таблицы. ГЛАВНОГО ЦЕЛЕВОГО СЕРВЕРА D использует имя этого поля, автоматически добавит пробел, чтобы создать заголовок таким образом, так как он не указан в атрибуте.
+Например, `Name` поле имеет значение `string` , а `EntryAttribute`оно дополнено. Это приводит к добавлению строки в таблицу с полем ввода текста и указанным заголовком. Аналогичным образом `bool` `CheckboxAttribute`поле — это, в результате чего строка таблицы с флажком справа от ячейки таблицы. `IsApproved` Машин. D использует имя поля, автоматически добавляя пробел, чтобы создать заголовок в этом случае, так как он не указан в атрибуте.
 
-## <a name="adding-the-bindingcontext"></a>Добавление контекста BindingContext
+## <a name="adding-the-bindingcontext"></a>Добавление BindingContext
 
-Чтобы использовать `Expense` класса, необходимо создать `BindingContext`. Объект `BindingContext` является классом, который будет привязывать данные из класса с атрибутом для создания иерархии элементов. Чтобы создать его, мы просто создать его экземпляр и передать конструктору экземпляра класса с атрибутом.
+Чтобы использовать `Expense` класс, необходимо `BindingContext`создать. `BindingContext` — Это класс, который будет привязывать данные из класса с атрибутами для создания иерархии элементов. Чтобы создать его, просто создайте экземпляр класса и передайте его в конструктор.
 
-Например, чтобы добавить пользовательский Интерфейс, который объявлен с помощью атрибута в `Expense` класса, включите следующий код в `FinishedLaunching` метод `AppDelegate`:
+Например, чтобы добавить пользовательский интерфейс, объявленный с помощью атрибута в `Expense` классе, включите следующий код `FinishedLaunching` в метод `AppDelegate`класса:
 
 ```csharp
 var expense = new Expense ();
 var bctx = new BindingContext (null, expense, "Create a task");
 ```
 
-Затем все что нужно сделать для создания пользовательского интерфейса — это добавить `BindingContext` для `DialogViewController` и задать его в качестве `RootViewController` окна, как показано ниже:
+Затем все, что нужно сделать для создания пользовательского интерфейса, — добавить `BindingContext` `DialogViewController` в и задать его в качестве значения `RootViewController` в окне, как показано ниже:
 
 ```csharp
 UIWindow window;
@@ -94,22 +94,22 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 }
 ```
 
-Запуск приложения теперь приводит к экран, показанный выше отображение.
+Запуск приложения теперь приводит к отображению экрана, показанного выше.
 
-### <a name="adding-a-uinavigationcontroller"></a>Добавление UINavigationController
+### <a name="adding-a-uinavigationcontroller"></a>Добавление Уинавигатионконтроллер
 
-Тем не менее Обратите внимание, что заголовок «Создание задачи», мы передали `BindingContext` не отображается. Это обусловлено `DialogViewController` — не является частью `UINavigatonController`. Давайте изменим код для добавления `UINavigationController` как окна `RootViewController,` и добавьте `DialogViewController` как корень `UINavigationController` как показано ниже:
+Обратите внимание, что заголовок «создание задачи», переданный `BindingContext` в, не отображается. Это вызвано тем `DialogViewController` , что не является частью `UINavigatonController`. Измените код, чтобы добавить `UINavigationController` в качестве `RootViewController,` окна, и добавьте его `DialogViewController` в качестве корня, `UINavigationController` как показано ниже:
 
 ```csharp
 nav = new UINavigationController(dvc);
 window.RootViewController = nav;
 ```
 
-Теперь при запуске приложения, это название появится в `UINavigationController’s` панели навигации как снимке экрана ниже показано:
+Теперь при запуске приложения заголовок отображается на `UINavigationController’s` панели навигации, как показано ниже.
 
- [![](reflection-api-walkthrough-images/02-create-task.png "Теперь при запуске приложения, в заголовке отображается на панели навигации UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
+ [![](reflection-api-walkthrough-images/02-create-task.png "Теперь при запуске приложения заголовок отображается на панели навигации Уинавигатионконтроллерс.")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
-Включив `UINavigationController`, мы теперь можно использовать другие преимущества машинного перевода. D, для которого необходим навигации. Например, мы можем добавить перечисление для `Expense` класс определяет категорию затрат и главного целевого сервера D будет автоматически создавать экран выбора. Чтобы продемонстрировать, измените `Expense` класса для включения `ExpenseCategory` поля следующим образом:
+Благодаря включению `UINavigationController`можно использовать преимущества других функций MT. D, для которого требуется Навигация. Например, можно добавить перечисление в `Expense` класс, чтобы определить категорию для расходов и MT. D создаст экран выбора автоматически. Чтобы продемонстрировать, измените класс `Expense` так, чтобы он `ExpenseCategory` включал поле, как показано ниже.
 
 ```csharp
 public enum Category
@@ -128,29 +128,29 @@ public class Expense
 }
 ```
 
-Запуск приложения теперь приводит строку в таблице для категории, как показано:
+Выполнение приложения теперь приводит к отображению новой строки в таблице для категории, как показано ниже.
 
- [![](reflection-api-walkthrough-images/03-set-details.png "Запуск приложения теперь приводит строку в таблице для категории, как показано")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
+ [![](reflection-api-walkthrough-images/03-set-details.png "Выполнение приложения теперь приводит к отображению новой строки в таблице для категории, как показано ниже.")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
-Выбрав строку приводит приложения выполнен переход на новый экран со строками, соответствующими перечисления, как показано ниже:
+Выбор строки приводит к переходу приложения на новый экран со строками, соответствующими перечислениям, как показано ниже:
 
- [![](reflection-api-walkthrough-images/04-set-category.png "Выбор строки приводит приложения выполнен переход на новый экран со строками, соответствующими перечисления")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
+ [![](reflection-api-walkthrough-images/04-set-category.png "Выбор строки приводит к переходу приложения на новый экран со строками, соответствующими перечислению")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 
 
 ## <a name="summary"></a>Сводка
 
-В этой статье представлено пошаговое руководство по API отражения. Мы показали, как добавить атрибуты к классу для управления тем, что отображается. Мы также рассказал пока о использовании `BindingContext` привязывать данные из класса в иерархии элемента, создается, а также способы использования машинного перевода. D с `UINavigationController`.
+В этой статье представлено пошаговое руководство по API отражения. Мы показали, как добавить атрибуты в класс для управления отображаемыми сведениями. Мы также рассмотрели, `BindingContext` как использовать для привязки данных класса к создаваемой иерархии элементов, а также как использовать MT. D с `UINavigationController`.
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MTDReflectionWalkthrough (пример)](https://developer.xamarin.com/samples/monotouch/MTDReflectionWalkthrough/)
-- [Общие сведения о диалоговом окне MonoTouch](~/ios/user-interface/monotouch.dialog/index.md)
+- [Мтдрефлектионвалксраугх (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
+- [Общие сведения о диалоговом окне для бескасания](~/ios/user-interface/monotouch.dialog/index.md)
 - [Пошаговое руководство по API элементов](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
-- [Пошаговое руководство элемент JSON](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
-- [Диалоговое окно MonoTouch на Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [TweetStation приложения](https://github.com/migueldeicaza/TweetStation)
-- [Ссылки на класс UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Ссылки на класс UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Пошаговое руководство по элементу JSON](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
+- [Диалоговое окно с несенсорным касанием на GitHub](https://github.com/migueldeicaza/MonoTouch.Dialog)
+- [Приложение Твитстатион](https://github.com/migueldeicaza/TweetStation)
+- [Справочник по классам Уитаблевиевконтроллер](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Справочник по классам Уинавигатионконтроллер](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

@@ -1,24 +1,24 @@
 ---
-title: Отображение всплывающих окон
-description: 'В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. В этой статье демонстрируется использование окно оповещения и действия API-интерфейсы для отображения диалоговых окон, попросите пользователей простых вопросов и помогает пользователям сделать задачи.'
+title: Отображать всплывающие окна
+description: 'В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. В этой статье показано использование API-интерфейсов предупреждений и листов действий для вывода диалоговых окон с простыми вопросами и руководством пользователей по задачам.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 58c98aefdf87bcd1ca819de96f67c66646c1723d
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 3b6b2ea2d497c9fdce2c323c7f7a793a4186aa4f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182306"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656114"
 ---
-# <a name="display-pop-ups"></a>Отображение всплывающих окон
+# <a name="display-pop-ups"></a>Отображать всплывающие окна
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-_В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. В этой статье демонстрируется использование окно оповещения и действия API-интерфейсы для отображения диалоговых окон, попросите пользователей простых вопросов и помогает пользователям сделать задачи._
+_В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. В этой статье показано использование API-интерфейсов предупреждений и листов действий для вывода диалоговых окон с простыми вопросами и руководством пользователей по задачам._
 
 Вывод предупреждения или вариантов на выбор — стандартная задача в пользовательском интерфейсе. В Xamarin.Forms есть два метода, относящихся к классу [`Page`](xref:Xamarin.Forms.Page), для взаимодействия с пользователем посредством всплывающих элементов: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) и [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). Эти элементы визуализируются на каждой платформе с помощью соответствующих собственных элементов управления.
 
@@ -46,7 +46,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [![DisplayAlert](pop-ups-images/alert2-sml.png "Диалоговое окно предупреждения с двумя кнопками")](pop-ups-images/alert2.png#lightbox "Диалоговое окно предупреждения с двумя кнопками")
 
-## <a name="guide-users-through-tasks"></a>Руководство по пользователей с помощью задач
+## <a name="guide-users-through-tasks"></a>Рекомендации для пользователей по задачам
 
 [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) — это стандартный элемент пользовательского интерфейса в iOS. Метод Xamarin.Forms [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) позволяет включать этот элемент управления в кроссплатформенные приложения. При этом в Android и UWP будут отрисовываться собственные аналоги.
 
@@ -76,4 +76,4 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PopupsSample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

@@ -1,24 +1,24 @@
 ---
-title: Страница TabbedPage, проведение пальцем по экрану в Android
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать Android конкретных платформ, позволяющий считывания с жест палец по горизонтали между страницами в TabbedPage.
+title: Таббедпаже прокрутка страниц на Android
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу Android, которая позволяет выполнять прокрутку с помощью жеста горизонтального пальца между страницами в Таббедпаже.
 ms.prod: xamarin
 ms.assetid: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 36fd3d047f9f847cfdaadc3787ba81a583f25e57
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 47a941b88ef22a24383f54aad72563a4814ac077
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926453"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649951"
 ---
-# <a name="tabbedpage-page-swiping-on-android"></a>Страница TabbedPage, проведение пальцем по экрану в Android
+# <a name="tabbedpage-page-swiping-on-android"></a>Таббедпаже прокрутка страниц на Android
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Это Android платформы используется для включения считывания с жест палец по горизонтали между страницами в [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Он используется в XAML, задав [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) вложенное свойство, чтобы `boolean` значение:
+Эта платформа для Android используется для включения прокрутки с помощью жеста горизонтального пальца между [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)страницами в. Он используется в XAML, задав [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) вложенное свойство, чтобы `boolean` значение:
 
 ```xaml
 <TabbedPage ...
@@ -48,7 +48,7 @@ On<Android>().SetOffscreenPageLimit(2)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API АндроидспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [АндроидспеЦифик. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

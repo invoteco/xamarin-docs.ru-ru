@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 12e7e31cda9818a3cb2e2efc331a0be5d0c334e5
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: d924bac99b4edc5f41afd024d56fb0c6ace2613d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740847"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647632"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
-[GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) образце показано, как реализовать шаблон навигации 2D выбора для Android Wear.
+В образце [гридвиевпажер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) показано, как реализовать шаблон навигации для средства выбора 2D для выполнения износа Android.
 
-![Пример снимка экрана GridViewPager на квадратным дисплеем](gridviewpager-images/gridviewpager.png)
+![Пример снимка экрана Гридвиевпажер на квадратном дисплее](gridviewpager-images/gridviewpager.png)
 
-Сначала добавьте [поддержку Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear/) свой проект пакет NuGet.
+Сначала добавьте пакет NuGet для [поддержки Xamarin Android](https://www.nuget.org/packages/Xamarin.Android.Wear/) в проект.
 
-Макет XML выглядит следующим образом:
+XML-файл макета выглядит следующим образом:
 
 ```xml
 <android.support.wearable.view.GridViewPager xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,13 +31,13 @@ ms.locfileid: "66740847"
     android:keepScreenOn="true" />
 ```
 
-Создание [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(или подкласс, такие как [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
-для предоставления представления для отображения имени пользователя переход.
+Создайте[`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(или подкласс, например[`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+для предоставления представлений, отображаемых при переходе пользователя.
 
-[Пример адаптера](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) показано, как реализовать требуемые методы, включая переопределения для `RowCount`, `GetColumnCount`, `GetBackground`, и `GetFragment`
+В [примере адаптера](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) показано, как реализовать необходимые методы, включая переопределения для `RowCount`, `GetColumnCount` `GetBackground`, и`GetFragment`
 
-Подключите адаптер, как показано:
+Присоединить адаптер, как показано ниже.
 
 ```csharp
 pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
@@ -47,6 +47,6 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Google 2D средство выбора документа](https://developer.android.com/training/wearables/ui/2d-picker.html)
-- [Документация Android.support.wearable](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [GridViewPager (пример)](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)
+- [Документ средства выбора 2D в Google](https://developer.android.com/training/wearables/ui/2d-picker.html)
+- [Документация по Android. support. носимого пользователем](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [Гридвиевпажер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)

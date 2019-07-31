@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386688"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653891"
 ---
 # <a name="listview-interactivity"></a>Интерактивность ListView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView) поддерживает взаимодействие с данными, которые она представляет.
+[`ListView`](xref:Xamarin.Forms.ListView)поддерживает взаимодействие с данными, представленными в ней.
 
 <a name="selectiontaps" />
 
@@ -37,7 +37,7 @@ ms.locfileid: "61386688"
 При касании тот же элемент дважды будет срабатывать два [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события, но будет только вызов одной [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) событий.
 
 > [!NOTE]
-> [ `ItemTappedEventArgs` ](xref:Xamarin.Forms.ItemTappedEventArgs) Класс, который содержит аргументы события для [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события, [ `Group` ](xref:Xamarin.Forms.ItemTappedEventArgs.Group) и [ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item) свойства и `ItemIndex` свойство, значение которого представляет индекс в массиве [ `ListView` ](xref:Xamarin.Forms.ListView) полученные элемента. Аналогичным образом [ `SelectedItemChangedEventArgs` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs) класс, который содержит аргументы события для [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) события, [ `SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) свойство и `SelectedItemIndex` свойство, значение которого представляет индекс в массиве `ListView` выбранного элемента.
+> [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) [`Group`](xref:Xamarin.Forms.ItemTappedEventArgs.Group) `ItemIndex` Класс, который содержит аргументы события, имеет свойства [и`ListView`](xref:Xamarin.Forms.ListView) , и свойство, значение которого представляет индекс в элементе нажатого элемента. [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs) Аналогично, [`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs) класс, который содержит аргументы [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) события, имеет [`SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) свойство и `SelectedItemIndex` свойство, значение которого представляет индекс в `ListView` выбранном элементе.
 
 Когда [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) свойству [ `Single` ](xref:Xamarin.Forms.ListViewSelectionMode.Single), элементы в [ `ListView` ](xref:Xamarin.Forms.ListView) можно выбрать, [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) и [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) события порождаются и [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) свойству будет присвоено значение выбранного элемента.
 
@@ -149,20 +149,20 @@ public void OnDelete (object sender, EventArgs e) {
 
 ## <a name="pull-to-refresh"></a>Потяните, чтобы обновить
 
-Пользователи привыкли, потянув вниз по списку данных обновит этого списка. [`ListView`](xref:Xamarin.Forms.ListView) поддерживает этот out-of--box. Чтобы включить функцию по запросу для обновления, задайте [ `IsPullToRefreshEnabled` ](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) для `true`:
+Пользователи привыкли, потянув вниз по списку данных обновит этого списка. [`ListView`](xref:Xamarin.Forms.ListView)поддерживает встроенную поддержку. Чтобы включить функцию "принудительное обновление", задайте [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) для `true`параметра значение:
 
 ```xaml
 <ListView ...
           IsPullToRefreshEnabled="true" />
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
 ```
 
-Счетчик появляется во время обновления, который является черной по умолчанию. Тем не менее, цвет "Счетчик" можно изменить в iOS и Android, задав `RefreshControlColor` свойства [ `Color` ](xref:Xamarin.Forms.Color):
+Счетчик отображается во время обновления, который по умолчанию является черным. Однако цвет счетчика можно изменить в iOS и Android, задав `RefreshControlColor` [`Color`](xref:Xamarin.Forms.Color)для свойства значение.
 
 ```xaml
 <ListView ...
@@ -170,25 +170,25 @@ listView.IsPullToRefreshEnabled = true;
           RefreshControlColor="Red" />
 ```
 
-Ниже приведен аналогичный код C#:
+Эквивалентный код на C# выглядит так:
 
 ```csharp
 listView.RefreshControlColor = Color.Red;
 ```
 
-На следующих снимках экрана показано по запросу для обновления, как пользователь извлекает:
+На следующих снимках экрана показан запрос на обновление по мере извлечения пользователя:
 
 ![](interactivity-images/refresh-start.png "ListView потяните, чтобы обновить выполняющееся")
 
-Далее на снимках экрана Показывать по запросу для обновления после Пользователь отпустил по запросу, с "Счетчик", который отображается во время [ `ListView` ](xref:Xamarin.Forms.ListView) обновляется:
+На следующих снимках экрана показан запрос на обновление после того, как пользователь освободил запрос на вытягивание, и при [`ListView`](xref:Xamarin.Forms.ListView) обновлении отображается счетчик:
 
-![](interactivity-images/refresh-in-progress.png "ListView потяните, чтобы обновление завершено")
+![](interactivity-images/refresh-in-progress.png "Извлечение ListView для обновления завершено")
 
-[`ListView`](xref:Xamarin.Forms.ListView) активируется [ `Refreshing` ](xref:Xamarin.Forms.ListView.Refreshing) событий инициировать обновление и [ `IsRefreshing` ](xref:Xamarin.Forms.ListView.IsRefreshing) свойству будет присвоено `true`. Любой код не требуется, чтобы обновить содержимое `ListView` затем должна выполняться с помощью обработчика событий для `Refreshing` событий, или с помощью метода, выполняемая [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand). Один раз `ListView` обновляется и `IsRefreshing` свойство должно быть присвоено `false`, или [ `EndRefresh` ](xref:Xamarin.Forms.ListView.EndRefresh) метод должен вызываться, для указания выполнения обновления.
+[`ListView`](xref:Xamarin.Forms.ListView)запускает событие для запуска обновления, [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) и свойство будет установлено в `true`значение. [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) Любой код, необходимый для обновления содержимого, `ListView` должен затем выполняться обработчиком событий `Refreshing` для события или методом, выполняемым [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand). После обновления `IsRefreshing` [свойстводолжно`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) иметь значение ,илиметоддолженбытьвызван,чтобыуказать,чтообновлениезавершено.`false` `ListView`
 
 > [!NOTE]
-> При определении [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand), `CanExecute` метод команды можно задать, чтобы включить или отключить команду.
+> При определении [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) `CanExecute` метода можно указать метод команды, чтобы включить или отключить команду.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [ListView интерактивности (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [ListView интерактивности (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

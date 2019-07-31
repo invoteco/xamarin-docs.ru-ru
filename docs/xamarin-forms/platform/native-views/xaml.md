@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: b2e441a8e1443d1d32d553e9bbf1126fe5e380e7
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: bf9b630613dcc5c25dac96cad71e54022ead1812
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508849"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649599"
 ---
 # <a name="native-views-in-xaml"></a>Исходные представления в XAML
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Исходные представления из iOS, Android и универсальной платформы Windows можно непосредственно ссылаться из файлов XAML Xamarin.Forms. На исходные представления можно задать свойства и обработчики событий, и они могут взаимодействовать с представления Xamarin.Forms. В этой статье показано, как использовать исходные представления из файлов XAML Xamarin.Forms._
 
@@ -490,9 +490,9 @@ class MySpinner : Spinner
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [NativeSwitch (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
-- [Forms2Native (пример)](https://developer.xamarin.com/samples/xamarin-forms/Forms2Native/)
-- [NativeViewInsideContentView (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeViewInsideContentView/)
-- [SubclassedNativeControls (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/)
+- [NativeSwitch (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+- [Forms2Native (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/forms2native)
+- [NativeViewInsideContentView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
+- [SubclassedNativeControls (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
 - [Исходные формы](~/xamarin-forms/platform/native-forms.md)
 - [Передача аргументов в XAML](~/xamarin-forms/xaml/passing-arguments.md)

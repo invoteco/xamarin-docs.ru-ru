@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: dff2efe687fde16903df19fefad2e2589c888086
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: abc7bb09791df115536f552979b48a3a12b4f443
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510110"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646350"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Заполнение ListView Xamarin. Android данными
 
@@ -218,6 +218,6 @@ public int GetSectionForPosition(int position)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Басиктаблеандроид (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
-- [Басиктаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
-- [Фастскролл (пример)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
+- [Басиктаблеандроид (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableandroid)
+- [Басиктаблеадаптер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableadapter)
+- [Фастскролл (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fastscroll)

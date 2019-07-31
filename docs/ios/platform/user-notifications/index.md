@@ -1,38 +1,38 @@
 ---
-title: Платформа уведомлений пользователя в Xamarin.iOS
-description: Ссылки на документы, описывающие framework уведомления для пользователей и способы ее использования для отправки и получения локальных и удаленных уведомлений в приложении Xamarin.iOS.
+title: Платформа уведомлений пользователей в Xamarin. iOS
+description: Ссылки на документы, описывающие платформу пользовательских уведомлений, и способы ее использования для отправки и получения локальных и удаленных уведомлений в приложении Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/01/2016
-ms.openlocfilehash: 3e9103b02dd17529d0084d6f7eb4ddcc7749659a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 13fb48d5ee64c1d84926158381f0f69655fb2cf2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423322"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651176"
 ---
-# <a name="user-notifications-framework-in-xamarinios"></a>Платформа уведомлений пользователя в Xamarin.iOS
+# <a name="user-notifications-framework-in-xamarinios"></a>Платформа уведомлений пользователей в Xamarin. iOS
 
-Знакомы с iOS 10, уведомление пользователя, платформа позволяет доставки и обработки локальных и удаленных уведомлений. С помощью этой платформы, приложения или расширения приложения можно запланировать доставку локальных уведомлений, указав набор условий, таких как расположение или время суток.
+В iOS 10 платформа уведомлений пользователя обеспечивает доставку и обработку локальных и удаленных уведомлений. С помощью этой платформы расширение приложения или приложения может запланировать доставку локальных уведомлений, указав набор условий, например расположение или время суток.
 
-Кроме того, приложения или расширения может получать (и потенциально изменять) локальных и удаленных уведомлений, так как они доставляются на устройстве iOS пользователя.
+Кроме того, приложение или расширение могут получать (и потенциально изменять) как локальные, так и удаленные уведомления по мере их доставки на устройство iOS пользователя.
 
-Новая платформа пользовательского интерфейса для уведомления пользователя позволяет приложения или расширения приложения, чтобы настроить внешний вид локальных и удаленных уведомлений, когда они отображаются для пользователя.
+Новая платформа пользовательского интерфейса уведомлений пользователя позволяет приложению или расширению приложения настраивать внешний вид как локальных, так и удаленных уведомлений, когда они представлены пользователю.
 
 ## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Оптимизированные уведомления пользователя](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
-В этой статье рассматриваются все способы, что уведомления для пользователей были улучшены для iOS 10 и дается краткое введение к реализации их с помощью новой платформы уведомление пользователя.
+В этой статье представлены все способы улучшения пользовательских уведомлений в iOS 10, а также приведены краткие сведения по их реализации с помощью новой платформы уведомлений пользователей.
 
 ## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Дополнительные уведомления пользователя](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
-В этой статье занимает более подробный обзор новой платформы уведомления для пользователей и как воспользоваться всеми преимуществами его в приложении Xamarin.iOS.
+В этой статье более подробно рассматривается новая платформа уведомлений пользователей и приводятся все преимущества ее использования в приложении Xamarin. iOS.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Справочник по платформа Usernotifications](https://developer.apple.com/reference/usernotifications)
-- [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Руководство по программированию локальных и удаленных уведомлений](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)
+- [Примеры iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Справочник по Усернотификатионс Framework](https://developer.apple.com/reference/usernotifications)
+- [усернотификатионсуи](https://developer.apple.com/reference/usernotificationsui)
+- [Локальное и удаленное уведомление по программированию](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

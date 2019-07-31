@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 37b14b60f3cd9aa6a3fb182583bde902cc677b89
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 4a0a7a4db4b0ca982a162ec3a0b67dc729af0ed2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925075"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655940"
 ---
 # <a name="listview-performance"></a>Производительность элемента управления ListView
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 
 При написании приложений для мобильных устройств, производительность имеет значение. Пользователи привыкли плавную прокрутку и время быстрой загрузки. Несоответствие требованиям ожиданиям пользователей будет стоить вам оценки в хранилище приложения или в случае с бизнес-приложением издержек время и деньги.
 
@@ -133,7 +133,7 @@ var listView = new ListView(ListViewCachingStrategy.RecycleElement);
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Настройка кэширования стратегии в подклассах ListView
 
-Установка `CachingStrategy` атрибута из XAML в подклассах [ `ListView` ](xref:Xamarin.Forms.ListView) не даст требуемое поведение, так как не `CachingStrategy` свойство `ListView`. Кроме того Если [XAMLC](~/xamarin-forms/xaml/xamlc.md) — включена, будет произведено следующее сообщение об ошибке: **Нет свойство, свойство, используемое или событие найдено для «CachingStrategy»**
+Установка `CachingStrategy` атрибута из XAML в подклассах [ `ListView` ](xref:Xamarin.Forms.ListView) не даст требуемое поведение, так как не `CachingStrategy` свойство `ListView`. Кроме того, если [XAMLC](~/xamarin-forms/xaml/xamlc.md) включен, будет создано следующее сообщение об ошибке: **Для "Качингстратеги" не найдено свойство, связываемое свойство или событие**
 
 Решение этой проблемы является указание конструктор для подкласса [ `ListView` ](xref:Xamarin.Forms.ListView) , принимающий [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) параметра и передает его в базовый класс:
 
@@ -185,6 +185,6 @@ public class CustomListView : ListView
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пользовательское представление модуля подготовки отчетов (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [ViewCell пользовательского модуля подготовки отчетов (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+- [Пользовательское представление модуля подготовки отчетов (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [ViewCell пользовательского модуля подготовки отчетов (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

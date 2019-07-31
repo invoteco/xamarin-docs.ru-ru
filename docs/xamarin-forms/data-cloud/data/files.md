@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 21d25315aec5c056df90da11b8a51ee1493a45a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659081"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656682"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Обработка файлов в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _Обработку файлов в Xamarin.Forms можно выполнить с помощью кода в библиотеке .NET Standard или внедренных ресурсов._
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-После этого можно воспользоваться переменной `text`, чтобы отобразить текст или использовать его в коде иным образом. Этот снимок экрана [примера приложения](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) отображает текст, отрисованный в элементе управления `Label`.
+После этого можно воспользоваться переменной `text`, чтобы отобразить текст или использовать его в коде иным образом. Этот снимок экрана [примера приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) отображает текст, отрисованный в элементе управления `Label`.
 
  [![Текстовый файл, внедренный в PCL](files-images/pcltext-sml.png "Внедренный в PCL текстовый файл, отображаемый в приложении")](files-images/pcltext.png#lightbox "Внедренный в PCL текстовый файл, отображаемый в приложении")
 
@@ -166,7 +166,7 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Работа с файловой системой в Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
 

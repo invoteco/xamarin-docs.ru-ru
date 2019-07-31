@@ -1,158 +1,158 @@
 ---
-title: Создание оформлений экрана для Android Wear 1.0
-description: В этом руководстве объясняется, как реализовать службу пользовательские Контрольные значения лиц для Android Wear 1.0. Пошаговые инструкции для создания является урезанным работу службы цифровых watch лиц, следуют дополнительные код, чтобы создать стиль аналоговый циферблате.
+title: Создание лица для просмотра неизноса Android 1,0
+description: В этом руководство объясняется, как реализовать пользовательскую службу отслеживания лиц для Android — износа 1,0. Пошаговые инструкции предназначены для создания отключенной службы Digital Watch, за которой следует дополнительный код для создания часового следа в аналоговом стиле.
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 52891a11dcc271497031658d0eff9f98a01d3555
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61287279"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647882"
 ---
 # <a name="creating-a-watch-face"></a>Создание оформлений экрана
 
-_В этом руководстве объясняется, как реализовать службу пользовательские Контрольные значения лиц для Android Wear 1.0. Пошаговые инструкции для создания является урезанным работу службы цифровых watch лиц, следуют дополнительные код, чтобы создать стиль аналоговый циферблате._
+_В этом руководство объясняется, как реализовать пользовательскую службу отслеживания лиц для Android — износа 1,0. Пошаговые инструкции предназначены для создания отключенной службы Digital Watch, за которой следует дополнительный код для создания часового следа в аналоговом стиле._
 
 ## <a name="overview"></a>Обзор
 
-В этом пошаговом руководстве Чтобы проиллюстрировать основы создания пользовательских оформлений экрана Android Wear 1.0 создается услуга лиц основные контрольные значения.
-Служба распознавания лиц начальное Контрольное значение отображает простой цифровой Контрольные значения, отображается текущее время в часах и минутах:
+В этом пошаговом руководстве создается базовая служба отслеживания лиц, которая иллюстрирует основные принципы создания пользовательского циферблата по 1,0 износу Android (в часах).
+В службе первоначального просмотра отображаются простые цифровые часы, в которых отображается текущее время в часах и минутах:
 
-[![Цифровой циферблате](creating-a-watchface-images/01-initial-face.png "пример снимка экрана начальной цифровой циферблате")](creating-a-watchface-images/01-initial-face.png#lightbox)
+[![Цифровой циферблат](creating-a-watchface-images/01-initial-face.png "Пример снимка экрана первоначального цифрового часового лица")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
-После этого цифровой циферблате разрабатывается и протестированы, дополнительные код добавляется до более сложных аналогового циферблате с тремя руки:
+После разработки и тестирования этого цифрового циферблата будет добавлен дополнительный код для его обновления до более замысловатого аналогового лица с тремя руки:
 
-[![Аналоговые циферблате](creating-a-watchface-images/02-example-watchface.png "пример снимка экрана на окончательный аналогового циферблате")](creating-a-watchface-images/02-example-watchface.png#lightbox)
+[![Аналоговое лицо для просмотра](creating-a-watchface-images/02-example-watchface.png "Пример снимка экрана окончательного аналогового циферблата")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
-Службы лиц Watch объединено и устанавливается как часть приложения Wear 1.0. В следующих примерах `MainActivity` содержит не более чем код из шаблона приложения Wear 1.0, чтобы служба лиц Контрольные значения можно упаковать и развернут умные часы в виде часть приложения. По сути это приложение будет использоваться исключительно как автомобиля для получения службе лиц watch, загруженной в устройстве Wear 1.0 (или эмуляторе) для отладки и тестирования.
+Службы просмотра лиц упаковываются и устанавливаются как часть приложения «износа 1,0». В следующих примерах `MainActivity` содержится не только код из шаблона приложения "износ 1,0", поэтому служба отслеживания лиц может быть упакована и развернута в разумном контрольном лице как часть приложения. По сути, это приложение будет использоваться исключительно как транспортное средство для получения сведений об отучении и тестировании службы "наблюдатель лиц", загруженной в устройство износа (или эмулятора) с недействительной 1,0.
 
 ## <a name="requirements"></a>Требования
 
-Реализация службы watch лиц, вот требуется:
+Чтобы реализовать службу отслеживания лиц, необходимо следующее:
 
--   Android 5.0 (уровень API 21) или более поздней версии на устройстве Android Wear или эмуляторе.
+-   Android 5,0 (уровень API 21) или более поздней версии на устройстве или эмуляторе износа.
 
--   [Библиотек поддержки Android Wear Xamarin](https://www.nuget.org/packages/Xamarin.Android.Wear) необходимо добавить в проект Xamarin.Android.
+-   [Библиотеки поддержки Xamarin Android](https://www.nuget.org/packages/Xamarin.Android.Wear) , которые необходимо добавить в проект Xamarin. Android.
 
-Несмотря на то, что Android 5.0 минимальное API уровня для реализации службы лиц watch, Android 5.1 или более поздней версии рекомендуется использовать. Android Wear устройств под управлением Android 5.1 (API 22) или более поздней версии разрешить износа приложения для управления, что отображается на экране, пока устройство находится в энергосберегающее *окружения* режим. При удалении устройства из низкого энергопотребления *окружения* режиме, он находится в *интерактивные* режим. Дополнительные сведения об этих режимах см. в разделе [сохранение свое приложение видимым](https://developer.android.com/training/wearables/apps/always-on.html).
+Хотя Android 5,0 является минимальным уровнем API для реализации службы отслеживания лиц, рекомендуется использовать Android 5,1 или более позднюю версию. Устройства Android с Android 5,1 (API 22) и более поздних версий позволяют приложениям-выпускам управлять отображением на экране, пока устройство находится *в режиме низкого* энергопотребления. Когда устройство выходит из окружающего режима низкого энергопотребления, оно находится в интерактивном режиме. Дополнительные сведения об этих режимах см. [в разделе обеспечение видимости приложения](https://developer.android.com/training/wearables/apps/always-on.html).
 
 
 ## <a name="start-an-app-project"></a>Запуск проекта приложения
 
-Создайте новый проект Android Wear 1.0 с именем **WatchFace** (Дополнительные сведения о создании новых проектов Xamarin.Android см. в разделе [Привет, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
+Создание проекта Android износа 1,0 с именем **ватчфаце** (Дополнительные сведения о создании проектов Xamarin. Android см. в статье [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Диалоговое окно нового проекта](creating-a-watchface-images/03-wear-project-vs-sml.png "выберите приложение Wear в диалоговом окне нового проекта")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
+[![Диалоговое окно создания проекта](creating-a-watchface-images/03-wear-project-vs-sml.png "Выбор приложения \"износ\" в диалоговом окне \"Создание проекта\"")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Диалоговое окно нового проекта](creating-a-watchface-images/03-wear-project-xs-sml.png "выберите приложение Wear в диалоговом окне нового проекта")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
+[![Диалоговое окно создания проекта](creating-a-watchface-images/03-wear-project-xs-sml.png "Выбор приложения \"износ\" в диалоговом окне \"Создание проекта\"")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
 
-Задайте имя пакета `com.xamarin.watchface`:
+Задайте имя `com.xamarin.watchface`пакета:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Параметр имени пакета](creating-a-watchface-images/04-package-name-vs.png "присвоено имя пакета com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
+[![Параметр имени пакета](creating-a-watchface-images/04-package-name-vs.png "Задайте для имени пакета значение com. Xamarin. ватчфаце")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Параметр имени пакета](creating-a-watchface-images/04-package-name-xs.png "присвоено имя пакета com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
+[![Параметр имени пакета](creating-a-watchface-images/04-package-name-xs.png "Задайте для имени пакета значение com. Xamarin. ватчфаце")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Кроме того, прокрутите вниз и включите **INTERNET** и **WAKE_LOCK** разрешения:
+Кроме того, прокрутите вниз и включите разрешения **Интернета** и **WAKE_LOCK** :
 
-[![Необходимые разрешения](creating-a-watchface-images/05-required-permissions-vs.png "разрешить и WAKE_LOCK разрешения")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
+[![Необходимые разрешения](creating-a-watchface-images/05-required-permissions-vs.png "Включить разрешения для Интернета и WAKE_LOCK")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Значение версии Android минимум **Android 5.1 (уровень API 22)**.
-Кроме того, включение **Internet** и **WakeLock** разрешения:
+Установите для минимальной версии Android значение **android 5,1 (API уровня 22)** .
+Кроме того, включите разрешения **Интернета** и **вакелокк** :
 
-[![Необходимые разрешения](creating-a-watchface-images/05-required-permissions-xs.png "разрешить и WakeLock разрешения")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
+[![Необходимые разрешения](creating-a-watchface-images/05-required-permissions-xs.png "Включить разрешения для Интернета и вакелокк")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
-Теперь скачайте [preview.png](creating-a-watchface-images/preview.png) &ndash; добавляется к **прорисовываемых ресурсов** папку позже в этом пошаговом руководстве.
+Затем загрузите файл [Preview. png](creating-a-watchface-images/preview.png) &ndash; , который будет добавлен в папку **драваблес** далее в этом пошаговом руководстве.
 
 
-## <a name="add-the-xamarinandroid-wear-package"></a>Добавьте пакет износа Xamarin.Android
+## <a name="add-the-xamarinandroid-wear-package"></a>Добавление пакета износа Xamarin. Android
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Запустите диспетчер пакетов NuGet (в Visual Studio щелкните правой кнопкой мыши **ссылки** в **обозревателе решений** и выберите **управление пакетами NuGet...** ). Обновить проект до последней стабильной версии **Xamarin.Android.Wear**:
+Запустите диспетчер пакетов NuGet (в Visual Studio щелкните правой кнопкой мыши **ссылки** в **Обозреватель решений** и выберите **Управление пакетами NuGet...** ). Обновите проект до последней стабильной версии **Xamarin. Android. износа**:
 
-[![Диспетчер пакетов NuGet добавьте](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "добавить пакет Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
+[![Добавление диспетчера пакетов NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Добавление пакета Xamarin. Android. износа")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
-Далее, если **Xamarin.Android.Support.v13** будет установлено, удалите его:
+Затем, если **Xamarin. Android. support. V13** установлен, удалите его:
 
-[![Удалить диспетчер пакетов NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "удалить Xamarin.Support.v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
+[![Удаление диспетчера пакетов NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Удалите Xamarin. support. V13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Запустите диспетчер пакетов NuGet (в Visual Studio для Mac, щелкните правой кнопкой мыши **пакетов** в **область решений** и выберите **добавить пакеты...** ). Обновить проект до последней стабильной версии **Xamarin.Android.Wear**:
+Запустите диспетчер пакетов NuGet (в Visual Studio для Mac щелкните правой кнопкой мыши **пакеты** в **области решение** и выберите команду **Добавить пакеты...** ). Обновите проект до последней стабильной версии **Xamarin. Android. износа**:
 
-[![Диспетчер пакетов NuGet добавьте](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "добавить пакет Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
+[![Добавление диспетчера пакетов NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Добавление пакета Xamarin. Android. износа")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
 
-Сборка и запуск приложения на устройстве Android Wear или в эмуляторе (Дополнительные сведения о том, как это сделать, см. в разделе [Приступая к работе](~/android/wear/get-started/index.md) руководстве). Вы должны увидеть на следующем экране приложения на устройстве Android Wear:
+Создание и запуск приложения на устройстве или в эмуляторе (Дополнительные сведения о том, как это сделать, см. в разделе Руководство по [Начало работы](~/android/wear/get-started/index.md) ). На устройстве "износ" должно отобразиться следующее окно приложения:
 
-[![Снимок экрана приложения](creating-a-watchface-images/08-app-screen.png "экран приложения на устройстве Android Wear")](creating-a-watchface-images/08-app-screen.png#lightbox)
+[![Снимок экрана приложения](creating-a-watchface-images/08-app-screen.png "Экран приложения на устройстве износа")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
-На этом этапе базовое приложение Wear имеет функциональных возможностей распознавания лиц Контрольные значения, так как он еще не обеспечивает реализацию службы лиц Контрольные значения. Эта служба будет добавляться рядом.
-
-
-## <a name="canvaswatchfaceservice"></a>CanvasWatchFaceService
-
-Android Wear реализует смотреть лиц с помощью `CanvasWatchFaceService` класса. `CanvasWatchFaceService` является производным от `WatchFaceService`, который сам является производным от `WallpaperService` как показано на следующей схеме:
-
-[![Схема наследования](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService диаграмма наследования")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
-
-`CanvasWatchFaceService` включает в себя вложенный `CanvasWatchFaceService.Engine`; он создает экземпляр `CanvasWatchFaceService.Engine` объект, который выполняет фактическую работу рисования на циферблате. `CanvasWatchFaceService.Engine` является производным от `WallpaperService.Engine` как показано на схеме выше.
-
-Не показано на этой схеме является `Canvas` , `CanvasWatchFaceService` используется для рисования на циферблате &ndash; это `Canvas` переданной через `OnDraw` метод, как описано ниже.
-
-В следующих разделах будут созданы службы лиц пользовательские Контрольные значения, сделав следующее:
-
-1.  Определите класс с именем `MyWatchFaceService` , производный от `CanvasWatchFaceService`.
-
-2.  В рамках `MyWatchFaceService`, создать вложенный класс с именем `MyWatchFaceEngine` , производный от `CanvasWatchFaceService.Engine`.
-
-3.  В `MyWatchFaceService`, реализовать `CreateEngine` метод, создающий экземпляр `MyWatchFaceEngine` и возвращает его.
-
-4.  В `MyWatchFaceEngine`, реализовать `OnCreate` метод для создания стиля грани контрольных значений и выполнения других задач инициализации.
-
-5.  Реализуйте `OnDraw` метод `MyWatchFaceEngine`. Этот метод вызывается всякий раз, когда на циферблате должна быть перерисована (т. е. *недействительным*). `OnDraw` — метод, который рисует (и перерисовывает) элементы лиц Контрольные значения, такие как час, минуту и второй руки.
-
-6.  Реализуйте `OnTimeTick` метод `MyWatchFaceEngine`.
-    `OnTimeTick` вызывается по крайней мере один раз в минуту (в окружающей среды и интерактивный режим) или при изменении даты и времени.
-
-Дополнительные сведения о `CanvasWatchFaceService`, см. в разделе Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) документации по API.
-Аналогичным образом [CanvasWatchFaceService.Engine](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) объясняет фактическую реализацию на циферблате.
+На этом этапе базовое приложение "простой" не имеет функциональных возможностей наблюдения, так как оно еще не предоставляет реализацию службы просмотра лиц. Эта служба будет добавлена далее.
 
 
-### <a name="add-the-canvaswatchfaceservice"></a>Добавить CanvasWatchFaceService
+## <a name="canvaswatchfaceservice"></a>канвасватчфацесервице
+
+Износ Android реализует Просмотр наблюдателей через `CanvasWatchFaceService` класс. `CanvasWatchFaceService`является производным `WatchFaceService`от, который является производным `WallpaperService` от, как показано на следующей схеме:
+
+[![Схема наследования](creating-a-watchface-images/09-inheritance-diagram-sml.png "Схема наследования канвасватчфацесервице")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
+
+`CanvasWatchFaceService`включает вложенный `CanvasWatchFaceService.Engine` `CanvasWatchFaceService.Engine` объект; он создает экземпляр объекта, который выполняет фактическую работу по рисованию циферблата. `CanvasWatchFaceService.Engine`является производным `WallpaperService.Engine` от, как показано на схеме выше.
+
+На этой диаграмме не показана `Canvas` схема `CanvasWatchFaceService` , используемая для рисования грани &ndash; просмотра `Canvas` . это передается `OnDraw` через метод, как описано ниже.
+
+В следующих разделах будет создана пользовательская служба отслеживания лиц, выполнив следующие действия.
+
+1.  Определите класс с именем `MyWatchFaceService` , производным от `CanvasWatchFaceService`.
+
+2.  В `MyWatchFaceService`среде создайте вложенный класс с `MyWatchFaceEngine` именем, производным `CanvasWatchFaceService.Engine`от.
+
+3.  В `MyWatchFaceService` `MyWatchFaceEngine` реализуйте метод, который создает экземпляр и возвращает его. `CreateEngine`
+
+4.  `MyWatchFaceEngine` В`OnCreate` реализуйте метод, чтобы создать стиль для просмотра граней и выполнить другие задачи инициализации.
+
+5.  Реализуйте`MyWatchFaceEngine`метод `OnDraw` . Этот метод вызывается каждый раз, когда необходимо перерисовать грань (т. е. аннулирование). `OnDraw`метод, рисующий (и перерисующий) элементы лицевой стороны, например час, минуту и секунды.
+
+6.  Реализуйте`MyWatchFaceEngine`метод `OnTimeTick` .
+    `OnTimeTick`метод вызывается по крайней мере один раз в минуту (в режиме окружающей среды и интерактивных режимов) или при изменении даты и времени.
+
+Дополнительные сведения о `CanvasWatchFaceService`см. в документации по API [канвасватчфацесервице](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) для Android.
+Аналогичным образом [канвасватчфацесервице. Engine](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) описывает фактическую реализацию циферблата.
+
+
+### <a name="add-the-canvaswatchfaceservice"></a>Добавление Канвасватчфацесервице
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Добавьте новый файл с именем **MyWatchFaceService.cs** (в Visual Studio щелкните правой кнопкой мыши **WatchFace** в **обозревателе решений**, нажмите кнопку **Добавить > новый элемент...** и выберите **класс**).
+Добавьте новый файл с именем **MyWatchFaceService.CS** (в Visual Studio щелкните правой кнопкой мыши **ватчфаце** в **Обозреватель решений**, а затем выберите пункт **Добавить > новый элемент...** и выберите **класс**).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Добавьте новый файл с именем **MyWatchFaceService.cs** (в Visual Studio для Mac, щелкните правой кнопкой мыши **WatchFace** проекта, щелкните **Добавить > новый файл...** и выберите **пустой класс**).
+Добавьте новый файл с именем **MyWatchFaceService.CS** (в Visual Studio для Mac щелкните правой кнопкой мыши проект **ватчфаце** , выберите команду **Добавить > создать файл...** и выберите **пустой класс**).
 
 -----
 
@@ -186,20 +186,20 @@ namespace WatchFace
 }
 ```
 
-`MyWatchFaceService` (производный от `CanvasWatchFaceService`) — это «основная программа» на циферблате. `MyWatchFaceService` реализует только один метод `OnCreateEngine`, который создает и возвращает `MyWatchFaceEngine` объекта (`MyWatchFaceEngine` является производным от `CanvasWatchFaceService.Engine`). Созданный экземпляр `MyWatchFaceEngine` объектом, возвращаемым как `WallpaperService.Engine`. Инкапсуляция `MyWatchFaceService` объект передается в конструктор.
+`MyWatchFaceService`(производный `CanvasWatchFaceService`от) — основная программа для просмотра циферблата. `MyWatchFaceService`реализует только один метод, `OnCreateEngine`который создает экземпляр и `MyWatchFaceEngine` возвращает объект (`MyWatchFaceEngine` производный от `CanvasWatchFaceService.Engine`). Экземпляр `MyWatchFaceEngine` объекта должен возвращаться `WallpaperService.Engine`как. Инкапсулированный `MyWatchFaceService` объект передается в конструктор.
 
-`MyWatchFaceEngine` — Это реализация лиц фактическое watch &ndash; он содержит код, который рисует на циферблате. Он также обрабатывает системные события, такие как изменения экрана (окружения/интерактивного режима экрана, отключение и т. д.).
+`MyWatchFaceEngine`— Это фактическая реализация &ndash; контрольного лица, содержащая код, который рисует грань просмотра. Он также обрабатывает системные события, такие как изменения экрана (режимы окружения и интерактивности, выключение экрана и т. д.).
 
 
-### <a name="implement-the-engine-oncreate-method"></a>Реализуйте метод OnCreate ядра
+### <a name="implement-the-engine-oncreate-method"></a>Реализация метода OnCreate обработчика
 
-`OnCreate` Метод инициализирует на циферблате. Добавьте следующее поле `MyWatchFaceEngine`:
+`OnCreate` Метод инициализирует поверхность просмотра. Добавьте следующее поле в `MyWatchFaceEngine`:
 
 ```csharp
 Paint hoursPaint;
 ```
 
-Это `Paint` объекта будет использоваться для рисования на циферблате текущее время. Добавьте следующий метод в `MyWatchFaceEngine`:
+Этот `Paint` объект будет использоваться для отображения текущего времени на наблюдателе. Затем добавьте следующий метод в `MyWatchFaceEngine`:
 
 ```csharp
 public override void OnCreate(ISurfaceHolder holder)
@@ -218,25 +218,25 @@ public override void OnCreate(ISurfaceHolder holder)
 }
 ```
 
-`OnCreate` вызывается вскоре после `MyWatchFaceEngine` запущена. Она настраивает `WatchFaceStyle` (контроль как износа устройство взаимодействует с пользователем) и создает экземпляр `Paint` объект, который будет использоваться для отображения времени.
+`OnCreate`вызывается вскоре после `MyWatchFaceEngine` запуска. Он настраивает элемент `WatchFaceStyle` управления (который управляет взаимодействием устройства по износу) и создает экземпляр `Paint` объекта, который будет использоваться для отображения времени.
 
-Вызов `SetWatchFaceStyle` делает следующее:
+Вызов метода `SetWatchFaceStyle` делает следующее:
 
-1.  Наборы *режим просмотра* для `PeekModeShort`, чего уведомления в виде карточек небольшой «Показать» на экране.
+1.  Задает *режим просмотра* , `PeekModeShort`в результате чего уведомления отображаются в виде мелких карточек просмотра.
 
-2.  Задает видимость фона `Interruptive`, чего фон карты обзора будет отображаться только на короткое время если оно представляет уведомление прерывающие работу.
+2.  Задает видимость `Interruptive`фона, что приводит к тому, что фон отображаемой карточки будет отображаться только в том случае, если он представляет собой прерывание уведомления.
 
-3.  Отключает системное время пользовательского интерфейса по умолчанию из изображаемого циферблате таким образом, чтобы пользовательские циферблате вместо отображения времени.
+3.  Отключает прорисовку времени пользовательского интерфейса системы по умолчанию на экране просмотра, чтобы пользовательское лицо наблюдения могла отображать время.
 
-Дополнительные сведения об этих и других параметров стиля лиц Контрольные значения, см. в разделе Android [WatchFaceStyle.Builder](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) документации по API.
+Дополнительные сведения об этих и других параметрах в стиле просмотра см. в документации по API Android [ватчфацестиле. Builder](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) .
 
-После `SetWatchFaceStyle` завершения `OnCreate` создает `Paint` объекта (`hoursPaint`) и задает ее цвет белым цветом и его размер шрифта до 48 пикселей ([TextSize](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) должен быть указан в пикселях).
+После `SetWatchFaceStyle` завершения `OnCreate` создает экземпляр `Paint` объекта(`hoursPaint`) и устанавливает его цвет в белый и его размер текста равным 48 пикселям (значение[TEXTSIZE](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) должно быть указано в пикселях).
 
 
-### <a name="implement-the-engine-ondraw-method"></a>Реализуйте метод OnDraw ядра
+### <a name="implement-the-engine-ondraw-method"></a>Реализация метода OnDraw Engine
 
-`OnDraw` Метод является наиболее важным, возможно `CanvasWatchFaceService.Engine` метод &ndash; этот метод, что фактически рисует смотрите лиц элементы, такие как цифры и clock руки лиц.
-В следующем примере он рисует строку времени на циферблате.
+Этот метод, возможно, является самым `CanvasWatchFaceService.Engine` важным &ndash; методом, который фактически рисует элементы с контрольными знаками, такие как цифры и циферблаты. `OnDraw`
+В следующем примере на экране просмотра выводится строка времени.
 Добавьте следующий метод в `MyWatchFaceEngine`:
 
 ```csharp
@@ -249,14 +249,14 @@ public override void OnDraw (Canvas canvas, Rect frame)
 }
 ```
 
-При вызове метода Android `OnDraw`, он передает в `Canvas` экземпляра и границы, в которых можно рисовать начертание шрифта. В приведенном выше примере кода `DateTime` используется для вычисления текущего времени в часах и минутах (в 12-часовом формате). Результирующая строка времени рисуется на холсте с помощью `Canvas.DrawText` метод. Строка отобразится 70 точек отказа от левого края и 80 пикселей вниз относительно верхнего края.
+При вызове `OnDraw`Android он передается `Canvas` в экземпляр и границы, в которых может быть нарисован лицо. В приведенном выше примере `DateTime` кода используется для вычисления текущего времени в часах и минутах (в 12-часовом формате). Результирующая строка времени рисуется на холсте с помощью `Canvas.DrawText` метода. Строка будет отображаться на 70 пикселей сверху от левого края до 80 пикселей вниз от верхнего края.
 
-Дополнительные сведения о `OnDraw` метод, см. в разделе Android [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) документации по API.
+Дополнительные сведения о `OnDraw` методе см. в документации по API [OnDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) для Android.
 
 
-### <a name="implement-the-engine-ontimetick-method"></a>Реализуйте метод OnTimeTick ядра
+### <a name="implement-the-engine-ontimetick-method"></a>Реализация метода Онтиметикк Engine
 
-Android периодически вызывает `OnTimeTick` метод обновления времени, отображаемого на циферблате. Он называется в как минимум один раз в минуту (в окружающей среды и интерактивный режим), или при изменении даты и времени или часового пояса. Добавьте следующий метод в `MyWatchFaceEngine`:
+Android периодически вызывает `OnTimeTick` метод для обновления времени, отображаемого лицом просмотра. Он вызывается по крайней мере один раз в минуту (как в режиме окружающего внешнего, так и интерактивного режима), так и при изменении даты/времени или часового пояса. Добавьте следующий метод в `MyWatchFaceEngine`:
 
 ```csharp
 public override void OnTimeTick()
@@ -265,14 +265,14 @@ public override void OnTimeTick()
 }
 ```
 
-Эта реализация `OnTimeTick` просто вызывает `Invalidate`. `Invalidate` Расписания метод `OnDraw` перерисовывает на циферблате.
+Эта реализация `OnTimeTick` просто вызывает `Invalidate`. `Invalidate` Метод планирует`OnDraw` перерисовку циферблата.
 
-Дополнительные сведения о `OnTimeTick` метод, см. в разделе Android [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) документации по API.
+Дополнительные сведения о `OnTimeTick` методе см. в документации по API [онтиметикк](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) для Android.
 
 
-## <a name="register-the-canvaswatchfaceservice"></a>Зарегистрировать CanvasWatchFaceService
+## <a name="register-the-canvaswatchfaceservice"></a>Регистрация Канвасватчфацесервице
 
-`MyWatchFaceService` должен быть зарегистрирован в **AndroidManifest.xml** из связанного приложения одежды. Чтобы сделать это, добавьте следующий XML-код для `<application>` раздел:
+`MyWatchFaceService`должен быть зарегистрирован в **AndroidManifest. XML** связанного приложения-износа. Для этого добавьте в `<application>` раздел следующий код XML:
 
 ```xml
 <service
@@ -294,150 +294,150 @@ public override void OnTimeTick()
 </service>
 ```
 
-Этот XML-код выполняет следующие функции:
+Этот XML-код выполняет следующие действия:
 
-1.  Наборы `android.permission.BIND_WALLPAPER` разрешение. Это разрешение дает watch лиц службы разрешение на изменение обоев системы на устройстве. Обратите внимание, что это разрешение должно быть задано в `<service>` раздел, а не во внешнем `<application>` раздел.
+1.  `android.permission.BIND_WALLPAPER` Задает разрешение. Это разрешение дает службе "наблюдатель лиц" разрешение на изменение рабочего стола системы на устройстве. Обратите внимание, что это разрешение должно быть `<service>` задано в разделе, а `<application>` не во внешнем разделе.
 
-2.  Определяет `watch_face` ресурсов. Этот ресурс находится в короткое XML-файл, который объявляет `wallpaper` ресурсов (этот файл будет создан в следующем разделе).
+2.  `watch_face` Определяет ресурс. Этот ресурс является коротким XML-файлом, который объявляет `wallpaper` ресурс (этот файл будет создан в следующем разделе).
 
-3.  Объявляет drawable образ с именем `preview` , будет отображаться на экране выбора средства выбора контрольных значений.
+3.  Объявляет изображение `preview` с возможностью рисования, которое будет отображаться на экране выбора контрольного значения выборки.
 
-4.  Включает в себя `intent-filter` для Android следует помнить, что `MyWatchFaceService` будут смотреть оформлений.
+4.  Включает, `MyWatchFaceService` чтобы позволить Android понять, что будет отображать экран с изображением циферблата. `intent-filter`
 
-На этом завершается создание кода для базовой `WatchFace` пример. Следующим шагом является добавление необходимых ресурсов.
+Это завершает код для базового `WatchFace` примера. Следующим шагом является добавление необходимых ресурсов.
 
 
-## <a name="add-resource-files"></a>Добавить файлы ресурсов
+## <a name="add-resource-files"></a>Добавление файлов ресурсов
 
-Перед запуском службы Контрольные значения, необходимо добавить **watch_face** ресурсов и изображение для предварительного просмотра. Во-первых, создайте новый файл XML в **Resources/xml/watch_face.xml** и замените его содержимое следующим кодом XML:
+Перед запуском службы Watch необходимо добавить ресурс **watch_face** и изображение для предварительного просмотра. Сначала создайте новый XML-файл в файле **Resources/XML/watch_face. XML** и замените его содержимое следующим XML-кодом:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <wallpaper xmlns:android="http://schemas.android.com/apk/res/android" />
 ```
 
-Задайте действие сборки этот файл для **AndroidResource**:
+Задать для этого файла действие сборки **AndroidResource**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Действие при сборке](creating-a-watchface-images/10-android-resource-vs.png "задание сборки действие AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
+[![Действие сборки](creating-a-watchface-images/10-android-resource-vs.png "Задать для действия сборки значение AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Действие при сборке](creating-a-watchface-images/10-android-resource-xs.png "задание сборки действие AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
+[![Действие сборки](creating-a-watchface-images/10-android-resource-xs.png "Задать для действия сборки значение AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
-Этот файл ресурсов определяет простой `wallpaper` элемент, который будет использоваться для на циферблате.
+Этот файл ресурсов определяет простой `wallpaper` элемент, который будет использоваться для просмотра циферблата.
 
-Если еще не сделано, загрузите [preview.png](creating-a-watchface-images/preview.png).
-Установить по этому **Resources/drawable/preview.png**. Не забудьте добавить этот файл, чтобы `WatchFace` проекта. Изображение для предварительного просмотра отображается для пользователей в средстве выбора лиц watch на устройстве Android Wear. Создание эскиза для собственного грани Контрольные значения, можно делать снимки экрана на циферблате, пока оно выполняется. (Дополнительные сведения о получении снимков экрана с износа устройств, см. в разделе [делать снимки экрана](~/android/wear/deploy-test/debug-on-device.md#screenshots)).
+Если вы еще не сделали этого, скачайте файл [Preview. png](creating-a-watchface-images/preview.png).
+Установите его в **области ресурсов, которые вы Нарисуйте/Предварительная версия. png**. Не забудьте добавить этот файл в `WatchFace` проект. Это изображение для предварительного просмотра отображается для пользователя в средстве выбора контрольных лиц на устройстве износа. Чтобы создать изображение предварительного просмотра для вашего собственного контрольного лица, можно сделать снимок экрана просмотра во время его работы. (Дополнительные сведения о получении снимков экрана от износа устройств см. в разделе [Создание снимков экрана](~/android/wear/deploy-test/debug-on-device.md#screenshots)).
 
 
 ## <a name="try-it"></a>Попробуйте!
 
-Создавайте и развертывайте приложения на устройстве Android Wear. Вы должны увидеть экран приложения износа отображаются как и раньше. Выполните следующую команду, чтобы включить новое лицо контрольных значений.
+Выполните сборку и развертывание приложения на устройстве износа. Появится экран «износ приложения». Выполните следующие действия, чтобы включить новое лицо наблюдения:
 
-1.  Проведите по экрану вправо, пока не появится фон окна контрольных значений.
+1.  Проведите вправо до тех пор, пока не появится фон экрана контрольных значений.
 
-2.  Touch и в любом месте хранения на заднем плане экрана на две секунды.
+2.  Нажимайте и держите в любом месте на фоне экрана в течение двух секунд.
 
-3.  Проведите по экрану от левого края справа, чтобы просмотреть различные фрагменты контрольных значений.
+3.  Проведите пальцем слева направо, чтобы просмотреть различные грани просмотра.
 
-4.  Выберите **пример Xamarin** смотреть лиц (справа):
+4.  Выберите ролик по **образцу Xamarin** (отображается справа):
 
-    [![Средство выбора Watchface](creating-a-watchface-images/11-watchface-picker.png "проведите по экрану, чтобы найти пример Xamarin циферблате")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
+    [![Средство выбора ватчфаце](creating-a-watchface-images/11-watchface-picker.png "Проведите пальцем, чтобы найти пример для просмотра примера Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5.  Коснитесь **пример Xamarin** смотреть лиц, чтобы выбрать его.
+5.  Коснитесь пункта Просмотр **образца Xamarin** , чтобы выбрать его.
 
-При этом изменяется на циферблате износа устройства, чтобы использовать службы лиц пользовательские Контрольные значения, реализованной в данный момент:
+Это изменит поверхность циферблата на устройстве износа для использования службы настраиваемых наблюдателей, реализованной на данный момент:
 
-[![Цифровой циферблате](creating-a-watchface-images/12-digital-watchface.png "цифровых Контрольное значение Custom на устройстве Android Wear")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
+[![Цифровой циферблат](creating-a-watchface-images/12-digital-watchface.png "Пользовательское цифровое наблюдение, выполняемое на устройстве износа")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
-Это относительно сырой оформлений, поскольку таким образом минимальный реализации приложения (например, она не включает фона лицевой Контрольные значения и не вызывает `Paint` сглаживание методы, чтобы улучшить внешний).
-Тем не менее он реализует Минималистическая функциональные возможности, необходимые для создания пользовательских оформлений.
+Это относительно грубыйое лицо, так как реализация приложения настолько проста (например, не включает фон контрольного лица) и не вызывает `Paint` методы сглаживания для улучшения внешнего вида.
+Однако он реализует функцию «Несамостоятельная кость», необходимую для создания пользовательского циферблата контрольных значений.
 
-В следующем разделе это циферблате обновляется до более сложные реализации.
+В следующем разделе эта контрольная область будет обновлена до более сложной реализации.
 
 
-## <a name="upgrading-the-watch-face"></a>Обновление на циферблате
+## <a name="upgrading-the-watch-face"></a>Обновление грани просмотра
 
-В оставшейся части этого пошагового руководства `MyWatchFaceService` обновляется для отображения циферблате стиле аналог для языка и расширяется для поддержки дополнительных функций. Для создания обновленной циферблате будут добавлены следующие возможности:
+В оставшейся части этого пошагового руководства `MyWatchFaceService` будет выполнено обновление для показа аналогового видеоролика и его расширение для поддержки большего числа функций. Для создания обновленного лица контрольных значений будут добавлены следующие возможности.
 
-1.  Указывает время аналогового час, минуту и второй руки.
+1.  Указывает время с аналоговыми часами, минутами и секундами.
 
-2.  Реагирует на изменения видимости.
+2.  Реагирует на изменения в видимости.
 
-3.  Реагирует на изменения между внешней и интерактивный режим.
+3.  Реагирует на изменения между окружающим режимом и интерактивным режимом.
 
-4.  Считывает свойства в базовое устройство одежды.
+4.  Считывает свойства базового износа устройства.
 
 5.  Автоматически обновляет время, когда происходит изменение часового пояса.
 
-Перед реализацией изменений в код ниже, скачайте [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), распакуйте его и перемещение распакованный PNG-файлы для **ресурсы/drawable** (заменяет предыдущую **preview.png**). Добавить новый PNG-файлы для `WatchFace` проекта.
+Перед реализацией приведенных ниже изменений кода Скачайте файл с возможностью [рисования. zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), распакуйте его и переместите распакованные PNG-файлы в **ресурсы или нарисуйте** (перезаписать предыдущую **предварительную версию. png**). Добавьте новые PNG-файлы в `WatchFace` проект.
 
 
-### <a name="update-engine-features"></a>Функции обновления ядра
+### <a name="update-engine-features"></a>Функции обработчика обновлений
 
-Следующим шагом является обновление **MyWatchFaceService.cs** на реализацию, который рисует аналогового циферблате и поддерживает новые функции. Замените содержимое файла **MyWatchFaceService.cs** с аналогового версию кода лиц Контрольные значения в [MyWatchFaceService.cs](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (можно вырезать и вставить этот источник в существующую  **MyWatchFaceService.cs**).
+Следующим шагом является обновление **MyWatchFaceService.CS** до реализации, которая рисует аналоговый видеоролик для просмотра и поддерживает новые функции. Замените содержимое **MyWatchFaceService.CS** на аналоговую версию кода для просмотра в [MyWatchFaceService.CS](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (вы можете вырезать и вставить этот источник в существующий **MyWatchFaceService.CS**).
 
-Эта версия **MyWatchFaceService.cs** добавляет дополнительный код в существующие методы и включает дополнительные переопределенные методы, расширяющие функциональные возможности. Следующие разделы содержат обзор возможностей исходный код.
+Эта версия **MyWatchFaceService.CS** добавляет дополнительный код к существующим методам и включает дополнительные переопределенные методы для добавления дополнительных функциональных возможностей. В следующих разделах представлен интерактивный обзор исходного кода.
 
 #### <a name="oncreate"></a>OnCreate
 
-Обновленный **OnCreate** метод задает стиль лиц Контрольные значения, как и раньше, но она также включает некоторые дополнительные действия:
+Обновленный метод onCreate настраивает стиль для просмотра, как и раньше, но включает некоторые дополнительные шаги.
 
-1.  Задает фоновое изображение **xamarin_background** ресурс, который находится в **Resources/drawable-hdpi/xamarin_background.png**.
+1.  Задает фоновое изображение для ресурса **xamarin_background** , который находится в resides **/дравабле-хдпи/xamarin_background. png**.
 
-2.  Инициализирует `Paint` объектов для рисования часовой стрелки, минутной и секундной стрелки.
+2.  Инициализирует `Paint` объекты для рисования часовой руки, минуты и секунды.
 
-3.  Инициализирует `Paint` для рисования делений час по краю на циферблате.
+3.  Инициализирует `Paint` объект для рисования квантов времени вокруг края циферблата.
 
-4.  Создает таймер, который вызывает `Invalidate` метод (перерисовки), чтобы секундной стрелки перерисовывается каждую секунду. Обратите внимание, что этот таймер необходима потому что `OnTimeTick` вызовы `Invalidate` только один раз каждую минуту.
+4.  Создает таймер, который вызывает `Invalidate` метод (перерисовку), так что вторая рука будет перерисовываться каждую секунду. Обратите внимание, что этот таймер `OnTimeTick` необходим `Invalidate` , так как вызывает только один раз каждую минуту.
 
-В этом примере включает в себя только один **xamarin_background.png** образ; тем не менее, вы можете создать другой фоновое изображение для каждого экрана плотности, с поддержкой пользовательского циферблат.
+Этот пример включает только один образ **xamarin_background. png** . Однако может потребоваться создать другое фоновое изображение для каждой плотности экрана, которую будет поддерживать пользовательское лицо-наблюдатель.
 
 #### <a name="ondraw"></a>OnDraw
 
-Обновленный **OnDraw** метод рисует стиле аналоговый циферблате, выполнив следующие действия:
+Обновленный метод **OnDraw** рисует видеоролик с аналоговым стилем, выполнив следующие действия.
 
-1.  Получает текущее время, которое теперь хранится в `time` объекта.
+1.  Возвращает текущее время, которое теперь поддерживается в `time` объекте.
 
-2.  Определяет границы области рисования и его центра.
+2.  Определяет границы поверхности рисования и ее центра.
 
-3.  Рисует фон, масштабируется по размерам устройства при рисовании фона.
+3.  Рисует фон, масштабируется по размеру устройства при прорисовке фона.
 
-4.  Рисует двенадцати *тактов* вокруг циферблата часов (соответствующий на Циферблат часов).
+4.  Рисует двенадцать *тактов* вокруг циферблата часов (соответствующих часам на циферблате часов).
 
-5.  Вычисляет угол, поворота и длина каждой стрелки контрольных значений.
+5.  Вычисляет угол, поворот и длину для каждой руки контрольных значений.
 
-6.  Рисует каждой стрелки в рабочей области контрольных значений. Обратите внимание, что секундной стрелки не выводится, если часы находятся в режиме окружения.
-
-
-#### <a name="onpropertieschanged"></a>OnPropertiesChanged
-
-Этот метод вызывается для информирования `MyWatchFaceEngine` о свойствах устройства Wear (например, "low разрядном режиме окружающей среды и тестирования защиты). В `MyWatchFaceEngine`, этот метод только проверяет наличие низким разрядном режиме окружающей среды (в режиме низкой окружения экрана поддерживает меньшее число битов для каждого цвета).
-
-Дополнительные сведения об этом методе см. в разделе Android [onPropertiesChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29) документации по API.
+6.  Рисует каждую руку на поверхности просмотра. Обратите внимание, что вторая рука не рисуется, если контрольные значения находятся в окружающем режиме.
 
 
-#### <a name="onambientmodechanged"></a>OnAmbientModeChanged
+#### <a name="onpropertieschanged"></a>онпропертиесчанжед
 
-Этот метод вызывается, когда устройстве Android Wear входит или выходит из режима окружения. В `MyWatchFaceEngine` реализации на циферблате отключает сглаживания, когда он находится в режиме окружения.
+Этот метод вызывается для информирования `MyWatchFaceEngine` о свойствах «износа» устройства (например, о низком уровне окружающей среды и защите в режиме записи). В `MyWatchFaceEngine`этот метод выполняет проверку только для режима небольшого двоичного окружения (в режиме с низкими разрядами, экран поддерживает меньшее число бит для каждого цвета).
 
-Дополнительные сведения об этом методе см. в разделе Android [onAmbientModeChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) документации по API.
-
-
-#### <a name="onvisibilitychanged"></a>OnVisibilityChanged
-
-Этот метод вызывается всякий раз, когда часы становится видимым или скрытым. В `MyWatchFaceEngine`, этот метод регистрирует и отменяет регистрацию получатель часового пояса (описаны ниже) в зависимости от состояния видимости.
-
-Дополнительные сведения об этом методе см. в разделе Android [onVisibilityChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29) документации по API.
+Дополнительные сведения об этом методе см. в документации по API [онпропертиесчанжед](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29) для Android.
 
 
-### <a name="time-zone-feature"></a>Компонент часового пояса
+#### <a name="onambientmodechanged"></a>онамбиентмодечанжед
 
-Новый **MyWatchFaceService.cs** также предусмотрена возможность обновить текущее время каждый раз, когда часовых поясов изменения (например, во время поездок в разных часовых поясах). В конце **MyWatchFaceService.cs**времени изменить зоны `BroadcastReceiver` определяется, обрабатывающий изменения часового пояса объекты целей:
+Этот метод вызывается, когда износ устройства переходит в окружающий режим или выходит из него. `MyWatchFaceEngine` В реализации контрольный ролик отключает сглаживание при использовании в окружающем режиме.
+
+Дополнительные сведения об этом методе см. в документации по API [онамбиентмодечанжед](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) для Android.
+
+
+#### <a name="onvisibilitychanged"></a>онвисибилитичанжед
+
+Этот метод вызывается каждый раз, когда контрольные значения становятся видимыми или скрытыми. В `MyWatchFaceEngine`этот метод регистрирует или отменяет регистрацию приемника часового пояса (описан ниже) в соответствии с состоянием видимости.
+
+Дополнительные сведения об этом методе см. в документации по API [онвисибилитичанжед](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29) для Android.
+
+
+### <a name="time-zone-feature"></a>Функция часового пояса
+
+Новый **MyWatchFaceService.CS** также включает функции для обновления текущего времени при каждом изменении часового пояса (например, при командировке по часовым поясам). Ближе к концу **MyWatchFaceService.CS**определяется изменение `BroadcastReceiver` часового пояса, обрабатывающее объекты намерения изменения часового пояса:
 
 ```csharp
 public class TimeZoneReceiver: BroadcastReceiver
@@ -451,10 +451,10 @@ public class TimeZoneReceiver: BroadcastReceiver
 }
 ```
 
-`RegisterTimezoneReceiver` И `UnregisterTimezoneReceiver` методы вызываются службами `OnVisibilityChanged` метод.
-`UnregisterTimezoneReceiver` вызывается при изменении состояния видимости на циферблате для скрытых. На циферблате отображается еще раз, когда `RegisterTimezoneReceiver` вызывается (см. в разделе `OnVisibilityChanged` метод).
+`RegisterTimezoneReceiver` `UnregisterTimezoneReceiver`Методыивызываютсяметодом. `OnVisibilityChanged`
+`UnregisterTimezoneReceiver`вызывается, когда состояние видимости наблюдателей изменяется на скрыто. Когда поверхность просмотра снова становится видимой, `RegisterTimezoneReceiver` вызывается ( `OnVisibilityChanged` см. метод).
 
-Ядро `RegisterTimezoneReceiver` метод объявляет обработчик данный получатель часовой пояс `Receive` задание; этот обработчик обновляет `time` объекта с новым значением времени каждый раз, когда пересечения часовой пояс:
+Метод Engine `RegisterTimezoneReceiver` объявляет обработчик для этого `Receive` события приемника часового пояса `time` ; этот обработчик обновляет объект с новым временем при пересечении часового пояса:
 
 ```csharp
 timeZoneReceiver = new TimeZoneReceiver ();
@@ -464,35 +464,35 @@ timeZoneReceiver.Receive = (intent) => {
 };
 ```
 
-Фильтром намерений создается и регистрируется для получателя часовой пояс:
+Для получателя часового пояса создается и регистрируется фильтр намерения:
 
 ```csharp
 IntentFilter filter = new IntentFilter(Intent.ActionTimezoneChanged);
 Application.Context.RegisterReceiver (timeZoneReceiver, filter);
 ```
 
-`UnregisterTimezoneReceiver` Метод отменяет регистрацию получатель часовой пояс:
+`UnregisterTimezoneReceiver` Метод отменяет регистрацию получателя часового пояса:
 
 ```csharp
 Application.Context.UnregisterReceiver (timeZoneReceiver);
 ```
 
-### <a name="run-the-improved-watch-face"></a>Запустите улучшенные циферблате
+### <a name="run-the-improved-watch-face"></a>Запуск улучшенного циферблата
 
-Создавайте и развертывайте приложения на устройстве Android Wear еще раз. Выберите на циферблате из палитры лиц контрольных значений как перед. Предварительной версии в средстве выбора Контрольное значение отображается слева и справа отображается новое лицо Контрольные значения:
+Снова создайте и разверните приложение на устройстве "износ". Выберите пункт Просмотреть грань в средстве выбора наблюдателей. Предварительный просмотр в средстве выбора контрольных значений отображается слева, а новый значок просмотра отображается справа:
 
-[![Аналоговые циферблате](creating-a-watchface-images/13-analog-watchface.png "Улучшенная аналогового лиц в средстве выбора и на устройстве")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
+[![Аналоговое лицо для просмотра](creating-a-watchface-images/13-analog-watchface.png "Усовершенствование аналогового лица в средстве выбора и на устройстве")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
-На этом снимке экрана секундной стрелки — это перенос один раз в секунду. При выполнении этого кода на устройстве Android Wear секундной стрелки исчезает, когда часы переходит в режим окружения.
+На этом снимке экрана вторая рука перемещается один раз в секунду. При запуске этого кода на устройстве, выполняющем износ, вторая рука исчезает, когда контроль переходит в окружающий режим.
 
 
 ## <a name="summary"></a>Сводка
 
-В этом пошаговом руководстве пользовательские watchface Android Wear 1.0 был реализации и тестирования. `CanvasWatchFaceService` И `CanvasWatchFaceService.Engine` появились классы, и основные методы класса ядра были реализованы для создания простого цифровой оформлений. Эта реализация была обновлена с дополнительные функциональные возможности для создания аналогового циферблате и дополнительные методы были реализованы для обработки изменений в видимость окружения режим и различия в свойствах устройства. И, наконец часовой пояс широковещательный приемник был реализован таким образом, чтобы часы автоматически обновляет время, когда пересечения часового пояса.
+В этом пошаговом руководстве была реализована и протестирована пользовательская износа ватчфаце для Android 1,0. Были введены классы `CanvasWatchFaceService.Engine` и,атакжебылиреализованыключевыеметодыклассаEngineдлясозданияпростогоцифровогоциферблата.`CanvasWatchFaceService` Эта реализация была обновлена с учетом дополнительных функциональных возможностей для создания аналогового циферблата, а дополнительные методы были реализованы для обработки изменений видимости, внешнего режима и различий в свойствах устройства. Наконец, был реализован широковещательный приемник часового пояса, который следит за тем, чтобы часы автоматически изменяли время, когда пересекается часовой пояс.
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Создание контрольных значений лиц](https://developer.android.com/training/wearables/watch-faces/index.html)
-- [Пример WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)
-- [WatchFaceService.Engine](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html)
+- [Создание граней для просмотра](https://developer.android.com/training/wearables/watch-faces/index.html)
+- [Пример Ватчфаце](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)
+- [Ватчфацесервице. Engine](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html)

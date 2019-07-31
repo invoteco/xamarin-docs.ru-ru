@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3e30e3d4ea3bf0ec58aff842ffee68885a47d44a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363921"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656189"
 ---
 # <a name="text-in-xamarinforms"></a>Текст в Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _С помощью Xamarin.Forms, чтобы ввести или отображения текста._
 
@@ -66,7 +66,7 @@ Xamarin.Forms есть три основных представления для
 
 ## <a name="fontsfontsmd"></a>[Шрифты](fonts.md)
 
-Многие элементы управления поддерживают параметры шрифта, с помощью встроенных шрифтов на каждой платформе или пользовательских шрифтов, поставляемых вместе с вашим приложением. См. в разделе [шрифты](fonts.md) статья более подробные сведения.
+Многие элементы управления поддерживают различные параметры шрифтов, используя встроенные шрифты на каждой платформе, или пользовательские шрифты, включенные в приложение. См. в разделе [шрифты](fonts.md) статья более подробные сведения.
 
 <a name="Styles" />
 
@@ -76,4 +76,4 @@ Xamarin.Forms есть три основных представления для
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Текст (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Текст (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

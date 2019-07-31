@@ -7,22 +7,22 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7802360c95d31f237cf69c69728cffe02ad47e5a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229722"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646227"
 ---
 # <a name="three-types-of-bzier-curves"></a>Три типа кривых Безье
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Узнайте, как использовать для подготовки к просмотру кривых Безье третьего порядка, квадратичных и conic SkiaSharp_
 
 Кривая Безье именуется после Безье Пьер (1910 – 1999 г.), инженер французский автомобильные компании альянс Renault, кто использовал кривой для проектирования автоматизированных тел автомобиля.
 
-Кривые Безье известны за то, что хорошо подходит для интерактивной разработки: Они правильно &mdash; другими словами, не существует, вызывающие кривая, становятся бесконечное или неудобным особенностей &mdash; , и они обычно красоту при помощи:
+Кривые Безье хорошо подходят для интерактивного проектирования: Они хорошо &mdash; работают другими словами, не существует единственных случаев, которые приводят к бесконечной или &mdash; неудобной кривой, и обычно визуальноы.
 
 ![](beziers-images/beziersample.png "Пример кривой Безье")
 
@@ -493,7 +493,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ![](beziers-images/conicarc.png "Отображают conic дуги дугу окружности")
 
-Тригонометрические функции можно использовать для определения расстояния контрольной точки из центра: Это радиус круга, деленное косинус угла половину α. Чтобы нарисовать дугу между начальной и конечной точек, присвойте весу этой же косинус половину угла. Обратите внимание на то, что если угол в 180 градусов, затем касательные никогда не соответствуют и вес равен нулю. Но для углов меньше, чем 180 градусов, математические работает нормально.
+С помощью тригонометрии можно определить расстояние контрольной точки от центра окружности: Это радиус круга, деленный на косинус половины угла α. Чтобы нарисовать дугу между начальной и конечной точек, присвойте весу этой же косинус половину угла. Обратите внимание на то, что если угол в 180 градусов, затем касательные никогда не соответствуют и вес равен нулю. Но для углов меньше, чем 180 градусов, математические работает нормально.
 
 **Conic дуги** страница демонстрирует это. [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) файл экземпляр `Slider` для выбора угол. `PaintSurface` Обработчик в [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) файл с выделенным кодом вычисляет контрольная точка и вес:
 
@@ -557,4 +557,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

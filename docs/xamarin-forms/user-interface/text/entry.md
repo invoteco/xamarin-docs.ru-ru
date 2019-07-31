@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 238ba1853df523ee275de628ebdbd138a6d1d1bf
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649604"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650277"
 ---
 # <a name="xamarinforms-entry"></a>Запись Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Однострочный текст или пароля_
 
@@ -59,9 +59,9 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 > [!NOTE]
 > Ширина `Entry` может быть определена путем задания его `WidthRequest` свойство. Не зависят от ширину `Entry` , определенное на основе значения из его `Text` свойство.
 
-### <a name="preventing-text-entry"></a>Предотвращение ввод текста
+### <a name="preventing-text-entry"></a>Предотвращение ввода текста
 
-Пользователи могут быть защищены от изменения текста в [ `Entry` ](xref:Xamarin.Forms.Entry) , задав `IsReadOnly` свойство, которое имеет значение по умолчанию из `false`, `true`:
+Пользователям может быть запрещено изменять текст [`Entry`](xref:Xamarin.Forms.Entry) в, `IsReadOnly` задавая свойство, которое по умолчанию `false`имеет значение, равным `true`:
 
 ```xaml
 <Entry Text="This is a read-only Entry"
@@ -73,7 +73,7 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 ```
 
 > [!NOTE]
-> `IsReadonly` Свойство не приводит к изменению внешнего вида [ `Entry` ](xref:Xamarin.Forms.Entry), в отличие от `IsEnabled` свойство, которое также изменяет внешний вид `Entry` к серому.
+> Свойство не изменяет внешний вид [`Entry`](xref:Xamarin.Forms.Entry), в отличие от `IsEnabled` свойства `Entry` , которое также изменяет внешний вид изображения на серый. `IsReadonly`
 
 ### <a name="limiting-input-length"></a>Ограничение длины входных
 
@@ -323,11 +323,11 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; вызывается, когда пользователь завершен входные данные с помощью возвращаемого значения клавиши на клавиатуре.
 
 > [!NOTE]
-> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) Класс, из которого [ `Entry` ](xref:Xamarin.Forms.Entry) наследует, также имеет [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) и [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)события.
+> Класс, от которого [`Entry`](xref:Xamarin.Forms.Entry) наследует, также имеет [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) события и [`Unfocused`.](xref:Xamarin.Forms.VisualElement.Unfocused) [`VisualElement`](xref:Xamarin.Forms.VisualElement)
 
 ### <a name="completed"></a>Завершено
 
-`Completed` Событие используется для реагирования на завершение взаимодействия с записью. `Completed` вызывается, когда пользователь завершает входных данных с полем, возвращаемое клавиши на клавиатуре (или нажав клавишу Tab на UWP). Обработчик для события представляет собой Универсальное событие обработчика, используя отправителя и `EventArgs`:
+`Completed` Событие используется для реагирования на завершение взаимодействия с записью. `Completed`вызывается, когда пользователь заканчивает ввод с полем, нажав клавишу Return на клавиатуре (или нажав клавишу TAB в UWP). Обработчик для события представляет собой Универсальное событие обработчика, используя отправителя и `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -381,5 +381,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Текст (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Текст (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Операция API](xref:Xamarin.Forms.Entry)

@@ -1,32 +1,32 @@
 ---
-title: Уведомления интерактивных пользовательских интерфейсов в Xamarin.iOS
-description: С помощью iOS 12 имеется возможность создавать интерактивные пользовательские интерфейсы для локальных и удаленных уведомлений. В этом руководстве описывается использование этих функций с помощью Xamarin.iOS.
+title: Пользовательские интерфейсы интерактивного уведомления в Xamarin. iOS
+description: В iOS 12 можно создавать интерактивные пользовательские интерфейсы для локальных и удаленных уведомлений. В этом руководство описано, как использовать эти функции с Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: e6dc2f14b36c9d6f67f1df5ad3d118fa423e0d4d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc566cf3744b8d6ec05204153b7c731935f98b8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034917"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652442"
 ---
-# <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Уведомления интерактивных пользовательских интерфейсов в Xamarin.iOS
+# <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Пользовательские интерфейсы интерактивного уведомления в Xamarin. iOS
 
-[Расширения содержимого уведомлений](~/ios/platform/user-notifications/advanced-user-notifications.md), представленный в iOS 10, позволяют создавать настраиваемые пользовательские интерфейсы для получения уведомлений. Начиная с iOS 12, уведомление пользователя интерфейсы могут содержать интерактивные элементы, такие как кнопки и ползунков.
+[Расширения содержимого уведомлений](~/ios/platform/user-notifications/advanced-user-notifications.md), появившиеся в iOS 10, позволяют создавать настраиваемые пользовательские интерфейсы для уведомлений. Начиная с iOS 12, пользовательские интерфейсы уведомлений могут содержать интерактивные элементы, такие как кнопки и ползунки.
 
-## <a name="sample-app-redgreennotifications"></a>Пример приложения. RedGreenNotifications
+## <a name="sample-app-redgreennotifications"></a>Пример приложения: редгриннотификатионс
 
-[RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) пример приложения содержит расширение содержимого уведомлений с помощью интерактивного пользовательского интерфейса.
+Пример приложения [редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) содержит расширение содержимого уведомлений с интерактивным пользовательским интерфейсом.
 
-Фрагменты кода, в этом руководстве, взяты из этого примера.
+Фрагменты кода в этом пошаговом окне взяты из этого примера.
 
-## <a name="notification-content-extension-infoplist-file"></a>Файл Info.plist расширение содержимого уведомлений
+## <a name="notification-content-extension-infoplist-file"></a>Файл сведений о расширении содержимого уведомлений. plist
 
-В примере приложения **Info.plist** файл **RedGreenNotificationsContentExtension** проект содержит следующую конфигурацию:
+В примере приложения файл **info. plist** в проекте **редгриннотификатионсконтентекстенсион** содержит следующую конфигурацию:
 
 ```xml
 <!-- ... -->
@@ -56,17 +56,17 @@ ms.locfileid: "61034917"
 <!-- ... -->
 ```
 
-Обратите внимание на следующие компоненты:
+Обратите внимание на следующие возможности.
 
-- `UNNotificationExtensionCategory` Массив указывает на тип категории уведомлений маркеры расширение содержимого.
-- Чтобы обеспечить поддержку интерактивное содержимое, задает расширение notification content `UNNotificationExtensionUserInteractionEnabled` ключа `true`.
-- `UNNotificationExtensionInitialContentSizeRatio` Ключ указывает соотношение начальной высоту или ширину для интерфейса содержимого расширения.
+- `UNNotificationExtensionCategory` Массив указывает тип категорий уведомлений, обрабатываемых расширением содержимого.
+- Для поддержки интерактивного содержимого расширение уведомления устанавливает `UNNotificationExtensionUserInteractionEnabled` ключ в `true`значение.
+- `UNNotificationExtensionInitialContentSizeRatio` Ключ задает начальное соотношение высоты и ширины для интерфейса расширения содержимого.
 
 ## <a name="interactive-interface"></a>Интерактивный интерфейс
 
-**MainInterface.storyboard**, который определяет интерфейс для расширение notification content, — это стандартный раскадровки, содержащий одно представление контроллера. В примере приложения, контроллер представления является типа `NotificationViewController`, и он содержит представление изображений, три кнопки и ползунок. Раскадровка связывает эти элементы управления с помощью обработчиков, определенных в **NotificationViewController.cs**:
+**Маининтерфаце. Storyboard**, определяющий интерфейс для расширения содержимого уведомлений, представляет собой стандартную раскадровку, содержащую один контроллер представления. В примере приложения контроллер представления имеет тип `NotificationViewController`и содержит представление изображения, три кнопки и ползунок. Раскадровка связывает эти элементы управления с обработчиками, определенными в **NotificationViewController.CS**:
 
-- **Запуска приложения** кнопку вызовов обработчика `PerformNotificationDefaultAction` метод действия в `ExtensionContext`, который запускает приложение:
+- Обработчик кнопки **запустить приложение** вызывает `PerformNotificationDefaultAction` метод действия для `ExtensionContext`, который запускает приложение:
 
     ```csharp
     partial void HandleLaunchAppButtonTap(UIButton sender)
@@ -75,7 +75,7 @@ ms.locfileid: "61034917"
     }
     ```
 
-    Приложения, в центре уведомлений пользователя `Delegate` (в примере приложения, `AppDelegate`) может отвечать на действия в `DidReceiveNotificationResponse` метод:
+    В приложении центр `Delegate` уведомлений пользователя (в примере приложения `AppDelegate`) может отвечать `DidReceiveNotificationResponse` на взаимодействие в методе:
 
     ```csharp
     [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -87,7 +87,7 @@ ms.locfileid: "61034917"
             // ...
     ```
 
-- **Отклонить уведомление** кнопку вызовов обработчика `DismissNotificationContentExtension` на `ExtensionContext`, который закрывает уведомления:
+- Обработчик кнопки **закрытия уведомления** вызывает `DismissNotificationContentExtension` On `ExtensionContext`, который закрывает уведомление:
 
     ```csharp
     partial void HandleDismissNotificationButtonTap(UIButton sender)
@@ -96,7 +96,7 @@ ms.locfileid: "61034917"
     }
     ```
 
-- **Удалить уведомление** обработчик кнопки закрывает уведомление и удаляет его из центра уведомлений:
+- Обработчик кнопки **удалить уведомление** закрывает уведомление и удаляет его из центра уведомлений:
 
     ```csharp
     partial void HandleRemoveNotificationButtonTap(UIButton sender)
@@ -106,7 +106,7 @@ ms.locfileid: "61034917"
     }
     ```
 
-- Метод, который обрабатывает изменения значений на ползунке обновляет альфа-канал изображения, отображаемого в интерфейсе уведомления:
+- Метод, обрабатывающий изменения значений на ползунке, обновляет альфа изображения, отображаемого в интерфейсе уведомления:
 
     ```csharp
     partial void HandleSliderValueChanged(UISlider sender)
@@ -117,10 +117,10 @@ ms.locfileid: "61034917"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример приложения — RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Платформа уведомлений пользователя в Xamarin.iOS](~/ios/platform/user-notifications/index.md)
-- [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Новые возможности в уведомления для пользователей (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Рекомендации и новые возможности в уведомления для пользователей (WWDC 2017 г.)](https://developer.apple.com/videos/play/wwdc2017/708/)
-- [Расширенные уведомления (WWDC 2017 г.)](https://developer.apple.com/videos/play/wwdc2017/817/)
+- [Пример приложения — Редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Платформа уведомлений пользователей в Xamarin. iOS](~/ios/platform/user-notifications/index.md)
+- [Усернотификатионс (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
+- [Новые возможности уведомлений пользователей (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Рекомендации и новые возможности уведомлений пользователей (ВВДК 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Расширенные уведомления (ВВДК 2017)](https://developer.apple.com/videos/play/wwdc2017/817/)
 - [Создание удаленного уведомления (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

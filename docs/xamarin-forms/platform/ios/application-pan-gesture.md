@@ -1,26 +1,26 @@
 ---
-title: Одновременные распознавания жестов Pan в iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать специфические для платформы iOS, позволяющий одновременных pan распознавания жестов для использования в приложении.
+title: Одновременный распознавание жестов панорамирования в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу iOS, которая позволяет использовать одновременный распознавание жестов в приложении.
 ms.prod: xamarin
 ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4587bb89ddfe43873e666a07514075f1a952e985
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8e86141ac27999a71a84ae7150b19ef3f60c117f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926781"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655983"
 ---
-# <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Одновременные распознавания жестов Pan в iOS
+# <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Одновременный распознавание жестов панорамирования в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Когда [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) прикреплено к представлению внутри прокрутки, все pan, охватывает жесты `PanGestureRecognizer` и не передаются представления с прокруткой. Таким образом больше не прокручивается представления с прокруткой.
 
-Этот iOS платформы позволяет `PanGestureRecognizer` в области прокрутки для записи и совместно использовать жест pan с представления с прокруткой. Он используется в XAML, задав [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) вложенное свойство, чтобы `true`:
+Эта платформа iOS позволяет `PanGestureRecognizer` в представлении прокрутки захватывать и совместно использовать жест панорамирования с прокруткой. Он используется в XAML, задав [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) вложенное свойство, чтобы `true`:
 
 ```xaml
 <Application ...
@@ -46,6 +46,6 @@ Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecogni
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

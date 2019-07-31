@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 72475d4b811cb33d2e716fc6ab4e2d169a75c801
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: 1b4732e87fb09a4846bfe12b7a476dfef2d6f4f9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354083"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647228"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Динамические стили в Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Стили не отвечать на изменения свойств и остаются неизменными в течение всего приложения. Например после назначения стиля в визуальный элемент, если один из экземпляров задания изменены, удалены, или добавить новый экземпляр задания, изменения не будут применяться к визуальный элемент. Тем не менее приложения могут реагировать на изменения стиля динамически во время выполнения с помощью динамических ресурсов._
 
@@ -125,7 +125,7 @@ public class DynamicStylesPageCS : ContentPage
 
 В C# [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) экземпляров использования [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) метода для ссылки `searchBarStyle`. `OnButtonClicked` Код обработчика событий идентичен приведенному XAML и при выполнении `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`.
 
-## <a name="dynamic-style-inheritance"></a>Наследование динамического стиля
+## <a name="dynamic-style-inheritance"></a>Динамическое наследование стиля
 
 Наследование от динамического стиля стиль нельзя сделать с помощью [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) свойство. Вместо этого [ `Style` ](xref:Xamarin.Forms.Style) класс включает [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) свойство, которое может быть присвоено словарь ключ, значение которого может динамически изменять.
 
@@ -211,8 +211,8 @@ public class DynamicStylesInheritancePageCS : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Динамические стили (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [Работа с использованием стилей (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Динамические стили (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Работа с использованием стилей (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Стиль](xref:Xamarin.Forms.Style)
 - [Метод задания](xref:Xamarin.Forms.Setter)

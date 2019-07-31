@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512874"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655966"
 ---
 # <a name="xamarinforms-device-class"></a>Класс устройств Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 [ `Device` ](xref:Xamarin.Forms.Device) Класс содержит несколько свойств и методов, чтобы помочь разработчикам настраивать макет и функций на каждой платформы.
 
-В дополнение к методам и свойствам для целевого кода по отдельным типам оборудования и размеры `Device` класс включает методы, которые могут использоваться для взаимодействия с элементами управления пользовательского интерфейса из фоновых потоков. Дополнительные сведения см. в разделе [взаимодействие с пользовательским Интерфейсом, из фоновых потоков](#interact-with-the-ui-from-background-threads).
+Помимо методов и свойств, предназначенных для целевого кода на конкретных типах и размерах оборудования `Device` , класс включает методы, которые можно использовать для взаимодействия с элементами управления пользовательского интерфейса из фоновых потоков. Дополнительные сведения см. в разделе [взаимодействие с интерфейсом пользователя из фоновых потоков](#interact-with-the-ui-from-background-threads).
 
-## <a name="providing-platform-specific-values"></a>Предоставление значений платформы
+## <a name="providing-platform-specific-values"></a>Предоставление значений для конкретной платформы
 
 До Xamarin.Forms 2.3.4, платформы, приложение было запущено на удалось получить, изучив [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) свойство и его для сравнения [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), и [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) значений перечисления. Аналогично, один из [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) перегрузки может использоваться для предоставления значений, зависящих от платформы к элементу управления.
 
@@ -180,24 +180,24 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Если код внутри таймер взаимодействует с помощью пользовательского интерфейса (такие как установка текст `Label` или отображая оповещение) должно выполняться внутри `BeginInvokeOnMainThread` выражение (см. ниже).
 
-## <a name="interact-with-the-ui-from-background-threads"></a>Взаимодействовать с пользовательским Интерфейсом, из фоновых потоков
+## <a name="interact-with-the-ui-from-background-threads"></a>Взаимодействие с пользовательским интерфейсом из фоновых потоков
 
-Большинство операционных систем, включая iOS, Android и универсальной платформы Windows, используйте однопоточную модель для кода, включающих пользовательский интерфейс. Этот поток часто называется *основной поток* или *поток пользовательского интерфейса*. Следствием этой модели является то, что весь код, который обращается к элементы пользовательского интерфейса необходимо запустить для основного потока приложения.
+Большинство операционных систем, в том числе iOS, Android и универсальная платформа Windows, используют однопотоковую модель для кода, включающего пользовательский интерфейс. Этот поток часто называют *основным потоком* или *потоком пользовательского интерфейса*. Следствием этой модели является то, что весь код, обращающийся к элементам пользовательского интерфейса, должен выполняться в основном потоке приложения.
 
-Иногда приложения использовать фоновые потоки для выполнения потенциально длительных операций, таких как извлечение данных из веб-службы. Если код, выполняемый в фоновом потоке нужен доступ к элементам управления, его необходимо запустить этот код в основном потоке.
+Приложения иногда используют фоновые потоки для выполнения потенциально длительных операций, таких как извлечение данных из веб-службы. Если код, выполняемый в фоновом потоке, должен иметь доступ к элементам пользовательского интерфейса, он должен запустить этот код в основном потоке.
 
-`Device` Класс включает в себя следующие `static` элементы из потоков фона интерфейса методы, которые могут использоваться для взаимодействия с пользователем:
+Класс включает следующие `static` методы, которые можно использовать для взаимодействия с элементами пользовательского интерфейса из фоновых потоков: `Device`
 
 | Метод | Аргументы | Returns | Цель |
 |---|---|---|---|
-| `BeginInvokeOnMainThread` | `Action` | `void` | Вызывает `Action` в основном потоке и не ожидает ее завершения. |
-| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Вызывает `Func<T>` на основной поток и ожидает его завершения. |
-| `InvokeOnMainThreadAsync` | `Action` | `Task` | Вызывает `Action` на основной поток и ожидает его завершения. |
-| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Вызывает `Func<Task<T>>` на основной поток и ожидает его завершения. |
-| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Вызывает `Func<Task>` на основной поток и ожидает его завершения. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Возвращает `SynchronizationContext` для основного потока. |
+| `BeginInvokeOnMainThread` | `Action` | `void` | Вызывает объект `Action` в основном потоке и не ожидает его завершения. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Вызывает объект `Func<T>` в основном потоке и ожидает его завершения. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Вызывает объект `Action` в основном потоке и ожидает его завершения. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Вызывает объект `Func<Task<T>>` в основном потоке и ожидает его завершения. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Вызывает объект `Func<Task>` в основном потоке и ожидает его завершения. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | `SynchronizationContext` Возвращает для основного потока. |
 
-Ниже приведен пример использования `BeginInvokeOnMainThread` метод:
+В следующем коде показан пример использования `BeginInvokeOnMainThread` метода:
 
 ```csharp
 Device.BeginInvokeOnMainThread (() =>
@@ -208,6 +208,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример устройства](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
-- [Образец стилей](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Пример устройства](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [Образец стилей](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Устройство](xref:Xamarin.Forms.Device)

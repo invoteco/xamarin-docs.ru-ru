@@ -7,22 +7,22 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 484a3ac742d162e1d6faaa38ad2e4eb056ed64a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018329"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644485"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Рисование простого кружка в SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Познакомьтесь с основами SkiaSharp документе, включая полотна и рисования объектов_
 
 В этой статье понятия рисованию графических элементов в Xamarin.Forms с помощью SkiaSharp, включая создание `SKCanvasView` объекта для размещения графики, обработки `PaintSurface` событий и с помощью `SKPaint` объект для указания цвета и другие графические атрибуты.
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) программа содержит все примеры кода для этой серии статей SkiaSharp. На первой странице размещен право **простого кружка** и вызывает класс страницы [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Этот код показывает, как нарисовать круг в центре страницы с радиусом 100 пикселей. Имеет красный цвет контура круга и внутренней окружности — синий.
+[ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программа содержит все примеры кода для этой серии статей SkiaSharp. На первой странице размещен право **простого кружка** и вызывает класс страницы [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Этот код показывает, как нарисовать круг в центре страницы с радиусом 100 пикселей. Имеет красный цвет контура круга и внутренней окружности — синий.
 
 ![](circle-images/circleexample.png "Синий круг, выделены красным")
 
@@ -153,7 +153,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 > [!NOTE]
 > `SKPaint` Класс определяет [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) Чтобы включить сглаживание при подготовке к просмотру рисунков. Сглаживание обычно приводит к визуально более гладкие грани, поэтому возможно, нужно присвоить этому свойству `true` в большинстве вашей `SKPaint` объектов. Для простоты данное свойство содержит _не_ в большинство образцов страниц.
 
-Несмотря на то, что ширина контура круга указывается как 25 пикселей &mdash; или части радиус круга &mdash; кажется более тонкие и есть хорошее объяснение: Половинная ширина линии замещается синий круг. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
+Хотя Ширина контура окружности равна 25 пикселям &mdash; или одному кварталу радиуса круга &mdash; , она выглядит более тонкой, и есть веская причина этого: Половина ширины линии скрыта синим кругом. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
 
 В приведенном ниже примере [интеграция с Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) статья демонстрирует это визуально.
 
@@ -161,4 +161,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

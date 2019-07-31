@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: ba0a76b44f5942db5528e9f5d11a1d2c3f027c40
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: f41bcc3ccaa6b4dd8c001ceb5ead165486745283
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354019"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650261"
 ---
 # <a name="resource-dictionaries"></a>Словари ресурсов
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 _Ресурсы XAML, определения объектов, которые можно совместно использовать и повторно использоваться на протяжении всего приложения Xamarin.Forms._
 
@@ -150,7 +150,7 @@ _Ресурсы XAML, определения объектов, которые м
 
 Тем не менее, обратите внимание, что на фон панели [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) по-прежнему желтый, так как [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) свойству присваивается значение `PageBackgroundColor` ресурс, определенный в приложении уровень `ResourceDictionary`.
 
-Вот еще один способ подумать о `ResourceDictionary` приоритет: Когда средство синтаксического анализа XAML обнаруживает `StaticResource`, он выполняет поиск совпадающего ключа, проходя вверх по визуальному дереву, используется первый из них найдет. Если этот поиск завершается на странице и ключ по-прежнему не был найден, средство синтаксического анализа XAML ищет `ResourceDictionary` подключен к `App` объекта. Если ключ не найден, возникает исключение.
+Вот еще один способ подумать о `ResourceDictionary` приоритете: Когда средство синтаксического анализа XAML встречает `StaticResource`, оно выполняет поиск совпадающего ключа, переполняя его через визуальное дерево, используя первое найденное совпадение. Если этот поиск завершается на странице и ключ по-прежнему не был найден, средство синтаксического анализа XAML ищет `ResourceDictionary` подключен к `App` объекта. Если ключ не найден, возникает исключение.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Словари ресурсов автономного
 
@@ -196,7 +196,7 @@ _Ресурсы XAML, определения объектов, которые м
 
 Экземпляр `MyResourceDictionary` присваивается `Resources` свойство `ContentPage` объекта.
 
-Однако такой подход имеет некоторые ограничения: `Resources` Свойство `ContentPage` ссылается только вот `ResourceDictionary`. В большинстве случаев требуется, в том числе другие `ResourceDictionary` экземпляров и возможно других ресурсов, а также.
+Однако этот подход имеет ряд ограничений. Свойство объекта ссылается только `ContentPage` на этот `ResourceDictionary`элемент. `Resources` В большинстве случаев требуется, в том числе другие `ResourceDictionary` экземпляров и возможно других ресурсов, а также.
 
 Эта задача требует объединенные словари ресурсов.
 
@@ -306,7 +306,7 @@ _Ресурсы XAML, определения объектов, которые м
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Словари ресурсов (пример)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+- [Словари ресурсов (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [Стили](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 

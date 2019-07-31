@@ -1,24 +1,24 @@
 ---
 title: Цвет фона ячейки в iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать iOS конкретных платформ, задающее цвет фона ячеек на iOS.
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать зависящую от платформы iOS, которая задает цвет фона по умолчанию для ячеек в iOS.
 ms.prod: xamarin
 ms.assetid: 2A3FDACF-5AE2-40DE-8488-6FE41733712F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6b1e2fe534c8b7d0c3346a18d1b82d797e52dba1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926763"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651374"
 ---
 # <a name="cell-background-color-on-ios"></a>Цвет фона ячейки в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS платформы задает цвет фона по умолчанию [ `Cell` ](xref:Xamarin.Forms.Cell) экземпляров. Он используется в XAML, задав `Cell.DefaultBackgroundColor` свойство, используемое для [ `Color` ](xref:Xamarin.Forms.Color):
+Эта платформа iOS задает цвет фона по умолчанию для [`Cell`](xref:Xamarin.Forms.Cell) экземпляров. Он используется в XAML путем установки `Cell.DefaultBackgroundColor` свойства [`Color`](xref:Xamarin.Forms.Color)BIND в значение:
 
 ```xaml
 <ContentPage ...
@@ -52,14 +52,14 @@ var viewCell = new ViewCell { View = ... };
 viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 ```
 
-`ListView.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. `Cell.SetDefaultBackgroundColor` Метод в [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) пространства имен, задает цвет фона ячейки с заданным [ `Color` ](xref:Xamarin.Forms.Color). Кроме того `Cell.DefaultBackgroundColor` метод может использоваться для получения текущий цвет фона ячейки.
+`ListView.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. Метод в пространстве имен задает для цвета фона ячейки указанный [`Color`](xref:Xamarin.Forms.Color)объект. [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) `Cell.SetDefaultBackgroundColor` Кроме того, `Cell.DefaultBackgroundColor` метод можно использовать для получения текущего цвета фона ячейки.
 
-Результатом является, цвет фона в [ `Cell` ](xref:Xamarin.Forms.Cell) можно задать с определенным [ `Color` ](xref:Xamarin.Forms.Color):
+В результате в качестве цвета фона в [`Cell`](xref:Xamarin.Forms.Cell) можно задать определенное [`Color`](xref:Xamarin.Forms.Color)значение:
 
-[![Снимок экрана ячейки заголовков групп сине-зеленый, в iOS](cell-background-color-images/group-header-cell-color.png "ListView с ячейки заголовков групп сине-зеленый")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView с ячейки заголовков групп сине-зеленый")
+[ ![Снимок экрана: ячейки заголовка синего группы в ListView iOS](cell-background-color-images/group-header-cell-color.png "с синей ячейкой заголовка группы") ] (cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView с синей ячейкой заголовка группы")
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

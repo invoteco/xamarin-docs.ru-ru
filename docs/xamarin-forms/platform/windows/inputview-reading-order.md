@@ -1,24 +1,24 @@
 ---
-title: Порядок чтения InputView на Windows
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать Windows конкретных платформ, позволяющий порядок чтения двунаправленного текста быть обнаруженным динамически.
+title: Инпутвиев порядок чтения в Windows
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу Windows, которая позволяет динамически определять порядок чтения двунаправленного текста.
 ms.prod: xamarin
 ms.assetid: E61BAEE0-C8B7-4F33-8DDC-FA1B9CA8E81D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d5d2e963a326b5bc750527a49008f2d2a40cac9f
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c184424a982aa82712685dbc33ad57422f2f8338
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924867"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651428"
 ---
-# <a name="inputview-reading-order-on-windows"></a>Порядок чтения InputView на Windows
+# <a name="inputview-reading-order-on-windows"></a>Инпутвиев порядок чтения в Windows
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Это универсальная платформа Windows платформы позволяет порядок чтения (слева направо или справа налево) двунаправленного текста в [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor)и [ `Label` ](xref:Xamarin.Forms.Label) экземпляры, чтобы быть обнаруженным динамически. Он используется в XAML, задав [ `InputView.DetectReadingOrderFromContent` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.InputView.DetectReadingOrderFromContentProperty) (для `Entry` и `Editor` экземпляры) или [ `Label.DetectReadingOrderFromContent` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Label.DetectReadingOrderFromContentProperty) вложенное свойство, чтобы `boolean` значение:
+Эта универсальная платформа Windows зависит от конкретной платформы [`Entry`](xref:Xamarin.Forms.Entry), а также от того, в каком экземпляре, и [`Label`](xref:Xamarin.Forms.Label) в каком-то конкретном случае [`Editor`](xref:Xamarin.Forms.Editor)будет определяться динамический текст (слева направо или справа налево). Он используется в XAML, задав [ `InputView.DetectReadingOrderFromContent` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.InputView.DetectReadingOrderFromContentProperty) (для `Entry` и `Editor` экземпляры) или [ `Label.DetectReadingOrderFromContent` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Label.DetectReadingOrderFromContentProperty) вложенное свойство, чтобы `boolean` значение:
 
 ```xaml
 <ContentPage ...
@@ -55,6 +55,6 @@ editor.On<Windows>().SetDetectReadingOrderFromContent(!editor.On<Windows>().GetD
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
+- [API ВиндовсспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

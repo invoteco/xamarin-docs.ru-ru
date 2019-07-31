@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 235a30293939333555c52b8d9e00bcf25ddd4dbd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658591"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645255"
 ---
 # <a name="xamarinforms-local-databases"></a>Локальные базы данных Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 _Xamarin.Forms поддерживает приложения на основе базы данных с использованием ядра СУБД SQLite, которое позволяет загружать и сохранять объекты в общем коде. В этой статье описывается, как приложения Xamarin.Forms считывают данные из локальной базы данных SQLite и записывают данные в нее с помощью SQLite.Net._
 
@@ -122,6 +122,6 @@ Xamarin.Forms поддерживает приложения на основе б
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример списка задач](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
-- [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Пример списка задач](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Примеры Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 

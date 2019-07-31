@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 364e10b8b59fcc8d640799ab6a0f11dcf4ded818
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675248"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644511"
 ---
 # <a name="introduction-to-watchos"></a>Введение в watchOS
 
@@ -29,7 +29,7 @@ ms.locfileid: "67675248"
 
 В watchOS 1 приложения код расширения выполняется на iPhone, Apple Watch, фактически внешнему дисплею. приложения для watchOS 2 и 3 выполнять полностью в Apple Watch. На следующей схеме показано это различие:
 
-[![](intro-to-watchos-images/arch-sml.png "На этой диаграмме отображается разница между watchOS 1 и watchOS 2 (и более)")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "На этой схеме показана разница между watchOS 1 и watchOS 2 (и более поздними).")](intro-to-watchos-images/arch.png#lightbox)
 
 Независимо от того, какую версию watchOS предназначено в Visual Studio для Mac в панели решения законченное решение будет выглядеть следующим образом:
 
@@ -53,8 +53,8 @@ ms.locfileid: "67675248"
 
 Жизненный цикл `WKInterfaceController` объект включает в себя следующие вызовы:
 
-- [Переходит в спящий режим](xref:WatchKit.WKInterfaceController.Awake*) : В этом методе необходимо выполнить большую часть инициализации.
-- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Вызывается перед вскоре приложении для Apple Watch и отображения пользователю. Используйте этот метод для выполнения последнего момента инициализации, запуска анимации и т. д.
+- [Спящий](xref:WatchKit.WKInterfaceController.Awake*) режима: В этом методе следует выполнять большую часть инициализации.
+- [Виллактивате](xref:WatchKit.WKInterfaceController.WillActivate) : Вызывается вскоре перед тем, как приложение Watch будет отображаться пользователю. Используйте этот метод для выполнения последнего момента инициализации, запуска анимации и т. д.
 - На этом этапе появится в приложении для Apple Watch и расширение начинает отвечать на запросы для ввода данных пользователем и обновление отображение приложения Watch на логике приложения.
 - [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) после Watch приложения закрыто пользователем, этот метод вызывается. После возврата этого метода, элементы управления пользовательского интерфейса не может изменяться до следующего `WillActivate` вызывается. Этот метод также будет вызываться при разрыве подключения для iPhone.
 - После отключения расширения оно является недоступным для программы. Ожидающие асинхронные функции **не** вызываться. Просмотрите набор расширений не используют фоновую обработку режимов. Если программа активируется пользователем, но приложение не было завершено в операционной системе, будет первый метод, вызываемый `WillActivate`.
@@ -69,7 +69,7 @@ ms.locfileid: "67675248"
 ### <a name="normal-interaction"></a>Обычный взаимодействия
 
 Большая часть взаимодействия Контрольные значения/расширение приложения будет более вложенные классы `WKInterfaceController` , написанный в соответствии с сцен в приложении watch **Interface.storyboard**. Это подробно рассматривается в [установки](~/ios/watchos/get-started/installation.md) и [Приступая к работе](~/ios/watchos/get-started/index.md) статей.
-На следующем рисунке показана часть [каталога контрольного значения Kit](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) образца раскадровки. Для каждой сцены, показали здесь, имеется соответствующий пользовательский `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`т. д.) в проекте расширения.
+На следующем рисунке показана часть [каталога контрольного значения Kit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) образца раскадровки. Для каждой сцены, показали здесь, имеется соответствующий пользовательский `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`т. д.) в проекте расширения.
 
 ![](intro-to-watchos-images/scenes.png "Примеры взаимодействия норм.")
 
@@ -90,10 +90,10 @@ Long выглядеть объединяет предоставляемая си
 
 ## <a name="screen-sizes"></a>Размеры экрана
 
-Apple Watch состоит из двух размеров лиц. 38 мм и 42 мм, как с помощью с соотношением 5:4 для отображения и дисплей Retina. Готовый к применению размеров являются:
+Apple Watch имеет два размера граней: 38 и часы, как с соотношением дисплея 5:4, так и с Retinaным дисплеем. Готовый к применению размеров являются:
 
-- 38 мм: логических пикселях 136 x 170 (физические пиксели 272 x 340)
-- 42 мм: 156 x 195 логических пикселях (физические пиксели 312 x 390).
+- 38 136 x 170 логических пикселов (272 x 340 пикселей)
+- Часы 156 x 195 логические Пиксели (312 x 390 пикселей).
 
 Используйте `WKInterfaceDevice.ScreenBounds` определить на какие display выполняется приложение для Apple Watch.
 
@@ -133,8 +133,8 @@ Apple Watch состоит из двух размеров лиц. 38 мм и 42 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [watchOS 3 каталога (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [watchOS 1 каталога (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [watchOS 3 каталога (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 каталога (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Установка и настройка](~/ios/watchos/get-started/installation.md)
 - [Первое приложение просмотра видео](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [В разработке Apple для Watch руководства](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 653b6e3d41f9acb4ee3e9ee3626e72220687ccb8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 79f97382b6d8bd7875e4921c859f92cd6b321687
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510086"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646322"
 ---
 # <a name="xamarinandroid-listview"></a>ListView Xamarin. Android
 
@@ -221,15 +221,15 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Акцессоривиевс (пример)](https://developer.xamarin.com/samples/monodroid/AccessoryViews/)
-- [Басиктаблеандроид (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
-- [Басиктаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
-- [Буилтинвиевс (пример)](https://developer.xamarin.com/samples/monodroid/BuiltInViews/)
-- [Кустомроввиев (пример)](https://developer.xamarin.com/samples/monodroid/CustomRowView/)
-- [Фастскролл (пример)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
-- [Сектиониндекс (пример)](https://developer.xamarin.com/samples/monodroid/SectionIndex/)
-- [Симплекурсортаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
-- [Курсортаблеадаптер (пример)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
+- [Акцессоривиевс (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/accessoryviews)
+- [Басиктаблеандроид (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableandroid)
+- [Басиктаблеадаптер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableadapter)
+- [Буилтинвиевс (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/builtinviews)
+- [Кустомроввиев (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/customrowview)
+- [Фастскролл (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fastscroll)
+- [Сектиониндекс (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sectionindex)
+- [Симплекурсортаблеадаптер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/simplecursortableadapter)
+- [Курсортаблеадаптер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/cursortableadapter)
 - [Учебник по жизненному циклу действий](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Работа с таблицами и ячейками (в Xamarin. iOS)](~/ios/user-interface/controls/tables/index.md)
 - [Ссылка на класс ListView](xref:Android.Widget.ListView)

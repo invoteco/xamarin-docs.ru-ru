@@ -1,24 +1,24 @@
 ---
-title: Большой заголовки страниц в iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать iOS конкретных платформ, отображаемую в виде больших заголовок на панели навигации NavigationPage заголовок страницы.
+title: Крупные заголовки страниц в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу iOS, которая отображает заголовок страницы в виде крупного заголовка на панели навигации Навигатионпаже.
 ms.prod: xamarin
 ms.assetid: 45FD9145-8319-452C-9AE6-624431A4D43C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 01c5e4f449a1aed84a73b0284ba15e0c03deeed7
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ab9becf2f7363674346abf004c1748cb06eb0d31
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925783"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655413"
 ---
-# <a name="large-page-titles-on-ios"></a>Большой заголовки страниц в iOS
+# <a name="large-page-titles-on-ios"></a>Крупные заголовки страниц в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS платформы используется для отображения заголовка страницы как крупным заголовком на панели навигации [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage), для устройств, использующих iOS 11 или выше. Большой Заголовок выравнивается по левому краю и использует крупный шрифт и переходит в стандартный заголовок как пользователь начинает прокрутка содержимого, чтобы использовалась площади экрана эффективно. Однако в альбомной ориентации заголовок будет возвращать относительно центральной части панели навигации для оптимизации макета содержимого. Он используется в XAML, задав `NavigationPage.PrefersLargeTitles` вложенное свойство, чтобы `boolean` значение:
+Эта платформа iOS используется для вывода заголовка страницы в виде большого заголовка панели навигации [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), для устройств, использующих iOS 11 или более поздней версии. Большой Заголовок выравнивается по левому краю и использует крупный шрифт и переходит в стандартный заголовок как пользователь начинает прокрутка содержимого, чтобы использовалась площади экрана эффективно. Однако в альбомной ориентации заголовок будет возвращать относительно центральной части панели навигации для оптимизации макета содержимого. Он используется в XAML, задав `NavigationPage.PrefersLargeTitles` вложенное свойство, чтобы `boolean` значение:
 
 ```xaml
 <NavigationPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,6 +101,6 @@ switch (On<iOS>().LargeTitleDisplay())
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -1,5 +1,5 @@
 ---
-title: Проверка подлинности пользователей с помощью базы данных документов Azure Cosmos DB и Xamarin.Forms
+title: Проверка подлинности пользователей с помощью Azure Cosmos DB базы данных документов и Xamarin. Forms
 description: В этой статье объясняется, как объединить управление доступом с помощью Azure Cosmos DB секционированных коллекций, таким образом, чтобы пользователь имеет доступ только к своих собственных документов в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 6e55b3b9b0f204992de684ba09f3d9ff2552ce00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 0067a9e576e695a308e4326955b540be2ff46f61
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832364"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657231"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Проверка подлинности пользователей с помощью базы данных документов Azure Cosmos DB и Xamarin.Forms
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Проверка подлинности пользователей с помощью Azure Cosmos DB базы данных документов и Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Базы данных документов Azure Cosmos DB поддерживает секционированные коллекции, которые могут охватывать несколько серверов и секций, поддерживая неограниченный объем хранилища и пропускной способности. В этой статье объясняется, как объединить управление доступом с секционированным коллекциям, таким образом, чтобы пользователь имеет доступ только к своих собственных документов в приложении Xamarin.Forms._
 
@@ -271,7 +271,7 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [TODO Azure Cosmos DB Auth (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [TODO Azure Cosmos DB Auth (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Использование базы данных документов Azure Cosmos DB](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Защита доступа к данным Azure Cosmos DB](/azure/cosmos-db/secure-access-to-data/)
 - [Управление доступом в SQL API](/rest/api/documentdb/access-control-on-documentdb-resources/).

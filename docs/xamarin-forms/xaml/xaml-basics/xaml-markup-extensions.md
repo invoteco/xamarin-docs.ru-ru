@@ -7,16 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 17ca8ec481b8af5ad0515e6544613864f0a66271
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342196"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655489"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Часть 3. Расширения разметки XAML
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Расширения разметки XAML составляют важную функцию в XAML, которые позволяют свойства, чтобы присвоить объекты или значения, задаваемые косвенными ссылками из других источников. Расширения разметки XAML особенно важны для совместного использования объектов и ссылки на константы, используемые в рамках всего приложения, но они находят их наибольшую служебной программы в привязках данных._
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Обратите внимание, что ключевое слово `clr-namespace` следует двоеточие, а затем имя пространства имен .NET, и точку с запятой, ключевое слово `assembly`, знак равенства, а также имя сборки.
 
-Да, двоеточие стоит `clr-namespace` , но следует знак равенства `assembly`. Синтаксис был определен в этом намеренно так: Большинство XML-декларации пространства имен ссылки URI, который начинается имени схемы URI, таких как `http`, который всегда следует двоеточие. `clr-namespace` Часть этой строки предназначена для имитации что по соглашению.
+Да, двоеточие стоит `clr-namespace` , но следует знак равенства `assembly`. Синтаксис был определен таким образом намеренно: Большинство объявлений пространств имен XML ссылаются на URI, который начинает имя схемы URI, `http`например, за которым всегда следует двоеточие. `clr-namespace` Часть этой строки предназначена для имитации что по соглашению.
 
 Оба эти объявления пространств имен, включаются в **StaticConstantsPage** образца. Обратите внимание, что `BoxView` присваивается измерения `Math.PI` и `Math.E`, но масштабированные с коэффициентом 100:
 
@@ -547,7 +547,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-Возможно наиболее важных занятия, которые следует предпринять из этого примера приведен синтаксис расширения разметки. Кавычки необходимо заключать в фигурные скобки расширения разметки. При вводе расширения разметки в файле XAML, логично, требуется заключить в кавычки значения свойств. Не покидайте!
+Возможно, самым важным уроком, который следует предпринять в этом примере, является синтаксис расширения разметки: Кавычки не должны присутствовать в фигурных скобках расширения разметки. При вводе расширения разметки в файле XAML, логично, требуется заключить в кавычки значения свойств. Не покидайте!
 
 Вот ее запуск.
 
@@ -561,7 +561,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Часть 1. Начало работы с XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Часть 2. Основной синтаксис XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Часть 4. Основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

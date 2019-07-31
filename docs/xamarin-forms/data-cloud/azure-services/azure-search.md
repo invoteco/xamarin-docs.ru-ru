@@ -1,5 +1,5 @@
 ---
-title: Поиск данных с помощью поиска Azure и Xamarin.Forms
+title: Поиск данных с помощью службы поиска Azure и Xamarin. Forms
 description: В этой статье показано, как использовать библиотеку поиска Microsoft Azure для интеграции службы поиска Azure в приложения Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 0ecb546cfb657aa138f05ade64354eb46380e9ab
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: d13246ddae3f505d04db2a866f785a9f60ce3979
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658641"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652042"
 ---
-# <a name="search-data-with-azure-search-and-xamarinforms"></a>Поиск данных с помощью поиска Azure и Xamarin.Forms
+# <a name="search-data-with-azure-search-and-xamarinforms"></a>Поиск данных с помощью службы поиска Azure и Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureSearch/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Поиск Azure — облачная служба, которая предоставляет возможности для отправляемых данных запросов и индексирования. Это устраняет требования к инфраструктуре сложности алгоритма поиска, традиционно ассоциирующиеся с реализацией функции поиска в приложении. В этой статье показано, как использовать библиотеку поиска Microsoft Azure для интеграции службы поиска Azure в приложения Xamarin.Forms._
 
@@ -279,6 +279,6 @@ async Task AzureSuggestions(string text)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Служба поиска Azure (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureSearch/)
+- [Служба поиска Azure (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Документация по поиску Azure](/azure/search/)
 - [Библиотека поиска Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search/)

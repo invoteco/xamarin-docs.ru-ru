@@ -1,24 +1,24 @@
 ---
-title: ImageButton тени в Android
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать Android конкретных платформ, позволяющий тени на ImageButton.
+title: Теневые тени ImageButton на Android
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу Android, которая включает тень на ImageButton.
 ms.prod: xamarin
 ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: ba666d2474934b0cd4349e607329433ae1988b47
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 567216171dd289e849ee0164452e4b876953f2a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926802"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653584"
 ---
-# <a name="imagebutton-drop-shadows-on-android"></a>ImageButton тени в Android
+# <a name="imagebutton-drop-shadows-on-android"></a>Теневые тени ImageButton на Android
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Это Android платформы используется для включения тени на `ImageButton`. Он используется в XAML, задав `ImageButton.IsShadowEnabled` свойство, используемое для `true`, а также ряд дополнительных необязательно привязываемые свойства, которые управляют тени:
+Эта платформа для Android используется для включения тени на `ImageButton`. Он используется в XAML, задав `ImageButton.IsShadowEnabled` свойство, используемое для `true`, а также ряд дополнительных необязательно привязываемые свойства, которые управляют тени:
 
 ```xaml
 <ContentPage ...
@@ -77,7 +77,7 @@ imageButton.On<Android>()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API АндроидспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [АндроидспеЦифик. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

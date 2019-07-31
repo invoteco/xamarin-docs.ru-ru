@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 11ec23abda6f1faae19ba9108150b9aaf55ef290
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: efb55b060243950640978ae2cfc3fe6998efdb87
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510584"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643473"
 ---
 # <a name="kitkat-features"></a>Функции KitKat
 
@@ -376,7 +376,7 @@ StartActivityForResult (intentCreate, write_request_code);
 
 [![Снимок экрана: пользователь изменяет имя файла на Невдок в каталоге загрузок](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
 
-Когда пользователь нажимает кнопку "Сохранить `OnActivityResult` ", передается `Android.Net.Uri` только что созданный файл, к которому можно получить `data.Data`доступ с помощью. Универсальный код ресурса (URI) можно использовать для потоковой передачи данных в новый файл:
+Когда пользователь нажимает кнопку"Сохранить `OnActivityResult` ", передается `Android.Net.Uri` только что созданный файл, к которому можно получить `data.Data`доступ с помощью. Универсальный код ресурса (URI) можно использовать для потоковой передачи данных в новый файл:
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -713,6 +713,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример KitKat](https://developer.xamarin.com/samples/monodroid/KitKat/)
+- [Пример KitKat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/kitkat)
 - [API-интерфейсы Android 4,4](https://developer.android.com/about/versions/android-4.4.html)
 - [KitKat Android](https://developer.android.com/about/versions/kitkat.html)

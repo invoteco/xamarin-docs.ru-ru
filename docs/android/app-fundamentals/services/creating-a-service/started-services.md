@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3dd2add9d8cbc719623c8229778dc0ffe49aaa8f
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509143"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644129"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Службы, запущенные с помощью Xamarin. Android
 
@@ -81,7 +81,7 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Стартедсервицесдемо (пример)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/StartedServicesDemo/)
+- [Стартедсервицесдемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
 - [Android. app. Service](xref:Android.App.Service)
 - [Android. app. Старткоммандфлагс](xref:Android.App.StartCommandFlags)
 - [Android. app. Старткоммандресулт](xref:Android.App.StartCommandResult)

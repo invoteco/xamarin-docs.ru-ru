@@ -1,24 +1,24 @@
 ---
-title: Стиль разделителя ListView на iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать iOS специфические для платформы, которое определяет, использует ли разделитель между ячейками в ListView всю ширину ListView.
+title: Стиль разделителя ListView в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу iOS, которая определяет, использует ли разделитель ячеек в ListView полную ширину ListView.
 ms.prod: xamarin
 ms.assetid: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 2d634231c0bfca115581f51bd9eb298b9c45a7e1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 921ef905eed17b6bfe5cb2ea401f7da92ff744af
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925749"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648115"
 ---
-# <a name="listview-separator-style-on-ios"></a>Стиль разделителя ListView на iOS
+# <a name="listview-separator-style-on-ios"></a>Стиль разделителя ListView в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS платформы управляет ли разделитель между ячейки в [ `ListView` ](xref:Xamarin.Forms.ListView) использует всю ширину `ListView`. Он используется в XAML, задав [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) присоединенное свойство в значение [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) перечисления:
+Эта платформа iOS определяет, [`ListView`](xref:Xamarin.Forms.ListView) использует ли разделитель ячеек в пределах всей ширины. `ListView` Он используется в XAML, задав [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) присоединенное свойство в значение [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) перечисления:
 
 ```xaml
 <ContentPage ...
@@ -55,6 +55,6 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

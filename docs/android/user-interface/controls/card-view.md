@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a5a70594b0fe48fe601ef836977f69b29e097ab5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 74d626fb1028c630b67888f84153adeb33ae32b9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510385"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644694"
 ---
 # <a name="xamarinandroid-cardview"></a>Xamarin. Android Кардвиев
 
@@ -157,7 +157,7 @@ _Мини-приложение Кардвиев — это компонент п
 
 [![Кардвиев с изображением и заголовком под изображением](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
-Этот снимок экрана взят из примера приложения [рециклервиевер](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer) , который использует мини- `RecyclerView` приложение для представления `CardView` прокручиваемого списка изображений для просмотра фотографий. Дополнительные сведения о `RecyclerView`см. в разделе [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) Guide.
+Этот снимок экрана взят из примера приложения [рециклервиевер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) , который использует мини- `RecyclerView` приложение для представления `CardView` прокручиваемого списка изображений для просмотра фотографий. Дополнительные сведения о `RecyclerView`см. в разделе [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) Guide.
 
 Обратите внимание `CardView` , что в области содержимого может отображаться более одного дочернего представления. Например, в приведенном выше примере приложения для просмотра фотографий область содержимого состоит из `ListView` объекта, который `ImageView` содержит и `TextView`. Хотя `CardView` экземпляры часто располагаются вертикально, их также можно упорядочить по горизонтали (см. раздел [Создание пользовательского стиля представления](~/android/user-interface/material-theme.md#customview) для примера снимка экрана).
 
@@ -253,6 +253,6 @@ _Мини-приложение Кардвиев — это компонент п
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [RecyclerView (пример)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerView (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Введение в интерфейс без описания операций](~/android/platform/lollipop.md)
 - [Справочник по классам Кардвиев](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

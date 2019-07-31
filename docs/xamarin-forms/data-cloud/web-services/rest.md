@@ -1,5 +1,5 @@
 ---
-title: Использование веб-службу RESTful
+title: Использование веб-службы RESTFUL
 description: Интеграция веб-службы в приложение является распространенным сценарием. В этой статье показано, как использовать веб-службу RESTful в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: adfc3247bce4d40d73580d6ca9baa31df4f57229
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: cb569a425bf636a51dd6d132f6efa539e74443a0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658971"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644576"
 ---
-# <a name="consume-a-restful-web-service"></a>Использование веб-службу RESTful
+# <a name="consume-a-restful-web-service"></a>Использование веб-службы RESTFUL
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _Интеграция веб-службы в приложение является распространенным сценарием. В этой статье показано, как использовать веб-службу RESTful в приложении Xamarin.Forms._
 
@@ -38,7 +38,7 @@ Representational State Transfer (REST) представляет собой ар�
 
 Простота REST сделала его основной метод для доступа к веб-служб в мобильных приложениях.
 
-При запуске примера приложения, он будет подключаться к локально размещенной службы REST, как показано на следующем снимке экрана:
+При запуске примера приложения он подключается к размещенной локально службе RESTFUL, как показано на следующем снимке экрана:
 
 ![](rest-images/portal.png "Пример приложения")
 
@@ -208,5 +208,5 @@ public async Task DeleteTodoItemAsync (string id)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Создание серверных служб для собственных мобильных приложений](/aspnet/core/mobile/native-mobile-backend/)
-- [TodoREST (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+- [TodoREST (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: c85dd8dbc654ee9c55248db1133135a2806f4bf2
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d4d7358ca6188f2528ea200f901823f04324ba3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829896"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647470"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms поддерживает стили визуальных элементов с помощью каскадных таблиц стилей (CSS)._
 
@@ -76,7 +76,7 @@ stacklayout>image {
 > [!NOTE]
 > В настоящее время все стили, возможна с помощью стилей XAML не может выполняться с CSS. Тем не менее стили XAML можно использовать в дополнение к CSS для свойств, которые в настоящее время не поддерживаются в Xamarin.Forms. Дополнительные сведения о стилях XAML см. в разделе [Задание стиля приложений Xamarin.Forms с помощью стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-[MonkeyAppCSS](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/) пример демонстрирует использование CSS для стиля простое приложение и показан на снимках экрана ниже:
+[MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) пример демонстрирует использование CSS для стиля простое приложение и показан на снимках экрана ниже:
 
 [![Страница MonkeyApp Main с Дизайн CSS](css-images/MonkeyAppMainPage.png "MonkeyApp главной страницы с Дизайн CSS")](css-images/MonkeyAppMainPage-Large.png#lightbox "MonkeyApp главной страницы с Дизайн CSS")
 
@@ -342,7 +342,7 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 |`.class`|`.header`|Выбирает все элементы с `StyleClass` свойство, содержащее «заголовок». Обратите внимание на то, что этот селектор чувствительно к регистру.|
 |`#id`|`#email`|Выбирает все элементы с `StyleId` присвоено `email`. Если `StyleId` не указан, возврат к `x:Name`. При использовании XAML, `x:Name` предпочтительнее, чем `StyleId`. Обратите внимание на то, что этот селектор чувствительно к регистру.|
 |`*`|`*`|Выбирает все элементы.|
-|`element`|`label`|Выбирает все элементы типа `Label`, но не подклассов. Обратите внимание, что этот селектор без учета регистра.|
+|`element`|`label`|Выбирает все элементы типа `Label`, но не подклассы. Обратите внимание, что этот селектор без учета регистра.|
 |`^base`|`^contentpage`|Выбирает все элементы с `ContentPage` в качестве базового класса, включая `ContentPage` сам. Обратите внимание, что этот селектор не учитывает регистр и не является частью спецификации CSS.|
 |`element,element`|`label,button`|Выбирает все `Button` элементы и все `Label` элементы. Обратите внимание, что этот селектор без учета регистра.|
 |`element element`|`stacklayout label`|Выбирает все `Label` элементов внутри `StackLayout`. Обратите внимание, что этот селектор без учета регистра.|
@@ -428,7 +428,7 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 
 Кроме того, не `inherit` наследования значения и поэтому не поддерживается. Поэтому невозможно например, задать `font-size` свойства в макете и ожидать, что все [ `Label` ](xref:Xamarin.Forms.Label) экземпляров в макете, чтобы наследовать значение. Единственным исключением является `direction` свойство, которое имеет значение по умолчанию из `inherit`.
 
-### <a name="xamarinforms-specific-properties"></a>Конкретные свойства Xamarin.Forms
+### <a name="xamarinforms-specific-properties"></a>Свойства, относящиеся к Xamarin. Forms
 
 Также поддерживаются следующие свойства CSS Xamarin.Forms для конкретных (в **значения** столбцов, типы являются _курсивом_, тогда как строковые литералы являются `gray`):
 
@@ -447,9 +447,9 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 |`-xf-thumb-color`|`Slider`|_Цвет_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_Double_ \| `initial` |`-xf-spacing: 8;`|
 
-### <a name="xamarinforms-shell-specific-properties"></a>Конкретные свойства оболочки Xamarin.Forms
+### <a name="xamarinforms-shell-specific-properties"></a>Специальные свойства оболочки Xamarin. Forms
 
-Также поддерживаются следующие свойства CSS Xamarin.Forms оболочки для конкретных (в **значения** столбцов, типы являются _курсивом_, тогда как строковые литералы являются `gray`):
+Также поддерживаются следующие свойства CSS, относящиеся к оболочке Xamarin. Forms (в столбце **значения** типы имеют _курсив_, а строковые `gray`литералы):
 
 |Свойство.|Применение|Значения|Пример|
 |---|---|---|---|
@@ -504,10 +504,10 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS видео**
+**Видео о CSS Xamarin. Forms 3,0**
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MonkeyAppCSS (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+- [MonkeyAppCSS (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Задание стиля приложений Xamarin.Forms с помощью стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: b00452d348072060ab0e31a64fdb8cd4eb177471
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7a6ea06d77b8eb170f4165bfc8cf2fd643d56406
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926978"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651667"
 ---
 # <a name="passing-arguments-in-xaml"></a>Передача аргументов в XAML
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
 _В этой статье демонстрируется использование атрибутов XAML, которые могут использоваться для передачи аргументов конструктора не по умолчанию, для вызова методов фабрики, а также указать тип универсального аргумента._
 
@@ -173,5 +173,5 @@ _В этой статье демонстрируется использован�
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пространства имен языка XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Передача аргументов конструктора (пример)](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
-- [Обращение к методам фабрики (пример)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)
+- [Передача аргументов конструктора (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [Обращение к методам фабрики (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)

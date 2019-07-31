@@ -1,24 +1,24 @@
 ---
-title: Выбор элемента в iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать специфические для платформы iOS, управляющий, когда происходит выбор элементов в средстве выбора.
+title: Выбор элемента средства выбора в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать особенности платформы iOS, которые используются для управления выбором элементов в средстве выбора.
 ms.prod: xamarin
 ms.assetid: 26B0604A-BD30-49FD-83A6-F0EDFBB0524B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: aeefa22c8a17611579c56b3105be860c12a8711c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 57420921100c99db1e2c3a5259ece30cfda719f2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925379"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651844"
 ---
-# <a name="picker-item-selection-on-ios"></a>Выбор элемента в iOS
+# <a name="picker-item-selection-on-ios"></a>Выбор элемента средства выбора в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS специфические для платформы контролирует, когда происходит выбор элементов в [ `Picker` ](xref:Xamarin.Forms.Picker), позволяя пользователю указать, что выбор элементов срабатывает при просмотре элементов в элементе управления или только в том случае, когда **сделать** нажата кнопка. Он используется в XAML, задав `Picker.UpdateMode` присоединенное свойство в значение `UpdateMode` перечисления:
+Элементы управления для конкретных платформ iOS при выборе элементов в [`Picker`](xref:Xamarin.Forms.Picker), позволяя пользователю указать, что выбор элементов выполняется при просмотре элементов в элементе управления, или только после нажатия кнопки Done ( **Готово** ). Он используется в XAML, задав `Picker.UpdateMode` присоединенное свойство в значение `UpdateMode` перечисления:
 
 ```xaml
 <ContentPage ...
@@ -67,6 +67,6 @@ switch (picker.On<iOS>().UpdateMode())
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

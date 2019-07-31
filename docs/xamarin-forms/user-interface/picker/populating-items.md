@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6363f84cb9c947fe8035b51c9f7aed05be6be9e0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61230307"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649208"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Добавление данных в коллекцию элементов средства выбора
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _Представление выбора является элемент управления для выбора элемента из списка данных. В этой статье объясняется, как заполнить управляющий элемент выбора с данными, добавив его в коллекцию элементов и как реагировать на выбор элемента пользователем._
 
-## <a name="populating-a-picker-with-data"></a>Заполнение управляющий элемент выбора с данными
+## <a name="populating-a-picker-with-data"></a>Заполнение средства выбора данными
 
 До Xamarin.Forms 2.3.4, процесс заполнения [ `Picker` ](xref:Xamarin.Forms.Picker) с данными было Добавление данных для отображения только для чтения [ `Items` ](xref:Xamarin.Forms.Picker.Items) коллекции, которая имеет тип `IList<string>`. Каждый элемент в коллекции должен быть типа `string`. Элементы могут быть добавлены в XAML путем инициализации `Items` свойства со списком `x:String` элементов:
 
@@ -83,5 +83,5 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Средство выбора Demo (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
+- [Средство выбора Demo (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 - [Средство выбора](xref:Xamarin.Forms.Picker)

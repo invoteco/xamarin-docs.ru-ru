@@ -7,18 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d323aa6616f7547ab91dfe2b394c339e273d61c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322300"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650026"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Мозаичное заполнение точечного рисунка SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
 Как вы уже видели в двух предыдущих статьях, [ `SKShader` ](xref:SkiaSharp.SKShader) класс создает линейные и циклическая градиенты. Эта статья посвящена `SKShader` объект, который использует растровое изображение для заполнения области. Битовая карта может повторяться по горизонтали и вертикали, либо в исходной ориентации или в качестве альтернативы перевернуто по горизонтали и вертикали. Отражение позволяет избежать перебоям в работе между плитки:
 
@@ -42,7 +42,7 @@ public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShade
 
 ## <a name="exploring-the-tile-modes"></a>Изучение мозаичные режимы
 
-Первая программа в **мозаичное заполнение растрового изображения** раздел **построители текстуры и другие эффекты** странице [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца демонстрируется действие двух `SKShaderTileMode` аргументы. **Режимы перевернуть растрового изображения мозаики** файл XAML создает экземпляр `SKCanvasView` и два `Picker` представления, которые позволяют выбрать `SKShaderTilerMode` значение для горизонтальных и вертикальных мозаичное заполнение. Обратите внимание, что массив `SKShaderTileMode` члены, определенные в `Resources` разделе:
+Первая программа в **мозаичное заполнение растрового изображения** раздел **построители текстуры и другие эффекты** странице [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца демонстрируется действие двух `SKShaderTileMode` аргументы. **Режимы перевернуть растрового изображения мозаики** файл XAML создает экземпляр `SKCanvasView` и два `Picker` представления, которые позволяют выбрать `SKShaderTilerMode` значение для горизонтальных и вертикальных мозаичное заполнение. Обратите внимание, что массив `SKShaderTileMode` члены, определенные в `Resources` разделе:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -300,7 +300,7 @@ public class PhotographicBrickWallPage : ContentPage
 
 Некоторые действия, необходимые для получения подходящих растрового изображения для мозаичного элемента. Это не работает очень хорошо, так как более темные модуля, выделяется среди слишком много. Он регулярно отображается в повторных образов, отображая тот факт, что упираетесь в стену был создан из небольших растрового изображения.
 
-**Мультимедиа** папке [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образец также входит этот образ камень стене:
+**Мультимедиа** папке [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образец также входит этот образ камень стене:
 
 ![Плитка Wall камне](bitmap-tiling-images/StoneWallTile.jpg "камне Wall плитки")
 
@@ -366,7 +366,7 @@ SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 
 В разделе [ **плитку выравнивание**](#tile-alignment), вы увидите пример преобразования переноса к шейдера.
 
-Автономной [ **часы Cat** ](https://developer.xamarin.com/samples/xamarin-forms/CatClock) пример (не является частью **SkiaSharpFormsDemos**) имитирует фона древесина детализации помощи дробления растрового изображения, в соответствии с этим растровым изображением square 240 пикселей:
+Автономной [ **часы Cat** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) пример (не является частью **SkiaSharpFormsDemos**) имитирует фона древесина детализации помощи дробления растрового изображения, в соответствии с этим растровым изображением square 240 пикселей:
 
 ![Деревянные детализации](bitmap-tiling-images/WoodGrain.png "деревянные детализации")
 
@@ -780,5 +780,5 @@ public class AnimatedBitmapTilePage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [CatClock (пример)](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)

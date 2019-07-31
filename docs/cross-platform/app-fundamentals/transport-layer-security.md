@@ -6,16 +6,16 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: d904ab25ee5a91fc33d9fa09c66a043e4bd33872
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 639a62316d718534677b0ae86f9e5b57791c23e1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511408"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649213"
 ---
 # <a name="transport-layer-security-tls-12"></a>Безопасность транспортного уровня (TLS) 1,2
 
-Использование последней версии [  протокола TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) важно для обеспечения безопасности сетевых подключений приложений.
+Использование последней версии [ протокола TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) важно для обеспечения безопасности сетевых подключений приложений.
 
 > [!WARNING]
 > **Апрель 2018** — из-за повышенных требований к безопасности, включая соответствие требованиям PCI, основным поставщикам облачных услуг и веб-серверам требуется отключить поддержку протоколов TLS версий старше 1,2.  Проекты Xamarin, созданные в предыдущих версиях Visual Studio по умолчанию, используют более старые версии TLS.
@@ -136,4 +136,4 @@ ms.locfileid: "68511408"
 - [Foundation. CFNetwork](xref:CoreFoundation.CFNetwork)
 - [Foundation. Нсурлконнектион](xref:Foundation.NSUrlConnection)
 - [System .NET. WebRequest](https://msdn.microsoft.com/library/system.net.webrequest(v=vs.110).aspx)
-- [HTTP-клиент (пример)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [HTTP-клиент (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

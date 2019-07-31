@@ -1,54 +1,54 @@
 ---
-title: Настраиваемый документ значки в Xamarin.iOS
-description: Этот статье охватывает, включая и управление ими ресурс изображения в приложение Xamarin.iOS для использования в качестве пользовательский значок типа документа.
+title: Настраиваемые значки документов в Xamarin. iOS
+description: В этой статье рассматривается включение ресурса изображения и управление им в приложении Xamarin. iOS, которое будет использоваться в качестве пользовательского значка типа документа.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 7520d3984a204dbceb67ef5310a10b1571f03127
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 1125b0c420d6dbd23c5539a2183d531bc0d6089f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827383"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642999"
 ---
-# <a name="custom-document-icons-in-xamarinios"></a>Настраиваемый документ значки в Xamarin.iOS
+# <a name="custom-document-icons-in-xamarinios"></a>Настраиваемые значки документов в Xamarin. iOS
 
-_Этот статье охватывает, включая и управление ими ресурс изображения в приложение Xamarin.iOS для использования в качестве пользовательский значок типа документа._
+_В этой статье рассматривается включение ресурса изображения и управление им в приложении Xamarin. iOS, которое будет использоваться в качестве пользовательского значка типа документа._
 
-Если приложения Xamarin.iOS поддерживает загрузку определенного типа документов, разработчик может предоставить значков, которые будут использоваться при обнаружении этого типа документа, например когда пользователь удерживает вложения в *почтовое приложение* как Вот как:
+Если приложение Xamarin. iOS поддерживает загрузку определенного типа документа, разработчик может предоставить значки, которые система будет использовать при обнаружении этого типа документа, например, когда пользователь удерживает вложение в *почтовом приложении* , как показано ниже:
 
- [![](custom-document-types-images/17.png "Пример значки для типов документов")](custom-document-types-images/17.png#lightbox)
+ [![](custom-document-types-images/17.png "Пример значков типа документа")](custom-document-types-images/17.png#lightbox)
 
-Разработчик может добавить сведения о типе документа в формате файла приложения — для открытия, включив словарей для `CFBundleTypeName` строку и `LSItemContentTypes` массива в приложении `Info.plist`. Значки для типа документа перейдите `CFBundleTypeIconFiles` массива. Если значок документа не указано, iOS будет наследовать из значка приложения.
-Значки могут быть предоставлены для несколько размеров, оптимизированные для различных разрешений устройства. 
+Разработчик может добавить сведения о типе документа для формата файла, который приложение может открывать, включая записи словаря для `CFBundleTypeName` строки и `LSItemContentTypes` `Info.plist`массива в приложении. Значки для типа документа попадают в `CFBundleTypeIconFiles` массив. Если значок документа не указан, iOS будет наследоваться от значка приложения.
+Значки можно указывать для нескольких размеров, оптимизированных для различных способов разрешения устройств. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Чтобы назначить эти значения в Visual Studio для Mac, используйте **типов документов** раздел **Дополнительно** вкладке `Info.plist` редактор, чтобы добавить тип документа и назначить ей изображения значков. Например ниже приведен снимок экрана, показывающий регистрации для поддержки PDF.
+Чтобы назначить эти значения в Visual Studio для Mac, используйте раздел **типы документов** на `Info.plist` вкладке **Дополнительно** в редакторе, чтобы добавить тип документа и назначить ему значки изображений. Например, ниже приведен снимок экрана, показывающий регистрацию для поддержки PDF:
 
- [![](custom-document-types-images/18.png "В разделе типов документов, в разделе вкладка \"Дополнительно\" в редакторе «Info.plist»")](custom-document-types-images/18.png#lightbox)
+ [![](custom-document-types-images/18.png "Раздел \"типы документов\" на вкладке \"Дополнительно\" редактора \"info. plist\"")](custom-document-types-images/18.png#lightbox)
  
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Чтобы назначить эти значения в Visual Studio, используйте **типов документов** раздел **Дополнительно** вкладке `Info.plist`:
+Чтобы назначить эти значения в Visual Studio, используйте раздел **типы документов** на `Info.plist`вкладке **Дополнительно** на странице:
 
- ![](custom-document-types-images/doc01w.png "Откройте раздел типов документов в разделе вкладка \"Дополнительно\"")
+ ![](custom-document-types-images/doc01w.png "Откройте раздел типы документов на вкладке Дополнительно.")
 
-Нажмите кнопку **добавить тип документа** кнопку и заполните обязательные поля:
+Нажмите кнопку **Добавить тип документа** и заполните обязательные поля:
 
-![](custom-document-types-images/doc02w.png "Форма добавления типа документа")
+![](custom-document-types-images/doc02w.png "Форма «Добавление типа документа»")
 
 -----
 
 
-Дополнительные сведения о типах документов см. в разделе Apple [универсальный ссылка на тип идентификаторы](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) и [разделы программирования документа взаимодействия для iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Дополнительные сведения о типах документов см. в разделах [Справочник по единообразным идентификаторам типов](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) Apple и [разделы по программированию документов для iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Работа с образами (пример)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
+- [Работа с изображениями (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Пользовательский значок и правила создания образа](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Пользовательские рекомендации по созданию значков и изображений](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

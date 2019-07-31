@@ -1,39 +1,33 @@
 ---
 title: F#Примеры для Xamarin
-description: F#можно использовать для создания приложений Xamarin. В этом документе ссылкой на различные устройства iOS, Mac и Xamarin.Forms пример Xamarin приложения проектов написаны в F#.
+description: F#может использоваться для создания приложений Xamarin. Этот документ содержит ссылки на различные примеры проектов приложений Xamarin в iOS, Mac и Xamarin. Forms F#, написанные на.
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7ca7f2d88e2330ffc55f7b2629f1ea6c35733fbd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 8c71ad269731c943060932aa30de95345e577ccf
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036023"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646134"
 ---
 # <a name="f-samples-for-xamarin"></a>F#Примеры для Xamarin
 
-Эта страница содержит ссылки на некоторые F# образцы, с помощью Xamarin.
+На этой странице приведены ссылки F# на некоторые примеры с помощью Xamarin.
 
 ## <a name="ios"></a>iOS
 
-[Город FSSceneKit](https://developer.xamarin.com/samples/monotouch/ios8/FSSceneKit/) примере показано, как создать случайный города с помощью [SceneKit](xref:SceneKit) и F#. Имеется также [Edition «Oculus Thrift» (Google картон)](https://developer.xamarin.com/samples/monotouch/ios8/SceneKitFSharp/).
+В примере [Фссценекит City](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-fsscenekit/) показано, как создать создаваемый случайным образом город с F#помощью [SceneKit](xref:SceneKit) и. Также существует [выпуск Окулус Thrift (Google кардбоард)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-scenekitfsharp/).
 
-[![](samples-images/fxscenekit-sml.png "В мире также выпуска Oculus Thrift картон Google")](samples-images/fxscenekit.png#lightbox)
+[![Есть также Окулус Thrift Google Кардбоард Edition](samples-images/fxscenekit-sml.png)](samples-images/fxscenekit.png#lightbox)
 
-[Неполная](https://github.com/dvdsgl/shallow) демонстрирует интересную проведите по экрану пользовательского интерфейса с F# для iOS.
-
-## <a name="mac"></a>Mac
-
-[Наблюдатель FSEvent](https://developer.xamarin.com/samples/mac/FSEvents/) записывается пример приложения Mac OS X с F#.
-
-[![](samples-images/fsevents-sml.png "Наблюдатель FSEvent находится пример приложения Mac OS X, написанный с помощьюF#")](samples-images/fsevents.png#lightbox)
+[Поверхностное](https://github.com/dvdsgl/shallow) демонстрирует увлекательный пользовательский интерфейс для прокрутки F# , созданный для iOS.
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Количество выборок для [Xamarin.Forms (книга)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) были перенесены F#. Эти ссылки ведут на расположение github для каждой главы:
+Несколько примеров для [книги Xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) перенесены в F#. Эти ссылки ведут к расположению GitHub для каждой главы:
 
 - [Глава 2. Анатомия приложения](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Глава 3. Более подробная информация](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)

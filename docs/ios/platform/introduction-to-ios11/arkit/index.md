@@ -1,46 +1,46 @@
 ---
-title: Общие сведения о ARKit в Xamarin.iOS
-description: В этом документе описывается дополненная реальность в iOS 11 с ARKit. Он описывает добавление трехмерной модели в приложение, настроить представление, реализации делегата сеанса, поместите трехмерной модели в мире и приостановить сеанс режиме дополненной реальности.
+title: Общие сведения о ARKit в Xamarin. iOS
+description: В этом документе описывается дополненная реальность в iOS 11 с ARKit. В нем обсуждается добавление трехмерной модели в приложение, Настройка представления, реализация делегата сеанса, размещение трехмерной модели в мире и приостановка расширенного сеанса реальности.
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: 348d2f2090105ed693da7be5a44c82ef18bd2a89
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 47c092215afef4aa6964a39f7dcb5b685d98a4fc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61176749"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655733"
 ---
-# <a name="introduction-to-arkit-in-xamarinios"></a>Общие сведения о ARKit в Xamarin.iOS
+# <a name="introduction-to-arkit-in-xamarinios"></a>Общие сведения о ARKit в Xamarin. iOS
 
 _Дополненная реальность для iOS 11_
 
-ARKit включает разнообразные дополненная реальность приложений и игр. Данный раздел охватывает следующее:
+ARKit обеспечивает широкий спектр расширенных приложений и игр в реальности. Данный раздел охватывает следующее:
 
-- [Приступая к работе с ARKit](#gettingstarted)
-- [С помощью ARKit с UrhoSharp](urhosharp.md)
+- [начало работы с ARKit](#gettingstarted)
+- [Использование ARKit с UrhoSharp](urhosharp.md)
 
 <a name="gettingstarted" />
 
-## <a name="getting-started-with-arkit"></a>Приступая к работе с ARKit
+## <a name="getting-started-with-arkit"></a>начало работы с ARKit
 
-Чтобы начать работу с дополненная реальность, приведенные ниже инструкции рассмотрим простое приложение: размещение трехмерной модели и позволить ARKit Сохраните модель в месте с функциональными возможностями отслеживания.
+Чтобы приступить к работе с дополненной реальности, в следующих инструкциях рассматривается простое приложение: размещение трехмерной модели и предоставление ARKit возможности сохранения модели с функциями отслеживания.
 
-![Jet трехмерной модели с плавающей запятой в camera образа](images/jet-sml.png)
+![Трехмерная модель Jet с плавающей запятой в образе камеры](images/jet-sml.png)
 
 ### <a name="1-add-a-3d-model"></a>1. Добавление трехмерной модели
 
-Ресурсы должны добавляться в проект с **SceneKitAsset** действие при сборке.
+Ресурсы должны быть добавлены в проект с помощью действия сборки **сценекитассет** .
 
-![Активов SceneKit в проекте](images/scene-assets.png)
+![SceneKit активы в проекте](images/scene-assets.png)
 
 
 ### <a name="2-configure-the-view"></a>2. Настройка представления
 
-В контроллере представления `ViewDidLoad` метода загрузки ресурса сцены и задайте `Scene` свойство представления:
+В `ViewDidLoad` методе контроллера представления загрузите ресурс сцены и `Scene` задайте свойство в представлении:
 
 ```csharp
 ARSCNView SceneView = (View as ARSCNView);
@@ -52,9 +52,9 @@ var scene = SCNScene.FromFile("art.scnassets/ship");
 SceneView.Scene = scene;
 ```
 
-### <a name="3-optionally-implement-a-session-delegate"></a>3. При необходимости реализации делегата сеанса
+### <a name="3-optionally-implement-a-session-delegate"></a>3. При необходимости реализуйте делегат сеанса
 
-Несмотря на то, что не требуется для простых случаях, реализация сеанса делегат может быть полезным при отладке состояние сеанса ARKit (и в реальных приложениях, обратная связь для пользователя). Создание простого делегата с помощью следующего кода:
+Хотя это и не является обязательным для простых случаев, реализация делегата сеанса может быть полезной для отладки состояния сеанса ARKit (и в реальных приложениях, предлагая пользователю отзыв). Создайте простой делегат, используя приведенный ниже код.
 
 ```csharp
 public class SessionDelegate : ARSessionDelegate
@@ -67,16 +67,16 @@ public class SessionDelegate : ARSessionDelegate
 }
 ```
 
-Назначить делегата в в `ViewDidLoad` метод:
+Назначьте делегат в `ViewDidLoad` методе:
 
 ```csharp
 // Track changes to the session
 SceneView.Session.Delegate = new SessionDelegate();
 ```
 
-### <a name="4-position-the-3d-model-in-the-world"></a>4. Положение в мире трехмерной модели
+### <a name="4-position-the-3d-model-in-the-world"></a>4. Размещение трехмерной модели в мире
 
-В `ViewWillAppear`, следующий код устанавливает сеанс ARKit и задает положение трехмерной модели в пространстве относительно камеры устройства:
+В `ViewWillAppear`следующий код устанавливает сеанс ARKit и задает расположение трехмерной модели в пространстве относительно камеры устройства:
 
 ```csharp
 // Create a session configuration
@@ -94,11 +94,11 @@ var ship = SceneView.Scene.RootNode.FindChildNode("ship", true);
 ship.Position = new SCNVector3(2f, -2f, -9f);
 ```
 
-Каждый раз, запустить или возобновлении приложения камеры будет располагаться трехмерной модели. Когда модель находится, перемещение камеры и посмотрите, как ARKit сохраняют находится модель.
+При каждом запуске или возобновлении работы приложения трехмерная модель будет размещена перед камерой. Когда модель будет размещена, переместите камеру и посмотрите, как ARKit сохраняет модель в положении.
 
-### <a name="5-pause-the-augmented-reality-session"></a>5. Приостановка сеанса дополненная реальность
+### <a name="5-pause-the-augmented-reality-session"></a>5. Приостановка расширенного сеанса реальности
 
-Рекомендуется приостановить сеанс ARKit, когда контроллер представления не отображается (в `ViewWillDisappear` метод:
+Рекомендуется приостанавливать сеанс ARKit, когда контроллер представления не отображается (в `ViewWillDisappear` методе:
 
 ```csharp
 SceneView.Session.Pause();
@@ -106,15 +106,15 @@ SceneView.Session.Pause();
 
 ## <a name="summary"></a>Сводка
 
-Приведенные выше результаты кода в простом приложении ARKit. Более сложные примеры ожидать контроллера представления хостом сеанса режиме дополненной реальности для реализации `IARSCNViewDelegate`, и реализовать дополнительные методы.
+Приведенный выше код приводит к попросту ARKit приложению. Более сложные примеры предполагают, что контроллер представления, на котором размещается реализованный `IARSCNViewDelegate`сеанс реальности, реализуется, а также реализуются дополнительные методы.
 
-ARKit предоставляет множество других более сложные функции, такие как surface отслеживания и взаимодействия с пользователем. См. в разделе [UrhoSharp Демонстрация](urhosharp.md) пример объединения ARKit отслеживания с UrhoSharp.
+ARKit предоставляет множество более сложных функций, таких как отслеживание поверхности и взаимодействие с пользователем. Пример объединения отслеживания ARKit с UrhoSharp см. в демонстрационном примере [UrhoSharp](urhosharp.md) .
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Дополненная реальность (Apple)](https://developer.apple.com/arkit/)
-- [С помощью ARKit с UrhoSharp](urhosharp.md)
-- [Пример простой ARKit (Jet)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
-- [Размещение объектов ARKit (пример)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/)
-- [Знакомство с ARKit - режиме дополненной реальности для iOS (WWDC) (видео)](https://developer.apple.com/videos/play/wwdc2017/602/)
+- [Использование ARKit с UrhoSharp](urhosharp.md)
+- [Пример простого ARKit (Jet)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit размещения объектов (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [Введение в ARKit для iOS (ВВДК) (видео)](https://developer.apple.com/videos/play/wwdc2017/602/)

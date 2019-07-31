@@ -7,24 +7,24 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 47b4a1bb0249bc21bd75e82067cb00b3f272e202
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61204875"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642676"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Отображение точечных рисунков SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Субъект точечных рисунков SkiaSharp была представлена в статье  **[основы растрового изображения в SkiaSharp](../basics/bitmaps.md)**. В этой статье показали три способа загрузки точечные рисунки и три способа отображения растровых изображений. В этой статье рассматривает методы для загрузки точечных рисунков, которые вступают глубже в использование `DrawBitmap` методы `SKCanvas`.
+Субъект точечных рисунков SkiaSharp была представлена в статье  **[основы растрового изображения в SkiaSharp](../basics/bitmaps.md)** . В этой статье показали три способа загрузки точечные рисунки и три способа отображения растровых изображений. В этой статье рассматривает методы для загрузки точечных рисунков, которые вступают глубже в использование `DrawBitmap` методы `SKCanvas`.
 
 ![Отображение примера](displaying-images/DisplayingSample.png "Отображение примера")
 
-`DrawBitmapLattice` И `DrawBitmapNinePatch` в этой статье рассматриваются методы  **[сегментированное отображение точечных рисунков SkiaSharp показателей](segmented.md)**.
+`DrawBitmapLattice` И `DrawBitmapNinePatch` в этой статье рассматриваются методы  **[сегментированное отображение точечных рисунков SkiaSharp показателей](segmented.md)** .
 
-Примеры на этой странице взяты из **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложения. На домашней странице приложения выберите **точечные рисунки SkiaSharp**и затем перейдите к разделу **отображение точечных рисунков** раздел.
+Примеры на этой странице взяты из **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложения. На домашней странице приложения выберите **точечные рисунки SkiaSharp**и затем перейдите к разделу **отображение точечных рисунков** раздел.
 
 ## <a name="loading-a-bitmap"></a>Загрузка растрового изображения
 
@@ -34,7 +34,7 @@ ms.locfileid: "61204875"
 - Из ресурсов, внедренных в исполняемый файл
 - В библиотеке фотографий пользователя
 
-Можно также для приложения SkiaSharp, чтобы создать новое растровое изображение, а затем нарисовать на нем или алгоритмически задать биты растрового изображения. Эти методы описаны в статьях **[создания и рисования в SkiaSharp точечные рисунки](drawing.md)** и **[доступ к пикселов точечного рисунка SkiaSharp](pixel-bits.md)**.
+Можно также для приложения SkiaSharp, чтобы создать новое растровое изображение, а затем нарисовать на нем или алгоритмически задать биты растрового изображения. Эти методы описаны в статьях **[создания и рисования в SkiaSharp точечные рисунки](drawing.md)** и **[доступ к пикселов точечного рисунка SkiaSharp](pixel-bits.md)** .
 
 В следующих трех примерах кода загрузки растрового изображения, класс предполагается, что содержит поле типа `SKBitmap`:
 
@@ -48,7 +48,7 @@ SKBitmap bitmap;
 HttpClient httpClient = new HttpClient();
 ```
 
-При использовании `HttpClient` с помощью приложений iOS и Android, необходимо задать свойства проекта, как описано в документах на  **[уровня безопасности транспорта (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**.
+При использовании `HttpClient` с помощью приложений iOS и Android, необходимо задать свойства проекта, как описано в документах на  **[уровня безопасности транспорта (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
 Код, использующий `HttpClient` часто включает в себя `await` оператор, поэтому он должен храниться в `async` метод:
 
@@ -73,7 +73,7 @@ catch
 
 Обратите внимание, что `Stream` полученный из `GetStreamAsync` копируется в `MemoryStream`. Android не поддерживает `Stream` из `HttpClient` обрабатываемых основным потоком за исключением в асинхронные методы. 
 
-[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) Выполняет массу работы: `Stream` Переданный ему объект ссылается на блок памяти, содержащий весь точечный рисунок в одной из распространенных форматов файлов точечного рисунка, обычно JPEG, PNG или GIF. `Decode` Метод должен определить формат и затем декодировать файл точечного рисунка в SkiaSharp в собственный формат внутреннего растрового изображения.
+[`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) Выполняет массу работы: Объект `Stream` , переданный в него, ссылается на блок памяти, содержащий все точечные рисунки в одном из стандартных форматов файлов точечных рисунков, обычно JPEG, PNG или GIF. `Decode` Метод должен определить формат и затем декодировать файл точечного рисунка в SkiaSharp в собственный формат внутреннего растрового изображения.
 
 После код вызывает метод `SKBitmap.Decode`, возможно, сделает `CanvasView` таким образом, чтобы `PaintSurface` обработчик может отображать вновь загруженных растрового изображения.
 
@@ -92,7 +92,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 Файлы растровых изображений также могут храниться как ресурсы в проект отдельные платформы iOS, Android и универсальной платформы Windows (UWP). Однако загрузка этих маленьких точечных изображений требуется код, который находится в проекте платформы.
 
-Третий подход для получения растрового изображения является из библиотеки рисунков пользователя. В следующем коде используется служба зависимость, которая включается в **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложения. **SkiaSharpFormsDemo** библиотеки .NET Standard включает в себя `IPhotoLibrary` интерфейс, хотя каждый из проектов платформа содержит `PhotoLibrary` класс, реализующий этот интерфейс.
+Третий подход для получения растрового изображения является из библиотеки рисунков пользователя. В следующем коде используется служба зависимость, которая включается в **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложения. **SkiaSharpFormsDemo** библиотеки .NET Standard включает в себя `IPhotoLibrary` интерфейс, хотя каждый из проектов платформа содержит `PhotoLibrary` класс, реализующий этот интерфейс.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -144,7 +144,7 @@ paint.Color = SKColors.Red.WithAlpha(0x80);
 
 `SKPaint` Объекта также играет роль при отображении растровых изображений с помощью режимы смешения или фильтрации эффекты. Они описаны в статьях [SkiaSharp композиции и режимы наложения](../effects/blend-modes/index.md) и [фильтры образа SkiaSharp](../effects/image-filters.md).
 
-**Пикселах** странице в **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** пример программы отображает ресурса точечного рисунка, который составляет 320 пикселей 240 пикселей:
+**Пикселах** странице в **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** пример программы отображает ресурса точечного рисунка, который составляет 320 пикселей 240 пикселей:
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -194,7 +194,7 @@ public class PixelDimensionsPage : ContentPage
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>Метод для загрузки ресурсов растровых изображений
 
-Многие из примеров, дальше необходимо загрузить ресурсы растрового изображения. Статический `BitmapExtensions` в класс **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** решение содержит метод, чтобы помочь:
+Многие из примеров, дальше необходимо загрузить ресурсы растрового изображения. Статический `BitmapExtensions` в класс **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** решение содержит метод, чтобы помочь:
 
 ```csharp
 static class BitmapExtensions
@@ -319,7 +319,7 @@ public class UniformScalingPage : ContentPage
 
 ## <a name="a-versatile-bitmap-display-function"></a>Функция отображения универсальный растрового изображения
 
-Программирования среды на основе XAML (например, UWP и Xamarin.Forms) имеют возможность увеличивать и уменьшать размер точечных рисунков, сохраняя их пропорций. Несмотря на то, что SkiaSharp не поддерживает эту функцию, вы можете реализовать его самостоятельно. `BitmapExtensions` Классов, включенных в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) приложения показано как. Этот класс определяет два новых `DrawBitmap` методы, выполняющие вычисления пропорции. Эти новые методы являются методами расширения `SKCanvas`.
+Программирования среды на основе XAML (например, UWP и Xamarin.Forms) имеют возможность увеличивать и уменьшать размер точечных рисунков, сохраняя их пропорций. Несмотря на то, что SkiaSharp не поддерживает эту функцию, вы можете реализовать его самостоятельно. `BitmapExtensions` Классов, включенных в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) приложения показано как. Этот класс определяет два новых `DrawBitmap` методы, выполняющие вычисления пропорции. Эти новые методы являются методами расширения `SKCanvas`.
 
 Новый `DrawBitmap` методов включают параметр типа `BitmapStretch`, перечисление, определенное в **BitmapExtensions.cs** файла:
 
@@ -666,5 +666,5 @@ public partial class ScalingModesPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: f59aa92f5f4f013a2d14b1667f4d0679a7ba82b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384828"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643016"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Точки и тире в SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Освойте тонкости механизмов рисования в SkiaSharp пунктирная и пунктирных линий_
 
@@ -26,7 +26,7 @@ SkiaSharp позволяет рисовать линии, которые не с
 
 Это сделать с помощью *эффект пути*, который является экземпляром [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) класс, который задается для [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) свойство `SKPaint`. Можно создать путь эффект (или эффекты объединения пути), с помощью одного из статических создания методов, определенных `SKPathEffect`. (`SKPathEffect` один из шести эффектов поддерживается SkiaSharp; остальные описаны в разделе [ **эффект SkiaSharp**](../effects/index.md).)
 
-Для рисования точечных или пунктирных линий, следует использовать [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) статический метод. Существует два аргумента: Это массив `float` значений, обозначающих длину точек и тире и длину пробелов между ними. Этот массив должен иметь четное число элементов и должно быть по крайней мере два элемента. (Может быть ноль элементов в массиве, но этот приводит сплошная линия.) При наличии двух элементов, первый представляет собой длину точка или тире и второй — длина пробела перед Далее точка или тире. Если имеется более двух элементов, то они находятся в следующем порядке: тире длины, длина временного промежутка, тире, длина временного промежутка и т. д.
+Для рисования точечных или пунктирных линий, следует использовать [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) статический метод. Существует два аргумента: Сначала это массив `float` значений, указывающий длины точек и тире, а также длину пробелов между ними. Этот массив должен иметь четное число элементов и должно быть по крайней мере два элемента. (Может быть ноль элементов в массиве, но этот приводит сплошная линия.) При наличии двух элементов, первый представляет собой длину точка или тире и второй — длина пробела перед Далее точка или тире. Если имеется более двух элементов, то они находятся в следующем порядке: тире длины, длина временного промежутка, тире, длина временного промежутка и т. д.
 
 Как правило нужно будет сделать длинами тире и свойство gap кратно ширина штриха. Если ширина мазков 10 точек, например, массив {10, 10} будет нарисуйте пунктирной линией, точек и пробелов которых же длины, толщина штриха.
 
@@ -217,4 +217,4 @@ public class AnimatedSpiralPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

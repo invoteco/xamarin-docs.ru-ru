@@ -1,24 +1,24 @@
 ---
-title: Специальные возможности масштабирования для с именем размеры шрифтов, в iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать iOS конкретных платформ, отключает специальные возможности масштабирования для размеров шрифта именованный.
+title: Масштабирование специальных возможностей для именованных размеров шрифтов в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу iOS, которая отключает масштабирование специальных возможностей для именованных размеров шрифтов.
 ms.prod: xamarin
 ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: 1fc6fefe1f9fe48fe2abb367b376a5a6f3484462
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 678ea2210389eb33bc3a184d758f2bfa07c60bd9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517953"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656734"
 ---
-# <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Специальные возможности масштабирования для с именем размеры шрифтов, в iOS
+# <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Масштабирование специальных возможностей для именованных размеров шрифтов в iOS
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS платформы отключает специальные возможности масштабирования для размеров шрифта именованный. Он используется в XAML, задав `Application.EnableAccessibilityScalingForNamedFontSizes` свойство, используемое для `false`:
+Эта платформа iOS отключает масштабирование доступа для именованных размеров шрифтов. Он используется в XAML, задав `Application.EnableAccessibilityScalingForNamedFontSizes` свойство, используемое для `false`:
 
 ```xaml
 <Application ...
@@ -38,10 +38,10 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetEnableAccessibilityScalingForNamedFontSizes(false);
 ```
 
-`Application.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. `Application.SetEnableAccessibilityScalingForNamedFontSizes` Метод в [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) пространства имен, используется для отключения размеры шрифта именованный масштабирование с помощью параметров специальных возможностей iOS. Кроме того `Application.GetEnableAccessibilityScalingForNamedFontSizes` метод может использоваться для возврата, уменьшается ли размеры шрифта именованный параметры специальных возможностей iOS.
+`Application.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. `Application.SetEnableAccessibilityScalingForNamedFontSizes` [Метод`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) в пространстве имен используется для отключения именованных размеров шрифтов, масштабируемых с помощью параметров специальных возможностей iOS. Кроме того, `Application.GetEnableAccessibilityScalingForNamedFontSizes` метод можно использовать для того, чтобы получить возможность масштабирования именованных размеров шрифтов с помощью параметров специальных возможностей iOS.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 9a54743ed7dc3ce23c3306589c0bae1e0fd3206c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: ed6992f946512cd88b4b2b8cfcf4c826bdd6b837
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658681"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645347"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Проверка орфографии с помощью API проверки орфографии Bing
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _API проверки орфографии выполняет контекстную орфографии для текста, предоставление встроенного по слова с ошибками. В этой статье объясняется, как с помощью API проверки орфографии REST исправлять орфографические ошибки в приложении Xamarin.Forms._
 
@@ -156,7 +156,7 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 ![](spell-check-images/after-spell-check.png "После проверки орфографии")
 
 > [!NOTE]
-> В примере выше используется `Replace` для простоты, а для всей большой объем текста, он может заменить Неверный маркер. Предоставляет API `offset` значение, которое следует использовать в рабочих приложениях, чтобы определить правильное расположение в исходном тексте, чтобы выполнить обновление.
+> Приведенный выше пример `Replace` использует для простоты, но в большом объеме текста он может заменить неверный маркер. API предоставляет `offset` значение, которое должно использоваться в рабочих приложениях для определения правильного расположения в исходном тексте для выполнения обновления.
 
 ## <a name="summary"></a>Сводка
 
@@ -165,6 +165,6 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Документация по проверка орфографии Bing](/azure/cognitive-services/bing-spell-check/)
-- [Использование веб-службу RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Cognitive Services TODO (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Использование веб-службы RESTFUL](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Cognitive Services TODO (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Справочник по API проверки орфографии Bing версии 7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

@@ -7,16 +7,16 @@ ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1d85c705fb993e9b6b558b0c051de93e449b9d05
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61289143"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648723"
 ---
 # <a name="skiasharp-mask-filters"></a>Фильтры маска SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Маска располагаются эффекты, которые управляют геометрии и альфа-канал графических объектов. Чтобы использовать фильтр, задайте [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) свойство `SKPaint` для объекта типа [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) вы создали путем вызова одного из `SKMaskFilter` статические методы.
 
@@ -43,7 +43,7 @@ public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 
 В приведенных ниже примерах показаны последствия этих стилей. `sigma` Параметр задает экстент размытия. В предыдущих версиях набора Skia со значением радиуса указанную степень размытия. Значение радиуса является предпочтительным для вашего приложения, есть ли статический [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) метод, который может быть преобразован из одного в другой. Этот метод умножает радиус 0.57735 и добавит 0,5.
 
-**Маска размытия поэкспериментировать** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) пример позволяет экспериментировать с стили размытия и значения «сигма». Файл XAML создает экземпляр `Picker` четырьмя `SKBlurStyle` члены перечисления и `Slider` для задания значения «сигма»:
+**Маска размытия поэкспериментировать** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) пример позволяет экспериментировать с стили размытия и значения «сигма». Файл XAML создает экземпляр `Picker` четырьмя `SKBlurStyle` члены перечисления и `Slider` для задания значения «сигма»:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,9 +180,9 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 
 [![Маскировать эксперимента размытия](mask-filters-images/MaskBlurExperiment.png "маскировать размытия эксперимента")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-На снимке экрана показан iOS `Solid` стиля: Текстовые знаки по-прежнему присутствуют как сплошной черной strokes и размытия добавляется снаружи эти символы. 
+Снимок экрана iOS показывает `Solid` стиль: Текстовые символы по-прежнему представляются сплошными черными штрихами, а размытие добавляется к внешним знакам текста. 
 
-Android экрана в среднем отображает `Outer` стиля: Символ штрихов, сами исключаются (как растровое изображение) и размытия заключает пустое место, где один раз обнаружены символы текста. 
+Снимок экрана Android в середине показывает `Outer` стиль: Сами по себе символы исключаются (как в виде точечного рисунка), а размытие окружает пустое пространство, где появлялись текстовые символы. 
 
 На снимке экрана универсальной платформы Windows на справа показывает `Inner` стиля. Размытие поддерживается только для области обычно, текстовых символов.
 
@@ -274,4 +274,4 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

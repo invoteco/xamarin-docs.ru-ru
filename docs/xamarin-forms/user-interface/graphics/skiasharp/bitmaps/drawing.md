@@ -7,16 +7,16 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 030655ba94130294729871348b3408fe6c3695e6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61401597"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656957"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Создание и рисования в SkiaSharp точечных рисунков
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Вы видели, как приложение может загрузить растровые изображения из Интернета, ресурсы приложения и библиотеке фотографий пользователя. Можно также создать новые растровые изображения в вашем приложении. Самый простой подход включает в себя один из конструкторов [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
@@ -56,7 +56,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 Затем можно отобразить растровое изображение. В дальнейшем, можно создать новую программу `SKCanvas` же растрового изображения и нарисовать на нем некоторые новые на основе объекта.
 
-**Точечного рисунка Hello** странице в **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложение записывает текст «Hello, точечный рисунок!» точечный рисунок и затем отображает эту несколько раз для точечных рисунков.  
+**Точечного рисунка Hello** странице в **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложение записывает текст «Hello, точечный рисунок!» точечный рисунок и затем отображает эту несколько раз для точечных рисунков.  
 
 Конструктор `HelloBitmapPage` начинается с создания `SKPaint` объекта для отображения текста. Он определяет размеры текстовой строки и создает точечный рисунок с этих измерений. Затем он создает `SKCanvas` объекта на его основе, вызовы `Clear`, а затем вызывает `DrawText`. Рекомендуется всегда вызывать `Clear` с точечного так как вновь созданного точечного может содержать случайных данных.
 
@@ -121,7 +121,7 @@ public partial class HelloBitmapPage : ContentPage
 
 Отображение **точечного рисунка Hello** страница демонстрирует, что точечный рисунок, является прозрачным за исключением черный текст программу, созданную. Вот почему зеленовато-голубой цвет поверхности отображения.
 
-В документации по `Clear` методы `SKCanvas` описывает их с помощью инструкции: «Заменяет все пиксели в текущей картинки canvas». Использовать слово «заменяет» показывает важной характеристикой этих методов: Все методы рисования объекта `SKCanvas` добавить что-либо существующие поверхность отображения. `Clear` Методы _замените_ уже существует.
+Документация `Clear` по`SKCanvas` методам описывает их с помощью оператора: "Заменяет все пиксели на холсте текущим клипом". Использование слова «reзамены» показывает важную характеристику этих методов: Все методы `SKCanvas` рисования для добавления объекта в существующую поверхность отображения. `Clear` Методы _замените_ уже существует.
 
 `Clear` существует в двух разных версиях: 
 
@@ -131,7 +131,7 @@ public partial class HelloBitmapPage : ContentPage
 
 Вызов `Clear` без аргументов на точечного инициализирует все растровое изображение полностью прозрачным. Обычно ничего впоследствии нарисован на растровое изображение будет непрозрачных или частично прозрачных.
 
-Вот что-то, чтобы повторить: В **точечного рисунка Hello** страницы, замените `Clear` метод применяется к `bitmapCanvas` на следующее:
+Вот что нужно сделать: В битовой странице **приветствия** замените `Clear` метод, примененный к `bitmapCanvas` , следующим:
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));
@@ -262,9 +262,9 @@ public partial class MonkeyMoustachePage : ContentPage
 
 Методы `SKCanvas` , можно использовать для рисования на точечный рисунок включают `DrawBitmap`. Это означает, что можно нарисовать одного точечного рисунка на другом, обычно его изменения каким-либо образом.
 
-Наиболее гибким способом изменить точечный рисунок вплоть до установления самих битах пикселов, тему описано в статье  **[пикселов точечного рисунка доступ к SkiaSharp](pixel-bits.md)**. Но существуют другие методы для изменения точечных рисунков, которому не требуется доступ к битов пикселов.
+Наиболее гибким способом изменить точечный рисунок вплоть до установления самих битах пикселов, тему описано в статье  **[пикселов точечного рисунка доступ к SkiaSharp](pixel-bits.md)** . Но существуют другие методы для изменения точечных рисунков, которому не требуется доступ к битов пикселов.
 
-Следующий точечный рисунок, включенные в **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложения — 360 пикселей в ширину и 480 пикселов в высоту:
+Следующий точечный рисунок, включенные в **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложения — 360 пикселей в ширину и 480 пикселов в высоту:
 
 ![Mountain Climbers](drawing-images/MountainClimbers.jpg "Mountain Climbers")
 
@@ -496,7 +496,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 Вызывается другая операция, типичные для выполнения на точечных рисунков _переворот_. По существу растровое изображение поворачивается в трех измерениях вокруг вертикальной или горизонтальной оси в центре растрового изображения. Вертикальное зеркальное отражение создает Зеркальное изображение.
 
-**Флиппере точечного рисунка** странице в **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** приложение демонстрирует эти процессы. Файл XAML содержит `SKCanvasView` и две кнопки для переворот по вертикали и горизонтали:
+**Флиппере точечного рисунка** странице в **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** приложение демонстрирует эти процессы. Файл XAML содержит `SKCanvasView` и две кнопки для переворот по вертикали и горизонтали:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -599,4 +599,4 @@ public partial class BitmapFlipperPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

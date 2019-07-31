@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740949"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654557"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Работа с watchOS родительское приложение в Xamarin
 
@@ -35,7 +35,7 @@ ms.locfileid: "66740949"
 
 ## <a name="run-code"></a>Выполните код
 
-Связи между расширением watch и iPhone в родительское приложение демонстрируется в [GpsWatch пример](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
+Связи между расширением watch и iPhone в родительское приложение демонстрируется в [GpsWatch пример](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gpswatch).
 Расширение контрольных значений можно запросить в родительское приложение iOS, то часть обработки на его имени с помощью `OpenParentApplication` метод.
 
 Это особенно полезно в тех случаях, для долго выполняющихся задач (включая сетевые запросы) - только родительского приложения iOS можно воспользоваться фоновую обработку для выполнения этих задач и сохранения полученных данных в расположении, доступном для расширения контрольных значений.
@@ -147,7 +147,7 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [GpsWatch (пример)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [GpsWatch (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WormHoleSharp (пример)](https://github.com/Clancey/WormHoleSharp)
 - [Справочник по WKInterfaceController Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple обмена данными с содержащего приложение](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

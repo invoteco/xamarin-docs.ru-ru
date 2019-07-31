@@ -1,34 +1,34 @@
 ---
-title: Core ML 2 в Xamarin.iOS
-description: В этом документе описываются обновления для Core ML доступны как часть iOS 12. В частности он рассматривает улучшения производительности, связанные с помощью новых API-интерфейса прогнозирования пакетной службы.
+title: Ядро машинного обучения 2 в Xamarin. iOS
+description: В этом документе описаны обновления ядра машинного обучения, доступные в составе iOS 12. В частности, он просматривает улучшения производительности, связанные с новым API-интерфейсом прогнозирования пакетов.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fc72e855101f110310a46145c577b272a647ac3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398849"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645708"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 в Xamarin.iOS
+# <a name="core-ml-2-in-xamarinios"></a>Ядро машинного обучения 2 в Xamarin. iOS
 
-ML лежит на iOS, macOS, tvOS и watchOS технологии машинного обучения. Она позволяет приложениям, делая прогнозов, основанных на модели машинного обучения.
+Core ML — это технология машинного обучения, доступная в iOS, macOS, tvOS и watchOS. Это позволяет приложениям создавать прогнозы на основе моделей машинного обучения.
 
-В iOS 12 Core ML включает пакетной обработки API. Этот API позволяет более эффективно Core ML и обеспечивает повышение производительности в сценариях, где используется модель, чтобы сделать последовательность прогнозов.
+В iOS 12 Core ML включает API пакетной обработки. Этот API делает основной МАШИНный механизм более эффективным и обеспечивает улучшение производительности в сценариях, где модель используется для создания последовательности прогнозов.
 
-## <a name="sample-app-marshabitatcoremltimer"></a>Пример приложения. MarsHabitatCoreMLTimer
+## <a name="sample-app-marshabitatcoremltimer"></a>Пример приложения: маршабитаткоремлтимер
 
-Чтобы продемонстрировать пакетных прогнозов с помощью Core ML, взгляните на [MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer) примера приложения. В этом образце используется модель Core ML обучаться для прогнозирования затрат на создание habitat на режим Mars, на основе различных входных данных: число панелей Солнечной, число greenhouses и число акр.
+Чтобы продемонстрировать пакетные прогнозы с помощью Core ML, ознакомьтесь с примером приложения [маршабитаткоремлтимер](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer) . В этом примере используется основная модель машинного обучения, обученная для прогнозирования затрат на создание Habitat в режиме MARS на основе различных входных элементов: число солнечных панелей, число гринхаусес и число Акрес.
 
-Фрагменты кода в этом документе поступать из этого примера.
+Фрагменты кода в этом документе взяты из этого примера.
 
 ## <a name="generate-sample-data"></a>Создание демонстрационных данных
 
-В `ViewController`, пример приложения `ViewDidLoad` вызовы метода `LoadMLModel`, который загружает модели включены Core ML:
+В `ViewController` `ViewDidLoad` метод примера приложения вызывает `LoadMLModel`, который загружает в себя базовую модель машинного обучения:
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-Затем пример приложения создает 100 000 `MarsHabitatPricerInput` объектов для использования в качестве входных данных для последовательного Core ML прогнозов. Каждый созданный образец имеет число панелей Солнечной, число greenhouses и число акр случайное значение.
+Затем пример приложения создает 100 000 `MarsHabitatPricerInput` объектов для использования в качестве входных данных для последовательных прогнозов машинного обучения ml. Каждый созданный пример имеет случайное значение, заданное для числа солнечных панелей, числа гринхаусес и числа Акрес:
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-Коснитесь любой из трех кнопок приложения выполняет две последовательности прогнозов: один с помощью `for` цикла, а другой — с помощью нового пакета `GetPredictions` метод впервые появился в iOS 12:
+При нажатии любой из трех кнопок приложения выполняются две последовательности прогнозов: один с помощью `for` цикла, а другой — с помощью нового метода пакетной `GetPredictions` службы, представленного в iOS 12:
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for - цикл
 
-`for` Версии цикла теста наивно перебор указанное число входов, вызвав [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) для каждого и отменяя результат. Метод времени, время, необходимое для создания прогнозов:
+Циклическая версия теста выполняет циклический перебор указанного числа входов, вызывая [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) для каждого из них и удаляя результат. `for` Метод показывает, сколько времени требуется для выполнения прогнозов:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -92,10 +92,10 @@ async Task FetchNonBatchResults(int num)
 }
 ```
 
-## <a name="getpredictions-new-batch-api"></a>GetPredictions (новый пакет API)
+## <a name="getpredictions-new-batch-api"></a>Прогнозирование (новый API пакетной службы)
 
-Создает в пакетной версии теста `MLArrayBatchProvider` объект из входного массива (так как это обязательный входной параметр для `GetPredictions` метод), создает [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-Объект, который предотвращает прогноза вычислений из ограниченных для ЦП и использует `GetPredictions` API, чтобы получить прогнозы, снова отменяя результат:
+Пакетная версия теста создает `MLArrayBatchProvider` объект из входного массива (поскольку это обязательный входной параметр `GetPredictions` для метода), создает элемент управления[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+Объект, который не позволяет вычислениям прогноза быть ограничен ЦП и использует `GetPredictions` API для выборки прогнозов и повторно отклоняет результат:
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,13 +118,13 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>Результаты
 
-В симуляторе и устройства `GetPredictions` быстрее, чем Core ML прогнозы на основе цикл завершения.
+Как на симуляторе, так `GetPredictions` и на устройстве, завершается быстрее, чем основные прогнозы машинного обучения на основе цикла.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример приложения — MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
-- [Новые возможности в Core ML, часть 1 (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/708/)
-- [Новые возможности в Core ML, часть 2 (WWDC 2018 г.)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Введение в Core ML в Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Пример приложения — Маршабитаткоремлтимер](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+- [Новые возможности в Core ML, часть 1 (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
+- [Новые возможности в Core ML, часть 2 (ВВДК 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
+- [Общие сведения о ядре ML в Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
-- [Работа с моделями Core ML](https://developer.apple.com/machine-learning/build-run-models/)
+- [Работа с моделями ядра машинного обучения](https://developer.apple.com/machine-learning/build-run-models/)

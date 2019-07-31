@@ -7,22 +7,22 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309518"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655256"
 ---
 # <a name="part-4-data-binding-basics"></a>Часть 4. Основы привязки данных
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Привязки данных позволяют свойства двух объектов для связывания таким образом, чтобы изменение одного приводит к изменению в другой. Это очень ценным средством, и во время привязки данных можно определить полностью в коде, XAML предоставляет сочетания клавиш и удобство работы. Следовательно одним из наиболее важных расширений разметки в Xamarin.Forms привязан._
 
 ## <a name="data-bindings"></a>Привязки данных
 
-Свойства двух объектов, который называется connect привязки данных *источника* и *целевой*. В коде необходимы два шага: `BindingContext` Свойство целевого объекта должно быть присвоено исходного объекта и `SetBinding` метод (часто используется в сочетании с `Binding` класс) должен быть вызван для целевого объекта для привязки свойства этого объекта к свойству источника объект.
+Свойства двух объектов, который называется connect привязки данных *источника* и *целевой*. В коде требуются два шага: Свойству целевого объекта должен быть присвоен исходный объект, `SetBinding` и метод (часто `Binding` используемый в сочетании с классом) должен вызываться для целевого объекта, чтобы привязать свойство этого объекта к свойству источника `BindingContext` объектами.
 
 Целевое свойство должно быть свойством привязки, это означает, что целевой объект должен быть производным от `BindableObject`. В электронной документации Xamarin.Forms указывает, какие свойства связываемые свойства. Свойство `Label` например `Text` связан с свойство, используемое `TextProperty`.
 
@@ -114,11 +114,11 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 - `OneWay` — значения передаются из источника в целевой объект
 - `OneWayToSource` — значения передаются от целевого объекта к источнику
 - `TwoWay` — значения передаются обе стороны между источником и целью
-- `OneTime` — данные отправляются из источника в целевой объект, но только если `BindingContext` изменения
+- `OneTime`— данные переходят от источника к целевому объекту, но `BindingContext` только когда изменения
 
 В следующей программе показано, как правило `OneWayToSource` и `TwoWay` режимы привязки. Четыре `Slider` представления предназначены для управления `Scale`, `Rotate`, `RotateX`, и `RotateY` свойства `Label`. Поначалу кажется, как если эти четыре свойства `Label` должно быть цели привязки данных, так как каждый задано `Slider`. Тем не менее `BindingContext` из `Label` может быть только один объект, и существует четыре разных ползунка.
 
-По этой причине все привязки установлены первый взгляд назад способов: `BindingContext` Каждого из четырех ползунки присваивается `Label`, и привязки установлены на `Value` свойства ползунки. С помощью `OneWayToSource` и `TwoWay` режимы, они `Value` свойства можно задать свойства источника, которые являются `Scale`, `Rotate`, `RotateX`, и `RotateY` свойства `Label`:
+По этой причине все привязки задаются в обратном направлении. Для каждого из четырех ползунков устанавливается значение `Value` ,апривязкизадаютсядлясвойствползунков.`Label` `BindingContext` С помощью `OneWayToSource` и `TwoWay` режимы, они `Value` свойства можно задать свойства источника, которые являются `Scale`, `Rotate`, `RotateX`, и `RotateY` свойства `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -255,7 +255,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
 > [!NOTE]
-> Источник привязки для ячейки и ячейки, дочерние элементы — `ListView.ItemsSource` коллекции.
+> Источником привязки для ячеек и потомками ячеек является `ListView.ItemsSource` коллекция.
 
 `Label` Элементу присваивается `View` свойство `ViewCell`. ( `ViewCell.View` Теги не требуются, так как `View` свойство является свойством содержимого из `ViewCell`.) Эта разметка отображает `FriendlyName` свойства каждого `NamedColor` объекта:
 
@@ -410,7 +410,7 @@ namespace XamlSamples
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Часть 1. Начало работы с XAML (пример)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Часть 2. Основному синтаксису XAML (пример)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Часть 3. Расширения разметки XAML (пример)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

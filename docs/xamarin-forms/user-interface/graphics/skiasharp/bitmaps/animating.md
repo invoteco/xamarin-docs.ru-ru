@@ -7,16 +7,16 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 604067ac853bd53707e059b7db4abf2cfade21ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 69f77ef7959a53fa46210d7e6e68b9666692423b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61077279"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653096"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Анимации точечных рисунков SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Приложения, которые обычно анимация графики SkiaSharp вызывают `InvalidateSurface` на `SKCanvasView` по фиксированной ставке, часто каждые 16 миллисекунд. Стал недопустимым области активирует вызов `PaintSurface` обработчик для повторной отрисовки поверхности отображения. Как визуальные элементы перерисовываются 60 раз в секунду, они отображаются плавно анимировать.
 
@@ -36,7 +36,7 @@ ms.locfileid: "61077279"
 
 Мандельброта визуально интересно, но computionally длинными. (Обсуждение Мандельброта и алгоритм, используемый здесь, см. в разделе [Глава 20 _Создание мобильных приложений с помощью Xamarin.Forms_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) начиная на странице 666. Со следующим описанием предполагается, что фоновые знания.)
 
-[ **Анимации Мандельброта** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/) образец использует анимации растрового изображения для эмуляции непрерывного изменения масштаба фиксированной точки Мандельброта. Увеличение следуют масштаба изображения, и затем цикл повторяется неограниченное время или до окончания работы программы.
+[ **Анимации Мандельброта** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) образец использует анимации растрового изображения для эмуляции непрерывного изменения масштаба фиксированной точки Мандельброта. Увеличение следуют масштаба изображения, и затем цикл повторяется неограниченное время или до окончания работы программы.
 
 Программа подготавливает этой анимации путем создания до 50 растровые изображения, хранящиеся в локальном хранилище приложения. Каждый рисунок охватывает половины ширины и высоты на комплексной плоскости как предыдущих битовую карту. (В программе, эти точечные рисунки называются представляют целочисленный тип _уровни масштаба_.) Растровые изображения отображаются в последовательности. Масштабирование растрового изображения каждого анимируется для предоставления smooth последовательность от одного точечного рисунка в другой.
 
@@ -469,7 +469,7 @@ public partial class MainPage : ContentPage
 
 Спецификация формата GIF (Graphics Interchange) включает компонент, позволяющий единый GIF-файл должен содержать несколько последовательных кадров сцены, который может быть отображен подряд, часто в цикле. Эти файлы называются _анимированных GIF_. Веб-браузеры могут играть анимированные изображения формата GIF и SkiaSharp позволяет приложению для извлечения из анимированный GIF-файл кадры и отобразить их последовательно.
 
-[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) пример с ресурсом анимационный GIF с именем **Newtons_cradle_animation_book_2.gif** созданные DemonDeLuxe и загружается из [подставки Ньютона ](https://en.wikipedia.org/wiki/Newton%27s_cradle) страницы в Википедии. **Анимированный GIF** страницы включает файл XAML, который предоставляет эту информацию и создает экземпляр `SKCanvasView`:
+[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) пример с ресурсом анимационный GIF с именем **Newtons_cradle_animation_book_2.gif** созданные DemonDeLuxe и загружается из [подставки Ньютона ](https://en.wikipedia.org/wiki/Newton%27s_cradle) страницы в Википедии. **Анимированный GIF** страницы включает файл XAML, который предоставляет эту информацию и создает экземпляр `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -660,5 +660,5 @@ public partial class AnimatedGifPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [Анимация "Мандельброт" (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Анимация "Мандельброт" (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima)

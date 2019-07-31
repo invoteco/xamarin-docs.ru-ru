@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169993"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647621"
 ---
 # <a name="customizing-listview-appearance"></a>Настройка внешнего вида ListView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-[`ListView`](xref:Xamarin.Forms.ListView) имеет возможность управления представления списка, в дополнение к [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) экземпляров для каждой строки в списке.
+[`ListView`](xref:Xamarin.Forms.ListView)имеет возможность управлять представлением списка в дополнение к [`ViewCell`](xref:Xamarin.Forms.ViewCell) экземплярам для каждой строки в списке.
 
 <a name="Grouping" />
 
@@ -78,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-В приведенном выше коде, можно также вызвать `Add` над элементами `groups`, которые являются экземплярами типа `PageTypeGroup`. Это возможно, так как `PageTypeGroup` наследует от `List<PageModel>`. Ниже приведен пример списка шаблон списки, указанным выше.
+В приведенном выше коде мы также можем вызывать `Add` для `groups`элементов, которые являются экземплярами типа `PageTypeGroup`. Это возможно, так как `PageTypeGroup` наследует от `List<PageModel>`. Ниже приведен пример списка шаблон списки, указанным выше.
 
 Ниже приведен XAML для отображения Сгруппированный список.
 
@@ -201,13 +201,13 @@ ListView HeaderList = new ListView() {
 
 ![](customizing-list-appearance-images/header-custom.png "ListView с настраиваемый верхний и нижний колонтитул")
 
-## <a name="scrollbar-visibility"></a>Видимость для полосы прокрутки
+## <a name="scrollbar-visibility"></a>Видимость полосы прокрутки
 
-[`ListView`](xref:Xamarin.Forms.ListView) имеет `HorizontalScrollBarVisibility` и `VerticalScrollBarVisibility` свойства, которые получить или задать [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) значение, представляющее полоса прокрутки по горизонтали или вертикали, является видимым. Оба свойства можно задать следующие значения:
+[`ListView`](xref:Xamarin.Forms.ListView)имеет `HorizontalScrollBarVisibility` свойства `VerticalScrollBarVisibility` и [,`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) которые получают или задают значение, представляющее, когда отображается горизонтальная или вертикальная полоса прокрутки. Для обоих свойств можно задать следующие значения:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает поведение прокрутки панели по умолчанию для платформы, и значение по умолчанию для `HorizontalScrollBarVisibility` и `VerticalScrollBarVisibility` свойства.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает, что полоса прокрутки будет отображаться, даже в том случае, если содержимое размещается в представлении.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) Указывает, что полосы прокрутки не видны, даже если содержимое не укладывается в представлении.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)Указывает поведение полосы прокрутки по умолчанию для платформы и является значением по умолчанию `HorizontalScrollBarVisibility` для `VerticalScrollBarVisibility` свойств и.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)Указывает, что полосы прокрутки будут видимы, даже если содержимое умещается в представлении.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)Указывает, что полосы прокрутки не будут видны, даже если содержимое не умещается в представлении.
 
 <a name="Row_Separators" />
 
@@ -342,8 +342,8 @@ void OnImageTapped (object sender, EventArgs args)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Группирование (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Пользовательское представление модуля подготовки отчетов (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Динамическое изменение размера строк (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
+- [Группирование (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Пользовательское представление модуля подготовки отчетов (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Динамическое изменение размера строк (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [заметки о выпуске 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [заметки о выпуске версии 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

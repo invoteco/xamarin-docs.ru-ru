@@ -104,7 +104,7 @@ sections:
               src: ~/media/icons/i_android-wear.svg
               href: ~/android/wear/
             title: Android Wear
-  - title: Справочник
+  - title: Справочники
     items:
       - type: list
         style: cards
@@ -114,5 +114,5 @@ sections:
             href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9'
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Документация по API Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Библиотека базовых классов</a></p>'
           - title: Примеры
-            href: 'https://developer.xamarin.com/samples/android/all/'
-            html: '<p><a href="https://developer.xamarin.com/samples/android/all/">Примеры Android</a></p>'
+            href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
+            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android">Примеры Android</a></p>'

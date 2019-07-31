@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 623802729bd5ef0429e329b193a4b331cd1cbc3f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d1aa70c5cfeeccbbb29d600c4ac92aff0d5aacfd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61372995"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669800"
 ---
 Поздравляем с завершением этого руководства, в котором вы научились:
 
@@ -22,6 +22,6 @@ ms.locfileid: "61372995"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Руководство по Button (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/ButtonTutorial)
+- [Руководство по Button (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-buttontutorial/)
 - [Button в Xamarin.Forms (руководство)](~/xamarin-forms/user-interface/button.md)
 - [API Button](xref:Xamarin.Forms.Button)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5f98bd713e5dc33fd84050c07a62143259af2d41
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3097ac63df36fffdbaf9d254aa0ef3bdf6c0577a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384563"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669802"
 ---
 Поздравляем с завершением этого руководства, в котором вы научились:
 
@@ -22,6 +22,6 @@ ms.locfileid: "61384563"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Учебник по изображениям (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/ImageTutorial)
+- [Учебник по изображениям (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
 - [Изображения в Xamarin.Forms (руководство)](~/xamarin-forms/user-interface/images.md)
 - [API изображений](xref:Xamarin.Forms.Image)

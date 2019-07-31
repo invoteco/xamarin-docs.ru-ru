@@ -11,7 +11,7 @@ abstract:
   description: 'Примеры приложений и демонстрации кода Xamarin Android, которые помогут приступить к созданию мобильных приложений с помощью C# и Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/android/all/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
         text: Все примеры Xamarin.Android
 sections:
   - title: null
@@ -68,9 +68,9 @@ sections:
               src: images/watchface.png
               href: 'https://developer.xamarin.com/samples/monodroid/wear/WatchFace/'
             title: WatchFace
-          - href: 'https://developer.xamarin.com/samples/android/all/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
             html: Полный набор примеров приложений Xamarin.Android и образцов кода.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/android/all/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
             title: Все примеры Xamarin.Android

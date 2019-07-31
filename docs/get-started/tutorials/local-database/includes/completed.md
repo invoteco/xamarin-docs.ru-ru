@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: da54409bdf0c36984feb1d70d50a718cff36ac95
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 07934bfdd924a0b52cbb240124e073c82aeb41ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659891"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669805"
 ---
 Поздравляем с завершением этого учебника, где вы научились:
 
@@ -22,6 +22,6 @@ ms.locfileid: "67659891"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [LocalDatabaseTutorial (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LocalDatabaseTutorial)
+- [LocalDatabaseTutorial (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-localdatabasetutorial/)
 - [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/data-cloud/data/databases.md)
 - [Пакет NuGet для SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)

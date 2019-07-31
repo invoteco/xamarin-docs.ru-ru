@@ -104,7 +104,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
               href: ~/xamarin-forms/internals/
             title: Дополнительные понятия и внутренние компоненты
-  - title: Справочники
+  - title: Справочник
     items:
       - type: list
         style: cards
@@ -113,6 +113,6 @@ sections:
           - title: API
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-forms">Документация по API Xamarin.Forms</a></p>'
           - title: Примеры
-            html: '<p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Примеры Xamarin.Forms</a></p>'
+            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms">Примеры Xamarin.Forms</a></p>'
           - title: Books
             html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">Электронная книга. Создание мобильных приложений</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">Электронная книга. Шаблоны корпоративного приложения</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Электронная книга "Графика SkiaSharp в Xamarin.Forms"</a></p>

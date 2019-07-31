@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 064ef79d79a74582e8deb6999589fda14d227e91
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b01edc9807b63613a66f5c24706eb694fef6dfbc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343457"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669809"
 ---
 Поздравляем с завершением этого руководства, в котором вы научились:
 
@@ -22,6 +22,6 @@ ms.locfileid: "61343457"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Руководство по Entry (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/EntryTutorial)
+- [Руководство по Entry (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
 - [Entry в Xamarin.Forms (руководство)](~/xamarin-forms/user-interface/text/entry.md)
 - [API Entry](xref:Xamarin.Forms.Entry)

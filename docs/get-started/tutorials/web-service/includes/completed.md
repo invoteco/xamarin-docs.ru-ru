@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4e759917eac2c6d966d8cd577838c311c13b2a9e
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 2c9895f36faccb0d0c82b0e7884cc04b8c4273bf
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659893"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669807"
 ---
 Поздравляем с завершением этого учебника, где вы научились:
 
@@ -31,6 +31,6 @@ ms.locfileid: "67659893"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WebServiceTutorial (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/WebServiceTutorial)
+- [WebServiceTutorial (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-webservicetutorial/)
 - [Использование веб-службы RESTful (руководство)](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Пакет NuGet Newtonsoft.JSON](https://www.nuget.org/packages/Newtonsoft.Json/)

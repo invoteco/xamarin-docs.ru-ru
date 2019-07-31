@@ -11,7 +11,7 @@ abstract:
   description: 'Кроссплатформенная графика, двух- и трехмерные игры для мобильных и классических платформ.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: Примеры
 sections:
   - title: null

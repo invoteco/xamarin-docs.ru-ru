@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37c2ba1b03d4894d7d7528f4cf520ddb4e6e5aab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896717"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669804"
 ---
 Поздравляем с завершением этого руководства, в котором вы научились:
 
@@ -22,6 +22,6 @@ ms.locfileid: "60896717"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Руководство по Label (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LabelTutorial)
+- [Руководство по Label (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Label в Xamarin.Forms (руководство)](~/xamarin-forms/user-interface/text/label.md)
 - [API Label](xref:Xamarin.Forms.Label)

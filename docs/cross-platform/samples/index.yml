@@ -11,7 +11,7 @@ abstract:
   description: 'Примеры кроссплатформенных приложений Xamarin и образцы кода, которые помогут вам начать создавать мобильные приложения с помощью C# и Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: Все образцы Xamarin
 sections:
   - title: Приступая к работе
@@ -20,11 +20,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             html: 'В этом примере представлено приложение списка задач, где данные сохраняются в локальной базе данных SQLite, созданной в Xamarin.Forms.'
             image:
               src: images/todo.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             title: Список задач
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: 'Демонстрационное приложение, которое позволяет специалистам по продажам отслеживать свои показатели продаж, управлять потенциальными клиентами, просматривать контакты, управлять заказами и просматривать каталог товаров.'
@@ -74,9 +74,9 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             html: Полный набор образцов кроссплатформенных приложений Xamarin и демонстраций кода.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             title: Все образцы Xamarin

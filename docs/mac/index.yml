@@ -78,7 +78,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
               href: ~/mac/internals/
             title: Дополнительные понятия и внутренние компоненты
-  - title: Ссылка
+  - title: Справочник
     items:
       - type: list
         style: cards
@@ -87,4 +87,4 @@ sections:
           - title: API
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/AppKit">Документация по API Mac</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Библиотека базовых классов</a></p>'
           - title: Примеры
-            html: '<p><a href="https://developer.xamarin.com/samples/mac/all/">Примеры Mac</a></p>'
+            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac">Примеры Mac</a></p>'

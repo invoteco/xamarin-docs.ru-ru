@@ -110,7 +110,7 @@ sections:
               src: ~/media/icons/i_tvos.svg
               href: ~/ios/tvos/
             title: tvOS
-  - title: Справочники
+  - title: Справочник
     items:
       - type: list
         style: cards
@@ -121,4 +121,4 @@ sections:
             html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12">Документация по API iOS</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">Библиотека базовых классов</a></p>'
           - title: Примеры
             href: 'https://developer.xamarin.com/samples'
-            html: '<p><a href="https://developer.xamarin.com/samples/ios/all/">Примеры iOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Примеры watchOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Примеры tvOS</a></p>'
+            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">Примеры iOS</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">Примеры watchOS</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">Примеры tvOS</a></p>'

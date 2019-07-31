@@ -1,38 +1,38 @@
 ---
-title: Уведомлений в Xamarin.iOS
-description: В этом разделе показано, как реализовать локальных уведомлений в Xamarin.iOS. Он будет объясняются различные элементы пользовательского интерфейса iOS уведомления о и рассматриваются API-Интерфейс связанных с созданием и отображение уведомления.
+title: Уведомления в Xamarin. iOS
+description: В этом разделе показано, как реализовать локальные уведомления в Xamarin. iOS. В нем объясняются различные элементы пользовательского интерфейса уведомления iOS и обсуждаются функции API, связанные с созданием и отображением уведомлений.
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/13/2018
-ms.openlocfilehash: 6710abd28a2b0f992296008d12950b95ec29783d
-ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
+ms.openlocfilehash: 7f2619010a410cabc54074e669ff4f1ea24bd0fa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66394696"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655496"
 ---
-# <a name="notifications-in-xamarinios"></a>Уведомлений в Xamarin.iOS
+# <a name="notifications-in-xamarinios"></a>Уведомления в Xamarin. iOS
 
 > [!IMPORTANT]
-> Сведения в этом разделе, относятся к iOS 9 и более. IOS 10 и более поздние версии, см. в разделе [руководство framework уведомление пользователя](~/ios/platform/user-notifications/index.md).
+> Сведения в этом разделе относятся к iOS 9 и более ранним версиям. Для iOS 10 и более поздних версий ознакомьтесь с [руководством по платформе уведомлений пользователей](~/ios/platform/user-notifications/index.md).
 
-iOS имеет три способа уведомить пользователя, что было получено уведомление.
+в iOS есть три способа указать пользователю, что было получено уведомление:
 
-- **Звук или вибрация** -iOS можно воспроизвести звук для уведомления пользователей. Если звук отключен, устройство можно настроить для «вибрация».
-- **Оповещения** -можно отобразить диалоговое окно на экране сведения об уведомлении.
-- **Значки** — когда публикуется уведомление, это значение может отображаться (эмблемой), на значок приложения.
+- **Звук или вибрация** — iOS может воспроизвести звук для уведомления пользователей. Если звук отключен, устройство можно настроить для вибрировало.
+- **Оповещения** . на экране можно отобразить диалоговое окно со сведениями об уведомлении.
+- **Эмблемы** . при публикации уведомления на значок приложения может отображаться число (с эмблемой).
 
-iOS также предоставляет *центр уведомлений* , будет отображать все уведомления, локальными и удаленными, для пользователя. Пользователи могут обратиться, проводя пальцем вниз из верхней части экрана:
+iOS также предоставляет *Центр уведомлений* , в котором отображаются все уведомления, как локальные, так и удаленные, для пользователя. Пользователи могут получить доступ к этому пользователю, прожимая в верхней части экрана:
 
-![Центр уведомлений](local-notifications-in-ios-images/image13.png "центр уведомлений")
+![Центр уведомлений](local-notifications-in-ios-images/image13.png "Центр уведомлений")
 
 ## <a name="creating-local-notifications-in-ios"></a>Создание локальных уведомлений в iOS
 
-iOS делает довольно прост, для создания и обработки локальных уведомлений.
-Во-первых iOS 8 требует, чтобы запросить разрешение пользователя отображать уведомления для приложения. Добавьте следующий код в приложение перед попыткой отправки локального уведомления - [присоединенного образец](https://developer.xamarin.com/samples/monotouch/LocalNotifications/) помещает его в **AppDelegate** **FinishedLaunching** метод.
+iOS делает создание и обработку локальных уведомлений довольно простым.
+Во первых, iOS 8 требует, чтобы приложения запросили разрешение пользователя на отображение уведомлений. Добавьте следующий код в приложение перед попыткой отправить локальное уведомление — [присоединенный пример](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) помещает его в метод **FinishedLaunching** **AppDelegate**.
 
 ```csharp
 var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
@@ -41,9 +41,9 @@ var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
 application.RegisterUserNotificationSettings(notificationSettings);
 ```
 
-[![Подтверждение возможность отправки локального уведомления](local-notifications-in-ios-images/image0-sml.png "подтверждения возможность отправки локального уведомления")](local-notifications-in-ios-images/image0.png#lightbox)
+[![Подтверждение возможности отправки локального уведомления](local-notifications-in-ios-images/image0-sml.png "Подтверждение возможности отправки локального уведомления")](local-notifications-in-ios-images/image0.png#lightbox)
 
-Чтобы запланировать локальное уведомление, создайте `UILocalNotification` установите `FireDate`и запланировать его через `ScheduleLocalNotification` метод `UIApplication.SharedApplication` объекта. В следующем фрагменте кода показано, как запланировать уведомление, которое будет срабатывать в будущем в одну минуту и отображение оповещений с сообщением:
+Чтобы запланировать локальное уведомление, `UILocalNotification` создайте объект, `FireDate`задайте `ScheduleLocalNotification` и запланируйте его с `UIApplication.SharedApplication` помощью метода объекта. В следующем фрагменте кода показано, как запланировать уведомление, которое будет срабатывать в течение одной минуты в будущем, и отобразить предупреждение с сообщением:
 
 ```csharp
 UILocalNotification notification = new UILocalNotification();
@@ -54,36 +54,36 @@ notification.AlertBody = "Your 15 second alert has fired!";
 UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 ```
 
-Снимке экрана ниже показано, как выглядит это предупреждение:
+На следующем снимке экрана показано, как выглядит это оповещение:
 
-[![](local-notifications-in-ios-images/image2-sml.png "Пример предупреждения")](local-notifications-in-ios-images/image2.png#lightbox)
+[![](local-notifications-in-ios-images/image2-sml.png "Пример оповещения")](local-notifications-in-ios-images/image2.png#lightbox)
 
-Обратите внимание, что если пользователь решает *допускает* уведомления, то ничего не отображается.
+Обратите внимание, что если пользователь решил *запретить* уведомления, ничего не будет отображаться.
 
-Если вы хотите применить эмблему на значок приложения с номером, можно задать его, как показано в следующем коде строки:
+Если вы хотите применить эмблему к значку приложения с числом, его можно задать, как показано в следующем примере кода:
 
 ```csharp
 notification.ApplicationIconBadgeNumber = 1;
 ```
 
-В порядок воспроизведения звука со значком, для свойства SoundName уведомление как показано в следующем фрагменте кода:
+Чтобы воспроизвести звук со значком, задайте для уведомления свойство Саунднаме, как показано в следующем фрагменте кода:
 
 ```csharp
 notification.SoundName = UILocalNotification.DefaultSoundName;
 ```
 
-Если звуковой сигнал содержит более 30 секунд, iOS будет звук по умолчанию вместо этого.
+Если оповещение превышает 30 секунд, вместо него будет воспроизводиться звук по умолчанию.
 
 > [!IMPORTANT]
-> Это ошибка в симуляторе iOS, который запустит уведомление делегат дважды. Эта проблема может произойти при запуске приложения на устройстве.
+> В симуляторе iOS есть ошибка, которая будет вызывать уведомление о делегировании дважды. Эта проблема не должна возникать при запуске приложения на устройстве.
 
 ## <a name="handling-notifications"></a>Обработка уведомлений
 
-приложения iOS обрабатывают удаленных и локальных уведомлений в почти так же. Когда приложение выполняется, `ReceivedLocalNotification` метод или `ReceivedRemoteNotification` метод `AppDelegate` класс будет называться и данные уведомления будут передаваться в качестве параметра.
+приложения iOS обрабатывали удаленные и локальные уведомления почти точно так же. При выполнении `ReceivedLocalNotification` приложения будет вызван метод `ReceivedRemoteNotification` или метод `AppDelegate` класса, а сведения об уведомлении передаются в качестве параметра.
 
-Приложение может обрабатывать уведомления по-разному. Например приложение может просто отображать оповещение, чтобы напомнить пользователям о некоторых событий. Или уведомление может использоваться для отображения предупреждения пользователю о завершении процесса, таких как синхронизация файлов на сервер.
+Приложение может управлять уведомлением различными способами. Например, приложение может просто отобразить оповещение, чтобы напомнить пользователям о некоторых событиях. Или уведомление может использоваться для вывода предупреждения пользователю о завершении процесса, например синхронизации файлов на сервере.
 
-Приведенный ниже показано, как обрабатывать локального уведомления и отображение оповещений и сброшено в ноль номер эмблемы:
+В следующем коде показано, как управлять локальным уведомлением, отображать предупреждение и сбрасывать номер эмблемы в ноль:
 
 ```csharp
 public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
@@ -99,7 +99,7 @@ public override void ReceivedLocalNotification(UIApplication application, UILoca
 }
 ```
 
-Если приложение не выполняется, iOS будет воспроизведения звука и/или обновить значок эмблемы, где это применимо. Когда пользователь начинает работу приложения, связанные с оповещением, запустится приложение и `FinishedLaunching` будет вызываться метод в делегате приложения и данные уведомления будут передаваться в через `launchOptions` параметра. Если ключ в словаре параметров `UIApplication.LaunchOptionsLocalNotificationKey`, а затем `AppDelegate` знает, что приложение было запущено из локального уведомления. Этот процесс показан в следующем фрагменте кода:
+Если приложение не выполняется, iOS воспроизводит звук и (или) обновляет эмблему значка как применимое. Когда пользователь запускает приложение, связанное с предупреждением, приложение запустится и `FinishedLaunching` будет вызван метод в делегате приложения, и данные уведомления будут передаваться `launchOptions` через параметр. Если словарь параметров содержит ключ `UIApplication.LaunchOptionsLocalNotificationKey`, то `AppDelegate` известно, что приложение было запущено из локального уведомления. Этот процесс показан в следующем фрагменте кода:
 
 ```csharp
 // check for a local notification
@@ -119,7 +119,7 @@ if (launchOptions.ContainsKey(UIApplication.LaunchOptionsLocalNotificationKey))
 }
 ```
 
-Для удаленного уведомления `launchOptions` будет иметь `LaunchOptionsRemoteNotificationKey` со связанным `NSDictionary` полезными данными удаленного уведомления. Можно извлечь полезные данные уведомления с помощью `alert`, `badge`, и `sound` ключи. В следующем фрагменте кода показано, как для получения удаленных уведомлений:
+Для удаленного уведомления `launchOptions` будет иметь объект `LaunchOptionsRemoteNotificationKey` с, связанный `NSDictionary` с удаленными полезными данными уведомления. Вы можете извлечь полезные данные уведомления с `alert`помощью ключей, `badge`и `sound` . В следующем фрагменте кода показано, как получить удаленные уведомления.
 
 ```csharp
 NSDictionary remoteNotification = options[UIApplication.LaunchOptionsRemoteNotificationKey];
@@ -131,12 +131,12 @@ if(remoteNotification != null)
 
 ## <a name="summary"></a>Сводка
 
-В этом разделе показано, как создать и опубликовать уведомление в Xamarin.iOS. Показать, как приложение может реагировать на уведомления путем переопределения `ReceivedLocalNotification` метод или `ReceivedRemoteNotification` метод в `AppDelegate`.
+В этом разделе показано, как создать и опубликовать уведомление в Xamarin. iOS. В нем показано, как приложение может реагировать на уведомления путем переопределения `ReceivedLocalNotification` метода `ReceivedRemoteNotification` или метода в `AppDelegate`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Локальные уведомления (пример)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
-- [Локальных и Push-уведомлений для разработчиков](https://developer.apple.com/notifications/)
-- [Локальных и Push-уведомлений руководство по программированию](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
+- [Локальные уведомления (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [Локальные и Push-уведомления для разработчиков](https://developer.apple.com/notifications/)
+- [Локальное и push-уведомление по программированию](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
 - [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UILocalNotification](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UILocalNotification)
+- [уилокалнотификатион](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UILocalNotification)

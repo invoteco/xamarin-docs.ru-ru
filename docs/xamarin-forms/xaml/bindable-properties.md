@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: d3e1c8a2b17ba41e3c9d212948f42023c15205ac
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 59ec82c222208ff0e73b0b7b5226d416d3a53398
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926231"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656603"
 ---
 # <a name="bindable-properties"></a>Привязываемые свойства
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 _В Xamarin.Forms функциональные возможности параметров среды выполнения (CLR) расширен с помощью свойства связывания. Может быть привязано — это специальный тип свойства, где значение свойства отслеживается системой свойств Xamarin.Forms. В этой статье содержатся вводные привязываемые свойства, а также показано, как создавать и использовать их._
 
@@ -226,8 +226,8 @@ public static readonly BindableProperty SizeProperty =
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пространства имен языка XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Чтобы команда поведение события (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
-- [Обратный вызов проверки (пример)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
-- [Приведение значение обратного вызова (пример)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
+- [Чтобы команда поведение события (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [Обратный вызов проверки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [Приведение значение обратного вызова (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

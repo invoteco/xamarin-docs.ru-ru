@@ -1,6 +1,6 @@
 ---
-title: Введение в tvOS в Xamarin
-description: Этот документ содержит ссылки на различные руководства и образцы, демонстрирующие способы создания приложений tvOS с помощью Xamarin. Руководства рассматриваются различные функции, такие как разработка пользовательского интерфейса, хранения данных, значки и многое другое.
+title: Общие сведения о tvOS в Xamarin
+description: В этом документе содержатся ссылки на различные руководства и примеры, демонстрирующие создание tvOS приложений с помощью Xamarin. В руководствах рассматриваются различные функции, такие как разработка пользовательского интерфейса, хранение данных, значки и многое другое.
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
@@ -8,75 +8,75 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: acbf000d0700e29fcd6155a35c26fee08f12b7e5
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b6bb036962522e83144843e38b1aa320e6145fda
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978016"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648045"
 ---
-# <a name="introduction-to-tvos-in-xamarin"></a>Введение в tvOS в Xamarin
+# <a name="introduction-to-tvos-in-xamarin"></a>Общие сведения о tvOS в Xamarin
 
-## <a name="introducing-tvos"></a>Введение в tvOS
+## <a name="introducing-tvos"></a>Знакомство с tvOS
 
-Apple этого был выпущен 5-го поколения оборудования Apple TV, Apple TV 4K, которая выполняет последнюю версию операционной системы tvOS, в зависимости от iOS 11.
+Компания Apple выпустила 5-й выпуск устройства Apple TV, который работает под управлением последней версии операционной системы tvOS на основе iOS 11.
 
-Платформа Apple TV открыт для разработчиков, позволяя им создавать полнофункциональные приложения и публикуйте их через App Store, встроенные в большом Apple.
+Платформа Apple TV открыта для разработчиков, позволяя создавать полнофункциональные впечатляющие приложения и освобождать их с помощью встроенного магазина приложений Apple TV.
 
-Дополнительные сведения о tvOS, см. в разделе [Приступая к работе](~/ios/tvos/get-started/index.md) документа.
+Дополнительные сведения о tvOS см. в документе [Начало работы](~/ios/tvos/get-started/index.md) .
 
 > [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
 
-**tvOS с видео Xamarin**
+**tvOS с помощью Xamarin Video**
 
 ## <a name="documentation"></a>Документация
 
-Приведенные ниже документы помогут вам приступить к созданию приложений tvOS с помощью Xamarin:
+Следующие документы помогут вам приступить к созданию приложений tvOS с помощью Xamarin:
 
-- [Введение в tvOS 11](~/ios/tvos/platform/introduction-to-tvos11.md) — в этой статье описываются новые функции, доступные в tvOS 11 для разработчиков Xamarin.tvOS.
-- [Введение в tvOS 10](~/ios/tvos/platform/introduction-to-tvos10/index.md) — в этой статье рассматриваются все новые и измененные API-интерфейсы и функции, доступные в tvOS 10 для разработчиков Xamarin.tvOS.
-- [Введение в tvOS 9](~/ios/tvos/platform/tvos9.md) — в этой статье рассматриваются все новые и измененные API-интерфейсы и функции, доступные в tvOS 9 для разработчиков Xamarin.tvOS. 
-- [Привет, краткое руководство по tvOS](~/ios/tvos/get-started/hello-tvos.md) — в этом руководстве описывается создание первого приложения Xamarin.tvOS и в процессе цепочкой инструментов разработки, включая Visual Studio для Mac, Xcode и конструкторе Interface Builder. В нем также представлены переменных экземпляров и действиях, которые добавляют элементы управления пользовательского интерфейса в код, и наконец, демонстрируется создание, запуск и тестирование приложения Xamarin.tvOS.
-- [Работа со значками и изображениями](~/ios/tvos/app-fundamentals/icons-images.md) — этот статье охватывает разработки и работы со значками и изображениями внутри приложения Xamarin.tvOS.
-- [Работа с навигацией и фокусом](~/ios/tvos/app-fundamentals/navigation-focus.md) — в этой статье рассматриваются концепции фокус и как она используется для представления и обработки переходов внутри приложения Xamarin.tvOS.
-- [Ресурсы и хранилище данных](~/ios/tvos/app-fundamentals/resources-data-storage.md) — в этой статье рассматривается работа с ресурсы и хранилище постоянных данных в приложении Xamarin.tvOS.
-- [Контроллеры Siri Remote и контроллеры Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) — в этой статье описывается поддержка новые контроллеры Siri Remote и Bluetooth игровые устройства управления в приложениях Xamarin.tvOS.
-- [Пользовательский интерфейс](~/ios/tvos/user-interface/index.md) — покрытие Общие интерфейс пользователя (UX), включая элементы управления интерфейса пользователя (UI), использовать конструктор Interface Builder в Xcode и принципы проектирования UX, при работе с Xamarin.tvOS.
-- [Развертывание, тестирование и метрики](~/ios/tvos/deploy-test/index.md) — в этом разделе рассматриваются темы, используется, чтобы проверить приложение, а также для распределения. Здесь будут рассмотрены такие средства, используемые для отладки, развертывания для инженеров-испытателей и как опубликовать приложение для Apple TV App Store.
-- [Поддерживаемые сборки](~/ios/tvos/internals/assemblies.md) — это список сборок, поддерживаемых Xamarin для приложений Xamarin.tvOS.
-- [Поддерживаемые и неподдерживаемые платформы](~/ios/tvos/internals/frameworks.md) — это список платформ, поддерживаемых Xamarin для приложений Xamarin.tvOS.
+- [Введение в tvOS 11](~/ios/tvos/platform/introduction-to-tvos11.md) . в этой статье описываются новые функции, доступные в tvOS 11 для разработчиков Xamarin. tvOS.
+- [Введение в tvOS 10](~/ios/tvos/platform/introduction-to-tvos10/index.md) . в этой статье представлены все новые и измененные API-интерфейсы и функции, доступные в tvOS 10 для разработчиков Xamarin. tvOS.
+- [Введение в tvOS 9](~/ios/tvos/platform/tvos9.md) . в этой статье представлены все новые и измененные API-интерфейсы и функции, доступные в tvOS 9 для разработчиков Xamarin. tvOS. 
+- [Привет, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md) — это руководство содержит инструкции по созданию первого приложения Xamarin. tvOS, а в процессе — цепочки инструментов разработки, в том числе Visual Studio для Mac, Xcode и Interface Builder. В нем также содержатся сведения о возможностях и действиях, которые предоставляют элементы управления ИП в коде, и, наконец, демонстрируется создание, запуск и тестирование приложения Xamarin. tvOS.
+- [Работа со значками и изображениями](~/ios/tvos/app-fundamentals/icons-images.md) . в этой статье рассматривается разработка значков и изображений в приложении Xamarin. tvOS и работа с ними.
+- [Работа с навигацией и фокусом](~/ios/tvos/app-fundamentals/navigation-focus.md) . в этой статье рассматривается понятие фокуса и его использование для представления и управления навигацией в приложении Xamarin. tvOS.
+- [Ресурсы и хранилище данных](~/ios/tvos/app-fundamentals/resources-data-storage.md) . в этой статье рассматривается работа с ресурсами и постоянным хранением данных в приложении Xamarin. tvOS.
+- [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) — в этой статье описывается поддержка новых устройств Siri Remote и Bluetooth в приложениях Xamarin. tvOS.
+- [Пользовательский интерфейс](~/ios/tvos/user-interface/index.md) : Общие сведения о пользовательском интерфейсе (UX), включая элементы управления пользовательского интерфейса, используют Interface Builder и принципы разработки UX при работе с Xamarin. tvOS.
+- [Развертывание, тестирование и метрики](~/ios/tvos/deploy-test/index.md) — в этом разделе рассматриваются темы, используемые для тестирования приложения, а также способы его распространения. В этом разделе рассматриваются такие темы, как средства, используемые для отладки, развертывания в тест-инженерах и публикации приложения в Apple TV App Store.
+- [Поддерживаемые сборки](~/ios/tvos/internals/assemblies.md) — это список сборок, поддерживаемых Xamarin для приложений Xamarin. tvOS.
+- [Поддерживаемые и неподдерживаемые платформы](~/ios/tvos/internals/frameworks.md) — список платформ, поддерживаемых Xamarin для приложений Xamarin. tvOS.
 
 ## <a name="sample-projects"></a>Образцы проектов
 
-Примеры tvOS приложений, созданных с помощью Xamarin:
+Примеры приложений tvOS, созданных с помощью Xamarin:
 
-- [Привет, tvOS](https://developer.xamarin.com/samples/monotouch/tvos/Hello-tvOS/) — в этом примере реализует простое приложение «Hello, World!» в Xamarin.tvOS и представляет основы работы с tvOS.
-- [tvAlerts](https://developer.xamarin.com/samples/monotouch/tvos/tvAlerts/) — в этом примере показано, как работать с оповещениями в приложении Xamarin.tvOS.
-- [tvButtons](https://developer.xamarin.com/samples/monotouch/tvos/tvButtons/) — этот образец показывает способы работы с кнопками — это приложение Xamarin.tvOS.
-- [tvRemote](https://developer.xamarin.com/samples/monotouch/tvos/tvRemote/) — это пример создает несколько способов, что приложение Xamarin.tvOS может взаимодействовать с удаленной Siri Навигация к пользовательскому интерфейсу.
-- [tvCollection](https://developer.xamarin.com/samples/monotouch/tvos/tvCollection/) — в этом примере показано, как работать с контроллерами представлений коллекции в приложении Xamarin.tvOS.
-- [tvNavBars](https://developer.xamarin.com/samples/monotouch/tvos/tvNavBars/) — в этом примере показано, как работать с панели навигации в приложении Xamarin.tvOS.
-- [tvPages](https://developer.xamarin.com/samples/monotouch/tvos/tvPages/) — в этом примере показано, как работать с элементами управления страницы, в приложении Xamarin.tvOS.
-- [tvProgress](https://developer.xamarin.com/samples/monotouch/tvos/tvProgress/) — в этом примере показано, как работать с индикаторами хода выполнения в приложении Xamarin.tvOS.
-- [tvSplit](https://developer.xamarin.com/samples/monotouch/tvos/tvSplit/) — в этом примере показано, как работать с контроллерами представлений разбиения в приложении Xamarin.tvOS.
-- [tvStackView](https://developer.xamarin.com/samples/monotouch/tvos/tvStackView/) -в этом примере показано, как работать с представлениями стека в приложении Xamarin.tvOS.
-- [UICatalog](https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/) — показано, как использовать несколько представлений и элементы управления на платформе UIKit в tvOS. Просмотрите этот пример, если вы ищете определенных элементов управления или представления, предоставляемые системой.
+- [Привет, tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-hello-tvos) — этот пример реализует простое приложение "Hello World" в Xamarin. tvOS и предоставляет основы работы с tvOS.
+- [твалертс](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvalerts) — в этом примере показано, как работать с предупреждениями в приложении Xamarin. tvOS.
+- [твбуттонс](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvbuttons) — в этом примере показано, как работать с кнопками — приложение Xamarin. tvOS.
+- [твремоте](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvremote) — в этом примере представлено несколько способов взаимодействия приложения Xamarin. TvOS с удаленным Siri для навигации по пользовательскому интерфейсу.
+- [твколлектион](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvcollection) — в этом примере показано, как работать с контроллерами представлений коллекций в приложении Xamarin. tvOS.
+- [твнавбарс](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvnavbars) — в этом примере показано, как работать с панелями навигации в приложении Xamarin. tvOS.
+- [твпажес](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvpages) — в этом примере показано, как работать с элементами управления страницы в приложении Xamarin. tvOS.
+- [твпрогресс](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvprogress) — в этом примере показано, как работать с индикаторами хода выполнения в приложении Xamarin. tvOS.
+- [твсплит](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvsplit) — в этом примере показано, как работать с контроллерами разделенного представления в приложении Xamarin. tvOS.
+- [твстакквиев](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvstackview) — в этом примере показано, как работать с представлениями стека в приложении Xamarin. tvOS.
+- [Уикаталог](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog) — демонстрируется использование множества представлений и элементов управления в инфраструктуре UIKit на tvOS. Ознакомьтесь с этим примером, если вы ищете определенные элементы управления или представления, предоставляемые системой.
 
-Кроме того компания Apple предоставляет следующие примеры приложений, которые могут быть перекодированные для C# для работы с Xamarin поддержка tvOS приложений:
+Кроме того, Apple предоставляет следующие примеры приложений, которые можно перекодировать C# для работы с поддержкой Xamarin для приложений tvOS.
 
-- [DemoBots: Разработка кроссплатформенного игры с помощью SpriteKit и GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
+- [Демоботс: Создание кросс-платформенной игры с помощью SpriteKit и Гамеплайкит](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
 
 ## <a name="known-issues-and-troubleshooting"></a>Известные проблемы и устранение неполадок
 
-Если возникнет проблема создания tvOS с помощью Xamarin, проверьте [заметки о выпуске](https://docs.microsoft.com/xamarin/ios/release-notes/), [форумы Xamarin.iOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), и [GitHub ](https://github.com/xamarin/xamarin-macios/issues) существующие проблемы.
+При возникновении проблем с созданием tvOS с помощью Xamarin просмотрите [заметки о](https://docs.microsoft.com/xamarin/ios/release-notes/)выпуске, [форумы Xamarin. iOS](https://forums.xamarin.com/categories/ios), [Xamarin бугзилла Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS)и [GitHub](https://github.com/xamarin/xamarin-macios/issues) для существующих проблем.
 
-Сообщить о новых проблемах и предложениях [на сайте GitHub](https://github.com/xamarin/xamarin-macios/issues).
+Сообщать о новых проблемах и предложениях [на GitHub](https://github.com/xamarin/xamarin-macios/issues).
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Примеры tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Человека направляющие интерфейса tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Приложение руководство по программированию для tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Руководства по tvOSму интерфейсу](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Руководством по программированию приложений для tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
 - [Создание приложений для tvOS с помощью Xamarin (видео)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

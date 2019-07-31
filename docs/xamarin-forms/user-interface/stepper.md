@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c89f04b1d1d87fed8d86d50cb68527391a7f317
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250625"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656195"
 ---
 # <a name="xamarinforms-stepper"></a>Несопоставимого Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Используйте средство организации пошагового режима выбора числовое значение из диапазона значений._
 
@@ -42,11 +42,11 @@ Xamarin.Forms [ `Stepper` ](xref:Xamarin.Forms.Stepper) состоит из дв
 
 ## <a name="basic-stepper-code-and-markup"></a>Основные несопоставимого кода и разметки
 
-[ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) образец содержит три страницы, которые функционально идентичны, но реализуются по-разному. На первой странице используется только C# код, вторая использует XAML с помощью обработчика событий в коде и третий избежать обработчик событий с помощью привязки данных в файле XAML.
+[ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) образец содержит три страницы, которые функционально идентичны, но реализуются по-разному. На первой странице используется только C# код, вторая использует XAML с помощью обработчика событий в коде и третий избежать обработчик событий с помощью привязки данных в файле XAML.
 
 ### <a name="creating-a-stepper-in-code"></a>Создание несопоставимого в коде
 
-**Базовый код несопоставимого** странице в [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) примере показано, как создать [ `Stepper` ](xref:Xamarin.Forms.Stepper) и два [ `Label` ](xref:Xamarin.Forms.Label) объектов в коде:
+**Базовый код несопоставимого** странице в [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) примере показано, как создать [ `Stepper` ](xref:Xamarin.Forms.Stepper) и два [ `Label` ](xref:Xamarin.Forms.Label) объектов в коде:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -182,7 +182,7 @@ double value = stepper.Value;
 </ContentPage>
 ```
 
-[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) Свойства первого [ `Label` ](xref:Xamarin.Forms.Label) привязан к [ `Value` ](xref:Xamarin.Forms.Stepper.Value) свойство [ `Stepper` ](xref:Xamarin.Forms.Stepper), так как [ `Text` ](xref:Xamarin.Forms.Label.Text) свойство второго `Label` с `StringFormat` спецификации. **Основных привязок несопоставимого** странице функций немного по-разному на двух предыдущих страницах: При первом отображении страницы, второй `Label` отображает текстовую строку со значением. Это является преимуществом с использованием привязки данных. Для отображения текста без привязки данных, необходимо специально инициализировать `Text` свойство `Label` или имитировать срабатывание [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) событие путем вызова обработчика событий из конструктора класса .
+[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) Свойства первого [ `Label` ](xref:Xamarin.Forms.Label) привязан к [ `Value` ](xref:Xamarin.Forms.Stepper.Value) свойство [ `Stepper` ](xref:Xamarin.Forms.Stepper), так как [ `Text` ](xref:Xamarin.Forms.Label.Text) свойство второго `Label` с `StringFormat` спецификации. Основная страница привязок с учетом **основных** действий немного отличается от двух предыдущих страниц: При первом отображении страницы вторая `Label` отображает текстовую строку со значением. Это является преимуществом с использованием привязки данных. Для отображения текста без привязки данных, необходимо специально инициализировать `Text` свойство `Label` или имитировать срабатывание [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) событие путем вызова обработчика событий из конструктора класса .
 
 ## <a name="precautions"></a>Меры предосторожности
 
@@ -258,5 +258,5 @@ Stepper stepper = new Stepper
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример демонстрации несопоставимого](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+- [Пример демонстрации несопоставимого](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [Несопоставимого API](xref:Xamarin.Forms.Stepper)

@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290781"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647307"
 ---
 # <a name="lines-and-stroke-caps"></a>Линии и концы штрихов
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Узнайте, как рисование линий с концы штрихов в другой с помощью SkiaSharp_
 
@@ -30,7 +30,7 @@ _Узнайте, как рисование линий с концы штрихо
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-По умолчанию [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) свойство вновь созданным экземпляром `SKPaint` объекта равно 0, который имеет тот же эффект, что значение 1 при отрисовке строки на один пиксель в толщины. Это выглядит очень тонкий на устройствах с высоким разрешением, таких как телефоны, поэтому, возможно, вы захотите присвоить `StrokeWidth` для него большее значение. Но как только вы начнете рисования линий расширяемой толщины, который вызывает еще одна проблема: Как должен начала и окончания этих линий толстых визуализироваться?
+По умолчанию [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) свойство вновь созданным экземпляром `SKPaint` объекта равно 0, который имеет тот же эффект, что значение 1 при отрисовке строки на один пиксель в толщины. Это выглядит очень тонкий на устройствах с высоким разрешением, таких как телефоны, поэтому, возможно, вы захотите присвоить `StrokeWidth` для него большее значение. Но после начала рисования линий с изменяемой толщиной возникает другая ошибка: Как должны подготавливаться и заканчиваться эти толстые линии?
 
 Внешний вид начала и окончания строк называется *завершение отрезка* или в Skia, *наконечник*. Слово «политики авторизации подключений» в этом контексте ссылается на тип hat &mdash; то, что находится в конце строки. Можно задать [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) свойство `SKPaint` одному из следующих членов [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) перечисления:
 
@@ -38,7 +38,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 - `Square`
 - `Round`
 
-Лучше всего они показаны с помощью примера программы. **Строки и пути SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) программа начинает с страницы под названием **концы штрихов** на основе [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) класса. Эта страница определяет `PaintSurface` обработчик событий, который проходит по трем членам `SKStrokeCap` перечисления, отображение имени члена перечисления и Рисование линии с помощью этого наконечник штриха:
+Лучше всего они показаны с помощью примера программы. **Строки и пути SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программа начинает с страницы под названием **концы штрихов** на основе [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) класса. Эта страница определяет `PaintSurface` обработчик событий, который проходит по трем членам `SKStrokeCap` перечисления, отображение имени члена перечисления и Рисование линии с помощью этого наконечник штриха:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -242,4 +242,4 @@ IPhone в левой показана как `SKPointMode.Points` вызывае
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

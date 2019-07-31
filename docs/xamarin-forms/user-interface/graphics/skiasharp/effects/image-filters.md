@@ -7,16 +7,16 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 54f6c8b94a1abdfcc3be9a86e179e766c417232b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290219"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655379"
 ---
 # <a name="skiasharp-image-filters"></a>Фильтры образа SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Фильтры образа, эффекты, которые работают на всех битов цвет пикселей, составляющих изображение. Они являются более гибкими, чем маска фильтров, которые работают только в альфа-канала, как описано в статье [ **фильтры маска SkiaSharp**](mask-filters.md). Чтобы использовать изображение фильтр, установите [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) свойство `SKPaint` для объекта типа [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) вы создали путем вызова одного из статических методов класса.
 
@@ -28,7 +28,7 @@ ms.locfileid: "61290219"
 
 ## <a name="blurring-vector-graphics-and-bitmaps"></a>Размытие векторные и растровые изображения
 
-Эффект размытия, созданные [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) статический метод имеет значительное преимущество по сравнению с методами размытия в [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) класса: Фильтра образа можно размыть всего точечного рисунка. Метод имеет следующий синтаксис:
+Эффект размытия, созданный [`SKImageFilter.CreateBlur`](xref:SkiaSharp.SKImageFilter.CreateBlur*) статическим методом, имеет значительное преимущество над методами размытия [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) в классе: Фильтр изображений может размытие всего растрового изображения. Метод имеет следующий синтаксис:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -38,7 +38,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
 
 Этот метод имеет два значения «сигма» &mdash; первый экстент размытия в горизонтальном направлении, а второй для по вертикали. Фильтры образа каскадирование, указав другой фильтр изображения в качестве необязательный третий аргумент. Можно также указать прямоугольника обрезки.
 
-**Изображение размытия поэкспериментировать** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) включает две `Slider` представления, которые позволяют экспериментировать с Настройка различных уровней размытия:
+**Изображение размытия поэкспериментировать** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) включает две `Slider` представления, которые позволяют экспериментировать с Настройка различных уровней размытия:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-Первый аргумент `SKImageFilter.CreateDistantLitDiffuse` направлению источника света. Положительная X и Y координаты указать, что индикатор указывает вправо и вниз. Положительная Z координаты точки на экран. Файл XAML позволяет выбрать отрицательные значения Z, но который происходит только в том случае, чтобы вы могли увидеть следующее: По существу отрицательных координат Z вызвать света для указания выходит из экрана. Сведения обо всех проблемах других затем небольшой отрицательные значения эффекта освещения перестает работать.
+Первый аргумент `SKImageFilter.CreateDistantLitDiffuse` направлению источника света. Положительная X и Y координаты указать, что индикатор указывает вправо и вниз. Положительная Z координаты точки на экран. Файл XAML позволяет выбрать отрицательные значения Z, но это только позволяет увидеть, что происходит: По сути, отрицательные координаты Z приводят к тому, что источник освещения будет указывать на экран. Сведения обо всех проблемах других затем небольшой отрицательные значения эффекта освещения перестает работать.
 
 `surfaceScale` Аргумент могут варьироваться от – 1 до 1. (Выше или ниже значения имеют не влияет). Это относительные значения по оси Z, указывающих смещение графического объекта (в данном случае это текстовая строка) из области холста. Используйте отрицательные значения для вызова текстовую строку выше области полотна и положительные значения мгновенное его на холст.
 
@@ -439,9 +439,9 @@ public partial class DistantLightExperimentPage : ContentPage
 
 Снимок экрана Android имеет значение Z 0, означающее, что источник света только указывает вниз и вправо. Не освещаются в фоновом режиме и не освещаются в рабочей области со строкой текста либо. Свет касается только границы текста очень нелегко выявить эффект.
 
-Альтернативный подход к текст с эффектом приподнятости и Утопленный приведенного ранее в этой статье [перевод преобразования](../transforms/translate.md): Текстовая строка отображается дважды с различными цветами, которые смещения немного друг от друга.
+Другой подход к выступающим и утопленным текстам был продемонстрирован в статье [Преобразование](../transforms/translate.md)преобразования: Текстовая строка отображается дважды с различными цветами, которые немного смещены друг от друга.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

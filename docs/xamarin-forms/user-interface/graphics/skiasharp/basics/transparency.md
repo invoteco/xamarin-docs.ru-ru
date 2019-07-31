@@ -7,16 +7,16 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 577eb19106ffa0ebd19c54aeeb155a9c6c85feac
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e8c909ce7dfd9c8f6dccbf2685ff2658931b6a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091688"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656359"
 ---
 # <a name="skiasharp-transparency"></a>Прозрачность SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Как вы убедились, [ `SKPaint` ](xref:SkiaSharp.SKPaint) класс включает [ `Color` ](xref:SkiaSharp.SKPaint.Color) свойство типа [ `SKColor` ](xref:SkiaSharp.SKColor). `SKColor` включает в себя альфа-канал, поэтому все, что можно цвет с `SKColor` значение может быть частично прозрачными. 
 
@@ -36,7 +36,7 @@ SKColor (byte red, byte green, byte blue, byte alpha);
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-Демонстрируется использование частично прозрачный текста в **более кода** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца. Эта страница исчезает две текстовые строки и включив прозрачности в `SKColor` значения:
+Демонстрируется использование частично прозрачный текста в **более кода** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца. Эта страница исчезает две текстовые строки и включив прозрачности в `SKColor` значения:
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -241,4 +241,4 @@ public partial class BitmapDissolvePage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

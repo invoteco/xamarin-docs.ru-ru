@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2019
-ms.openlocfilehash: fd67072953f0fc4e448fee7edeec84760ebbda9a
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048317"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657281"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Использование расширения разметки XAML
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Расширения разметки XAML для повышения возможности и гибкость XAML, позволяя атрибутов элемента из различных источников. Несколько расширений разметки XAML являются частью спецификации XAML 2009 г. Они отображаются в файлах XAML с обычной `x` префикс пространства имен того они часто ссылаются с этого префикса. В этой статье рассматриваются следующие расширения разметки.
 
@@ -27,7 +27,7 @@ ms.locfileid: "65048317"
 - [`x:Null`](#null) – значение атрибута `null` значение.
 - [`OnPlatform`](#onplatform) — настраивать внешний вид пользовательского интерфейса на каждой платформы.
 - [`OnIdiom`](#onidiom) — настраивать внешний вид пользовательского интерфейса на идиому устройства, приложения на основе.
-- [`DataTemplate`](#datatemplate-markup-extension) — Преобразует тип в [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
+- [`DataTemplate`](#datatemplate-markup-extension)— Преобразует тип в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 
 Дополнительные расширения разметки XAML Исторически поддерживаются в других реализациях XAML и также поддерживаются в Xamarin.Forms. Более подробно они описаны в других статьях:
 
@@ -44,7 +44,7 @@ ms.locfileid: "65048317"
 
 `x:Static` Расширение разметки поддерживается [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) класса. Класс имеет одно свойство с именем [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) типа `string` присвоено имя общедоступная константа, статическое свойство, статическое поле или член перечисления.
 
-Один из распространенных способов использования `x:Static` является сначала определить класс с некоторыми константы или статические переменные, такие как эта маленькая `AppConstants` в класс [ **расширений MarkupExtension** ](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/) программы:
+Один из распространенных способов использования `x:Static` является сначала определить класс с некоторыми константы или статические переменные, такие как эта маленькая `AppConstants` в класс [ **расширений MarkupExtension** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) программы:
 
 ```csharp
 static class AppConstants
@@ -85,7 +85,7 @@ static class AppConstants
 </Label>
 ```
 
-Это можно упростить еще дальше, но изменение вводит некоторые новый синтаксис: Он состоит из помещения `StaticExtension` классов и членов, установив в фигурные скобки. Результирующее выражение имеет значение непосредственно в `FontSize` атрибут:
+Это можно сделать еще более простым, но в результате изменения появился новый синтаксис: Он состоит из размещения `StaticExtension` класса и параметра элемента в фигурных скобках. Результирующее выражение имеет значение непосредственно в `FontSize` атрибут:
 
 ```xaml
 <Label Text="Label No. 3"
@@ -504,7 +504,7 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="onidiom-markup-extension"></a>Расширение разметки OnIdiom
 
-`OnIdiom` Расширение разметки позволяет настраивать внешний вид пользовательского интерфейса на идиому устройства, приложения на основе. Этот режим поддерживается [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) класс, который определяет следующие свойства:
+Расширение `OnIdiom` разметки позволяет настраивать внешний вид пользовательского интерфейса на основе идиомы устройства, на котором выполняется приложение. Этот режим поддерживается [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) класс, который определяет следующие свойства:
 
 - `Default` типа `object`, присвоено значение по умолчанию для применения к свойствам, которые представляют стили устройства.
 - `Phone` типа `object`, установленным в значение для применения на телефонах.
@@ -540,12 +540,12 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="datatemplate-markup-extension"></a>Расширение разметки DataTemplate
 
-`DataTemplate` Расширение разметки можно выполнить преобразование типа в [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate). Этот режим поддерживается `DataTemplateExtension` класс, определяющий `TypeName` свойство типа `string`, то есть присвоено имя типа быть преобразован в `DataTemplate`. `TypeName` Свойство является свойством содержимого из `DataTemplateExtension`. Таким образом, для выражений разметки XAML, выраженными с помощью фигурных скобок, то можно исключить `TypeName=` часть выражения.
+Расширение разметки позволяет преобразовать тип [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)в. `DataTemplate` Он поддерживается `DataTemplateExtension` классом, который `TypeName` определяет свойство типа `string`, которому присваивается имя типа, преобразуемого в `DataTemplate`. `TypeName` Свойство является свойством содержимого из `DataTemplateExtension`. Таким образом, для выражений разметки XAML, выраженных с фигурными скобками, `TypeName=` можно исключить часть выражения.
 
 > [!NOTE]
-> Средство синтаксического анализа XAML позволяет `DataTemplateExtension` класса, чтобы сократить до `DataTemplate`.
+> Средство синтаксического анализа XAML позволяет `DataTemplateExtension` сократить `DataTemplate`класс до.
 
-Типичное использование этого расширения разметки находится в приложении оболочки, как показано в следующем примере:
+Типичное использование этого расширения разметки — в приложении оболочки, как показано в следующем примере:
 
 ```xaml
 <ShellContent Title="Monkeys"
@@ -553,9 +553,9 @@ public partial class TypeDemoPage : ContentPage
               ContentTemplate="{DataTemplate views:MonkeysPage}" />
 ```
 
-В этом примере `MonkeysPage` преобразуется из [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) для [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), которое задается для параметра `ShellContent.ContentTemplate` свойство. Это гарантирует, что `MonkeysPage` только для создания, когда происходит переход на страницу, а не при запуске приложения.
+В этом примере `MonkeysPage` преобразуется [`ContentPage`](xref:Xamarin.Forms.ContentPage) из [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)в, `ShellContent.ContentTemplate` который задается как значение свойства. Это гарантирует, `MonkeysPage` что она будет создана только при переходе на страницу, а не при запуске приложения.
 
-Дополнительные сведения о приложениях оболочки, см. в разделе [Xamarin.Forms оболочки](~/xamarin-forms/app-fundamentals/shell/index.md).
+Дополнительные сведения о приложениях оболочки см. в разделе [оболочка Xamarin. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="define-your-own-markup-extensions"></a>Определить собственные расширения разметки
 
@@ -563,9 +563,9 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Расширения разметки (пример)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Расширения разметки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Глава расширения разметки XAML из Xamarin.Forms (книга)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Динамические стили](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Привязка данных](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.Forms оболочки](~/xamarin-forms/app-fundamentals/shell/index.md).
+- [Оболочка Xamarin. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).

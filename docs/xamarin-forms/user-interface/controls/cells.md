@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: c4d73f131b8b20f17c5a3df13a3c4590f4ca926c
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
+ms.openlocfilehash: 1e003a80b58f783829f5af3b74801fc3c91c88e9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469496"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655619"
 ---
 # <a name="xamarinforms-cells"></a>Ячейки Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Ячейки Xamarin.Forms могут добавляться к ListView и TableViews._
 
@@ -48,7 +48,7 @@ Xamarin.Forms поддерживает следующие типы ячейки:
 
 |     |     |
 | --- | --- |
-| [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) Содержит текст, набор с [ `Text` ](xref:Xamarin.Forms.SwitchCell.Text) свойства и Признак включения изначально значение с двоичным [ `On` ](xref:Xamarin.Forms.SwitchCell.On) свойство. Обрабатывать [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) когда уведомления о событии `On` изменения свойств.<br /><br />[Документация по API](xref:Xamarin.Forms.SwitchCell) / [руководство](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![Пример SwitchCell](cells-images/SwitchCell.png "пример SwitchCell")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
+| Содержит набор текста [`Text`](xref:Xamarin.Forms.SwitchCell.Text) со свойством и параметром включения/выключения, изначально заданным логическим [`On`](xref:Xamarin.Forms.SwitchCell.On) свойством. [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) Обрабатывать [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) когда уведомления о событии `On` изменения свойств.<br /><br />[Документация по API](xref:Xamarin.Forms.SwitchCell) / [руководство](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![Пример SwitchCell](cells-images/SwitchCell.png "пример SwitchCell")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="entrycell"></a>EntryCell
@@ -61,6 +61,6 @@ Xamarin.Forms поддерживает следующие типы ячейки:
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
-- [Примеры Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Пример Xamarin.Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Примеры Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Документация по API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

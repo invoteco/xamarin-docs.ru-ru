@@ -1,24 +1,24 @@
 ---
-title: Цвет курсора запись в iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать iOS конкретных платформ, задает цвет курсор записи.
+title: Цвет курсора ввода в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать конкретную платформу iOS, которая задает цвет курсора для записи.
 ms.prod: xamarin
 ms.assetid: 867D70BA-53F9-4434-8094-85D71DCECC2D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6d075f782778313fafff3f26760152a1efbd84c8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: ff88302755f1c1947591d90ab3373dae7e7db8ec
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971035"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656698"
 ---
-# <a name="entry-cursor-color-on-ios"></a>Цвет курсора запись в iOS
+# <a name="entry-cursor-color-on-ios"></a>Цвет курсора ввода в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS платформы задает цвет курсора [ `Entry` ](xref:Xamarin.Forms.Entry) для выбранного цвета. Он используется в XAML, задав [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) свойство, используемое для [ `Color` ](xref:Xamarin.Forms.Color):
+Эта платформа iOS задает цвет [`Entry`](xref:Xamarin.Forms.Entry) курсора для определенного цвета. Он используется в XAML, задав [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) свойство, используемое для [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...
@@ -48,6 +48,6 @@ entry.On<iOS>().SetCursorColor(Color.LimeGreen);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

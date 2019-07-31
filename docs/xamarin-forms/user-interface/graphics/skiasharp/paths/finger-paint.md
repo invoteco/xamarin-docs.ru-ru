@@ -7,16 +7,16 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: eb7622fb2cebc13abd5e49e42b21511e45c72a45
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 571ddae0757691cd7fee301076f0b1310749531d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61302060"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657461"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Рисование пальцами в SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Используйте пальцы для рисования на холсте._
 
@@ -24,9 +24,9 @@ _Используйте пальцы для рисования на холсте
 
 ![](finger-paint-images/fingerpaintsample.png "Получить с помощью Рисование пальцами")
 
-Поддержка сенсорного ввода в Xamarin.Forms не позволяет отслеживания отдельных пальцев на экране, чтобы эффект Xamarin.Forms touch отслеживания был разработан для обеспечения поддержки дополнительных сенсорного ввода. В этой статье описан этот эффект [ **вызов события из эффекты**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Пример программы [ **демонстрации эффекта Touch отслеживания** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) включает в себя две страницы, использующие SkiaSharp, включая красочное программу.
+Поддержка сенсорного ввода в Xamarin.Forms не позволяет отслеживания отдельных пальцев на экране, чтобы эффект Xamarin.Forms touch отслеживания был разработан для обеспечения поддержки дополнительных сенсорного ввода. В этой статье описан этот эффект [ **вызов события из эффекты**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Пример программы [ **демонстрации эффекта Touch отслеживания** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) включает в себя две страницы, использующие SkiaSharp, включая красочное программу.
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) решение включает в себя это событие отслеживания сенсорного ввода. Включает в себя проект библиотеки .NET Standard `TouchEffect` класс, `TouchActionType` перечисления, `TouchActionEventHandler` делегата и `TouchActionEventArgs` класса. Каждый из проектов платформы включает в себя `TouchEffect` класса для данной платформы; проект iOS также содержит `TouchRecognizer` класса.
+[ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) решение включает в себя это событие отслеживания сенсорного ввода. Включает в себя проект библиотеки .NET Standard `TouchEffect` класс, `TouchActionType` перечисления, `TouchActionEventHandler` делегата и `TouchActionEventArgs` класса. Каждый из проектов платформы включает в себя `TouchEffect` класса для данной платформы; проект iOS также содержит `TouchRecognizer` класса.
 
 **Рисование пальцами** странице в **SkiaSharpFormsDemos** представляет собой упрощенную реализацию Рисование пальцем. Не разрешить выбор цвет и ширина штриха, он никак не может очистить холст и Конечно не удается сохранить иллюстрации.
 
@@ -172,6 +172,6 @@ public partial class FingerPaintPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [Демонстрации эффекта отслеживания сенсорного ввода (пример)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Демонстрации эффекта отслеживания сенсорного ввода (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 - [Вызов событий из эффектов](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

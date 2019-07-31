@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 60add066d581afffeaa200769efcdff9e0644535
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309513"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646560"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Часть 2. Синтаксис Essential XAML
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML предназначен главным образом для создания и инициализации объектов. Но часто необходимо задать свойства для сложных объектов, которые нельзя легко представить в виде строки XML, и иногда на дочерний класс, в котором необходимо задать свойства, определенные в одном классе. Эти две задачи требуют самых важных особенностей синтаксиса XAML элементов свойства и вложенные свойства._
 
@@ -143,7 +143,7 @@ _XAML предназначен главным образом для создан
 </Label>
 ```
 
-Другой пример: `Grid` Имеет два свойства с именем `RowDefinitions` и `ColumnDefinitions`. Эти два свойства имеют тип `RowDefinitionCollection` и `ColumnDefinitionCollection`, которые представляют собой коллекции `RowDefinition` и `ColumnDefinition` объектов. Необходимо использовать синтаксис элемента свойства для задания этих коллекций.
+Другой пример: Имеет два свойства с именами `RowDefinitions` и `ColumnDefinitions`. `Grid` Эти два свойства имеют тип `RowDefinitionCollection` и `ColumnDefinitionCollection`, которые представляют собой коллекции `RowDefinition` и `ColumnDefinition` объектов. Необходимо использовать синтаксис элемента свойства для задания этих коллекций.
 
 Здесь — это начало файла XAML для `GridDemoPage` класс, показывающий теги элемента свойства для `RowDefinitions` и `ColumnDefinitions` коллекций:
 
@@ -351,7 +351,7 @@ _XAML предназначен главным образом для создан
 </ContentPage>
 ```
 
-Является возник такой вопрос: Почему представляют собой эти элементы свойства *не* в файле XAML требуется?
+Реальный вопрос: Почему эти элементы свойств *не* требуются в файле XAML?
 
 Элементы, определенные в Xamarin.Forms для использования в XAML должен иметь одно свойство, отмеченные в `ContentProperty` атрибут класса. Если просмотреть `ContentPage` класс в электронной документации Xamarin.Forms, вы увидите этот атрибут:
 
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-Вы также можете выполнить что-то подобное в XAML с помощью [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) и [ `On` ](xref:Xamarin.Forms.On) классы. Во-первых, включите элементы свойства для `Padding` свойство в верхней части страницы:
+Вы также можете сделать что-то подобное в XAML [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) , [`On`](xref:Xamarin.Forms.On) используя классы и. Во-первых, включите элементы свойства для `Padding` свойство в верхней части страницы:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -524,7 +524,7 @@ if (Device.RuntimePlatform == Device.iOS)
 ```
 
 > [!NOTE]
-> `OnPlatform` Расширение разметки может также использоваться в XAML для настройки внешнего вида пользовательского интерфейса на каждой платформы. Он предоставляет те же функции, что `OnPlatform` и `On` классов, но с более кратким представлением. Дополнительные сведения см. в разделе [расширение разметки OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+> Расширение `OnPlatform` разметки также можно использовать в XAML для настройки внешнего вида пользовательского интерфейса на уровне платформы. Он предоставляет те же функциональные возможности, `OnPlatform` что `On` и классы и, но с более кратким представлением. Дополнительные сведения см. в разделе [расширение разметки OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
 ## <a name="summary"></a>Сводка
 
@@ -532,7 +532,7 @@ if (Device.RuntimePlatform == Device.iOS)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Часть 1. Начало работы с XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Часть 3. Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Часть 4. Основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

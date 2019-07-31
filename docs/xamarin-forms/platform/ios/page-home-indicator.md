@@ -1,24 +1,24 @@
 ---
-title: Домашний видимость индикатора на устройстве iOS
-description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать iOS конкретных платформ, задает видимость индикатора домашней страницы.
+title: Видимость индикатора дома в iOS
+description: Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов. В этой статье объясняется, как использовать зависящую от платформы iOS платформу, которая задает видимость индикатора Home на странице.
 ms.prod: xamarin
 ms.assetid: F81022E0-3C6C-49C0-A000-FAF6574D3FB7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: c0d6717cd8f89344be7df3dc3ec687a5f1b375f4
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: c8acf826eb5b3f42f62803ac1caaaa5929c5ea75
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971626"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648868"
 ---
-# <a name="home-indicator-visibility-on-ios"></a>Домашний видимость индикатора на устройстве iOS
+# <a name="home-indicator-visibility-on-ios"></a>Видимость индикатора дома в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Этот iOS платформы задает видимость домашней индикатора на [ `Page` ](xref:Xamarin.Forms.Page). Он используется в XAML, задав [ `Page.PrefersHomeIndicatorAutoHidden` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.PrefersHomeIndicatorAutoHiddenProperty) свойство, используемое для `boolean`:
+Эта платформа iOS задает видимость индикатора Home на [`Page`](xref:Xamarin.Forms.Page). Он используется в XAML путем установки [`Page.PrefersHomeIndicatorAutoHidden`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.PrefersHomeIndicatorAutoHiddenProperty) свойства `boolean`BIND в значение:
 
 ```xaml
 <ContentPage ...
@@ -38,17 +38,17 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 On<iOS>().SetPrefersHomeIndicatorAutoHidden(true);
 ```
 
-`Page.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. [ `Page.SetPrefersHomeIndicatorAutoHidden` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetPrefersHomeIndicatorAutoHidden(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Page},System.Boolean)) Метод в [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) пространства имен, управляет видимостью индикатора home. Кроме того [ `Page.PrefersHomeIndicatorAutoHidden` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.PrefersHomeIndicatorAutoHidden(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Page})) метод может использоваться для получения видимость домашней индикатора.
+`Page.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. [`Page.SetPrefersHomeIndicatorAutoHidden`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetPrefersHomeIndicatorAutoHidden(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Page},System.Boolean)) [Метод`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) в пространстве имен управляет видимостью индикатора "начало". Кроме того, [`Page.PrefersHomeIndicatorAutoHidden`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.PrefersHomeIndicatorAutoHidden(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Page})) метод можно использовать для получения видимости индикатора "начало".
 
-Результатом является, видимость домашней индикатора на [ `Page` ](xref:Xamarin.Forms.Page) можно управлять:
+В результате можно контролировать видимость индикатора Home на элементе [`Page`](xref:Xamarin.Forms.Page) управления:
 
-![Снимок экрана включена видимость индикатора домашней страницы iOS](page-home-indicator-images/home-indicator-visibility.png "видимость индикатора на домашней странице")
+![Снимок экрана с отображением индикатора "домой" на странице iOS](page-home-indicator-images/home-indicator-visibility.png "Видимость индикатора для домашней страницы")
 
 > [!NOTE]
-> Этой платформы, которые могут применяться к [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage), [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage), и [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)объектов.
+> [`ContentPage`](xref:Xamarin.Forms.ContentPage)Эта конкретная платформа может применяться к объектам, [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)и. [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

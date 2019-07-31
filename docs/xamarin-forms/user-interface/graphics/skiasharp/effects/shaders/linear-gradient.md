@@ -7,16 +7,16 @@ ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 43a427b4eca174dce4af47bb43cb1a048a6cfe7c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61158546"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647689"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Линейный градиент SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [ `SKPaint` ](xref:SkiaSharp.SKPaint) Класс определяет [ `Color` ](xref:SkiaSharp.SKPaint.Color) свойство, используемое для вычерчивания линий или заполнения области сплошным цветом. Можно также обводки линии или Заливка области с _градиенты_, которые являются постепенное смешения цветов:
 
@@ -27,7 +27,7 @@ ms.locfileid: "61158546"
 Эти методы возвращают объект типа [ `SKShader` ](xref:SkiaSharp.SKShader) , задаваемый для [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) свойство `SKPaint`. Если `Shader` свойства не равно null, оно переопределяет `Color` свойство. Любой строкой, которая рисуется или любой области, который заполняется с помощью этого `SKPaint` основана на градиента, а не сплошным цветом.
 
 > [!NOTE]
-> `Shader` Свойство учитывается при включении `SKPaint` объекта в `DrawBitmap` вызова. Можно использовать `Color` свойство `SKPaint` для установки уровня прозрачности для отображения растрового изображения (как описано в статье [растровые изображения отображение SkiaSharp](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), но нельзя использовать `Shader` свойство для отображения Битовая карта с градиентной прозрачности. Другие функции доступны для отображения растровых изображений с помощью эффекта прозрачности градиента: Они описаны в статьях [циклическая градиенты SkiaSharp](circular-gradients.md#radial-gradients-for-masking) и [SkiaSharp композиции и режимы наложения](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
+> `Shader` Свойство учитывается при включении `SKPaint` объекта в `DrawBitmap` вызова. Можно использовать `Color` свойство `SKPaint` для установки уровня прозрачности для отображения растрового изображения (как описано в статье [растровые изображения отображение SkiaSharp](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), но нельзя использовать `Shader` свойство для отображения Битовая карта с градиентной прозрачности. Для отображения точечных рисунков с прозрачностью градиента доступны другие методы: Они описаны в статьях [SkiaSharp циклические градиенты](circular-gradients.md#radial-gradients-for-masking) , а также режимы совмещения [и смешения SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
 
 ## <a name="corner-to-corner-gradients"></a>Градиенты углу верхним углом
 
@@ -37,7 +37,7 @@ ms.locfileid: "61158546"
 - по горизонтали в правом верхнем углу
 - по диагонали, чтобы нижний правый угол
 
-Диагональный линейный градиент демонстрируется на первой странице в **SkiaSharp построители текстуры и другие эффекты** раздел [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) образца. **Градиента угла к другому** страница создает `SKCanvasView` в своем конструкторе. `PaintSurface` Обработчик создает `SKPaint` объекта в `using` инструкцию и затем определяет 300 пикселей square прямоугольника с центром на холсте:
+Диагональный линейный градиент демонстрируется на первой странице в **SkiaSharp построители текстуры и другие эффекты** раздел [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) образца. **Градиента угла к другому** страница создает `SKCanvasView` в своем конструкторе. `PaintSurface` Обработчик создает `SKPaint` объекта в `using` инструкцию и затем определяет 300 пикселей square прямоугольника с центром на холсте:
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -477,7 +477,7 @@ public class GradientAnimationPage : ContentPage
 
 `OnTimerTick` Метод вычисляет `angle` значение, которое анимируется от 0 до 2π каждые 3 секунды. 
 
-Вот один из способов, для которого требуется вычислить две точки градиента. `SKPoint` Значение с именем `vector` вычисляется для расширения в центре холста в точку на радиус круга. Направление данного вектора, зависит от значения синуса и косинуса угла. Затем вычисляется двумя точками противоположной градиента: Одна точка вычисляется путем вычитания, вектор из центральной точки, а другие точки получается путем прибавления вектор к центральной точке:
+Вот один из способов, для которого требуется вычислить две точки градиента. `SKPoint` Значение с именем `vector` вычисляется для расширения в центре холста в точку на радиус круга. Направление данного вектора, зависит от значения синуса и косинуса угла. Затем вычисляются две противоположные точки градиента: Одна точка вычисляется вычитанием этого вектора из центральной точки, а другая точка вычисляется путем добавления вектора в центральную точку:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -511,7 +511,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-Немного другой подход требует меньшего объема кода. Этот подход использует [ `SKShader.CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) перегрузки метода преобразования матрицы в качестве последнего аргумента. Этот подход является версией в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) пример:
+Немного другой подход требует меньшего объема кода. Этот подход использует [ `SKShader.CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) перегрузки метода преобразования матрицы в качестве последнего аргумента. Этот подход является версией в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) пример:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -617,13 +617,13 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-Две точки градиента в `CreateLinearGradient` метод основаны на две точки, которые определяют этот путь: Обе точки, близки к верхнего левого угла. Во-первых, на верхней границе холста, а второй — в левой части холста. Ниже приведен результат.
+Две точки градиента в `CreateLinearGradient` методе основаны на двух точках, определяющих этот путь: Обе точки находятся ближе к левому верхнему углу. Во-первых, на верхней границе холста, а второй — в левой части холста. Ниже приведен результат.
 
 [![Градиент радуги неисправного](linear-gradient-images/RainbowGradientFaulty.png "радуги градиента неисправного")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 
 Это интересный образ, но это не совсем цель. Проблема в том, что при создании линейный градиент, строки постоянный цвет перпендикулярная линии градиента. Линии градиента зависит от точки, где рисунке касается верхней и левой границ, и эту строку не перпендикулярной к краям фигуры, которые отображают в нижнем правом углу. Этот подход будет работать только в том случае, если холст были square.
 
-Для создания правильного радуги градиента, должен быть перпендикулярной к краю радуги линии градиента. Это более сложного вычисления. Вектор должен быть определен, параллельное длинной стороны фигуры. Вектор — Повернуть на 90 градусов, так как это перпендикулярной к этой стороне. Он затем удлиняется, чтобы быть ширину рисунка путем умножения `rainbowWidth`. Две точки градиента вычисляются на основе точки на стороне рисунке, и, которые указывают плюс вектора. Ниже приведен код, который отображается в **радуги градиента** странице в [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) пример:
+Для создания правильного радуги градиента, должен быть перпендикулярной к краю радуги линии градиента. Это более сложного вычисления. Вектор должен быть определен, параллельное длинной стороны фигуры. Вектор — Повернуть на 90 градусов, так как это перпендикулярной к этой стороне. Он затем удлиняется, чтобы быть ширину рисунка путем умножения `rainbowWidth`. Две точки градиента вычисляются на основе точки на стороне рисунке, и, которые указывают плюс вектора. Ниже приведен код, который отображается в **радуги градиента** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) пример:
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -917,4 +917,4 @@ textBounds.Offset(xText, yText);
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

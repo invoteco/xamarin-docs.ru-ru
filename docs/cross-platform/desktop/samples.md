@@ -1,49 +1,49 @@
 ---
 ms.assetid: 77F12838-DBB1-48AC-ACF8-B934998B6EC8
-title: Кросс платформенных примерах для настольных систем
-description: Этот документ содержит ссылки на различные примеры приложений, которые были перенесены для запуска в качестве кросс платформенные приложения с помощью Xamarin.
+title: Примеры различных платформ для настольных компьютеров
+description: В этом документе содержатся ссылки на различные примеры приложений, которые были перенесены для запуска в качестве межплатформенных приложений с помощью Xamarin.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 4f77353345c6ed1ce1cde8190a347f3deb1c0348
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7af820e1c73c3b41e58ef8a9ee8ab5ea3a601834
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269953"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647551"
 ---
-# <a name="cross-platform-desktop-samples"></a>Кросс платформенных примерах для настольных систем
+# <a name="cross-platform-desktop-samples"></a>Примеры различных платформ для настольных компьютеров
 
-## <a name="wpf-to-cross-platform-with-xamarinforms"></a>WPF на нескольких платформах с Xamarin.Forms
+## <a name="wpf-to-cross-platform-with-xamarinforms"></a>WPF для кросс-платформенных платформ с помощью Xamarin. Forms
 
-### <a name="expenses-app"></a>Приложение расходы
+### <a name="expenses-app"></a>Приложение по расходам
 
-[WPFToMobile источник на GitHub](https://github.com/nishanil/WPFToMobile)
+[Источник Впфтомобиле на GitHub](https://github.com/nishanil/WPFToMobile)
 
 #### <a name="original-app"></a>Исходное приложение
 
-* WPF И WCF
+* WPF + WCF
 
-#### <a name="cross-platform-apps"></a>Кросс платформенные приложения
+#### <a name="cross-platform-apps"></a>Кросс-платформенные приложения
 
-Используя Xamarin.Forms, исходное приложение смогла перенесена в Azure серверной части, работающей на мобильных устройствах, планшетов и компьютеров:
+С помощью Xamarin. Forms исходное приложение могло перенестися в серверную часть Azure, которая работает на мобильных устройствах, планшетах и настольных системах:
 
 * Android
 * iOS
-* Универсальная платформа Windows 
+* Универсальная платформа Windows
 
 ## <a name="architecture-guidance"></a>Руководство по архитектуре
 
-### <a name="eshop-on-containers-app"></a>eShop (в контейнерах) приложения
+### <a name="eshop-on-containers-app"></a>Приложение Ешоп (в контейнерах)
 
-[eShopOnContainers источник на GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
+[Источник eShopOnContainers на GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
 
-Пример приложения ссылается следующее:
+Пример приложения, на который ссылается следующее:
 
-* [Микрослужбы .NET электронную книгу](https://aka.ms/microservicesebook)
-* [Контейнерные электронная книга жизненный цикл приложения Docker](https://aka.ms/dockerlifecycleebook)
-* [Электронная книга Xamarin.Forms с помощью шаблонов корпоративных приложений](~/xamarin-forms/enterprise-application-patterns/index.md)
+* [Электронная книга по микрослужбам .NET](https://aka.ms/microservicesebook)
+* [Электронная книга жизненного цикла контейнера приложения DOCKER](https://aka.ms/dockerlifecycleebook)
+* [Шаблоны корпоративных приложений с использованием электронной документации по Xamarin. Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
 
 ## <a name="mobile-app-samples"></a>Примеры мобильных приложений
 
-* Другие [образцы Xamarin](https://developer.xamarin.com/samples/)
+* Другие [примеры Xamarin](https://docs.microsoft.com/samples/browse/?products=xamarin)

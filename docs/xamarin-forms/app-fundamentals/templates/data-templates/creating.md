@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: dee45f9788360326ddb393305e9a52627264a671
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 1163f264fc54a461d8d95854524439589cdc81f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926287"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646983"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Создание DataTemplate в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Шаблоны данных могут создаваться как встроенные, в ResourceDictionary, или из пользовательского типа или соответствующего типа ячейки Xamarin.Forms. В этой статье рассматривается каждый из способов._
 
@@ -293,5 +293,5 @@ public class WithDataTemplatePageCS : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Вид ячейки](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Шаблоны данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+- [Шаблоны данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

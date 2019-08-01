@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ae9b5eb5b768b50ddcbc199040074de855f220de
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059422"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649447"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>Добавление распознавателя жестов прокрутки
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_Жест прокрутки происходит, когда палец перемещается по экрану в горизонтальном или вертикальном направлении. Он часто используется для перемещения по содержимому. Примеры кода для этой статьи взяты из примера [жеста прокрутки](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)._
+_Жест прокрутки происходит, когда палец перемещается по экрану в горизонтальном или вертикальном направлении. Он часто используется для перемещения по содержимому. Примеры кода для этой статьи взяты из примера [жеста прокрутки](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)._
 
 Чтобы заставить [`View`](xref:Xamarin.Forms.View) распознавать жест прокрутки, создайте экземпляр [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer), задайте для свойства [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) значение перечисления [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) (`Left`, `Right`, `Up` или `Down`), при необходимости задайте свойство [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), обработайте событие [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) и добавьте новый распознаватель жестов в коллекцию [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) представления. В следующем примере кода показан `SwipeGestureRecognizer`, присоединенный к [`BoxView`](xref:Xamarin.Forms.BoxView):
 
@@ -207,6 +207,6 @@ public class SwipeContainerPageCS : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Жест прокрутки (пример)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+- [Жест прокрутки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

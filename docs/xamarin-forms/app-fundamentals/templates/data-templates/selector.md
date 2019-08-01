@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: bb65f5702579f83f56b30e556859a122d0e7fcbb
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 684820a646527b382b1dbb936b9256fd4457803e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926929"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651899"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Создание DataTemplateSelector в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplateSelector/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
 _С помощью объекта DataTemplateSelector можно выбирать шаблон DataTemplate во время выполнения в соответствии со значением привязанного к данным свойства. Это позволяет применять несколько шаблонов DataTemplate к одному типу объектов, чтобы настроить внешний вид определенных объектов. В этой статье содержатся сведения о создании и использовании объекта DataTemplateSelector._
 
@@ -137,5 +137,5 @@ public class HomePageCS : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Селектор шаблона данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplateSelector/)
+- [Селектор шаблона данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

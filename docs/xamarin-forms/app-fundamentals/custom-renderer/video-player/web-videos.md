@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 784c4d22a112de1adc98d6b7f183f9fa2081a897
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 9beff615c39fc34b5a58a93d309bb20543cad77f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926274"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650414"
 ---
 # <a name="playing-a-web-video"></a>Воспроизведение видео через Интернет
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Класс `VideoPlayer` определяет свойство `Source`, используемое для указания источника видеофайла, а также свойство `AutoPlay`. Свойству `AutoPlay` задано значение по умолчанию `true`. Это значит, что видеовоспроизведение должно начинаться автоматически после установки свойства `Source`.
 
@@ -449,7 +449,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Задание URL-адреса источника
 
-Благодаря реализации этих свойств в трех отрисовщиках, можно воспроизводить видео из URL-адреса источника. Страница **Воспроизведение видео в Интернете** в программе [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) определяется в следующем XAML-файле:
+Благодаря реализации этих свойств в трех отрисовщиках, можно воспроизводить видео из URL-адреса источника. Страница **Воспроизведение видео в Интернете** в программе [**VideoPlayDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) определяется в следующем XAML-файле:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,4 +525,4 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Демоверсии видеопроигрывателя (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

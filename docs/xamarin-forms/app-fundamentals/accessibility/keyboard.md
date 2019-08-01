@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ba29e57008bfea420562d88ab1612c09f4460e85
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830348"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651064"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Специальные возможности клавиатуры в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 Пользователям, которые работают со средствами чтения с экрана или испытывают проблемы с передвижением, может быть трудно работать с приложениями, которые не обеспечивают должный уровень доступа с клавиатуры. В приложениях Xamarin.Forms можно определить ожидаемую последовательность табуляции, чтобы сделать приложение более удобным и доступным. Определение последовательности табуляции для элементов управления позволяет выполнять навигацию с помощью клавиатуры, подготавливает страницы приложений к вводу данных в определенном порядке и разрешает средствам чтения с экрана читать имена фокусируемых элементов для пользователя.
 
@@ -146,4 +146,4 @@ ms.locfileid: "67830348"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Специальные возможности (пример)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [Специальные возможности (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

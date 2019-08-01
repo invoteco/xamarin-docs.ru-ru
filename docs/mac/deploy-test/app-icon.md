@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5245ce6c2c8a2317e18a90514039d36232e933ef
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 25a0a6f5f16b3035307b6b42f1c509401beb3553
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117918"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647128"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Значок приложения для приложений Xamarin.Mac
 
@@ -54,10 +54,10 @@ _В этой статье описано, как создавать изобра
 
 Как и для любого другого ресурса изображения, который разработчик будет использовать в приложении Xamarin.Mac, для значка приложения необходимы версии стандартного разрешения и разрешения Retina. И опять же, как и для любого другого изображения, при именовании файлов значков следует использовать формат `@2x`:
 
-- **Стандартное разрешение**  - _имя_изображения_**.**_расширение_имени_файла_ (например, **icon_512x512.png**).
-- **Высокое разрешение**  - _имя_изображения_**@2x.**_расширение_имени_файла_ (например, **icon_512x512@2x.png**).
+- **Стандартное разрешение**  - _имя_изображения_ **.** _расширение_имени_файла_ (например, **icon_512x512.png**).
+- **Высокое разрешение**  - _имя_изображения_ **@2x.** _расширение_имени_файла_ (например, **icon_512x512@2x.png** ).
 
-Например, чтобы указать версию значка приложения 512 x 512, именем файла будет **icon_512x512.png** и **icon_512x512@2x.png**.
+Например, чтобы указать версию значка приложения 512 x 512, именем файла будет **icon_512x512.png** и **icon_512x512@2x.png** .
 
 Чтобы значок отлично смотрелся во всех местах, где его видят пользователи, необходимо предоставить ресурсы в приведенных ниже размерах:
 
@@ -116,7 +116,7 @@ _В этой статье описано, как создавать изобра
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MacImages (пример)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (пример)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Привет, Mac](~/mac/get-started/hello-mac.md)
 - [Работа с образами](~/mac/app-fundamentals/image.md)
 - [Рекомендации по работе с человеческим интерфейсом iOS. Значки и изображения](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/)

@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 20a6dab34f290c6e5f170d861183dabbfe382970
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977775"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650223"
 ---
 # <a name="xamarinforms-binding-mode"></a>Режим привязки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 В [предыдущей статье](basic-bindings.md), в разделах **Альтернативная привязка кода** и **Альтернативная привязка XAML**, объект `Label` со свойством `Scale` привязывался к свойству `Value` объекта `Slider`. Так как начальное значение `Slider` равно 0, свойство `Scale` объекта `Label` также было равно 0, а не 1, поэтому объект `Label` исчезал.
 
-В примере [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) страница **Обратная привязка** аналогична программам в предыдущей статье, только привязка данных определяется для `Slider`, а не `Label`:
+В примере [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) страница **Обратная привязка** аналогична программам в предыдущей статье, только привязка данных определяется для `Slider`, а не `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -684,5 +684,5 @@ public partial class SampleSettingsPage : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии привязок данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Демоверсии привязок данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Глава, посвященная привязкам данных, из книги Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: e7b8ae57f127b4c9397ab4e5f7e097fa330e827a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 36069bc20a5341b87d55b60f83466e89f263b2ec
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650657"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646118"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Индексирование приложения и создание прямых ссылок
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _Индексирование приложения позволяет приложениям, которые в противном случае забываются после нескольких использований, оставаться релевантными благодаря отображению в результатах поиска. Создание прямых ссылок позволяет приложениям реагировать на результат поиска, который содержит данные приложения, как правило путем перехода на страницу, на которую ссылается прямая ссылка. В этой статье объясняется, как использовать индексирование приложения и создание прямых ссылок, чтобы предоставить доступ к доступному для поиска содержимому приложения Xamarin.Forms на устройствах iOS и Android._
 
@@ -248,7 +248,7 @@ pageLink.KeyValues.Add("companyName", "Xamarin");
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Создание прямых ссылок (пример)](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
+- [Создание прямых ссылок (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [API поиска iOS](~/ios/platform/search/index.md)
 - [Связывание приложений в Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

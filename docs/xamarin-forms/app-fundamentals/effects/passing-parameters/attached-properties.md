@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: fbc5ccda4e798b818b4c21dd459bab6b467cba31
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925436"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645371"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Передача параметров эффекта в качестве присоединенных свойств
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _Присоединенные свойства можно использовать для определения параметров эффекта, реагирующих на изменения свойств времени выполнения. В этой статье описывается использование присоединенных свойств для передачи параметров эффекту и изменение параметра во время выполнения._
 
@@ -318,7 +318,7 @@ namespace EffectsDemo.Droid
     }
 ```
 
-Метод `OnAttached` вызывает методы, которые получают значения присоединенного свойства с помощью методов получения `ShadowEffect`, и вызывает метод, который вызывает метод [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) для создания тени с использованием значений свойств. Ели у элемента управления, к которому присоединен эффект, отсутствуют свойства `Control.Layer`, указанная выше функциональность заключается в блок `try`/`catch`. Поскольку очистка не требуется, метод `OnDetached` не предоставляет реализацию.
+Метод `OnAttached` вызывает методы, которые получают значения присоединенного свойства с помощью методов получения `ShadowEffect`, и вызывает метод, который вызывает метод [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) для создания тени с использованием значений свойств. Ели у элемента управления, к которому присоединен эффект, отсутствуют свойства `Control.Layer`, указанная выше функциональность заключается в блок `try`/`catch`. Поскольку очистка не требуется, метод `OnDetached` не предоставляет реализацию.
 
 #### <a name="responding-to-property-changes"></a>Реагирование на изменения свойств
 
@@ -440,4 +440,4 @@ public class LabelShadowEffect : PlatformEffect
 - [Эффект](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Эффект тени (пример)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
+- [Эффект тени (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

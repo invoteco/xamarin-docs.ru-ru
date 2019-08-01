@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f5a7dd9cca006157589f6fc43b41764129d90c86
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: db666fc6a547e3fa089475ba5912774c1af3be0d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926648"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650750"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Выделение круговой области на карте
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Circle/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-circle)
 
 _В этой статье содержатся сведения о добавлении кругового наложения на карту для выделения на ней круговой области._
 
@@ -335,6 +335,6 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Круговое наложение на карте (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Circle/)
+- [Круговое наложение на карте (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-circle)
 - [Настройка закрепления карты](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

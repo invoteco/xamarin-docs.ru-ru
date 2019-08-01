@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: d09188373d11b33f3b3d78b92faa46bf754797f6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cd4bb8cae59e5d9cdcc36a58fb37e71e56d580b3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268985"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650868"
 ---
 # <a name="implementing-a-hybridwebview"></a>Реализация HybridWebView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 _Настраиваемые элементы управления пользовательского интерфейса Xamarin.Forms должны быть производными от класса View, который используется для размещения макетов и элементов управления на экране. В этой статье показано, как создать настраиваемый отрисовщик для пользовательского элемента управления HybridWebView, который показывает, как улучшить зависящие от платформы веб-элементы управления, чтобы разрешить вызов кода C# из JavaScript._
 
@@ -377,7 +377,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Класс `HybridWebViewRenderer` загружает веб-страницу, указанную в свойстве `HybridWebView.Uri`, в собственный элемент управления [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/), а функция JavaScript `invokeCSharpAction` внедряется в веб-страницы после окончания загрузки веб-страницы с переопределением `OnPageFinished` в классе `JavascriptWebViewClient`:
+Класс `HybridWebViewRenderer` загружает веб-страницу, указанную в свойстве `HybridWebView.Uri`, в собственный элемент управления [`WebView`](xref:Android.Webkit.WebView), а функция JavaScript `invokeCSharpAction` внедряется в веб-страницы после окончания загрузки веб-страницы с переопределением `OnPageFinished` в классе `JavascriptWebViewClient`:
 
 ```csharp
 public class JavascriptWebViewClient : WebViewClient
@@ -401,10 +401,10 @@ public class JavascriptWebViewClient : WebViewClient
 
 - Если настраваемый отрисовщик подключен к новому элементу Xamarin.Forms:
   - При условии, что свойство `Control` является `null`, выполняются следующие операции:
-    - Создается собственный экземпляр [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/), JavaScript включается в элементе управления, а экземпляр `JavascriptWebViewClient` задается как реализация `WebViewClient`.
-    - Вызывается метод `SetNativeControl`, чтобы назначить ссылку на элемент управления [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) свойству `Control`.
-  - Метод [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) вставляет новый экземпляр `JSBridge` в главный фрейм контекста JavaScript веб-преставления, называя его `jsBridge`. Это открывает доступ к методам в классе `JSBridge` из JavaScript.
-  - Метод [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) загружает HTML-файл, указанный свойством `HybridWebView.Uri`. Код указывает, что файл сохранен в папке `Content` проекта.
+    - Создается собственный экземпляр [`WebView`](xref:Android.Webkit.WebView), JavaScript включается в элементе управления, а экземпляр `JavascriptWebViewClient` задается как реализация `WebViewClient`.
+    - Вызывается метод `SetNativeControl`, чтобы назначить ссылку на элемент управления [`WebView`](xref:Android.Webkit.WebView) свойству `Control`.
+  - Метод [`WebView.AddJavascriptInterface`](xref:Android.Webkit.WebView.AddJavascriptInterface*) вставляет новый экземпляр `JSBridge` в главный фрейм контекста JavaScript веб-преставления, называя его `jsBridge`. Это открывает доступ к методам в классе `JSBridge` из JavaScript.
+  - Метод [`WebView.LoadUrl`](xref:Android.Webkit.WebView.LoadUrl*) загружает HTML-файл, указанный свойством `HybridWebView.Uri`. Код указывает, что файл сохранен в папке `Content` проекта.
   - В классе `JavascriptWebViewClient` функция JavaScript `invokeCSharpAction` внедряется в веб-страницу после завершения загрузки страницы.
 - Когда элемент, к которому присоединен отрисовщик, меняется:
   - Ресурсы освобождаются.
@@ -511,5 +511,5 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CustomRendererHybridWebView (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
+- [CustomRendererHybridWebView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 - [Вызов C# из JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)

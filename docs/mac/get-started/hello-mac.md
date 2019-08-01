@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 8f5be75c750a6ee7efc52300382ca2241b87ecd3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855319"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656927"
 ---
 # <a name="hello-mac-walkthrough"></a>Знакомство с Mac. Пошаговое руководство
 
@@ -314,7 +314,7 @@ namespace Hello_Mac
 
 Для работы с Interface Builder сделайте следующее:
 
-1. В Xcode перетащите **нажимную кнопку**  из **раздела "Библиотека"**:
+1. В Xcode перетащите **нажимную кнопку**  из **раздела "Библиотека"** :
 
     [![](hello-mac-images/xcode07.png "Выбор NSButton в инспекторе библиотеки")](hello-mac-images/xcode07.png#lightbox)
 
@@ -326,7 +326,7 @@ namespace Hello_Mac
 
     [![](hello-mac-images/xcode09.png "Задание свойств кнопки")](hello-mac-images/xcode09.png#lightbox)
 
-4. Перетащите **метку** из **раздела "Библиотека"**:
+4. Перетащите **метку** из **раздела "Библиотека"** :
 
     [![](hello-mac-images/xcode10.png "Выбор метки в инспекторе библиотеки")](hello-mac-images/xcode10.png#lightbox)
 
@@ -579,9 +579,9 @@ partial void ClickedButton (Foundation.NSObject sender) {
 - [Представления коллекций](~/mac/user-interface/collection-view.md). В этой статье рассматривается работа с представлениями коллекций в приложении Xamarin.Mac. В ней содержатся сведения о создании и обслуживании представлений коллекций в Xcode и конструкторе Interface Builder, предоставлении элементов представлений коллекций в код с помощью переменных экземпляров и действий, заполнении представлений коллекций и реагировании на представления коллекций в коде C#.
 - [Работа с изображениями](~/mac/app-fundamentals/image.md). В этой статье рассматривается работа с изображениями и значками в приложении Xamarin.Mac. Здесь рассматривается создание и обслуживание изображений, необходимых для создания значка приложения, и использование изображений в коде C# и конструкторе Interface Builder для Xcode.
 
-[Коллекция примеров Mac](https://developer.xamarin.com/samples/mac/all/) содержит готовые к использованию примеры кода, которые помогут освоить Xamarin.Mac.
+[Коллекция примеров Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac) содержит готовые к использованию примеры кода, которые помогут освоить Xamarin.Mac.
 
-В качестве примера полностью готового приложения Xamarin.Mac, содержащего многие из тех функций, которые пользователь ожидает увидеть в типичном приложении для Mac, можно привести [SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter — это простой редактор исходного кода, который предоставляет поддержку для автозавершения и выделения простого синтаксиса.
+В качестве примера полностью готового приложения Xamarin.Mac, содержащего многие из тех функций, которые пользователь ожидает увидеть в типичном приложении для Mac, можно привести [SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter — это простой редактор исходного кода, который предоставляет поддержку для автозавершения и выделения простого синтаксиса.
 
 Весь код SourceWriter содержит комментарии. Где необходимо, добавлены ссылки на описания технологий и методов или на соответствующую документацию по Xamarin.Mac.
 
@@ -591,5 +591,5 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- ["Привет, Mac" (пример)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- ["Привет, Mac" (пример)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Рекомендации по созданию пользовательских интерфейсов в macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

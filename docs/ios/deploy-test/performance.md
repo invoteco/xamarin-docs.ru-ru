@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 4954b83b75618128f32b0e5fceed2f04df183433
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870395"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511470"
 ---
 # <a name="xamarinios-performance"></a>Производительность Xamarin.iOS
 
@@ -109,7 +109,7 @@ container.AddSubview (new MyView (container));
 
 #### <a name="weak-attribute"></a>Слабый атрибут
 
-В [Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute) появился атрибут `[Weak]`. Как и `WeakReference <T>`, `[Weak]` можно использовать для разрушения [строгих циклических ссылок](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references), но при этом код будет еще короче.
+В [Xamarin.iOS 11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute) появился атрибут `[Weak]`. Как и `WeakReference <T>`, `[Weak]` можно использовать для разрушения [строгих циклических ссылок](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references), но при этом код будет еще короче.
 
 Рассмотрим приведенный ниже код, где используется `WeakReference <T>`:
 
@@ -211,7 +211,7 @@ class MyChild : UIView
 ```
 
 Дополнительные сведения об освобождении строгих ссылок см. в разделе [Освобождение ресурсов IDisposable](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
-Полезную информацию можно также найти в следующей записи блога: [Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/) (Xamarin.iOS, сборщик мусора и мои наблюдения).
+Полезную информацию можно также найти в следующей записи блога: [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, сборщик мусора и мои наблюдения).
 
 ### <a name="more-information"></a>Дополнительные сведения
 

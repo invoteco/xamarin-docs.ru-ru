@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 90215be6356722729b441513bf749150c77755ca
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: aa1093336a79689380e920783dd772c5e68c76b9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924648"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650445"
 ---
 # <a name="customizing-a-viewcell"></a>Настройка ViewCell
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _ViewCell в Xamarin.Forms — это ячейка, которую можно добавить в представление ListView или TableView и которая содержит представления, определяемые разработчиком. В этой статье показано, как создать пользовательский отрисовщик для ячейки ViewCell, размещенной в элементе управления ListView Xamarin.Forms. Это предотвратит постоянные вызовы вычисления макета Xamarin.Forms во время прокрутки ListView._
 
@@ -577,4 +577,4 @@ namespace CustomRenderer.UWP
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Производительность элемента управления ListView](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+- [CustomRendererViewCell (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

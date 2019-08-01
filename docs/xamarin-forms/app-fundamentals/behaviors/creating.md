@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 650c341ab4b599a4eaf0cab81ba6f9129699e15d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: addb367d8e730919b621b5858f458444ace62024
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926024"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651001"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Создание реакций на события Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 _Режимы Xamarin.Forms являются производными от класса Behavior или Behavior&lt;T&gt;. В этой статье содержатся сведения о создании и использовании реакций на события Xamarin.Forms._
 
@@ -211,7 +211,7 @@ entry.Behaviors.Clear();
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Реакция на событие Xamarin.Forms (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
-- [Применение реакции на событие Xamarin.Forms с помощью стиля (пример)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehaviorStyle/)
+- [Реакция на событие Xamarin.Forms (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
+- [Применение реакции на событие Xamarin.Forms с помощью стиля (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehaviorstyle)
 - [Реакция на событие](xref:Xamarin.Forms.Behavior)
 - [Реакция на событие<T>](xref:Xamarin.Forms.Behavior`1)

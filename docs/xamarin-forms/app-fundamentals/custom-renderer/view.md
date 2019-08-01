@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 8f5c440784205fa0e7e2001c981e37eab8646f24
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: e8070894bab89ab2e38772518c94482409e4d17f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268928"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650422"
 ---
 # <a name="implementing-a-view"></a>Реализация представления
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
 _Настраиваемые элементы управления пользовательского интерфейса Xamarin.Forms должны быть производными от класса View, который используется для размещения макетов и элементов управления на экране. Эта статья описывает, как создать настраиваемый отрисовщик для пользовательского элемента управления Xamarin.Forms, который используется для отображения видеопотока для предварительного просмотра с камеры устройства._
 
@@ -335,4 +335,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CustomRendererView (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
+- [CustomRendererView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3e5db00a73047aaadb1162fa1cc8a21f6e77b3a0
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926191"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650637"
 ---
 # <a name="custom-video-transport-controls"></a>Пользовательские элементы управления транспортировкой видео
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 К элементам управления транспортировкой в видеопроигрывателе относятся кнопки, которые выполняют функции **воспроизведения**, **паузы** и **остановки**. Эти кнопки обычно определяются по знакомым значкам, а не тексту. Как правило, функции **Воспроизведение** и **Пауза** объединены в одну кнопку.
 
@@ -364,7 +364,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-status-setting"></a>Параметр состояния на платформе Android
 
-Свойство [`IsPlaying`](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) класса Android `VideoView` является логическим, которое указывает только состояние видео — воспроизведение или приостановка. Чтобы определить, что `VideoView` пока не может ни воспроизводить, ни приостанавливать видео, необходимо обработать событие `Prepared` класса `VideoView`. Эти два обработчика задаются в методе `OnElementChanged` и отсоединяются во время переопределения метода `Dispose`.
+Свойство [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) класса Android `VideoView` является логическим, которое указывает только состояние видео — воспроизведение или приостановка. Чтобы определить, что `VideoView` пока не может ни воспроизводить, ни приостанавливать видео, необходимо обработать событие `Prepared` класса `VideoView`. Эти два обработчика задаются в методе `OnElementChanged` и отсоединяются во время переопределения метода `Dispose`.
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -660,4 +660,4 @@ namespace VideoPlayerDemos
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Демоверсии видеопроигрывателя (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 43f8b1185900ff20f8e4c53680c1adf62ac8316a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829698"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509075"
 ---
 # <a name="build-process"></a>Процесс сборки
 
@@ -127,7 +127,7 @@ ms.locfileid: "67829698"
 
     Только один проект со значением `<AndroidApplication>True</AndroidApplication>` может присутствовать в пакете Android. (К сожалению, это еще не проверено и может привести к различным ошибкам по отношению к ресурсам Android.)
 
--   **AndroidApplicationJavaClass** — полное имя класса Java для использования вместо `android.app.Application`, когда класс наследуется от [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
+-   **AndroidApplicationJavaClass** — полное имя класса Java для использования вместо `android.app.Application`, когда класс наследуется от [Android.App.Application](xref:Android.App.Application).
 
     Это свойство обычно задается *другими* свойствами, например MSBuild `$(AndroidEnableMultiDex)`.
 

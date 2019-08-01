@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: a962c61027fa6f9f05c59272c900a3ca32e1b01f
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926129"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650647"
 ---
 # <a name="custom-video-positioning"></a>Настраиваемая строка позиционирования видео
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 На каждой платформе реализуются элементы управления транспортировкой, в том числе строка позиционирования. Эта строка похожа на ползунок или полосу прокрутки и отображает общую продолжительность видео, а также текущую позицию его воспроизведения. Кроме того, с помощью строки позиционирования пользователь может перемещаться вперед или назад в другую позицию воспроизведения.
 
@@ -481,4 +481,4 @@ if (newPosition.Seconds != Position.Seconds)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Демоверсии видеопроигрывателя (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

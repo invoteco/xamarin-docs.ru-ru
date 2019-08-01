@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: ab48d6d3a463a287af8de7d3926287b799ae43a6
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6cb828f59505159c972d40905f22995055f207df
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926266"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646847"
 ---
 # <a name="xamarinforms-data-templates"></a>Шаблоны данных Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Шаблон данных используется для определения внешнего вида данных в поддерживаемых элементах управления и обычно привязывается к данным для отображения._
 
@@ -35,4 +35,4 @@ _Шаблон данных используется для определени�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Шаблоны данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+- [Шаблоны данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

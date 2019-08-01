@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 505b2ab60a4fc828790aa2b351460de8980c6b9d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 269d9d1ff658217a49ff56057c01c011f920b5df
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926790"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650518"
 ---
 # <a name="loading-application-resource-videos"></a>Загрузка видеоресурсов приложения
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Пользовательские отрисовщики для представления `VideoPlayer` могут воспроизводить видеофайлы, внедренные в проекты для отдельных платформ в виде ресурсов приложения. Однако текущая версия `VideoPlayer` не может обращаться к ресурсам, внедренным в библиотеку .NET Standard.
 
@@ -184,4 +184,4 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Демоверсии видеопроигрывателя (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

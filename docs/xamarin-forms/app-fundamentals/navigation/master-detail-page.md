@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: c60eecd5ebd0f518514cd77d8dd963568d1a1d43
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 702ec35bca051f7255c5c9d67d2dc68d4f89ca52
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970915"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645956"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Страница "Основной вид и подробности" Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
 _Xamarin.Forms MasterDetailPage представляет собой страницу, управляющую двумя страницами связанных данных — главной страницей, которая представляет элементы, и страницей сведений, которая представляет сведения об элементах на главной странице. В этой статье описываются принципы работы со страницей MasterDetailPage и перехода между управляемыми страницами данных._
 
@@ -295,5 +295,5 @@ public class MainPageCS : MasterDetailPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Виды страниц](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [MasterDetailPage (пример)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/)
+- [MasterDetailPage (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 - [MasterDetailPage](xref:Xamarin.Forms.MasterDetailPage)

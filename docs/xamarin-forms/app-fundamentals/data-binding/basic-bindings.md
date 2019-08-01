@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d1759701708c337a804471167223ef68cc3f2910
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 8cec67ec582edad506aecb0945257b9baae3da90
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479749"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650350"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Базовые привязки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Привязка данных Xamarin.Forms связывает пару свойств между двумя объектами, по крайней мере один из которых обычно является объектом пользовательского интерфейса. Эти два объекта называются *целевым объектом* и *источником*:
 
@@ -332,7 +332,7 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии привязок данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Демоверсии привязок данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Глава, посвященная привязкам данных, из книги Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Связанные видео

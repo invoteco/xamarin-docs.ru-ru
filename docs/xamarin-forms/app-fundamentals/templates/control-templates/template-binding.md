@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: e4e67ba63d2040bff264498bc9c00124dfd22164
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 41e5bbc42ccde5cdd5223a7d2cb0a77da66e10c1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926336"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647008"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Привязка на основе ControlTemplate в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleThemeWithTemplateBinding/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebinding)
 
 _Привязки шаблонов позволяют элементам управления в шаблоне элемента управления выполнять привязку данных к общим свойствам, предоставляя возможность легко изменять значения свойств в элементах управления в шаблоне элемента управления. В этой статье содержатся сведения об использовании привязок шаблонов для выполнения привязки данных на основе шаблона элемента управления._
 
@@ -181,8 +181,8 @@ public class HomePageCS : ContentPage
 
 - [Основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 - [От привязки данных до MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
-- [Простая тема с привязкой к шаблону (пример)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleThemeWithTemplateBinding/)
-- [Простая тема с привязкой к шаблону и ViewModel (пример)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
+- [Простая тема с привязкой к шаблону (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebinding)
+- [Простая тема с привязкой к шаблону и ViewModel (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebindingandviewmodel)
 - [TemplateBinding](xref:Xamarin.Forms.TemplateBinding)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentView](xref:Xamarin.Forms.ContentView)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 290cd36f36d86d161b7fc124f8961888ade41955
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925948"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650919"
 ---
 # <a name="customizing-a-contentpage"></a>Настройка ContentPage
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _ContentPage — это визуальный элемент, который отображает одно представление и занимает большую часть экрана. В этой статье показано, как создать пользовательский отрисовщик для страницы ContentPage, чтобы переопределять собственный способ отрисовки по умолчанию с помощью настройки в зависимости от платформы._
 
@@ -199,7 +199,7 @@ namespace CustomRenderer.Droid
 
 В результате вызова метода `OnElementChanged` базового класса создается элемент управления `ViewGroup` Android, который является группой представлений. Отрисовка трансляции видеопотока происходит только при условии, что отрисовщик еще не присоединен к существующему элементу Xamarin.Forms и существует экземпляр страницы, который отрисовывается пользовательским отрисовщиком.
 
-Затем страница настраивается путем вызова ряда методов, использующих API `Camera` для предоставления возможностей трансляции видеопотока и фотографирования. После этого вызывается метод `AddView` для добавления пользовательского интерфейса трансляции видеопотока в элемент управления `ViewGroup`. Обратите внимание, что для выполнения операций по измерению и действий с макетом на платформе Android также требуется переопределить метод `OnLayout`. Дополнительные сведения см. на странице с [примером отрисовщика ContentPage](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/).
+Затем страница настраивается путем вызова ряда методов, использующих API `Camera` для предоставления возможностей трансляции видеопотока и фотографирования. После этого вызывается метод `AddView` для добавления пользовательского интерфейса трансляции видеопотока в элемент управления `ViewGroup`. Обратите внимание, что для выполнения операций по измерению и действий с макетом на платформе Android также требуется переопределить метод `OnLayout`. Дополнительные сведения см. на странице с [примером отрисовщика ContentPage](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Создание отрисовщика страницы на платформе UWP
 
@@ -257,4 +257,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CustomRendererContentPage (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+- [CustomRendererContentPage (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

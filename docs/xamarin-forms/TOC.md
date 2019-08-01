@@ -35,7 +35,8 @@
 ### [XAML Standard (предварительная версия)](xaml/standard/index.md)
 #### [Элементы управления](xaml/standard/controls.md)
 ### [Загрузка XAML во время выполнения](xaml/runtime-load.md)
-## [Принципы работы приложения](app-fundamentals/index.md)
+## Принципы работы приложения
+### [Обзор](app-fundamentals/index.yml)
 ### [Специальные возможности](app-fundamentals/accessibility/index.md)
 #### [Свойства автоматизации](app-fundamentals/accessibility/automation-properties.md)
 #### [Специальные возможности клавиатуры](app-fundamentals/accessibility/keyboard.md)

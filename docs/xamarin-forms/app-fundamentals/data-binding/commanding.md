@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9c6edddd70fa7a74a72857a94dbed613b5b0d66d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053468"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657154"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Командный интерфейс Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 В архитектуре "модель — представление — модель представления" (MVVM) привязки данных определяются между свойствами в модели представления, которое обычно является классом, производным от `INotifyPropertyChanged`, и свойствами в представлении, которое обычно является файлом XAML. Иногда приложение имеет потребности, которые не удовлетворяются этими привязками свойств, и требует, чтобы пользователь запускал команды, влияющие на элементы модели представления. Эти команды обычно обозначаются путем нажатия кнопки или касания пальцем и традиционно обрабатываются в файле с выделенным кодом в обработчике для события `Clicked` объекта `Button` или события `Tapped` объекта `TapGestureRecognizer`.
 
@@ -86,7 +86,7 @@ public ICommand MyCommand { private set; get; }
 
 ## <a name="basic-commanding"></a>Базовые команды
 
-Страница **Запись пользователя** в программе [**Демоверсии привязок данных**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) показывает несколько простых команд, реализованных в модели представления.
+Страница **Запись пользователя** в программе [**Демоверсии привязок данных**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) показывает несколько простых команд, реализованных в модели представления.
 
 `PersonViewModel` определяет три свойства с именами `Name`, `Age` и `Skills`, которые определяют пользователя. Этот класс *не* содержит свойств `ICommand`:
 
@@ -693,7 +693,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Асинхронные команды для меню навигации
 
-Команды удобны для реализации меню навигации, как, например, в самой программе [**Демоверсии привязок данных**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/). Вот часть **MainPage.xaml**:
+Команды удобны для реализации меню навигации, как, например, в самой программе [**Демоверсии привязок данных**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos). Вот часть **MainPage.xaml**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -767,5 +767,5 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии привязок данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Демоверсии привязок данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Глава, посвященная привязкам данных, из книги Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: bf2ba7d0cfe5b5b35eda423654e929e53fff451c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 959b2091e88adde5bb3f64c2cdb5d5b0748aa0be
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926663"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650817"
 ---
 # <a name="customizing-a-listview"></a>Настройка ListView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ListView/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
 
 _Xamarin.Forms ListView — это представление, в котором коллекция данных отображается в виде вертикального списка. В этой статье показано, как создать пользовательское средство отрисовки, содержащее зависящий от платформы список элементов управления и собственные макеты ячеек, предоставляя больше контроля над производительностью списка собственных элементов управления._
 
@@ -567,4 +567,4 @@ protected override void OnElementPropertyChanged(object sender, System.Component
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CustomRendererListView (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ListView/)
+- [CustomRendererListView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)

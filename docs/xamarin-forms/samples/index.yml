@@ -5,7 +5,7 @@ metadata:
   description: Примеры приложений Xamarin.Forms и образцы кода помогут вам начать работу с платформой Xamarin.Forms и понять ее концепции.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 07/30/2019
   ms.topic: sample
 abstract:
   description: Примеры приложений Xamarin.Forms и образцы кода помогут вам начать работу с платформой Xamarin.Forms и понять ее концепции.
@@ -20,41 +20,41 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             html: В этом примере представлен список приложений списка задач. Их данные сохраняются в локальной базе данных SQLite.
             image:
               src: images/todo.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             title: Список задач
-          - href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/bugsweeper/'
             html: 'Это знакомая всем игра с некоторыми изменениями. Десять ошибок, скрытые в сетке плиток (9 x 9). Чтобы выиграть, необходимо найти и пометить все ошибки.'
             image:
               src: images/bugsweeper.png
-              href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/bugsweeper/'
             title: BugSweeper
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/'
             html: Калькулятор RPN (обратная польская нотация) позволяет вводить числа и выполнять операции без использования клавиши скобок или знака равенства.
             image:
               src: images/rpncalc.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/'
             title: Калькулятор RPN
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/'
             html: 'Программа имитирует циклический диск, чтобы вы могли рисовать касанием пальца. Программа SpinPaint реагирует на касание, рисуя линию, но она также дублирует эту линию в трех зеркальных отображениях в других трех квадрантах диска.'
             image:
               src: images/spinpaint.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/'
             title: SpinPaint
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/'
             html: XAML (расширяемый язык разметки для приложений) позволяет разработчикам определить пользовательские интерфейсы приложений Xamarin.Forms с помощью разметки вместо кода.
             image:
               src: images/xaml.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/'
             title: Образцы XAML
-          - href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/'
             html: XAML (расширяемый язык разметки для приложений) позволяет разработчикам определить пользовательские интерфейсы приложений Xamarin.Forms с помощью разметки вместо кода.
             image:
               src: images/xuzzle.png
-              href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/'
+              href: 'https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/'
             title: Xuzzle
           - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms'
             html: Полный набор примеров приложений Xamarin.Forms и образцов кода.

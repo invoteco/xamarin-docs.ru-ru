@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: cc7bdcfff3916f7d7ae04e4ef63cb02f17315c2a
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 2deee2bd7fa07f562bee02409d1a7a19cdac0be9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926707"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650851"
 ---
 # <a name="customizing-an-entry"></a>Настройка элемента управления Entry
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Entry/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _Элемент управления Xamarin.Forms Entry позволяет редактировать одну строку текста. В этой статье показано, как создать пользовательский отрисовщик для элемента управления Entry, чтобы переопределить собственный способ отрисовки по умолчанию с помощью настройки для конкретной платформы._
 
@@ -216,4 +216,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [CustomRendererEntry (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Entry/)
+- [CustomRendererEntry (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

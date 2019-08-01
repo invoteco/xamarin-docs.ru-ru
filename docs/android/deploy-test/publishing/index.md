@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 4b50d230be642466de68c54957a3fe9a79c1093b
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ebf29e99e1145c23bf476cb80e068e79f72816f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670963"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643904"
 ---
 # <a name="publishing-an-application"></a>Публикация приложения
 
@@ -55,7 +55,7 @@ Google Play является, пожалуй, самым всеобъемлющ�
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [HelloWorldPublishing (пример)](https://developer.xamarin.com/samples/monodroid/HelloWorldPublishing/)
+- [HelloWorldPublishing (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing)
 - [Процесс сборки](~/android/deploy-test/building-apps/build-process.md)
 - [Компоновка](~/android/deploy-test/linker.md)
 - [Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: 87542bbd158b8c8ab0f48bb57fa0d19ce8f374c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411769"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651677"
 ---
 # <a name="invoking-events-from-effects"></a>Вызов событий из эффекта
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _Эффект может определять вызов события, сигнализирующего об изменениях в базовом собственном представлении. В этой статье описываются реализация низкоуровневого отслеживания мультисенсорного ввода, а также создание событий, сигнализирующих о прикосновениях._
 
@@ -52,7 +52,7 @@ API `Pointer` на универсальной платформе Windows обе�
 
 ## <a name="the-touch-tracking-effect-api"></a>API эффекта отслеживания сенсорного ввода
 
-В примере, [**демонстрирующем эффект отслеживания сенсорного ввода**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/), содержится класс (и перечисление) для реализации низкоуровневого отслеживания сенсорного ввода. Эти типы принадлежат пространству имен `TouchTracking` и начинаются со слова `Touch`. Проект библиотеки .NET Standard **TouchTrackingEffectDemos** включает перечисление `TouchActionType` для типа событий прикосновения:
+В примере, [**демонстрирующем эффект отслеживания сенсорного ввода**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/), содержится класс (и перечисление) для реализации низкоуровневого отслеживания сенсорного ввода. Эти типы принадлежат пространству имен `TouchTracking` и начинаются со слова `Touch`. Проект библиотеки .NET Standard **TouchTrackingEffectDemos** включает перечисление `TouchActionType` для типа событий прикосновения:
 
 ```csharp
 public enum TouchActionType
@@ -359,7 +359,7 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 ## <a name="putting-the-touch-effect-to-work"></a>Применение эффекта сенсорного ввода на практике
 
-Программа [**TouchTrackingEffectDemos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) содержит пять страниц, на которых можно протестировать применение эффекта отслеживания сенсорного ввода при выполнении стандартных задач.
+Программа [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) содержит пять страниц, на которых можно протестировать применение эффекта отслеживания сенсорного ввода при выполнении стандартных задач.
 
 На странице **перетаскивания элементов BoxView** вы можете добавить элементы `BoxView` в объект `AbsoluteLayout` и затем перетаскивать их по экрану. В [файле XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) создаются экземпляры двух представлений `Button` для добавления элементов `BoxView` в объект `AbsoluteLayout` и очистки объекта `AbsoluteLayout`.
 
@@ -809,4 +809,4 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 - [Отслеживание мультисенсорного ввода в iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Отслеживание мультисенсорного ввода в Android](~/android/app-fundamentals/touch/touch-tracking.md)
-- [Эффект отслеживания сенсорного ввода (пример)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+- [Эффект отслеживания сенсорного ввода (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

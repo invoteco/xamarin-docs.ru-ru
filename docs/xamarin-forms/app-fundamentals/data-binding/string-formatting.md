@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 87972df2b15a5bc1f6323a6953f809379cae4a50
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056127"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644528"
 ---
 # <a name="xamarinforms-string-formatting"></a>Форматирование строк Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Иногда привязки данных удобно использовать для отображения строкового представления объекта или значения. Например, может потребоваться использовать `Label` для отображения текущего значения `Slider`. В этой привязке данных `Slider` является источником, а целевым объектом является свойство `Text` объекта `Label`.
 
@@ -187,5 +187,5 @@ ms.locfileid: "53056127"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии привязок данных (пример)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Демоверсии привязок данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Глава, посвященная привязкам данных, из книги Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

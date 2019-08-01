@@ -6,16 +6,16 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
-ms.openlocfilehash: bc88a5eb977ea49b761df22407329dfaf20fa122
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
+ms.openlocfilehash: 1318d8e1563239d5215d8cfc03c971be8b2cff35
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477580"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647642"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Подключение к локальным веб-службам из iOS Simulator и Android Emulator
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Многие мобильные приложения используют веб-службы. На этапе разработки веб-службу обычно развертывают локально и подключаются к ней из мобильного приложения, выполняемого в iOS Simulator или Android Emulator. Это избавляет от необходимости развертывать веб-службу в размещенной конечной точке и позволяет упростить процесс отладки, так как и мобильное приложение, и веб-служба выполняются локально.
 
@@ -121,7 +121,7 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [TodoREST (пример)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [TodoREST (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Включение локального HTTPS](/aspnet/core/getting-started#enable-local-https)
 - [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md) (Селектор реализации HttpClient и SSL/TLS для iOS и macOS)
 - [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md) (Селектор реализации HttpClient и SSL/TLS для Android)

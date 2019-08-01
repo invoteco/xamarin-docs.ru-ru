@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6845a08a531305468b861a3205e978b379f242bf
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 219f6498dc1349d32c8f0b247a187df75f2a523a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926153"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650702"
 ---
 # <a name="accessing-the-devices-video-library"></a>Доступ к видеотеке устройства
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Большинство современных мобильных устройств и настольных компьютеров позволяют записывать видео с помощью камеры. Создаваемые пользователем видеоролики сохраняются в виде файлов на устройстве. Эти файлы можно извлечь из библиотеки изображений и воспроизвести с помощью класса `VideoPlayer`, как и любые другие видеоролики.
 
@@ -188,7 +188,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-Дополнением к объекту `MainActivity` является только код в решении [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/), где требуется изменить обычный код приложения для поддержки классов `FormsVideoLibrary`.
+Дополнением к объекту `MainActivity` является только код в решении [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos), где требуется изменить обычный код приложения для поддержки классов `FormsVideoLibrary`.
 
 ### <a name="the-uwp-video-picker"></a>Средство выбора видео на платформе UWP
 
@@ -229,7 +229,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="invoking-the-dependency-service"></a>Вызов службы зависимостей
 
-На странице **Play Library Video** (Воспроизведение видео из библиотеки) программы [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) показано, как использовать службу зависимостей средства выбора видео. Файл XAML содержит экземпляр `VideoPlayer` и `Button` с меткой **Show Video Library** (Показать видеотеку):
+На странице **Play Library Video** (Воспроизведение видео из библиотеки) программы [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) показано, как использовать службу зависимостей средства выбора видео. Файл XAML содержит экземпляр `VideoPlayer` и `Button` с меткой **Show Video Library** (Показать видеотеку):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -390,5 +390,5 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Демоверсии видеопроигрывателя (пример)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Демоверсии видеопроигрывателя (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 - [Выбор фотографии в библиотеке рисунков](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

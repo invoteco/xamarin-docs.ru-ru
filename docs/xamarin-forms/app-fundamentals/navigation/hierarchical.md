@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 01bb3d19b5e79a6ce9942447b5ddd4afb04574cc
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b1f2dbe87fed951223e731912b696c649d0b6edb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978602"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647194"
 ---
 # <a name="hierarchical-navigation"></a>Иерархическая навигация
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _Класс NavigationPage обеспечивает иерархическую навигацию, при которой пользователь может переходить по страницам вперед и назад по своему желанию. Этот класс реализует навигацию на основе стека объектов Page по методу ЛИФО (последним поступил — первым обслужен). В этой статье показано, как использовать класс NavigationPage для навигации в стеке страниц._
 
@@ -310,7 +310,7 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 Любое представление Xamarin.Forms [`View`](xref:Xamarin.Forms.View) может отображаться на панели навигации [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Для этого нужно установить присоединенное свойство [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) в `View`. Это присоединенное свойство может быть задано для любого объекта [`Page`](xref:Xamarin.Forms.Page), и, когда `Page` помещается в `NavigationPage`, `NavigationPage` будет учитывать значение этого свойства.
 
-В следующем примере, взятом из [примера представления заголовка](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/), показано, как задать присоединенное свойство [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) в XAML.
+В следующем примере, взятом из [примера представления заголовка](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview), показано, как задать присоединенное свойство [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) в XAML.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -362,9 +362,9 @@ public class TitleViewPage : ContentPage
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Переход по страницам](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Иерархическое (пример)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
-- [PassingData (пример)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
-- [LoginFlow (пример)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
-- [TitleView (пример)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
+- [Иерархическое (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+- [PassingData (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [LoginFlow (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
+- [TitleView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
 - [Видеоролик о создании страницы для входа в Xamarin.Forms](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

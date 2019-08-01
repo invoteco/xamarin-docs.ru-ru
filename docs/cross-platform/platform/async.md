@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4ade8fbb3ac596ef2da5d76b4efa751661cd8611
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646254"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680940"
 ---
 # <a name="async-support-overview"></a>Обзор поддержки асинхронного выполнения
 
@@ -89,7 +89,7 @@ C#для 5 компонентов требуется моно 3,0, включе�
 
 ## <a name="example"></a>Пример
 
-Скачайте [пример решения Xamarin](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (для iOS и Android), чтобы просмотреть рабочий пример `async` и `await` в мобильных приложениях. Пример кода более подробно рассматривается в этом разделе.
+Скачайте [пример решения Xamarin](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (для iOS и Android), чтобы просмотреть рабочий пример `async` и `await` в мобильных приложениях. Пример кода более подробно рассматривается в этом разделе.
 
 ### <a name="writing-an-async-method"></a>Написание асинхронного метода
 
@@ -196,7 +196,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Асинкаваит (пример)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [Асинкаваит (пример)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [Обратные вызовы в качестве оператора Go в поколениях](https://tirania.org/blog/archive/2013/Aug-15.html)
 - [Данные (iOS) (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
 - [HttpClient (iOS) (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 3be63eb8909f129f046b2959ec7963e493674914
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b3a6dfb11b49f9ab3b09cf09594eb374f63fe304
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644225"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680226"
 ---
 # <a name="default-resources"></a>Ресурсы по умолчанию
 
@@ -38,7 +38,7 @@ ms.locfileid: "68644225"
  
 -  **Макет** &ndash; XML-файлы, описывающие макет пользовательского интерфейса, например действие или строку в списке.
 
--  **меню** XML-файлы, описывающие меню приложений, такие как *меню параметров*, *Контекстные меню*и подменю. &ndash; Пример меню см. в разделе демонстрационное [всплывающее меню](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) или образец [стандартных элементов управления](https://developer.xamarin.com/samples/mobile/StandardControls/) .
+-  **меню** XML-файлы, описывающие меню приложений, такие как *меню параметров*, *Контекстные меню*и подменю. &ndash; Пример меню см. в разделе демонстрационное [всплывающее меню](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) или образец [стандартных элементов управления](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) .
 
 -  необработанный &ndash; Произвольные файлы, сохраненные в их необработанном двоичном формате. Эти файлы компилируются в приложение Android в двоичном формате.
 
@@ -70,7 +70,7 @@ ms.locfileid: "68644225"
 
 -  **Макет** &ndash; XML-файлы, описывающие макет пользовательского интерфейса, например действие или строку в списке.
 
--  **меню** XML-файлы, описывающие меню приложений, такие как *меню параметров*, *Контекстные меню*и подменю. &ndash; Пример меню см. в разделе демонстрационное [всплывающее меню](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) или образец [стандартных элементов управления](https://developer.xamarin.com/samples/mobile/StandardControls/) .
+-  **меню** XML-файлы, описывающие меню приложений, такие как *меню параметров*, *Контекстные меню*и подменю. &ndash; Пример меню см. в разделе демонстрационное [всплывающее меню](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) или образец [стандартных элементов управления](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) .
 
 -  необработанный &ndash; Произвольные файлы, сохраненные в их необработанном двоичном формате. Эти файлы компилируются в приложение Android в двоичном формате.
 

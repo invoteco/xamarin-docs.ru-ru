@@ -1,0 +1,117 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Основы разработки приложения Xamarin.Forms
+metadata:
+  title: Основы разработки приложения Xamarin.Forms
+  description: Узнайте больше о разработке мобильных приложений с использованием Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/30/2019
+abstract:
+  description: Узнайте больше о разработке мобильных приложений с использованием Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: accessibility/index.md
+            html: 'Узнайте, как сделать приложения пригодными для пользователей с различными требованиями к пользовательскому интерфейсу.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_accessibility.svg'
+              href: accessibility/index.md
+            title: Специальные возможности
+          - href: application-class.md
+            html: 'Сведения о функциях, предоставляемых подклассом класса Application.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
+              href: application-class.md
+            title: Класс приложения
+          - href: app-lifecycle.md
+            html: Сведения об обработке событий жизненного цикла приложения.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
+              href: app-lifecycle.md
+            title: Жизненный цикл приложения
+          - href: deep-linking.md
+            html: 'Узнайте, как использовать индексирование приложения и создание прямых ссылок, чтобы предоставить доступ к доступному для поиска содержимому приложения на iOS и Android.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_link.svg'
+              href: deep-linking.md
+            title: Индексирование приложения и создание прямых ссылок
+          - href: behaviors/index.md
+            html: 'Узнайте, как добавлять функциональные возможности в элементы управления без разделения их на подклассы.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: behaviors/index.md
+            title: поведения
+          - href: custom-renderer/index.md
+            html: 'Узнайте, как расширять элементы управления Xamarin.Forms путем создания новых пользовательских элементов управления и изменения существующих.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_extend.svg'
+              href: custom-renderer/index.md
+            title: Пользовательские отрисовщики
+          - href: data-binding/index.md
+            html: 'Узнайте, как автоматически синхронизировать пользовательский интерфейс с его источником данных.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_sync.svg'
+              href: data-binding/index.md
+            title: Привязка данных
+          - href: dependency-service/index.md
+            html: 'Узнайте, как вызывать функции собственной платформы из общего кода с помощью класса DependencyService.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: dependency-service/index.md
+            title: Служба зависимостей
+          - href: effects/index.md
+            html: 'Узнайте, как настроить поведение элементов управления Xamarin.Forms путем доступа к базовым элементам управления.'
+            image:
+              src: ~/media/icons/i_platform.svg
+              href: effects/index.md
+            title: Произведенный эффект
+          - href: gestures/index.md
+            html: 'Узнайте, как использовать распознаватели жестов, чтобы добавить в приложения поддержку касаний, сжатия, сдвига и считывания жестов.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_form.svg'
+              href: gestures/index.md
+            title: Жесты
+          - href: localization/index.md
+            html: 'Узнайте, как разрабатывать многоязычные приложения с помощью Xamarin.Forms.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: localization/index.md
+            title: Локализация
+          - href: messaging-center.md
+            html: 'Узнайте, как использовать связь на основе сообщений для уменьшения зависимостей между типами.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mail.svg'
+              href: messaging-center.md
+            title: Центр обмена сообщениями
+          - href: navigation/index.md
+            html: Узнайте о навигации в приложениях Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_class.svg'
+              href: navigation/index.md
+            title: Навигация
+          - href: shell/index.md
+            html: 'Узнайте, как использовать оболочку Xamarin.Forms для снижения сложности разработки мобильных приложений.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+              href: shell/index.md
+            title: Оболочка
+          - href: templates/index.md
+            html: 'Узнайте, как использовать функциональные возможности шаблонов, предоставляемые Xamarin.Forms.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_template.svg'
+              href: templates/index.md
+            title: Шаблоны
+          - href: triggers.md
+            html: 'Узнайте, как задавать действия в XAML, которые изменяют внешний вид элементов управления при изменении событий или свойств.'
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: triggers.md
+            title: Триггеры

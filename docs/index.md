@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: ad1c033b35da548921ec47d8cc2f3a8ef87d2fa8
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: 00e48907f3044fab8dcf23d0bbb5838bc587bb2f
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68486068"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68681086"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -294,7 +294,7 @@ Xamarin.Forms — это кроссплатформенный набор сре
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/app-fundamentals/index.md">
+                                <a href="~/xamarin-forms/app-fundamentals/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -305,7 +305,7 @@ Xamarin.Forms — это кроссплатформенный набор сре
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Принципы работы приложения</h3>
-                                                    <p>Все, что вам нужно знать для создания приложений, например работа с файлами, изображениями, базами данных и т. д.</p>
+                                                    <p>Все, что необходимо знать для разработки приложений Xamarin.Forms, например, навигация, жесты, привязка данных и многое другое.</p>
                                                 </div>
                                             </div>
                                         </div>

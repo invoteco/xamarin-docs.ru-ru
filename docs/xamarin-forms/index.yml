@@ -57,7 +57,7 @@ sections:
         className: cardsB
         items:
           - href: ~/xamarin-forms/app-fundamentals/
-            html: 'Все, что вам нужно знать для создания приложений Xamarin.Forms, например работа с файлами, изображениями, базами данных и т. д.'
+            html: 'Все, что необходимо знать для разработки приложений Xamarin.Forms, например, навигация, жесты, привязка данных и многое другое.'
             image:
               src: ~/media/icons/i_app-build.svg
               href: ~/xamarin-forms/app-fundamentals/

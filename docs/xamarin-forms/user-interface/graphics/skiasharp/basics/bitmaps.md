@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f43779fd0a61bd3ad04f3f7445faa6517fb9c989
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645886"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738896"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Основы растрового изображения в SkiaSharp
 
@@ -22,7 +22,7 @@ _Загрузка точечных рисунков из различных ис
 
 Поддержка точечных рисунков в SkiaSharp является достаточно большим. В этой статье рассматриваются только основные &mdash; как загружать точечные рисунки и способ их отображения:
 
-![](bitmaps-images/bitmapssample.png "Отображение двух точечных рисунков")
+![](bitmaps-images/basicbitmaps-small.png "Отображение двух точечных рисунков")
 
 Гораздо более глубокого исследования, точечных рисунков, можно найти в разделе [точечные рисунки SkiaSharp](../bitmaps/index.md).
 
@@ -98,7 +98,7 @@ protected override async void OnAppearing()
 
 ОС Android приводит к появлению исключения при использовании `Stream` возвращаемые `GetStreamAsync` в `SKBitmap.Decode` метод так как он выполняет длительных операций на основной поток. По этой причине содержимое файла точечного рисунка копируются `MemoryStream` с помощью `CopyToAsync`.
 
-Статический `SKBitmap.Decode` метод отвечает за декодирование файлы растровых изображений. Она работает с форматами растрового изображения JPEG, GIF и PNG и сохраняет результаты во внутреннем формате SkiaSharp. На этом этапе `SKCanvasView` необходимо сделать недействительным, чтобы разрешить `PaintSurface` обработчик для обновления отображения. 
+Статический `SKBitmap.Decode` метод отвечает за декодирование файлы растровых изображений. Она работает с форматами растрового изображения JPEG, GIF и PNG и сохраняет результаты во внутреннем формате SkiaSharp. На этом этапе `SKCanvasView` необходимо сделать недействительным, чтобы разрешить `PaintSurface` обработчик для обновления отображения.
 
 ## <a name="loading-a-bitmap-resource"></a>Загрузка ресурса точечного рисунка
 

@@ -1,44 +1,46 @@
 ---
-title: Модификаторы поля XAML в Xamarin.Forms
-description: 'Атрибут x: FieldModifier пространства имен указывает уровень доступа для созданных полей для именованных элементов XAML.'
+title: Модификаторы полей XAML в Xamarin. Forms
+description: Атрибут пространства имен КС:фиелдмодифиер определяет уровень доступа для созданных полей именованных элементов XAML.
 ms.prod: xamarin
 ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
-ms.openlocfilehash: 8be56524ec1c5331f30418fcc29a4bd2c26ccde1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 08/02/2019
+ms.openlocfilehash: 0f6050de943ca9878cf41b448d44bf222689be56
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075302"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739450"
 ---
-# <a name="xaml-field-modifiers-in-xamarinforms"></a>Модификаторы поля XAML в Xamarin.Forms
+# <a name="xaml-field-modifiers-in-xamarinforms"></a>Модификаторы полей XAML в Xamarin. Forms
 
-_`x:FieldModifier` Атрибут пространства имен указывает уровень доступа для созданных полей для именованных элементов XAML._
+Атрибут `x:FieldModifier` Namespace задает уровень доступа для созданных полей именованных элементов XAML. Допустимые значения атрибута:
 
-## <a name="overview"></a>Обзор
+- `private`— Указывает, что созданное поле для элемента XAML доступно только в теле класса, в котором он объявлен.
+- `public`— Указывает, что созданное поле для элемента XAML не имеет ограничений доступа.
+- `protected`— Указывает, что созданное поле для элемента XAML доступно в своем классе и экземплярах производного класса.
+- `internal`— Указывает, что созданное поле для элемента XAML доступно только в типах в той же сборке.
+- `notpublic`— Указывает, что созданное поле для элемента XAML доступно только в типах в той же сборке.
 
-Ниже приведены допустимые значения атрибута.
+По умолчанию, если значение атрибута не задано, то созданным полем для элемента будет `private`.
 
-- `Public` — Указывает, что поле, создаваемое для элемента XAML `public`.
-- `NotPublic` — Указывает, что поле, создаваемое для элемента XAML `internal` на сборку.
+> [!NOTE]
+> Значение атрибута может использовать любой регистр, так как он будет преобразован в нижний регистр с помощью Xamarin. Forms.
 
-Если значение атрибута не задано, будет поле, создаваемое для элемента `private`.
+Для `x:FieldModifier` обработки атрибута должны выполняться следующие условия.
 
-Должны быть выполнены следующие условия для `x:FieldModifier` атрибут для обработки:
+- Элемент XAML верхнего уровня должен быть допустимым `x:Class`.
+- Текущий элемент XAML имеет указанный объект `x:Name` .
 
-- Элемент верхнего уровня XAML должен быть допустимым `x:Class`.
-- Текущий элемент XAML имеет `x:Name` указанного.
-
-Следующий XAML показаны примеры установки атрибута:
+В следующем коде XAML показаны примеры установки атрибута:
 
 ```xaml
 <Label x:Name="privateLabel" />
-<Label x:Name="internalLabel" x:FieldModifier="NotPublic" />
-<Label x:Name="publicLabel" x:FieldModifier="Public" />
+<Label x:Name="internalLabel" x:FieldModifier="internal" />
+<Label x:Name="publicLabel" x:FieldModifier="public" />
 ```
 
-> [!NOTE]
-> `x:FieldModifier` Атрибут не может использоваться для указания уровня доступа класса XAML.
+> [!IMPORTANT]
+> `x:FieldModifier` Атрибут нельзя использовать для указания уровня доступа класса XAML.

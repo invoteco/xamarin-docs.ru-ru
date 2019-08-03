@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: c05bc88ef6d182f282decedff3e4fb03b4bb96b1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: feae1a33b2e090ccfe3573285c75978aacd1799a
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334703"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739204"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Создание мобильных приложений с помощью Xamarin.Forms (книга)
 
@@ -26,11 +26,11 @@ ms.locfileid: "61334703"
 
 Скачайте вашего формата предпочтительный электронная книга от Microsoft Virtual Academy:
 
-*    [**PDF (56 МБ)**](https://aka.ms/xamebook)
+*    [**PDF (56 МБ)** ](https://aka.ms/xamebook)
 
-*    [**ePub (151 МБ)**](https://aka.ms/xamebook/epub)
+*    [**ePub (151 МБ)** ](https://aka.ms/xamebook/epub)
 
-*    [**Kindle edition (325 МБ)**](https://aka.ms/xamebook/mobi)
+*    [**Kindle edition (325 МБ)** ](https://aka.ms/xamebook/mobi)
 
 Вы также можете [скачайте отдельные главы](#download-chapters-and-summaries) виде PDF-файлов.
 
@@ -103,7 +103,7 @@ ms.locfileid: "61334703"
 
 <i>Создание мобильных приложений с помощью Xamarin.Forms</i> начинается с описания способах создания приложений Xamarin.Forms с помощью C#. Расширяемый язык разметки приложений (XAML) не возникающие до [Глава 7. XAML vs. Код](summaries/chapter07.md).
 
-XAML теперь имеет роль в Xamarin.Forms. Шаблоны решения Xamarin.Forms, в состав Visual Studio создайте файлы на основе XAML страницы. Разработчик, использующий Xamarin.Forms следует ознакомиться с XAML как можно раньше. [Расширяемого языка разметки приложений (XAML)](~/xamarin-forms/xaml/index.md) раздел документации Xamarin.Forms содержит несколько статей о XAML, чтобы приступить к работе.
+XAML теперь имеет роль в Xamarin.Forms. Шаблоны решения Xamarin.Forms, в состав Visual Studio создайте файлы на основе XAML страницы. Разработчик, использующий Xamarin.Forms следует ознакомиться с XAML как можно раньше. [Расширяемого языка разметки приложений (XAML)](~/xamarin-forms/xaml/index.yml) раздел документации Xamarin.Forms содержит несколько статей о XAML, чтобы приступить к работе.
 
 ### <a name="supported-platforms"></a>Поддерживаемые платформы
 

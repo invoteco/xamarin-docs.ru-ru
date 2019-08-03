@@ -1,31 +1,31 @@
 ---
-title: Флажок Xamarin.Forms
-description: Флажок Xamarin.Forms — это тип кнопки, которая может быть проверено, или пустой. Если флажок установлен, он рассматривается как на. Если флажок пуст, он рассматривается как.
+title: Флажок Xamarin. Forms
+description: Флажок Xamarin. Forms является типом кнопки, которая может быть либо установлена, либо пустой. Если флажок установлен, он считается включенным. Если флажок пуст, он считается отключенным.
 ms.prod: xamarin
 ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 42631b1b67dc1d342e9f8666916604e68ee158d8
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517923"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739145"
 ---
-# <a name="xamarinforms-checkbox"></a>Флажок Xamarin.Forms
+# <a name="xamarinforms-checkbox"></a>Флажок Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
-Xamarin.Forms `CheckBox` — это тип кнопки, которая может быть установлен или пустой. Если флажок установлен, он рассматривается как на. Если флажок пуст, он рассматривается как.
+Xamarin. Forms `CheckBox` — это тип кнопки, которая может быть либо установлена, либо пустой. Если флажок установлен, он считается включенным. Если флажок пуст, он считается отключенным.
 
-`CheckBox` Определяет `bool` свойство с именем `IsChecked`, которое указывает ли `CheckBox` проверяется. Это свойство также поддерживаемый [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) объект, который означает, что его можно применить различные стили и быть целевым объектом привязки данных.
+`CheckBox`Определяет свойство с `IsChecked` именем`CheckBox` , которое указывает, установлен ли флажок. `bool` Это свойство также [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) поддерживается объектом, то есть его можно присвоить стилю и быть целевым объектом привязок данных.
 
 > [!NOTE]
-> `IsChecked` Режим привязки по умолчанию имеет свойство, используемое [ `BindingMode.TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay).
+> Свойство BIND имеет режим привязки по умолчанию [`BindingMode.TwoWay`.](xref:Xamarin.Forms.BindingMode.TwoWay) `IsChecked`
 
-`CheckBox` Определяет `CheckedChanged` событие, которое возникло при `IsChecked` изменения свойств, либо через операции пользователя, или когда приложение задает `IsChecked` свойства. `CheckedChangedEventArgs` Объект, который прилагается к `CheckedChanged` событие имеет одно свойство с именем `Value`, типа `bool`. При возникновении этого события значение `Value` свойству присваивается новое значение `IsChecked` свойства.
+`CheckBox`Определяет событие, которое возникает `IsChecked` при изменении свойства с помощью манипуляции пользователя или `IsChecked` когда приложение задает свойство. `CheckedChanged` Объект, `Value`сопровождающий событие, имеет одно свойство с именем типа `bool`. `CheckedChanged` `CheckedChangedEventArgs` При срабатывании события в качестве значения `Value` свойства задается новое значение `IsChecked` свойства.
 
 ## <a name="create-a-checkbox"></a>Создание флажка
 
@@ -35,29 +35,29 @@ Xamarin.Forms `CheckBox` — это тип кнопки, которая може
 <CheckBox />
 ```
 
-Этот XAML приводит к появлению, показано на следующем снимке экрана:
+Этот XAML приводит к отображению на следующих снимках экрана:
 
-![Снимок экрана пустой флажок, в iOS и Android](checkbox-images/checkbox-empty.png "пустой флажок")
+![Снимок экрана пустого флажка в iOS и Android](checkbox-images/checkbox-empty.png "Пустой флажок")
 
-По умолчанию `CheckBox` пуст. `CheckBox` Можно проверить путем управления пользователя, или установив `IsChecked` свойства `true`:
+По умолчанию `CheckBox` параметр пуст. Можно проверить с помощью манипуляции с пользователем или `IsChecked` задав для `true`свойства значение: `CheckBox`
 
 ```xaml
 <CheckBox IsChecked="true" />
 ```
 
-Этот XAML приводит к появлению, показано на следующем снимке экрана:
+Этот XAML приводит к отображению на следующих снимках экрана:
 
-![Снимок экрана установленный флажок, в iOS и Android](checkbox-images/checkbox-checked.png "установлен флажок")
+![Снимок экрана флажка "отмечено" в iOS и Android](checkbox-images/checkbox-checked.png "Флажок") флажка
 
-Кроме того `CheckBox` могут создаваться в коде:
+Кроме того, `CheckBox` можно создать в коде:
 
 ```csharp
 CheckBox checkBox = new CheckBox { IsChecked = true };
 ```
 
-## <a name="respond-to-a-checkbox-changing-state"></a>Ответ на изменение состояния флажка
+## <a name="respond-to-a-checkbox-changing-state"></a>Реагирование на изменение состояния флажка
 
-Когда `IsChecked` изменения свойств, либо через операции пользователя, или когда приложение задает `IsChecked` свойства `CheckedChanged` вызывает событие. Обработчик событий для этого события могут быть зарегистрированы в ответ на изменение:
+Когда свойство изменяется либо с помощью пользовательской манипуляции, либо когда приложение `IsChecked` задает свойство, `CheckedChanged` возникает событие. `IsChecked` Для реагирования на изменение можно зарегистрировать обработчик событий для этого события:
 
 ```xaml
 <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
@@ -74,7 +74,7 @@ void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
 
 `sender` Аргумент `CheckBox` инициатором этого события. Это можно использовать для доступа к `CheckBox` объекта, или чтобы различать несколько `CheckBox` объектов с одинаковым `CheckedChanged` событий.
 
-Кроме того, обработчик событий для `CheckedChanged` событие может быть зарегистрировано в коде:
+Кроме того, обработчик событий для `CheckedChanged` события можно зарегистрировать в коде:
 
 ```csharp
 CheckBox checkBox = new CheckBox { ... };
@@ -84,9 +84,9 @@ checkBox.CheckedChanged += (sender, e) =>
 };
 ```
 
-## <a name="data-bind-a-checkbox"></a>Привязка данных флажок
+## <a name="data-bind-a-checkbox"></a>Флажок привязки данных
 
-`CheckedChanged` Обработчик событий, которые можно устранить с помощью привязки данных и триггеров реагировать на `CheckBox` , помечен или пустой:
+Обработчик событий можно исключить с помощью привязки данных и триггеров, чтобы реагировать `CheckBox` на проверяемый или пустой: `CheckedChanged`
 
 ```xaml
 <CheckBox x:Name="checkBox" />
@@ -104,33 +104,33 @@ checkBox.CheckedChanged += (sender, e) =>
 </Label>
 ```
 
-В этом примере [ `Label` ](xref:Xamarin.Forms.Label) использует выражение привязки в триггер для отслеживания `IsChecked` свойство `CheckBox`. Когда это свойство становится `true`, `FontAttributes` и `FontSize` свойства `Label` изменить. Когда `IsChecked` свойство возвращается `false`, `FontAttributes` и `FontSize` свойства `Label` сбрасываются в изначальное состояние.
+В этом примере [`Label`](xref:Xamarin.Forms.Label) компонент использует выражение привязки в триггере данных для `IsChecked` отслеживания свойства объекта `CheckBox`. Когда это свойство примет `true`значение `FontAttributes` , свойства `FontSize` и для `Label` изменения. `FontAttributes` `FontSize` Когда свойство возвращает значение `false`, свойства и объекта`Label` сбрасываются в исходное состояние. `IsChecked`
 
-На снимках экрана ниже, показано на снимке экрана iOS [ `Label` ](xref:Xamarin.Forms.Label) форматирование при `CheckBox` пуст, хотя на Android снимке экрана показаны `Label` форматирование при `CheckBox` проверяется:
+На приведенных ниже снимках экрана в iOS отображается [`Label`](xref:Xamarin.Forms.Label) форматирование, `CheckBox` когда пусто, а `Label` на снимке экрана Android `CheckBox` отображается форматирование при проверке.
 
-[![Снимок экрана данных привязано флажок, iOS и Android](checkbox-images/checkbox-databinding.png "флажок с привязкой к данным")](checkbox-images/checkbox-databinding-large.png#lightbox "флажок с привязкой к данным")
+[ ![Снимок экрана: флажок "привязка данных" на устройстве iOS и Android](checkbox-images/checkbox-databinding.png "с привязкой к данным") ] (checkbox-images/checkbox-databinding-large.png#lightbox "Флажок привязки данных")
 
-Дополнительные сведения о триггерах см. в разделе [Xamarin.Forms триггеры](~/xamarin-forms/app-fundamentals/triggers.md).
+Дополнительные сведения о триггерах см. в разделе [триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
-## <a name="disable-a-checkbox"></a>Снимите флажок
+## <a name="disable-a-checkbox"></a>Отключение флажка
 
-Иногда приложение переходит в состояние где `CheckBox` проверяемой в данный момент не является допустимой операцией. В таких случаях `CheckBox` можно отключить, задав его `IsEnabled` свойства `false`.
+Иногда приложение переходит в состояние, в котором `CheckBox` проверяемое значение не является допустимой операцией. В таких случаях `CheckBox` можно отключить, `IsEnabled` задав свойству `false`значение.
 
-## <a name="checkbox-appearance"></a>Внешний вид флажка
+## <a name="checkbox-appearance"></a>Вид флажка
 
-Помимо свойств, `CheckBox` наследует от [ `View` ](xref:Xamarin.Forms.View) класс, `CheckBox` также определяет `Color` свойство, которое задает ее цвет [ `Color` ](xref:Xamarin.Forms.Color):
+В дополнение к свойствам, `CheckBox` [`View`](xref:Xamarin.Forms.View) унаследованным от `Color` класса, `CheckBox` также определяет свойство, которое задает для его цвета значение [`Color`](xref:Xamarin.Forms.Color).
 
 ```xaml
 <CheckBox Color="Red" />
 ```
 
-На следующих снимках экрана показано ряд checked `CheckBox` объектов, где каждый объект имеет его `Color` свойство присвоено другой [ `Color` ](xref:Xamarin.Forms.Color):
+На следующих снимках экрана показан ряд проверенных `CheckBox` объектов, для каждого `Color` из которых задано другое [`Color`](xref:Xamarin.Forms.Color)свойство:
 
-![Снимок экрана цветной флажки, в iOS и Android](checkbox-images/checkbox-colors.png "цветной флажок")
+![Снимок экрана с цветными флажками в iOS и Android](checkbox-images/checkbox-colors.png "Цветовой флажок")
 
-## <a name="checkbox-visual-states"></a>Визуальные состояния CheckBox
+## <a name="checkbox-visual-states"></a>Визуальные состояния флажка
 
-`CheckBox` имеет `IsChecked` [ `VisualState` ](xref:Xamarin.Forms.VisualState) , можно использовать для запуска Визуальное изменение в `CheckBox` когда становится отмеченным.
+`CheckBox`имеет объект `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) , который можно использовать для инициации визуального изменения `CheckBox` в при проверке.
 
 В следующем примере XAML показано, как определить визуальное состояние для `IsChecked` состояния:
 
@@ -156,12 +156,12 @@ checkBox.CheckedChanged += (sender, e) =>
 </CheckBox>
 ```
 
-В этом примере `IsChecked` [ `VisualState` ](xref:Xamarin.Forms.VisualState) указывает, что при `CheckBox` установлен, его `Color` будет установлено на зеленый. `Normal` `VisualState` Указывает, что при `CheckBox` находится в обычном состоянии, его `Color` будет установлено на красный. Таким образом, общий эффект является `CheckBox` отображается красным цветом, если это пустой и зеленого при его выборе.
+`IsChecked` В этом примере параметр [`VisualState`](xref:Xamarin.Forms.VisualState) указывает, что если `CheckBox` флажок установлен, его `Color` свойство будет иметь значение Green. Указывает, `Color` что когда `CheckBox` находится в нормальном состоянии, его свойство будет установлено в значение Red. `Normal` `VisualState` Таким образом, общий результат заключается в `CheckBox` том, что красный, когда он пуст, и зеленый при проверке.
 
-Дополнительные сведения о визуальных состояниях см. в разделе [Диспетчер визуальных состояний Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
+Дополнительные сведения о визуальных состояниях см. в разделе [Диспетчер визуальных состояний Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Флажок демонстрации (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
-- [Триггеры Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Диспетчер визуальных состояний Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Демонстрации CheckBox (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+- [Триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Диспетчер визуальных состояний Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

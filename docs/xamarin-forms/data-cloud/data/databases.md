@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645255"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739175"
 ---
 # <a name="xamarinforms-local-databases"></a>Локальные базы данных Xamarin.Forms
 
@@ -24,7 +24,7 @@ _Xamarin.Forms поддерживает приложения на основе �
 
 Приложения Xamarin.Forms могут использовать пакет [NuGet SQLite.NET PCL](https://www.nuget.org/packages/sqlite-net-pcl/) для включения операций с базой данных в общий код путем обращения к классам `SQLite`, которые входят в состав NuGet. Операции с базой данных можно определить в проекте библиотеки .NET Standard решения Xamarin.Forms.
 
-В качестве [примера](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) предлагается простое приложение для ведения списка задач. На следующих снимках экрана показано, как оно выглядит на каждой платформе.
+В качестве [примера](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) предлагается простое приложение для ведения списка задач. На следующих снимках экрана показано, как оно выглядит на каждой платформе.
 
 [![Снимки экрана с примером работы с базой данных на платформе Xamarin.Forms](databases-images/todo-list-sml.png "Снимки экрана с первой страницей списка задач")](databases-images/todo-list.png#lightbox "Снимки экрана с первой страницей списка задач") [![Снимки экрана с примером работы с базой данных на платформе Xamarin.Forms](databases-images/todo-list-sml.png "Снимки экрана с первой страницей списка задач")](databases-images/todo-list.png#lightbox "Снимки экрана с первой страницей списка задач")
 
@@ -124,4 +124,3 @@ Xamarin.Forms поддерживает приложения на основе б
 
 - [Пример списка задач](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 - [Примеры Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-

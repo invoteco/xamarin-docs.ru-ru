@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: 3f51b61cd7dcc3c7b17881b3576aa2c22a45e470
-ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
+ms.openlocfilehash: aea82b5946d12bc75aef18953d61cd88e5329329
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64987085"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511389"
 ---
 # <a name="system-requirements"></a>Требования к системе
 
@@ -70,7 +70,7 @@ ms.locfileid: "64987085"
 
 Последний выпуск Xamarin для macOS можно скачать вместе с [Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation). В Windows следуйте инструкциям по установке [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
-Полный список текущих версий продукта можно найти на [странице текущих выпусков](https://developer.xamarin.com/releases/current/). На этой странице также приводятся версии отдельных продуктов (и ссылки на заметки о выпуске) для альфа- и бета-каналов.
+Полный список текущих выпусков продукта доступен на [странице новых возможностей](~/whats-new/index.yml). На этой странице также приведены ссылки на заметки о выпусках.
 
 Конкретные инструкции по [установке](~/get-started/installation/index.md) для каждой платформы можно найти здесь:
 

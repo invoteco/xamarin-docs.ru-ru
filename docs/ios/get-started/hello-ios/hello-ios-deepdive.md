@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
-ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
+ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58751265"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647051"
 ---
 # <a name="hello-ios--deep-dive"></a>Подробный обзор примера приложения "Привет, iOS"
 
@@ -414,7 +414,7 @@ public override void ViewDidLoad ()
 Устройству требуется время для подготовки, а также учетная запись разработчика Apple. В руководстве [Подготовка устройств](~/ios/get-started/installation/device-provisioning/index.md) приведены подробные инструкции по подготовке устройства к разработке.
 
 > [!NOTE]
-> Сейчас, в связи с требованиями Apple, при создании кода для устройства или симулятора требуется сертификат разработки или _удостоверение подписывания_. Чтобы настроить их, следуйте указаниям в руководстве по [подготовке устройств](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+> Сейчас, в связи с требованиями Apple, при компиляции кода для физического устройства или симулятора требуется сертификат разработки или _удостоверение подписывания_. Чтобы настроить их, следуйте указаниям в руководстве по [подготовке устройств](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
 После подготовки устройство можно развернуть, подключив его, изменив целевой объект в панели инструментов сборки на устройство iOS и нажав кнопку **Запустить** (**Воспроизвести**), как показано на следующем снимке экрана:
 
@@ -458,10 +458,10 @@ public override void ViewDidLoad ()
 ## <a name="summary"></a>Сводка
 
 Поздравляем! Теперь у вас должно быть ясное понимание того, из каких компонентов состоит приложение Xamarin.iOS и какие инструменты нужны для его создания.
-В [следующем руководстве из серии "Приступая к работе"](~/ios/get-started/hello-ios-multiscreen/index.md) вы расширите наше приложение, реализовав обработку нескольких экранов. Попутно вы реализуете контроллер навигации, узнаете о переходах раскадровки, а также познакомитесь с шаблоном MVC.
+В [следующем руководстве из серии "Приступая к работе"](~/ios/get-started/hello-ios-multiscreen/index.md) вы расширите наше приложение, реализовав обработку нескольких экранов. При добавлении в приложение поддержки нескольких экранов вы реализуете контроллер навигации, узнаете о переходах раскадровки, а также познакомитесь с шаблоном "Модель — представление — контроллер" (MVC).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Привет, iOS (пример)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Привет, iOS (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Рекомендации по работе с человеческим интерфейсом iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Портал подготовки iOS](https://developer.apple.com/account/#/overview)

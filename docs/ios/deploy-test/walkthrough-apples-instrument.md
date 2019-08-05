@@ -7,24 +7,24 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: d0c79a5eb417762531245256ff062c5c34ca394c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f06af6a2121fc037f5c3f496ee8bd6b91e2969e6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112329"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656747"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Пошаговое руководство. Использование средства Apple Instruments
 
 _В этой статье последовательно описываются этапы использования средства Apple Instruments для диагностики проблем с памятью в приложении iOS, созданном с помощью Xamarin. В ней описывается запуск Instruments, создание мгновенного снимка кучи и анализ роста памяти. В статье также показано, как использовать Instruments для отображения и определения именно тех строк кода, которые приводят к возникновению проблем с памятью._
 
 На этой странице рассказывается, как использовать **средство Xcode Instruments** для диагностики проблем с памятью в приложении iOS.
-Для начала загрузите [Пример MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) и откройте **предыдущую версию** решения в Visual Studio для Mac.
+Для начала загрузите [Пример MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) и откройте **предыдущую версию** решения в Visual Studio для Mac.
 
 ## <a name="diagnosing-the-memory-issues"></a>Диагностика проблем с памятью
 
-1. В среде Visual Studio для Mac запустите средство **Instruments**, открыв меню **"Сервис" > "Запустить Instruments"**.
-2. Отправьте приложение на устройство, выбрав в меню **"Запуск" > "Отправить на устройство"**.
+1. В среде Visual Studio для Mac запустите средство **Instruments**, открыв меню **"Сервис" > "Запустить Instruments"** .
+2. Отправьте приложение на устройство, выбрав в меню **"Запуск" > "Отправить на устройство"** .
 3. Выберите шаблон **Allocations** (Распределения). Это оранжевый значок с белым полем
 
     ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Выбор шаблона Allocations")
@@ -33,11 +33,11 @@ _В этой статье последовательно описываются 
 
     ![](walkthrough-apples-instrument-images/01-mem-demo.png "Выбор приложения Memory Demo")
 
-5. Нажмите кнопку **Choose** (Выбрать) в нижнем правом углу окна, чтобы запустить **Instruments**. Этот шаблон отобразит в верхней области два элемента: Allocations и VM Tracker (Трекер ВМ).
+5. Нажмите кнопку **Choose** (Выбрать) в нижнем правом углу окна, чтобы запустить **Instruments**. В верхней панели шаблона отобразятся два элемента: Allocations (Выделения) и VM Tracker (Отслеживание виртуальных машин).
 
 6. Нажмите кнопку **Record** (Запись), т. е. красный кружок в верхнем левом углу экрана Instruments, чтобы запустить приложение.
 
-7. Выберите строку **VM Tracker** в верхней области. Теперь, когда приложение запущено, она будет содержать два раздела: Dirty (Черновик) и Resident Size (Размер в памяти). В области **Inspector** (Инспектор) выберите **Show Display Settings** (Показать параметры отображения), т. е. значок шестеренки, а затем установите флажок **Automatic Snapshotting** (Автоматическое создание снимков), показанный на следующем снимке экрана в правом нижнем углу:
+7. Выберите в верхней панели строку **VM Tracker**. Теперь, когда приложение запущено, в нем будет два раздела: Dirty (Изменение) и Resident Size (Размер в памяти). В области **Inspector** (Инспектор) выберите **Show Display Settings** (Показать параметры отображения), т. е. значок шестеренки, а затем установите флажок **Automatic Snapshotting** (Автоматическое создание снимков), показанный на следующем снимке экрана в правом нижнем углу:
 
     ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Выбор пункта Show Display Settings (значок шестеренки) и установка флажка Automatic Snapshotting")
 
@@ -85,7 +85,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 ![](walkthrough-apples-instrument-images/06-reduced-memory.png "Отображение использования памяти приложением")
 
-Улучшенный код представлен в [примере MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) из **измененной версии** решения в Visual Studio для Mac.
+Улучшенный код представлен в [примере MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) из **измененной версии** решения в Visual Studio для Mac.
 
 Эта статья блога сообщества о [сборке мусора в Xamarin.iOS](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) — полезный справочный ресурс по устранению проблем с памятью с помощью Xamarin.iOS.
 
@@ -97,5 +97,5 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/)
+- [Пример MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
 - [Сборка мусора Xamarin.iOS (запись блога)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

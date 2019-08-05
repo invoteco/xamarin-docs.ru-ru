@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670185"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509575"
 ---
 # <a name="hello-android-deep-dive"></a>Знакомство с Android. Глубокое погружение
 
@@ -153,6 +153,11 @@ Visual Studio для Mac — это бесплатная интегрирова
 
 ## <a name="user-interface"></a>Пользовательский интерфейс
 
+> [!TIP]
+> Новые выпуски Visual Studio поддерживают открытие XML-файлов в Android Designer.
+>
+> Android Designer поддерживает как файлы AXML, так и XML.
+
 ::: zone pivot="windows"
 
 **activity_main.axml** — это файл макета пользовательского интерфейса для первого экрана приложения. Расширение AXML указывает на то, что это файл конструктора Android (AXML означает *Android XML*). Имя *Main* является произвольным в Android &ndash; файл макета мог бы иметь любое другое имя. При открытии файла **activity_main.axml** в интегрированной среде разработки запускается визуальный редактор файлов макетов Android, который называется *Android Designer*:
@@ -193,7 +198,7 @@ Visual Studio для Mac — это бесплатная интегрирова
 
 ::: zone-end
 
-Исходный код XML должен содержать **текст (крупный)**, **обычный текст** и два элемента типа **Button**. Более подробные сведения о конструкторе Android Designer см. в руководстве [Обзор конструктора](~/android/user-interface/android-designer/index.md) Xamarin Android.
+Этот исходный код XML должен содержать четыре элемента управления: два элемента **TextView**, один **EditText** и один **Button**. Более подробные сведения о конструкторе Android Designer см. в руководстве [Обзор конструктора](~/android/user-interface/android-designer/index.md) Xamarin Android.
 
 Мы рассмотрели средства и понятия, связанные с визуальной частью пользовательского интерфейса. Теперь пора перейти к коду, обеспечивающему работу пользовательского интерфейса, и рассмотреть действия и их жизненный цикл.
 
@@ -207,7 +212,7 @@ Visual Studio для Mac — это бесплатная интегрирова
 
 В приложении **Phoneword** имеется только один экран (действие). Класс, обеспечивающий работу экрана, называется `MainActivity` и находится в файле **MainActivity.cs**. Имя `MainActivity` не имеет особого значения в Android &ndash; хотя первое действие в приложении принято называть `MainActivity`, оно может иметь и любое другое имя.
 
-Если открыть файл **MainActivity.cs**, то можно увидеть, что класс `MainActivity` является *подклассом* класса `Activity` и что действие снабжено атрибутом [Activity](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/):
+Если открыть файл **MainActivity.cs**, то можно увидеть, что класс `MainActivity` является *подклассом* класса `Activity` и что действие снабжено атрибутом [Activity](xref:Android.App.ActivityAttribute):
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]
@@ -333,7 +338,7 @@ translateButton.Click += (sender, e) =>
 ::: zone-end
 ::: zone pivot="macos"
 
-Настроив устройство, вы можете развернуть на нем приложение. Для этого подключите устройство, нажмите **Запуск (воспроизведение)**, выберите устройство в диалоговом окне **Выбор устройства** и нажмите кнопку **ОК**:
+Настроив устройство, вы можете развернуть на нем приложение. Для этого подключите устройство, нажмите **Запуск (воспроизведение)** , выберите устройство в диалоговом окне **Выбор устройства** и нажмите кнопку **ОК**:
 
 [![Выбор устройства отладки](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
@@ -349,7 +354,7 @@ translateButton.Click += (sender, e) =>
 
 [![Нечеткий значок](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
-Чтобы такого не происходило, рекомендуется добавлять значки с разным разрешением в папку **Resources**. В Android имеются различные версии папки **mipmap** для значков средства запуска с различной плотностью: *mdpi* для средней плотности, *hdpi* для высокой и *xhdpi*, *xxhdpi*, *xxxhdpi* для экранов с очень высокой плотностью. Значки разного размера хранятся в соответствующих папках **mipmap-**:
+Чтобы такого не происходило, рекомендуется добавлять значки с разным разрешением в папку **Resources**. В Android имеются различные версии папки **mipmap** для значков средства запуска с различной плотностью: *mdpi* для средней плотности, *hdpi* для высокой и *xhdpi*, *xxhdpi*, *xxxhdpi* для экранов с очень высокой плотностью. Значки разного размера хранятся в соответствующих папках **mipmap-** :
 
 ::: zone pivot="windows"
 
@@ -404,7 +409,7 @@ translateButton.Click += (sender, e) =>
 _Сервисы Google Play_ — это набор дополнительных библиотек, которые позволяют разработчикам Android использовать новейшие возможности, предоставляемые Google, такие как Google Карты, Google Cloud Messaging и выставление счетов в приложении.
 Ранее привязки ко всем библиотекам Сервисов Google Play предоставлялись Xamarin в виде одного пакета. Начиная с Visual Studio для Mac доступно новое диалоговое окно проекта для выбора пакетов Сервисов Google Play, которые необходимо включить в приложение.
 
-Чтобы добавить одну или несколько библиотек Сервисов Google Play, в дереве проекта щелкните правой кнопкой мыши узел **Пакеты** и выберите команду **Добавить службу Google Play...**:
+Чтобы добавить одну или несколько библиотек Сервисов Google Play, в дереве проекта щелкните правой кнопкой мыши узел **Пакеты** и выберите команду **Добавить службу Google Play...** :
 
 [![Добавить службу Google Play](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 

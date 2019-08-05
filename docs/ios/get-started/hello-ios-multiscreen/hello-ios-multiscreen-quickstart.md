@@ -9,16 +9,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 849c60507fe0ff7b8bf1743be5bbf89ca94b9d6f
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 61bf1c99b90d21d701dd923dcca4a203c96b69a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865567"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657042"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Привет, iOS (несколько экранов): краткое руководство
 
-В этой части пошагового руководства вы добавите второй экран для приложения Phoneword, отображающего журнал телефонных номеров, на которые выполнялись вызовы из приложения. Итоговое приложение будет иметь второй экран с журналом вызовов, как показано на следующем снимке экрана:
+В этой части пошагового руководства вы добавите в приложение Phoneword второй экран с журналом телефонных номеров, на которые из приложения совершались звонки. Итоговое приложение будет иметь второй экран с журналом вызовов, как показано на следующем снимке экрана:
 
 [![](hello-ios-multiscreen-quickstart-images/00.png "Итоговое приложение будет иметь второй экран с журналом вызовов, как показано на снимке экрана")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67865567"
 
 ## <a name="requirements"></a>Требования
 
-Это руководство начинается с того момента, на котором заканчивается документ "Привет, iOS", поэтому вам нужно сначала изучить [Привет, iOS: краткое руководство](~/ios/get-started/hello-ios/index.md). Готовую версию приложения Phoneword можно скачать из примера [Привет, iOS](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+Это руководство начинается с того момента, на котором заканчивается документ "Привет, iOS", поэтому вам нужно сначала изучить [Привет, iOS: краткое руководство](~/ios/get-started/hello-ios/index.md). Скачайте готовую версию приложения Phoneword из примера [Привет, iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 ::: zone pivot="macos"
 
@@ -34,7 +34,7 @@ ms.locfileid: "67865567"
 
 В этом пошаговом руководстве вы добавите в приложение **Phoneword** экран "Call History" (Журнал вызовов).
 
-1. Откройте приложение **Phoneword** в Visual Studio для Mac. При необходимости готовое приложение Phoneword из пошагового руководства [Привет, iOS](~/ios/get-started/hello-ios/index.md) можно скачать [здесь](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+1. Откройте приложение **Phoneword** в Visual Studio для Mac. При необходимости готовое приложение Phoneword из пошагового руководства [Привет, iOS](~/ios/get-started/hello-ios/index.md) можно скачать [здесь](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 2. Откройте файл **Main.storyboard** из **Панели решения**:
 
@@ -256,7 +256,7 @@ ms.locfileid: "67865567"
 
     Здесь необходимо обратить внимание на несколько моментов.
 
-    - Переменная `translatedNumber` перемещена из метода `ViewDidLoad` в _переменную уровня класса_.
+    - Переменная `translatedNumber` перемещена из метода `ViewDidLoad` и сделана _переменной уровня класса_.
     - Код **CallButton** изменен, чтобы добавлять набранные номера в список телефонных номеров с помощью вызова `PhoneNumbers.Add(translatedNumber)`.
     - Добавлен метод `PrepareForSegue`.
 
@@ -275,7 +275,7 @@ ms.locfileid: "67865567"
 
 В этом пошаговом руководстве вы добавите в приложение **Phoneword** экран "Call History" (Журнал вызовов).
 
-1. Откройте приложение **Phoneword** в Visual Studio. При необходимости скачайте [готовое приложение Phoneword](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) из пошагового руководства [Привет, iOS](~/ios/get-started/hello-ios/index.md). Не забывайте, что для подключения к [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) нужно использовать конструктор iOS и симулятор iOS.
+1. Откройте приложение **Phoneword** в Visual Studio. При необходимости скачайте [готовое приложение Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) из пошагового руководства [Привет, iOS](~/ios/get-started/hello-ios/index.md). Не забывайте, что для подключения к [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) нужно использовать конструктор iOS и симулятор iOS.
 
 2. Сначала измените пользовательский интерфейс. Откройте файл **Main.storyboard** в **обозревателе решений** и убедитесь, что в поле **Просмотреть как** задано значение _iPhone 6_:
 
@@ -517,6 +517,6 @@ ms.locfileid: "67865567"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Привет, iOS (пример)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Привет, iOS (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Рекомендации по работе с человеческим интерфейсом iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Портал подготовки iOS](https://developer.apple.com/ios/manage/overview/index.action)

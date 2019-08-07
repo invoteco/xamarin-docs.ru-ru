@@ -39,7 +39,7 @@ _Список узлов, которые необходимо разрешить
 
 Для доступа к NuGet (набор Xamarin.Forms упакован в виде NuGet) потребуется добавить следующие адреса:
 
-- www.nuget.org (для доступа к NuGet)
+- [www.nuget.org](www.nuget.org) (для доступа к NuGet)
 - globalcdn.nuget.org (загрузки NuGet)
 - dl-ssl.google.com (компоненты Google для Android и Xamarin.Forms)
 

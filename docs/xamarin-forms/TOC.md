@@ -128,7 +128,8 @@
 ##### [Создание шаблона данных](app-fundamentals/templates/data-templates/creating.md)
 ##### [Выбор шаблона данных](app-fundamentals/templates/data-templates/selector.md)
 ### [Триггеры](app-fundamentals/triggers.md)
-## [Пользовательский интерфейс](user-interface/index.md)
+## Пользовательский интерфейс
+### [Обзор](user-interface/index.yml)
 ### [Индикатор активности](user-interface/activityindicator.md)
 ### [Анимация](user-interface/animation/index.md)
 #### [Простые анимации](user-interface/animation/simple.md)

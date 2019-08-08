@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 03b9c5f903cea67032a9560754a32ac552635e92
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 73e312a1af56091a7e579d3fcbcea810ee0efb1e
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653878"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820966"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Добавление распознавателя жестов сдвига
 
@@ -48,9 +48,6 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
   // Handle the pan
 }
 ```
-
-> [!NOTE]
-> Для правильного сдвига в Android требуется по крайней мере [пакет NuGet Xamarin.Forms 2.1.0-pre1](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1).
 
 ## <a name="creating-a-pan-container"></a>Создание контейнера сдвига
 
@@ -147,7 +144,7 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 Когда содержимое сдвигается внутри элемента, который занимает не весь экран, высоту и ширину окна просмотра можно получить из свойств [`Height`](xref:Xamarin.Forms.VisualElement.Height) и [`Width`](xref:Xamarin.Forms.VisualElement.Width) элемента.
 
 > [!NOTE]
-> Отображение изображений в высоком разрешении может значительно увеличивать объем памяти, занимаемой приложением. Поэтому их следует создавать только при необходимости и сразу же освобождать, если они больше не нужны приложению. Дополнительные сведения см. в разделе [Оптимизация графических ресурсов](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
+> Отображение изображений в высоком разрешении может значительно увеличивать объем памяти, занимаемой приложением. Поэтому их следует создавать только при необходимости и сразу же освобождать, если они больше не нужны приложению. Дополнительные сведения см. в разделе [Оптимизация графических ресурсов](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
 ## <a name="related-links"></a>Связанные ссылки
 

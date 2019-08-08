@@ -1,0 +1,195 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Пользовательский интерфейс Xamarin.Forms
+metadata:
+  title: Пользовательский интерфейс Xamarin.Forms
+  description: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/31/2019
+abstract:
+  description: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: activityindicator.md
+            html: 'Сведения об использовании ActivityIndicator для сообщения пользователям о том, что приложение выполняет длительное действие, не отображая ход выполнения.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: activityindicator.md
+            title: ActivityIndicator
+          - href: animation/index.md
+            html: Сведения о создании анимации в Xamarin.Forms.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: animation/index.md
+            title: Animation
+          - href: boxview.md
+            html: Сведения об использовании BoxView для создания цветных прямоугольников.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: boxview.md
+            title: BoxView
+          - href: button.md
+            html: Сведения об использовании Button для создания в приложении кнопки под определенную задачу.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: button.md
+            title: Button
+          - href: checkbox.md
+            html: Сведения о задании логического значения с помощью CheckBox.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: checkbox.md
+            title: CheckBox
+          - href: collectionview/index.md
+            html: Сведения о представлении списков данных с различными спецификациями макета при помощи CollectionView.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: collectionview/index.md
+            title: CollectionView
+          - href: colors.md
+            html: Сведения об использовании класса Color для определения и применения цветов на различных платформах.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: colors.md
+            title: Color
+          - href: controls/index.md
+            html: 'Сведения о страницах, макетах, представлениях и ячейках, доступных в Xamarin.Forms.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: controls/index.md
+            title: Справочник по элементам управления
+          - href: datepicker.md
+            html: 'Сведения о том, как разрешить выбор даты в определенном диапазоне с помощью DatePicker.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: datepicker.md
+            title: DatePicker
+          - href: pop-ups.md
+            html: 'Сведения о том, как отображать диалоговые окна, задающие пользователям простые вопросы и помогающие им выполнять определенные задачи.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: pop-ups.md
+            title: Отображение всплывающих элементов
+          - href: graphics/skiasharp/index.md
+            html: 'Сведения о том, как включить графику в приложения Xamarin.Forms с использованием SkiaSharp.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: graphics/skiasharp/index.md
+            title: Графика SkiaSharp
+          - href: images.md
+            html: Сведения об использовании элемента управления Image для вывода изображения.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: images.md
+            title: Изображения
+          - href: imagebutton.md
+            html: Сведения об использовании элемента управления ImageButton для вывода изображения и выполнения приложением определенной задачи при касании элемента.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: imagebutton.md
+            title: ImageButton
+          - href: layouts/index.md
+            html: Сведения об организации содержимого с помощью элементов управления и компонентов макета в Xamarin.Forms.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: layouts/index.md
+            title: Макеты
+          - href: listview/index.md
+            html: Сведения об использовании элемента управления ListView для вывода списков данных.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: listview/index.md
+            title: ListView
+          - href: map.md
+            html: 'Сведения об использовании элемента управления Map, включая настройку платформы и заполнение карты отметками.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: map.md
+            title: Maps
+          - href: picker/index.md
+            html: Сведения об использовании элемента управления Picker для выбора текстового элемента из списка данных.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: picker/index.md
+            title: Picker
+          - href: progressbar.md
+            html: 'Сведения об использовании элемента ProgressBar, указывающего, что приложение выполняет длительное действие.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: progressbar.md
+            title: ProgressBar
+          - href: searchbar.md
+            html: Сведения о поиске с помощью элемента управления SearchBar.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: searchbar.md
+            title: SearchBar
+          - href: slider.md
+            html: 'Сведения об элементе управления Slider, позволяющем пользователю выбрать числовое значение из непрерывного диапазона.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: slider.md
+            title: Slider
+          - href: stepper.md
+            html: 'Сведения об элементе управления Stepper, позволяющем пользователю выбрать числовое значение из определенных вариантов.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: stepper.md
+            title: Stepper
+          - href: styles/index.md
+            html: "Сведения о применении стилей\_XAML и каскадных таблиц стилей\_(CSS) в пользовательском интерфейсе."
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: styles/index.md
+            title: Стили
+          - href: switch.md
+            html: Сведения о задании логических значений с помощью Switch.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: switch.md
+            title: Switch
+          - href: tableview.md
+            html: 'Сведения об использовании TableView для отображения прокручиваемых списков данных или вариантов выбора, в которых строки имеют разный шаблон.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: tableview.md
+            title: TableView
+          - href: text/index.md
+            html: Сведения об элементах управления Xamarin.Forms для получения и представления текста.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: text/index.md
+            title: Text
+          - href: timepicker.md
+            html: Сведения об использовании TimePicker для выбора времени.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: timepicker.md
+            title: TimePicker
+          - href: visual/index.md
+            html: Сведения об использовании визуального элемента Material из Xamarin.Forms для создания приложений с идентичным или практически идентичным внешним видом на iOS и Android.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: visual/index.md
+            title: Визуальный элемент
+          - href: visual-state-manager.md
+            html: 'Сведения о классе VisualStateManager, позволяющем определять и активировать визуальные состояния для пользовательского интерфейса.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: visual-state-manager.md
+            title: Диспетчер визуальных состояний
+          - href: webview.md
+            html: Сведения об отображении HTML- и веб-содержимого в приложении Xamarin.Forms.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: webview.md
+            title: WebView

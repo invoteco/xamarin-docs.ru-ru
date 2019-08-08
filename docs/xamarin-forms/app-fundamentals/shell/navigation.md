@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 9f48659a8af7bb74cc33ec0929f41b2a881e1978
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
+ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469510"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739272"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Навигация в оболочке Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Оболочка Xamarin.Forms предоставляет улучшенные возможности навигации по интерфейсу на основе URI, позволяя переходить на любую страницу в приложении без соблюдения строгой иерархии. Кроме того, они также дают возможность перехода назад без необходимости прохода всех страниц в стеке навигации.
 
@@ -156,7 +156,7 @@ await Shell.Current.GoToAsync("monkeydetails");
 
 Кроме того, поддерживаются следующие форматы относительных маршрутов.
 
-| Формат | Описание |
+| Формат | ОПИСАНИЕ |
 | --- | --- |
 | //*маршрут* | Поиск указанного маршрута выполняется в иерархии маршрутов вверх, начиная от текущего отображаемого маршрута. |
 | ///*маршрут* | Поиск указанного маршрута выполняется в иерархии маршрутов вниз, начиная от текущего отображаемого маршрута. |
@@ -211,7 +211,7 @@ bears
 
 Класс `Shell` определяет событие `Navigating`, которое возникает перед выполнением любого перехода — программного или вызванного действием пользователя. Объект `ShellNavigatingEventArgs`, который прилагается к событию `Navigating`, содержит следующие свойства:
 
-| Свойство. | Тип | Описание |
+| Свойство. | type | ОПИСАНИЕ |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI текущей страницы. |
 | `Source` | `ShellNavigationSource` | Тип выполненного перехода. |
@@ -226,7 +226,7 @@ bears
 
 Класс `Shell` также определяет событие `Navigated`, которое возникает при завершении навигации. Объект `ShellNavigatedEventArgs`, который прилагается к событию `Navigating`, содержит следующие свойства:
 
-| Свойство. | Тип | Описание |
+| Свойство. | type | ОПИСАНИЕ |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI текущей страницы. |
 | `Previous`| `ShellNavigationState` | URI предыдущей страницы. |
@@ -339,4 +339,4 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

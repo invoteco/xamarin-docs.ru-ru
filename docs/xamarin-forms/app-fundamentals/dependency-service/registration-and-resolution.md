@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
-ms.openlocfilehash: aab5f56594f9b9b81acb9c447eee238d151bd533
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 0bbe4310a32c11da35e41b01693f8cb1a66fc39b
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832197"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739328"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Регистрация и разрешение класса Xamarin.Forms DependencyService
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 При использовании Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) для вызова собственных функций платформы реализации платформы нужно зарегистрировать в `DependencyService`, после чего разрешить их из общего кода для вызова.
 
@@ -175,5 +175,5 @@ using (service as IDisposable)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Использование класса DependencyService (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+- [Использование класса DependencyService (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Dependency resolution in Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md) (Разрешение зависимостей в Xamarin.Forms)

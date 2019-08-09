@@ -101,7 +101,7 @@ sections:
             html: 'Узнайте, как создавать связанные свойства и как использовать их из XAML.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-              href: bindable-properties.md
+              href: attached-properties.md
             title: Вложенные свойства
           - href: resource-dictionaries.md
             html: 'Узнайте, как создавать ресурсы XAML и повторно использовать их в приложении Xamarin.Forms.'

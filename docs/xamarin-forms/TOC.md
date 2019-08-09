@@ -151,6 +151,7 @@
 #### [Макеты](user-interface/controls/layouts.md)
 #### [Представления](user-interface/controls/views.md)
 #### [Ячейки](user-interface/controls/cells.md)
+#### [Элементы управления сторонних производителей](user-interface/controls/thirdparty.md)
 ### [DataPages](user-interface/datapages/index.md)
 #### [Начало работы](user-interface/datapages/get-started.md)
 #### [Справочник по элементам управления](user-interface/datapages/controls.md)
@@ -339,7 +340,7 @@
 #### [Распознавание речи](data-cloud/azure-cognitive-services/speech-recognition.md)
 #### [Проверка орфографии](data-cloud/azure-cognitive-services/spell-check.md)
 #### [Преобразование текста](data-cloud/azure-cognitive-services/text-translation.md)
-#### [Распознавание эмоций](data-cloud/azure-cognitive-services/emotion-recognition.md)
+#### [Распознанное распознавание эмоций](data-cloud/azure-cognitive-services/emotion-recognition.md)
 ### Веб-службы
 #### [Общие сведения о веб-службах](data-cloud/web-services/index.md)
 #### [Введение](data-cloud/web-services/introduction.md)

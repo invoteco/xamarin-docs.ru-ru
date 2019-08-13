@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: вспомогательные функции класса FileSystem'
+title: 'Xamarin.Essentials: Вспомогательные методы для файловой системы'
 description: Класс FileSystem в Xamarin.Essentials содержит ряд вспомогательных функций для поиска кэша приложения, каталогов данных и открытых файлов в пакете приложения.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 74089d55006555168d9774924c484cb8866cfb37
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898862"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738867"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: вспомогательные функции класса FileSystem
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Вспомогательные методы для файловой системы
 
 Класс **FileSystem** содержит ряд вспомогательных функций для поиска кэша приложения, каталогов данных и открытых файлов в пакете приложения.
 
@@ -28,7 +28,7 @@ ms.locfileid: "52898862"
 using Xamarin.Essentials;
 ```
 
-Чтобы получить каталог приложения для хранения **кэшированных данных**. Данные кэша можно использовать для любых данных, которые должны сохраняться дольше, чем временные, но не требуются для правильной работы.
+Чтобы получить каталог приложения для хранения **кэшированных данных**. Данные кэша можно использовать для любых данных, которые должны сохраняться дольше, чем временные, но не требуются для правильной работы, так как ОС определяет, когда это хранилище очищается.
 
 ```csharp
 var cacheDir = FileSystem.CacheDirectory;

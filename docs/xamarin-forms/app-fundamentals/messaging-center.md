@@ -1,118 +1,104 @@
 ---
 title: Класс MessagingCenter в Xamarin.Forms
-description: В этой статье описывается, как использовать класс MessagingCenter в Xamarin.Forms для отправки и получения сообщений, что сокращает потребность в обеспечении взаимодействия между классами, такими как модели представлений.
+description: Класс Xamarin.Forms MessagingCenter реализует шаблон "публикация-подписка", который обеспечивает взаимодействие на основе сообщений между компонентами, которые неудобно связывать по ссылкам объектов и типов.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2016
-ms.openlocfilehash: b40617dc9ed2054540ce04d5527fae8de6e2285b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/30/2019
+ms.openlocfilehash: a4d246419c7449c2395759cf5a8b04469e7a2309
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644901"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821007"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Класс MessagingCenter в Xamarin.Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
-_Платформа Xamarin.Forms включает в себя простую службу обмена сообщениями для отправки и получения сообщений._
+Шаблон "публикация-подписка" — это шаблон обмена сообщениями, в котором издатели отправляют сообщение без знания о получателях, известных как подписчики. Аналогичным образом подписчики прослушивают определенные сообщения, не зная издателей.
 
-<a name="Overview" />
+Класс Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) реализует шаблон "публикация-подписка", который обеспечивает взаимодействие на основе сообщений между компонентами, которые неудобно связывать по ссылкам объектов и типов. Этот механизм позволяет издателям и подписчикам взаимодействовать без ссылки друг на друга, помогая уменьшить зависимости между ними.
 
-## <a name="overview"></a>Обзор
+Класс [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) предоставляет функцию многоадресной публикации и подписки. Это означает, что может существовать несколько издателей, которые публикуют одно сообщение, и может быть несколько подписчиков, прослушивающих одно и то же сообщение:
 
-Класс `MessagingCenter` в Xamarin.Forms позволяет моделям представлений и другим компонентам взаимодействовать, не зная ничего друг о друге, кроме простого контракта сообщения.
+![](messaging-center-images/messaging-center.png "Функция многоадресной публикации и подписки")
 
-<a name="How_the_MessagingCenter_Works" />
+Издатели отправляют сообщения с помощью метода [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), а подписчики прослушивают сообщения с помощью метода [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). Кроме того, подписчики могут также отменять подписку на сообщения, если это необходимо, с помощью метода [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
-## <a name="how-the-messagingcenter-works"></a>Как работает MessagingCenter
+> [!IMPORTANT]
+> На внутреннем уровне класс [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) использует слабые ссылки. Это означает, что он не будет поддерживать объекты в активном состоянии и позволит им собирать мусор. Поэтому необходимо отменять подписку на сообщения только в том случае, если классу больше не требуется получать сообщения.
 
-Класс `MessagingCenter` имеет два метода.
+## <a name="publish-a-message"></a>Публикация сообщения
 
--  **Subscribe** — ожидает передачи сообщений с определенной сигнатурой и выполняет некоторое действие при их получении. Ожидать передачи одного и того же сообщения могут несколько подписчиков.
--  **Send** — публикует сообщение для прослушивателей. Если прослушиватели не подписаны на сообщение, оно игнорируется.
-
-`MessagingCenter` — это статический класс с методами `Subscribe` и `Send`, которые используются в рамках всего решения.
-
-Сообщения имеют строковый параметр `message`, который позволяет *адресовать* их. Методы `Subscribe` и `Send` используют универсальные параметры для дальнейшего управления доставкой сообщений: два сообщения с одинаковой строкой `message`, но разными аргументами универсального типа не могут быть доставлены одному подписчику.
-
-Интерфейс API для `MessagingCenter` прост:
-
-- `Subscribe<TSender> (object subscriber, string message, Action<TSender> callback, TSender source = null)`
-- `Subscribe<TSender, TArgs> (object subscriber, string message, Action<TSender, TArgs> callback, TSender source = null)`
-- `Send<TSender> (TSender sender, string message)`
-- `Send<TSender, TArgs> (TSender sender, string message, TArgs args)`
-- `Unsubscribe<TSender, TArgs> (object subscriber, string message)`
-- `Unsubscribe<TSender> (object subscriber, string message)`
-
-Эти методы рассматриваются далее.
-
-<a name="Using_the_MessagingCenter" />
-
-## <a name="using-the-messagingcenter"></a>Использование класса MessagingCenter
-
-Сообщения могут отправляться в результате действия пользователя (например, нажатия кнопки), системного события (например, изменения состояния элемента управления) или другого инцидента (например, завершения асинхронного скачивания). Получив сообщение, подписчик может изменить внешний вид пользовательского интерфейса, сохранить данные или инициировать другую операцию.
-
-Дополнительные сведения об использовании класса `MessagingCenter`: [Взаимодействие между слабо связанными компонентами](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
-
-### <a name="simple-string-message"></a>Простое строковое сообщение
-
-Простейшее сообщение содержит только строку в параметре `message`. Ниже показан метод `Subscribe`, *ожидающий передачи* простого строкового сообщения. Обратите внимание на то, что отправитель должен быть универсального типа `MainPage`. Любые классы в решении могут подписаться на сообщение с помощью следующего синтаксиса.
+Сообщения [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) являются строками. Издатели уведомляют подписчиков о сообщении с помощью одной из перегрузок [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*). Следующий код публикует события `Hi`.
 
 ```csharp
-MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) => {
-    // do something whenever the "Hi" message is sent
+MessagingCenter.Send<MainPage>(this, "Hi");
+```
+
+В этом примере метод [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) задает универсальный аргумент, представляющий отправителя. Чтобы получить сообщение, подписчик также должен указать тот же универсальный аргумент, указывающий, что он прослушивает сообщение от этого отправителя. Кроме того, в этом примере указываются два аргумента метода:
+
+- Первый аргумент указывает экземпляр отправителя.
+- Второй аргумент указывает само сообщение.
+
+Полезные данные также могут быть отправлены с сообщением:
+
+```csharp
+MessagingCenter.Send<MainPage, string>(this, "Hi", "John");
+```
+
+В этом примере метод [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) задает два универсальных аргумента. Первый — это тип, который отправляет сообщение, а второй — тип отправляемых полезных данных. Чтобы получить сообщение, подписчик также должен указать те же универсальные аргументы. Это позволяет разным подписчикам получать несколько сообщений с одним удостоверением сообщения, но различными типами полезных данных. Кроме того, в этом примере задается третий аргумент метода, представляющий полезные данные для отправки подписчику. В этом случае данные — это `string`.
+
+Метод [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) опубликует сообщение и все полезные данные в стиле "отправил и забыл". Поэтому сообщение отправляется, даже если отсутствуют подписчики, зарегистрированные для получения сообщения. В этом случае отправленное сообщение игнорируется.
+
+## <a name="subscribe-to-a-message"></a>Оформление подписки на сообщение
+
+Подписчики могут зарегистрироваться для получения сообщения с помощью одной из перегрузок [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). В следующем коде показан пример такого действия:
+
+```csharp
+MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) =>
+{
+    // Do something whenever the "Hi" message is received
 });
 ```
 
-В классе `MainPage` приведенный ниже код *отправляет* сообщение. Параметр `this` — это экземпляр `MainPage`.
+В этом примере метод [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) подписывает объект `this` на сообщения `Hi`, отправляемые типом `MainPage`, и выполняет делегат обратного вызова в ответ на получение сообщения. Делегат обратного вызова, указанный в качестве лямбда-выражения, может быть кодом, который обновляет пользовательский интерфейс, сохраняет данные или запускает другую операцию.
+
+> [!NOTE]
+> Подписчику может не потребоваться обрабатывать каждый экземпляр опубликованного сообщения, и это можно контролировать с помощью аргументов универсального типа, указанных в методе [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*).
+
+Следующий пример демонстрирует, как подписаться на сообщение, содержащее полезные данные.
 
 ```csharp
-MessagingCenter.Send<MainPage> (this, "Hi");
-```
-
-Строка не меняется: в ней указывается *тип сообщения* и определяется, каких подписчиков следует уведомить. Сообщение такого рода служит для уведомления о наступлении определенного события, например завершения отправки, когда дополнительные сведения не требуются.
-
-### <a name="passing-an-argument"></a>Передача аргумента
-
-Чтобы передать аргумент с сообщением, укажите аргумент Type в универсальных аргументах метода `Subscribe` и в сигнатуре действия.
-
-```csharp
-MessagingCenter.Subscribe<MainPage, string> (this, "Hi", (sender, arg) => {
-    // do something whenever the "Hi" message is sent
-    // using the 'arg' parameter which is a string
+MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
+{
+    await DisplayAlert("Message received", "arg=" + arg, "OK");
 });
 ```
 
-Чтобы отправить сообщение с аргументом, включите универсальный параметр Type и значение аргумента в вызов метода `Send`.
+В этом примере метод [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) подписывается на сообщения `Hi`, отправляемые типом `MainPage`, полезные данные которого — `string`. В ответ на получение такого сообщения выполняется делегат обратного вызова, который отображает полезные данные в оповещении.
+
+## <a name="unsubscribe-from-a-message"></a>Отмена подписки на сообщение
+
+Если подписчики больше не должны получать сообщения, можно отменить подписку на них. Для этого используется одна из перегрузок [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
 ```csharp
-MessagingCenter.Send<MainPage, string> (this, "Hi", "John");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
-В этом простом примере используется аргумент `string`, но передать можно любой объект C#.
+В этом примере метод [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) отменяет подписывание объекта `this` на сообщения `Hi`, отправляемые типом `MainPage`.
 
-### <a name="unsubscribe"></a>Отмена подписки
-
-Вы можете отменить подписку объекта на сигнатуру сообщения, чтобы сообщения больше не доставлялись. В синтаксисе метода `Unsubscribe` должна быть отражена сигнатура сообщения (поэтому может потребоваться включить универсальный параметр Type для аргумента сообщения).
+Подписку на сообщения, содержащие полезные данные, необходимо отменять с помощью перегрузки [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*), указывающей два универсальных аргумента:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage> (this, "Hi");
-MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
-<a name="Summary" />
-
-## <a name="summary"></a>Сводка
-
-Класс MessagingCenter — это простой способ сократить взаимодействие, особенно между моделями представлений. С его помощью можно отправлять и получать простые сообщения либо передавать аргументы между классами. Если классы больше не должны получать сообщения, необходимо отменить подписку на них.
-
+В этом примере метод [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) отменяет подписывание объекта `this` на сообщения `Hi`, отправляемые типом `MainPage`, полезные данные которого — `string`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
-- [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
-- [Взаимодействие между слабо связанными компонентами](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)

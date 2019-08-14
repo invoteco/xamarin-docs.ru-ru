@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: d47a8d4a0fa72cee59a054554e9868f20323d00b
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832442"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980788"
 ---
 # <a name="getting-started-with-datapages"></a>Приступая к работе с DataPages
 
@@ -21,8 +21,7 @@ ms.locfileid: "67832442"
 ![](~/media/shared/preview.png "Этот API доступна в предварительной версии")
 
 > [!IMPORTANT]
-> Требуется DataPages [Xamarin.Forms темы](~/xamarin-forms/user-interface/themes/index.md) ссылку для отображения.
-
+> Для подготовки страниц к просмотру требуется ссылка на тему Xamarin. Forms. Это включает в себя установку пакета NuGet [Xamarin. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) в проект, за которым следуют пакеты NuGet [Xamarin. Forms. Theme. light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) или [Xamarin. Forms. Theme. темно](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
 Чтобы приступить к созданию простую страницу управляемых данными, с помощью предварительной версии DataPages, выполните следующие действия. Этот демонстрационный использует, жестко стиля («события») в предварительной версии сборок, которые работает только с определенным форматом JSON в коде.
 
@@ -34,7 +33,7 @@ ms.locfileid: "67832442"
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
-* Это реализация темы Nuget (например) Xamarin.Forms.Theme.Light)
+* Это реализация темы Nuget (например) Xamarin. Forms. Theme. Light)
 
 ## <a name="2-add-theme-reference"></a>2. Добавление ссылки на темы
 
@@ -52,7 +51,7 @@ ms.locfileid: "67832442"
 ```
 
 > [!IMPORTANT]
-> Вы также должны выполнить действия по [загружать темы сборки (см. ниже)](#loadtheme) , добавив некоторые стандартный код для iOS `AppDelegate` и Android `MainActivity`. Это будет улучшена в будущих предварительной версии.
+> Также необходимо выполнить действия по [загрузке сборок темы (приведенных ниже)](#loadtheme) , добавив в iOS `AppDelegate` и Android `MainActivity`некоторый стандартный код. Это будет улучшена в будущих предварительной версии.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. Добавьте страницу XAML
@@ -100,7 +99,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 Удалить `Content` элемента и замените ее строкой `p:ListDataPage.DataSource` для заполнения страницы с данными. В примере ниже Json удаленного файла данных загружается из URL-адрес.
 
 > [!NOTE]
-> Предварительный просмотр *требует* `StyleClass` атрибут для предоставления подсказки визуализированного представления источника данных. `StyleClass="Events"` Ссылается на макет, который является стандартным в предварительной версии и содержит стили *жестко* для сопоставления используемого источника данных JSON.
+> Предварительный просмотр *требует наличия* `StyleClass` атрибута для предоставления подсказок отрисовки для источника данных. `StyleClass="Events"` Ссылается на макет, который является стандартным в предварительной версии и содержит стили *жестко* для сопоставления используемого источника данных JSON.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -177,7 +176,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
 
-Это немного больше усилий для создания темы с нуля (см. в разделе [руководстве темы](~/xamarin-forms/user-interface/themes/index.md)), но будущих предварительных выпусках будет облегчить эту задачу для выполнения.
+Создавать темы с нуля немного сложнее, но будущие выпуски предварительной версии сделают это проще.
 
 
 ## <a name="troubleshooting"></a>Устранение неполадок

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: b48e92bcb49109dad6e8c5260b5cb822945e7a0b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82ca106f29eb28672abcbd282b60841bfdb4da8c
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651333"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980829"
 ---
 # <a name="xamarinforms-layouts"></a>Макеты Xamarin.Forms
 
@@ -45,7 +45,7 @@ _Макеты Xamarin.Forms используются для создания э�
 
 |     |     |
 | --- | --- |
-| [ `Frame` ](xref:Xamarin.Forms.Frame) Класс является производным от [ `ContentView` ](#contentView) и отображает прямоугольную рамку вокруг его дочерних. `Frame` имеет значение по умолчанию [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) значение 20, а также определяет [ `OutlineColor` ](xref:Xamarin.Forms.Frame.OutlineColor), [ `CornerRadius` ](xref:Xamarin.Forms.Frame.CornerRadius), и [ `HasShadow` ](xref:Xamarin.Forms.Frame.HasShadow)свойства.<br /><br />[Документация по API](xref:Xamarin.Forms.Frame) | [![Frame пример](layouts-images/Frame.png "кадров пример")](layouts-images/Frame-Large.png#lightbox "кадров пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| Класс является производным от [`ContentView`](#contentView) и отображает границу (рамку) вокруг ее дочернего элемента. [`Frame`](xref:Xamarin.Forms.Frame) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) Класс имеет значение по умолчанию [`Padding`](xref:Xamarin.Forms.Layout.Padding) 20, а также свойства, и. `Frame`<br /><br />[Документация по API](xref:Xamarin.Forms.Frame) / [руководство](~/xamarin-forms/user-interface/layouts/frame.md) / [образца](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![Frame пример](layouts-images/Frame.png "кадров пример")](layouts-images/Frame-Large.png#lightbox "кадров пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
 
 <a name="scrollView" />

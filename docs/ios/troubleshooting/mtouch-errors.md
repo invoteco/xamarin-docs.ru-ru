@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: da19b9071695f11a7c5591b7e715d85daa01841b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 3291589f4a61fad7d7465e0ac2bd4844ae4a0655
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508721"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980735"
 ---
 # <a name="xamarinios-errors"></a>Ошибки Xamarin. iOS
 
@@ -137,7 +137,7 @@ SGen (--Sgen) необходимо включить, если включено �
 
 <a name="MT0015" />
 
-### <a name="mt0015-invalid-abi--supported-abis-are-i386-x8664--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: Недопустимый ABI: *. Поддерживаемые ABI: i386, x86_64, ARMv7, ARMv7 + LLVM, ARMv7 + LLVM + thumb2, armv7s, armv7s + LLVM, armv7s + LLVM + thumb2, arm64 и arm64 + LLVM.
+### <a name="mt0015-invalid-abi--supported-abis-are-i386-x86_64--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: Недопустимый ABI: *. Поддерживаемые ABI: i386, x86_64, ARMv7, ARMv7 + LLVM, ARMv7 + LLVM + thumb2, armv7s, armv7s + LLVM, armv7s + LLVM + thumb2, arm64 и arm64 + LLVM.
 
 Недопустимый ABI передан в mtouch. Укажите допустимый ABI.
 
@@ -252,7 +252,7 @@ REPL поддерживается только в том случае, если 
 
 <a name="MT0037" />
 
-### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x8664"></a>MT0037: несовместимость. dll не поддерживает 64-разрядные технологии. Либо сослаться на Xamarin. iOS. dll, либо не выполнять сборку для 64-разрядной архитектуры (ARM64 и/или x86_64).
+### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: несовместимость. dll не поддерживает 64-разрядные технологии. Либо сослаться на Xamarin. iOS. dll, либо не выполнять сборку для 64-разрядной архитектуры (ARM64 и/или x86_64).
 
 <a name="MT0038" />
 
@@ -838,7 +838,7 @@ class Program {
 
 Произошла ошибка при касании файла (что сделано для обеспечения правильной работы частичных сборок).
 
-Это предупреждение может быть, скорее всего, игнорироваться. в случае каких-либо проблем файл ошибки (https://bugzilla.xamarin.com ) (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) и будет исследован.
+Это предупреждение может быть, скорее всего, игнорироваться. в случае возникновения проблем файл ошибки [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) будет исследован.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Сообщения об ошибках, связанные с проектом
 
@@ -1678,7 +1678,7 @@ Parameter name: instruction
 
 <a name="MT3002" />
 
-### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvancedtopicslimitationsreversecallbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: Ограничение AOT: Метод "*" должен быть статическим, так как он дополнен атрибутом [Монопинвокекаллбакк]. См. раздел [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
+### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: Ограничение AOT: Метод "*" должен быть статическим, так как он дополнен атрибутом [Монопинвокекаллбакк]. См. раздел [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
 
 Это сообщение об ошибке поступает из компилятора AOT.
 
@@ -1824,7 +1824,7 @@ Parameter name: instruction
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvancedtopicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: Регистратор обнаружил недопустимый тип `*`. Регистрация универсальных типов с помощью цели-C не поддерживается и может привести к случайному поведению и (или) сбоям (для обеспечения обратной совместимости с более старыми версиями Xamarin. iOS эту ошибку можно пропустить, `--unsupported--enable-generics-in-registrar` передав в качестве дополнительного mtouch на странице параметров сборки iOS проекта. Дополнительные сведения см. в разделе [Developer.Xamarin.com/Guides/iOS/advanced_topics/Registrar](~/ios/internals/registrar.md) .
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: Регистратор обнаружил недопустимый тип `*`. Регистрация универсальных типов с помощью цели-C не поддерживается и может привести к случайному поведению и (или) сбоям (для обеспечения обратной совместимости с более старыми версиями Xamarin. iOS эту ошибку можно пропустить, `--unsupported--enable-generics-in-registrar` передав в качестве дополнительного mtouch на странице параметров сборки iOS проекта. Дополнительные сведения см. в разделе [Developer.Xamarin.com/Guides/iOS/advanced_topics/Registrar](~/ios/internals/registrar.md) .
 
 <a name="MT4113" />
 
@@ -2110,7 +2110,7 @@ class MyCustomNSObject : MyNSObject
 
 <a name="MT4168" />
 
-### <a name="mt4168-cannot-register-the-type-managedname-because-its-objective-c-name-exportedname-is-an-objective-c-keyword-please-use-a-different-name"></a>MT4168: Не удается зарегистрировать тип "{Managed\_Name}", так как его цель-c "\_{Exported Name}" является ключевым словом "цель-c". Укажите другое имя.
+### <a name="mt4168-cannot-register-the-type-managed_name-because-its-objective-c-name-exported_name-is-an-objective-c-keyword-please-use-a-different-name"></a>MT4168: Не удается зарегистрировать тип "{Managed\_Name}", так как его цель-c "\_{Exported Name}" является ключевым словом "цель-c". Укажите другое имя.
 
 Имя цели-C для рассматриваемого типа не является допустимым идентификатором цели-C.
 
@@ -3017,6 +3017,6 @@ Xamarin. iOS не удалось разместить необходимый м�
 
 <a name="MT8024" />
 
-### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Не удалось найти допустимый тип расширения для интеллектуального перечисления "{smart_type}". Отправляйте ошибку по адресу https://bugzilla.xamarin.com.
+### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Не удалось найти допустимый тип расширения для интеллектуального перечисления "{smart_type}". Отправляйте ошибку по адресу https://bugzilla.xamarin.com.
 
 Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).

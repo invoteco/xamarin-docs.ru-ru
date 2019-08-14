@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 8173ebcc174df6e34a53f226a43083bd28941031
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: bc95b9be0605c353ee9f914cb065f79711b9f92b
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869379"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978278"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Создание визуального модуля подготовки Xamarin. Forms
 
@@ -104,7 +104,7 @@ public class CustomVisual : IVisual
 
 ## <a name="register-the-ivisual-type"></a>Регистрация типа IVisual
 
-В проектах платформы добавьте пространства имен `ExportRendererAttribute`модуля подготовки отчетов в:
+В проектах платформы добавьте на `ExportRendererAttribute` уровне сборки:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]

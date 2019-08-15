@@ -49,6 +49,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: hot-reload.md
+            html: 'Узнайте, как использовать горячую перезагрузку XAML для быстрой проверки изменений пользовательского интерфейса.'
+            image:
+              src: ~/media/icons/i_quickstart-3.svg
+              href: hot-reload.md
+            title: Горячая перезагрузка
           - href: toolbox.md
             html: Узнайте об использовании панели элементов XAML для перетаскивания элементов управления и макетов Xamarin.Forms в редактор XAML.
             image:

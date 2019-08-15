@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
+  ms.date: 08/07/2019
 abstract:
   description: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
 sections:
@@ -30,7 +30,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: animation/index.md
-            title: Animation
+            title: Анимация
           - href: boxview.md
             html: Сведения об использовании BoxView для создания цветных прямоугольников.
             image:
@@ -42,7 +42,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: button.md
-            title: Button
+            title: Кнопка
           - href: checkbox.md
             html: Сведения о задании логического значения с помощью CheckBox.
             image:
@@ -60,7 +60,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: colors.md
-            title: Color
+            title: Цвета
           - href: controls/index.md
             html: 'Сведения о страницах, макетах, представлениях и ячейках, доступных в Xamarin.Forms.'
             image:
@@ -90,7 +90,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: images.md
-            title: Изображения
+            title: Образы
           - href: imagebutton.md
             html: Сведения об использовании элемента управления ImageButton для вывода изображения и выполнения приложением определенной задачи при касании элемента.
             image:
@@ -114,13 +114,19 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: map.md
-            title: Maps
+            title: Карты
+          - href: menuitem.md
+            html: 'Узнайте, как использовать класс MenuItem для добавления элементов в контекстное меню ячеек ListView.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: menuitem.md
+            title: MenuItem
           - href: picker/index.md
             html: Сведения об использовании элемента управления Picker для выбора текстового элемента из списка данных.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: picker/index.md
-            title: Picker
+            title: Средство выбора
           - href: progressbar.md
             html: 'Сведения об использовании элемента ProgressBar, указывающего, что приложение выполняет длительное действие.'
             image:
@@ -132,7 +138,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: searchbar.md
-            title: SearchBar
+            title: Панель поиска
           - href: slider.md
             html: 'Сведения об элементе управления Slider, позволяющем пользователю выбрать числовое значение из непрерывного диапазона.'
             image:
@@ -144,7 +150,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: stepper.md
-            title: Stepper
+            title: Шаговый переключатель
           - href: styles/index.md
             html: "Сведения о применении стилей\_XAML и каскадных таблиц стилей\_(CSS) в пользовательском интерфейсе."
             image:
@@ -156,7 +162,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: switch.md
-            title: Switch
+            title: Параметр
           - href: tableview.md
             html: 'Сведения об использовании TableView для отображения прокручиваемых списков данных или вариантов выбора, в которых строки имеют разный шаблон.'
             image:
@@ -169,12 +175,24 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: text/index.md
             title: Text
+          - href: theming.md
+            html: 'Узнайте, как создавать темы для приложений Xamarin.Forms и изменять тему во время выполнения.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: theming.md
+            title: Темы
           - href: timepicker.md
             html: Сведения об использовании TimePicker для выбора времени.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: timepicker.md
             title: TimePicker
+          - href: toolbaritem.md
+            html: 'Узнайте, как использовать ToolbarItem для добавления кнопок на панель навигации.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: toolbaritem.md
+            title: ToolbarItem
           - href: visual/index.md
             html: Сведения об использовании визуального элемента Material из Xamarin.Forms для создания приложений с идентичным или практически идентичным внешним видом на iOS и Android.
             image:

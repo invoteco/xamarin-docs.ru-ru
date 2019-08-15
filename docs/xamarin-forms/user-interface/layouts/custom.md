@@ -1,5 +1,5 @@
 ---
-title: Создание пользовательского макета
+title: Создание пользовательского макета в Xamarin. Forms
 description: В этой статье объясняется, как создать класс пользовательского макета, а также демонстрирует класс WrapLayout, с учетом ориентации, который упорядочивает его дочерние элементы горизонтально по странице и затем создает оболочку для отображения последующих дочерних элементов для дополнительных строк.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -7,20 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0f2136aa4a07d289e1e8aecc6cb37460fdc5727c
+ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645205"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024529"
 ---
-# <a name="creating-a-custom-layout"></a>Создание пользовательского макета
+# <a name="create-a-custom-layout-in-xamarinforms"></a>Создание пользовательского макета в Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms определяет четыре класса макета — StackLayout, AbsoluteLayout, RelativeLayout и сетки, и каждый упорядочивает его дочерние элементы по-разному. Тем не менее иногда это необходимо для организации содержимого страницы, с использованием макета, не поддерживаемых Xamarin.Forms. В этой статье объясняется, как создать класс пользовательского макета, а также демонстрирует класс WrapLayout, с учетом ориентации, который упорядочивает его дочерние элементы горизонтально по странице и затем создает оболочку для отображения последующих дочерних элементов для дополнительных строк._
-
-## <a name="overview"></a>Обзор
 
 В Xamarin.Forms, все макета классы являются производными от [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) класса и ограничение универсального типа, [ `View` ](xref:Xamarin.Forms.View) и его производные типы. В свою очередь `Layout<T>` класс является производным от [ `Layout` ](xref:Xamarin.Forms.Layout) класс, который предоставляет механизм для определения положения и размера дочерних элементов.
 
@@ -67,7 +65,7 @@ _Xamarin.Forms определяет четыре класса макета — S
 
 [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) Может быть переопределен для реализации кэша, чтобы свести к минимуму повторяющихся вызовов [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) методы макета дочерних элементов. Переопределение `InvalidateLayout` метод предоставляет уведомления об при добавлении дочерних элементов или удалены из разметки. Аналогичным образом [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) метод может быть переопределен для предоставления уведомления при изменении размера одного из дочерних элементов макета. Для обоих переопределения методов настраиваемый макет должен вернуть ответ Очистка кэша. Дополнительные сведения см. в разделе [вычисление и кэширование данных](#caching).
 
-## <a name="creating-a-custom-layout"></a>Создание пользовательского макета
+## <a name="create-a-custom-layout"></a>Создание пользовательского макета
 
 Процесс создания пользовательского макета выглядит следующим образом:
 
@@ -89,7 +87,7 @@ _Xamarin.Forms определяет четыре класса макета — S
 
 <a name="creating" />
 
-### <a name="creating-a-wraplayout"></a>Создание WrapLayout
+### <a name="create-a-wraplayout"></a>Создание Враплайаут
 
 Пример приложения демонстрирует учетом ориентации `WrapLayout` класс, который упорядочивает его дочерние элементы горизонтально по странице и затем создает оболочку для отображения последующих дочерних элементов для дополнительных строк.
 
@@ -107,7 +105,7 @@ public class WrapLayout : Layout<View>
 
 <a name="caching" />
 
-#### <a name="calculating-and-caching-layout-data"></a>Вычисление и кэширование данных макета
+#### <a name="calculate-and-cache-layout-data"></a>Вычисление и кэширование данных макета
 
 `LayoutData` Структура сохраняет данные о коллекции дочерних элементов в ряд свойств:
 
@@ -200,7 +198,7 @@ LayoutData GetLayoutData(double width, double height)
 
 <a name="adding_properties" />
 
-#### <a name="adding-properties-backed-by-bindable-properties"></a>Добавление свойств, поддерживаемый привязываемые свойства
+#### <a name="add-properties-backed-by-bindable-properties"></a>Добавление свойств, которые поддерживаются с помощью привязки свойств
 
 `WrapLayout` Класс определяет `ColumnSpacing` и `RowSpacing` свойства, значения которого используются для разделения строк и столбцов в макете, и который обеспечиваются связываемые свойства. Привязываемые свойства показаны в следующем примере кода:
 
@@ -230,7 +228,7 @@ public static readonly BindableProperty RowSpacingProperty = BindableProperty.Cr
 
 <a name="onmeasure" />
 
-#### <a name="overriding-the-onmeasure-method"></a>Переопределение метода OnMeasure
+#### <a name="override-the-onmeasure-method"></a>Переопределение метода onmeasure
 
 `OnMeasure` Переопределение показан в следующем примере кода:
 
@@ -256,7 +254,7 @@ protected override SizeRequest OnMeasure(double widthConstraint, double heightCo
 
 <a name="layoutchildren" />
 
-#### <a name="overriding-the-layoutchildren-method"></a>Переопределение метода LayoutChildren
+#### <a name="override-the-layoutchildren-method"></a>Переопределение метода Лайаутчилдрен
 
 `LayoutChildren` Переопределение показан в следующем примере кода:
 
@@ -307,7 +305,7 @@ protected override void LayoutChildren(double x, double y, double width, double 
 
 <a name="invalidatelayout" />
 
-#### <a name="overriding-the-invalidatelayout-method"></a>Переопределение метода InvalidateLayout
+#### <a name="overridethe-invalidatelayout-method"></a>Оверридесе Инвалидателайаут, метод
 
 [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) Переопределение вызывается в том случае, когда дочерние элементы добавлении или удалении из макета, или если в одном из `WrapLayout` значение изменений свойств, как показано в следующем примере кода:
 
@@ -326,7 +324,7 @@ protected override void InvalidateLayout()
 
 <a name="onchildmeasureinvalidated" />
 
-#### <a name="overriding-the-onchildmeasureinvalidated-method"></a>Переопределение метода OnChildMeasureInvalidated
+#### <a name="override-the-onchildmeasureinvalidated-method"></a>Переопределение метода Ончилдмеасуреинвалидатед
 
 [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) Переопределение вызывается в том случае, когда один из дочерних элементов макета изменяется размер и показано в следующем примере кода:
 
@@ -342,7 +340,7 @@ protected override void OnChildMeasureInvalidated()
 
 <a name="consuming" />
 
-### <a name="consuming-the-wraplayout"></a>Использование WrapLayout
+### <a name="consume-the-wraplayout"></a>Использование Враплайаут
 
 `WrapLayout` Класса могут использоваться, поместив его на [ `Page` ](xref:Xamarin.Forms.Page) производный тип, как показано в следующем примере кода XAML:
 

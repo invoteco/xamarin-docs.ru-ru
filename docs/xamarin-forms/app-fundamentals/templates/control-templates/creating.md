@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/14/2019
-ms.openlocfilehash: fbc966fdf1d79ecc9794d2156db81b583694ce36
-ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
+ms.openlocfilehash: 523113a7b54541733e14f947eefa247e4f774b99
+ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68665686"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024518"
 ---
 # <a name="create-a-controltemplate"></a>Создание шаблона ControlTemplate
 
@@ -152,7 +152,7 @@ void OnButtonClicked (object sender, EventArgs e)
 
 ## <a name="create-a-controltemplate-in-c35"></a>Создание шаблона ControlTemplate в C&#35;
 
-Чтобы определить шаблон [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) на уровне приложения, необходимо создать `class`, представляющий `ControlTemplate`. Этот класс должен быть производным от [макета](~/xamarin-forms/user-interface/layouts/index.md), используемого для шаблона, как показано в следующем примере кода.
+Чтобы определить шаблон [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) на уровне приложения, необходимо создать `class`, представляющий `ControlTemplate`. Этот класс должен быть производным от [макета](~/xamarin-forms/user-interface/layouts/index.yml), используемого для шаблона, как показано в следующем примере кода.
 
 ```csharp
 class TealTemplate : Grid

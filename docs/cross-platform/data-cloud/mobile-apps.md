@@ -6,12 +6,12 @@ ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: 2ac361ae48e353944420482c7beedbec07774be6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: de56c133bfc28d66081505e458c35d533885c574
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511365"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526735"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure мобильные приложения
 
@@ -45,17 +45,17 @@ Validate and modify data    http://go.microsoft.com/fwlink/p/?LinkId=331330
 В этой статье содержатся пошаговые инструкции по созданию и запуску первого приложения Xamarin Azure.
 Здесь рассматривается создание нового мобильного приложения Azure на портале, а затем Загрузка и запуск предварительно настроенного приложения.
 
--  [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started/)
--  [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started/)
--  [Xamarin.Forms](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started)
+- [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started/)
+- [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started/)
+- [Xamarin.Forms](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started)
 
 <!--
 ## Validate, Modify and Augment Data in Scripts
 
 Demonstrates how to add server-side scripts to Azure Mobile Services data tables to implement server-side validation and other functionality.
 
--  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
--  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+- [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+- [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
 -->
 
 <!--
@@ -63,39 +63,39 @@ Demonstrates how to add server-side scripts to Azure Mobile Services data tables
 
 A quick example of paging large sets of data using Skip() and Take().
 
--  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
--  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+- [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+- [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
 -->
 
 ## <a name="get-started-with-users"></a>Начало работы с пользователями
 
 Содержит полные инструкции по настройке и кодированию экрана входа с помощью мобильных служб Azure. Поддерживаемые поставщики проверки подлинности включают в себя Microsoft, Google, Facebook и Twitter.
 
--  [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
--  [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
+- [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
+- [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
 
 ## <a name="authorize-users-in-scripts"></a>Авторизация пользователей в скриптах
 
 Пример кода для интерфейсов JavaScript
 
--  [TODO. js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
+- [TODO. js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
 
 
 ## <a name="get-started-with-push"></a>Начало работы с Push-уведомлениями
 
 Выполните инструкции по настройке push-уведомлений на сайтах Apple и Google, а затем отправьте push-уведомление из мобильных служб Azure на устройство.
 
--  [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
--  [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
+- [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
+- [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
 
 
 ## <a name="get-started-with-notification-hubs"></a>Приступая к работе с центрами уведомлений
 
 Выполните инструкции по настройке push-уведомлений на сайтах Apple и Google, настройте центр уведомлений Azure, а затем создайте push-уведомления на устройствах.
 
--  [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
--  [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
+- [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
+- [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
 
 
 

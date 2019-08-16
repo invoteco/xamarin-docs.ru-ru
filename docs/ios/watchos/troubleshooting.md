@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6826088dcc192f4bc4dcfa7424236f98391e0bd6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656707"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528404"
 ---
 # <a name="watchos-troubleshooting"></a>Устранение неполадок watchOS
 
@@ -105,37 +105,39 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. Закройте раскадровку и вернитесь к Visual Studio для Mac. Создайте новый C# файл **MyInterfaceController.CS** (или любое требуемое имя) в проекте " **Контрольное расширение приложения** " (а не в приложении для просмотра, где находится Раскадровка). Добавьте следующий код (с обновлением пространства имен, ClassName и имени конструктора):
 
-        using System;
-        using WatchKit;
-        using Foundation;
-        
-        namespace WatchAppExtension  // remember to update this
+    ```csharp
+    using System;
+    using WatchKit;
+    using Foundation;
+
+    namespace WatchAppExtension  // remember to update this
+    {
+        public partial class MyInterfaceController // remember to update this
+        : WKInterfaceController
         {
-            public partial class MyInterfaceController // remember to update this
-            : WKInterfaceController
+            public MyInterfaceController // remember to update this
+            (IntPtr handle) : base (handle)
             {
-                public MyInterfaceController // remember to update this
-                (IntPtr handle) : base (handle)
-                {
-                }
-                public override void Awake (NSObject context)
-                {
-                    base.Awake (context);
-                    // Configure interface objects here.
-                    Console.WriteLine ("{0} awake with context", this);
-                }
-                public override void WillActivate ()
-                {
-                    // This method is called when the watch view controller is about to be visible to the user.
-                    Console.WriteLine ("{0} will activate", this);
-                }
-                public override void DidDeactivate ()
-                {
-                    // This method is called when the watch view controller is no longer visible to the user.
-                    Console.WriteLine ("{0} did deactivate", this);
-                }
+            }
+            public override void Awake (NSObject context)
+            {
+                base.Awake (context);
+                // Configure interface objects here.
+                Console.WriteLine ("{0} awake with context", this);
+            }
+            public override void WillActivate ()
+            {
+                // This method is called when the watch view controller is about to be visible to the user.
+                Console.WriteLine ("{0} will activate", this);
+            }
+            public override void DidDeactivate ()
+            {
+                // This method is called when the watch view controller is no longer visible to the user.
+                Console.WriteLine ("{0} did deactivate", this);
             }
         }
+    }
+    ```
 
 5. Создайте еще один C# файл **MyInterfaceController.Designer.CS** в проекте " **Контрольное расширение приложения** " и добавьте приведенный ниже код. Не забудьте обновить пространство имен, ClassName и `Register` атрибут:
 
@@ -188,22 +190,22 @@ with an alpha channel. Icons should not have an alpha channel.
 
 11. Когда изменения раскадровки сохранены и Xcode закрывается, вернитесь в Visual Studio для Mac. Он определит изменения в файле заголовка и автоматически добавит код в файл **Designer.CS** :
 
+    ```csharp
+    [Register ("MyInterfaceController")]
+    partial class MyInterfaceController
+    {
+        [Outlet]
+        WatchKit.WKInterfaceButton myButton { get; set; }
 
-        [Register ("MyInterfaceController")]
-        partial class MyInterfaceController
+        void ReleaseDesignerOutlets ()
         {
-            [Outlet]
-            WatchKit.WKInterfaceButton myButton { get; set; }
-        
-            void ReleaseDesignerOutlets ()
-            {
-                if (myButton != null) {
-                    myButton.Dispose ();
-                    myButton = null;
-                }
+            if (myButton != null) {
+                myButton.Dispose ();
+                myButton = null;
             }
         }
-
+    }
+    ```
 
 Теперь можно ссылаться на элемент управления (или реализовать действие) в C#!
 
@@ -213,7 +215,7 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Запуск приложения Watch из командной строки
 
 > [!IMPORTANT]
-> Вы можете запустить приложение Watch в нормальном режиме приложения по умолчанию, а также в режимах **уведомлений** **или с** помощью [настраиваемых параметров выполнения](~/ios/watchos/get-started/installation.md#custommodes) в Visual Studio для Mac и Visual Studio.
+> Вы можете запустить приложение Watch в нормальном режиме приложения по умолчанию, а также в режимах **уведомлений** или с помощью [настраиваемых параметров выполнения](~/ios/watchos/get-started/installation.md#custommodes) в Visual Studio для Mac и Visual Studio.
 
 
 Вы также можете использовать командную строку для управления симулятором iOS. Программа командной строки, используемая для запуска контрольных приложений, — **mtouch**.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 715fd408cc05671beba0277a690585fdbb558c7e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff406b8bd6630ef9e17011e0b4b6b996fa944d89
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654034"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528783"
 ---
 # <a name="social-framework-in-xamarinios"></a>Социальные платформы в Xamarin. iOS
 
@@ -55,9 +55,9 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 
  `SLComposeViewController`никогда не отправляет твит непосредственно без взаимодействия с пользователем. Однако его можно инициализировать с помощью следующих методов:
 
--   `SetInitialText`— Добавляет начальный текст для отображения в твите. 
--  `AddUrl`— Добавляет URL-адрес твита.
--  `AddImage`— Добавляет изображение в твит.
+- `SetInitialText`— Добавляет начальный текст для отображения в твите. 
+- `AddUrl`— Добавляет URL-адрес твита.
+- `AddImage`— Добавляет изображение в твит.
 
 
 После инициализации вызов `PresentVIewController` отображает представление, созданное `SLComposeViewController`. Пользователь может при необходимости изменить и отправить твит или отменить его отправку. В любом случае контроллер должен быть закрыт в `CompletionHandler`, где результат также можно проверить, чтобы увидеть, был ли твит отправлен или отменен, как показано ниже:

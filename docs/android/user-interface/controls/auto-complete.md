@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 810c6ddead66d191870ce97a50653f29737492b0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510653"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523076"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Автоматическое заполнение для Xamarin. Android
 
@@ -199,11 +199,8 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### <a name="references"></a>Ссылки
 
--   [Рецепт аутокомплететекствиев](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) Пример проекта Xamarin. Android `AutoCompleteTextView`для. &ndash;
--   [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
--   [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+- [Рецепт аутокомплететекствиев](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Пример проекта Xamarin. Android для`AutoCompleteTextView`
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
-описанными в[*лицензии*](http://creativecommons.org/licenses/by/2.5/) *Creative Commons Attribution 2,5. Этот*учебник основан на
-[*руководстве*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-по автоматическому завершению Android *.*
+_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](http://creativecommons.org/licenses/by/2.5/). Это руководство основано на [руководстве по автоматическому заполнению Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

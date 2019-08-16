@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 82320b069156828101d17e79ca48a8933b8a8777
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655082"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528460"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Создание приложения Xamarin. iOS с помощью API элементов
 
 _Эта статья посвящена информации, приведенной в статье Общие сведения о диалоговом окне с ограниченным касанием. В нем представлено пошаговое руководство, в котором показано, как использовать «некасание» (MT. D). API элементов, чтобы быстро приступить к созданию приложения с помощью MT. Четырехмерного._
 
-В этом пошаговом руководстве мы будем использовать MT. D элементов API для создания стиля приложения "основной/подробности", отображающего список задач. Когда пользователь нажимает <span class="ui">+</span> кнопку на панели навигации, в таблицу добавляется новая строка для задачи. Выбор строки приведет к переходу на экран сведений, который позволяет обновить описание задачи и дату выполнения, как показано ниже:
+В этом пошаговом руководстве мы будем использовать MT. D элементов API для создания стиля приложения "основной/подробности", отображающего список задач. Когда пользователь нажимает **+** кнопку на панели навигации, в таблицу добавляется новая строка для задачи. Выбор строки приведет к переходу на экран сведений, который позволяет обновить описание задачи и дату выполнения, как показано ниже:
 
  [![](elements-api-walkthrough-images/01-task-list-app.png "Выбор строки приведет к переходу на экран сведений, который позволяет обновить описание задачи и дату выполнения.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
@@ -36,11 +36,11 @@ _Эта статья посвящена информации, приведенн
 
 Чтобы создать Многоэкранное приложение с помощью одноуровневого диалогового окна, необходимо выполнить следующие действия.
 
-1.  Создайте`UINavigationController.`
-1.  Создайте`DialogViewController.`
-1.  Добавьте в `DialogViewController` качестве корня`UINavigationController.` 
-1.  `RootElement` Добавьте в`DialogViewController.`
-1.  Добавьте `Sections` и `Elements` в`RootElement.` 
+1. Создайте`UINavigationController.`
+1. Создайте`DialogViewController.`
+1. Добавьте в `DialogViewController` качестве корня`UINavigationController.` 
+1. `RootElement` Добавьте в`DialogViewController.`
+1. Добавьте `Sections` и `Elements` в`RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>Использование Уинавигатионконтроллер
 
@@ -77,14 +77,14 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="using-dialogviewcontroller"></a>Использование Диалогвиевконтроллер
 
-Объект, являющийся подклассом, имеет `UITableView` в качестве своего представления. `UITableViewController` `DialogViewController` В этом примере мы хотим добавлять элементы в таблицу при каждом <span class="ui">+</span> нажатии кнопки. Так как `DialogViewController` объект был добавлен `UINavigationController`в `NavigationItem`, `RightBarButton` мы можем использовать свойство, чтобы добавить <span class="ui">+</span> кнопку, как показано ниже:
+Объект, являющийся подклассом, имеет `UITableView` в качестве своего представления. `UITableViewController` `DialogViewController` В этом примере мы хотим добавлять элементы в таблицу при каждом **+** нажатии кнопки. Так как `DialogViewController` объект был добавлен `UINavigationController`в `NavigationItem`, `RightBarButton` мы можем использовать свойство, чтобы добавить **+** кнопку, как показано ниже:
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-Когда мы создали `RootElement` ранее, мы передали ему единственный `Section` экземпляр, чтобы мы <span class="ui">+</span> могли добавлять элементы при нажатии кнопки пользователем. Чтобы сделать это в обработчике событий для кнопки, можно использовать следующий код:
+Когда мы создали `RootElement` ранее, мы передали ему единственный `Section` экземпляр, чтобы мы **+** могли добавлять элементы при нажатии кнопки пользователем. Чтобы сделать это в обработчике событий для кнопки, можно использовать следующий код:
 
 ```csharp
 _addButton.Clicked += (sender, e) => {                

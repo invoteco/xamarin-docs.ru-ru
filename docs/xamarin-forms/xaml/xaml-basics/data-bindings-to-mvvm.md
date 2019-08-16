@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 11bca4bc74316f87ab7b329c897efcd4b768bc03
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f81a9d232e1702d112e837a80d35403162e3adca
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657105"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529332"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Часть 5. От привязки данных до MVVM
 
@@ -304,26 +304,26 @@ namespace XamlSamples
 
 Чтобы разрешить ViewModel, чтобы быть более независимой от объектов определенного пользовательского интерфейса, но по-прежнему допускает методов, вызываемых в ViewModel, *команда* интерфейс существует. Этот интерфейс командной поддерживает следующие элементы в Xamarin.Forms.
 
--  `Button`
--  `MenuItem`
--  `ToolbarItem`
--  `SearchBar`
--  `TextCell` (и, следовательно также `ImageCell`)
--  `ListView`
--  `TapGestureRecognizer`
+- `Button`
+- `MenuItem`
+- `ToolbarItem`
+- `SearchBar`
+- `TextCell` (и, следовательно также `ImageCell`)
+- `ListView`
+- `TapGestureRecognizer`
 
 За исключением элемента `SearchBar` и `ListView` элемента, эти элементы определяют два свойства:
 
--  `Command` типа  `System.Windows.Input.ICommand`
--  `CommandParameter` типа  `Object`
+- `Command` типа  `System.Windows.Input.ICommand`
+- `CommandParameter` типа  `Object`
 
 `SearchBar` Определяет `SearchCommand` и `SearchCommandParameter` свойства, хотя `ListView` определяет `RefreshCommand` свойство типа `ICommand`.
 
 `ICommand` Интерфейс определяет два метода и одно событие:
 
--  `void Execute(object arg)`
--  `bool CanExecute(object arg)`
--  `event EventHandler CanExecuteChanged`
+- `void Execute(object arg)`
+- `bool CanExecute(object arg)`
+- `event EventHandler CanExecuteChanged`
 
 ViewModel можно определить свойства типа `ICommand`. Теперь можно привязать эти свойства, чтобы `Command` свойства каждого `Button` или другой элемент, или возможно пользовательские представления, которое реализует этот интерфейс. При необходимости можно задать `CommandParameter` свойство для идентификации отдельных `Button` объектов (или другие элементы), привязанные к этому свойству модели представления. На внутреннем уровне `Button` вызовы `Execute` метод всякий раз, когда пользователь касается `Button`, передав для `Execute` метод его `CommandParameter`.
 

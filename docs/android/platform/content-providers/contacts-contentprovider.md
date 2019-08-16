@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: e83b9a594bad5ee3d29800988eb94812600da8a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e5b23973d7784a9116d4c82ef6d892aacbf584a1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643710"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524474"
 ---
 # <a name="using-the-contacts-contentprovider"></a>Использование контактов ContentProvider
 
@@ -33,11 +33,11 @@ ms.locfileid: "68643710"
 
 Каждый из этих методов имеет один и тот же базовый набор входных данных:
 
--  **Универсальный код ресурса** &ndash; Полное имя `ContentProvider` .
--  **Проекция** &ndash; Спецификация выбора столбцов для курсора.
--  **Выделенный фрагмент** Аналогично предложению `WHERE`SQL. &ndash;
--  **Селектионаргс** &ndash; Параметры, подставляемые в выделенном фрагменте.
--  **SortOrder** &ndash; Столбцы, по которым выполняется сортировка.
+- **Универсальный код ресурса** &ndash; Полное имя `ContentProvider` .
+- **Проекция** &ndash; Спецификация выбора столбцов для курсора.
+- **Выделенный фрагмент** Аналогично предложению `WHERE`SQL. &ndash;
+- **Селектионаргс** &ndash; Параметры, подставляемые в выделенном фрагменте.
+- **SortOrder** &ndash; Столбцы, по которым выполняется сортировка.
 
 
 

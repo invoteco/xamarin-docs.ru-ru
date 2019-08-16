@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655966"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529061"
 ---
 # <a name="xamarinforms-device-class"></a>Класс устройств Xamarin.Forms
 
@@ -71,12 +71,12 @@ layout.Margin = new Thickness(5, top, 5, 0);
 
 `Device.Idiom` Свойство может использоваться для изменения макеты или функциональные возможности в зависимости от устройства приложение выполняется на. [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) Перечисление содержит следующие значения:
 
--  **Телефон** — iPhone, iPod touch и уже, чем 600 частные интерфейсы Android ^
--  **Tablet** — iPad, Windows и Android устройств шире, чем 600 спады ^
--  **Рабочий стол** — возвращаются только в [приложений универсальной платформы Windows](~/xamarin-forms/platform/windows/installation/index.md) на настольных компьютерах Windows 10 (возвращает `Phone` на мобильных устройствах Windows, в том числе в сценариях непрерывное множество решений)
--  **TV** — Tizen TV устройств
--  **Контрольные значения** — Tizen watch устройств
--  **Неподдерживаемый** – не используется
+- **Телефон** — iPhone, iPod touch и уже, чем 600 частные интерфейсы Android ^
+- **Tablet** — iPad, Windows и Android устройств шире, чем 600 спады ^
+- **Рабочий стол** — возвращаются только в [приложений универсальной платформы Windows](~/xamarin-forms/platform/windows/installation/index.md) на настольных компьютерах Windows 10 (возвращает `Phone` на мобильных устройствах Windows, в том числе в сценариях непрерывное множество решений)
+- **TV** — Tizen TV устройств
+- **Контрольные значения** — Tizen watch устройств
+- **Неподдерживаемый** – не используется
 
 *^ частные интерфейсы не обязательно является количество физических пикселей*
 

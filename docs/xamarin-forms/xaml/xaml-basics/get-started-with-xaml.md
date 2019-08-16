@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 085960b92aa0f349d4cb2737385e723d8b6aa6b7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f4acadc1153c93ebade7453cfd7a79f5b052e513
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656516"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528357"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Часть 1. Начало работы с XAML
 
@@ -211,9 +211,9 @@ namespace XamlSamples
 
 Для более сложных типов свойств, тем не менее, преобразователи типов используются для синтаксического анализа XAML. Это классы в Xamarin.Forms, который является производным от `TypeConverter`. Много открытых классов, но некоторые — нет. Для этого конкретного файла XAML некоторые из этих классов играют роль в фоновом:
 
--  `LayoutOptionsConverter` для `VerticalOptions` свойство
--  `FontSizeConverter` для `FontSize` свойство
--  `ColorTypeConverter` для `TextColor` свойство
+- `LayoutOptionsConverter` для `VerticalOptions` свойство
+- `FontSizeConverter` для `FontSize` свойство
+- `ColorTypeConverter` для `TextColor` свойство
 
 Эти преобразователи определяют допустимый синтаксис значения свойств.
 

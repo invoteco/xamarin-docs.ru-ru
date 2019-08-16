@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d6ad088f9223dccb1966148fe8f53d76e85040a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645606"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528589"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Части и функции таблиц в Xamarin. iOS
 
 Уитаблевиев может иметь стиль "Группировка" или "обычный" и состоит из следующих частей:
 
--  [Заголовок раздела](#Section_Header)
--  [Ячейки](#Cells) (или строки, если предпочитаете)
--  [Нижний колонтитул раздела](#Section_Footer)
--  [Index](#Index)
--  [Режим правки](#Edit_Features) (включает операцию "Прокрутка для удаления" и перетаскивание маркеров для изменения порядка строк) 
+- [Заголовок раздела](#Section_Header)
+- [Ячейки](#Cells) (или строки, если предпочитаете)
+- [Нижний колонтитул раздела](#Section_Footer)
+- [Index](#Index)
+- [Режим правки](#Edit_Features) (включает операцию "Прокрутка для удаления" и перетаскивание маркеров для изменения порядка строк) 
 
 На этих снимках экрана показано, как отображаются строки разделов, верхние и нижние колонтитулы, элементы управления правки и индекс.
 

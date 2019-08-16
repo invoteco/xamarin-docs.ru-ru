@@ -1,66 +1,66 @@
 ---
-title: Платформ Xamarin.Mac
-description: В этом документе перечислены различные платформы macOS можно использовать при разработке приложений для Mac с помощью Xamarin.Mac.
+title: Платформы Xamarin. Mac
+description: В этом документе перечислены различные платформы macOS, доступные для использования при разработке приложений Mac с помощью Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/19/2016
-ms.openlocfilehash: 605ffb23a70792a3dbaf98cd1d5b040a9dea92f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bea9d8f40766346825d19b5a95719a8321ecaca0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034088"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528947"
 ---
-# <a name="xamarinmac-frameworks"></a>Платформ Xamarin.Mac
+# <a name="xamarinmac-frameworks"></a>Платформы Xamarin. Mac
 
-Поддерживает следующие платформы macOS Xamarin.Mac:
+Xamarin. Mac поддерживает следующие платформы macOS:
 
--  AVFoundation 
--  Ускорение
--  Учетные записи
--  AVKit
--  Адресной книги 
--  AppKit 
--  AudioToolbox 
--  AudioUnit 
--  AudioUnitWrapper 
--  CoreAnimation 
--  CoreBluetooth 
--  CoreData 
--  CoreFoundation 
--  CoreGraphics 
--  CoreImage 
--  CoreLocation 
--  CoreMedia 
--  CoreMidi 
--  CoreServices 
--  CoreText 
--  CoreVideo 
--  CoreWlan 
--  CloudKit
--  CFNetwork
--  Darwin 
--  Foundation 
--  GameKit 
--  ImageIO 
--  ImageKit 
--  LocalAuthentication
--  MapKit
--  MediaAccessibility
--  ObjCRuntime 
--  OpenAL 
--  OpenGL 
--  PdfKit 
--  QTKit 
--  QuartzComposer 
--  QuickLook 
--  SceneKit 
--  ScriptingBridge 
--  Безопасность 
--  StoreKit 
--  VideoToolbox
--  WebKit
+- авфаундатион 
+- Ускорить
+- Учетные записи
+- авкит
+- AddressBook 
+- AppKit 
+- аудиотулбокс 
+- аудиаунит 
+- аудиаунитвраппер 
+- кореаниматион 
+- CoreBluetooth 
+- CoreData 
+- корефаундатион 
+- кореграфикс 
+- CoreImage 
+- Переreloc 
+- коремедиа 
+- коремиди 
+- коресервицес 
+- коретекст 
+- коревидео 
+- коревлан 
+- CloudKit
+- CFNetwork
+- Darwin 
+- Базовый 
+- GameKit 
+- имажеио 
+- имажекит 
+- LocalAuthentication
+- MapKit
+- медиаакцессибилити
+- обжкрунтиме 
+- Открытая 
+- OpenGL 
+- пдфкит 
+- кткит 
+- куартзкомпосер 
+- куикклук 
+- SceneKit 
+- скриптингбридже 
+- Безопасность 
+- StoreKit 
+- видеотулбокс
+- WebKit
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 40a44b2748b29b21a1456c55cb75514f18506dd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4a3ba0ae860f2e6b42fc4cf349ec1bc8e83979e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648570"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527072"
 ---
 # <a name="images-in-xamarinforms"></a>Образы в Xamarin.Forms
 
@@ -204,7 +204,7 @@ public class ImageResourceExtension : IMarkupExtension
 
 #### <a name="debugging-code"></a>Отладка кода
 
-Так как иногда сложно понять, почему не загружаемых ресурсов определенного образа, следующий код отладки можно временно добавляется приложения чтобы убедиться, что ресурсы настроены правильно. Будут выведены все известные ресурсов, внедренных в заданной сборке для <span class="UIItem">консоли</span> для отладки проблем загрузки ресурсов.
+Так как иногда сложно понять, почему не загружаемых ресурсов определенного образа, следующий код отладки можно временно добавляется приложения чтобы убедиться, что ресурсы настроены правильно. Будут выведены все известные ресурсов, внедренных в заданной сборке для **консоли** для отладки проблем загрузки ресурсов.
 
 ```csharp
 using System.Reflection;

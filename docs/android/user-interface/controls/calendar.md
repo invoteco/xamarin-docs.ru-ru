@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 027b526815c56e5a0092b68b550129d9ffbf1493
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 610f9be346b761c4d20e4bbf97ecfcda74c0bee0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643034"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523050"
 ---
 # <a name="xamarinandroid-calendar"></a>Календарь Xamarin. Android
 
@@ -224,10 +224,10 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 Мы рассмотрели, как считывать данные календаря. Теперь давайте посмотрим, как добавить событие в календарь. Чтобы это работало, обязательно включите в него `android.permission.WRITE_CALENDAR` разрешение, упомянутое ранее. Чтобы добавить событие в календарь, мы будем делать следующее:
 
-1.  `ContentValues` Создайте экземпляр.
-1.  Используйте ключи из `CalendarContract.Events.InterfaceConsts` класса для заполнения `ContentValues` экземпляра.
-1.  Задайте Часовые пояса для времени начала и окончания события.
-1.  `ContentResolver` Используйте для вставки данных события в календарь.
+1. `ContentValues` Создайте экземпляр.
+1. Используйте ключи из `CalendarContract.Events.InterfaceConsts` класса для заполнения `ContentValues` экземпляра.
+1. Задайте Часовые пояса для времени начала и окончания события.
+1. `ContentResolver` Используйте для вставки данных события в календарь.
 
 
 Эти шаги показаны в приведенном ниже коде.

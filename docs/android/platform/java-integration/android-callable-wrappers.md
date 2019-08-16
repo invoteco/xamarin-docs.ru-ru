@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: a8bd3f11698260b944bd29fcd9551825cb76e506
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fb00bf4a817ad8188d5a127b23b4a910dd4f23a7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511186"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524132"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Вызываемые оболочки Android для Xamarin. Android
 
@@ -40,7 +40,7 @@ java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivit
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Если требуется  доступ к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, вот код, объявляющий действие с полным именем `My.ActivityType`:
+Если требуется доступ к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, вот код, объявляющий действие с полным именем `My.ActivityType`:
 
 ```csharp
 namespace My {
@@ -64,11 +64,11 @@ namespace My {
 
 После добавления `my.ActivityType` этого параметра свойства к нему можно получить доступ по имени из внешнего кода и из `adb` скриптов. `Service` `Application` `Activity` `ContentProvider` `BroadcastReceiver`Атрибут может быть задан для многих различных типов, включая,,, и: `Name` 
 
--   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
--   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
--   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
--   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
--   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
+- [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+- [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+- [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+- [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+- [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
 Именование АКВ на основе MD5SUM было введено в Xamarin. Android 5,0. Дополнительные сведения об именовании атрибутов см. в разделе [регистераттрибуте](xref:Android.Runtime.RegisterAttribute). 
 

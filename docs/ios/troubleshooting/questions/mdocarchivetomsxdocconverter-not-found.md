@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 0746174857f66843ef9a09429b6286f2efca90d6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: af90baf6d7b94973a76bcf391f2cb28c45340602
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420541"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528148"
 ---
 # <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequest"></a>MDocArchiveToMsxDocConverter.exe не найден, rver.BaseCommand.OnRequest
 
 > [!IMPORTANT]
-> Эта проблема устранена в последних версиях Xamarin. Тем не менее, если эта проблема возникает на последнюю версию программного обеспечения, отправьте [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) благодаря полное управление версиями сведения и полный создавать выходные данные журнала.
+> Эта проблема решена в последних версиях Xamarin. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.
 
 
 ## <a name="error-message"></a>Сообщение об ошибке
 
-Эта ошибка может возникать в *Mac Server Log* в Visual Studio:
+Эта ошибка может появиться в *журнале сервера Mac* в Visual Studio:
 
 ```
 Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found
@@ -30,12 +30,12 @@ Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter
   at Mtb.Server.Listener.OnRequest (System.Object state) [0x00000] in <filename unknown>:0
 ```
 
-Существует 2 отдельные проблемы в этом сообщении.
+В этом сообщении есть две отдельные проблемы:
 
-1.  `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
+1. `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
 
-    Эта ошибка не опасна, но он также ввести в заблуждение. Он [удаляется](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) в будущем выпуске.
+    Эта ошибка является безвредной, но также приводит к неверности. В следующем выпуске он [будет удален](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) .
 
-2.  `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
+2. `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
 
-    Эта ошибка является настоящую проблему. К сожалению, из-за для [ограничение](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) Эта трассировка стека исключения *неполные*. Если вы заметили неполный стек трассировки следующим образом, в журнале сервера Mac, вы можете проверить `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` файл на узле сборки Mac, чтобы найти полная трассировка стека.
+    Эта ошибка является реальной проблемой. К сожалению, из-за [ограничения](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) Эта трассировка стека исключений является неполной. Если вы заметили неполную трассировку стека подобным образом в журнале сервера Mac, можно проверить `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` файл на узле сборки Mac, чтобы найти полную трассировку стека.

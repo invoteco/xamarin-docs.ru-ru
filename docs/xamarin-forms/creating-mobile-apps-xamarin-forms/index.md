@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: feae1a33b2e090ccfe3573285c75978aacd1799a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: f4ff4b7b39f589f29f0c4c5df76ff36fe0060d83
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739204"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529218"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Создание мобильных приложений с помощью Xamarin.Forms (книга)
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples)
 
-<p><img src="images/cover-sml.png" title="Создание мобильных приложений с помощью Xamarin.Forms (книга)" align="left" />Книга <i>Создание мобильных приложений с помощью Xamarin.Forms</i> Чарльза Петцольда является руководство о том, как писать приложения Xamarin.Forms. Единственным предварительным условием является знание C# языка программирования. В книге предоставляет обширные исследования в пользовательском интерфейсе Xamarin.Forms и также рассматриваются анимации, MVVM, триггеры, поведений, пользовательские макеты, пользовательские модули подготовки отчетов и многое другое.
+<img src="images/cover-sml.png" title="Создание мобильных приложений с помощью Xamarin.Forms (книга)" align="left" />Книга *Создание мобильных приложений с помощью Xamarin.Forms* Чарльза Петцольда является руководство о том, как писать приложения Xamarin.Forms. Единственным предварительным условием является знание C# языка программирования. В книге предоставляет обширные исследования в пользовательском интерфейсе Xamarin.Forms и также рассматриваются анимации, MVVM, триггеры, поведений, пользовательские макеты, пользовательские модули подготовки отчетов и многое другое.
 
 В книге была опубликована весной 2016 и не была обновлена с тех пор. Нам есть в книге, остается качественное, но некоторые из [материал устарел](#ways-in-which-the-book-is-outdated), и некоторые темы, не полностью правильный или завершения.
 
@@ -26,11 +26,11 @@ ms.locfileid: "68739204"
 
 Скачайте вашего формата предпочтительный электронная книга от Microsoft Virtual Academy:
 
-*    [**PDF (56 МБ)** ](https://aka.ms/xamebook)
+* [**PDF (56 МБ)** ](https://aka.ms/xamebook)
 
-*    [**ePub (151 МБ)** ](https://aka.ms/xamebook/epub)
+* [**ePub (151 МБ)** ](https://aka.ms/xamebook/epub)
 
-*    [**Kindle edition (325 МБ)** ](https://aka.ms/xamebook/mobi)
+* [**Kindle edition (325 МБ)** ](https://aka.ms/xamebook/mobi)
 
 Вы также можете [скачайте отдельные главы](#download-chapters-and-summaries) виде PDF-файлов.
 
@@ -85,7 +85,7 @@ ms.locfileid: "68739204"
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>Способами, в котором она неактуальна книги
 
-С момента публикации <i>Создание мобильных приложений с помощью Xamarin.Forms</i>, были добавлены несколько новых возможностей в Xamarin.Forms. Эти новые возможности описаны в отдельных статьях в [Xamarin.Forms](/xamarin/) документации.
+С момента публикации *Создание мобильных приложений с помощью Xamarin.Forms*, были добавлены несколько новых возможностей в Xamarin.Forms. Эти новые возможности описаны в отдельных статьях в [Xamarin.Forms](/xamarin/) документации.
 
 Другие изменения привели некоторое содержимое книги как устаревшие:
 
@@ -101,7 +101,7 @@ ms.locfileid: "68739204"
 
 ### <a name="the-role-of-xaml-has-been-elevated"></a>Была изменена роль XAML
 
-<i>Создание мобильных приложений с помощью Xamarin.Forms</i> начинается с описания способах создания приложений Xamarin.Forms с помощью C#. Расширяемый язык разметки приложений (XAML) не возникающие до [Глава 7. XAML vs. Код](summaries/chapter07.md).
+*Создание мобильных приложений с помощью Xamarin.Forms* начинается с описания способах создания приложений Xamarin.Forms с помощью C#. Расширяемый язык разметки приложений (XAML) не возникающие до [Глава 7. XAML vs. Код](summaries/chapter07.md).
 
 XAML теперь имеет роль в Xamarin.Forms. Шаблоны решения Xamarin.Forms, в состав Visual Studio создайте файлы на основе XAML страницы. Разработчик, использующий Xamarin.Forms следует ознакомиться с XAML как можно раньше. [Расширяемого языка разметки приложений (XAML)](~/xamarin-forms/xaml/index.yml) раздел документации Xamarin.Forms содержит несколько статей о XAML, чтобы приступить к работе.
 

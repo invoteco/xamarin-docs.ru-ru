@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b73f00eb704d80da6b0bab3a34f08f2d1cb70a16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646175"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527993"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 
@@ -45,10 +45,10 @@ _В этой статье приводятся пошаговые инструк
 
 В этой статье предполагается, что у вас есть опыт работы с Xcode и языком цели-c, и вы прочитали нашу документацию по [цели привязки](~/cross-platform/macios/binding/index.md) . Кроме того, для выполнения представленных действий необходимо выполнить следующие действия.
 
--  **Xcode и iOS SDK** . на компьютере разработчика необходимо установить и настроить Apple Xcode и последнюю версию API iOS.
--  **[Средства командной строки Xcode](#Installing_the_Xcode_Command_Line_Tools)** . для текущей установленной версии Xcode должны быть установлены средства командной строки Xcode (Дополнительные сведения об установке см. ниже).
--  **Visual Studio для Mac или Visual Studio** . на компьютере разработчика должны быть установлены и настроены последняя версия Visual Studio для Mac или Visual Studio. Для разработки приложения Xamarin. iOS требуется компьютер Apple Mac. при использовании Visual Studio необходимо подключение к [узлу сборки Xamarin. iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **Последняя версия цели Шарпие** — текущая копия инструмента объектив Шарпие, скачанного [отсюда](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Если вы уже установили цель Шарпие, вы можете обновить ее до последней версии, используя`sharpie update`
+- **Xcode и iOS SDK** . на компьютере разработчика необходимо установить и настроить Apple Xcode и последнюю версию API iOS.
+- **[Средства командной строки Xcode](#Installing_the_Xcode_Command_Line_Tools)** . для текущей установленной версии Xcode должны быть установлены средства командной строки Xcode (Дополнительные сведения об установке см. ниже).
+- **Visual Studio для Mac или Visual Studio** . на компьютере разработчика должны быть установлены и настроены последняя версия Visual Studio для Mac или Visual Studio. Для разработки приложения Xamarin. iOS требуется компьютер Apple Mac. при использовании Visual Studio необходимо подключение к [узлу сборки Xamarin. iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **Последняя версия цели Шарпие** — текущая копия инструмента объектив Шарпие, скачанного [отсюда](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Если вы уже установили цель Шарпие, вы можете обновить ее до последней версии, используя`sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 

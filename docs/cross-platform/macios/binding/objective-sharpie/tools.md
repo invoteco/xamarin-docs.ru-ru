@@ -1,28 +1,26 @@
 ---
-title: Цели Sharpie средства и команды
-description: Этот документ предоставляет обзор средств, включенных с Sharpie цели и аргументы командной строки для использования с ними.
+title: Средства & задания Шарпие команды
+description: В этом документе представлен обзор средств, входящих в состав цели Шарпие, и аргументов командной строки для их использования.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 51a0b81204b743824e24cfed83bd73308fa8d506
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: ddfe0f99991808214a6006c9504d267179adf2ab
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977666"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521857"
 ---
-# <a name="objective-sharpie-tools--commands"></a>Цели Sharpie средства и команды
+# <a name="objective-sharpie-tools--commands"></a>Средства & задания Шарпие команды
 
-_Обзор средств, включенных с Sharpie цели и аргументы командной строки для их использования._
+_Общие сведения о средствах, входящих в состав цели Шарпие, и аргументы командной строки для их использования._
 
-<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
+После успешной [установки](~/cross-platform/macios/binding/objective-sharpie/get-started.md)цели Шарпие откройте терминал и ознакомьтесь с командами цели Шарпие, которые должны предложить:
 
-
-После успешной цели Sharpie [установлен](~/cross-platform/macios/binding/objective-sharpie/get-started.md), откройте окно терминала и ознакомиться с <em>команды</em> Sharpie цель может предложить:
-
-<pre>$ <b>sharpie -help</b>
+```
+$ sharpie -help
 usage: sharpie [OPTIONS] TOOL [TOOL_OPTIONS]
 
 Options:
@@ -48,22 +46,24 @@ Available Tools:
   bind               Create a Xamarin C# binding to Objective-C APIs
   update             Update to the latest release of Objective Sharpie
   verify-docs        Show cross reference documentation for [Verify] attributes
-  docs               Open the Objective Sharpie online documentation</pre>
+  docs               Open the Objective Sharpie online documentation
+```
 
-Цели Sharpie предоставляет следующие средства:
+Целевое Шарпие предоставляет следующие средства:
 
-|Средство|Описание|
+|Инструмент|Описание|
 |--- |--- |
-|**Xcode**|Сведения о текущей установке Xcode и версиях iOS и Mac пакеты SDK, которые доступны. Мы будем использовать в дальнейшем при создании наших привязки.|
-|**POD**|Выполняет поиск, настраивает, устанавливает (в локальном каталоге) и привязывает Objective-C [cocoapod для службы](https://cocoapods.org/) библиотек, доступных из главного репозитория спецификаций. Этот инструмент оценивает установленных cocoapod для службы автоматически определить правильные входные данные для передачи `bind` ниже средства. Новые возможности 3.0!|
-|**bind**|Анализирует файлы заголовков (`*.h`) в библиотеке Objective-C в исходный [ApiDefinition.cs и StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) файлов.|
-|**update**|Проверяет наличие более новых версиях Sharpie цели и загружает и запускает программу установки, если таковой доступен.|
-|**проверить документы**|Отображаются подробные сведения о `[Verify]` атрибуты.|
+|**Xcode**|Содержит сведения о текущей установке Xcode и доступных версиях пакетов SDK для iOS и Mac. Эти сведения будут использоваться позже при формировании привязок.|
+|**модуль**|Выполняет поиск, настраивает, устанавливает (в локальном каталоге) и привязывает библиотеки цели-C [кокоапод](https://cocoapods.org/) , доступные в репозитории основных спецификаций. Это средство оценивает установленный кокоапод для автоматического вывода правильных входных данных для передачи `bind` в средство ниже. Новое в 3,0!|
+|**bind**|Выполняет синтаксический анализ файлов заголовков (`*.h`) в библиотеке цели-C в начальных файлах [ApiDefinition.cs и StructsAndEnums.CS](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) .|
+|**update**|Проверяет наличие новых версий цели Шарпие и загружает и запускает установщик, если он доступен.|
+|**Проверка-документация**|Отображает подробные сведения об `[Verify]` атрибутах.|
 |**Документы**|Переход к этому документу в веб-браузере по умолчанию.|
 
-Чтобы получить справку по определенное средство Sharpie цели, введите имя средства и `-help` параметр. Например `sharpie xcode -help` возвращает следующие выходные данные:
+Чтобы получить справку по определенному целевому инструменту Шарпие, введите имя средства и `-help` параметр. Например, `sharpie xcode -help` возвращает следующие выходные данные:
 
-<pre>$ <b>sharpie xcode -help</b>
+```
+$ sharpie xcode -help
 usage: sharpie xcode [OPTIONS]
 
 Options:
@@ -71,17 +71,20 @@ Options:
   -v, -verbose     Be verbose with output
 
 Xcode Options:
-  -sdks            List all available Xcode SDKs. Pass -verbose for more details.</pre>
+  -sdks            List all available Xcode SDKs. Pass -verbose for more details.
+```
 
-Прежде чем приступать процесса привязки, нам нужно получить сведения о нашей текущей установленных SDK, введя следующую команду в окне терминала `sharpie xcode -sdks`. Выходные данные могут различаться в зависимости от версий Xcode установки. Цели Sharpie ищет пакеты SDK, устанавливать его в любом `Xcode*.app` под `/Applications` каталог:
+Прежде чем можно будет начать процесс привязки, необходимо получить сведения о текущих установленных пакетах SDK, введя следующую команду в терминале `sharpie xcode -sdks`. Выходные данные могут отличаться в зависимости от того, какие версии Xcode установлены. Цель Шарпие ищет пакеты SDK, установленные в `Xcode*.app` `/Applications` каталоге:
 
-<pre>$ <b>sharpie xcode -sdks</b>
-<span class="terminal-blue">sdk:</span> appletvos9.0    <span class="terminal-green">arch:</span> arm64
-<span class="terminal-blue">sdk:</span> iphoneos9.1     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> iphoneos9.0     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> iphoneos8.4     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> macosx10.11     <span class="terminal-green">arch:</span> x86_64  i386
-<span class="terminal-blue">sdk:</span> macosx10.10     <span class="terminal-green">arch:</span> x86_64  i386
-<span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
+```
+$ sharpie xcode -sdks
+sdk: appletvos9.0    arch: arm64
+sdk: iphoneos9.1     arch: arm64   armv7
+sdk: iphoneos9.0     arch: arm64   armv7
+sdk: iphoneos8.4     arch: arm64   armv7
+sdk: macosx10.11     arch: x86_64  i386
+sdk: macosx10.10     arch: x86_64  i386
+sdk: watchos2.0      arch: armv7
+```
 
-Приведенные выше, мы видим, что у нас есть `iphoneos9.1` пакет SDK установлен на компьютере, и он имеет `arm64` поддержка архитектуры. Мы будем использовать это значение для всех примеров в этом разделе. Располагая этой информацией, мы готовы выполнить синтаксический анализ файлов заголовка библиотеки Objective-C в исходный `ApiDefinition.cs` и `StructsAndEnums.cs` для привязки проекта.
+На приведенном выше примере мы видим, что `iphoneos9.1` на нашем компьютере установлен пакет SDK, и `arm64` он поддерживает архитектуру. Мы будем использовать это значение для всех примеров в этом разделе. После этой информации мы готовы к анализу файлов заголовков библиотек цели-C в первоначальной `ApiDefinition.cs` и `StructsAndEnums.cs` для проекта привязки.

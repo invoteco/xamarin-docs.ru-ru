@@ -7,27 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: cd27d5c884086cd0fade4364851039fd0cd915a0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dc84ecc0ee3a71cc4e1d4233f4d6d5f22f597b07
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945465"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523479"
 ---
 # <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Почему моя сборка выпуска Android не подключается к Интернету?
 
 ## <a name="cause"></a>Причина
 
-Наиболее распространенной причиной этой проблемы в том, что **INTERNET** разрешение автоматически включается в сборке отладки, но должен быть установлен вручную для построения выпуска. Это обусловлено разрешение Internet позволяет отладчик для присоединения к процессу, как описано для «DebugSymbols» [здесь](~/android/deploy-test/building-apps/build-process.md).
+Наиболее распространенной причиной этой проблемы является то, что **Интернет** -разрешение автоматически включается в отладочную сборку, но его необходимо задать вручную для сборки выпуска. Это связано с тем, что разрешение «Интернет» позволяет отладчику присоединяться к процессу, как описано в [статье](~/android/deploy-test/building-apps/build-process.md)«DebugSymbols».
 
 
-## <a name="fix"></a>Исправление
+## <a name="fix"></a>Fix
 
-Чтобы устранить проблему, может потребоваться разрешение Internet в манифесте Android. Это можно сделать с помощью редактора манифестов или sourcecode манифеста:
+Чтобы устранить эту проблему, можно запросить разрешение Интернета в манифесте Android. Это можно сделать с помощью редактора манифеста или кодовприложений манифеста:
 
--   Исправления в редакторе: В проект Android, перейдите в раздел **AndroidManifest.xml на "->" Свойства "->" необходимые разрешения** и проверьте **Internet**
+- Исправить в редакторе: В проекте Android перейдите в раздел **Свойства — > AndroidManifest. XML — > необходимые разрешения** и проверьте **Интернет** .
 
--   Исправление в Sourcecode: Откройте в редакторе источника AndroidManifest и добавьте тег разрешение внутри `<Manifest>` теги:
+- Исправление в Кодовприложений: Откройте AndroidManifest в редакторе исходного кода и добавьте тег `<Manifest>` разрешения в Теги:
 
     ```xml
     <Manifest>

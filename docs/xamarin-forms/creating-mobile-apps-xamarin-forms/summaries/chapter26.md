@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 26. Пользовательские макеты
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 26. Пользовательские макеты
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 26. Пользовательские макеты'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 9fa9802f94e10612c4b0fe02c84ddcabc89820a8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a9887d12d251e60cf6767fe89f6125fe1438d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331576"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529248"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Сводка Глава 26. Пользовательские макеты
 
@@ -116,7 +116,7 @@ ms.locfileid: "61331576"
 
 [ **ExploreChildSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) отображает ограничение и размер запроса информации для простой макет.
 
-## <a name="deriving-from-layoutview"></a>Наследование от макета<View>
+## <a name="deriving-from-layoutview"></a>Наследование из представления\<макета >
 
 Класс пользовательского макета является производным от `Layout<View>`. Он отвечает за две задачи:
 

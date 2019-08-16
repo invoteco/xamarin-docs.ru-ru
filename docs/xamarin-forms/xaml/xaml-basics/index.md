@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 7d46744c20874dd122b63e56ec92c7aa5ae6562e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d8b522ce75b2b594242dca167242ad0362f6cbfc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656988"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528303"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Основы XAML Xamarin.Forms
 
@@ -35,35 +35,13 @@ XAML (расширяемый язык разметки для приложени
 
 XAML рассматриваются более подробно в многих главах книги, включая:
 
-<table style="border:0px; box-shadow:0 0px 0px" cellpadding="0" cellspacing="2" border="0" width="85%">
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Глава 7. XAML vs. Код</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf">Скачать PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">Сводка</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Глава 8. Код и XAML в гармонии</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">Скачать PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">Сводка</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Глава 10. Расширения разметки XAML</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf">Скачать PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">Сводка</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Глава 18. MVVM</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf">Скачать PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">Сводка</a></td></tr>
-</table>
+
+| Глава | Скачать | Сводка |
+|---------|---------|---------|
+| Глава 7. XAML vs. Код | [Загрузить PDF-файл](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [Сводка](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md) |
+| Глава 8. Код и XAML в гармонии | [Загрузить PDF-файл](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [Сводка](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md) |
+| Глава 10. Расширения разметки XAML | [Загрузить PDF-файл](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [Сводка](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md) |
+| Глава 18. MVVM | [Загрузить PDF-файл](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [Сводка](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md) |
 
 Эти главы может быть [для бесплатной загрузки](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
 
@@ -77,17 +55,17 @@ XAML также является частью Xamarin.Forms, кросс плат
 
 XAML имеет несколько преимуществ, эквивалентный код:
 
--  XAML чаще всего более емкий, так и удобочитаемыми, чем эквивалентный код.
--  В иерархии родители потомки, присущих XML позволяет XAML для имитации visual многоуровневому стандарту иерархии "родители потомки" объектов пользовательского интерфейса.
--  XAML может быть легко рукописных программистами, но тоже поддается оснащен инструментами, и созданный средствами визуальной разработки.
+- XAML чаще всего более емкий, так и удобочитаемыми, чем эквивалентный код.
+- В иерархии родители потомки, присущих XML позволяет XAML для имитации visual многоуровневому стандарту иерархии "родители потомки" объектов пользовательского интерфейса.
+- XAML может быть легко рукописных программистами, но тоже поддается оснащен инструментами, и созданный средствами визуальной разработки.
 
 Конечно существует ряд недостатков, в основном связаны с ограничениями, которые являются внутренними для языков разметки:
 
--  XAML не может содержать код. Все обработчики событий должны быть определены в файле кода.
--  XAML не может содержать циклы для повторной обработки. (Тем не менее, несколько визуальных объектов Xamarin.Forms — особенно [ `ListView` ](xref:Xamarin.Forms.ListView) — можно создать несколько дочерних элементов, в зависимости от объектов в его `ItemsSource` коллекции.)
--  XAML не может содержать условной обработки (тем не менее, привязку данных может ссылаться преобразователь привязки на основе кода, который фактически позволяет некоторое условную обработку.)
--  Обычно XAML нельзя создавать экземпляры классов, которые не определяют конструктор без параметров. (Тем не менее, есть иногда способ обойти это ограничение.)
--  Как правило, XAML не может вызывать методы. (Опять же, это ограничение можно иногда преодолеть.)
+- XAML не может содержать код. Все обработчики событий должны быть определены в файле кода.
+- XAML не может содержать циклы для повторной обработки. (Тем не менее, несколько визуальных объектов Xamarin.Forms — особенно [ `ListView` ](xref:Xamarin.Forms.ListView) — можно создать несколько дочерних элементов, в зависимости от объектов в его `ItemsSource` коллекции.)
+- XAML не может содержать условной обработки (тем не менее, привязку данных может ссылаться преобразователь привязки на основе кода, который фактически позволяет некоторое условную обработку.)
+- Обычно XAML нельзя создавать экземпляры классов, которые не определяют конструктор без параметров. (Тем не менее, есть иногда способ обойти это ограничение.)
+- Как правило, XAML не может вызывать методы. (Опять же, это ограничение можно иногда преодолеть.)
 
 Существует еще не визуальный конструктор для создания XAML в приложениях Xamarin.Forms. Все XAML должен быть написан вручную, но есть [средства предварительного просмотра XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). Программистам новый XAML может потребоваться часто сборка и запуск приложений, особенно после все, что возможно, очевидно, что неправильно. Даже разработчики богатом опыте в XAML знают, что поощрения для службы "Экспериментирование".
 

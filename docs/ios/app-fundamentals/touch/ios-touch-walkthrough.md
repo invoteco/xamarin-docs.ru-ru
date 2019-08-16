@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f772bf1309330b41f9faea812e2cdcdba8e969cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653127"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527064"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Пошаговое руководство. Использование сенсорного ввода в Xamarin. iOS
 
@@ -181,8 +181,8 @@ ms.locfileid: "68653127"
 В [предыдущем разделе](#Touch_Samples) показано, как перетащить объект на экран с помощью событий касания.
 В этом разделе мы удалим события касания и покажем, как использовать следующие распознаватели жестов:
 
--  Объект `UIPanGestureRecognizer` для перетаскивания изображения вокруг экрана.
--  Объект `UITapGestureRecognizer` , отвечающий на двойные касания на экране.
+- Объект `UIPanGestureRecognizer` для перетаскивания изображения вокруг экрана.
+- Объект `UITapGestureRecognizer` , отвечающий на двойные касания на экране.
 
 Если запустить [начальный пример кода](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) и нажать кнопку **распознавания жестов** , появится следующий экран:
 

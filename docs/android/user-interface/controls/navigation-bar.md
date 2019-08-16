@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c017ab96bdd78a41b31a3305021c5bc1f8e472d0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644915"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522920"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Панель навигации Xamarin. Android
 
@@ -22,9 +22,9 @@ ms.locfileid: "68644915"
 
 Доступно несколько новых флагов, контролирующих видимость панели навигации и ее элементов управления, а также видимость системной панели, представленной в Android 3. Флаги определены в `Android.View.View` классе и перечислены ниже:
 
--   `SystemUiFlagVisible`&ndash; Делает панель навигации видимой. 
--   `SystemUiFlagLowProfile`&ndash; Затемнение элементов управления на панели навигации. 
--   `SystemUiFlagHideNavigation`&ndash; Скрывает панель навигации. 
+- `SystemUiFlagVisible`&ndash; Делает панель навигации видимой. 
+- `SystemUiFlagLowProfile`&ndash; Затемнение элементов управления на панели навигации. 
+- `SystemUiFlagHideNavigation`&ndash; Скрывает панель навигации. 
 
 
 Эти флаги можно применить к любому представлению в иерархии представлений, задав `SystemUiVisibility` свойство. Если для нескольких представлений задано это свойство, система объединяет их с операцией или и применяет их до тех пор, пока в окне, в котором установлены флаги, остается фокус. При удалении представления все установленные флаги также будут удалены.

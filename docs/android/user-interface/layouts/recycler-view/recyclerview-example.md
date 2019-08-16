@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: b40b2d2d5083f32edcb0fc08c8365096e6d4fda9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645358"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522465"
 ---
 # <a name="a-basic-recyclerview-example"></a>Пример базового RecyclerView
 
@@ -171,11 +171,11 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 `mPhotoAlbum` Элемент содержит источник данных (фотоальбом), который передается в конструктор; конструктор копирует фотоальбом в эту переменную-член. Реализуются следующие необходимые `RecyclerView.Adapter` методы:
 
--   **`OnCreateViewHolder`** &ndash; Создает экземпляр файла макета элемента и владельца представления.
+- **`OnCreateViewHolder`** &ndash; Создает экземпляр файла макета элемента и владельца представления.
 
--   **`OnBindViewHolder`** &ndash; Загружает данные в указанной позиции в представления, ссылки на которые хранятся в заданном заполнителе представления.
+- **`OnBindViewHolder`** &ndash; Загружает данные в указанной позиции в представления, ссылки на которые хранятся в заданном заполнителе представления.
 
--   **`ItemCount`** &ndash; Возвращает число элементов в источнике данных.
+- **`ItemCount`** &ndash; Возвращает число элементов в источнике данных.
 
 Диспетчер макетов вызывает эти методы при размещении элементов `RecyclerView`в. Реализация этих методов рассматривается в следующих разделах.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: a53baed9d5f291628d7d1a8da05739e43412d473
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: af74ae3c7c87f501bff519bcfa361264205ca3f1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509715"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522377"
 ---
 # <a name="xamarinandroid-relativelayout"></a>Xamarin. Android RelativeLayout
 
@@ -76,7 +76,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[`Activity`](xref:Android.App.Activity) &mdash; `Resource.Layout.Main`  Метод загружает файл макета для, заданный идентификатором ресурса, относится к файлу макета RESOURCES/Layout/Main. axml. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+[`Activity`](xref:Android.App.Activity) &mdash; `Resource.Layout.Main` Метод загружает файл макета для, заданный идентификатором ресурса, относится к файлу макета RESOURCES/Layout/Main. axml. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
 
 Запустите приложение. Вы должны увидеть следующий макет:
 
@@ -90,5 +90,4 @@ protected override void OnCreate (Bundle savedInstanceState)
 - [`EditText`](xref:Android.Widget.EditText)
 - [`Button`](xref:Android.Widget.Button)
 
-*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
-описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/).
+_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](http://creativecommons.org/licenses/by/2.5/)._

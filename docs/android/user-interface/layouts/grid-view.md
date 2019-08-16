@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a1bcb83d6057cb7d4a43c510d7b5805b574812e6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: f71c275dd2beee6aedf41ecd19c8a4a39ab5a36f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510061"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522645"
 ---
 # <a name="xamarinandroid-gridview"></a>Элемент управления GridView. Android
 
@@ -145,7 +145,7 @@ public class ImageAdapter : BaseAdapter
 
 - [`SetPadding(int, int, int, int)`](xref:Android.Views.View.SetPadding*)Определяет заполнение для всех сторон. (Обратите внимание, что если изображения имеют разные пропорции, то меньшее заполнение приведет к более обрезке изображения, если оно не соответствует измерениям, заданным для Имажевиев.)
 
-[`View`](xref:Android.Views.View) Если  переданное [значениенеравноnull,`GetView()`](xref:Android.Widget.BaseAdapter.GetView*) то локальный[`ImageView`](xref:Android.Widget.ImageView)
+[`View`](xref:Android.Views.View) Если переданное [значениенеравноnull,`GetView()`](xref:Android.Widget.BaseAdapter.GetView*) то локальный[`ImageView`](xref:Android.Widget.ImageView)
 инициализируется с помощью перезапущенного [`View`](xref:Android.Views.View) объекта.
 
 В конце[`GetView()`](xref:Android.Widget.BaseAdapter.GetView*)
@@ -166,5 +166,4 @@ public class ImageAdapter : BaseAdapter
 - [`ImageView`](xref:Android.Widget.ImageView)
 - [`BaseAdapter`](xref:Android.Widget.BaseAdapter)
 
-*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами,* 
-описанными в[*лицензии Creative Commons Attribution 2,5*](http://creativecommons.org/licenses/by/2.5/).
+_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](http://creativecommons.org/licenses/by/2.5/)._

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 79f97382b6d8bd7875e4921c859f92cd6b321687
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3817a6a111bb8a19248127d3be31a719fac68ba8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646322"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522560"
 ---
 # <a name="xamarinandroid-listview"></a>ListView Xamarin. Android
 
@@ -192,26 +192,26 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 В остальных разделах (связанных ниже) подробно рассматривается работа с `ListView` классом и типы адаптеров различных типов, которые можно использовать с ним. Эта структура выглядит следующим образом:
 
--   **Визуальный вид** &ndash; Части элементауправленияи`ListView` принципы их работы.
+- **Визуальный вид** &ndash; Части элементауправленияи`ListView` принципы их работы.
 
--   **Классы** Общие сведения о классах, `ListView`используемых для вывода. &ndash;
+- **Классы** Общие сведения о классах, `ListView`используемых для вывода. &ndash;
 
--   **Отображение данных в ListView** Как отобразить простой список данных, как реализовать `ListView's` функции для удобства использования, как использовать разные встроенные макеты строк и как адаптеры сохраняют память путем повторного использования представлений строк. &ndash;
+- **Отображение данных в ListView** Как отобразить простой список данных, как реализовать `ListView's` функции для удобства использования, как использовать разные встроенные макеты строк и как адаптеры сохраняют память путем повторного использования представлений строк. &ndash;
 
--   **Пользовательский внешний вид** &ndash; Изменение стиля`ListView` с пользовательскими макетами, шрифтами и цветами.
+- **Пользовательский внешний вид** &ndash; Изменение стиля`ListView` с пользовательскими макетами, шрифтами и цветами.
 
--   **Использование SQLite** Сведения о том, как отображать данные из базы данных `CursorAdapter`SQLite с помощью. &ndash;
+- **Использование SQLite** Сведения о том, как отображать данные из базы данных `CursorAdapter`SQLite с помощью. &ndash;
 
--   **Жизненный цикл действия** Рекомендации по проектированию `ListView` при реализации действий, включая, где в жизненном цикле следует заполнять данные и когда следует освобождать ресурсы. &ndash;
+- **Жизненный цикл действия** Рекомендации по проектированию `ListView` при реализации действий, включая, где в жизненном цикле следует заполнять данные и когда следует освобождать ресурсы. &ndash;
 
 Обсуждение (разбитое на шесть частей) начинается с обзора `ListView` самого класса перед тем, как Познакомьтесь с более сложными примерами его использования.
 
--   [Компоненты ListView и функции](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
--   [Заполнение ListView данными](~/android/user-interface/layouts/list-view/populating.md)
--   [Настройка вида ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [Использование CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [Использование ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView и жизненный цикл действия](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+- [Компоненты ListView и функции](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+- [Заполнение ListView данными](~/android/user-interface/layouts/list-view/populating.md)
+- [Настройка вида ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+- [Использование CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+- [Использование ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
+- [ListView и жизненный цикл действия](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
 ## <a name="summary"></a>Сводка

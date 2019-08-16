@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 4a5b0e7d45878dcaa0f3e97411c2ef83d2e26c5a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510698"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524694"
 ---
 # <a name="working-with-the-android-manifest"></a>Работа с манифестом Android
 
@@ -237,18 +237,18 @@ public class MyActivity : Activity
 
 ## <a name="list-of-custom-attributes"></a>Список настраиваемых атрибутов
 
--   [Android. app. активитяттрибуте](xref:Android.App.ActivityAttribute) : Создает фрагмент XML [/Манифест/аппликатион/Активити](https://developer.android.com/guide/topics/manifest/activity-element.html) 
--   [Android. app. аппликатионаттрибуте](xref:Android.App.ApplicationAttribute) : Создает фрагмент XML [/Манифест/аппликатион](https://developer.android.com/guide/topics/manifest/application-element.html) 
--   [Android. app. инструментатионаттрибуте](xref:Android.App.InstrumentationAttribute) : Создает фрагмент XML [/Манифест/инструментатион](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
--   [Android. app. интентфилтераттрибуте](xref:Android.App.IntentFilterAttribute) : Создает фрагмент XML [//Интент-филтер](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
--   [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Создает фрагмент XML [//мета-дата](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
--   [Android. app. PrincipalPermissionAttribute](xref:Android.App.PermissionAttribute) : Создает фрагмент XML [//пермиссион](https://developer.android.com/guide/topics/manifest/permission-element.html) 
--   [Android. app. пермиссионграупаттрибуте](xref:Android.App.PermissionGroupAttribute) : Создает фрагмент XML [//пермиссион-грауп](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
--   [Android. app. пермиссионтриаттрибуте](xref:Android.App.PermissionTreeAttribute) : Создает фрагмент XML [//пермиссион-три](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
--   [Android. app. сервицеаттрибуте](xref:Android.App.ServiceAttribute) : Создает фрагмент XML [/Манифест/аппликатион/сервице](https://developer.android.com/guide/topics/manifest/service-element.html) 
--   [Android. app. усеслибраряттрибуте](xref:Android.App.UsesLibraryAttribute) : Создает фрагмент XML [/Манифест/аппликатион/усес-либрари](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
--   [Android. app. усеспермиссионаттрибуте](xref:Android.App.UsesPermissionAttribute) : Создает фрагмент XML [/Манифест/усес-пермиссион](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
--   [Android. Content. броадкастрецеивераттрибуте](xref:Android.Content.BroadcastReceiverAttribute) : Создает фрагмент XML [/Манифест/аппликатион/рецеивер](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
--   [Android. Content. контентпровидераттрибуте](xref:Android.Content.ContentProviderAttribute) : Создает фрагмент XML [/Манифест/аппликатион/провидер](https://developer.android.com/guide/topics/manifest/provider-element.html) 
--   [Android. Content. грантурипермиссионаттрибуте](xref:Android.Content.GrantUriPermissionAttribute) : Создает фрагмент XML [/Манифест/аппликатион/провидер/Грант-Ури-пермиссион](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)
+- [Android. app. активитяттрибуте](xref:Android.App.ActivityAttribute) : Создает фрагмент XML [/Манифест/аппликатион/Активити](https://developer.android.com/guide/topics/manifest/activity-element.html) 
+- [Android. app. аппликатионаттрибуте](xref:Android.App.ApplicationAttribute) : Создает фрагмент XML [/Манифест/аппликатион](https://developer.android.com/guide/topics/manifest/application-element.html) 
+- [Android. app. инструментатионаттрибуте](xref:Android.App.InstrumentationAttribute) : Создает фрагмент XML [/Манифест/инструментатион](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
+- [Android. app. интентфилтераттрибуте](xref:Android.App.IntentFilterAttribute) : Создает фрагмент XML [//Интент-филтер](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
+- [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Создает фрагмент XML [//мета-дата](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
+- [Android. app. PrincipalPermissionAttribute](xref:Android.App.PermissionAttribute) : Создает фрагмент XML [//пермиссион](https://developer.android.com/guide/topics/manifest/permission-element.html) 
+- [Android. app. пермиссионграупаттрибуте](xref:Android.App.PermissionGroupAttribute) : Создает фрагмент XML [//пермиссион-грауп](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
+- [Android. app. пермиссионтриаттрибуте](xref:Android.App.PermissionTreeAttribute) : Создает фрагмент XML [//пермиссион-три](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
+- [Android. app. сервицеаттрибуте](xref:Android.App.ServiceAttribute) : Создает фрагмент XML [/Манифест/аппликатион/сервице](https://developer.android.com/guide/topics/manifest/service-element.html) 
+- [Android. app. усеслибраряттрибуте](xref:Android.App.UsesLibraryAttribute) : Создает фрагмент XML [/Манифест/аппликатион/усес-либрари](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
+- [Android. app. усеспермиссионаттрибуте](xref:Android.App.UsesPermissionAttribute) : Создает фрагмент XML [/Манифест/усес-пермиссион](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
+- [Android. Content. броадкастрецеивераттрибуте](xref:Android.Content.BroadcastReceiverAttribute) : Создает фрагмент XML [/Манифест/аппликатион/рецеивер](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
+- [Android. Content. контентпровидераттрибуте](xref:Android.Content.ContentProviderAttribute) : Создает фрагмент XML [/Манифест/аппликатион/провидер](https://developer.android.com/guide/topics/manifest/provider-element.html) 
+- [Android. Content. грантурипермиссионаттрибуте](xref:Android.Content.GrantUriPermissionAttribute) : Создает фрагмент XML [/Манифест/аппликатион/провидер/Грант-Ури-пермиссион](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)
 

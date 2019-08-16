@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 94a0bddcb3a9a1e7236bed4b4c95fc38e1f9f0dd
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: f25ce3c5bfe7e3d8032709e9df99e7538e978862
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510439"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523417"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Как автоматизировать тестовый проект Android NUnit?
 
@@ -28,7 +28,7 @@ adb shell am instrument
 
 Этот процесс описывается в следующих шагах:
 
-1.  Создайте новый файл с именем **TestInstrumentation.CS**: 
+1. Создайте новый файл с именем **TestInstrumentation.CS**: 
 
     ```cs 
     using System;
@@ -37,16 +37,16 @@ adb shell am instrument
     using Android.Content;
     using Android.Runtime;
     using Xamarin.Android.NUnitLite;
-     
+
     namespace App.Tests {
-     
+
         [Instrumentation(Name="app.tests.TestInstrumentation")]
         public class TestInstrumentation : TestSuiteInstrumentation {
-     
+
             public TestInstrumentation (IntPtr handle, JniHandleOwnership transfer) : base (handle, transfer)
             {
             }
-     
+
             protected override void AddTests ()
             {
                 AddTest (Assembly.GetExecutingAssembly ());
@@ -54,11 +54,12 @@ adb shell am instrument
         }
     }
     ```
+
     В этом файле `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (из **Xamarin. Android. NUnitLite. dll**) создается подкласс для создания. `TestInstrumentation`
 
-2.  Реализуйте `AddTests` конструктор и метод. `TestInstrumentation` `AddTests` Метод определяет, какие тесты фактически выполняются.
+2. Реализуйте `AddTests` конструктор и метод. `TestInstrumentation` `AddTests` Метод определяет, какие тесты фактически выполняются.
 
-3.  Измените файл, добавив **TestInstrumentation.cs.** `.csproj` Например:
+3. Измените файл, добавив **TestInstrumentation.cs.** `.csproj` Например:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -74,13 +75,13 @@ adb shell am instrument
     </Project>
     ```
 
-4.  Используйте следующую команду для запуска модульных тестов. Замените `PACKAGE_NAME` на имя пакета приложения (имя пакета можно найти в `/manifest/@package` атрибуте приложения, расположенном в **файле AndroidManifest. XML**):
+4. Используйте следующую команду для запуска модульных тестов. Замените `PACKAGE_NAME` на имя пакета приложения (имя пакета можно найти в `/manifest/@package` атрибуте приложения, расположенном в **файле AndroidManifest. XML**):
 
     ```shell
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-5.  При необходимости можно изменить `.csproj` файл, `RunTests` добавив целевой объект MSBuild. Это дает возможность вызывать модульные тесты с помощью команды, как в следующем примере:
+5. При необходимости можно изменить `.csproj` файл, `RunTests` добавив целевой объект MSBuild. Это дает возможность вызывать модульные тесты с помощью команды, как в следующем примере:
 
     ```shell
     msbuild /t:RunTests Project.csproj

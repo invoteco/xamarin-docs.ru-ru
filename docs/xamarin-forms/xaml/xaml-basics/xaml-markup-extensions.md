@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655489"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529267"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Часть 3. Расширения разметки XAML
 
@@ -441,9 +441,9 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Несколько расширений разметки являются внутренними для XAML и поддерживается в файлах XAML Xamarin.Forms. Некоторые из них не используются очень часто, но необходимы, когда они нужны:
 
--  Если свойство имеет отличный от `null` значение по умолчанию, но вы хотите присвоить `null`, задайте для него значение `{x:Null}` расширение разметки.
--  Если свойство имеет тип `Type`, можно назначить его `Type` с помощью расширения разметки `{x:Type someClass}`.
--  Можно определить массивы в XAML с помощью `x:Array` расширение разметки. Это расширение разметки имеет обязательный атрибут с именем `Type` , указывающее тип элементов в массиве.
+- Если свойство имеет отличный от `null` значение по умолчанию, но вы хотите присвоить `null`, задайте для него значение `{x:Null}` расширение разметки.
+- Если свойство имеет тип `Type`, можно назначить его `Type` с помощью расширения разметки `{x:Type someClass}`.
+- Можно определить массивы в XAML с помощью `x:Array` расширение разметки. Это расширение разметки имеет обязательный атрибут с именем `Type` , указывающее тип элементов в массиве.
 - `Binding` Расширение разметки рассматривается в [часть 4. Основные сведения о привязке данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## <a name="the-constraintexpression-markup-extension"></a>Расширение разметки ConstraintExpression

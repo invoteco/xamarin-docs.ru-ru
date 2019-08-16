@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: fea96ab645b2d01b774f691402a5796eec1f1dba
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dfee003ba327b199974ae277a93cb1ca55a81b0d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644969"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522892"
 ---
 # <a name="android-time-picker"></a>Средство выбора времени Android
 
@@ -167,20 +167,20 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
 
 `TimePickerFragment`реализует несколько методов: фабричный метод, метод создания экземпляра диалогового окна и `OnTimeSet` метод обработчика, необходимый для. `TimePickerDialog.IOnTimeSetListener`
 
--   `TimePickerFragment`является подклассом `DialogFragment`. Он также реализует `TimePickerDialog.IOnTimeSetListener` интерфейс (то есть он предоставляет необходимый `OnTimeSet` метод):
+- `TimePickerFragment`является подклассом `DialogFragment`. Он также реализует `TimePickerDialog.IOnTimeSetListener` интерфейс (то есть он предоставляет необходимый `OnTimeSet` метод):
 
     ```csharp
     public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetListener
     ```
 
--   `TAG`инициализируется для целей ведения журнала (*митимепиккерфрагмент* можно изменить на любую строку, которую вы хотите использовать). Для предотвращения исключений NULL-ссылок действиеинициализируетсяпустымделегатом.`timeSelectedHandler`
+- `TAG`инициализируется для целей ведения журнала (*митимепиккерфрагмент* можно изменить на любую строку, которую вы хотите использовать). Для предотвращения исключений NULL-ссылок действиеинициализируетсяпустымделегатом.`timeSelectedHandler`
 
     ```csharp
     public static readonly string TAG = "MyTimePickerFragment";
     Action<DateTime> timeSelectedHandler = delegate { };
     ```
 
--   Метод Factory вызывается для создания нового `TimePickerFragment`экземпляра. `NewInstance` Этот метод принимает `Action<DateTime>` обработчик, который вызывается, когда пользователь нажимает кнопку **ОК** в `TimePickerDialog`:
+- Метод Factory вызывается для создания нового `TimePickerFragment`экземпляра. `NewInstance` Этот метод принимает `Action<DateTime>` обработчик, который вызывается, когда пользователь нажимает кнопку **ОК** в `TimePickerDialog`:
 
     ```csharp
     public static TimePickerFragment NewInstance(Action<DateTime> onTimeSelected)
@@ -191,7 +191,7 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
     }
     ```
 
--   Когда фрагмент будет отображаться, Android вызывает `DialogFragment` метод [онкреатедиалог](xref:Android.App.DialogFragment.OnCreateDialog*).
+- Когда фрагмент будет отображаться, Android вызывает `DialogFragment` метод [онкреатедиалог](xref:Android.App.DialogFragment.OnCreateDialog*).
     Этот метод создает новый `TimePickerDialog` объект и инициализирует его с помощью действия, объекта обратного вызова (текущего экземпляра `TimePickerFragment`) и текущего времени:
 
     ```csharp
@@ -205,7 +205,7 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
     }
     ```
 
--   Когда пользователь изменяет параметр времени в `TimePicker` диалоговом окне `OnTimeSet` , вызывается метод. `OnTimeSet``DateTime` создает объект, используя текущую дату и слияния за время (час и минуту), выбранное пользователем:
+- Когда пользователь изменяет параметр времени в `TimePicker` диалоговом окне `OnTimeSet` , вызывается метод. `OnTimeSet``DateTime` создает объект, используя текущую дату и слияния за время (час и минуту), выбранное пользователем:
 
     ```csharp
     public void OnTimeSet(TimePicker view, int hourOfDay, int minute)
@@ -215,7 +215,7 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
     ```
 
 
--   Этот `DateTime` объект передается в `timeSelectedHandler` `TimePickerFragment` объект, зарегистрированный в объекте во время создания. `OnTimeSet`вызывает этот обработчик для обновления экрана времени действия до выбранного времени (этот обработчик реализуется в следующем разделе):
+- Этот `DateTime` объект передается в `timeSelectedHandler` `TimePickerFragment` объект, зарегистрированный в объекте во время создания. `OnTimeSet`вызывает этот обработчик для обновления экрана времени действия до выбранного времени (этот обработчик реализуется в следующем разделе):
 
     ```csharp
     timeSelectedHandler (selectedTime);
@@ -225,7 +225,7 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
 
 Теперь, когда `DialogFragment` объект реализован, можно создать экземпляр `DialogFragment` с помощью `NewInstance` метода Factory и отобразить его, вызвав [диалогфрагмент. Показать](xref:Android.App.DialogFragment.Show*):
 
-Добавьте следующий метод в `MainActivity`:
+Добавьте следующий метод к `MainActivity`:
 
 ```csharp
 void TimeSelectOnClick (object sender, EventArgs eventArgs)

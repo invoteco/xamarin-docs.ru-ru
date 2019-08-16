@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 2b8e524d95fb60c8eb45b3dd5b64b68469d97ad1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510731"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524850"
 ---
 # <a name="architecture"></a>Архитектура
 
@@ -33,12 +33,11 @@ ms.locfileid: "68510731"
 
 Пакеты приложений Android — это ZIP-контейнеры с расширением *apk* . Пакеты приложений Xamarin. Android имеют ту же структуру и макет, что и обычные пакеты Android, со следующими дополнениями:
 
--   Сборки приложения (содержащие IL) *хранятся* в папке *assemblies* без сжатия. Во время запуска процесса в выпуске сборка *. apk* — это *mmap ()* ED в процесс, а сборки загружаются из памяти. Это позволяет ускорить запуск приложения, так как сборки не нужно извлекать перед выполнением.  
--   *Примечание.* Сведения о расположении сборки, такие как [Assembly. Location](xref:System.Reflection.Assembly.Location) и [Assembly. CodeBase](xref:System.Reflection.Assembly.CodeBase)
-    ,*не могут рассчитываться* в сборках выпуска. Они не существуют как отдельные записи файловой системы и не имеют пригодных для использования места.
+- Сборки приложения (содержащие IL) *хранятся* в папке *assemblies* без сжатия. Во время запуска процесса в выпуске сборка *. apk* — это *mmap ()* ED в процесс, а сборки загружаются из памяти. Это позволяет ускорить запуск приложения, так как сборки не нужно извлекать перед выполнением.  
+- *Примечание.* Сведения о расположении сборки, такие как [Assembly. Location](xref:System.Reflection.Assembly.Location) и [Assembly. CodeBase](xref:System.Reflection.Assembly.CodeBase) , *не могут рассчитываться* в сборках выпуска. Они не существуют как отдельные записи файловой системы и не имеют пригодных для использования места.
 
 
--   Собственные библиотеки, содержащие среду выполнения Mono, находятся в *. apk* . Приложение Xamarin. Android должно содержать собственные библиотеки для требуемой или целевой архитектуры Android, например *ARMEABI* , *ARMEABI-V7A* , *x86* . Приложения Xamarin. Android не могут работать на платформе, если она не содержит соответствующие библиотеки среды выполнения.
+- Собственные библиотеки, содержащие среду выполнения Mono, находятся в *. apk* . Приложение Xamarin. Android должно содержать собственные библиотеки для требуемой или целевой архитектуры Android, например *ARMEABI* , *ARMEABI-V7A* , *x86* . Приложения Xamarin. Android не могут работать на платформе, если она не содержит соответствующие библиотеки среды выполнения.
 
 
 Приложения Xamarin. Android также содержат *вызываемые оболочки Android* , позволяющие Android вызывать управляемый код.
@@ -83,7 +82,7 @@ ms.locfileid: "68510731"
 
 Существует два сценария, в которых конструктор *(IntPtr, жнихандлеовнершип)* должен быть предоставлен вручную в управляемом подклассе вызываемой обертки:
 
-1. [Android. app. Application](xref:Android.App.Application) является подклассом. *Приложение* является специальным; Конструктор по  умолчанию приложения отменено *никогда не* будет вызываться, и [вместо него должен быть указан конструктор (IntPtr, жнихандлеовнершип)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
+1. [Android. app. Application](xref:Android.App.Application) является подклассом. *Приложение* является специальным; Конструктор по умолчанию приложения отменено *никогда не* будет вызываться, и [вместо него должен быть указан конструктор (IntPtr, жнихандлеовнершип)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
 
 2. Вызов виртуального метода из конструктора базового класса.
 
@@ -94,23 +93,23 @@ ms.locfileid: "68510731"
 
 Порядок событий:
 
-1.  XML-файл макета загружается в [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
+1. XML-файл макета загружается в [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
 
-2.  Android создает экземпляр графа объекта макета и создает экземпляр класса *monodroid. ApiDemo. логтекстбокс* , АКВ для *логтекстбокс* .
+2. Android создает экземпляр графа объекта макета и создает экземпляр класса *monodroid. ApiDemo. логтекстбокс* , АКВ для *логтекстбокс* .
 
-3.  Конструктор *monodroid. ApiDemo. логтекстбокс* выполняет конструктор [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
+3. Конструктор *monodroid. ApiDemo. логтекстбокс* выполняет конструктор [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
 
-4.  Конструктор *TextView* вызывает *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* .
+4. Конструктор *TextView* вызывает *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* .
 
-5.  *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* вызывает *логтекстбокс. n_getDefaultMovementMethod ()* , который вызывает *TextView. n_getDefaultMovementMethod ()* , который вызывает [Java. lang. Object.GetObject&lt; TextView&gt; (Handle, жнихандлеовнершип. доноттрансфер)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* вызывает *логтекстбокс. n_getDefaultMovementMethod ()* , который вызывает *TextView. n_getDefaultMovementMethod ()* , который вызывает [Java. lang. Object.GetObject&lt; TextView&gt; (Handle, жнихандлеовнершип. доноттрансфер)](xref:Java.Lang.Object.GetObject*) .
 
-6.  *Java. lang. Object.&lt;GetObject TextView&gt;()* проверяет, уже существует ли соответствующий C# экземпляр для *Handle* . Если это так, возвращается значение. В этом сценарии нет, поэтому *Object.&lt;GetObject&gt;t ()* должен создать его.
+6. *Java. lang. Object.&lt;GetObject TextView&gt;()* проверяет, уже существует ли соответствующий C# экземпляр для *Handle* . Если это так, возвращается значение. В этом сценарии нет, поэтому *Object.&lt;GetObject&gt;t ()* должен создать его.
 
-7.  *Object&lt;. GetObject T&gt;()* ищет конструктор *логтекстбокс (IntPtr, жнихандлеовнешип)* , вызывает его, создает сопоставление между *дескриптором* и созданным экземпляром и возвращает созданный экземпляр.
+7. *Object&lt;. GetObject T&gt;()* ищет конструктор *логтекстбокс (IntPtr, жнихандлеовнешип)* , вызывает его, создает сопоставление между *дескриптором* и созданным экземпляром и возвращает созданный экземпляр.
 
-8.  *TextView. n_GetDefaultMovementMethod ()* вызывает метод получения свойства *логтекстбокс. дефаултмовементмесод* .
+8. *TextView. n_GetDefaultMovementMethod ()* вызывает метод получения свойства *логтекстбокс. дефаултмовементмесод* .
 
-9.  Элемент управления возвращает в конструктор *Android. widget. TextView* , который завершает выполнение.
+9. Элемент управления возвращает в конструктор *Android. widget. TextView* , который завершает выполнение.
 
 10. Конструктор *monodroid. ApiDemo. логтекстбокс* выполняет, вызывая *типеманажер. Activate ()* .
 

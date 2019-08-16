@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7526349c1b4b61495af95dfc200a5055cea5650e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646560"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529299"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Часть 2. Синтаксис Essential XAML
 
@@ -82,9 +82,9 @@ _XAML предназначен главным образом для создан
 
 С помощью этого нового синтаксиса могут быть введены под рукой термины:
 
--  `Label` — *объектного элемента*. Это объекта Xamarin.Forms, выраженный в виде XML-элемента.
--  `Text`, `VerticalOptions`, `FontAttributes` и `FontSize` являются *атрибуты свойства*. Они являются свойствами Xamarin.Forms выразить в виде атрибутов XML.
--  В этот последний фрагмент `TextColor` стала *элемент свойства*. Это свойство Xamarin.Forms, однако сейчас это XML-элемента.
+- `Label` — *объектного элемента*. Это объекта Xamarin.Forms, выраженный в виде XML-элемента.
+- `Text`, `VerticalOptions`, `FontAttributes` и `FontSize` являются *атрибуты свойства*. Они являются свойствами Xamarin.Forms выразить в виде атрибутов XML.
+- В этот последний фрагмент `TextColor` стала *элемент свойства*. Это свойство Xamarin.Forms, однако сейчас это XML-элемента.
 
 
 Определение свойства, элементы могут в сначала кажется воспринимает как нарушение синтаксиса XML, но это не так. Период не имеет специального значения в формате XML. Декодеру XML `Label.TextColor` — просто обычный дочерний элемент.
@@ -176,13 +176,13 @@ _XAML предназначен главным образом для создан
 
 Внутри тега для каждого дочернего элемента `Grid` указываются в строке и столбце этого дочернего элемента, используя следующие атрибуты:
 
--  `Grid.Row`
--  `Grid.Column`
+- `Grid.Row`
+- `Grid.Column`
 
 Значения по умолчанию эти атрибуты являются 0. Можно также указать, если дочерний элемент охватывает более одной строки или столбца со следующими атрибутами:
 
--  `Grid.RowSpan`
--  `Grid.ColumnSpan`
+- `Grid.RowSpan`
+- `Grid.ColumnSpan`
 
 Эти атрибуты имеют значения по умолчанию 1.
 

@@ -6,69 +6,69 @@ ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 99fde9330498ee62d3cf6b5910c2cbfae39cfdeb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e387e398f3a79ea2063457f0c5c6e7469c07ac23
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61159627"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521532"
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Как полностью удалить Xamarin для Visual Studio?
 
 
-1.  С помощью панели управления Windows удалите любые из следующих имеющихся:
+1. На панели управления Windows удалите следующие элементы:
 
-    -   Xamarin
-    -   Xamarin для Windows
-    -   Xamarin.Android
-    -   Xamarin.iOS
-    -   Xamarin для Visual Studio
+    - Xamarin
+    - Xamarin для Windows
+    - Xamarin.Android
+    - Xamarin.iOS
+    - Xamarin для Visual Studio
 
-2.  В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin для Visual Studio (все версии, включая _Program Files_ и _Program Files (x86)_):
+2. В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin Visual Studio (все версии, включая программные _файлы_ и _программные файлы (x86)_ ):
 
-    _C:\\Program Files\*\\Microsoft Visual Studio 1\*.0\\Common7\\IDE\\расширения\\Xamarin_
+    _C:\\Program Files\\MicrosoftVisualStudio1\\0 Common7IDE\\Extensions\\Xamarin\*\*\\_
 
-3.  Удалите каталог кэша компонента MEF Visual Studio также:
+3. Удалите также каталог кэша компонента MEF Visual Studio:
 
-    _% LOCALAPPDATA %\\Microsoft\\VisualStudio\\1\*.0\\ComponentModelCache_
+    _% LocalAppData%\\0\\\*\\компонентмоделкаче\\Microsoft VisualStudio 1_
 
-    На самом деле этот шаг, сам по себе, обычно достаточно для устранения ошибок, таких как:
+    На самом деле этот шаг часто достаточно для разрешения таких ошибок, как:
 
-    -   «Пакет «XamarinShellPackage» не был правильно загружен»
+    - "Пакет" Ксамариншеллпаккаже "не был правильно загружен"
 
-    -   «Файл проекта... не удалось открыть. "Есть отсутствует подтип проекта»
+    - "Файл проекта... не удается открыть. Отсутствует подтип проекта "
 
-    -   «Ссылка на объект не указывает на экземпляр объекта.  at Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize()"
+    - "Ссылка на объект не задана для экземпляра объекта.  в Xamarin. VisualStudio. IOS. Ксамариниоспаккаже. Initialize () "
 
-    -   «Ошибка SetSite пакет» (в Visual Studio _ActivityLog.xml_)
+    - "Сбой SetSite для пакета" (в Visual Studio _ActivityLog. XML_)
 
-    -   «Ошибка LegacySitePackage пакета» (в Visual Studio _ActivityLog.xml_)
+    - "Сбой Легациситепаккаже для пакета" (в Visual Studio _ActivityLog. XML_)
 
-    (См. также [очистить кэш компонентов MEF](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) расширение Visual Studio.  И см. в разделе [ошибки 40781, комментарий 19](https://bugzilla.xamarin.com/show_bug.cgi?id=40781#c19) немного дополнительный контекст о вышестоящих проблеме в Visual Studio, которая может вызвать эти ошибки.)
+    (См. также расширение " [Очистка кэша компонентов MEF](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) " для Visual Studio.  См. [ошибку 40781, комментарий 19,](https://bugzilla.xamarin.com/show_bug.cgi?id=40781#c19) чтобы получить более подробные сведения о вышестоящей неполадке в Visual Studio, которая может вызвать эти ошибки.)
 
-4.  Ознакомьтесь с в _VirtualStore_ каталог, чтобы увидеть, если Windows либо сохраненные файлы наложения для _расширения\\Xamarin_ или _ComponentModelCache_каталогов:
+4. Также проверьте каталог _виртуалсторе_ , чтобы узнать, _\\_ могли ли Windows хранить файлы оверлея для каталогов Xamarin или _компонентмоделкаче_ .
 
-    _% LOCALAPPDATA %\\VirtualStore_
+    _% LocalAppData%\\виртуалсторе_
 
-5.  Откройте редактор реестра (`regedit`).
+5. Откройте редактор реестра (`regedit`).
 
-6.  Найдите следующий раздел:
+6. Найдите следующий раздел:
 
-    _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\SharedDlls_
+    _HKey\_\_Локальное\\программное\\обеспечениеWOW6432NodeMicrosoft\\Windows CurrentVersionSharedDlls\\\\\\_
 
-7.  Найдите и удалите все записи, соответствующие этому шаблону.
+7. Найдите и удалите все записи, соответствующие этому шаблону.
 
-    _C:\\Program Files\*\\Microsoft Visual Studio 1\*.0\\Common7\\IDE\\расширения\\Xamarin_
+    _C:\\Program Files\\MicrosoftVisualStudio1\\0 Common7IDE\\Extensions\\Xamarin\*\*\\_
 
-8.  Найдите следующий раздел.
+8. Найдите следующий раздел.
 
-    _Открываемый раздел HKEY\_текущей\_пользователя\\программного обеспечения\\Microsoft\\VisualStudio\\1\*.0\\ExtensionManager\\PendingDeletions_
+    _HKey\_текущее\\пользовательское\\программное\\обеспечение Microsoft VisualStudio1\\0екстенсионманажер\\пендингделетионс\*\_\\_
 
-9.  Удалите все записи, которые могут иметь отношение к Xamarin.  Например ниже приведен один, можно вызвать проблемы в более старых версиях Xamarin:
+9. Удалите все записи, которые могут иметь отношение к Xamarin.  Вот пример, который используется для того, чтобы вызвать проблемы в старых версиях Xamarin:
 
-    _Mono.VisualStudio.Shell,1.0_
+    _Моно. VisualStudio. Shell, 1.0_
 
-10. Откройте администратор `cmd.exe` командную строку, а затем запустите `devenv /setup` и `devenv /updateconfiguration` команды для каждой установленной версии Visual Studio.  Например, для Visual Studio 2015:
+10. Откройте командную `cmd.exe` строку администратора и `devenv /setup` выполните команды и `devenv /updateconfiguration` для каждой установленной версии Visual Studio.  Например, для Visual Studio 2015:
 
     ```
     "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" /setup
@@ -77,20 +77,20 @@ ms.locfileid: "61159627"
 
 11. Перезагрузите систему.
 
-12. Переустановите текущей стабильной версии с помощью Xamarin из [visualstudio.com](https://visualstudio.com/xamarin/).
+12. Переустановите текущую стабильную версию Xamarin с помощью из [VisualStudio.com](https://visualstudio.com/xamarin/).
 
-## <a name="additional-troubleshooting-steps-for-package-did-not-load-correctly"></a>Дополнительные действия по устранению неполадок для «пакет не был правильно загружен»
+## <a name="additional-troubleshooting-steps-for-package-did-not-load-correctly"></a>Дополнительные действия по устранению неполадок при неправильной загрузке пакета
 
-В случаях, где указанные выше шаги не помогли устранить ошибку «пакет не был правильно загружен» ниже приведены несколько дополнительных действий, чтобы повторить.
+В тех случаях, когда описанные выше действия не позволяют устранить ошибку «пакет не был правильно загружен», попробуйте выполнить еще несколько действий.
 
-1.  Создайте учетную запись пользователя Windows.
+1. Создайте новую учетную запись пользователя Windows.
 
-2.  Проверьте, если расширения Xamarin для Visual Studio загрузить без ошибок для нового пользователя.
+2. Проверьте, загружены ли расширения Xamarin Visual Studio без ошибок для нового пользователя.
 
-3.  Если правильно загрузить расширения, затем проблема скорее всего вызвано некоторые сохраненные параметры для исходного пользователя:
+3. Если расширения загружены правильно, проблема, скорее всего, вызвана некоторыми из сохраненных параметров для исходного пользователя:
 
-    -   **В обозревателе** — _% LOCALAPPDATA %\\Microsoft\\VisualStudio\\1\*.0_
-    -   **В редакторе реестра** — _HKEY\_текущей\_пользователя\\программного обеспечения\\Microsoft\\VisualStudio\\1\*.0_
-    -   **В редакторе реестра** — _HKEY\_текущей\_пользователя\\программного обеспечения\\Microsoft\\VisualStudio\\1\*.0\_конфигурации_
+    - **В обозревателе** — _% LocalAppData%\\Microsoft\\VisualStudio\\1\*. 0_
+    - **В** regedit _—\_hKey\_Current\\User Software\\MicrosoftVisualStudio\\1.\*0\\_
+    - **В** regedit _—\_hKey\_Current\\user\\Software программа Microsoft\\VisualStudio1\\0\_config\*_
 
-4.  Если эти сохраненные параметры действительно могут быть проблемы, можно попробовать их архивации, а затем удалите их.
+4. Если эти сохраненные параметры действительно выглядят как проблема, можно попытаться выполнить резервное копирование и удалить их.

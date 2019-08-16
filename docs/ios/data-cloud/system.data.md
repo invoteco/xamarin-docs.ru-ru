@@ -1,44 +1,44 @@
 ---
-title: System.Data в Xamarin.iOS
-description: В этом документе описывается использование System.Data и Mono.Data.Sqlite.dll для доступа к данным SQLite в приложении Xamarin.iOS.
+title: System. Data в Xamarin. iOS
+description: В этом документе описывается, как использовать System. Data и Mono. Data. SQLite. dll для доступа к данным SQLite в приложении Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/25/2015
-ms.openlocfilehash: e6df2d9d45eb2f898bb3c4957ec7960956a184e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 060dcef28f50b3368f126b4b5b6996d9b52bc260
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61240228"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526577"
 ---
-# <a name="systemdata-in-xamarinios"></a>System.Data в Xamarin.iOS
+# <a name="systemdata-in-xamarinios"></a>System. Data в Xamarin. iOS
 
-Xamarin.iOS 8.10 добавлена поддержка [System.Data](xref:System.Data), в том числе `Mono.Data.Sqlite.dll` поставщика ADO.NET. Поддержка включает в себя добавление следующих [сборки](~/cross-platform/internals/available-assemblies.md):
+В Xamarin. iOS 8,10 добавлена поддержка [System. Data](xref:System.Data), включая `Mono.Data.Sqlite.dll` поставщика ADO.NET. Поддержка включает в себя добавление следующих [сборок](~/cross-platform/internals/available-assemblies.md):
 
--  `System.Data.dll`
--  `System.Data.Service.Client.dll`
--  `System.Transactions.dll`
--  `Mono.Data.Tds.dll`
--  `Mono.Data.Sqlite.dll`
+- `System.Data.dll`
+- `System.Data.Service.Client.dll`
+- `System.Transactions.dll`
+- `Mono.Data.Tds.dll`
+- `Mono.Data.Sqlite.dll`
 
 <a name="Example" />
 
 ## <a name="example"></a>Пример
 
-Следующая программа создает базу данных в `Documents/mydb.db3`, и если базы данных не существует, ранее он заполняется с образцами данных. Затем запрашивается базы данных, с помощью выходных данных, записанных `stderr`.
+Следующая программа создает базу данных в `Documents/mydb.db3`, а если база данных не существует, она заполняется демонстрационными данными. База данных запрашивается, а выходные данные записываются в `stderr`.
 
-### <a name="add-references"></a>Добавление ссылок
+### <a name="add-references"></a>Добавить ссылки
 
-Во-первых, щелкните правой кнопкой мыши **ссылки** узел и выберите **изменить ссылки...**  выберите `System.Data` и `Mono.Data.Sqlite`:
+Сначала щелкните правой кнопкой мыши узел **ссылки** и выберите **изменить ссылки...** , а затем выберите `System.Data` и `Mono.Data.Sqlite`:
 
-[![](system.data-images/edit-references-sml.png "Добавление новой ссылки")](system.data-images/edit-references.png#lightbox)
+[![](system.data-images/edit-references-sml.png "Добавление новых ссылок")](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>Пример кода
 
-Ниже приведен простой пример. Создание таблицы и вставка строк с применением внедренные команды SQL:
+В следующем коде показан простой пример создания таблицы и вставки строк с помощью внедренных команд SQL:
 
 ```csharp
 using System;
@@ -108,12 +108,12 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> Как упоминалось в приведенном выше примере, не рекомендуется, чтобы внедрять строки в командах SQL, так как он делает код уязвимым для [путем внедрения кода SQL](https://en.wikipedia.org/wiki/SQL_injection).
+> Как упоминалось в примере кода выше, не рекомендуется внедрять строки в команды SQL, так как это делает код уязвимым для [внедрения кода SQL](https://en.wikipedia.org/wiki/SQL_injection).
 
 
 ### <a name="using-command-parameters"></a>Использование параметров команды
 
-Приведенный ниже показано использование параметров команды вставляемый введенный пользователем текст безопасно в базе данных (даже если текст содержит специальные символы SQL, такие как апостроф один):
+В следующем коде показано, как использовать параметры команды для безопасного ввода текста, введенного пользователем, в базу данных (даже если текст содержит специальные символы SQL, например одинарные апострофы):
 
 ```csharp
 // user input from Textbox control
@@ -132,42 +132,42 @@ using (var addCmd = conn.CreateCommand ()) {
 
 <a name="Missing_Functionality" />
 
-## <a name="missing-functionality"></a>Отсутствующие функции
+## <a name="missing-functionality"></a>Отсутствуют функциональные возможности
 
-Оба **System.Data** и **Mono.Data.Sqlite** отсутствуют некоторые функциональные возможности.
+В **System. Data** и **Mono. Data. SQLite** отсутствуют некоторые функциональные возможности.
 
 <a name="System.Data" />
 
 ### <a name="systemdata"></a>System.Data
 
-Функциональные возможности, отсутствующие на **System.Data.dll** состоит из:
+Функции, отсутствующие в **System. Data. dll** , состоят из следующих компонентов:
 
--  Все, что требование [System.CodeDom](xref:System.CodeDom) (например)  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
--  XML-ФАЙЛ конфигурации файл поддержки (например)  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
--   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (зависит от поддержки файла конфигурации XML)
--   [System.Data.OleDb](xref:System.Data.OleDb)
--   [System.Data.Odbc](xref:System.Data.Odbc)
--  `System.EnterpriseServices.dll` Зависимость была *удалены* из `System.Data.dll` , что может привести к удалению [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) метод.
+- Все, что требует [System. CodeDom](xref:System.CodeDom) (например,  [System. Data. TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+- Поддержка XML-файлов конфигурации (например,  [System. Data. Common. дбпровидерконфигуратионхандлер](xref:System.Data.Common.DbProviderConfigurationHandler) )
+- [System. Data. Common. дбпровидерфакториес](xref:System.Data.Common.DbProviderFactories) (зависит от поддержки XML-файла конфигурации)
+- [System. Data. OleDb](xref:System.Data.OleDb)
+- [System. Data. ODBC](xref:System.Data.Odbc)
+- Зависимость удалена из `System.Data.dll` , что привело к удалению метода [SqlConnection. енлистдистрибутедтрансактион (ITransaction).](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) `System.EnterpriseServices.dll`
 
 
 <a name="Mono.Data.Sqlite" />
 
-### <a name="monodatasqlite"></a>Mono.Data.Sqlite
+### <a name="monodatasqlite"></a>Mono. Data. SQLite
 
-В то же время **Mono.Data.Sqlite.dll** обязанность без изменения исходного кода, но вместо этого может должна быть размещена ряд *среды выполнения* проблемы с момента `Mono.Data.Sqlite.dll` привязывает SQLite 3.5. iOS 8, в то же время поставляется с SQLite 3.8.5. Достаточно сказать между двумя версиями изменились некоторые принципы.
+В то же время, **Mono. Data. SQLite. dll** не имеет изменений исходного кода, но вместо этого может размещаться ряд проблем со `Mono.Data.Sqlite.dll` *временем выполнения* , начиная с привязки SQLite 3,5. с iOS 8, в то же время поставляется с SQLite 3.8.5. Достаточно сказать, что некоторые вещи изменились между двумя версиями.
 
-Более старые версии iOS поставляются со следующими версиями SQLite:
+Более старая версия iOS поставляется со следующими версиями SQLite:
 
-- **iOS 7** -версии 3.7.13.
-- **iOS 6** -версии 3.7.13.
-- **iOS 5** -версии 3.7.7.
-- **операций ввода-вывода 4** -версии 3.6.22.
+- Версия-3.7.13 **iOS 7** .
+- Версия-3.7.13 **iOS 6** .
+- Версия-3.7.7 **iOS 5** .
+- **iOS 4** — версия 3.6.22.
 
-Наиболее распространенных проблем могут быть связаны с запрос для схемы базы данных, например определение во время выполнения, в которой столбцы существуют на данной таблице, такие как `Mono.Data.Sqlite.SqliteConnection.GetSchema` (переопределение [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) и `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (переопределение [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). Короче говоря, кажется, что-либо с помощью [DataTable](xref:System.Data.DataTable) не будет работать.
+Чаще всего возникают проблемы, связанные с запросами к схеме базы данных, например определение во время выполнения, какие столбцы существуют в данной таблице, например `Mono.Data.Sqlite.SqliteConnection.GetSchema` (переопределение [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) и `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` переопределение [ DbDataReader. GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). Вкратце, кажется, что все, что использует [DataTable](xref:System.Data.DataTable) , вряд ли будет работать.
 
 <a name="Data_Binding" />
 
 ## <a name="data-binding"></a>Привязка данных
 
-В настоящее время не поддерживается привязка данных.
+Привязка данных в настоящее время не поддерживается.
 

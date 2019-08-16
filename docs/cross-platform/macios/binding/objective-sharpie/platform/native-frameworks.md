@@ -1,37 +1,41 @@
 ---
 title: Привязка собственных платформ
-description: В этом документе описывается использование цели Sharpie современному параметры платформы для создания привязки в библиотеку, распределенному как платформу.
+description: В этом документе описывается использование параметра целевой платформы Шарпие для создания привязки к библиотеке, распространяемой в качестве платформы.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 0da40918c8ae36c4ab3d4c41128429b49706d653
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: cb6c39b2110161b3f839b8adc03701007f09cc4d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977645"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521880"
 ---
 # <a name="binding-native-frameworks"></a>Привязка собственных платформ
 
-Иногда собственной библиотеки распространяется в виде [framework](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WhatAreFrameworks.html). Цели Sharpie предоставляет удобное средство для привязки правильно определенные платформы через `-framework` параметр.
+Иногда собственная библиотека распространяется как [платформа](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WhatAreFrameworks.html). Цель Шарпие предоставляет удобную функцию для привязки правильно определенных платформ с помощью `-framework` параметра.
 
-Например, привязка [Adobe Creative SDK Framework](https://creativesdk.adobe.com/downloads.html) для операций ввода-вывода выполняется просто:
+Например, привязка [платформы Adobe Creative SDK](https://creativesdk.adobe.com/downloads.html) для iOS проста:
 
-<pre>$ <b>sharpie bind \
+```
+$ sharpie bind \
     -framework AdobeCreativeSDKFoundation.framework \
-    -sdk iphoneos8.1</b></pre>
+    -sdk iphoneos8.1
+```
 
-В некоторых случаях будет указать платформу **Info.plist** которого указывает, к какой пакет SDK платформы должны быть скомпилированы. Если этой информации и без явного указания `-sdk` передается параметр, цель Sharpie определит его из платформы **Info.plist** (либо `DTSDKName` ключ или сочетание `DTPlatformName` и `DTPlatformVersion`ключи).
+В некоторых случаях платформа будет указывать **info. plist** , указывающий, в каком пакете SDK должна быть скомпилирована платформа. Если эта информация существует и ни один `-sdk` параметр не передан, Целевая Шарпие будет вычислять его из **info. plist** ( `DTSDKName` ключа или сочетания `DTPlatformName` ключей и `DTPlatformVersion` ).
 
-`-framework` Параметр не поддерживает явные заголовка файлов для передачи. Файл заголовка обобщающий выбирается по соглашению, на основе имени платформы. Если не удается найти заголовок обобщающий, Sharpie цели не будет пытаться привязать платформы и привязки необходимо выполнить вручную, указав правильный обобщающий файлы заголовка для синтаксического анализа, и любые другие аргументы framework для clang (например `-F`параметр пути поиска framework).
+`-framework` Параметр не допускает передачи явных файлов заголовков. Файл заголовка "тег" выбирается по соглашению на основе имени платформы. Если заголовок не удается найти, Целевая Шарпие не будет пытаться привязать платформу, и необходимо вручную выполнить привязку, предоставив правильные файлы заголовков (-ов) для синтаксического анализа, а также аргументы платформы для Clang (например, `-F`параметр пути поиска платформы).
 
-За кулисами указав `-framework` является просто ярлыком. Следующие аргументы привязки идентичны `-framework` сокращением выше.
-Особенное значение имеет `-F .` путь поиска платформы для clang (Обратите внимание, места и период, которые являются неотъемлемой частью команды).
+Внутри, указание `-framework` — это просто ярлык. Следующие аргументы привязки идентичны `-framework` приведенным выше.
+Особая важность — `-F .` это путь поиска платформы, предоставленный для Clang (Обратите внимание на пространство и период, которые требуются как часть команды).
 
-<pre>$ <b>sharpie bind \
+```
+$ sharpie bind \
     -sdk iphoneos8.1 \
     AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
     -scope AdobeCreativeSDKFoundation.framework/Headers \
-    -c -F .</b></pre>
+    -c -F .
+```

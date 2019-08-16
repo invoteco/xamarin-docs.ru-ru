@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2019
-ms.openlocfilehash: 51555382e38412b7fa2c5c821b252984758bb1ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e818495d45435546f9d2fc9c5593d9c7caa608ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656970"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528883"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms карты
 
@@ -56,9 +56,9 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 Добавьте этот вызов в следующих файлах для каждой платформы:
 
--  **iOS** -файл AppDelegate.cs, в `FinishedLaunching` метод.
--  **Android** -MainActivity.cs файле `OnCreate` метод.
--  **UWP** -файл MainPage.xaml.cs, в `MainPage` конструктор.
+- **iOS** -файл AppDelegate.cs, в `FinishedLaunching` метод.
+- **Android** -MainActivity.cs файле `OnCreate` метод.
+- **UWP** -файл MainPage.xaml.cs, в `MainPage` конструктор.
 
 После добавления пакета NuGet и метода инициализации, вызываемого в каждом приложении, `Xamarin.Forms.Maps` интерфейсы API можно использовать в общем проекте .NET Standard библиотеки или в общем коде проекта.
 
@@ -178,16 +178,16 @@ map.MapType == MapType.Street;
 
 Допустимые `MapType` значения:
 
--  Гибридные
--  Вспомогательные
--  Улица (по умолчанию)
+- Гибридные
+- Вспомогательные
+- Улица (по умолчанию)
 
 ### <a name="map-region-and-mapspan"></a>Регион и Мапспан на карте
 
 Как показано в приведенном выше фрагменте кода, указав `MapSpan` экземпляр конструктора карты задает первоначального представления (центральную точку и масштаб) сопоставления при его загрузке. `MoveToRegion` Затем метод класса map можно использовать для изменения положения или масштабирования уровня карты. Существует два способа для создания нового `MapSpan` экземпляр:
 
--  **MapSpan.FromCenterAndRadius()** -статический метод, чтобы создать диапазон из `Position` и указав `Distance` .
--  **New () MapSpan** -конструктор, использующий `Position` и градусах широты и долготы для отображения.
+- **MapSpan.FromCenterAndRadius()** -статический метод, чтобы создать диапазон из `Position` и указав `Distance` .
+- **New () MapSpan** -конструктор, использующий `Position` и градусах широты и долготы для отображения.
 
 
 Чтобы изменить уровень масштаба карты, не изменяя расположение, создайте новый `MapSpan` с использованием текущего расположения из `VisibleRegion.Center` свойство элемента управления картой. Объект `Slider` может использоваться для управления масштабом карты следующим образом (Однако масштабирование непосредственно в элементе управления картой не может обновить сейчас значение ползунка):
@@ -220,10 +220,10 @@ map.Pins.Add(pin);
 
 `PinType`можно задать одно из следующих значений, которое может повлиять на способ подготовки к просмотру ПИН-кода (в зависимости от платформы):
 
--  Универсальный
--  Место
--  SavedPin
--  SearchResult
+- Универсальный
+- Место
+- SavedPin
+- SearchResult
 
 ### <a name="map-clicks"></a>Кнопки карт
 

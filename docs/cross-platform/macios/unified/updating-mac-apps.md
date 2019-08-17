@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c1a374feaadf28898b7fde8e364cf0adab83acd5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509608"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560301"
 ---
 # <a name="updating-existing-mac-apps"></a>Обновление существующих приложений Mac
 
@@ -70,7 +70,7 @@ Xamarin предоставляет инструментарий для Visual St
 
 Пример
 
-![](updating-mac-apps-images/csproj3.png "Добавьте следующие строки кода после элемента < AssemblyName >")
+![Добавьте следующие строки кода после \<элемента AssemblyName >](updating-mac-apps-images/csproj3.png)
 
 ### <a name="2-update-project-references"></a>2. Обновить ссылки проекта
 
@@ -98,7 +98,7 @@ Xamarin предоставляет инструментарий для Visual St
 
 Для `AppKit` некоторых методов сигнатура была изменена для использования новых [собственных типов](~/cross-platform/macios/nativetypes.md) (например, `nint`). Если пользовательские подклассы переопределяют эти методы, сигнатуры больше не будут совпадать и будут приводить к ошибкам. Исправьте эти переопределения метода, изменив подкласс в соответствии с новой сигнатурой, используя собственные типы. 
 
-## <a name="considerations"></a>Особенности
+## <a name="considerations"></a>Рекомендации
 
 При преобразовании существующего проекта Xamarin. Mac из Classic API в новый Unified API необходимо учитывать следующие моменты, если это приложение полагается на один или несколько компонентов или пакетов NuGet. 
 

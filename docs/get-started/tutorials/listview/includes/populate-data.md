@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037590"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69541529"
 ---
 Объект [`ListView`](xref:Xamarin.Forms.ListView) заполняется данными с помощью свойства [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), которое имеет тип `IEnumerable`. Предыдущий шаг заполняет `ListView` в XAML массивом строк. Тем не менее обычно `ListView` будет заполняться данными из коллекции, определенной в коде программной части, которая реализует `IEnumerable`.
 
@@ -177,7 +177,7 @@ ms.locfileid: "61037590"
     > [!IMPORTANT]
     > Свойство [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) наследуется через визуальное дерево. Так как оно задано для объекта [`ContentPage`](xref:Xamarin.Forms.ContentPage), дочерние объекты `ContentPage` наследуют свое значение, включая [`ListView`](xref:Xamarin.Forms.ListView).
 
-1.  В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.Image), чтобы задать свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) как коллекцию `Monkeys`:
+1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.Image), чтобы задать свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) как коллекцию `Monkeys`:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />
@@ -358,7 +358,7 @@ ms.locfileid: "61037590"
     > [!IMPORTANT]
     > Свойство [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) наследуется через визуальное дерево. Так как оно задано для объекта [`ContentPage`](xref:Xamarin.Forms.ContentPage), дочерние объекты `ContentPage` наследуют свое значение, включая [`ListView`](xref:Xamarin.Forms.ListView).
 
-1.  В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.Image), чтобы задать свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) как коллекцию `Monkeys`:
+1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.Image), чтобы задать свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) как коллекцию `Monkeys`:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />

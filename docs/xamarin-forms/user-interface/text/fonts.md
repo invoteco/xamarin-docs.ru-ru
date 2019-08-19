@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: 329f7dc9cc43582f630a4895fba452a8496bae9a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656172"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529305"
 ---
 # <a name="fonts-in-xamarinforms"></a>Шрифты в Xamarin.Forms
 
@@ -58,9 +58,9 @@ Xamarin. Forms также определяет поля в [`NamedSize`](xref:Xa
 
 Задает стиль шрифта, такие как **полужирным** и *курсивом* может устанавливаться на `FontAttributes` свойство. В настоящее время поддерживаются следующие значения:
 
--  **None**
--  **Полужирный**
--  **Курсив**
+- **None**
+- **Полужирный**
+- **Курсив**
 
 `FontAttribute` Перечисления можно использовать следующим образом (можно указать один атрибут или `OR` их):
 
@@ -100,7 +100,7 @@ Xamarin.Forms элементы управления, отображаемый т
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) может также использоваться в XAML для отрисовки шрифта на каждой платформе. В следующем примере используется пользовательский шрифт в iOS (<span style="font-family:MarkerFelt-Thin">тонкой MarkerFelt</span>) и определяет только размер и атрибуты на других платформах:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) может также использоваться в XAML для отрисовки шрифта на каждой платформе. В приведенном ниже примере используется пользовательский шрифт на iOS (Маркерфелт-тонкий), и на других платформах указывается только размер и атрибуты:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -183,7 +183,7 @@ new Label
 
 ### <a name="windows"></a>Windows
 
-Xamarin.Forms для платформ Windows можно ссылаться на пользовательский шрифт, который был добавлен в проект, выполнив определенные стандарт именования. Сначала добавьте файл шрифта в **/Assets/шрифты/** папки в проект приложения и установите <span class="UIItem">сборки: содержимое действия</span>. Затем используйте полный путь и шрифт имени файла, следуют решетки (#) и <span class="UIItem">имя шрифта</span>, как показано в следующем фрагменте кода:
+Xamarin.Forms для платформ Windows можно ссылаться на пользовательский шрифт, который был добавлен в проект, выполнив определенные стандарт именования. Сначала добавьте файл шрифта в **/Assets/шрифты/** папки в проект приложения и установите **сборки: содержимое действия**. Затем используйте полный путь и шрифт имени файла, следуют решетки (#) и **имя шрифта**, как показано в следующем фрагменте кода:
 
 ```csharp
 new Label

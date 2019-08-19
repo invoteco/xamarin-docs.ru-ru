@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 209d70c2e158261ca671e6a889e979de39362d53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 38d58350cf067a2d5f7813250590cc0715b6c9ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647987"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527384"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Введение в трехмерное касание в Xamarin. iOS
 
@@ -173,7 +173,7 @@ namespace DTouch
 }
 ```
 
-Метод используется для выполнения операции просмотра. `GetViewControllerForPreview` Он получает доступ к ячейке таблицы и резервные данные, а затем загружает `DetailViewController` из текущей раскадровки. Если задать `PreferredContentSize` для параметра значение (0, 0), то запрашивается **Размер представления просмотра** по умолчанию. Наконец, мы будем размыт все, кроме ячейки, с `previewingContext.SourceRect = cell.Frame` которой мы видим, и возвращаем новое представление для отображения.
+Метод используется для выполнения операции просмотра. `GetViewControllerForPreview` Он получает доступ к ячейке таблицы и резервные данные, а затем загружает `DetailViewController` из текущей раскадровки. Если задать `PreferredContentSize` для параметра значение (0, 0), то запрашивается размер представления просмотра по умолчанию. Наконец, мы будем размыт все, кроме ячейки, с `previewingContext.SourceRect = cell.Frame` которой мы видим, и возвращаем новое представление для отображения.
 
 Компонент повторно использует представление, созданное при просмотре представления **POP** , когда пользователь нажимает сложнее. `CommitViewController`
 
@@ -274,11 +274,11 @@ public override void ViewDidLoad ()
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-        ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![](3d-touch-images/uiapplicationshortcuticontype.png "Изображение Уиаппликатионшорткутиконтипе")
 
-* `UIApplicationShortcutItemSubtitle`— Определяет подзаголовок для элемента.
-* `UIApplicationShortcutItemTitle`— Определяет заголовок для элемента.
-* `UIApplicationShortcutItemType`— Строковое значение, которое будет использоваться для распознавания элемента в нашем приложении. Дополнительные сведения см. в следующем разделе.
+- `UIApplicationShortcutItemSubtitle`— Определяет подзаголовок для элемента.
+- `UIApplicationShortcutItemTitle`— Определяет заголовок для элемента.
+- `UIApplicationShortcutItemType`— Строковое значение, которое будет использоваться для распознавания элемента в нашем приложении. Дополнительные сведения см. в следующем разделе.
 
 > [!IMPORTANT]
 > Элементы ярлыков быстрого действия, заданные в `Info.plist` файле, недоступны `Application.ShortcutItems` со свойством. Они передаются `HandleShortcutItem` только обработчику событий.

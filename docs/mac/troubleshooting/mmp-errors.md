@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: d81435f7d693204a76249fc3fa6953766f7ab59a
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
-ms.translationtype: HT
+ms.openlocfilehash: 16708ad1d26c9d7394ad95b2d449ca304534a2bd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012467"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528860"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Сообщения об ошибках Xamarin. Mac (MMP)
 
@@ -103,7 +103,7 @@ ms.locfileid: "69012467"
 
 <a name="MM0056" />
 
-#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: Не удается найти Xcode в любом из расположений по умолчанию. Установите Xcode или передайте пользовательский путь с помощью--sdkroot добавлен =<path>
+#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: Не удается найти Xcode в любом из расположений по умолчанию. Установите Xcode или передайте пользовательский путь с помощью--sdkroot добавлен =\<path >
 
 <a name="MM0059" />
 
@@ -566,7 +566,7 @@ Xamarin. Mac не поддерживает установку версии ми�
 
 <a name="MM5309" />
 
-#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309: Сбой встроенной компоновки с кодом ошибки 1.  Дополнительные сведения см. в журнале сборки.
+#### <a name="mm5309-native-linking-failed-with-error-code-1-check-build-log-for-details"></a>MM5309: Сбой встроенной компоновки с кодом ошибки 1. Дополнительные сведения см. в журнале сборки.
 
 <a name="MM5310" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 8c7aae672d284d4105c6b09dfe81b72cf4ad519b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: f2272b90f664331959cfc8f60c6e59adc9550a98
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645518"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522769"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -31,10 +31,10 @@ _ViewPager — это Диспетчер макетов, позволяющий 
 
 В этом руководстве демонстрируются оба подхода: 
 
--   В [Viewpager с представлениями](~/android/user-interface/controls/view-pager/viewpager-and-views.md)приложение [трипажер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) разрабатывается, чтобы продемонстрировать, как `ViewPager` использовать для отображения представлений каталога дерева (коллекции изображений листопадное и популярная-деревьев). 
+- В [Viewpager с представлениями](~/android/user-interface/controls/view-pager/viewpager-and-views.md)приложение [трипажер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) разрабатывается, чтобы продемонстрировать, как `ViewPager` использовать для отображения представлений каталога дерева (коллекции изображений листопадное и популярная-деревьев). 
     `PagerTabStrip`и `PagerTitleStrip` используются для вывода заголовков, помогающих при навигации по страницам.
 
--   В [Viewpager с фрагментами](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md)разрабатывается немного более сложное [флашкардпажер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) приложение, которое показывает, `ViewPager` как `Fragment`использовать с s для создания приложения, которое представляет математические проблемы в виде флэш-карт и реагирует на вводимые пользователем данные. 
+- В [Viewpager с фрагментами](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md)разрабатывается немного более сложное [флашкардпажер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) приложение, которое показывает, `ViewPager` как `Fragment`использовать с s для создания приложения, которое представляет математические проблемы в виде флэш-карт и реагирует на вводимые пользователем данные. 
 
 
 ## <a name="requirements"></a>Требования
@@ -46,9 +46,9 @@ _ViewPager — это Диспетчер макетов, позволяющий 
 
 Для реализации навигации `ViewPager`жестурал используются три компонента:
 
--   ViewPager
--   Адаптер
--   Индикатор страничного навигатора
+- ViewPager
+- Адаптер
+- Индикатор страничного навигатора
 
 Ниже приведено описание каждого из этих компонентов.
 

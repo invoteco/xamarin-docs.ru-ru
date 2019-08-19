@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ffa462ed7cfdc45357f0ac62cae23d307cdb92b7
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509075"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012448"
 ---
 # <a name="build-process"></a>Процесс сборки
 
@@ -72,6 +72,28 @@ ms.locfileid: "68509075"
 
 -   **UpdateAndroidResources** — обновляет файл `Resource.designer.cs`. Этот целевой объект обычно вызывается средой IDE при добавлении новых ресурсов в проект.
 
+## <a name="build-extension-points"></a>Точки расширения сборки
+
+Система сборки Xamarin.Android предоставляет несколько общедоступных точек расширения для пользователей, желающих присоединиться к нашему процессу сборки. Чтобы использовать одну из этих точек расширения, необходимо добавить настраиваемый целевой объект в соответствующее свойство MSBuild в `PropertyGroup`. Например:
+
+```xml
+<PropertyGroup>
+   <AfterGenerateAndroidManifest>
+      $(AfterGenerateAndroidManifest);
+      YourTarget;
+   </AfterGenerateAndroidManifest>
+</PropertyGroup>
+```
+
+Предупреждение о расширении процесса сборки. Если расширения сборки написаны неправильно, они могут повлиять на производительность сборки, особенно если выполняются при каждой сборке. Настоятельно рекомендуется ознакомиться с [документацией](https://docs.microsoft.com/visualstudio/msbuild/msbuild) по MSBuild перед реализацией таких расширений.
+
+-   **AfterGenerateAndroidManifest** — целевые объекты, перечисленные в этом свойстве, будут запускаться непосредственно после внутреннего целевого объекта `_GenerateJavaStubs`. Здесь файл `AndroidManifest.xml` создается в `$(IntermediateOutputPath)`. Поэтому, если вы хотите внести изменения в созданный файл `AndroidManifest.xml`, это можно сделать с помощью этой точки расширения.
+
+    Добавлено в Xamarin.Android версии 9.4.
+
+-   **BeforeGenerateAndroidManifest** — целевые объекты, перечисленные в этом свойстве, будут запускаться прямо перед `_GenerateJavaStubs`.
+
+    Добавлено в Xamarin.Android версии 9.4.
 
 ## <a name="build-properties"></a>Свойства сборки
 
@@ -113,13 +135,19 @@ ms.locfileid: "68509075"
 Свойства упаковки управляют созданием пакета Android и используются целевыми объектами `Install` и `SignAndroidPackage`.
 [Свойства подписи](#Signing_Properties) также актуальны при упаковке приложений выпуска.
 
+-   **AndroidApkDigestAlgorithm** — строковое значение, которое указывает алгоритм хэш-кода для использования с `jarsigner -digestalg`.
+
+    Значение по умолчанию: `SHA1` для пакетов APK и `SHA-256` для пакетов приложений.
+
+    Добавлено в Xamarin.Android версии 9.4.
+
 -   **AndroidApkSignerAdditionalArguments** — свойство строки, которое позволяет разработчику предоставлять дополнительные аргументы для средства `apksigner`.
 
     Свойство добавлено в Xamarin.Android версии 8.2.
 
 -   **AndroidApkSigningAlgorithm** — строковое значение, которое указывает алгоритм подписи для использования с `jarsigner -sigalg`.
 
-    Значение по умолчанию — `md5withRSA`.
+    Значение по умолчанию: `md5withRSA` для пакетов APK и `SHA256withRSA` для пакетов приложений.
 
     Свойство добавлено в Xamarin.Android версии 8.2.
 
@@ -147,6 +175,10 @@ ms.locfileid: "68509075"
 
 -   **AndroidEnableDesugar** &ndash; Логическое свойство, которое определяет, включен ли `desugar`. Android пока поддерживает не все функции Java 8, и цепочка инструментов по умолчанию реализует новые языковые функции, выполняя преобразования байт-кода, которые называются `desugar`, на выходе компилятора `javac`. По умолчанию используется `False` при использовании `AndroidDexTool=dx` и `True` при использовании `AndroidDexTool=d8`.
 
+-   **AndroidEnableGooglePlayStoreChecks** — логическое свойство, позволяющее разработчикам отключить следующие проверки Google Play Маркет: XA1004, XA1005 и XA1006. Это полезно для разработчиков, которые создают приложения не для Google Play Маркет и не хотят выполнять эти проверки.
+
+    Добавлено в Xamarin.Android версии 9.4.
+
 -   **AndroidEnableMultiDex**  — логическое свойство, которое определяет, будет ли поддерживаться Multi-DEX в окончательном файле `.apk`.
 
     Поддержка этого свойства была добавлена в Xamarin.Android версии 5.1.
@@ -166,6 +198,14 @@ ms.locfileid: "68509075"
     По умолчанию свойству задано значение `True`.
 
     Свойство добавлено в Xamarin.Android версии 9.2.
+
+-   **AndroidEnableProfiledAot** — логическое свойство, которое определяет, используются ли профили AOT во время компиляции AOT.
+
+    Профили перечислены в группе элементов `AndroidAotProfile`. Эта ItemGroup содержит профили по умолчанию. Ее можно переопределить, удалив существующие и добавив собственные профили AOT.
+
+    Поддержка этого свойства была добавлена в Xamarin.Android 9.4.
+
+    По умолчанию это свойство имеет значение `False`.
 
 -   **AndroidEnableSGenConcurrent** — логическое свойство, которое определяет, будет ли использоваться [параллельный сборщик мусора](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen) Mono.
 
@@ -238,11 +278,23 @@ ms.locfileid: "68509075"
     Свойство добавлено в Xamarin.Android версии 9.2.
 
 -   **AndroidHttpClientHandlerType** &ndash; управляет стандартной реализацией `System.Net.Http.HttpMessageHandler`, которую будет использовать конструктор по умолчанию `System.Net.Http.HttpClient`. Значение — имя типа с указанием сборки подкласса `HttpMessageHandler`, подходящее для использования с [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
+    Наиболее распространенные значения для этого свойства:
 
-    Значение по умолчанию — `System.Net.Http.HttpClientHandler, System.Net.Http`.
+    -   `Xamarin.Android.Net.AndroidClientHandler`: используйте интерфейсы API Android Java для выполнения сетевых запросов. Это обеспечивает доступ к URL-адресам TLS 1.2, если базовая версия Android поддерживает TLS 1.2. Только Android 5.0 и более поздних версий обеспечивает надежную поддержку TLS 1.2 через Java.
 
-    Значение может быть переопределено. Тогда оно будет содержать реализацию `Xamarin.Android.Net.AndroidClientHandler`, которую используют API Android Java для выполнения сетевых запросов. Это обеспечивает доступ к URL-адресам TLS 1.2, если базовая версия Android поддерживает TLS 1.2.  
-    Только Android 5.0 и более поздних версий обеспечивает надежную поддержку TLS 1.2 через Java.
+        Это соответствует параметру **Android** на страницах свойств Visual Studio и параметру **AndroidClientHandler** на страницах свойств Visual Studio для Mac.
+
+        Мастер создания проектов выбирает этот вариант для новых проектов, если указана **минимальная версия Android** **Android 5.0 (Lollipop)** или выше в Visual Studio или если для **целевых платформ** установлено значение **Последняя и самая поздняя** в Visual Studio для Mac.
+
+    -   Удаляет пустую строку. Это эквивалентно `System.Net.Http.HttpClientHandler, System.Net.Http`
+
+        Это соответствует параметру **по умолчанию** на страницах свойств Visual Studio.
+
+        Мастер создания проектов выбирает этот параметр для новых проектов, если указана **минимальная версия Android** **Android 4.4.87** или более ранняя в Visual Studio или если для **целевых платформа** установлено **Современная разработка** или **Максимальная совместимость** в Visual Studio для Mac.
+
+    -  `System.Net.Http.HttpClientHandler, System.Net.Http`: используйте управляемый `HttpMessageHandler`.
+
+       Это соответствует параметру **Управляемый** на страницах свойств Visual Studio.
 
     *Примечание*. Если требуется поддержка TLS 1.2 в версиях Android ниже 5.0 *или* если поддержка TLS 1.2 необходима для `System.Net.WebClient` и связанных API, следует использовать `$(AndroidTlsProvider)`.
 
@@ -314,6 +366,17 @@ ms.locfileid: "68509075"
 
     Свойство добавлено в Xamarin.Android версии 8.3.
 
+-   **AndroidPackageFormat** — свойство стиля перечисления с допустимыми значениями `apk` или `aab`. Это означает, что вы хотите упаковать приложение Android как [файл APK][apk] или [пакет приложений Android][bundle]. Пакеты приложений — это новый формат для сборок `Release`, предназначенных для отправки на Google Play. Текущее значение по умолчанию: `apk`.
+
+    Если параметр `$(AndroidPackageFormat)` имеет значение `aab`, то устанавливаются другие свойства MSBuild, которые необходимы для пакетов приложений Android.
+
+    * Свойство `$(AndroidUseAapt2)` имеет значение `True`.
+    * Свойство `$(AndroidUseApkSigner)` имеет значение `False`.
+    * Свойство `$(AndroidCreatePackagePerAbi)` имеет значение `False`.
+
+[apk]: https://en.wikipedia.org/wiki/Android_application_package
+[bundle]: https://developer.android.com/platform/technology/app-bundle
+
 -   **AndroidR8JarPath** &ndash; Путь к `r8.jar` для использования с DEX-компилятором и средством сжатия кода r8. По умолчанию используется путь установки Xamarin.Android. Дополнительные сведения см. в документации по [D8 и R8][d8-r8].
 
 -   **AndroidSdkBuildToolsVersion** — предоставляет версию пакета средств сборки SDK для Android, который помимо прочих включает средства **aapt** и **zipalign**. Одновременно могут быть установлены несколько различных версий пакета средств сборки. Пакет средств сборки, выбранный для упаковки, создается путем проверки и использования "предпочтительной" версии, если она присутствует. Если такая версия *отсутствует*, то используется установленный пакет средств сборки последней версии.
@@ -331,19 +394,27 @@ ms.locfileid: "68509075"
 
 -   **AndroidTlsProvider** — строковое значение, которое указывает, какой поставщик TLS следует использовать в приложении. Доступны следующие значения:
 
+    -   Удаляет пустую строку. В Xamarin.Android 7.3 или более поздней версии это эквивалентно значению `btls`.
+
+        В Xamarin.Android 7.1 это эквивалентно значению `legacy`.
+
+        Это соответствует параметру **по умолчанию** на страницах свойств Visual Studio.
+
     -   `btls`: используется [Boring SSL](https://boringssl.googlesource.com/boringssl) для взаимодействия через TLS с [HttpWebRequest](xref:System.Net.HttpWebRequest).
+
         Это позволяет использовать TLS 1.2 во всех версиях Android.
+
+        Это соответствует параметру **Собственный протокол TLS 1.2+** на страницах свойств Visual Studio.
 
     -   `legacy`: используется историческая управляемая реализация протокола SSL для взаимодействия по сети. TLS 1.2 *не* поддерживается.
 
-    -   `default`: разрешить *Mono* выбирать поставщик TLS по умолчанию.
-        Это значение эквивалентно `legacy` даже в Xamarin.Android 7.3.  
-        *Примечание*. Это значение вряд ли появится среди значений `.csproj`, так как, если для интегрированной среды разработки указано значение Default, свойство `$(AndroidTlsProvider)` будет *удалено*.
+        Это соответствует параметру **Управляемый протокол TLS 1.0** на страницах свойств Visual Studio.
 
-    -   Удаляет пустую строку. В Xamarin.Android 7.1 это эквивалентно значению `legacy`.  
-        В Xamarin.Android 7.3 это эквивалентно значению `btls`.
+    -   `default`: Это значение вряд ли будет использоваться в проектах Xamarin.Android. Вместо этого рекомендуется использовать пустую строку, соответствующую параметру **по умолчанию** на страницах свойств Visual Studio.
 
-    Значение по умолчанию — пустая строка.
+        Значение `default` не предлагается на страницах свойств Visual Studio.
+
+        В настоящее время оно эквивалентно `legacy`.
 
     Свойство добавлено в Xamarin.Android версии 7.1.
 

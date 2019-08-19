@@ -1,75 +1,75 @@
 ---
-title: Изменения платформы дополнительных tvOS 10
-description: В этом документе описываются незначительные изменения и усовершенствования, внесенные в имеющиеся платформы в iOS 10. Здесь рассматриваются обновления AVFoundation, AVKit, Core Data, Core Graphics, Foundation, GameKit, GameplayKit и многое другое.
+title: Дополнительные изменения в tvOS 10 Frameworks
+description: В этом документе описываются незначительные изменения и улучшения, внесенные в существующие платформы в iOS 10. В нем рассматриваются обновления для Авфаундатион, Авкит, основных данных, основной графики, фундамента, GameKit, Гамеплайкит и т. д.
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ab6236198d0a5826fc613d1f3839bafdb980d235
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 230da58bba68b9411b67baacd53b534ae832510d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865645"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657439"
 ---
-# <a name="additional-tvos-10-frameworks-changes"></a>Изменения платформы дополнительных tvOS 10
+# <a name="additional-tvos-10-frameworks-changes"></a>Дополнительные изменения в tvOS 10 Frameworks
 
-Помимо основных изменения tvOS Apple сделала изменения и усовершенствования для нескольких существующих платформ в tvOS 10.
+В дополнение к значительным изменениям в tvOS, компания Apple внесла изменения в несколько существующих платформ в tvOS 10.
 
 <a name="AV-Foundation-Framework" />
 
-## <a name="avfoundation-framework-additions"></a>Дополнения AVFoundation Framework
+## <a name="avfoundation-framework-additions"></a>Дополнения Авфаундатион Framework
 
-Платформа AVFoundation включает следующие улучшения:
+Платформа Авфаундатион включает следующие усовершенствования.
 
-- В tvOS 10, приложение больше не реализует различные [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) поведения на основе типа содержимого. Просто задайте `Rate` свойство и AVFoundation определяют при достаточно содержимое доступно для воспроизведения без замедляется работа.
-- Новый `AVPlayerLooper` класс упрощает цикл данной части носителей во время воспроизведения.
+- В tvOS 10 приложение больше не реализует различные поведения [авплайеритем](https://developer.apple.com/reference/avfoundation/avplayeritem) на основе типа содержимого. Просто задайте `Rate` свойство, и авфаундатион определит, когда будет доступно достаточное содержимое для воспроизведения без ожидания.
+- Новый `AVPlayerLooper` класс упрощает циклический перебор заданной части мультимедиа во время воспроизведения.
 
 <a name="AVKit-Framework-Enhancements" />
 
-## <a name="avkit-framework-enhancements"></a>Усовершенствования AVKit Framework
+## <a name="avkit-framework-enhancements"></a>Усовершенствования платформы Авкит
 
-Платформа AVKit включает следующие улучшения:
+Платформа Авкит включает следующие усовершенствования.
 
-- Приложение теперь имеет контроль над пропуск поведение [AVPlayerViewController](https://developer.apple.com/reference/avkit/avplayerviewcontroller) пропуск жест может перемещать к следующему элементу в список воспроизведения или advance внутри текущего элемента.
+- Теперь приложение имеет контроль над пропуском поведения [авплайервиевконтроллер](https://developer.apple.com/reference/avkit/avplayerviewcontroller) , поэтому жест пропуска может перемещаться к следующему элементу в списке воспроизведения или перемещаться в пределах текущего элемента.
 
 <a name="Core-Data-Enhancements" />
 
 ## <a name="core-data-enhancements"></a>Усовершенствования основных данных
 
-tvOS 10 включает следующие улучшения в Framework Core Data:
+tvOS 10 включает следующие усовершенствования для основной платформы данных:
 
-- Корневой [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) объектов поддерживает параллельные завершение со сбоем и выборка без сериализации.
-- [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) класс поддерживается пул хранилищ данных SQLite.
-- [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) объектов с хранилищами данных SQLite в режиме журнал WAL поддержки нового поколения запроса компонентов, где управляемый объект контекстов (MOC) можно прикрепить к версии конкретной базы данных для будущих выборки и Ошибка транзакции.
-- С помощью высокоуровневым `NSPersistenceContainer` ссылка `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) и другим ресурсам конфигурации Core Data.
-- Были добавлены несколько новых удобных методов `NSManagedObject` облегчая процесс для выполнения операций выборки и создание подклассов.
+- Корневые объекты [нсманажедобжектконтекст](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) поддерживают одновременную ошибку и выборку без сериализации.
+- Класс [нсперсистентсторекурдинатор](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) поддерживает пул хранилищ данных SQLite.
+- [Нсманажедобжектконтекст](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) объекты с хранилищами данных SQLite в режиме журнала Wal поддерживают новую функцию создания запросов, где контексты управляемых объектов (MOC) могут быть закреплены в конкретных версиях базы данных для последующей выборки и сбоя транзакций.
+- Использование высокого уровня `NSPersistenceContainer` для ссылки на [нсманажедобжектмодел](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) и другие основные ресурсы по `NSPersistentStoreCoordinator`настройке данных.
+- Было добавлено несколько новых удобных методов для `NSManagedObject` упрощения выборки и создания подклассов.
 
-Дополнительные сведения см. в разделе Apple [справочные материалы по основной данных Framework](https://developer.apple.com/reference/coredata).
+Дополнительные сведения см. в справочнике по [основной платформе данных](https://developer.apple.com/reference/coredata)Apple.
 
 <a name="Core-Graphics-Enhancements" />
 
-## <a name="core-graphics-enhancements"></a>Главные усовершенствования графики
+## <a name="core-graphics-enhancements"></a>Основные улучшения графики
 
-tvOS 10 включает следующие улучшения в Core Framework графики:
+tvOS 10 включает следующие усовершенствования для основной графической платформы:
 
-- Новый [CGColorConverterRef](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) класс может использоваться для выполнения ряда преобразования цветов.
+- Новый класс [кгколорконвертерреф](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) можно использовать для выполнения ряда преобразований цветов.
 
 <a name="Core-Image-Enhancements" />
 
-## <a name="core-image-enhancements"></a>Главные усовершенствования образа
+## <a name="core-image-enhancements"></a>Усовершенствования основных образов
 
-tvOS 10 вносит следующие усовершенствования framework образ основных компонентов:
+tvOS 10 вносит следующие улучшения в основную платформу образов:
 
-- `ImageWithExtent` Метод [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) класс может использоваться для вставки пользовательской обработки в операцию фильтрации. Основной образ будет вызывать данным обратным вызовом от фильтров при обработке изображения для выходных данных или отображения.
-- Приложение теперь может обрабатывать образы в цветовом пространстве вне контекста образ основных компонентов рабочее цветовое пространство путем преобразования в и из него цветовое пространство до и после обработки.
-- Были внесены некоторые улучшения производительности отрисовки `UIImage` визуализации (когда хранилищ образа образ основных компонентов) в `UIImageView` объектов. 
-- `UIImage` объекты с тегами wide-цветовой гаммы визуализирует цвета в цветовой гаммы wide в `UIImageView` объекты на устройствах iOS, поддерживающих широкая цветовая палитра.
-- Основной образ ядра код теперь можете запросить определенный пиксель выходных форматов.
+- Метод `ImageWithExtent` класса [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) можно использовать для вставки пользовательской обработки в операцию фильтрации. Основное изображение будет вызывать заданный обратный вызов между фильтрами при обработке изображения для вывода или показа.
+- Теперь приложение может обрабатывать изображения в цветовом пространстве за пределами рабочего пространства контекста образа путем преобразования в цветовое пространство и из него до и после обработки.
+- Для подготовки к `UIImage` просмотру в `UIImageView` объектах были сделаны некоторые улучшения производительности отрисовки (при резервном копировании в хранилищах образов основных образов). 
+- `UIImage`объекты с тегами Wide-охват будут отображаться в виде цвета с широкими охватами в `UIImageView` объектах на устройствах iOS, поддерживающих широкий цвет.
+- Код ядра образа ядра теперь может запрашивать определенные форматы вывода пикселей.
 
-Кроме того были добавлены следующие новые фильтры образ основных компонентов:
+Кроме того, добавлены следующие новые фильтры основных образов:
 
 - `CINinePartTiled`
 - `CINinePartStretched`
@@ -79,125 +79,125 @@ tvOS 10 вносит следующие усовершенствования fra
 
 <a name="Foundation-Enhancements" />
 
-## <a name="foundation-enhancements"></a>Усовершенствования Foundation
+## <a name="foundation-enhancements"></a>Усовершенствования в фундаменте
 
-В среде Foundation для tvOS 10 были внесены следующие улучшения:
+В платформу Foundation для tvOS 10 были внесены следующие улучшения:
 
-- Используйте новый [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) класса, чтобы дата и время вычисления интервала, например длительности для сравнения интервалы и тестирование для пересечения интервал.
-- Были добавлены несколько новых свойств [NSLocal](https://developer.apple.com/reference/foundation/nslocale) класс получения местной информации и отображение доступных форматов.
-- Используйте новый [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) класс для преобразования между разные единицы из мер (единица Измерения) или выполняют вычисления над значениями в разных UOMs.
-- Используйте новый [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) класс для форматирования локализованного измерения для отображения для конечного пользователя.
-- Используйте новый [NSUnit](https://developer.apple.com/reference/foundation/nsunit) и [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) классы для представления определенных UOMs.
+- Новый класс [нсдатеинтервал](https://developer.apple.com/reference/foundation/nsdateinterval) используется для вычисления интервалов даты и времени, таких как длительность, для сравнения интервалов и тестирования для пересечения интервалов.
+- К классу [нслокал](https://developer.apple.com/reference/foundation/nslocale) были добавлены несколько новых свойств для получения локальных сведений и доступных форматов отображаемых данных.
+- Используйте новый класс [нсмеасуремент](https://developer.apple.com/reference/foundation/nsmeasurement) для преобразования между разными единицами измерения (ЕИ) или вычисления значений в разных уомс.
+- Используйте новый класс [нсмеасурементформаттер](https://developer.apple.com/reference/foundation/nsmeasurementformatter) , чтобы отформатировать локализованные измерения для отображения конечному пользователю.
+- Используйте новые классы [нсунит](https://developer.apple.com/reference/foundation/nsunit) и [нсдименсион](https://developer.apple.com/reference/foundation/nsdimension) для представления конкретных уомс.
 
 <a name="GameKit-Enhancements" />
 
 ## <a name="gamekit-enhancements"></a>Усовершенствования GameKit
 
-Платформа "GameKit" в tvOS 10 были внесены следующие улучшения:
+В GameKit Framework в tvOS 10 были внесены следующие улучшения:
 
-- Реализован новый тип учетную запись iCloud [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) класса.
-- Новый [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) класс предоставляет универсального решения для управления хранилищем постоянных данных в Game Center. `GKGameSession` хранит список игроков и приложение является ответственным формы реализации, как и когда участника дата хранится, извлечь или обмениваются игроков. Во многих случаях игр сеансов можно заменить существующих Поочередный совпадений, совпадений в режиме реального времени или постоянных игры сохранить методы.
+- Новый тип учетной записи только iCloud реализован классом [гкклаудплайер](https://developer.apple.com/reference/gamekit/gkcloudplayer) .
+- Новый класс [гкгамесессион](https://developer.apple.com/reference/gamekit/gkgamesession) предоставляет обобщенное решение для управления хранилищем постоянных данных на Game Center. `GKGameSession`ведет список игроков, и приложение отвечает за реализацию того, как и когда дата участника сохраняется, извлекается или обменивается между игроками. Во многих случаях игровые сеансы могут заменять существующие соответствия, основанные на включении, совпадения в режиме реального времени или постоянные способы сохранения игр.
 
 <a name="GameplayKit-Enhancements" />
 
-## <a name="gameplaykit-enhancements"></a>Усовершенствования GameplayKit
+## <a name="gameplaykit-enhancements"></a>Усовершенствования Гамеплайкит
 
-Платформа GameplayKit в tvOS 10 были внесены следующие улучшения:
+В Гамеплайкит Framework в tvOS 10 были внесены следующие улучшения:
 
-- Поколение процедурного пропускаемые была добавлена и может использоваться для повышения реалистичности в выглядящие естественно текстуры, добавить реализм перемещение камеры и помогают создавать полнофункциональной игровой среды.
-- Используйте Пространственные секционирования для секционирования данных игровой для эффективного поиска.
-- Специалист по стратегиям новый методом Монте-Карло ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) был добавлен для вычислений исчерпывающим возможных перемещения.
-- Добавлен новый интерфейс API дерева принятия решений ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) и [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) для улучшения AI игры дом.
-- Поддержка трехмерного представления был добавлен существующий агент и поведения путь поиска, с помощью нового [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) и [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) классы.
-- Используйте новый [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) класса для обеспечения высокой производительности — это Естественный пути.
-- Новый [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) и [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) классы марки, объединение GameplayKit и проще, чем когда-либо SpriteKit.
+- Было добавлено описание процедурного создания шума, которое можно использовать для улучшения реальных текстур в естественном виде, добавления факта к перемещению камеры и помощи в создании полнофункциональных игр.
+- Используйте пространственное секционирование, чтобы секционировать реальные данные игры для эффективного поиска.
+- Добавлен новый Монте-Карло специалист по стратегиям ([гкмонтекарлостратегист](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) для исчерпывающего возможного вычисления перемещения.
+- Добавлен новый API дерева принятия решений ([гкдеЦисионтри](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) и [гкдеЦисионноде](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) для улучшения искусственного проектирования.
+- поддержка трехмерных объектов добавлена к существующим агентам и поведениям поиска пути с помощью новых классов [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) и [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) .
+- Используйте новый класс [гкмешграф](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) для обеспечения высокопроизводительных и естественных путей.
+- Новые классы [гксцене](https://developer.apple.com/reference/gameplaykit/gkscene) и [Гкскнодекомпонент](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) делают объединение гамеплайкит и SpriteKit проще, чем когда-либо.
 
 <a name="Metal-Enhancements" />
 
-## <a name="metal-enhancements"></a>Усовершенствования исходного состояния системы
+## <a name="metal-enhancements"></a>Усовершенствования в металлах
 
-К платформе без операционной системы в tvOS 10 были внесены следующие улучшения:
+В tvOS 10 были внесены следующие улучшения в среду металла:
 
-- Теперь можно использовать трехмерных приложениях и играх _тесселяции_ для эффективного отображения сложных сцен и geometry с помощью графического Процессора.
-- Используйте специализацию функции для создания коллекции оптимизирован материалов и света сочетания функций для сцены.
-- Предоставлять детальный контроль выделения ресурсов для оптимизации работы операционной системы на основе приложений с помощью ресурсов кучи и Memoryless целевых буферов визуализации.
+- Трехмерные приложения и игры теперь могут использовать тесселяцию для эффективного отображения сложных сцен и геометрии с помощью GPU.
+- Используйте специализацию функции, чтобы создать высокооптимизированный набор функций для комбинирования материалов и освещения для сцены.
+- Обеспечение точного контроля за выделением ресурсов для оптимизации производительности металлических приложений с помощью куч ресурсов и целевых объектов визуализации, поддерживающих память.
 
-Дополнительные сведения см. в разделе Apple [руководство по программированию без операционной системы](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
+Дополнительные сведения см. в статье [по программированию для металлического программирования](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221)Apple.
 
 <a name="Metal-Performance-Shaders-Enhancements" />
 
-## <a name="metal-performance-shaders-enhancements"></a>Шейдеры усовершенствования производительности без операционной системы
+## <a name="metal-performance-shaders-enhancements"></a>Улучшения в построителейх шейдеров производительности
 
-Платформа производительности шейдеров без операционной системы в tvOS 10 были внесены следующие улучшения:
+В платформу шейдеров для металлической производительности в tvOS 10 были внесены следующие улучшения:
 
-- Были добавлены многие новых ядер framework шейдеры производительности без операционной системы, чтобы разрешить приложению использовать преимущества вычислений оптимизированного для высокой, параллельной обработки данных, например преобразования цветов пространство и операции нейронной сети.
+- В платформу шейдеров металлической производительности добавлено множество новых ядер, позволяющих приложению использовать преимущества высокооптимизированных вычислений с параллельным выполнением данных, таких как преобразование цветового пространства и операции нейронной сети.
 
 <a name="ModelIO-Enhancements" />
 
-## <a name="modelio-enhancements"></a>Усовершенствования ModelIO
+## <a name="modelio-enhancements"></a>Усовершенствования Моделио
 
-Платформа ModelIO в tvOS 10 были внесены следующие улучшения:
+В Моделио Framework в tvOS 10 были внесены следующие улучшения:
 
-- Теперь поддерживается формат файла долл. США.
-- Используйте новый `MDLMaterialPropertyGraph` класса для упрощения поддержки среды выполнения изменения в модели.
-- Подпись поля расстояние, добавлена поддержка [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) класса.
-- Используйте новый `MDLLightProbeIrradianceDataSource` класс, помогающий в свет выборки данных размещения.
+- Теперь поддерживается формат файла USD.
+- Используйте новый `MDLMaterialPropertyGraph` класс, чтобы легко поддерживать изменения среды выполнения в моделях.
+- В класс [мдлвокселаррай](https://developer.apple.com/reference/modelio/mdlvoxelarray) добавлена поддержка поля со знакомого расстояния.
+- Используйте новый `MDLLightProbeIrradianceDataSource` класс, чтобы упростить размещение зонда.
 
 <a name="SceneKit-Enhancements" />
 
 ## <a name="scenekit-enhancements"></a>Усовершенствования SceneKit
 
-Платформа SceneKit в tvOS 10 были внесены следующие улучшения:
+В SceneKit Framework в tvOS 10 были внесены следующие улучшения:
 
-- SceneKit теперь включает в себя новую систему физически основе визуализации (PBR) для более реалистичного результатов разработки, более простой ресурс.
-- Используйте новый [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) заливки модель, в которой продукта широкий спектр реалистичную заливку эффекты при этом не только для трех основных свойств (`Diffuse`, `Metalness` и `Roughness`).
-- С момента PBR заливки работает лучше всего с освещением, основанная на среде, используйте `LightingEnvironment` свойство, чтобы назначить освещение на основе образа для tan всей сцены.
-- Используйте `IESProfileURL` свойство для импорта приборами реального мира, которые определяют базовый освещения на реальные значения, такие как интенсивность (в люмен) и цветовой температуры (в градусах Кельвина).
-- [SCNCamera](https://developer.apple.com/reference/scenekit/scncamera) класс может предоставить больше реализм с помощью функций HDR и эффекты. Используйте адаптивной раскрытия для создания автоматического эффекты или виньетирование использования, каймы цвет и цвет градации Добавление filmatic эффекты для игры.
-- PBR и HDR камеры функции обеспечивают лучшие результаты, чем методы традиционных отрисовки и, таким образом, SceneKit теперь выполняет все вычисления цвета в линейном цветовом пространстве (с использованием цветового P3 дисплеям устройств wide цвет).
-- SceneKit теперь цвет соответствует все цвета, считывая данные профиля цвета.
-- SceneKit интерпретирует значений составляющих цвета в линейной цветовое пространство RGB для всех типов шейдера.
-- Поскольку SceneKit считывает и настроить сведения о профиле цвет в изображения текстур, используйте каталоги активов для всех образов, чтобы убедиться, что эта информация.
-- Линейные цветовые пространства отрисовки и расширенных цвет можно отключить, задав `SCNDisableLinearSpaceRendering` и `SCNDisableWideGamut` ключей в приложении `Info.plist`.
-- Создавать произвольные многоугольника приматов (либо загружено из файлов, либо создан программным путем) для указания geometry с новым [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) класса.
+- SceneKit теперь включает новую систему физической отрисовки (PBR) для более реалистичных результатов с более простым созданием ресурсов.
+- Используйте новую модель заливки [скнлигхтингмоделфисикаллибасед](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) для произведения широкого спектра реалистичных эффектов заливки, при этом требуются только три фундаментальных `Metalness` свойства `Roughness`(`Diffuse`и).
+- Поскольку заливка PBR лучше всего работает с освещением на основе среды, `LightingEnvironment` используйте свойство, чтобы назначить освещение на основе изображения для всей сцены Tan.
+- `IESProfileURL` Используйте свойство для импорта реальных осветительных источников, определяющих основу освещения в реальных значениях, таких как интенсивность (в люменах) и цветовая температура (в градусах Кельвина).
+- Класс [скнкамера](https://developer.apple.com/reference/scenekit/scncamera) обеспечивает более высокую реальную работу с помощью функций и эффектов HDR. Используйте адаптивную раскрытие, чтобы создать автоматические эффекты или использовать вигнеттинг, регулировку цвета и цветовую раскраску для добавления филматик эффектов в игру.
+- Функции PBR и HDR-камеры предоставляют лучшие результаты по сравнению с традиционными методами отрисовки, и в результате SceneKit теперь выполняет все цветовые вычисления в линейном цветовом пространстве (при отображении цветовой гаммы P3 на устройствах с широким цветом).
+- SceneKit теперь цвет соответствует всем цветам, считывая сведения о цветовых профилях.
+- SceneKit интерпретирует значения цветовых компонентов в линейном цветовом пространстве RGB для всех типов шейдера.
+- Так как SceneKit считывает и корректирует сведения о цветовых профилях в образах текстур, используйте каталоги активов для всех изображений, чтобы обеспечить их использование.
+- Как линейное, так и расширенное отображение цветового пространства можно отключить, `SCNDisableLinearSpaceRendering` указав `SCNDisableWideGamut` `Info.plist`ключи и в приложении.
+- Создайте произвольный многоугольник приматов (загружается из файлов или создается программно), чтобы указать геометрию с новым классом [скнжеометрипримитиветипеполигон](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
 
 <a name="SpriteKit-Enhancements" />
 
 ## <a name="spritekit-enhancements"></a>Усовершенствования SpriteKit
 
-Платформа SpriteKit в tvOS 10 были внесены следующие улучшения:
+В SpriteKit Framework в tvOS 10 были внесены следующие улучшения:
 
-- Tilemaps теперь поддерживают square, Шестигранная и изометрической плитки фигур для двухмерных, 2,5 D и прокрутка стороне игры, используя `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` и `SKTileSet` классы.
-- Используйте новый `SKWarpGeometry` класса к растягиванию или искажать [SKSpriteNode](https://developer.apple.com/reference/spritekit/skspritenode) или [SKEffectNode](https://developer.apple.com/reference/spritekit/skeffectnode) подготовки к просмотру. Новый [SKAction](https://developer.apple.com/reference/spritekit/skaction) класс может использоваться для переходов между warp эффекты анимации.
-- Пользовательские построители текстуры можно предоставить атрибуты (`SKAttribute`), можно настроить по отдельности каждым узлом, который использует шейдера, указав значение атрибута (`SKAttributeValue`).
-- [SKView](https://developer.apple.com/reference/spritekit/skview) класс предоставляет несколько новых способов позволяют точно контролировать время и способ визуализации сцены.
+- Тилемапс теперь поддерживает фигуры мозаичных, шестиугольников и изометрических плиток для двумерных, 2,5 и прокрутых игр с `SKTileMapMode`помощью `SKTileGroup`классов `SKTileGroupRule` , `SKTileSet` и.
+- Используйте новый `SKWarpGeometry` класс для растяжения или искажения отрисовки [скспритеноде](https://developer.apple.com/reference/spritekit/skspritenode) или [скеффектноде](https://developer.apple.com/reference/spritekit/skeffectnode) . Новый класс [скактион](https://developer.apple.com/reference/spritekit/skaction) можно использовать для анимации переходов между эффектами деформации.
+- Пользовательские шейдеры могут предоставлять атрибуты (`SKAttribute`), которые можно настроить отдельно для каждого узла, использующего шейдер, путем предоставления значения атрибута (`SKAttributeValue`).
+- Класс [сквиев](https://developer.apple.com/reference/spritekit/skview) предоставляет несколько новых методов, позволяющих точно контролировать время и способ отрисовки сцены.
 
 <a name="UIKit-Enhancements" />
 
 ## <a name="uikit-enhancements"></a>Усовершенствования UIKit
 
-На платформе UIKit в tvOS 10 были внесены следующие улучшения:
+В UIKit Framework в tvOS 10 были внесены следующие улучшения:
 
-- Фокус API был улучшен для поддержки фокуса элемента не view в дополнение к `UIViews`. Элементы, которые поддерживают фокус _необходимо_ реализовать `IUIFocusItem` интерфейс.
-- Новый `UIGraphicsRender` класс предоставляет метод объектно ориентированного создания растровые изображения или PDF-файлы из UIKit отрисовки или Core Graphics и заменяет нерекомендуемый `UIGraphicsBeginImageContext` метод.
-- `UIUserInterfaceStyle` Был добавлен класс, чтобы определить, какие темы пользовательского интерфейса (Темная или Светлая) в данный момент активна.
-- Добавлена поддержка нового, полностью интерактивные, объектно ориентированного прерываемые анимации и Ван связываться с помощью жестов. Pleas см. в разделе Apple [по протоколу UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating), [ссылки на класс UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [по протоколу UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Ссылки на класс UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) и [ссылки на класс UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) Дополнительные сведения.
-- Новый `UIPreviewInteraction` и `UIPreviewInteractionDelegate` позволяют приложению предоставлять пользовательский интерфейс для операций считывания и pop.
-- Новый `UIAccessibilityCustomRotor` класс позволяет приложению предоставлять пользовательские, зависящего от контекста функциональные возможности для вспомогательных технологий, таких как Voice Over.
-- Используйте `UIAccessibilityIsAssistiveTouchRunning` и `UIAccessibilityAssistiveTouchStatusDidChangeNotification` символы, чтобы определить, включена ли AssistiveTouch.
-- Используйте `UIAccessibilityHearingDevicePairedEar` и `UIAccessibilityHearingDevicePairedEarDidChangeNotification` символы, чтобы получить состояние какой-либо пару вспомогательные средства MFi вашим отзывам.
-- Новый [UIPasteboard](https://developer.apple.com/reference/uikit/uipasteboard) API предоставляет новые возможности (например, время существования ограничения) и автоматически объявляют совместимых типов содержимого для распространенных типов классов.
-- Для поддержки динамического типа в метки, текстовые поля и текстовые поля используйте новый `PreferredFontForTextStyle` метод `UIFont` класса.
-- Чтобы решить, если элемент необходимо обновить его шрифта при устройства `UIContentSizeCategory` изменения, используйте `AdjustsFontForContentSizeCategory` свойство `UIContentSizeCategoryAdjusting` делегировать.
-- Приложение теперь может управлять внешний вид значка для панели элементов вкладки, например цвет текста и фона.
-- Обновление экрана в теперь поддерживается во всех представления и представления подклассы (например, `UICollectionView`).
-- `OpenURL` Метод `UIApplication` класса вызывается асинхронно теперь поддерживает обработчик завершения, который вызывается после завершения открытия.
-- Инициировать CloudKit общий доступ и изменение его свойств, с помощью нового `UICloudSharingController` и `UICloudSharingControllerDelegate` классы.
-- Воспользоваться преимуществами предварительно выбранных ячеек прокрутки совершенствовать `UICollectionViews` с новым `UICollectionViewDataSourcePrefetching` делегировать.
+- API фокуса был усовершенствован для поддержки фокусировки элемента, не являющегося представлением, в дополнение `UIViews`к. Элементы, поддерживающие фокус, должны `IUIFocusItem` реализовывать интерфейс.
+- Новый `UIGraphicsRender` класс предоставляет объектно-ориентированный метод создания точечных рисунков или документов PDF из UIKit отрисовки или основной графики и заменяет `UIGraphicsBeginImageContext` устаревший метод.
+- Добавлен `UIUserInterfaceStyle` класс, чтобы определить, какая тема пользовательского интерфейса (темная или светлая) сейчас активна.
+- Добавлена новая интерактивная поддержка однообъектной анимации на основе объектов, и Van должна быть связана с жестами. Обратитесь к разделу Справочник по [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [UIViewPropertyAnimator Class Reference](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [UICubicTimingParameters Class Reference](https://developer.apple.com/reference/uikit/uicubictimingparameters) и [UISpringTimingParameter Class Reference](https://developer.apple.com/reference/uikit/uispringtimingparameters).
+- Новый `UIPreviewInteraction` и`UIPreviewInteractionDelegate` позволяет приложению предоставлять пользовательский интерфейс для операций просмотра и POP.
+- Новый `UIAccessibilityCustomRotor` класс позволяет приложению предоставлять настраиваемые, зависящие от контекста функции для вспомогательных технологий, таких как передача голоса.
+- Используйте символы `UIAccessibilityAssistiveTouchStatusDidChangeNotification` и, чтобы определить, включен ли параметр AssistiveTouch. `UIAccessibilityIsAssistiveTouchRunning`
+- Используйте символы `UIAccessibilityHearingDevicePairedEarDidChangeNotification` и, чтобы получить состояние любого парного MFiного средства для слуха. `UIAccessibilityHearingDevicePairedEar`
+- Новый API [уипастебоард](https://developer.apple.com/reference/uikit/uipasteboard) предоставляет новые параметры (такие как ограничения времени существования) и автоматически объявляет совместимые типы содержимого для общих типов классов.
+- Для поддержки динамического типа в метках текстовые поля и текстовые поля используют новый `PreferredFontForTextStyle` метод `UIFont` класса.
+- Чтобы решить, должен ли элемент обновлять шрифт при изменении устройства `UIContentSizeCategory` , `AdjustsFontForContentSizeCategory` используйте свойство `UIContentSizeCategoryAdjusting` делегата.
+- Теперь приложение может управлять внешним видом значка для элементов панели вкладок, таких как цвет текста и фона.
+- Элемент управления обновлением теперь поддерживается во всех подклассах прокрутки и просмотра с прокруткой (например, `UICollectionView`).
+- `OpenURL` Метод`UIApplication` класса вызывается асинхронно, теперь поддерживает обработчик завершения, который вызывается после завершения открытия.
+- Инициируйте CloudKit общий доступ и измените его свойства с `UICloudSharingController` помощью `UICloudSharingControllerDelegate` новых классов и.
+- Воспользуйтесь преимуществами предвыбранных ячеек, чтобы улучшить процесс `UICollectionViews` прокрутки с помощью нового `UICollectionViewDataSourcePrefetching` делегата.
 
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Примеры tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [Новые возможности в tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 3291589f4a61fad7d7465e0ac2bd4844ae4a0655
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
-ms.translationtype: MT
+ms.openlocfilehash: 736195182713eb35ad18fb1ae12c5cc7ddce0787
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980735"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012522"
 ---
 # <a name="xamarinios-errors"></a>Ошибки Xamarin. iOS
 
@@ -30,7 +30,7 @@ ms.locfileid: "68980735"
 
 ### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: Непредвиденная ошибка. Заполните отчет об ошибке по адресу https://github.com/xamarin/xamarin-macios/issues/new
 
-Произошло непредвиденное условие ошибки. Создайте [отчет об ошибке](https://github.com/xamarin/xamarin-macios/issues/new) с максимально возможной информацией, включая:
+Произошло непредвиденное условие ошибки. Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с максимально возможной информацией, включая:
 
 * Полные журналы сборки с максимальным уровнем детализации (например `-v -v -v -v` , в **дополнительных аргументах mtouch**);
 * Минимальный тестовый случай, воспроизводящий ошибку; перетаскивани
@@ -94,7 +94,7 @@ Xamarin. iOS не удается найти сборку в расположен
 
 ### <a name="mt0009-error-while-loading-assemblies-"></a>MT0009: Ошибка при загрузке сборок: *.
 
-Произошла ошибка при загрузке сборок, на которые ссылается корневая сборка. Дополнительные сведения можно указать в выходных данных сборки.
+Произошла ошибка при загрузке сборок из ссылок на корневую сборку. Дополнительные сведения можно указать в выходных данных сборки.
 
 <a name="MT0010" />
 
@@ -324,7 +324,7 @@ REPL поддерживается только в том случае, если 
 
 ### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: Не удалось канонизировать путь "*": *
 
-Это внутренняя ошибка. Если вы видите эту ошибку, подайте сообщение об [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)ошибке.
+Это внутренняя ошибка. Если вы видите эту ошибку, создайте новую ошибку на сайте [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0055" />
 
@@ -374,7 +374,7 @@ REPL поддерживается только в том случае, если 
 
 Каждый файл info. plist должен иметь исполняемый объект (с помощью записи Кфбундликсекутабле), однако запись во время сборки должна создаваться автоматически.
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0064" />
 
@@ -394,13 +394,13 @@ Xamarin. iOS поддерживает только внедренные плат
 
 ### <a name="mt0066-invalid-build-registrar-assembly-"></a>MT0066: Недопустимая сборка регистратора сборки: *
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0067" />
 
 ### <a name="mt0067-invalid-registrar-"></a>MT0067: Недопустимый регистратор: *
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0068" />
 
@@ -422,13 +422,13 @@ Xamarin. iOS поддерживает только внедренные плат
 
 ### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: Неизвестная платформа: *. Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке http://bugzilla.xamarin.com в тестовом случае.
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0072" />
 
 ### <a name="mt0072-extensions-are-not-supported-for-the-platform-"></a>MT0072: Расширения не поддерживаются для платформы "*".
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0073" />
 
@@ -454,19 +454,19 @@ Xamarin. iOS не поддерживает задание минимальной
 
 <a name="MT0076" />
 
-### <a name="mt0075-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0075: Архитектура не указана (с помощью аргумента--ABI). Для проектов * требуется архитектура.
+### <a name="mt0076-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0076: Архитектура не указана (с помощью аргумента--ABI). Для проектов * требуется архитектура.
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0077" />
 
-### <a name="mt0076-watchos-projects-must-be-extensions"></a>MT0076: Проекты WatchOS должны быть расширениями.
+### <a name="mt0077-watchos-projects-must-be-extensions"></a>MT0077: Проекты WatchOS должны быть расширениями.
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0078" />
 
-### <a name="mt0077-incremental-builds-are-enabled-with-a-deployment-target--80-currently--this-is-not-supported-the-resulting-application-will-not-launch-on-ios-9-so-the-deployment-target-will-be-set-to-80"></a>MT0077: Добавочные сборки включены с целевым объектом развертывания < 8,0 (в настоящее время *). Это не поддерживается (полученное приложение не будет запущено в iOS 9), поэтому для целевого объекта развертывания будет установлено значение 8,0.
+### <a name="mt0078-incremental-builds-are-enabled-with-a-deployment-target--80-currently--this-is-not-supported-the-resulting-application-will-not-launch-on-ios-9-so-the-deployment-target-will-be-set-to-80"></a>MT0078: Добавочные сборки включены с целевым объектом развертывания < 8,0 (в настоящее время *). Это не поддерживается (полученное приложение не будет запущено в iOS 9), поэтому для целевого объекта развертывания будет установлено значение 8,0.
 
 Это предупреждение сообщает о том, что для цели развертывания в этой сборке установлено значение 8,0, чтобы последовательные сборки работали правильно.
 
@@ -474,7 +474,7 @@ Xamarin. iOS не поддерживает задание минимальной
 
 <a name="MT0079" />
 
-### <a name="mt0078-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0078: Рекомендуемая версия Xcode для Xamarin. iOS * — Xcode * или более поздней версии. Текущая версия Xcode (найдена в *) — *.
+### <a name="mt0079-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0079: Рекомендуемая версия Xcode для Xamarin. iOS * — Xcode * или более поздней версии. Текущая версия Xcode (найдена в *) — *.
 
 Это предупреждение, информирующее о том, что текущая версия Xcode не является рекомендуемой версией Xcode для этой версии Xamarin. iOS.
 
@@ -512,7 +512,7 @@ Xamarin. iOS не поддерживает задание минимальной
 
 ### <a name="mt0086-a-target-framework---target-framework-must-be-specified-when-building-for-tvos-or-watchos"></a>MT0086: При сборке для TVOS или WatchOS необходимо указать целевую платформу (--Target-Framework).
 
-Обычно это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0087" />
 
@@ -561,7 +561,7 @@ Xamarin. iOS не поддерживает задание минимальной
 
 Это сообщение об ошибке появляется при сбое внутренней проверки согласованности в Xamarin. iOS.
 
-Это указывает на ошибку в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0100" />
 
@@ -569,7 +569,7 @@ Xamarin. iOS не поддерживает задание минимальной
 
 Это сообщение об ошибке появляется при сбое внутренней проверки согласованности в Xamarin. iOS.
 
-Это всегда является ошибкой в Xamarin. iOS; Запишите отчет об ошибке [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в тестовом случае.
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT0101" />
 
@@ -838,7 +838,19 @@ class Program {
 
 Произошла ошибка при касании файла (что сделано для обеспечения правильной работы частичных сборок).
 
-Это предупреждение может быть, скорее всего, игнорироваться. в случае возникновения проблем файл ошибки [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) будет исследован.
+Это предупреждение может быть, скорее всего, игнорироваться. в случае возникновения каких-либо проблем в файле [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) возникла новая проблема, которая будет исследована.
+
+<a name="MT0135" />
+
+### <a name="mt0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MT0135: Не удалось связать системную платформу{0}"" (на которую ссылается{1}сборка ""), так как {2} она была введена в {3}, {2} и мы используем {4} пакет SDK.
+
+Для сборки приложения Xamarin. iOS должен ссылаться на системные библиотеки, некоторые из которых зависят от версии пакета SDK, указанной в сообщении об ошибке. Поскольку используется более старая версия пакета SDK, вызовы этих API могут завершиться ошибкой во время выполнения.
+
+Чтобы устранить эту ошибку, рекомендуется обновить Xcode, чтобы получить необходимый пакет SDK. Если у вас установлено несколько версий Xcode или вы хотите использовать Xcode в расположении, отличном от расположения по умолчанию, убедитесь, что в настройках IDE задано правильное расположение Xcode.
+
+Кроме того, можно разрешить управляемому [компоновщику](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) удалять неиспользуемые API, в том числе (в большинстве случаев) новые, для которых требуется Указанная библиотека. Однако это не будет работать, если для проекта требуются API, появившиеся в более новом пакете SDK, чем тот, который предоставляет Xcode.
+
+В качестве последнего страв решения используйте более раннюю версию Xamarin. iOS, которая не требует наличия этих новых пакетов SDK в процессе сборки.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Сообщения об ошибках, связанные с проектом
 
@@ -864,6 +876,8 @@ class Program {
 <a name="MT1004" />
 
 ### <a name="mt1004-could-not-get-the-list-of-installed-applications"></a>MT1004: Не удалось получить список установленных приложений.
+
+## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Сообщения об ошибках, связанные с проектом
 
 <a name="MT1005" />
 
@@ -901,7 +915,7 @@ $ launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl remove
 sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/*/*.mdb
 ```
 
-Однако так как эта проблема решена в последней версии Xamarin. iOS, создайте новую ошибку в [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) файле с полными сведениями о версии и журналом сборки.
+Однако поскольку эта проблема решена в последней версии Xamarin. iOS, создайте новую проблему на сайте [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , указав полную информацию о версии и выходные данные журнала сборки.
 
 <a name="MT1010" />
 
@@ -919,7 +933,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 ### <a name="mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT1013: Ошибка отслеживания зависимостей: нет файлов для сравнения. Запишите отчет об ошибке http://bugzilla.xamarin.com в тестовом случае.
 
-Это указывает на ошибку в Xamarin. iOS. Запишите ошибку [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) с помощью тестового Каес.
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем.
 
 <a name="MT1014" />
 
@@ -1565,7 +1579,7 @@ Parameter name: instruction
 
 ### <a name="mt202x-binding-optimizer-failed-processing-"></a>MT202x: Не удалось обработать `...`оптимизатор привязки.
 
-Возникла непредвиденная ошибка при попытке оптимизации созданного кода привязки. Элемент, вызвавший ошибку, назван в сообщении об ошибке. Чтобы устранить эту проблему, необходимо указать сборку с именем (или содержащую тип или метод с именем) в [отчете об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке оптимизации созданного кода привязки. Элемент, вызвавший ошибку, назван в сообщении об ошибке. Чтобы устранить эту проблему, необходимо предоставить сборку с именем (или содержащую тип или метод с именем) в новой ошибке в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. е `-v -v -v -v` . в **дополнительных аргументах mtouch**).
 
 Последняя цифра `x` будет:
 * `0`для имени сборки;
@@ -1576,7 +1590,7 @@ Parameter name: instruction
 
 ### <a name="mt2030-remove-user-resources-failed-processing-"></a>MT2030: Удаление пользовательских ресурсов с ошибкой `...`обработки.
 
-Произошла непредвиденная ошибка при попытке удаления пользовательских ресурсов. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Произошла непредвиденная ошибка при попытке удаления пользовательских ресурсов. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 Пользовательские ресурсы — это файлы, включенные в сборки (в виде ресурсов), которые необходимо извлечь во время сборки, чтобы создать пакет приложений. В том числе следующее:
 
@@ -1587,37 +1601,37 @@ Parameter name: instruction
 
 ### <a name="mt2040-default-httpmessagehandler-setter-failed-processing-"></a>MT2040: Не удалось обработать `...`метод задания HttpMessageHandler по умолчанию.
 
-Возникла непредвиденная ошибка при попытке задать `HttpMessageHandler` значение по умолчанию для приложения. Создайте [отчет об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке задать `HttpMessageHandler` значение по умолчанию для приложения. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2050" />
 
 ### <a name="mt2050-code-remover-failed-processing-"></a>MT2050: Ошибка при обработке `...`кода удаления.
 
-Возникла непредвиденная ошибка при попытке удаления кода из доставки BCL с приложением. Создайте [отчет об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке удаления кода из доставки BCL с приложением. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2060" />
 
 ### <a name="mt2060-sealer-failed-processing-"></a>MT2060: Сбой при обработке `...`запечатывания.
 
-Возникла непредвиденная ошибка при попытке запечатать типы или методы (Final) или при девиртуализации некоторых методов. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке запечатать типы или методы (Final) или при девиртуализации некоторых методов. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2070" />
 
 ### <a name="mt2070-metadata-reducer-failed-processing-"></a>MT2070: Сбой обработки `...`сокращения метаданных.
 
-Возникла непредвиденная ошибка при попытке сократить метаданные приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке сократить метаданные приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2080" />
 
 ### <a name="mt2080-marknsobjects-failed-processing-"></a>MT2080: Сбой при обработке `...`маркнсобжектс.
 
-Возникла непредвиденная ошибка при попытке пометить `NSObject` подклассы из приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](http://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке пометить `NSObject` подклассы из приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2090" />
 
 ### <a name="mt2090-inliner-failed-processing-"></a>MT2090: Ошибка обработки `...`во встроенном коде.
 
-Возникла непредвиденная ошибка при попытке встроенного кода из приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](https://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т. е `-v -v -v -v` . в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке встроенного кода из приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. е. `-v -v -v -v` в **дополнительных аргументах mtouch**).
 
 <!-- MT21xx: more linker errors -->
 
@@ -1627,7 +1641,7 @@ Parameter name: instruction
 
 ### <a name="mt2100-smart-enum-conversion-preserver-failed-processing-"></a>MT2100: Не удалось обработать `...`промежуточный сервер преобразования Smart Enum.
 
-Возникла непредвиденная ошибка при попытке пометить методы преобразования для интеллектуальных перечислений из приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](https://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т. е `-v -v -v -v` . в **дополнительных аргументах mtouch**).
+Возникла непредвиденная ошибка при попытке пометить методы преобразования для интеллектуальных перечислений из приложения. Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. е. `-v -v -v -v` в **дополнительных аргументах mtouch**).
 
 <a name="MT2101" />
 
@@ -1635,7 +1649,7 @@ Parameter name: instruction
 
 При обработке метода, указанного в сообщении об ошибке, обнаружена недопустимая ссылка на сборку.
 
-Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](https://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2102" />
 
@@ -1643,7 +1657,7 @@ Parameter name: instruction
 
 Возникла непредвиденная ошибка при попытке пометить метод, упомянутый в сообщении об ошибке.
 
-Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](https://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т `-v -v -v -v` . е. в **дополнительных аргументах mtouch**).
+Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2103" />
 
@@ -1651,7 +1665,7 @@ Parameter name: instruction
 
 При обработке сборки произошла непредвиденная ошибка.
 
-Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в [отчете об ошибке](https://bugzilla.xamarin.com) вместе с полным журналом сборки с включенной детализацией (т. е `-v -v -v -v` . в **дополнительных аргументах mtouch**).
+Сборка, вызвавшая ошибку, называется в сообщении об ошибке. Чтобы устранить эту проблему, сборка должна быть предоставлена в новой ошибке на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. `-v -v -v -v` е. в **дополнительных аргументах mtouch**).
 
 <a name="MT2104" />
 
@@ -1659,7 +1673,7 @@ Parameter name: instruction
 
 Сборки в смешанном режиме не могут быть обработаны компоновщиком.
 
-Дополнительные https://msdn.microsoft.com/library/x0w2664k.aspx сведения о сборках в смешанном режиме см. в разделе.
+Дополнительные https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies сведения о сборках в смешанном режиме см. в разделе.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Сообщения об ошибках AOT
 
@@ -1672,7 +1686,7 @@ Parameter name: instruction
 
 ### <a name="mt3001-could-not-aot-the-assembly-"></a>MT3001: Не удалось распорепозитарием сборки "*"
 
-Обычно это указывает на ошибку в компиляторе AOT. Запишите ошибку [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) в проекте, который можно использовать для воспроизведения ошибки.
+Обычно это указывает на ошибку в компиляторе AOT. Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , указав проект, который можно использовать для воспроизведения ошибки.
 
 Иногда это можно обойти, отключив добавочные сборки в параметре сборки iOS проекта (но по-прежнему это ошибка, поэтому сообщите о нем).
 
@@ -1734,13 +1748,13 @@ Parameter name: instruction
 
 ### <a name="mt4001-the-main-template-could-not-be-expanded-to-"></a>MT4001: Не удалось расширить основной шаблон до `*`.
 
-Произошла ошибка при создании Main. m. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Произошла ошибка при создании `main.m`. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4002" />
 
 ### <a name="mt4002-failed-to-compile-the-generated-code-for-pinvoke-methods-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4002: Не удалось скомпилировать созданный код для методов P/Invoke. Отправляйте отчет об ошибках по адресу http://bugzilla.xamarin.com
 
-Не удалось скомпилировать созданный код для методов P/Invoke. Отправляйте отчет об ошибках [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)по адресу.
+Не удалось скомпилировать созданный код для методов P/Invoke. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt41xx-registrar"></a>MT41xx: регистратор
 
@@ -1754,7 +1768,7 @@ Parameter name: instruction
 
 В экспортированном API обнаружен тип, который среда выполнения не знает, как выполнить упаковку в или из цели-C.
 
-Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос расширения по адресу [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com).
+Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4102" />
 
@@ -1774,13 +1788,13 @@ Parameter name: instruction
 
 В экспортированном API обнаружен тип, который среда выполнения не знает, как выполнить упаковку в или из цели-C.
 
-Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос расширения по адресу [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com).
+Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4105" />
 
 ### <a name="mt4105-the-registrar-cannot-marshal-the-parameter-of-type--in-signature-for-method-"></a>MT4105: Регистратор не может маршалировать параметр типа `*` в сигнатуре для метода. `*`
 
-Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос расширения по адресу [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com).
+Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4106" />
 
@@ -1788,7 +1802,7 @@ Parameter name: instruction
 
 В экспортированном API обнаружен тип, который среда выполнения не знает, как выполнить упаковку в или из цели-C.
 
-Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос расширения по адресу [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com).
+Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4107" />
 
@@ -1796,7 +1810,7 @@ Parameter name: instruction
 
 В экспортированном API обнаружен тип, который среда выполнения не знает, как выполнить упаковку в или из цели-C.
 
-Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос расширения по адресу [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com).
+Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4108" />
 
@@ -1804,7 +1818,7 @@ Parameter name: instruction
 
 В экспортированном API обнаружен тип, который среда выполнения не знает, как выполнить упаковку в или из цели-C.
 
-Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос расширения по адресу [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com).
+Если вы считаете, что Xamarin. iOS должен поддерживать рассматриваемый тип, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4109" />
 
@@ -1812,7 +1826,7 @@ Parameter name: instruction
 
 Не удалось скомпилировать созданный код для регистратора. Журнал сборки будет содержать выходные данные от собственного компилятора, объясняющие, почему код не компилируется.
 
-Это всегда является ошибкой в Xamarin. iOS; Запросите отчет об ошибках в [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com) проекте или тестовом случае.
+Это всегда является ошибкой в Xamarin. iOS; Запишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с помощью своего проекта или тестового случая.
 
 <a name="MT4110" />
 
@@ -1854,7 +1868,7 @@ Parameter name: instruction
 
 ### <a name="mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4120: Регистратор обнаружил неизвестный тип\*поля "" в поле "\*. *". Отправляйте отчет об ошибках по адресу http://bugzilla.xamarin.com
 
-Эта ошибка указывает на ошибку в Xamarin. iOS. Отправляйте отчет об ошибках [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)по адресу.
+Эта ошибка указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4121" />
 
@@ -1872,7 +1886,7 @@ Parameter name: instruction
 
 ### <a name="mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4124: В "*" найден недопустимый *. Отправляйте отчет об ошибках по адресу http://bugzilla.xamarin.com
 
-Эта ошибка указывает на ошибку в Xamarin. iOS. Отправляйте отчет об ошибках [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)по адресу.
+Эта ошибка указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4125" />
 
@@ -1990,7 +2004,7 @@ class MyCustomNSObject : MyNSObject
 
 ### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144: Невозможно зарегистрировать метод "*", так как он не имеет связанного трамполине. Отправляйте отчет об ошибках http://bugzilla.xamarin.com по адресу.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4145" />
 
@@ -2080,7 +2094,7 @@ class MyCustomNSObject : MyNSObject
 
 ### <a name="mt4163-internal-error-in-the-registrar--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4163: Внутренняя ошибка в регистраторе (*). Отправляйте отчет об ошибках по адресу http://bugzilla.xamarin.com
 
-Эта ошибка указывает на ошибку в Xamarin. iOS. Отправляйте отчет об ошибках [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)по адресу.
+Эта ошибка указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4164" />
 
@@ -2094,19 +2108,19 @@ class MyCustomNSObject : MyNSObject
 
 ### <a name="mt4165-the-registrar-couldnt-find-the-type-systemvoid-in-any-of-the-referenced-assemblies"></a>MT4165: Регистратору не удалось найти тип "System. void" в любой из сборок, на которые имеются ссылки.
 
-Эта ошибка, скорее всего, указывает на ошибку в Xamarin. iOS. Отправляйте отчет об ошибках [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)по адресу.
+Эта ошибка, скорее всего, указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4166" />
 
 ### <a name="mt4166-cannot-register-the-method--because-the-signature-contains-a-type--that-isnt-a-reference-type"></a>MT4166: Невозможно зарегистрировать метод "\*", так как сигнатура содержит тип (\*), который не является ссылочным типом.
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4167" />
 
 ### <a name="mt4167-cannot-register-the-method--because-the-signature-contains-a-generic-type--with-a-generic-argument-type-that-isnt-an-nsobject-subclass-"></a>MT4167: Невозможно зарегистрировать метод "\*", так как сигнатура содержит универсальный тип (\*) с универсальным типом аргумента, который не является подклассом нсобжект (*).
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4168" />
 
@@ -2141,12 +2155,9 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 
 Регистратор не поддерживает преобразование указанных типов.
 
-Это ошибка в Xamarin. iOS, если рассматриваемый API предоставляется Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com][1].
+Это ошибка в Xamarin. iOS, если рассматриваемый API предоставляется Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-При выполнении этого при разработке проекта привязки для собственной библиотеки мы относимся к добавлению поддержки новых сочетаний типов. Если это так, напишите запрос расширения ([http://bugzilla.xamarin.com][2]) с тестовым случаем и вычислите его.
-
-[1]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS
-[2]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS&component=General&bug_severity=enhancement
+При выполнении этого при разработке проекта привязки для собственной библиотеки мы относимся к добавлению поддержки новых сочетаний типов. Если это так, отправьте запрос на расширение на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) с тестовым случаем, чтобы оценить его.
 
 ## <a name="mt5xxx-gcc-and-toolchain-error-messages"></a>MT5xxx: Сообщения об ошибках GCC и цепочки инструментов
 
@@ -2179,7 +2190,7 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 
 ### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106: Не удалось скомпилировать файлы "*". Отправляйте отчет об ошибках по адресу http://bugzilla.xamarin.com
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS; Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt52xx-linking"></a>MT52xx: Компоновка
 
@@ -2338,7 +2349,7 @@ class MyImports {
 
 Эта ошибка сообщается при связывании выходных данных компилятора AOT.
 
-Эта ошибка, скорее всего, указывает на ошибку в Xamarin. iOS. Отправляйте отчет об ошибках [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)по адресу.
+Эта ошибка, скорее всего, указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT5217" />
 
@@ -2915,19 +2926,19 @@ class MyImports {
 
 ### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: Загруженная версия Xamarin. iOS. dll была скомпилирована для * бит, а процесс — * бит. Отправляйте ошибку по адресу http://bugzilla.xamarin.com.
 
-Это указывает на то, что в процессе сборки возникли проблемы. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на то, что в процессе сборки возникли проблемы. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8009" />
 
 ### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: Не удалось разместить блок для делегирования метода преобразования для метода *.* " s параметр # *. Отправляйте ошибку по адресу http://bugzilla.xamarin.com.
 
-Это означает, что API не был правильно привязан. Если это API, предоставляемый Xamarin, напишите ошибку в нашей бугзилла ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)), если это привязка третьей стороны, обратитесь к поставщику.
+Это означает, что API не был правильно привязан. Если это API, предоставляемый Xamarin, напишите новую ошибку в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new). Если это привязка третьей стороны, обратитесь к поставщику.
 
 <a name="MT8010" />
 
 ### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>MT8010: Несоответствие размера собственного типа Xamarin. [iOS | Mac]. dll и исполняющая архитектура. Xamarin. [iOS | Mac]. dll была создана для *-bit, а текущий процесс — *-bit.
 
-Это указывает на то, что в процессе сборки возникли проблемы. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на то, что в процессе сборки возникли проблемы. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8011" />
 
@@ -2935,7 +2946,7 @@ class MyImports {
 
 Xamarin. iOS не удалось разместить необходимый метод во время выполнения (для преобразования делегата в блок).
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8012" />
 
@@ -2943,23 +2954,23 @@ Xamarin. iOS не удалось разместить необходимый м�
 
 Недопустимый атрибут Делегатепрокси для рассматриваемого метода.
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8013" />
 
 ### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: Недопустимый Делегатепроксяттрибуте для возвращаемого значения метода *.* : Делегатетипе ({2}) указывает тип без поля "обработчик". Отправляйте ошибку по адресу http://bugzilla.xamarin.com.
 
-Недопустимый атрибут Делегатепрокси для рассматриваемого метода.
+Недопустимый `[DelegateProxy]` атрибут для рассматриваемого метода.
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8014" />
 
 ### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: Недопустимый Делегатепроксяттрибуте для возвращаемого значения метода *.* : Поле "handler"{2}делегатетипе () "обработчик" имеет значение null. Отправляйте ошибку по адресу http://bugzilla.xamarin.com.
 
-Недопустимый атрибут Делегатепрокси для рассматриваемого метода.
+Недопустимый `[DelegateProxy]` атрибут для рассматриваемого метода.
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8015" />
 
@@ -2967,15 +2978,15 @@ Xamarin. iOS не удалось разместить необходимый м�
 
 Недопустимый атрибут Делегатепрокси для рассматриваемого метода.
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8016" />
 
 ### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: Не удалось преобразовать делегата в Block для возвращаемого значения для метода *.* , поскольку входные данные не являются делегатом, это *. Отправляйте ошибку по адресу http://bugzilla.xamarin.com.
 
-Недопустимый атрибут Делегатепрокси для рассматриваемого метода.
+Недопустимый `[DelegateProxy]` атрибут для рассматриваемого метода.
 
-Обычно это указывает на ошибку в Xamarin. iOS; отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Обычно это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <!-- 8017 is used by mmp -->
 
@@ -2983,40 +2994,40 @@ Xamarin. iOS не удалось разместить необходимый м�
 
 ### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: Внутренняя ошибка согласованности. Отправляйте отчет об ошибках http://bugzilla.xamarin.com по адресу.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8019" />
 
 ### <a name="mt8019-could-not-find-the-assembly--in-the-loaded-assemblies"></a>MT8019: Не удалось найти сборку * в загруженных сборках.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8020" />
 
 ### <a name="mt8020-could-not-find-the-module-with-metadatatoken--in-the-assembly-"></a>MT8020: Не удалось найти модуль с Метадататокен * в сборке *.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8021" />
 
 ### <a name="mt8021-unknown-implicit-token-type-"></a>MT8021: Неизвестный тип неявного токена: *.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8022" />
 
 ### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: Ожидалась ссылка на маркер *, а не знак *. Отправляйте отчет об ошибках http://bugzilla.xamarin.com по адресу.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8023" />
 
 ### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: Объект экземпляра необходим для создания закрытого универсального метода для открытого универсального метода: * (ссылка на маркер: *). Отправляйте отчет об ошибках http://bugzilla.xamarin.com по адресу.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8024" />
 
 ### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Не удалось найти допустимый тип расширения для интеллектуального перечисления "{smart_type}". Отправляйте ошибку по адресу https://bugzilla.xamarin.com.
 
-Это указывает на ошибку в Xamarin. iOS. Отправляйте ошибку по адресу [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Это указывает на ошибку в Xamarin. iOS. Запишите новую ошибку на [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).

@@ -1,61 +1,61 @@
 ---
-title: Изменения платформы дополнительных iOS 10
-description: В этом документе описываются незначительные изменения и усовершенствования, внесенные в имеющиеся платформы в iOS 10 и обсуждаются способы сделать использование этих обновлений в Xamarin.iOS.
+title: Изменения дополнительных платформ iOS 10
+description: В этом документе описываются незначительные изменения и улучшения существующих платформ в iOS 10, а затем описывается использование этих обновлений в Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5aad72de5d894a83d734cd53fce3ac060125d740
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831210"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656941"
 ---
-# <a name="additional-ios-10-frameworks-changes"></a>Изменения платформы дополнительных iOS 10
+# <a name="additional-ios-10-frameworks-changes"></a>Изменения дополнительных платформ iOS 10
 
-_В этой статье рассматриваются дополнительные, незначительные изменения и улучшения для существующих платформ для iOS 10._
+_В этой статье рассматриваются дополнительные, незначительные изменения или усовершенствования существующих платформ для iOS 10._
 
-## <a name="av-foundation-framework-additions"></a>Дополнения Framework AV Foundation
+## <a name="av-foundation-framework-additions"></a>Дополнения AV Foundation Framework
 
-Платформа AVFoundation включает следующие улучшения:
+Платформа Авфаундатион включает следующие усовершенствования.
 
-- В iOS 10, разработчик больше не нужно реализовывать различные [AVPlayerItem](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/) поведения на основе типа содержимого. Просто задайте `Rate` свойство и AVFoundation определяют при достаточно содержимое доступно для воспроизведения без замедляется работа.
-- Новый [AVCapturePhotoOutput](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureFileOutput/) заменяет нерекомендуемый класс `AVCaptureStillImageOutput` класса и предоставляет единый метод для обработки всех фотографий рабочих процессов, предоставляя расширенного управления и наблюдение за процессом отслеживания и Поддержка новых функций, таких как фотографии Live и НЕОБРАБОТАННЫЕ записи формат.
-- Новый `AVPlayerLooper` класс упрощает цикл данной части носителей во время воспроизведения.
-- `AVAssetDownloadURLSession` Класс позволяет получить загрузку и более поздних версий воспроизведение FairPlay зашифрованы потоков HLS.
-- По умолчанию [AVCaptureSession](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureSession/) класс автоматически поддерживает захват wide-color, широким, когда его поддерживает устройства. См. в разделе Apple [Справочник по совместимости устройства iOS](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) для получения дополнительных сведений.
+- В iOS 10 разработчик больше не должен реализовывать различные поведения [авплайеритем](xref:AVFoundation.AVPlayerItem) на основе типа содержимого. Просто задайте `Rate` свойство, и авфаундатион определит, когда будет доступно достаточное содержимое для воспроизведения без ожидания.
+- Новый класс [авкаптурефотуутпут](xref:AVFoundation.AVCaptureFileOutput) заменяет устаревший `AVCaptureStillImageOutput` класс и предоставляет единый метод для обработки всех рабочих процессов фотосъемки, предоставляя сложный контроль и мониторинг процесса записи и поддержку новых такие функции, как динамические фотографии и формат записи RAW.
+- Новый `AVPlayerLooper` класс упрощает циклический перебор заданной части мультимедиа во время воспроизведения.
+- `AVAssetDownloadURLSession` Класс позволяет загружать и более поздние воспроизводить Fairplay зашифрованные HLS потоки.
+- По умолчанию класс [авкаптуресессион](xref:AVFoundation.AVCaptureSession) автоматически поддерживает широкие и широкие записи с широким спектром цветов, если оборудование устройства поддерживает его. Дополнительные сведения см. в справочнике по [совместимости устройств iOS](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) Apple.
 
-## <a name="avkit-additions"></a>Дополнения AVKit
+## <a name="avkit-additions"></a>Дополнения Авкит
 
-Платформа AVKit теперь включает новый `UpdatesNowPlayingInfoCenter` свойство, указывающее, когда следует обновить информационный центр игральную теперь.
+Платформа авкит теперь включает новое `UpdatesNowPlayingInfoCenter` свойство, которое указывает, когда будет обновлен информационный центр.
 
 ## <a name="core-data-enhancements"></a>Усовершенствования основных данных
 
-iOS 10, включает следующие улучшения в Framework Core Data:
+в iOS 10 включены следующие усовершенствования основной платформы данных:
 
-- [NSManagedObjectContext](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectContext/) объектов с хранилищами данных SQLite в режиме журнал WAL поддержки нового поколения запроса компонентов, где управляемый объект контекстов (MOC) можно прикрепить к версии конкретной базы данных для будущих выборки и Ошибка транзакции.
-- Корневой [NSManagedObjectContext](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectContext/) объектов поддерживает параллельные завершение со сбоем и выборка без сериализации.
-- [NSPersistentStoreCoordinator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) класс поддерживается пул хранилищ данных SQLite.
-- Были добавлены несколько новых удобных методов `NSManagedObject` облегчая процесс для выполнения операций выборки и создание подклассов.
-- С помощью высокоуровневым `NSPersistenceContainer` ссылка `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectModel/) и другим ресурсам конфигурации Core Data.
+- [Нсманажедобжектконтекст](xref:CoreData.NSManagedObjectContext) объекты с хранилищами данных SQLite в режиме журнала Wal поддерживают новую функцию создания запросов, где контексты управляемых объектов (MOC) могут быть закреплены в конкретных версиях базы данных для последующей выборки и сбоя транзакций.
+- Корневые объекты [нсманажедобжектконтекст](xref:CoreData.NSManagedObjectContext) поддерживают одновременную ошибку и выборку без сериализации.
+- Класс [нсперсистентсторекурдинатор](xref:CoreData.NSPersistentStoreCoordinator) поддерживает пул хранилищ данных SQLite.
+- Было добавлено несколько новых удобных методов для `NSManagedObject` упрощения выборки и создания подклассов.
+- Использование высокого уровня `NSPersistenceContainer` для ссылки на [нсманажедобжектмодел](xref:CoreData.NSManagedObjectModel) и другие основные ресурсы по `NSPersistentStoreCoordinator`настройке данных.
 
-Дополнительные сведения см. в разделе Apple [справочные материалы по основной данных Framework](https://developer.apple.com/reference/coredata).
+Дополнительные сведения см. в справочнике по [основной платформе данных](https://developer.apple.com/reference/coredata)Apple.
 
-## <a name="core-image-enhancements"></a>Главные усовершенствования образа
+## <a name="core-image-enhancements"></a>Усовершенствования основных образов
 
-iOS 10 вносит следующие усовершенствования framework образ основных компонентов:
+iOS 10 вносит следующие улучшения в основную платформу образов:
 
-- Разработчику возможность обрабатывать изображения в цветовом пространстве вне контекста образ основных компонентов рабочее цветовое пространство путем преобразования в и из него цветовое пространство до и после обработки.
-- Для устройств iOS, использующие A8 или A9 ЦП теперь поддерживается формат изображений RAW-ФОРМАТА. Основной образ теперь обеспечивает поддержку для декодирования НЕОБРАБОТАННЫЕ образы либо из встроенных iSight камеры или с сторонних производителей камеры. Используйте `FilterWithImageData` или `FilterWithImageURL` методы [CIFilter](https://developer.xamarin.com/api/type/CoreImage.CIFilter/) класс для обработки НЕОБРАБОТАННЫХ изображений.
-- Были внесены некоторые улучшения производительности отрисовки `UIImage` визуализации (когда хранилищ образа образ основных компонентов) в `UIImageView` объектов. 
-- `UIImage` объекты с тегами wide-цветовой гаммы визуализирует цвета в цветовой гаммы wide в `UIImageView` объекты на устройствах iOS, поддерживающих широкая цветовая палитра.
-- Основной образ ядра код теперь можете запросить определенный пиксель выходных форматов.
-- `ImageWithExtent` Метод [CIFilter](https://developer.xamarin.com/api/type/CoreImage.CIFilter/) класс может использоваться для вставки пользовательской обработки в операцию фильтрации. Основной образ будет вызывать данным обратным вызовом от фильтров при обработке изображения для выходных данных или отображения.
+- Теперь разработчик может обрабатывать изображения в цветовом пространстве за пределами рабочего пространства контекста образа путем преобразования в цветовое пространство и из него до и после обработки.
+- Для устройств iOS, использующих процессоры A8 или A9, теперь поддерживается формат необработанных изображений. Теперь основной образ обеспечивает поддержку декодирования необработанных изображений из встроенной камеры Исигхт или сторонней камеры. Используйте методы `FilterWithImageData` или `FilterWithImageURL` класса [CIFilter](xref:CoreImage.CIFilter) для обработки необработанных изображений.
+- Для подготовки к `UIImage` просмотру в `UIImageView` объектах были сделаны некоторые улучшения производительности отрисовки (при резервном копировании в хранилищах образов основных образов). 
+- `UIImage`объекты с тегами Wide-охват будут отображаться в виде цвета с широкими охватами в `UIImageView` объектах на устройствах iOS, поддерживающих широкий цвет.
+- Код ядра образа ядра теперь может запрашивать определенные форматы вывода пикселей.
+- Метод `ImageWithExtent` класса [CIFilter](xref:CoreImage.CIFilter) можно использовать для вставки пользовательской обработки в операцию фильтрации. Основное изображение будет вызывать заданный обратный вызов между фильтрами при обработке изображения для вывода или показа.
 
-Кроме того были добавлены следующие новые фильтры образ основных компонентов:
+Кроме того, добавлены следующие новые фильтры основных образов:
 
 - `CINinePartTiled`
 - `CINinePartStretched`
@@ -63,156 +63,156 @@ iOS 10 вносит следующие усовершенствования fram
 - `CIEdgePreserveUpsampleFilter`
 - `CIClamp`
 
-## <a name="core-motion-additions"></a>Дополнения движения Core
+## <a name="core-motion-additions"></a>Основные дополнения движения
 
-Новое в iOS 10, платформа движения Core включает pedometer события, которые позволяют приложению быстрых и получать уведомления в реальном времени пользователя, приостановки и возобновления отслеживания во время выполнения. Используйте [CMPedometer](https://developer.xamarin.com/api/type/CoreMotion.CMPedometer/) для регистрации событий pedometer обычном или фоновом режиме.
+В iOS 10 Основная платформа Motion включает события педометер, которые позволяют приложению получать быстрые уведомления о приостановке и возобновлении отслеживания во время работы приложения в режиме реального времени. Используйте [кмпедометер](xref:CoreMotion.CMPedometer) для регистрации в качестве основного или фонового события педометер.
 
-## <a name="foundation-enhancements"></a>Усовершенствования Foundation
+## <a name="foundation-enhancements"></a>Усовершенствования в фундаменте
 
-В среде Foundation для iOS 10 были внесены следующие улучшения:
+В платформу Foundation для iOS 10 были внесены следующие улучшения.
 
-- Используйте новый [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) класс для форматирования локализованного измерения для отображения для конечного пользователя.
-- Используйте новый [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) класса, чтобы дата и время вычисления интервала, например длительности для сравнения интервалы и тестирование для пересечения интервал.
-- Используйте новый [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) класс для преобразования между разные единицы из мер (единица Измерения) или выполняют вычисления над значениями в разных UOMs.
+- Используйте новый класс [нсмеасурементформаттер](https://developer.apple.com/reference/foundation/nsmeasurementformatter) , чтобы отформатировать локализованные измерения для отображения конечному пользователю.
+- Новый класс [нсдатеинтервал](https://developer.apple.com/reference/foundation/nsdateinterval) используется для вычисления интервалов даты и времени, таких как длительность, для сравнения интервалов и тестирования для пересечения интервалов.
+- Используйте новый класс [нсмеасуремент](https://developer.apple.com/reference/foundation/nsmeasurement) для преобразования между разными единицами измерения (ЕИ) или вычисления значений в разных уомс.
 
-- Используйте новый [NSUnit](https://developer.apple.com/reference/foundation/nsunit) и [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) классы для представления определенных UOMs.
-- Были добавлены несколько новых свойств [NSLocal](https://developer.apple.com/reference/foundation/nslocale) класс получения местной информации и отображение доступных форматов.
+- Используйте новые классы [нсунит](https://developer.apple.com/reference/foundation/nsunit) и [нсдименсион](https://developer.apple.com/reference/foundation/nsdimension) для представления конкретных уомс.
+- К классу [нслокал](https://developer.apple.com/reference/foundation/nslocale) были добавлены несколько новых свойств для получения локальных сведений и доступных форматов отображаемых данных.
 
 ## <a name="gamekit-enhancements"></a>Усовершенствования GameKit
 
-Платформа "GameKit" в iOS 10 были внесены следующие улучшения:
+В GameKit Framework в iOS 10 были внесены следующие улучшения.
 
-- **Приложения Game Center** устаревшими и удалены из iOS. Если приложение использует GameKit, его _необходимо_ предоставить свой собственный интерфейс для отображения GameKit функции, такие как списки лидеров и т. д. 
-- Реализован новый тип учетную запись iCloud [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) класса.
-- Новый [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) класс предоставляет универсального решения для управления хранилищем постоянных данных в Game Center. `GKGameSession` хранит список игроков и приложение отвечает за реализацию как и когда участника дата хранится, извлечь или обмениваются игроков. Во многих случаях игр сеансов можно заменить существующих Поочередный совпадений, совпадений в режиме реального времени или постоянных игры сохранить методы.
+- **Game Centerное приложение** устарело и удалено из iOS. Если приложение использует GameKit, оно _должно_ предоставлять собственный интерфейс для отображения таких gamekit функций, как списки лидеров и т. д. 
+- Новый тип учетной записи только iCloud реализован классом [гкклаудплайер](https://developer.apple.com/reference/gamekit/gkcloudplayer) .
+- Новый класс [гкгамесессион](https://developer.apple.com/reference/gamekit/gkgamesession) предоставляет обобщенное решение для управления хранилищем постоянных данных на Game Center. `GKGameSession`ведет список игроков, и приложение отвечает за реализацию того, как и когда дата участника сохраняется, извлекается или обменивается между игроками. Во многих случаях игровые сеансы могут заменять существующие соответствия, основанные на включении, совпадения в режиме реального времени или постоянные способы сохранения игр.
 
-## <a name="gameplaykit-enhancements"></a>Усовершенствования GameplayKit
+## <a name="gameplaykit-enhancements"></a>Усовершенствования Гамеплайкит
 
-Платформа GameplayKit в iOS 10 были внесены следующие улучшения:
+В Гамеплайкит Framework в iOS 10 были внесены следующие улучшения.
 
-- Используйте новый [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) класса для обеспечения высокой производительности — это Естественный пути.
-- Поколение процедурного пропускаемые была добавлена и может использоваться для повышения реалистичности в выглядящие естественно текстуры, добавить реализм перемещение камеры и помогают создавать полнофункциональной игровой среды.
-- Используйте Пространственные секционирования для секционирования данных игровой для эффективного поиска.
-- Специалист по стратегиям новый методом Монте-Карло ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) был добавлен для вычислений исчерпывающим возможных перемещения.
-- Поддержка трехмерного представления был добавлен существующий агент и поведения путь поиска, с помощью нового [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) и [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) классы.
-- Новый [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) и [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) классы марки, объединение GameplayKit и проще, чем когда-либо SpriteKit.
-- Добавлен новый интерфейс API дерева принятия решений ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) и [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) для улучшения AI игры дом.
+- Используйте новый класс [гкмешграф](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) для обеспечения высокопроизводительных и естественных путей.
+- Было добавлено описание процедурного создания шума, которое можно использовать для улучшения реальных текстур в естественном виде, добавления факта к перемещению камеры и помощи в создании полнофункциональных игр.
+- Используйте пространственное секционирование, чтобы секционировать реальные данные игры для эффективного поиска.
+- Добавлен новый Монте-Карло специалист по стратегиям ([гкмонтекарлостратегист](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) для исчерпывающего возможного вычисления перемещения.
+- поддержка трехмерных объектов добавлена к существующим агентам и поведениям поиска пути с помощью новых классов [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) и [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) .
+- Новые классы [гксцене](https://developer.apple.com/reference/gameplaykit/gkscene) и [Гкскнодекомпонент](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) делают объединение гамеплайкит и SpriteKit проще, чем когда-либо.
+- Добавлен новый API дерева принятия решений ([гкдеЦисионтри](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) и [гкдеЦисионноде](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) для улучшения искусственного проектирования.
 
 ## <a name="healthkit-enhancements"></a>Усовершенствования HealthKit
 
-Платформа HealthKit в iOS 10 были внесены следующие улучшения:
+В HealthKit Framework в iOS 10 были внесены следующие улучшения.
 
-- Были добавлены новые ключи метаданных для типов погоды (такие как `HKWeatherConditionClear` и `HKWeatherConditionCloudy`) и для организации тренировок типов (таких как `HKWorkoutActivityTypeFlexibility` и `HKWorkoutActivityTypeWheelchairRunPace`) были добавлены.
-- Новый `HKCDADocument` был добавлен класс для представления архитектуры клинических документов (CDA) в формате документа.
-- Используйте новый [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) класс для указания `ActivityType` и `LocationType` для тренировок.
-- Новый [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) и `WheelchairUse` метод [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) класса были добавлены для работы с колясок связанные данные о работоспособности.
+- Добавлены новые ключи метаданных для типов `HKWeatherConditionClear` погоды (например, и `HKWeatherConditionCloudy`), а также были добавлены типы тренировок (такие `HKWorkoutActivityTypeWheelchairRunPace`как `HKWorkoutActivityTypeFlexibility` и).
+- Добавлен новый `HKCDADocument` класс, который представляет документ в формате клинической практике Document Architecture (CDA).
+- Используйте новый класс [хкворкаутконфигуратион](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) , чтобы указать `ActivityType` и `LocationType` для тренировки.
+- Для работы с коляска связанными данными о работоспособности были добавлены новые [хквхилчаирусеобжект](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) и `WheelchairUse` метод класса [хкхеалссторе](https://developer.apple.com/reference/healthkit/hkhealthstore) .
 
 ## <a name="homekit-enhancements"></a>Усовершенствования HomeKit
 
-Фреймворк HomeKit в iOS 10 были внесены следующие улучшения:
+В HomeKit Framework в iOS 10 были внесены следующие улучшения.
 
-- Были добавлены новые службы и характеристики.
-- IPad можно настроить для использования в качестве концентратора для предоставления удаленного доступа периферийных устройств, запустить триггеры автоматизации и включить HomeKit общих разрешений пользователя.
-- Добавлена поддержка для камеры и дверного звонка стандартные.
-- Для "Стандартные" указаны дополнительные контекста и конфигурации.
+- Добавлены новые службы и характеристики.
+- IPad можно настроить для работы в качестве центра HomeKit, чтобы предоставить удаленный доступ к аксессуарам, запустить триггеры автоматизации и включить разрешения общего пользователя.
+- Добавлена поддержка для дурбелл и камер.
+- Для аксессуаров указаны дополнительные контексты и конфигурации.
 
-См. в нашем [введение в HomeKit](~/ios/platform/homekit.md) Дополнительные сведения см.
+Дополнительные сведения см. в документации по [HomeKit](~/ios/platform/homekit.md) .
 
-## <a name="metal-enhancements"></a>Усовершенствования исходного состояния системы
+## <a name="metal-enhancements"></a>Усовершенствования в металлах
 
-К платформе без операционной системы в iOS 10 были внесены следующие улучшения:
+В среде с iOS 10 были сделаны следующие улучшения:
 
-- Теперь можно использовать трехмерных приложениях и играх _тесселяции_ для эффективного отображения сложных сцен и geometry с помощью графического Процессора.
-- Предоставлять детальный контроль выделения ресурсов для оптимизации работы операционной системы на основе приложений с помощью ресурсов кучи и Memoryless целевых буферов визуализации.
-- Используйте специализацию функции для создания коллекции оптимизирован материалов и света сочетания функций для сцены.
+- Трехмерные приложения и игры теперь могут использовать тесселяцию для эффективного отображения сложных сцен и геометрии с помощью GPU.
+- Обеспечение точного контроля за выделением ресурсов для оптимизации производительности металлических приложений с помощью куч ресурсов и целевых объектов визуализации, поддерживающих память.
+- Используйте специализацию функции, чтобы создать высокооптимизированный набор функций для комбинирования материалов и освещения для сцены.
 
-Дополнительные сведения см. в разделе Apple [руководство по программированию без операционной системы](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
+Дополнительные сведения см. в статье [по программированию для металлического программирования](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221)Apple.
 
-## <a name="modelio-enhancements"></a>Усовершенствования ModelIO
+## <a name="modelio-enhancements"></a>Усовершенствования Моделио
 
-Платформа ModelIO в iOS 10 были внесены следующие улучшения:
+В Моделио Framework в iOS 10 были внесены следующие улучшения.
 
-- Теперь поддерживается формат файла долл. США.
-- Подпись поля расстояние, добавлена поддержка [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) класса.
-- Используйте новый `MDLLightProbeIrradianceDataSource` класс, помогающий в свет выборки данных размещения.
-- Используйте новый `MDLMaterialPropertyGraph` класса для упрощения поддержки среды выполнения изменения в модели.
+- Теперь поддерживается формат файла USD.
+- В класс [мдлвокселаррай](https://developer.apple.com/reference/modelio/mdlvoxelarray) добавлена поддержка поля со знакомого расстояния.
+- Используйте новый `MDLLightProbeIrradianceDataSource` класс, чтобы упростить размещение зонда.
+- Используйте новый `MDLMaterialPropertyGraph` класс, чтобы легко поддерживать изменения среды выполнения в моделях.
 
 ## <a name="photos-enhancements"></a>Усовершенствования фотографий
 
-Платформа фотографий в iOS 10 были внесены следующие улучшения:
+В платформу Photos в iOS 10 были внесены следующие улучшения.
 
-- Используйте [CIImageProcessorInput](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) и [CIImageProcessorOutput](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) классы, чтобы воспользоваться преимуществами нового образа основных компонентов процессора для внесения изменений.
-- Интерактивное редактирование фотографий теперь доступна для приложений, поддерживающие платформу фотографии и расширения редактирования фотографий (для использования внутри фотографии и камеры приложений).
-- Используйте новый [PHLivePhotoEditingContext](https://developer.apple.com/reference/photos/phlivephotoeditingcontext) класс для применения изменений к видео и по-прежнему содержимое Live фотографий.
+- Используйте классы [Циимажепроцессоринпут](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) и [Циимажепроцессораутпут](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) , чтобы воспользоваться преимуществами новой функции процессора основных образов для внесения изменений.
+- Редактирование фотографий в реальном времени теперь доступно для приложений, поддерживающих платформу фото, и для расширений редактирования фотографий (для использования в фотографиях и в фотоаппаратных приложениях).
+- Используйте новый класс [фливефотоедитингконтекст](https://developer.apple.com/reference/photos/phlivephotoeditingcontext) , чтобы применить изменения как к видео, так и по прежнему в содержимом живых фотографий.
 
-## <a name="replaykit-enhancements"></a>Усовершенствования ReplayKit
+## <a name="replaykit-enhancements"></a>Усовершенствования Реплайкит
 
-Платформа ReplayKit в iOS 10 были внесены следующие улучшения:
+В Реплайкит Framework в iOS 10 были внесены следующие улучшения.
 
-- Используйте [RPScreenRecorder](https://developer.apple.com/reference/replaykit/rpscreenrecorder), [RPBroadcastActivityViewController](https://developer.apple.com/reference/replaykit/rpbroadcastactivityviewcontroller) и [RPBroadcastController](https://developer.apple.com/reference/replaykit/rpbroadcastcontroller) классы для поддержки передачи широковещательных сообщений из записанных содержимое с помощью третьей стороной сайты.
-- Расширения пользовательского интерфейса вещания и отправьте вещания требуются для поддержки широковещательных служб сторонних производителей ReplayKit 3-й день в приложении.
+- Используйте классы [рпскринрекордер](https://developer.apple.com/reference/replaykit/rpscreenrecorder), [рпброадкастактивитивиевконтроллер](https://developer.apple.com/reference/replaykit/rpbroadcastactivityviewcontroller) и [рпброадкастконтроллер](https://developer.apple.com/reference/replaykit/rpbroadcastcontroller) для поддержки вещания записанного мультимедиа с помощью сторонних сайтов.
+- Для поддержки Реплайкитных широковещательных служб сторонних поставщиков в приложении требуется пользовательский интерфейс вещания и расширения Broadcast Upload.
 
 ## <a name="scenekit-enhancements"></a>Усовершенствования SceneKit
 
-Платформа SceneKit IOS 10 были внесены следующие улучшения:
+В SceneKit Framework в iOS 10 были внесены следующие улучшения.
 
-- [SCNCamera](xref:SceneKit.SCNCamera) класс может предоставить больше реализм с помощью функций HDR и эффекты. Используйте адаптивной раскрытия для создания автоматического эффекты или виньетирование использования, каймы цвет и цвет градации Добавление fillmatic эффекты для игры.
-- SceneKit теперь включает в себя новую систему физически основе визуализации (PBR) для более реалистичного результатов разработки, более простой ресурс.
-- Используйте новый [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) заливки модель, в которой продукта широкий спектр реалистичную заливку эффекты при этом не только для трех основных свойств (`Diffuse`, `Metalness` и `Roughness`).
-- С момента PBR заливки работает лучше всего с освещением, основанная на среде, используйте `LightingEnvironment` свойств образа освещения сцены целиком.
-- Используйте `IESProfileURL` значение для импорта приборами реального мира, которые определяют освещения в зависимости от реальных значений, таких как интенсивность (в люмен) и цветовой температуры (в градусах Кельвина).
-- PBR и HDR камеры функции обеспечивают лучшие результаты, чем методы традиционных отрисовки и, таким образом, SceneKit теперь выполняет все вычисления цвета в линейном цветовом пространстве (с использованием цветового P3 дисплеям устройств wide цвет).
-- SceneKit теперь цвет соответствует все цвета, считывая данные профиля цвета.
-- SceneKit интерпретирует значений составляющих цвета в линейной цветовое пространство RGB для всех типов шейдера.
-- Линейные цветовые пространства отрисовки и расширенных цвет можно отключить, задав `SCNDisableLinearSpaceRendering` и `SCNDisableWideGamut` ключей в приложении `Info.plist`.
-- Создавать произвольные многоугольника приматов (либо загружено из файлов, либо создан программным путем) для указания geometry с новым [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) класса.
-- Поскольку SceneKit считывает и настроить сведения о профиле цвет в изображения текстур, используйте каталоги активов для всех образов, чтобы убедиться, что эта информация.
+- Класс [скнкамера](xref:SceneKit.SCNCamera) обеспечивает более высокую реальную работу с помощью функций и эффектов HDR. Используйте адаптивную раскрытие, чтобы создать автоматические эффекты или использовать вигнеттинг, регулировку цвета и цветовую раскраску для добавления филлматик эффектов в игру.
+- SceneKit теперь включает новую систему физической отрисовки (PBR) для более реалистичных результатов с более простым созданием ресурсов.
+- Используйте новую модель заливки [скнлигхтингмоделфисикаллибасед](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) для произведения широкого спектра реалистичных эффектов заливки, при этом требуются только три фундаментальных `Metalness` свойства `Roughness`(`Diffuse`и).
+- Так как заливка типа данных PBR лучше всего работает с освещением на `LightingEnvironment` основе среды, используйте свойство, чтобы назначить освещение на основе изображения для всей сцены.
+- `IESProfileURL` Используйте свойство для импорта реальных осветительных источников, определяющих освещение на основе реальных значений, таких как интенсивность (в люменах) и цветовая температура (в градусах Кельвина).
+- Функции PBR и HDR-камеры предоставляют лучшие результаты по сравнению с традиционными методами отрисовки, и в результате SceneKit теперь выполняет все цветовые вычисления в линейном цветовом пространстве (при отображении цветовой гаммы P3 на устройствах с широким цветом).
+- SceneKit теперь цвет соответствует всем цветам, считывая сведения о цветовых профилях.
+- SceneKit интерпретирует значения цветовых компонентов в линейном цветовом пространстве RGB для всех типов шейдера.
+- Как линейное, так и расширенное отображение цветового пространства можно отключить, `SCNDisableLinearSpaceRendering` указав `SCNDisableWideGamut` `Info.plist`ключи и в приложении.
+- Создайте произвольный многоугольник приматов (загружается из файлов или создается программно), чтобы указать геометрию с новым классом [скнжеометрипримитиветипеполигон](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
+- Так как SceneKit считывает и корректирует сведения о цветовых профилях в образах текстур, используйте каталоги активов для всех изображений, чтобы обеспечить их использование.
 
 ## <a name="spritekit-enhancements"></a>Усовершенствования SpriteKit
 
-Платформа SpriteKit IOS 10 были внесены следующие улучшения:
+В SpriteKit Framework в iOS 10 были внесены следующие улучшения.
 
-- Пользовательские построители текстуры можно предоставить атрибуты (`SKAttribute`), можно настроить по отдельности каждым узлом, который использует шейдера, указав значение атрибута (`SKAttributeValue`).
-- Tilemaps теперь поддерживают square, Шестигранная и изометрической плитки фигур для двухмерных, 2,5 D и прокрутка стороне игры, используя `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` и `SKTileSet` классы.
-- Используйте новый `SKWarpGeometry` класса к растягиванию или искажать [SKSpriteNode](https://developer.xamarin.com/api/type/SpriteKit.SKSpriteNode/) или [SKEffectNode](https://developer.xamarin.com/api/type/SpriteKit.SKEffectNode/) подготовки к просмотру. Новый [SKAction](https://developer.xamarin.com/api/type/SpriteKit.SKAction/) класс может использоваться для переходов между warp эффекты анимации.
-- [SKView](https://developer.xamarin.com/api/type/SpriteKit.SKView/) класс предоставляет несколько новых способов позволяют точно контролировать время и способ визуализации сцены.
+- Пользовательские шейдеры могут предоставлять атрибуты (`SKAttribute`), которые можно настроить отдельно для каждого узла, использующего шейдер, путем предоставления значения атрибута (`SKAttributeValue`).
+- Тилемапс теперь поддерживает фигуры мозаичных, шестиугольников и изометрических плиток для двумерных, 2,5 и прокрутых игр с `SKTileMapMode`помощью `SKTileGroup`классов `SKTileGroupRule` , `SKTileSet` и.
+- Используйте новый `SKWarpGeometry` класс для растяжения или искажения отрисовки [скспритеноде](xref:SpriteKit.SKSpriteNode) или [скеффектноде](xref:SpriteKit.SKEffectNode) . Новый класс [скактион](xref:SpriteKit.SKAction) можно использовать для анимации переходов между эффектами деформации.
+- Класс [сквиев](xref:SpriteKit.SKView) предоставляет несколько новых методов, позволяющих точно контролировать время и способ отрисовки сцены.
 
-## <a name="scrollview-enhancements"></a>Усовершенствования ScrollView
+## <a name="scrollview-enhancements"></a>Усовершенствования Скроллвиев
 
-Элемент управления ScrollView в iOS 10.3 были внесены следующие улучшения:
+В iOS 10,3 были внесены следующие улучшения в элемент управления Скроллвиев:
 
-- `UIScrollView` Теперь включают `IndexDisplayMode` свойства для управления отображением индекс при прокрутке пользователем как `UIScrollViewIndexDisplayMode` из:
-    - `Automatic` — Отображение контролируется Операционной системой.
-    - `AlwaysHidden` — Отображение всегда является скрытым.
+- `UIScrollView`Теперь включите `IndexDisplayMode` свойство, чтобы управлять отображением индекса, когда пользователь выполняет прокрутку в `UIScrollViewIndexDisplayMode` виде:
+    - `Automatic`— Отображение индекса управляется операционной системой.
+    - `AlwaysHidden`— Отображение индекса всегда скрыто.
 
-См. в разделе [iOSTenThree пример](https://developer.xamarin.com/samples/monotouch/iOS10/iOSTenThree) для использования.
+См. [Пример иостенсри](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) для использования.
 
 ## <a name="uikit-enhancements"></a>Усовершенствования UIKit
 
-На платформе UIKit в iOS 10 были внесены следующие улучшения:
+В UIKit Framework в iOS 10 были внесены следующие улучшения.
 
-- Новый [UIPasteboard](xref:UIKit.UIPasteboard) API предоставляет новые возможности (например, время существования ограничения) и автоматически объявляют совместимых типов содержимого для распространенных типов классов.
-- Поддержка новых анимации, полностью интерактивные, объектно ориентированного прерываемой был добавлен и могут быть связаны с помощью жестов. См. в разделе Apple [по протоколу UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating), [ссылки на класс UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [по протоколу UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Ссылки на класс UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) и [ссылки на класс UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) Дополнительные сведения.
-- Новый `UIPreviewInteraction` и `UIPreviewInteractionDelegate` разрешить приложению разработчика для обеспечения пользовательского интерфейса для операций считывания и pop.
-- Новый `UIAccessibilityCustomRotor` класс позволяет приложению предоставлять пользовательские, зависящего от контекста функциональные возможности для вспомогательных технологий, таких как Voice Over.
-- Используйте `UIAccessibilityIsAssistiveTouchRunning` и `UIAccessibilityAssistiveTouchStatusDidChangeNotification` символы, чтобы определить, включена ли AssistiveTouch.
-- Используйте `UIAccessibilityHearingDevicePairedEar` и `UIAccessibilityHearingDevicePairedEarDidChangeNotification` символы, чтобы получить состояние какой-либо пару вспомогательные средства MFi вашим отзывам.
-- Для поддержки динамического типа в метки, текстовые поля и текстовые поля используйте новый `PreferredFontForTextStyle` метод `UIFont` класса.
-- Чтобы решить, если элемент необходимо обновить его шрифта при устройства `UIContentSizeCategory` изменения, используйте `AdjustsFontForContentSizeCategory` свойство `UIContentSizeCategoryAdjusting` делегировать.
-- `OpenURL` Метод `UIApplication` класса вызывается асинхронно и теперь поддерживает обработчик завершения, который вызывается после завершения откройте действие.
-- Инициировать CloudKit общий доступ и изменение его свойств, с помощью нового `UICloudSharingController` и `UICloudSharingControllerDelegate` классы.
-- Воспользоваться преимуществами предварительно выбранных ячеек прокрутки совершенствовать `UICollectionViews` с новым `UICollectionViewDataSourcePrefetching` делегировать.
-- Разработчик теперь можно управлять внешним видом эмблемы для элементов этой панели (например, текст и цвет фона).
-- Обновление экрана теперь поддерживается во всех представления и представления подклассы прокрутки (таких как `UICollectionView`).
+- Новый API [уипастебоард](xref:UIKit.UIPasteboard) предоставляет новые параметры (такие как ограничения времени существования) и автоматически объявляет совместимые типы содержимого для общих типов классов.
+- Добавлена новая интерактивная поддержка для однообъектной анимации на основе объектов, которую можно связать с жестами. См. сведения в справочнике по [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [UIViewPropertyAnimator Class Reference](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [UICubicTimingParameters Class Reference](https://developer.apple.com/reference/uikit/uicubictimingparameters) и [UISpringTimingParameter Class Reference](https://developer.apple.com/reference/uikit/uispringtimingparameters).
+- Новый `UIPreviewInteraction` и`UIPreviewInteractionDelegate` позволяет приложению-разработчикам предоставлять пользовательский интерфейс для операций просмотра и POP.
+- Новый `UIAccessibilityCustomRotor` класс позволяет приложению предоставлять настраиваемые, зависящие от контекста функции для вспомогательных технологий, таких как передача голоса.
+- Используйте символы `UIAccessibilityAssistiveTouchStatusDidChangeNotification` и, чтобы определить, включен ли параметр AssistiveTouch. `UIAccessibilityIsAssistiveTouchRunning`
+- Используйте символы `UIAccessibilityHearingDevicePairedEarDidChangeNotification` и, чтобы получить состояние любого парного MFiного средства для слуха. `UIAccessibilityHearingDevicePairedEar`
+- Для поддержки динамического типа в метках текстовые поля и текстовые поля используют новый `PreferredFontForTextStyle` метод `UIFont` класса.
+- Чтобы решить, должен ли элемент обновлять свой шрифт при `UIContentSizeCategory` изменении устройства, `AdjustsFontForContentSizeCategory` используйте свойство `UIContentSizeCategoryAdjusting` делегата.
+- `OpenURL` Метод`UIApplication` класса вызывается асинхронно и теперь поддерживает обработчик завершения, который вызывается после завершения действия Open.
+- Инициируйте CloudKit общий доступ и измените его свойства с `UICloudSharingController` помощью `UICloudSharingControllerDelegate` новых классов и.
+- Воспользуйтесь преимуществами предвыбранных ячеек, чтобы улучшить процесс `UICollectionViews` прокрутки с помощью нового `UICollectionViewDataSourcePrefetching` делегата.
+- Теперь разработчик может управлять внешним видом значка для элементов панели вкладок (таких как цвет текста и фона).
+- Элемент управления обновлением теперь поддерживается во всех подклассах прокрутки и просмотра с прокруткой (например, `UICollectionView`).
 
 ## <a name="webkit-enhancements"></a>Усовершенствования WebKit
 
-Платформа WebKit в iOS 10 были внесены следующие улучшения:
+В WebKit Framework в iOS 10 были внесены следующие улучшения.
 
-- Peek и pop поддержки был добавлен `WKWebView` класса. Используйте `ShouldPreviewElement` метод, чтобы определить, если данной веб-представление следует отобразить предварительный просмотр.
+- В `WKWebView` класс добавлена поддержка просмотра и POP. `ShouldPreviewElement` Используйте метод, чтобы определить, должна ли в данном веб-представлении отображаться предварительный просмотр.
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Новые возможности в iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)
+- [Примеры iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Новые возможности iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)

@@ -1,6 +1,6 @@
 ---
 title: Стилизация кроссплатформенного приложения Xamarin.Forms
-description: В этой статье объясняется, как изменить стиль кросс платформенные приложения Xamarin.Forms с помощью стилей XAML.
+description: В этой статье объясняется, как можно застильировать кросс-платформенный приложение Xamarin. Forms с использованием стилей XAML.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,37 +9,37 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 1b68afc1f3d3c57a5c336e9d30c97ce2375acb9f
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: e26a71ad72b557a27841bfee1d26001126e2a2a2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864350"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654668"
 ---
-# <a name="style-a-cross-platform-xamarinforms-application"></a>Стиль кросс платформенные приложения Xamarin.Forms
+# <a name="style-a-cross-platform-xamarinforms-application"></a>Стиль для кросс-платформенного приложения Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
-В этом кратком руководстве вы узнаете, как:
+В этом кратком руководстве вы узнаете, как выполнять следующие задачи:
 
-- Приложение Xamarin.Forms, с помощью стилей XAML в стиле.
+- Стиль приложения Xamarin. Forms с использованием стилей XAML.
 
-Кратком руководстве показано, как изменить стиль кросс платформенные приложения Xamarin.Forms с помощью стилей XAML. Ниже показано итоговое приложение:
+В кратком руководстве описывается, как можно присвоить различные типы приложений Xamarin. Forms в стиле XAML. Ниже показано итоговое приложение:
 
-[![](styling-images/screenshots1-sml.png "Страницы заметок")](styling-images/screenshots1.png#lightbox "страницы заметок")
-[![](styling-images/screenshots2-sml.png "Обратите внимание, первая страница")](styling-images/screenshots2.png#lightbox "Примечание Страница входа")
+Страница «заметки» [ ![(styling-images/screenshots1-sml.png " ")]] (styling-images/screenshots1.png#lightbox "Страница «заметки»") Страница ввода примечания страница(styling-images/screenshots2.png#lightbox "записи примечания") [ ![(styling-images/screenshots2-sml.png " ")]] 
+
 
 ### <a name="prerequisites"></a>Предварительные требования
 
-При успешном выполнении [предыдущего краткого руководства](database.md) перед попыткой в этом кратком руководстве. Кроме того, скачать [предыдущих примеров](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/) и использовать его в качестве отправной точки для этого краткого руководства.
+Перед выполнением этого краткого руководства необходимо успешно выполнить [предыдущее краткое руководство](database.md) . Также можно скачать [предыдущий пример краткого руководства](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) и использовать его в качестве отправной точки для этого краткого руководства.
 
 ::: zone pivot="windows"
 
 ## <a name="update-the-app-with-visual-studio"></a>Обновление приложения с помощью Visual Studio
 
-1. Запустите Visual Studio и откройте решение заметки.
+1. Запустите Visual Studio и откройте решение Notes.
 
-2. В **обозревателе решений**в **заметки** проекта, дважды щелкните **App.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+2. В **Обозреватель решений**в проекте **Notes** дважды щелкните **app. XAML** , чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -77,11 +77,11 @@ ms.locfileid: "67864350"
     </Application>
     ```
 
-    Этот код определяет [ `Thickness` ](xref:Xamarin.Forms.Thickness) значение ряда [ `Color` ](xref:Xamarin.Forms.Color) значения и неявные стили для [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) и [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). Обратите внимание на том, что эти стили, размещаются на уровне приложения [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), могут быть использованы в приложении. Дополнительные сведения о стили XAML, см. в разделе [Стилизация](deepdive.md#styling) в [подробный обзор быстрого запуска Xamarin.Forms](deepdive.md).
+    Этот код определяет [`Thickness`](xref:Xamarin.Forms.Thickness) значение, [`Color`](xref:Xamarin.Forms.Color) ряд значений [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) и неявные стили для и [`ContentPage`](xref:Xamarin.Forms.ContentPage). Обратите внимание, что эти стили, которые находятся на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)приложения, могут использоваться в рамках всего приложения. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
-    Сохраните изменения в **App.xaml** , нажав клавишу **CTRL + S**и закройте файл.
+    Сохраните изменения в файле **app. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
-3. В **обозревателе решений**в **заметки** проекта, дважды щелкните **NotesPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+3. В **Обозреватель решений**в проекте **Notes** дважды щелкните **нотеспаже. XAML** , чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -116,11 +116,11 @@ ms.locfileid: "67864350"
     </ContentPage>
     ```
 
-    Этот код добавляет неявный стиль для [ `ListView` ](xref:Xamarin.Forms.ListView) на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)и задает `ListView.Margin` свойству значение, определенное на уровне приложения `ResourceDictionary` . Обратите внимание, что `ListView` неявный стиль был добавлен к страницам `ResourceDictionary`, так как он используется только операцией `NotesPage`. Дополнительные сведения о стили XAML, см. в разделе [Стилизация](deepdive.md#styling) в [подробный обзор быстрого запуска Xamarin.Forms](deepdive.md).
+    Этот код добавляет неявный стиль для [`ListView`](xref:Xamarin.Forms.ListView) объекта на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и задает `ListView.Margin` для свойства значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `ListView` , что неявный стиль был добавлен к `ResourceDictionary`уровню страницы, так как он используется `NotesPage`только объектом. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
-    Сохраните изменения в **NotesPage.xaml** , нажав клавишу **CTRL + S**и закройте файл.
+    Сохраните изменения в **нотеспаже. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
-4. В **обозревателе решений**в **заметки** проекта, дважды щелкните **NoteEntryPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+4. В **Обозреватель решений**в проекте **Notes** дважды щелкните **нотинтрипаже. XAML** , чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -165,22 +165,22 @@ ms.locfileid: "67864350"
     </ContentPage>
     ```
 
-    Этот код добавляет неявные стили для [ `Editor` ](xref:Xamarin.Forms.Editor) и [ `Button` ](xref:Xamarin.Forms.Button) представления на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)и задает `StackLayout.Margin` свойство, значение, определенное на уровне приложения `ResourceDictionary`. Обратите внимание, что `Editor` и `Button` неявные стили, добавленные на уровне страницы `ResourceDictionary`, так как они используются только с `NoteEntryPage`. Дополнительные сведения о стили XAML, см. в разделе [Стилизация](deepdive.md#styling) в [подробный обзор быстрого запуска Xamarin.Forms](deepdive.md).
+    Этот код добавляет Неявные стили [`Editor`](xref:Xamarin.Forms.Editor) для [`Button`](xref:Xamarin.Forms.Button) представлений и на `StackLayout.Margin` уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и присваивает свойству значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `Editor` , `Button` что Неявные стили были добавлены на уровне `ResourceDictionary`страницы, так как они используются только в `NoteEntryPage`. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
-    Сохраните изменения в **NoteEntryPage.xaml** , нажав клавишу **CTRL + S**и закройте файл.
+    Сохраните изменения в **нотинтрипаже. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
-5. Постройте и запустите проект на каждой платформе. Дополнительные сведения см. в разделе [создания быстрого запуска](single-page.md#building-the-quickstart).
+5. Создайте и запустите проект на каждой платформе. Дополнительные сведения см. [в разделе Создание краткого руководства](single-page.md#building-the-quickstart).
 
-    На **NotesPage** клавишу **+** кнопки для перехода к **NoteEntryPage** и введите заметку. На каждой странице наблюдайте за изменении стилей из предыдущего краткого руководства.
+    В **нотеспаже** нажмите **+** кнопку, чтобы перейти к **нотинтрипаже** и ввести Примечание. На каждой странице Обратите внимание на то, как стили изменились в предыдущем кратком руководстве.
 
 ::: zone-end
 ::: zone pivot="macos"
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Обновление приложения с помощью Visual Studio для Mac
 
-1. Запустите Visual Studio для Mac и открыть проект заметки.
+1. Запустите Visual Studio для Mac и откройте проект Notes.
 
-2. В **панели решения**в **заметки** проекта, дважды щелкните **App.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+2. В **панель решения**в проекте **Notes** дважды щелкните **app. XAML** , чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -218,11 +218,11 @@ ms.locfileid: "67864350"
     </Application>
     ```
 
-    Этот код определяет [ `Thickness` ](xref:Xamarin.Forms.Thickness) значение ряда [ `Color` ](xref:Xamarin.Forms.Color) значения и неявные стили для [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) и [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). Обратите внимание на том, что эти стили, размещаются на уровне приложения [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), могут быть использованы в приложении. Дополнительные сведения о стили XAML, см. в разделе [Стилизация](deepdive.md#styling) в [подробный обзор быстрого запуска Xamarin.Forms](deepdive.md).
+    Этот код определяет [`Thickness`](xref:Xamarin.Forms.Thickness) значение, [`Color`](xref:Xamarin.Forms.Color) ряд значений [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) и неявные стили для и [`ContentPage`](xref:Xamarin.Forms.ContentPage). Обратите внимание, что эти стили, которые находятся на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)приложения, могут использоваться в рамках всего приложения. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
-    Сохраните изменения в **App.xaml** , выбрав **файл > Сохранить** (или нажав  **&#8984; + S**) и закройте файл.
+    Сохраните изменения в файле **app. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
-3. В **панели решения**в **заметки** проекта, дважды щелкните **NotesPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+3. В **панель решения**в проекте **Notes** дважды щелкните **нотеспаже. XAML** , чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -257,11 +257,11 @@ ms.locfileid: "67864350"
     </ContentPage>
     ```
 
-    Этот код добавляет неявный стиль для [ `ListView` ](xref:Xamarin.Forms.ListView) на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)и задает `ListView.Margin` свойству значение, определенное на уровне приложения `ResourceDictionary` . Обратите внимание, что `ListView` неявный стиль был добавлен к страницам `ResourceDictionary`, так как он используется только операцией `NotesPage`. Дополнительные сведения о стили XAML, см. в разделе [Стилизация](deepdive.md#styling) в [подробный обзор быстрого запуска Xamarin.Forms](deepdive.md).
+    Этот код добавляет неявный стиль для [`ListView`](xref:Xamarin.Forms.ListView) объекта на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и задает `ListView.Margin` для свойства значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `ListView` , что неявный стиль был добавлен к `ResourceDictionary`уровню страницы, так как он используется `NotesPage`только объектом. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
-    Сохраните изменения в **NotesPage.xaml** , выбрав **файл > Сохранить** (или нажав  **&#8984; + S**) и закройте файл.
+    Сохраните изменения в **нотеспаже. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
-4. В **панели решения**в **заметки** проекта, дважды щелкните **NoteEntryPage.xaml** чтобы открыть его. Затем замените существующий код следующим кодом:
+4. В **панель решения**в проекте **Notes** дважды щелкните **нотинтрипаже. XAML** , чтобы открыть его. Затем замените существующий код следующим кодом:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -306,29 +306,29 @@ ms.locfileid: "67864350"
     </ContentPage>
     ```
 
-    Этот код добавляет неявные стили для [ `Editor` ](xref:Xamarin.Forms.Editor) и [ `Button` ](xref:Xamarin.Forms.Button) представления на уровне страницы [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)и задает `StackLayout.Margin` свойство, значение, определенное на уровне приложения `ResourceDictionary`. Обратите внимание, что `Editor` и `Button` неявные стили, добавленные на уровне страницы `ResourceDictionary`, так как они используются только с `NoteEntryPage`. Дополнительные сведения о стили XAML, см. в разделе [Стилизация](deepdive.md#styling) в [подробный обзор быстрого запуска Xamarin.Forms](deepdive.md).
+    Этот код добавляет Неявные стили [`Editor`](xref:Xamarin.Forms.Editor) для [`Button`](xref:Xamarin.Forms.Button) представлений и на `StackLayout.Margin` уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и присваивает свойству значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `Editor` , `Button` что Неявные стили были добавлены на уровне `ResourceDictionary`страницы, так как они используются только в `NoteEntryPage`. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
-    Сохраните изменения в **NoteEntryPage.xaml** , выбрав **файл > Сохранить** (или нажав  **&#8984; + S**) и закройте файл.
+    Сохраните изменения в **нотинтрипаже. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
-5. Постройте и запустите проект на каждой платформе. Дополнительные сведения см. в разделе [создания быстрого запуска](single-page.md#building-the-quickstart).
+5. Создайте и запустите проект на каждой платформе. Дополнительные сведения см. [в разделе Создание краткого руководства](single-page.md#building-the-quickstart).
 
-    На **NotesPage** клавишу **+** кнопки для перехода к **NoteEntryPage** и введите заметку. На каждой странице наблюдайте за изменении стилей из предыдущего краткого руководства.
+    В **нотеспаже** нажмите **+** кнопку, чтобы перейти к **нотинтрипаже** и ввести Примечание. На каждой странице Обратите внимание на то, как стили изменились в предыдущем кратком руководстве.
 
 ::: zone-end
 
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В этом кратком руководстве вы узнали, как:
+В этом кратком руководстве вы узнали, как выполнять следующие задачи:
 
-- Приложение Xamarin.Forms, с помощью стилей XAML в стиле.
+- Стиль приложения Xamarin. Forms с использованием стилей XAML.
 
-Дополнительные сведения об основах разработки приложений с помощью Xamarin.Forms, продолжайте подробный обзор быстрого запуска.
+Чтобы узнать больше об основах разработки приложений с помощью Xamarin. Forms, перейдите к краткому руководству.
 
 > [!div class="nextstepaction"]
 > [Вперед](deepdive.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Заметки (пример)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
-- [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](deepdive.md)
+- [Заметки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [Углубленное углубление в руководстве по Xamarin. Forms](deepdive.md)

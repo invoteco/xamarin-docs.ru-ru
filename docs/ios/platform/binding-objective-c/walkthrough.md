@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4c4aaeaa451a67da16057cd9b345fbbcd0af6f35
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527993"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621025"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 
@@ -74,16 +74,16 @@ _В этой статье приводятся пошаговые инструк
 
 - **Установка Xcode** . при установке Xcode они поставляются в комплекте со всеми программами командной строки. В оболочках совместимости OS X 10,9 (устанавливается `/usr/bin`в) может сопоставлять любые средства, входящие `/usr/bin` в, в соответствующий инструмент в Xcode. Например, `xcrun` команда, которая позволяет найти или запустить любой инструмент в Xcode из командной строки.
 - **Приложение терминала** . из приложения терминала можно установить программы командной строки, выполнив `xcode-select --install` команду:
-    - Запустите приложение терминала.
-    - Введите `xcode-select --install` и нажмите клавишу **Ввод**, например:
+  - Запустите приложение терминала.
+  - Введите `xcode-select --install` и нажмите клавишу **Ввод**, например:
 
-    ```bash
-    Europa:~ kmullins$ xcode-select --install
-    ```
+  ```bash
+  Europa:~ kmullins$ xcode-select --install
+  ```
 
-    - Вам будет предложено установить программы командной строки, нажать кнопку " **установить** ":   [![](walkthrough-images/xcode01.png "Установка программ командной строки")](walkthrough-images/xcode01.png#lightbox)
+  - Вам будет предложено установить программы командной строки, нажать кнопку " **установить** ": [![](walkthrough-images/xcode01.png "Установка программ командной строки")](walkthrough-images/xcode01.png#lightbox)
 
-    - Эти средства будут скачаны и установлены с серверов Apple:   [![](walkthrough-images/xcode02.png "Загрузка средств")](walkthrough-images/xcode02.png#lightbox)
+  - Эти средства будут скачаны и установлены с серверов Apple: [![](walkthrough-images/xcode02.png "Загрузка средств")](walkthrough-images/xcode02.png#lightbox)
 
 - **Загружаемые файлы для разработчиков Apple** . пакет средств командной строки доступен на веб-странице [загрузки для разработчиков Apple](https://developer.apple.com/downloads/index.action) . Войдите в систему, используя идентификатор Apple ID, а затем найдите и скачайте программы командной строки: [![](walkthrough-images/xcode03.png "Поиск программ командной строки")](walkthrough-images/xcode03.png#lightbox)
 
@@ -186,7 +186,8 @@ _В этой статье приводятся пошаговые инструк
 
 Существует множество средств для автоматизации таких задач, как сценарий оболочки, [Rake](http://rake.rubyforge.org/), [Xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)и [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). При установке `make` программ командной строки Xcode также устанавливается, поэтому это система сборки, которая будет использоваться в этом пошаговом руководстве. Ниже приведен **файл Makefile** , который можно использовать для создания общей библиотеки с несколькими архитектурами, которая будет работать на устройстве iOS и симуляторе для любой библиотеки:
 
-```bash
+<!--markdownlint-disable MD010 -->
+```makefile
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=./YOUR-PROJECT-NAME
 PROJECT=$(PROJECT_ROOT)/YOUR-PROJECT-NAME.xcodeproj
@@ -212,6 +213,7 @@ lib$(TARGET).a: lib$(TARGET)-i386.a lib$(TARGET)-armv7.a lib$(TARGET)-arm64.a
 clean:
     -rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 Введите команды **makefile** в выбранном текстовом редакторе и обновите разделы, указав имя проекта в разделе с именем **-Project-Name** . Также важно убедиться в том, что инструкции, приведенные выше, правильно вставлены, а вкладки в этих инструкциях сохранены.
 
@@ -622,21 +624,21 @@ using UIKit;
 
 namespace InfColorPickerSample
 {
-    public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  {
+    readonly UIViewController parent;
+
+    public ColorSelectedDelegate (UIViewController parent)
     {
-        readonly UIViewController parent;
-
-        public ColorSelectedDelegate (UIViewController parent)
-        {
-            this.parent = parent;
-        }
-
-        public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
-        {
-            parent.View.BackgroundColor = controller.ResultColor;
-            parent.DismissViewController (false, null);
-        }
+      this.parent = parent;
     }
+
+    public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
+    {
+      parent.View.BackgroundColor = controller.ResultColor;
+      parent.DismissViewController (false, null);
+    }
+  }
 }
 ```
 
@@ -653,9 +655,9 @@ ColorSelectedDelegate selector;
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
-    ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
-    selector = new ColorSelectedDelegate (this);
+  base.ViewDidLoad ();
+  ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
+  selector = new ColorSelectedDelegate (this);
 }
 ```
 **Реализуйте метод хандлетаучупинсидевисстронгделегате** -Next. Реализуйте обработчик событий, когда пользователь касается **колорчанжебуттон**. Измените `ViewController`и добавьте следующий метод:

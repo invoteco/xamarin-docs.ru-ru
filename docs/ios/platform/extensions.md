@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 4137ce7542a213a0a4c27b6a66b38828e4646520
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653469"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621083"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>расширения iOS в Xamarin. iOS
 
@@ -91,13 +91,13 @@ ms.locfileid: "68653469"
 
 - Он должен иметь идентификатор пакета, который начинается с идентификатора пакета приложения контейнера. Например, если у приложения-контейнера есть идентификатор `com.myCompany.ContainerApp`пакета, идентификатором расширения может быть: `com.myCompany.ContainerApp.MyExtension` 
 
-    ![](extensions-images/bundleidentifiers.png) 
-- Он должен определить `NSExtensionPointIdentifier`ключ с соответствующим значением ( `com.apple.widget-extension` например, для мини-приложения центра `Info.plist` уведомлений) в файле.
-- Он также `NSExtensionPrincipalClass` *должен определить* `NSExtensionMainStoryboard` ключ или ключ в `Info.plist` файле с соответствующим значением:
-    - Используйте ключ, чтобы указать имя раскадровки, которая представляет основной пользовательский интерфейс для расширения (минус `.storyboard`). `NSExtensionMainStoryboard` Например, `Main` `Main.storyboard` для файла.
-    - `NSExtensionPrincipalClass` Используйте ключ, чтобы указать класс, который будет инициализирован при запуске расширения. Значение должно соответствовать `UIViewController`значению **регистра** : 
+  ![](extensions-images/bundleidentifiers.png) 
+- Он должен определить ключ `NSExtensionPointIdentifier`с соответствующим значением ( `Info.plist` `com.apple.widget-extension` например, для мини-приложения центра уведомлений) в файле.
+- Он также должен определить `NSExtensionMainStoryboard` ключ или `NSExtensionPrincipalClass` ключ в `Info.plist` файле с соответствующим значением:
+  - Используйте ключ, чтобы указать имя раскадровки, которая представляет основной пользовательский интерфейс для расширения (минус `.storyboard`). `NSExtensionMainStoryboard` Например, `Main` `Main.storyboard` для файла.
+  - `NSExtensionPrincipalClass` Используйте ключ, чтобы указать класс, который будет инициализирован при запуске расширения. Значение должно соответствовать `UIViewController`значению **регистра** : 
 
-    ![](extensions-images/registerandprincipalclass.png)
+  ![](extensions-images/registerandprincipalclass.png)
 
 Определенные типы расширений могут иметь дополнительные требования. Например, в **сегодняшнем** или основном классе **центра уведомлений** должен быть реализован [инквиджетпровидинг](xref:NotificationCenter.INCWidgetProviding).
 
@@ -182,28 +182,28 @@ using CoreGraphics;
 
 namespace DaysRemaining
 {
-    [Register("CodeBasedViewController")]
-    public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  [Register("CodeBasedViewController")]
+  public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  {
+    public CodeBasedViewController ()
     {
-        public CodeBasedViewController ()
-        {
-        }
-
-        public override void ViewDidLoad ()
-        {
-            base.ViewDidLoad ();
-
-            // Add label to view
-            var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
-                TextAlignment = UITextAlignment.Center
-            };
-
-            View.AddSubview (TodayMessage);
-            
-            // Insert code to power extension here...
-
-        }
     }
+
+    public override void ViewDidLoad ()
+    {
+      base.ViewDidLoad ();
+
+      // Add label to view
+      var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
+        TextAlignment = UITextAlignment.Center
+      };
+
+      View.AddSubview (TodayMessage);
+
+      // Insert code to power extension here...
+
+    }
+  }
 }
 ```
 
@@ -216,19 +216,19 @@ namespace DaysRemaining
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
+  base.ViewDidLoad ();
 
-    // Calculate the values
-    var dayOfYear = DateTime.Now.DayOfYear;
-    var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
-    var daysRemaining = 365 + leapYearExtra - dayOfYear;
+  // Calculate the values
+  var dayOfYear = DateTime.Now.DayOfYear;
+  var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
+  var daysRemaining = 365 + leapYearExtra - dayOfYear;
 
-    // Display the message
-    if (daysRemaining == 1) {
-        TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
-    } else {
-        TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
-    }
+  // Display the message
+  if (daysRemaining == 1) {
+    TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
+  } else {
+    TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
+  }
 }
 ```
 
@@ -458,7 +458,7 @@ results.ObjectForKey("NSExtensionJavaScriptPreprocessingResultsKey");
 
 ## <a name="summary"></a>Сводка
 
-Этот документ содержит охваченные расширения, их типы, тип точек расширения и известные ограничения, накладываемые на расширение iOS. В нем обсуждаются создание, распространение, установка и запуск расширений, а также жизненный цикл расширения. В нем представлено пошаговое руководство по **созданию простого мини** -приложения, которое показывает два способа создания пользовательского интерфейса мини-приложения с помощью раскадровки или кода. Было показано, как тестировать расширение в симуляторе iOS. Наконец, в нем вкратце обсуждается взаимодействие с ведущим приложением и некоторые меры предосторожности и рекомендации, которые следует предпринять при разработке расширения. 
+Этот документ содержит охваченные расширения, их типы, тип точек расширения и известные ограничения, накладываемые на расширение iOS. В нем обсуждаются создание, распространение, установка и запуск расширений, а также жизненный цикл расширения. В нем представлено пошаговое руководство по созданию простого мини-приложения, которое показывает два способа создания пользовательского интерфейса мини-приложения с помощью раскадровки или кода. Было показано, как тестировать расширение в симуляторе iOS. Наконец, в нем вкратце обсуждается взаимодействие с ведущим приложением и некоторые меры предосторожности и рекомендации, которые следует предпринять при разработке расширения. 
 
 ## <a name="related-links"></a>Связанные ссылки
 

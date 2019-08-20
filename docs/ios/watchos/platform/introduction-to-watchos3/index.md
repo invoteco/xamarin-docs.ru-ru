@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
-ms.openlocfilehash: 8f1e77d112eae951f3441484df94772da1b0f303
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5abd28dc9a6fc2a0dca5fa31908731a5496ce5fa
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655520"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621051"
 ---
 # <a name="introduction-to-watchos-3"></a>Введение в watchOS 3
 
@@ -21,17 +21,17 @@ _В этой статье представлены все новые и изме
 В этом документе рассматриваются следующие темы:
 
 - [Новые возможности в watchOS 3](#Whats-New-in-watchOS-3)
-    - [Улучшения Apple Pay](#Apple-Pay-Enhancements) добавляют поддержку платежей в приложении на Apple Watch.
-    - [Фоновые задачи](#Background-Tasks) предоставляют приложению возможность обновлять свои данные в фоновом режиме, чтобы оно было готово, когда это необходимо пользователю.
-    - В watchOS 3 были внесены [улучшения сложности](#Complications-Enhancements) , которые предоставляют новые функции для приложений.
-    - [Новые доступные платформы](#Newly-Available-Frameworks) доступны для приложений watchOS.
-    - [Упреждающие предложения](#Proactive-Suggestions) позволяют приложению заранее показывать сведения пользователю.
-    * В watchOS 3 внесено несколько [улучшений безопасности и конфиденциальности](#Security-and-Privacy-Enhancements) .
-    - [Моментальные снимки и закрепление](#Snapshots-and-Dock) предоставляют пользователю быстрый доступ к приложениям watchOS приложений.
-    - Пользовательские [уведомления](#User-Notifications) предоставляют пользователю как локальные, так и удаленные уведомления.
-    * В watchOS 3 были сделаны несколько [улучшений инфраструктуры подключения](#Watch-Connectivity-Framework-Enhancements) .
-    * В watchOS 3 было внесено несколько [улучшений платформы WatchKit](#WatchKit-Framework-Enhancements) .
-    - [Усовершенствованные приложения для тренировки](#Workout-App-Enhancements) предоставляют новые возможности для Apple Watch приложений, связанных с тренировками.
+  - [Улучшения Apple Pay](#Apple-Pay-Enhancements) добавляют поддержку платежей в приложении на Apple Watch.
+  - [Фоновые задачи](#Background-Tasks) предоставляют приложению возможность обновлять свои данные в фоновом режиме, чтобы оно было готово, когда это необходимо пользователю.
+  - В watchOS 3 были внесены [улучшения сложности](#Complications-Enhancements) , которые предоставляют новые функции для приложений.
+  - [Новые доступные платформы](#Newly-Available-Frameworks) доступны для приложений watchOS.
+  - [Упреждающие предложения](#Proactive-Suggestions) позволяют приложению заранее показывать сведения пользователю.
+  - В watchOS 3 внесено несколько [улучшений безопасности и конфиденциальности](#Security-and-Privacy-Enhancements) .
+  - [Моментальные снимки и закрепление](#Snapshots-and-Dock) предоставляют пользователю быстрый доступ к приложениям watchOS приложений.
+  - Пользовательские [уведомления](#User-Notifications) предоставляют пользователю как локальные, так и удаленные уведомления.
+  - В watchOS 3 были сделаны несколько [улучшений инфраструктуры подключения](#Watch-Connectivity-Framework-Enhancements) .
+  - В watchOS 3 было внесено несколько [улучшений платформы WatchKit](#WatchKit-Framework-Enhancements) .
+  - [Усовершенствованные приложения для тренировки](#Workout-App-Enhancements) предоставляют новые возможности для Apple Watch приложений, связанных с тренировками.
 - В watchOS 3 были сделаны [Дополнительные изменения платформы](#Additional-Framework-Changes) .
 - [Устаревшие API-интерфейсы](#Deprecated-APIs) в watchOS 3.
 

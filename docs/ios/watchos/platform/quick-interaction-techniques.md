@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 83b8b6b443a794b1001c581f45299dbd22133c80
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656418"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620507"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Методы быстрого взаимодействия для watchOS 3 в Xamarin
 
@@ -47,12 +47,12 @@ _В этой статье рассматриваются методы быстр
 Компания Apple добавила несколько новых функций и API-интерфейсов в WatchKit, чтобы помочь разработчикам в добавлении быстрых взаимодействий с Apple Watch приложениями:
 
 - watchOS 3 предоставляет доступ к новым типам вводимых пользователем данных, таким как:
-    - Распознаватели жестов
-    - Вращение Digital Crown 
+  - Распознаватели жестов
+  - Вращение Digital Crown 
 - watchOS 3 предоставляет новые способы отображения и обновления информации, например:
-    - Улучшенная навигация по таблицам
-    - Поддержка новой платформы уведомлений пользователей
-    - Интеграция SpriteKit и SceneKit
+  - Улучшенная навигация по таблицам
+  - Поддержка новой платформы уведомлений пользователей
+  - Интеграция SpriteKit и SceneKit
 
 Реализуя эти новые функции, разработчик может гарантировать, что их приложение watchOS 3 будет доступно для просмотра, выполнения действий и реагирования.
 
@@ -63,11 +63,11 @@ _В этой статье рассматриваются методы быстр
 watchOS 3 будет поддерживать четыре следующих распознавателя жестов:
 
 - Дискретные типы жестов:
-    - Жест прокрутки`WKSwipeGestureRecognizer`().
-    - Жест касания (`WKTapGestureRecognizer`).
+  - Жест прокрутки`WKSwipeGestureRecognizer`().
+  - Жест касания (`WKTapGestureRecognizer`).
 - Типы непрерывных жестов:
-    - Жест панорамирования (`WKPanGestureRecognizer`).
-    - Жест длительного нажатия (`WKLongPressGestureRecognizer`).
+  - Жест панорамирования (`WKPanGestureRecognizer`).
+  - Жест длительного нажатия (`WKLongPressGestureRecognizer`).
 
 Чтобы реализовать один из новых распознавателей жестов, просто перетащите его в область конструктора в конструкторе iOS в Visual Studio для Mac и настройте его свойства.
 
@@ -96,8 +96,8 @@ watchOS 3 будет поддерживать четыре следующих р
 - Добавьте распознаватели жестов к элементам группы, а не к отдельным элементам управления. Так как Apple Watch имеет меньший размер физического экрана, элементы группы, как правило, больше и более простые целевые объекты для пользователя. Кроме того, распознаватели жестов могут конфликтовать с встроенными жестами, которые уже находятся в собственных элементах управления пользовательского интерфейса.
 - Установка отношений зависимости в раскадровке приложения Watch.
 - Некоторый жест имеет приоритет над другими типами жестов, например:
-    - Прокрутка
-    - Force Touch
+  - Прокрутка
+  - Force Touch
  
 ### <a name="digital-crown-rotation"></a>Вращение Digital Crown
 
@@ -137,28 +137,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-    public class CrownDelegate : WKCrownDelegate
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
+
+    #region Constructors
+    public CrownDelegate ()
     {
-        #region Computed Properties
-        public double AccumulatedRotations { get; set;}
-        #endregion
-
-        #region Constructors
-        public CrownDelegate ()
-        {
-        }
-        #endregion
-
-        #region Override Methods
-        public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-        {
-            base.CrownDidRotate (crownSequencer, rotationalDelta);
-
-            // Accumulate rotations
-            AccumulatedRotations += rotationalDelta;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
+
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -225,8 +225,8 @@ MenuTable.PerformSegue (0);
 - Для хорошо определенного и представленного уведомления пользователь не будет выполнять никаких действий и просто отклонить уведомление.
 - Они также могут коснуться уведомления, чтобы запустить приложение watchOS.
 - Для уведомления, которое поддерживает настраиваемые действия, пользователь может выбрать одно из настраиваемых действий. Это может быть:
-    - **Действия переднего плана** — они запускают приложение для выполнения действия.
-    - **Фоновые действия** — всегда направляются на iPhone в watchOS 2, но могут направляться в Ватчапп в watchOS 3.
+  - **Действия переднего плана** — они запускают приложение для выполнения действия.
+  - **Фоновые действия** — всегда направляются на iPhone в watchOS 2, но могут направляться в Ватчапп в watchOS 3.
 
 Новое для watchOS 3:
 

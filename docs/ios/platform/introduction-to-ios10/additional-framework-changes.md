@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 5aad72de5d894a83d734cd53fce3ac060125d740
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 85dad3bdd46401b1acf9a1cb5acc206508cd611f
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656941"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620724"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Изменения дополнительных платформ iOS 10
 
@@ -182,8 +182,8 @@ iOS 10 вносит следующие улучшения в основную п
 В iOS 10,3 были внесены следующие улучшения в элемент управления Скроллвиев:
 
 - `UIScrollView`Теперь включите `IndexDisplayMode` свойство, чтобы управлять отображением индекса, когда пользователь выполняет прокрутку в `UIScrollViewIndexDisplayMode` виде:
-    - `Automatic`— Отображение индекса управляется операционной системой.
-    - `AlwaysHidden`— Отображение индекса всегда скрыто.
+  - `Automatic`— Отображение индекса управляется операционной системой.
+  - `AlwaysHidden`— Отображение индекса всегда скрыто.
 
 См. [Пример иостенсри](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) для использования.
 

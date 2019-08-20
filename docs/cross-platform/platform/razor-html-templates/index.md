@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
-ms.openlocfilehash: c6c279a31b6081f7e20b4047e2a8e82c79aeac23
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521803"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621037"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Создание представлений HTML с помощью шаблонов Razor
 
@@ -167,7 +167,7 @@ class HybridWebViewClient : WebViewClient {
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### <a name="calling-javascript-from-c"></a>Вызов JavaScript изC#
+### <a name="calling-javascript-from-c"></a>Вызов JavaScript из C\#
 
 Кроме того, что в веб-представлении можно загрузить новую страницу HTML, C# код также может запускать JavaScript в текущей отображаемой странице. Все блоки кода JavaScript могут быть созданы с C# помощью строк и выполняться, или можно создавать вызовы методов для JavaScript, которые уже доступны на странице `script` через теги.
 
@@ -465,7 +465,7 @@ var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 
 После обработки URL-адреса метод прерывает навигацию таким образом, чтобы не пытаться завершить переход к пользовательскому URL.
 
-#### <a name="manipulating-the-template-from-c"></a>Управление шаблоном изC#
+#### <a name="manipulating-the-template-from-c"></a>Управление шаблоном из C\#
 
 Взаимодействие с отображаемым веб-представлением C# HTML из осуществляется путем вызова JavaScript в веб-представлении. В iOS это делается путем вызова `EvaluateJavascript` в уивебвиев:
 

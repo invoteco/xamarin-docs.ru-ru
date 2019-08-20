@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: bd4c09b7defcc3038919a4dea841d7bd1d02f39e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654083"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620959"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Поиск в веб-разметке в Xamarin. iOS
 
@@ -46,7 +46,7 @@ Apple получит эти результаты в результатах по�
 
 Предоставьте баннер Smart App на веб-сайте, чтобы предоставить четкую ссылку на приложение. Если приложение еще не установлено, Safari автоматически выдаст пользователю запрос на установку приложения. В противном случае можно коснуться ссылки **View** , чтобы запустить приложение с веб-сайта. Например, чтобы создать баннер смарт-приложения, можно использовать следующий код:
 
-```xml
+```html
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
@@ -65,7 +65,7 @@ Apple получит эти результаты в результатах по�
 
 Вы можете предоставить глубокие ссылки на содержимое вашего приложения с помощью карточки Twitter. Например:
 
-```xml
+```html
 <meta name="twitter:app:name:iphone" content="AppName">
 <meta name="twitter:app:id:iphone" content="AppNameID">
 <meta name="twitter:app:url:iphone" content="AppNameURL">
@@ -77,7 +77,7 @@ Apple получит эти результаты в результатах по�
 
 Ссылки на содержимое приложения можно предоставить с помощью ссылки на приложение Facebook. Например:
 
-```xml
+```html
 <meta property="al:ios:app_name" content="AppName">
 <meta property="al:ios:app_store_id" content="AppNameID">
 <meta property="al:ios:url" content="AppNameURL">
@@ -93,23 +93,23 @@ Apple получит эти результаты в результатах по�
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
 {
 
-    // Handling a URL in the form http://company.com/appname/?123
-    try {
-        var components = new NSUrlComponents(url,true);
-        var path = components.Path;
-        var query = components.Query;
+  // Handling a URL in the form http://company.com/appname/?123
+  try {
+    var components = new NSUrlComponents(url,true);
+    var path = components.Path;
+    var query = components.Query;
 
-        // Is this a known format?
-        if (path == "/appname") {
-            // Display the view controller for the content
-            // specified in query (123)
-            return ContentViewController.LoadContent(query);
-        }
-    } catch {
-        // Ignore issue for now
+    // Is this a known format?
+    if (path == "/appname") {
+      // Display the view controller for the content
+      // specified in query (123)
+      return ContentViewController.LoadContent(query);
     }
+  } catch {
+    // Ignore issue for now
+  }
 
-    return false;
+  return false;
 }
 ```
 
@@ -123,7 +123,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 Один из вариантов предоставления структурированных данных — с помощью Open Graph. Например:
 
-```xml
+```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
 <meta property="og:audio" content="http://company.com/appname/theme.m4a">
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
@@ -133,22 +133,20 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 Другим распространенным форматом разметки структурированных данных является формат Schema. org микроданные. Например:
 
-```xml
+```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4** stars -
-    <span itemprop="reviewCount">255** reviews
-
-
+  <span itemprop="ratingValue">4** stars -
+  <span itemprop="reviewCount">255** reviews
 ```
 
 Те же сведения можно представить в формате JSON-LD схемы. org:
 
-```xml
+```html
 <script type="application/ld+json">
-    "@content":"http://schema.org",
-    "@type":"AggregateRating",
-    "ratingValue":"4",
-    "reviewCount":"255"
+  "@content":"http://schema.org",
+  "@type":"AggregateRating",
+  "ratingValue":"4",
+  "reviewCount":"255"
 </script>
 ```
 
@@ -179,34 +177,28 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 Например, определение действия для набора номера телефона может выглядеть следующим образом:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/Organization">
-    <span itemprop="telephone">(408) 555-1212**
-
-
+  <span itemprop="telephone">(408) 555-1212**
 ```
 
 Когда результат поиска будет представлен конечному пользователю, в результате отобразится маленький значок телефона. Если пользователь касается значка, будет вызвано указанное число.
 
 Следующий HTML-код добавляет действие для воспроизведения звукового файла из результатов поиска:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/AudioObject">
-    <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
-
-
+  <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
 ```
 
 Наконец, следующий HTML-код добавит действие для получения направлений из результата поиска:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="streetAddress">1 Infinite Loop**
-    <span itemprop="addressLocality">Cupertino**
-    <span itemprop="addressRegion">CA**
-    <span itemprop="postalCode">95014**
-
-
+  <span itemprop="streetAddress">1 Infinite Loop**
+  <span itemprop="addressLocality">Cupertino**
+  <span itemprop="addressRegion">CA**
+  <span itemprop="postalCode">95014**
 ```
 
 Дополнительные сведения см. в разделе [веб-сайт разработчика поиска приложений](https://developer.apple.com/ios/search/)Apple.

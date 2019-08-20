@@ -1,74 +1,74 @@
 ---
-title: API для разработчиков Xamarin.Mac macOS
-description: В этом документе описывается, как считывать селекторы Objective-C и как найти соответствующие методы C# в приложении Xamarin.Mac.
+title: API-интерфейсы macOS для разработчиков Xamarin. Mac
+description: В этом документе описывается чтение селекторов цели-C и способы поиска соответствующих C# методов в приложении Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/02/2017
-ms.openlocfilehash: c387bbead1ac56d7f4c4c05a79c430302e50aec1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9dfc2b6602baf6965a8cdfddf2ca8050262ff83b
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085285"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620592"
 ---
-# <a name="macos-apis-for-xamarinmac-developers"></a>API для разработчиков Xamarin.Mac macOS
+# <a name="macos-apis-for-xamarinmac-developers"></a>API-интерфейсы macOS для разработчиков Xamarin. Mac
 
 ## <a name="overview"></a>Обзор
 
-Большую часть времени разработки с помощью Xamarin.Mac вы думаете, читать и писать на C# не столь важно, с помощью базовых интерфейсов Objective-C API. Тем не менее иногда вы будет нужно прочитать документацию по API Apple, перевод ответ на Stack Overflow в решение для решения проблемы или сравнения в существующий образец.
+В C# значительной мере время разработки с помощью Xamarin. Mac вы можете думать, читать и писать, не заботясь о базовых API-интерфейсах целевой платформы. Однако иногда вам потребуется прочитать документацию по API от Apple, преобразовать ответ из Stack Overflow в решение проблемы или сравнить с существующим примером.
 
-## <a name="reading-enough-objective-c-to-be-dangerous"></a>Чтение достаточно Objective-C опасными
+## <a name="reading-enough-objective-c-to-be-dangerous"></a>Чтение достаточной цели-C, чтобы быть опасной
 
-Иногда его будет необходимо прочитать определение Objective-C, или метод вызова и переводить, эквивалентного метода C#. Давайте взглянем на определение функции Objective-C и разбить на части. Этот метод ( *селектор* в Objective-C) можно найти на `NSTableView`:
+Иногда потребуется прочитать определение цели или вызов метода и перевести его в эквивалентный C# метод. Давайте взглянем на определение функции-C и разбейте его на части. Этот метод ( *селектор* в цели-C) можно найти в `NSTableView`:
 
 ```objc
 - (BOOL)canDragRowsWithIndexes:(NSIndexSet *)rowIndexes atPoint:(NSPoint)mouseDownPoint
 ```
 
-Объявления могут считываться слева направо:
+Объявление может быть прочитано слева направо:
 
-- `-` Префикс означает, что он является методом экземпляра (нестатическим). + означает, что он является методом класса (статический)
-- `(BOOL)` — Это тип возвращаемого значения (логическое значение в C#)
-- `canDragRowsWithIndexes` — Это первая часть имени.
-- `(NSIndexSet *)rowIndexes` — Это тип первого параметра и с ним относится к типу. Первый параметр имеет формат: `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` — Тип второго параметра и его тип. Каждый параметр, после первого имеет формат: `selectorPart:(Type) pararmName`
-- — Полное имя этого сообщения селектор: `canDragRowsWithIndexes:atPoint:`. Примечание `:` в конце - очень важно.
-- Фактическая привязка Xamarin.Mac C# является: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- `-` Префикс означает, что это метод экземпляра (не статический). + означает, что это метод класса (статический)
+- `(BOOL)`Тип возвращаемого значения (bool в C#)
+- `canDragRowsWithIndexes`Первая часть имени.
+- `(NSIndexSet *)rowIndexes`параметр является первым параметром и имеет тип. Первый параметр имеет формат:`(Type) pararmName`
+- `atPoint:(NSPoint)mouseDownPoint`Второй параметр и его тип. Каждый параметр после первого является форматом:`selectorPart:(Type) pararmName`
+- Полное имя этого селектора сообщений: `canDragRowsWithIndexes:atPoint:`. Обратите `:` внимание, что в конечном итоге это важно.
+- Фактическая привязка Xamarin. C# Mac:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
-Этот вызов селектор можно прочитать так же, как:
+Этот вызов селектора может быть прочитан таким же образом:
 
 ```objc
 [v canDragRowsWithIndexes:set atPoint:point];
 ```
 
-- Экземпляр `v` испытывает его `canDragRowsWithIndexes:atPoint` селектора вызывается с двумя параметрами `set` и `point`, переданное в.
-- В C# вызов метода выглядит следующим образом: `x.CanDragRows (set, point);`
+- Экземпляр `v` имеет свой `canDragRowsWithIndexes:atPoint` селектор, вызываемый с двумя параметрами `set` , `point`и, переданным в.
+- В C#метод вызов метода выглядит следующим образом:`x.CanDragRows (set, point);`
 
 <a name="finding_selector" />
 
-## <a name="finding-the-c-member-for-a-given-selector"></a>Поиск члена C# для данного селектора
+## <a name="finding-the-c-member-for-a-given-selector"></a>Поиск C# элемента для данного селектора
 
-Теперь, когда вы нашли селекторе Objective-C, который необходимо вызвать, следующим шагом является сопоставление, эквивалентный член C#. Существует четыре подхода, можно попробовать (продолжением `NSTableView CanDragRows` пример):
+Теперь, когда вы нашли селектор цели-C, который необходимо вызвать, следующий шаг выполняет сопоставление с эквивалентным C# элементом. Существует четыре подхода, которые можно попробовать (продолжение работы с `NSTableView CanDragRows` примером):
 
-1. Используйте список автоматического завершения, можно быстро находить примерно таким же именем. Так как мы знаем, что он является экземпляром класса `NSTableView` можно ввести:
-
-    - `NSTableView x;`
-    - `x.` [ctrl + пробел, если список не отображается).
-    - `CanDrag` [ВВОД]
-    - Щелкните правой кнопкой мыши метод, перейти к объявлению, чтобы открыть обозреватель сборок, где вы можете сравнить `Export` для рассматриваемого селектор атрибута
-
-2. Поиск всего класса привязки. Так как мы знаем, что он является экземпляром класса `NSTableView` можно ввести:
+1. Используйте список автозавершения, чтобы быстро проверить наличие что-то с тем же именем. Так как известно, что это экземпляр `NSTableView` , можно ввести:
 
     - `NSTableView x;`
-    - Щелкните правой кнопкой мыши `NSTableView`, перейти к объявлению, чтобы обозреватель сборок
-    - Поиск для рассматриваемого селектора
+    - `x.`[Ctrl + пробел, если список не отображается).
+    - `CanDrag`входить
+    - Щелкните метод правой кнопкой мыши, перейдите к объявлению, чтобы открыть браузер сборок, где можно сравнить `Export` атрибут с выбранным селектором.
 
-3. Можно использовать [электронной документации по Xamarin.Mac API](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+2. Поиск по всей привязке класса. Так как известно, что это экземпляр `NSTableView` , можно ввести:
 
-4. Мигель обеспечивает представление «Розеттском камне» API-интерфейсы Xamarin.Mac [здесь](https://tirania.org/tmp/rosetta.html) , которые можно найти через для заданного API. Если API не AppKit или конкретных macOS, может оказаться существует.
+    - `NSTableView x;`
+    - Щелчок `NSTableView`правой кнопкой мыши, переход к объявлению в браузере сборки
+    - Поиск рассматриваемого селектора
+
+3. Вы можете использовать [интерактивную документацию по API Xamarin. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+
+4. Мигель предоставляет представление "Розеттском" для API Xamarin. Mac [здесь](https://tirania.org/tmp/rosetta.html) , где можно выполнять поиск по заданному API. Если ваш API не является AppKit или macOS, его можно найти там.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

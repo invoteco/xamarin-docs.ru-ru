@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ebaf5bf2fcb82dd98147819ea9e089dcd427affc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e2d3a3590e8006c745d28026f3a359350f7ce940
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644454"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621067"
 ---
-# <a name="native-views-in-c"></a>Исходные представления в C#
+# <a name="native-views-in-c"></a>Собственные представления в C\#
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Исходные представления из iOS, Android и UWP можно непосредственно ссылаться из страницы Xamarin.Forms, созданные с помощью C#. В этой статье показано, как добавить исходные представления в макете Xamarin.Forms, созданные с помощью C# и переопределение макет пользовательские представления, чтобы исправить их измерения использования API._
 

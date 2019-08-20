@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 14a7fdc21c95b2febcf73497055461830b0df831
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 671a7c8aaa81094157056672c64f0c2dc847d6a7
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645786"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620913"
 ---
 # <a name="alerts-in-xamarinmac"></a>Оповещения в Xamarin. Mac
 
@@ -51,9 +51,9 @@ Apple рекомендует следующие рекомендации:
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Critical,
-    InformativeText = "We need to save the document here...",
-    MessageText = "Save Document",
+  AlertStyle = NSAlertStyle.Critical,
+  InformativeText = "We need to save the document here...",
+  MessageText = "Save Document",
 };
 alert.RunModal ();
 ```
@@ -65,9 +65,9 @@ alert.RunModal ();
 Apple предоставляет несколько свойств, которые можно использовать для настройки оповещений.
 
 - **Алертстиле** определяет тип предупреждения как одно из следующих:
-    - **Предупреждение** — используется для предупреждения пользователя о текущем или неожидающем событии, которое не является критическим. Это стиль по умолчанию.
-    - **Информация** — используется для предупреждения пользователя о текущем или ожидающем событии. В настоящее время нет видимых различий между **предупреждением** и **информационным**
-    - **Критический** — используется для предупреждения пользователя о серьезных последствиях незавершенного события (например, при удалении файла). Этот тип предупреждения следует использовать с осторожностью.
+  - **Предупреждение** — используется для предупреждения пользователя о текущем или неожидающем событии, которое не является критическим. Это стиль по умолчанию.
+  - **Информация** — используется для предупреждения пользователя о текущем или ожидающем событии. В настоящее время нет видимых различий между **предупреждением** и **информационным**
+  - **Критический** — используется для предупреждения пользователя о серьезных последствиях незавершенного события (например, при удалении файла). Этот тип предупреждения следует использовать с осторожностью.
 - **MessageText** — это основное сообщение или заголовок оповещения, которое должно быстро определить ситуацию для пользователя.
 - **Информативетекст** — это текст оповещения, в котором следует четко определить ситуацию и предоставить пользователю возможные варианты.
 - **Значок** — позволяет пользователю отображать пользовательский значок.
@@ -84,9 +84,9 @@ Apple предоставляет несколько свойств, которы
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.RunModal ();
 ```
@@ -98,9 +98,9 @@ alert.RunModal ();
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.BeginSheet (this);
 ```
@@ -118,9 +118,9 @@ alert.BeginSheet (this);
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -142,15 +142,15 @@ var result = alert.RunModal ();
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.BeginSheetForResponse (this, (result) => {
-    Console.WriteLine ("Alert Result: {0}", result);
+  Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
 При выполнении этого кода будут отображены следующие:
@@ -168,9 +168,9 @@ alert.BeginSheetForResponse (this, (result) => {
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -190,16 +190,16 @@ Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.Suppression
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.ShowsSuppressionButton = true;
 alert.BeginSheetForResponse (this, (result) => {
-    Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 
@@ -219,7 +219,7 @@ var input = new NSTextField (new CGRect (0, 0, 300, 20));
 var alert = new NSAlert () {
 AlertStyle = NSAlertStyle.Informational,
 InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -243,9 +243,9 @@ Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.Suppression
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
 
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -254,7 +254,7 @@ alert.ShowsSuppressionButton = true;
 alert.AccessoryView = input;
 alert.Layout ();
 alert.BeginSheetForResponse (this, (result) => {
-    Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 

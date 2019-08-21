@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 391820cf2e94c1131f4082798ee9efa05d8489b8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739400"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658026"
 ---
 # <a name="xamarinforms-searchbar"></a>Сеарчбар Xamarin. Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) — это элемент управления вводом пользователя, который используется для запуска поиска. `SearchBar` Элемент управления поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана `SearchBar` показан запрос с результатами, `ListView`отображаемыми в:
+Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) — это элемент управления вводом пользователя, используемый для запуска поиска. `SearchBar` Элемент управления поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана `SearchBar` показан запрос с результатами, `ListView`отображаемыми в:
 
 [ ![Снимок экрана Сеарчбар в iOS и Android](searchbar-images/device-searchbars-cropped.png "Сеарчбар в iOS и Android") ] (searchbar-images/device-searchbars.png#lightbox "Сеарчбар в iOS и Android")
 
-`SearchBar` Определяет следующие свойства:
+`SearchBar` Класс определяет следующие свойства:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)значение типа `Color` , определяющее цвет кнопки отмены.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)значение перечисления, которое определяет, является ли `SearchBar` шрифт полужирным, курсивом или ни тем ни другого. `FontAttributes`
@@ -66,7 +66,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
            FontAttributes="Italic" />
 ```
 
-Эти свойства также можно указать при создании `SearchBar` в коде:
+Эти свойства также можно указать при создании `SearchBar` объекта в коде:
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,7 +80,7 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-На следующем снимке экрана показан `SearchBar`итоговый результат:
+На следующем снимке экрана показан `SearchBar` итоговый элемент управления:
 
 [ ![Снимок экрана настраиваемого Сеарчбар в iOS и Android],(searchbar-images/device-searchbars-styled-cropped.png "настроенном Сеарчбар в iOS и Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Настраиваемые сеарчбар в iOS и Android")
 

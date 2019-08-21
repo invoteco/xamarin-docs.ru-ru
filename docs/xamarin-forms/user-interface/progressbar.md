@@ -7,19 +7,19 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/09/2019
-ms.openlocfilehash: 78c5f38428e20a2e0c6a15d0964f8fd505a8d082
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: a4cfc6c54eb2864707f328106761af029e0734cf
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739416"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658083"
 ---
 # <a name="xamarinforms-progressbar"></a>Компонент ProgressBar для Xamarin. Forms
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
-Xamarin. Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) — это элемент управления, который визуально представляет ход выполнения в виде горизонтальной панели, заполненной в `float` процентах, представленном значением. Класс наследует от [`View`.](xref:Xamarin.Forms.View) `ProgressBar`
+Элемент управления Xamarin. [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) Forms визуально представляет ход выполнения в виде горизонтальной панели, заполненной в процентах, представленном `float` значением. Класс наследует от [`View`.](xref:Xamarin.Forms.View) `ProgressBar`
 
-На следующем снимке экрана `ProgressBar` показана на iOS и Android:
+`ProgressBar` На следующих снимках экрана показано на iOS и Android:
 
 ![Снимок экрана элемента ProgressBar в iOS и Android](progressbar-images/progressbars-default.png "ProgressBar в iOS и Android")
 
@@ -37,7 +37,7 @@ Xamarin. Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) — это эле
 
 ## <a name="create-a-progressbar"></a>Создание элемента ProgressBar
 
-Экземпляр `ProgressBar` можно создать в XAML. Его `Progress` свойство можно задать, чтобы определить процент заполнения внутренней, цветной полосы. `Progress` Если свойство не задано, по умолчанию используется значение 0. В следующем примере показано, как создать экземпляр `ProgressBar` в XAML с помощью необязательного `Progress` набора свойств:
+Экземпляр `ProgressBar` можно создать в XAML. Его `Progress` свойство определяет процент заполнения внутренней цветной полосы. Значение свойства `Progress` по умолчанию — 0. В следующем примере показано, как создать экземпляр `ProgressBar` в XAML с помощью необязательного `Progress` набора свойств:
 
 ```xaml
 <ProgressBar Progress="0.5" />
@@ -54,7 +54,7 @@ ProgressBar progressBar = new ProgressBar { Progress = 0.5f };
 
 ## <a name="progressbar-appearance-properties"></a>Свойства внешнего вида ProgressBar
 
-Свойство может быть задано, чтобы определить цвет внутренней линии, `Progress` если свойство больше нуля. `ProgressColor` В следующем примере показано, как создать экземпляр `ProgressBar` в XAML `ProgressColor` с помощью набора свойств:
+Свойство определяет цвет внутреннего столбца, `Progress` если свойство больше нуля. `ProgressColor` В следующем примере показано, как создать экземпляр `ProgressBar` в XAML `ProgressColor` с помощью набора свойств:
 
 ```xaml
 <ProgressBar OnColor="Orange" />
@@ -66,7 +66,7 @@ ProgressBar progressBar = new ProgressBar { Progress = 0.5f };
 ProgressBar progressBar = new ProgressBar { ProgressColor = Color.Orange };
 ```
 
-На следующем снимке экрана `ProgressBar` показано, `ProgressColor` со свойством `Color.Orange` , установленным в iOS и Android:
+На следующих снимках экрана `ProgressBar` показано, `ProgressColor` для `Color.Orange` чего свойство имеет значение в iOS и Android:
 
 ![Снимок экрана с стилем ProgressBar в iOS и Android](progressbar-images/progressbars-styled.png "Стили ProgressBar в iOS и Android")
 

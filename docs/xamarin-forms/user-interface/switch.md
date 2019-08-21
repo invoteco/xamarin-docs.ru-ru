@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: 58755c54ce2afe80a8bf43adc25a0cf2d90a0bb5
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739456"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658049"
 ---
 # <a name="xamarinforms-switch"></a>Переключатель Xamarin. Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-Xamarin. Forms [`Switch`](xref:Xamarin.Forms.Switch) — это горизонтальная кнопка, которая может управляться пользователем для переключения между и выключенными состояниями, которые представлены `boolean` значением. Класс наследует от [`View`.](xref:Xamarin.Forms.View) `Switch`
+Элемент управления Xamarin. [`Switch`](xref:Xamarin.Forms.Switch) Forms является горизонтальной выключателем, с помощью которого пользователь может переключаться между состояниями включения и выключения, которые представлены `boolean` значением. Класс наследует от [`View`.](xref:Xamarin.Forms.View) `Switch`
 
-На следующем снимке экрана `Switch` показан элемент управления в состояниях переключателя **On** и **Off** в iOS и Android:
+На следующих снимках экрана `Switch` показан элемент управления в состояниях переключения и **отключения** в iOS и Android:
 
 ![Снимок экрана параметров включения и отключения состояний, в iOS и Android](switch-images/switch-states-default.png "Параметры в iOS и Android")
 
@@ -44,7 +44,7 @@ Xamarin. Forms [`Switch`](xref:Xamarin.Forms.Switch) — это горизонт
 Также `Switch` можно создать в коде:
 
 ```csharp
-Switch switch = new Switch { IsToggled = true };
+Switch switchControl = new Switch { IsToggled = true };
 ```
 
 ### <a name="switch-style-properties"></a>Переключить свойства стиля
@@ -58,10 +58,10 @@ Switch switch = new Switch { IsToggled = true };
 Это свойство также может быть задано при `Switch` создании в коде: `OnColor`
 
 ```csharp
-Switch switch = new Switch { OnColor = Color.Orange };
+Switch switchControl = new Switch { OnColor = Color.Orange };
 ```
 
-На следующем снимке экрана `Switch` показано включение и **выключение** состояния переключателя со `OnColor` свойством `Color.Orange` , установленным в iOS и Android:
+На следующих снимках экрана `Switch` показаны **включенные** и **Отключенные** состояния переключателя со `OnColor` свойством `Color.Orange` в iOS и Android:
 
 ![Снимок экрана параметров включения и отключения состояний, в iOS и Android](switch-images/switch-states-oncolor.png "Параметры в iOS и Android")
 
@@ -87,8 +87,8 @@ void OnToggled(object sender, ToggledEventArgs e)
 Обработчик `Toggled` событий можно также назначить в коде:
 
 ```csharp
-Switch switch = new Switch {...};
-switch.Toggled += (sender, e) =>
+Switch switchControl = new Switch {...};
+switchControl.Toggled += (sender, e) =>
 {
     // Perform an action after examining e.Value
 }

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: b42a300d9d76a18322891856486720116eb6a8d4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9bb041206dbafb68c1bb60bbbb3068f0a2001b55
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522025"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658062"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Тулбаритем Xamarin. Forms
 
@@ -20,21 +20,21 @@ ms.locfileid: "69522025"
 
 Класс Xamarin. Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) — это специальный тип кнопки, который можно добавить `Page` в `ToolbarItems` коллекцию объекта. Каждый `ToolbarItem` объект будет отображаться в виде кнопки на панели навигации приложения. `ToolbarItem` Экземпляр может иметь значок и отображаться как первичный или вторичный элемент меню. Класс наследует от [`MenuItem`.](xref:Xamarin.Forms.MenuItem) `ToolbarItem`
 
-На следующем снимке `ToolbarItem` экрана показаны объекты на панели навигации в iOS и Android:
+На следующих снимках `ToolbarItem` экрана показаны объекты на панели навигации в iOS и Android:
 
 !["Демонстрационный снимок экрана тулбаритем на Android и iOS"](toolbaritem-images/toolbaritem-device-screenshot.png "Демонстрационный снимок экрана тулбаритем на устройствах Android и iOS")
 
-`ToolbarItem` Элемент управления определяет следующие свойства:
+`ToolbarItem` Класс определяет следующие свойства:
 
 * [`Order`](xref:Xamarin.Forms.ToolbarItem.Order)значение перечисления, которое определяет, отображается `ToolbarItem` ли экземпляр в основном или дополнительном меню. `ToolbarItemOrder`
 * [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority)значение, определяющее порядок вывода элементов `Page` в `ToolbarItems` коллекции объекта. `integer`
 
 Класс наследует следующие свойства, `MenuItem` обычно используемые из класса: `ToolbarItem`
 
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text)значение типа `string` , определяющее отображаемый текст `ToolbarItem` объекта.
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)значение, определяющее значок `ToolbarItem` вывода объекта. `ImageSource`
 * [`Command`](xref:Xamarin.Forms.MenuItem.Command)— Это `ICommand` , которое позволяет привязать пользовательские действия, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)аргумент, указывающий параметр, который должен быть передан в `SearchCommand`. `object`
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)аргумент, указывающий параметр, который должен быть передан в `Command`. `object`
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)значение, определяющее значок `ToolbarItem` вывода объекта. `ImageSource`
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text)значение типа `string` , определяющее отображаемый текст `ToolbarItem` объекта.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, `ToolbarItem` поэтому экземпляр может быть целевым объектом привязок данных.
 
@@ -119,3 +119,4 @@ void OnItemClicked(object sender, EventArgs e)
 
 * [Демонстрации Тулбаритем](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md)
+* [Меню Xamarin. Forms](~/xamarin-forms/user-interface/menuitem.md)

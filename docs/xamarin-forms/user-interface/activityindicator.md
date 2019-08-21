@@ -7,32 +7,32 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/10/2019
-ms.openlocfilehash: e13a46e1022f4e33ace6f9f19bb5cea5d1ac784b
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: de93927728271e9f0d9d2ef850b70eeeee249c84
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739165"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658112"
 ---
 # <a name="xamarinforms-activityindicator"></a>Активитиндикатор Xamarin. Forms
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
-Xamarin. Forms[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) — это элемент управления, отображающий анимацию, которая показывает, что приложение вовлечено в длительное действие. В отличие [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)от, параметр `ActivityIndicator` не дает указания о ходе выполнения. Объект `ActivityIndicator` наследует от [`View`](xref:Xamarin.Forms.View).
+Элемент управления Xamarin.[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms отображает анимацию, чтобы показать, что приложение вовлечено в длительное действие. В отличие [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)от, параметр `ActivityIndicator` не дает указания о ходе выполнения. Объект `ActivityIndicator` наследует от [`View`](xref:Xamarin.Forms.View).
 
-На следующем снимке экрана `ActivityIndicator` показан элемент управления в iOS и Android:
+На следующих снимках экрана `ActivityIndicator` показан элемент управления iOS и Android:
 
 ![Снимок экрана активитиндикатор в iOS и Android](activityindicator-images/activityindicators-default.png "Снимок экрана активитиндикатор в iOS и Android")
 
 `ActivityIndicator` Элемент управления определяет следующие свойства:
 
-* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning)значение, указывающее, должен ли объект `ActivityIndicator` быть видимым, анимировать или скрываться. `bool` Если значение параметра является `false` `ActivityIndicator` невидимым.
 * [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color)значение, определяющее цвет `ActivityIndicator`дисплея. `Color`
+* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning)значение, указывающее, должен ли объект `ActivityIndicator` быть видимым, анимировать или скрываться. `bool` Если значение параметра является `false` `ActivityIndicator` невидимым.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами. Это означает `ActivityIndicator` , что можно использовать стиль и цель привязок данных.
 
 ## <a name="create-an-activityindicator"></a>Создание Активитиндикатор
 
-Экземпляр `ActivityIndicator` можно создать в XAML. Его `IsRunning` свойство можно задать, чтобы определить видимость элемента управления и его анимацию. Если свойство не задано, по умолчанию используется `false` значение, `ActivityIndicator` а элемент не будет видимым. `IsRunning` В следующем примере показано, как создать экземпляр `ActivityIndicator` в XAML с необязательным `IsRunning` набором свойств:
+Экземпляр `ActivityIndicator` класса можно создать на языке XAML. Его `IsRunning` свойство определяет, является ли элемент управления видимым и анимацией. По умолчанию `false`свойствоимеетзначение `IsRunning` . В следующем примере показано, как создать экземпляр `ActivityIndicator` в XAML с необязательным `IsRunning` набором свойств:
 
 ```xaml
 <ActivityIndicator IsRunning="true" />
@@ -46,7 +46,7 @@ ActivityIndicator activityIndicator = new ActivityIndicator { IsRunning = true }
 
 ## <a name="activityindicator-appearance-properties"></a>Свойства внешнего вида Активитиндикатор
 
-Для определения цвета можно задать `Color`свойство `ActivityIndicator` . В следующем примере показано, как создать экземпляр `ActivityIndicator` в XAML `Color` с набором свойств:
+`Color` Свойство`ActivityIndicator` определяет цвет. В следующем примере показано, как создать экземпляр `ActivityIndicator` в XAML `Color` с набором свойств:
 
 ```xaml
 <ActivityIndicator Color="Orange" />
@@ -58,7 +58,7 @@ ActivityIndicator activityIndicator = new ActivityIndicator { IsRunning = true }
 ActivityIndicator activityIndicator = new ActivityIndicator { Color = Color.Orange };
 ```
 
-На следующем снимке экрана `ActivityIndicator` показано, `Color` со свойством `Color.Orange` , установленным в iOS и Android:
+На следующих снимках экрана `ActivityIndicator` показано, `Color` для `Color.Orange` чего свойство имеет значение в iOS и Android:
 
 ![Снимок экрана с стилем активитиндикатор в iOS и Android](activityindicator-images/activityindicators-styled.png "Снимок экрана с стилем активитиндикатор в iOS и Android")
 

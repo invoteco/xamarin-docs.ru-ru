@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 68560c6cc814f54bb8ba9348bc53334089c36a93
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 396853e2e61904689069b7abd157c73d1da59fed
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984476"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658091"
 ---
 # <a name="xamarinforms-menuitem"></a>Меню Xamarin. Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
-Класс Xamarin. Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) используется для определения пунктов меню для меню, таких как `ListView` контекстные меню элементов и всплывающие меню приложения оболочки.
+Класс Xamarin. Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) определяет пункты меню для меню, такие как `ListView` контекстные меню элементов и всплывающие меню приложения оболочки.
 
-На следующем снимке `MenuItem` экрана показаны объекты `ListView` в контекстном меню в iOS и Android:
+На следующих снимках `MenuItem` экрана показаны объекты `ListView` в контекстном меню в iOS и Android:
 
 [ !["MenuItems в iOS и Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems в iOS и Android") ] (menuitem-images/menuitem-demo-full.png#lightbox "MenuItems в iOS и Androidfull image")
 

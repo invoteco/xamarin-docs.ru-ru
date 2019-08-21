@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4ce217d31811df82f0779a22d0c64464b5295fcc
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528404"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629660"
 ---
 # <a name="watchos-troubleshooting"></a>Устранение неполадок watchOS
 
@@ -31,7 +31,7 @@ ms.locfileid: "69528404"
 
 ## <a name="known-issues"></a>Известные проблемы
 
-### <a name="general"></a>Общие
+### <a name="general"></a>Общее
 
 <a name="deploy" />
 
@@ -92,7 +92,7 @@ with an alpha channel. Icons should not have an alpha channel.
 *Если* использовании построителя интерфейс Xcode, выполните следующие действия для создания новых контроллеров интерфейс для наблюдения за приложения и включите синхронизацию с Xcode, выходов и действия, доступные в C#:
 
 1. Откройте интерфейс Watch приложения **.** Раскадровка в **Xcode Interface Builder**.
-    
+
     ![](troubleshooting-images/add-6.png "Открытие раскадровки в построителе интерфейс Xcode")
 
 2. Перетащите новый `InterfaceController` элемент на раскадровку:
@@ -144,7 +144,7 @@ with an alpha channel. Icons should not have an alpha channel.
     ```csharp
     using Foundation;
     using System.CodeDom.Compiler;
-    
+
     namespace HelloWatchExtension  // remember to update this
     {
         [Register ("MyInterfaceController")] // remember to update this
@@ -156,9 +156,10 @@ with an alpha channel. Icons should not have an alpha channel.
         }
     }
     ```
-    
-    Совет. Можно (необязательно) сделать этот файл дочерним узлом первого файла, перетащив его на другой C# файл в Visual Studio для Mac панель решения. Затем он будет выглядеть следующим образом:
-    
+
+    > [!TIP]
+    > Можно (необязательно) сделать этот файл дочерним узлом первого файла, перетащив его на другой C# файл в Visual Studio для Mac панель решения. Затем он будет выглядеть следующим образом:
+
     ![](troubleshooting-images/add-5.png "Панель решения")
 
 6. Выберите **Сборка > собрать все** , чтобы в ходе синхронизации Xcode был распознан новый класс (через `Register` атрибут), который мы использовали.
@@ -168,7 +169,7 @@ with an alpha channel. Icons should not have an alpha channel.
     ![](troubleshooting-images/add-6.png "Открытие раскадровки в построителе интерфейса")
 
 8. Выберите новый контроллер интерфейса и присвойте ему значение className, указанное выше, например. `MyInterfaceController`.
-Если все работало правильно, оно должно появиться автоматически в раскрывающемся списке **класс:** , и его можно выбрать из этого списка.
+    Если все работало правильно, оно должно появиться автоматически в раскрывающемся списке **класс:** , и его можно выбрать из этого списка.
 
     ![](troubleshooting-images/add-4.png "Пользовательский класс параметров")
 

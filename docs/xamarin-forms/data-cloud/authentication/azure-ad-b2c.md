@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: 765f34af3b3c43531857b705bb4a39ea56e32f61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a13501218b6d3039f189693512d185a9d546d23f
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656138"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629650"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Проверка подлинности пользователей с помощью Azure Active Directory B2C
 
@@ -57,7 +57,7 @@ public static class Constants
 
 ## <a name="register-your-mobile-application-with-azure-active-directory-b2c"></a>Регистрация мобильного приложения с помощью Azure Active Directory B2C
 
-Мобильное приложение должно быть зарегистрировано в клиенте, прежде чем оно сможет подключиться и проверить подлинность пользователей. Процесс регистрации назначает приложению уникальный **идентификатор приложения** и **URL-адрес перенаправления** , который направляет ответы обратно в приложение после проверки подлинности. Дополнительные сведения см. в [разделе Azure Active Directory B2C: Зарегистрируйте приложение](/azure/active-directory-b2c/active-directory-b2c-app-registration/). Необходимо знать **идентификатор приложения** , назначенный приложению, который указан после имени приложения в представлении свойств. На следующем снимке экрана показано, где найти идентификатор приложения:
+Мобильное приложение должно быть зарегистрировано в клиенте, прежде чем оно сможет подключиться и проверить подлинность пользователей. Процесс регистрации назначает приложению уникальный **идентификатор приложения** и **URL-адрес перенаправления** , который направляет ответы обратно в приложение после проверки подлинности. Дополнительные сведения см. в статье [Настройка Зарегистрируйте приложение](/azure/active-directory-b2c/active-directory-b2c-app-registration/). Необходимо знать **идентификатор приложения** , назначенный приложению, который указан после имени приложения в представлении свойств. На следующем снимке экрана показано, где найти идентификатор приложения:
 
 [![Идентификатор приложения в представлении свойств приложения Azure](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
 
@@ -81,7 +81,7 @@ public static class Constants
 
 ## <a name="create-sign-up-and-sign-in-policies-and-forgot-password-policies"></a>Создание политик регистрации и входа и забытые политики паролей
 
-Политика — это опыт, с помощью которого пользователи могут выполнять такие задачи, как создание учетной записи или сброс пароля. Политика также определяет содержимое токенов, получаемых приложением при возвращении пользователя из процесса. Необходимо настроить политики для регистрации учетной записи и входа в систему, а также для сброса пароля. В Azure есть встроенные политики, упрощающие создание общих политик. Дополнительные сведения см. в [разделе Azure Active Directory B2C: Встроенные политики](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+Политика — это опыт, с помощью которого пользователи могут выполнять такие задачи, как создание учетной записи или сброс пароля. Политика также определяет содержимое токенов, получаемых приложением при возвращении пользователя из процесса. Необходимо настроить политики для регистрации учетной записи и входа в систему, а также для сброса пароля. В Azure есть встроенные политики, упрощающие создание общих политик. Дополнительные сведения см. в статье [Настройка Встроенные политики](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
 После завершения установки политики в портал Azure будут существовать две политики в представлении " **потоки пользователей (политики)** ". На следующем снимке экрана показаны две настроенные политики в портал Azure.
 
@@ -247,7 +247,7 @@ public partial class LogoutPage : ContentPage
 
 ### <a name="ios"></a>iOS
 
-В iOS настраиваемая схема URL-адресов, зарегистрированная в Azure Active Directory B2C, должна быть зарегистрирована в **info. plist**. MSAL ждет, чтобы схема URL-адресов соответствовала определенному шаблону, описанному ранее в разделе [Регистрация мобильного приложения с помощью Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). На следующем снимке экрана показана настраиваемая схема URL-адресов в **info. plist**.
+В iOS настраиваемая схема URL-адресов, зарегистрированная в Azure Active Directory B2C, должна быть зарегистрирована в **info. plist**. MSAL ждет, чтобы схема URL-адресов соответствовала определенному шаблону, описанному ранее в разделе [Регистрация мобильного приложения с помощью Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). На следующем снимке экрана показана настраиваемая схема URL-адресов в **info. plist**.
 
 !["Регистрация настраиваемой схемы URL-адресов в iOS"](azure-ad-b2c-images/customurl-ios.png)
 
@@ -277,7 +277,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-В Android пользовательская схема URL-адресов, зарегистрированная в Azure Active Directory B2C, должна быть зарегистрирована в **AndroidManifest. XML**. MSAL ждет, чтобы схема URL-адресов соответствовала определенному шаблону, описанному ранее в разделе [Регистрация мобильного приложения с помощью Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). В следующем примере показана пользовательская схема URL-адресов в **файле AndroidManifest. XML**.
+В Android пользовательская схема URL-адресов, зарегистрированная в Azure Active Directory B2C, должна быть зарегистрирована в **AndroidManifest. XML**. MSAL ждет, чтобы схема URL-адресов соответствовала определенному шаблону, описанному ранее в разделе [Регистрация мобильного приложения с помощью Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). В следующем примере показана пользовательская схема URL-адресов в **файле AndroidManifest. XML**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -289,7 +289,9 @@ namespace TodoAzure.iOS
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />"
+        <!-- example -->
+        <!-- <data android:scheme="msalaaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee" android:host="auth" /> -->
+        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />
       </intent-filter>
     </activity>"
   </application>

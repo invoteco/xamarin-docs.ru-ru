@@ -5,18 +5,18 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/10/2019
-ms.openlocfilehash: 8bdd5c0d40cfdac0dadbc6bab1c538ab1b27946e
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 2dadc9effb2433467609338d4654e784fe8b085e
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386168"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629590"
 ---
 # <a name="platform-support"></a>Поддержка платформ
 
 Xamarin.Essentials поддерживает указанные ниже платформы и операционные системы.
 
-| Platform | Версия |
+| платформа | Version (версия) |
 | --- | --- |
 | Android | 4.4 (API 19) или более поздней версии |
 | iOS |10.0 или выше |
@@ -25,11 +25,10 @@ Xamarin.Essentials поддерживает указанные ниже плат
 | watchOS | 4.0 или более поздней версии |
 | UWP | 10.0.16299.0 или более поздней версии |
 
-**Примечание.**
-
-* Tizen официально поддерживает группа разработчиков Samsung.
-* Охват API в tvOS и watchOS ограничен. Дополнительные сведения см. в руководстве по функциям.
-* Операционные системы Tizen, tvOS и watchOS сейчас находятся на этапе предварительной версии и доступны в Xamarin.Essentials 1.3-pre.
+> [!NOTE]
+> * Tizen официально поддерживает группа разработчиков Samsung.
+> * Охват API в tvOS и watchOS ограничен. Дополнительные сведения см. в руководстве по функциям.
+> * Операционные системы Tizen, tvOS и watchOS сейчас находятся на этапе предварительной версии и доступны в Xamarin.Essentials 1.3-pre.
 
 ## <a name="feature-support"></a>Поддержка компонентов
 
@@ -50,7 +49,7 @@ Xamarin.Essentials всегда пытается обеспечить компо
 | [Буфер обмена](clipboard.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
 | [Преобразователи цвета](color-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Компас](compass.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Подключение](connectivity.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [Соединение](connectivity.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Обнаружение тряски](detect-shake.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Сведения о дисплее устройства](device-display.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
 | [Сведения об устройстве](device-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -63,14 +62,14 @@ Xamarin.Essentials всегда пытается обеспечить компо
 | [Средство запуска](launcher.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [Магнитометр](magnetometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
 | [MainThread](main-thread.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Карты](maps.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
+| [Maps](maps.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
 | [Открыть браузер](open-browser.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [Датчик ориентации](orientation-sensor.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
 | [Телефон](phone-dialer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [Расширения платформы](platform-extensions.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Параметры](preferences.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Защищенное хранилище](secure-storage.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Общий доступ](share.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
+| [Share](share.md?context=xamarin/xamarin-forms) (Предоставить общий доступ) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [SMS](sms.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [Преобразование текста в речь](text-to-speech.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Преобразователи единиц](unit-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |

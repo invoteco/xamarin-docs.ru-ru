@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 7c7a3e311a6c5f19242b51dd14f59bcdc9a75c64
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: 2f580571e7b871e724ca1a760060a238098e4f44
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574719"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526498"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Установка Xamarin.iOS в Windows
 
@@ -38,7 +38,7 @@ _В этой статье описывается настройка компью
   >
   > Если у вас нет доступа к Mac, вы можете использовать [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) или [MacStadium](https://www.macstadium.com/); обе службы предоставляют размещенное в облаке оборудование Mac, которое можно использовать для сборки проектов Xamarin.iOS.
 
-## <a name="setup"></a>Установка
+## <a name="setup"></a>Настройка
 
 Процедура настройки для разработки Xamarin.iOS в Visual Studio 2019 включает следующие этапы.
 
@@ -71,13 +71,13 @@ _В этой статье описывается настройка компью
 
 Для сборки приложений Xamarin.iOS с помощью Visual Studio 2017 в Windows вам потребуются следующие компоненты.
 
--  Компьютер Windows с установленной Visual Studio 2017. Это может быть физический компьютер или виртуальная машина.
+- Компьютер Windows с установленной Visual Studio 2017. Это может быть физический компьютер или виртуальная машина.
     - [Требования к системе Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
     
--  Доступный по сети компьютер Mac, на котором настроены средства сборки Apple и Xamarin.iOS. Visual Studio 2017 обращается к этому компьютеру по сети, чтобы использовать средства сборки Apple, которые необходимы для компиляции приложений в машинном коде iOS. 
+- Доступный по сети компьютер Mac, на котором настроены средства сборки Apple и Xamarin.iOS. Visual Studio 2017 обращается к этому компьютеру по сети, чтобы использовать средства сборки Apple, которые необходимы для компиляции приложений в машинном коде iOS. 
     - [Требования к системе Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
 
-## <a name="setup"></a>Установка
+## <a name="setup"></a>Настройка
 
 Процедура настройки для разработки Xamarin.iOS в Visual Studio 2017 включает следующие этапы.
 

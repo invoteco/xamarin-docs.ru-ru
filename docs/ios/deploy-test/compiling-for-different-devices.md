@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: aac558f52423132bef53f1754307e743c69f6f22
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b3bc6874a8584b60b15d1d373ad97fde565dfc4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121213"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527127"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Компиляция для разных устройств в Xamarin.iOS
 
@@ -128,8 +128,8 @@ Thumb — это более компактный набор инструкций
 
 Для этого следует выполнить следующие действия:
 
--  Откройте **Параметры проекта** и перейдите к панели **Сборка iOS**.
--  Добавьте `'-gcc_flags "-weak_framework iAd"'` в раздел **Дополнительные параметры** для каждой конфигурации, к которой должна действовать слабая привязка:
+- Откройте **Параметры проекта** и перейдите к панели **Сборка iOS**.
+- Добавьте `'-gcc_flags "-weak_framework iAd"'` в раздел **Дополнительные параметры** для каждой конфигурации, к которой должна действовать слабая привязка:
 
 
 [![](compiling-for-different-devices-images/image3.png "Дополнительные параметры")](compiling-for-different-devices-images/image3.png#lightbox)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: fe2cc5fb7c51425c8030d31015236473a5264efb
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: aa72daae1727e0d100592873a7895a7d8942b4f2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509018"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525499"
 ---
 # <a name="gdb"></a>GDB
 
@@ -24,9 +24,9 @@ ms.locfileid: "68509018"
 
 `gdb` можно использовать тремя способами.
 
-1.  [Отладочная сборка с быстрым развертыванием](#Debug_Builds_with_Fast_Deployment).
-1.  [Отладочная сборка без быстрого развертывания](#Debug_Builds_without_Fast_Deployment).
-1.  [Сборки выпуска](#Release_Builds).
+1. [Отладочная сборка с быстрым развертыванием](#Debug_Builds_with_Fast_Deployment).
+1. [Отладочная сборка без быстрого развертывания](#Debug_Builds_without_Fast_Deployment).
+1. [Сборки выпуска](#Release_Builds).
 
 
 Если у вас возникли проблемы, переходите к разделу [Устранение неполадок](#Troubleshooting).
@@ -83,8 +83,8 @@ GNU gdb (GDB) 7.3.1-gg2
 
 У вас есть два варианта обойти эту проблему.
 
--   Задайте системное свойство `debug.mono.log`, чтобы создался каталог `.__override__`.
--   Включите `gdbserver` в `.apk`.
+- Задайте системное свойство `debug.mono.log`, чтобы создался каталог `.__override__`.
+- Включите `gdbserver` в `.apk`.
 
 ### <a name="setting-the-debugmonolog-system-property"></a>Настройка системного свойства `debug.mono.log`
 
@@ -141,9 +141,9 @@ GNU gdb (GDB) 7.3.1-gg2
 
 Для поддержки `gdb` нужно выполнить три условия.
 
-1.  Предоставить разрешение `INTERNET`.
-2.  Включить отладку приложения.
-3.  Предоставить доступный `gdbserver`.
+1. Предоставить разрешение `INTERNET`.
+2. Включить отладку приложения.
+3. Предоставить доступный `gdbserver`.
 
 Разрешение `INTERNET` по умолчанию включается в приложениях для отладки. Если в вашем приложении оно отсутствует, добавьте его, отредактировав файл **Properties/AndroidManifest.xml** или изменив [свойства проекта](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
@@ -161,7 +161,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
-### <a name="monopmip-doesnt-work"></a>`mono_pmip` не работает.
+### <a name="mono_pmip-doesnt-work"></a>`mono_pmip` не работает.
 
 Функция `mono_pmip` (она полезна для [получения кадров управляемого стека](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)), экспортируется из `libmonosgen-2.0.so`, который в настоящее время не запрашивается целевым устройством `_Gdb`. (Эта ошибка будет исправлена в будущих выпусках.)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: aa1093336a79689380e920783dd772c5e68c76b9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6fd952fc929fc11d19d8ceb0153aa8d7702a21a7
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650445"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889231"
 ---
 # <a name="customizing-a-viewcell"></a>Настройка ViewCell
 
@@ -68,6 +68,7 @@ public class NativeCell : ViewCell
   }
 }
 ```
+
 Класс `NativeCell` создается в проекте библиотеки .NET Standard и определяет API для пользовательской ячейки. Пользовательская ячейка предоставляет свойства `Name`, `Category` и `ImageFilename`, которые могут отображаться посредством привязки данных. Дополнительные сведения о привязке данных см. в статье [Основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 <a name="Consuming_the_Custom_Cell" />

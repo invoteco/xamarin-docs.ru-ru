@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865893"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526631"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Ручная подготовка для Xamarin.iOS
 
@@ -126,7 +126,7 @@ _Установив Xamarin.iOS для разработки приложений
 
     [![](manual-provisioning-images/add06.png "Укажите имя нового устройства и его идентификатор")](manual-provisioning-images/add06.png#lightbox)
 
-11. Нажмите кнопку **Continue** (Продолжить).
+11. Нажмите кнопку **Продолжить**.
 12. Наконец, проверьте сведения и нажмите кнопку **Register** (Зарегистрировать):
 
     [![](manual-provisioning-images/add07.png "Проверка сведений")](manual-provisioning-images/add07.png#lightbox)
@@ -143,7 +143,7 @@ _Установив Xamarin.iOS для разработки приложений
 
 Перед созданием профиля подготовки необходимо создать *идентификатор приложения*. Идентификатор приложения — это строка в обратном стиле DNS, однозначно определяющая приложение. Ниже показано, как создать **шаблон идентификатора приложения**, который можно использовать для создания и установки большинства приложений. **Явный идентификатор приложения** позволяет устанавливать только одно приложение (с соответствующим идентификатором пакета) и, как правило, применяется для определенных функций iOS, таких как Apple Pay и HealthKit. Сведения о создании явных идентификаторов приложений см. в руководстве [Работа с возможностями](~/ios/deploy-test/provisioning/capabilities/index.md).
 
-### <a name="app-id"></a>Идентификатор приложения
+### <a name="app-id"></a>Идентификатор приложения API.
 
 1. На [портале разработчика](https://developer.apple.com/account/overview.action) перейдите в раздел *Certificates, Identifiers and Profiles* (Сертификаты, идентификаторы и профили) в Apple Developer Center. В разделе **Identifiers** (Идентификаторы) выберите элемент **App IDs** (ИД приложений).
 2. Нажмите кнопку **+** и укажите **имя**:
@@ -193,14 +193,14 @@ _Установив Xamarin.iOS для разработки приложений
 
 Сертификаты и профили подготовки, созданные на портале разработчика Apple, могут не отображаться в Xcode автоматически. Поэтому их может потребоваться скачать, чтобы они стали доступны в Visual Studio для Mac и Visual Studio. Чтобы обновить и скачать сертификаты, созданные на портале разработчика Apple, выполните указанные ниже действия:
 
-1.   Выйдите из Visual Studio для Mac или Visual Studio.
-2.   Запустите Xcode.
-3.   Выберите **Xcode Menu > Preferences...** (Меню Xcode > Предпочтения...).
-4.   Перейдите на вкладку **Accounts** (Учетные записи).
-5.   Выберите команду и нажмите кнопку **Download Manual Profiles** (Скачать профили, созданные вручную): [![](manual-provisioning-images/selectteam1.png "Скачивание профилей, созданных вручную")](manual-provisioning-images/selectteam1.png#lightbox)
+1. Выйдите из Visual Studio для Mac или Visual Studio.
+2. Запустите Xcode.
+3. Выберите **Xcode Menu > Preferences...** (Меню Xcode > Предпочтения...).
+4. Перейдите на вкладку **Accounts** (Учетные записи).
+5. Выберите команду и нажмите кнопку **Download Manual Profiles** (Скачать профили, созданные вручную):  [![](manual-provisioning-images/selectteam1.png "Скачивание профилей, созданных вручную")](manual-provisioning-images/selectteam1.png#lightbox)
 
-6.   Выйдите из Xcode.
-7.  Запустите Visual Studio для Mac или Visual Studio.
+6. Выйдите из Xcode.
+7. Запустите Visual Studio для Mac или Visual Studio.
 
 Новые сертификаты или профили подготовки станут доступны для использования в Visual Studio для Mac или Visual Studio.
 
@@ -228,7 +228,7 @@ Apple предоставляет ряд специальных служб при
 
 ## <a name="deploying-to-a-device"></a>Развертывание на устройстве
 
-На этом этапе подготовка должна быть завершена, а приложение готово к развертыванию на устройстве. Выполните указанные ниже действия:
+На этом этапе подготовка должна быть завершена, а приложение готово к развертыванию на устройстве. Для этого сделайте следующее.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

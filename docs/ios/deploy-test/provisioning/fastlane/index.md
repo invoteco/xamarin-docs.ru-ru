@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 23bf62688da4e2e82cb3e0fadc9a3b7c13ab1a7d
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: becf9696a13dbd1ae96693729618d70b043d1c3a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865514"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527418"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Общие сведения о Fastlane для iOS
 
@@ -78,7 +78,7 @@ Fastlane — это проект с открытым кодом, призван
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-8.  Запустите `which fastlane` еще раз и проверьте, что путь выглядит так: `/Users/[user]/.fastlane/bin`
+8. Запустите `which fastlane` еще раз и проверьте, что путь выглядит так: `/Users/[user]/.fastlane/bin`
 
 
 ## <a name="updating-fastlane"></a>Обновление Fastlane
@@ -93,7 +93,7 @@ Fastlane — это активно развивающийся проект с �
 [![](images/fastlane-image0a.png "Запуск пакета установки")](images/fastlane-image0a.png#lightbox)
 
 
-## <a name="contents"></a>Описание
+## <a name="contents"></a>Оглавление
 
 Эта серия руководств рассказывает о некоторых инструментах, используемых в Fastlane для подписывания кода приложений iOS при подготовке к их разработке или распространению. На данный момент охвачены следующие средства:
 

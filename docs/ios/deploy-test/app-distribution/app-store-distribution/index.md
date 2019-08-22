@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e6f7ec4fe018181b6f470de4201d5e5a3f90d4da
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831509"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527642"
 ---
 # <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -64,11 +64,11 @@ ms.locfileid: "67831509"
 
 Можно также запросить сертификат в Xcode через диалоговое окно "Preferences" (Параметры). Выполните указанные ниже действия:
 
-1.   Выберите свою команду и нажмите **Manage Certificates** (Управление сертификатами): [![](images/selectteam.png "Выбор команды и просмотр сведений")](images/selectteam.png#lightbox)
+1. Выберите свою команду и нажмите **Manage Certificates** (Управление сертификатами):  [![](images/selectteam.png "Выбор команды и просмотр сведений")](images/selectteam.png#lightbox)
 
-2.   Затем нажмите кнопку **Create** (Создать) рядом с полем **iOS Distribution Certificate** (Сертификат распространения iOS): [![](images/selectcert.png "Создание сертификата распространения iOS")](images/selectcert.png#lightbox)
+2. Затем нажмите кнопку **Create** (Создать) рядом с полем **iOS Distribution Certificate** (Сертификат распространения iOS):  [![](images/selectcert.png "Создание сертификата распространения iOS")](images/selectcert.png#lightbox)
 
-3.   В зависимости от привилегий вашей команды будет создано удостоверение подписывания, как показано ниже, или вам придется ждать, пока администратор или агент команды утвердит его: [![](images/generated.png "Создание удостоверения подписывания и отображение диалогового окна")](images/generated.png#lightbox)
+3. В зависимости от привилегий вашей команды будет создано удостоверение подписывания, как показано ниже, или вам придется ждать, пока администратор или агент команды утвердит его:  [![](images/generated.png "Создание удостоверения подписывания и отображение диалогового окна")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -156,7 +156,7 @@ ms.locfileid: "67831509"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
- В Visual Studio выполните следующие действия:
+ В Visual Studio выполните следующее:
 
 1. Щелкните проект правой кнопкой мыши в **обозревателе решений** и выберите пункт **Свойства**, чтобы открыть его для изменения.
 2. Выберите **Подписывание пакета iOS** и **Выпуск | iPhone** в раскрывающемся списке **Конфигурация**:

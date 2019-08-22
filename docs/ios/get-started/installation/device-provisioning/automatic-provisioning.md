@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865324"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890099"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Автоматическая подготовка для Xamarin.iOS
 
@@ -28,7 +28,7 @@ _Установив Xamarin.iOS для разработки приложений
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-- Visual Studio 2019
+- Visual Studio 2019
 - ИЛИ Visual Studio 2017 версии 15.7 (или более поздней)
 
 Вам потребуется подключение к узлу сборки Mac со следующими компонентами:
@@ -43,12 +43,15 @@ _Установив Xamarin.iOS для разработки приложений
 
 > [!IMPORTANT]
 > Перед началом работы обязательно посетите сайт [iTunes Connect](https://itunesconnect.apple.com/) или [appleid.apple.com](https://appleid.apple.com), чтобы проверить, принята ли последняя версия политик учетных записей Apple. Если поступит соответствующий запрос, примите новые условия соглашений об использовании учетных записей от Apple. Если не приняты условия соглашения о конфиденциальности, вышедшего в мае 2018 г., при попытке подготовки устройства поступит следующее оповещение:
+>
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
 > }
 > ```
+>
 > или
+>
 > ```
 > Authentication Service Is Unavailable
 > ```

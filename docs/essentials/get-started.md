@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
-ms.openlocfilehash: fd4c51714cea370f1d62457931a5820d5f1a5b97
-ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
+ms.openlocfilehash: d120b9420061ac0c3c4e2ccda3021320d29a547d
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67850942"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629603"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Начало работы с Xamarin.Essentials
 
@@ -30,6 +30,7 @@ Xamarin.Essentials предоставляется в виде пакета NuGet
 
 3. Добавьте пакет NuGet для [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) в каждый из проектов:
 
+    <!--markdownlint-disable MD023 -->
     # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
     На панели обозревателя решений щелкните правой кнопкой мыши имя решения и выберите **Управление пакетами NuGet**. Найдите **Xamarin.Essentials** и установите пакет во **ВСЕ** проекты, в том числе для Android, iOS, универсальной платформы Windows и .NET Standard.

@@ -55,6 +55,12 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: scroll-view.md
             title: ScrollView
+          - href: contentview.md
+            html: 'Узнайте, как использовать ContentView для создания пользовательского элемента управления.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: contentview.md
+            title: Frame
           - href: frame.md
             html: 'Узнайте, как создать оболочку для представления, используя фрейм, который можно настроить с помощью цвета, тени и других параметров.'
             image:

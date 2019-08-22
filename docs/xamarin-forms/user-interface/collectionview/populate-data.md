@@ -6,13 +6,13 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: ce745109ea2852b597de3a8a5922a171ad83e289
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 08/13/2019
+ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738920"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888547"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Данные CollectionView в Xamarin. Forms
 
@@ -26,6 +26,11 @@ ms.locfileid: "68738920"
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate)Тип [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)— указывает шаблон, применяемый к каждому элементу в коллекции отображаемых элементов.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что свойства могут быть целевыми объектами привязок данных.
+
+> [!NOTE]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)Определяет свойство, представляющее поведение `CollectionView` прокрутки при добавлении новых элементов к нему. `ItemsUpdatingScrollMode` Дополнительные сведения об этом свойстве см. в разделе [управление позицией прокрутки при добавлении новых элементов](scrolling.md#control-scroll-position-when-new-items-are-added).
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)также может загружать данные постепенно по мере прокрутки пользователем. Дополнительные сведения см. в статье [добавочная загрузка данных](#load-data-incrementally).
 
 ## <a name="populate-a-collectionview-with-data"></a>Заполнение CollectionView данными
 
@@ -90,10 +95,10 @@ CollectionView collectionView = new CollectionView();
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-В этом примере [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) данные свойства привязываются `Monkeys` к свойству подключенной модели представления.
+В этом примере [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) данные свойства привязываются `Monkeys` к свойству подключенного ViewModel.
 
 > [!NOTE]
-> Скомпилированные привязки можно включить для повышения производительности привязки данных в приложениях Xamarin. Forms. Дополнительные сведения см. в разделе [скомпилированные привязки](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Скомпилированные привязки можно включить для повышения производительности привязки данных в приложениях Xamarin. Forms. Дополнительные сведения см. в статье [Скомпилированные привязки](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -244,6 +249,56 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 > [!IMPORTANT]
 > При использовании [`CollectionView`](xref:Xamarin.Forms.CollectionView)никогда не устанавливайте для `ViewCell`корневого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) объектов значение. Это приведет к возникновению исключения, так как `CollectionView` не содержит концепцию ячеек.
+
+## <a name="load-data-incrementally"></a>Добавочная загрузка данных
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)поддерживает добавочную загрузку данных по мере прокрутки элементов пользователями. Это позволяет выполнять такие сценарии, как асинхронная загрузка страницы данных из веб-службы при прокрутке пользователем. Кроме того, точка, в которой загружаются дополнительные данные, настраивается таким образом, что пользователи не видят пустое пространство или останавливаются при прокрутке.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)определяет следующие свойства для управления добавочной загрузкой данных:
+
+- `RemainingItemsThreshold`, тип `int`, пороговое значение элементов, `RemainingItemsThresholdReached` которые еще не отображаются в списке, в котором будет вызвано событие.
+- `RemainingItemsThresholdReachedCommand`Тип `ICommand`, который выполняется `RemainingItemsThreshold` при достижении.
+- `RemainingItemsThresholdReachedCommandParameter` с типом `object`, который передается как параметр в `RemainingItemsThresholdReachedCommand`.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)также определяет `RemainingItemsThresholdReached` событие, которое возникает, `CollectionView` когда прокрутка достаточно велика, `RemainingItemsThreshold` чтобы элементы не отображались. Это событие может быть обработано для загрузки дополнительных элементов. Кроме того, при `RemainingItemsThresholdReached` срабатывании `RemainingItemsThresholdReachedCommand` события выполняется, что позволяет выполнять добавочную загрузку данных в ViewModel.
+
+Значение `RemainingItemsThreshold` свойства по умолчанию равно-1, что означает `RemainingItemsThresholdReached` , что событие никогда не будет запущено. Если значение свойства равно 0, `RemainingItemsThresholdReached` событие будет инициировано при отображении последнего элемента [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) в. Для значений, превышающих 0, `RemainingItemsThresholdReached` событие будет запущено, `ItemsSource` когда содержит количество элементов, которые еще не прокручены.
+
+> [!NOTE]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)`RemainingItemsThreshold` проверяет свойство таким образом, что его значение всегда больше или равно-1.
+
+В следующем примере XAML показано, [`CollectionView`](xref:Xamarin.Forms.CollectionView) как выполнить добавочную загрузку данных:
+
+```xaml
+<CollectionView ItemsSource="{Binding Animals}"
+                RemainingItemsThreshold="5"
+                RemainingItemsThresholdReached="OnCollectionViewRemainingItemsThresholdReached">
+    ...
+</CollectionView>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    RemainingItemsThreshold = 5
+};
+collectionView.RemainingItemsThresholdReached += OnCollectionViewRemainingItemsThresholdReached;
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
+```
+
+В этом примере `RemainingItemsThresholdReached` кода событие срабатывает при наличии 5 элементов, которые еще не прокручены, и в ответ выполняет `OnCollectionViewRemainingItemsThresholdReached` обработчик событий:
+
+```csharp
+void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
+{
+    // Retrieve more data here and add it to the CollectionView's ItemsSource collection.
+}
+```
+
+> [!NOTE]
+> Данные также могут быть загружены постепенно путем привязки `RemainingItemsThresholdReachedCommand` `ICommand` к реализации в ViewModel.
 
 ## <a name="related-links"></a>Связанные ссылки
 

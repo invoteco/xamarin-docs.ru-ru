@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 16cf976b252e409ae4302ab51eb594370a6689d1
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e6aac37561d107cb7e3f646c15621b86385dd0ee
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620941"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887512"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Миграция привязки в Unified API
 
@@ -89,6 +89,7 @@ int Add(int operandUn, int operandDeux);
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 Если мы сопоставлены с библиотекой стороннего производителя более новой версии, чем `.h` мы изначально связали с, нам нужно просмотреть файлы заголовков для библиотеки и узнать, завершаются ли выходные, явные `int`вызовы, `int32_t`, `unsigned int` `uint32_t` или были обновлены до `NSInteger`, `NSUInteger` или. `CGFloat` `float` Если да, то те же изменения `nint` `nuint` типов и должны `nfloat` быть внесены и в их сопоставления.
 
 Дополнительные сведения об этих изменениях типа данных см. в документе [native Types](~/cross-platform/macios/nativetypes.md) .

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: d26f8f68b2cf4eca2d28a365c921b533e657c64b
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: 06283987e1d70659653729b4f3d5a00e1877aa5f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629614"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887382"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Советы по устранению неполадок в Xamarin. iOS 
 
@@ -98,6 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
+
 ## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System. MissingMethodException: Не найден конструктор для foo. Bar:: ctor (System. IntPtr)
 
 Эта ошибка возникает во время выполнения, когда код пытается создать экземпляр класса, на который вы ссылались из файла Interface Builder. Это означает, что вы забыли добавить конструктор, принимающий один IntPtr в качестве параметра.
@@ -109,6 +110,7 @@ public partial class MyImageView : UIView {
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
+
 ## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>Тип {foo} не содержит определения для `GetNativeField` и не удалось найти метод `GetNativeField` расширения типа {foo}
 
 Если эта ошибка возникает в файлах, созданных конструктором (*. xib.designer.cs), это означает одно из двух действий:
@@ -388,6 +390,7 @@ Visual Studio для Mac параметры сборки проекта iPhone �
   at MonoTouch.ObjCRuntime.Runtime.RegisterAssembly (System.Reflection.Assembly)
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
+
 ... возможно, у вас есть одна (или несколько) устаревшей сборки в каталоге приложения имитатора. Такие сборки могут существовать, так как имитатор Apple iOS добавляет и обновляет файлы, но никогда не удаляет их. В этом случае проще всего выбрать пункт "Сброс и содержимое и настройки". в меню симулятора.   
 
 > [!WARNING]

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
-ms.openlocfilehash: d170e37b8bf4ce880f9d8f48d30defb42ee6bba2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 28cb1573262b63cc2b0ccad9f468fe36c682718d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648011"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888851"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Использование веб-службы Windows Communication Foundation (WCF)
 
@@ -232,6 +232,7 @@ public async Task DeleteTodoItemAsync (string id)
 По умолчанию IIS Express будет отвечать только на запросы к `localhost`. Удаленные устройства (например, устройства Android, iPhone или даже симулятор) не будут иметь доступа к локальной службе WCF. Вам нужно будет знать IP-адрес рабочей станции Windows 10 в локальной сети. В этом примере предположим, что у рабочей станции есть IP-адрес `192.168.1.143`. Ниже описаны действия по настройке Windows 10 и IIS Express для приема удаленных подключений и подключения к службе из физического или виртуального устройства.
 
 1. **Добавьте исключение в брандмауэр Windows**. Необходимо открыть порт через брандмауэр Windows, который приложения в подсети могут использовать для взаимодействия со службой WCF. Создайте правило входящего трафика, открыв порт 49393 в брандмауэре. В командной строке администратора выполните следующую команду:
+
     ```
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```

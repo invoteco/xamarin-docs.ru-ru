@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2019
-ms.openlocfilehash: 5fb92882f443007e5b3dd693f54e582757db1905
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 08/12/2019
+ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739026"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888658"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Макет CollectionView Xamarin. Forms
 
@@ -105,16 +105,12 @@ ms.locfileid: "68739026"
 </CollectionView>
 ```
 
-Кроме того, это [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) можно сделать, задав для свойства объект [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) класса, указав `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) член перечисления в качестве аргумента:
+Кроме того, это можно сделать [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) , задав для свойства объект [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) класса, указав `Orientation` в `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) качестве значения свойства элемент перечисления:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout>
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <ListItemsLayout Orientation="Vertical" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
@@ -173,16 +169,12 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Кроме того, это [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) можно сделать, задав [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) для свойства объект, указав `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) член перечисления в качестве аргумента:
+Кроме того, это можно сделать [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) , задав для свойства объект [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) класса, указав `Orientation` в `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) качестве значения свойства элемент перечисления:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout>
-            <x:Arguments>
-                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <ListItemsLayout Orientation="Horizontal" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
@@ -313,6 +305,147 @@ CollectionView collectionView = new CollectionView
 По умолчанию элементы по [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) горизонтали будут отображаться в одной строке. Однако в `GridItemsLayout.Span` этом примере свойству присваивается значение 4. В результате получается сетка из четырех строк, которая увеличивается горизонтально по мере добавления новых элементов:
 
 [ ![Снимок экрана с горизонтальным макетом сетки CollectionView на](layout-images/horizontal-grid.png "горизонтальном макете сетки") в iOS и Android CollectionView] (layout-images/horizontal-grid-large.png#lightbox "Горизонтальный макет сетки CollectionView")
+
+## <a name="headers-and-footers"></a>Верхние и нижние колонтитулы
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)может представлять верхний и нижний колонтитулы, которые прокручивается с элементами списка. Верхний и нижний колонтитулы могут быть строками, представлениями [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) или объектами.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)определяет следующие свойства для указания верхнего и нижнего колонтитулов:
+
+- `Header`, типа `object`, указывает строку, привязку или представление, которое будет отображаться в начале списка.
+- `HeaderTemplate`Тип [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)указывает, `DataTemplate` используемый для форматирования `Header`.
+- `Footer`, типа `object`, указывает строку, привязку или представление, которое будет отображаться в конце списка.
+- `FooterTemplate`Тип [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)указывает, `DataTemplate` используемый для форматирования `Footer`.
+
+Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что свойства могут быть целевыми объектами привязок данных.
+
+> [!IMPORTANT]
+> В настоящее время верхние и нижние колонтитулы поддерживаются только в Android.
+
+При добавлении заголовка к макету, который увеличивается горизонтально, слева направо заголовок отображается слева от списка. Аналогично, при добавлении нижнего колонтитула к макету, который увеличивается горизонтально, слева направо нижний колонтитул отображается справа от списка.
+
+### <a name="display-strings-in-the-header-and-footer"></a>Отображение строк в верхнем и нижнем колонтитулах
+
+Для `Header` `Footer` свойств и можно задать значения, как показано в следующем примере: `string`
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                Header="Monkeys"
+                Footer="2019">
+    ...
+</CollectionView>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    Header = "Monkeys",
+    Footer = "2019"
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+### <a name="display-views-in-the-header-and-footer"></a>Отображение представлений в верхнем и нижнем колонтитулах
+
+Для свойств `Footer` и можно задать представление. `Header` Это может быть одно представление или представление, содержащее несколько дочерних представлений. `Header` В следующем примере показаны `Footer` [`Label`](xref:Xamarin.Forms.Label) свойства и, для [каждогоизкоторыхзадаетсяобъект,содержащийобъект:`StackLayout`](xref:Xamarin.Forms.StackLayout)
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.Header>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Margin="10,0,0,0"
+                   Text="Monkeys"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </CollectionView.Header>
+    <CollectionView.Footer>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Margin="10,0,0,0"
+                   Text="Friends of Xamarin Monkey"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </CollectionView.Footer>
+    ...
+</CollectionView>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    Header = new StackLayout
+    {
+        Children =
+        {
+            new Label { Text = "Monkeys", ... }
+        }
+    },
+    Footer = new StackLayout
+    {
+        Children =
+        {
+            new Label { Text = "Friends of Xamarin Monkey", ... }
+        }
+    }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+### <a name="display-a-templated-header-and-footer"></a>Отображение шаблона верхнего и нижнего колонтитулов
+
+Свойства `HeaderTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) и `FooterTemplate` можно задать для объектов, которые используются для форматирования верхнего и нижнего колонтитулов. В этом сценарии `Header` свойства и `Footer` должны быть привязаны к текущему источнику для применения шаблонов, как показано в следующем примере:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                Header="{Binding .}"
+                Footer="{Binding .}">
+    <CollectionView.HeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="10,0,0,0"
+                       Text="Monkeys"
+                       FontSize="Small"
+                       FontAttributes="Bold" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.HeaderTemplate>
+    <CollectionView.FooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="10,0,0,0"
+                       Text="Friends of Xamarin Monkey"
+                       FontSize="Small"
+                       FontAttributes="Bold" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.FooterTemplate>
+    ...
+</CollectionView>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    HeaderTemplate = new DataTemplate(() =>
+    {
+        return new StackLayout { };
+    }),
+    FooterTemplate = new DataTemplate(() =>
+    {
+        return new StackLayout { };
+    })
+};
+collectionView.SetBinding(ItemsView.HeaderProperty, ".");
+collectionView.SetBinding(ItemsView.FooterProperty, ".");
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
 
 ## <a name="item-spacing"></a>Промежуток между элементами
 

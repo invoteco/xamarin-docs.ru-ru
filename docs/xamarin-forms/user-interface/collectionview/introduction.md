@@ -6,13 +6,13 @@ ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 25e2d9bad11614cf594980480db14ddc18125a96
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 07/24/2019
+ms.openlocfilehash: 5832cb28162602a41d31026bc4a0ed54ac6bfb34
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738908"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888611"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Введение в Xamarin. Forms CollectionView
 
@@ -20,7 +20,7 @@ ms.locfileid: "68738908"
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)представляет собой представление для представления списков данных с использованием различных спецификаций макета. Она нацелена на предоставление более гибкой и производительной альтернативы [`ListView`](xref:Xamarin.Forms.ListView). Например, на следующих снимках экрана показан `CollectionView` объект, использующий вертикальную сетку двух столбцов и допускающий множественный выбор:
+Представление [`CollectionView`](xref:Xamarin.Forms.CollectionView) служит для вывода списков данных с различными спецификациями макета. Она нацелена на предоставление более гибкой и производительной альтернативы [`ListView`](xref:Xamarin.Forms.ListView). Например, на следующих снимках экрана показан `CollectionView` объект, использующий вертикальную сетку двух столбцов и допускающий множественный выбор:
 
 [ ![Снимок экрана: вертикальный макет сетки CollectionView, в iOS и Android](introduction-images/verticalgrid-multipleselection.png "CollectionView вертикальная сетка с множественным выделением") ] (introduction-images/verticalgrid-multipleselection-large.png#lightbox "Вертикальный макет сетки CollectionView с множественным выделением")
 
@@ -57,8 +57,8 @@ Forms.SetFlags("CollectionView_Experimental");
 | Выбранное | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)поддерживает выбор одного и нескольких элементов. Дополнительные сведения см. в разделе [Xamarin. Forms CollectionView Selection](selection.md). |
 | Высота строки | `HasUnevenRows`, `RowHeight` | В высота строки каждого элемента определяется `ItemSizingStrategy` свойством. `CollectionView` Дополнительные сведения см. в разделе [изменение размера элемента](layout.md#item-sizing).|
 | Кэширование | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)автоматически использует виртуализацию, предоставляемую базовыми элементами управления. |
-| Верхние и нижние колонтитулы | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | Верхние и нижние колонтитулы в настоящее время `CollectionView`не поддерживаются в, но будут добавлены в следующем выпуске.|
-| Группирование | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | Группирование в настоящее время не поддерживается `CollectionView`в, но будет добавлено в будущем выпуске. |
+| Верхние и нижние колонтитулы | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)может представлять верхний и нижний колонтитулы для прокрутки элементов списка `Header`с помощью свойств `HeaderTemplate`, `Footer`, и `FooterTemplate` . Дополнительные сведения см. в разделе [верхние и нижние колонтитулы](layout.md#headers-and-footers). |
+| Группирование | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)Отображает правильно сгруппированные данные, присвоив `IsGrouped` `true`свойству значение. Заголовки групп и нижние колонтитулы групп можно настроить, задав `GroupHeaderTemplate` для `GroupFooterTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) свойств и значение Objects. Дополнительные сведения см. в разделе [Xamarin. Forms CollectionView GROUPING](grouping.md). |
 | Извлечь для обновления | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Извлечение для обновления в настоящее время не поддерживается в `CollectionView`, но будет добавлено в будущем выпуске. |
 | Контекстные действия | `ContextActions` | Контекстные действия в настоящее время не поддерживаются в `CollectionView`, но будут добавлены в будущем выпуске. |
 | Прокрутка | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)Определяет `ScrollTo` методы, которые просматривают элементы в представлении. Дополнительные сведения см. в разделе [прокрутка](scrolling.md). |

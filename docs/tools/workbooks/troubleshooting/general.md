@@ -1,69 +1,70 @@
 ---
-title: Известные проблемы и обходные пути
-description: В этом документе описаны известные проблемы и решения для Xamarin Workbooks. В нем описывается CultureInfo, JSON проблем и многое другое.
+title: Известные проблемы & решения
+description: В этом документе описаны известные проблемы и способы их решения для Xamarin Workbooks. В нем обсуждаются проблемы CultureInfo, ошибки JSON и многое другое.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 221ed97db17da62f513448b6c85d4df205a7cbaf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61268889"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889403"
 ---
-# <a name="known-issues--workarounds"></a>Известные проблемы и обходные пути
+# <a name="known-issues--workarounds"></a>Известные проблемы & решения
 
 ## <a name="persistence-of-cultureinfo-across-cells"></a>Сохраняемость CultureInfo в ячейках
 
-Установка `System.Threading.CurrentThread.CurrentCulture` или `System.Globalization.CultureInfo.CurrentCulture` не сохраняются между ячейках книги о целевых показателях книг на основе Mono (Mac, iOS и Android) из-за [ошибку в Mono `AppContext.SetSwitch` ] [ appcontext-bug] реализации .
+Параметр `System.Threading.CurrentThread.CurrentCulture` или`System.Globalization.CultureInfo.CurrentCulture` не сохраняется в ячейках книг на целевых объектах книг на основе Mono (Mac, iOS и Android) из-за [ `AppContext.SetSwitch` ошибки в реализации Mono][appcontext-bug] .
 
 ### <a name="workarounds"></a>Методы обхода проблемы
 
-* Задать приложение домена local `DefaultThreadCurrentCulture`:
+* Задайте локальное `DefaultThreadCurrentCulture`доменное приложение:
+
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* Или обновление до книг 1.2.1 или более поздней версии, что перепишет назначения `System.Threading.CurrentThread.CurrentCulture` и `System.Globalization.CultureInfo.CurrentCulture` для обеспечения требуемого поведения (временное решение Mono ошибки).
+* Или обновите книги до версии 1.2.1 или более поздней, которая будет перезаписывать `System.Threading.CurrentThread.CurrentCulture` назначения `System.Globalization.CultureInfo.CurrentCulture` и предоставлять требуемый режим работы (обходит ошибку Mono).
 
-## <a name="unable-to-use-newtonsoftjson"></a>Не удается использовать Newtonsoft.Json
+## <a name="unable-to-use-newtonsoftjson"></a>Не удается использовать Newtonsoft. JSON
 
-### <a name="workaround"></a>Обходной путь
+### <a name="workaround"></a>Возможное решение
 
-* Обновление до книг 1.2.1, которые будут устанавливать Newtonsoft.Json 9.0.1.
-  Книги 1.3, в настоящее время в альфа-канал поддерживает версии 10 и более поздних версиях.
+* Обновите книгу до 1.2.1, которая установит Newtonsoft. JSON 9.0.1.
+  Книги 1,3, в настоящее время в альфа-канале, поддерживают версии 10 и более поздние.
 
 ### <a name="details"></a>Подробные сведения
 
-Newtonsoft.Json 10 была выпущена которой уменьшил ее зависимость от Microsoft.CSharp, который конфликтует с книгами версии поставляется для поддержки `dynamic`. Эта проблема устранена в предварительной версии 1.3 книг, но сейчас мы обойти это, закрепляющих Newtonsoft.Json специально для версии 9.0.1.
+Newtonsoft. JSON 10 был освобожден, что его зависимость от Microsoft. CSharp, которая конфликтует с книгами версий, поддерживает `dynamic`. Это решено в выпуске книги 1,3 Preview, но сейчас мы обработали его, закрепите Newtonsoft. JSON специально для версии 9.0.1.
 
-Пакеты NuGet, явным образом в зависимости от Newtonsoft.Json 10 или более поздней версии поддерживаются только в версии 1.3 книг, в настоящее время в альфа-канала.
+Пакеты NuGet, явно зависящие от Newtonsoft. JSON 10 или более поздней версии, поддерживаются только в книгах 1,3, в настоящее время в альфа-канале.
 
-## <a name="code-tooltips-are-blank"></a>Код подсказки должны пусто
+## <a name="code-tooltips-are-blank"></a>Подсказки кода пусты
 
-Существует [ошибки в редакторе Монако] [ monaco-bug] в Safari/WebKit, который используется в приложении книги по Mac, результаты при подготовке к просмотру подсказки кода без текста.
+В [редакторе Монако][monaco-bug] в Safari или WebKit есть ошибка, которая используется в приложении "книги Mac", что приводит к отображению всплывающих подсказок кода без текста.
 
 ![](general-images/monaco-signature-help-bug.png)
 
-### <a name="workaround"></a>Обходной путь
+### <a name="workaround"></a>Возможное решение
 
-* Щелкнув всплывающей подсказки, после его появления вынудит текст для отображения.
+* Если щелкнуть подсказку после ее отображения, текст будет отображаться.
 
-* Или обновление до книг 1.2.1 или более поздней версии
+* Или обновите книги до версии 1.2.1 или более поздней
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
 
-## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>В версии 1.3 книги отсутствуют SkiaSharp модулей подготовки отчетов
+## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Модули подготовки отчетов SkiaSharp отсутствуют в книгах 1,3
 
-Начиная с версии 1.3 книги, мы удалили SkiaSharp модулей подготовки отчетов, которые мы выпустили в книгах 0.99.0, пользу SkiaSharp предоставления визуализаторов, самой, с помощью наших [SDK](~/tools/workbooks/sdk/index.md).
+Начиная с книг 1,3, мы удалили модули подготовки отчетов SkiaSharp, которые мы поставляли в книгах 0.99.0, в пользу SkiaSharp, предоставляющей сами средства подготовки отчетов, с помощью нашего [пакета SDK](~/tools/workbooks/sdk/index.md).
 
-### <a name="workaround"></a>Обходной путь
+### <a name="workaround"></a>Возможное решение
 
-* Обновите SkiaSharp до последней версии в NuGet. Во время написания этой статьи это 1.57.1.
+* Обновите SkiaSharp до последней версии в NuGet. На момент написания статьи это 1.57.1.
 
 ## <a name="related-links"></a>Связанные ссылки
 

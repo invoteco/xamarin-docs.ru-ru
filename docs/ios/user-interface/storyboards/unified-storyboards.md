@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 20010fb3704da54ae1e1133c25f332e8481a1b87
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528539"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890177"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Унифицированные раскадровки в Xamarin. iOS
 
@@ -71,6 +71,7 @@ iOS 8 включает новый, более простой в использо
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
+
 Или при назначении изображения элементу пользовательского интерфейса с помощью конструктора iOS, как `MonkeyIcon.png`, он `MonkeyIcon@3x.png` будет использоваться автоматически на iPhone 6 Plus.
 
 <a name="dynamic-launch-screens" />

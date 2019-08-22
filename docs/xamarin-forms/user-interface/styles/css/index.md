@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: ed9a376da0fcfebffd707e2e93919237adfef87b
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de7ec7dc87fc4ba61e76603240197fc9d041255
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620841"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887935"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
 
@@ -131,25 +131,7 @@ stacklayout>image {
 
 ### <a name="c"></a>C\#
 
-В C#, таблицу стилей можно загрузить как внедренный ресурс и добавить к [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
-
-```csharp
-public partial class MyPage : ContentPage
-{
-    public MyPage()
-    {
-        InitializeComponent();
-
-        this.Resources.Add(StyleSheet.FromAssemblyResource(
-            IntrospectionExtensions.GetTypeInfo(typeof(MyPage)).Assembly,
-            "MyProject.Assets.styles.css"));
-    }
-}
-```
-
-Первый аргумент `StyleSheet.FromAssemblyResource` метода сборки, содержащий таблицу стилей, а второй аргумент — `string` , представляющим собой идентификатор ресурса. Идентификатор ресурса можно получить из **свойства** окно при выборе файла CSS.
-
-Кроме того, можно загрузить таблицу стилей из `StringReader` и добавляемый [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+В C#таблица стилей может быть загружена из `StringReader` [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)и добавлена в:
 
 ```csharp
 public partial class MyPage : ContentPage

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: f25ce3c5bfe7e3d8032709e9df99e7538e978862
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 53dce7cc6cc614cde252aa34248fa299c89fafa3
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523417"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887708"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Как автоматизировать тестовый проект Android NUnit?
 
@@ -86,6 +86,7 @@ adb shell am instrument
     ```shell
     msbuild /t:RunTests Project.csproj
     ```
+
     (Обратите внимание, что использование этого нового целевого объекта не является `adb` обязательным. можно использовать более раннюю `msbuild`команду вместо.)
 
 Дополнительные сведения об использовании `adb shell am instrument` команды для выполнения модульных тестов см. в разделе Android Developer [Tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .

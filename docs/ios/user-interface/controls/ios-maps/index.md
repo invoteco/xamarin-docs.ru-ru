@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d7bd3d64d7e9f4ad8298120a017719b3cbb1410e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528697"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887484"
 ---
 # <a name="maps-in-xamarinios"></a>Карты в Xamarin. iOS
 
@@ -28,25 +28,27 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
- `MKMapView``UIView` — подкласс, отображающий карту. Простое добавление схемы с помощью приведенного выше кода создает интерактивную карту:
+`MKMapView``UIView` — подкласс, отображающий карту. Простое добавление схемы с помощью приведенного выше кода создает интерактивную карту:
 
- ![](images/00-map.png "Пример схемы")
+![](images/00-map.png "Пример схемы")
 
 ## <a name="map-style"></a>Стиль схемы
 
- `MKMapView`поддерживает 3 различных стиля карт. Чтобы применить стиль схемы, просто присвойте `MapType` свойству значение `MKMapType` из перечисления:
- ```
+`MKMapView`поддерживает 3 различных стиля карт. Чтобы применить стиль схемы, просто присвойте `MapType` свойству значение `MKMapType` из перечисления:
+
+```
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
- ```
-  На следующем снимке экрана показаны различные доступные стили карт.
+```
 
- ![](images/01-mapstyles.png "На этом снимке экрана показаны различные доступные стили карт")
+На следующем снимке экрана показаны различные доступные стили карт.
+
+![](images/01-mapstyles.png "На этом снимке экрана показаны различные доступные стили карт")
 
 ## <a name="panning-and-zooming"></a>Панорамирование и масштаб
 
- `MKMapView`включает поддержку функций для интерактивной работы с картой, таких как:
+`MKMapView`включает поддержку функций для интерактивной работы с картой, таких как:
 
 - Масштаб с помощью жеста сжатия
 - Панорамирование с помощью жеста панорамирования

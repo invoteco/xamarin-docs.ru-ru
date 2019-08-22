@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2019
-ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/18/2019
+ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657281"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887909"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Использование расширения разметки XAML
 
@@ -28,6 +28,7 @@ ms.locfileid: "68657281"
 - [`OnPlatform`](#onplatform) — настраивать внешний вид пользовательского интерфейса на каждой платформы.
 - [`OnIdiom`](#onidiom) — настраивать внешний вид пользовательского интерфейса на идиому устройства, приложения на основе.
 - [`DataTemplate`](#datatemplate-markup-extension)— Преобразует тип в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
+- [`FontImage`](#fontimage-markup-extension)— отображать значок шрифта в любом представлении, которое может отображать `ImageSource`.
 
 Дополнительные расширения разметки XAML Исторически поддерживаются в других реализациях XAML и также поддерживаются в Xamarin.Forms. Более подробно они описаны в других статьях:
 
@@ -556,6 +557,37 @@ public partial class TypeDemoPage : ContentPage
 В этом примере `MonkeysPage` преобразуется [`ContentPage`](xref:Xamarin.Forms.ContentPage) из [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)в, `ShellContent.ContentTemplate` который задается как значение свойства. Это гарантирует, `MonkeysPage` что она будет создана только при переходе на страницу, а не при запуске приложения.
 
 Дополнительные сведения о приложениях оболочки см. в разделе [оболочка Xamarin. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+
+## <a name="fontimage-markup-extension"></a>Расширение разметки Фонтимаже
+
+Расширение разметки позволяет отображать значок шрифта в любом представлении, которое может `ImageSource`отображать. `FontImage` Он предоставляет те же функциональные возможности, `FontImageSource` что и класс, но с более кратким представлением.
+
+Расширение разметки поддерживается `FontImageExtension` классом, который определяет следующие свойства: `FontImage`
+
+- `FontFamily`типа `string`— семейство шрифтов, которому принадлежит значок шрифта.
+- `Glyph`типа `string`, значение символа Юникода со значком Font.
+- `Color`Тип `Color`— цвет, используемый при отображении значка шрифта.
+- `Size`Тип `double`— размер в единицах, не зависящих от устройства, значка отображаемого шрифта.
+
+> [!NOTE]
+> Средство синтаксического анализа XAML позволяет `FontImageExtension` сократить `FontImage`класс до.
+
+`Glyph` Свойство является свойством содержимого из `FontImageExtension`. Таким образом, для выражений разметки XAML, выраженными с помощью фигурных скобок, то можно исключить `Glyph=` часть выражения, при условии, что это первый аргумент.
+
+На **демонстрационной странице фонтимаже** показано, `FontImage` как использовать расширение разметки:
+
+```xaml
+<Image BackgroundColor="#D1D1D1"
+       Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=44}" />
+```
+
+В этом примере сокращенная версия `FontImageExtension` имени класса используется для вывода значка Xbox из семейства шрифтов иониконс [`Image`](xref:Xamarin.Forms.Image)в. Выражение также использует `OnPlatform` расширение разметки для указания различных `FontFamily` значений свойств в iOS и Android. Кроме того `Glyph=` , часть выражения исключена, а заданные свойства расширения разметки разделяются запятыми. Обратите внимание, что хотя символ Юникода для значка — `\uf30c`, он должен быть экранирован в XAML и, таким образом, стал. `&#xf30c;`
+
+Вот работающая программа:
+
+[ ![Снимок экрана с демонстрацией расширения разметки фонтимаже](consuming-images/fontimagedemo.png "фонтимаже") ] (consuming-images/fontimagedemo-large.png#lightbox "Демонстрация фонтимаже")
+
+Сведения о отображении значков шрифтов путем указания данных значка шрифта в `FontImageSource` объекте см. в разделе [Отображение значков шрифтов](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
 ## <a name="define-your-own-markup-extensions"></a>Определить собственные расширения разметки
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1aaacae8cebed2396661a28c189af44c25238e7b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524694"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887843"
 ---
 # <a name="working-with-the-android-manifest"></a>Работа с манифестом Android
 
@@ -227,6 +227,7 @@ public class MyActivity : Activity
              android:theme="@android:style/Theme.Light"
                 ... />
 ```
+
 В этом примере все действия в приложении будут по умолчанию `Theme.Light` применены к стилю. Если задать тему действия равным `Theme.Dialog`, то только это действие будет `Theme.Dialog` использовать стиль, тогда как все остальные действия в `Theme.Light` приложении будут по умолчанию иметь стиль, заданный в `<application>` элементе. 
 
 Элемент не является единственным способом настройки `<application>` атрибутов. `Application` Кроме того, можно вставлять атрибуты непосредственно в `<application>` элемент **Properties/AndroidManifest. XML**. Эти параметры сливаются с последним `<application>` элементом, который находится в **obj/Debug/Android/AndroidManifest. XML**. Обратите внимание, что содержимое **Properties/AndroidManifest. XML** всегда переопределяет данные, предоставленные пользовательскими атрибутами. 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 671a7c8aaa81094157056672c64f0c2dc847d6a7
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c97006d1afb68d693e2792879788ea92907873fc
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620913"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889546"
 ---
 # <a name="alerts-in-xamarinmac"></a>Оповещения в Xamarin. Mac
 
@@ -90,6 +90,7 @@ var alert = new NSAlert () {
 };
 alert.RunModal ();
 ```
+
 При выполнении этого кода отображается следующее:
 
 [![](alert-images/alert02.png "Простое оповещение")](alert-images/alert02.png#lightbox)
@@ -153,6 +154,7 @@ alert.BeginSheetForResponse (this, (result) => {
   Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
+
 При выполнении этого кода будут отображены следующие:
 
 [![](alert-images/alert05.png "Предупреждение с тремя кнопками, отображаемое в виде листа")](alert-images/alert05.png#lightbox)

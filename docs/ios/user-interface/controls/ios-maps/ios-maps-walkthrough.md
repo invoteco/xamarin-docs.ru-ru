@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dba8fc3c239a8c20795913d6d1e5409a478c4072
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b666e8e8621019da4f2acb71ab5b3bf22fad3a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642730"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889762"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Заметки и наложенные наложения в Xamarin. iOS
 
@@ -178,6 +178,7 @@ ms.locfileid: "68642730"
     
     map.AddOverlay (hotelOverlay);  
     ```
+
 Это завершает код в `ViewDidLoad`. Теперь нам нужно реализовать наш `MapDelegate` класс для создания представлений заметок и наложений соответственно.
 
 
@@ -192,6 +193,7 @@ ms.locfileid: "68642730"
         ...
     }
     ```
+
     Здесь есть только одна Аннотация, поэтому код повторного использования не является обязательным, но рекомендуется включить его.
 
 1. Реализуйте `ConferenceAnnotation` метод, чтобы вернуть представление для использования образа **Conference. png** , входящего в состав этого пошагового руководства: `GetViewForAnnotation`
@@ -261,6 +263,7 @@ ms.locfileid: "68642730"
         }
     }
     ```
+
     Теперь у нас есть код для заметки на месте. Остается только добавить код в, `MapDelegate` чтобы создать представление для наложения отеля.
 
 1. Добавьте следующую реализацию `GetViewForOverlay` `MapDelegate`в:

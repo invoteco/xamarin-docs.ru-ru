@@ -6,13 +6,13 @@ ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/03/2019
-ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.date: 07/18/2019
+ms.openlocfilehash: 1f2ef838287e32df5df42f73e4b43816d618552d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658049"
+ms.locfileid: "69887888"
 ---
 # <a name="xamarinforms-switch"></a>Переключатель Xamarin. Forms
 
@@ -26,8 +26,9 @@ ms.locfileid: "69658049"
 
 `Switch` Элемент управления определяет два свойства:
 
-* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)параметр, который влияет на то `Switch` , как объект отображается в переключенном или **включенном**состоянии. `Color`
 * [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)значение, указывающее, включено ли в. `Switch` `boolean`
+* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)параметр, который влияет на то `Switch` , как объект отображается в переключенном или **включенном**состоянии. `Color`
+* `ThumbColor`значение `Color` параметра бегунка Switched.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектом. Это означает, `Switch` что можно использовать стиль и цель привязок данных.
 
@@ -47,23 +48,24 @@ ms.locfileid: "69658049"
 Switch switchControl = new Switch { IsToggled = true };
 ```
 
-### <a name="switch-style-properties"></a>Переключить свойства стиля
+## <a name="switch-appearance"></a>Переключить внешний вид
 
-Свойство может быть задано для `Switch` определения цвета, когда он переключается в состояние **On.** `OnColor` В следующем примере показано, как создать экземпляр `Switch` в XAML `OnColor` с помощью набора свойств:
+В дополнение к свойствам, [`Switch`](xref:Xamarin.Forms.Switch) [`View`](xref:Xamarin.Forms.View) унаследованным от класса, `Switch` также определяет `OnColor` и `ThumbColor` свойства. `ThumbColor` `Switch` `Color` Свойство может быть задано для определения цвета, когда он переключается в состояние ON, а свойство может быть задано для определения типа бегунка переключателя. `OnColor` В следующем примере показано, как создать экземпляр `Switch` в XAML со следующими наборами свойств:
 
 ```xaml
-<Switch OnColor="Orange" />
+<Switch OnColor="Orange"
+        ThumbColor="Green" />
 ```
 
-Это свойство также может быть задано при `Switch` создании в коде: `OnColor`
+Свойства также можно задать при создании `Switch` в коде:
 
 ```csharp
-Switch switchControl = new Switch { OnColor = Color.Orange };
+Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 ```
 
-На следующих снимках экрана `Switch` показаны **включенные** и **Отключенные** состояния переключателя со `OnColor` свойством `Color.Orange` в iOS и Android:
+На следующем снимке экрана `Switch` показаны состояния переключателя **On** и **Off** , для которых `OnColor` заданы свойства и `ThumbColor` .
 
-![Снимок экрана параметров включения и отключения состояний, в iOS и Android](switch-images/switch-states-oncolor.png "Параметры в iOS и Android")
+![Снимок экрана параметров включения и отключения состояний, в iOS и Android](switch-images/switch-states-colors.png "Параметры в iOS и Android")
 
 ## <a name="respond-to-a-switch-state-change"></a>Ответ на изменение состояния переключения
 

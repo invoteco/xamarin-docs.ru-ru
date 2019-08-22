@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522465"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887534"
 ---
 # <a name="a-basic-recyclerview-example"></a>Пример базового RecyclerView
 
@@ -145,6 +145,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
     }
 }
 ```
+
 В этом примере `PhotoViewHolder` кода конструктору передается ссылка на представление родительского элемента `CardView`(), которое `PhotoViewHolder` является оболочкой. Обратите внимание, что вы всегда пересылаете представление родительского элемента в базовый конструктор. `ImageView` `TextView` `Image` `Caption` Конструктор вызывает `FindViewById` в представлении родительского элемента, чтобы нахождение всех ссылок на дочернее представление, и, сохраняя результаты в свойствах и соответственно. `PhotoViewHolder` Адаптер позже извлекает ссылки на представления из этих свойств, когда обновляет `CardView`эти дочерние представления новыми данными.
 
 Дополнительные сведения о `RecyclerView.ViewHolder`см. в справочнике по [классам RecyclerView. виевхолдер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).

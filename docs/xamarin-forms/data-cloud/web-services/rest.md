@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: cb569a425bf636a51dd6d132f6efa539e74443a0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9b99421755b1ad979b4beed279bef6e194659ab7
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644576"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888858"
 ---
 # <a name="consume-a-restful-web-service"></a>Использование веб-службы RESTFUL
 
@@ -173,6 +173,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
   ...
 }
 ```
+
 Операция `PutAsync` метод идентичен методу `PostAsync` метод, используемый для создания данных в веб-службы. Тем не менее отличаются возможные ответы, отправленные из веб-службы.
 
 Служба REST отправляет код состояния HTTP `HttpResponseMessage.IsSuccessStatusCode` свойство, чтобы указать, успешно ли выполнено HTTP-запроса. Ниже приведены распространенные ответы для этой операции.

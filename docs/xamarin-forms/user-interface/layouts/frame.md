@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019
-ms.openlocfilehash: 329edf455a4778efa5f6fbd1ec88cfb274c5cb49
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 619b29a9d65594b1badd805c3361fe1a174d7174
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976502"
 ---
 # <a name="xamarinforms-frame"></a>Кадр Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 Класс Xamarin. Forms [`Frame`](xref:Xamarin.Forms.Frame) — это макет, используемый для создания оболочки представления с границей, которые можно настроить с помощью цвета, тени и других параметров. Фреймы обычно используются для создания границ вокруг элементов управления, но их можно использовать для создания более сложного пользовательского интерфейса. Дополнительные сведения см. в разделе [Расширенное использование кадров](#advanced-frame-usage).
 
@@ -193,5 +193,5 @@ Frame circleImageFrame = new Frame
 
 ## <a name="related-links"></a>Связанные ссылки
 
-* [Демонстрации кадров](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Демонстрации кадров](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 * [Изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md)

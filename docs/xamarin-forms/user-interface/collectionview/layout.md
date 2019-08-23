@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/12/2019
-ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 08/22/2019
+ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976553"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Макет CollectionView Xamarin. Forms
 
@@ -319,9 +319,6 @@ CollectionView collectionView = new CollectionView
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что свойства могут быть целевыми объектами привязок данных.
 
-> [!IMPORTANT]
-> В настоящее время верхние и нижние колонтитулы поддерживаются только в Android.
-
 При добавлении заголовка к макету, который увеличивается горизонтально, слева направо заголовок отображается слева от списка. Аналогично, при добавлении нижнего колонтитула к макету, который увеличивается горизонтально, слева направо нижний колонтитул отображается справа от списка.
 
 ### <a name="display-strings-in-the-header-and-footer"></a>Отображение строк в верхнем и нижнем колонтитулах
@@ -346,6 +343,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Этот код приводит к следующим снимкам экрана с заголовком на снимке экрана iOS и нижним колонтитулом, показанным на снимке экрана Android:
+
+[ ![Снимок экрана: заголовок и нижний колонтитул CollectionView строки в](layout-images/header-footer-string.png "заголовке и нижнем колонтитуле строки CollectionView") для iOS и Android] (layout-images/header-footer-string-large.png#lightbox "Верхний и нижний колонтитулы строки CollectionView")
 
 ### <a name="display-views-in-the-header-and-footer"></a>Отображение представлений в верхнем и нижнем колонтитулах
 
@@ -395,6 +396,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Этот код приводит к следующим снимкам экрана с заголовком на снимке экрана iOS и нижним колонтитулом, показанным на снимке экрана Android:
+
+Снимок экрана верхнего и нижнего колонтитулов [ ![CollectionView с помощью представлений в](layout-images/header-footer-view.png "заголовке и нижнем колонтитуле представления CollectionView") для iOS и Android] (layout-images/header-footer-view-large.png#lightbox "Верхний и нижний колонтитулы представления CollectionView")
 
 ### <a name="display-a-templated-header-and-footer"></a>Отображение шаблона верхнего и нижнего колонтитулов
 
@@ -446,6 +451,10 @@ collectionView.SetBinding(ItemsView.HeaderProperty, ".");
 collectionView.SetBinding(ItemsView.FooterProperty, ".");
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Этот код приводит к следующим снимкам экрана с заголовком на снимке экрана iOS и нижним колонтитулом, показанным на снимке экрана Android:
+
+Снимок экрана верхнего и нижнего колонтитулов [ ![CollectionView с помощью шаблонов в](layout-images/header-footer-template.png "заголовке и нижнем колонтитуле шаблона CollectionView") для iOS и Android] (layout-images/header-footer-template-large.png#lightbox "Верхний и нижний колонтитулы шаблона CollectionView")
 
 ## <a name="item-spacing"></a>Промежуток между элементами
 

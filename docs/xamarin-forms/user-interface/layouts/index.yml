@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: choose-layout.md
+            html: 'Сведения о том, как основные классы макета в Xamarin.Forms размещают и масштабируют дочерние элементы.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: choose-layout.md
+            title: Выбор макета
           - href: stack-layout.md
             html: 'Узнайте, как упорядочивать представления в виде распределения (горизонтально или вертикально) на основе одномерного массива.'
             image:
@@ -37,18 +43,18 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: flex-layout.md
             title: FlexLayout
-          - href: absolute-layout.md
-            html: 'Узнайте, как упорядочивать представления, задавая значения координат и размера, которые могут быть пропорциональными или абсолютными.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
           - href: relative-layout.md
             html: 'Узнайте о том, как упорядочивать представления путем установки ограничений относительно свойств макета или одноуровневых представлений.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: absolute-layout.md
             title: RelativeLayout
+          - href: absolute-layout.md
+            html: 'Узнайте, как упорядочивать представления, задавая значения координат и размера, которые могут быть пропорциональными или абсолютными.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: AbsoluteLayout
           - href: scroll-view.md
             html: 'Узнайте, как обеспечить прокрутку, если представление не умещается в границах экрана.'
             image:
@@ -60,7 +66,7 @@ sections:
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: contentview.md
-            title: Frame
+            title: ContentView
           - href: frame.md
             html: 'Узнайте, как создать оболочку для представления, используя фрейм, который можно настроить с помощью цвета, тени и других параметров.'
             image:

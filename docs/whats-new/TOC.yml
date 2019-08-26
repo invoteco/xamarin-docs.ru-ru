@@ -5,6 +5,8 @@
     - name: 2019
       expanded: true
       items:
+        - name: Август
+          href: 2019-08.md
         - name: Июль
           href: 2019-07.md
         - name: Июнь

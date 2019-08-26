@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2019
-ms.openlocfilehash: 25fcf40f7ad94bf5c2ba03fca7413fcaaedba09e
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739237"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888983"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Вкладки оболочки Xamarin.Forms
 
@@ -126,7 +126,7 @@ ms.locfileid: "68739237"
 Класс `Tab` включает следующие свойства, которые определяют внешний вид и поведение вкладки:
 
 - `CurrentItem` с типом `ShellContent` обозначает выбранный элемент.
-- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. Значение по умолчанию — `AsSingleItem`.
+- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. По умолчанию используется значение `AsSingleItem`.
 - `FlyoutIcon` с типом `ImageSource` определяет значок, который отображается во всплывающем элементе.
 - `Icon` с типом `ImageSource` определяет значок, который отображается в частях хрома, не являющихся всплывающими элементами.
 - `IsChecked` с типом `boolean` определяет, выделен ли этот элемент во всплывающем элементе в настоящий момент.
@@ -163,6 +163,9 @@ ms.locfileid: "68739237"
 ```
 
 В каждом объекте [`ContentPage`](xref:Xamarin.Forms.ContentPage) можно перейти к дополнительным объектам `ContentPage`. Дополнительные сведения о навигации, см. в статье [о навигации в оболочке Xamarin.Forms](navigation.md).
+
+> [!NOTE]
+> [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) каждого объекта `ShellContent` наследуется от родительского объекта `Tab`.
 
 ### <a name="shellcontent-class"></a>Класс ShellContent
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: a79dcf14ddefd13d17e218602030a6467a3f1448
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643838"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525417"
 ---
 # <a name="linking-on-android"></a>Компоновка в Android
 
@@ -19,7 +19,7 @@ ms.locfileid: "68643838"
 
 Давайте рассмотрим этот механизм на примере приложения [Привет, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a).
 
-|Параметр Configuration|Размер 1.2.0|Размер 4.0.1|
+|Конфигурация|Размер 1.2.0|Размер 4.0.1|
 |---|---|---|
 |Сборка выпуска без компоновщика|14.0 МБ|16.0 МБ|
 |Сборка выпуска с компоновщиком|4.2 МБ|2.9 МБ|
@@ -28,7 +28,7 @@ ms.locfileid: "68643838"
 
 
 
-## <a name="control"></a>Элемент управления
+## <a name="control"></a>Контроль
 
 Работа компоновщика основана на *статического анализа*. Следовательно, он не сможет обнаружить зависимости, определяемые средой выполнения.
 
@@ -55,9 +55,9 @@ public class MyActivity {
 
 Основным механизмом для управления компоновщиком является раскрывающийся список **Поведение компоновщика** (или *Компоновка* в Visual Studio), который размещен в диалоговом окне **Параметры проекта**. Здесь доступны три варианта выбора:
 
-1.  **Не компоновать** (или *Нет* в Visual Studio)
-1.  **Компоновать сборки пакета SDK** (*Только сборки пакета SDK*)
-1.  **Компоновать все сборки** (*Сборки пакета SDK и пользователя*)
+1. **Не компоновать** (или *Нет* в Visual Studio)
+1. **Компоновать сборки пакета SDK** (*Только сборки пакета SDK*)
+1. **Компоновать все сборки** (*Сборки пакета SDK и пользователя*)
 
 
 Вариант **Не компоновать** отключает компоновщик. Сборка, размер которой приводится в графе "Сборка выпуска без компоновщика", была получена именно с этим значением параметра. Он может оказаться полезен при отладке ошибок среды выполнения, чтобы подтвердить или исключить проблемы компоновщика. Обычно для производственных сборок этот вариант применять не следует.
@@ -92,11 +92,11 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 Иногда компоновщик удаляет код, который нужно сохранить. Например:
 
--   Возможно, код вызывается динамически через `System.Reflection.MemberInfo.Invoke`.
+- Возможно, код вызывается динамически через `System.Reflection.MemberInfo.Invoke`.
 
--   Если вы динамически создаете экземпляры типов, нужно сохранять в коде конструктор по умолчанию для этих типов.
+- Если вы динамически создаете экземпляры типов, нужно сохранять в коде конструктор по умолчанию для этих типов.
 
--   Если используется XML-сериализация, нужно сохранять свойства типов.
+- Если используется XML-сериализация, нужно сохранять свойства типов.
 
 Во всех таких случаях вам пригодится атрибут [Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute). Все члены, на которые нет статических ссылок из приложения, подлежат удалению. Этот атрибут позволяет отметить те члены, которые должны сохраняться в приложении даже при отсутствии статических ссылок. Этот атрибут можно применить к любому члену типа или к самому типу.
 
@@ -198,27 +198,27 @@ RDL-файл. Файлы пользовательской конфигураци
 
 При компоновке сборки из всех элементов удаляются пользовательские атрибуты следующих типов:
 
--  System.ObsoleteAttribute
--  System.MonoDocumentationNoteAttribute
--  System.MonoExtensionAttribute
--  System.MonoInternalNoteAttribute
--  System.MonoLimitationAttribute
--  System.MonoNotSupportedAttribute
--  System.MonoTODOAttribute
--  System.Xml.MonoFIXAttribute
+- System.ObsoleteAttribute
+- System.MonoDocumentationNoteAttribute
+- System.MonoExtensionAttribute
+- System.MonoInternalNoteAttribute
+- System.MonoLimitationAttribute
+- System.MonoNotSupportedAttribute
+- System.MonoTODOAttribute
+- System.Xml.MonoFIXAttribute
 
 
 При компоновке сборки для сборки выпуска из всех элементов удаляются пользовательские атрибуты следующих типов:
 
--  System.Diagnostics.DebuggableAttribute
--  System.Diagnostics.DebuggerBrowsableAttribute
--  System.Diagnostics.DebuggerDisplayAttribute
--  System.Diagnostics.DebuggerHiddenAttribute
--  System.Diagnostics.DebuggerNonUserCodeAttribute
--  System.Diagnostics.DebuggerStepperBoundaryAttribute
--  System.Diagnostics.DebuggerStepThroughAttribute
--  System.Diagnostics.DebuggerTypeProxyAttribute
--  System.Diagnostics.DebuggerVisualizerAttribute
+- System.Diagnostics.DebuggableAttribute
+- System.Diagnostics.DebuggerBrowsableAttribute
+- System.Diagnostics.DebuggerDisplayAttribute
+- System.Diagnostics.DebuggerHiddenAttribute
+- System.Diagnostics.DebuggerNonUserCodeAttribute
+- System.Diagnostics.DebuggerStepperBoundaryAttribute
+- System.Diagnostics.DebuggerStepThroughAttribute
+- System.Diagnostics.DebuggerTypeProxyAttribute
+- System.Diagnostics.DebuggerVisualizerAttribute
 
 
 ## <a name="related-links"></a>Связанные ссылки

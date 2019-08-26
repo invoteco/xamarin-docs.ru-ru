@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: b803c1ccfbd8bae008a763f8a31283b653ae4cf3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652152"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629628"
 ---
 # <a name="xamarinforms-triggers"></a>Триггеры Xamarin.Forms
 
@@ -111,7 +111,8 @@ ms.locfileid: "68652152"
 </Button>
 ```
 
-Совет. При определении `Path=Text.Length` всегда следует указывать значение по умолчанию для целевого свойства (например, `Text=""`), так как в противном случае будет использоваться значение `null` и триггер не будет работать надлежащим образом.
+> [!TIP]
+> При определении `Path=Text.Length` всегда следует указывать значение по умолчанию для целевого свойства (например, `Text=""`), так как в противном случае будет использоваться значение `null` и триггер не будет работать надлежащим образом.
 
 Помимо указания `Setter`, можно задать коллекции [`EnterActions` и `ExitActions`](#enterexit).
 

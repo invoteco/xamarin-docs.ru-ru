@@ -7,20 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: b96877045a3f289cb4b9ba83a8159d26ed768d99
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a243acc0273931c963a586fbfda29586623b612e
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655598"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889173"
 ---
 # <a name="xamarinforms-carousel-page"></a>CarouselPage в Xamarin.Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
 _CarouselPage в Xamarin.Forms — это страница, по которой пользователи могут проводить из стороны в сторону, чтобы переходить по страницам содержимого, например по страницам коллекции. В этой статье демонстрируется использование CarouselPage для перехода по коллекции страниц._
-
-## <a name="overview"></a>Обзор
 
 На следующих снимках экрана показана страница [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) на каждой платформе.
 
@@ -36,14 +34,21 @@ _CarouselPage в Xamarin.Forms — это страница, по которой
 
 Если провести по экрану пальцем справа налево еще раз, будет выполнен переход к третьей странице, а если провести слева направо, то вы вернетесь к предыдущей странице.
 
+> [!NOTE]
+> [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) не поддерживает виртуализацию пользовательского интерфейса. Поэтому, если `CarouselPage` содержит слишком много дочерних элементов, производительность может снижаться.
+
+Если объект [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) внедрен на страницу [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) страницы [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), свойству [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) необходимо присвоить значение `false`, чтобы предотвратить конфликты жестов между `CarouselPage` и `MasterDetailPage`.
+
+Дополнительные сведения о [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) см. в [главе 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) книги Xamarin.Forms Чарльза Петцольда (Charles Petzold).
+
 <!--
 > [!NOTE]
 > The [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](xref:Xamarin.Forms.CarouselView) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
 -->
 
-## <a name="creating-a-carouselpage"></a>Создание CarouselPage
+## <a name="create-a-carouselpage"></a>Создание CarouselPage
 
-Создать [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) можно двумя способами.
+Создать [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) можно двумя способами:
 
 - [Заполните](#Populating_a_CarouselPage_with_a_Page_Collection) `CarouselPage` коллекцией дочерних экземпляров [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 - [Присвойте](#Populating_a_CarouselPage_with_a_Template) коллекцию свойству [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource), а затем присвойте [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) свойству [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate), чтобы вернуть экземпляры [`ContentPage`](xref:Xamarin.Forms.ContentPage) для объектов в коллекции.
@@ -55,7 +60,7 @@ _CarouselPage в Xamarin.Forms — это страница, по которой
 
 <a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
-### <a name="populating-a-carouselpage-with-a-page-collection"></a>Заполнение CarouselPage коллекцией страниц
+### <a name="populate-a-carouselpage-with-a-page-collection"></a>Заполнение CarouselPage коллекцией страниц
 
 В следующем примере кода XAML показан объект [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), отображающий три экземпляра [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
@@ -143,16 +148,9 @@ public class MainPageCS : CarouselPage
 
 На каждой странице [`ContentPage`](xref:Xamarin.Forms.ContentPage) отображается элемент [`Label`](xref:Xamarin.Forms.Label) для соответствующего цвета и элемент [`BoxView`](xref:Xamarin.Forms.BoxView) этого цвета.
 
-> [!NOTE]
-> [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) не поддерживает виртуализацию пользовательского интерфейса. Поэтому, если `CarouselPage` содержит слишком много дочерних элементов, производительность может снижаться.
-
-Если объект [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) внедрен на страницу [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) страницы [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), свойству [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) необходимо присвоить значение `false`, чтобы предотвратить конфликты жестов между `CarouselPage` и `MasterDetailPage`.
-
-Дополнительные сведения о [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) см. в [главе 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) книги Xamarin.Forms Чарльза Петцольда (Charles Petzold).
-
 <a name="Populating_a_CarouselPage_with_a_Template" />
 
-### <a name="populating-a-carouselpage-with-a-template"></a>Заполнение CarouselPage с помощью шаблона
+### <a name="populate-a-carouselpage-with-a-template"></a>Заполнение CarouselPage с помощью шаблона
 
 В следующем примере кода XAML показан объект [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), сформированный путем присвоения [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) свойству [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) для возврата страниц для объектов в коллекции.
 
@@ -239,18 +237,6 @@ public class MainPageCS : CarouselPage
 ```
 
 На каждой странице [`ContentPage`](xref:Xamarin.Forms.ContentPage) отображается элемент [`Label`](xref:Xamarin.Forms.Label) для соответствующего цвета и элемент [`BoxView`](xref:Xamarin.Forms.BoxView) этого цвета.
-
-> [!NOTE]
-> [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) не поддерживает виртуализацию пользовательского интерфейса. Поэтому, если `CarouselPage` содержит слишком много дочерних элементов, производительность может снижаться.
-
-Если объект [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) внедрен на страницу [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) страницы [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), свойству [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) необходимо присвоить значение `false`, чтобы предотвратить конфликты жестов между `CarouselPage` и `MasterDetailPage`.
-
-Дополнительные сведения о [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) см. в [главе 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) книги Xamarin.Forms Чарльза Петцольда (Charles Petzold).
-
-## <a name="summary"></a>Сводка
-
-В этой статье было показано, как использовать [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) для перехода по коллекции страниц. `CarouselPage` — это страница, по которой пользователи могут проводить из стороны в сторону, чтобы переходить по страницам содержимого, как по страницам коллекции.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

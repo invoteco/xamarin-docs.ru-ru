@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
-ms.openlocfilehash: a988a99e20af76d071f55c4cd2c97b135ad077f8
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: 20ac6ad748e7056f7f8037a73a95de66b9eae3b6
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252273"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888917"
 ---
 # <a name="xamarinforms-shell"></a>Оболочка Xamarin.Forms
 
@@ -43,6 +43,10 @@ ms.locfileid: "66252273"
 ## <a name="searchsearchmd"></a>[Поиск](search.md)
 
 Приложения оболочки могут использовать интегрированную функцию поиска, которая реализована в виде поля поиска в верхней части каждой страницы.
+
+## <a name="lifecyclelifecyclemd"></a>[Жизненный цикл](lifecycle.md)
+
+Приложения оболочки учитывают жизненный цикл Xamarin.Forms, и событие `Appearing` возникает, когда страница собирается отображаться на экране, а событие `Disappearing` возникает, когда страница собирается исчезнуть с экрана.
 
 ## <a name="custom-rendererscustomrenderersmd"></a>[Пользовательские отрисовщики](customrenderers.md)
 

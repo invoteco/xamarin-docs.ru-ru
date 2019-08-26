@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: afb4da5e424fd86a386b85d8b64bd2a126af6add
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194941"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521102"
 ---
-# <a name="contributing"></a>Добавление данных
+# <a name="contributing"></a>Участие
 
 Благодарим вас за проявленный интерес к процессу участия в разработке документации по Xamarin!
 
@@ -45,15 +45,17 @@ ms.locfileid: "67194941"
 
 Если вы затрагиваете новую тему, [файл шаблона](../contributing-guidelines/template.md) будет хорошей отправной точкой. Он содержит рекомендации по написанию статьи, а также пояснения по необходимым для каждой статьи метаданным, таким как сведения об авторе.
 
-Изображения и другие статические ресурсы добавьте во вложенную папку **<mypage>-images**. Если вы создаете папку для содержимого, добавьте в нее папку images.
+Изображения и другие статические ресурсы добавьте во вложенную папку **\<mypage>-images**. Если вы создаете папку для содержимого, добавьте в нее папку images.
 
 #### <a name="example-structure"></a>Пример структуры
 
-    docs
-      /android
-          mypage.md
-          /mypage-images
-              some-image.png
+```
+docs
+    /android
+        mypage.md
+        /mypage-images
+            some-image.png
+```
 
 Обязательно используйте правильный синтаксис Markdown. Дополнительные сведения см. в [руководстве по стилю](../contributing-guidelines/template.md).
 

@@ -19,11 +19,17 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: 2019-08.md
+            html: "Новое в документации по Xamarin на август 2019\_г.: выпуск Xamarin.Forms\_4.2, обновления пользовательского интерфейса и другие обновления."
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-08.md
+            title: "Август 2019\_г."
           - href: 2019-07.md
             html: "Новое в документации по Xamarin на июль 2019\_г.: выпуск Xamarin.Forms\_4.1, обновления в разделе \"Данные и облачные службы\" и другие обновления."
             image:
               src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-06.md
+              href: 2019-07.md
             title: "Июль 2019\_г."
           - href: 2019-06.md
             html: "Новое в документации по Xamarin на июнь 2019\_г.: на портале docs.microsoft.com появились сведения о выпуске Xamarin.Forms\_4.0, обновления в разделе \"Данные и облачные службы\", а также документация по\_API."
@@ -114,4 +120,4 @@ sections:
             image:
               src: 'https://docs.microsoft.com/media/common/i_tools.svg'
               href: 'https://docs.microsoft.com/xamarin/tools/'
-            title: Инструменты
+            title: Средства

@@ -8,19 +8,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 400075a1cbd2303f2ecddb9b1cc9465bbcbde32d
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680268"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525583"
 ---
 # <a name="profiling-android-apps"></a>Профилирование приложений Android
 
 Перед развертыванием приложения в Магазине важно выявить и устранить все узкие места по производительности, проблемы с использованием чрезмерного количества памяти или неэффективным использованием сетевых ресурсов. Для этого доступны два средства профилирования:
 
--  Xamarin Profiler 
--  Android Profiler в Android Studio
+- Xamarin Profiler 
+- Android Profiler в Android Studio
 
 Это руководство содержит общие сведения о Xamarin Profiler, а также информацию о начале работы с Android Profiler.
 
@@ -40,38 +40,38 @@ Android Studio 3.0 и более поздних версий включает в
 
 Ниже описано, как запустить приложение Xamarin Android в средстве Android Profiler среды Android Studio. На примерах снимков экрана ниже приложение [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) Xamarin Forms создается и профилируется с помощью Android Profiler:
 
-1.  В параметрах сборки проекта Android отключите параметр **Использовать общую среду выполнения**. Это позволяет выполнить сборку пакета приложения Android (APK) без зависимости от общей среды выполнения Mono времени разработки.
+1. В параметрах сборки проекта Android отключите параметр **Использовать общую среду выполнения**. Это позволяет выполнить сборку пакета приложения Android (APK) без зависимости от общей среды выполнения Mono времени разработки.
 
     ![Отключение параметра "Использовать общую среду выполнения"](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
-2.  Выполните сборку приложения для **отладки** и разверните его на физическом устройстве или в эмуляторе. В результате создается подписанная **отладочная** версия APK-файла.
+2. Выполните сборку приложения для **отладки** и разверните его на физическом устройстве или в эмуляторе. В результате создается подписанная **отладочная** версия APK-файла.
     Для примера **XamagonXuzzle** итоговый APK-файл называется **com.companyname.XamagonXuzzle Signed.apk**.
 
-3.  Откройте папку проекта и перейдите в **bin/Debug**. В этой папке найдите версию **Signed.apk** приложения и скопируйте ее в удобное место (например, на рабочий стол). На следующем снимке экрана указан APK-файл **com.companyname.XamagonXuzzle Signed.apk**, копируемый на рабочий стол:
+3. Откройте папку проекта и перейдите в **bin/Debug**. В этой папке найдите версию **Signed.apk** приложения и скопируйте ее в удобное место (например, на рабочий стол). На следующем снимке экрана указан APK-файл **com.companyname.XamagonXuzzle Signed.apk**, копируемый на рабочий стол:
 
     [![Расположение отладочного подписанного APK-файла](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
-4.  Запустите Android Studio и выберите **Profile or debug APK** (Профилирование или отладка APK):
+4. Запустите Android Studio и выберите **Profile or debug APK** (Профилирование или отладка APK):
 
     ![Запуск профилировщика с экрана запуска Android Studio](profiling-images/vswin/03-android-studio.png)
 
-5.  В диалоговом окне **Select APK File** (Выбор APK-файла) перейдите к ранее созданному и скопированному APK-файлу. Выберите этот файл и нажмите кнопку **ОК**. 
+5. В диалоговом окне **Select APK File** (Выбор APK-файла) перейдите к ранее созданному и скопированному APK-файлу. Выберите этот файл и нажмите кнопку **ОК**. 
     
     ![Выбор APK в диалоговом окне "Select APK File" (Выбор APK-файла)](profiling-images/vswin/04-select-apk-dialog.png)
 
-6.  Android Studio загружает APK-файл и дизассемблирует **classes.dex**:
+6. Android Studio загружает APK-файл и дизассемблирует **classes.dex**:
 
     ![Настройка APK-файла](profiling-images/vswin/05-setting-up-the-apk.png)
 
-7.  После загрузки APK среда Android Studio отображает для него приведенный ниже экран проекта. Щелкните правой кнопкой мыши имя приложения в представлении в виде дерева слева и выберите пункт **Open Module Settings** (Открыть параметры модуля):
+7. После загрузки APK среда Android Studio отображает для него приведенный ниже экран проекта. Щелкните правой кнопкой мыши имя приложения в представлении в виде дерева слева и выберите пункт **Open Module Settings** (Открыть параметры модуля):
 
     [![Расположение элемента меню "Open Module Settings" (Открыть параметры модуля)](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
-8.  Перейдите в раздел **Project Settings > Modules** (Параметры проекта > Модули), выберите узел **-Signed** (Подписан) для приложения, а затем щелкните **&lt;No SDK&gt;** (Без SDK):
+8. Перейдите в раздел **Параметры проекта > Модули**, выберите узел **-Подписан** для приложения, а затем щелкните **&lt;Без SDK&gt;** :
 
     [![Переход к параметру пакета SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
-9.  В раскрывающемся меню **Module SDK** (Модуль SDK) выберите уровень пакета SDK для Android, который использовался для сборки приложения (в этом примере для сборки **XamagonXuzzle** использовался уровень API 26):
+9. В раскрывающемся меню **Модуль SDK** выберите уровень пакета SDK для Android, который использовался для сборки приложения (в этом примере для сборки **XamagonXuzzle** использовался уровень API 26):
 
     [![Настройка уровня для пакета SDK проекта](profiling-images/vswin/08-project-sdk-level-sml.png)](profiling-images/vswin/08-project-sdk-level.png#lightbox)
 
@@ -107,8 +107,8 @@ Android Studio 3.0 и более поздних версий включает в
 Подробные сведения об использовании Android Profiler приведены в [документации по Android Studio](https://developer.android.com/studio/profile/android-profiler.html).
 Для разработчиков Xamarin Android могут представлять интерес следующие разделы:
 
--   [Профилировщик ЦП](https://developer.android.com/studio/profile/cpu-profiler.html) &ndash; объясняет, как проверить загрузку ЦП и активность потоков для приложения в режиме реального времени.
+- [Профилировщик ЦП](https://developer.android.com/studio/profile/cpu-profiler.html) &ndash; объясняет, как проверить загрузку ЦП и активность потоков для приложения в режиме реального времени.
 
--   [Профилировщик памяти](https://developer.android.com/studio/profile/memory-profiler.html) &ndash; отображает график использования памяти приложением в режиме реального времени, а также позволяет регистрировать выделения памяти для анализа.
+- [Профилировщик памяти](https://developer.android.com/studio/profile/memory-profiler.html) — отображает график использования памяти приложением в режиме реального времени, а также позволяет регистрировать выделения памяти для анализа.
 
--   [Профилировщик сети](https://developer.android.com/studio/profile/network-profiler.html) &ndash; отображает сведения о сетевой активности в реальном времени для данных, отправляемых и получаемых приложением.
+- [Профилировщик сети](https://developer.android.com/studio/profile/network-profiler.html) — отображает сведения о сетевой активности в реальном времени для данных, отправляемых и получаемых приложением.

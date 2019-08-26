@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: 9f2aecf1bcac8f9603db40e3562f49123e924bfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 07/19/2019
+ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739291"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889208"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Всплывающее меню оболочки Xamarin.Forms
 
@@ -131,6 +131,32 @@ Shell.Current.FlyoutIsPresented = false;
 </Shell>
 ```
 
+## <a name="flyout-background-image"></a>Фоновое изображение всплывающего элемента
+
+Всплывающий элемент может иметь необязательное фоновое изображение, которое отображается под заголовком всплывающего элемента, а также за всеми всплывающими элементами и пунктами меню. Фоновое изображение можно указать, задав для привязываемого свойства `FlyoutBackgroundImage` типа [`ImageSource`](xref:Xamarin.Forms.ImageSource) файл, внедренный ресурс, URI или поток.
+
+Пропорции фонового изображения можно настроить, установив для привязываемого свойства `FlyoutBackgroundImageAspect` типа [`Aspect`](xref:Xamarin.Forms.Aspect)один из членов перечисления `Aspect`:
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) — обрезает изображение таким образом, чтобы оно заполнило область экрана, сохраняя пропорции.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) — осуществляет леттербоксинг изображения (при необходимости), чтобы изображение поместилось в область экрана, с добавлением пустого пространства в верхнюю, нижнюю или боковую часть в зависимости от ориентации изображения.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) — растягивает изображение, чтобы полностью заполнить отображаемую область. Это может привести к искажению изображения.
+
+По умолчанию свойство `FlyoutBackgroundImageAspect` имеет значение `AspectFit`.
+
+В следующем примере показано задание этих свойств:
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+Это приводит к отображению фонового изображения во всплывающем элементе:
+
+![Снимок экрана: фоновое изображение всплывающего элемента](flyout-images/flyout-backgroundimage.png "Фоновое изображение всплывающего элемента")
+
 ## <a name="flyout-items"></a>Элементы всплывающего меню
 
 Если шаблон навигации по приложению включает всплывающее меню, производный объект `Shell` должен содержать один или несколько объектов `FlyoutItem`, где каждый объект `FlyoutItem` представляет один такой элемент. Каждый объект `FlyoutItem` должен быть дочерним для объекта `Shell`.
@@ -197,7 +223,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 Класс `FlyoutItem` включает следующие свойства, которые определяют внешний вид и поведение всплывающего меню:
 
-- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. Значение по умолчанию — `AsSingleItem`.
+- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. По умолчанию используется значение `AsSingleItem`.
 - `CurrentItem` с типом `Tab` обозначает выбранный элемент.
 - `Items` с типом `IList<Tab>` определяет все вкладки в `FlyoutItem`.
 - `FlyoutIcon` с типом `ImageSource` — значок, который используется для элемента. Если это свойство не установлено, по умолчанию ему присваивается значение свойства `Icon`.

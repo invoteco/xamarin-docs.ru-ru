@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: MT
+ms.openlocfilehash: 180ffa7cf723d841021a8bf7d1f1a285c882c103
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653891"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065547"
 ---
 # <a name="listview-interactivity"></a>Интерактивность ListView
 
@@ -75,7 +75,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 По умолчанию элемент меню не имеет возможности узнать, какая ячейка, в которой он принадлежит. `CommandParameter` можно найти в `MenuItem` для хранения объектов, таких как объект MenuItem ViewCell. `CommandParameter` можно задать в XAML и C#.
 
-### <a name="c"></a>C#  
+### <a name="c"></a>C\#
 
 Контекстные действия может быть реализован ни в одном `Cell` подкласс (пока она не используется в качестве заголовка группы), создав `MenuItem`s и добавления их в `ContextActions` коллекции для ячейки. У вас есть следующие свойства можно настроить для контекста действия:
 

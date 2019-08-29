@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: MT
+ms.openlocfilehash: 1e1bba499a14b92965a5fb544ccf321b0e453894
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527064"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065440"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Пошаговое руководство. Использование сенсорного ввода в Xamarin. iOS
 
@@ -37,7 +37,7 @@ ms.locfileid: "69527064"
 
 
 1. Откройте проект **Touch_Start**. Сначала запустите проект, чтобы убедиться, что все готово, и коснитесь кнопки **сенсорные примеры** . Вы увидите экран, аналогичный приведенному ниже (хотя ни одна из кнопок не будет работать):
-    
+
     [![](ios-touch-walkthrough-images/image4.png "Пример приложения запускается с нерабочими кнопками")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
@@ -164,11 +164,11 @@ ms.locfileid: "69527064"
         touchStartedInside = false;
     }
     ```
-    
+
     Оба этих метода сбрасывают `touchStartedInside` флаг в значение false. `TouchesEnded`также отображается `TouchesEnded` на экране.
 
 1. На этом этапе экран сенсорных примеров завершен. Обратите внимание, что экран изменяется при взаимодействии с каждым из изображений, как показано на следующем снимке экрана:
-        
+
     [![](ios-touch-walkthrough-images/image4.png "Экран начального приложения")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "Экран после того, как пользователь перетаскивает кнопку")](ios-touch-walkthrough-images/image5.png#lightbox)

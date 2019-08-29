@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 2dde7415f40c9db205351a81d63d273fc211ed2b
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 86e92ee5293b4c9ed902f1c8d9858e06db1aa458
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976588"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065514"
 ---
 # <a name="xamarinforms-contentview"></a>ContentView Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 Класс Xamarin. Forms [`ContentView`](xref:Xamarin.Forms.ContentView) является `Layout` типом, который содержит один дочерний элемент и обычно используется для создания настраиваемых, многократно используемых элементов управления. Класс наследует от [`TemplatedView`.](xref:Xamarin.Forms.TemplatedView) `ContentView` В этой статье и связанном примере объясняется, как создать пользовательский `CardView` элемент управления на основе `ContentView` класса.
 
@@ -205,7 +205,7 @@ CardView card = new CardView
 
 ## <a name="related-links"></a>Связанные ссылки
 
-* [Пример приложения ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+* [Пример приложения ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Привязка данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Привязываемые свойства](~/xamarin-forms/xaml/bindable-properties.md).
 * [Шаблоны элементов управления Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647621"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121634"
 ---
 # <a name="customizing-listview-appearance"></a>Настройка внешнего вида ListView
 
@@ -214,8 +214,8 @@ ListView HeaderList = new ListView() {
 ## <a name="row-separators"></a>Разделители строк
 Разделитель линии отображаются между `ListView` элементы по умолчанию в iOS и Android. Если вы хотите скрыть разделительных линий в iOS и Android, задайте `SeparatorVisibility` свойство в ListView. Параметры для `SeparatorVisibility` являются:
 
-* **По умолчанию** -показана строка разделителя в iOS и Android.
-* **Нет** -скрывает разделителя на всех платформах.
+- **По умолчанию** -показана строка разделителя в iOS и Android.
+- **Нет** -скрывает разделителя на всех платформах.
 
 Видимость по умолчанию:
 

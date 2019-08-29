@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eb1358f039cc5d5a200f929fcc7dfa71ca863d2a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529061"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121317"
 ---
 # <a name="xamarinforms-device-class"></a>Класс устройств Xamarin.Forms
 
@@ -135,12 +135,12 @@ this.FlowDirection = Device.FlowDirection;
 
 [ `Styles` Свойство](~/xamarin-forms/user-interface/styles/index.md) содержит определения встроенных стилей, которые могут применяться для некоторых элементов управления (такие как `Label`) `Style` свойство. Ниже приведены доступные стили.
 
-* BodyStyle
-* CaptionStyle
-* ListItemDetailTextStyle
-* ListItemTextStyle
-* SubtitleStyle
-* TitleStyle
+- BodyStyle
+- CaptionStyle
+- ListItemDetailTextStyle
+- ListItemTextStyle
+- SubtitleStyle
+- TitleStyle
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
@@ -188,7 +188,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Класс включает следующие `static` методы, которые можно использовать для взаимодействия с элементами пользовательского интерфейса из фоновых потоков: `Device`
 
-| Метод | Аргументы | Returns | Цель |
+| Метод | Аргументы | Возвращает | Цель |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Вызывает объект `Action` в основном потоке и не ожидает его завершения. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Вызывает объект `Func<T>` в основном потоке и ожидает его завершения. |

@@ -1,48 +1,48 @@
 ---
-title: Работа с watchOS значки в Xamarin
-description: В этом документе описываются различные значки, необходимую для приложения watchOS, а также как настроить решение, чтобы включить эти значки.
+title: Работа со значками watchOS в Xamarin
+description: В этом документе описываются различные значки, необходимые для приложения watchOS, и описывается, как настроить решение для включения этих значков.
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/26/2018
-ms.openlocfilehash: 75b5d1f941921a84d96579a4b0d0666ae0c2522d
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f65d4faa0e006517366ab6aacf3f596b18385ccb
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864987"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120507"
 ---
-# <a name="working-with-watchos-icons-in-xamarin"></a>Работа с watchOS значки в Xamarin
+# <a name="working-with-watchos-icons-in-xamarin"></a>Работа со значками watchOS в Xamarin
 
-Apple Watch решений требуется два набора значков:
+Для Apple Watch решений требуется два набора значков:
 
-* Значки приложений iOS, которые будут отображаться на устройстве iPhone.
-* Apple Watch значки, которые будут отображаться в круге в меню контрольных значений и на экранах уведомлений. Значок приложения также отображается в [Apple Watch](~/ios/watchos/app-fundamentals/settings.md) приложение iOS.
+- Значки приложения iOS, которые будут отображаться на iPhone.
+- Apple Watch значки, которые будут отображаться в окружности в меню контрольные значения и на экранах уведомлений. Значок контрольного приложения также отображается в приложении [Apple Watch](~/ios/watchos/app-fundamentals/settings.md) iOS.
 
 ## <a name="apple-watch-icons"></a>Значки Apple Watch
 
 | | | |
 |-|-|-|
-|Значок приложения iOS|Откроется на iPhone и начнется в родительское приложение|![значок приложения iOS](icons-images/icon-ios.png)|
-|Значок приложения Watch|Отображается на начальном экране Apple Watch|![значок приложения watchOS](icons-images/icon-home.png)|
-||Отображается в уведомлениях Контрольные значения|![значок уведомления watchOS](icons-images/notification-icon.png)|
-||Отображается в [Apple Watch приложение iOS](~/ios/watchos/app-fundamentals/settings.md)|![значок iOS приложения Watch](icons-images/watch-app-sml.png)|
+|Значок приложения iOS|Отображается на iPhone и запускает родительское приложение.|![значок приложения iOS](icons-images/icon-ios.png)|
+|Значок просмотра приложения|Отображается на начальном экране Apple Watch|![значок приложения watchOS](icons-images/icon-home.png)|
+||Отображается в уведомлениях о просмотре|![значок уведомления watchOS](icons-images/notification-icon.png)|
+||Отображается в [приложении Apple Watch iOS](~/ios/watchos/app-fundamentals/settings.md)|![значок приложения наблюдения iOS](icons-images/watch-app-sml.png)|
 
 ## <a name="configuring-your-solution"></a>Настройка решения
 
-Чтобы убедиться, что ваше приложение iOS и приложение watch Показывать правильное имя и значок, выполните следующие действия для каждого проекта:
+Чтобы убедиться, что приложение iOS и контрольное приложение показывают правильное имя и значок, выполните следующие инструкции для каждого проекта:
 
 ### <a name="ios-app"></a>Приложение iOS
 
-Ссылаться на [руководство значки приложения iOS](~/ios/app-fundamentals/images-icons/app-icons.md) чтобы ваше приложение iOS значки настроены правильно.
+Чтобы убедиться, что значки приложения iOS правильно настроены, обратитесь к [руководству по значкам приложения iOS](~/ios/app-fundamentals/images-icons/app-icons.md) .
 
 #### <a name="infoplist"></a>Info.plist
 
-Строка, которая появляется рядом с приложение для Apple watch в [приложение "Параметры" Apple Watch](~/ios/watchos/app-fundamentals/settings.md) настраивается в **Info.plist приложения iOS**.
+Строка, отображаемая рядом с приложением Watch в [приложении Apple Watch Settings](~/ios/watchos/app-fundamentals/settings.md) , настраивается в файле **info. plist приложения iOS**.
 
-Убедитесь, что ваш **Info.plist** имеет `CFBundleName` ключом и значением (Примечание: этот режим отличается `CFBundleDisplayName`, может иметь оба):
+Убедитесь, что в файле **info. plist** есть `CFBundleName` ключ и значение (Обратите внимание, что это `CFBundleDisplayName`отличается от, у вас может быть и то, и другое):
 
 ```xml
 <key>CFBundleName</key>
@@ -51,39 +51,39 @@ Apple Watch решений требуется два набора значков
 
 ### <a name="apple-watch-app"></a>Приложение Apple Watch
 
-Один раз в [родительское приложение](~/ios/watchos/app-fundamentals/parent-app.md) значки настроена, необходимо добавить каталог активов значок приложения в приложении для Apple watch.
+После настройки значков [родительского приложения](~/ios/watchos/app-fundamentals/parent-app.md) необходимо добавить в приложение Watch каталог ресурсов значка приложения.
 
-1. Щелкните правой кнопкой мыши на проекте приложения Watch и выберите **файл > Добавить > новый файл... > iOS > каталог активов** добавляемый каталог ресурсов проекта.
+1. Щелкните проект Watch App правой кнопкой мыши и выберите **файл > добавить > новый файл... > iOS > каталога активов** , чтобы добавить каталог активов в проект.
 
-    ![](icons-images/newasset.png "Добавьте каталог ресурсов в проект")
+    ![](icons-images/newasset.png "Добавление каталога активов в проект")
 
-2. Дважды щелкните **AppIcon.appiconset/Contents.json** файла
+2. Дважды щелкните файл **AppIcon. appiconset/Contents. JSON** .
 
     ![](icons-images/xcassets-iconset-sml.png "Содержимое AppIcon")
 
-3. Добавьте все изображения watchOS, как показано на следующем снимке экрана:
+3. Добавьте все образы watchOS, как показано на следующем снимке экрана:
 
-    [![](icons-images/appicons-sml.png "Добавьте все изображения watchOS, как показано на следующем снимке экрана")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Добавьте все образы watchOS, как показано на этом снимке экрана.")](icons-images/appicons.png#lightbox)
 
-    Ссылаться на [логотипу Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) для размера (размеры также отображаются на экране). Помните, автоматически обрезается эти значки для подготовки к просмотру в кружке.
+    См. [рекомендации по использованию значков Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) для требуемых размеров (размеры также отображаются на экране). Помните, что эти значки будут автоматически обрезаны для отображения в окружности.
 
-    Значок списка должен выглядеть следующим образом:
+    Список значков должен выглядеть примерно так:
 
-    ![](icons-images/xcassets-complete-sml.png "Значок списка в обозревателе решений")
+    ![](icons-images/xcassets-complete-sml.png "Список значков в обозреватель решений")
 
-4. Чтобы каталог активов, включенными в приложение, добавьте следующий раздел и значение **Info.plist приложения Watch**:
+4. Чтобы убедиться в том, что каталог активов включен в приложение, добавьте следующий ключ и значение в поле **info. plist приложения Watch.**
 
     ```xml
     <key>XSAppIconAssets</key>
     <string>Images.xcassets/AppIcon.appiconset</string>
     ```
 
-Можно проверить значки настроены правильно, проверив [приложение "Параметры" Apple Watch](~/ios/watchos/app-fundamentals/settings.md) в симуляторе iPhone или создание [уведомления](~/ios/watchos/platform/notifications.md) и подтверждения того, значок появляется уведомление экран.
+Проверить правильность настройки значков можно, проверив [приложение Apple Watch Settings](~/ios/watchos/app-fundamentals/settings.md) в симуляторе iPhone или создав [уведомление](~/ios/watchos/platform/notifications.md) и убедившись, что значок отображается на экране уведомления.
 
 > [!NOTE]
-> Значки не может иметь альфа-канал (приложения будут отклонены во время отправки в App Store при наличии альфа-канал). Можно проверить, существует ли альфа-канал и удалите его [с помощью предварительной версии приложения в Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+> Значки не могут иметь альфа-канал (приложение будет отклонено при отправке в магазине приложений, если имеется альфа-канал). Можно проверить, существует ли альфа-канал, и удалить его [с помощью предварительной версии приложения на Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Руководство по значок & образы watchOS Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)
+- [Значок Apple watchOS. Guide & Images](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)

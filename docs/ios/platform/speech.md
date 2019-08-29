@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fe871985700c5a40db2736ded78588b0b7d4f616
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655388"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121289"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Распознавание речи в Xamarin. iOS
 
@@ -89,8 +89,8 @@ API распознавания речи можно использовать на
 - Укажите описание использования в `Info.plist` файле приложения `NSSpeechRecognitionUsageDescription` с помощью ключа. Например, приложение камеры может включать следующее описание: _«это позволяет получить фотографию_ , произнося слово «Мак».
 - Запросите авторизацию `SFSpeechRecognizer.RequestAuthorization` , вызвав метод для представления пояснения ( `NSSpeechRecognitionUsageDescription` приведенного выше ключа) о том, почему приложение хочет получить доступ к распознаванию речи для пользователя в диалоговом окне и позволить им принять или отклонить.
 - Создайте запрос распознавания речи:
-    * Для предварительно записанного звука на диске используйте `SFSpeechURLRecognitionRequest` класс.
-    * Для звукового аудио (или звука из памяти) используйте `SFSPeechAudioBufferRecognitionRequest` класс.
+    - Для предварительно записанного звука на диске используйте `SFSpeechURLRecognitionRequest` класс.
+    - Для звукового аудио (или звука из памяти) используйте `SFSPeechAudioBufferRecognitionRequest` класс.
 - Передайте запрос распознавания речи распознавателю речи (`SFSpeechRecognizer`), чтобы начать распознавание. Приложение может при необходимости удерживаться на возвращенном `SFSpeechRecognitionTask` для отслеживания и отслеживания результатов распознавания.
 
 Эти действия будут подробно рассмотрены ниже.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528797"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119168"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Привет, tvOS краткое руководство по началу работы
 
@@ -327,8 +327,8 @@ namespace HellotvOS
 
 Есть два основных способа доступа к элементам управления, добавленным в конструктор iOS из кода:
 
-* Создание обработчика событий для элемента управления.
-* Присвоение имени элементу управления, чтобы впоследствии можно было ссылаться на него.
+- Создание обработчика событий для элемента управления.
+- Присвоение имени элементу управления, чтобы впоследствии можно было ссылаться на него.
 
 При добавлении любого из этих элементов разделяемый класс `ViewController.designer.cs` в будет обновлен для отражения изменений. Это позволит вам получить доступ к элементам управления в контроллере представления.
 

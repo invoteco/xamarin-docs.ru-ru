@@ -1,40 +1,40 @@
 ---
-title: Вручную созданию пакетов NuGet для Xamarin
-description: Этот документ содержит советы помогут вам создавать пакеты NuGet, нацеленных на платформу Xamarin. Он описывает профили Xamarin пакета NuGet, пакеты NuGet переносимой библиотеки Классов с зависимостями платформа и ссылки на различные примеры с открытым исходным кодом.
+title: Создание пакетов NuGet для Xamarin вручную
+description: В этом документе содержатся советы по созданию пакетов NuGet, предназначенных для платформы Xamarin. Здесь описываются профили Xamarin для пакетов NuGet, PCL NuGet с зависимостями платформы и ссылки на различные примеры с открытым исходным кодом.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 2f66d8a3960741643013a1010162f52d283026d6
-ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
+ms.openlocfilehash: cf694b54c8d2cdb33fd480d89d32b439f036ddc5
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67855712"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119448"
 ---
-# <a name="manually-creating-nuget-packages-for-xamarin"></a>Вручную созданию пакетов NuGet для Xamarin
+# <a name="manually-creating-nuget-packages-for-xamarin"></a>Создание пакетов NuGet для Xamarin вручную
 
-_Эта страница содержит некоторые советы помогут вам создавать пакеты NuGet, нацеленных на платформу Xamarin._
+_На этой странице содержатся некоторые советы по созданию пакетов NuGet, предназначенных для платформы Xamarin._
 
 > [!NOTE]
-> Xamarin Studio 6.2 (и Visual Studio для Mac) включает в себя возможность _автоматически_ создание пакетов NuGet из библиотеки PCL .NET Standard и проектах общих. Ссылаться на [многоплатформенные библиотеки для совместного использования кода](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) руководство для получения дополнительных сведений.
+> Xamarin Studio 6,2 (и Visual Studio для Mac) включает возможность _автоматического_ создания пакетов NuGet с помощью PCL, .NET Standard или общих проектов. Дополнительные сведения см. в разделе многоплатформенные [библиотеки для совместного использования кода](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) .
 
 ## <a name="nuget-package-xamarin-profiles"></a>Профили Xamarin пакета NuGet
 
-Веб-сайте NuGet [поддержка нескольких версий платформы .NET и профили](https://docs.nuget.org/create/enforced-package-conventions) описывает, как для поддержки различных платформ Microsoft и профили, но не содержит имен целевой платформы, используемые Xamarin.
+Веб-сайт NuGet, [поддерживающий несколько версий и профилей .NET Framework](https://docs.nuget.org/create/enforced-package-conventions) , описывает поддержку различных платформ и профилей Майкрософт, но не включает имена целевых платформ, используемых Xamarin.
 
-Сегодня являются основной целевые платформы Xamarin, используется:
+Основные целевые платформы Xamarin, используемые сегодня:
 
-* **MonoAndroid** -Xamarin.Android
-* **Xamarin.iOS** -Xamarin.iOS [единый API](~/cross-platform/macios/unified/index.md) (поддерживает 64-разрядных)
-* **Xamarin.Mac** -мобильных профиля в Xamarin.Mac, что эквивалентно области Xamarin.iOS и Xamarin.Android API.
+- Для **Android** — Xamarin. Android
+- **Xamarin. iOS** — [Unified API](~/cross-platform/macios/unified/index.md) Xamarin. iOS (поддерживает 64-разрядный)
+- **Xamarin. Mac** — профиль мобильного устройства Xamarin. Mac, эквивалентный поверхности API Xamarin. iOS и Xamarin. Android.
 
-Имеется также целевой объект для более старых iOS [классический API](~/cross-platform/macios/unified/index.md):
+Существует также целевой объект для более старых [Classic API](~/cross-platform/macios/unified/index.md)iOS:
 
-* **MonoTouch** -iOS классический API
+- Classic API iOS с поддержкой **технологии Touch**
 
-Объект **файлу nuspec** файл, который все это в качестве целевого будет выглядеть следующим образом:
+**Nuspec** -файл, предназначенный для всех, будет выглядеть следующим образом:
 
 ```xml
 <files>
@@ -45,39 +45,39 @@ _Эта страница содержит некоторые советы пом
 </files>
 ```
 
-Выше игнорирует все переносимые библиотеки классов.
+Приведенный выше параметр игнорирует все переносимые библиотеки классов.
 
-Большинство **файлу nuspec** файлах указывается номер версии целевой платформы, но это необязательно, если сборка работает со всеми версиями этой целевой платформы. Таким образом, если на целевом сервере была **lib\MonoAndroid** это будет означать, она работает с любой версией Xamarin.Android.
+Большинство файлов **. nuspec** указывают номер версии целевой платформы, но это необязательно, если сборка работает со всеми версиями этой целевой платформы. Таким образом, если целевой объект был **либ\моноандроид** , это означает, что он работает с любой версией Xamarin. Android.
 
-Можно указать версию с набором номера без десятичной запятой, или это можно сделать с помощью десятичных запятых. Без десятичной запятой NuGet просто принимает каждое число и включить его в версию, вставив "." между каждая цифра.
+Можно указать версию с набором чисел без десятичной запятой или указать ее с помощью десятичных разделителей. Без десятичной запятой NuGet просто принимает каждое число и преобразует его в версию, вставляя символ "." между каждой цифрой.
 
-В приведенном выше «MonoAndroid10» означает «Android 1.0". Это означает лишь то проекта [требуемой версии .NET framework](~/android/app-fundamentals/android-api-levels.md) должен быть MonoAndroid 1.0 или более поздней версии. Версия, указанная в `<TargetFrameworkVersion>` элемент в файле проекта.
+В приведенном выше "MonoAndroid10" означает "Android 1,0". Это означает, что Целевая [платформа](~/android/app-fundamentals/android-api-levels.md) проекта должна иметь версию Android 1,0 или более позднюю. Версия указывается в `<TargetFrameworkVersion>` элементе в файле проекта.
 
 Для уточнения:
 
-- **MonoAndroid403** соответствует Android 4.0.3 и более поздних версий (т. е API уровня 15)
-- **Xamarin.iOS10** соответствует Xamarin.iOS 1.0 и новее
-- **Xamarin.iOS1.0** также соответствует Xamarin.iOS 1.0 и новее
+- **MonoAndroid403** соответствует Android 4.0.3 и более поздней версии (уровень API IE 15)
+- **Xamarin. iOS10** соответствует Xamarin. iOS 1,0 и более поздним версиям
+- **Xamarin. iOS 1.0** также соответствует Xamarin. iOS 1,0 и более поздним версиям
 
-## <a name="pcl-nugets-with-platform-dependencies"></a>Пакеты NuGet переносимой библиотеки Классов с зависимости платформы
+## <a name="pcl-nugets-with-platform-dependencies"></a>PCL NuGet с зависимостями платформы
 
-Профили PCL ограничены в какую платформу .NET API-интерфейсов, они могут получить доступ, и они определенно не может получить доступ к кода для конкретных платформ. Эти ссылки 3rd-party обсуждаются различные подходы к созданию пакетов NuGet, использующие PCL и собственные API-интерфейсы для обеспечения совместимости для Xamarin и других платформ:
+Профили PCL ограничены тем, какие API-интерфейсы .NET Framework имеют доступ, и, конечно, не могут получить доступ к коду, зависящему от платформы. Эти сторонние ссылки обсуждают различные подходы к созданию пакетов NuGet, использующих PCL и собственные API для обеспечения совместимости с Xamarin и другими платформами:
 
-- [Как исправить работу библиотеки переносимый класс для вас](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [Прием с подменой переносимой библиотеки Классов](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Создание NuGet переносимую библиотеку Классов, которая работает с помощью Xamarin.iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Как сделать переносимые библиотеки классов пригодными для вас](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [Прием Bait и переключение PCL](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Создание пакета NuGet PCL, который работает с Xamarin. iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-Этот внешний [список профилей PCL с их именами целевой NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) также является полезным справочником.
+Этот внешний [список профилей PCL с именем целевого объекта NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) также является полезной ссылкой.
 
 ## <a name="examples"></a>Примеры
 
-Некоторые примеры открытым исходным кодом, который можно использовать для:
+Некоторые примеры с открытым кодом, на которые можно ссылаться:
 
-- [**ModernHttpClient** ](https://www.nuget.org/packages/modernhttpclient/) — создавать приложения с помощью System.Net.Http, но удалить эту библиотеку в и осуществляется значительно быстрее (представление [источника](https://github.com/paulcbetts/ModernHttpClient)).
-- [**Сплаттинга** ](https://www.nuget.org/packages/Splat/) — библиотеку, чтобы упростить платформ, должно быть (представление [источника](https://github.com/paulcbetts/Splat)).
-- [**NGraphics** ](https://www.nuget.org/packages/NGraphics/) -межплатформенной библиотеки для отрисовки векторной графики на платформе .NET (представление [источника](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
+- [**Модернхттпклиент**](https://www.nuget.org/packages/modernhttpclient/) — напишите свое приложение с помощью System .NET. http, но удалите эту библиотеку в, и она будет работать значительно быстрее (Просмотр [исходного кода](https://github.com/paulcbetts/ModernHttpClient)).
+- [**Со звездочкой**](https://www.nuget.org/packages/Splat/) — Библиотека, позволяющая выполнять операции между различными платформами (Просмотр [исходного кода](https://github.com/paulcbetts/Splat)).
+- [**Нграфикс**](https://www.nuget.org/packages/NGraphics/) — межплатформенная библиотека для отрисовки векторной графики на платформе .NET (Просмотр [исходного кода](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Nugetizer 3000 автоматическое создание Nuget](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
+- [Нужетизер-3000 автоматическое создание NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
 - [Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 2c69c995317d5121f203946cf1a4196bce9b4177
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643087"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120600"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Отображение изображения в Xamarin. iOS
 
@@ -159,9 +159,9 @@ if (MyIcon.Image != null) {
 
 Существует три возможных параметра `UIImage.RenderMode` с `UIImageRenderingMode` помощью перечисления:
 
-* `AlwaysOriginal`— Принудительное отображение изображения в качестве исходного файла исходного изображения без каких-либо изменений.
-* `AlwaysTemplate`— Принудительное отображение изображения в виде шаблона путем выделения цветом пикселов указанного `Tint` цвета.
-* `Automatic`— Отображает изображение в виде шаблона или исходного файла в зависимости от среды, в которой он используется. Например, если изображение `UIToolBar`используется в `UITabBar` , `UINavigationBar`или `UISegmentControl` будет рассматриваться как шаблон.
+- `AlwaysOriginal`— Принудительное отображение изображения в качестве исходного файла исходного изображения без каких-либо изменений.
+- `AlwaysTemplate`— Принудительное отображение изображения в виде шаблона путем выделения цветом пикселов указанного `Tint` цвета.
+- `Automatic`— Отображает изображение в виде шаблона или исходного файла в зависимости от среды, в которой он используется. Например, если изображение `UIToolBar`используется в `UITabBar` , `UINavigationBar`или `UISegmentControl` будет рассматриваться как шаблон.
 
 ## <a name="adding-new-assets-collections"></a>Добавление новых коллекций активов
 

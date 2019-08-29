@@ -7,12 +7,12 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 1977da75e430e72bee151814abc4502ee090b40c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521493"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119962"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Где я могу найти информацию о версии и журналы
 
@@ -182,9 +182,9 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />журналы симуляторов iOS (на Mac)
 
-* Чтобы получить доступ к системному журналу, выберите **отладка > открыть системный журнал...** в приложении для симуляторов iOS.
+- Чтобы получить доступ к системному журналу, выберите **отладка > открыть системный журнал...** в приложении для симуляторов iOS.
 
-* Чтобы просмотреть отчеты о сбоях в симуляторе, откройте консоль. app и перейдите `~/Library/Logs > DiagnosticReports`по адресу.
+- Чтобы просмотреть отчеты о сбоях в симуляторе, откройте консоль. app и перейдите `~/Library/Logs > DiagnosticReports`по адресу.
 
 ### <a name="a-idios-device-logs-nameios-device-logs-ios-device-logs-on-mac"></a><a id="ios-device-logs" name="ios-device-logs" />журналы устройств iOS (на Mac)
 

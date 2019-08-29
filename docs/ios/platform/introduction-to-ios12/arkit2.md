@@ -7,21 +7,21 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 747eed60c40f7faee0ed7512d6db05116c81b50d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4af5e7ea9c1d744cd3b5ea5444312ba68bfcea11
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645752"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120456"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 в Xamarin. iOS
 
 ARKit был значительно развит с момента его введения в прошлый год в iOS 11. В первую очередь, теперь можно определять вертикальную и горизонтальную плоскости, что значительно повышает практичность дополнений к реальному. Кроме того, существуют новые возможности:
 
-* Распознавание эталонных изображений и объектов в качестве точки соединения между реальными и цифровыми изображениями
-* Новый режим освещения, имитирующий реальное освещение
-* Возможность совместного использования и сохранения сред AR
-* Новый формат файла, предпочтительный для хранения содержимого AR
+- Распознавание эталонных изображений и объектов в качестве точки соединения между реальными и цифровыми изображениями
+- Новый режим освещения, имитирующий реальное освещение
+- Возможность совместного использования и сохранения сред AR
+- Новый формат файла, предпочтительный для хранения содержимого AR
 
 ## <a name="recognizing-reference-objects"></a>Распознавание ссылочных объектов
 
@@ -31,11 +31,11 @@ ARKit был значительно развит с момента его вве
 
 Пример « [сканирование и обнаружение трехмерных объектов](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) » — это порт [проекта Apple](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) , который демонстрирует:
 
-* Управление состоянием приложения [`NSNotification`](xref:Foundation.NSNotification) с помощью объектов
-* Пользовательская визуализация
-* Сложные жесты
-* Просмотр объектов
-* Сохранение[`ARReferenceObject`](xref:ARKit.ARReferenceObject)
+- Управление состоянием приложения [`NSNotification`](xref:Foundation.NSNotification) с помощью объектов
+- Пользовательская визуализация
+- Сложные жесты
+- Просмотр объектов
+- Сохранение[`ARReferenceObject`](xref:ARKit.ARReferenceObject)
 
 Сканирование объекта-образца — это батарея, а более старые устройства часто не могут столкнуться с достижением стабильного отслеживания.
 
@@ -43,17 +43,17 @@ ARKit был значительно развит с момента его вве
 
 Это приложение использует конечный автомат, который переходит между следующими состояниями:
 
-* `AppState.StartARSession`
-* `AppState.NotReady`
-* `AppState.Scanning`
-* `AppState.Testing`
+- `AppState.StartARSession`
+- `AppState.NotReady`
+- `AppState.Scanning`
+- `AppState.Testing`
 
 И дополнительно использует внедренный набор состояний и переходов в `AppState.Scanning`:
 
-* `Scan.ScanState.Ready`
-* `Scan.ScanState.DefineBoundingBox`
-* `Scan.ScanState.Scanning`
-* `Scan.ScanState.AdjustingOrigin`
+- `Scan.ScanState.Ready`
+- `Scan.ScanState.DefineBoundingBox`
+- `Scan.ScanState.Scanning`
+- `Scan.ScanState.AdjustingOrigin`
 
 Приложение использует реактивную архитектуру, которая отправляет уведомления о смене состояния [`NSNotificationCenter`](xref:Foundation.NSNotificationCenter) в эти уведомления и подписывается на них. Программа установки выглядит следующим образом `ViewController.cs`:
 
@@ -121,9 +121,9 @@ internal void EnterStateTesting()
 
 Это облако точки доступно для разработчиков в [`ARFrame.RawFeaturePoints`](xref:ARKit.ARFrame.RawFeaturePoints) свойстве. Эффективное Визуализация облачной точки может быть непростой задачей. Проход по точкам, а затем создание и размещение нового узла SceneKit для каждой точки приведет к уничтожению частоты кадров. Кроме того, при асинхронном завершении произойдет задержка. Пример поддерживает производительность с помощью стратегии из трех частей:
 
-* Использование ненадежного кода для закрепления данных на месте и интерпретации данных в виде необработанного буфера байтов.
-* Преобразование этого необработанного буфера [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) в и создание [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) объекта шаблона.
-* Быстро «объединяя» необработанные данные и шаблон с помощью[`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
+- Использование ненадежного кода для закрепления данных на месте и интерпретации данных в виде необработанного буфера байтов.
+- Преобразование этого необработанного буфера [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) в и создание [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) объекта шаблона.
+- Быстро «объединяя» необработанные данные и шаблон с помощью[`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
 
 ```csharp
 internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color, float size)
@@ -251,11 +251,11 @@ internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRec
 
 Теперь вы можете использовать любой из следующих элементов в качестве основания для работы в смешанной реальности:
 
-* Только акселерометр устройства ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration)iOS 11)
-* Лица ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
-* Эталонные изображения[`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration)(, iOS 12)
-* Сканирование объемных объектов[`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration)(, iOS 12)
-* Визуальный инерциый одометри[`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration)(Улучшенный в iOS 12)
+- Только акселерометр устройства ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration)iOS 11)
+- Лица ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
+- Эталонные изображения[`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration)(, iOS 12)
+- Сканирование объемных объектов[`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration)(, iOS 12)
+- Визуальный инерциый одометри[`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration)(Улучшенный в iOS 12)
 
 `AROrientationTrackingConfiguration`, обсуждаемое в [этой записи и F# образце блога](https://github.com/lobrien/FSharp_Face_AR), является наиболее ограниченным и обеспечивает неплохое взаимодействие в смешанной реальности, так как оно только помещает цифровые объекты в связи с движением устройства, не пытаясь привязывать устройство и экран к реальному миру.
 
@@ -284,8 +284,8 @@ configuration.TrackingImages = referenceImages;
 
 Существует два интересных аспекта этой конфигурации:
 
-* Он эффективен и может использоваться с потенциально большим количеством эталонных образов.
-* Цифровая картинка привязывается к изображению, даже если этот образ перемещается в реальном мире (например, если изображение книги распознается, книга будет отслежена по мере ее извлечения, размещения и т. д.).
+- Он эффективен и может использоваться с потенциально большим количеством эталонных образов.
+- Цифровая картинка привязывается к изображению, даже если этот образ перемещается в реальном мире (например, если изображение книги распознается, книга будет отслежена по мере ее извлечения, размещения и т. д.).
 
 `ARObjectScanningConfiguration` обсуждалось [ранее](#recognizing-reference-objects) и является ориентированной на разработчика конфигурацией для сканирования трехмерных объектов. Это сильно ресурсоемкий процессор и аккумулятор, и его не следует использовать в приложениях для конечных пользователей. Пример [сканирования и обнаружения трехмерных объектов](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) демонстрирует использование этой конфигурации.
 
@@ -299,8 +299,8 @@ ARKit 2 поддерживает «текстурирование окружаю
 
 Для использования текстурирования окружающей среды:
 
-* Объекты должны использовать [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) и присвоить значение в диапазоне от 0 до 1 для [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) и [`Roughness.Contents`и](xref:SceneKit.SCNMaterialProperty.Contents) [`SCNMaterial`](xref:SceneKit.SCNMaterial)
-* Настройка отслеживания должна быть задана [`EnvironmentTexturing`:](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic)
+- Объекты должны использовать [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) и присвоить значение в диапазоне от 0 до 1 для [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) и [`Roughness.Contents`и](xref:SceneKit.SCNMaterialProperty.Contents) [`SCNMaterial`](xref:SceneKit.SCNMaterial)
+- Настройка отслеживания должна быть задана [`EnvironmentTexturing`:](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic)
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e8113a9cefad5f53b66595728340f71101faa9de
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: b8ffeb996783d7a3b1a385265b14f37f36126e8f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065579"
+ms.locfileid: "70119066"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Отображение предупреждений в Xamarin. iOS
 
@@ -23,16 +23,16 @@ ms.locfileid: "70065579"
 Используется `UIAlertControllerStyle` для указания типа оповещения для отображения. Эти типы оповещений:
 
 - **уиалертконтроллерстилеактионшит**
-  * До iOS 8 это было бы Уиактионшит
+  - До iOS 8 это было бы Уиактионшит
 - **уиалертконтроллерстилеалерт**
-  * До iOS 8 это было бы Уиалертвиево 
+  - До iOS 8 это было бы Уиалертвиево 
 
 При создании контроллера предупреждений необходимо выполнить три шага.
 
 - Создайте и настройте оповещение с помощью:
-  * заголовок
-  * message
-  * преферредстиле
+  - заголовок
+  - message
+  - преферредстиле
 
 - Используемых Добавление текстового поля
 - Добавление необходимых действий

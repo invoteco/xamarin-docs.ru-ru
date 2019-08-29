@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522015"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120479"
 ---
 # <a name="binding-objective-c-libraries"></a>Цель привязки-библиотеки C
 
@@ -32,7 +32,7 @@ ms.locfileid: "69522015"
 
 <a name="Getting_Started" />
 
-## <a name="getting-started"></a>Начало работы
+## <a name="getting-started"></a>Приступая к работе
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -918,8 +918,8 @@ public class  XyzOptions {
 
 Для этого необходимо выполнить несколько действий:
 
-* Создайте класс со строгой типизацией, который подклассировать [диктионариконтаинер](xref:Foundation.DictionaryContainer) и предоставляет различные методы получения и задания для каждого свойства.
-* Объявите перегрузки для методов, `NSDictionary` принимающих новую строго типизированную версию.
+- Создайте класс со строгой типизацией, который подклассировать [диктионариконтаинер](xref:Foundation.DictionaryContainer) и предоставляет различные методы получения и задания для каждого свойства.
+- Объявите перегрузки для методов, `NSDictionary` принимающих новую строго типизированную версию.
 
 Вы можете создать строго типизированный класс либо вручную, либо использовать генератор для выполнения работы.  Сначала мы рассмотрим, как это сделать вручную, чтобы понять, что происходит, а затем — автоматический подход.
 
@@ -1404,3 +1404,4 @@ class Demo {
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример привязки](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+ 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 886a6145851720c088e39818b3a6e42a7b66e4bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eaae0859ddce1c7601b0429381c8643c0884c3ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654404"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121389"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Дополнительные изменения платформ iOS 9
 
@@ -78,8 +78,8 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 
 В класс [нсбундле](xref:Foundation.NSBundle) для iOS 9 были внесены следующие изменения:
 
-* `GetPreservationPriorityForTag (NSString tag)`— Получает текущий приоритет сохранения для ресурсов с заданным тегом. Допустимые значения находятся в диапазоне `0.0` от `1.0`до, первыми очищаются ресурсы с наименьшим приоритетом.
-* `SetPreservationPriorityForTag (double priority, NSSet tags)`— Задает текущий приоритет хранения для ресурсов с заданными тегами. Допустимые значения находятся в диапазоне `0.0` от `1.0`до, первыми очищаются ресурсы с наименьшим приоритетом.
+- `GetPreservationPriorityForTag (NSString tag)`— Получает текущий приоритет сохранения для ресурсов с заданным тегом. Допустимые значения находятся в диапазоне `0.0` от `1.0`до, первыми очищаются ресурсы с наименьшим приоритетом.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)`— Задает текущий приоритет хранения для ресурсов с заданными тегами. Допустимые значения находятся в диапазоне `0.0` от `1.0`до, первыми очищаются ресурсы с наименьшим приоритетом.
 
 Дополнительные сведения см. в справочнике по [Нсбундле](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)Apple.
 

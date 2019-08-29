@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 180ffa7cf723d841021a8bf7d1f1a285c882c103
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 3949dd85492a8181ee53e23b3ba2e986e59f8f47
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065547"
+ms.locfileid: "70121624"
 ---
 # <a name="listview-interactivity"></a>Интерактивность ListView
 
@@ -79,9 +79,9 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 Контекстные действия может быть реализован ни в одном `Cell` подкласс (пока она не используется в качестве заголовка группы), создав `MenuItem`s и добавления их в `ContextActions` коллекции для ячейки. У вас есть следующие свойства можно настроить для контекста действия:
 
-* **Текст** &ndash; строка, которая появляется в элементе меню.
-* **Нажата** &ndash; события при щелчке элемента.
-* **IsDestructive** &ndash; (Дополнительно) Если значение true, элемент отображается по-разному в iOS.
+- **Текст** &ndash; строка, которая появляется в элементе меню.
+- **Нажата** &ndash; события при щелчке элемента.
+- **IsDestructive** &ndash; (Дополнительно) Если значение true, элемент отображается по-разному в iOS.
 
 Несколько контекстных действий можно добавить в ячейку, однако должны иметь только один `IsDestructive` присвоено `true`. В следующем коде показано, как будут добавлены контекстные действия `ViewCell`:
 

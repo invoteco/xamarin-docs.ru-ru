@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: c2092cd9e7beb233c9478869ebff91d85b5b30c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c2747b24c47e826e0d832faa36ddb93d8aa06f37
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649609"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121522"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Общие сведения о CoreML в Xamarin. iOS
 
@@ -171,11 +171,11 @@ void HandleClassification(VNRequest request, NSError error){
 
 Существует три примера CoreML, которые можно попробовать:
 
-* [Образец прогнозируемого Habitat цен на Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) имеет простые числовые входные и выходные данные.
+- [Образец прогнозируемого Habitat цен на Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) имеет простые числовые входные и выходные данные.
 
-* [Образец & CoreML "концепция](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) " принимает параметр Image и использует инфраструктуру видения для идентификации квадратных областей в изображении, которые передаются в модель CoreML, распознающую одиночные цифры.
+- [Образец & CoreML "концепция](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) " принимает параметр Image и использует инфраструктуру видения для идентификации квадратных областей в изображении, которые передаются в модель CoreML, распознающую одиночные цифры.
 
-* Наконец, [Пример распознавания изображений CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) использует CoreML для поиска компонентов в фотографии. По умолчанию используется меньшая модель **скуизенет** (5 МБ), но она была написана так, чтобы можно было загрузить и внедрить более крупную модель **VGG16** (553MB). Дополнительные сведения см. в [файле сведений для примера](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+- Наконец, [Пример распознавания изображений CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) использует CoreML для поиска компонентов в фотографии. По умолчанию используется меньшая модель **скуизенет** (5 МБ), но она была написана так, чтобы можно было загрузить и внедрить более крупную модель **VGG16** (553MB). Дополнительные сведения см. в [файле сведений для примера](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 

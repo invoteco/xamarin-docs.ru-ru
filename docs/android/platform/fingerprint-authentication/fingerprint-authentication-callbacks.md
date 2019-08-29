@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: cb4933695d34a0805be4139c7b345f7a70f33613
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524335"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119589"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Ответ на обратные вызовы проверки подлинности
 
 Сканер отпечатков пальцев выполняется в фоновом режиме в собственном потоке, и по завершении он будет сообщать результаты проверки, вызвав один метод `FingerprintManager.AuthenticationCallback` в потоке пользовательского интерфейса. Приложение Android должно предоставить собственный обработчик, который расширяет этот абстрактный класс, реализуя все следующие методы:
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Вызывается, когда возникает неустранимая ошибка. Нет ничего большего, что приложение или пользователь может исправить ситуацию, только если возможно, повторите попытку.
-* **`OnAuthenticationFailed()`** &ndash; Этот метод вызывается, когда отпечаток обнаружен, но не распознан устройством.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Вызывается, когда возникает устранимая ошибка, например, когда палец проводится для ускорения работы сканера.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Вызывается, когда распознается отпечаток.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Вызывается, когда возникает неустранимая ошибка. Нет ничего большего, что приложение или пользователь может исправить ситуацию, только если возможно, повторите попытку.
+- **`OnAuthenticationFailed()`** &ndash; Этот метод вызывается, когда отпечаток обнаружен, но не распознан устройством.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Вызывается, когда возникает устранимая ошибка, например, когда палец проводится для ускорения работы сканера.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Вызывается, когда распознается отпечаток.
 
 Если при вызове `Authenticate`использовался метод, рекомендуется вызвать `Cipher.DoFinal` в `OnAuthenticationSuccessful`. `CryptoObject`
 `DoFinal`вызовет исключение, если шифр был изменен или неправильно инициализирован, что свидетельствует о том, что результат сканера отпечатков пальцев мог быть изменен вне приложения.

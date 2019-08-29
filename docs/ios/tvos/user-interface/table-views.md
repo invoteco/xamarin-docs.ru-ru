@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3df0d8f686ec521a55948a9eb4632d77e5c3691f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652323"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121373"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Работа с табличными представлениями tvOS в Xamarin
 
@@ -883,8 +883,8 @@ namespace tvTable
 
 Опять же, этот класс просто определяет несколько сочетаний клавиш, чтобы упростить взаимодействие между двумя сторонами контроллера разделенного представления:
 
-* `SplitView`— Ссылка на контроллер разделенного представления (`MainSpiltViewController`), к которому относится контроллер представления навигации.
-* `TableController`— Получает контроллер представления таблицы (`AttractionTableViewController`), представленный в качестве верхнего представления в контроллере представления навигации.
+- `SplitView`— Ссылка на контроллер разделенного представления (`MainSpiltViewController`), к которому относится контроллер представления навигации.
+- `TableController`— Получает контроллер представления таблицы (`AttractionTableViewController`), представленный в качестве верхнего представления в контроллере представления навигации.
 
 <a name="The-Split-View-Controller" />
 

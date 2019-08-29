@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620507"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120161"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Методы быстрого взаимодействия для watchOS 3 в Xamarin
 
@@ -230,16 +230,16 @@ MenuTable.PerformSegue (0);
 
 Новое для watchOS 3:
 
-* В уведомлении используется аналогичный API на всех платформах (iOS, watchOS, tvOS и macOS).
-* Локальное уведомление можно запланировать на Apple Watch.
-* Фоновое уведомление будет направляться в расширение приложения, если они были запланированы на Apple Watch.
+- В уведомлении используется аналогичный API на всех платформах (iOS, watchOS, tvOS и macOS).
+- Локальное уведомление можно запланировать на Apple Watch.
+- Фоновое уведомление будет направляться в расширение приложения, если они были запланированы на Apple Watch.
 
 #### <a name="notification-scheduling-and-delivery"></a>Планирование и доставка уведомлений
 
 Уведомление от iPhone пользователя будет пересылаться Apple Watch в следующих случаях:
 
-* Экран iPhone отключен.
-* Apple Watch надеты и был разблокирован.
+- Экран iPhone отключен.
+- Apple Watch надеты и был разблокирован.
 
 В watchOS 3 локальные уведомления могут быть запланированы на Apple Watch и доставляются только в часы. Разработчик может запланировать соответствующее уведомление iPhone, если оно требуется для приложения.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 648b03dc34daa8906adab316c552a9615649800d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fa4744ba217d602dbd3134e616ac3bc4d47f7b76
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655824"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120818"
 ---
 # <a name="introduction-to-ios-11"></a>Введение в iOS 11
 
@@ -53,7 +53,7 @@ ARKit расширяет возможности iOS, позволяя польз
 
 Siri теперь поддерживает еще больше взаимодействий, включая списки и примечания, а также другие улучшения, такие как альтернативные имена приложений.
 
-## <a name="visionvisionmd"></a>[Vision](vision.md)
+## <a name="visionvisionmd"></a>[зрение](vision.md);
 
 Предоставляет разнообразные функции обработки изображений и анализа в iOS, включая обнаружение и распознавание лиц, CoreML модели, новые API-интерфейсы обнаружения штрихкодов, обнаружение текста и горизонта, а также более общее обнаружение и отслеживание объектов.
 
@@ -61,24 +61,24 @@ Siri теперь поддерживает еще больше взаимоде�
 
 У нас есть несколько C# [примеров](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11) , которые помогут вам приступить к работе:
 
-* [Пример ARKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
-* [ARKit размещения объектов](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
-* [ARKit и UrhoSharp](arkit/urhosharp.md)
-* [Пример распознавания изображений CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
-* [CoreML с настраиваемой моделью Azure](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
-* [Пример средства чтения тегов Коренфк](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
-* [Перетащить & представление таблицы](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
-* [Перетаскивание представления коллекции &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
-* [Перетаскивание пользовательского представления &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
-* [Пример перетаскивания & Драгбоард](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
-* [Пример Мапкит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
-* [Пример SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
-* [Пример обновленной платформы фото](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
-* [Пример & концепции CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
-* [Пример обнаружения прямоугольников концепции](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
-* [Пример обнаружения лиц с видением](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
-* [Пример мини-приложений Пдкфит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
-* [Пример водяного знака Пдфкит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
+- [Пример ARKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit размещения объектов](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [ARKit и UrhoSharp](arkit/urhosharp.md)
+- [Пример распознавания изображений CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [CoreML с настраиваемой моделью Azure](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [Пример средства чтения тегов Коренфк](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
+- [Перетащить & представление таблицы](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [Перетаскивание представления коллекции &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [Перетаскивание пользовательского представления &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
+- [Пример перетаскивания & Драгбоард](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
+- [Пример Мапкит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [Пример SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [Пример обновленной платформы фото](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
+- [Пример & концепции CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
+- [Пример обнаружения прямоугольников концепции](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
+- [Пример обнаружения лиц с видением](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [Пример мини-приложений Пдкфит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
+- [Пример водяного знака Пдфкит](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
 
 ## <a name="related-links"></a>Связанные ссылки
 

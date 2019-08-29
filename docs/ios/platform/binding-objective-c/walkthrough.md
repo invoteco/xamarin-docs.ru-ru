@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 634081b63ce4a70368ef7621837932a3ae6de0a8
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890390"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121336"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 
@@ -22,9 +22,9 @@ _В этой статье приводятся пошаговые инструк
 
 Как правило, в экосистеме iOS библиотеки можно найти в трех разновидностях:
 
-* Как предварительно скомпилированный файл статической библиотеки с `.a` расширением вместе со своими заголовками (h-файлами). Например, [Библиотека аналитики Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
-* Как предкомпилированную платформу. Это просто папка, содержащая статическую библиотеку, заголовки и иногда дополнительные ресурсы с `.framework` расширением. Например, [Библиотека AdMob от Google](https://developers.google.com/admob/ios/download).
-* Как просто файлы исходного кода. Например, Библиотека, содержащая только `.m` файлы C и `.h` цель с.
+- Как предварительно скомпилированный файл статической библиотеки с `.a` расширением вместе со своими заголовками (h-файлами). Например, [Библиотека аналитики Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
+- Как предкомпилированную платформу. Это просто папка, содержащая статическую библиотеку, заголовки и иногда дополнительные ресурсы с `.framework` расширением. Например, [Библиотека AdMob от Google](https://developers.google.com/admob/ios/download).
+- Как просто файлы исходного кода. Например, Библиотека, содержащая только `.m` файлы C и `.h` цель с.
 
 В первом и втором сценариях уже будет предкомпилированная статическая библиотека Кокоатауч, поэтому в этой статье мы рассмотрим третий сценарий. Помните, что перед началом создания привязки всегда проверяйте лицензию, поставляемую с библиотекой, чтобы убедиться, что ее можно привязать.
 

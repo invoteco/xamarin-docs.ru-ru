@@ -5,12 +5,12 @@ ms.assetid: 35DE2704-E730-4337-9476-66CD53376943
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 23126359c3b5e1c7e3562177b82f12596d2893a4
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: be560a156647274932265597ae5b83f22255d061
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58176077"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120138"
 ---
 # <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: Преобразователи единиц
 
@@ -36,29 +36,29 @@ var celcius = UnitConverters.FahrenheitToCelsius(32.0);
 
 Ниже приведен список доступных преобразований:
 
-* FahrenheitToCelsius
-* CelsiusToFahrenheit
-* CelsiusToKelvin
-* KelvinToCelsius
-* MilesToMeters
-* MilesToMeters
-* KilometersToMiles
-* DegreesToRadians
-* RadiansToDegrees
-* DegreesPerSecondToRadiansPerSecond
-* RadiansPerSecondToDegreesPerSecond
-* DegreesPerSecondToHertz
-* DegreesPerSecondToHertz
-* HertzToDegreesPerSecond
-* HertzToDegreesPerSecond
-* KilopascalsToHectopascals
-* HectopascalsToKilopascals
-* KilopascalsToHectopascals
-* HectopascalsToKilopascals
-* AtmospheresToPascals
-* PascalsToAtmospheres
-* CoordinatesToMiles
-* CoordinatesToMiles
+- FahrenheitToCelsius
+- CelsiusToFahrenheit
+- CelsiusToKelvin
+- KelvinToCelsius
+- MilesToMeters
+- MilesToMeters
+- KilometersToMiles
+- DegreesToRadians
+- RadiansToDegrees
+- DegreesPerSecondToRadiansPerSecond
+- RadiansPerSecondToDegreesPerSecond
+- DegreesPerSecondToHertz
+- DegreesPerSecondToHertz
+- HertzToDegreesPerSecond
+- HertzToDegreesPerSecond
+- KilopascalsToHectopascals
+- HectopascalsToKilopascals
+- KilopascalsToHectopascals
+- HectopascalsToKilopascals
+- AtmospheresToPascals
+- PascalsToAtmospheres
+- CoordinatesToMiles
+- CoordinatesToMiles
 
 ## <a name="api"></a>API
 

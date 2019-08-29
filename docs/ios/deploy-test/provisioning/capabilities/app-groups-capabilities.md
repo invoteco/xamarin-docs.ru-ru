@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 0dcc0c9499a1f4085e489fe6d8dcfa3fbf2fa3e0
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 20aa1da478916bf4c8949103a5ce7fbf1f5d8f93
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832407"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064821"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Возможности групп приложений в Xamarin.iOS
 
@@ -20,9 +20,9 @@ _Добавление возможностей в приложения част�
 
 Группы приложений предоставляют различным приложениям (или одному приложению и его расширениям) общее место хранения файлов. Группы приложений можно использовать для следующих данных:
 
-*   [Параметры Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
-*   [Общие параметры NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
-*   [Общие файлы](~/ios/watchos/app-fundamentals/parent-app.md#files)
+* [Параметры Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
+* [Общие параметры NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
+* [Общие файлы](~/ios/watchos/app-fundamentals/parent-app.md#files)
 
 ## <a name="configure-a-new-app-group"></a>Настройка новой группы приложений
 

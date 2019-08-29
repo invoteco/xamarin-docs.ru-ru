@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: afb4da5e424fd86a386b85d8b64bd2a126af6add
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521102"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70118913"
 ---
-# <a name="contributing"></a>Участие
+# <a name="contributing"></a>Добавление данных
 
 Благодарим вас за проявленный интерес к процессу участия в разработке документации по Xamarin!
 
 На этой странице рассматривается базовый процесс обновления содержимого в [документации по Xamarin](https://docs.microsoft.com/xamarin).
 
-* [Лицензионное соглашение с участником](LICENSE)
+- [Лицензионное соглашение с участником](LICENSE)
 
 ## <a name="process-for-contributing"></a>Процесс добавления данных
 

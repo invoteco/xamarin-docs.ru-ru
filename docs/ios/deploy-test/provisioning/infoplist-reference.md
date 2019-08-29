@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/18/2017
-ms.openlocfilehash: 654eca1098f9486e0c41fd296b3f8d381ac7ea34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a61a4a313fa23b5cdc629279bee39f1eed792cc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105380"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120504"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Справочник по Info.plist для Xamarin.iOS
 
@@ -22,8 +22,8 @@ ms.locfileid: "50105380"
 
 Доступ к расположению пользователя требует изменений в файле Info.plist. Необходимо задать следующие ключи, связанные с данными о расположении: 
 
-* **NSLocationWhenInUseUsageDescription** для доступа к расположению пользователя во время его взаимодействия с приложением. 
-* **NSLocationAlwaysUsageDescription** для доступа приложения к расположению пользователя в фоновом режиме.
+- **NSLocationWhenInUseUsageDescription** для доступа к расположению пользователя во время его взаимодействия с приложением. 
+- **NSLocationAlwaysUsageDescription** для доступа приложения к расположению пользователя в фоновом режиме.
 
 ## <a name="photos"></a>Фотографии 
 

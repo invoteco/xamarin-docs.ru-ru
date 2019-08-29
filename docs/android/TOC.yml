@@ -448,6 +448,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: Вибрация
           href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: Заметки о выпуске Xamarin.Essentials
+          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: Устранение неполадок
           href: ~/essentials/troubleshooting.md?context=xamarin/android
     - name: Данные и облачные службы

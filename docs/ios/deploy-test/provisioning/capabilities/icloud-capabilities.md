@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 86b077c95bfe1cb32731c92c0c1cfec451295c12
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ef36e79254a6d07ae6d23de7e86f6a43b2140b09
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831349"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065522"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Возможности iCloud в Xamarin.iOS
 
@@ -97,9 +97,9 @@ iCloud позволяет пользователям iOS легко и удоб�
 
 Дополнительные сведения об использовании iCloud см. в следующих руководствах:
 
-*   [Введение в iCloud](~/ios/data-cloud/introduction-to-icloud.md)
-*   [Введение в CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
-*   [Введение в Document Picker](~/ios/platform/document-picker.md)
+* [Введение в iCloud](~/ios/data-cloud/introduction-to-icloud.md)
+* [Введение в CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
+* [Введение в Document Picker](~/ios/platform/document-picker.md)
 
 ## <a name="next-steps"></a>Следующие шаги
  

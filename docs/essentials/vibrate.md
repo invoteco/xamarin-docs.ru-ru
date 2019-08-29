@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Vibration'
+title: 'Xamarin.Essentials: Вибрация'
 description: В этом документе описан класс Vibration в Xamarin.Essentials, который позволяет запускать и останавливать вибрацию в течение требуемого времени.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: d9bf7a1e5e0d15f1fdc909745cd439115b6f8463
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898944"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120118"
 ---
-# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
+# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Вибрация
 
 Класс **Vibration** позволяет запускать и останавливать вибрацию в течение требуемого времени.
 
@@ -107,9 +107,9 @@ catch (Exception ex)
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Устройство вибрирует, только если задан параметр Vibrate on ring (Вибрация при вызове).
-* Постоянная вибрация в течение 500 миллисекунд.
-* Невозможно отменить вибрацию.
+- Устройство вибрирует, только если задан параметр Vibrate on ring (Вибрация при вызове).
+- Постоянная вибрация в течение 500 миллисекунд.
+- Невозможно отменить вибрацию.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

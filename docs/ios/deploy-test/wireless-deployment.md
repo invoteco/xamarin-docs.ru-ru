@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: ac4ae1d8b247a709307841be1ffa1fee2afbf68f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865507"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121479"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Беспроводное развертывание для приложений Xamarin.iOS и tvOS
 
@@ -95,9 +95,9 @@ ms.locfileid: "67865507"
 
 2. Если устройство не отображается в Visual Studio, проверьте окно **Devices and Simulators** (Устройства и эмуляторы) в Xcode . 
 
-    * Если Xcode **не** отображает устройство как подключенное, попробуйте [подключите](#pair) устройство еще раз.
+    - Если Xcode **не** отображает устройство как подключенное, попробуйте [подключите](#pair) устройство еще раз.
 
-    * Если в Xcode устройство отображается правильно, перезапустите Visual Studio и (или) устройство.
+    - Если в Xcode устройство отображается правильно, перезапустите Visual Studio и (или) устройство.
 
 3. Также не забудьте [подготовить](~/ios/get-started/installation/device-provisioning/index.md) устройство, если вы не сделали это ранее.
 

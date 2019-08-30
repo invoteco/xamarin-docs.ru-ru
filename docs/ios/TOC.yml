@@ -250,6 +250,8 @@
               href: platform/ios13/index.md
             - name: Начало работы
               href: platform/ios13/get-started.md
+            - name: Темный режим
+              href: platform/ios13/dark-mode.md
             - name: Устранение неполадок
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12

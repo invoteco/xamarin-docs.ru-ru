@@ -4,13 +4,13 @@ description: Этот документ содержит ссылки на раз
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 08f97263ccb5b4c91a541d06534e82aaaebbae1e
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.date: 08/27/2019
+ms.openlocfilehash: 2101d2e3948cb917e62725731c4895cc57282b3b
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175399"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065128"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -63,6 +63,10 @@ Android, iOS и универсальная платформа Windows предо
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Устранение неполадок](troubleshooting.md?context=xamarin/xamarin-forms)
 
 Получение помощи при возникновении проблем.
+
+## <a name="release-noteshttpsdocsmicrosoftcomxamarinessentialsrelease-notes"></a>[Заметки о выпуске](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+
+Ознакомьтесь с полными заметками для каждого выпуска Xamarin.Essentials.
 
 ## <a name="api-documentationxrefxamarinessentials"></a>[Документация по API](xref:Xamarin.Essentials)
 

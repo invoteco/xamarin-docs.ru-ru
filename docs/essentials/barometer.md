@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: барометр'
+title: 'Xamarin.Essentials: Барометр'
 description: Класс Barometer в Xamarin.Essentials позволяет отслеживать барометрический датчик устройства, измеряющий давление.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 342ae1b64fefebaa4b3fa82e9f48c6e9a58d4751
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899048"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976436"
 ---
-# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: барометр
+# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Барометр
 
 Класс **Barometer** позволяет отслеживать барометрический датчик устройства, измеряющий давление.
 
@@ -82,6 +82,8 @@ public class BarometerTest
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 API использует класс [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter) для отслеживания изменений давления. Это аппаратная функция, которая была добавлена в устройства iPhone 6 и более поздние версии. В устройствах, которые не поддерживают альтиметр, будет выдано исключение `FeatureNotSupportedException`.
+
+`SensorSpeed` не используется, так как он не поддерживается в iOS.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

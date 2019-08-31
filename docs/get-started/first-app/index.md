@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 245b41eea556ef36c81b337b57ce58d922e4e8fd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2c50ffb37f0fd1d7b0d9fad063c4d6195d6b1f08
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653672"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199769"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Создание первого приложения Xamarin.Forms
 
@@ -48,15 +48,37 @@ _Просмотрите это видео и следуйте инструкци
 
 5. Подождите, пока восстанавливаются пакеты NuGet (в строке состояния появится сообщение "Восстановление завершено").
 
-6. Запустите эмулятор Android, нажав кнопку отладки (или пункт меню **Отладка > Начать отладку**).
+6. В новых установках Visual Studio 2019 не будет настроен эмулятор Android. Щелкните стрелку раскрывающегося списка на кнопке Отладка и выберите **создать Android Emulator** , чтобы запустить экран создания эмулятора:
 
-7. Измените **MainPage.xaml**, добавив этот XAML до конца `</StackLayout>`:
+    ![Раскрывающийся список создания Android Emulator](images/win-2019/debug-dropdown.png)
+
+7. На экране создания эмулятора используйте параметры по умолчанию и нажмите кнопку **создать** :
+
+    [![Экран создания эмулятора Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+
+8. Создание эмулятора вернет вас в окно Device Manager. Нажмите кнопку " **Пуск** ", чтобы запустить новый эмулятор:
+
+    ![Эмулятор Android в Device Manager](images/win-2019/start-emulator.png)
+
+9. Visual Studio 2019 теперь должен показывать имя нового эмулятора на кнопке " **Отладка** ":
+
+    ![Имя эмулятора Android на кнопке "Отладка"](images/win-2019/debug-emulator-name.png)
+
+10. Нажмите кнопку "Отладка", чтобы создать и развернуть приложение в эмуляторе Android:
+
+    ![Эмулятор Android, отображающий приложение](images/win-2019/android-emulator.png)
+
+## <a name="customize-the-application"></a>Настройка приложения
+
+Приложение можно настроить для добавления интерактивных функций. Чтобы добавить взаимодействие с пользователем в приложение, выполните следующие действия.
+
+1. Измените **MainPage.xaml**, добавив этот XAML до конца `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-8. Измените **MainPage.xaml**, добавив этот код до конца класса:
+2. Измените **MainPage.xaml**, добавив этот код до конца класса:
 
     ```csharp
     int count = 0;
@@ -67,14 +89,16 @@ _Просмотрите это видео и следуйте инструкци
     }
     ```
 
-9. Отладка приложения на Android:
+3. Отладка приложения на Android:
 
     ![Приложение Android](images/win/07-sml.png)
 
-    > [!TIP]
-    > Можно создавать и отлаживать приложения iOS из Visual Studio с компьютером Mac, подключенным к сети. Дополнительные сведения см. в [инструкциях по установке](~/ios/get-started/installation/windows/index.md).
+> [!NOTE]
+> Пример приложения включает дополнительные интерактивные функции, которые не рассматриваются в видео.
 
 ## <a name="build-an-ios-app-in-visual-studio-2019"></a>Создание приложения iOS в Visual Studio 2019
+
+Можно создать и отладить приложение iOS из Visual Studio с помощью сетевого компьютера Mac. Дополнительные сведения см. в [инструкциях по установке](~/ios/get-started/installation/windows/index.md).
 
 В этом видеоролике рассматривается процесс создания и тестирования приложения iOS с помощью Visual Studio 2019 в Windows.
 

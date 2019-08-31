@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d119d96a3ce8389a71726e1359e064efe1fbb1ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509453"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199206"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Обновление существующих приложений Xamarin. Forms
 
@@ -53,7 +53,7 @@ _Выполните следующие действия, чтобы обнови
 Это будет автоматически:
 
 - Измените тип проекта для поддержки унифицированного 64-разрядного API.
-- Измените ссылку на платформу на **Xamarin. iOS** (замените старую  ссылку на касание).
+- Измените ссылку на платформу на **Xamarin. iOS** (замените старую ссылку на касание).
 - Измените ссылки на пространство имен в коде, чтобы удалить `MonoTouch` префикс.
 - Обновите файл **CSPROJ** , чтобы использовать правильные целевые объекты сборки для Unified API.
 
@@ -65,7 +65,7 @@ _Выполните следующие действия, чтобы обнови
 
 ## <a name="2-xamarinforms-131-update"></a>2. Обновление 1.3.1 Xamarin. Forms
 
-После обновления приложения iOS до Unified API необходимо обновить остальную часть решения до Xamarin. Forms версии 1.3.1. В том числе следующее:
+После обновления приложения iOS до Unified API необходимо обновить остальную часть решения до Xamarin. Forms версии 1.3.1. Сюда входят следующие возможности.
 
 - Обновление пакета NuGet Xamarin. Forms в каждом проекте.
 - Изменение кода для использования новых классов Xamarin. Forms `Application`, `FormsApplicationDelegate` (IOS), `FormsApplicationActivity` (Android) и `FormsApplicationPage` (Windows Phone).
@@ -211,7 +211,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 После удаления этих старых ссылок проект должен быть успешно построен.
 
-## <a name="considerations"></a>Особенности
+## <a name="considerations"></a>Рекомендации
 
 При преобразовании существующего проекта Xamarin. Forms из Classic API в новый Unified API следует учитывать следующие моменты, если это приложение полагается на один или несколько компонентов или пакетов NuGet.
 

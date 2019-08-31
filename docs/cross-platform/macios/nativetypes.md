@@ -6,12 +6,12 @@ ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 9d43bbdb49fe4ab1ff909f709a37f979c360ceb9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509593"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199389"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Собственные типы для iOS и macOS
 
@@ -45,9 +45,9 @@ ms.locfileid: "68509593"
 
 Операторы явного преобразования предоставляются при возможной потере данных (64-разрядное значение хранится в расположении 32 или потенциально 32).
 
- `int``nfloat` `nuint` `nint`и все они неявно преобразуются в, а 32 бит всегда помещается в 32 или 64 бит. `float` `uint`
+`int``nfloat` `nuint` `nint`и все они неявно преобразуются в, а 32 бит всегда помещается в 32 или 64 бит. `float` `uint`
 
- `nint`, `nuint` `long`и `nfloat` все они неявно преобразуются в, `double` `ulong` а как 32 или 64 разрядные значения всегда помещаются в 64 разрядного хранилища.
+`nint`, `nuint` `long`и `nfloat` все они неявно преобразуются в, `double` `ulong` а как 32 или 64 разрядные значения всегда помещаются в 64 разрядного хранилища.
 
 Необходимо использовать явные `nint`преобразования из `nfloat` , `nuint` и в `int` `uint` и`float` , так как собственные типы могут содержать 64 бит хранилища.
 

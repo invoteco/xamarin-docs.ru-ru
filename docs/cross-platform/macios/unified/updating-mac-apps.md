@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
+ms.openlocfilehash: a6d245e60a0d163c054fd74e0fb64780225da031
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560301"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197804"
 ---
 # <a name="updating-existing-mac-apps"></a>Обновление существующих приложений Mac
 
@@ -118,7 +118,7 @@ Xamarin предоставляет инструментарий для Visual St
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Включение 64 разрядных сборок приложений Xamarin. Mac
 
 Для мобильного приложения Xamarin. Mac, которое было преобразовано в Unified API, разработчику по-прежнему необходимо включить сборку приложения на 64 разрядных компьютеров с помощью параметров приложения. Подробные инструкции по 64 включению поразрядных сборок см. в статье **включение 64-разрядных сборок приложений Xamarin. Mac** из раздела [32/64 разрядов платформы](~/cross-platform/macios/32-and-64/index.md) .
-    
+
 ## <a name="finishing-up"></a>Завершение
 
 Если вы решили использовать автоматический или ручной метод преобразования приложения Xamarin. Mac из классической среды в унифицированные API, существует несколько экземпляров, требующих дальнейших действий, которые потребуется выполнить вручную. Ознакомьтесь с нашими [советами по обновлению кода в Unified API](~/cross-platform/macios/unified/updating-tips.md) документе для получения известных проблем и устранения неполадок.

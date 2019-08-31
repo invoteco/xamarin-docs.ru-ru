@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f7290d8284f90db4f53a38dc89f7b5a1a10213c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655535"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200385"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Пошаговое руководство. Использование локальных уведомлений в Xamarin. iOS
 
@@ -27,7 +27,7 @@ _В этом разделе мы рассмотрим, как использов
 
 
 1. В Visual Studio для Mac создайте новое решение для iOS с одним представлением и назовите его `Notifications`.
-1. `Main.storyboard` Откройте файл и перетащите кнопку на представление. Назовите кнопку **кнопки и**присвойте ей название **добавить уведомление**. В этот момент может потребоваться задать некоторые [ограничения](~/ios/user-interface/designer/designer-auto-layout.md) для кнопки: 
+1. `Main.storyboard` Откройте файл и перетащите кнопку на представление. Назовите кнопкукнопки и присвойте ей название **добавить уведомление**. В этот момент может потребоваться задать некоторые [ограничения](~/ios/user-interface/designer/designer-auto-layout.md) для кнопки: 
 
     ![](local-notifications-in-ios-walkthrough-images/image3.png "Задание некоторых ограничений для кнопки")
 1. `ViewController` Измените класс и добавьте в метод ViewDidLoad следующий обработчик событий:
@@ -62,29 +62,28 @@ _В этом разделе мы рассмотрим, как использов
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-            var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
-                UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
-            );
+        var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
+            UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
+        );
 
-            application.RegisterUserNotificationSettings (notificationSettings);
-        }
+        application.RegisterUserNotificationSettings (notificationSettings);
+    }
     ```
 
 1. По-прежнему добавьте следующий метод ,которыйбудетвызыватьсяприполученииуведомления:`AppDelegate.cs`
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
-            {
-                // show an alert
-                UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
-                okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    {
+        // show an alert
+        UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
+        okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-                UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
+        UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
 
-                // reset our badge
-                UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-            }
-
+        // reset our badge
+        UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+    }
     ```
 
 1. Необходимо обменять случай, когда уведомление было запущено из-за локального уведомления. Измените метод `FinishedLaunching` в, чтобы `AppDelegate` включить в него следующий фрагмент кода:
@@ -111,7 +110,6 @@ _В этом разделе мы рассмотрим, как использов
             }
         }
     }
-
     ```
 
 1. Наконец, запустите приложение. В iOS 8 вам будет предложено разрешить уведомления. Нажмите кнопку **ОК** , а затем нажмите кнопку **добавить уведомление** . После небольшой паузы вы увидите диалоговое окно предупреждения, как показано на следующих снимках экрана:

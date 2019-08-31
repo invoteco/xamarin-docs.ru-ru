@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649666"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199940"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Работа с контроллерами панели вкладок tvOS в Xamarin
 
@@ -59,7 +59,7 @@ ms.locfileid: "68649666"
 Самый простой способ работы с панелями вкладок в приложении Xamarin. tvOS — добавить их в пользовательский интерфейс приложения с помощью конструктора iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
-    
+
 1. Запустите новое приложение Xamarin. tvOS и выберите приложение **tvOS** >  > с**вкладками**: 
 
     [![](tab-bars-images/tab02.png "Выбор приложения с вкладками")](tab-bars-images/tab02.png#lightbox)
@@ -84,7 +84,7 @@ ms.locfileid: "68649666"
 1. Сохраните изменения.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Запустите новое приложение Xamarin. tvOS и выберите приложение **tvOS** >  > с**вкладками**: 
 
     [![](tab-bars-images/tab02vs.png "Выбор приложения с вкладками")](tab-bars-images/tab02vs.png#lightbox)
@@ -107,7 +107,7 @@ ms.locfileid: "68649666"
 1. Предоставьте все необходимые события для работы с элементами управления пользовательского интерфейса C# в коде.
 1. Назовите все элементы управления пользовательского интерфейса, которые необходимо C# предоставить в коде.
 1. Сохраните изменения.
-    
+
 -----
 
 > [!IMPORTANT]

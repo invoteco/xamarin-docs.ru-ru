@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 245c406a1b62b454ff9935ebb7cd3531a624aea3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6446bd7ef196fadae25c0e4dc18542d269424d6d
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656589"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200282"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit в Xamarin. iOS
 
@@ -83,7 +83,7 @@ ms.locfileid: "68656589"
 
 [![](healthkit-images/image04.png "Создание профиля подготовки")](healthkit-images/image04.png#lightbox)
 
-Щелкните **создать** и дождаться создания профиля. Скачайте файл и дважды щелкните его, чтобы установить в Xcode. Вы можете подтвердить установку в разделе **Xcode > Preferences > accounts > View Details...** Вы должны увидеть только что установленный профиль подготовки, и он должен иметь значок для набора работоспособности и других специальных служб **в строке прав** :
+Щелкните **создать** и дождаться создания профиля. Скачайте файл и дважды щелкните его, чтобы установить в Xcode. Вы можете подтвердить установку в разделе **Xcode > Preferences > accounts > View Details...** Вы должны увидеть только что установленный профиль подготовки, и он должен иметь значок для набора работоспособности и других специальных служб в строке прав:
 
 [![](healthkit-images/image05.png "Просмотр профиля в Xcode")](healthkit-images/image05.png#lightbox)
 

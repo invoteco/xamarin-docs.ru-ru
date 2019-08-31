@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f4f063cf7004d35aa93f688e71a917caa7a3e5a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648945"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200253"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Работа с сегментированными элементами управления tvOS в Xamarin
 
@@ -71,7 +71,7 @@ Apple предлагает следующие рекомендации по ра
 1. Сохраните изменения.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
 1. Перетащите **элемент управления "сегмент** " из **панели элементов** и поместите его в представление: 
 
@@ -85,7 +85,7 @@ Apple предлагает следующие рекомендации по ра
 
     [![](segmented-controls-images/segment04-vs.png "Назначение имени")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Сохраните изменения.
-    
+
 -----
 
 Дополнительные сведения о работе с раскадровками см. в статье [Hello, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md). 
@@ -206,9 +206,9 @@ SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIContr
 
 Где `UIControlState` указывает состояние элемента управления, для которого задается изображение:
 
-- Норм.
+- Обычный
 - Деле
-- Отключено
+- отключено
 - Selected
 - Focused
 

@@ -1,5 +1,5 @@
 ---
-title: Можно изменить путь к выходной IPA-файл?
+title: Можно ли изменить выходной путь к файлу IPA?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
@@ -7,32 +7,32 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 8b0686a91f18b41aa8e2e7db071123c0d96723a0
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: 6a51529e5a8c2878e46946608455f409ece9e43a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290105"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200226"
 ---
-# <a name="can-i-change-the-output-path-of-the-ipa-file"></a>Можно изменить путь к выходной IPA-файл?
+# <a name="can-i-change-the-output-path-of-the-ipa-file"></a>Можно ли изменить выходной путь к файлу IPA?
 
 ## <a name="for-cycle-7-and-higher"></a>Для цикла 7 и более поздних версий
-Да, можно использовать настраиваемые целевые объекты MSBuild для достижения этой цели. Самый простой вариант является, вероятно, скопируйте `.ipa` файл после его построения.
+Да, для достижения этого можно использовать настраиваемые целевые объекты MSBuild. Самый простой способ — скопировать `.ipa` файл после его построения.
 
-Эти действия будут работать для любого проекта iOS, которое использует подсистема сборки MSBuild на компьютере Mac или Windows. (Примечание: все проекты единый API используют подсистема сборки MSBuild.)
+Эти действия будут работать для любого проекта iOS, использующего модуль сборки MSBuild на компьютерах Mac или Windows. (Примечание. все Unified API проекты используют подсистему сборки MSBuild.)
 
-1. Откройте `.csproj` файл для проекта приложения iOS в текстовом редакторе и затем добавьте следующие строки в конце (непосредственно перед закрывающим `</Project>` тега):
-    
-    ```
+1. Откройте файл для проекта приложения iOS в текстовом редакторе, а затем добавьте в конец файла следующие строки (непосредственно перед закрывающим `</Project>` тегом): `.csproj`
+
+    ```xml
     <PropertyGroup>
-           <CreateIpaDependsOn>
-           $(CreateIpaDependsOn);
-            CopyIpa
-           </CreateIpaDependsOn>
+        <CreateIpaDependsOn>
+        $(CreateIpaDependsOn);
+        CopyIpa
+        </CreateIpaDependsOn>
     </PropertyGroup>
     
     <Target Name="CopyIpa"
-        Condition="'$(OutputType)' == 'Exe'
+            Condition="'$(OutputType)' == 'Exe'
             And '$(ComputedPlatform)' == 'iPhone'
             And '$(BuildIpa)' == 'true'">
         <Copy
@@ -42,31 +42,31 @@ ms.locfileid: "68290105"
     </Target>
     ```
 
-2. Присвоить папке поставленной DestinationFolder. Как обычно вы можете использовать свойства MSBuild (например, $(OutputPath)) в этот аргумент, при необходимости.
+2. Задайте для DestinationFolder нужную выходную папку. Как правило, при необходимости можно использовать свойства MSBuild (например, $ (OutputPath)) в этом аргументе.
 
 ## <a name="notes"></a>Примечания
-- `CreateIpaDependsOn` Свойство определено в `Xamarin.iOS.Common.targets` файл, который является частью Xamarin.iOS. Он ведет себя, как описано в разделе [переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) статьи [как: Расширение процесса построения Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- `CreateIpaDependsOn` Свойство определяется`Xamarin.iOS.Common.targets` в файле, который является частью Xamarin. iOS. Он ведет себя, как описано в разделе [Переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) в статье [как: Расширьте процесс](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)сборки Visual Studio.
 
-- Можно использовать **переместить** задач вместо **копирования** задач при желании вы. Если выбран этот вариант и создаете на Windows, необходимо использовать имя полного задачи `<Microsoft.Build.Tasks.Move>` во избежание неоднозначности с XamarinVS задачи сборки.
+- Если вы предпочитаете, можно использовать задачу **перемещения** , а не задачу **копирования** . При выборе этого варианта и построении в Windows необходимо использовать полное имя `<Microsoft.Build.Tasks.Move>` задачи, чтобы избежать неоднозначности в задачах сборки ксамаринвс.
 
-## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Для версий до Xamarin Studio 6.0.0.5174 | Xamarin для Visual Studio 4.1.0.530
+## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Для версий, предшествующих Xamarin Studio 6.0.0.5174 | Xamarin для Visual Studio 4.1.0.530
 
-Да, можно использовать настраиваемые целевые объекты MSBuild для достижения этой цели. Самый простой вариант является, вероятно, скопируйте `.ipa` файл после его построения.
+Да, для достижения этого можно использовать настраиваемые целевые объекты MSBuild. Самый простой способ — скопировать `.ipa` файл после его построения.
 
-Эти действия будут работать для любого проекта iOS, которое использует подсистема сборки MSBuild на компьютере Mac или Windows. (Примечание: все проекты единый API используют подсистема сборки MSBuild.)
+Эти действия будут работать для любого проекта iOS, использующего модуль сборки MSBuild на компьютерах Mac или Windows. (Примечание. все Unified API проекты используют подсистему сборки MSBuild.)
 
-1. Откройте `.csproj` файл для проекта приложения iOS в текстовом редакторе и затем добавьте следующие строки в конце (непосредственно перед закрывающим `</Project>` тега).
+1. Откройте файл для проекта приложения iOS в текстовом редакторе, а затем добавьте следующие строки в конец (непосредственно перед закрывающим `</Project>` тегом). `.csproj`
 
-    ```csharp
+    ```xml
     <PropertyGroup>
         <CreateIpaDependsOn>
             $(CreateIpaDependsOn);
             CopyIpa
         </CreateIpaDependsOn>
     </PropertyGroup>
-    
+
     <Target Name="CopyIpa"
-        Condition="'$(OutputType)' == 'Exe'
+            Condition="'$(OutputType)' == 'Exe'
             And '$(ComputedPlatform)' == 'iPhone'
             And '$(BuildIpa)' == 'true'">
         <Copy
@@ -76,9 +76,9 @@ ms.locfileid: "68290105"
     </Target>
     ```
 
-2. Задайте `DestinationFolder` к требуемой папке выходных данных. Как обычно вы можете использовать свойства MSBuild (например `$(OutputPath)`) в этот аргумент, при необходимости.
+2. `DestinationFolder` Присвойте свойству требуемую выходную папку. Как правило, при необходимости можно использовать свойства MSBuild `$(OutputPath)`(например,) в этом аргументе.
 
 ## <a name="notes"></a>Примечания
-- `CreateIpaDependsOn` Свойство определено в `Xamarin.iOS.Common.targets` файл, который является частью Xamarin.iOS. t ведет себя так, как описано в разделе [переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) статьи [как: Расширение процесса построения Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- `CreateIpaDependsOn` Свойство определяется`Xamarin.iOS.Common.targets` в файле, который является частью Xamarin. iOS. t ведет себя, как описано в разделе [Переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) в статье [как: Расширьте процесс](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)сборки Visual Studio.
 
-- Можно использовать **переместить** задач вместо **копирования** задач при желании вы. Если выбран этот вариант и создаете на Windows, необходимо использовать имя полного задачи `<Microsoft.Build.Tasks.Move>` во избежание неоднозначности с XamarinVS задачи сборки.
+- Если вы предпочитаете, можно использовать задачу **перемещения** , а не задачу **копирования** . При выборе этого варианта и построении в Windows необходимо использовать полное имя `<Microsoft.Build.Tasks.Move>` задачи, чтобы избежать неоднозначности в задачах сборки ксамаринвс.

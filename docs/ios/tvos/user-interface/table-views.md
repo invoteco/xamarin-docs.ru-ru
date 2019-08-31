@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121373"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199911"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Работа с табличными представлениями tvOS в Xamarin
 
@@ -69,7 +69,7 @@ _В этой статье рассматривается проектирова�
 Чтобы начать работу, выполните следующие действия:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
-    
+
 1. В Visual Studio для Mac запустите новый проект приложения tvOS и выберите приложение **tvOS** > **приложение** > с**единым представлением** и нажмите кнопку **Далее** : 
 
     [![](table-views-images/table02.png "Выбор приложения с одним представлением")](table-views-images/table02.png#lightbox)
@@ -112,9 +112,9 @@ _В этой статье рассматривается проектирова�
 
     [![](table-views-images/table15.png "Макет пользовательского интерфейса")](table-views-images/table15.png#lightbox)
 1. Сохраните изменения в раскадровке.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. В Visual Studio запустите новый проект приложения tvOS и выберите **tvOS** > **Single View App (приложение с одним представлением** ) и введите имя приложения. Нажмите кнопку " **ОК** ", чтобы создать новое решение: 
 
     [![](table-views-images/table02-vs.png "Выбор приложения с одним представлением")](table-views-images/table02-vs.png#lightbox)
@@ -153,7 +153,7 @@ _В этой статье рассматривается проектирова�
 
     [![](table-views-images/table15.png "Макет пользовательского интерфейса")](table-views-images/table15.png#lightbox)
 1. Сохраните изменения в раскадровке.
-    
+
 -----
 
 <a name="Designing-a-Data-Model" />

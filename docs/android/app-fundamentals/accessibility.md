@@ -1,41 +1,41 @@
 ---
-title: Специальные возможности на Android
+title: Специальные возможности в Android
 ms.prod: xamarin
 ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: d004b753c89f3995e8dc511877bd115a894396fc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f32f32e56ff4869c003b142f9ad67b0e54cfa353
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018624"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197690"
 ---
-# <a name="accessibility-on-android"></a>Специальные возможности на Android
+# <a name="accessibility-on-android"></a>Специальные возможности в Android
 
-Эта страница описывает, как использовать API Android специальных возможностей для создания приложений в соответствии с [контрольный список специальных возможностей](~/cross-platform/app-fundamentals/accessibility.md).
-Ссылаться на [специальных возможностей iOS](~/ios/app-fundamentals/accessibility.md) и [специальных возможностей OS X](~/mac/app-fundamentals/accessibility.md) страниц для других API платформы.
+На этой странице описывается, как использовать интерфейсы API специальных возможностей Android для создания приложений в соответствии с [контрольным списком специальных возможностей](~/cross-platform/app-fundamentals/accessibility.md).
+См. страницы специальных [возможностей iOS](~/ios/app-fundamentals/accessibility.md) и [доступность OS X](~/mac/app-fundamentals/accessibility.md) для других API-интерфейсов платформы.
 
 
 ## <a name="describing-ui-elements"></a>Описание элементов пользовательского интерфейса
 
-Android предоставляет `ContentDescription` свойство, которое используется API-интерфейсы чтения с экрана для предоставления доступное описание назначения элемента управления.
+Android предоставляет `ContentDescription` свойство, которое используется API чтения экрана для предоставления доступного описания назначения элемента управления.
 
-Описание содержимого можно задать в среде C# или в файле макета AXML.
+Описание содержимого можно задать в файле макета AXML C# или.
 
 **C#**
 
-Описание можно задать в коде, чтобы любая строка (или строковый ресурс):
+Описание можно задать в коде для любой строки (или строкового ресурса):
 
 ```csharp
 saveButton.ContentDescription = "Save data";
 ```
 
-**Макета AXML**
+**Макет AXML**
 
-В XML с помощью макетов `android:contentDescription` атрибут:
+В макетах XML используйте `android:contentDescription` атрибут:
 
 ```xml
 <ImageButton
@@ -44,22 +44,22 @@ saveButton.ContentDescription = "Save data";
     android:contentDescription="Save data" />
 ```
 
-### <a name="use-hint-for-textview"></a>Использовать подсказку для TextView
+### <a name="use-hint-for-textview"></a>Использовать указание для TextView
 
-Для `EditText` и `TextView` использовать элементы управления для ввода данных, `Hint` свойство, чтобы предоставить описание ожидается указываем входные данные (а не `ContentDescription`).
-После введения какой-либо текст, сам текст «читается» вместо подсказка.
+Для `EditText` `Hint` `ContentDescription`и `TextView` элементов управления для ввода данных используйте свойство, чтобы задать описание ожидаемого ввода (вместо).
+При введении какого бы то ни было текста текст будет «Read» вместо подсказки.
 
 **C#**
 
-Задать `Hint` свойства в коде:
+`Hint` Задайте свойство в коде:
 
 ```csharp
 someText.Hint = "Enter some text"; // displays (and is "read") when control is empty
 ```
 
-**Макета AXML**
+**Макет AXML**
 
-В XML-файлы макета используют `android:hint` атрибут:
+В XML-файлах макета используется `android:hint` атрибут:
 
 ```xml
 <EditText
@@ -68,13 +68,13 @@ someText.Hint = "Enter some text"; // displays (and is "read") when control is e
 ```
 
 
-### <a name="labelfor-links-input-fields-with-labels"></a>Поля с метками ввода LabelFor ссылки
+### <a name="labelfor-links-input-fields-with-labels"></a>Лабелфор ссылки на поля ввода с метками
 
-Чтобы связать метку с элемент управления для ввода данных, используйте `LabelFor` свойства
+Чтобы связать метку с элементом управления вводом данных, используйте `LabelFor` свойство для
 
 **C#**
 
-В C#, задайте `LabelFor` присваивается идентификатор ресурса элемента управления, который описывает это содержимое (обычно это свойство задано для метки и ссылается на входной другого элемента управления):
+В C#задайте `LabelFor` для свойства Идентификатор ресурса элемента управления, описанного в этом содержимом (обычно это свойство задано для метки и ссылается на другой элемент управления вводом):
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);
@@ -82,9 +82,9 @@ TextView tv = FindViewById<TextView> (Resource.Id.labelFirstName);
 tv.LabelFor = Resource.Id.editFirstName;
 ```
 
-**Макета AXML**
+**Макет AXML**
 
-В макете использования в формате XML `android:labelFor` свойство для ссылки на идентификатор другого элемента управления:
+В XML-макете `android:labelFor` используйте свойство для ссылки на идентификатор другого элемента управления:
 
 ```xml
 <TextView
@@ -96,11 +96,11 @@ tv.LabelFor = Resource.Id.editFirstName;
     android:hint="Enter some text" />
 ```
 
-### <a name="announce-for-accessibility"></a>Объявления для объекта специальных возможностей
+### <a name="announce-for-accessibility"></a>Объявить о специальных возможностях
 
-Используйте `AnnounceForAccessibility` метод для какого-либо просмотреть взаимодействия событие или состояние изменений для пользователей, при включении специальных возможностей элемента управления. Этот метод не требуется для большинства операций, встроенные записи позволяют недостаточно узнавать, когда следует использовать, где может быть полезно для пользователя дополнительную информацию.
+`AnnounceForAccessibility` Используйте метод для любого элемента управления представления, чтобы сообщить о событии или изменении состояния пользователям при включении специальных возможностей. Этот метод не требуется для большинства операций, в которых Встроенный речевой комментарий предоставляет достаточное количество отзывов, но следует использовать там, где дополнительная информация будет полезной для пользователя.
 
-В следующем коде показан простой пример вызывающую `AnnounceForAccessibility`:
+В приведенном ниже коде показан простой пример `AnnounceForAccessibility`вызова:
 
 ```csharp
 button.Click += delegate {
@@ -109,32 +109,32 @@ button.Click += delegate {
 };
 ```
 
-## <a name="changing-focus-settings"></a>Изменение параметров фокус
+## <a name="changing-focus-settings"></a>Изменение параметров фокуса
 
-Доступны Навигация зависит от элементов управления фокус, чтобы помочь пользователю понять, какие операции доступны. Android предоставляет `Focusable` свойство, которое можно пометить элементы управления, в частности возможность получать фокус во время перехода.
+Доступная Навигация полагается на элементы управления, которые имеют фокус, чтобы помочь пользователю понять, какие операции доступны. Android предоставляет `Focusable` свойство, которое может помечать элементы управления, чтобы они могли получать фокус во время навигации.
 
 **C#**
 
-Чтобы предотвратить получение фокуса с элемента управления C#, задайте `Focusable` свойства `false`:
+Чтобы предотвратить получение элементом управления фокуса C#, задайте `Focusable` для `false`свойства значение.
 
 ```csharp
 label.Focusable = false;
 ```
 
-**Макета AXML**
+**Макет AXML**
 
-В формате XML-файлы набора `android:focusable` атрибут:
+В XML-файлах макета задайте `android:focusable` атрибут:
 
 ```xml
 <android:focusable="false" />
 ```
 
-Можно также контролировать порядок фокуса с `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` атрибутов, обычно задается в макета AXML. Используйте эти атрибуты, чтобы убедиться, что пользователь может легко перемещаться по элементам управления на экране.
+Можно также контролировать порядок `nextFocusDown`фокуса с помощью атрибутов `nextFocusLeft` `nextFocusRight`,, `nextFocusUp` , обычно заданных в макете AXML. Используйте эти атрибуты, чтобы убедиться, что пользователь может легко перемещаться по элементам управления на экране.
 
 
-## <a name="accessibility-and-localization"></a>Локализации и специальных возможностей
+## <a name="accessibility-and-localization"></a>Специальные возможности и локализация
 
-В приведенных выше примерах, описание подсказки и содержимое набор непосредственно отображаемого значения. Желательно использовать значения в **Strings.xml** файла, например это:
+В примерах выше указание и описание содержимого задаются непосредственно в отображаемое значение. Предпочтительнее использовать значения в файле **Strings. XML** , например:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -144,11 +144,11 @@ label.Focusable = false;
 </resources>
 ```
 
-С помощью текста из файла строк ниже приведен в C# и файлы макета AXML:
+Использование текста из файла со строками показано ниже в C# файлах макета и AXML:
 
 **C#**
 
-Вместо использования строковых литералов в коде, поиска переведенных значений из строки файлов с помощью `Resources.GetText`:
+Вместо использования строковых литералов в коде найдите переведенные значения из файлов строк с помощью `Resources.GetText`:
 
 ```csharp
 someText.Hint = Resources.GetText (Resource.String.enter_info);
@@ -157,7 +157,7 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 **AXML**
 
-В формате XML, такие как атрибуты специальных возможностей `hint` и `contentDescription` можно присвоить идентификатор строки:
+В атрибутах доступа XML макета `hint` , `contentDescription` таких как и, можно задать идентификатор строки:
 
 ```xml
 <TextView
@@ -169,17 +169,17 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
     android:contentDescription="@string/save_info" />
 ```
 
-В приложении можно указать несколько переводов язык файла является преимуществом сохранения текста в отдельном файле. См. в разделе [руководство по локализации для Android](~/android/app-fundamentals/localization.md) дополнительные как добавить файлы локализованных строк в проекте приложения.
+Преимущество хранения текста в отдельном файле заключается в том, что в приложении может быть предоставлено несколько языковых переводов файла. Дополнительные сведения о добавлении локализованных строковых файлов в проект приложения см. в статье [руководство по локализации Android](~/android/app-fundamentals/localization.md) .
 
 
 ## <a name="testing-accessibility"></a>Тестирование специальных возможностей
 
-Выполните [эти действия](https://developer.android.com/training/accessibility/testing.html#how-to) для включения talkback; "и" Проводник по сенсорного ввода для проверки специальных возможностей на устройствах Android.
+Выполните следующие [действия](https://developer.android.com/training/accessibility/testing.html#how-to) , чтобы включить Талкбакк и исследовать с помощью сенсорного ввода для проверки специальных возможностей на устройствах Android.
 
-Может потребоваться установить [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) из Google Play, если он не отображается в **параметры > Специальные возможности**.
+Может потребоваться установить [талкбакк](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) из Google Play, если он не отображается в окне **Параметры > Специальные возможности**.
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Кросс-платформенные специальные возможности](~/cross-platform/app-fundamentals/accessibility.md)
-- [Интерфейсы API Android специальных возможностей](https://developer.android.com/guide/topics/ui/accessibility/index.html)
+- [Интерфейсы API специальных возможностей для Android](https://developer.android.com/guide/topics/ui/accessibility/index.html)

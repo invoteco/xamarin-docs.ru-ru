@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9113ff728c382a26d0f0b5c0a6e40575cb8e776f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198284"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227947"
 ---
 # <a name="xamarinforms-webview"></a>Веб-представления Xamarin.Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "70198284"
 
 [`WebView`](xref:Xamarin.Forms.WebView) — Это представление для отображения HTML-содержимого и веб-приложения. В отличие от `OpenUri`, которая перенаправит пользователя на веб-браузер на устройстве, `WebView` отображает HTML содержимое внутри своего приложения.
 
-![](webview-images/in-app-browser.png "В браузере приложения")
+![В браузере приложений](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>Content
 
@@ -105,7 +105,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "Отображение веб-представления HTML-строки")
+![WebView отображение HTML-строки](webview-images/html-string.png)
 
 В приведенном выше коде `@` используется для пометки HTML как строка литерала, то есть все обычные escape-символы учитываются.
 
@@ -147,7 +147,7 @@ body,p,h1 {
 
 На следующих снимках экрана показано отображение локального содержимого на каждой платформе результат:
 
-![](webview-images/local-content.png "Отображение локального содержимого веб-представления")
+![WebView Отображение локального содержимого](webview-images/local-content.png)
 
 Несмотря на то, что первая страница загрузится, `WebView` не имеет сведений о происхождения HTML. Это проблема, при работе со страницами, которые ссылаются на локальные ресурсы. Когда это может случиться примеры при другом, страницы делает ссылку локальных страниц использовать отдельный файл JavaScript, или страница ссылается на таблицу стилей CSS.  
 
@@ -176,11 +176,11 @@ source.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "Локальные файлы в iOS")
+![Локальные файлы в iOS](webview-images/ios-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "Локальные файлы в iOS")
+![Локальные файлы в iOS](webview-images/ios-xs.png)
 
 -----
 
@@ -206,11 +206,11 @@ namespace WorkingWithWebview.iOS
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/android-vs.png "Локальные файлы на устройстве Android")
+![Локальные файлы на Android](webview-images/android-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![](webview-images/android-xs.png "Локальные файлы на устройстве Android")
+![Локальные файлы на Android](webview-images/android-xs.png)
 
 -----
 
@@ -328,7 +328,7 @@ public partial class InAppBrowserXaml : ContentPage
 
 Вот и все!
 
-![](webview-images/in-app-browser.png "Кнопки навигации веб-представления")
+![Кнопки навигации WebView](webview-images/in-app-browser.png)
 
 ## <a name="events"></a>События
 
@@ -383,11 +383,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Это приводит к приведенным ниже (загрузка):
 
-![](webview-images/loading-start.png "Пример события перехода WebView")
+![Пример события навигации WebView](webview-images/loading-start.png)
 
 По завершении загрузки:
 
-![](webview-images/loading-end.png "Веб-представления переход пример события")
+![Пример события навигации WebView](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Повторная загрузка содержимого
 

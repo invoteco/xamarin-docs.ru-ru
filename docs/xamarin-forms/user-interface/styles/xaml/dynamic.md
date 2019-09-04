@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 1b4732e87fb09a4846bfe12b7a476dfef2d6f4f9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9a26532d13b843b812da94739be071c7accac212
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647228"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228193"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Динамические стили в Xamarin.Forms
 
@@ -82,10 +82,10 @@ public partial class DynamicStylesPage : ContentPage
 }
 ```
 
-Когда `OnButtonClicked` выполняется обработчик событий, `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`. Это приводит к появлению, показано на следующем снимке экрана:
+Когда `OnButtonClicked` выполняется обработчик событий, `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`. Результат показан на следующих снимках экрана.
 
-[![](dynamic-images/dynamic-style-blue.png "Пример динамического стиля цвета на синем")](dynamic-images/dynamic-style-blue-large.png#lightbox "синий пример динамического стиля")
-[![](dynamic-images/dynamic-style-green.png "зеленый пример динамического стиля") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Зеленый пример динамического стиля")
+[![Пример динамического](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
+[стиля"синий"впримересзеленымстилем![](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 В следующем примере кода показаны эквивалентные страницы на языке C#:
 
@@ -161,10 +161,10 @@ public class DynamicStylesPageCS : ContentPage
 
 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) Экземпляров использования `StaticResource` расширения разметки для ссылки на [ `Style` ](xref:Xamarin.Forms.Style) с именем `tealSearchBarStyle`. Это `Style` задает некоторые дополнительные свойства и использует [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) свойство для ссылки `searchBarStyle`. `DynamicResource` Расширения разметки не является обязательным, так как `tealSearchBarStyle` не изменится, за исключением `Style` он является производным от. Таким образом `tealSearchBarStyle` сохраняет ссылку `searchBarStyle` и изменяется при изменении базового стиля.
 
-В файле кода, конструктор создает [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) запись с ключом `searchBarStyle`, как в предыдущем примере, демонстрируются динамические стили. Когда `OnButtonClicked` выполняется обработчик событий, `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`. Это приводит к появлению, показано на следующем снимке экрана:
+В файле кода, конструктор создает [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) запись с ключом `searchBarStyle`, как в предыдущем примере, демонстрируются динамические стили. Когда `OnButtonClicked` выполняется обработчик событий, `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`. Результат показан на следующих снимках экрана.
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Синий пример наследования стиля динамического")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "синий пример наследования стиля динамического")
-[![](dynamic-images/dynamic-style-inheritance-green.png "зеленый динамического стиля Пример наследования")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "зеленый пример наследования стиля динамические")
+[![](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
+[Примеробщего![наследования динамического стиля с синим примером](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 В следующем примере кода показаны эквивалентные страницы на языке C#:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 41aabb5e8b6d3eb46a92ee194c6b6b5e3ca51943
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e90e108e6b02055a585129b6412641a726afaab4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655629"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226291"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Работа с действиями строк в Xamarin. iOS
 
@@ -22,7 +22,7 @@ _В этом руководстве показано, как создавать 
 
 в iOS предусмотрено два способа выполнения действий с таблицей `UISwipeActionsConfiguration` : `UITableViewRowAction`и.
 
-`UISwipeActionsConfiguration`была введена в iOS 11 и используется для определения набора действий, которые должны выполняться, когда пользователь просматривает _любое направление_ на строке в табличном представлении. Такое поведение аналогично поведению собственного mail. app. 
+`UISwipeActionsConfiguration`была введена в iOS 11 и используется для определения набора действий, которые должны выполняться, когда пользователь просматривает _любое направление_ на строке в табличном представлении. Такое поведение аналогично поведению собственного mail. app.
 
 `UITableViewRowAction` Класс используется для определения действия, которое будет выполнено, когда пользователь просматривает строку в табличном представлении влево по горизонтали.
 Например, при редактировании таблицы прокрутка влево по строке по умолчанию отображает кнопку **Удалить** . Присоединив несколько экземпляров `UITableViewRowAction` класса к, можно определить `UITableView`несколько пользовательских действий, каждое из которых имеет собственный текст, форматирование и поведение.
@@ -32,7 +32,7 @@ _В этом руководстве показано, как создавать 
 
 Для реализации действий `UISwipeActionsConfiguration`по считыванию необходимо выполнить три шага.
 
-1. Переопределите `GetLeadingSwipeActionsConfiguration` методы и `GetTrailingSwipeActionsConfiguration` /или. Эти методы возвращают `UISwipeActionsConfiguration`. 
+1. Переопределите `GetLeadingSwipeActionsConfiguration` методы и `GetTrailingSwipeActionsConfiguration` /или. Эти методы возвращают `UISwipeActionsConfiguration`.
 2. Создайте экземпляр возвращаемого объекта `UISwipeActionsConfiguration` . Этот класс принимает массив `UIContextualAction`.
 3. Создайте таблицу `UIContextualAction`.
 
@@ -40,7 +40,7 @@ _В этом руководстве показано, как создавать 
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. Реализация методов Свипеактионсконфигуратионс
 
-`UITableViewController`(а также `UITableViewSource` и `UITableViewDelegate`) содержат два метода: `GetLeadingSwipeActionsConfiguration` и `GetTrailingSwipeActionsConfiguration`, которые используются для реализации набора действий по считыванию в строке представления таблицы. Первое действие по прокрутке означает прокрутку с левой стороны экрана на языке слева направо и с правой стороны экрана на языке с письмом справа налево. 
+`UITableViewController`(а также `UITableViewSource` и `UITableViewDelegate`) содержат два метода: `GetLeadingSwipeActionsConfiguration` и `GetTrailingSwipeActionsConfiguration`, которые используются для реализации набора действий по считыванию в строке представления таблицы. Первое действие по прокрутке означает прокрутку с левой стороны экрана на языке слева направо и с правой стороны экрана на языке с письмом справа налево.
 
 В следующем примере (из примера [таблесвипеактионс](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) показано, как реализовать начальную конфигурацию считывания. Из контекстных действий создаются два действия, которые описаны [ниже](#create-uicontextualaction). Затем эти действия передаются в инициализированное [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations), которое используется в качестве возвращаемого значения.
 
@@ -54,11 +54,11 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
     //UISwipeActionsConfiguration
     var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction });
-    
+
     leadingSwipe.PerformsFirstActionWithFullSwipe = false;
-    
+
     return leadingSwipe;
-}  
+}
 ```
 
 <a name="create-uiswipeactionsconfigurations" />
@@ -99,10 +99,10 @@ public UIContextualAction ContextualFlagAction(int row)
                         "Flag",
                         (FlagAction, view, success) => {
                             var alertController = UIAlertController.Create($"Report {words[row]}?", "", UIAlertControllerStyle.Alert);
-                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null)); 
+                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
                             alertController.AddAction(UIAlertAction.Create("Yes", UIAlertActionStyle.Destructive, null));
                             PresentViewController(alertController, true, null);
-                            
+
                             success(true);
                         });
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: aee3d81375ab619fa2016a87951cce3e72cdbe47
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650197"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227908"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Создание пользовательских элементов управления в Xamarin. Mac
 
@@ -221,7 +221,7 @@ public override void DrawRect (CGRect dirtyRect)
 
 #### <a name="handling-user-input-with-override-methods"></a>Обработка пользовательского ввода с помощью методов переопределения
 
-Объекты, наследующие `NSControl` (или `NSView`), имеют несколько методов переопределения для обработки ввода с клавиатуры или мыши. Для нашего примера элемента управления необходимо перевернуть состояние **переключения между и** **выкл** ., когда пользователь щелкает элемент управления с помощью левой кнопки мыши. Мы можем добавить следующие методы переопределения в `NSFlipSwitch` класс для их решения:
+Объекты, наследующие `NSControl` (или `NSView`), имеют несколько методов переопределения для обработки ввода с клавиатуры или мыши. Для нашего примера элемента управления необходимо перевернуть состояние переключения между и **выкл** ., когда пользователь щелкает элемент управления с помощью левой кнопки мыши. Мы можем добавить следующие методы переопределения в `NSFlipSwitch` класс для их решения:
 
 ```csharp
 #region Mouse Handling Methods
@@ -285,7 +285,7 @@ private void Initialize() {
 
 ### <a name="responding-to-state-change-events"></a>Реагирование на события изменения состояния
 
-Когда пользователь изменяет состояние пользовательского элемента управления, нам нужен способ реагирования на изменение состояния в коде (например, при щелчке на пользовательской кнопке). 
+Когда пользователь изменяет состояние пользовательского элемента управления, нам нужен способ реагирования на изменение состояния в коде (например, при щелчке на пользовательской кнопке).
 
 Чтобы предоставить эту функцию, измените `NSFlipSwitch` класс и добавьте следующий код:
 
@@ -299,7 +299,7 @@ internal void RaiseValueChanged() {
 
     // Perform any action bound to the control from Interface Builder
     // via an Action.
-    if (this.Action !=null) 
+    if (this.Action !=null)
         NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 }
 ## endregion
@@ -320,7 +320,7 @@ private void FlipSwitchState() {
 Во-вторых, поскольку наш пользовательский элемент управления `NSControl`наследует от, он автоматически имеет **действие** , которое можно назначить в Interface Builder Xcode. Чтобы вызвать это **действие** при изменении состояния, мы используем следующий код:
 
 ```csharp
-if (this.Action !=null) 
+if (this.Action !=null)
     NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 ```
 
@@ -361,7 +361,7 @@ public override void ViewDidLoad ()
         Console.WriteLine("Option Two: {0}", OptionTwo.Value);
     };
 }
-``` 
+```
 
 Здесь мы реагируем `ValueChanged` на событие, которое мы определили выше `NSFlipSwitch` в классе, и записываюте текущее **значение** , когда пользователь щелкает элемент управления.
 

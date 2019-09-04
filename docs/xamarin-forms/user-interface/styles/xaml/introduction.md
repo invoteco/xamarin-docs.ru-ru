@@ -1,24 +1,24 @@
 ---
-title: Введение в стили Xamarin.Forms
-description: Стили позволяют внешний вид визуальных элементов для специальной настройки. Стили определяются для конкретного типа и содержит значения для свойств, доступных для этого типа.
+title: Общие сведения о стилях Xamarin. Forms
+description: Стили позволяют настраивать внешний вид визуальных элементов. Стили определяются для конкретного типа и содержат значения для свойств, доступных для этого типа.
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 9e5fb0196b67e23a034856ee0dd7b9c7d4846b31
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 35f8dad3590c07ceb3c93aa735b8c02d75098498
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971112"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228170"
 ---
-# <a name="introduction-to-xamarinforms-styles"></a>Введение в стили Xamarin.Forms
+# <a name="introduction-to-xamarinforms-styles"></a>Общие сведения о стилях Xamarin. Forms
 
-_Стили позволяют внешний вид визуальных элементов для специальной настройки. Стили определяются для конкретного типа и содержит значения для свойств, доступных для этого типа._
+_Стили позволяют настраивать внешний вид визуальных элементов. Стили определяются для конкретного типа и содержат значения для свойств, доступных для этого типа._
 
-Приложения Xamarin.Forms часто содержат несколько элементов управления, имеющих идентичным внешним видом. Например, приложение может иметь несколько [ `Label` ](xref:Xamarin.Forms.Label) экземпляров, которые имеют одинаковые параметры шрифта и параметры макета, как показано в следующем примере кода XAML:
+Приложения Xamarin. Forms часто содержат несколько элементов управления, имеющих одинаковый внешний вид. Например, приложение может иметь несколько [`Label`](xref:Xamarin.Forms.Label) экземпляров с одинаковыми параметрами шрифта и параметрами макета, как показано в следующем примере кода XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -82,35 +82,35 @@ public class NoStylesPageCS : ContentPage
 }
 ```
 
-Каждый [ `Label` ](xref:Xamarin.Forms.Label) экземпляр имеет одинаковые значения свойств для внешний вид текста, отображаемого элементом управления `Label`. Результат показан на следующих снимках экрана.
+Каждый [`Label`](xref:Xamarin.Forms.Label) экземпляр имеет одинаковые значения свойств для управления внешним видом текста, отображаемого `Label`. Результат показан на следующих снимках экрана.
 
-[![](introduction-images/no-styles.png "Метка внешний вид, без учета стилей")](introduction-images/no-styles-large.png#lightbox "метки внешний вид, без учета стилей")
+[![Внешний вид метки без стилей](introduction-images/no-styles.png)](introduction-images/no-styles-large.png#lightbox)
 
-Настройка внешнего вида каждого отдельного элемента управления может быть повторяющихся и подвержено ошибкам. Вместо этого стиля могут создаваться, определяет внешний вид, а затем применяются к необходимыми элементами управления.
+Настройка внешнего вида каждого отдельного элемента управления может быть повторена и подвержена ошибкам. Вместо этого можно создать стиль, определяющий внешний вид, а затем применить его к необходимым элементам управления.
 
 ## <a name="create-a-style"></a>Создание стиля
 
-[ `Style` ](xref:Xamarin.Forms.Style) Класс группирует коллекцию значений свойств в один объект, который затем можно применить к нескольким экземплярам визуальный элемент. Это позволяет сократить повтора разметки и позволяет внешний вид приложения, проще изменять.
+[`Style`](xref:Xamarin.Forms.Style) Класс группирует коллекцию значений свойств в один объект, который затем можно применить к нескольким экземплярам визуальных элементов. Это помогает уменьшить повторяющуюся разметку и позволяет упростить изменение внешнего вида приложений.
 
-Несмотря на то, что стили предназначены главным образом для приложений на основе XAML, они также могут создаваться в C#:
+Хотя стили разрабатывались в основном для приложений на основе XAML, их также можно создавать в C#:
 
-- [`Style`](xref:Xamarin.Forms.Style) экземпляры, созданные в XAML обычно определяются в [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) , назначенный [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) коллекцию элемента управления, странице или к [ `Resources` ](xref:Xamarin.Forms.Application.Resources) коллекции приложения.
-- [`Style`](xref:Xamarin.Forms.Style) экземпляры, созданные на языке C# обычно определяются в классе страницы или в классе, который может осуществляться глобально.
+- [`Style`](xref:Xamarin.Forms.Style)экземпляры, созданные в XAML, обычно определяются [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) в, который назначается [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) коллекции элемента управления, [`Resources`](xref:Xamarin.Forms.Application.Resources) страницы или коллекции приложения.
+- [`Style`](xref:Xamarin.Forms.Style)экземпляры, созданные C# в, обычно определяются в классе страницы или в классе, доступ к которому можно получить глобально.
 
 От того, где определен шаблон [`Style`](xref:Xamarin.Forms.Style), зависит то, где его можно использовать.
 
-- [`Style`](xref:Xamarin.Forms.Style) экземпляров, определенные на уровне управления может применяться только к элементу управления и с его дочерними элементами.
-- [`Style`](xref:Xamarin.Forms.Style) экземпляров, определенные на уровне страниц может применяться только к странице и с его дочерними элементами.
-- [`Style`](xref:Xamarin.Forms.Style) экземпляры, определенные на уровне приложения можно применять в приложении.
+- [`Style`](xref:Xamarin.Forms.Style)экземпляры, определенные на уровне элемента управления, могут быть применены только к элементу управления и его дочерним элементам.
+- [`Style`](xref:Xamarin.Forms.Style)экземпляры, определенные на уровне страницы, могут быть применены только к странице и ее дочерним элементам.
+- [`Style`](xref:Xamarin.Forms.Style)экземпляры, определенные на уровне приложения, можно применять ко всему приложению.
 
-Каждый [ `Style` ](xref:Xamarin.Forms.Style) экземпляр содержит коллекцию из одного или нескольких [ `Setter` ](xref:Xamarin.Forms.Setter) объектов, каждый `Setter` необходимости [ `Property` ](xref:Xamarin.Forms.Setter.Property) и [`Value`](xref:Xamarin.Forms.Setter.Value). `Property` Имя привязываемые свойства элемента применяется стиль, и `Value` является значением, которое применяется к свойству.
+Каждый [`Style`](xref:Xamarin.Forms.Style) экземпляр содержит коллекцию из одного или нескольких [`Setter`](xref:Xamarin.Forms.Setter) объектов [`Property`](xref:Xamarin.Forms.Setter.Property) , [`Value`](xref:Xamarin.Forms.Setter.Value)каждый `Setter` из которых имеет и. — Это имя привязываемого свойства элемента, к которому применяется стиль, `Value` а — это значение, которое применяется к свойству. `Property`
 
-Каждый [ `Style` ](xref:Xamarin.Forms.Style) экземпляр может быть *явные*, или *неявное*:
+Каждый [`Style`](xref:Xamarin.Forms.Style) экземпляр может быть *явным*или неявным:
 
-- *Явные* [ `Style` ](xref:Xamarin.Forms.Style) экземпляр определяется путем указания [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) и `x:Key` значение, а также задать целевого элемента [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства `x:Key` ссылки. Дополнительные сведения о *явные* стили, см. в разделе [явные стили](~/xamarin-forms/user-interface/styles/explicit.md).
-- *Неявное* [ `Style` ](xref:Xamarin.Forms.Style) экземпляр определяется путем указания только [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType). `Style` Экземпляр затем автоматически применяются ко всем элементам этого типа. Обратите внимание, подклассы `TargetType` , не получают автоматически `Style` применения. Дополнительные сведения о *неявное* стили, см. в разделе [неявные стили](~/xamarin-forms/user-interface/styles/implicit.md).
+- *Явный* [`Style`](xref:Xamarin.Forms.Style) экземпляр [`Style`](xref:Xamarin.Forms.NavigableElement.Style) определяется с помощью`x:Key` указания изначения`x:Key` , а также путем присвоения свойству целевого элемента ссылки. [`TargetType`](xref:Xamarin.Forms.Style.TargetType) Дополнительные сведения о *явных* стилях см. в разделе [явные стили](~/xamarin-forms/user-interface/styles/explicit.md).
+- Неявный [`Style`](xref:Xamarin.Forms.Style) экземпляр определяется [`TargetType`](xref:Xamarin.Forms.Style.TargetType)путем указания только. Затем `Style` экземпляр будет автоматически применен ко всем элементам этого типа. Обратите внимание, что в `TargetType` `Style` подклассах объекта не применяется автоматически. Дополнительные сведения о неявных стилях см. в разделе неявные [стили](~/xamarin-forms/user-interface/styles/implicit.md).
 
-При создании [ `Style` ](xref:Xamarin.Forms.Style), [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) свойство всегда является обязательным. В следующем коде показано в примере *явные* стиля (Примечание `x:Key`) создан в XAML:
+При создании [`Style`](xref:Xamarin.Forms.Style) [`TargetType`](xref:Xamarin.Forms.Style.TargetType) свойство всегда является обязательным. В следующем примере кода показан *явный* стиль (Примечание), `x:Key`созданный в XAML:
 
 ```xaml
 <Style x:Key="labelStyle" TargetType="Label">
@@ -120,20 +120,20 @@ public class NoStylesPageCS : ContentPage
 </Style>
 ```
 
-Чтобы применить `Style`, целевой объект должен иметь [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) , соответствующий [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) значение свойства `Style`, как показано в следующем примере кода XAML:
+Чтобы применить `Style`объект, целевой объект должен [`VisualElement`](xref:Xamarin.Forms.VisualElement) иметь значение, совпадающее [`TargetType`](xref:Xamarin.Forms.Style.TargetType) со значением `Style`свойства, как показано в следующем примере кода XAML:
 
 ```xaml
 <Label Text="Demonstrating an explicit style" Style="{StaticResource labelStyle}" />
 ```
 
-Стили более низкого уровня в иерархии представлений имеют приоритет над определенных выше вверх. Например, установка [ `Style` ](xref:Xamarin.Forms.Style) , задает [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) для `Red` приложения будут переопределены уровень стиль уровня страницы, который задает `Label.TextColor` для `Green`. Аналогичным образом стиль уровня будут переопределены уровня стиль элемента управления. Кроме того Если `Label.TextColor` задано напрямую на свойства элемента управления, имеет приоритет над любые стили.
+Стили более низкого уровня в иерархии представлений имеют приоритет над определенных выше вверх. Например, установка [ `Style` ](xref:Xamarin.Forms.Style) , задает [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) для `Red` приложения будут переопределены уровень стиль уровня страницы, который задает `Label.TextColor` для `Green`. Аналогичным образом стиль уровня будут переопределены уровня стиль элемента управления. Кроме того, если `Label.TextColor` свойство задано непосредственно для свойства элемента управления, это имеет приоритет над любыми стилями.
 
-Статьи в этом разделе демонстрируют и объясняется, как создать и применить *явные* и *неявное* стили, как создать глобальные стили, стиль наследования, как реагировать на изменения стиля во время выполнения и как использовать встроенные стили, включенные в Xamarin.Forms.
+В статьях этого раздела показано, как создавать и применять *явные* и неявные стили, как создавать глобальные стили, наследование стилей, как реагировать на изменения стиля во время выполнения, а также как использовать встроенные стили, входящие в Xamarin. Forms.
 
 > [!NOTE]
-> **Что такое StyleId?**
+> **Что такое Стилеид?**
 >
-> Предшествующих версии 2.2 Xamarin.Forms [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство используется для идентификации отдельных элементов в приложении для идентификации при тестировании пользовательского интерфейса, а также в тему движков, таких как Pixate. Однако представлены Xamarin.Forms 2.2 [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) свойство, которое используется для [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство.
+> До Xamarin. Forms 2,2 [`StyleId`](xref:Xamarin.Forms.Element.StyleId) свойство было использовано для идентификации отдельных элементов в приложении для идентификации в тестировании пользовательского интерфейса, а также в механизмах тем, например пиксате. Однако Xamarin. Forms 2,2 представил [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) свойство, заменяя [`StyleId`](xref:Xamarin.Forms.Element.StyleId) свойство.
 
 ## <a name="related-links"></a>Связанные ссылки
 

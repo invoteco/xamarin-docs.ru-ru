@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: eb6eff59ccb44d9954139c294592fafcba1f08e0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 806f58ae6a79f935916008e93deed0136920951a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889527"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227815"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Общие сведения о Опентк в Xamarin. Mac
 
@@ -237,7 +237,7 @@ Game.Resize += (sender, e) =>
 
 ### <a name="the-updateframe-event"></a>Событие Упдатефраме
 
-`UpdateFrame` Событие используется для обработки вводимых пользователем данных, обновления позиций объектов, выполнения вычислений физикы или искусственного интеллекта. Для нашего простого тестового приложения мы не используем `UpdateFrame` событие, но включили его для справки: 
+`UpdateFrame` Событие используется для обработки вводимых пользователем данных, обновления позиций объектов, выполнения вычислений физикы или искусственного интеллекта. Для нашего простого тестового приложения мы не используем `UpdateFrame` событие, но включили его для справки:
 
 ```csharp
 Game.UpdateFrame += (sender, e) =>
@@ -253,7 +253,7 @@ Game.UpdateFrame += (sender, e) =>
 
 ### <a name="the-renderframe-event"></a>Событие Рендерфраме
 
-`RenderFrame` Событие содержит код, используемый для отрисовки (рисования) графики. Для нашего примера приложения мы заполняем представление игры простым треугольником: 
+`RenderFrame` Событие содержит код, используемый для отрисовки (рисования) графики. Для нашего примера приложения мы заполняем представление игры простым треугольником:
 
 ```csharp
 Game.RenderFrame += (sender, e) =>

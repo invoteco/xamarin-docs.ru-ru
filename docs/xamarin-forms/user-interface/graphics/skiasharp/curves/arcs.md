@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 97c168460b091b9ada954cacd895a670c31805b2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ada7ce8fc9365ab4133ddf439353e97e640f39d6
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655181"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228111"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Три способа нарисовать дугу
 
@@ -22,7 +22,7 @@ _Сведения об использовании для определения 
 
 Дуга — кривую на длины окружности эллипса, например скругленными части это знак бесконечности:
 
-![](arcs-images/arcsample.png "Знак бесконечности")
+![Знак бесконечности](arcs-images/arcsample.png)
 
 Несмотря на простоту этого определения, не существует способа определить функцию рисования дуги, удовлетворяющий все потребности, и, следовательно, не консенсус между системами графики о наилучшем способе нарисовать дугу. По этой причине `SKPath` класса не ограничивает сам лишь одним из подходов.
 
@@ -42,21 +42,21 @@ public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean fo
 
 Оба метода начинаются с `SKRect` значение, которое определяет расположение и размер эллипса:
 
-![](arcs-images/anglearcoval.png "Овала, начинает угол дуги")
+![Овал, начинающий дугу угла](arcs-images/anglearcoval.png)
 
 Дуга является частью длины окружности этого эллипса.
 
 `startAngle` Аргумент — по часовой стрелке в градусах относительно горизонтальной линии, рисуемой из центра эллипса справа. `sweepAngle` Аргумент задается по отношению к `startAngle`. Ниже приведены `startAngle` и `sweepAngle` значения 60 градусов и 100 градусов, соответственно:
 
-![](arcs-images/anglearcangles.png "Углы, которые определяют угол дуги")
+![Углы, определяющие дугу угла](arcs-images/anglearcangles.png)
 
 Начальный угол дуги начинается. Его длина регулируется угол поворота. Ниже приведен дуги красным цветом.
 
-![](arcs-images/anglearchighlight.png "Выделенные угол дуги")
+![Выделенная дуга угла](arcs-images/anglearchighlight.png)
 
 Кривая, добавляется к пути с `AddArc` или `ArcTo` метод — просто это часть эллипса окружности:
 
-![](arcs-images/anglearc.png "Угол дуги сама по себе")
+![Дуга угла по себе](arcs-images/anglearc.png)
 
 Аргументы `startAngle` или`sweepAngle` могут быть отрицательными: Дуга по часовой стрелке используется для положительных `sweepAngle` значений и против часовой стрелки для отрицательных значений.
 
@@ -103,7 +103,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Как вы видите, начальный угол и угол поворота, выполняемых с отрицательными значениями:
 
-[![](arcs-images/anglearc-small.png "Тройной снимок экрана страницы угол дуги")](arcs-images/anglearc-large.png#lightbox "тройной снимок экрана страницы угол дуги")
+[![Тройной снимок экрана со страницей угла дуги](arcs-images/anglearc-small.png)](arcs-images/anglearc-large.png#lightbox)
 
 Этот подход к созданию дугу является алгоритмически наиболее простым и легко являются производными параметрические уравнения, которые описывают дуги. Зная, размер и расположение элемента эллипса и угла начала и поворота, начальную и конечную точки дуги можно вычислить по простой тригонометрических вычислений:
 
@@ -208,11 +208,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Новый `SKPath` объекта создается для каждого среза круговой диаграммы. Путь состоит из строки из центра, то `ArcTo` для рисования дуги и еще одну строку обратно в центр результаты из `Close` вызова. Эта программа отображает «Разрезанная» секторов диаграммы, перемещая их все в центре на 50 пикселей. Эта задача требует вектор в направлении среднюю угол поворота для каждого среза:
 
-[![](arcs-images/explodedpiechart-small.png "Тройной снимок экрана страницы Разрезанная круговая диаграмма")](arcs-images/explodedpiechart-large.png#lightbox "тройной снимок экрана страницы Разрезанная круговая диаграмма")
+[![Тройной снимок экрана страницы разрезанной круговой диаграммы](arcs-images/explodedpiechart-small.png)](arcs-images/explodedpiechart-large.png#lightbox)
 
 Чтобы увидеть, как выглядит без «развертывание», просто задокомментируем `Translate` вызова:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Тройной снимок экрана страницы Разрезанная круговая диаграмма без развертывания")](arcs-images/explodedpiechartunexploded-large.png#lightbox "тройной снимок экрана страницы Разрезанная круговая диаграмма без развертывания")
+[![Тройной снимок экрана развернутой страницы круговой диаграммы без развертывания](arcs-images/explodedpiechartunexploded-small.png)](arcs-images/explodedpiechartunexploded-large.png#lightbox)
 
 ## <a name="the-tangent-arc"></a>Касательной дуги
 
@@ -234,31 +234,31 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 - Первый аргумент точки `ArcTo` метод, именуемый *углу точки*
 - Второй аргумент точки `ArcTo`, который называется *конечная точка*:
 
-![](arcs-images/tangentarcthreepoints.png "Три точки, которые начинаются касательных дуги")
+![Три точки, начинающиеся с дуги по касательной](arcs-images/tangentarcthreepoints.png)
 
 Эти три точки определяют две соединенные линии:
 
-![](arcs-images/tangentarcconnectinglines.png "Линии, соединяющие три точки касания дуги")
+![Линии, соединяющие три точки дуги тангенса](arcs-images/tangentarcconnectinglines.png)
 
 Если colinear три точки &mdash; то есть если они находятся в той же строке прямой &mdash; рисуется дуга.
 
 `ArcTo` Также включает `radius` параметра. Определяет радиус круга:
 
-![](arcs-images/tangentarccircle.png "Круг касательных дуги")
+![Окружность дуги тангенса](arcs-images/tangentarccircle.png)
 
 Касательной дуги для эллипс не генерализована.
 
 Если две строки соответствует под любым углом, которым могут вставляться между эти строки, чтобы она была касательной к обе строки:
 
-![](arcs-images/tangentarctangentcircle.png "Элемент управления circle касательных дуга между двумя строками")
+![Окружность дуги между двумя линиями](arcs-images/tangentarctangentcircle.png)
 
 Кривую, которая добавляется в профиль не затрагивает любой из точки, указанные в `ArcTo` метод. Она состоит из прямую линию с текущего момента первой точке касания и дугу, которая заканчивается на второй точке касания, здесь показано красным цветом:
 
-![](arcs-images/tangentarchighlight.png "Выделенные касательных дуга между двумя линиями")
+![Выделенная дуга тангенса между двумя линиями](arcs-images/tangentarchighlight.png)
 
 Ниже приведен окончательный прямой линии и дуги, который добавляется в профиль.
 
-![](arcs-images/tangentarc.png "Выделенные касательных дуга между двумя линиями")
+![Выделенная дуга тангенса между двумя линиями](arcs-images/tangentarc.png)
 
 Профиль может быть продолжен из второй точке касания.
 
@@ -416,7 +416,7 @@ public partial class TangentArcPage : InteractivePage
 
 Вот **дуги тангенс** странице под управлением:
 
-[![](arcs-images/tangentarc-small.png "Тройной снимок экрана страницы Arc тангенс")](arcs-images/tangentarc-large.png#lightbox "тройной снимок экрана страницы тангенс дуги")
+[![Тройной снимок экрана со страницей дуги на Тангенсе](arcs-images/tangentarc-small.png)](arcs-images/tangentarc-large.png#lightbox)
 
 Касательной дуги идеально подходит для создания скругленных углов, например прямоугольник с закругленными углами. Так как `SKPath` уже включает в себя `AddRoundedRect` метод, **округленное Heptagon** странице рассказывается, как использовать `ArcTo` для скругление углов семь стороны многоугольника. (Код обобщается для любого регулярных многоугольника.)
 
@@ -489,9 +489,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Вот ее запуск.
+Вот работающая программа:
 
-[![](arcs-images/roundedheptagon-small.png "Тройной снимок экрана страницы округленное Heptagon")](arcs-images/roundedheptagon-large.png#lightbox "тройной снимок экрана страницы округленное Heptagon")
+[![Тройной снимок экрана со скругленной Хептагон страницей](arcs-images/roundedheptagon-small.png)](arcs-images/roundedheptagon-large.png#lightbox)
 
 ## <a name="the-elliptical-arc"></a>Эллиптической дуги
 
@@ -507,31 +507,31 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 Эти `ArcTo` методы нарисовать дугу между двумя точками, которые являются текущей точки контура, а последний параметр `ArcTo` метод ( `xy` параметр или отдельные `x` и `y` параметров):
 
-![](arcs-images/ellipticalarcpoints.png "Две точки, которые определены эллиптической дуги")
+![Две точки, которые задают эллиптическую дугу](arcs-images/ellipticalarcpoints.png)
 
 Первый параметр точки для `ArcTo` метод (`r`, или `rx` и `ry`) вообще не является точкой, но вместо этого задает горизонтальный и вертикальный радиусы эллипса;
 
-![](arcs-images/ellipticalarcellipse.png "Эллипса, который определен эллиптической дуги")
+![Эллипс, который определил эллиптическую дугу](arcs-images/ellipticalarcellipse.png)
 
 `xAxisRotate` Параметр — это число градусов по часовой стрелке для поворота этого эллипса:
 
-![](arcs-images/ellipticalarctiltedellipse.png "Мозаичный эллипса, который определен эллиптической дуги")
+![Наклон эллипса, который определил эллиптическую дугу](arcs-images/ellipticalarctiltedellipse.png)
 
 Если это мозаичный эллипс находится затем таким образом, чтобы он соприкасается двумя точками, точки соединяются два разных дуги:
 
-![](arcs-images/ellipticalarcellipse1.png "Первый набор эллиптической дуги")
+![Первый набор эллиптических дуг](arcs-images/ellipticalarcellipse1.png)
 
 Эти две дуги могут различаться двумя способами: Верхняя дуга больше, чем нижняя дуга, и по мере того, как дуга рисуется слева направо, верхняя дуга рисуется в направлении по часовой стрелке, а нижняя дуга рисуется в направлении по часовой стрелке.
 
 Можно также в соответствии с эллипса между двумя точками другим способом:
 
-![](arcs-images/ellipticalarcellipse2.png "Второй набор эллиптической дуги")
+![Второй набор эллиптических дуг](arcs-images/ellipticalarcellipse2.png)
 
 Теперь имеется меньшего размера дуги в верхней части, которая рисуется по часовой стрелке и большего размера дуги внизу, рисуется против часовой стрелки.
 
 Этих двух точек может быть подключено дугой определением мозаичный эллипс в общей сложности состоит из четырех способов:
 
-![](arcs-images/ellipticalarccolors.png "Все четыре эллиптической дуги")
+![Все четыре эллиптических дуги](arcs-images/ellipticalarccolors.png)
 
 Эти четыре дуги различаются по четыре комбинации [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) и [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) аргументов типа перечисления в `ArcTo` метод:
 
@@ -586,21 +586,21 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Здесь выполняется:
 
-[![](arcs-images/ellipticalarc-small.png "Тройной снимок экрана страницы эллиптической дуги")](arcs-images/ellipticalarc-large.png#lightbox "тройной снимок экрана страницы эллиптической дуги")
+[![Тройной снимок экрана эллиптической страницы дуги](arcs-images/ellipticalarc-small.png)](arcs-images/ellipticalarc-large.png#lightbox)
 
 **Бесконечность Arc** страница использует эллиптической дуги для рисования знак бесконечности. Знак бесконечности основана на два круга с радиусы 100 единиц, разделенных 100 единиц.
 
-![](arcs-images/infinitycircles.png "Два круга")
+![Два круга](arcs-images/infinitycircles.png)
 
 Две строки, пересекающих друг с другом приведены касательной оба окружности.
 
-![](arcs-images/infinitycircleslines.png "Два круга с касательные")
+![Два круга с касательными линиями](arcs-images/infinitycircleslines.png)
 
 Знак бесконечности состоит из части этих кругах и две строки. Чтобы использовать эллиптической дуги для рисования знак бесконечности, необходимо определить координаты, где две строки представляют касательной кругов.
 
 Создайте прямоугольник справа в один из кругов.
 
-![](arcs-images/infinitytriangle.png "Два круга с касательные и embedded круг")
+![Два круга с касательными и внедренными кругами](arcs-images/infinitytriangle.png)
 
 Радиус круга составляет 100 единиц и гипотенузы треугольника составляет 150 единиц, поэтому угол α арксинус 100 на 150, или 41,8 градусов (обратный синус). Длина другой стороне треугольник — 150 раз косинус 41,8 градусов или 112, который также можно вычислить по необходимости знать теорему Пифагора.
 
@@ -612,7 +612,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Четыре касательных приведены все необходимое для рисования знак бесконечности по центру в точке (0, 0) с радиусы круг 100.
 
-![](arcs-images/infinitycoordinates.png "Два круга с касательные и координатами")
+![Два круга с касательными и координатами](arcs-images/infinitycoordinates.png)
 
 `PaintSurface` Обработчик в [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) класс размещает знак бесконечности, чтобы (0, 0) точка располагается по центру страницы и масштабирует путь, по размеру экрана:
 
@@ -654,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Код использует `Bounds` свойство `SKPath` определяет размеры бесконечность синус для его масштабирования размер холста:
 
-[![](arcs-images/arcinfinity-small.png "Тройной снимок экрана страницы бесконечность Arc")](arcs-images/arcinfinity-large.png#lightbox "тройной снимок экрана страницы бесконечность дуги")
+[![Тройной снимок экрана со страницей "бесконечность" для дуги](arcs-images/arcinfinity-small.png)](arcs-images/arcinfinity-large.png#lightbox)
 
 Результат выглядит немного мало, поэтому, предположительно, `Bounds` свойство `SKPath` сообщает, размер, превышающий путь.
 
@@ -662,7 +662,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Чтобы получить более тесную подходит, используйте `TightBounds` свойство, которое исключает контрольные точки. Вот программа работает в альбомном режиме и с помощью `TightBounds` свойство, чтобы получить границы путей:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Тройной снимок экрана страницы бесконечность Arc с тесной границами")](arcs-images/arcinfinitytightbounds-large.png#lightbox "тройной снимок экрана страницы бесконечность Arc с тесной границы")
+[![Тройной снимок экрана страницы с жесткими границами на странице "бесконечность"](arcs-images/arcinfinitytightbounds-small.png)](arcs-images/arcinfinitytightbounds-large.png#lightbox)
 
 Несмотря на то, что подключения между дуги, а также прямые линии — математически smooth, может показаться немного внезапные изменение дугу на прямую линию. Знак бесконечности лучше представлены в следующей статье по [ **три типа кривых Безье**](beziers.md).
 

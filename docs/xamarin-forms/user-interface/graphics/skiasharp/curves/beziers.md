@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 7802360c95d31f237cf69c69728cffe02ad47e5a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646227"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228267"
 ---
 # <a name="three-types-of-bzier-curves"></a>Три типа кривых Безье
 
@@ -24,7 +24,7 @@ _Узнайте, как использовать для подготовки к 
 
 Кривые Безье хорошо подходят для интерактивного проектирования: Они хорошо &mdash; работают другими словами, не существует единственных случаев, которые приводят к бесконечной или &mdash; неудобной кривой, и обычно визуальноы.
 
-![](beziers-images/beziersample.png "Пример кривой Безье")
+![Пример кривой Безье](beziers-images/beziersample.png)
 
 Контурам символов на компьютере шрифтов, обычно определяются с помощью кривых Безье.
 
@@ -93,7 +93,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Здесь выполняется:
 
-[![](beziers-images/beziercurve-small.png "Тройной снимок экрана страницы кривой Безье")](beziers-images/beziercurve-large.png#lightbox "тройной снимок экрана страницы кривую Безье")
+[![Тройной снимок экрана со страницей кривой Безье](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
 
 Математически кривая является третьего полинома. Кривая максимум пересекает прямую линию в трех местах. Начальной точки кривой всегда является касательной и в направлении, прямую линию с самого начала пункты первой контрольной точки. В конечной точке, кривая является всегда точки касания и в направлении, прямую линию от второго элемента управления в конечную точку.
 
@@ -125,7 +125,7 @@ y(t) = (1 – t) ³y₀ + 3t (1 – t) ²y₁ + 3t² (1 – t) y₂ + t³y₃
 
 На следующей схеме показаны четыре точки с меткой `pto`, `pt1`, `pt2`, и `pt3` определение кривую Безье (показано красным цветом), соответствующий сегмент дуги:
 
-![](beziers-images/bezierarc45.png "Приближение дуги в кривую Безье")
+![Приближение дуги окружности к кривой Безье](beziers-images/bezierarc45.png)
 
 Строк из начальной и конечной точек для контрольных точек касательной к элементу управления circle и в кривую Безье, и они имеют длину *L*. Первая статья, обозначенной выше указывает, что кривая Безье рекомендации аппроксимирует сегмент дуги при этой длины, *L* вычисляется следующим образом:
 
@@ -211,13 +211,13 @@ float Magnitude(SKPoint v)
 
 Вот приложение, выполняющееся с различными углами зрения:
 
-[![](beziers-images/beziercirculararc-small.png "Тройной снимок экрана страницы Безье дуги")](beziers-images/beziercirculararc-large.png#lightbox "тройной снимок экрана страницы дуги Безье")
+[![Тройной снимок экрана круговой страницы дуги Безье](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
 
 Внимательно посмотрите на третий снимок экрана, и вы увидите, что кривая Безье особенно отличается от полукруга угол равен 180 градусов, когда на экране iOS показывает, что кажется под просто прекрасно квартал круг угол равен 90 градусов.
 
 Вычисление координаты две контрольные точки достаточно прост, когда четверть круга ориентирован следующим образом:
 
-![](beziers-images/bezierarc90.png "Приближение квартала окружности в кривую Безье")
+![Приближение окружности круга с кривой Безье](beziers-images/bezierarc90.png)
 
 Если радиус круга равна 100, затем *L* – 55, и это число легко запомнить.
 
@@ -293,7 +293,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Точки интерполируются на основе sinusoidally oscillating значения `t`. Интерполированные точки затем используются для создания ряда из четырех соединенных кривых Безье. Ниже приведен запущенная анимация.
 
-[![](beziers-images/squaringthecircle-small.png "Тройной снимок Squaring странице круг")](beziers-images/squaringthecircle-large.png#lightbox "тройной снимок Squaring странице круг")
+[![Тройной снимок экрана возведения в круг страницы окружности](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
 
 Такой анимации бы невозможно без кривых, которые алгоритмически достаточно гибки для воспроизведения в виде прямых линий и дуг.
 
@@ -342,7 +342,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ниже приведен знак бесконечности.
 
-[![](beziers-images/bezierinfinity-small.png "Тройной снимок экрана страницы бесконечность Безье")](beziers-images/bezierinfinity-large.png#lightbox "тройной снимок экрана страницы бесконечность Безье")
+[![Тройной снимок экрана страницы бесконечной Безье](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
 
 Это отчасти гораздо легче к центру, чем знак бесконечности, преобразовываемый для просмотра **бесконечность Arc** странице из [ **три способа нарисовать дугу** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) статьи.
 
@@ -405,7 +405,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 И здесь он выполняется:
 
-[![](beziers-images/quadraticcurve-small.png "Тройной снимок экрана страницы квадратичной кривой")](beziers-images/quadraticcurve-large.png#lightbox "тройной снимок экрана страницы квадратичной кривой")
+[![Тройной снимок экрана со страницей кривой с квадратичным изгибом](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
 
 Пунктирные линии располагаются по касательной к кривой в начальной и конечной точки и соответствовать в точке управления.
 
@@ -483,7 +483,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Здесь выполняется:
 
-[![](beziers-images/coniccurve-small.png "Тройной снимок экрана страницы Conic кривой")](beziers-images/coniccurve-large.png#lightbox "тройной снимок экрана страницы Conic кривой")
+[![Тройной снимок экрана со страницей кривой Коник](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
 
 Как вы видите, контрольная точка похоже на включение внесенных изменений кривой к более, если вес выше. Если вес равен нулю, кривая становится прямую линию от начальной точки в конечную точку.
 
@@ -491,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Это очень легко создавать производные контрольную точку и плотность `ConicTo` метод, чтобы нарисовать дугу до (но не включая) полукруга. На следующей схеме касательные из начальной и конечной точек соответствовать в точке управления.
 
-![](beziers-images/conicarc.png "Отображают conic дуги дугу окружности")
+![Коникная дуга, Визуализация дуги окружности](beziers-images/conicarc.png)
 
 С помощью тригонометрии можно определить расстояние контрольной точки от центра окружности: Это радиус круга, деленный на косинус половины угла α. Чтобы нарисовать дугу между начальной и конечной точек, присвойте весу этой же косинус половину угла. Обратите внимание на то, что если угол в 180 градусов, затем касательные никогда не соответствуют и вес равен нулю. Но для углов меньше, чем 180 градусов, математические работает нормально.
 
@@ -547,7 +547,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Как видите, нет никакой разницы между `ConicTo` путь, выделяются красным цветом и базовой круг, отображаемый для ссылки:
 
-[![](beziers-images/coniccirculararc-small.png "Тройной снимок экрана страницы Conic дуги")](beziers-images/coniccirculararc-large.png#lightbox "тройной снимок экрана страницы Conic дугу окружности")
+[![Тройной снимок экрана Коник круглой страницы дуги](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
 
 Но задать угол в 180 градусов, а также математика "fail".
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7004c4692158be2e51eca93dece349da2a735bab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654393"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227495"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Основные сведения о расширении приложения для сообщений в Xamarin. iOS
 
@@ -118,14 +118,14 @@ _В этой статье показано, как включить расшир
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Запустите Visual Studio для Mac.
-2. Откройте решение, чтобы добавить расширение приложения сообщений в. 
-3. Выберите **расширения iOS** >  iMessage расширение и нажмите кнопку Далее: >  
+2. Откройте решение, чтобы добавить расширение приложения сообщений в.
+3. Выберите **расширения iOS** >  iMessage расширение и нажмите кнопку Далее: > 
 
     [![](intro-to-message-app-extensions-images/message01.png "Выбор расширения iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Введите **имя расширения** и нажмите кнопку **Далее** : 
+4. Введите **имя расширения** и нажмите кнопку **Далее** :
 
     [![](intro-to-message-app-extensions-images/message02.png "Введите имя расширения")](intro-to-message-app-extensions-images/message02.png#lightbox)
-5. Нажмите кнопку **создать** , чтобы создать расширение: 
+5. Нажмите кнопку **создать** , чтобы создать расширение:
 
     [![](intro-to-message-app-extensions-images/message03.png "Нажмите кнопку \"создать\"")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
@@ -158,7 +158,7 @@ _В этой статье показано, как включить расшир
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 1. В **панель решения**щелкните правой кнопкой мыши имя проекта расширения и выберите **Добавить** > **новый файл...**  >  **iOS |**  > **Контроллер интерфейса**Apple Watch.
-2. Введите `StickerBrowserViewController` в поле **имя** и нажмите кнопку **New (создать** ): 
+2. Введите `StickerBrowserViewController` в поле **имя** и нажмите кнопку **New (создать** ):
 
     [![](intro-to-message-app-extensions-images/browser01.png "Введите Стиккербровсервиевконтроллер для имени")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. `StickerBrowserViewController.cs` Откройте файл для редактирования.
@@ -166,7 +166,7 @@ _В этой статье показано, как включить расшир
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. В **Обозреватель решений**щелкните правой кнопкой мыши имя проекта расширения и выберите **Добавить** > **новый файл...**  >  **iOS |**  > **Контроллер интерфейса**Apple Watch.
-2. Введите `StickerBrowserViewController` в поле **имя** и нажмите кнопку **New (создать** ): 
+2. Введите `StickerBrowserViewController` в поле **имя** и нажмите кнопку **New (создать** ):
 
     [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Введите Стиккербровсервиевконтроллер для имени")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. `StickerBrowserViewController.cs` Откройте файл для редактирования.
@@ -537,7 +537,7 @@ namespace MessageExtension
                 MessagesAppViewController.AddStickerToCollection (NewSticker);
             };
             View.AddSubview (doneButton);
-            
+
             ...
         }
         #endregion
@@ -702,7 +702,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
         break;
     }
 }
-``` 
+```
 
 ## <a name="summary"></a>Сводка
 

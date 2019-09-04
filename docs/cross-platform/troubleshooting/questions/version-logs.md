@@ -7,38 +7,38 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cd7a2026a4d1d1458455733a6f2710364cc7fec7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119962"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226781"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Где я могу найти информацию о версии и журналы
 
 ## <a name="outline"></a>Контур
 
 - [Сведения о версии](#version-information)
-    - Сведения о версии Windows
-    - Сведения о версии Mac
-    - Android SDK Tools, Platform-Tools, Build-Tools
+  - Сведения о версии Windows
+  - Сведения о версии Mac
+  - Android SDK Tools, Platform-Tools, Build-Tools
 - [Журналы IDE и установщика](#ide-and-installer-logs)
-    - [Журналы Windows](#windows-logs)
-        - Xamarin Studio
-        - Xamarin для Visual Studio
-        - Универсальный установщик Xamarin
-        - Отдельные `.msi` установщики, подробные журналы
-        - Запуск Visual Studio, подробные журналы
-    - [Журналы Mac](#mac-logs)
-        - Узел сборки
-    - Visual Studio для Mac
-        - Xamarin Studio
-        - Установщик Xamarin
+  - [Журналы Windows](#windows-logs)
+    - Xamarin Studio
+    - Xamarin для Visual Studio
+    - Универсальный установщик Xamarin
+    - Отдельные `.msi` установщики, подробные журналы
+    - Запуск Visual Studio, подробные журналы
+  - [Журналы Mac](#mac-logs)
+    - Узел сборки
+  - Visual Studio для Mac
+    - Xamarin Studio
+    - Установщик Xamarin
 - [Подробные выходные данные сборки](#verbose-build-output-logs)
 - [Журналы отладки для приложений Xamarin. Android и Xamarin. iOS](#debug-logs-for-xamarin-apps)
-    - Журналы `adb` logcat для Android
-    - журналы симуляторов iOS (на Mac)
-    - журналы устройств iOS (на Mac)
+  - Журналы `adb` logcat для Android
+  - журналы симуляторов iOS (на Mac)
+  - журналы устройств iOS (на Mac)
 
 ## <a name="a-idversion-information-nameversion-information-version-information"></a><a id="version-information" name="version-information" />Сведения о версии
 

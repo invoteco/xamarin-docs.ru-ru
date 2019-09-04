@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: b639a7fdefb8fca67d833b07ef9aa1a85da67ef6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642882"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228007"
 ---
 # <a name="xamarinforms-text-styles"></a>Стили текста Xamarin.Forms
 
@@ -48,7 +48,7 @@ _Выделение текста в Xamarin.Forms_
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "Пример стили устройства")
+![Пример стилей устройств](styles-images/builtinstyles.png)
 
 <a name="Custom_Styles" />
 
@@ -90,7 +90,7 @@ var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 
 Обратите внимание, что ресурсы (включая все стили) определяются в `ContentPage.Resources`, который является одноуровневым элементом знакомую `ContentPage.Content` элемент.
 
-![](styles-images/customstyle.png "Пример пользовательских стилей")
+![Пример пользовательских стилей](styles-images/customstyle.png)
 
 <a name="Applying_Styles" />
 
@@ -137,11 +137,11 @@ label.Style = Device.Styles.TitleStyle;
 
 Отключено:
 
-![](styles-images/pre-access.png "Стили устройства с отключенной специальных возможностей")
+![Стили устройств с отключенной поддержкой специальных возможностей](styles-images/pre-access.png)
 
 Включено:
 
-![](styles-images/post-access.png "Стили устройства с поддержкой специальных возможностей")
+![Стили устройств с включенной поддержкой специальных возможностей](styles-images/post-access.png)
 
 Для обеспечения доступности, убедитесь, что встроенные стили основой для используются все стили, относящихся к тексту в приложении, и что вы используете стили согласованно. См. в разделе [стили](~/xamarin-forms/user-interface/styles/index.md) Дополнительные сведения о расширении и работы со стилями, в целом.
 

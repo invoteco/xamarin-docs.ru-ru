@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 328063fd6924902738722813cfb961e56af5385e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cdbfaafdac8f965adaf4b840b568154e40ef7e10
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644477"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228181"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Неявные стили в Xamarin.Forms
 
@@ -51,9 +51,9 @@ _Неявный стиль, которое используется для вс�
 </ContentPage>
 ```
 
-[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) Определяет одно *неявное* стиль, применяемый к странице [ `Entry` ](xref:Xamarin.Forms.Entry) экземпляров. `Style` Используется для отображения синий текст на желтом фоне, а для параметра другие параметры оформления. `Style` Добавляется на страницу [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) без указания `x:Key` атрибута. Таким образом `Style` применяется ко всем `Entry` экземпляров неявно, так как они соответствуют [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) свойство `Style` точно. Тем не менее `Style` не применяется к `CustomEntry` экземпляра, то есть, выведенных в подклассы `Entry`. Это приводит к появлению, показано на следующем снимке экрана:
+[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) Определяет одно *неявное* стиль, применяемый к странице [ `Entry` ](xref:Xamarin.Forms.Entry) экземпляров. `Style` Используется для отображения синий текст на желтом фоне, а для параметра другие параметры оформления. `Style` Добавляется на страницу [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) без указания `x:Key` атрибута. Таким образом `Style` применяется ко всем `Entry` экземпляров неявно, так как они соответствуют [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) свойство `Style` точно. Тем не менее `Style` не применяется к `CustomEntry` экземпляра, то есть, выведенных в подклассы `Entry`. Результат показан на следующих снимках экрана.
 
-[![](implicit-images/implicit-styles.png "Пример неявные стили")](implicit-images/implicit-styles-large.png#lightbox "пример неявные стили")
+[![Пример неявных стилей](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
 Кроме того, четвертый [ `Entry` ](xref:Xamarin.Forms.Entry) переопределяет [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor) и [ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor) свойства неявный стиль для разных `Color`значения.
 

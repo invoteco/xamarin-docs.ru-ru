@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 889bc13cfd0cbea51c34e8b3bcb6393293f4c2ae
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6f60b52d4fd29aacf319f9de94051e28c9876e33
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528744"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226696"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Ручные элементы управления камерой в Xamarin. iOS
 
@@ -172,8 +172,8 @@ namespace ManualCameraControls
 
 1. Дважды щелкните `AppDelegate.cs` файл в Обозреватель решений, чтобы открыть его для редактирования.
 1. Добавьте следующие операторы using в начало файла:
-    
-    ```
+
+    ```csharp
     using System;
     using Foundation;
     using UIKit;
@@ -188,12 +188,12 @@ namespace ManualCameraControls
     ```
 
 1. Добавьте следующие частные переменные и вычисленные свойства в `AppDelegate` класс:
-    
-    ```
+
+    ```csharp
     #region Private Variables
     private NSError Error;
     #endregion
-    
+
     #region Computed Properties
     public override UIWindow Window {get;set;}
     public bool CameraAvailable { get; set; }
@@ -204,16 +204,16 @@ namespace ManualCameraControls
     public AVCaptureDeviceInput Input { get; set; }
     #endregion
     ```
-  
+
 1. Переопределите метод завершения и измените его на:
-    
-    ```
+
+    ```csharp
     public override void FinishedLaunching (UIApplication application)
     {
         // Create a new capture session
         Session = new AVCaptureSession ();
         Session.SessionPreset = AVCaptureSession.PresetMedium;
-    
+
         // Create a device input
         CaptureDevice = AVCaptureDevice.DefaultDeviceWithMediaType (AVMediaType.Video);
         if (CaptureDevice == null) {
@@ -222,7 +222,7 @@ namespace ManualCameraControls
             CameraAvailable = false;
             return;
         }
-    
+
         // Prepare device for configuration
         CaptureDevice.LockForConfiguration (out Error);
         if (Error != null) {
@@ -231,13 +231,13 @@ namespace ManualCameraControls
             CaptureDevice.UnlockForConfiguration ();
             return;
         }
-    
+
         // Configure stream for 15 frames per second (fps)
         CaptureDevice.ActiveVideoMinFrameDuration = new CMTime (1, 15);
-    
+
         // Unlock configuration
         CaptureDevice.UnlockForConfiguration ();
-    
+
         // Get input from capture device
         Input = AVCaptureDeviceInput.FromDevice (CaptureDevice);
         if (Input == null) {
@@ -246,27 +246,27 @@ namespace ManualCameraControls
             CameraAvailable = false;
             return;
         }
-    
+
         // Attach input to session
         Session.AddInput (Input);
-    
+
         // Create a new output
         var output = new AVCaptureVideoDataOutput ();
         var settings = new AVVideoSettingsUncompressed ();
         settings.PixelFormatType = CVPixelFormatType.CV32BGRA;
         output.WeakVideoSettings = settings.Dictionary;
-    
+
         // Configure and attach to the output to the session
         Queue = new DispatchQueue ("ManCamQueue");
         Recorder = new OutputRecorder ();
         output.SetSampleBufferDelegate (Recorder, Queue);
         Session.AddOutput (output);
-    
+
         // Let tabs know that a camera is available
         CameraAvailable = true;
     }
-    ```  
-  
+    ```
+
 1. Сохраните изменения в файле.
 
 
@@ -300,10 +300,10 @@ namespace ManualCameraControls
 
 При работе с фокусом существует несколько терминов, с которыми разработчик должен быть знаком.
 
-- **Глубина поля** — расстояние между ближайшим и крайним числом объектов, которые находятся в фокусе. 
+- **Глубина поля** — расстояние между ближайшим и крайним числом объектов, которые находятся в фокусе.
 - **Макрос** — это приближается к концу спектра фокуса и представляет собой ближайшее расстояние, на которое может сосредоточиться объектив.
 - Бесконечность — это дальний конец спектра фокуса и является самым крайним расстоянием, на которое может сосредоточиться объектив.
-- **Расстояние между** фокусами — это точка в спектре, где самый крайний объект в кадре находится на самом конце фокуса. Иными словами, это фокусное расположение, которое увеличивает глубину поля. 
+- **Расстояние между** фокусами — это точка в спектре, где самый крайний объект в кадре находится на самом конце фокуса. Иными словами, это фокусное расположение, которое увеличивает глубину поля.
 - **Позицией линзы** — это то, что управляет всеми другими условиями. Это расстояние линзы от датчика и, следовательно, контроллер фокусировки.
 
 
@@ -383,8 +383,8 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     using CoreGraphics;
     using CoreFoundation;
     using System.Timers;
-    ```  
-  
+    ```
+
 1. Добавьте следующие частные переменные:
 
     ```csharp
@@ -392,8 +392,8 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     private NSError Error;
     private bool Automatic = true;
     #endregion
-    ```  
-  
+    ```
+
 1. Добавьте следующие вычисленные свойства:
 
     ```csharp
@@ -403,21 +403,21 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     }
     public Timer SampleTimer { get; set; }
     #endregion
-    ```  
-  
+    ```
+
 1. Переопределите `ViewDidLoad` метод и добавьте следующий код:
 
     ```csharp
     public override void ViewDidLoad ()
     {
         base.ViewDidLoad ();
-    
+
         // Hide no camera label
         NoCamera.Hidden = ThisApp.CameraAvailable;
-    
+
         // Attach to camera view
         ThisApp.Recorder.DisplayView = CameraView;
-    
+
         // Create a timer to monitor and update the UI
         SampleTimer = new Timer (5000);
         SampleTimer.Elapsed += (sender, e) => {
@@ -426,13 +426,13 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
                 Position.Value = ThisApp.Input.Device.LensPosition;
             });
         };
-    
+
         // Watch for value changes
         Segments.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // Lock device for change
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
-    
+
             // Take action based on the segment selected
             switch(Segments.SelectedSegment) {
             case 0:
@@ -450,43 +450,43 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
                 Position.Enabled = true;
                 break;
             }
-    
+
             // Unlock device
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         // Monitor position changes
         Position.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             if (Automatic) return;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.SetFocusModeLocked(Position.Value,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
     }
-    ```  
-  
+    ```
+
 1. Переопределите `ViewDidAppear` метод и добавьте следующий, чтобы начать запись при загрузке представления:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
             SampleTimer.Start ();
         }
     }
-    ```  
-  
+    ```
+
 1. Если камера находится в режиме Auto, ползунок будет перемещаться автоматически по мере регулировки фокуса камерой:
 
     [![](intro-to-manual-camera-controls-images/image6.png "Ползунок будет перемещаться автоматически по мере регулировки на камере фокуса в этом примере приложения.")](intro-to-manual-camera-controls-images/image6.png#lightbox)
@@ -517,7 +517,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 Ниже перечислены три основных элемента, которые связаны с выдержки.
 
 - **Скорость затвора** — это продолжительность времени, в течение которого назатвор открыт, чтобы дать лампочку на датчик камеры. Чем короче время открытия затвора, тем менее светлое изображение имеет в себе и четкость изображения (меньше размытого движения). Чем дольше открыта выдержка, тем более светлой становится то же самое, что и более размытое движение.
-- **Сопоставление ISO** — это термин, взятый из фотопленки и означающий чувствительность химических веществ на пленке к светлой. Низкое значение ISO на пленке имеет меньшую детализацию и более точное воспроизведение цвета; низкие значения ISO на цифровых датчиках имеют меньше шума от датчика, но меньше яркости. Чем выше значение ISO, тем ярче изображение, но с большим шум датчика. "ISO" на цифровом датчике — это мера [электронного дохода](https://en.wikipedia.org/wiki/Gain), а не физического компонента. 
+- **Сопоставление ISO** — это термин, взятый из фотопленки и означающий чувствительность химических веществ на пленке к светлой. Низкое значение ISO на пленке имеет меньшую детализацию и более точное воспроизведение цвета; низкие значения ISO на цифровых датчиках имеют меньше шума от датчика, но меньше яркости. Чем выше значение ISO, тем ярче изображение, но с большим шум датчика. "ISO" на цифровом датчике — это мера [электронного дохода](https://en.wikipedia.org/wiki/Gain), а не физического компонента.
 - **Апертура линзы** — это размер проёма линзы. На всех устройствах iOS Исправлена Апертура линза, поэтому единственными значениями, которые можно использовать для корректировки экспозиции, являются скорость выдержки и ISO.
 
 
@@ -573,12 +573,12 @@ CaptureDevice.UnlockForConfiguration();
 
 Минимальный и максимальный диапазоны зависят от устройства, на котором работает приложение, поэтому они никогда не должны быть жестко закодированы. Вместо этого используйте следующие свойства для получения минимального и максимального диапазонов значений:
 
-- `CaptureDevice.MinExposureTargetBias` 
-- `CaptureDevice.MaxExposureTargetBias` 
-- `CaptureDevice.ActiveFormat.MinISO` 
-- `CaptureDevice.ActiveFormat.MaxISO` 
-- `CaptureDevice.ActiveFormat.MinExposureDuration` 
-- `CaptureDevice.ActiveFormat.MaxExposureDuration` 
+- `CaptureDevice.MinExposureTargetBias`
+- `CaptureDevice.MaxExposureTargetBias`
+- `CaptureDevice.ActiveFormat.MinISO`
+- `CaptureDevice.ActiveFormat.MaxISO`
+- `CaptureDevice.ActiveFormat.MinExposureDuration`
+- `CaptureDevice.ActiveFormat.MaxExposureDuration`
 
 
 Как видно из приведенного выше кода, устройство записи должно быть заблокировано для настройки, прежде чем можно будет внести изменение в уязвимость.
@@ -600,8 +600,8 @@ CaptureDevice.UnlockForConfiguration();
 
 
 1. Добавьте следующие операторы using:
-    
-    ```
+
+    ```csharp
     using System;
     using Foundation;
     using UIKit;
@@ -614,19 +614,19 @@ CaptureDevice.UnlockForConfiguration();
     using CoreGraphics;
     using CoreFoundation;
     using System.Timers;
-    ```  
-  
+    ```
+
 1. Добавьте следующие частные переменные:
 
     ```csharp
     #region Private Variables
-    private NSError Error; 
+    private NSError Error;
     private bool Automatic = true;
     private nfloat ExposureDurationPower = 5;
     private nfloat ExposureMinimumDuration = 1.0f/1000.0f;
     #endregion
-    ```  
-  
+    ```
+
 1. Добавьте следующие вычисленные свойства:
 
     ```csharp
@@ -636,34 +636,34 @@ CaptureDevice.UnlockForConfiguration();
     }
     public Timer SampleTimer { get; set; }
     #endregion
-    ```  
-  
+    ```
+
 1. Переопределите `ViewDidLoad` метод и добавьте следующий код:
 
     ```csharp
     public override void ViewDidLoad ()
     {
         base.ViewDidLoad ();
-    
+
         // Hide no camera label
         NoCamera.Hidden = ThisApp.CameraAvailable;
-    
+
         // Attach to camera view
         ThisApp.Recorder.DisplayView = CameraView;
-    
+
         // Set min and max values
         Offset.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
         Offset.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
-    
+
         Duration.MinValue = 0.0f;
         Duration.MaxValue = 1.0f;
-    
+
         ISO.MinValue = ThisApp.CaptureDevice.ActiveFormat.MinISO;
         ISO.MaxValue = ThisApp.CaptureDevice.ActiveFormat.MaxISO;
-    
+
         Bias.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
         Bias.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
-    
+
         // Create a timer to monitor and update the UI
         SampleTimer = new Timer (5000);
         SampleTimer.Elapsed += (sender, e) => {
@@ -671,7 +671,7 @@ CaptureDevice.UnlockForConfiguration();
             Offset.BeginInvokeOnMainThread(() =>{
                 Offset.Value = ThisApp.Input.Device.ExposureTargetOffset;
             });
-    
+
             Duration.BeginInvokeOnMainThread(() =>{
                 var newDurationSeconds = CMTimeGetSeconds(ThisApp.Input.Device.ExposureDuration);
                 var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration), ExposureMinimumDuration);
@@ -679,22 +679,22 @@ CaptureDevice.UnlockForConfiguration();
                 var p = (newDurationSeconds - minDurationSeconds) / (maxDurationSeconds - minDurationSeconds);
                 Duration.Value = (float)Math.Pow(p, 1.0f/ExposureDurationPower);
             });
-    
+
             ISO.BeginInvokeOnMainThread(() => {
                 ISO.Value = ThisApp.Input.Device.ISO;
             });
-    
+
             Bias.BeginInvokeOnMainThread(() => {
                 Bias.Value = ThisApp.Input.Device.ExposureTargetBias;
             });
         };
-    
+
         // Watch for value changes
         Segments.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // Lock device for change
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
-    
+
             // Take action based on the segment selected
             switch(Segments.SelectedSegment) {
             case 0:
@@ -722,71 +722,71 @@ CaptureDevice.UnlockForConfiguration();
                 ISO.Enabled = true;
                 break;
             }
-    
+
             // Unlock device
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         // Monitor position changes
         Duration.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             if (Automatic) return;
-    
+
             // Calculate value
             var p = Math.Pow(Duration.Value,ExposureDurationPower);
             var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration),ExposureMinimumDuration);
             var maxDurationSeconds = CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MaxExposureDuration);
             var newDurationSeconds = p * (maxDurationSeconds - minDurationSeconds) +minDurationSeconds;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.LockExposure(CMTime.FromSeconds(p,1000*1000*1000),ThisApp.CaptureDevice.ISO,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         ISO.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             if (Automatic) return;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.LockExposure(ThisApp.CaptureDevice.ExposureDuration,ISO.Value,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         Bias.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             // if (Automatic) return;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.SetExposureTargetBias(Bias.Value,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
     }
-    ```  
-  
+    ```
+
 1. Переопределите `ViewDidAppear` метод и добавьте следующий, чтобы начать запись при загрузке представления:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
             SampleTimer.Start ();
         }
     }
-    ```  
-  
+    ```
+
 1. Если камера находится в режиме Auto, ползунки будут перемещаться автоматически по мере регулировки экспозиции.
 
     [![](intro-to-manual-camera-controls-images/image13.png "Ползунки будут автоматически перемещаться по мере настройки раскрытия камеры.")](intro-to-manual-camera-controls-images/image13.png#lightbox)
@@ -853,9 +853,9 @@ CaptureDevice.UnlockForConfiguration();
 
 Для реализации описанных выше функций `AVCaptureWhiteBalanceGain` структура добавлена со следующими элементами:
 
-- `RedGain` 
-- `GreenGain` 
-- `BlueGain` 
+- `RedGain`
+- `GreenGain`
+- `BlueGain`
 
 
 Максимальный коэффициент белого баланса в настоящее время равен четырем (4) и может быть готов `MaxWhiteBalanceGain` к использованию в свойстве. В настоящее время допустимый диапазон — от одного (1 `MaxWhiteBalanceGain` ) до (4).
@@ -926,17 +926,17 @@ Apple использует термин серый мир для обознач�
     using CoreGraphics;
     using CoreFoundation;
     using System.Timers;
-    ```  
-  
+    ```
+
 1. Добавьте следующие частные переменные:
 
     ```csharp
     #region Private Variables
-    private NSError Error; 
+    private NSError Error;
     private bool Automatic = true;
     #endregion
     ```
-  
+
 1. Добавьте следующие вычисленные свойства:
 
     ```csharp
@@ -946,8 +946,8 @@ Apple использует термин серый мир для обознач�
     }
     public Timer SampleTimer { get; set; }
     #endregion
-    ```  
-  
+    ```
+
 1. Добавьте следующий частный метод, чтобы задать новую температуру и оттенок белого баланса:
 
     ```csharp
@@ -966,7 +966,7 @@ Apple использует термин серый мир для обознач�
             ThisApp.CaptureDevice.UnlockForConfiguration ();
         }
     }
-    
+
     AVCaptureWhiteBalanceGains NomralizeGains (AVCaptureWhiteBalanceGains gains)
     {
         gains.RedGain = Math.Max (1, gains.RedGain);
@@ -981,8 +981,8 @@ Apple использует термин серый мир для обознач�
         return gains;
     }
     #endregion
-    ```   
-  
+    ```
+
 1. Переопределите `ViewDidLoad` метод и добавьте следующий код:
 
     ```csharp
@@ -1086,26 +1086,26 @@ Apple использует термин серый мир для обознач�
             }
         };
     }
-    ``` 
-  
+    ```
+
 1. Переопределите `ViewDidAppear` метод и добавьте следующий, чтобы начать запись при загрузке представления:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
             SampleTimer.Start ();
         }
     }
-    ```  
-  
+    ```
+
 1. Сохраните изменения в коде и запустите приложение.
 1. При использовании камеры в режиме Auto ползунки автоматически перемещаются, когда камера корректирует баланс белого:
 
@@ -1145,8 +1145,8 @@ Apple использует термин серый мир для обознач�
 
 Для работы с параметрами были реализованы два новых класса:
 
-- `AVCaptureAutoExposureBracketedStillImageSettings` - У него есть одно свойство, `ExposureTargetBias`которое используется для установки смещения для автоматической экспозиции. 
-- `AVCaptureManual`  `ExposureBracketedStillImageSettings` - Он имеет два свойства `ExposureDuration` и `ISO` используется для установки скорости затвора и ISO для ручной экспозиционной скобки. 
+- `AVCaptureAutoExposureBracketedStillImageSettings` - У него есть одно свойство, `ExposureTargetBias`которое используется для установки смещения для автоматической экспозиции.
+- `AVCaptureManual`  `ExposureBracketedStillImageSettings` - Он имеет два свойства `ExposureDuration` и `ISO` используется для установки скорости затвора и ISO для ручной экспозиционной скобки.
 
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>Элементы управления для захвата в квадратных скобках
@@ -1214,8 +1214,8 @@ Apple использует термин серый мир для обознач�
     using CoreGraphics;
     using CoreFoundation;
     using CoreImage;
-    ```  
-  
+    ```
+
 1. Добавьте следующие частные переменные:
 
     ```csharp
@@ -1224,8 +1224,8 @@ Apple использует термин серый мир для обознач�
     private List<UIImageView> Output = new List<UIImageView>();
     private nint OutputIndex = 0;
     #endregion
-    ```    
-  
+    ```
+
 1. Добавьте следующие вычисленные свойства:
 
     ```csharp
@@ -1234,68 +1234,68 @@ Apple использует термин серый мир для обознач�
         get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
     }
     #endregion
-    ```  
-  
+    ```
+
 1. Добавьте следующий частный метод, чтобы создать требуемые представления выходных изображений:
 
     ```csharp
     #region Private Methods
     private UIImageView BuildOutputView(nint n) {
-    
+
         // Create a new image view controller
         var imageView = new UIImageView (new CGRect (CameraView.Frame.Width * n, 0, CameraView.Frame.Width, CameraView.Frame.Height));
-    
+
         // Load a temp image
         imageView.Image = UIImage.FromFile ("Default-568h@2x.png");
-    
+
         // Add a label
         UILabel label = new UILabel (new CGRect (0, 20, CameraView.Frame.Width, 24));
         label.TextColor = UIColor.White;
         label.Text = string.Format ("Bracketed Image {0}", n);
         imageView.AddSubview (label);
-    
+
         // Add to scrolling view
         ScrollView.AddSubview (imageView);
-    
+
         // Return new image view
         return imageView;
     }
     #endregion
-    ```  
-  
-1. Переопределите `ViewDidLoad` метод и добавьте следующий код:
-    
     ```
+
+1. Переопределите `ViewDidLoad` метод и добавьте следующий код:
+
+    ```csharp
     public override void ViewDidLoad ()
     {
         base.ViewDidLoad ();
-    
+
         // Hide no camera label
         NoCamera.Hidden = ThisApp.CameraAvailable;
-    
+
         // Attach to camera view
         ThisApp.Recorder.DisplayView = CameraView;
-    
+
         // Setup scrolling area
         ScrollView.ContentSize = new SizeF (CameraView.Frame.Width * 4, CameraView.Frame.Height);
-    
+
         // Add output views
         Output.Add (BuildOutputView (1));
         Output.Add (BuildOutputView (2));
         Output.Add (BuildOutputView (3));
-    
+
         // Create preset settings
         var Settings = new AVCaptureBracketedStillImageSettings[] {
             AVCaptureAutoExposureBracketedStillImageSettings.Create(-2.0f),
             AVCaptureAutoExposureBracketedStillImageSettings.Create(0.0f),
             AVCaptureAutoExposureBracketedStillImageSettings.Create(2.0f)
         };
-    
+
         // Wireup capture button
         CaptureButton.TouchUpInside += (sender, e) => {
             // Reset output index
             OutputIndex = 0;
-    
+
             // Tell the camera that we are getting ready to do a bracketed capture
             ThisApp.StillImageOutput.PrepareToCaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings,async (bool ready, NSError err) => {
                 // Was there an error, if so report it
@@ -1303,16 +1303,16 @@ Apple использует термин серый мир для обознач�
                     Console.WriteLine("Error: {0}",err.LocalizedDescription);
                 }
             });
-    
+
             // Ask the camera to snap a bracketed capture
             ThisApp.StillImageOutput.CaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings, (sampleBuffer, settings, err) =>{
                 // Convert raw image stream into a Core Image Image
                 var imageData = AVCaptureStillImageOutput.JpegStillToNSData(sampleBuffer);
                 var image = CIImage.FromData(imageData);
-    
+
                 // Display the resulting image
                 Output[OutputIndex++].Image = UIImage.FromImage(image);
-    
+
                 // IMPORTANT: You must release the buffer because AVFoundation has a fixed number
                 // of buffers and will stop delivering frames if it runs out.
                 sampleBuffer.Dispose();
@@ -1320,26 +1320,26 @@ Apple использует термин серый мир для обознач�
         };
     }
     ```
-    
-  
+
+
 1. Переопределите `ViewDidAppear` метод и добавьте следующий код:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
         }
     }
-    
-    ```  
-    
+
+    ```
+
 1. Сохраните изменения в коде и запустите приложение.
 1. Кадрировать сцену и нажать кнопку "записать скобку":
 

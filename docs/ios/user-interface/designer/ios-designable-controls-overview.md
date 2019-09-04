@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: aa6db1403a34b7228352e12e1b2f954308db3744
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3f36ef7541ea00e2a08733c9d47d252477da787a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528505"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227060"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Пользовательские элементы управления в Xamarin Designer для iOS
 
@@ -98,7 +98,7 @@ public class CustomView : UIView {
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
-    
+
     [Export ("Counter"), Browsable (true)]
     public int Counter {get; set;}
 
@@ -179,7 +179,8 @@ public class DesignerAwareLabel : UILabel, IComponent {
 
  ![](ios-designable-controls-overview-images/exception-box.png "Элемент управления с ошибками как красный заполнитель и сведения об исключении")
 
-Если для элемента управления доступны отладочные символы, то трассировка будет содержать имена файлов и номера строк. Двойной щелчок по строке в трассировке стека приведет к переходу к этой строке в исходном коде.
+Если для элемента управления доступны отладочные символы, то трассировка будет содержать имена файлов и номера строк.
+Двойной щелчок по строке в трассировке стека приведет к переходу к этой строке в исходном коде.
 
 Если конструктор не может изолировать неисправный элемент управления, в верхней части области конструктора появится предупреждающее сообщение:
 

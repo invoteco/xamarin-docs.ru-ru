@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: f3baa6756b4e72b750ff1b128b72802f8f1ce6d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7d5c9ebec2a1d79df7a9a16da91c79772746f6fc
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527349"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227526"
 ---
 # <a name="limitations-of-xamarinios"></a>Ограничения Xamarin. iOS
 
@@ -57,11 +57,11 @@ class Foo<T> : UIView {
 
 - System. Reflection. Emit недоступен.
 - Отсутствует поддержка System. Runtime. Remoting.
-- Не поддерживается динамическое создание типов (без Type. GetType ("MyType ' 1")), хотя Поиск существующих типов (Type. GetType ("System. String"), например, работает прекрасно). 
+- Не поддерживается динамическое создание типов (без Type. GetType ("MyType ' 1")), хотя Поиск существующих типов (Type. GetType ("System. String"), например, работает прекрасно).
 - Обратные обратные вызовы должны быть зарегистрированы в среде выполнения во время компиляции.
 
 
- 
+
  <a name="System.Reflection.Emit" />
 
 
@@ -71,7 +71,7 @@ class Foo<T> : UIView {
 
 - Среда выполнения динамического языка.
 - Все языки, созданные на основе среды динамического языка.
-- Транспарентпрокси удаленного взаимодействия или любое другое, которое привело бы к динамическому созданию кода средой выполнения. 
+- Транспарентпрокси удаленного взаимодействия или любое другое, которое привело бы к динамическому созданию кода средой выполнения.
 
 
   > [!IMPORTANT]
@@ -91,7 +91,7 @@ class Foo<T> : UIView {
 ```
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
- 
+
  <a name="Reverse_Callbacks" />
 
 
@@ -103,7 +103,7 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 - Необходимо отметить все методы обратного вызова с помощью [монопинвокекаллбаккаттрибуте](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
 - Методы должны быть статическими методами, но не поддерживаются методы экземпляров.
- 
+
 <a name="No_Remoting" />
 
 ## <a name="no-remoting"></a>Без удаленного взаимодействия

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c0ee125090a2bb817f09a18c34033a1f8a788569
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528727"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227279"
 ---
 # <a name="textkit-in-xamarinios"></a>Тексткит в Xamarin. iOS
 
@@ -29,7 +29,7 @@ ms.locfileid: "69528727"
 Тексткит предоставляет многоуровневую архитектуру, которая отделяет хранилище текста от макета и экрана, включая следующие классы:
 
 - `NSTextContainer`— Предоставляет систему координат и геометрию, используемую для разметки текста.
-- `NSLayoutManager`— Размещает текст, преобразуя текст в глифы. 
+- `NSLayoutManager`— Размещает текст, преобразуя текст в глифы.
 - `NSTextStorage`— Содержит текстовые данные, а также обрабатывает обновления свойств текста пакета. Все обновления пакетов передаются диспетчеру макета для фактической обработки изменений, таких как пересчет макета и перерисовка текста.
 
 
@@ -160,7 +160,7 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 На следующем снимке экрана показано, как изменяется макет текста, чтобы обтекать рисуемый контур.
 
-<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
+<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")-->
 ![](textkit-images/exclusionpath2.png "На этом снимке экрана показано, как изменяется макет текста, чтобы обтекать рисуемый контур.")
 
 Обратите внимание, что в `AllowsNonContiguousLayout` этом случае свойство диспетчера макета имеет значение false. Это приводит к повторному вычислению макета для всех случаев, когда текст изменяется. Установка значения true может повысить производительность, избегая полного обновления макета, особенно в случае больших документов. Однако при установке `AllowsNonContiguousLayout` значения true путь исключения не будет обновлять макет в некоторых обстоятельствах, например, если текст записывается во время выполнения без завершающего возврата каретки до установки пути.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 567985b1d6c6aff87e0a6879f05ab711a0095d6f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b7888ea29dd02733059346bca21fec0a4c510c2e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647206"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227994"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Явные стили в Xamarin.Forms
 
@@ -64,9 +64,9 @@ _Явный стиль — это приложения, выборочно пр�
 </ContentPage>
 ```
 
-[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) Определяет три *явные* стили, которые применяются к странице [ `Label` ](xref:Xamarin.Forms.Label) экземпляров. Каждый `Style` используется для отображения текста в другой цвет, а для параметра шрифт размером и горизонтальных и вертикальных макетов. Каждый `Style` применяется к другим `Label` , задав его [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства с помощью `StaticResource` расширение разметки. Это приводит к появлению, показано на следующем снимке экрана:
+[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) Определяет три *явные* стили, которые применяются к странице [ `Label` ](xref:Xamarin.Forms.Label) экземпляров. Каждый `Style` используется для отображения текста в другой цвет, а для параметра шрифт размером и горизонтальных и вертикальных макетов. Каждый `Style` применяется к другим `Label` , задав его [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства с помощью `StaticResource` расширение разметки. Результат показан на следующих снимках экрана.
 
-[![](explicit-images/explicit-styles.png "Явные стили пример")](explicit-images/explicit-styles-large.png#lightbox "пример явные стили")
+[![Пример явных стилей](explicit-images/explicit-styles.png)](explicit-images/explicit-styles-large.png#lightbox)
 
 Кроме того, конечный [ `Label` ](xref:Xamarin.Forms.Label) имеет [ `Style` ](xref:Xamarin.Forms.Style) применения к нему, но также переопределяет [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) свойства различных `Color`значение.
 

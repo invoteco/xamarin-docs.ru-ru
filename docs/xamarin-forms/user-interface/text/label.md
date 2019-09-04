@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 5c12b5a5c0e558403362bd12baddfb8201f40759
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642924"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228159"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin.Forms
 
@@ -48,7 +48,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 Ниже показаны снимки экрана `TextDecorations` членов перечисления, применяется к [ `Label` ](xref:Xamarin.Forms.Label) экземпляров:
 
-![](label-images/label-textdecorations.png "Метки с оформление текста")
+![Метки с оформлением текста](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > Оформление текста могут также применяться к [ `Span` ](xref:Xamarin.Forms.Span) экземпляров. Дополнительные сведения о `Span` , представлена в разделе [текст в формате](#Formatted_Text).
@@ -91,7 +91,7 @@ public partial class LabelPage : ContentPage
 
 На следующих снимках экрана показано результат действия параметра `TextColor` свойство:
 
-![](label-images/textcolor.png "Пример TextColor")
+![Пример метки TextColor](label-images/textcolor.png)
 
 Дополнительные сведения о цветах см. в разделе [цвета](~/xamarin-forms/user-interface/colors.md).
 
@@ -140,7 +140,7 @@ var label =
 
 На следующих снимках экрана показано результат действия параметра `MaxLines` значение 2, когда текст достаточно длинным, чтобы занимать более чем на две строки:
 
-![](label-images/label-maxlines.png "Пример MaxLines метки")
+![Пример метки Макслинес](label-images/label-maxlines.png)
 
 <a name="Formatted_Text" />
 
@@ -223,7 +223,7 @@ public class LabelPageCode : ContentPage
 
 На следующих снимках экрана показано результат действия параметра `FormattedString` свойство до трех `Span` экземпляров:
 
-![](label-images/formattedtext.png "Пример FormattedText")
+![Пример метки FormattedText](label-images/formattedtext.png)
 
 ## <a name="line-height"></a>Высота линии
 
@@ -254,7 +254,7 @@ var label =
 
 На следующих снимках экрана показано результат действия параметра [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) свойство до версии 1.8:
 
-![](label-images/label-lineheight.png "Пример LineHeight метки")
+![Пример метки LineHeight](label-images/label-lineheight.png)
 
 В следующем примере XAML показано параметр [ `LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) свойство [ `Span` ](xref:Xamarin.Forms.Span):
 
@@ -294,7 +294,7 @@ var label = new Label
 
 На следующих снимках экрана показано результат действия параметра [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) свойство до версии 1.8:
 
-![](label-images/span-lineheight.png "Пример span LineHeight")
+![Пример span LineHeight](label-images/span-lineheight.png)
 
 ## <a name="hyperlinks"></a>Гиперссылки
 

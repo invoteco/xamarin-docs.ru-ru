@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655256"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227932"
 ---
 # <a name="part-4-data-binding-basics"></a>Часть 4. Основы привязки данных
 
@@ -102,7 +102,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Ниже приведен выполняющейся программе.
 
-[![](data-binding-basics-images/sliderbinding.png "Представление позволяет просматривать привязки")](data-binding-basics-images/sliderbinding-large.png#lightbox "привязок представления на представление ")
+[![Привязки представлений и представлений](data-binding-basics-images/sliderbinding.png)](data-binding-basics-images/sliderbinding-large.png#lightbox)
 
 ## <a name="the-binding-mode"></a>Режим привязки
 
@@ -201,7 +201,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Однако привязки для `Scale` свойство `TwoWay`. Это обусловлено `Scale` свойство имеет значение по умолчанию 1 и по использованию `TwoWay` привязки причины `Slider` начальное значение, устанавливаемое на 1 вместо 0. Если были, привязку к `OneWayToSource`, `Scale` свойство изначально будет иметь значение 0 из `Slider` значение по умолчанию. `Label` Не будет видима, и это может привести к путанице для пользователя.
 
- [![](data-binding-basics-images/slidertransforms.png "Обратной привязки")](data-binding-basics-images/slidertransforms-large.png#lightbox "обратной привязки")
+ [![Обратные привязки](data-binding-basics-images/slidertransforms.png)](data-binding-basics-images/slidertransforms-large.png#lightbox)
 
  > [!NOTE]
  > [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) Класс также имеет [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) и [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) свойства, которые масштабируют `VisualElement` на оси x и оси y соответственно.
@@ -234,7 +234,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Итоговый отображение устанавливает, что элементы по-настоящему имеют тип `XamlSamples.NamedColor`:
 
-[![](data-binding-basics-images/listview1.png "Привязка к коллекции")](data-binding-basics-images/listview1-large.png#lightbox "привязка к коллекции")
+[![Привязка к коллекции](data-binding-basics-images/listview1.png)](data-binding-basics-images/listview1-large.png#lightbox)
 
 Это не много информации, но `ListView` является прокручиваемым и доступный для выбора.
 
@@ -259,7 +259,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 `Label` Элементу присваивается `View` свойство `ViewCell`. ( `ViewCell.View` Теги не требуются, так как `View` свойство является свойством содержимого из `ViewCell`.) Эта разметка отображает `FriendlyName` свойства каждого `NamedColor` объекта:
 
-[![](data-binding-basics-images/listview2.png "Привязка к коллекции с помощью DataTemplate")](data-binding-basics-images/listview2-large.png#lightbox "привязка к коллекции с помощью DataTemplate")
+[![Привязка к коллекции с помощью DataTemplate](data-binding-basics-images/listview2.png)](data-binding-basics-images/listview2-large.png#lightbox)
 
 Гораздо лучше. Теперь все, что требуется — настройка шаблона элемента с Дополнительные сведения и фактический цвет. Для поддержки этого шаблона, некоторые значения и объекты были определены в словаре ресурсов страницы:
 
@@ -396,7 +396,7 @@ namespace XamlSamples
 
 Ниже приведен результат.
 
-[![](data-binding-basics-images/listview3.png "Привязка к коллекции с DataTemplate и преобразователями")](data-binding-basics-images/listview3-large.png#lightbox "привязка к коллекции с DataTemplate и преобразователи типов")
+[![Привязка к коллекции с помощью шаблона DataTemplate и преобразователей](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
 `ListView` Достаточно сложная в обработка изменений, которые динамически могут возникнуть в базовых данных, но только если сначала выполнить ряд действий. Если назначен коллекции элементов `ItemsSource` свойство `ListView` изменения во время выполнения — это, если элементы могут добавляться к или удален из коллекции — использовать `ObservableCollection` класс для этих элементов. `ObservableCollection` реализует `INotifyCollectionChanged` интерфейс, и `ListView` установит обработчик `CollectionChanged` событий.
 

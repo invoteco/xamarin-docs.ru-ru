@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b61924c78f85c8a1a835cef87f357ec262926935
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1aa4e6dcf5137d12647fb2a5531218839b6db9a1
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197725"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225796"
 ---
 # <a name="kitkat-features"></a>Функции KitKat
 
@@ -80,12 +80,12 @@ KitKat больше не позволяет задать точную повто
 Теперь внешнее хранилище делится на два типа: хранилище, уникальное для приложения, и данные, совместно используемые несколькими приложениями. Для чтения и записи в конкретное расположение приложения во внешнем хранилище не требуются специальные разрешения. Для взаимодействия с данными в общем хранилище теперь требуется `READ_EXTERNAL_STORAGE` разрешение или. `WRITE_EXTERNAL_STORAGE` Эти два типа можно классифицировать следующим образом:
 
 - Если вы получаете путь к файлу или каталогу путем вызова метода в `Context` , например,[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
-   ни[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
-   - приложению не требуются дополнительные разрешения.
+  ни[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
+  - приложению не требуются дополнительные разрешения.
 
 - Если вы получаете путь к файлу или каталогу путем доступа к свойству или вызова метода в `Environment` , например[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
-   ни[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
-   приложение должно иметь `READ_EXTERNAL_STORAGE` разрешение или `WRITE_EXTERNAL_STORAGE` .
+  ни[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
+  приложение должно иметь `READ_EXTERNAL_STORAGE` разрешение или `WRITE_EXTERNAL_STORAGE` .
 
 > [!NOTE]
 > `WRITE_EXTERNAL_STORAGE``READ_EXTERNAL_STORAGE` подразумевает разрешение, поэтому вам нужно только установить одно разрешение.
@@ -681,27 +681,27 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 - *В полноэкранном* режиме — KitKat представляет новый [режим погружения](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) для обзора содержимого, воспроизведения игр и выполнения других приложений, которые могут использовать преимущества полноэкранного режима работы.
 
 - *Настройка уведомлений* . получение дополнительных сведений о системных уведомлениях с помощью[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
-   . Это позволяет представлять информацию по-другому в приложении.
+  . Это позволяет представлять информацию по-другому в приложении.
 
 - *Зеркальные рисуемые ресурсы* . для создаваемых ресурсов[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
-   атрибут, сообщающий системе о создании зеркальной версии для изображений, требующих зеркального отображения для макетов слева направо.
+  атрибут, сообщающий системе о создании зеркальной версии для изображений, требующих зеркального отображения для макетов слева направо.
 
 - *Приостановить анимацию* — приостанавливать и возобновлять анимации, созданные с помощью[`Animator`](xref:Android.Animation.Animator)
-   .
+  .
 
 - *Чтение динамически изменяемых частей текста* в пользовательском интерфейсе, динамически обновляемых с новым текстом в качестве "динамических регионов" с новым[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
-   атрибут, поэтому новый текст будет автоматически прочитан в режиме специальных возможностей.
+  атрибут, поэтому новый текст будет автоматически прочитан в режиме специальных возможностей.
 
 - *Улучшение работы с аудио* — Следите за громкостью с помощью[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
-   , найдите пиковый уровень и RMS для аудиопотока с помощью[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
-   и получить сведения из [метки времени звука](xref:Android.Media.AudioTimestamp) , чтобы помочь при синхронизации аудио-видео.
+  , найдите пиковый уровень и RMS для аудиопотока с помощью[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
+  и получить сведения из [метки времени звука](xref:Android.Media.AudioTimestamp) , чтобы помочь при синхронизации аудио-видео.
 
 - *ContentResolver синхронизации с настраиваемым интервалом* — KitKat добавляет некоторую вариативность к времени выполнения запроса на синхронизацию. Синхронизируйте `ContentResolver` объект в настраиваемое время или интервал `ContentResolver.RequestSync` , вызвав метод `SyncRequest`и передав в него.
 
 - *Различие контроллеров* . в KitKat контроллерам назначаются уникальные целочисленные идентификаторы, доступ к которым можно получить через `ControllerNumber` свойство устройства. Это упрощает разделение игроков в игре.
 
 - *Удаленное управление* . с несколькими изменениями на стороне оборудования и программного обеспечения KitKat позволяет превратить устройство с инфракрасным приемопередатчиком в пульт дистанционного управления с помощью `ConsumerIrService`и взаимодействовать с периферийными устройствами с помощью нового[`RemoteController`](xref:Android.Media.RemoteController)
-   Интерфейсы.
+  Интерфейсы.
 
 Дополнительные сведения об изменениях, описанных выше, см. в обзоре [API-интерфейсов Google Android 4,4](https://developer.android.com/about/versions/android-4.4.html) .
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fc3837cd0d69d49b9939b04da667010aac919fe2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 195ed82325ed681f31f9963d5ff0ca0a7fef48ab
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657126"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228139"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -20,7 +20,7 @@ ms.locfileid: "68657126"
 
 [`TableView`](xref:Xamarin.Forms.TableView)— Это представление для отображения прокручиваемых списков данных или вариантов выбора, где имеются строки, которые не используют один и тот же шаблон. В отличие от [ListView](~/xamarin-forms/user-interface/listview/index.md) `TableView` не имеет концепции `ItemsSource`, поэтому элементы должны добавляться вручную в качестве дочерних элементов.
 
-![](tableview-images/tableview-all-sml.png "Пример TableView")
+![Пример Таблевиев](tableview-images/tableview-all-sml.png)
 
 <a name="Use_Cases" />
 
@@ -106,7 +106,7 @@ Xamarin.Forms в состав встроенных ячеек для сбора 
 
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell)также предоставляет `OnChanged` событие, позволяющее реагировать на изменения в состоянии ячейки.
 
-![](tableview-images/switch-cell.png "Пример SwitchCell")
+![Пример Свитчцелл](tableview-images/switch-cell.png)
 
 <a name="entrycell" />
 
@@ -123,7 +123,7 @@ Xamarin.Forms в состав встроенных ячеек для сбора 
 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell)также предоставляет `Completed` событие, которое срабатывает, когда пользователь нажимает кнопку "Готово" на клавиатуре при редактировании текста.
 
-![](tableview-images/entry-cell.png "Пример EntryCell")
+![Пример Ентрицелл](tableview-images/entry-cell.png)
 
 <a name="Custom_Cells" />
 
@@ -135,7 +135,7 @@ Xamarin.Forms в состав встроенных ячеек для сбора 
 
 Ниже приведен пример пользовательского ячейки:
 
-![](tableview-images/custom-cell.png "Пример пользовательской ячейки")
+![Пример пользовательской ячейки](tableview-images/custom-cell.png)
 
 В следующем примере показан XAML, используемый для создания на [`TableView`](xref:Xamarin.Forms.TableView) снимках экрана выше:
 
@@ -252,11 +252,11 @@ void OnViewCellTapped(object sender, EventArgs e)
 
 На следующих снимках экрана показано ячейки до касание после:
 
-![](tableview-images/cell-beforeresize.png "ViewCell до изменения его размера")
+![ViewCell до изменения размера](tableview-images/cell-beforeresize.png)
 
 Далее на снимках экрана Показать ячейки после касание после:
 
-![](tableview-images/cell-afterresize.png "ViewCell после изменения размера")
+![ViewCell после изменения размера](tableview-images/cell-afterresize.png)
 
 > [!IMPORTANT]
 > Если эта функция является чрезмерным, есть вероятность, strong снижения производительности.

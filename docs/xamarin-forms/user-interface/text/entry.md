@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e712f0b69f87659499f7eab4955a9f943716f5b5
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650277"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227990"
 ---
 # <a name="xamarinforms-entry"></a>Запись Xamarin.Forms
 
@@ -105,7 +105,7 @@ var entry = new Entry { ... MaxLength = 10 };
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Пример записи IsPassword")
+![Пример ввода пароля](entry-images/password.png)
 
 Заполнители, которые могут использоваться с экземплярами `Entry` , настроенные в качестве пароля:
 
@@ -121,7 +121,7 @@ var MyEntry = new Entry { IsPassword = true };
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Запись IsPassword и примере заполнитель")
+![Пример ввода пароля и заполнителя](entry-images/passwordplaceholder.png)
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>Задание позиции курсора и длину выделения текста
 
@@ -294,7 +294,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Пример записи TextColor")
+![Пример записи TextColor](entry-images/textcolor.png)
 
 Обратите внимание, что заполнитель не влияет на заданный `TextColor`.
 
@@ -311,7 +311,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Пример записи BackgroundColor")
+![Пример записи BackgroundColor](entry-images/textbackgroundcolor.png)
 
 Следите за тем, чтобы убедиться в том, что цвета фона и текста, которые вы выбрали могут использоваться на каждой платформе и не закрывают любой текст заполнителя.
 

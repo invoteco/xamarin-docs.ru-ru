@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 2b82de58b9d2f9e8acb8996f484845f9a71b6e80
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 844730d2ace717b951df2d80b2add6d1094fe997
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120314"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226097"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Советы по обновлению кода в Unified API
 
@@ -59,7 +59,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 - `NSDictionary.IntValue`теперь возвращает `nint`, `Int32Value` что можно использовать вместо него.
 
-- `nfloat`типы `nint` и не могут быть `const`помечены.   `static readonly nint` является разумной альтернативой.
+- `nfloat`типы `nint` и не могут быть `const`помечены. `static readonly nint` является разумной альтернативой.
 
 - Элементы, `MonoTouch.` которые были непосредственно использованы в пространстве имен, теперь обычно находятся `ObjCRuntime.` в `MonoTouch.Constants.Version` пространстве имен (например, теперь `ObjCRuntime.Constants.Version`).
 
@@ -69,10 +69,10 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 - Экспортированные вручную методы `[Export]` с помощью могут не быть автоматически исправлены средством миграции, например в этом коде снипперт необходимо вручную обновить `nfloat`тип возвращаемого значения следующим образом:
 
-    ```csharp
-    [Export("tableView:heightForRowAtIndexPath:")]
-    public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
-    ```
+  ```csharp
+  [Export("tableView:heightForRowAtIndexPath:")]
+  public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
+  ```
 
 - Unified API не обеспечивает неявное преобразование между Нсдате и .NET DateTime, так как оно не является преобразованием без потерь. Значение, чтобы предотвратить ошибки `DateTimeKind.Unspecified` , связанные с `DateTime` преобразованием .NET в локальные или `NSDate`UTC перед приведением к.
 
@@ -80,9 +80,9 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 - Код, использующий `VideoSettings` классы авфаундатион с, должен `WeakVideoSettings` измениться на использование свойства. Для этого требуется `Dictionary`объект, который доступен как свойство в классах параметров, например:
 
-    ```csharp
-    vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
-    ```
+  ```csharp
+  vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
+  ```
 
 - Конструктор нсобжект `.ctor(IntPtr)` был изменен с Public на protected ([для предотвращения неправильного использования](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 

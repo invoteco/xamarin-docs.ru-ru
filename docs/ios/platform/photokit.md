@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 5e5cc20e9fbeaf2b00e022ccdbf67286aed6d5ef
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3920445c234344fe7f2a1cdd93ed7f4f6405727d
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528811"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226578"
 ---
 # <a name="photokit-in-xamarinios"></a>Фотокит в Xamarin. iOS
 
@@ -25,13 +25,13 @@ ms.locfileid: "69528811"
 
 ## <a name="querying-model-data"></a>Запрос данных модели
 
-Фотокит упрощает запрос данных модели с помощью различных методов выборки. Например, чтобы получить все изображения, необходимо вызвать `PFAsset.Fetch`, `PHAssetMediaType.Image` передав тип мультимедиа.
+Фотокит упрощает запрос данных модели с помощью различных методов выборки. Например, чтобы получить все изображения, необходимо вызвать `PHAsset.Fetch`, `PHAssetMediaType.Image` передав тип мультимедиа.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-Экземпляр будет содержать все экземпляры, `PFAsset` представляющие изображения. `PHFetchResult` Чтобы получить сами образы, используйте `PHImageManager` (или `PHCachingImageManager`версию кэширования) для создания запроса образа путем вызова `RequestImageForAsset`. Например, следующий код извлекает изображение для каждого ресурса в `PHFetchResult` для отображения в ячейке представления коллекции:
+Экземпляр будет содержать все экземпляры, `PHAsset` представляющие изображения. `PHFetchResult` Чтобы получить сами образы, используйте `PHImageManager` (или `PHCachingImageManager`версию кэширования) для создания запроса образа путем вызова `RequestImageForAsset`. Например, следующий код извлекает изображение для каждого ресурса в `PHFetchResult` для отображения в ячейке представления коллекции:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

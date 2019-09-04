@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/29/2018
-ms.openlocfilehash: 9817ac2df7a60b5358316599ce02702448b0c307
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199719"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226033"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Регистратор типов для Xamarin. iOS
 
@@ -129,10 +129,10 @@ class MyClass : IMyProtocol
 Эта новая система регистрации предоставляет следующие новые возможности:
 
 - Обнаружение ошибок программиста во время компиляции:
-    - Два класса регистрируются с одним и тем же именем.
-    - Несколько экспортированных методов отвечают на один и тот же селектор
+  - Два класса регистрируются с одним и тем же именем.
+  - Несколько экспортированных методов отвечают на один и тот же селектор
 - Удаление неиспользуемого машинного кода:
-    - Новая система регистрации будет добавлять надежные ссылки на код, используемый в статических библиотеках, позволяя собственному компоновщику удалять неиспользуемый машинный код из результирующего двоичного файла. В примерах привязок Xamarin большинство приложений становятся по крайней мере 300 тыс меньше.
+  - Новая система регистрации будет добавлять надежные ссылки на код, используемый в статических библиотеках, позволяя собственному компоновщику удалять неиспользуемый машинный код из результирующего двоичного файла. В примерах привязок Xamarin большинство приложений становятся по крайней мере 300 тыс меньше.
 
 - Поддержка универсальных подклассов `NSObject`; дополнительные сведения см. в разделе [универсальные шаблоны нсобжект](~/ios/internals/api-design/nsobject-generics.md) . Кроме того, Новая система регистрации будет перехватывать неподдерживаемые универсальные конструкции, которые ранее вызывали бы случайное поведение во время выполнения.
 
@@ -142,37 +142,37 @@ class MyClass : IMyProtocol
 
 - Экспорт одного и того же селектора несколько раз в одном классе:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo:")]
-        void Foo (NSString str);
-        [Export ("foo:")]
-        void Foo (string str)
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo:")]
+      void Foo (NSString str);
+      [Export ("foo:")]
+      void Foo (string str)
+  }
+  ```
 
 - Экспорт более одного управляемого класса с одним и тем же именем цели-C:
 
-    ```csharp
-    [Register ("Class")]
-    class MyClass : NSObject {}
+  ```csharp
+  [Register ("Class")]
+  class MyClass : NSObject {}
 
-    [Register ("Class")]
-    class YourClass : NSObject {}
-    ```
+  [Register ("Class")]
+  class YourClass : NSObject {}
+  ```
 
 - Экспорт универсальных методов:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo")]
-        void Foo<T> () {}
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo")]
+      void Foo<T> () {}
+  }
+  ```
 
 ### <a name="limitations-of-the-new-registrar"></a>Ограничения нового регистратора
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 157f797ebb19de1ae00a00328a9c63b051c7224f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887484"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226449"
 ---
 # <a name="maps-in-xamarinios"></a>Карты в Xamarin. iOS
 
@@ -36,7 +36,7 @@ View = map;
 
 `MKMapView`поддерживает 3 различных стиля карт. Чтобы применить стиль схемы, просто присвойте `MapType` свойству значение `MKMapType` из перечисления:
 
-```
+```csharp
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
@@ -87,7 +87,7 @@ map.ShowsUserLocation = true;
 ```
 
  ![](images/02-location-alert.png "Предупреждение о доступе к расположению")
- 
+
 ## <a name="annotations"></a>Заметки
 
  `MKMapView`также поддерживает отображение изображений, известных как заметки, на карте. Это могут быть пользовательские образы или заданные системой ПИН-коды различных цветов. Например, на следующем снимке экрана показана схема с ПИН-кодом и пользовательским изображением:
@@ -250,7 +250,7 @@ var searchResultsController = new SearchResultsViewController (map);
 //Creates a search controller updater
 var searchUpdater = new SearchResultsUpdator ();
 searchUpdater.UpdateSearchResults += searchResultsController.Search;
-            
+
 //add the search controller
 searchController = new UISearchController (searchResultsController) {
                 SearchResultsUpdater = searchUpdater
@@ -264,7 +264,7 @@ searchController.SearchBar.Placeholder = "Enter a search query";
 //the search bar is contained in the navigation bar, so it should be visible
 searchController.HidesNavigationBarDuringPresentation = false;
 
-//Ensure the searchResultsController is presented in the current View Controller 
+//Ensure the searchResultsController is presented in the current View Controller
 DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
@@ -279,7 +279,7 @@ NavigationItem.TitleView = searchController.SearchBar;
 Это приводит к отображению панели поиска на карте, как показано ниже:
 
  ![](images/07-searchbar.png "Панель поиска, отображаемая на карте")
- 
+
 
 
 ### <a name="displaying-the-search-results"></a>Отображение результатов поиска
@@ -358,7 +358,7 @@ public class SearchResultsViewController : UITableViewController
 
 ### <a name="updating-the-search-results"></a>Обновление результатов поиска
 
-Объект `SearchResultsUpdater` выступает в качестве медиатора `searchController`между панелью поиска и результатами поиска. 
+Объект `SearchResultsUpdater` выступает в качестве медиатора `searchController`между панелью поиска и результатами поиска.
 
 В этом примере необходимо сначала создать метод Search в `SearchResultsViewController`. Для этого необходимо `MKLocalSearch` создать объект и использовать его для выполнения поиска `MKLocalSearchRequest`. Результаты извлекаются в обратном вызове, переданном `Start` методу `MKLocalSearch` объекта. Затем результаты возвращаются в `MKLocalSearchResponse` объекте, содержащем `MKMapItem` массив объектов:
 
@@ -403,7 +403,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 Приведенная выше реализация добавляет к карте заметку при выборе элемента из результатов, как показано ниже:
 
  ![](images/08-search-results.png "Заметка, добавленная к сопоставлению при выборе элемента из результатов")
- 
+
 > [!IMPORTANT]
 > `UISearchController`реализован в iOS 8. Если вы хотите поддерживать устройства более ранней версии, вам потребуется использовать `UISearchDisplayController`.
 

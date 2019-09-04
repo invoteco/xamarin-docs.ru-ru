@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b96cd489f84ea93e7ada9b6458272d0dea1c0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3ae18a2009ee3c34498a2e7586b561c525e76d45
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524860"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225539"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Принципы разработки API Xamarin. Android
 
@@ -42,21 +42,21 @@ ms.locfileid: "69524860"
 
 - Предоставление строго типизированного API:
 
-    - Повышение безопасности типа.
+  - Повышение безопасности типа.
 
-    - Сократите количество ошибок времени выполнения.
+  - Сократите количество ошибок времени выполнения.
 
-    - Получите IntelliSense интегрированной среды разработки для возвращаемых типов.
+  - Получите IntelliSense интегрированной среды разработки для возвращаемых типов.
 
-    - Разрешает всплывающую документацию интегрированной среды разработки.
+  - Разрешает всплывающую документацию интегрированной среды разработки.
 
 - Рекомендуем исследовать API в интегрированной среде разработки:
 
-    - Используйте альтернативные платформы, чтобы снизить уязвимость Java Класслиб.
+  - Используйте альтернативные платформы, чтобы снизить уязвимость Java Класслиб.
 
-    - Предоставляйте C# делегаты (лямбда-выражения, анонимные методы и System. Delegate) вместо интерфейсов с одним методом, если это уместно и применимо.
+  - Предоставляйте C# делегаты (лямбда-выражения, анонимные методы и System. Delegate) вместо интерфейсов с одним методом, если это уместно и применимо.
 
-    - Предоставьте механизм для вызова произвольных библиотек Java ( [Android. Runtime. жниенв](xref:Android.Runtime.JNIEnv)).
+  - Предоставьте механизм для вызова произвольных библиотек Java ( [Android. Runtime. жниенв](xref:Android.Runtime.JNIEnv)).
 
 
 ## <a name="assemblies"></a>Сборки
@@ -198,17 +198,17 @@ Java использует интерфейс [Java. lang. готов](xref:Java.
 
 ```csharp
 class CubeWallpaper : WallpaperService {
-        public override WallpaperService.Engine OnCreateEngine ()
-        {
-                return new CubeEngine (this);
-        }
+    public override WallpaperService.Engine OnCreateEngine ()
+    {
+        return new CubeEngine (this);
+    }
 
-        class CubeEngine : WallpaperService.Engine {
-                public CubeEngine (CubeWallpaper s)
-                        : base (s)
-                {
-                }
+    class CubeEngine : WallpaperService.Engine {
+        public CubeEngine (CubeWallpaper s)
+                : base (s)
+        {
         }
+    }
 }
 ```
 

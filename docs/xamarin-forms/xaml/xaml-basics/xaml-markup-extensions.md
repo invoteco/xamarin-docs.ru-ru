@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 620a986ea9c5a6792d321b0c89dae936ffa256da
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529267"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227920"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Часть 3. Расширения разметки XAML
 
@@ -297,7 +297,7 @@ _Расширения разметки XAML составляют важную ф
 
 Снимки экрана проверить согласованный дизайн и стилей зависят от платформы:
 
-[![](xaml-markup-extensions-images/sharedresources.png "Оформленных элементов управления")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "оформленных элементов управления")
+[![Элементы управления с стилями](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Несмотря на то, что чаще всего используется для определения `Resources` коллекции в верхней части страницы, имейте в виду, `Resources` определяется свойство `VisualElement`, и может иметь `Resources` коллекций для других элементов на странице. Например, попробуйте добавить одно для `StackLayout` в этом примере:
 
@@ -435,7 +435,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Размер результирующего `BoxView` относительно экрана зависит от платформы:
 
- [![](xaml-markup-extensions-images/staticconstants.png "Элементы управления, используя расширение разметки x: Static")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "элементы управления, используя расширение разметки x: Static")
+[![Элементы управления, использующие расширение разметки x:Static](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## <a name="other-standard-markup-extensions"></a>Другие расширения стандартной разметки
 
@@ -551,7 +551,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Вот ее запуск.
 
-[![](xaml-markup-extensions-images/relativelayout.png "Относительный макет, используя ограничения")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "относительного макета с помощью ограничений")
+[![Относительный макет с использованием ограничений](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## <a name="summary"></a>Сводка
 

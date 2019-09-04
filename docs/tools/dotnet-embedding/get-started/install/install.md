@@ -6,12 +6,12 @@ ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 04/18/2018
-ms.openlocfilehash: 7da163e85b04791c276f9cb14f5b21615b7909fb
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 47efbaa12475f627b5963cb6613c3441a1d96aac
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200156"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227837"
 ---
 # <a name="installing-net-embedding"></a>Установка внедрения .NET
 
@@ -32,12 +32,12 @@ ms.locfileid: "70200156"
 - Откройте окно терминала (macOS) или командную строку (Windows)
 - Перейдите в корневой каталог решения.
 - Инструментарий устанавливается в:
-    - **./Packages/Embeddinator-4000. [Версия]/тулс/обжкжен** (цель-C)
-    - **./Packages/Embeddinator-4000. [Версия]/tools/Embeddinator-4000.exe** (Java/C)
+  - **./Packages/Embeddinator-4000. [Версия]/тулс/обжкжен** (цель-C)
+  - **./Packages/Embeddinator-4000. [Версия]/tools/Embeddinator-4000.exe** (Java/C)
 - В macOS **обжкжен** можно запустить напрямую.
 - В Windows **Embeddinator-4000. exe** можно запустить напрямую.
 - В macOS необходимо запустить **Embeddinator-4000. exe** с **Mono**:
-    - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
+  - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
 При каждом вызове команды потребуется ряд параметров, перечисленных в документации для конкретной платформы.
 

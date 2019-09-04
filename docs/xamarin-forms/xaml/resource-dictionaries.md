@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2019
 ms.custom: video
-ms.openlocfilehash: a9b9b2d12193161e0cb4514600381c3a7a38495a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7c0fffbe626a740c15d85b1277c5158a5e564a15
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529317"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228074"
 ---
 # <a name="resource-dictionaries"></a>Словари ресурсов
 
@@ -105,9 +105,9 @@ _Ресурсы XAML — это определения объектов, кот�
 </StackLayout>
 ```
 
-Первый [ `Label` ](xref:Xamarin.Forms.Label) экземпляр извлекает и использует `LabelPageHeadingStyle` ресурс, определенный на уровне приложения `ResourceDictionary`, со вторым `Label` экземпляра получение и использование `LabelNormalStyle`ресурс, определенный в уровне управления `ResourceDictionary`. Аналогичным образом [ `Button` ](xref:Xamarin.Forms.Button) экземпляр извлекает и использует `NormalTextColor` ресурс, определенный на уровне приложения `ResourceDictionary`и `MediumBoldText` ресурс, определенный в уровне управления `ResourceDictionary`. Это приводит к появлению, показано на следующем снимке экрана:
+Первый [ `Label` ](xref:Xamarin.Forms.Label) экземпляр извлекает и использует `LabelPageHeadingStyle` ресурс, определенный на уровне приложения `ResourceDictionary`, со вторым `Label` экземпляра получение и использование `LabelNormalStyle`ресурс, определенный в уровне управления `ResourceDictionary`. Аналогичным образом [ `Button` ](xref:Xamarin.Forms.Button) экземпляр извлекает и использует `NormalTextColor` ресурс, определенный на уровне приложения `ResourceDictionary`и `MediumBoldText` ресурс, определенный в уровне управления `ResourceDictionary`. Результат показан на следующих снимках экрана.
 
-[![](resource-dictionaries-images/screenshots-sml.png "Использование ResourceDictionary ресурсов")](resource-dictionaries-images/screenshots.png#lightbox "потребления ресурсов ResourceDictionary")
+[![Использование ресурсов ResourceDictionary](resource-dictionaries-images/screenshots-sml.png)](resource-dictionaries-images/screenshots.png#lightbox)
 
 > [!NOTE]
 > Ресурсы, относящиеся к одной странице не должно быть включено в приложение ресурсов на уровне словарю, таким образом ресурсы будут анализироваться при запуске приложения, а не, затем при необходимости в страницу. Дополнительные сведения см. в разделе [уменьшение размера словаря ресурсов приложения](~/xamarin-forms/deploy-test/performance.md).
@@ -142,7 +142,7 @@ _Ресурсы XAML — это определения объектов, кот�
 
 Исходный `PageBackgroundColor` и `NormalTextColor` экземпляров, определенные на уровне приложения, переопределяются `PageBackgroundColor` и `NormalTextColor` экземпляров, определенные на уровне страниц. Таким образом, цвет фона страницы становится синий, а текст на странице желтый, как показано на следующем снимке экрана:
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "Переопределения ресурсов ResourceDictionary")](resource-dictionaries-images/overridding-screenshots.png#lightbox "ResourceDictionary ресурсов переопределения")
+[![Переопределение ресурсов ResourceDictionary](resource-dictionaries-images/overridding-screenshots-sml.png)](resource-dictionaries-images/overridding-screenshots.png#lightbox)
 
 Тем не менее, обратите внимание, что на фон панели [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) по-прежнему желтый, так как [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) свойству присваивается значение `PageBackgroundColor` ресурс, определенный в приложении уровень `ResourceDictionary`.
 

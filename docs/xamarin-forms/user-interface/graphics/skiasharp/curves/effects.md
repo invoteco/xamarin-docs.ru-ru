@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642752"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228241"
 ---
 # <a name="path-effects-in-skiasharp"></a>Эффекты пути в SkiaSharp
 
@@ -22,7 +22,7 @@ _Обнаружить различные эффекты пути, которые
 
 Объект *эффект пути* является экземпляром класса [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) класс, созданный с помощью одного из восьми статических создания методов, определенных классом. `SKPathEffect` Объект затем устанавливается [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) свойство [ `SKPaint` ](xref:SkiaSharp.SKPaint) объект ряд интересных эффектов, например, Обводка линий с небольшой реплицированных путь :
 
-![](effects-images/patheffectsample.png "Пример связанной цепочке")
+![Пример связанной цепочки](effects-images/patheffectsample.png)
 
 Эффекты пути позволяют:
 
@@ -51,7 +51,7 @@ public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 
 **Анимированный текст точками** страница аналогична **контурного текста** страниц, описанное в статье [ **интеграция текста и графики** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) в он отображает описанные текстовых символов, задав `Style` свойство `SKPaint` объект `SKPaintStyle.Stroke`. Кроме того **анимированный текст точками** использует `SKPathEffect.CreateDash` предоставить это структуры более точечно вид, и программа также анимирует `phase` аргумент `SKPathEffect.CreateDash` метод для установки точек показаться передаваться вокруг текста символы. Ниже приведен страницу в альбомной ориентации.
 
-[![](effects-images/animateddottedtext-small.png "Тройной снимок экрана страницы анимированный текст точками")](effects-images/animateddottedtext-large.png#lightbox "тройной снимок экрана страницы анимированный текст точками")
+[![Тройной снимок экрана анимированной точечной текстовой страницы](effects-images/animateddottedtext-small.png)](effects-images/animateddottedtext-large.png#lightbox)
 
 [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) Класс начинается определение нескольких констант, а также переопределяет `OnAppearing` и `OnDisappearing` методы для анимации:
 
@@ -159,7 +159,7 @@ public class AnimatedDottedTextPage : ContentPage
 
 **Точка или тире Morph** программы анимирует шаблоне сам таким образом, тире, по-видимому, разделить точек, которые комбинировать в форме тире, еще раз:
 
-[![](effects-images/dotdashmorph-small.png "Тройной снимок экрана страницы точка Dash Morph")](effects-images/dotdashmorph-large.png#lightbox "тройной снимок экрана страницы Morph точка тире")
+[![Тройной снимок экрана страницы преобразования "пунктирное тире"](effects-images/dotdashmorph-small.png)](effects-images/dotdashmorph-large.png#lightbox)
 
 [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) Класса переопределения `OnAppearing` и `OnDisappearing` так же, как на аналогичную предыдущей программы, но этот класс определяет методы `SKPaint` объект как поле:
 
@@ -398,7 +398,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 `PaintSurface` Обработчик создает кривую Безье, циклы вокруг сам, который обращается к палитре, чтобы определить, какие `PathEffect` следует использовать для вычерчивания его. Три варианта — `Translate`, `Rotate`, и `Morph` — отображаются слева направо:
 
-[![](effects-images/1dpatheffect-small.png "Тройной снимок экрана страницы эффект пути 1D")](effects-images/1dpatheffect-large.png#lightbox "тройной снимок экрана страницы эффект пути 1 D")
+[![Тройной снимок экрана со страницей эффектов для пути 1D](effects-images/1dpatheffect-small.png)](effects-images/1dpatheffect-large.png#lightbox)
 
 Путь, указанный в `SKPathEffect.Create1DPath` метод всегда будет заполнено. Путь, указанный в `DrawPath` метод всегда рисуется, если `SKPaint` объект имеет его `PathEffect` , имеющим значение 1 D эффект. Обратите внимание, что `pathPaint` объект не имеет `Style` параметр, который по умолчанию обычно используется `Fill`, но путь вычерчивается независимо.
 
@@ -410,7 +410,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 Если `advance` аргумент меньше, чем размер пути, а затем реплицированных пути могут перекрывать друг друга. Это может привести некоторые интересные эффекты. **Связанной цепочке** страница отображает ряд перекрывающихся окружности, кажется, чтобы он напоминал связанной цепи, который перестает отвечать на запросы в отдельные роли catenary:
 
-[![](effects-images/linkedchain-small.png "Тройной снимок экрана страницы связанной цепочке")](effects-images/linkedchain-large.png#lightbox "тройной снимок экрана страницы связанной цепочке")
+[![Тройной снимок экрана страницы связанной цепочки](effects-images/linkedchain-small.png)](effects-images/linkedchain-large.png#lightbox)
 
 Найдите очень близки, и вы увидите, что это не фактически кругов. Каждая ссылка в цепочке — два дуг, изменять размеры и расположение, кажется, свяжитесь с соседними ссылки.
 
@@ -549,7 +549,7 @@ public class LinkedChainPage : ContentPage
 
 **Конвейерная лента** страница создает путь в виде прямоугольный конвейерная лента с кривой верхнее и нижнее, изменяется в соответствии с размером окна. Этот путь рисуется с помощью простого `SKPaint` объекта 20 пикселей в ширину и серого цвета и затем снова с обводкой другой `SKPaint` со `SKPathEffect` объекта, ссылающегося на путь в виде небольшой сегмент:
 
-[![](effects-images/conveyorbelt-small.png "Тройной снимок экрана страницы конвейерная лента")](effects-images/conveyorbelt-large.png#lightbox "тройной снимок экрана страницы конвейерная лента")
+[![Тройной снимок экрана: страница "лента конвейера"](effects-images/conveyorbelt-small.png)](effects-images/conveyorbelt-large.png#lightbox)
 
 (0, 0) точка сегмента пути — дескриптор, поэтому, когда `phase` аргумент анимируется, контейнеров, по-видимому, связана с конвейерная лента, возможно scooping вверх воды в нижней и сохранение его в верхней.
 
@@ -798,7 +798,7 @@ public class HatchFillPage : ContentPage
 
 `PaintSurface` Обработчик завершается вызов просто обводки Скругленный прямоугольник, чтобы можно было видеть расхождения с линиями штриховки красного и синего:
 
-[![](effects-images/hatchfill-small.png "Тройной снимок экрана страницы штриховки заливки")](effects-images/hatchfill-large.png#lightbox "тройной снимок экрана страницы штриховки заливки")
+[![Тройной снимок экрана со страницей заливки штриховки](effects-images/hatchfill-small.png)](effects-images/hatchfill-large.png#lightbox)
 
 Экран Android на самом деле выглядит следующим образом: Масштабирование на снимке экрана привело к тому, что тонкие красные линии и тонкие пробелы объединяются в красные и более широкие пробелы.
 
@@ -852,7 +852,7 @@ public class PathTileFillPage : ContentPage
 
 В `PaintSurface` обработчик, `SKPathEffect.Create2DPath` вызовы задает горизонтальным и вертикальным пространством до 64 заставить квадратные плитки 80 пикселей к их наложению. К счастью путь будет иметь вид пазла хорошо совмещения с соседних плитки:
 
-[![](effects-images/pathtilefill-small.png "Тройной снимок экрана страницы заполняет путь")](effects-images/pathtilefill-large.png#lightbox "тройной снимок экрана страницы заполняет путь")
+[![Тройной снимок экрана со страницей заливки плитки пути](effects-images/pathtilefill-small.png)](effects-images/pathtilefill-large.png#lightbox)
 
 Масштабирование из исходного снимка экрана вызывает некоторые искажения, особенно на экран Android.
 
@@ -927,7 +927,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Этот эффект можно использовать с Обводка или заполнение на основе `Style` свойство `SKPaint` объекта. Здесь выполняется:
 
-[![](effects-images/anotherroundedheptagon-small.png "Тройной снимок экрана страницы другой округленное Heptagon")](effects-images/anotherroundedheptagon-large.png#lightbox "тройной снимок экрана страницы другой Heptagon округляется")
+[![Тройной снимок экрана другой скругленной Хептагон страницы](effects-images/anotherroundedheptagon-small.png)](effects-images/anotherroundedheptagon-large.png#lightbox)
 
 Вы увидите, что это округленное heptagon идентично программу более ранней. При необходимости дополнительные убедить радиус углов по-настоящему равно 100, а не 50 указан в `SKPathEffect.CreateCorner` вызов, вы можете Раскомментировать последняя инструкция в программе и см. в разделе 100-радиус круга наложены друг на друга в углу.
 
@@ -946,7 +946,7 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 **Дрожание поэкспериментировать** страница позволяет поэкспериментировать с различными значениями в Обводка прямоугольник:
 
-[![](effects-images/jitterexperiment-small.png "Тройной снимок экрана страницы дрожание эксперимента")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
+[![Тройной снимок экрана страницы Життерексперимент](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
 
 Программа проста. [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) файл создает два `Slider` элементов и `SKCanvasView`:
 
@@ -1072,7 +1072,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Здесь он работает в альбомном режиме:
 
-[![](effects-images/jittertext-small.png "Тройной снимок экрана страницы дрожание: текст")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
+[![Тройной снимок экрана страницы Життертекст](effects-images/jittertext-small.png)](effects-images/jittertext-large.png#lightbox)
 
 ## <a name="path-outlining"></a>Структурирование путь
 
@@ -1173,11 +1173,11 @@ public partial class TapToOutlineThePathPage : ContentPage
 
 Элемент управления circle заполняется и обводкой, как и следовало ожидать:
 
-[![](effects-images/taptooutlinethepathnormal-small.png "Тройной снимок экрана страницы обычный коснитесь для структуры Path")](effects-images/taptooutlinethepathnormal-large.png#lightbox "тройной снимок экрана страницы обычный коснитесь для структуры Path")
+[![Тройной снимок экрана с обычным касанием для структурирования страницы пути](effects-images/taptooutlinethepathnormal-small.png)](effects-images/taptooutlinethepathnormal-large.png#lightbox)
 
 При касании экрана, `outlineThePath` присваивается `true`и `PaintSurface` обработчик создает новый `SKPath` объекта и использует его в качестве пути назначения в вызове `GetFillPath` на `redThickStroke` рисования объекта. Затем заполняется и обводке с помощью этого пути назначения `redThinStroke`, в следующем результате:
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "Тройной снимок экрана страницы контурные коснитесь для структуры Path")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "тройной снимок экрана страницы контурные коснитесь для структуры Path")
+[![Тройной снимок экрана со структурным касанием для структурирования страницы пути](effects-images/taptooutlinethepathoutlined-small.png)](effects-images/taptooutlinethepathoutlined-large.png#lightbox)
 
 Два красными кружками четкого указания, что исходный путь циклическая была преобразована в двух контуров циклическая.
 
@@ -1241,7 +1241,7 @@ public static SKPathEffect CreateCompose (SKPathEffect outer, SKPathEffect inner
 
 Один очевидный использования `CreateSum` является определение `SKPaint` объект, который заполняет путь с эффектом один путь, а Обводка путь с эффектом другой путь. Это показано в **кошки в кадре** образца, который отображает массив кошки в течение периода с Зубчатый границ:
 
-[![](effects-images/catsinframe-small.png "Тройной снимок экрана страницы кошки в кадр")](effects-images/catsinframe-large.png#lightbox "тройной снимок экрана страницы кошки в кадр")
+[![Тройной снимок экрана со страницей "кошки на рамке"](effects-images/catsinframe-small.png)](effects-images/catsinframe-large.png#lightbox)
 
 [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) Класса начинается с определения нескольких полей. Может распознать первого поля из [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) класса из [ **данные пути SVG** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) статьи. Второй путь основан на строки и дуги для шаблона Зубцы кадра:
 
@@ -1409,7 +1409,7 @@ public class DashedHatchLinesPage : ContentPage
 
 Как вам уже известно, штриховка не точно ограниченные внутренней области, и в этом примере они всегда начинаются с левого входа с всей тире:
 
-[![](effects-images/dashedhatchlines-small.png "Тройной снимок экрана страницы Пунктирная штриховка")](effects-images/dashedhatchlines-large.png#lightbox "тройной снимок экрана страницы Пунктирная штриховка")
+[![Тройной снимок экрана со страницей пунктирных линий штриховки](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Теперь, когда вы увидели эффекты пути, от простых точек и тире странное сочетаниям использовать свое воображение и см. в разделе, можно создать.
 

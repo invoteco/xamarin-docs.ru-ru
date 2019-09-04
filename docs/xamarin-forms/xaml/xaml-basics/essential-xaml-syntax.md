@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 7526349c1b4b61495af95dfc200a5055cea5650e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b55c9d8a65dbb4e44605295043d1b302295030ce
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529299"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228059"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Часть 2. Синтаксис Essential XAML
 
@@ -255,7 +255,7 @@ _XAML предназначен главным образом для создан
 
 Вот, как оно выглядит:
 
-[![](essential-xaml-syntax-images/griddemo.png "Макет сетки")](essential-xaml-syntax-images/griddemo-large.png#lightbox "макет сетки")
+[![Макет сетки](essential-xaml-syntax-images/griddemo.png)](essential-xaml-syntax-images/griddemo-large.png#lightbox)
 
 Судя исключительно из синтаксиса, они `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, и `Grid.ColumnSpan` атрибуты отображаются как статические поля или свойства `Grid`, но интересно, `Grid` не определяет никаких данных с именем `Row`, `Column`, `RowSpan`, или `ColumnSpan`.
 
@@ -312,7 +312,7 @@ _XAML предназначен главным образом для создан
 
 А вот она:
 
-[![](essential-xaml-syntax-images/absolutedemo-large.png "Абсолютный макет")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "абсолютный макет")
+[![Абсолютный макет](essential-xaml-syntax-images/absolutedemo-large.png)](essential-xaml-syntax-images/absolutedemo-large.png#lightbox)
 
 Для нечто подобное могут возникнуть вопросы на подсказку с помощью XAML. Конечно повторение и непрерывную `LayoutBounds` прямоугольник предполагает, что он может лучше реализовать в коде.
 

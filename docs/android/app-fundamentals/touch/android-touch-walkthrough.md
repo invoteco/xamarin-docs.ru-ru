@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: efff9edd81f17979ce8f4441da3d512d0a8ec188
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d9c8fb7e1045d35fa23c85c689cb0e1f9461d8dd
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526265"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225809"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Пошаговое руководство. Использование сенсорного ввода в Android
 
@@ -25,39 +25,39 @@ ms.locfileid: "69526265"
 
 - Откройте проект **таучвалксраугх\_Start**. **MainActivity** все настроено для &ndash; того, чтобы мы смогли реализовать поведение касания в действии. Если запустить приложение и щелкнуть **образец касания**, должно начаться следующее действие:
 
-    [![Отображается снимок экрана действий с касанием](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
+  [![Отображается снимок экрана действий с касанием](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 - Теперь, когда мы подтвердили, что действие запускается, откройте файл **TouchActivity.CS** и добавьте обработчик для `Touch` события: `ImageView`
 
-    ```csharp
-    _touchMeImageView.Touch += TouchMeImageViewOnTouch;
-    ```
+  ```csharp
+  _touchMeImageView.Touch += TouchMeImageViewOnTouch;
+  ```
 
 - Затем добавьте следующий метод в **TouchActivity.CS**:
 
-    ```csharp
-    private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
-    {
-        string message;
-        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
-        {
-            case MotionEventActions.Down:
-            case MotionEventActions.Move:
-            message = "Touch Begins";
-            break;
+  ```csharp
+  private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
+  {
+      string message;
+      switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
+      {
+          case MotionEventActions.Down:
+          case MotionEventActions.Move:
+          message = "Touch Begins";
+          break;
 
-            case MotionEventActions.Up:
-            message = "Touch Ends";
-            break;
+          case MotionEventActions.Up:
+          message = "Touch Ends";
+          break;
 
-            default:
-            message = string.Empty;
-            break;
-        }
+          default:
+          message = string.Empty;
+          break;
+      }
 
-        _touchInfoTextView.Text = message;
-    }
-    ```
+      _touchInfoTextView.Text = message;
+  }
+  ```
 
 Обратите внимание, что в приведенном выше `Move` коде `Down` действие и обрабатывается как одно и то же. Это связано с тем `ImageView`, что несмотря на то, что пользователь может не допустить палец пальца, он может перемещаться или задавление, которое может изменить пользователь. Эти типы изменений приводят к `Move` созданию действия.
 
@@ -75,170 +75,170 @@ ms.locfileid: "69526265"
 Теперь позволяет реализовать действие распознавателя жестов. Это действие демонстрирует, как перетащить представление по экрану и проиллюстрировать один из способов реализации сжатия.
 
 - Добавьте новое действие в приложение с именем `GestureRecognizer`.
-    Измените код для этого действия, чтобы он соответствовал следующему коду:
+  Измените код для этого действия, чтобы он соответствовал следующему коду:
 
-    ```csharp
-    public class GestureRecognizerActivity : Activity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
-            View v = new GestureRecognizerView(this);
-            SetContentView(v);
-        }
-    }
-    ```
+  ```csharp
+  public class GestureRecognizerActivity : Activity
+  {
+      protected override void OnCreate(Bundle bundle)
+      {
+          base.OnCreate(bundle);
+          View v = new GestureRecognizerView(this);
+          SetContentView(v);
+      }
+  }
+  ```
 
 - Добавьте в проект новое представление Android и присвойте ему `GestureRecognizerView`имя. Добавьте в этот класс следующие переменные:
 
-    ```csharp
-    private static readonly int InvalidPointerId = -1;
+  ```csharp
+  private static readonly int InvalidPointerId = -1;
 
-    private readonly Drawable _icon;
-    private readonly ScaleGestureDetector _scaleDetector;
+  private readonly Drawable _icon;
+  private readonly ScaleGestureDetector _scaleDetector;
 
-    private int _activePointerId = InvalidPointerId;
-    private float _lastTouchX;
-    private float _lastTouchY;
-    private float _posX;
-    private float _posY;
-    private float _scaleFactor = 1.0f;
-    ```
+  private int _activePointerId = InvalidPointerId;
+  private float _lastTouchX;
+  private float _lastTouchY;
+  private float _posX;
+  private float _posY;
+  private float _scaleFactor = 1.0f;
+  ```
 
 - Добавьте следующий конструктор в `GestureRecognizerView`. Этот конструктор `ImageView` добавит в действие. На этом этапе код по-прежнему не будет &ndash; компилироваться. нам нужно создать `MyScaleListener` класс, который поможет изменить размер, `ImageView` когда пользователь его сжимает:
 
-    ```csharp
-    public GestureRecognizerView(Context context): base(context, null, 0)
-    {
-        _icon = context.Resources.GetDrawable(Resource.Drawable.Icon);
-        _icon.SetBounds(0, 0, _icon.IntrinsicWidth, _icon.IntrinsicHeight);
-        _scaleDetector = new ScaleGestureDetector(context, new MyScaleListener(this));
-    }
-    ```
+  ```csharp
+  public GestureRecognizerView(Context context): base(context, null, 0)
+  {
+      _icon = context.Resources.GetDrawable(Resource.Drawable.Icon);
+      _icon.SetBounds(0, 0, _icon.IntrinsicWidth, _icon.IntrinsicHeight);
+      _scaleDetector = new ScaleGestureDetector(context, new MyScaleListener(this));
+  }
+  ```
 
 - Чтобы нарисовать изображение на нашем действии, необходимо переопределить `OnDraw` метод класса представления, как показано в следующем фрагменте кода. Этот код переместит `ImageView` в положение, `_posX` указанное в, `_posY` а также изменяет размер изображения в соответствии с коэффициентом масштабирования:
 
-    ```csharp
-    protected override void OnDraw(Canvas canvas)
-    {
-        base.OnDraw(canvas);
-        canvas.Save();
-        canvas.Translate(_posX, _posY);
-        canvas.Scale(_scaleFactor, _scaleFactor);
-        _icon.Draw(canvas);
-        canvas.Restore();
-    }
-    ```
+  ```csharp
+  protected override void OnDraw(Canvas canvas)
+  {
+      base.OnDraw(canvas);
+      canvas.Save();
+      canvas.Translate(_posX, _posY);
+      canvas.Scale(_scaleFactor, _scaleFactor);
+      _icon.Draw(canvas);
+      canvas.Restore();
+  }
+  ```
 
 - Далее нам нужно обновить переменную `_scaleFactor` экземпляра, так как пользователь сжимает. `ImageView` Мы добавим класс с именем `MyScaleListener`. Этот класс будет прослушивать события масштабирования, которые будут вызываться Android, когда пользователь сжимает `ImageView`.
-    Добавьте следующий внутренний класс в `GestureRecognizerView`. Этот класс является `ScaleGesture.SimpleOnScaleGestureListener`. Этот класс является удобным классом, который прослушиватели могут подклассировать, когда вы заинтересованы в подмножестве жестов:
+  Добавьте следующий внутренний класс в `GestureRecognizerView`. Этот класс является `ScaleGesture.SimpleOnScaleGestureListener`. Этот класс является удобным классом, который прослушиватели могут подклассировать, когда вы заинтересованы в подмножестве жестов:
 
-    ```csharp
-    private class MyScaleListener : ScaleGestureDetector.SimpleOnScaleGestureListener
-    {
-        private readonly GestureRecognizerView _view;
+  ```csharp
+  private class MyScaleListener : ScaleGestureDetector.SimpleOnScaleGestureListener
+  {
+      private readonly GestureRecognizerView _view;
 
-        public MyScaleListener(GestureRecognizerView view)
-        {
-            _view = view;
-        }
+      public MyScaleListener(GestureRecognizerView view)
+      {
+          _view = view;
+      }
 
-        public override bool OnScale(ScaleGestureDetector detector)
-        {
-            _view._scaleFactor *= detector.ScaleFactor;
+      public override bool OnScale(ScaleGestureDetector detector)
+      {
+          _view._scaleFactor *= detector.ScaleFactor;
 
-            // put a limit on how small or big the image can get.
-            if (_view._scaleFactor > 5.0f)
-            {
-                _view._scaleFactor = 5.0f;
-            }
-            if (_view._scaleFactor < 0.1f)
-            {
-                _view._scaleFactor = 0.1f;
-            }
+          // put a limit on how small or big the image can get.
+          if (_view._scaleFactor > 5.0f)
+          {
+              _view._scaleFactor = 5.0f;
+          }
+          if (_view._scaleFactor < 0.1f)
+          {
+              _view._scaleFactor = 0.1f;
+          }
 
-            _view.Invalidate();
-            return true;
-        }
-    }
-    ```
+          _view.Invalidate();
+          return true;
+      }
+  }
+  ```
 
 - Следующий метод, который нужно переопределить в `GestureRecognizerView` , — это. `OnTouchEvent` В следующем коде показана полная реализация этого метода. Здесь есть большой объем кода, поэтому он займет пару минут и посмотрим, что происходит здесь. Первое, что делает этот метод, — это масштабирование значка, если это &ndash; необходимо `_scaleDetector.OnTouchEvent`, путем вызова метода. Далее мы пытаемся выяснить, какое действие вызвало этот метод:
 
-    - Если пользователь затронул экран с помощью, запишите позиции X и Y и идентификатор первого указателя, который затронул экран.
+  - Если пользователь затронул экран с помощью, запишите позиции X и Y и идентификатор первого указателя, который затронул экран.
 
-    - Если пользователь переместил касание на экране, мы вычислим, насколько далеко Пользователь переместил указатель.
+  - Если пользователь переместил касание на экране, мы вычислим, насколько далеко Пользователь переместил указатель.
 
-    - Если пользователь направит палец с экрана, он перестанет отслеживать жесты.
+  - Если пользователь направит палец с экрана, он перестанет отслеживать жесты.
 
-    ```csharp
-    public override bool OnTouchEvent(MotionEvent ev)
-    {
-        _scaleDetector.OnTouchEvent(ev);
+  ```csharp
+  public override bool OnTouchEvent(MotionEvent ev)
+  {
+      _scaleDetector.OnTouchEvent(ev);
 
-        MotionEventActions action = ev.Action & MotionEventActions.Mask;
-        int pointerIndex;
+      MotionEventActions action = ev.Action & MotionEventActions.Mask;
+      int pointerIndex;
 
-        switch (action)
-        {
-            case MotionEventActions.Down:
-            _lastTouchX = ev.GetX();
-            _lastTouchY = ev.GetY();
-            _activePointerId = ev.GetPointerId(0);
-            break;
+      switch (action)
+      {
+          case MotionEventActions.Down:
+          _lastTouchX = ev.GetX();
+          _lastTouchY = ev.GetY();
+          _activePointerId = ev.GetPointerId(0);
+          break;
 
-            case MotionEventActions.Move:
-            pointerIndex = ev.FindPointerIndex(_activePointerId);
-            float x = ev.GetX(pointerIndex);
-            float y = ev.GetY(pointerIndex);
-            if (!_scaleDetector.IsInProgress)
-            {
-                // Only move the ScaleGestureDetector isn't already processing a gesture.
-                float deltaX = x - _lastTouchX;
-                float deltaY = y - _lastTouchY;
-                _posX += deltaX;
-                _posY += deltaY;
-                Invalidate();
-            }
+          case MotionEventActions.Move:
+          pointerIndex = ev.FindPointerIndex(_activePointerId);
+          float x = ev.GetX(pointerIndex);
+          float y = ev.GetY(pointerIndex);
+          if (!_scaleDetector.IsInProgress)
+          {
+              // Only move the ScaleGestureDetector isn't already processing a gesture.
+              float deltaX = x - _lastTouchX;
+              float deltaY = y - _lastTouchY;
+              _posX += deltaX;
+              _posY += deltaY;
+              Invalidate();
+          }
 
-            _lastTouchX = x;
-            _lastTouchY = y;
-            break;
+          _lastTouchX = x;
+          _lastTouchY = y;
+          break;
 
-            case MotionEventActions.Up:
-            case MotionEventActions.Cancel:
-            // We no longer need to keep track of the active pointer.
-            _activePointerId = InvalidPointerId;
-            break;
+          case MotionEventActions.Up:
+          case MotionEventActions.Cancel:
+          // We no longer need to keep track of the active pointer.
+          _activePointerId = InvalidPointerId;
+          break;
 
-            case MotionEventActions.PointerUp:
-            // check to make sure that the pointer that went up is for the gesture we're tracking.
-            pointerIndex = (int) (ev.Action & MotionEventActions.PointerIndexMask) >> (int) MotionEventActions.PointerIndexShift;
-            int pointerId = ev.GetPointerId(pointerIndex);
-            if (pointerId == _activePointerId)
-            {
-                // This was our active pointer going up. Choose a new
-                // action pointer and adjust accordingly
-                int newPointerIndex = pointerIndex == 0 ? 1 : 0;
-                _lastTouchX = ev.GetX(newPointerIndex);
-                _lastTouchY = ev.GetY(newPointerIndex);
-                _activePointerId = ev.GetPointerId(newPointerIndex);
-            }
-            break;
+          case MotionEventActions.PointerUp:
+          // check to make sure that the pointer that went up is for the gesture we're tracking.
+          pointerIndex = (int) (ev.Action & MotionEventActions.PointerIndexMask) >> (int) MotionEventActions.PointerIndexShift;
+          int pointerId = ev.GetPointerId(pointerIndex);
+          if (pointerId == _activePointerId)
+          {
+              // This was our active pointer going up. Choose a new
+              // action pointer and adjust accordingly
+              int newPointerIndex = pointerIndex == 0 ? 1 : 0;
+              _lastTouchX = ev.GetX(newPointerIndex);
+              _lastTouchY = ev.GetY(newPointerIndex);
+              _activePointerId = ev.GetPointerId(newPointerIndex);
+          }
+          break;
 
-        }
-        return true;
-    }
-    ```
+      }
+      return true;
+  }
+  ```
 
 - Теперь запустите приложение и запустите действие распознавателя жестов.
-    При запуске экран должен выглядеть примерно так, как показано на снимке экрана ниже:
+  При запуске экран должен выглядеть примерно так, как показано на снимке экрана ниже:
 
-    [![Экран запуска распознавателя жестов с помощью значка Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
+  [![Экран запуска распознавателя жестов с помощью значка Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 - Теперь коснитесь значка и перетащите его вокруг экрана. Попробуйте использовать жест сжатия для масштабирования. В некоторый момент экран может выглядеть примерно так, как на следующем снимке экрана:
 
-    [![Значок перемещения по экрану](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
+  [![Значок перемещения по экрану](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 На этом этапе вы должны дать себе точку зрения: вы только что реализовали сжатие в приложении Android! Выполните быстрый перерыв и перейдите к третьему и завершающему действию в этом пошаговом &ndash; руководстве с помощью пользовательских жестов.
 
@@ -250,106 +250,106 @@ ms.locfileid: "69526265"
 
 - Добавьте файл макета с именем **Custom\_жест\_Layout. axml** в проект со следующим содержимым. В проекте уже есть все образы в папке **ресурсов** :
 
-    ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-        <ImageView
-            android:src="@drawable/check_me"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:id="@+id/imageView1"
-            android:layout_gravity="center_vertical" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-    ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1" />
+      <ImageView
+          android:src="@drawable/check_me"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="3"
+          android:id="@+id/imageView1"
+          android:layout_gravity="center_vertical" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1" />
+  </LinearLayout>
+  ```
 
 - Затем добавьте новое действие в проект и присвойте ему `CustomGestureRecognizerActivity.cs`имя. Добавьте в класс две переменные экземпляра, как показано в следующих двух строках кода:
 
-    ```csharp
-    private GestureLibrary _gestureLibrary;
-    private ImageView _imageView;
-    ```
+  ```csharp
+  private GestureLibrary _gestureLibrary;
+  private ImageView _imageView;
+  ```
 
 - `OnCreate` Измените метод этого действия, чтобы он соответствовал следующему коду. Потратьте пару минут, чтобы объяснить, что происходит в этом коде. В первую очередь мы создаем экземпляр `GestureOverlayView` класса и устанавливаем его в качестве корневого представления действия.
-    Мы также присваиваем обработчик событий для `GesturePerformed` `GestureOverlayView`события. Далее мы изменим файл макета, который был создан ранее, и добавим его в качестве дочернего представления `GestureOverlayView`. Последним шагом является инициализация переменной `_gestureLibrary` и загрузка файла жестов из ресурсов приложения. Если не удается загрузить файл жестов по какой-либо причине, это действие не может быть завершено, поэтому оно будет выключено.
+  Мы также присваиваем обработчик событий для `GesturePerformed` `GestureOverlayView`события. Далее мы изменим файл макета, который был создан ранее, и добавим его в качестве дочернего представления `GestureOverlayView`. Последним шагом является инициализация переменной `_gestureLibrary` и загрузка файла жестов из ресурсов приложения. Если не удается загрузить файл жестов по какой-либо причине, это действие не может быть завершено, поэтому оно будет выключено.
 
-    ```csharp
-    protected override void OnCreate(Bundle bundle)
-    {
-        base.OnCreate(bundle);
+  ```csharp
+  protected override void OnCreate(Bundle bundle)
+  {
+      base.OnCreate(bundle);
 
-        GestureOverlayView gestureOverlayView = new GestureOverlayView(this);
-        SetContentView(gestureOverlayView);
-        gestureOverlayView.GesturePerformed += GestureOverlayViewOnGesturePerformed;
+      GestureOverlayView gestureOverlayView = new GestureOverlayView(this);
+      SetContentView(gestureOverlayView);
+      gestureOverlayView.GesturePerformed += GestureOverlayViewOnGesturePerformed;
 
-        View view = LayoutInflater.Inflate(Resource.Layout.custom_gesture_layout, null);
-        _imageView = view.FindViewById<ImageView>(Resource.Id.imageView1);
-        gestureOverlayView.AddView(view);
+      View view = LayoutInflater.Inflate(Resource.Layout.custom_gesture_layout, null);
+      _imageView = view.FindViewById<ImageView>(Resource.Id.imageView1);
+      gestureOverlayView.AddView(view);
 
-        _gestureLibrary = GestureLibraries.FromRawResource(this, Resource.Raw.gestures);
-        if (!_gestureLibrary.Load())
-        {
-            Log.Wtf(GetType().FullName, "There was a problem loading the gesture library.");
-            Finish();
-        }
-    }
-    ```
+      _gestureLibrary = GestureLibraries.FromRawResource(this, Resource.Raw.gestures);
+      if (!_gestureLibrary.Load())
+      {
+          Log.Wtf(GetType().FullName, "There was a problem loading the gesture library.");
+          Finish();
+      }
+  }
+  ```
 
 - Наконец, нам нужно реализовать метод `GestureOverlayViewOnGesturePerformed` , как показано в следующем фрагменте кода. `GestureOverlayView` Когда обнаруживает жест, он выполняет обратный вызов к этому методу. Первое, что мы пытаемся получить `IList<Prediction>` объекты, соответствующие жесту, вызвав. `_gestureLibrary.Recognize()` Мы используем немного LINQ для получения объекта `Prediction` , имеющего наибольшую оценку для жеста.
 
-    Если подходящий жест с достаточно высоким показателем нет, обработчик событий завершает работу без выполнения каких-либо действий. В противном случае мы проверяем имя прогноза и изменим отображаемое изображение на основе имени жеста:
+  Если подходящий жест с достаточно высоким показателем нет, обработчик событий завершает работу без выполнения каких-либо действий. В противном случае мы проверяем имя прогноза и изменим отображаемое изображение на основе имени жеста:
 
-    ```csharp
-    private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayView.GesturePerformedEventArgs gesturePerformedEventArgs)
-    {
-        IEnumerable<Prediction> predictions = from p in _gestureLibrary.Recognize(gesturePerformedEventArgs.Gesture)
-        orderby p.Score descending
-        where p.Score > 1.0
-        select p;
-        Prediction prediction = predictions.FirstOrDefault();
+  ```csharp
+  private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayView.GesturePerformedEventArgs gesturePerformedEventArgs)
+  {
+      IEnumerable<Prediction> predictions = from p in _gestureLibrary.Recognize(gesturePerformedEventArgs.Gesture)
+      orderby p.Score descending
+      where p.Score > 1.0
+      select p;
+      Prediction prediction = predictions.FirstOrDefault();
 
-        if (prediction == null)
-        {
-            Log.Debug(GetType().FullName, "Nothing seemed to match the user's gesture, so don't do anything.");
-            return;
-        }
+      if (prediction == null)
+      {
+          Log.Debug(GetType().FullName, "Nothing seemed to match the user's gesture, so don't do anything.");
+          return;
+      }
 
-        Log.Debug(GetType().FullName, "Using the prediction named {0} with a score of {1}.", prediction.Name, prediction.Score);
+      Log.Debug(GetType().FullName, "Using the prediction named {0} with a score of {1}.", prediction.Name, prediction.Score);
 
-        if (prediction.Name.StartsWith("checkmark"))
-        {
-            _imageView.SetImageResource(Resource.Drawable.checked_me);
-        }
-        else if (prediction.Name.StartsWith("erase", StringComparison.OrdinalIgnoreCase))
-        {
-            // Match one of our "erase" gestures
-            _imageView.SetImageResource(Resource.Drawable.check_me);
-        }
-    }
-    ```
+      if (prediction.Name.StartsWith("checkmark"))
+      {
+          _imageView.SetImageResource(Resource.Drawable.checked_me);
+      }
+      else if (prediction.Name.StartsWith("erase", StringComparison.OrdinalIgnoreCase))
+      {
+          // Match one of our "erase" gestures
+          _imageView.SetImageResource(Resource.Drawable.check_me);
+      }
+  }
+  ```
 
 - Запустите приложение и запустите действие распознавателя пользовательских жестов. Он должен выглядеть примерно так, как на следующем снимке экрана:
 
-    [![Снимок экрана с изображением для проверки](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
+  [![Снимок экрана с изображением для проверки](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
-    Теперь нарисуйте флажок на экране, и отображаемое растровое изображение должно выглядеть примерно так, как показано на следующих снимках экрана:
+  Теперь нарисуйте флажок на экране, и отображаемое растровое изображение должно выглядеть примерно так, как показано на следующих снимках экрана:
 
-    [![Отображается галочка, флажок распознан](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+  [![Отображается галочка, флажок распознан](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
-    Наконец, нарисуйте каракулю на экране. Флажок должен вернуться к исходному изображению, как показано на снимках экрана:
+  Наконец, нарисуйте каракулю на экране. Флажок должен вернуться к исходному изображению, как показано на снимках экрана:
 
-    [![Рисованная кривая на экране, отображается исходное изображение](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+  [![Рисованная кривая на экране, отображается исходное изображение](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 Теперь вы понимаете, как интегрировать сенсоры и жесты в приложении Android с помощью Xamarin. Android.
 

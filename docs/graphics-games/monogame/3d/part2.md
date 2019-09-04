@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f125f8f20d22da4e988440cbaa936771d86a7673
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680973"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227722"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Рисование трехмерной графики с вершинами в одноигре
 
@@ -85,7 +85,7 @@ protected override void Draw(GameTime gameTime)
 Сначала мы добавим член в наш класс Game1:
 
 ```csharp
-VertexPositionTexture[] floorVerts; 
+VertexPositionTexture[] floorVerts;
 ```
 
 Затем определите наши вершины в `Game1.Initialize`. Обратите внимание, что указанный шаблон, упомянутый ранее в этой статье `Game1.Initialize` , не содержит метод, поэтому нам нужно добавить весь метод `Game1`в:
@@ -179,7 +179,7 @@ void DrawGround()
             PrimitiveType.TriangleList,
             // The array of verts that we want to render
             floorVerts,
-            // The offset, which is 0 since we want to start 
+            // The offset, which is 0 since we want to start
             // at the beginning of the floorVerts array
             0,
             // The number of triangles to draw
@@ -213,7 +213,7 @@ protected override void Draw (GameTime gameTime)
 
 ### <a name="techniques-and-passes"></a>Методы и проходы
 
-После назначения свойств по нашему результату можно выполнить фактическую отрисовку. 
+После назначения свойств по нашему результату можно выполнить фактическую отрисовку.
 
 Мы не будем менять `CurrentTechnique` свойство в этом пошаговом руководстве, но более сложные игры могут иметь один результат, который может выполнять рисование различными способами (например, применение значения цвета). Каждый из этих режимов подготовки можно представить в виде метода, который можно назначить перед отрисовкой. Кроме того, для правильного отображения каждого метода может потребоваться несколько проходов. Эффекты могут потребовать нескольких проходов при отрисовке сложных визуальных элементов, таких как свечение или шерсть.
 
@@ -231,7 +231,7 @@ protected override void Draw (GameTime gameTime)
 
 ## <a name="rendering-with-a-texture"></a>Отрисовка с помощью текстуры
 
-На этом этапе наше приложение визуализирует белую плоскость (в перспективе). Далее мы добавим в наш проект текстуру, которая будет использоваться при подготовке к просмотру плоскости. 
+На этом этапе наше приложение визуализирует белую плоскость (в перспективе). Далее мы добавим в наш проект текстуру, которая будет использоваться при подготовке к просмотру плоскости.
 
 Для простоты мы добавим PNG-файлы непосредственно в наш проект, а не с помощью инструмента для конвейера «непрерывной игры». Для этого Скачайте PNG- [файл](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) на компьютер. После скачивания щелкните правой кнопкой мыши папку **содержимое** на панели решения и выберите **Добавить > Добавить файлы...** . При работе с Android эта папка будет находиться в папке Assets в проекте, относящемся к Android. Если в iOS, то эта папка будет находиться в корне проекта iOS. Перейдите в расположение, где будет сохранен файл **шахматной доски. png** , и выберите его. Выберите, чтобы скопировать файл в каталог.
 
@@ -332,7 +332,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 Если мы выполним код, мы видим, что в нашей плоскости теперь отображается шаблон шахматной доски:
@@ -404,7 +404,7 @@ protected override void Draw(GameTime gameTime)
     DrawModel (new Vector3 ( 4, 4, 3));
 
     base.Draw(gameTime);
-} 
+}
 ```
 
 Кроме того, мы создадим `Vector3` в `Game1` для представления расположения камеры. Мы добавим поле в нашем `checkerboardTexture` объявлении:
@@ -413,7 +413,7 @@ protected override void Draw(GameTime gameTime)
 ...
 Texture2D checkerboardTexture;
 // new code:
-Vector3 cameraPosition = new Vector3(0, 10, 10); 
+Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 Затем удалите локальную `cameraPosition` переменную `DrawModel` из метода:
@@ -434,7 +434,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
 
             effect.View = Matrix.CreateLookAt (
-                cameraPosition, cameraLookAtVector, cameraUpVector); 
+                cameraPosition, cameraLookAtVector, cameraUpVector);
             ...
 ```
 
@@ -450,7 +450,7 @@ void DrawGround()
 
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
-    ... 
+    ...
 ```
 
 Теперь, если мы выполним код, можно увидеть обе модели и земля в одно и то же время:

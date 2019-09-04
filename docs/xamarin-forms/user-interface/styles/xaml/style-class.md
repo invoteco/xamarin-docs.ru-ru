@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 438d3462c123cc9c9a8730405bb64a5e9492bfdf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4a353d64f0e7e29da6c64f93b8554c3661f4d389
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645556"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228124"
 ---
 # <a name="xamarinforms-style-classes"></a>Классы стилей Xamarin. Forms
 
@@ -203,7 +203,7 @@ Resources = new ResourceDictionary
 
 В этом примере первый [`BoxView`](xref:Xamarin.Forms.BoxView) стиль является разделителем строк, а третий `BoxView` — циклическим. Ко второму `BoxView` применены два класса стилей, которые предоставляют скругленные углы и поворачивают его в 45 градусов:
 
-![](style-class-images/boxviews.png "Боксвиевс с стилями с помощью классов стилей")
+![Боксвиевс с стилями с помощью классов стилей](style-class-images/boxviews.png)
 
 > [!IMPORTANT]
 > К элементу управления можно применить несколько классов стилей, поскольку [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) свойство имеет тип. `IList<string>` В этом случае классы стилей применяются в порядке возрастания списка. Поэтому, если несколько классов стилей устанавливают одинаковые свойства, приоритет будет иметь свойство класса Style, находящийся в самом высшем положении списка.

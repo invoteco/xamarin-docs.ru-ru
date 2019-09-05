@@ -3,15 +3,15 @@ title: Пользовательская конфигурация компоно�
 description: Этот документ описывает XML-файл, который можно использовать для настройки компоновщика, чтобы явно предотвратить исключение необходимого кода из связанного приложения.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: bf934d50c90efaba266cbfac00aa5140ea92009b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526683"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284842"
 ---
 # <a name="custom-linker-configuration"></a>Пользовательская конфигурация компоновщика
 

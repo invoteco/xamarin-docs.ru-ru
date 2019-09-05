@@ -4,15 +4,15 @@ description: Этот документ описывает Xamarin.iOS для р�
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: d64f92c9bb145da6ab4bfa688ea52bffb4de22d4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 96a7e6b9587d696479afd084613c79e2b03f956c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526493"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292004"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin для разработчиков на Objective-C
 
@@ -29,7 +29,7 @@ Xamarin позволяет разработчикам, создающим реш
 На нашем сайте доступно много документации, которая поможет быстрее перейти к использованию Xamarin, интегрируя код C# со знакомыми вам технологиями. Вот некоторые важные сведения, которые помогут приступить к работе:
 
 - [Руководство по C# для разработчиков Objective-C](primer.md) быстро введет в курс дела тех разработчиков, которые уже знакомы с Objective-C и намерены перейти к использованию Xamarin и C#. 
-- [Пошаговое руководство привязка библиотек Objective-C](~/ios/platform/binding-objective-c/walkthrough.md) поможет применить существующий код Objective-C в приложении Xamarin.iOS. 
+- [Пошаговое руководство: привязка библиотек Objective-C](~/ios/platform/binding-objective-c/walkthrough.md) поможет применить существующий код Objective-C в приложении Xamarin.iOS. 
 
 
 ## <a name="binding-objective-c"></a>Привязка Objective-C

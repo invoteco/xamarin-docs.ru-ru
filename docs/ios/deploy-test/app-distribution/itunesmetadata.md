@@ -4,15 +4,15 @@ description: Статья описывает файл iTunesMetadata.plist, ко
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f632b44e087c0e380ecd81c2af7db3d49c072f7e
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 47b2428ddca47f554fea675a9d2e70374679688f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887746"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281158"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Файл iTunesMetadata.plist в приложениях Xamarin.iOS
 
@@ -124,7 +124,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="artistname-and-playlistartistname"></a>artistName и playlistArtistName
 
-В ключах `artistName` и `playlistArtistName` указывается название компании, создавшей приложение. Название будет отображаться в iTunes. Пример:
+В ключах `artistName` и `playlistArtistName` указывается название компании, создавшей приложение. Название будет отображаться в iTunes. Пример
 
 ```xml
 <key>artistName</key>
@@ -136,7 +136,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="bundledisplayname-itemname-and-playlistname"></a>bundleDisplayName, itemName и playlistName
 
-В ключах `bundleDisplayName`, `itemName` и `playlistName` указывается имя приложения iOS, которое будет отображаться в iTunes. Пример:
+В ключах `bundleDisplayName`, `itemName` и `playlistName` указывается имя приложения iOS, которое будет отображаться в iTunes. Пример
 
 ```xml
 <key>bundleDisplayName</key>
@@ -151,7 +151,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="bundleshortversionstring-and-bundleversion"></a>bundleShortVersionString и bundleVersion
 
-В ключах `bundleShortVersionString` и `bundleVersion` указывается номер версии приложения iOS, который отображается в iTunes. Пример:
+В ключах `bundleShortVersionString` и `bundleVersion` указывается номер версии приложения iOS, который отображается в iTunes. Пример
 
 ```xml
 <key>bundleShortVersionString</key>
@@ -162,7 +162,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="softwareversionbundleid"></a>softwareVersionBundleId
 
-В ключе `softwareVersionBundleId` указывается идентификатор пакета приложения. Пример:
+В ключе `softwareVersionBundleId` указывается идентификатор пакета приложения. Пример
 
 ```xml
 <key>softwareVersionBundleId</key>
@@ -171,7 +171,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="copyright"></a>авторские права
 
-В ключе `copyright`указывается уведомление об авторских правах, которое отображается в iTunes. Пример:
+В ключе `copyright`указывается уведомление об авторских правах, которое отображается в iTunes. Пример
 
 ```xml
 <key>copyright</key>
@@ -180,7 +180,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="releasedate"></a>releaseDate
 
-В ключе `releaseDate` указывается дата выпуска приложения iOS. Дата выпуска отображается в iTunes. Пример:
+В ключе `releaseDate` указывается дата выпуска приложения iOS. Дата выпуска отображается в iTunes. Пример
 
 ```xml
 <key>releaseDate</key>
@@ -189,7 +189,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="softwareiconneedsshine"></a>softwareIconNeedsShine
 
-В ключе `softwareIconNeedsShine` указывается, требуется ли _подсветка_ значка приложения в iOS 6 (и ранее). Пример:
+В ключе `softwareIconNeedsShine` указывается, требуется ли _подсветка_ значка приложения в iOS 6 (и ранее). Пример
 
 ```xml
 <key>softwareIconNeedsShine</key>
@@ -198,7 +198,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="gamecenterenabled-and-gamecentereverenabled"></a>gameCenterEnabled и gameCenterEverEnabled
 
-Ключи `gameCenterEnabled` и `gameCenterEverEnabled` сообщают iTunes, поддерживает ли это приложение Apple Game Center. Пример:
+Ключи `gameCenterEnabled` и `gameCenterEverEnabled` сообщают iTunes, поддерживает ли это приложение Apple Game Center. Пример
 
 ```xml
 <key>gameCenterEnabled</key>
@@ -209,7 +209,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="genre-genreid-and-subgenres"></a>genre, genreId и subgenres
 
-Ключи `genre` и `genreId` сообщают iTunes, к какому жанру относится приложение. Пример:
+Ключи `genre` и `genreId` сообщают iTunes, к какому жанру относится приложение. Пример
 
 ```xml
 <key>genre</key>
@@ -218,7 +218,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 <integer>6014</integer>
 ```
 
-Дополнительно можно использовать ключ `subgenres` для определения до двух поджанров приложения iOS. Пример:
+Дополнительно можно использовать ключ `subgenres` для определения до двух поджанров приложения iOS. Пример
 
 ```xml
 <key>subgenres</key>
@@ -246,7 +246,7 @@ Apple определяет следующие жанры и идентифика
 
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
-Ключ `softwareSupportedDeviceIds` сообщает iTunes, какие устройства с iOS поддерживает это приложение. Пример:
+Ключ `softwareSupportedDeviceIds` сообщает iTunes, какие устройства с iOS поддерживает это приложение. Пример
 
 ```xml
 <key>softwareSupportedDeviceIds</key>
@@ -342,7 +342,7 @@ Apple определяет следующие жанры и идентифика
 
 Плагин Xamarin для Visual Studio поддерживает только визуальный редактор для файлов `Info.plist` и `Entitlement.plist`, поэтому вам нужно создать файл `iTunesMetadata.plist` в обычном текстовом редакторе и вручную включить его в проект Xamarin.iOS.
 
-Выполните следующее:
+Выполните следующие действия:
 
 1. Создайте в текстовом редакторе новый файл и назовите его `iTunesMetadata.plist`.
 2. Скопируйте пример содержимого файла из раздела [Содержимое файла iTunesMetadata.plist](#iTunesMetadata_contents) выше.

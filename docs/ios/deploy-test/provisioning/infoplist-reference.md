@@ -4,15 +4,15 @@ description: Этот документ описывает различные п�
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 2a61a4a313fa23b5cdc629279bee39f1eed792cc
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9b766677c10a06b933504f3fdcba0b43e2c84a1c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120504"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284390"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Справочник по Info.plist для Xamarin.iOS
 

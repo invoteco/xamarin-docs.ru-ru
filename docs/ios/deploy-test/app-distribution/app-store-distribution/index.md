@@ -4,15 +4,15 @@ description: Этот документ описывает, как распрос
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: e6f7ec4fe018181b6f470de4201d5e5a3f90d4da
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5cf57a42092535363071acffe993cd38a91b9805
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527642"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290994"
 ---
 # <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -156,7 +156,7 @@ ms.locfileid: "69527642"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
- В Visual Studio выполните следующее:
+ В Visual Studio выполните следующие действия:
 
 1. Щелкните проект правой кнопкой мыши в **обозревателе решений** и выберите пункт **Свойства**, чтобы открыть его для изменения.
 2. Выберите **Подписывание пакета iOS** и **Выпуск | iPhone** в раскрывающемся списке **Конфигурация**:

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4a3ba970f8ca32f0bfa2e5297e8052f3eb572ed0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525715"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225768"
 ---
 # <a name="building-abi-specific-apks"></a>Создание пакетов APK для конкретного ABI
 
@@ -49,17 +49,17 @@ Google рекомендует соблюдать определенные пра
 Расширив эту схему до восьми цифр, вы сможете добавить в код версии сведения об ABI, что позволит Google Play распределять на устройства правильные пакеты APK. Следующий список содержит описание восьми цифр кода версии для этого формата (индексы в коде нумеруются слева направо).
 
 - **Индекс 0** (выделен красным на схеме ниже): &ndash; целое число, обозначающее ABI:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **Индексы 1–2** (выделены оранжевым на схеме ниже): &ndash; минимальный уровень API, поддерживаемый приложением.
 
 - **Индексы 3–4** (выделены синим на схеме ниже): &ndash; поддерживаемые размеры экрана.
-    - 1 &ndash; маленький;
-    - 2 &ndash; обычный;
-    - 3 &ndash; большой;
-    - 4 &ndash; очень большой.
+  - 1 &ndash; маленький;
+  - 2 &ndash; обычный;
+  - 3 &ndash; большой;
+  - 4 &ndash; очень большой.
 
 - **Индексы 5–7** (выделены зеленым на схеме ниже): &ndash; уникальный номер кода версии. 
     Это значение определяется разработчиком. Оно должно увеличиваться для каждого следующего общедоступного выпуска приложения.
@@ -118,7 +118,7 @@ Google Play будет доставлять на устройства прави
 
 - `/p:Configuration=Release` &ndash; обозначает выполнение сборки выпуска для APK. Отладочные сборки не всегда загружаются в Google Play.
 
-- `<CS_PROJ FILE>` &ndash; обозначает путь к файлу `.csproj` для проекта Xamarin.Android.
+- `<CS_PROJ FILE>` &ndash; — обозначает путь к файлу `.csproj` для проекта Xamarin.Android.
 
 
 

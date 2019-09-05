@@ -4,15 +4,15 @@ description: Этот документ описывает C# для разраб
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: a55d1d9848d3f1378ccbc4a24e1748eb146a6a35
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669821"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291989"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Начальное руководство по C# для разработчиков Objective-C
 
@@ -36,7 +36,7 @@ Objective-C и C# значительно отличаются друг от др
 
 Но все же в Objective-C и C# есть несколько почти аналогичных языковых возможностей. Понимание различий полезно при создании привязки для кода Objective-C из C# и (или) при портировании Objective-C в C#.
 
-### <a name="protocols-vs-interfaces"></a>Сравнение протоколов и интерфейсов,
+### <a name="protocols-vs-interfaces"></a>Сравнение протоколов и Интерфейсы
 
 В Objective-C и C# используется одиночное наследование. Однако оба этих языка позволяют реализовать в одном классе сразу несколько интерфейсов. В Objective-C эти логические объекты именуются *протоколами* а в C# — *интерфейсами*. Реализация интерфейсов в C# отличается от протоколов в Objective-C в первую очередь тем, что для протоколы могут иметь необязательные методы. Дополнительные сведения см в статье о [событиях, делегатах и протоколах](~/ios/app-fundamentals/delegates-protocols-and-events.md).
 

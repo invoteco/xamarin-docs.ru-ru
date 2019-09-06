@@ -4,15 +4,15 @@ description: В этой статье рассматриваются новые 
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: e647169a9059edab3593ec2986e16358b4e574aa
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: fa78a596495b22ebb2c8b148aadb76261845ccdc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065561"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281260"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>Игровые API iOS в Xamarin. iOS
 
@@ -396,7 +396,7 @@ public override void ViewWillLayoutSubviews ()
 2. Простой доступ к ресурсам на основе ввода-вывода модели для обработки модели с учетом особенностей. Эти функции были оптимизированы для обеспечения эффективной передачи данных между сетками ввода-вывода модели и металлическими буферами.
 3. Стандартные металлические представления и Управление представлениями, которые значительно снижают объем кода, необходимый для отображения графических изображений в приложении iOS.
 
-Дополнительные сведения о Металкит см. в справочнике по [платформе металкит](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356)компании Apple, [руководстве по программированию металлического программирования](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), лабораторной [платформе](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) и справочнике [по языку](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)для работы с металлической заливкой.
+Дополнительные сведения о Металкит см. в справочнике по [платформе металкит](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356)компании Apple, [руководстве по программированию металлического программирования](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), лабораторной [платформе и справочнике](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) [по языку для работы с металлической заливкой](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
 
 ### <a name="metal-performance-shaders-framework"></a>Платформа шейдеров производительности металла
 
@@ -445,7 +445,7 @@ public override void ViewWillLayoutSubviews ()
 - Классы `SCNView` и`SCNSceneRenderer` можно использовать для включения визуализации металла (на поддерживаемых устройствах iOS).
 - Классы `SCNAudioPlayer` и`SCNNode` можно использовать для добавления пространственных звуковых эффектов, которые автоматически отслеживанием расположения проигрывателя в приложении iOS.
 
-Дополнительные сведения см. в [документации по SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) и Справочнике по [SceneKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) Apple и [Fox: Создание игры SceneKit с примером проекта редактора](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) сцены Xcode.
+Дополнительные сведения см. в [документации по SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) и [справочнике по SceneKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) Apple и [Fox: Создание игры SceneKit с примером проекта редактора](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) сцены Xcode.
 
 ## <a name="spritekit"></a>SpriteKit
 

@@ -1,30 +1,30 @@
 ---
 title: Примеры интеграции
-description: Этот документ содержит ссылки на примеры, демонстрирующие Xamarin Workbooks интеграции. Связанные примеры работы с подготовки к просмотру представление и SkiaSharp.
+description: В этом документе приведены ссылки на примеры, демонстрирующие интеграцию Xamarin Workbooks. Связанные образцы работают с визуализацией представления и SkiaSharp.
 ms.prod: xamarin
 ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: e35577b116180d2745e2f6afb792547f63873214
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fbe471aa7f08d85a870d68505cf2c983b7e442e9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61424614"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292816"
 ---
 # <a name="sample-integrations"></a>Примеры интеграции
 
-См. в разделе [приемника кухни] [ KitchenSink] образец рабочий пример интеграции. Просто построить `KitchenSink.sln` в Visual Studio для Mac или Visual Studio и откройте `KitchenSink.workbook`.
+Рабочий пример интеграции см. в примере [приемника кухни][KitchenSink] . Просто выполните `KitchenSink.sln` сборку в Visual Studio для Mac или Visual Studio, а `KitchenSink.workbook`затем откройте.
 
-[![Снимок экрана кухни приемника интеграции:](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
+[![Снимок экрана интеграции с приемником кухни](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
 
-Кухни приемник в нем демонстрируется оба вида понятия:
+В образце приемника кухни показаны оба набора концепций:
 
-* Представление части демонстрируется использование `RepresentationManager` для улучшения визуализации с помощью встроенных представлений.
-* `Person` Объекта и его связанные визуализации JavaScript демонстрируют использование `ISerializableObject` без прохождения через представление поставщика.
+* На фрагментах представления показано, как `RepresentationManager` использовать для улучшения отрисовки с помощью встроенных представлений.
+* Объект и связанный с ним модуль подготовки JavaScript демонстрируют использование `ISerializableObject` без использования поставщика представления. `Person`
 
-Также см. в разделе [SkiaSharp][skiasharp] пример реальной интегрированного решения, которое использует существующую [представления](~/tools/workbooks/sdk/representations.md) предоставляемые Xamarin Workbooks для подготовки к просмотру его типы.
+См. также [SkiaSharp][skiasharp] для реального примера интеграции, в котором используются существующие [представления](~/tools/workbooks/sdk/representations.md) , предоставляемые Xamarin Workbooks для отрисовки своих типов.
 
 [KitchenSink]: https://github.com/xamarin/Workbooks/tree/master/SDK/Samples/KitchenSink
 [skiasharp]: https://github.com/mono/SkiaSharp/tree/master/source/SkiaSharp.Workbooks

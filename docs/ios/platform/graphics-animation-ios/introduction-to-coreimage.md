@@ -4,15 +4,15 @@ description: Основной образ — это новая платформ�
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 6960fe3db1ddf7d6d911fe8151e49b1a42388d26
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a537926ab28bc355af5c5c4993ccff4a736b15aa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527857"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288577"
 ---
 # <a name="core-image-in-xamarinios"></a>Основные образы в Xamarin. iOS
 

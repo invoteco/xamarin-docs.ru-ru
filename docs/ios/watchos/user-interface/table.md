@@ -4,15 +4,15 @@ description: В этом документе описывается, как ис�
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: f3e991550cd58f20d52bebb208eedec4d8f7e41e
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065674"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291696"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Элементы управления таблицы watchOS в Xamarin
 
@@ -152,7 +152,7 @@ for (var i = 0; i < rows.Count; i++) {
 > [!IMPORTANT]
 > Эта функция в настоящее время доступна только путем редактирования раскадровки в Xcode Interface Builder.
 
-Чтобы включить эту функцию, выберите элемент `WKInterfaceTable` в области конструктора и установите флажок вертикальная детализация разбиения на **страницы** :
+Чтобы включить эту функцию, выберите элемент `WKInterfaceTable` в области конструктора и установите флажок **вертикальная детализация разбиения на страницы** :
 
 ![](table-images/vertical-detail-paging-sml.png "Выбор параметра «вертикальный Просмотр данных»")
 

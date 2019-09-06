@@ -1,49 +1,49 @@
 ---
-title: принципы работы приложения watchOS
-description: Этот документ содержит ссылки на различные документы, которые описывают основные понятия, основа для разработки приложений watchOS, с помощью Xamarin.
+title: Основы приложений watchOS
+description: В этом документе приводятся ссылки на различные документы, описывающие основные принципы разработки приложений watchOS с помощью Xamarin.
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 3933c18c27f727b833a624f0d59b5ed36b0a0b76
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 682e1d8e8146472c65dc4d8009bd4d93162049fb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865637"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285964"
 ---
-# <a name="watchos-application-fundamentals"></a>принципы работы приложения watchOS
+# <a name="watchos-application-fundamentals"></a>Основы приложений watchOS
 
 ## <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[Родительское приложение](~/ios/watchos/app-fundamentals/parent-app.md)
 
-Приложения Watch могут взаимодействовать с их родительское приложение, работающих под управлением iOS.
+Просмотр приложений может взаимодействовать со своим родительским приложением, выполняемым в iOS.
 
 ## <a name="app-groupsioswatchosapp-fundamentalsapp-groupsmd"></a>[Группы приложений](~/ios/watchos/app-fundamentals/app-groups.md)
 
-Совместное использование параметров и данных в iOS и приложения Watch.
+Совместное использование параметров и данных в приложениях iOS и Watch.
 
 ## <a name="iconsioswatchosapp-fundamentalsiconsmd"></a>[Значки](~/ios/watchos/app-fundamentals/icons.md)
 
-Способ добавления значков приложений Apple Watch.
+Добавление значков в Apple Watch приложения.
 
 ## <a name="layoutioswatchosapp-fundamentalslayoutmd"></a>[Макет](~/ios/watchos/app-fundamentals/layout.md)
 
-Советы по проектированию для создания пользовательских интерфейсов для Apple Watch.
+Советы по проектированию для создания Apple Watch пользовательских интерфейсов.
 
 ## <a name="localizationioswatchosapp-fundamentalslocalizationmd"></a>[Локализация](~/ios/watchos/app-fundamentals/localization.md)
 
-Руководство по перевода приложения на Apple Watch содержимого для поддержки нескольких языков.
+Рекомендации по преобразованию содержимого приложения Apple Watch для поддержки нескольких языков.
 
 ## <a name="navigationioswatchosapp-fundamentalsnavigationmd"></a>[Навигация](~/ios/watchos/app-fundamentals/navigation.md)
 
-Дополнительные сведения об этих двух параметрах навигации, доступных для приложения watch: иерархические или на основе страниц навигации.
+Сведения о двух параметрах навигации, доступных для просмотра приложений: иерархическая навигация или переход на страницы.
 
 ## <a name="screen-sizesioswatchosapp-fundamentalsscreen-sizesmd"></a>[Размеры экрана](~/ios/watchos/app-fundamentals/screen-sizes.md)
 
-Предварительный просмотр и оптимизировать пользовательский интерфейс для обоих размеров доступные Контрольные значения.
+Предварительный просмотр и оптимизация пользовательского интерфейса для обоих доступных размеров контрольных значений.
 
 ## <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[Параметры](~/ios/watchos/app-fundamentals/settings.md)
 
-Добавление параметров экрана для приложение для Apple watch.
+Добавьте экран параметров для приложения Watch.

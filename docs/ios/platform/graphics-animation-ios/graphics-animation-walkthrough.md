@@ -4,15 +4,15 @@ description: В этой статье описывается пошаговое 
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: badb65ace8d2ab68e102c9be127abe998a602091
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225849"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286121"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Использование основной графической и основной анимации в Xamarin. iOS
 
@@ -82,7 +82,7 @@ ms.locfileid: "70225849"
 
     `SetNeedsDisplay`будет вызываться каждый раз при перемещении `Draw` , чтобы их можно было вызывать при следующем передаче цикла выполнения.
 
-4. Мы будем добавлять строки к пути в `Draw` методе и использовать красную пунктирную линию для рисования. [ `Draw` Реализуйте](~/ios/platform/graphics-animation-ios/core-graphics.md) с кодом, показанным ниже:
+4. Мы будем добавлять строки к пути в `Draw` методе и использовать красную пунктирную линию для рисования. [Реализуйте `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) с кодом, показанным ниже:
 
     ```csharp
     public override void Draw (CGRect rect){

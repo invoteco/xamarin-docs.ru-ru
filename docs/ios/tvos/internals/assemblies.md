@@ -1,45 +1,45 @@
 ---
-title: Поддерживаемые сборки с Xamarin для tvOS
-description: Чтобы уточнить функций, доступных для приложения tvOS, этот документ предоставляет список сборок, поддерживаемых Xamarin для разработки приложений tvOS.
+title: Сборки, поддерживаемые Xamarin для tvOS
+description: Для пояснения функций, доступных для tvOS приложений, в этом документе содержится список сборок, поддерживаемых Xamarin для разработки tvOS.
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: df50b4280335001f2d27ff23a91e4098eed3ba99
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 193f4a445e21416abf2fd6279cdc18228e16c985
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269339"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283614"
 ---
-# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Поддерживаемые сборки с Xamarin для tvOS
+# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Сборки, поддерживаемые Xamarin для tvOS
 
 ## <a name="supported-assemblies"></a>Поддерживаемые сборки
 
-Это список сборок, поддерживаемых Xamarin для приложений Xamarin.tvOS. Ниже приводится подробный список этих.  Включить некоторые важные пропусков `System.EnterpriseServices`, стек ASP.NET и Windows.Forms.
+Это список сборок, поддерживаемых Xamarin для приложений Xamarin. tvOS. Ниже приведен подробный список этих сведений.  В число заметных опущений входят `System.EnterpriseServices`стек ASP.NET и Windows. Forms.
 
 |Assembly|Added|Совместимость API|
 |---|---|---|
-|Mono.CompilerServices.SymbolWriter.dll|1.0|Для компиляторов.|
-|Mono.Data.Sqlite.dll|1.2|Поставщик ADO.NET для SQLite; см. в разделе [ограничения](~/ios/data-cloud/system.data.md).|
-|Mono.Data.Tds.dll|1.2|Поддержка протокола потока табличных данных; используется для [System.Data.SqlClient](xref:System.Data.SqlClient) поддерживают в [System.Data](~/ios/data-cloud/system.data.md).|
+|Mono.CompilerServices.SymbolWriter.dll|1.0|Для модулей записи компилятора.|
+|Mono.Data.Sqlite.dll|1.2|Поставщик ADO.NET для SQLite; см. раздел [ограничения](~/ios/data-cloud/system.data.md).|
+|Mono.Data.Tds.dll|1.2|Поддержка протокола TDS; используется для поддержки [System. Data. SqlClient](xref:System.Data.SqlClient) в [System. Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|Криптографические API.|
-|monotouch.dll|1.0|Эта сборка содержит [C# привязки к платформе CocoaTouch API](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
+|monotouch.dll|1.0|Эта сборка содержит [ C# привязку к API кокоатауч](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|OpenTK.dll|1.0|OpenGL/OpenAL объектно ориентированные API-интерфейсы, [расширенной поддержки устройства iPhone](xref:OpenGLES).|
-|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
+|OpenTK.dll|1.0|API-интерфейсы OpenGL/Open Object, [Расширенные для обеспечения поддержки устройств iPhone](xref:OpenGLES).|
+|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System. ComponentModel. Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System .NET. Cache</li> <li>Система .NET. mail</li> <li>System .NET. MIME</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>Системные. Timers</li></ul>|
 |System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Data.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx), [с некоторые функциональные возможности удаления](~/ios/data-cloud/system.data.md).|
-|System.Data.Service.Client.dll|3.x|Клиент полный oData.|
-|System.Drawing;|1.0|System.Drawing API — только классический API.<br />_System.Drawing не поддерживается на единый API Xamarin.Mac .NET 4.5 или мобильных платформ._|
+|System.Data.dll|1.2|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx) [с удаленными функциями](~/ios/data-cloud/system.data.md).|
+|System.Data.Service.Client.dll|3|Полный клиент oData.|
+|System.Drawing;|1.0|API System. Drawing — только Classic API.<br />_System. Drawing не поддерживается в Unified API для платформы Xamarin. Mac .NET 4,5 или Mobile._|
 |System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) стека, заданное на [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.dll|1.1|Стек [WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) , имеющийся в [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <ul><li>Система</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); частью [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) поддержки.|
-|System.Web.Services|1.1|[Базовых веб-служб](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) из профиля .NET 3.5, с сервера компоненты, удаленные.|
+|System.Transactions.dll|1.2|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); часть поддержки [System. Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) .|
+|System.Web.Services|1.1|[Основные веб-службы](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) из профиля .NET 3,5 с удаленными компонентами сервера.|
 |System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 |System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 
@@ -47,10 +47,10 @@ ms.locfileid: "61269339"
 
 ## <a name="portable-class-libraries"></a>Переносимые библиотеки классов
 
-Помимо привязки Mac, способные Xamarin.tvOS [переносимые библиотеки классов .NET](~/cross-platform/app-fundamentals/pcl.md).
+Помимо привязок Mac, Xamarin. tvOS может использовать [переносимые библиотеки классов .NET](~/cross-platform/app-fundamentals/pcl.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [tvOS](https://developer.apple.com/tvos/)
-- [Человека направляющие интерфейса tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Приложение руководство по программированию для tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Руководства по tvOSму интерфейсу](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Руководством по программированию приложений для tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -3,15 +3,15 @@ title: Работа с собственными типами в кросспла
 description: В этой статье рассматривается использование новых типов iOS Unified API Native Type (НИНТ, нуинт, нфлоат) в кросс-платформенном приложении, где код используется для устройств, не относящихся к iOS, таких как Android или Windows Phoneные ОС.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: 9018c3e3c976ef7623835055ee989dfd86dc25e1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226236"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290848"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Работа с собственными типами в кроссплатформенных приложениях
 
@@ -207,7 +207,7 @@ namespace NativeShared
 }
 ```
 
-Обратите внимание, что мы изменили `CalculateArea` метод, чтобы он `nfloat` возвращал вместо стандартного `float`. Это было сделано, чтобы не было возникать ошибка компиляции при попытке неявного преобразования `nfloat` результата вычисления (поскольку оба значения, умноженные на, имеют `float` тип `nfloat`) в возвращаемое значение.
+Обратите внимание, что мы изменили `CalculateArea` метод, чтобы он `nfloat` возвращал вместо стандартного `float`. Это было сделано, чтобы не было возникать ошибка компиляции при попытке _неявного_ преобразования `nfloat` результата вычисления (поскольку оба значения, умноженные на, имеют `float` тип `nfloat`) в возвращаемое значение.
 
 Если код компилируется и выполняется на неUnified APIном устройстве `using nfloat = global::System.Single;` , объект `nfloat` сопоставляет `Single` с, который неявно преобразуется в, что `CalculateArea` позволяет использовать `float` клиентское приложение для вызова метода без модификация.
 

@@ -1,33 +1,33 @@
 ---
-title: Приступая к работе с watchOS в Xamarin
-description: Этот документ содержит ссылки на различные руководства, описывающие способ начала работы с разработкой приложений watchOS с помощью Xamarin. Связанное содержимое представляет собой введение в watchOS, объясняется, как установить поддержку watchOS Xamarin и показано, как создать начальное приложение.
+title: начало работы с watchOS в Xamarin
+description: В этом документе содержатся ссылки на различные руководства, в которых описывается, как приступить к разработке watchOS с помощью Xamarin. Связанное содержимое содержит введение в watchOS, объясняет, как установить поддержку watchOS для Xamarin и как создать начальное приложение.
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 82b03787d8254643d912073cbf22d045ff72e0d4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d7de124dd032bd63a10d6a273bc86489df007832
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290437"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293066"
 ---
-# <a name="getting-started-with-watchos-in-xamarin"></a>Приступая к работе с watchOS в Xamarin
+# <a name="getting-started-with-watchos-in-xamarin"></a>начало работы с watchOS в Xamarin
 
-_Введение в watchOS и как создавать приложения watch_
+_Введение в watchOS и создание приложений для просмотра контрольных значений_
 
 ## <a name="introduction-to-watchosioswatchosget-startedintro-to-watchosmd"></a>[Введение в watchOS](~/ios/watchos/get-started/intro-to-watchos.md)
 
-Общие сведения о watchOS, жизненный цикл приложения, пользовательский интерфейс и ограничения.
+Общие сведения о watchOS, жизненном цикле приложения, пользовательском интерфейсе и ограничениях.
 
 ## <a name="setup--installationioswatchosget-startedinstallationmd"></a>[Установка и настройка](~/ios/watchos/get-started/installation.md)
 
-Способы создания, сборки и запуска проекта watchOS.
-Можно также прочитать о [ссылки и идентификаторы проекта](~/ios/watchos/get-started/project-references.md) , специально настроенные для watchOS решений.
+Создание, сборка и запуск нового проекта watchOS.
+Вы также можете ознакомиться со [ссылками проекта и идентификаторами](~/ios/watchos/get-started/project-references.md) , специально настроенными для решений watchOS.
 
-## <a name="hello-watchioswatchosget-startedhello-watchmd"></a>[Привет, Контрольные значения](~/ios/watchos/get-started/hello-watch.md)
+## <a name="hello-watchioswatchosget-startedhello-watchmd"></a>[Привет, смотреть](~/ios/watchos/get-started/hello-watch.md)
 
-Сборки первого приложения watchOS с помощью C# и Xamarin.
+Создайте свое первое приложение watchOS с C# помощью и Xamarin.
 

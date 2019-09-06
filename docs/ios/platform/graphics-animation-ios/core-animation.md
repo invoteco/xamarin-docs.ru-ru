@@ -4,15 +4,15 @@ description: В этой статье рассматривается основ�
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 4a5e4766321babebed9a84b37590ef1d50bfc77e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 366932e32443a7284f15f51a7a9a437d4b177438
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621129"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286240"
 ---
 # <a name="core-animation-in-xamarinios"></a>Основная анимация в Xamarin. iOS
 

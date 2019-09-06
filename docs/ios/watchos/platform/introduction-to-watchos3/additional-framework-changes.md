@@ -4,15 +4,15 @@ description: В этом документе описаны различные и
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d8c1ace9972f15c3f068bda88bc21e7cb5990f25
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 34f192938ac583e39232312377142015aa6d3811
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655558"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287555"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Дополнительные изменения в watchOS 3 Framework
 
@@ -31,7 +31,7 @@ _В этой статье рассматриваются дополнитель�
 - Использование высокого уровня `NSPersistenceContainer` для ссылки на [нсманажедобжектмодел](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) и другие основные ресурсы по `NSPersistentStoreCoordinator`настройке данных.
 - Было добавлено несколько новых удобных методов для `NSManagedObject` упрощения выборки и создания подклассов.
 
-Дополнительные сведения см. в справочнике по [основной платформе данных](https://developer.apple.com/reference/coredata)Apple.
+Дополнительные сведения см. в [справочнике по основной платформе данных](https://developer.apple.com/reference/coredata)Apple.
 
 
 ## <a name="core-motion"></a>Основное движение

@@ -3,15 +3,15 @@ title: Отсутствуют расширения Visual Studio после у�
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 55d3cc9ffa91673771a274f42bcd496d0cfe8887
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c81ef4e07a90f09d6e06d0d1f565febfcaacf922
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199836"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288396"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Отсутствуют расширения Visual Studio после установки
 
@@ -66,7 +66,7 @@ ms.locfileid: "70199836"
 
     * Xamarin для Visual Studio
 
-2. В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin Visual Studio (все версии, включая программные **файлы** и **программные файлы (x86)** ):
+2. В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin Visual Studio (все версии, включая **программные файлы** и **программные файлы (x86)** ):
 
     `C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin`
 

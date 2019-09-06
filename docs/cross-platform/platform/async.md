@@ -3,15 +3,15 @@ title: Обзор поддержки асинхронного выполнени
 description: В этом документе описывается программирование с использованием Async и await, основные C# понятия, представленные в 5, облегчают написание асинхронного кода.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: a9297d9a19ef56d658e983c38329b1aa400ffd05
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521717"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280629"
 ---
 # <a name="async-support-overview"></a>Обзор поддержки асинхронного выполнения
 
@@ -23,7 +23,7 @@ _C#5 появились два ключевых слова для упрощен
 
 В этом документе представлены новые ключевые слова Async и await, а затем приведены некоторые простые примеры реализации асинхронных методов в Xamarin. iOS и Xamarin. Android.
 
-Более подробное обсуждение новых асинхронных возможностей C# 5 (включая множество примеров и различных сценариев использования) см. в статье асинхронное [программирование](https://docs.microsoft.com/dotnet/csharp/async).
+Более подробное обсуждение новых асинхронных возможностей C# 5 (включая множество примеров и различных сценариев использования) см. в статье [Асинхронное программирование](https://docs.microsoft.com/dotnet/csharp/async).
 
 Пример приложения выполняет простой асинхронный веб-запрос (без блокировки основного потока), а затем обновляет пользовательский интерфейс с загруженным кодом HTML и числом символов.
 

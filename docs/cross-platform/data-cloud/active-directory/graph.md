@@ -3,15 +3,15 @@ title: Доступ к API Graph
 description: В этом документе описывается добавление Azure Active Directory проверки подлинности в мобильное приложение, созданное с помощью Xamarin.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 74072a48e190478af79ec06ca8e5048d2cb61e36
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 96e0991bb0805e61dfbf91e8479cbf1c9943f212
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198574"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287749"
 ---
 # <a name="accessing-the-graph-api"></a>Доступ к API Graph
 
@@ -46,7 +46,7 @@ public static string graphApiVersion = "2013-11-08";
 AuthenticationResult authResult = null;
 ```
 
-Обратите внимание `commonAuthority`на одну вещь. Когда конечная точка проверки `common`подлинности имеет значение, приложение становится многоклиентским, что означает, что любой пользователь может использовать вход с учетными данными Active Directory. После проверки подлинности этот пользователь будет работать в контексте собственного Active Directory — т. е. он увидит подробные сведения о его Active Directory.
+Обратите внимание `commonAuthority`на одну вещь. Когда конечная точка проверки `common`подлинности имеет значение, приложение становится **многоклиентским**, что означает, что любой пользователь может использовать вход с учетными данными Active Directory. После проверки подлинности этот пользователь будет работать в контексте собственного Active Directory — т. е. он увидит подробные сведения о его Active Directory.
 
 ### <a name="write-method-to-acquire-access-token"></a>Метод Write для получения маркера доступа
 

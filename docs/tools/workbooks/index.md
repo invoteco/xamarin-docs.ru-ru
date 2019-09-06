@@ -1,44 +1,44 @@
 ---
 title: Xamarin Workbooks
-description: Xamarin Workbooks предоставляют blend документации и код, который идеально подходит для экспериментов, обучения и Создание руководств и преподаванием вспомогательные элементы.
+description: Xamarin Workbooks предоставить сочетание документации и кода, которое идеально подходит для экспериментов, обучения и создания руководств и учебных пособий.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/23/2018
-ms.openlocfilehash: d0aed1b501b86a23d4008ba9618b0e459178ca24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ea065a0eea9be95b0513acd4ee3950efe9a4e53d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61257746"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288093"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
-Xamarin Workbooks предоставляют blend документации и код, который идеально подходит для экспериментов, обучения и Создание руководств и преподаванием вспомогательные элементы.
+Xamarin Workbooks предоставить сочетание документации и кода, которое идеально подходит для экспериментов, обучения и создания руководств и учебных пособий.
 
-Создание расширенных C# книгу для Android, iOS, Mac, WPF, или консоли и get мгновенных динамические результаты как узнать эти API-интерфейсы.
+Создавайте полнофункциональную C# книгу для Android, iOS, Mac, WPF или консоли и получайте мгновенные результаты по мере изучения этих API.
 
-Xamarin Workbooks — программное обеспечение с открытым исходным кодом. Разработка происходит с открытой лицензией на сайте GitHub. Мы предлагаем, заинтересованные пользователи и разработчики Станьте участником с проектом.
+Xamarin Workbooks является программным обеспечением с открытым исходным кодом. Разработка осуществляется в открытом расположении на GitHub. Мы приглашаем заинтересованных пользователей и разработчиков участвовать в работе с проектом.
 
-[Присоединяйтесь к нам на сайте GitHub.](https://github.com/Microsoft/workbooks)
+[Присоединяйтесь к нам на GitHub!](https://github.com/Microsoft/workbooks)
 
-Попробуйте и сообщите нам свое мнение, или, если вы [возникли ошибки](~/tools/workbooks/install.md#reporting-bugs). У нас есть [форум](https://forums.xamarin.com/categories/inspector) слишком!
+Попробуйте и сообщите нам, что вы думаете, или в случае каких-либо [ошибок](~/tools/workbooks/install.md#reporting-bugs). У нас тоже есть [форум](https://forums.xamarin.com/categories/inspector) .
 
-[![](images/interactive-1.0.0-urho-planet-earth-small.png "Образец книги на основе UrhoSharp")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "Пример книги на основе UrhoSharp")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[Установка и требования](install.md)
 
-Сведения о том, как книги, установленной на компьютере Mac или Windows.
+Сведения о получении книг, установленных на компьютере Mac или Windows.
 
 ## <a name="interactive-workbooksworkbookmd"></a>[Интерактивные Workbooks](workbook.md)
 
-Общие сведения о том, как использовать Xamarin Workbooks.
+Общие сведения об использовании Xamarin Workbooks.
 
 ## <a name="samples"></a>Примеры
 
-Существует широкий спектр [книг на сайте GitHub примеров](https://github.com/xamarin/workbooks).
+[На сайте GitHub доступно множество примеров книг](https://github.com/xamarin/workbooks).
 
 ## <a name="integration-sdksdkindexmd"></a>[Интеграция пакета SDK](sdk/index.md)
 
-Существует возможность расширить Xamarin Workbooks с помощью представления пользовательских данных и модули подготовки отчетов. При написании интеграции C# и TypeScript и JavaScript.
+Можно расширить Xamarin Workbooks с помощью пользовательских представлений данных и модулей подготовки отчетов. Интеграция записывается с C# помощью и TypeScript/JavaScript.

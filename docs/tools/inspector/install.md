@@ -1,33 +1,33 @@
 ---
-title: Требования к установке инспектора и
-description: В этом документе описываются способы установки Xamarin Inspector и поддерживаемой операционной системы, интегрированные среды разработки и платформ приложений.
+title: Установка и требования инспектора
+description: В этом документе описывается, как установить Xamarin Inspector и обсуждаются поддерживаемые платформы операционной системы, IDE и приложений.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1273a51d29d7abcbecb9b19ae42e111db8ccc06c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61373473"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292298"
 ---
-# <a name="inspector-installation-and-requirements"></a>Требования к установке инспектора и
+# <a name="inspector-installation-and-requirements"></a>Установка и требования инспектора
 
 ## <a name="download-and-installation"></a>Загрузка и установка
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Скачайте и установите [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) и выберите **разработки мобильных приложений на .NET** рабочей нагрузки.
-1. [Войдите в](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) Чтобы включить подписку Enterprise.
-1. [Проверьте](~/tools/inspector/inspect.md) свое собственное приложение!
+1. Скачайте и установите [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) и выберите рабочую нагрузку **Разработка мобильных приложений на .NET** .
+1. [Войдите](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) , чтобы включить корпоративную подписку.
+1. [Проверьте](~/tools/inspector/inspect.md) свое приложение!
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 1. Скачайте и установите [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/).
-1. [Войдите в](https://docs.microsoft.com/visualstudio/mac/activation) Чтобы включить подписку Enterprise.
-1. [Проверьте](~/tools/inspector/inspect.md) свое собственное приложение!
+1. [Войдите](https://docs.microsoft.com/visualstudio/mac/activation) , чтобы включить корпоративную подписку.
+1. [Проверьте](~/tools/inspector/inspect.md) свое приложение!
 
 -----
 
@@ -35,63 +35,63 @@ ms.locfileid: "61373473"
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
-- **Mac** -OS X 10.11 или более поздней версии
-- **Windows** -Windows 7 или более поздней версии (с помощью Internet Explorer 11 или более поздней версии и .NET 4.6.1 или более поздней версии)
+- **Mac** -OS X 10,11 или более поздней версии
+- **Windows** 7 или более поздняя (с Internet Explorer 11 или более поздней версии и .NET 4.6.1 или более поздней версии)
 
-### <a name="supported-ides"></a>Поддерживаемые интегрированные среды разработки
+### <a name="supported-ides"></a>Поддерживаемые IDE
 
 - Visual Studio для Mac
-- Visual Studio 2017 с **разработки мобильных приложений на .NET** рабочей нагрузки
+- Visual Studio 2017 с рабочей нагрузкой **для мобильных приложений на платформе .NET**
 
-Проверка активного приложения доступна для корпоративных клиентов.
+Интерактивная проверка приложений доступна для корпоративных клиентов.
 
 <a name="supported-platforms" />
 
-### <a name="supported-app-platforms"></a>Поддерживаемые приложения платформы
+### <a name="supported-app-platforms"></a>Поддерживаемые платформы приложений
 
-|Платформа приложений|Поддержка IDE|Примечания|
+|Платформа приложения|Поддержка интегрированной среды разработки|Примечания|
 |--- |--- |--- |
 |Mac|Поддерживается только в Visual Studio для Mac|
-|iOS|Поддерживается в Visual Studio 2017 и Visual Studio для Mac| Поведение компоновщика должно быть присвоено **не компоновать** (в разделе **сборка iOS** параметры проекта) |
-|Android|Поддерживается в Visual Studio 2017 и Visual Studio для Mac|Необходимо применять Android > = 4.0.3, с помощью **fastdev** включена.<br />Необходимо использовать эмуляторы Google, Visual Studio или Xamarin Android. Эмуляторы Android 7 не должен позволять проверки в данный момент.|
+|iOS|Поддерживается в Visual Studio 2017 и Visual Studio для Mac| Для поведения компоновщика необходимо задать значение " **не связывать** " (в разделе Параметры проекта **сборки iOS** ) |
+|Android|Поддерживается в Visual Studio 2017 и Visual Studio для Mac|Необходимо выбрать Android > = 4.0.3 с включенным **Фастдев** .<br />Необходимо использовать Эмуляторы Google, Visual Studio или Xamarin Android. В настоящее время Эмуляторы Android 7 могут не допускать проверку.|
 |WPF|Поддерживается только в Visual Studio 2017|
 
 <a name="reporting-bugs" />
 
 ## <a name="reporting-bugs"></a>Сообщения об ошибках
 
-Ошибки должны сопровождаться непосредственно с помощью Visual Studio:
+Ошибки следует сообщать непосредственно через Visual Studio:
 
 - **Справка > Отправить отзыв > сообщить о проблеме**
 
-Укажите все следующие сведения:
+Включите следующие сведения:
 
 ### <a name="platform-version-information"></a>Сведения о версии платформы
 
-Эта информация является жизненно важных.
+Эти сведения являются жизненно важными.
 
 Visual Studio для Mac
 
-- **Visual Studio > о Visual Studio > Показать подробности > Копировать сведения**
-- Вставьте в отчет об ошибках
+- **Visual Studio > о Visual Studio > показывать подробные сведения > сведения о копировании**
+- Вставить в отчет об ошибках
 
 Visual Studio
 
-- **Справка > о Visual Studio > скопировать сведения**
-- Расскажите нам о версии операционной системы и выполняется 32-разрядная или 64-разрядной Windows.
+- **Справка > о > скопировать сведения о программе Visual Studio**
+- Сообщите нам о версии операционной системы и о том, используете ли вы 32-разрядную или 64-разрядную версию Windows.
 
 ### <a name="log-files"></a>Файлы журнала
 
-Всегда вложения интегрированной среды разработки и инспектор файлов журнала клиента.
+Всегда Прикрепите файлы журнала клиента IDE и инспектора.
 
-Инспектор клиента
+Клиент инспектора
 
 - Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
-1.4.x также предоставляет возможность выбора файла журнала в Finder (macOS) или в обозревателе (Windows) непосредственно из главного меню:
+1.4. x также обладает возможностью выбора файла журнала в Finder (macOS) или Explorer (Windows) непосредственно из главного меню:
 
-- **Справка > открыть файл журнала**
+- **Справка > обнаружить файл журнала**
 
 Visual Studio для Mac
 
@@ -100,23 +100,23 @@ Visual Studio для Mac
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- Содержимое в Visual Studio **вывода** панель также может быть информативные.
+- Содержимое панели **вывода** Visual Studio также может быть информативным.
 
 ### <a name="project-settings"></a>Параметры проекта
 
-Если вы можете подключить **.csproj** для проекта, вы пытаетесь проверить, было бы очень полезно. Это проще, чем вопросом о отдельные параметры.
+Если вы можете присоединить **CSPROJ** к проекту, который вы пытаетесь проверить, это было бы очень полезным. Это проще, чем спрашивать о отдельных параметрах.
 
-Также убедитесь, что вы находитесь в конфигурации отладки.
+Также убедитесь, что вы используете конфигурацию отладки.
 
 ### <a name="selected-devices"></a>Выбранные устройства
 
-Для Android и iOS крайне важно, что мы знаем, какое устройство вы отладке, когда требуется проверить. Нам нужно знать:
+Для Android и iOS очень важно, что устройство, на котором выполняется отладка, при необходимости проверки. Необходимо знать следующее:
 
-- Имя устройства, как показано в интерфейсе IDE
+- Имя устройства, как показано в интегрированной среде разработки
 - Версия ОС устройства
-- Android: Убедитесь, что вы используете x86 эмулятора
-- Android: Какие платформы эмулятора вы используете? Эмулятор Google? Эмулятор Android Visual Studio? Xamarin Android Player?
-- Правильно отлаживаемое приложение выглядеть и работать на устройстве?
-- Устройство имеет сетевое подключение (Ознакомьтесь с веб-браузер)?
+- Android Убедитесь, что используется эмулятор x86.
+- Android Какую платформу эмулятора вы используете? Эмулятор Google? Android Emulator Visual Studio? Xamarin Android Player?
+- Должно ли приложение, которое вы отлаживается, правильно отображаться и работать на устройстве?
+- Устройство подключено к сети (Проверьте через веб-браузер)?
 
 [client-bugs]: https://github.com/Microsoft/workbooks/issues/new

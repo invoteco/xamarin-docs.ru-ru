@@ -3,15 +3,15 @@ title: Установка и требования к книгам
 description: В этом документе описывается, как скачать и установить Xamarin Workbooks, обсуждаются поддерживаемые платформы и требования к системе.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: d94a14bcd1486b7b64e9ce6d9fee6d36406b2710
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 5292a052d4f93af9b21cc7cbc51891c99d6f9403
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511858"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285249"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Установка и требования к книгам
 
@@ -78,7 +78,7 @@ ms.locfileid: "68511858"
 
 В главном меню в книгах:
 
-* **Справка > копирование сведений о версии**
+- **Справка > копирование сведений о версии**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>Инструкции для книг 1,3 и более ранних версий:
 

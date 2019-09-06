@@ -1,55 +1,55 @@
 ---
-title: Редактирование метаданных NuGet
-description: В этом документе описывается, как использовать параметры проекта для изменения метаданных NuGet многоплатформенного библиотек. Здесь рассматриваются обязательные и необязательные метаданные.
+title: Изменение метаданных NuGet
+description: В этом документе описывается, как использовать параметры проекта для изменения метаданных NuGet для многоплатформенных библиотек. В нем обсуждаются обязательные и необязательные метаданные.
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 3680b02003a844668b0b5c97e5d4c0d296ae3500
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf8efad28c7ec6acfd0e43403e8db14639a3c755
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266886"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289410"
 ---
-# <a name="editing-nuget-metadata"></a>Редактирование метаданных NuGet
+# <a name="editing-nuget-metadata"></a>Изменение метаданных NuGet
 
-_Используйте параметры проекта, чтобы изменить метаданные NuGet многоплатформенного библиотек_
+_Использование параметров проекта для изменения метаданных NuGet для многоплатформенных библиотек_
 
-Типы проектов библиотеки (например PCL или .NET Standard или новый тип проекта NuGet) имеют **пакет NuGet** статьи **параметры проекта** окна.
+Типы проектов библиотеки (например, PCL или .NET Standard или новый тип проекта NuGet) имеют раздел **пакета NuGet** в окне " **Параметры проекта** ".
 
-**Метаданных** раздел настраивает значения, используемые в [ **файлу nuspec** файл манифеста пакета NuGet](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
+Раздел **Metadata (метаданные** ) настраивает значения, используемые в [файле манифеста пакета NuGet для **nuspec** ](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
 
-## <a name="required-information"></a>Необходимые сведения
+## <a name="required-information"></a>Требуемая информация
 
-**Общие** вкладка содержит четыре поля, которые должны быть введены для создания пакета NuGet:
+На вкладке **Общие** содержатся четыре поля, которые необходимо указать для создания пакета NuGet.
 
-[![](metadata-images/metadata-general-sml.png "Окно необходимые метаданные пакета NuGet")](metadata-images/metadata-general.png#lightbox)
+[![](metadata-images/metadata-general-sml.png "Требуемое окно метаданных пакета NuGet")](metadata-images/metadata-general.png#lightbox)
 
-- **Идентификатор** — идентификатор пакета, который должен быть уникальным в пределах Nuget.org (или везде, где этот пакет будет распространяться). Выполните это [рекомендации](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) и использовать только символы, допустимые в URL-адрес (без пробелов и избежать большинство специальных символов).
-- **Версия** — выберите номер версии, согласованные с [правила управления версиями NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
-- **Авторы** — разделенный запятыми список имен.
-- **Описание** — Обзор функций пакета, который отображается, когда пользователь выбирает пакет.
+- **ID** — идентификатор пакета, который должен быть уникальным в пределах NuGet.org (или в любом месте, где будет распространяться пакет). Следуйте этому [руководству](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) и используйте только символы, допустимые в URL-адресе (без пробелов, и не используйте большинство специальных символов).
+- **Версия** — выберите номер версии, совместимый с [правилами управления версиями NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
+- **Авторы** — список имен с разделителями-запятыми.
+- **Описание** — обзор компонентов пакета, которые отображаются, когда пользователи выбирают пакет.
 
 > [!NOTE]
-> Не забудьте увеличить номер версии, при создании новых версий для распространения NuGet или других пользователей.
+> Не забывайте увеличивать номер версии при создании новых версий для распространения в NuGet или других пользователей.
 
-Дополнительные сведения см. в разделе [требуется Справочник по элементам](https://docs.microsoft.com/nuget/schema/nuspec#required-metadata-elements) Дополнительные сведения, а также как эти подробные инструкции по [Выбор уникального идентификатора пакета и задание номера версии](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) и [ Указание типа пакета](https://docs.microsoft.com/nuget/create-packages/creating-a-package#setting-a-package-type).
+Дополнительные сведения см. в [справочнике по необходимым элементам](https://docs.microsoft.com/nuget/schema/nuspec#required-metadata-elements) для получения дополнительных сведений, а также в этих подробных инструкциях по [выбору уникального идентификатора пакета и заданию номера версии](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) и [заданию типа пакета](https://docs.microsoft.com/nuget/create-packages/creating-a-package#setting-a-package-type).
 
 > [!IMPORTANT]
-> Все поля на этой вкладке, должны быть введены; в противном случае появится сообщение об ошибке: _«Проект не поддерживает метаданных NuGet, не будет создан пакет NuGet. Метаданные пакета NuGet можно указать в разделе "метаданные" в параметрах проекта»_
+> Необходимо указать все поля на этой вкладке. в противном случае появится сообщение об ошибке: _"У проекта нет метаданных NuGet, поэтому пакет NuGet не будет создан. Метаданные пакета NuGet можно указать в разделе метаданных в параметрах проекта "._
 
 ## <a name="optional-metadata"></a>Необязательные метаданные
 
-**Сведения** вкладка содержит необязательные поля для включения в файле манифеста пакета NuGet.
+Вкладка **сведения** содержит необязательные поля, которые будут включены в файл манифеста пакета NuGet.
 
-[![](metadata-images/metadata-detail-sml.png "Окно необязательные метаданные пакета NuGet")](metadata-images/metadata-detail.png#lightbox)
+[![](metadata-images/metadata-detail-sml.png "Необязательное окно метаданных пакета NuGet")](metadata-images/metadata-detail.png#lightbox)
 
-Ссылаться на [Справочник по дополнительным элементы](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) Дополнительные сведения об обязательных и необязательных полях.
+Дополнительные сведения о обязательных и необязательных полях см. в [справочнике по дополнительным элементам](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) .
 
 > [!NOTE]
-> Если пакет NuGet распространяется на [NuGet.org](https://www.nuget.org) рекомендуется указать столько информации, как можно.
+> Если пакет NuGet распространяется в [NuGet.org](https://www.nuget.org) , рекомендуется предоставить как можно больше информации.
 
 
 ## <a name="related-links"></a>Связанные ссылки

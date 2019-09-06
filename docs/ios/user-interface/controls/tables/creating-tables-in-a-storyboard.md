@@ -4,19 +4,19 @@ description: В предыдущих разделах мы изучили раз
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528686"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291382"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Работа с таблицами в конструкторе iOS
 
-Раскадровки — это WYSIWYG-способ создания приложений iOS и поддерживается в Visual Studio на Mac и Windows. Дополнительные сведения о раскадровках см. в документе [Введение в](~/ios/user-interface/storyboards/index.md) раскадровки. Раскадровки также позволяют изменять макеты ячеек *в* таблице, что упрощает разработку с помощью таблиц и ячеек.
+Раскадровки — это WYSIWYG-способ создания приложений iOS и поддерживается в Visual Studio на Mac и Windows. Дополнительные сведения о раскадровках см. в документе [Введение в раскадровки](~/ios/user-interface/storyboards/index.md) . Раскадровки также позволяют изменять макеты ячеек *в* таблице, что упрощает разработку с помощью таблиц и ячеек.
 
 При настройке свойств табличного представления в конструкторе iOS можно выбрать один из двух типов содержимого ячеек: **Динамическое** или **статическое** содержимое прототипа.
 

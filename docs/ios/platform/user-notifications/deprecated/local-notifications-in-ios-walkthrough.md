@@ -4,15 +4,15 @@ description: В этом разделе мы рассмотрим, как исп
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200385"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290462"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Пошаговое руководство. Использование локальных уведомлений в Xamarin. iOS
 
@@ -27,7 +27,7 @@ _В этом разделе мы рассмотрим, как использов
 
 
 1. В Visual Studio для Mac создайте новое решение для iOS с одним представлением и назовите его `Notifications`.
-1. `Main.storyboard` Откройте файл и перетащите кнопку на представление. Назовите кнопкукнопки и присвойте ей название **добавить уведомление**. В этот момент может потребоваться задать некоторые [ограничения](~/ios/user-interface/designer/designer-auto-layout.md) для кнопки: 
+1. `Main.storyboard` Откройте файл и перетащите кнопку на представление. Назовите кнопку **кнопки и**присвойте ей название **добавить уведомление**. В этот момент может потребоваться задать некоторые [ограничения](~/ios/user-interface/designer/designer-auto-layout.md) для кнопки: 
 
     ![](local-notifications-in-ios-walkthrough-images/image3.png "Задание некоторых ограничений для кнопки")
 1. `ViewController` Измените класс и добавьте в метод ViewDidLoad следующий обработчик событий:
@@ -58,7 +58,7 @@ _В этом разделе мы рассмотрим, как использов
 
     Этот код создает уведомление, использующее звук, устанавливает значение значка значок 1 и отображает предупреждение для пользователя.
 
-1. Затем измените файл `AppDelegate.cs`, добавьте следующий код `FinishedLaunching` в метод. Мы проверили, работает ли устройство под управлением iOS 8, если это так, поэтому нам нужно запросить разрешение пользователя на получение уведомлений:
+1. Затем измените файл `AppDelegate.cs`, добавьте следующий код `FinishedLaunching` в метод. Мы проверили, работает ли устройство под управлением iOS 8, если это так, поэтому **нам нужно запросить** разрешение пользователя на получение уведомлений:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {

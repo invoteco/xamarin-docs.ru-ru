@@ -3,15 +3,15 @@ title: Журнал выпусков цели Шарпие
 description: В этом документе описывается история выпусков целевого Шарпиеа, используемая для автоматизации создания C# привязок в коде цели-C.
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: 86c9f46064b66dc31f805e830309cb061a78a2c8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509638"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290861"
 ---
 # <a name="objective-sharpie-release-history"></a>Журнал выпусков цели Шарпие
 

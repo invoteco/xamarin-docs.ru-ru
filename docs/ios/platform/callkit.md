@@ -4,15 +4,15 @@ description: В этой статье рассматривается новый 
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 92e4cd45a7fe49a7a78a8922bf70ac87870db095
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ef2894d91604f0bc315b38eb525862858428c405
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200403"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292163"
 ---
 # <a name="callkit-in-xamarinios"></a>Каллкит в Xamarin. iOS
 
@@ -877,7 +877,7 @@ public override void PerformEndCallAction (CXProvider provider, CXEndCallAction 
 3. Если система принимает действие, оно будет возвращено приложению через `XCProvider` делегат.
 4. Приложение запускает исходящий вызов со своей сетью связи.
 
-Дополнительные сведения о целях см. в документации по расширениям [пользовательского интерфейса для целей и](~/ios/platform/sirikit/understanding-sirikit.md) целей. 
+Дополнительные сведения о целях см. в документации по [расширениям пользовательского интерфейса для целей и](~/ios/platform/sirikit/understanding-sirikit.md) целей. 
 
 ### <a name="the-outgoing-call-lifecycle"></a>Жизненный цикл исходящего вызова
 

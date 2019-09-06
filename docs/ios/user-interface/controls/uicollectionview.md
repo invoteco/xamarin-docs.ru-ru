@@ -4,15 +4,15 @@ description: Представления коллекций позволяют о
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8557a3efca1336f70c0feef2ac4dc9c462eedbf5
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889882"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282861"
 ---
 # <a name="collection-views-in-xamarinios"></a>Представления коллекций в Xamarin. iOS
 
@@ -452,7 +452,7 @@ namespace SimpleCollectionView
 Как упоминалось выше, одно из наиболее значительных изменений в представлении коллекции в iOS 9 было добавлением простой перетаскивания функциональности из поля.
 
 В iOS 9 самый быстрый способ добавить изменение порядка в представление коллекции — использовать `UICollectionViewController`.
-Контроллер представления коллекции теперь имеет `InstallsStandardGestureForInteractiveMovement` свойство, добавляющее Стандартный распознаватель *жестов* , поддерживающий перетаскивание для изменения порядка элементов в коллекции.
+Контроллер представления коллекции теперь имеет `InstallsStandardGestureForInteractiveMovement` свойство, добавляющее Стандартный *распознаватель жестов* , поддерживающий перетаскивание для изменения порядка элементов в коллекции.
 Так как значение по умолчанию равно `true`, необходимо `MoveItem` реализовать метод `UICollectionViewDataSource` класса для поддержки перетаскивания. Пример:
 
 ```csharp
@@ -490,7 +490,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 Добавьте ограничения, чтобы поместить метку в центре ячейки по мере изменения размера:
 
-На панели **свойств** для _Коллектионвиевцелл_ и задайте `TextCollectionViewCell`классу значение :
+На панели **свойств** для _Коллектионвиевцелл_ и задайте **классу** `TextCollectionViewCell`значение:
 
 [![](uicollectionview-images/quick05.png "Присвойте классу значение Текстколлектионвиевцелл")](uicollectionview-images/quick05.png#lightbox)
 
@@ -690,7 +690,7 @@ namespace CollectionView
 
 Обратите `DataSource` внимание `Delegate` , что и, что мы создали выше, задаются при создании представления коллекции из его раскадровки (или файла **XIB** ).
 
-Снова измените файл **Main. Storyboard** и выберите представление коллекции и перейдите к свойствам. Присвойте **классу** пользовательский `WaterfallCollectionView` класс, который мы определили выше:
+Снова измените файл **Main. Storyboard** и выберите представление коллекции и перейдите к **свойствам**. Присвойте **классу** пользовательский `WaterfallCollectionView` класс, который мы определили выше:
 
 Сохраните изменения, внесенные в пользовательский интерфейс, и запустите приложение.
 Если пользователь выбирает элемент из списка и перетаскивает его в новое место, другие элементы будут анимироваться автоматически по мере того, как они переходят за пределы элемента.

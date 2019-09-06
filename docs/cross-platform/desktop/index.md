@@ -1,37 +1,37 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
-title: Между различными платформами для разработчиков классических приложений
-description: Этот документ содержит ссылки на различные руководства, описывающие Xamarin.Forms для разработчиков WPF и Windows Forms. Связанное содержимое рассматривает жизненный цикл приложения, элементы управления пользовательского интерфейса, перенос руководствах и примерах.
-author: asb3993
-ms.author: amburns
+title: Кросс-платформенные разработчики для настольных систем
+description: Этот документ содержит ссылки на различные руководства, описывающие Xamarin. Forms для разработчиков WPF и Windows Forms. В связанном содержимом рассматриваются жизненный цикл приложения, элементы управления пользовательского интерфейса, руководство по переносу и примеры.
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 21c74b8c0ccaffb2b3b8205a3bdda9101b99f072
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4c14b3f6458180c6da9f123cab5aad406091667
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270533"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290366"
 ---
-# <a name="cross-platform-for-desktop-developers"></a>Между различными платформами для разработчиков классических приложений
+# <a name="cross-platform-for-desktop-developers"></a>Кросс-платформенные разработчики для настольных систем
 
-Этот раздел содержит сведения для разработчиков WPF и Windows Forms для получения разработки мобильных приложений с помощью Xamarin, благодаря использованию перекрестных свои знания и расширения возможностей мобильных идиом и предоставляя примеры перенос классических приложений для мобильных устройств.
+В этом разделе содержатся сведения, помогающие WPF и Windows Forms разработчикам изучать разработку мобильных приложений с помощью Xamarin, перекрестно ссылаясь на существующие знания и опыт работы с мобильными идиомами, а также предоставляя примеры переноса настольных приложений на мобильные устройства.
 
-## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Сравнение жизненного цикла приложений](lifecycle.md)
+## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Сравнение жизненного цикла приложения](lifecycle.md)
 
-Основные сведения о различиях между WPF и Xamarin.Forms приложения на запуск и фона состояний.
+Основные сведения о различиях запуска и фонового состояния приложения WPF и Xamarin. Forms.
 
-## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Сравнение элементов управления пользовательского интерфейса](controls/index.md)
+## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Сравнение элементов управления ИП](controls/index.md)
 
-Краткий справочник, чтобы найти эквивалентные элементы управления в Windows Forms, WPF и Xamarin.Forms, включая дополнительные рекомендации о различиях между WPF и Xamarin.Forms.
+Краткий справочник по поиску эквивалентных элементов управления в Windows Forms, WPF и Xamarin. Forms, включая дополнительные рекомендации по различиям между WPF и Xamarin. Forms.
 
 ## <a name="porting-guidanceportingmd"></a>[Руководство по переносу](porting.md)
 
-С помощью анализатора переносимости облегчить перенос кода классического приложения (без пользовательского интерфейса) в Xamarin.Forms.
+Использование анализатора переносимости для переноса кода настольного приложения (за исключением пользовательского интерфейса) в Xamarin. Forms.
 
 ## <a name="samplessamplesmd"></a>[Примеры](samples.md)
 
-Справочник по образцы, демонстрирующий Корпоративная архитектура приложения и перенос кода из WPF в Xamarin.Forms.
+Эталонные примеры, демонстрирующие архитектуру корпоративных приложений и перенос кода из WPF в Xamarin. Forms.
 
 ## <a name="learn-more"></a>Дополнительные сведения
 
-[![Создание мобильных приложений электронная книга](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [ ![электронная книга. шаблоны корпоративного приложения](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
+[ Созданиеэлектронной![](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [документации пошаблонамкорпоративныхприложенийнамобильныхустройствахэлектроннаякнига![](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)

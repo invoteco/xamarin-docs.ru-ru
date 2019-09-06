@@ -1,35 +1,35 @@
 ---
-title: Objective-C платформ
-description: В этом документе описывается внедрение .NET можно ориентироваться при работе с кодом Objective-C различных платформ. В нем описывается macOS, iOS, tvOS и watchOS.
+title: Платформы цели-C
+description: В этом документе описываются различные платформы, которые могут быть ориентированы на внедрение .NET при работе с кодом цели-C. В нем обсуждаются macOS, iOS, tvOS и watchOS.
 ms.prod: xamarin
 ms.assetid: 43253BE4-A03A-4646-9A14-32C05174E672
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 8091fb4e8328f61f1471d061b51b4735de3c089c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f97b595f129cb1ad1ea56e3ae43b0f0a477fef5a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61230728"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282729"
 ---
-# <a name="objective-c-platforms"></a>Objective-C платформ
+# <a name="objective-c-platforms"></a>Платформы цели-C
 
-Внедрение .NET можно предназначенных для различных платформ при создании кода Objective-C:
+Внедрение .NET может ориентироваться на различные платформы при формировании кода цели на C:
 
 * macOS
 * iOS
 * tvOS
-* [еще не реализован] watchOS
+* watchOS [еще не реализовано]
 
-Платформа выбирается путем передачи `--platform=<platform>` внедрение .NET аргумент командной строки.
+Платформа выбирается путем передачи `--platform=<platform>` аргумента командной строки в внедрение .NET.
 
-При построении для iOS, tvOS и watchOS платформ, внедрение .NET всегда создает структуру, содержащую Xamarin.iOS, так как Xamarin.iOS содержит массу кода поддержки среды выполнения, который необходим на этих платформах.
+При создании платформ для iOS, tvOS и watchOS внедрение .NET всегда создает платформу, которая внедряет Xamarin. iOS, так как Xamarin. iOS содержит большой код поддержки среды выполнения, необходимый на этих платформах.
 
-Тем не менее при построении для платформы macOS можно выбрать, должен ли созданный framework внедрить Xamarin.Mac или нет. Можно не внедрять Xamarin.Mac, если связанные сборки ссылается на Xamarin.Mac.dll (прямо или косвенно), и этот параметр выбран, передав `--platform=macOS` к средству внедрение .NET.
+Однако при создании для платформы macOS можно выбрать, должна ли созданная платформа внедрять Xamarin. Mac. Вы можете не внедрять Xamarin. Mac, если привязанная сборка не ссылается на Xamarin. Mac. dll (прямо или косвенно), и этот вариант выбран путем передачи `--platform=macOS` в средство внедрения .NET.
 
-Если связанный сборка содержит ссылку на Xamarin.Mac.dll, необходимо внедрить Xamarin.Mac и Кроме того embeddinator необходимо знать, какой целевой платформы для использования.
+Если связанная сборка содержит ссылку на Xamarin. Mac. dll, необходимо внедрить Xamarin. Mac, а кроме того, ембеддинатор должен быть уверен, какую целевую платформу использовать.
 
-Существует три возможных целевых платформ Xamarin.Mac: `modern` (прежнее название — `mobile`), `full` и `system` (разница между каждым описан в Xamarin.Mac [требуемой версии .NET framework] [ 1] документации), и каждый выбирается путем передачи `--platform=macOS-modern`, `--platform=macOS-full` или `--platform=macOS-system` к средству внедрение .NET.
+Существует `modern` три возможные целевые платформы Xamarin. Mac: (ранее назывались `mobile`) `full` и `system` (разница между ними описана в документации по [целевой платформе][1] Xamarin. Mac), и каждая из них выбирается путем передачи `--platform=macOS-modern` `--platform=macOS-full` или `--platform=macOS-system` для средства внедрения .NET.
 
 [1]: ~/mac/platform/target-framework.md

@@ -1,41 +1,41 @@
 ---
-title: Воспроизведение звука в tvOS с помощью AVAudioPlayer в Xamarin
-description: В этой статье показано, как использовать вспомогательный класс для управления воспроизведением звукового помощью AVAudioPlayer использования в приложении Xamarin.iOS.
+title: Воспроизведение звука в tvOS с помощью помощью avaudioplayer в Xamarin
+description: В этой статье показано, как использовать вспомогательный класс для управления воспроизведением звука с помощью помощью avaudioplayer в приложении Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: bc1e9febea9529c3fadbacd689404562952276fe
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b34c769eaa3aef5bf47a9bfa891859289b195f03
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414104"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283786"
 ---
-# <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Воспроизведение звука в tvOS с помощью AVAudioPlayer в Xamarin
+# <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Воспроизведение звука в tvOS с помощью помощью avaudioplayer в Xamarin
 
-## <a name="about-the-avaudioplayer"></a>О помощью AVAudioPlayer
+## <a name="about-the-avaudioplayer"></a>О помощью avaudioplayer
 
-`AVAudioPlayer` Используется для воспроизведения звуковых данных из памяти или файла. Компания Apple рекомендует использовать этот класс для воспроизведение звука в приложении, если вы не выполняете сети потоковой передачи или потребовать аудио низкую задержку ввода-вывода.
+`AVAudioPlayer` Используется для воспроизведения звуковых данных из памяти или файла. Корпорация Apple рекомендует использовать этот класс для воспроизведения звука в приложении, если вы не выполняете потоковую передачу или требует ввода-вывода с низкой задержкой.
 
-Можно использовать `AVAudioPlayer` для следующих целей:
+`AVAudioPlayer` Для этого можно использовать команду.
 
-- Воспроизведение звуков любой продолжительности необязательно выполнения цикла.
-- Несколько звук в то же время, с необязательным синхронизации.
-- Управлять тома, темп воспроизведения и стерео размещение каждого звуков, воспроизведение.
-- Поддерживает функции, такие как Перемотка вперед или назад.
-- Получите уровень воспроизведения данных отслеживания использования.
+- Воспроизводить звуки любой длительности с необязательным циклом.
+- Одновременное воспроизведение нескольких звуков с дополнительной синхронизацией.
+- Контроль громкости, скорость воспроизведения и положение стерео для каждого воспроизводимого звука.
+- Поддержка таких функций, как быстрая переадресация или перемотка назад.
+- Получение данных отслеживания уровня воспроизведения.
 
-`AVAudioPlayer` поддерживает звуков в любой формат аудио, предоставляемыми iOS, tvOS и OS X такими как `.aif`, `.wav` или `.mp3`.
+`AVAudioPlayer`поддерживает звук в любом звуковом формате, предоставляемом iOS, tvOS и OS X `.aif`, `.wav` например `.mp3`, или.
 
 ## <a name="playing-sounds-in-tvos"></a>Воспроизведение звуков в tvOS
 
-Поскольку tvOS поддерживает те же классы аудио элементов, как iOS, см. наш iOS [Игральных звука с помощью AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) документации, полный список воспроизведения звука в приложении Xamarin.tvOS.
+Так как tvOS поддерживает те же классы панели элементов, что и iOS, дополнительные сведения о воспроизведении звука в приложении Xamarin. tvOS см. в статье воспроизведение звука в iOS [с помощью помощью avaudioplayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) документации.
 
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Справочник по с помощью AVAudioPlayer](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVAudioPlayerClassReference/)
+- [Справочник по помощью avaudioplayer](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVAudioPlayerClassReference/)

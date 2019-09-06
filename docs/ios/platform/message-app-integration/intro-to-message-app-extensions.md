@@ -4,15 +4,15 @@ description: В этой статье показано, как включить 
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6edb9107c3d6ae04c91ebcf874fb92a7f911b3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227495"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280043"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Основные сведения о расширении приложения для сообщений в Xamarin. iOS
 
@@ -119,7 +119,7 @@ _В этой статье показано, как включить расшир
 
 1. Запустите Visual Studio для Mac.
 2. Откройте решение, чтобы добавить расширение приложения сообщений в.
-3. Выберите **расширения iOS** >  iMessage расширение и нажмите кнопку Далее: > 
+3. Выберите**расширения** **iOS** >  iMessage расширение и нажмите кнопку Далее: > 
 
     [![](intro-to-message-app-extensions-images/message01.png "Выбор расширения iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Введите **имя расширения** и нажмите кнопку **Далее** :
@@ -665,14 +665,14 @@ namespace MessageExtension
 }
 ```
 
-Когда пользователь запрашивает добавить новую наклейку в доступную коллекцию, новый `AddStickerViewController` объект становится видимым контроллером, а представление наклейок переходит в развернутое представление:
+Когда пользователь запрашивает добавить новую наклейку в доступную коллекцию, новый `AddStickerViewController` объект становится видимым контроллером, а представление наклейок переходит в **развернутое** представление:
 
 ```csharp
 // Switch to expanded view mode
 Request (MSMessagesAppPresentationStyle.Expanded);
 ```
 
-Когда пользователь выбирает добавляемую наклейку, она добавляется в доступную для нее коллекцию и запрашивается компактное представление:
+Когда пользователь выбирает добавляемую наклейку, она добавляется в доступную для нее коллекцию и запрашивается **компактное** представление:
 
 ```csharp
 public void AddStickerToCollection (MSSticker sticker)

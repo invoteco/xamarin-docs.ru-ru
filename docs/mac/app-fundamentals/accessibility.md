@@ -4,15 +4,15 @@ description: В этом документе описано, как работа�
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6d53cda17864a6afa8f8af187df7c4a07e9f8cbe
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e92887dc54acc33e6d433aafe39ae7df9ea8ac71
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198623"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291654"
 ---
 # <a name="accessibility-on-macos"></a>Специальные возможности в macOS
 
@@ -28,7 +28,7 @@ AppKit использует `NSAccessibility` протокол для предо
 ### <a name="storyboard-files"></a>Файлы раскадровки
 
 Xamarin. Mac использует Interface Builder Xcode для изменения файлов раскадровки.
-Сведения о специальных возможностях могут быть изменены в инспекторе удостоверений при выборе элемента управления в области конструктора (как показано на снимке экрана ниже):
+Сведения о специальных возможностях могут быть изменены в **инспекторе удостоверений** при выборе элемента управления в области конструктора (как показано на снимке экрана ниже):
 
 [![Добавление специальных возможностей в Interface Builder Xcode](accessibility-images/xcode.png "Добавление специальных возможностей в Interface Builder Xcode")](accessibility-images/xcode-large.png#lightbox)
 

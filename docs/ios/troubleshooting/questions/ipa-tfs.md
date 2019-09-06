@@ -1,22 +1,22 @@
 ---
-title: Копирование выходных IPA-файлов в папку сброса TFS?
+title: Как скопировать выходные файлы IPA в папку сброса TFS?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 74e2f2219dcb0908edce7f109844932639038b25
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9c7b7e598f66d930b5e16ef19b8bc108d8b6701a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421127"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291056"
 ---
-# <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Копирование выходных IPA-файлов в папку сброса TFS?
+# <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Как скопировать выходные файлы IPA в папку сброса TFS?
 
-Откройте `.csproj` файл для проекта приложения iOS в текстовом редакторе и затем добавьте следующие строки в конце (непосредственно перед закрывающим `</Project>` тега):
+Откройте файл для проекта приложения iOS в текстовом редакторе, а затем добавьте в конец файла следующие строки (непосредственно перед закрывающим `</Project>` тегом): `.csproj`
 
 ```xml
 <PropertyGroup>
@@ -40,16 +40,16 @@ ms.locfileid: "61421127"
 
 ## <a name="notes"></a>Примечания
 
-- Это же общего метода, описанного на [можно изменить путь к выходной файл IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). Два важных аспекта, чтобы задать `$(TF_BUILD_BINARIESDIRECTORY)` конечной папке и чтобы добавить дополнительное условие, `CopyIpa` будет выполняться только для сборок TFS.
+- Это та же общая методика, о которой [можно изменить выходной путь к файлу IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). Две важные точки `$(TF_BUILD_BINARIESDIRECTORY)` задаются в качестве папки назначения и добавляют дополнительное условие, `CopyIpa` которое будет выполняться только для сборок TFS.
 
-- Описание `TF_BUILD_BINARIESDIRECTORY` см. в разделе [предварительно определенные переменные сборки](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
+- Описание `TF_BUILD_BINARIESDIRECTORY` см. в разделе [стандартные переменные сборки](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Документация по установке TFS для использования с Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
-- [Задача сборки Azure DevOps. Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
-- [Задача сборки Azure DevOps. Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
+- [Задача сборки DevOps Azure: Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
+- [Задача сборки DevOps Azure: Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>Следующие шаги
 
-В этом документе рассматриваются текущее поведение начиная с Xamarin 3.11.666 для Visual Studio и узла сборки Xamarin.iOS 8.10.3 на компьютере Mac. Дополнительная помощь, свяжитесь с нами, или если эта проблема остается даже после использования указанные выше сведения, ознакомьтесь с разделом [какие варианты поддержки доступны для Xamarin?](~/cross-platform/troubleshooting/support-options.md) сведения о параметрах связи, предложения, а также как файл новую ошибку, при необходимости.
+В этом документе рассматривается текущее поведение 3.11.666 Xamarin для Visual Studio и Xamarin. iOS 8.10.3 на узле сборки Mac. Для получения дополнительной помощи, для связи с нами или если проблема остается даже после использования приведенных выше сведений, ознакомьтесь с возможностями [поддержки Xamarin?](~/cross-platform/troubleshooting/support-options.md) дополнительные сведения о вариантах контактов, предложениях и о том, как создать новую ошибку при необходимости .

@@ -3,22 +3,22 @@ title: Создание пакетов NuGet для Xamarin вручную
 description: В этом документе содержатся советы по созданию пакетов NuGet, предназначенных для платформы Xamarin. Здесь описываются профили Xamarin для пакетов NuGet, PCL NuGet с зависимостями платформы и ссылки на различные примеры с открытым исходным кодом.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: cf694b54c8d2cdb33fd480d89d32b439f036ddc5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119448"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289191"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Создание пакетов NuGet для Xamarin вручную
 
 _На этой странице содержатся некоторые советы по созданию пакетов NuGet, предназначенных для платформы Xamarin._
 
 > [!NOTE]
-> Xamarin Studio 6,2 (и Visual Studio для Mac) включает возможность _автоматического_ создания пакетов NuGet с помощью PCL, .NET Standard или общих проектов. Дополнительные сведения см. в разделе многоплатформенные [библиотеки для совместного использования кода](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) .
+> Xamarin Studio 6,2 (и Visual Studio для Mac) включает возможность _автоматического_ создания пакетов NuGet с помощью PCL, .NET Standard или общих проектов. Дополнительные сведения см. в разделе [многоплатформенные библиотеки для совместного использования кода](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) .
 
 ## <a name="nuget-package-xamarin-profiles"></a>Профили Xamarin пакета NuGet
 
@@ -51,7 +51,7 @@ _На этой странице содержатся некоторые сове
 
 Можно указать версию с набором чисел без десятичной запятой или указать ее с помощью десятичных разделителей. Без десятичной запятой NuGet просто принимает каждое число и преобразует его в версию, вставляя символ "." между каждой цифрой.
 
-В приведенном выше "MonoAndroid10" означает "Android 1,0". Это означает, что Целевая [платформа](~/android/app-fundamentals/android-api-levels.md) проекта должна иметь версию Android 1,0 или более позднюю. Версия указывается в `<TargetFrameworkVersion>` элементе в файле проекта.
+В приведенном выше "MonoAndroid10" означает "Android 1,0". Это означает, что [Целевая платформа](~/android/app-fundamentals/android-api-levels.md) проекта должна иметь версию Android 1,0 или более позднюю. Версия указывается в `<TargetFrameworkVersion>` элементе в файле проекта.
 
 Для уточнения:
 

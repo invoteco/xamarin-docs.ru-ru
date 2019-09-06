@@ -4,15 +4,15 @@ description: В этом документе перечислены различ�
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: bea9d8f40766346825d19b5a95719a8321ecaca0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6b9927b7f6887d7be1a586c854b3bde6cad883b9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528947"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292880"
 ---
 # <a name="xamarinmac-frameworks"></a>Платформы Xamarin. Mac
 

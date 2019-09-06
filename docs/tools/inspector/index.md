@@ -1,32 +1,32 @@
 ---
 title: Xamarin Inspector
-description: Этот документ содержит ссылки на руководства, описывающие, как установить и использовать Xamarin Inspector, просматривать и отлаживать приложения.
+description: В этом документе содержатся ссылки на руководства, в которых описывается установка и использование Xamarin Inspector для изучения и отладки приложений.
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 41111a0ae87b2b1c4a7b1c77bfeeeb3c9e5fa000
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5aa35c53af39df63f0b6e0f960432cbc43dadc8a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896006"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292470"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
-Xamarin Inspector интегрируется с рабочим процессом интегрированной среды разработки, позволяя интерактивного выполнения отладки приложений C# кода или проверить свойства пользовательского интерфейса, выступая в качестве отладкой или диагностикой помощь при проверке запущенного приложения.
+Xamarin Inspector интегрируется с рабочим процессом отладки приложений интегрированной среды разработки, позволяя интерактивно выполнять код или C# проверять свойства пользовательского интерфейса, выполняя в качестве средства отладки или диагностики при проверке работающего приложения.
 
-Проверка активного приложения доступна для корпоративных клиентов. Сообщите нам об этом, если вы [возникли ошибки](~/tools/inspector/install.md#reporting-bugs). У нас есть [форум](https://forums.xamarin.com/categories/inspector) слишком!
+Интерактивная проверка приложений доступна для корпоративных клиентов. Сообщите нам о том, что [возникнут ошибки](~/tools/inspector/install.md#reporting-bugs). У нас тоже есть [форум](https://forums.xamarin.com/categories/inspector) .
 
-[![](images/interactive-1.0.0-bike-inspect-3d-small.png "Проверка активного приложения доступен для корпоративных клиентов")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
+[![](images/interactive-1.0.0-bike-inspect-3d-small.png "Интерактивная проверка приложений доступна для корпоративных клиентов.")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
 
 ## <a name="installation-and-requirementstoolsinspectorinstallmd"></a>[Установка и требования](~/tools/inspector/install.md)
 
-Сведения о том, как Xamarin Inspector установлен на компьютере Mac или Windows.
+Сведения о получении Xamarin Inspector, установленных на компьютере Mac или Windows.
 
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[Проверка интерактивных приложений](~/tools/inspector/inspect.md)
 
-В этой статье описывается подключение к приложению, пока они выполняются в интегрированной среде разработки, позволяя состоянии, чтобы изучить и управления этим состоянием, не приостанавливая выполнение с помощью инспектора.
+Описывает, как использовать инспектор для подключения к приложению во время его выполнения из интегрированной среды разработки, что позволяет просматривать состояние и управлять им без приостановки.
 
 

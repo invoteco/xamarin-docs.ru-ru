@@ -4,15 +4,15 @@ description: HomeKit — это платформа Apple для управлен
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e8acec18785ff5017aa012a646f40f8a866070f8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656631"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292714"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit в Xamarin. iOS
 
@@ -454,7 +454,7 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 - таржеттемпературе
 - таржетвертикалтилт
 - температуреунитс
-- Версия
+- Version
 
 ### <a name="working-with-a-characteristics-value"></a>Работа со значением характеристик
 
@@ -671,7 +671,7 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 - **Действия и наборы действий** — действия изменяют характеристики службы аксессуаров и могут быть сгруппированы в наборы. Набор действий действует как скрипты для управления группой аксессуаров и координации их действий. Например, сценарий просмотра ТЕЛЕПЕРЕДАЧ может закрывать слепые, затемнять индикаторы и включать телевизор и его звуковую систему. Дополнительные сведения о создании и обслуживании действий и наборов действий см. в документации по [хмактион](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) и [хмактионсет](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) компании Apple.
 - **Триггеры** . триггер может активировать один или несколько наборов действий при выполнении определенного набора условий. Например, включите портч Light и заблокируйте все внешние двери, когда она становится темной. Дополнительные сведения о создании и обслуживании триггеров см. в документации Apple [хмтригжер](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) .
 
-Поскольку эти функции используют те же методы, которые описаны выше, их следует легко реализовать, следуя рекомендациям Apple [Хомекитдевелопер Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html), [правилам интерфейса пользователя HomeKit](https://developer.apple.com/homekit/ui-guidelines/) и Справочнику по [HomeKit Framework](https://developer.apple.com/library/ios/home_kit_framework_ref).
+Поскольку эти функции используют те же методы, которые описаны выше, их следует легко реализовать, следуя рекомендациям Apple [Хомекитдевелопер Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html), [правилам интерфейса пользователя HomeKit](https://developer.apple.com/homekit/ui-guidelines/) и [Справочнику по HomeKit Framework](https://developer.apple.com/library/ios/home_kit_framework_ref).
 
 ## <a name="homekit-app-review-guidelines"></a>Рекомендации по проверке приложения HomeKit
 
@@ -700,7 +700,7 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 - **Новые возможности Bluetooth с низким энергопотреблением (BLE)** — HomeKit теперь поддерживает больше типов аксессуаров, которые могут взаимодействовать через протокол Bluetooth с низким энергопотреблением (BLE). Используя безопасное туннелирование хап, HomeKitное устройство может предоставлять другое устройство Bluetooth через Wi-Fi (если оно выходит за пределы диапазона Bluetooth). В iOS 9 аксессуары BLE имеют полную поддержку уведомлений и метаданных.
 - **Новые категории аксессуаров** — Apple добавила следующие новые категории аксессуаров в iOS 9: Оконные задвижки, двери и окна, системы сигнализации, датчики и программируемые коммутаторы.
 
-Дополнительные сведения о новых возможностях HomeKit в iOS 9 см. в статье об индексе Apple [HomeKit](https://developer.apple.com/homekit/) и новых возможностях [в HomeKit](https://developer.apple.com/videos/wwdc/2015/?id=210) Video.
+Дополнительные сведения о новых возможностях HomeKit в iOS 9 см. в статье об [индексе Apple HomeKit](https://developer.apple.com/homekit/) и новых возможностях [в HomeKit](https://developer.apple.com/videos/wwdc/2015/?id=210) Video.
 
 ## <a name="summary"></a>Сводка
 

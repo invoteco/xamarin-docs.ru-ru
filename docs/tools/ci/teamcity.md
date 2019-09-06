@@ -3,15 +3,15 @@ title: Использование Team City с Xamarin
 description: В этом руководстве рассматриваются шаги, связанные с использованием TeamCity для компиляции мобильных приложений, а затем их отправка в Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2880fcbc3366079955945c4780af2be82afe5a4a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511932"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293137"
 ---
 # <a name="using-team-city-with-xamarin"></a>Использование Team City с Xamarin
 

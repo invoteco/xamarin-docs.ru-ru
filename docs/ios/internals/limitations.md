@@ -4,15 +4,15 @@ description: В этом документе описаны ограничени�
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 7d5c9ebec2a1d79df7a9a16da91c79772746f6fc
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227526"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291900"
 ---
 # <a name="limitations-of-xamarinios"></a>Ограничения Xamarin. iOS
 
@@ -45,7 +45,7 @@ class Foo<T> : UIView {
 ```
 
 > [!NOTE]
-> Хотя универсальные подклассы Нсобжектс возможны, существует ряд ограничений. Дополнительные сведения см. в универсальных подклассах документа [нсобжект](~/ios/internals/api-design/nsobject-generics.md) .
+> Хотя универсальные подклассы Нсобжектс возможны, существует ряд ограничений. Дополнительные сведения см. в [универсальных подклассах документа нсобжект](~/ios/internals/api-design/nsobject-generics.md) .
 
 
  <a name="No_Dynamic_Code_Generation" />

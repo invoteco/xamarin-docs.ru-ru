@@ -3,15 +3,15 @@ title: Создание представлений HTML с помощью шаб
 description: " Использование веб-страницы в полноэкранном режиме для визуализации HTML может быть простым и эффективным способом визуализации сложного форматирования на кросс-платформенном способе, особенно если у вас уже есть HTML, JavaScript и CSS из проекта веб-сайта."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621037"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284922"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Создание представлений HTML с помощью шаблонов Razor
 
@@ -41,7 +41,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 ```
 
-Дополнительные сведения об использовании элемента управления Уивебвиев см. в статье Уивебвиевные рецепты для [iOS](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) .
+Дополнительные сведения об использовании элемента управления Уивебвиев см. в статье [уивебвиевные](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) рецепты для iOS.
 
 ### <a name="android"></a>Android
 
@@ -80,7 +80,7 @@ webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8"
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
-Базовый каталог указывается в качестве `NSBundle.MainBundle.BundleUrl` ссылки на каталог, в котором установлено приложение. Все файлы в папке resources копируются в это расположение, например файл **Style. CSS** , показанный здесь:
+Базовый каталог указывается в качестве `NSBundle.MainBundle.BundleUrl` ссылки на каталог, в котором установлено приложение. Все файлы в папке **Resources** копируются в это расположение, например файл **Style. CSS** , показанный здесь:
 
  ![решение Ифонехибрид](images/image1_240x163.png)
 
@@ -485,7 +485,7 @@ webView.LoadUrl ("javascript:" + js);
 
 HTML-код может быть полезен для создания прототипов и отображения тех вещей, которые лучше использовать в Интернете, таких как форматированный текст и макет с откликом. Однако не все задачи подходят для HTML и JavaScript — прокрутка по длинным спискам данных, например, позволяет лучше использовать собственные элементы управления пользовательского интерфейса (например, Уитаблевиев в iOS или ListView в Android).
 
-Веб-представления в шаблоне можно легко дополнить элементами управления для конкретных платформ — просто измените **файл mainstoryboard. Storyboard** в конструкторе iOS или Resources **/Layout/Main. axml** в Android.
+Веб-представления в шаблоне можно легко дополнить элементами управления для конкретных платформ — просто измените **файл mainstoryboard. Storyboard** в конструкторе iOS или **Resources/Layout/Main. axml** в Android.
 
 ### <a name="razortodo-sample"></a>Пример Разортодо
 

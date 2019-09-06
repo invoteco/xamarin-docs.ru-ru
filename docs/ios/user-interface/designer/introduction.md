@@ -4,15 +4,15 @@ description: В этом руководством описывается Xamarin
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: 2f47e655da60c05fe57e5c57b3a3236fee7cbd65
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f37905f483ad31d05276383718a3295d4a288f28
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528655"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285869"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
 
@@ -24,7 +24,7 @@ Xamarin Designer для iOS является конструктором визу
 
 Конструктор iOS доступен в Visual Studio для Mac и Visual Studio 2017 и более поздних версий в Windows. В Visual Studio для Windows конструктор iOS требует подключения к правильно настроенному узлу сборки Mac, хотя Xcode не требуется.
 
-В этом руководстве предполагается, что вы знакомы с содержанием, изложенным в руководствах по [Начало работы](~/ios/get-started/index.md).
+В этом руководстве предполагается, что вы знакомы с содержанием, изложенным в [руководствах по начало работы](~/ios/get-started/index.md).
 
 <a name="how-it-works" />
 
@@ -32,7 +32,7 @@ Xamarin Designer для iOS является конструктором визу
 
 В этом разделе описывается, как конструктор iOS упрощает создание пользовательского интерфейса и его подключение к коду.
 
-Конструктор iOS позволяет разработчикам визуально проектировать пользовательский интерфейс приложения. Как описано в разделе [Общие сведения](~/ios/user-interface/storyboards/index.md) о раскадровках, раскадровка Описывает экраны (контроллеры представлений), которые составляют приложение, элементы интерфейса (представления), размещенные на этих контроллерах представления, и общий поток навигации приложения. 
+Конструктор iOS позволяет разработчикам визуально проектировать пользовательский интерфейс приложения. Как описано в разделе [Общие сведения о раскадровках](~/ios/user-interface/storyboards/index.md) , раскадровка Описывает экраны (контроллеры представлений), которые составляют приложение, элементы интерфейса (представления), размещенные на этих контроллерах представления, и общий поток навигации приложения. 
 
 Контроллер представления состоит из двух частей: визуального представления в конструкторе iOS и связанного C# класса:
 
@@ -82,13 +82,13 @@ Xamarin Designer для iOS является конструктором визу
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-В **панель решения**перейдите к **ViewController.CS** и щелкните индикатор раскрытия, чтобы определить, что определение `ViewController` класса контроллера представления охватывает два файла, каждый из которых содержит определение разделяемого [класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+В **панель решения**перейдите к **ViewController.CS** и щелкните индикатор раскрытия, чтобы определить, что определение `ViewController` класса контроллера представления охватывает два файла, каждый из которых содержит определение [разделяемого класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
 [![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.Designer.CS](introduction-images/5-twoviewcontrollerfiles-vsmac.png "два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-В **Обозреватель решений**перейдите к **ViewController.CS** и щелкните индикатор раскрытия, чтобы определить, что определение `ViewController` класса контроллера представления охватывает два файла, каждый из которых содержит разделяемый [класс](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) . макроопределения
+В **Обозреватель решений**перейдите к **ViewController.CS** и щелкните индикатор раскрытия, чтобы определить, что определение `ViewController` класса контроллера представления охватывает два файла, каждый из которых содержит [разделяемый класс](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) . макроопределения
 
 [![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.Designer.CS](introduction-images/5-twoviewcontrollerfiles-vs.png "два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
@@ -482,7 +482,7 @@ namespace Designer
 - [Создание пользовательского Таблевиевцелл с помощью. XIB](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/tables/custom-tableviewcell)
 - [Создание экрана запуска с помощью. XIB](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/templates/launchscreen-xib)
 
-Дополнительные сведения об использовании раскадровки см. в статье [Введение в](~/ios/user-interface/storyboards/index.md)раскадровки.
+Дополнительные сведения об использовании раскадровки см. в статье [Введение в раскадровки](~/ios/user-interface/storyboards/index.md).
 
 Это и другие руководства, связанные с конструктором iOS, относятся к использованию раскадровок в качестве стандартного подхода к созданию пользовательских интерфейсов, так как большинство новых шаблонов проектов Xamarin. iOS по умолчанию предоставляют раскадровку.
 

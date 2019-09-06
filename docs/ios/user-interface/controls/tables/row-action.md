@@ -4,15 +4,15 @@ description: В этом руководстве показано, как соз�
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: e90e108e6b02055a585129b6412641a726afaab4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: aabbbb706d4b6fcd022e30f726696b5d4f46167f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226291"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279516"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Работа с действиями строк в Xamarin. iOS
 

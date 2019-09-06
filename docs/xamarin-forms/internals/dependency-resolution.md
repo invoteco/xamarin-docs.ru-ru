@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: e2cab7191bb4877deacb3f3f3235a3a4d5c65612
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6df393d59207cea9c316189059f8d0e08a5e5137
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656368"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290066"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Разрешение зависимостей в Xamarin.Forms
 
@@ -29,9 +29,9 @@ _В этой статье объясняется, как вставить мет
 
 ## <a name="injecting-a-dependency-resolution-method"></a>Добавление метода разрешения зависимостей
 
-[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) Класс предоставляет возможность внедрения зависимостей метод разрешения в Xamarin.Forms, используя [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) метод. Затем когда Xamarin.Forms требуется экземпляр определенного типа, этот метод разрешения зависимостей присваивается возможность предоставить экземпляр. Если этот метод разрешения зависимостей возвращает `null` для запрошенного типа, возвращается Xamarin.Forms к попытке создать тип экземпляр с помощью `Activator.CreateInstance` метод.
+[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) Класс предоставляет возможность внедрения зависимостей метод разрешения в Xamarin.Forms, используя [ `ResolveUsing` ](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) метод. Затем когда Xamarin.Forms требуется экземпляр определенного типа, этот метод разрешения зависимостей присваивается возможность предоставить экземпляр. Если этот метод разрешения зависимостей возвращает `null` для запрошенного типа, возвращается Xamarin.Forms к попытке создать тип экземпляр с помощью `Activator.CreateInstance` метод.
 
-В следующем примере показано, как установить метод разрешения зависимостей с [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) метод:
+В следующем примере показано, как установить метод разрешения зависимостей с [ `ResolveUsing` ](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) метод:
 
 ```csharp
 using Autofac;

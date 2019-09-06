@@ -1,56 +1,56 @@
 ---
-title: Доступ к данным Xamarin.iOS
-description: Этот документ содержит ссылки на руководства, описывающие способы работы с локальными базами данных в приложении Xamarin.iOS. Связанное содержимое рассматриваются для SQLite.NET, ADO.NET и многое другое.
+title: Доступ к данным Xamarin. iOS
+description: В этом документе содержатся ссылки на руководства, в которых описывается работа с локальными базами данных в приложении Xamarin. iOS. Связанное содержимое обсуждает SQLite.NET, ADO.NET и многое другое.
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 420f52a055dc1c03a017723ab34c2fc3b5363656
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 6050320f781ea89c5455e10a8754a89d7086e92a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650232"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281746"
 ---
-# <a name="xamarinios-data-access"></a>Доступ к данным Xamarin.iOS
+# <a name="xamarinios-data-access"></a>Доступ к данным Xamarin. iOS
 
-Xamarin.iOS поддерживает интерфейсы API для доступа к базе данных, такие как:
+Xamarin. iOS поддерживает API-интерфейсы доступа к базам данных, например:
 
--  Платформа ADO.NET.
--  SQLite-NET сторонний библиотеки.
+- ADO.NET Framework.
+- SQLite-NET Library стороннего производителя.
 
-Это руководство содержит обзор баз данных в целом перед описанием Настройка ADO.NET и для SQLite.NET для доступа к базам данных SQLite в приложениях Xamarin.iOS. 
+В этом руководство представлен общий обзор баз данных, прежде чем описано, как настроить ADO.NET и SQLite.NET для доступа к базам данных SQLite в приложениях Xamarin. iOS. 
 
-Большая часть кода в этом документе полностью кросс платформенные и будет выполняться в iOS или Android без изменений. Существует два примеры приложений, которые рассматриваются:
+Большая часть кода в этом документе полностью кросс-платформенная и будет работать на iOS или Android без изменения. Обсуждаются два примера приложений:
 
--  [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) — простых операций записывает результаты в текстовый отображения элемента управления;
--  [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) — объединяет операции с данными в небольших рабочее приложение, которое перечисляет и изменяет простая структура данных.
+- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) — простые операции с данными записывают результаты в элемент управления отображением текста;
+- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) — интегрирует операции с данными в небольшое рабочее приложение, которое перечисляет и редактирует простую структуру данных.
 
-Оба примера решения содержат iOS и Android примеры проектов приложений.
+Оба примера решения содержат проекты образцов приложений для iOS и Android.
 
-Приложения Xamarin.Forms. в статье [работы с базами данных](~/xamarin-forms/data-cloud/data/databases.md) которой описана работа с SQLite в библиотеке переносимой библиотеки Классов с помощью Xamarin.Forms.
+Для приложений Xamarin. Forms прочтите статью [Работа с базами данных](~/xamarin-forms/data-cloud/data/databases.md) , в которой объясняется, как работать с SQLite в библиотеке PCL с Xamarin. Forms.
 
 ## <a name="sections"></a>Разделы
 
--  [Введение](introduction.md)
--  [Конфигурация](configuration.md)
--  [Использование ORM для SQLite.NET](using-sqlite-orm.md)
--  [Использование ADO.NET](using-adonet.md)
--  [Использование данных в приложении](using-data-in-an-app.md)
+- [Введение](introduction.md)
+- [Конфигурация](configuration.md)
+- [Использование ORM для SQLite.NET](using-sqlite-orm.md)
+- [Использование ADO.NET](using-adonet.md)
+- [Использование данных в приложении](using-data-in-an-app.md)
 
 ## <a name="summary"></a>Сводка
 
-В этой главе рассматривается доступ к данным в Xamarin.iOS с помощью SQLite в качестве ядра базы данных. Базы данных может осуществляться в «напрямую» с использованием синтаксиса ADO.NET, или можно включить ORM для SQLite.NET и выполнения операций с данными в C#.
+В этой главе обсуждаются доступ к данным в Xamarin. iOS с использованием SQLite в качестве ядра СУБД. Доступ к базе данных можно получить напрямую с помощью синтаксиса ADO.NET. Кроме того, можно включить SQLite.NET ORM и выполнить операции C#с данными в.
 
-Мы рассмотрели два примера: содержит код доступа к данным очень простой выходные данные в текстовое поле, а также простое приложение, которое включает в себя создания, чтения, обновления и удаления функциональные возможности. Мы также описана работа с потоками и способе направления разбора приложения с помощью предварительно заполненный база данных SQLite.
+Мы рассматривали два примера: один, содержащий очень простой код доступа к данным, который выводит данные в текстовое поле, и простое приложение, которое включает функции создания, чтения, обновления и удаления. Мы также обсуждали работу с потоками и как инициализировать приложение с помощью предварительно заполненной базы данных SQLite.
 
-Дополнительные примеры доступа к данным платформах см. в нашем [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) практический пример.
+Дополнительные примеры межплатформенного доступа к данным см. в [статье Практическое](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) обучение для различных платформ.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [DataAccess Basic (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess Advanced (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [iOS рецепты данных](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Доступ к данным Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Базовый доступ к данным (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
+- [Расширенный доступ к данным (пример)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Рецепты на данные iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
+- [Доступ к данным Xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

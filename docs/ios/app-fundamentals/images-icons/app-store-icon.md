@@ -4,15 +4,15 @@ description: В этом документе описывается, как ис�
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/26/2017
-ms.openlocfilehash: 984ef59a4571379f7b2969ed4f15674f8819e4e4
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b6bf2aa8925e29ed5120de5cc2d3146704259d87
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620329"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282406"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Значки App Store в Xamarin. iOS
 

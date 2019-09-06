@@ -4,15 +4,15 @@ description: В этом документе описывается, как до�
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 4b00efe1132f5588ee896fc2044c247acfe0723a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 00c2284a12d17e0dcd5a89cb0c39c1064665c6d7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198470"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288442"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Автоматическое изменение высоты строки в Xamarin. iOS
 
@@ -38,7 +38,7 @@ ms.locfileid: "70198470"
 
 [![](autosizing-row-height-images/table03a.png "Раздел макета Панель свойств")](autosizing-row-height-images/table03a.png#lightbox)
 
-Задайте для элемента, который требуется расширить, значение приоритета хуггинг и более **низкое** значение приоритета сопротивления.
+Задайте для элемента, который требуется расширить, значение приоритета **хуггинг и более** **низкое** значение приоритета сопротивления.
 
 Далее необходимо выбрать прототип ячейки и присвоить ему уникальный **идентификатор**:
 

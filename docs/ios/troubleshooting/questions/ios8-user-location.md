@@ -4,19 +4,19 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9BE92C99-C9C5-427E-ADE4-789DF258BACE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 8b800d0c5639d4679b5e17c6c6a4689690529b85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4b7f4239f97b7199f9b0eb7f1be9907a2c54cb0b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421169"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288108"
 ---
 # <a name="user-location-not-working-in-ios-8"></a>Расположение пользователя не работает в iOS 8
 
-В текстовом редакторе: Откройте Info.plist и добавьте следующие строки:
+В текстовом редакторе: Откройте окно info. plist и добавьте следующее:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -26,13 +26,13 @@ ms.locfileid: "61421169"
 <string>This will be called if location is used behind the scenes</string>
 ```
 
-И в пределах MainViewController.cs необходимо вызвать следующие:
+В MainViewController.cs необходимо вызвать следующее:
 
 ```csharp
 iPhoneLocationManager.RequestWhenInUseAuthorization ();
 ```
 
-ПРИМЕР:
+СИМВОЛА
 
 ```cs
 if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {

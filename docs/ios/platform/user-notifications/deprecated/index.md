@@ -4,15 +4,15 @@ description: В этом документе описываются технол�
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2016
-ms.openlocfilehash: af9f4d606dbe258b224d09f68f9b65d6f56ab28f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 899d3e33e4722194a53b75eace1f5b03ee07eb40
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653899"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282365"
 ---
 # <a name="deprecated-notification-technologies-in-xamarinios"></a>Нерекомендуемые технологии уведомлений в Xamarin. iOS
 

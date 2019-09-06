@@ -1,46 +1,46 @@
 ---
-title: iOS Дополнительные понятия и внутренние компоненты
-description: В данном разделе рассматриваются в MonoTouch API проектирования, сборок и классов из библиотеки классов .NET Base (BCL) и интеграции Visual Studio для Mac с помощью конструктора Interface Builder и цепочки инструментов компании Apple.
+title: Дополнительные понятия и внутренние компоненты iOS
+description: В этом разделе рассматриваются структура API, сборки и классы из библиотеки базовых классов .NET (BCL), а также объясняется, как Visual Studio для Mac интегрируется с Interface Builder Xcode и Apple цепочки инструментов.
 ms.prod: xamarin
 ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 8a454e469f96c3464d756eb6b4e4eb3ed40c8f1e
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 4f6043190087d34ccaa4a63fcc801843194273ad
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865763"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291885"
 ---
-# <a name="ios-advanced-concepts-and-internals"></a>iOS Дополнительные понятия и внутренние компоненты
+# <a name="ios-advanced-concepts-and-internals"></a>Дополнительные понятия и внутренние компоненты iOS
 
-_В данном разделе рассматриваются в MonoTouch API проектирования, сборок и классов из библиотеки классов .NET Base (BCL) и интеграции Visual Studio для Mac с помощью конструктора Interface Builder и цепочки инструментов компании Apple._
+_В этом разделе рассматриваются структура API, сборки и классы из библиотеки базовых классов .NET (BCL), а также объясняется, как Visual Studio для Mac интегрируется с Interface Builder Xcode и Apple цепочки инструментов._
 
 ## <a name="api-designiosinternalsapi-designindexmd"></a>[Структура API](~/ios/internals/api-design/index.md)
 
-Объясняет принципы проектирования API привязки.
+Описывает принципы разработки, лежащие в основе привязки API.
 
 ## <a name="available-assembliescross-platforminternalsavailable-assembliesmd"></a>[Доступные сборки](~/cross-platform/internals/available-assemblies.md)
 
-Список доступных сборок и классов из библиотеки классов .NET Base (BCL).
+Перечисляет доступные сборки и классы из библиотеки базовых классов (BCL) .NET.
 
 ## <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[Создание кода для XIB-файлов](~/ios/internals/xib-code-generation.md)
 
-Здесь также рассматривается, как Visual Studio для Mac и конструктора Interface Builder позволяет использовать конструктора интерфейсов для разработки пользовательского интерфейса.
+Здесь также рассматривается, как Visual Studio для Mac и Xcode Interface Builder позволяет использовать Interface Builder для проектирования пользовательского интерфейса.
 
 > [!IMPORTANT]
-> В этом документе объясняется Visual Studio для Mac в интеграции с помощью конструктора Interface Builder. Дополнительные сведения о конструкторе iOS, см. в статье [конструктор iOS](~/ios/user-interface/designer/index.md) документа.
+> В этом документе описывается интеграция Visual Studio для Mac только с Interface Builderом Xcode. Дополнительные сведения о конструкторе iOS см. в документе, посвященном [конструктору iOS](~/ios/user-interface/designer/index.md) .
 
 ## <a name="ios-architectureiosinternalsarchitecturemd"></a>[Архитектура iOS](~/ios/internals/architecture.md)
 
-Xamarin.iOS приложения выполняются в среде выполнения Mono и использовать полной вперед от времени (AOT) компиляции для компиляции кода C# для языка ассемблера ARM. В этом руководстве описано Xamarin.iOS на низком уровне
+Приложения Xamarin. iOS выполняются в среде выполнения Mono и используют компиляцию с полным временем (AOT) для компиляции C# кода на языке ассемблера ARM. В этом руководством рассматривается Xamarin. iOS на низком уровне
 
-## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Селекторы Objective-C](~/ios/internals/objective-c-selectors.md)
+## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Селекторы цели-C](~/ios/internals/objective-c-selectors.md)
 
-Заметки и использования для прямого вызова селекторы Objective-C (методы).
+Примечания и использование для вызова селекторов цели-C (методов) напрямую.
 
 ## <a name="limitationslimitationsmd"></a>[Ограничения](limitations.md)
 
-Проблемы и ограничения, которые следует учитывать с Xamarin.iOS.
+Ловушки и ограничения, которые следует учитывать при использовании Xamarin. iOS.

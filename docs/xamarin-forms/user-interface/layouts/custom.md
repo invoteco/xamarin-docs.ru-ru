@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526951"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292571"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Создание пользовательского макета в Xamarin. Forms
 
@@ -74,8 +74,8 @@ _Xamarin.Forms определяет четыре класса макета — S
 1. Переопределить [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) вызываемого метода [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) метод на дочерние элементы макета и возвращают запрошенный размер для макета. Дополнительные сведения см. в разделе [переопределение метода OnMeasure](#onmeasure).
 1. Переопределить [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) вызываемого метода [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) метод макета дочерних элементов. Ошибка вызова [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) метод на каждый дочерний элемент в макете вызовет никогда не получает требуемый размер или положение дочерних, и поэтому дочерних, не станет видимым на странице. Дополнительные сведения см. в разделе [переопределение метода LayoutChildren](#layoutchildren).
 
-  > [!NOTE]
->  При перечислении дочерних элементов в [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) и [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) переопределений, пропустить любой дочерний которого [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) свойству `false`. Это позволит гарантировать, что пользовательский макет не оставить место для невидимые дочерние элементы.
+    > [!NOTE]
+    > При перечислении дочерних элементов в [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) и [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) переопределений, пропустить любой дочерний которого [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) свойству `false`. Это позволит гарантировать, что пользовательский макет не оставить место для невидимые дочерние элементы.
 
 1. [*необязательно*] переопределение [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) метод, чтобы получать уведомления при добавлении дочерних элементов или удалены из разметки. Дополнительные сведения см. в разделе [переопределение метода InvalidateLayout](#invalidatelayout).
 1. [*необязательно*] переопределение [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) метод, чтобы получать уведомления при изменении размера одного из дочерних элементов макета. Дополнительные сведения см. в разделе [переопределение метода OnChildMeasureInvalidated](#onchildmeasureinvalidated).

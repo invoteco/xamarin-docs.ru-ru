@@ -4,15 +4,15 @@ description: В этом документе описываются необно�
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ea016860bc30d9f6b70f41b85db09bf5544304ba
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f455d2164573d68db0a9c764f2b2cef5cc6d739
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528281"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284044"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Подписки и отчеты в Xamarin. iOS
 
@@ -90,7 +90,7 @@ ms.locfileid: "69528281"
 }
 ```
 
-Если состояние равно нулю, подписка все еще действительна, а другие поля содержат допустимые данные. Если состояние — 21006, срок действия подписки истек. Другие коды ошибок см. в документации по [проверке подлинности устанавливать возобновляемую](https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) по подписке.
+Если состояние равно нулю, подписка все еще действительна, а другие поля содержат допустимые данные. Если состояние — 21006, срок действия подписки истек. Другие коды ошибок см. в документации по [проверке подлинности устанавливать возобновляемую по подписке](https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) .
 
 #### <a name="restoring-auto-renewable-subscriptions"></a>Восстановление подписок Auto-устанавливать возобновляемую
 

@@ -1,50 +1,50 @@
 ---
 title: Изменения WebKit и Safari в iOS 11
-description: В этом документе рассматриваются изменения, внесенные в WebKit и платформу служб Safari в iOS 11. Он описывает способы работы с Задание стиля обновлений в SFSafariViewController и новых возможностях WKWebView.
+description: В этом документе обсуждаются изменения, вносимые в WebKit и платформу служб Safari в iOS 11. В нем описывается работа с обновлениями стилей в Сфсафаривиевконтроллер и новые функции в Вквебвиев.
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/12/2017
-ms.openlocfilehash: 5ced73b1f3f5b8207ae1258dcb01a78c94df217d
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: b90673559d0b8a3728898b7d8dbc3207bb22520b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268918"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280082"
 ---
 # <a name="webkit-and-safari-changes-in-ios-11"></a>Изменения WebKit и Safari в iOS 11
 
-iOS 11 предлагает новый вариант браузера Safari — Safari 11.0 — включая изменения WebKit и SafariServices. В этом руководстве рассматриваются эти изменения.
+в iOS 11 появилась новая версия веб-браузера Safari — Safari 11,0, который включает изменения в WebKit и Сафарисервицес. В этом руководством рассматриваются эти изменения.
 
-## <a name="safariservices"></a>SafariServices
+## <a name="safariservices"></a>сафарисервицес
 
-`SFSafariViewController` впервые появился в iOS 9 как параметр для отображения веб-содержимого или проверки подлинности пользователей из вашего приложения. Дополнительные сведения о его функциях можно найти в [веб-представления](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) руководства.
+`SFSafariViewController`была введена в iOS 9 в качестве варианта отображения веб-содержимого или проверки подлинности пользователей из приложения. Дополнительные сведения о его возможностях см. в разделе "Обзор [веб-представлений](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) ".
 
-iOS 11 был представлен стиля обновлений на контроллер представления Safari, предоставление пользователям более удобную работу между приложением и веб-узла. Например удаление из адресной строки теперь предоставляет контроллер представления вида в приложении браузера, а не мини-обозреватель Safari. Вы также можете настроить цвет в соответствии с цветовой схемы приложения, задав `preferredBarTintColor` и `PreferredControlTintColor` свойства:
+в iOS 11 появились обновления стиля для контроллера представления Safari, что позволяет пользователям более эффективно работать между приложением и Интернетом. Например, удаление адресной строки теперь дает контроллеру представления Safari поведение обозревателя в приложении, а не мини-браузер. Можно также настроить цветовую схему так, чтобы она соответствовала цветовой схеме приложения, задав `preferredBarTintColor` свойства и. `PreferredControlTintColor`
 
 ```csharp
 sfViewController.PreferredControlTintColor = UIColor.White;
 sfViewController.PreferredBarTintColor = UIColor.Purple;
 ```
 
-В следующем фрагменте кода отображает столбцы фиолетовым до белого, как показано на следующем рисунке:
+Следующий фрагмент кода отображает столбцы в виде фиолетового и белого столбцов, как показано на следующем рисунке:
 
-![Полосы SFSafariViewController, подготавливается к просмотру в фиолетовым до белого](web-images/image1.png)
+![Сфсафаривиевконтроллер панели, отображаемые фиолетовым и белым цветом](web-images/image1.png)
 
-Кнопки закрытия, представленные в контроллер представления Safari также можно изменить, задав `DismissButtonStyle` значение `Done`, `Close`, или `Cancel`:
+Кнопку Закрыть `Done`, представленную в контроллере представления Safari, можно также изменить, задав `DismissButtonStyle` для свойства значение, `Close`или `Cancel`.
 
 ```csharp
 sfViewController.DismissButtonStyle = SFSafariViewControllerDismissButtonStyle.Close;
 ```
 
-![Отклонить изменения текста кнопки](web-images/image2.png)
+![Текст кнопки "Закрыть" изменен](web-images/image2.png)
 
-Это значение может быть изменено во время `SFSafariViewController` представлены.
+Это значение можно изменить, пока `SFSafariViewController` представляется.
 
 
-В зависимости от содержимого, который отображается в контроллер представления Safari возможно, необходимо, чтобы гарантировать, что строки меню не свернуть прокрутке пользователем. Эта функция включена, задав новое `BarCollapsedEnabled` свойства `false`:
+В зависимости от содержимого, отображаемого в контроллере представления Safari, может потребоваться не сворачивать строки меню при прокрутке пользователем. Это можно настроить, задав для `BarCollapsedEnabled` `false`нового свойства значение:
 
 ```csharp
 var config = new SFSafariViewControllerConfiguration();
@@ -53,28 +53,28 @@ config.BarCollapsingEnabled = false;
 var sfViewController = new SFSafariViewController(url, config);
 ```
 
-![Панель свертывание отключена](web-images/image3.png)
+![Свертывание строк отключено](web-images/image3.png)
 
-Apple внесла обновлений к конфиденциальности в контроллере представления Safari в iOS 11. Теперь Просмотр данных, такие как файлы cookie и локального хранилища существуют только на основе каждого приложения, а не для всех экземпляров контроллера представления Safari. При этом сохраняется закрытыми в пределах приложения обзора действий пользователей.
+Компания Apple также внесла изменения в сведения о конфиденциальности в контроллере представления Safari в iOS 11. Теперь просмотр данных, таких как файлы cookie и локальное хранилище, доступен только для каждого приложения, а не для всех экземпляров контроллера представления Safari. Это позволяет сохранить частное действие обзора пользователей в приложении.
 
-Дополнительные функции например перетаскивание поддержку URL-адресов и поддержка `window.open()` также были добавлены `SFSafariViewController` в iOS 11. Можно найти дополнительные сведения об этих новых функциях в [документации Apple SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor).
+`SFSafariViewController` В iOS 11 также добавлены дополнительные функции, такие как поддержка перетаскивания `window.open()` для URL-адресов и поддержки для. Дополнительные сведения об этих новых функциях см. в [документации Apple сфсафаривиевконтроллер](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor).
 
 
 ## <a name="webkit"></a>WebKit
 
-`WKWebView` появилась как часть WebKit в iOS 8 как средство отображения веб-содержимого для пользователей. Гораздо более возможность настройки, чем `SFSafariViewController`, что позволяет создавать собственные навигации и пользовательский интерфейс.
+`WKWebView`был представлен в составе WebKit в iOS 8 как средство отображения веб-содержимого для пользователя. Это гораздо более настраиваемое, чем `SFSafariViewController`, что позволяет создавать собственные возможности навигации и пользовательский интерфейс.
 
-Apple представила три основные улучшения для `WKWebView` с iOS 11: 
+В Apple появились три основных улучшения для `WKWebView` iOS 11: 
 
 - Возможность управления файлами cookie
 - Фильтрация содержимого
-- Загрузка пользовательских ресурсов. 
+- Пользовательская загрузка ресурсов. 
 
-Файлы «cookie» осуществляется с помощью нового [ `WKHttpCookieStore` ](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) класс, который позволяет добавлять и удалять файлы cookie, чтобы получить все файлы cookie, хранящиеся в WKWebView и для наблюдения за хранилище для изменения файла cookie.
+Управление файлами cookie осуществляется с помощью нового [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) класса, который позволяет добавлять и удалять файлы cookie, получать все файлы cookie, хранящиеся в вквебвиев, и отслеживать изменения в хранилище файлов cookie.
 
-Содержимого, фильтрации позволяет управлять тип содержимого, которое пользователь увидит, позволяя убедитесь, что это безопасные, семейств удобных и при необходимости, доступно только для выбора группы пользователей. Это реализуется с помощью нового [ `WKContentRuleList` ](https://developer.apple.com/documentation/webkit/wkcontentrulelist) класса, указав пары триггеры и действия в формате JSON. Дополнительные сведения об этих триггерах и действиях можно найти в компании Apple [содержимого правила блокировки](https://developer.apple.com/library/content/documentation/Extensions/Conceptual/ContentBlockingRules/Introduction/Introduction.html) руководства.
+Фильтрация содержимого позволяет управлять типом содержимого, которое будет видеть пользователь, что позволяет обеспечить его безопасность, удобство работы в семействе и, при необходимости, доступ только к выбранным группам пользователей. Это реализуется с помощью нового [`WKContentRuleList`](https://developer.apple.com/documentation/webkit/wkcontentrulelist) класса путем предоставления пар триггеров и действий в JSON. Дополнительные сведения об этих триггерах и действиях можно найти в статье о [правилах блокировки содержимого](https://developer.apple.com/library/content/documentation/Extensions/Conceptual/ContentBlockingRules/Introduction/Introduction.html) Apple.
 
-iOS 11 теперь позволяет настраивать `WKWebView` с помощью настраиваемых ресурсов, загрузка для веб-содержимому. Это реализуется с помощью `IWKUrlSchemeHandler` интерфейс, который позволяет обрабатывать схемы URL-адресов, не включены в пакет средств Web. Этот интерфейс содержит метод start и stop, который должен быть реализован:
+Теперь iOS 11 позволяет настраивать `WKWebView` пользовательскую загрузку ресурсов для веб-содержимого. Это реализуется с помощью `IWKUrlSchemeHandler` интерфейса, который позволяет управлять схемами URL-адресов, которые не являются собственными для веб-набора. Этот интерфейс имеет метод Start и останавливаться, который должен быть реализован:
 
 ```csharp
 public class MyHandler : NSObject, IWKUrlSchemeHandler {
@@ -97,7 +97,7 @@ public class MyHandler : NSObject, IWKUrlSchemeHandler {
 }
 ``` 
 
-После реализации обработчика, использовать его для задания `SetUrlSchemeHandler` свойство `WKWebViewConfiguration`. Затем загрузите URL-адрес чего-либо, использующий настраиваемой схемой:
+После реализации обработчика используйте его для задания `SetUrlSchemeHandler` свойства `WKWebViewConfiguration`в. Затем загрузите URL-адрес объекта, который использует пользовательскую схему:
 
 ```csharp
 var config = new WKWebViewConfiguration();

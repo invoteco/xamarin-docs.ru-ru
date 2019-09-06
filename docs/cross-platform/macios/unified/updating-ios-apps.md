@@ -3,15 +3,15 @@ title: Обновление существующих приложений iOS
 description: В этом документе описаны действия, которые необходимо выполнить для обновления приложения Xamarin. iOS с Classic API на Unified API.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b0999ff6fc3b3042827f11ae1e127ef7bb9fedfe
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c74efef96a15a950122041eb52dc09835bb8940b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509617"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279553"
 ---
 # <a name="updating-existing-ios-apps"></a>Обновление существующих приложений iOS
 
@@ -57,11 +57,11 @@ Xamarin предоставляет инструментарий для Visual St
 
 ### <a name="2-update-project-references"></a>2. Обновить ссылки проекта
 
-Разверните узел **ссылки** проекта приложения iOS. Вначале будет показана * неработающая **ссылка,** как на этом снимке экрана (так как мы только что изменили тип проекта):
+Разверните узел **ссылки** проекта приложения iOS. Вначале будет показана * неработающая **ссылка, как на этом** снимке экрана (так как мы только что изменили тип проекта):
 
 ![](updating-ios-apps-images/references.png "Вначале будет показана Неработающая ссылка, похожая на этот снимок экрана, так как изменился тип проекта")
 
-Щелкните правой кнопкой мыши проект приложения iOS, чтобы **изменить ссылки**, а затем щелкните ссылку  на однокасание и удалите ее с помощью красной кнопки "X".
+Щелкните правой кнопкой мыши проект приложения iOS, чтобы **изменить ссылки**, а затем щелкните ссылку на **однокасание** и удалите ее с помощью красной кнопки "X".
 
 ![](updating-ios-apps-images/references-delete-monotouch-sml.png "Щелкните правой кнопкой мыши проект приложения iOS, чтобы изменить ссылки, а затем щелкните ссылку на касание и удалите ее с помощью красной кнопки X")
 
@@ -73,7 +73,7 @@ Xamarin предоставляет инструментарий для Visual St
 
 ### <a name="3-remove-monotouch-from-namespaces"></a>3. Удалить из пространств имен бескасание
 
-Удалите префикс  «нечувствительный к касанию `using` » из пространств имен в операторах или в любом месте полного имени класса ClassName (например, `MonoTouch.UIKit`будет просто `UIKit`).
+Удалите префикс « **нечувствительный к касанию** » из пространств имен в `using` операторах или в любом месте полного имени класса ClassName (например, `MonoTouch.UIKit`будет просто `UIKit`).
 
 ### <a name="4-remap-types"></a>4. Типы пересопоставления
 
@@ -85,7 +85,7 @@ Xamarin предоставляет инструментарий для Visual St
 
 Примеры включают изменение `public override int NumberOfSections (UITableView tableView)` для возврата `nint` и изменения возвращаемого типа `nint`и типов параметров в `public override int RowsInSection (UITableView tableView, int section)` .
 
-## <a name="considerations"></a>Особенности
+## <a name="considerations"></a>Рекомендации
 
 При преобразовании существующего проекта Xamarin. iOS из Classic API в новый Unified API необходимо учитывать следующие моменты, если это приложение полагается на один или несколько компонентов или пакетов NuGet.
 

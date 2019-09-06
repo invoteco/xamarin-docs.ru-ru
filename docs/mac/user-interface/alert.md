@@ -4,15 +4,15 @@ description: В этой статье рассматривается работ�
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: c97006d1afb68d693e2792879788ea92907873fc
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 1e2ad12e7dc52b44bda079340638298b87ac5f65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889546"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291217"
 ---
 # <a name="alerts-in-xamarinmac"></a>Оповещения в Xamarin. Mac
 

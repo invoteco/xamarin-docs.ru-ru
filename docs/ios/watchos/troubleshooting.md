@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 1777bfe627d0dc579169c954f7799348befbf6b8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227024"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292839"
 ---
 # <a name="watchos-troubleshooting"></a>Устранение неполадок watchOS
 
@@ -38,7 +38,7 @@ ms.locfileid: "70227024"
 - Более ранние выпуски Visual Studio для Mac неправильно отображают один из значков **апплекомпанионсеттингс** как 88x88 пикселов; Это приводит к **ошибке отсутствующего значка** при попытке отправить в App Store.
     Этот значок должен быть 87x87 пикселей (29 единиц для **@3x** экранов Retina). Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** (в соответствии с [этим образцом](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
-- Если **идентификатор пакета WKApp "info. > plist** " проекта расширения контрольных значений [неправильно установлен](~/ios/watchos/get-started/project-references.md) в соответствии с **идентификатором пакета**приложения Watch, отладчику не удастся подключиться, и Visual Studio для Mac будет ожидать сообщение "ожидание завершения работы *отладчика Connect "* .
+- Если **идентификатор пакета WKApp "info. > plist** " проекта расширения контрольных значений [неправильно установлен](~/ios/watchos/get-started/project-references.md) в соответствии с **идентификатором пакета**приложения Watch, отладчику не удастся подключиться, и Visual Studio для Mac будет ожидать сообщение *"ожидание завершения работы отладчика Connect "* .
 
 - Отладка поддерживается в режиме **уведомлений** , но может быть ненадежной. Повторная попытка иногда будет работать. Убедитесь, что значение **info. plist** `WKCompanionAppBundleIdentifier` приложения Watch установлено в соответствии с идентификатором пакета приложения iOS (родительское или контейнером), которое выполняется на устройстве iPhone.
 
@@ -91,7 +91,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 *Если* использовании построителя интерфейс Xcode, выполните следующие действия для создания новых контроллеров интерфейс для наблюдения за приложения и включите синхронизацию с Xcode, выходов и действия, доступные в C#:
 
-1. Откройте интерфейс Watch приложения **.** Раскадровка в **Xcode Interface Builder**.
+1. Откройте интерфейс Watch приложения **. раскадровка** в **Xcode Interface Builder**.
 
     ![](troubleshooting-images/add-6.png "Открытие раскадровки в построителе интерфейс Xcode")
 
@@ -216,7 +216,7 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Запуск приложения Watch из командной строки
 
 > [!IMPORTANT]
-> Вы можете запустить приложение Watch в нормальном режиме приложения по умолчанию, а также в режимах **уведомлений** или с помощью [настраиваемых параметров выполнения](~/ios/watchos/get-started/installation.md#custommodes) в Visual Studio для Mac и Visual Studio.
+> Вы можете запустить приложение Watch в нормальном режиме приложения по умолчанию, а также в режимах **уведомлений** **или с** помощью [настраиваемых параметров выполнения](~/ios/watchos/get-started/installation.md#custommodes) в Visual Studio для Mac и Visual Studio.
 
 
 Вы также можете использовать командную строку для управления симулятором iOS. Программа командной строки, используемая для запуска контрольных приложений, — **mtouch**.

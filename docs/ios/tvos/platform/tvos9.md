@@ -4,15 +4,15 @@ description: В этой статье представлены все новые
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: be59ee3f51801c67277aac1a3ec274e81997ff3b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657327"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290722"
 ---
 # <a name="introduction-to-tvos-9"></a>Введение в tvOS 9
 
@@ -85,7 +85,7 @@ _В этой статье представлены все новые и изме
 - Германия
 - Япония
 - Испания
-- Великобритания
+- Соединенное Королевство
 - США
 
 Все остальные страны получат Пульт Apple TV Remote, который заменяет кнопку Siri на кнопку поиска, которая открывает экран поиска по умолчанию с текстовым вводом для поиска:
@@ -126,7 +126,7 @@ _В этой статье представлены все новые и изме
 
 В дополнение к установленным традиционным приложениям Apple TV позволяет легко создавать веб-клиентские приложения потоковой передачи данных на основе Интернета (HTTPS, XML и JavaScript). Вы разрабатываете пользовательский интерфейс с помощью языка разметки Apple ТВМЛ и используете JavaScript для определения поведения приложения с помощью Твмлкит.
 
-Дополнительные сведения см. в справочнике по [языку разметки Apple TV](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064)Apple, справочнике по [Твжс Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLJS/Reference/TVJSFrameworkReference/index.html#//apple_ref/doc/uid/TP40016076), Справочнику по [платформам Твмлкит](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLKit/Reference/TVMLKit_Collection/index.html#//apple_ref/doc/uid/TP40016429), [о HTTP Live Streaming](https://developer.apple.com/library/prerelease/tvos/referencelibrary/GettingStarted/AboutHTTPLiveStreaming/about/about.html#//apple_ref/doc/uid/TP40013978) и [HLS о спецификации разработки для Apple TV](https://developer.apple.com/services-account/download?path=/Documentation/HLS_Authoring_Specification_for_Apple_TV/HLS_Authoring_Specification_for_Apple_TV.pdf) . по.
+Дополнительные сведения см. в [справочнике по языку разметки Apple TV](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064)Apple, справочнике по [Твжс Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLJS/Reference/TVJSFrameworkReference/index.html#//apple_ref/doc/uid/TP40016076), [Справочнику по платформам Твмлкит](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLKit/Reference/TVMLKit_Collection/index.html#//apple_ref/doc/uid/TP40016429), [о HTTP Live Streaming](https://developer.apple.com/library/prerelease/tvos/referencelibrary/GettingStarted/AboutHTTPLiveStreaming/about/about.html#//apple_ref/doc/uid/TP40013978) и [HLS о спецификации разработки для Apple TV](https://developer.apple.com/services-account/download?path=/Documentation/HLS_Authoring_Specification_for_Apple_TV/HLS_Authoring_Specification_for_Apple_TV.pdf) . по.
 
 <a name="User-Interface-Challenges" />
 
@@ -174,7 +174,7 @@ _В этой статье представлены все новые и изме
 
 Вместо того чтобы отображать статическое изображение верхнего уровня, оно может содержать динамическую строку или элементы с фокусом или динамический набор заголовков с прокруткой. Оба этих динамического стиля позволяют выделить содержимое, предоставленное приложением, или перейти к наиболее часто используемым функциям.
 
-Дополнительные сведения см. в документации по [значкам и](~/ios/tvos/app-fundamentals/icons-images.md) образам, а также в справочнике по [платформе Apple твсервицес Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) для получения динамических сведений о верхнем полке.
+Дополнительные сведения см. в документации по [значкам и образам](~/ios/tvos/app-fundamentals/icons-images.md) , а также в [справочнике по платформе Apple твсервицес Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) для получения динамических сведений о верхнем полке.
 
 
 

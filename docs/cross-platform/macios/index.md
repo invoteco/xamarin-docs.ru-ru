@@ -3,15 +3,15 @@ title: Платформа Apple (iOS и Mac)
 description: 'В этом документе описываются различные темы, связанные с разработкой Xamarin. iOS и Xamarin. Mac: совместное использование кода, Unified API, связанные библиотеки цели-C, собственные ссылки, собственные типы и многое другое.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d57e69f3cb7662b1ff6e1e7fe1645605d7861b9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199424"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290832"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Платформа Apple (iOS и Mac)
 

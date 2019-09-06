@@ -4,15 +4,15 @@ description: В этом документе описывается, как ис�
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d97f914a557839a2ca1322f803894055b6156c7e
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 18e7873eede87e9bb81c1c0b304bfc87c317c27a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065337"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291517"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Элементы управления изображениями watchOS в Xamarin
 

@@ -5,14 +5,14 @@ ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
-ms.openlocfilehash: 88823aa2d86b7cc5db72b3949453cd6aa464bd74
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: 61f214a7e072725bd7ba6cc4a3d493c8fcb909ff
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629641"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289305"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Создание приложения Xamarin. iOS с помощью API элементов
 
@@ -28,7 +28,7 @@ _Эта статья посвящена информации, приведенн
 
 ## <a name="elements-api-walkthrough"></a>Пошаговое руководство по API элементов
 
-В статье [Общие сведения о диалоговом окне с](~/ios/user-interface/monotouch.dialog/index.md) ограниченным касанием мы получили полное представление о различных частях MT. Четырехмерного. Давайте будем использовать API Elements, чтобы объединить их в приложение.
+В статье [Общие сведения о диалоговом окне с ограниченным касанием](~/ios/user-interface/monotouch.dialog/index.md) мы получили полное представление о различных частях MT. Четырехмерного. Давайте будем использовать API Elements, чтобы объединить их в приложение.
 
 ## <a name="setting-up-the-multi-screen-application"></a>Настройка приложения для нескольких экранов
 

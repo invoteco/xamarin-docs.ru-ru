@@ -4,15 +4,15 @@ description: В этой статье рассматривается созда�
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226890"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283332"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>Структура пользовательского интерфейса. Storyboard/. XIB-меньше в Xamarin. Mac
 

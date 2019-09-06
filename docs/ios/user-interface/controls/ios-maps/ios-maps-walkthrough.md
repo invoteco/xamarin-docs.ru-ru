@@ -4,15 +4,15 @@ description: В этой статье представлено пошагово�
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: c768003e2737fef191a1afb24b7ac50b28ace9b0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 94ab5ca9fa34487457b93758dfac0ab514e702c8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226275"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286288"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Заметки и наложенные наложения в Xamarin. iOS
 
@@ -20,7 +20,7 @@ ms.locfileid: "70226275"
 
  [![](ios-maps-walkthrough-images/00-map-overlay.png "Пример приложения Мапкит")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
 
-Полный код можно найти в [примере пошагового руководства](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough)по картам.
+Полный код можно найти в [примере пошагового руководства по картам](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough).
 
 Начнем с создания нового **пустого проекта iOS**и присвоив ему соответствующее имя. Начнем с добавления кода в наш контроллер представления для отображения MapView, а затем создадим новые классы для нашего Мапделегате и пользовательские заметки. Для этого выполните следующие действия:
 

@@ -4,15 +4,15 @@ description: В этой статье приводятся пошаговые и
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121336"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285768"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 
@@ -68,7 +68,7 @@ _В этой статье приводятся пошаговые инструк
 
 -----
 
-В соответствии с настройкой Apple [из командной строки с](https://developer.apple.com/library/ios/technotes/tn2339/_index.html) документацией по Xcode FAQ в OS X 10,9 и более поздних версиях панель **загрузки** диалогового окна **предпочтения** Xcode больше не поддерживает скачивание программ командной строки.
+В соответствии с [настройкой Apple из командной строки с](https://developer.apple.com/library/ios/technotes/tn2339/_index.html) документацией по Xcode FAQ в OS X 10,9 и более поздних версиях панель **загрузки** диалогового окна **предпочтения** Xcode больше не поддерживает скачивание программ командной строки.
 
 Для установки средств необходимо использовать один из следующих методов:
 
@@ -334,7 +334,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 -----
 
-Когда файл добавляется в проект, Xamarin. IOS автоматически устанавливает для файла **действие сборки** **обжкбиндингнативелибрари**и создает специальный файл с именем `libInfColorPickerSDK.linkwith.cs`.
+Когда файл **добавляется в проект** , Xamarin. IOS автоматически устанавливает для файла **действие сборки** **обжкбиндингнативелибрари**и создает специальный файл с именем `libInfColorPickerSDK.linkwith.cs`.
 
 
 Этот файл содержит `LinkWith` атрибут, сообщающий Xamarin. iOS, как обрабатывается только что добавленная статическая библиотека. Содержимое этого файла показано в следующем фрагменте кода:

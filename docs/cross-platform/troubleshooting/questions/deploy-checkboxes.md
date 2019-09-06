@@ -3,24 +3,24 @@ title: Отключены флажки развертывания в Configurati
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: aaf675cd-d885-4dac-9754-77dbcaea3be9
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 12/02/2016
-ms.openlocfilehash: 35efb00a721062ad3217300f7e3a5430b1bd1560
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 82ff1a684ffad75a301f0db6b0f8e3116be6746d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357768"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285064"
 ---
 # <a name="deploy-checkboxes-disabled-in-configuration-manager"></a>Отключены флажки развертывания в Configuration Manager
 
-С момента Xamarin 3.5, проекты Xamarin.iOS развертываются автоматически при каждом нажатии клавиши **запустить** кнопки панели инструментов или выберите **Отладка > Начать отладку** пункта меню. Вы по-прежнему потребуется задать нужный проект приложения Xamarin.iOS как **запускаемым проектом** перед выполнением любой из этих команд.
+Так как Xamarin 3,5 проекты Xamarin. iOS разворачиваются автоматически при нажатии кнопки **Пуск** на панели инструментов или выборе пункта меню **Отладка > начать отладку** . Перед выполнением любой из этих команд вам все равно потребуется задать проект приложения Xamarin. iOS в качестве **запускаемого проекта** .
 
-По этой причине **развернуть** флажки преднамеренно отключены в Visual Studio Configuration Manager для проектов Xamarin.iOS:
+По этой причине флажки **развертывания** намеренно отключены в Configuration Manager Visual Studio для проектов Xamarin. iOS:
 
-![](deploy-checkboxes-images/configuration.png "Visual Studio Configuration Manager, отображается флажок «Развернуть» отключена для проекта Xamarin.iOS в Xamarin 3.5")
+![](deploy-checkboxes-images/configuration.png "Visual Studio Configuration Manager отображение флажка \"развернуть\" для проекта Xamarin. iOS в Xamarin 3,5")
 
-Это изменение устраняет ошибку, которая может отображаться в более старых версиях Xamarin (версия 3.3 и более ранних версий), если в проект приложения Xamarin.iOS не был задан для развертывания:
+Это изменение устраняет ошибку, которая может появиться в более старых версиях Xamarin (версии 3,3 и более ранних), если проект приложения Xamarin. iOS не был настроен для развертывания:
 
-![](deploy-checkboxes-images/error.png "Диалоговое окно ошибки: IPhoneApp1 проекта должен быть развернут, прежде чем можно будет запустить. Убедитесь, что проект выбран для развертывания в диспетчере конфигурации решения.")
+![](deploy-checkboxes-images/error.png "Диалоговое окно ошибки: Перед запуском проекта iPhoneApp1 его необходимо развернуть. Убедитесь, что проект выбран для развертывания в Configuration Manager решения.")

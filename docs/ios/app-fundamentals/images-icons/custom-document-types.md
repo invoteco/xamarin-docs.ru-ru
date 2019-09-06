@@ -4,15 +4,15 @@ description: В этой статье рассматривается включ�
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 1125b0c420d6dbd23c5539a2183d531bc0d6089f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642999"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282519"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Настраиваемые значки документов в Xamarin. iOS
 

@@ -4,15 +4,15 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 7aa3b430af28a85cb8b774baa9538306cb9dd673
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656411"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286743"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Обновления SiriKit в iOS 11
 
@@ -25,7 +25,7 @@ SiriKit в iOS 11 добавляет новые и обновленные дом
 - [**Списки и примечания**](#listsnotes) — новые! Предоставляет API для приложений для обработки задач и заметок.
 - **Визуальные коды** — новые! Siri может отображать QR-коды для совместного использования контактных данных или участия в платежных транзакциях.
 - **Платежи** — добавлены сведения о способах поиска и перемещения для взаимодействий оплаты.
-- Применяйте резервирование — добавлены ответы для отмены и обратной связи.
+- Применяйте **резервирование** — добавлены ответы для отмены и обратной связи.
 
 Другие новые возможности:
 

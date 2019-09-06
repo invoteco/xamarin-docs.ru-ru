@@ -4,15 +4,15 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 616b20872a01b4df6c3f27c636ce7b8ee912414e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200337"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280208"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Работа с представлениями коллекций tvOS в Xamarin
 
@@ -125,10 +125,10 @@ public CityCollectionView (IntPtr handle) : base (handle)
 1. Выберите ячейку представление коллекции и задайте для `CityCollectionViewCell` ее класса значение на **вкладке мини**-приложение: 
 
     [![](collection-views-images/collection09.png "Присвойте классу значение Цитиколлектионвиевцелл")](collection-views-images/collection09.png#lightbox)
-1. На **вкладке мини** -приложение убедитесь, что макет `Flow` имеет значение, а **направление** прокрутки — `Vertical` для представления коллекция: 
+1. На **вкладке мини** -приложение убедитесь, что макет `Flow` имеет значение, а **направление прокрутки** — `Vertical` для представления коллекция: 
 
     [![](collection-views-images/collection10.png "Вкладка мини-приложения")](collection-views-images/collection10.png#lightbox)
-1. Выберите ячейку представление коллекции и задайте ее `CityCell` **удостоверение** на **вкладке мини**-приложение: 
+1. Выберите ячейку представление коллекции и задайте ее **удостоверение** `CityCell` на **вкладке мини**-приложение: 
 
     [![](collection-views-images/collection11.png "Задайте удостоверение Цитицелл.")](collection-views-images/collection11.png#lightbox)
 1. Сохраните изменения.
@@ -163,10 +163,10 @@ public CityCollectionView (IntPtr handle) : base (handle)
 1. Выберите ячейку представление коллекции и задайте для `CityCollectionViewCell` ее класса значение на **вкладке мини**-приложение: 
 
     [![](collection-views-images/collection09vs.png "Присвойте классу значение Цитиколлектионвиевцелл")](collection-views-images/collection09vs.png#lightbox)
-1. На **вкладке мини** -приложение убедитесь, что макет `Flow` имеет значение, а **направление** прокрутки — `Vertical` для представления коллекция: 
+1. На **вкладке мини** -приложение убедитесь, что макет `Flow` имеет значение, а **направление прокрутки** — `Vertical` для представления коллекция: 
 
     [![](collection-views-images/collection10vs.png "Вкладка мини-приложения Tне")](collection-views-images/collection10vs.png#lightbox)
-1. Выберите ячейку представление коллекции и задайте ее `CityCell` **удостоверение** на **вкладке мини**-приложение: 
+1. Выберите ячейку представление коллекции и задайте ее **удостоверение** `CityCell` на **вкладке мини**-приложение: 
 
     [![](collection-views-images/collection11vs.png "Задайте удостоверение Цитицелл.")](collection-views-images/collection11vs.png#lightbox)
 1. Сохраните изменения.
@@ -806,7 +806,7 @@ public override void ViewWillAppear (bool animated)
 
 [![](collection-views-images/run01.png "Основной экран")](collection-views-images/run01.png#lightbox)
 
-Если пользователь наберет кнопку " **выбрать представление** ", отобразится представление коллекции:
+Если пользователь **наберет кнопку "выбрать представление** ", отобразится представление коллекции:
 
 [![](collection-views-images/run02.png "Представление коллекции")](collection-views-images/run02.png#lightbox)
 

@@ -3,15 +3,15 @@ title: Селектор реализации HttpClient и SSL/TLS для iOS/ma
 description: В HttpClient стека и реализации SSL/TLS определяется реализация HttpClient и SSL/TLS, которая будет использоваться приложением Xamarin iOS, tvOS или macOS.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: f00a25bbb86e9ec57ef2290c1a7e37a8891e1064
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f3c30e8edc36c6d92b6fac0bd0e199aa26e16993
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521877"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280926"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>Селектор реализации HttpClient и SSL/TLS для iOS/macOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "69521877"
 > [!WARNING]
 > **Апрель 2018** — из-за повышенных требований к безопасности, включая соответствие требованиям PCI, основным поставщикам облачных услуг и веб-серверам требуется отключить поддержку протоколов TLS версий старше 1,2. Проекты Xamarin, созданные в предыдущих версиях Visual Studio по умолчанию, используют более старые версии TLS.
 >
-> Чтобы ваши приложения продолжали работать с этими серверами и службами, необходимо **обновить проекты Xamarin `NSUrlSession` с помощью параметра, показанного ниже, а затем повторно создать и повторно развернуть приложения** для пользователей.
+> Чтобы ваши приложения продолжали работать с этими серверами и службами, необходимо **обновить проекты `NSUrlSession` Xamarin с помощью параметра, показанного ниже, а затем повторно создать и повторно развернуть приложения** для пользователей.
 
 ### <a name="selecting-an-httpclient-stack"></a>Выбор стека HttpClient
 

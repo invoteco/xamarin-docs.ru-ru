@@ -4,15 +4,15 @@ description: В этой статье описываются ресурсы, к�
 ms.prod: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: f2dbb95992725ec85edaf94b2c07912e2bc561c9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6d4303ebcd77ad5234b4750b46bbd0c84ffc5356
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227515"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291750"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Устранение неполадок при разработке iOS 12 с помощью Xamarin
 
@@ -23,8 +23,8 @@ ms.locfileid: "70227515"
 Для устранения известных проблем обратитесь к следующим ресурсам:
 
 - заметки о выпуске;
-  - Блог о выпусках [Xamarin](http://releases.xamarin.com/)
-  - Архив [заметок о](https://docs.microsoft.com/xamarin/ios/release-notes/) выпуске Xamarin
+  - Блог о [выпусках Xamarin](http://releases.xamarin.com/)
+  - Архив [заметок о выпуске](https://docs.microsoft.com/xamarin/ios/release-notes/) Xamarin
   - Visual Studio для Mac ([стабильный](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [Предварительный просмотр](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
   - Visual Studio 2017 ([стабильная](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [Предварительная версия](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [Сообщество разработчиков](https://developercommunity.visualstudio.com/search.html)

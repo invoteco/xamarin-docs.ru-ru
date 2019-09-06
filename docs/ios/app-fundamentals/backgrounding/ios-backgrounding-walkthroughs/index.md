@@ -1,25 +1,25 @@
 ---
-title: Пошаговые руководства по фоновой обработке iOS
-description: Этот документ содержит ссылки на примеры, демонстрирующие способы использования сведений о расположении в backgrounded приложении и как использовать фоновой службы передачи и NSURLSession.
+title: Пошаговые руководства по фоновому использованию iOS
+description: В этом документе содержатся ссылки на пошаговые руководства, демонстрирующие использование сведений о расположении в фоновом приложении и использовании службы фоновой передачи и NSURLSession.
 ms.prod: xamarin
 ms.assetid: D4937080-7865-48C0-8FE5-310E90229BC3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: b739b5a23653fdcc2b9324aefde03e48446bdc76
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 340f5d614b268a68460c749c4844784fdc8cacf8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865551"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286873"
 ---
-# <a name="ios-backgrounding-walkthroughs"></a>Пошаговые руководства по фоновой обработке iOS
+# <a name="ios-backgrounding-walkthroughs"></a>Пошаговые руководства по фоновому использованию iOS
 
 ## <a name="walkthrough---using-background-locationiosapp-fundamentalsbackgroundingios-backgrounding-walkthroughslocation-walkthroughmd"></a>[Пошаговое руководство. Использование расположения в фоновом режиме](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)
 
-В этом примере мы создаем iOS расположение приложения, которое выводит сведения о наших текущего расположения - широты, долготы и другие параметры - на экран. Это приложение будет показано, как правильно выполнять обновления расположение, пока приложение находится активный "или" Backgrounded.
+В этом примере мы создадим приложение расположения iOS, которое выводит на экран сведения о текущем местоположении: широту, долготу и другие параметры. Это приложение показывает, как правильно выполнять обновления расположения, пока приложение активно или находится в фоновом режиме.
 
 ## <a name="walkthrough---using-background-transfer-service-and-nsurlsessioniosapp-fundamentalsbackgroundingios-backgrounding-walkthroughsbackground-transfer-walkthroughmd"></a>[Пошаговое руководство. Использование фоновой службы передачи и NSURLSession](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md)
 
-В этом пошаговом руководстве мы используем фоновой службы передачи и `NSURLSession` API, чтобы начать загрузку большое изображение, которое продолжат скачиваться во время работы приложения в фоновом режиме.
+В этом пошаговом руководстве мы используем службу фоновой `NSURLSession` пересылки и API для запуска загрузки большого образа, который будет загружаться, когда приложение находится в фоновом режиме.

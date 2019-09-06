@@ -5,14 +5,14 @@ ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
-ms.openlocfilehash: cc7d966e7dd0371e967775d112789af9f0ad7c59
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: cfa82ccec8149acfc7ddd69bff2f68e0e11894d1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528513"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282432"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Общие сведения о "несенсорном". диалоговое окно для Xamarin. iOS
 
@@ -190,11 +190,11 @@ var taskElement = new RootElement (task.Name) {
 };
 ```
 
-Этот код создает пользовательский интерфейс, как показано ниже. Полное пошаговое руководство по этому примеру см. в разделе Пошаговое руководство по [API элементов](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) .
+Этот код создает пользовательский интерфейс, как показано ниже. Полное пошаговое руководство по этому примеру см. в разделе [Пошаговое руководство по API элементов](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) .
 
  [![](images/image6.png "В сочетании со свойством element. Value функция обратного вызова может получить значение, заданное в других элементах.")](images/image6.png#lightbox)
 
-Когда пользователь нажимает нижнюю ячейку таблицы, код в анонимной функции выполняется, записывая значение из `element` экземпляра на выходную панель **приложения** в Visual Studio для Mac.
+Когда пользователь нажимает нижнюю ячейку таблицы, код в анонимной функции выполняется, записывая значение из `element` экземпляра на **выходную панель приложения** в Visual Studio для Mac.
 
 ## <a name="built-in-elements"></a>Встроенные элементы
 
@@ -395,7 +395,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-Дополнительные сведения об использовании JSON с MT. Г. см. Пошаговое руководство по [элементу JSON](http://docs.xamarin.com/guides/ios/user_interface/monotouch.dialog/json_element_walkthrough) .
+Дополнительные сведения об использовании JSON с MT. Г. см. [Пошаговое руководство по элементу JSON](http://docs.xamarin.com/guides/ios/user_interface/monotouch.dialog/json_element_walkthrough) .
 
 ## <a name="other-features"></a>Другие функции
 

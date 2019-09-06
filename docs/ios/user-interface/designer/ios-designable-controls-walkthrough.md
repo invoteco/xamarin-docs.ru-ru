@@ -4,15 +4,15 @@ description: В этом документе описывается, как со�
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 65b6f11662cdb8e1814e1146faf70cd01b2c11bc
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227088"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287313"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Использование пользовательских элементов управления в конструкторе iOS
 
@@ -20,7 +20,7 @@ ms.locfileid: "70227088"
 
 Xamarin Designer для iOS доступен в Visual Studio для Mac и Visual Studio 2017 и более поздних версий в Windows.
 
-В этом руководстве предполагается, что вы знакомы с содержанием, изложенным в руководствах по [Начало работы](~/ios/get-started/index.md).
+В этом руководстве предполагается, что вы знакомы с содержанием, изложенным в [руководствах по начало работы](~/ios/get-started/index.md).
 
 ## <a name="walkthrough"></a>Пошаговое руководство
 
@@ -158,7 +158,7 @@ Xamarin Designer для iOS доступен в Visual Studio для Mac и Visu
     ```
 
 
-1. `FillTexture.png`Добавьте файлы и`Monkey.png`( доступны [из GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) в папку Resources. `FillTexture2.png`
+1. `FillTexture.png`Добавьте файлы и`Monkey.png`( доступны [из GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) в папку **Resources.** `FillTexture2.png`
 
 1. Дважды щелкните `Main.storyboard` файл, чтобы открыть его в конструкторе:
 

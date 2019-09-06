@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: dea7337702e37895d1e8dec55bd433d8ac4d64c0
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 6bc2990ef82e1bccd4f9e530eb67265eeae528a9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065614"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292144"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Советы по устранению неполадок Xamarin. Mac
 

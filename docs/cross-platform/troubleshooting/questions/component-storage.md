@@ -3,24 +3,24 @@ title: Где на компьютере хранятся компоненты
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 4152c8ef7eeba3748d9244e27e48f3f9a2c0019b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7725dbff994ffcef9734ad07c6b506064d9c5b2b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359109"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285052"
 ---
 # <a name="where-are-the-components-stored-on-my-machine"></a>Где на компьютере хранятся компоненты
 
-При установке компонента Xamarin в проекте приложения, он помещается в двух местах:
+При установке компонента Xamarin в проект приложения он размещается в двух местах:
 
-1. В папке компоненты на корневом уровне папки решения. При удалении компонента из всех проектов в решении, он будут удалены из этой папки.
+1. В папке Components на корневом уровне папки решения. Если удалить компонент из всех проектов в решении, он также будет удален из этой папки.
 
-2. Копии также хранятся в следующих расположениях:
+2. Копия также хранится в следующих расположениях:
     - Windows: `%LocalAppData%\Xamarin\Cache\Components`
     - Mac: `~/Library/Caches/Xamarin/Components`
 
-Поэтому чтобы полностью удалить компонент из системы, удалите его из проектов и решений, а также из папки кэша выше.
+Чтобы полностью удалить компонент из системы, удалите его из проектов и решений и из папки кэша выше.

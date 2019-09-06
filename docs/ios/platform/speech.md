@@ -4,15 +4,15 @@ description: В этой статье представлен новый API ра
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227340"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292525"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Распознавание речи в Xamarin. iOS
 
@@ -86,7 +86,7 @@ API распознавания речи можно использовать на
 
 Существует четыре основных шага, которые необходимо предпринять разработчику для внедрения распознавания речи в приложение iOS:
 
-- Укажите описание использования в `Info.plist` файле приложения `NSSpeechRecognitionUsageDescription` с помощью ключа. Например, приложение камеры может включать следующее описание: _«это позволяет получить фотографию_ , произнося слово «Мак».
+- Укажите описание использования в `Info.plist` файле приложения `NSSpeechRecognitionUsageDescription` с помощью ключа. Например, приложение камеры может включать следующее описание: _«это позволяет получить фотографию, произнося слово «Мак»._
 - Запросите авторизацию `SFSpeechRecognizer.RequestAuthorization` , вызвав метод для представления пояснения ( `NSSpeechRecognitionUsageDescription` приведенного выше ключа) о том, почему приложение хочет получить доступ к распознаванию речи для пользователя в диалоговом окне и позволить им принять или отклонить.
 - Создайте запрос распознавания речи:
   - Для предварительно записанного звука на диске используйте `SFSpeechURLRecognitionRequest` класс.

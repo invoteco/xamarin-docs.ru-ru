@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: d13246ddae3f505d04db2a866f785a9f60ce3979
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652042"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292676"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Поиск данных с помощью службы поиска Azure и Xamarin. Forms
 
@@ -60,7 +60,7 @@ var searchClient =
 `SearchServiceClient` Перегрузку конструктора принимает имя службы поиска и `SearchCredentials` объект в качестве аргументов, с `SearchCredentials` упаковки объект *ключ администратора* для службы поиска Azure. *Ключ администратора* необходима для создания индекса.
 
 > [!NOTE]
->  Один `SearchServiceClient` экземпляр должен использоваться в приложении во избежание открытия слишком много подключений к службе поиска Azure.
+> Один `SearchServiceClient` экземпляр должен использоваться в приложении во избежание открытия слишком много подключений к службе поиска Azure.
 
 Индекс определяется `Index` объекта, как показано в следующем примере кода:
 

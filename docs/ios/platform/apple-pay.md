@@ -4,15 +4,15 @@ description: В этом руководством рассматривается
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: cd5293e90caef81c875c0b06b9e5db06cd562655
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620529"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291816"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay в Xamarin. iOS
 
@@ -49,7 +49,7 @@ Apple Pay доступен только в iOS 8 и более поздних в
 
 Есть два варианта:
 
-- Создание чередующихся подписок на [stripe.com](https://stripe.com/) для доступа к их API.
+- Создание **чередующихся** подписок на [stripe.com](https://stripe.com/) для доступа к их API.
 
 - **Как judopay** — извлеките свой [пример кода Xamarin на GitHub](https://github.com/Judopay/Xamarin-Sample-App)и зарегистрируйтесь по адресу [JudoPay.com](https://www.judopay.com/).
 
@@ -76,7 +76,7 @@ Apple Pay доступен только в iOS 8 и более поздних в
 
 ### <a name="apple-pay-website-integration"></a>Интеграция Apple Pay веб-сайтов
 
-В iOS 10 разработчик может включать Apple Pay непосредственно в свои веб-сайты с помощью **APPLEPAY JS**. Пользователи, просматривающие веб-сайт с помощью Safari в iOS или macOS, могут выполнять платежи с Apple Pay, проверяя транзакцию на iPhone или Apple Watch. Дополнительные сведения см. в справочнике по [платформе Apple APPLEPAY JP](https://developer.apple.com/reference/applepayjs).
+В iOS 10 разработчик может включать Apple Pay непосредственно в свои веб-сайты с помощью **APPLEPAY JS**. Пользователи, просматривающие веб-сайт с помощью Safari в iOS или macOS, могут выполнять платежи с Apple Pay, проверяя транзакцию на iPhone или Apple Watch. Дополнительные сведения см. в [справочнике по платформе Apple APPLEPAY JP](https://developer.apple.com/reference/applepayjs).
 
 ### <a name="passkit-framework-enhancements"></a>Усовершенствования платформы PassKit
 

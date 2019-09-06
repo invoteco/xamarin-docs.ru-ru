@@ -4,15 +4,15 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199940"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283982"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Работа с контроллерами панели вкладок tvOS в Xamarin
 
@@ -60,7 +60,7 @@ ms.locfileid: "70199940"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-1. Запустите новое приложение Xamarin. tvOS и выберите приложение **tvOS** >  > с**вкладками**: 
+1. Запустите**новое приложение Xamarin** > . tvOS и выберите приложение **tvOS** > с**вкладками**: 
 
     [![](tab-bars-images/tab02.png "Выбор приложения с вкладками")](tab-bars-images/tab02.png#lightbox)
 1. Следуйте всем запросам, чтобы создать новое решение Xamarin. tvOS.
@@ -85,7 +85,7 @@ ms.locfileid: "70199940"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Запустите новое приложение Xamarin. tvOS и выберите приложение **tvOS** >  > с**вкладками**: 
+1. Запустите**новое приложение Xamarin** > . tvOS и выберите приложение **tvOS** > с**вкладками**: 
 
     [![](tab-bars-images/tab02vs.png "Выбор приложения с вкладками")](tab-bars-images/tab02vs.png#lightbox)
 1. Следуйте всем запросам, чтобы создать новое решение Xamarin. tvOS.

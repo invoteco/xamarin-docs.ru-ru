@@ -1,38 +1,38 @@
 ---
-title: Привязка библиотек Mac для Xamarin.Mac
-description: Этот документ содержит ссылки на руководства, описывающие способы работы с привязками Objective-C в приложении Xamarin.Mac, включая Sharpie цели и примеры кода.
+title: Привязка библиотек Mac для Xamarin. Mac
+description: В этом документе содержатся ссылки на руководства, в которых описывается работа с привязками цели-C в приложении Xamarin. Mac, включая целевые Шарпие и примеры кода.
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/13/2017
-ms.openlocfilehash: fde21b2056d56cbf1c4768b287e29f559390f500
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 59ac5a4f9949f1e65e67b9629c43ddb4b822bf43
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032488"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290051"
 ---
-# <a name="binding-mac-libraries-for-xamarinmac"></a>Привязка библиотек Mac для Xamarin.Mac
+# <a name="binding-mac-libraries-for-xamarinmac"></a>Привязка библиотек Mac для Xamarin. Mac
 
-Используйте следующие ссылки, чтобы узнать о привязке библиотек Objective-C в Xamarin.Mac.
+Перейдите по следующим ссылкам, чтобы узнать о привязке библиотек цели-C на Xamarin. Mac:
 
-- [**Общие сведения о** ](~/cross-platform/macios/binding/overview.md) -
-  описан принцип действия привязки.
-- [**Привязка библиотек Objective-C** ](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  инструкции о том, как выполнить привязку библиотеки Objective-C для использования в проектах Xamarin.
-- [**Введите справочное руководство по определению** ](~/cross-platform/macios/binding/binding-types-reference.md) -
-  описывает все атрибуты, доступные для авторов привязки для управления процессом создания привязки.
+- [**Общие сведения**](~/cross-platform/macios/binding/overview.md) -
+  Описывает, как работает привязка.
+- [**Цель привязки-библиотеки C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  Инструкции по привязке библиотек цели-C для использования в проектах Xamarin.
+- [**Справочное руководство по определению типа**](~/cross-platform/macios/binding/binding-types-reference.md) -
+  Описывает все атрибуты, доступные для привязки авторов, чтобы управлять процессом создания привязки.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
-Цели Sharpie является средством командной строки для начальной загрузки при первом проходе привязки.
-Он работает путем анализа файлов заголовков из собственной библиотеки для сопоставления открытого API-интерфейса в [определения привязки](~/cross-platform/macios/binding/binding-types-reference.md) (этот процесс, в противном случае выполняется вручную). Цели Sharpie не обеспечивает привязку, сам по себе, но он может помочь приступить к работе!
+Цель Шарпие — это средство командной строки, помогающее выполнить начальную загрузку первого прохода привязки.
+Он работает путем анализа файлов заголовков собственной библиотеки, чтобы сопоставлять открытый API с [определением привязки](~/cross-platform/macios/binding/binding-types-reference.md) (процесс, который в противном случае выполняется вручную). Цель Шарпие не создает привязку самостоятельно, но может помочь вам приступить к работе!
 
 ## <a name="examples"></a>Примеры
 
-Ссылаться на [пример XMBindingExample Mac](https://github.com/xamarin/mac-samples/tree/master/XMBindingExample) чтобы узнать, как создать привязку Mac с помощью проектов привязки.
+Сведения о создании привязки Mac с помощью привязок проектов см. в [примере Ксмбиндинжексампле Mac](https://github.com/xamarin/mac-samples/tree/master/XMBindingExample) .
 
 ## <a name="related-links"></a>Связанные ссылки
 

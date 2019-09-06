@@ -5,14 +5,14 @@ ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
-ms.openlocfilehash: 64b35588afa06a6a8f4a206f10827409f9de316f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: c7deda17a7a4936f000fbfce285b3dc3932795e2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645222"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292278"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Использование JSON для создания пользовательского интерфейса в Xamarin. iOS
 
@@ -24,7 +24,7 @@ _Однокасание. Dialog (MT. D) включает поддержку ди
 
 [![](json-element-walkthrough-images/01-load-from-file.png "Например, приложение на этом снимке экрана полностью объявляется с помощью JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "для этого приложения на этом снимке экрана полностью объявляется с помощью JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
-Перейдем к примеру из пошагового руководства по [API Elements](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) , в котором показано, как добавить экран сведений о задаче с помощью JSON.
+Перейдем к примеру из [пошагового руководства по API Elements](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) , в котором показано, как добавить экран сведений о задаче с помощью JSON.
 
 ## <a name="setting-up-mtd"></a>Настройка MT. Четырехмерного
 

@@ -4,15 +4,15 @@ description: В этом документе описывается связь м
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 9108f83d76e07d12d70b400075142d9c73519716
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 72a1fe3541eb4ece67dd137ebcd33f8e81ae9553
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065595"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292269"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Ссылки на проекты watchOS в Xamarin
 

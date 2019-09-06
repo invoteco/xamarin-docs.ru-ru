@@ -3,19 +3,19 @@ title: Управление учетными записями Apple
 description: В этом документе описывается, как использовать функции управления учетными записями Apple в Visual Studio для Mac и Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: bb51550518c723a72a29637ad8972cb61c687c6b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118979"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290627"
 ---
 # <a name="apple-account-management"></a>Управление учетными записями Apple
 
-Интерфейс управления учетными записями Apple предоставляет способ просмотра всех команд разработки, связанных с идентификатором Apple ID. Он также позволяет просматривать дополнительные сведения о каждой команде, отображая список удостоверений подписывания и _профили подготовки_ , установленные на компьютере.
+Интерфейс управления учетными записями Apple предоставляет способ просмотра всех команд разработки, связанных с идентификатором Apple ID. Он также позволяет просматривать дополнительные сведения о каждой команде, отображая список _удостоверений подписывания_ и _профили подготовки_ , установленные на компьютере.
 
 Проверка подлинности Apple ID выполняется в командной строке с помощью [FastLane](https://fastlane.tools/). для успешной проверки подлинности на компьютере должен быть установлен FastLane. Дополнительные сведения о FastLane и его установке подробно описаны в руководствах по [FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) .
 
@@ -40,7 +40,7 @@ ms.locfileid: "70118979"
 - Убедитесь, что вы подключены к Интернету. Это связано с тем, что FastLane взаимодействует напрямую с порталом разработчика Apple.
 - Убедитесь, что у вас [установлены средства FastLane](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
 - Убедитесь, что у вас есть новейшие средства [https://download.fastlane.tools](https://download.fastlane.tools)FastLane из.
-- Перед началом убедитесь, что все лицензионные соглашения принимаются на портале [разработчика](https://developer.apple.com/account/).
+- Перед началом убедитесь, что все лицензионные соглашения принимаются на [портале разработчика](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Добавление учетной записи разработчика Apple
 

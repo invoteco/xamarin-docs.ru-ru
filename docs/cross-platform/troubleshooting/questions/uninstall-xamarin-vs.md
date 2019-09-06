@@ -3,15 +3,15 @@ title: Как полностью удалить Xamarin для Visual Studio?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 12/02/2016
-ms.openlocfilehash: e387e398f3a79ea2063457f0c5c6e7469c07ac23
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4d8396574f02cde4c75fd96c98f79d5ed4080293
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521532"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291065"
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Как полностью удалить Xamarin для Visual Studio?
 
@@ -24,7 +24,7 @@ ms.locfileid: "69521532"
     - Xamarin.iOS
     - Xamarin для Visual Studio
 
-2. В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin Visual Studio (все версии, включая программные _файлы_ и _программные файлы (x86)_ ):
+2. В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin Visual Studio (все версии, включая _программные файлы_ и _программные файлы (x86)_ ):
 
     _C:\\Program Files\\MicrosoftVisualStudio1\\0 Common7IDE\\Extensions\\Xamarin\*\*\\_
 
@@ -90,7 +90,7 @@ ms.locfileid: "69521532"
 3. Если расширения загружены правильно, проблема, скорее всего, вызвана некоторыми из сохраненных параметров для исходного пользователя:
 
     - **В обозревателе** — _% LocalAppData%\\Microsoft\\VisualStudio\\1\*. 0_
-    - **В** regedit _—\_hKey\_Current\\User Software\\MicrosoftVisualStudio\\1.\*0\\_
-    - **В** regedit _—\_hKey\_Current\\user\\Software программа Microsoft\\VisualStudio1\\0\_config\*_
+    - **В Regedit** _—\_hKey\_Current\\User Software\\Microsoft\\VisualStudio\*1.0\\_
+    - **В Regedit** — _\_hKey\_Current\\user\\Software программа Microsoft\\VisualStudio1\\0\_config\*_
 
 4. Если эти сохраненные параметры действительно выглядят как проблема, можно попытаться выполнить резервное копирование и удалить их.

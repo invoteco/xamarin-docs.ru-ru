@@ -3,15 +3,15 @@ title: Устранение неполадок Xamarin Live Player
 description: В этом документе описаны известные проблемы с Xamarin Live Player и возможными исправлениями. В нем обсуждаются проблемы подключения, проблемы с конфигурацией и многое другое.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2019
-ms.openlocfilehash: 56ffa280481ba6331b01ff27c6fd5bc3ab585f53
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 04a377bad42ff680247759036327035d61757b42
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121579"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290167"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Устранение неполадок Xamarin Live Player
 
@@ -144,7 +144,7 @@ ms.locfileid: "70121579"
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Сообщение "тип или пространство имен не удается найти" в IDE
 
-Убедитесь, что выбран запускаемый **проект** , соответствующий типу устройства (например, Android) и конфигурация соответствует этому типу устройства (например, **Отладка** для Android).
+Убедитесь, что выбран **запускаемый проект** , соответствующий типу устройства (например, Android) и конфигурация соответствует этому типу устройства (например, **Отладка** для Android).
 
 ## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>"Конструктор для типа" Интерпретедксамарин. Forms. Button "не найден" в проигрывателе
 

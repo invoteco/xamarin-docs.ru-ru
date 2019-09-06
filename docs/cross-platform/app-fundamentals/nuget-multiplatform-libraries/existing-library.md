@@ -1,46 +1,46 @@
 ---
-title: Создание NuGet из имеющиеся проекты библиотеки
-description: В этом документе описывается создание пакета NuGet из существующего проекта библиотеки, что позволяет коду, совместно с другими разработчиками.
+title: Создание NuGet из существующих проектов библиотек
+description: В этом документе описывается, как создать пакет NuGet на основе существующего проекта библиотеки, что позволяет совместно использовать код с другими разработчиками.
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2017
-ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f9d49fc4bff91939c9924dc42a11ef31ffd87362
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864696"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289225"
 ---
-# <a name="creating-a-nuget-from-existing-library-projects"></a>Создание NuGet из имеющиеся проекты библиотеки
+# <a name="creating-a-nuget-from-existing-library-projects"></a>Создание NuGet из существующих проектов библиотек
 
-Существующей библиотекой PCL или .NET Standard библиотек, которые можно преобразовать в пакеты NuGet через **параметры проекта** окна:
+Существующие библиотеки PCL или .NET Standard можно включить в NuGet через окно " **Параметры проекта** ":
 
-1. Щелкните правой кнопкой мыши проект библиотеки в **панели решения** и выберите **параметры**.
+1. Щелкните правой кнопкой мыши проект библиотеки в **панель решения** и выберите пункт **Параметры**.
 
-2. Перейдите к **пакетов NuGet > метаданных** раздела и ввести все [необходимые сведения](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) в **Общие** вкладку:
+2. Перейдите в раздел **метаданных пакета NuGet >** и введите все [необходимые сведения](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) на вкладке **Общие** .
 
    [![](existing-library-images/existing-metadata-sml.png "Введите необходимые метаданные")](existing-library-images/existing-metadata.png#lightbox)
 
-3. При необходимости [добавления дополнительных метаданных](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) в **сведения** вкладки.
+3. При необходимости [добавьте дополнительные метаданные](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) на вкладке **сведения** .
 
-4. После настройки метаданных можно правой кнопкой мыши проект и выберите **создать пакет NuGet** и **.nupkg** будет сохранен файл пакета NuGet в **/bin/** папка (отладки или выпуска, в зависимости от конфигурации).
+4. После настройки метаданных можно щелкнуть правой кнопкой мыши проект и выбрать пункт **создать пакет NuGet** , а файл пакета NuGet **. nupkg** будет сохранен в папке **/bin/** (Отладка или выпуск, в зависимости от конфигурации).
 
-   ![](existing-library-images/create-nuget-package.png "Выберите создать пакет NuGet из контекстного меню")
+   ![](existing-library-images/create-nuget-package.png "Выберите пункт Создать пакет NuGet в контекстном меню.")
 
-5. Создание пакета NuGet на _каждые_ сборки или развертывания, перейдите к **пакет NuGet > построения** раздел и их **Создание пакета NuGet при сборке проекта**:
+5. Чтобы создать пакет NuGet при _каждой_ сборке или развертывании, перейдите в раздел **NuGet Package > Build** и Tick ( **создать пакет NuGet) при сборке проекта**:
 
-    [![](existing-library-images/existing-tickbox-sml.png "Установка флажка для создания пакета NuGet")](existing-library-images/existing-tickbox.png#lightbox)
+    [![](existing-library-images/existing-tickbox-sml.png "Такт для создания пакета NuGet")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
-> Создание пакета NuGet пакета может замедлить работу процесса сборки. Если этот флажок не установлен, можно по-прежнему создать пакет NuGet вручную в любое время, в контекстном меню проекта (как показано на шаге 4 выше).
+> Создание пакета NuGet может замедлить процесс сборки. Если это поле не является тактовым, вы по-прежнему можете создать пакет NuGet вручную в любое время из контекстного меню проекта (см. шаг 4 выше).
 
 ## <a name="verifying-the-output"></a>Проверка выходных данных
 
-Пакеты NuGet также являются ZIP-файлы, поэтому имеется возможность проверить внутреннюю структуру создаваемый пакет.
+Пакеты NuGet также являются ZIP-файлами, поэтому можно проверить внутреннюю структуру созданного пакета.
 
-На этом снимке экрана показано содержимое NuGet на основе переносимой библиотеки Классов — включается только в одну сборку переносимой библиотеки Классов:
+На этом снимке экрана показано содержимое NuGet на основе PCL — включена только одна сборка PCL:
 
 ![](existing-library-images/nuget-output.png "Файлы, содержащиеся в пакете NuGet")
 

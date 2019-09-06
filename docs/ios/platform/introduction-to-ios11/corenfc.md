@@ -4,15 +4,15 @@ description: В этом документе описывается чтение 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: c82861a0b4ca00f7c664cd6a920f250ad937d306
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6da32e22fbdb3b5b7d96d7ee93c2f25bba84cd78
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656458"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286629"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Ядро NFC в Xamarin. iOS
 
@@ -31,7 +31,7 @@ _Чтение тегов NFC с помощью iOS 11_
 
 На этой странице описывается конфигурация, необходимая для использования Коренфк, и демонстрируется использование API с помощью [примера кода "нфктагреадер"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Параметр Configuration
+## <a name="configuration"></a>Конфигурация
 
 Чтобы включить Коренфк, необходимо настроить три элемента в проекте:
 

@@ -4,30 +4,30 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 929A0080-B126-4744-BF88-A4A1EFBB6CC2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: fc4c143d6b5f7c211d24e6e3ed2ed3bb8d264410
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 68c87355a2a6a081e0fff741ffe8a4466abb540a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421974"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292604"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>Ошибка конструктора iOS RegisterServicePort
 
 ## <a name="sample-error"></a>Пример ошибки
-> System.AggregateException: Произошла одна или несколько ошибок---> System.SystemException: RegisterServicePort(com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Возвращаемый ядра: -308 (-308): умер сервера (ipc/mig)
+> System. AggregateException: ---> System. SystemException произошла одна или несколько ошибок: Регистерсервицепорт (com. Xamarin. Мсостинг. 2a0b1, com. Apple. Поверманажемент. Control): Ядро вернуло:-308 (-308): (IPC/MIG) умер сервера
 
 ## <a name="explanation"></a>Объяснение
-Ошибки, связанные с `RegisterServicePort` и аналогичные сообщения об ошибках как выше обычно представляют собой проблему шпионского ПО и вредоносных программ на компьютере. Попробуйте [комментарий для этого отчета об ошибках](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) Дополнительные сведения и ссылки [обсуждения в форумах Apple](https://discussions.apple.com/thread/5596008) об удалении заражения. 
+`RegisterServicePort` Ошибки и подобные сообщения об ошибках, подобные описанным выше, обычно являются проблемой с программами-шпионами и вредоносными программами на компьютере. Дополнительные сведения см. в [комментариях к этому отчету об ошибках](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) , а также в ссылке на [форуме Apple Forum](https://discussions.apple.com/thread/5596008) о том, как удалить возможное заражение. 
 
-Чтобы помочь в диагностике проблемы, откройте приложение macOS **консоли** и удалите каждый файл внутри **пользователя диагностические отчеты** разделе [ http://screencast.com/t/y9i3NKcuMy ](http://screencast.com/t/y9i3NKcuMy). Затем запустите Visual Studio для Mac и попробуйте использовать конструктор. Если создание файлов журнала отображается в этом разделе после конструктора не удалось инициализировать, сохраните их для необходимости анализировать.  
+Чтобы помочь в диагностике проблемы, откройте **консоль** приложения macOS и удалите каждый файл в разделе [http://screencast.com/t/y9i3NKcuMy](http://screencast.com/t/y9i3NKcuMy)" **отчеты о диагностике пользователей** ". Затем запустите Visual Studio для Mac и попытайтесь использовать конструктор. Если в этом разделе появляются новые файлы журнала после сбоя инициализации конструктора, сохраните их для анализа.  
 
-Обратите внимание на то, что наиболее важно проверить, является ли этот файл: 
+Обратите внимание, что важно проверить наличие этого файла: 
 > /usr/lib/libimckit.dylib
 
-Независимо от того, приведенные выше результаты если этот файл существует, упомянутых выше проблему шпионского ПО и вредоносных программ на компьютере.  
+Независимо от указанных выше результатов, если этот файл существует, то на вашем компьютере присутствует упомянутая выше ошибка шпионского по или вредоносного по.  
 
-Используйте следующую ссылку включает шаги для удаления шпионских программ или вредоносной программе. [http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
+Ниже приведена ссылка на действия по удалению программы-шпиона или вредоносной программы.[http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
 

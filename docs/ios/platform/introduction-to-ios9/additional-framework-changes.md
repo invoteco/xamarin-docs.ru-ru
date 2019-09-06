@@ -4,15 +4,15 @@ description: В этом документе описаны дополнител�
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c3f140affe3d539eb07d06f50a031cd7ef469728
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197752"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292408"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Дополнительные изменения платформ iOS 9
 
@@ -36,7 +36,7 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 
 Класс [авкуеуеплайер](xref:AVFoundation.AVQueuePlayer) теперь поддерживает смесь потоковой передачи в Интернете и файлового носителя в очереди. В предыдущих версиях можно было только ставить в очередь носители одного типа.
 
-Дополнительные сведения см. в справочнике по [Авспичсинсесисвоице](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVSpeechSynthesisVoice_Ref/index.html#//apple_ref/occ/cl/AVSpeechSynthesisVoice)Apple.
+Дополнительные сведения см. в [справочнике по Авспичсинсесисвоице](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVSpeechSynthesisVoice_Ref/index.html#//apple_ref/occ/cl/AVSpeechSynthesisVoice)Apple.
 
 ## <a name="avkit-framework-additions"></a>Дополнения Авкит Framework
 
@@ -45,7 +45,7 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 - **Авпиктуреинпиктуреконтроллер** — этот класс позволяет приложению iOS 9 отвечать на запросы пользователя, запускающего воспроизведение видео в перемещаемом окне PIP с изменяемым размером на iPad.
 - **Авплайервиевконтроллер** — управляет `AVPlayer` контроллером, используемым для представления видео в перемещаемом окне PIP с изменяемым размером на iPad.
 
-Дополнительные сведения см. в статье о [многозадачности для iPad](~/ios/platform/introduction-to-ios9/index.md#multitasking) , справочнике по Apple [авпиктуреинпиктуреконтроллер](https://developer.apple.com/library/prerelease/ios/documentation/AVKit/Reference/AVPictureInPictureController_Class/index.html#//apple_ref/occ/cl/AVPictureInPictureController) и [справочнике по авплайервиевконтроллер](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVPlayerViewController_Class/index.html#//apple_ref/occ/cl/AVPlayerViewController).
+Дополнительные сведения см. в статье о [многозадачности для iPad](~/ios/platform/introduction-to-ios9/index.md#multitasking) , [справочнике](https://developer.apple.com/library/prerelease/ios/documentation/AVKit/Reference/AVPictureInPictureController_Class/index.html#//apple_ref/occ/cl/AVPictureInPictureController) по Apple авпиктуреинпиктуреконтроллер и [справочнике по авплайервиевконтроллер](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVPlayerViewController_Class/index.html#//apple_ref/occ/cl/AVPlayerViewController).
 
 ## <a name="introducing-cloudkit-web-services"></a>Знакомство с веб-службами CloudKit
 
@@ -81,7 +81,7 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 - `GetPreservationPriorityForTag (NSString tag)`— Получает текущий приоритет сохранения для ресурсов с заданным тегом. Допустимые значения находятся в диапазоне `0.0` от `1.0`до, первыми очищаются ресурсы с наименьшим приоритетом.
 - `SetPreservationPriorityForTag (double priority, NSSet tags)`— Задает текущий приоритет хранения для ресурсов с заданными тегами. Допустимые значения находятся в диапазоне `0.0` от `1.0`до, первыми очищаются ресурсы с наименьшим приоритетом.
 
-Дополнительные сведения см. в справочнике по [Нсбундле](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)Apple.
+Дополнительные сведения см. в [справочнике по Нсбундле](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)Apple.
 
 ### <a name="changes-to-nsprocessinfo"></a>Изменения в Нспроцессинфо
 
@@ -100,7 +100,7 @@ var activity = NSProcessInfo.ProcessInfo.BeginActivity(NSActivityOptions.Automat
 NSProcessInfo.ProcessInfo.EndActivity(activity);
 ```
 
-Дополнительные сведения см. в справочнике по [Нспроцессинфо](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSProcessInfo_Class/index.html#//apple_ref/occ/cl/NSProcessInfo)Apple.
+Дополнительные сведения см. в [справочнике по Нспроцессинфо](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSProcessInfo_Class/index.html#//apple_ref/occ/cl/NSProcessInfo)Apple.
 
 ### <a name="reacting-to-low-power-mode"></a>Реагирование на режим низкого энергопотребления
 
@@ -119,22 +119,22 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 
 Компания Apple включила следующие изменения в платформу [HealthKit](xref:HealthKit) в iOS 9:
 
-- Поддержка полного удаления и отслеживания удаления записей в базе данных HealthKit. Дополнительные сведения см. в справочнике по классам [хкделетедобжект](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [Хканчоредобжекткуери](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) и [хкхеалссторе](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) Apple.
-- Новые категории и характеристики отслеживания были добавлены `HKQuantityTypeIdentifier` в класс (например, `UVExposure`) и в `HKCategoryTypeIdentifier` класс (например, `OvulationTestResult`). Дополнительные сведения см. в справочнике по константам Apple [HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) .
+- Поддержка полного удаления и отслеживания удаления записей в базе данных HealthKit. Дополнительные сведения см. в [справочнике по классам](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) [хкделетедобжект](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [хканчоредобжекткуери](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) и хкхеалссторе Apple.
+- Новые категории и характеристики отслеживания были добавлены `HKQuantityTypeIdentifier` в класс (например, `UVExposure`) и в `HKCategoryTypeIdentifier` класс (например, `OvulationTestResult`). Дополнительные сведения см. в [справочнике по константам Apple HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) .
 
 Дополнительные сведения о работе с HealthKit в Xamarin. iOS см. в статье [Введение в](~/ios/platform/healthkit.md) документацию по HealthKit.
 
 ## <a name="local-authentication-framework-changes"></a>Изменения в инфраструктуре локальной проверки подлинности
 
-Компания Apple включила следующие изменения в [локальную инфраструктуру проверки](xref:LocalAuthentication) подлинности в iOS 9:
+Компания Apple включила следующие изменения в [локальную инфраструктуру проверки подлинности](xref:LocalAuthentication) в iOS 9:
 
 - С помощью методов `EvaluateAccessControl` и `EvaluatePolicy` класса [LAContext](xref:LocalAuthentication.LAContext) теперь можно повторно использовать идентификаторы сенсорного экрана, соответствующие предыдущим успешным попыткам разблокировки .
 - Возможность получить список зарегистрированных пальцев.
 - Поддержка отслеживания при добавлении или удалении пальца из проверки подлинности.
-- Возможность использования _контекста проверки_ подлинности в вызовах цепочки ключей и поддержки для оценки списков управления доступом к цепочке ключей.
+- Возможность использования _контекста проверки подлинности_ в вызовах цепочки ключей и поддержки для оценки списков управления доступом к цепочке ключей.
 - Возможность отмены запроса пользователя из кода.
 
-Дополнительные сведения о работе с Touch ID в Xamarin. iOS см. в статье [Введение в](~/ios/platform/touchid.md) документацию по СЕНСОРному идентификатору.
+Дополнительные сведения о работе с Touch ID в Xamarin. iOS см. в статье Введение в документацию по [сенсорному идентификатору](~/ios/platform/touchid.md) .
 
 ### <a name="lacontext-changes"></a>Лаконтекст изменения
 
@@ -149,7 +149,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 - **Credential** -возвращает `true` значение, если учетные данные в настоящее время заданы.
 - **Сеткредентиалтипе** Задает указанный тип учетных данных.
 
-Дополнительные сведения см. в справочнике по [Лаконтекст](https://developer.apple.com/library/prerelease/ios/documentation/LocalAuthentication/Reference/LAContext_Class/index.html#//apple_ref/occ/instm/LAContext/evaluatePolicy:localizedReason:reply:) Apple.
+Дополнительные сведения см. в [справочнике по Лаконтекст](https://developer.apple.com/library/prerelease/ios/documentation/LocalAuthentication/Reference/LAContext_Class/index.html#//apple_ref/occ/instm/LAContext/evaluatePolicy:localizedReason:reply:) Apple.
 
 ## <a name="mapkit-framework-changes"></a>Изменения платформы Мапкит
 
@@ -165,8 +165,8 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 
 Компания Apple включила следующие изменения в платформу [PassKit](xref:PassKit) в iOS 9:
 
-- Apple Pay теперь поддерживает как дебетовые, так и кредитные карты, а также карты обнаружения. Дополнительные сведения см. в разделе " **платежные сети** " Справочника по [классу пкпайментрекуест](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKPaymentRequest_Ref/index.html#//apple_ref/doc/uid/TP40014832) Apple.
-- Непосредственно в приложении Xamarin. iOS теперь можно добавлять платежные сети и издатели карточек в Apple Pay. Дополнительные сведения см. в справочнике по [классу Пкаддпайментпассвиевконтроллер](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKAddPaymentPassViewController_Class/index.html#//apple_ref/doc/uid/TP40016116) Apple.
+- Apple Pay теперь поддерживает как дебетовые, так и кредитные карты, а также карты обнаружения. Дополнительные сведения см. в разделе " **платежные сети** " [справочника по классу пкпайментрекуест](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKPaymentRequest_Ref/index.html#//apple_ref/doc/uid/TP40014832) Apple.
+- Непосредственно в приложении Xamarin. iOS теперь можно добавлять платежные сети и издатели карточек в Apple Pay. Дополнительные сведения см. в [справочнике по классу Пкаддпайментпассвиевконтроллер](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKAddPaymentPassViewController_Class/index.html#//apple_ref/doc/uid/TP40016116) Apple.
 
 Дополнительные сведения о работе с PassKit в Xamarin. iOS см. в статье [Введение в](~/ios/platform/passkit.md) документацию по PassKit.
 
@@ -208,7 +208,7 @@ PresentViewController(controller, true, null);
 
 Чтобы обеспечить поддержку новой функциональности с открытым размещением, добавьте `LSSupportsOpeningDocumentsInPlace` ключ в файл **info. plist** приложения Xamarin. iOS `YES`со значением.
 
-Дополнительные сведения см. в справочнике по [Уиаппликатионделегате](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) Apple.
+Дополнительные сведения см. в [справочнике по Уиаппликатионделегате](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) Apple.
 
 ### <a name="enhanced-touch-events"></a>Улучшенные события касания
 
@@ -228,7 +228,7 @@ PresentViewController(controller, true, null);
 
 ### <a name="new-readable-content-margins"></a>Новые доступные для чтения поля содержимого
 
-Новый `UILayoutGuide` класс можно использовать для предоставления доступных для чтения полей содержимого и определения областей рисования содержимого внутри представления. Дополнительные сведения см. в справочнике по [Уилайаутгуиде](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UILayoutGuide_Class_Reference/index.html#//apple_ref/occ/cl/UILayoutGuide) Apple.
+Новый `UILayoutGuide` класс можно использовать для предоставления доступных для чтения полей содержимого и определения областей рисования содержимого внутри представления. Дополнительные сведения см. в [справочнике по Уилайаутгуиде](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UILayoutGuide_Class_Reference/index.html#//apple_ref/occ/cl/UILayoutGuide) Apple.
 
 ### <a name="text-input-in-notifications-modifications"></a>Ввод текста в уведомлениях об изменениях
 
@@ -238,7 +238,7 @@ PresentViewController(controller, true, null);
 
 Хотя компания Apple не является устаревшей, она предлагает заменить все вызовы метода `FinishedLaunching (UIApplication application)` класса [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) методами `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` или `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)`.
 
-Дополнительные сведения см. в справочнике по [Уиаппликатионделегате](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) Apple.
+Дополнительные сведения см. в [справочнике по Уиаппликатионделегате](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) Apple.
 
 ### <a name="uikit-dynamics-changes"></a>Изменения UIKit Dynamics
 
@@ -248,7 +248,7 @@ PresentViewController(controller, true, null);
 - Новый настраиваемый `UIFieldBehavior` класс используется для поддержки различных типов полей.
 - К `UIAttachmentBehavior` классу добавлены дополнительные типы вложений.
 
-Дополнительные сведения см. в справочнике по [Уиаттачмент](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIAttachmentBehavior_Class/index.html#//apple_ref/occ/cl/UIAttachmentBehavior) Apple.
+Дополнительные сведения см. в [справочнике по Уиаттачмент](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIAttachmentBehavior_Class/index.html#//apple_ref/occ/cl/UIAttachmentBehavior) Apple.
 
 ### <a name="uipickerview-and-uidatepicker-changes"></a>Изменения Уипиккервиев и Уидатепиккер
 

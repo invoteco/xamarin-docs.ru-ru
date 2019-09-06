@@ -4,15 +4,15 @@ description: В этом документе описано, как настро�
 ms.prod: xamarin
 ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 369133f49566625dd677dc077ed8ff6a0bb0b4db
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 64c1ca0bfee5b98b7842bdc44a46bc40cf2012fc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511674"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285462"
 ---
 # <a name="get-started-with-macos-mojave"></a>Начало работы с macOS Можаве
 
@@ -33,7 +33,7 @@ ms.locfileid: "68511674"
    >
    > Перед обновлением компьютера Mac до macOS Можаве для создания и тестирования приложений Xamarin. Mac, которые вызывают новые API macOS Можаве:
    >
-   > - Сведения об обновлении операционной системы см. в заметках [о выпуске Apple](https://developer.apple.com/download/) .
+   > - Сведения об обновлении операционной системы см. в [заметках о выпуске Apple](https://developer.apple.com/download/) .
 
 ## <a name="related-links"></a>Связанные ссылки
 

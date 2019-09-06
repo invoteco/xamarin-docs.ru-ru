@@ -4,15 +4,15 @@ description: В этой статье приводятся общие сведе
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 806f58ae6a79f935916008e93deed0136920951a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 908ed187d8d3d341f8d65e3a3d417588492f325f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227815"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292968"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Общие сведения о Опентк в Xamarin. Mac
 
@@ -22,7 +22,7 @@ ms.locfileid: "70227815"
 
 В этой статье рассматриваются основы Опентк в приложении Xamarin. Mac. Мы настоятельно рекомендуем сначала ознакомиться со статьей [Hello, Mac](~/mac/get-started/hello-mac.md) , в частности [Знакомство с Xcode и Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) , а также с разделом "возможности [и действия](~/mac/get-started/hello-mac.md#outlets-and-actions) ", так как в нем рассматриваются основные понятия и методы, которые мы будем использовать в Эта статья.
 
-Возможно, вы захотите ознакомиться с представлением [ C# классов и методов для цели-C](~/mac/internals/how-it-works.md) в документе о внутренних компонентах [Xamarin. Mac](~/mac/internals/how-it-works.md) , а `Register` также объясняются команды и `Export` , используемые для подключения C# классов к Объекты цели-C и элементы пользовательского интерфейса.
+Возможно, вы захотите ознакомиться с [ C# представлением классов и методов для цели-C](~/mac/internals/how-it-works.md) в документе о внутренних компонентах [Xamarin. Mac](~/mac/internals/how-it-works.md) , а `Register` также объясняются команды и `Export` , используемые для подключения C# классов к Объекты цели-C и элементы пользовательского интерфейса.
 
 <a name="About_OpenTK" />
 

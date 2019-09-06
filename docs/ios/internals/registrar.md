@@ -4,15 +4,15 @@ description: В этом документе описывается регист�
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0d8e16c2a651df293b13e7f7586d5a643caa1c9c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226033"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291831"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Регистратор типов для Xamarin. iOS
 

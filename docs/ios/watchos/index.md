@@ -1,22 +1,22 @@
 ---
-title: Создание приложений с помощью Xamarin watchOS
-description: Этот документ содержит ссылки на различные руководства, описывающие способы создания приложений watchOS с помощью Xamarin. Связанные руководства рассматриваются Приступая к работе, элементы управления пользовательского интерфейса watchOS, watchOS функции, развертывание и тестирование и устранение неполадок
+title: Создание watchOS приложений с помощью Xamarin
+description: В этом документе содержатся ссылки на различные руководства, в которых описывается создание watchOS приложений с помощью Xamarin. Связанные руководства обсуждают начало работы, элементы управления пользовательского интерфейса watchOS, функции watchOS, развертывание и тестирование, а также устранение неполадок.
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 29f7480845dc4e8e608477e1eeb7f2e35d8f5490
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 36e3bec3c616f9aa3efcc5bec25647d7e5ef3162
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61361789"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292251"
 ---
-# <a name="building-watchos-apps-with-xamarin"></a>Создание приложений с помощью Xamarin watchOS
+# <a name="building-watchos-apps-with-xamarin"></a>Создание watchOS приложений с помощью Xamarin
 
-![Интерфейс выбора Apple Watch](images/watch1.png) ![Кнопки Apple Watch](images/watch2.png) ![Интерфейс сопоставления Apple Watch](images/watch3.png)
+![Интерфейс средства выбора Apple Watch](images/watch1.png) ![Apple Watch кнопки](images/watch2.png) ![Интерфейс Apple Watch карты](images/watch3.png)
 
 <!-- watch images courtesy of http://infinitapps.com/bezel/ -->
 
@@ -24,28 +24,28 @@ ms.locfileid: "61361789"
 
 * [Введение в watchOS](~/ios/watchos/get-started/intro-to-watchos.md).
 * [Сведения об установке](~/ios/watchos/get-started/installation.md).
-* Создание вашей [первое приложение watchOS](~/ios/watchos/get-started/hello-watch.md) с помощью Xamarin.
+* Создайте свое [первое приложение watchOS](~/ios/watchos/get-started/hello-watch.md) с помощью Xamarin.
 
 ## <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Пользовательский интерфейс](~/ios/watchos/user-interface/index.md)
 
-Краткий обзор элементов управления, включенных в примере приложения Watch Kit каталога, включая [изображение](~/ios/watchos/user-interface/image.md), [таблицы](~/ios/watchos/user-interface/menu.md) [меню](~/ios/watchos/user-interface/menu.md), и [ввода текста](~/ios/watchos/user-interface/text-input.md) элементы управления.
+Краткий обзор элементов управления, включенных в пример приложения каталога контрольных материалов, включая [изображение](~/ios/watchos/user-interface/image.md), [меню](~/ios/watchos/user-interface/menu.md) [таблицы](~/ios/watchos/user-interface/menu.md) и элементы управления [вводом текста](~/ios/watchos/user-interface/text-input.md) .
 
 ## <a name="platform-featuresplatformindexmd"></a>[Функции платформы](platform/index.md)
 
-Включение функции watchOS такие как [уведомления](~/ios/watchos/platform/notifications.md) и [сложности](~/ios/watchos/platform/complications.md) в приложения watch.
+Как включить в приложения watchOS такие функции, как [уведомления](~/ios/watchos/platform/notifications.md) и [сложности](~/ios/watchos/platform/complications.md) .
 
 ## <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Принципы работы приложения](~/ios/watchos/app-fundamentals/index.md)
 
-Работа с различными аспектами watchOS API, включая [родительского приложения](~/ios/watchos/app-fundamentals/parent-app.md), [значки](~/ios/watchos/app-fundamentals/icons.md), [макета](~/ios/watchos/app-fundamentals/layout.md), [навигации](~/ios/watchos/app-fundamentals/navigation.md), [экранах](~/ios/watchos/app-fundamentals/screen-sizes.md), и [параметры](~/ios/watchos/app-fundamentals/settings.md).
+Работа с различными аспектами API watchOS, включая [родительское приложение](~/ios/watchos/app-fundamentals/parent-app.md), [значки](~/ios/watchos/app-fundamentals/icons.md), [Макет](~/ios/watchos/app-fundamentals/layout.md), [навигацию](~/ios/watchos/app-fundamentals/navigation.md), [размеры экрана](~/ios/watchos/app-fundamentals/screen-sizes.md)и [Параметры](~/ios/watchos/app-fundamentals/settings.md).
 
 ## <a name="deployment-and-testingioswatchosdeploy-testindexmd"></a>[Развертывание и тестирование](~/ios/watchos/deploy-test/index.md)
 
-Пошаговые инструкции по развертыванию приложений Apple Watch и контрольный список тестовых устройств и к App Store.
+Контрольный список и инструкции по развертыванию Apple Watch приложений тестовые устройства и в магазине приложений.
 
 ## <a name="troubleshootingioswatchostroubleshootingmd"></a>[Устранение неполадок](~/ios/watchos/troubleshooting.md)
 
-Известные проблемы и решения.
+Известные проблемы и способы их решения.
 
 ## <a name="api-documentationxrefwatchkit"></a>[Документация по API](xref:WatchKit)
 
-Класс и метод покрытия API Kit контрольных значений.
+Покрытие класса и метода API набора контрольных данных.

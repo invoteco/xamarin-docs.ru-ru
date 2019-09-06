@@ -3,15 +3,15 @@ title: Обновление существующих приложений до U
 description: В этом документе содержатся ссылки на различные руководства, в которых описывается обновление приложений Xamarin на Unified API. В нем обсуждаются приложения Xamarin. iOS, приложения Xamarin. Mac. Приложения Xamarin. Forms, собственные типы в кросс-платформенных приложениях и привязки проектов.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 021139c817d2b0eb430a6c8fe09dbd07b7c17813
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3379b9672b344e8e424f95e273683f4c5e241b71
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226151"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280803"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Обновление существующих приложений до Unified API
 

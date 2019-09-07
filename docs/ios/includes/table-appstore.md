@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ef7e0e0e0874857786196452de83d7532b80c347
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8cd3861093d4548c5252150cb3c74921c6217b25
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61079268"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70775888"
 ---
 |Идентификатор жанра|Название жанра|
 |---|---|
@@ -14,7 +14,7 @@ ms.locfileid: "61079268"
 |6003|Путешествия|
 |6004|Спорт|
 |6005|Социальные сети|
-|6006|Ссылка|
+|6006|Справочник|
 |6007|Производительность|
 |6008|Фото и видео|
 |6009|Новости|
@@ -87,4 +87,3 @@ ms.locfileid: "61079268"
 |13028|Подростки|
 |13029|Путешествия|
 |13030|Женщины|
-

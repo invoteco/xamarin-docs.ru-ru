@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2017
-ms.openlocfilehash: b01fbbe813b778d3c2e1cabeba620ed48a46ecac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e0336e65532c4487e3ec8c1984b132544b5b547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287159"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768660"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Фоновые задачи watchOS в Xamarin
 
@@ -109,7 +109,6 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 В среде выполнения задачи приложение может выполнять любые локальные операции обработки, такие как обновление временной шкалы усложнения или выбор некоторых необходимых данных с помощью `NSUrlSession`.
 
-
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>вкурлсессионрефрешбаккграундтаск
@@ -142,9 +141,6 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 > [!IMPORTANT]
 > Важно всегда планировать `WKSnapshotRefreshBackgroundTask` после того, как приложение получит новые данные и обновило пользовательский интерфейс, или пользователь не увидит измененную информацию.
-
-
-
 
 Кроме того, когда пользователь получает уведомление от приложения и использует его для переноса приложения на передний план, моментальный снимок должен быть обновлен так же, как и экран запуска.
 
@@ -700,8 +696,6 @@ private void UpdateComplication ()
 ## <a name="summary"></a>Сводка
 
 В этой статье были рассмотрены улучшения, внесенные компанией Apple в watchOS, а также способы их использования для обновления приложения для просмотра. Во первых, он охватывает все новые фоновые задачи Apple, добавленные в watchOS 3. Затем он охватывает фоновый жизненный цикл API и способ реализации фоновых задач в приложении Xamarin watchOS. Наконец, мы рассмотрели, как работает планирование, и предоставили некоторые рекомендации.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

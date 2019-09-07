@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: d9c8fb7e1045d35fa23c85c689cb0e1f9461d8dd
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fc3fb6e7c3391092b33ce1d162a60ce6528e0ab0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225809"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754855"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Пошаговое руководство. Использование сенсорного ввода в Android
 
@@ -65,10 +65,9 @@ ms.locfileid: "70225809"
 
 [![Снимок экрана действий с касанием начинается](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
-При условии `ImageView`, что пользователь касается, **касание начнет** отображаться в. `TextView` Когда пользователь больше не касается `ImageView`, на экране будут отображаться `TextView`концы сообщений, как показано на следующем снимке экрана:
+При условии `ImageView`, что пользователь касается, **касание начнет** отображаться в `TextView`. Когда пользователь больше не касается `ImageView`, на экране будут отображаться `TextView`концы сообщений, как показано на следующем снимке экрана:
 
 [![Снимок экрана действий с сенсорными элементами](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
-
 
 ## <a name="gesture-recognizer-activity"></a>Действие распознавателя жестов
 
@@ -352,7 +351,6 @@ ms.locfileid: "70225809"
   [![Рисованная кривая на экране, отображается исходное изображение](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 Теперь вы понимаете, как интегрировать сенсоры и жесты в приложении Android с помощью Xamarin. Android.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

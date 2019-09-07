@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7c6e395a353dcfd737ad244df9d169edc5b08f1c
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1c093d3d67ace3b0f9186fca8226d4ef631d9af0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510309"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762309"
 ---
 # <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>ListView для Xamarin. Android и жизненный цикл действия
 
@@ -24,7 +24,6 @@ ms.locfileid: "68510309"
 
 Если адаптер использует такие ресурсы, как память, или управляемый курсор, не забудьте освободить эти ресурсы в методе, где они были созданы (например, объекты, созданные `OnStart` в, могут быть удалены в. `OnStop`
 
-
 ## <a name="configuration-changes"></a>Изменения конфигурации
 
 Важно помнить, что изменения &ndash; конфигурации, особенно вращение экрана и видимость &ndash; клавиатуры, могут привести к уничтожению и повторному созданию текущего действия (если не указано иное с помощью `ConfigurationChanges` атрибут). Это означает, что при нормальных условиях смена устройства приведет к созданию `ListView` и `Adapter` повторному созданию и (если только вы не написали код в `OnPause` и `OnResume`) состояние прокрутки и выбора строк будет потеряно.
@@ -36,4 +35,3 @@ ms.locfileid: "68510309"
 ```
 
 Действие должно переопределяться `OnConfigurationChanged` , чтобы реагировать на эти изменения соответствующим образом. Дополнительные сведения об обработке изменений конфигурации см. в документации.
-

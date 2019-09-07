@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/23/2016
-ms.openlocfilehash: 15afd5b1812e0423097e889cd8c2558ca01a8074
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4ead912b55790caf3e2e1f22e149f5682e6bb697
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119742"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761221"
 ---
 # <a name="scanning-for-fingerprints"></a>Сканирование отпечатков пальцев
 
@@ -58,10 +58,7 @@ protected void FingerPrintAuthenticationExample()
 
 Может потребоваться, чтобы пользователь (или приложение) отменил сканирование отпечатков пальцев после запуска. В этом случае вызовите [`IsCancelled`](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) метод [`CancellationSignal`](https://developer.android.com/reference/android/os/CancellationSignal.html) для, который был предоставлен для `FingerprintManager.Authenticate` , когда он был вызван для запуска проверки отпечатка пальца.
 
-Теперь, когда мы увидели `Authenticate` метод, давайте подробнее рассмотрим некоторые из более важных параметров. Во первых, мы рассмотрим [реакцию на обратные вызовы проверки](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md)подлинности, в которых обсуждается подкласс [финжерпринтманажер. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), что позволяет приложению Android реагировать на результаты, предоставленные сканером отпечатков пальцев.
-
-
-
+Теперь, когда мы увидели `Authenticate` метод, давайте подробнее рассмотрим некоторые из более важных параметров. Во первых, мы рассмотрим [реакцию на обратные вызовы проверки подлинности](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), в которых обсуждается подкласс [финжерпринтманажер. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), что позволяет приложению Android реагировать на результаты, предоставленные сканером отпечатков пальцев.
 
 ## <a name="related-links"></a>Связанные ссылки
 

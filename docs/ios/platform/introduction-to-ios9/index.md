@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285210"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751998"
 ---
 # <a name="introduction-to-ios-9"></a>Введение в iOS 9
 
@@ -67,7 +67,6 @@ _В этой статье представлены все новые и изме
 
 Дополнительные сведения см. в документации по нашим [контактам и контактам в пользовательском интерфейсе](~/ios/platform/contacts.md) .
 
-
 ## <a name="new-search-apis"></a>Новые API поиска
 
 Поиск был расширен в iOS 9, чтобы предоставить отличные новые способы доступа к информации в приложении Xamarin. iOS. С помощью новых API-интерфейсов поиска можно сделать содержимое вашего приложения недоступным для поиска с помощью Spotlight и результатов поиска Safari, а также Siri напоминаний и предложений. Это позволяет пользователям быстро получать доступ к действиям и информации, размещенным в приложении.
@@ -83,7 +82,6 @@ _В этой статье представлены все новые и изме
 С помощью элемента управления представлением стека объем работы, необходимый для разметки пользовательского интерфейса, значительно сокращается. Макет всех вложенных представлений, присоединенных к представлению «стек», управляется автоматически на основе определенных разработчиком свойств, таких как ось, распределение, выравнивание и пространство.
 
 Дополнительные сведения см. в документации по [представлению Stack](~/ios/user-interface/controls/uistackview.md) .
-
 
 ## <a name="collection-view-changes"></a>Изменения в представлении коллекции
 
@@ -145,7 +143,6 @@ _В этой статье представлены все новые и изме
 
 Дополнительные сведения см. в статье Введение в документацию по [сенсорному идентификатору](~/ios/platform/touchid.md) .
 
-
 ## <a name="right-to-left-language-support"></a>Поддержка языков с письмом справа налево
 
 В iOS 9 Компания Apple предоставила упрощенный пользовательский интерфейс, что обеспечивает полную поддержку языков с письмом справа налево. Это поведение характеризуется следующим образом.
@@ -155,8 +152,6 @@ _В этой статье представлены все новые и изме
 - Возможность программной перелистывания изображения с помощью свойства [флипсфорригхттолефтлайаутдиректион](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) класса [уиимаже](xref:UIKit.UIImage) .
 
 Дополнительные сведения см. в документации Apple о [поддержке языков с письмом справа налево](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) .
-
-
 
 ## <a name="additional-framework-changes"></a>Дополнительные изменения платформы
 
@@ -205,8 +200,6 @@ _В этой статье представлены все новые и изме
 
 - [ажентскаталог](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [металкитессентиалс](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

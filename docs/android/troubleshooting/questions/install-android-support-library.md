@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: a43a2ed4498be76a99ab4b6b54d3048f2f80af5c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 107fcd39a64ef1d7758d211ab47a07e1ece52f4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887659"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757241"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Как вручную установить вспомогательные библиотеки Android, необходимые для пакетов Xamarin.Android.Support?
 
@@ -78,7 +78,7 @@ property string 'Version' = string('23.4.0.0')}
 
 Скачайте нужный пакет NuGet для Xamarin. Android. support (например, установите его с помощью диспетчера пакетов NuGet).
 
-Дважды щелкните сборку _Xamarin. Android. support. v4_ в разделе References проекта Android в Visual Studio для Mac, чтобы открыть сборку в браузере сборок. Убедитесь, что в раскрывающемся списке _язык_ задано _C#_ значение, и выберите сборку высшего уровня _Xamarin. Android. support. v4_ из дерева навигации браузера сборок. Нахождение `IncludeAndroidResourcesFrom` свойства по одному из атрибутов или `JavaLibraryReference`: `SourceUrl`
+Дважды щелкните сборку _Xamarin. Android. support. v4_ в разделе _References_ проекта Android в Visual Studio для Mac, чтобы открыть сборку в браузере сборок. Убедитесь, что в раскрывающемся списке _язык_ задано _C#_ значение, и выберите сборку высшего уровня _Xamarin. Android. support. v4_ из дерева навигации браузера сборок. Нахождение `IncludeAndroidResourcesFrom` свойства по одному из атрибутов или `JavaLibraryReference`: `SourceUrl`
 
 ```csharp
 [assembly: IncludeAndroidResourcesFrom ("./", PackageName = "Xamarin.Android.Support.v4", SourceUrl = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip", EmbeddedArchive = "m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar", Version = "23.4.0.0")]
@@ -119,14 +119,13 @@ F16A3455987DBAE5783F058F19F7FCDF
 
 (создание подкаталога **Content/m2repository** ). Если пропустить этот шаг, то первая сборка, использующая библиотеку, займет немного больше времени, так как потребуется выполнить этот шаг.
 
-Номер версии подкаталога (**23.4.0.0** в этом примере) не совпадает с версией пакета NuGet. Как и на предыдущем шаге, можно использовать браузер сборок в Visual Studio для Mac, чтобы найти правильный номер версии. Найдите свойство в одном `IncludeAndroidResourcesFrom` из атрибутов или `JavaLibraryReference`: `Version`
+Номер версии подкаталога (**23.4.0.0** в этом примере) не совпадает с версией пакета NuGet. Как **и на предыдущем шаге,** можно использовать браузер сборок в Visual Studio для Mac, чтобы найти правильный номер версии. Найдите свойство в одном `IncludeAndroidResourcesFrom` из атрибутов или `JavaLibraryReference`: `Version`
 
 ```csharp
 [assembly: IncludeAndroidResourcesFrom ("./", PackageName = "Xamarin.Android.Support.v4", SourceUrl = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip", EmbeddedArchive = "m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar", Version = "23.4.0.0")]
 ```
 
 -----
-
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
@@ -137,4 +136,3 @@ F16A3455987DBAE5783F058F19F7FCDF
 В этом документе рассматривается текущее поведение по состоянию на 2016 августа. Методика, описанная в этом документе, не является частью стабильного набора тестов для Xamarin, поэтому она может прерываться в будущем.
 
 Для получения дополнительной помощи, для связи с нами или если проблема остается даже после использования приведенных выше сведений, ознакомьтесь с возможностями [поддержки Xamarin?](~/cross-platform/troubleshooting/support-options.md) дополнительные сведения о вариантах контактов, предложениях и о том, как создать новую ошибку при необходимости .
-

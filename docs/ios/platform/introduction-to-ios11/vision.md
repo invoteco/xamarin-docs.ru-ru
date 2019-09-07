@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2017
-ms.openlocfilehash: b0f6647ff92c8d8d0b8d2769c85aa24572d1464e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: efe3f2d4c79dc6e5e2a7f13408de52e05006e10a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285744"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752275"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Инфраструктура концепции в Xamarin. iOS
 
@@ -102,7 +102,6 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 Обнаружение прямоугольника часто является просто первым шагом в цепочке операций, например в [этом коремлвисион примере](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), где прямоугольники передаются в модель CoreML для анализа рукописных цифр.
 
-
 <a name="faces" />
 
 ## <a name="face-detection"></a>обнаружение лиц
@@ -175,7 +174,6 @@ private void HandleRectangles(VNRequest request, NSError error){
 ### <a name="5-further-processing"></a>5. Дальнейшая обработка
 
 Инфраструктура концепции включает дополнительные возможности для определения возможностей лиц, таких как глаза и рот. Используйте тип, который `VNFaceObservation` возвратит результаты, как на шаге 3 выше, но с дополнительными `VNFaceLandmark` данными. `VNDetectFaceLandmarksRequest`
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

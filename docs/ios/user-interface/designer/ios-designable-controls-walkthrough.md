@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 651df247e3b5616a3baa38e85159c6a6d5247807
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287313"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768805"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Использование пользовательских элементов управления в конструкторе iOS
 
@@ -26,7 +26,6 @@ Xamarin Designer для iOS доступен в Visual Studio для Mac и Visu
 
 > [!IMPORTANT]
 > Начиная с Xamarin. Studio 5,5, способ создания пользовательских элементов управления немного отличается от предыдущих версий. Для создания пользовательского элемента управления необходим либо `IComponent` интерфейс (со связанными методами реализации), либо класс, с которым `[DesignTimeVisible(true)]`можно добавить заметки. Последний метод используется в следующем примере пошагового руководства.
-
 
 1. Создайте новое решение из приложения **> IOS > приложение с одним представлением > C#**  шаблон, присвойте `ScratchTicket`ему имя и продолжайте работу с мастером создания проекта:
 
@@ -157,23 +156,19 @@ Xamarin Designer для iOS доступен в Visual Studio для Mac и Visu
     }
     ```
 
-
 1. `FillTexture.png`Добавьте файлы и`Monkey.png`( доступны [из GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) в папку **Resources.** `FillTexture2.png`
 
 1. Дважды щелкните `Main.storyboard` файл, чтобы открыть его в конструкторе:
 
     [![](ios-designable-controls-walkthrough-images/03new.png "Конструктор iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
-
 1. Перетащите **представление изображения** из **панели элементов** в представление в раскадровке.
 
     [![](ios-designable-controls-walkthrough-images/04new.png "Представление изображения, добавленное в макет")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
-
 1. Выберите **представление изображения** и измените его свойство **Image** на `Monkey.png`.
 
     [![](ios-designable-controls-walkthrough-images/05new.png "Задание для свойства Image представления изображения значения обезьян. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
-
 
 1. По мере использования классов размера необходимо ограничить это представление изображений. Дважды щелкните изображение, чтобы перевести его в режим ограничения. Добавим его в центр, щелкнув маркер крепления в центре и выровняйте его по вертикали и по горизонтали:
 
@@ -183,16 +178,13 @@ Xamarin Designer для iOS доступен в Visual Studio для Mac и Visu
 
     [![](ios-designable-controls-walkthrough-images/07new.png "Добавление ограничений")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
-
 1. Обновите фрейм на основе ограничений, нажав кнопку Обновить на панели инструментов:
 
     [![](ios-designable-controls-walkthrough-images/08new.png "Панель инструментов \"ограничения\"")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
-
 1. Затем постройте проект, чтобы **представление временных билетов** отображалось в разделе **пользовательские компоненты** на панели элементов:
 
     [![](ios-designable-controls-walkthrough-images/09new.png "Панель элементов пользовательских компонентов")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
-
 
 1. Перетащите **представление "создание временных билетов"** , чтобы оно появлялось над изображением обезьяны. Измените маркеры перетаскивания, чтобы представление временных билетов полностью обрабатывало эту обезьяну, как показано ниже:
 
@@ -201,7 +193,6 @@ Xamarin Designer для iOS доступен в Visual Studio для Mac и Visu
 1. Ограничьте представление "Рабочая схема" представлением изображения, нарисовав ограничивающий прямоугольник для выбора обоих представлений. Выберите параметры, чтобы ограничить его шириной, высотой, центром и средним и обновлением кадров на основе ограничений, как показано ниже:
 
     [![](ios-designable-controls-walkthrough-images/11new.png "Центрирование и Добавление ограничений")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
-
 
 1. Запустите приложение и "выключите" изображение, чтобы увидеть обезьяну.
 
@@ -272,8 +263,6 @@ public override void Draw(CGRect rect)
 ## <a name="summary"></a>Сводка
 
 В этой статье мы рассмотрели, как создать пользовательский элемент управления, а также как использовать его в приложении iOS с помощью конструктора iOS. Мы увидели, как создать и построить элемент управления, чтобы сделать его доступным для приложения на **панели элементов**конструктора. Кроме того, мы рассматривали, как реализовать элемент управления таким образом, чтобы он правильно отображался как во время разработки, так и в среде выполнения, а также как предоставить настраиваемые свойства элемента управления в конструкторе.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

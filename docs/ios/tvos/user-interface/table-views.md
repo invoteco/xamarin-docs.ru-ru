@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10f065d6e7b1cacb217cb510c57707662a196664
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768573"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Работа с табличными представлениями tvOS в Xamarin
 
@@ -952,8 +952,6 @@ namespace tvTable
 ## <a name="summary"></a>Сводка
 
 В этой статье рассматривается проектирование и работа с табличными представлениями в приложении Xamarin. tvOS. И представил пример работы с табличным представлением в представлении с разделением, которое является типичным использованием табличного представления в приложении tvOS.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

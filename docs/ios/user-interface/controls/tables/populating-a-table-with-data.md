@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: d409787661491a6922434a12157c494851644412
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d180345c36531b58c13eebbd97dc4f7555b8f13c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291631"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768873"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Заполнение таблицы данными в Xamarin. iOS
 
@@ -25,7 +25,6 @@ ms.locfileid: "70291631"
 - Добавление индекса
 - Добавление верхних и нижних колонтитулов
 
-
 <a name="Subclassing_UITableViewSource" />
 
 ## <a name="subclassing-uitableviewsource"></a>Подклассировать Уитаблевиевсаурце
@@ -36,7 +35,6 @@ ms.locfileid: "70291631"
 
 - **Ровсинсектион** — возвращает [`nint`](~/cross-platform/macios/nativetypes.md) число всех строк данных, которые должна отобразить таблица.
 - @ **Cell** — возврат `UITableCellView` заполненного данными для соответствующего индекса строки, переданного в метод.
-
 
 Пример файла **TableSource.CS** басиктабле имеет простейшую возможную реализацию `UITableViewSource`. В следующем фрагменте кода можно увидеть, что он принимает массив строк, отображаемых в таблице, и возвращает стиль ячейки по умолчанию, содержащий каждую строку:
 
@@ -139,13 +137,9 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-
 Теперь пользователь может коснуться строки, и появится предупреждение:
 
-
-
  [![](populating-a-table-with-data-images/image4.png "Выбранная строка оповещения")](populating-a-table-with-data-images/image4.png#lightbox)
-
 
 ## <a name="cell-reuse"></a>Повторное использование ячейки
 
@@ -246,7 +240,6 @@ keys = indexedTableItems.Keys.ToArray ();
 - **Ровсинсектион** — возвращает количество строк в заданном разделе.
 - **Сектиониндекститлес** — возвращает массив строк, которые будут использоваться для вывода индекса. Пример кода возвращает массив букв.
 
-
 Обновленные методы в примере файла **басиктаблеиндекс/таблесаурце. CS** выглядят следующим образом:
 
 ```csharp
@@ -266,7 +259,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Обычно индексы используются только с обычным стилем таблицы.
 
-
 <a name="Adding_Headers_and_Footers" />
 
 ## <a name="adding-headers-and-footers"></a>Добавление верхних и нижних колонтитулов
@@ -280,7 +272,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 - **Титлефорхеадер** — возвращает текст, используемый в качестве заголовка.
 - **Титлефорфутер** — возвращает текст, используемый в качестве нижнего колонтитула.
-
 
 Обновленные методы в примере файла **басиктаблехеадерфутер/Code/таблесаурце. CS** выглядят следующим образом:
 
@@ -296,7 +287,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 ```
 
 Можно дополнительно настроить внешний вид верхнего и нижнего колонтитула с помощью объекта представления, используя `GetViewForHeader` переопределения методов и `GetViewForFooter` для. `UITableViewSource`
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

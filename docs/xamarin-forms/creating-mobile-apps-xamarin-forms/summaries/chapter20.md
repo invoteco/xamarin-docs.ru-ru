@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 20. Асинхронный и файловый ввод-вывод
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 20. Асинхронный и файловый ввод-вывод
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 20. Асинхронный и файловый ввод-вывод'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 283273e6ee28cc5cd1a61169f38bfcd1dd1726d8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650464"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771035"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Сводка Глава 20. Асинхронный и файловый ввод-вывод
 
@@ -166,8 +166,6 @@ ms.locfileid: "67650464"
 ## <a name="back-to-the-web"></a>Обратно в Интернете
 
 [ `WebRequest` ](xref:System.Net.WebRequest) Класс, используемый в некоторых примерах используется устаревший асинхронный протокол называется модели асинхронного программирования или APM. Такой класс можно преобразовать в современных TAP протокола, с помощью одного из `FromAsync` методы в [ `TaskFactory` ](xref:System.Threading.Tasks.TaskFactory`1) класса. [ **ApmToTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap) в нем демонстрируется это.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

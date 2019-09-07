@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d37537f345a1532e38ab4d016cfbd5b26eae8b3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522330"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758537"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Макеты с вкладками с помощью Актионбар
 
 _В этом руководство рассказывается о том, как использовать API Актионбар для создания пользовательского интерфейса с вкладками в приложении Xamarin. Android._
-
 
 ## <a name="overview"></a>Обзор
 
@@ -25,15 +24,11 @@ _В этом руководство рассказывается о том, ка
 
 Обратите `Toolbar` внимание, что является более новым и обобщенным компонентом панели операций, который следует `ActionBar` использовать`Toolbar` вместо (был разработан `ActionBar`для замены). Дополнительные сведения см. в разделе [панель инструментов](~/android/user-interface/controls/tool-bar/index.md). 
 
-
-
 ## <a name="requirements"></a>Требования
 
 Любое приложение Xamarin. Android, предназначенное для API уровня 11 (Android 3,0) или более поздней версии, имеет доступ к интерфейсам API Актионбар в рамках собственных интерфейсов API Android. 
 
 Некоторые API Актионбар были перенесены на уровень API 7 (Android 2,1) и доступны через [библиотеку AppCompat версии 7](https://developer.android.com/tools/support-library/features.html#v7-appcompat), которая доступна для приложений Xamarin. Android через [библиотеку поддержки Xamarin Android Library-версии 7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) .
-
-
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>Знакомство с вкладками в Актионбар
 
@@ -59,15 +54,13 @@ Xamarin. Android заключает в оболочку `ActionBar.ITabListener`
 - табреселектед
 - табунселектед
 
-
-
 ### <a name="adding-tabs-to-the-actionbar"></a>Добавление вкладок в Актионбар
 
 Актионбар является собственным интерфейсом Android 3,0 (API уровня 11) и более поздней версии и доступен для любого приложения Xamarin. Android, которое нацелено на этот API как минимум. 
 
 Ниже показано, как добавить Актионбар вкладки в действие Android. 
 
-1. &ndash; `NavigationMode` `ActionBar.NavigationModeTabs` `ActionBar` В методе действия &ndash; перед инициализацией любых мини-приложений пользовательского интерфейса приложение должно установить в значение, как показано в следующем фрагменте кода: `OnCreate`
+1. `ActionBar` `NavigationMode` &ndash; `ActionBar.NavigationModeTabs` В методе действия &ndash; перед инициализацией любых мини-приложений пользовательского интерфейса приложение должно установить в значение, как показано в следующем фрагменте кода: `OnCreate`
 
    ```csharp
    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
@@ -79,7 +72,6 @@ Xamarin. Android заключает в оболочку `ActionBar.ITabListener`
 3. Назначьте обработчики событий или предоставьте пользовательскую `ActionBar.ITabListener` реализацию, которая будет отвечать на события, возникающие, когда пользователь взаимодействует со вкладками актионбар.
 
 4. Добавьте вкладку, созданную на предыдущем шаге, в `ActionBar`.
-
 
 Следующий код является одним из примеров использования этих шагов для добавления вкладок в приложение, которое использует обработчики событий для реагирования на изменения состояния: 
 
@@ -107,14 +99,11 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 #### <a name="event-handlers-vs-actionbaritablistener"></a>Обработчики событий VS Актионбар. Итаблистенер
 
 Приложения должны использовать обработчики событий `ActionBar.ITabListener` и для различных сценариев. Обработчики событий предлагают определенный объем синтаксического удобства; они сохраняют у вас возможность создавать и реализовывать `ActionBar.ITabListener`класс. Это удобство достигается за счет &ndash; Xamarin. Android выполняет это преобразование, создавая один класс и реализуя `ActionBar.ITabListener` его. Это нормально, если в приложении имеется ограниченное количество вкладок. 
 
 При работе со многими вкладками или совместном использовании общих функциональных возможностей на вкладках актионбар может быть более эффективным в плане памяти и производительности для создания пользовательского класса, реализующего `ActionBar.ITabListener`интерфейс и совместно использующего один экземпляр класса. Это позволит сократить число Греф, которые использует приложение Xamarin. Android. 
-
-
 
 ### <a name="backwards-compatibility-for-older-devices"></a>Обратная совместимость для старых устройств
 
@@ -171,11 +160,9 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-
 ## <a name="summary"></a>Сводка
 
 В этом руководство мы рассмотрели создание пользовательского интерфейса с вкладками в Xamarin. Android с помощью Актионбар. Мы рассмотрели, как добавлять вкладки в актионбар и как действие может взаимодействовать с событиями табуляции `ActionBar.ITabListener` через интерфейс. Кроме того, мы увидели, как в библиотеке поддержки Android пакет AppCompat версии 7 поддерживает вкладки Актионбар с более старыми версиями Android. 
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

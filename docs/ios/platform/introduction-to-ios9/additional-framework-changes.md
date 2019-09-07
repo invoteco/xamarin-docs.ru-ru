@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb16ad3889453f866f3dc9e66f5bcc8860bd094a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751980"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Дополнительные изменения платформ iOS 9
 
@@ -55,9 +55,6 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 
 > [!IMPORTANT]
 > Прежде чем получить доступ к, представлять или обновлять содержимое базы данных CloudKit с помощью CloudKit JS, необходимо предварительно определить схему этой базы данных.
-
-
-
 
 Дополнительные сведения см. в следующих документах:
 
@@ -261,8 +258,6 @@ PresentViewController(controller, true, null);
 ### <a name="new-uitextinputassistantitem-class"></a>Новый класс Уитекстинпутассистантитем
 
 Используйте новый `UITextInputAssistantItem` класс для групп кнопок панели макета на _панели ярлыков_. Панель ярлыков — это новая область, доступная на экранной клавиатуре для ввода сочетаний клавиш.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

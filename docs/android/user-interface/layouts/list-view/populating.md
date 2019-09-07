@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e934dd0f35b7c734228d637fe646d0e2c20e9dad
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522538"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758627"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Заполнение ListView Xamarin. Android данными
 
@@ -37,7 +37,6 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-
 ### <a name="handling-row-clicks"></a>Обработка щелчков по строкам
 
 `ListView` Обычно также позволяет пользователю коснуться строки, чтобы выполнить какое-либо действие (например, воспроизведение песни или вызов контакта или отображение другого экрана). Для реагирования на `ListActivity` пользовательское касание должен быть еще один метод, &ndash; `OnListItemClick` &ndash; реализованный следующим образом:
@@ -55,7 +54,6 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 Теперь пользователь может коснуться строки, и `Toast` появится предупреждение:
 
 [![Снимок экрана с всплывающим окном, отображаемым при затронутой строке](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
-
 
 ## <a name="implementing-a-listadapter"></a>Реализация Листадаптер
 
@@ -102,7 +100,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
 ### <a name="using-a-custom-adapter"></a>Использование пользовательского адаптера
 
 Использование пользовательского адаптера аналогично встроенному `ArrayAdapter`, передавая `context` значения и `string[]` для отображаемых значений:
@@ -112,7 +109,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 ```
 
 Поскольку в этом примере используется тот же макет строки`SimpleListItem1`(), полученное приложение будет выглядеть аналогично предыдущему примеру.
-
 
 ### <a name="row-view-re-use"></a>Повторное использование представления строк
 
@@ -137,7 +133,6 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 Некоторые реализации `CursorAdapter`адаптеров (например,) не `GetView` имеют метода, а используют два разных метода `NewView` и `BindView` `GetView` принудительное повторное использование строк путем разделения обязанностей на два метод. Ниже приведен пример в документе. `CursorAdapter`
 
-
 ## <a name="enabling-fast-scrolling"></a>Включение быстрой прокрутки
 
 Быстрая прокрутка позволяет пользователю прокручивать длинные списки, предоставляя дополнительный маркер "Handle", который выступает в качестве полосы прокрутки для прямого доступа к части списка. На этом снимке экрана показан маркер быстрой прокрутки:
@@ -149,7 +144,6 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 ```csharp
 ListView.FastScrollEnabled = true;
 ```
-
 
 ### <a name="adding-a-section-index"></a>Добавление индекса раздела
 
@@ -164,7 +158,6 @@ ListView.FastScrollEnabled = true;
 - **Жетпоситионфорсектион** &ndash; Возвращает позиции первой строки для данного индекса раздела.
 
 - **Жетсектионфорпоситион** &ndash; Возвращает индекс раздела, который будет отображаться для данной строки.
-
 
 В примере `SectionIndex/HomeScreenAdapter.cs` файла реализуются эти методы и дополнительный код в конструкторе. Конструктор строит индекс раздела путем прохода по каждой строке и извлечения первого символа заголовка (элементы уже должны быть отсортированы для работы).
 
@@ -213,8 +206,6 @@ public int GetSectionForPosition(int position)
 
 Названиям индексов разделов не нужно сопоставлять 1:1 с реальными разделами. Именно поэтому `GetPositionForSection` метод существует.
 `GetPositionForSection`предоставляет возможность сопоставлять любые индексы в списке индексов с любыми разделами в представлении списка. Например, в индексе может быть знак "z", но для каждой буквы может отсутствовать раздел таблицы, поэтому вместо "z" в 26 может сопоставлено значение 25 или 24, либо любой индекс раздела "z" должен быть сопоставлен с.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

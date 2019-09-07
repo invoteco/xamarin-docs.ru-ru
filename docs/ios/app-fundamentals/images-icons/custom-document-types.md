@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 25b4e5a564c8dabf4cb44881c25e0a10ade47350
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282519"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767740"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Настраиваемые значки документов в Xamarin. iOS
 
@@ -30,7 +30,7 @@ _В этой статье рассматривается включение ре
 Чтобы назначить эти значения в Visual Studio для Mac, используйте раздел **типы документов** на `Info.plist` вкладке **Дополнительно** в редакторе, чтобы добавить тип документа и назначить ему значки изображений. Например, ниже приведен снимок экрана, показывающий регистрацию для поддержки PDF:
 
  [![](custom-document-types-images/18.png "Раздел \"типы документов\" на вкладке \"Дополнительно\" редактора \"info. plist\"")](custom-document-types-images/18.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Чтобы назначить эти значения в Visual Studio, используйте раздел **типы документов** на `Info.plist`вкладке **Дополнительно** на странице:
@@ -43,9 +43,7 @@ _В этой статье рассматривается включение ре
 
 -----
 
-
 Дополнительные сведения о типах документов см. в разделах [Справочник по единообразным идентификаторам типов](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) Apple и [разделы по программированию документов для iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

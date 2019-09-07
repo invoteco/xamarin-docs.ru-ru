@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 46db28dab32f14fa476b9fbb42b788feb669aa74
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3a0737a5a28ced1ec55246d0586d4cfe28363f3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291866"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753451"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Введение в трехмерное касание в Xamarin. iOS
 
@@ -66,9 +66,6 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 > [!IMPORTANT]
 > Изменения в нажиме приведут `TouchesMoved` к возникновению события, даже если координаты X/Y не изменились. Из-за этого изменения в поведении приложения iOS должны быть готовы `TouchesMoved` к вызову события чаще, а координаты X/Y должны совпадать с последним `TouchesMoved` вызовом.
-
-
-
 
 Дополнительные сведения см. в разделе Apple [таучканвас: Эффективное использование уитауч и эффективный](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/) пример [справочника по классу](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/)App и уитауч.
 
@@ -210,7 +207,6 @@ public override void ViewDidLoad ()
 
 [![](3d-touch-images/quickactions01.png "Пример меню быстрых действий")](3d-touch-images/quickactions01.png#lightbox)
 
-
 ### <a name="defining-static-quick-actions"></a>Определение статических быстрых действий
 
 Если одно или несколько быстрых действий, необходимых для приложения, являются статическими и их не нужно изменять, их можно определить в `Info.plist` файле приложения. Измените этот файл во внешнем редакторе и добавьте следующие разделы:
@@ -282,10 +278,6 @@ public override void ViewDidLoad ()
 
 > [!IMPORTANT]
 > Элементы ярлыков быстрого действия, заданные в `Info.plist` файле, недоступны `Application.ShortcutItems` со свойством. Они передаются `HandleShortcutItem` только обработчику событий.
-
-
-
-
 
 ### <a name="identifying-quick-action-items"></a>Определение элементов быстрого действия
 
@@ -387,7 +379,6 @@ public override void PerformActionForShortcutItem (UIApplication application, UI
 
 Наконец, если приложение уже запущено, `PerformActionForShortcutItem` метод будет вызван для выполнения элемента быстрого действия, поэтому необходимо переопределить его и вызвать наш `HandleShortcutItem` метод.
 
-
 ### <a name="creating-dynamic-quick-action-items"></a>Создание динамических элементов быстрого действия
 
 Помимо определения статических элементов быстрого действия в `Info.plist` файле приложения, вы можете создавать динамические быстрые действия в режиме реального времени. Чтобы определить два новых динамических действия, измените `AppDelegate.cs` файл еще раз и `FinishedLaunching` измените метод так, чтобы он выглядел следующим образом:
@@ -446,8 +437,6 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 ## <a name="summary"></a>Сводка
 
 В этой статье появились новые API-интерфейсы трехмерного касания, доступные в iOS 9 для iPhone 6S и iPhone 6S Plus. В нем рассматривается добавление чувствительности к нажиму для приложения. Использование функции Peek и POP для быстрого отображения сведений в приложении из текущего контекста без навигации; и использование быстрых действий для предоставления сочетаний клавиш для наиболее часто используемых функций приложения.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

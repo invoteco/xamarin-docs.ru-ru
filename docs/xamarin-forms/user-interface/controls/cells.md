@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 1e003a80b58f783829f5af3b74801fc3c91c88e9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 769ff7efedca453734b6db2dd2dcb2ad503ba272
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655619"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759802"
 ---
 # <a name="xamarinforms-cells"></a>Ячейки Xamarin.Forms
 
@@ -57,7 +57,6 @@ Xamarin.Forms поддерживает следующие типы ячейки:
 | --- | --- |
 | [ `EntryCell` ](xref:Xamarin.Forms.EntryCell) Определяет [ `Label` ](xref:Xamarin.Forms.EntryCell.Label) свойства, которое определяет ячейку и строку ввода и редактирования текста в [ `Text` ](xref:Xamarin.Forms.EntryCell.Text) свойство. Обрабатывать [ `Completed` ](xref:Xamarin.Forms.EntryCell.Completed) событий, чтобы получать уведомления, когда пользователь завершит ввод текста.<br /><br />[Документация по API](xref:Xamarin.Forms.EntryCell) / [руководство](~/xamarin-forms/user-interface/tableview.md#entrycell) | [![Пример EntryCell](cells-images/EntryCell.png "пример EntryCell")](cells-images/EntryCell-Large.png#lightbox "EntryCell пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryCellDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryCellDemoPage.xaml) |
 |     |     |
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

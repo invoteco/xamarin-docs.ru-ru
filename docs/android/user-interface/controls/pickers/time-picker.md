@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: dfee003ba327b199974ae277a93cb1ca55a81b0d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1f55e5d97058d07926233e8b116663e6674a441c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522892"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764960"
 ---
 # <a name="android-time-picker"></a>Средство выбора времени Android
 
@@ -42,7 +42,7 @@ ms.locfileid: "69522892"
 
 [![Снимок экрана: диалоговое окно выбора времени по умолчанию, отображаемое приложением](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png#lightbox)
 
-В, выбрав время и нажав кнопку **ОК** , `TimePickerDialog` вызывается метод [ионтимесетлистенер. OnTime](xref:Android.App.TimePickerDialog.IOnTimeSetListener.OnTimeSet*). `TimePickerDialog`
+В, выбрав время и нажав кнопку **ОК** , `TimePickerDialog` вызывается метод [ионтимесетлистенер. OnTime.](xref:Android.App.TimePickerDialog.IOnTimeSetListener.OnTimeSet*) `TimePickerDialog`
 Этот интерфейс реализуется размещением `DialogFragment` (`TimePickerFragment`, описанным ниже). Нажатие кнопки **Отмена** приводит к закрытию фрагмента и диалогового окна.
 
 `DialogFragment`Возвращает выбранное время для ведущего действия одним из трех способов:
@@ -213,7 +213,6 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
         DateTime currentTime = DateTime.Now;
         DateTime selectedTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hourOfDay, minute, 0);
     ```
-
 
 - Этот `DateTime` объект передается в `timeSelectedHandler` `TimePickerFragment` объект, зарегистрированный в объекте во время создания. `OnTimeSet`вызывает этот обработчик для обновления экрана времени действия до выбранного времени (этот обработчик реализуется в следующем разделе):
 

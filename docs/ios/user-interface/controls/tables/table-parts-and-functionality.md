@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: edc5ec51499116fc2fabeb03327b32a689dc0c49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279330"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768345"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Части и функции таблиц в Xamarin. iOS
 
@@ -67,7 +67,6 @@ ms.locfileid: "70279330"
 - Вставка новых ячеек (с анимацией).
 
 В оставшейся части этого документа показано, как реализовать все эти Уитаблевиев функции с помощью Xamarin. iOS.
-
 
 ## <a name="classes-overview"></a>Общие сведения о классах
 

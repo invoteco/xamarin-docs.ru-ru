@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4d294b7aee9d4a6c2118a5ff12968a7f95fb981c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524733"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757855"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -27,9 +27,7 @@ Android поддерживает два способа настройки соо
 
 - `SetNdefPushMessageCallback`— Когда инициируется образ Android, приложение может реализовать обратный вызов для создания Ндефмессаже. Этот механизм позволяет отложить создание сообщений до тех пор, пока устройства не будут находиться в диапазоне. Он поддерживает сценарии, в которых сообщение может изменяться в зависимости от того, что происходит в приложении.
 
-
 В любом случае, чтобы отправлять данные с помощью устройства Android, приложение отправляет `NdefMessage`пакет, упаковывая данные в несколько. `NdefRecords` Давайте рассмотрим ключевые моменты, которые необходимо устранить, прежде чем можно будет активировать образ Android. Во `NdefMessage`первых, мы будем работать с стилем обратного вызова для создания.
-
 
 ## <a name="creating-a-message"></a>Создание сообщения
 
@@ -65,7 +63,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## <a name="receiving-a-message"></a>Получение сообщения
 
 На принимающей стороне система вызывает намерение с `ActionNdefDiscovered` действием, откуда мы можем извлечь ндефмессаже следующим образом:
@@ -75,11 +72,9 @@ IParcelable [] rawMsgs = intent.GetParcelableArrayExtra (NfcAdapter.ExtraNdefMes
 NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
-Полный пример кода, в котором используется образ Android, показанный на снимке экрана ниже, см. в демонстрационном ролике по [Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) в галерее примеров.
+Полный пример кода, в котором используется образ Android, показанный на снимке экрана ниже, см. в [демонстрационном ролике по Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) в галерее примеров.
 
 [![Пример снимков экрана с демонстрационной версией Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

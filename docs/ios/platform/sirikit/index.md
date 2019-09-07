@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e3ef6dd857760d722fe84f98250b8db9e398ea2e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 802cf60f88f80ce7d67cd9fd8ec85ca343fd2916
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287187"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769393"
 ---
 # <a name="sirikit-in-xamarinios"></a>SiriKit в Xamarin. iOS
 
@@ -38,10 +38,6 @@ Siri работает с понятием **доменов**, группами �
 ## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Реализация SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
 В этой статье рассматриваются шаги, необходимые для реализации поддержки SiriKit в приложениях Xamarin. iOS. Прежде чем пытаться добавить поддержку SiriKit в приложение, разработчик должен ознакомиться с руководством по основным понятиям SiriKit. в этом разделе рассматриваются основные понятия, которые необходимы для успешной реализации.
-
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

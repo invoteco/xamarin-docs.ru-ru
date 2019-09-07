@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: d1464ca3accf53a9362d00e279ff9e158d7e34d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b829cf3f440b1c94c5232d258c86b6ea4b0f181
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281636"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767511"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Создание пользовательских интерфейсов iOS в коде в Xamarin.iOS
 
@@ -59,16 +59,13 @@ ms.locfileid: "70281636"
 1. **Info.plist** -файл списка свойств, содержащий сведения о конфигурации приложения.
 1. **Entitlements.plist** — файл списка свойств, содержащий сведения о возможностях и разрешения приложения.
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>шаблоны iOS
 
-
 Visual Studio для Mac не поддерживает пустой шаблон. Все шаблоны поставляются с поддержкой раскадровки, в которой корпорация Apple рекомендует использовать как основной способ создания пользовательского интерфейса. Тем не менее существует возможность создать свой пользовательский Интерфейс полностью в коде.
 
 Приведенные ниже инструкции по Удаление раскадровки из приложения.
-
 
 1. Используйте приложение с одним представлением шаблон, чтобы создать новый проект iOS:
 

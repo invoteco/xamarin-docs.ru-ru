@@ -7,28 +7,25 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9d589af6249063add3dc9b085463fde9edd8e449
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: aa2f52be4e485fb55a949a0327161bd1c301334c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278437"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769718"
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Почему сборка iOS завершается ошибкой "В цепочке ключей не удалось найти допустимые ключи подписывания кода iPhone"?
 
 ## <a name="cause-of-the-error"></a>Причина ошибки
 Это сообщение об ошибке возникает, если рассматриваемый проект ищет действительные учетные данные подписывания кода, но их не удается найти. Для тестирования и развертывания на физических устройствах iOS требуется подписывание кода. а также ad-hoc & сборки магазина приложений. 
 
-
 ### <a name="provisioning-devices"></a>Подготовка устройств
 Если вы еще не подготовили устройство iOS, выполните приведенные ниже инструкции по полному пошаговому процессу. [Рекомендации по подготовке устройств](~/ios/get-started/installation/device-provisioning/index.md)
-
 
 ## <a name="bug-when-using-ios-simulator"></a>Ошибка при использовании симулятора iOS
 
 > [!NOTE]
 > Эта проблема решена в последних версиях Xamarin для Visual Studio. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.
-
 
 Произошла ошибка в Xamarin. Visual Studio 3,11, которая привела к проекту iOS в шаблоне Xamarin. Forms, чтобы добавить соplistные права на сборку симуляторов; эффективное блокирование тестирования с помощью симулятора.
 

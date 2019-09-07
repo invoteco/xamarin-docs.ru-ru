@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 13a9a02984828781cc6402e982a4b5151c077c52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648329"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758333"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -40,9 +40,7 @@ ms.locfileid: "68648329"
 
 ## <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[API-интерфейсы износа](https://developer.android.com/reference/android/support/wearable)
 
-Сайт для разработчиков Android предоставляет подробные сведения об основных API-интерфейсах износа, таких как [действия носимого пользователем](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html) [, намерения](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [Проверка](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html)подлинности, [сложности](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [визуализация](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [уведомления](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Представления](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)и [ватчфаце](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
-
-
+Сайт для разработчиков Android предоставляет подробные сведения об основных API-интерфейсах износа, [таких](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html)как [действия носимого пользователем](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), намерения, [Проверка подлинности](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [сложности](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [визуализация](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [уведомления](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Представления](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)и [ватчфаце](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
 ## <a name="samples"></a>Примеры
 
@@ -51,12 +49,11 @@ ms.locfileid: "68648329"
 |Пример|Описание|Снимок экрана|
 |--- |--- |--- |
 |[скелетонвеар](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|Простой пример основ проектов носимого пользователем, включая Гридвиевпажер и интерактивные уведомления.|![Снимок экрана Скелетонвеар](images/skeleton.png)|
-|[ватчвиевстуб](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Простая демонстрация элемента управления Ватчвиевстуб, который обнаруживает форму экрана и автоматически загружает правильный макет. Узнайте, как работает Ватчвиевстуб в макете Resources **/Layout/main_activity. XML** .|![Снимок экрана Ватчвиевстуб](images/watchview.png)|
+|[ватчвиевстуб](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Простая демонстрация элемента управления Ватчвиевстуб, который обнаруживает форму экрана и автоматически загружает правильный макет. Узнайте, как работает Ватчвиевстуб в макете **Resources/Layout/main_activity. XML** .|![Снимок экрана Ватчвиевстуб](images/watchview.png)|
 |[реЦипеассистант](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant)|Демонстрация страниц с нестандартными уведомлениями в виде шагов рецепта. Уведомления создаются в RecipeService.cs.|![Снимок экрана РеЦипеассистант](images/recipeassist.png)|
 |[елизачат](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-elizachat)|Забавный пример взаимодействия с "личным помощником", именуемый Елиза, с использованием стандартных интерактивных уведомлений для создания диалога с использованием предустановленных ответов.|![Снимок экрана Елизачат](images/eliza.png)|
 |[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|Гридвиевпажер реализует плоский навигационный шаблон, где пользователь выполняет вертикальное перемещение, а затем по горизонтали для навигации по параметрам и содержимому.|![Снимок экрана Гридвиевпажер](images/gridviewpager.png)|
 |[ватчфаце](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|Ватчфаце — это пользовательское лицо с контрольными данными с использованием часов, минут и секунд с аналоговым стилем. В этом примере показано, как создать службу отслеживания лиц, которая рисует текущее время и обрабатывает события изменения внешнего режима и видимости. Он включает широковещательный приемник, который прослушивает изменения часового пояса и автоматически обновляет соответствующее время.|![Снимок экрана Ватчфаце](images/gridviewpager.png)|
-
 
 ## <a name="videos"></a>Видеоролики
 
@@ -67,7 +64,6 @@ ms.locfileid: "68648329"
 |[Android L и многое другое](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; В предварительной версии Android L для разработчиков появились новые API-интерфейсы, которые позволяют разработчикам воспользоваться преимуществами, включая проектирование материалов, уведомления и новые анимации.|![Снимок экрана презентации](images/video-android-l.png)|
 |[C#в моей Ушкие и в моих глаза: Носимого пользователем вычисления с помощью Google](https://www.youtube.com/watch?v=80H8tXByZQc) Glass и Android могут показаться что-нибудь из будущего (или мини-приложения инспектора), но многие люди уже используют будущее сегодня! &ndash; C#разработчики узнают это и уже имеют средства и навыки для использования возможностей носимого пользователем устройств (от развития до 2014).|![Снимок экрана презентации](images/video-eyes-ears.png)|
 |[Новые возможности Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Light, Android TV, автозапуск для Android, проектирование материалов и искусство; что это означает в качестве разработчика Xamarin? от развития 2014.|![Снимок экрана презентации](Images/video-whats-new.png)|
-
 
 <!--
 

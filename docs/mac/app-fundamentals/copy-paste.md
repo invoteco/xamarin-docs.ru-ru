@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291220"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769934"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Копирование и вставка в Xamarin. Mac
 
@@ -603,7 +603,7 @@ namespace MacCopyPaste
 Опять же, мы получаем текущее, самое верхнее окно и `ImageDocument` используем его экземпляр класса для просмотра наличия требуемых данных изображения. Затем мы используем `MenuWillHighlightItem` метод, чтобы включить или отключить каждый элемент на основе этого состояния.
 
 Измените файл **AppDelegate.CS** и сделайте так, `DidFinishLaunching` чтобы метод выглядел следующим образом:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
@@ -1275,8 +1275,6 @@ if (ok) {
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается работа с монтажным знаком в приложении Xamarin. Mac для поддержки операций копирования и вставки. Во-первых, в нем появился простой пример, получающий представление о стандартных монтажных столах. Далее на монтажном столе потребовался подробный обзор, а также чтение и запись данных из него. Наконец, он рассматривал использование пользовательского типа данных для поддержки копирования и вставления сложных типов данных в приложении.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

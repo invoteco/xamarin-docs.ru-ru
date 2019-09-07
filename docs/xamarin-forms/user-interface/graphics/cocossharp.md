@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: d6440518149a4fab8e9667a2a41d3df818e2a879
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7b465391958a6e862bfed9fde8d9da1fdd52bee5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120524"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759753"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Использование CocosSharp в Xamarin.Forms
 
@@ -94,7 +94,6 @@ CocosSharp может размещаться в любом контейнере 
 
 Во-первых, Настройка параметров страницы, чтобы он содержал `Grid` и два `Button` экземпляров:
 
-
 ```csharp
 public class HomePage : ContentPage
 {
@@ -147,7 +146,6 @@ public HomePage ()
 
 `CocosSharpView` Класс используется для внедрения CocosSharp в Xamarin.Forms приложение. Так как `CocosSharpView` наследует от [Xamarin.Forms.View](xref:Xamarin.Forms.View) класс, он предлагает привычный интерфейс для макета, и он может использоваться внутри контейнеров макета например [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid). Добавьте новый `CocosSharpView` в проект, выполнив `CreateTopHalf` метод:
 
-
 ```csharp
 void CreateTopHalf(Grid grid)
 {
@@ -165,7 +163,6 @@ void CreateTopHalf(Grid grid)
 ```
 
 CocosSharp инициализация не выполняется сразу же, поэтому рекомендуем зарегистрироваться событие когда `CocosSharpView` завершения его создания. Это можно сделать `HandleViewCreated` метод:
-
 
 ```csharp
 void HandleViewCreated (object sender, EventArgs e)
@@ -203,7 +200,6 @@ void HandleViewCreated (object sender, EventArgs e)
 
 Изначально `GameScene` класс будет практически пустым – мы просто создадим его соответствие ссылка в `HomePage`. Добавьте новый класс в проект .NET Standard library с именем `GameScene`. Он должен наследовать от `CCScene` следующим образом:
 
-
 ```csharp
 public class GameScene : CCScene
 {
@@ -215,7 +211,6 @@ public class GameScene : CCScene
 ```
 
 Теперь, когда `GameScene` — мы определены, можно вернуться к `HomePage` и добавьте поля:
-
 
 ```csharp
 // Keep the GameScene at class scope
@@ -234,7 +229,6 @@ GameScene gameScene;
 В приложении используется запущенный экземпляр обработчика CocosSharp, отображение пустой `CCScene`. Далее мы добавим визуальный объект: круг. `CCDrawNode` Класс может использоваться для рисования различных геометрических фигур, как описано в [Рисование геометрия с CCDrawNode руководство](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 Добавить круг наших `GameScene` класса и создать его экземпляр в конструкторе, как показано в следующем коде:
-
 
 ```csharp
 public class GameScene : CCScene
@@ -262,7 +256,6 @@ public class GameScene : CCScene
 
 ![](cocossharp-images/image6.png "Круг в GameScene")
 
-
 #### <a name="understanding-designresolution"></a>Основные сведения о DesignResolution
 
 Теперь, когда отображается визуального объекта CocosSharp, мы сможем решить проблему `DesignResolution` свойство.
@@ -287,7 +280,6 @@ public class GameScene : CCScene
 
 CocosSharp визуальные элементы (такие как `CCDrawNode`) наследовать от `CCNode` класса. `CCNode` предоставляет два свойства, которые могут использоваться для размещения объекта относительно его родительского элемента: `PositionX` и `PositionY`. В настоящее время наш код использует эти два свойства для размещения центра круга, как показано в этом фрагменте кода:
 
-
 ```csharp
 circle.PositionX = 20;
 circle.PositionY = 50;
@@ -296,7 +288,6 @@ circle.PositionY = 50;
 Это важно отметить, что CocosSharp объекты располагаются с явно указанными значениями позиции, в отличие от большинства представления Xamarin.Forms, которые автоматически располагаются в соответствии с поведение их родительские элементы управления макета.
 
 Мы добавим код, чтобы разрешить пользователю щелкните одну из двух кнопок, чтобы переместить элемент управления circle влево или вправо, 10 единиц (не пикселей, поскольку Рисует элемент управления circle в абсолютном единицы CocosSharp пространстве). Сначала мы создадим два открытых метода в `GameScene` класса:
-
 
 ```csharp
 public void MoveCircleLeft()
@@ -311,7 +302,6 @@ public void MoveCircleRight()
 ```
 
 Далее мы добавим обработчики две кнопки в `HomePage` реакция на щелчок мыши. После завершения наших `CreateBottomHalf` метод содержит следующий код:
-
 
 ```csharp
 void CreateBottomHalf(Grid grid)

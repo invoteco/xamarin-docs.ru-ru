@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 0d4e32b7bf98758f12dc038e0b61ffa0132f234d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529228"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760568"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Обработка файлов в Xamarin.Forms
 
@@ -118,7 +118,6 @@ listView.ItemsSource = monkeys;
 - **Синхронизация проектов** — можно изменить свойства проекта для каждой платформы, чтобы использовать **одни и те же** имя сборки и пространство имен по умолчанию. Затем это значение можно жестко задать в качестве префикса для идентификаторов внедренных ресурсов в общем проекте.
 - **Директивы компилятора #if** — можно использовать директивы компилятора, чтобы задать правильный префикс идентификатора ресурса и использовать это значение для динамического формирования необходимого идентификатора ресурса.
 
-
 Ниже приведен код, иллюстрирующий второй вариант. Директивы компилятора используются для выбора жестко заданного префикса ресурса (который обычно такой же, как и пространство имен по умолчанию для ссылающегося проекта). Затем переменная `resourcePrefix` используется для создания допустимого идентификатора ресурса путем сцепления с именем файла внедренного ресурса.
 
 ```csharp
@@ -169,4 +168,3 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Примеры Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Работа с файловой системой в Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
-

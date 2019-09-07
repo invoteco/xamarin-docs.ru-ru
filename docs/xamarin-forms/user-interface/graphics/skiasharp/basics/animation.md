@@ -7,12 +7,12 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648732"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759751"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Простая анимация в SkiaSharp
 
@@ -245,7 +245,6 @@ public class ExpandingCirclesPage : ContentPage
 Результатом является то, что образ, выглядит так же when `t` равен 0, как и при `t` равно 1, и круги, по-видимому, поочередно раскройте остальные навсегда:
 
 [![](animation-images/expandingcircles-small.png "Тройной снимок экрана страницы круги, развернув")](animation-images/expandingcircles-large.png#lightbox "тройной снимок экрана страницы кругов развертывания")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

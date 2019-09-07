@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 194f1a260adc49083a8d4365a310447acbcc96f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287973"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769024"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Работа с tvOSными представлениями с накоплением в Xamarin
 
@@ -74,9 +74,6 @@ ms.locfileid: "70287973"
 
 > [!IMPORTANT]
 > Выравнивание по базовому плану не работает для размеров с растяжением или сжатого представления, так как базовый план вычисляется в соответствии с неверной позицией. Для выравнивания по базовому плану убедитесь, что **Высота** подпредставления совпадает с **высотой**внутреннего представления содержимого.
-
-
-
 
 <a name="Common-Stack-View-Uses" />
 
@@ -309,8 +306,6 @@ UIView.Animate(0.25, ()=>{
 ## <a name="summary"></a>Сводка
 
 В этой статье описано проектирование и работа с представлением с накоплением в приложении Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

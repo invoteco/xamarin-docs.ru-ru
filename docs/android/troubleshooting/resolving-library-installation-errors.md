@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: d3face5db37e22fe7acceaa975c3327bb02b78ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8107a26e090aa920d71146d5f2af8b8365697d6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523334"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757209"
 ---
 # <a name="resolving-library-installation-errors"></a>Устранение ошибок установки библиотеки
 
@@ -23,8 +23,6 @@ _В некоторых случаях при установке библиоте
 
 При построении проекта приложения Xamarin. Android могут возникнуть ошибки сборки, когда Visual Studio или Visual Studio для Mac пытаются загрузить и установить библиотеки зависимостей. Многие из этих ошибок вызваны проблемами с сетевым подключением, повреждением файлов или проблемами управления версиями. В этом руководстве описаны наиболее распространенные ошибки установки библиотеки поддержки и приведены инструкции по решению этих проблем и повторному созданию проекта приложения. 
 
- 
- 
 ## <a name="errors-while-downloading-m2repository"></a>Ошибки при скачивании m2Repository
 
 При ссылке на пакет NuGet библиотек поддержки Android или служб Google Play можно столкнуться с ошибками **m2repository** . Сообщение об ошибке выглядит следующим образом:
@@ -34,8 +32,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 ```
 
 Этот пример предназначен для **Android\_m2repository\_R16**, но вы можете увидеть такое же сообщение об ошибке для другой версии, **например\_Android\_m2repository R18** или **Android\_ m2repository\_R25**. 
-
-
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>Автоматическое восстановление из m2repository ошибок 
 
@@ -51,7 +47,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     [![Пример расположения папки для библиотеки поддержки 22.2.1](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png#lightbox)
 
-3. Удалите содержимое папки версии. Не забудьте удалить **ZIP** -файл, а также **содержимое** и вложенные подкаталоги в этой папке. В примере сообщения об ошибке, приведенном выше, файлы и подкаталоги, показанные на этом снимке экрана (**содержимое**, **внедренные**и **android_m2repository_r16. zip**), будут удалены:
+3. Удалите содержимое папки версии. Не забудьте удалить **ZIP** -файл, а также **содержимое** и **вложенные** подкаталоги в этой папке. В примере сообщения об ошибке, приведенном выше, файлы и подкаталоги, показанные на этом снимке экрана (**содержимое**, **внедренные**и **android_m2repository_r16. zip**), будут удалены:
 
     [![Пример содержимого папки библиотеки поддержки 22.2.1](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png#lightbox)
 
@@ -60,8 +56,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 4. Перестроение проекта &ndash; . это приведет к повторной загрузке отсутствующей библиотеки в процессе сборки.
 
 В большинстве случаев эти действия позволят устранить ошибку сборки и продолжить работу. Если удаление этой библиотеки не приводит к устранению ошибки сборки, необходимо вручную скачать и установить файл **Android\_m2repository\_r_nn_. zip** , как описано в следующем разделе. 
-
-
 
 ### <a name="manually-downloading-m2repository"></a>Загрузка m2repository вручную
 
@@ -111,7 +105,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
 3. Скопируйте файл в папку Xamarin **zips** : 
 
-    - В Windows эта папка находится в папке **C\\: Users\\***username***\\AppData\\Local\\Xamarin\\zips**. 
+    - В Windows эта папка находится в папке **C:\\Users\\***username***\\AppData\\Local\\Xamarin\\zips**. 
 
     - На Mac OS X эта папка находится по адресу **/Users/***имя_пользователя***/.локал/шаре/ксамарин/зипс**. 
 
@@ -119,9 +113,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     [![Пример переименования репозитория R16. zip в 0595E577D19D31708195A83087881EE6. zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
-
 Если эта процедура не позволяет устранить ошибку сборки, необходимо вручную скачать файл **Android\_m2repository\_r_nn_. zip** , распаковать его и установить его содержимое, как описано в следующем разделе. 
-
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>Загрузка и установка файлов m2repository вручную
 
@@ -133,7 +125,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 Чтобы скачать **m2repository** и установить его содержимое, выполните следующие действия:
 
-1. Удалите содержимое папки Library, соответствующей сообщению об ошибке. Например, в приведенном выше сообщении об ошибке будет удалено содержимое **файла C\\:\\Users\\***username***\\AppData\\Local\\Xamarin Android. support. v423.1.1.0\\** . 
+1. Удалите содержимое папки Library, соответствующей сообщению об ошибке. Например, в приведенном выше сообщении об ошибке будет удалено содержимое файла **C\\:\\Users\\***username***\\AppData\\Local\\Xamarin Android. support. v423.1.1.0\\** . 
     Как было описано ранее, необходимо удалить все содержимое этого каталога:
 
     [![Удаление содержимого, внедренных и android_m2repository папок из папки 23.1.1.0](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
@@ -144,7 +136,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
     [![Папка m2repository найдена в извлеченном ZIP-архиве](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
-4. В каталоге библиотеки с версией, очищенном на шаге 1, повторно создайте **содержимое** и **внедренные** подкаталоги. Например, на следующем снимке экрана **показано содержимое** и **внедренные** подкаталоги, создаваемые в папке **23.1.1.0** для **\_Android m2repository\_R25. zip**: 
+4. В каталоге библиотеки с версией, очищенном на шаге 1, повторно создайте **содержимое** и **внедренные** подкаталоги. Например, на следующем снимке экрана показано **содержимое** и **внедренные** подкаталоги, создаваемые в папке **23.1.1.0** для **Android\_m2repository\_R25. zip**: 
 
     [![Создание содержимого и внедренных папок в папке 23.1.1.0](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
@@ -156,7 +148,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
     [![Пример списка файлов, содержащихся в папке Support-v4/23.1.1](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png#lightbox)
 
-7. Скопируйте все файлы из этой папки в внедренный каталог , созданный на шаге 4.
+7. Скопируйте все файлы из этой папки в **внедренный** каталог, созданный на шаге 4.
 
     [![Пример файлов, скопированных в папку 23.1.1.0/Embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
@@ -166,8 +158,6 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
     В macOS Распакуйте файл **AAR** с помощью команды **unzip** в терминале (например, **unzip File. AAR**).
 
 На этом этапе вы вручную установили недостающие компоненты, и проект должен быть построен без ошибок. Если это не так, убедитесь, что вы скачали версию архива **m2repository** **. zip** , соответствующую версии в сообщении об ошибке, и убедитесь, что ее содержимое установлено в нужных расположениях, как описано в описанных выше шагах. 
-
-
 
 ## <a name="summary"></a>Сводка 
 

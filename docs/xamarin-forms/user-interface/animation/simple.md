@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d3046479282ef1535677f6712e487ab80bbf9d1b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71972f13f991bc5ad3ddf3c1c631fa7413290204
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656795"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759906"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Простая анимация в Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _Класс ViewExtensions предоставляет методы расширения, которые могут использоваться для создания простой анимации. В этой статье демонстрирует создание и Отмена с помощью класса ViewExtensions анимации._
-
 
 [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) Класс предоставляет следующие методы расширения, которые могут использоваться для создания простой анимации:
 
@@ -229,7 +228,6 @@ ViewExtensions.CancelAnimations (image);
 ## <a name="summary"></a>Сводка
 
 В этой статье демонстрируется создание и Отмена анимаций с помощью [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) класса. Этот класс предоставляет методы расширения, которые могут использоваться для создания простой анимации, поворот, масштабирование, перевод и скрывать [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) экземпляров.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

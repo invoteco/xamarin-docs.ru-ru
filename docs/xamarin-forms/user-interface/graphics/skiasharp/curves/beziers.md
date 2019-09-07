@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228267"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759420"
 ---
 # <a name="three-types-of-bzier-curves"></a>Три типа кривых Безье
 
@@ -552,7 +552,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 Но задать угол в 180 градусов, а также математика "fail".
 
 Его в этом случае является нежелательным, `ConicTo` не поддерживает в случае отрицательных весов, поскольку теоретически (с учетом параметрические уравнения), элемент управления circle можно сделать с помощью другой вызов `ConicTo` с одной точки, но отрицательное значение веса. Это сделало бы возможным создание весь круг с помощью только два `ConicTo` на любой угол между (но не включая) основе кривых нуля градусов и 180 градусов.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

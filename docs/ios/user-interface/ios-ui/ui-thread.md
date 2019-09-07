@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 76733d4efd4ce292da2781c97aef963fb68e3974
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287877"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768180"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Работа с потоком пользовательского интерфейса в Xamarin. iOS
 
@@ -40,7 +40,6 @@ InvokeOnMainThread ( () => {
 
  <a name="Background_Thread_Example" />
 
-
 ## <a name="background-thread-example"></a>Пример фонового потока
 
 Ниже приведен пример, который пытается получить доступ к элементу управления пользовательского `UILabel`интерфейса (a) из фонового потока с помощью простого потока:
@@ -64,7 +63,6 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 Это не потребуется для оставшейся части примеров в этом документе, но важно помнить, когда приложение выполняет сетевые запросы, использует Центр уведомлений или другие методы, требующие обработчика завершения, который будет выполняться на другом поток.
 
  <a name="Async_Await_Example" />
-
 
 ## <a name="asyncawait-example"></a>Пример async/await
 
@@ -92,7 +90,6 @@ async partial void button2_TouchUpInside (UIButton sender)
 ```
 
 Если асинхронный метод вызывается из фонового потока (не основного потока пользовательского интерфейса), `InvokeOnMainThread` то все равно потребуется.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

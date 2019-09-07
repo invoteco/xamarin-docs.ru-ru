@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 065c7284970ececacbdb298d773b19f654280513
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 80f332e45d6c46ad49543923e85cbb2eceadb378
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228088"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767595"
 ---
 # <a name="passing-arguments-in-xaml"></a>Передача аргументов в XAML
 
@@ -168,7 +168,6 @@ _В этой статье демонстрируется использован�
 ## <a name="summary"></a>Сводка
 
 В этой статье показано, с помощью атрибутов XAML, которые могут использоваться для передачи аргументов конструктора не по умолчанию, для вызова методов фабрики, а также указать тип универсального аргумента.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

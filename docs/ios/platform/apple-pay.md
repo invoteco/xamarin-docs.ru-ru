@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f264f210a9228fd213f0c041abb5b26023c796f4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291816"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753270"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay в Xamarin. iOS
 
@@ -81,7 +81,6 @@ Apple Pay доступен только в iOS 8 и более поздних в
 ### <a name="passkit-framework-enhancements"></a>Усовершенствования платформы PassKit
 
 В iOS 10 платформа PassKit была расширена для поддержки Apple Pay вне `UIKit` и позволяет поставщикам карт предоставлять собственные карты в своих приложениях.
-
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>Поддержка Apple Pay за пределами UIKit
 

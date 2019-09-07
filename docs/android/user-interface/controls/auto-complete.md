@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523076"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762437"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Автоматическое заполнение для Xamarin. Android
 
@@ -47,7 +47,6 @@ ms.locfileid: "69523076"
 
 [`TextView`](xref:Android.Widget.TextView) — Это метка, представляющая собой[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 ».
-
 
 ## <a name="tutorial"></a>Учебник
 
@@ -166,8 +165,6 @@ static string[] COUNTRIES = new string[] {
 
 [![Пример автозаполнения снимок экрана со списком имен, содержащих "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## <a name="more-information"></a>Дополнительные сведения
 
 Обратите внимание, что использование жестко закодированного массива строк не является рекомендуемым подходом к проектированию, поскольку код приложения должен сосредоточиться на поведении, а не на содержимом. Содержимое приложения, например строки, должно быть внешним из кода для упрощения и упрощения локализации содержимого. Жестко запрограммированные строки используются в этом учебнике только для того, чтобы сделать его простым и сосредоточиться на[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
@@ -195,7 +192,6 @@ static string[] COUNTRIES = new string[] {
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
-
 
 ### <a name="references"></a>Ссылки
 

@@ -7,12 +7,12 @@ ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 985510caa78733d1a53aceb41371839f544daa73
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd4014fa4db4e90596c100d454cf0467512240a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511641"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760503"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Сводка Глава 27. Пользовательские модули подготовки отчетов
 
@@ -113,8 +113,6 @@ UWP [ `ViewRenderer<TElement, TNativeElement>` ](https://github.com/xamarin/Xama
 Визуализаторов обнаруживать изменения в собственный элемент управления, а затем вызвать `SetValueFromRenderer`, которая ссылается на свойство, используемое, определенные в `StepSlider`, изменение чего `StepSlider` срабатывание `ValueChanged` событий.
 
 [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) в нем демонстрируется этот новый ползунок.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun
 ms.date: 04/08/2017
-ms.openlocfilehash: ff40ed55c06df41c418b694d02f7d6e9c1c5316c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a5a9ddfe92bd8f5b743da2c535a93c282542c860
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291447"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756783"
 ---
 # <a name="uninstalling-xamarin"></a>Удаление Xamarin
 
@@ -266,7 +266,6 @@ Xamarin удаляется из Visual Studio 2019 и Visual Studio 2017 с по
 >
 >Для решения этой проблемы запустите в установщике Visual Studio функцию **Исправить**, которая повторно установит отсутствующие компоненты.
 
-
 ## <a name="uninstalling-older-and-unsupported-products"></a>Удаление старых и неподдерживаемых продуктов
 
 <a name="uninstallvs2015"></a>
@@ -361,7 +360,6 @@ rm -rf ~/Library/XamarinStudio-*
 ## <a name="summary"></a>Сводка
 
 В этой статье приведены указания по полному удалению Xamarin с компьютера Mac при помощи команд терминала. Здесь также представлены действия по удалению Xamarin с компьютера Windows через элемент **Программы и компоненты** (для Visual Studio 2015 и более ранних версий), а также с помощью **установщика Visual Studio** (для Visual Studio 2017).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

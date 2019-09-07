@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e593a594bbf0fd6398c277d531258f6fded515f1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bc97f14066456a07ee7ce62131985194bbe83811
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282551"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768373"
 ---
 # <a name="web-views-in-xamarinios"></a>Веб-представления в Xamarin. iOS
 
@@ -27,9 +27,9 @@ ms.locfileid: "70282551"
 `UIWebView`является устаревшим способом Apple для предоставления веб-содержимого в приложении. Она была выпущена в iOS 2,0 и является устаревшей по отношению к 8,0.
 
 Если вы планируете поддерживать версии iOS более ранние, чем 8,0, потребуется использовать `UIWebView`. Из-за того, `UIWebView` что менее оптимизировано для производительности, чем альтернативные варианты, рекомендуется проверять версию iOS пользователя. Если он 8,0 или более поздней версии, использование любого из параметров, описанных ниже, поможет улучшить взаимодействие с пользователем.
- 
+
 Чтобы добавить Уивебвиев в приложение Xamarin. iOS, используйте следующий код:
- 
+
 ```
 webView = new UIWebView (View.Bounds);
 View.AddSubview(webView);
@@ -43,7 +43,6 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 [![](uiwebview-images/webview.png "Результат Скалеспажестофит")](uiwebview-images/webview.png#lightbox)
 
 Дополнительные сведения об использовании `UIWebView`см. в следующих рецептах:
-
 
 - [Загрузка веб-страницы](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
 - [Загрузка локального содержимого](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
@@ -79,11 +78,11 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 <a name="safariviewcontroller" />
 
 ## <a name="sfsafariviewcontroller"></a>сфсафаривиевконтроллер
- 
+
  `SFSafariViewController`— Это последний способ предоставления веб-содержимого из приложения и доступен в iOS 9 и более поздних версиях. В отличие `UIWebView` от `WKWebView`или `SFSafariViewController` , является контроллером представления и поэтому не может использоваться с другими представлениями. Вы должны `SFSafariViewController` быть новым контроллером представления таким же образом, как и любой контроллер представления.
- 
+
  `SFSafariViewController`— Это, по сути, Мини-обозреватель Safari, который можно внедрить в приложение. Как и Вквебвиев, он использует тот же механизм JavaScript нитро, но также предоставляет ряд дополнительных функций Safari, таких как автозаполнение, читатель и возможность совместного использования файлов cookie и данных с помощью мобильного обозревателя Safari. Взаимодействие между пользователем и `SFSafariViewController` недоступно для вашего приложения. Приложение не будет иметь доступ к каким бы то ни было функциям Safari по умолчанию.
- 
+
 Кроме того, по умолчанию реализуется кнопка **done (Готово** ), позволяющая пользователю легко вернуться в приложение, а также кнопки перехода и обратно, позволяющие пользователю перемещаться по стеку веб-страниц. Кроме того, он также предоставляет пользователю, которому необходимо предоставить уверенность в том, что они находятся на ожидаемой веб-странице. Адресная строка не разрешает пользователю изменять URL-адрес. 
 
 Эти реализации не могут быть изменены, поэтому `SFSafariViewController` идеально подходит для использования в качестве браузера по умолчанию, если приложение хочет представлять веб-страницу без настройки.

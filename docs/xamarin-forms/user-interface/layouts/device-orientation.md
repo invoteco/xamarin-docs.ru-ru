@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d988be9163c0a6e12735425a139c03d9641fa95c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656786"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772763"
 ---
 # <a name="device-orientation"></a>Ориентации устройства
 
@@ -225,7 +225,6 @@ protected override void OnSizeAllocated (double width, double height){
 
 - `outerStack` настраивается для представления изображений и элементов управления в виде горизонтальной или вертикальной стека в зависимости от ориентации, чтобы лучше всего воспользоваться преимуществами доступное пространство.
 
-
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 Рассмотрим следующее приложение, отображается в книжной ориентации.
@@ -277,7 +276,6 @@ Title="AbsoluteLayout - XAML" BackgroundImageSource="deer.jpg">
 
 - Из-за того, в который странице макетирования нет необходимости для процедурного кода представить скорость реагирования.
 - `ScrollView` , Используется для разрешить метки отображаться, даже если высота экрана не меньше, чем сумма предопределенной высоту кнопки и изображения.
-
 
 ### <a name="relativelayout"></a>RelativeLayout
 
@@ -471,7 +469,6 @@ protected override void OnSizeAllocated (double width, double height){
 Обратите внимание на следующее условия:
 
 - Из-за того, в который макетирования страницы имеется метод для изменения положения элементов управления сетки.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

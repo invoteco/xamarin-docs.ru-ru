@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9ca50171e43ef98e5b4e5fbd7bd236f74d35da8f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ae6a4fb45eb53c514c888d671780a5ceaeba6624
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286765"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768609"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS уведомления в Xamarin
 
@@ -34,7 +34,6 @@ ms.locfileid: "70286765"
 
 ![](notifications-images/notifications-segue.png "Свойства уведомлений")
 
-
 Существует два типа уведомлений:
 
 - Статическое представление с **коротким** просмотром, не поддерживающее прокрутку, определенное системой.
@@ -46,7 +45,6 @@ ms.locfileid: "70286765"
 Внешний вид, short пользовательский Интерфейс состоит из значок приложения, имя приложения и строка заголовка уведомления.
 
 Если пользователь не будет пропускать уведомления, система автоматически переключается на внешний вид, длительно уведомление, с дополнительными сведениями.
-
 
 ### <a name="long-look-notification-controller"></a>Внешний вид долго контроллера уведомлений
 
@@ -63,7 +61,6 @@ ms.locfileid: "70286765"
 Динамическое представление может отображать больше данных и обеспечивать более интерактивным.
 
 ![](notifications-images/notification-dynamic.png "Динамическое представление")
-
 
 ## <a name="generating-notifications"></a>Создания уведомлений
 
@@ -146,8 +143,6 @@ Visual Studio для Mac будет отображаются дополните�
         "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to choose between them in when selecting to debug the notification interface of your Watch App."
     }
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

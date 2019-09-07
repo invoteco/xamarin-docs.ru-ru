@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 18. MVVM
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 18. MVVM
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 18. MVVM'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 32c16409f30d6b6d502b7cc074eafb182898594a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334639"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771071"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Сводка Глава 18. MVVM
 
@@ -92,8 +92,6 @@ MVVM работает с привязками данных, и привязок 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>Модели представлений и жизненного цикла приложения
 
 `AdderViewModel` Используется в **AddingMachine** образец также определяет два метода с именем `SaveState` и `RestoreState`. Эти методы вызываются из приложения, когда он переходит в спящий режим, и при его запуске.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

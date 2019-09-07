@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 16. Привязка данных
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 16. Привязка данных
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 16. Привязка данных'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334209"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771101"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Сводка Глава 16. привязка данных,
 
@@ -138,8 +138,6 @@ ms.locfileid: "61334209"
 Вместо этого [ `NewCheckBox.cs.xaml` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NewCheckBox.xaml) файл содержит всю разметку для визуальных элементов элемента управления через привязки данных на `Label` элементы на основании свойства, определенные в файле кода.
 
 [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) в нем демонстрируется `NewCheckBox` пользовательского элемента управления.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

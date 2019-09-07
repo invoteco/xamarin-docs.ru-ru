@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2578272dcd38399f23f2aac67503ea4e1b09a027
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291122"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769079"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Работа с оповещениями tvOS в Xamarin
 
@@ -361,14 +361,11 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 #endregion
 ```
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Сводка
 
 Эта статья посвящена работе `UIAlertController` с для вывода на экран сообщения о предупреждении пользователю в Xamarin. tvOS. Во-первых, было показано, как отобразить простое оповещение и добавить кнопки. Далее показано, как добавить текстовые поля в предупреждение. Наконец, было показано, как использовать вспомогательный класс, чтобы уменьшить количество повторяющихся кода, необходимого для отображения предупреждения.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

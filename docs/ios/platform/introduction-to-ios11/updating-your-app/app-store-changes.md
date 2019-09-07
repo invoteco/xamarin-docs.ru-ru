@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286589"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752325"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Изменения в магазине приложений в iOS 11
 
@@ -33,7 +33,6 @@ ms.locfileid: "70286589"
 Значки хранилища (или маркетинговые значки) больше не управляются в iTunes Connect и должны храниться в виде [каталога активов](~/ios/app-fundamentals/images-icons/app-icons.md) в двоичном файле приложения аналогично значкам приложений. Для успешной отправки приложений iOS 11 в каталог активов должен быть добавлен значок хранилища 1024 x 1024 в формате PNG.
 
 Тонкое расширение приложения гарантирует, что этот дополнительный каталог активов не увеличит размер приложения.
-
 
 ## <a name="in-app-purchases-promoted-in-the-app-store"></a>Покупки в приложении, повышенные в магазине приложений
 
@@ -96,7 +95,6 @@ ms.locfileid: "70286589"
 ![Параметр, отображающий поэтапный выпуск для автоматических обновлений](app-store-changes-images/image6.png)
 
 Обновление будет доступно немедленно для загрузки на вкладке "обновления" в магазине App Store. Поэтапные выпуски доступны только пользователям, у которых выбрана автоматическая загрузка.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

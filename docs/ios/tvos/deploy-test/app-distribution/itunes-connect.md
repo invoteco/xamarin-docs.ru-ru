@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 92f028a632a32392a349c06c0b7ab8e15b308b9f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ef3d25974f61bb1ac763831ab9a1f6b62d11abbe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769668"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Настройка приложения tvOS в iTunes Connect
 
 _В этой статье представлено дополнительное руководство по настройке приложения iOS в iTunes Connect для конфигураций, связанных с tvOS._
-
 
 В дополнение к конфигурациям и параметрам, которые необходимо выполнить, следуя указаниям в руководстве по [настройке приложения iOS в iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , в этом документе рассматриваются конкретные конфигурации, которые потребуется для выпуска приложения Xamarin. TvOS в приложении Apple TV. Сообщений.
 
@@ -78,8 +77,6 @@ _В этой статье представлено дополнительное 
 ## <a name="summary"></a>Сводка
 
 В этой статье представлен обзор настроек tvOS, необходимых в iTunes Connect для выпуска приложения tvOS в Apple TV App Store.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

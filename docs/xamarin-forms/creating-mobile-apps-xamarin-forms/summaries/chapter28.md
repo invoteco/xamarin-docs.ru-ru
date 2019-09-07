@@ -7,12 +7,12 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 846b7fa3c905b208771a110a013283bd77214b72
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c0b60a5064bbcf605f66a7b9dcce5da1f84a015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511704"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770899"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Сводка Глава 28. Расположение и карты
 
@@ -234,8 +234,6 @@ Android приложениях, которые извлекают из мест�
 [ **Xamarin.Forms.Maps** ](xref:Xamarin.Forms.Maps) сборка также содержит [ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder) класса [ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) метод, который преобразует адрес текста в ноль или более возможных географического положения и другой метод [ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) , преобразует в другом направлении.
 
 [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) файл и [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) эта функция позволяет продемонстрировать файл с выделенным кодом.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

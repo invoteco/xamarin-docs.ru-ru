@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 4. Раскрутка стека
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 4. Раскрутка стека
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 4. Раскрутка стека'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66e4f52e87a4398dd2e09d2d128f43de9a71a665
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334608"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760843"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Сводка Глава 4. Раскрутка стека
 
@@ -110,8 +110,6 @@ ms.locfileid: "61334608"
 Для этого достаточно для предоставления `ScrollView` потомком `StackLayout` `VerticalOptions` параметр `FillAndExpand`. Это показано в [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) образца.
 
 **BlackCat** образце также показано, как определить и получить доступ к ресурсам программы, которые внедряются в общей библиотеке. Это можно сделать также с проектами общих ресурсов (SAPs), но процесс несколько сложнее, как [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) в нем демонстрируется.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

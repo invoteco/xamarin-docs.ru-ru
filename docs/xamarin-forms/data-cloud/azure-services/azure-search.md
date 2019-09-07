@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ea2c733a9c85662b9286f8e8631b601248dc11de
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292676"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770840"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Поиск данных с помощью службы поиска Azure и Xamarin. Forms
 
@@ -275,7 +275,6 @@ async Task AzureSuggestions(string text)
 ## <a name="summary"></a>Сводка
 
 В этой статье было показано, как использовать библиотеку поиска Microsoft Azure для интеграции службы поиска Azure в приложения Xamarin.Forms. Поиск Azure — облачная служба, которая предоставляет возможности для отправляемых данных запросов и индексирования. Это устраняет требования к инфраструктуре сложности алгоритма поиска, традиционно ассоциирующиеся с реализацией функции поиска в приложении.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 722e09cc292bad682a49ee0cba4ff0ca0f39a844
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ff29ac58db618d4a644bbaa5a95ac8624726827f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291642"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770051"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Общие сведения о раскадровках в Xamarin. Mac
 
@@ -111,7 +111,6 @@ _В этой статье приводятся общие сведения о р
 ## <a name="summary"></a>Сводка
 
 В этой статье мы кратко рассмотрим работу с раскадровкой в приложении Xamarin. Mac. Мы увидели, как создать новое приложение с помощью раскадровок и как определить пользовательский интерфейс. Мы также увидели, как перемещаться между различными окнами и состояниями просмотра с помощью переходов.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

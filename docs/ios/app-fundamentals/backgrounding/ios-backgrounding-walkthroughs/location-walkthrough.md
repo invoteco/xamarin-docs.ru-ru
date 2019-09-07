@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: b95f60676a1c58463fc6e384ea3738122a1c76fe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f4708b56b8cf8a243785816440c63b743059cf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756275"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Пошаговое руководство. фоновое расположение в Xamarin. iOS
 
@@ -21,7 +21,6 @@ ms.locfileid: "70286813"
 В этом пошаговом руководстве рассматриваются некоторые основные понятия, включая регистрацию приложения в качестве фонового приложения, приостановку обновлений пользовательского интерфейса, когда приложение находится в фоновом режиме, `WillEnterBackground` и `WillEnterForeground` работа с методами и `AppDelegate` .
 
 ## <a name="application-set-up"></a>Настройка приложения
-
 
 1. Сначала создайте новое **приложение > iOS > приложении с одним представлением (C#)** . Назовите _его и_ убедитесь, что выбраны оба iPad и iPhone.
 
@@ -84,7 +83,6 @@ ms.locfileid: "70286813"
 1. Добавьте ключ `NSLocationAlwaysUsageDescription` или `NSLocationWhenInUseUsageDescription` строку, которая будет отображаться для пользователя в предупреждении, которое запрашивает доступ к данным о расположении.
 
 1. iOS 9 требует, чтобы при `AllowsBackgroundLocationUpdates` использовании **info. plist** ключ `UIBackgroundModes` был включен в значение `location`. Если вы выполнили шаг 2 этого пошагового руководства, он уже должен находиться в файле info. plist.
-
 
 1. Внутри класса создайте метод с именем `StartLocationUpdates` со следующим кодом. `LocationManager` В этом коде показано, как начать получение обновлений расположения из `CLLocationManager`:
 
@@ -202,7 +200,6 @@ public override void ViewDidLoad ()
 }
 ```
 
-
 Теперь при запуске приложения он должен выглядеть примерно так:
 
 [![](location-walkthrough-images/image5.png "Пример выполнения приложения")](location-walkthrough-images/image5.png#lightbox)
@@ -278,7 +275,6 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 Теперь пользовательский интерфейс начнет обновляться при первом запуске приложения и возобновлять обновление каждый раз, когда приложение возвращается на передний план.
 
 В этом пошаговом руководстве мы создали правильно настроенное фоновое приложение iOS, которое выводит данные о расположении на экран и в окно вывода приложения.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

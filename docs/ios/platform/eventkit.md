@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 960be485f6997ed8c861d47181fa89397cff9c0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753146"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit в Xamarin. iOS
 
@@ -24,7 +24,6 @@ ms.locfileid: "70291523"
 
 - **Основы EventKit** . Это приводит к образованию фундаментальных частей EventKit через основные классы и обеспечивает понимание их использования. Этот раздел является обязательным для чтения перед началом следующей части документа. 
 - **Общие задачи** . раздел Common Tasks (общие задачи) предназначен для краткого справочника о том, как выполнять такие общие операции, как; Перечисление календарей, создание, сохранение и получение событий календаря и напоминаний, а также использование встроенных контроллеров для создания и изменения событий календаря. Этот раздел не должен быть прочитан спереди на задний план, так как он предназначен для определенных задач. 
-
 
 Все задачи в этом руководство доступны в прилагаемом образце приложения:
 
@@ -376,7 +375,6 @@ App.Current.EventStore.FetchReminders (
 ## <a name="summary"></a>Сводка
 
 В этом документе представлен обзор как важных частей EventKit Framework, так и ряда наиболее распространенных задач. Однако платформа EventKit является очень большой и мощной и включает в себя функции, которые не появились здесь, такие как пакетные обновления, Настройка оповещений, настройка периодичности событий, регистрация и прослушивание изменений в базе данных календаря. Настройка геозаборов и др.  Дополнительные сведения см. в статье о [программировании календаря и напоминаний](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)Apple.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

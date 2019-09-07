@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 21. Transform
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 21. Transform
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 21. Transform'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 313348952b87d94db63d1682f8e1b9413d56714d
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513015"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760579"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Сводка Глава 21. Transform
 
@@ -122,8 +122,6 @@ Xamarin.Forms поддерживает три основных типа прео
 Трехмерная система координат содержится в разрешении Xamarin.Forms для левши. При наведении указательным пальцем левой руки по оси x, увеличение координирует (справа), и координирует пальца среднего в направлении возрастающий Y (вниз), затем все точки бегунок в направление увеличения координаты Z (выходит из экрана).
 
 Кроме того для любого из трех осей, при наведении на левом бегунок в направление увеличения значения, то кривая одним касанием указывает направление поворота положительные значения угла поворота.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

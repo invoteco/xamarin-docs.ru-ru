@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: a937de27fc032b0d88dfdf717339b47e0df8e58d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e8ffe337e1f5c74bc348b9600a466f1232f40b0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758831"
 ---
 # <a name="xamarinandroid-edit-text"></a>Изменение текста Xamarin. Android
 
@@ -35,7 +35,7 @@ ms.locfileid: "68644632"
 </LinearLayout>
 ```
 
-В этом примере `EditText` кода атрибуту `android:imeOptions` присваивается значение `actionGo`. Этот параметр изменяет [действие по умолчанию](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) на действие [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) , так что нажатие клавиши `KeyPress` ввод активирует обработчик ввода.
+В этом примере `EditText` кода атрибуту `android:imeOptions` присваивается значение `actionGo`. Этот параметр изменяет [действие по умолчанию на](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) действие [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) , так что нажатие клавиши `KeyPress` ввод активирует обработчик ввода.
 (Обычно используется `actionGo` , чтобы клавиша **Ввод** перебирала пользователя в целевой объект URL-адреса, введенного в.)
 
 Чтобы управлять вводом текста пользователя, добавьте следующий код в конец метода [OnCreate](xref:Android.App.Activity.OnCreate*) в **MainActivity.CS**:
@@ -65,7 +65,6 @@ using Android.Views;
 [![Примеры ввода текста в EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
 *Части этой страницы являются изменениями на основе созданных работ и* [*совместно используется проектом Android с открытым исходным кодом*](http://code.google.com/policies.html) *и используются в соответствии с терминами, описанными в разделе* [*Лицензия на соотнесение Creative commons attribution 2,5*](http://creativecommons.org/licenses/by/2.5/) *. Этот учебник основан на* [*руководстве по формам Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

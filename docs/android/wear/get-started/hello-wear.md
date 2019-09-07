@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 056ab7a9fe4bcb7f07a9a7cd7c841a3d9f7574b6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4c3c0e51348d2435ce5042485b214e6e5fe159b2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648028"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758425"
 ---
 # <a name="hello-wear"></a>Основные сведения о Wear
 
@@ -38,7 +38,6 @@ _Создайте свое первое приложение "износ Android
 
 -----
 
-
 Этот шаблон автоматически включает в себя Microsoft **Xamarin Android носимого пользователем Library** NuGet (и зависимости), поэтому у вас будет доступ к мини-приложениям, которые относятся к износу. Если шаблон "недействительность" не отображается, ознакомьтесь с руководством по [установке и настройке](~/android/wear/get-started/installation.md) , чтобы убедиться, что вы установили поддерживаемую пакет SDK для Android. 
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. Выберите правильную **целевую платформу**
@@ -58,7 +57,6 @@ _Создайте свое первое приложение "износ Android
 -----
 
 Дополнительные сведения о настройке целевой платформы см. в разделе [Основные сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### <a name="3-edit-the-mainaxml-layout"></a>3. Изменение макета **Main. axml**
 
@@ -131,12 +129,11 @@ public class MainActivity : Activity
 
 ### <a name="5-setup-an-emulator-or-device"></a>5. Настройка эмулятора или устройства
 
-Следующий шаг — Настройка эмулятора или устройства для развертывания и запуска приложения. Если вы еще не знакомы с процессом развертывания и запуска приложений Xamarin. Android в целом, ознакомьтесь с кратким руководством по [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
+Следующий шаг — Настройка эмулятора или устройства для развертывания и запуска приложения. Если вы еще не знакомы с процессом развертывания и запуска приложений Xamarin. Android в целом, ознакомьтесь с [кратким руководством по Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
 Если у вас нет такого устройства Android, как Android Смартватч, можно запустить приложение в эмуляторе. Сведения об отладке приложений износа в эмуляторе см. [в разделе Отладка износа Android в эмуляторе](~/android/wear/deploy-test/debug-on-emulator.md).
 
 Если вы используете устройство Android, например "износ Android", вы можете запустить приложение на устройстве, а не в эмуляторе. Дополнительные сведения об отладке на устройстве с износом см. в разделе [Отладка на устройстве с износом](~/android/wear/deploy-test/debug-on-device.md).
-
 
 ### <a name="6-run-the-android-wear-app"></a>6. Запуск приложения "износ Android"
 
@@ -152,7 +149,7 @@ public class MainActivity : Activity
 
 -----
 
-В первую очередь может появиться сообщение **только** о минуте (или на другом экране внутреннего): 
+В первую очередь может появиться сообщение **только о минуте** (или на другом экране внутреннего): 
 
 ![Просмотр эмулятора просмотра всего за минуту...](hello-wear-images/please-wait.png)
 
@@ -166,13 +163,11 @@ public class MainActivity : Activity
 
 [![Снимок экрана приложения "износ" после трех щелчков](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-
 ## <a name="next-steps"></a>Следующие шаги
 
 Ознакомьтесь с [примерами износа](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) , включая приложения "износ Android", с сопутствующими телефонными приложениями.
 
 Когда вы будете готовы к распространению приложения, см. статью [Работа с упаковкой](~/android/wear/deploy-test/packaging.md).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

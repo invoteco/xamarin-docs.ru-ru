@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3ae18a2009ee3c34498a2e7586b561c525e76d45
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0b3d8fc4836f6f6d1f6bf30b555e3c5c285678f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225539"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756863"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Принципы разработки API Xamarin. Android
 
@@ -19,12 +19,11 @@ ms.locfileid: "70225539"
 
 В ядре Xamarin. Android есть механизм взаимодействия, который связывает C# мир с Java и предоставляет разработчикам доступ к API-интерфейсам Java из C# или других языков .NET.
 
-
 ## <a name="design-principles"></a>Принципы разработки
 
 Ниже приведены некоторые принципы разработки для привязки Xamarin. Android.
 
-- Соответствие рекомендациям по [проектированию .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+- Соответствие [рекомендациям по проектированию .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
 - Разрешить разработчикам подкласс классов Java.
 
@@ -58,16 +57,13 @@ ms.locfileid: "70225539"
 
   - Предоставьте механизм для вызова произвольных библиотек Java ( [Android. Runtime. жниенв](xref:Android.Runtime.JNIEnv)).
 
-
 ## <a name="assemblies"></a>Сборки
 
-Xamarin. Android включает несколько сборок, которые составляют *профиль*для бесмобильности. Дополнительные сведения см. на странице [сборок](~/cross-platform/internals/available-assemblies.md) .
+Xamarin. Android включает несколько сборок, которые составляют профиль для *Бесмобильности*. Дополнительные сведения см. на странице [сборок](~/cross-platform/internals/available-assemblies.md) .
 
 Привязки к платформе Android содержатся в `Mono.Android.dll` сборке. Эта сборка содержит всю привязку для использования интерфейсов API Android и взаимодействия с виртуальной машиной среды выполнения Android.
 
-
 ## <a name="binding-design"></a>Разработка привязки
-
 
 ### <a name="collections"></a>Коллекции
 
@@ -103,7 +99,6 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-
 ### <a name="properties"></a>Свойства
 
 При необходимости методы Java преобразуются в свойства.
@@ -115,8 +110,6 @@ if (goodSource.Count != 4) // false
 - Свойства, доступные только для установки, не создаются.
 
 - Свойства *не* создаются, если тип свойства будет массивом.
-
-
 
 ### <a name="events-and-listeners"></a>События и прослушиватели
 
@@ -154,12 +147,11 @@ C#события или свойства создаются автоматиче
 
 1. Имеет тип `void` возвращаемого значения.
 
-1. Принимает только один параметр, тип параметра является интерфейсом, интерфейс имеет только один метод, а имя интерфейса заканчивается на, например, `Listener` в прослушивателе [View. OnClick](xref:Android.Views.View.IOnClickListener).
+1. Принимает только один параметр, тип параметра является интерфейсом, интерфейс имеет только один метод, а имя интерфейса заканчивается на, например, `Listener` в [ *прослушивателе*View. OnClick](xref:Android.Views.View.IOnClickListener).
 
+Более того, если метод интерфейса прослушивателя имеет тип возвращаемого **значения Boolean** , а не **void**, то созданный подкласс *EventArgs* будет содержать *обработанное* свойство. Значение *обрабатываемого* свойства используется в качестве возвращаемого значения для метода *прослушивателя* , а `true`по умолчанию — значение.
 
-Более того, если метод интерфейса прослушивателя имеет тип возвращаемого **значения Boolean** , а не **void**, то созданный подкласс *EventArgs* будет содержать *обработанное* свойство. Значение обрабатываемого свойства используется в качестве возвращаемого значения для метода прослушивателя , а `true`по умолчанию — значение.
-
-Например, метод Android [View. сетонкэйлистенер ()](xref:Android.Views.View.SetOnKeyListener*) принимает интерфейс [View. онкэйлистенер](xref:Android.Views.View.IOnKeyListener) , а метод [View. онкэйлистенер. онкэй (View, int, кэйевент)](xref:Android.Views.View.IOnKeyListener.OnKey*) имеет логический тип возвращаемого значения. Xamarin. Android создает соответствующее событие [View. KeyPress](xref:Android.Views.View.KeyPress) , которое является представлением [EventHandler&lt;. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
+Например, метод Android [View. сетонкэйлистенер ()](xref:Android.Views.View.SetOnKeyListener*) принимает интерфейс [View. онкэйлистенер](xref:Android.Views.View.IOnKeyListener) , а метод [View. онкэйлистенер. онкэй (View, int, кэйевент)](xref:Android.Views.View.IOnKeyListener.OnKey*) имеет логический тип возвращаемого значения. Xamarin. Android создает соответствующее событие [View. KeyPress](xref:Android.Views.View.KeyPress) , которое является [представлением EventHandler&lt;. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
 Класс *KeyEventArgs* , в свою очередь, имеет свойство [View. KeyEventArgs. Handled](xref:Android.Views.View.KeyEventArgs.Handled) , которое используется в качестве возвращаемого значения для метода *View. онкэйлистенер. онкэй ()* .
 
 Мы планируем добавить перегрузки для других методов и ctor для предоставления подключения на основе делегата. Кроме того, для прослушивателей с несколькими обратными вызовами требуется дополнительная проверка, чтобы определить, разумны ли реализации отдельных обратных вызовов, так что мы преобразуем их по мере их идентификации. Если соответствующее событие не существует, прослушиватели должны использоваться в C#, но все, что вы думаете, может использовать делегирование для нашего внимания. Мы также выполнили некоторые преобразования интерфейсов без суффикса "Listener", когда было ясно, что это помогло бы воспользоваться альтернативой делегата.
@@ -167,16 +159,14 @@ C#события или свойства создаются автоматиче
 Все интерфейсы прослушивателей реализуют[`Android.Runtime.IJavaObject`](xref:Android.Runtime.IJavaObject)
 из-за сведений о реализации привязки, поэтому Классы прослушивателей должны реализовывать этот интерфейс. Это можно сделать, реализовав интерфейс прослушивателя для подкласса [Java. lang. Object](xref:Java.Lang.Object) или любого другого упакованного объекта Java, например действия Android.
 
-
 ### <a name="runnables"></a>руннаблес
 
-Java использует интерфейс [Java. lang. готов](xref:Java.Lang.Runnable) к запуску для предоставления механизма делегирования. Класс [Java. lang. Thread](xref:Java.Lang.Thread) является важным потребителем этого интерфейса. Android также использует интерфейс в API.
+Java использует интерфейс [Java. lang. готов к запуску](xref:Java.Lang.Runnable) для предоставления механизма делегирования. Класс [Java. lang. Thread](xref:Java.Lang.Thread) является важным потребителем этого интерфейса. Android также использует интерфейс в API.
 [Действия. рунонуисреад ()](xref:Android.App.Activity.RunOnUiThread*) и [View.POST ()](xref:Android.Views.View.Post*) представляют собой важные примеры.
 
 Интерфейс содержит один метод void, [Run ().](xref:Java.Lang.Runnable.Run) `Runnable` Таким образом, он самостоятельно привязывается C# в в качестве делегата [System. Action](xref:System.Action) . Мы предоставили перегрузки в привязке, которые `Action` принимают параметр для всех элементов API, которые `Runnable` используют в собственном API, например [Activity. рунонуисреад ()](xref:Android.App.Activity.RunOnUiThread*) и [View.POST ()](xref:Android.Views.View.Post*).
 
 Мы оставили перегрузки [интерфейс irunnable](xref:Java.Lang.IRunnable) вместо того, чтобы заменять их, так как несколько типов реализуют интерфейс и поэтому могут передаваться как руннаблес напрямую.
-
 
 ### <a name="inner-classes"></a>Внутренние классы
 
@@ -184,7 +174,7 @@ Java использует интерфейс [Java. lang. готов](xref:Java.
 
 Статические вложенные классы Java идентичны C# вложенным типам.
 
-Нестатические вложенные классы, такженазываемые внутренними классами, значительно отличаются. Они содержат неявную ссылку на экземпляр своего включающего типа и не могут содержать статические члены (помимо других различий за пределами области этого обзора).
+Нестатические вложенные классы, также называемые *внутренними классами*, значительно отличаются. Они содержат неявную ссылку на экземпляр своего включающего типа и не могут содержать статические члены (помимо других различий за пределами области этого обзора).
 
 Когда дело доходит до привязки и C# использования, статические вложенные классы обрабатываются как обычные вложенные типы. В то же время внутренние классы имеют два существенных отличия:
 
@@ -233,8 +223,8 @@ class CubeWallpaper : WallpaperService {
 Вложенные типы "перемещены", которые являются одноуровневыми элементами включающего интерфейса, а не вложенными типами, при этом имя интерфейса заключается в качестве префикса.
 
 Например, рассмотрим интерфейс [Android. OS. для загрузки](xref:Android.OS.Parcelable) .
-Переданный интерфейс содержит методы, вложенные типы и константы. Методы , доступные для загрузки, помещаются в интерфейс [Android. OS. ипарцелабле](xref:Android.OS.IParcelable) .
-Постоянные интерфейсные константы помещаются в тип [Android. OS. парцелаблеконстс](xref:Android.OS.ParcelableConsts) . Вложенные типы для [Android. OS. класслоадеркреатор\<t >](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) и [Android. OS. Supported. Creator\<t >](https://developer.android.com/reference/android/os/Parcelable.Creator.html) в настоящее время не привязаны из-за ограничений в поддержке универсальных шаблонов; если они поддерживались, они может присутствовать в качестве интерфейсов *Android. OS. ипарцелаблекласслоадеркреатор* и *Android. OS. ипарцелаблекреатор* . Например, вложенный интерфейс [Android. OS. IBinder. деасреЦипиент](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) привязан как интерфейс [Android. OS. ибиндердеасреЦипиент](xref:Android.OS.IBinderDeathRecipient) .
+Переданный *интерфейс* содержит методы, вложенные типы и константы. Методы, *Доступные для* загрузки, помещаются в интерфейс [Android. OS. ипарцелабле](xref:Android.OS.IParcelable) .
+Постоянные *интерфейсные* константы помещаются в тип [Android. OS. парцелаблеконстс](xref:Android.OS.ParcelableConsts) . Вложенные типы для [Android. OS. класслоадеркреатор\<t >](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) и [Android. OS. Supported. Creator\<t >](https://developer.android.com/reference/android/os/Parcelable.Creator.html) в настоящее время не привязаны из-за ограничений в поддержке универсальных шаблонов; если они поддерживались, они может присутствовать в качестве интерфейсов *Android. OS. ипарцелаблекласслоадеркреатор* и *Android. OS. ипарцелаблекреатор* . Например, вложенный интерфейс [Android. OS. IBinder. деасреЦипиент](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) привязан как интерфейс [Android. OS. ибиндердеасреЦипиент](xref:Android.OS.IBinderDeathRecipient) .
 
 > [!NOTE]
 > Начиная с Xamarin. Android 1,9, константы интерфейса Java _дублируются_ в целях упрощения переноса кода Java. Это помогает улучшить перенос кода Java, основанного на константах интерфейса [поставщика Android](https://developer.android.com/reference/android/provider/package-summary.html) .
@@ -249,17 +239,15 @@ class CubeWallpaper : WallpaperService {
 
 1. Тип *констант* теперь устарел.
 
-
 Для интерфейса *Android. OS. для загрузки* это означает, что теперь будет использоваться тип [*Android. OS.* ](xref:Android.OS.Parcelable) для хранения констант. Например, постоянная [подCONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) константа будет привязана как постоянная [*контентсфиледескриптор*](xref:Android.OS.Parcelable.ContentsFileDescriptor) , а не как константа *парцелаблеконстс. контентсфиледескриптор* .
 
 Для интерфейсов, содержащих константы, которые реализуют другие интерфейсы, содержащие еще больше констант, теперь создается объединение всех констант. Например, интерфейс [Android. Provider. медиасторе. Video. видеоколумнс](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) реализует интерфейс [Android. Provider. медиасторе. медиаколумнс](xref:Android.Provider.MediaStore.MediaColumns) . Однако до 1,9 тип [Android. Provider. медиасторе. Video. видеоколумнсконстс](xref:Android.Provider.MediaStore.Video.VideoColumnsConsts) не имеет способа доступа к константам, объявленным в [Android. Provider. медиасторе. медиаколумнсконстс](xref:Android.Provider.MediaStore.MediaColumnsConsts).
 В результате, выражение Java *медиасторе. Video. видеоколумнс. Title* должно быть привязано к C# выражению *медиасторе. Video. медиаколумнсконстс. Title* , которое трудно обнаружить без необходимости читать множество документации по Java. В 1,9 эквивалентным C# выражением будет [медиасторе. Video. видеоколумнс. Title](xref:Android.Provider.MediaStore.Video.VideoColumns.Title).
 
-Кроме того, рассмотрим тип [Android. OS. пучок](xref:Android.OS.Bundle) , который реализует интерфейс, поддерживающий Java. Поскольку он реализует интерфейс, все константы в этом интерфейсе доступны "через" тип пакета, например, *пакет. CONTENTS_FILE_DESCRIPTOR* является идеально допустимым выражением Java.
+Кроме того, рассмотрим тип [Android. OS. пучок](xref:Android.OS.Bundle) , который *реализует интерфейс,* поддерживающий Java. Поскольку он реализует интерфейс, все константы в этом интерфейсе доступны "через" тип пакета, например, *пакет. CONTENTS_FILE_DESCRIPTOR* является идеально допустимым выражением Java.
 Ранее для переноса этого выражения C# необходимо просмотреть все интерфейсы, которые реализуются для просмотра, из какого типа *CONTENTS_FILE_DESCRIPTOR* поступил. Начиная с Xamarin. Android 1,9, классы, реализующие интерфейсы Java, которые содержат константы, будут иметь вложенный тип *интерфацеконстс* , который будет содержать все наследуемые константы интерфейса. Это позволит перевести *пакет. CONTENTS_FILE_DESCRIPTOR* в [*пакет. интерфацеконстс. контентсфиледескриптор*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor).
 
 Наконец, типы с суффиксом *const* , например *Android. OS. Парцелаблеконстс* , теперь устарели, кроме вновь появившихся вложенных типов интерфацеконстс. Они будут удалены в Xamarin. Android 3,0.
-
 
 ## <a name="resources"></a>Ресурсы
 
@@ -306,7 +294,6 @@ public class Resource {
 ```
 
 `Resource.Drawable.icon` Затем следует использовать для `drawable/icon.png` ссылки на файл или `Resource.Layout.main` для ссылки `layout/main.xml` на файл или `Resource.String.first_string` для ссылки на первую строку в файле `values/strings.xml`словаря.
-
 
 ## <a name="constants-and-enumerations"></a>Константы и перечисления
 

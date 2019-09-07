@@ -6,12 +6,12 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288375"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758112"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Общие сведения о построении межплатформенных приложений
 
@@ -45,11 +45,9 @@ Xamarin — это не просто платформа "однократной 
 1. [Пакеты NuGet](https://nuget.org) , совместимые с проектами Xamarin, например [JSON.NET](https://www.nuget.org/packages/Newtonsoft.Json/),
 1. Использование функций .NET Framework для работы с сетью, веб-службами, ВВОДом и др.
 
-
 Некоторые из этих компонентов реализуются в примере использования *задач* .
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
-
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>Разделение повторно используемого кода в основную библиотеку
 
@@ -58,7 +56,6 @@ Xamarin — это не просто платформа "однократной 
  ![](overview-images/layers2.png "Следуя принципу разделения ответственности путем распределения архитектуры приложения и последующего перемещения основных функциональных возможностей, которые не зависят от платформы, в базовую библиотеку с возможностью повторного использования, можно максимально увеличить совместное использование кода на разных платформах.")
 
  <a name="Case_Studies" />
-
 
 ## <a name="case-studies"></a>Примеры использования
 

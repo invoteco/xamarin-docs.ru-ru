@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: fb00bf4a817ad8188d5a127b23b4a910dd4f23a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b55cffc19eec5ae95a0a0aba8053bdaaa49e7747
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524132"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761478"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Вызываемые оболочки Android для Xamarin. Android
 
@@ -20,8 +20,6 @@ ms.locfileid: "69524132"
 *Каждый раз* Код Android должен выполнять `virtual` метод интерфейса или `overridden` , реализованный в управляемом коде, Xamarin. Android должен предоставить прокси-сервер Java, чтобы этот метод был отправлен в соответствующий управляемый тип. Эти типы прокси Java — это код Java, имеющий тот же базовый класс и список интерфейсов Java, что и управляемый тип, реализующий те же конструкторы и объявляющие переопределенный базовый класс и методы интерфейса. 
 
 Вызываемые оболочки Android создаются программой **monodroid. exe** во время [процесса сборки](~/android/deploy-test/building-apps/build-process.md): они формируются для всех типов, которые (прямо или косвенно) наследуют [Java. lang. Object](xref:Java.Lang.Object). 
-
-
 
 ## <a name="android-callable-wrapper-naming"></a>Имя вызываемой оболочки Android
 
@@ -40,7 +38,7 @@ java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivit
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Если требуется доступ к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, вот код, объявляющий действие с полным именем `My.ActivityType`:
+Если требуется *доступ* к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, вот код, объявляющий действие с полным именем `My.ActivityType`:
 
 ```csharp
 namespace My {
@@ -72,8 +70,6 @@ namespace My {
 
 Именование АКВ на основе MD5SUM было введено в Xamarin. Android 5,0. Дополнительные сведения об именовании атрибутов см. в разделе [регистераттрибуте](xref:Android.Runtime.RegisterAttribute). 
 
-
-
 ## <a name="implementing-interfaces"></a>Реализация интерфейсов
 
 Иногда может потребоваться реализовать интерфейс Android, например [Android. Content. икомпоненткаллбаккс](xref:Android.Content.IComponentCallbacks). Поскольку все классы и интерфейс Android расширяют интерфейс [Android. Runtime. ижаваобжект](xref:Android.Runtime.IJavaObject) , возникает вопрос: как реализовать `IJavaObject`? 
@@ -94,7 +90,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
     }
 }
 ```
-
 
 ## <a name="implementation-details"></a>Сведения о реализации
 

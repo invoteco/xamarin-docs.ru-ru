@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 79f3f88dba37899bcb9467fcd6d1bd7e9dc5eb10
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 131b9dc64db1ea0dba3982bd71459c2a281743bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657161"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770282"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
@@ -115,7 +115,6 @@ scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
 ```
 
 Обратите внимание, что позиции прокрутки может быть отрицательным, из-за эффекта bounce при прокрутке в конце списка.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

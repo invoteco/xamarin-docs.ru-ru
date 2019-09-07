@@ -1,18 +1,18 @@
 ---
 title: Сводка главе 25. Создание страницы
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка главе 25. Создание страницы
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка главе 25. Создание страницы'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db6c329c029f52180fe508f277a1cf4834ab493a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b86f2d7216a6344b14fc4d8c538ea68871eda5ae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331827"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760534"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Сводка главе 25. Создание страницы
 
@@ -111,8 +111,6 @@ ms.locfileid: "61331827"
 [ **MultiTabbedColor** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MultiTabbedColors) примере используется [ `NamedColor` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки. [MultiTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/MultiTabbedColors/MultiTabbedColors/MultiTabbedColors/MultiTabbedColorsPage.xaml) файле задает `DataTemplate` свойство `TabbedPage` в визуальном дереве, начиная с `ContentPage` , содержащая привязки к свойствам `NamedColor` (включая привязку к `Title` свойство).
 
 Однако это является проблемой для операций ввода-вывода. Можно отобразить только некоторые элементы, и нет нет хорошего способа предоставить им значки.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

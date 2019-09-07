@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: f1f886f0e4c14f2da29342a2a651f91ed510fd25
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 838f8bdcf3bd82a31bf0d033eee628bd19ad1c30
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524266"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757550"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Обеспечение обратной совместимости с пакетом поддержки Android
 
@@ -19,7 +19,6 @@ ms.locfileid: "69524266"
 
 > [!NOTE]
 > `ListFragment` Только`DialogFragment` и доступны через пакет поддержки Android. Ни один из других подклассов фрагментов, например `PreferenceFragment,` , не поддерживается в пакете поддержки Android. Они не будут работать в приложениях до Android 3,0. 
-
 
 ## <a name="adding-the-support-package"></a>Добавление пакета поддержки
 
@@ -47,7 +46,6 @@ fragmentTx.Commit();
 ```
 
 После внесения этих изменений можно будет запустить приложение на основе фрагмента на Android 1,6 или 2. x, а также на Хонэйкомб и Южные Сандвичевы. 
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

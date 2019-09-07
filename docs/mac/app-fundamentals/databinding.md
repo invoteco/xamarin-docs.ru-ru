@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290162"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769994"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Привязка данных и кодирование значений ключа в Xamarin. Mac
 
@@ -888,7 +888,6 @@ For more information on working with Collection Views, please see our [Collectio
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается работа с привязкой данных и кодированием значений ключа в приложении Xamarin. Mac. Во-первых, он рассматривал предоставление C# класса для цели-C с помощью кодирования "ключ — значение" (КВК) и контрольного значения "ключ — значение" (кво). Далее показано, как использовать класс, совместимый с кво, и данные, привязывать их к элементам пользовательского интерфейса в Interface Builder Xcode. Наконец, он показал сложную привязку данных с помощью **контроллеров массива** и **контроллеров дерева**.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

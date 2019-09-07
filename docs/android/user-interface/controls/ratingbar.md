@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: de63a0f3f6564671a50594c66b55ed095329c95c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 51f88dba25ca2b4f7e33bb8b5c813c43a214c062
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887627"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764855"
 ---
 # <a name="xamarinandroid-ratingbar"></a>Xamarin. Android Ратингбар
 
 Ратингбар — это мини-приложение пользовательского интерфейса, которое отображает рейтинг от одной до пяти звезд. Пользователь может выбрать оценку, съемки на звездочку в этом разделе. вы создадите мини-приложение, позволяющее пользователю предоставить рейтинг с помощью [`RatingBar`](xref:Android.Widget.RatingBar) мини – приложения.
 
 ![Пример Ратингбар](ratingbar-images/01-ratingbar.png)
-
 
 ## <a name="creating-a-ratingbar"></a>Создание Ратингбар
 
@@ -50,4 +49,3 @@ ms.locfileid: "69887627"
     Это захватывает [`RatingBar`](xref:Android.Widget.RatingBar) мини-приложение из макета с [`FindViewById`](xref:Android.App.Activity.FindViewById*) помощью, а затем задает метод события, который определяет действие, выполняемое, когда пользователь устанавливает рейтинг. В этом случае в простом [`Toast`](xref:Android.Widget.Toast) сообщении отображается новая оценка.
 
 3. Запустите приложение.
-

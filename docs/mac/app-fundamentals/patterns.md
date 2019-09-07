@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 06/17/2016
-ms.openlocfilehash: 188bc8a04b62c97e9d6f80669fe50da1bf4d9340
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b4934fa82d862ad2e8ab53579137873ed9e4bcca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289548"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770169"
 ---
 # <a name="common-patterns-and-idioms-in-xamarinmac"></a>Общие шаблоны и идиомы в Xamarin. Mac
 
@@ -54,8 +54,6 @@ ms.locfileid: "70289548"
 Протоколы в цели-C можно сравнивать с интерфейсами C#в, и во многих случаях они используются в подобных ситуациях. Например, в `NSTableView` приведенном выше примере делегат и источник данных фактически являются протоколами. Xamarin. Mac предоставляет эти базовые классы с виртуальными методами, которые можно переопределить. Основное различие между C# интерфейсами и протоколами цели-C заключается в том, что некоторые методы в протоколе могут быть необязательными для реализации. Чтобы определить, что является необязательным, необходимо ознакомиться с документацией и (или) определением API.
 
 Дополнительные сведения см. в документации наших [делегатов, протоколов и событий](~/ios/app-fundamentals/delegates-protocols-and-events.md) .
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

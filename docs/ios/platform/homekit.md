@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a004ea539bab264f6a1418826be451ffb7d43d47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753047"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit в Xamarin. iOS
 
@@ -266,7 +266,6 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 
 > [!IMPORTANT]
 > `AlertView.PresentOKAlert` Метод, используемый в приведенном выше примере кода, является вспомогательным классом в приложении хомекитинтро, который упрощает работу с предупреждениями iOS.
-
 
 ## <a name="finding-new-accessories"></a>Поиск новых аксессуаров
 
@@ -705,8 +704,6 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 ## <a name="summary"></a>Сводка
 
 В этой статье мы предоставили платформу Apple HomeKit Home. В нем было показано, как установить и настроить тестовые устройства с помощью симулятора аксессуаров HomeKit, а также как создать простое приложение Xamarin. iOS для обнаружения, взаимодействия с устройствами службы автоматизации и управления им с помощью HomeKit.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

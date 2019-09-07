@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2017
-ms.openlocfilehash: 799e117e3a4cb6e3071680da90e6432f389c6682
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2857033c5cd69e9696d2ce82feaf8212300da2c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642560"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764813"
 ---
 # <a name="xamarinandroid-textureview"></a>Xamarin. Android Текстуревиев
 
@@ -70,8 +70,6 @@ public class TextureViewActivity : Activity,
 [![Пример приложения, выполняемого на устройстве с отображением изображения](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
 Чтобы использовать `TextureView`, необходимо включить аппаратное ускорение, которое по умолчанию будет иметь уровень API 14. Кроме того, поскольку в этом примере используется камера, как `android.permission.CAMERA` разрешение, так `android.hardware.camera` и функция должны быть установлены в **AndroidManifest. XML**.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

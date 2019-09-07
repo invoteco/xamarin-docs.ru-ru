@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
-ms.openlocfilehash: ce2f62869057fc83b04b58af37d6ffffd5ad7fb8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 084e1e9a4af8d7e27bee955ff4f27af28f9db08a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646476"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758676"
 ---
 # <a name="using-cursoradapters-with-xamarinandroid"></a>Использование Курсорадаптерс с Xamarin. Android
 
@@ -22,7 +22,6 @@ Android предоставляет классы адаптеров, специа
  **Курсорадаптер** — базовый класс, который можно унаследовать, если требуется больший контроль над привязкой значений данных к элементам управления макета (например, скрытие или отображение элементов управления или изменение их свойств).
 
 Адаптеры курсоров обеспечивают высокопроизводительный способ прокрутки длинных списков данных, хранящихся в SQLite. В коде, использующем код, необходимо определить SQL- `Cursor` запрос в объекте, а затем описать, как создать и заполнить представления для каждой строки.
-
 
 ## <a name="creating-an-sqlite-database"></a>Создание базы данных SQLite
 
@@ -58,7 +57,6 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 Для работы запрос курсора должен иметь целочисленный столбец `CursorAdapter` . `_id` Если в базовой таблице нет целочисленного столбца с именем `_id` , используйте псевдоним столбца для другого уникального целого числа в элементе `RawQuery` , составляющем курсор. Дополнительные сведения см. в документации по [Android](xref:Android.Widget.CursorAdapter) .
 
-
 ### <a name="creating-the-cursor"></a>Создание курсора
 
 В примерах используется `RawQuery` для преобразования SQL-запроса `Cursor` в объект. Список столбцов, возвращаемый курсором, определяет столбцы данных, доступные для вывода в адаптере курсора. Код, создающий базу данных в методе **симплекурсортаблеадаптер/хомескрин. CS** `OnCreate` , показан здесь:
@@ -78,7 +76,6 @@ cursor.Close();
 ```
 
 После того как приложение получило доступ к базе данных SQLite и создала объект Cursor, как показано ниже, он `SimpleCursorAdapter` может использовать либо `CusorAdapter` подкласс, либо подкласс `ListView`для отображения строк в.
-
 
 ## <a name="using-simplecursoradapter"></a>Использование Симплекурсорадаптер
 
@@ -112,7 +109,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 
 `SimpleCursorAdapter`— Это быстрый и простой способ вывода SQLite- `ListView`данных в. Основное ограничение заключается в том, что он может привязывать значения столбцов только к элементам управления для отображения, но не позволяет изменять другие аспекты макета строки (например, отображение или скрытие элементов управления или изменение свойств).
 
-
 ## <a name="subclassing-cursoradapter"></a>Подклассировать Курсорадаптер
 
 Подкласс имеет те же преимущества производительности, что и `SimpleCursorAdapter` для отображения данных из SQLite, но он также обеспечивает полный контроль над созданием и структурой каждого представления строк. `CursorAdapter` `GetItemId` `GetView` `this[]` `Count` Реализация сильно отличается от `BaseAdapter` подкласса, так как не переопределяет, или индексатор. `CursorAdapter`
@@ -124,7 +120,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 - **Неввиев** — вызывается, `ListView` когда для отображения требуется новое представление. Будет `CursorAdapter` относиться к повторному выполнению представлений ( `GetView` в отличие от метода для обычных адаптеров).
 
 Подклассы адаптера в предыдущих примерах имеют методы для возвращения количества строк и получения текущего элемента — `CursorAdapter` не требуются эти методы, так как эти сведения могут быть получены из самого курсора. Разделение создания и заполнения каждого представления на эти два метода `CursorAdapter` обеспечивает повторное использование представления. Это отличается от обычного адаптера, в котором можно игнорировать `convertView` параметр `BaseAdapter.GetView` метода.
-
 
 ### <a name="implementing-the-cursoradapter"></a>Реализация Курсорадаптер
 
@@ -150,7 +145,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-
 ### <a name="assigning-the-cursoradapter"></a>Назначение Курсорадаптер
 
 В окне `Activity` , в котором будет `ListView`отображаться, создать курсор и `CursorAdapter` затем назначить его представлению списка.
@@ -168,8 +162,6 @@ listView.Adapter = (IListAdapter)new HomeScreenCursorAdapter(this, cursor, false
 ```
 
 Метод содержит вызов метода `StopManagingCursor` , описанный выше. `OnDestroy`
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 5. Работа с размерами
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 5. Работа с размерами
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 5. Работа с размерами'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c082bdb10732e42b37511cf050e50f46990a5b5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334434"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771143"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Сводка Глава 5. Работа с размерами
 
@@ -80,15 +80,13 @@ ms.locfileid: "61334434"
 
 ## <a name="accessibility-issues"></a>Проблемы со специальными возможностями
 
-**EstimatedFontSize** программы и **FitToSizeClock** обе программы содержат слабая недостаток: Если пользователь изменяет параметры специальных возможностей телефона на платформе Android или Windows 10 Mobile, программа больше не можно рассчитать размер текст отображается на основе размера шрифта. [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) образец демонстрирует эту проблему.
+Программа **естиматедфонтсизе** и программа **фиттосизеклокк** содержат слабый недостаток: Если пользователь изменяет параметры специальных возможностей телефона на устройствах Android или Windows 10 Mobile, программа больше не может оценить размер отображаемого текста в зависимости от размера шрифта. [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) образец демонстрирует эту проблему.
 
 ## <a name="empirically-fitting-text"></a>Эмпирически помещении текста
 
 Другим способом для соответствия размеру текста в прямоугольник является эмпирически вычислить размер отображаемого текста и настроить его вверх или вниз. Программа в вызовах книги [ `GetSizeRequest` ](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) на визуальный элемент, чтобы получить желаемый размер этого элемента. Метод является устаревшим, что вместо этого необходимо вызвать программы [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
 Для `Label`, первый аргумент должен быть Ширина контейнера (чтобы упаковки), а для второго аргумента должно быть установлено для `Double.PositiveInfinity` чтобы высота без ограничений. [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) этот метод продемонстрирован в примере.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

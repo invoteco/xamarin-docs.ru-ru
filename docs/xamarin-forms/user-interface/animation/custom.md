@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: b195e63bcc88c4d1c659216f99ab698773f73e9e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 86fac9dd0c2f9281a0c828ace68fbf77679dce5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759840"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Пользовательской анимации в Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _Класс анимации является стандартным блоком все Xamarin.Forms анимации, с помощью методов расширения в классе ViewExtensions, создание одного или нескольких объектов анимации. В этой статье показано, как использовать класс анимации для создания и Отмена анимации, синхронизации нескольких анимаций и создание анимации, анимации свойств, не анимировано в существующие методы анимации._
-
 
 Число параметров должно быть указано при создании `Animation` объекта, включая начальное и конечное значения анимируемого свойства и обратный вызов, который изменяет значение свойства. `Animation` Объект также может поддерживать коллекцию дочерних анимаций, которые можно выполнить и синхронизированы. Дополнительные сведения см. в разделе [дочерних анимациях](#child).
 
@@ -180,7 +179,6 @@ await boxView.ColorTo(Color.Blue, Color.Red, c => boxView.Color = c, 4000);
 ## <a name="summary"></a>Сводка
 
 В этой статье было показано, как использовать [ `Animation` ](xref:Xamarin.Forms.Animation) класс для создания и Отмена анимации, синхронизации нескольких анимаций и создание анимации, анимации свойств, не анимируется с существующей анимации методы. `Animation` Класс является стандартным блоком все Xamarin.Forms анимации.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

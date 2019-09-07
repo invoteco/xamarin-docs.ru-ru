@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: efd120e785e55bfa3806cd193bd5f155f35a5e18
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292839"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767730"
 ---
 # <a name="watchos-troubleshooting"></a>Устранение неполадок watchOS
 
@@ -80,14 +80,12 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. Теперь изображение значка должно передавать проверки Apple.
 
-
 <a name="add" />
 
 ## <a name="manually-adding-interface-controller-files"></a>Добавление файлов контроллера интерфейса вручную
 
 > [!IMPORTANT]
 > Поддержка WatchKit в Xamarin включает проектирование раскадровок просмотра в конструкторе iOS (как в Visual Studio для Mac, так и в Visual Studio), что не требует действий, описанных ниже. Просто присвойте контроллеру интерфейса имя класса на панели свойств Visual Studio для Mac, и файлы C# кода будут созданы автоматически.
-
 
 *Если* использовании построителя интерфейс Xcode, выполните следующие действия для создания новых контроллеров интерфейс для наблюдения за приложения и включите синхронизацию с Xcode, выходов и действия, доступные в C#:
 
@@ -210,14 +208,12 @@ with an alpha channel. Icons should not have an alpha channel.
 
 Теперь можно ссылаться на элемент управления (или реализовать действие) в C#!
 
-
 <a name="command_line" />
 
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Запуск приложения Watch из командной строки
 
 > [!IMPORTANT]
 > Вы можете запустить приложение Watch в нормальном режиме приложения по умолчанию, а также в режимах **уведомлений** **или с** помощью [настраиваемых параметров выполнения](~/ios/watchos/get-started/installation.md#custommodes) в Visual Studio для Mac и Visual Studio.
-
 
 Вы также можете использовать командную строку для управления симулятором iOS. Программа командной строки, используемая для запуска контрольных приложений, — **mtouch**.
 
@@ -243,7 +239,6 @@ with an alpha channel. Icons should not have an alpha channel.
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-
 ## <a name="notification-mode"></a>Режим уведомления
 
 Чтобы проверить [режим **уведомления** ](~/ios/watchos/platform/notifications.md)приложения `watchlaunchmode` , присвойте параметру `Notification` значение и укажите путь к JSON-файлу, содержащему полезные данные тестового уведомления.
@@ -255,7 +250,6 @@ with an alpha channel. Icons should not have an alpha channel.
 ```bash
 --watchlaunchmode=Notification --watchnotificationpayload=/path/to/file.json
 ```
-
 
 ## <a name="other-arguments"></a>Другие аргументы
 
@@ -296,8 +290,6 @@ with an alpha channel. Icons should not have an alpha channel.
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

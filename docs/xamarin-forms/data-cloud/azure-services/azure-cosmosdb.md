@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: dd325fbdf9d2619df94077eed74f9e6c61796a26
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a18572b0f28cb8d6c699d0bbd062bdb067471a34
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770886"
 ---
 # <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Использование базы данных документов Azure Cosmos DB в Xamarin. Forms
 
@@ -226,7 +226,6 @@ await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.Database
 ## <a name="summary"></a>Сводка
 
 В этой статье было рассмотрено, как использовать клиентской библиотеке .NET Standard для Azure Cosmos DB для интеграции базы данных документов Azure Cosmos DB в приложении Xamarin.Forms. База данных документов Azure Cosmos DB является базой данных NoSQL, которая предоставляет высокоскоростной доступ к документам JSON, предоставляющие доступ к службе быстрый, высокой степенью доступности и базы данных для приложений, которым требуется эффективное масштабирование и глобальная репликация.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

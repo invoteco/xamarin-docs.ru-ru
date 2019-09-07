@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 13b19d60569884f244f2ea9c79aaa6989838d0d3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290708"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770041"
 ---
 # <a name="xamarinmac-extension-support"></a>Поддержка расширения Xamarin.Mac
 
@@ -45,7 +45,6 @@ ms.locfileid: "70290708"
     [![](extensions-images/extension02.png "Системный журнал")](extensions-images/extension02.png#lightbox)
 - Как отмечалось выше, запуск приложения расширения приведет к его регистрации в системе. Удаление пакета приложений с отменой регистрации. 
 - Если регистрируются "недопустимые" версии расширений приложения, используйте следующую команду, чтобы их можно было удалить.`plugin kit -mv`
-
 
 <a name="Walkthrough-and-Sample-App" />
 

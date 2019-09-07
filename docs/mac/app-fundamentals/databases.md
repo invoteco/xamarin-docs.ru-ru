@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3bcf52d33ebfaba6117a2089419673e0152cbe88
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289120"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769912"
 ---
 # <a name="databases-in-xamarinmac"></a>Базы данных в Xamarin. Mac
 
@@ -2221,8 +2221,6 @@ public override void AwakeFromNib ()
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается работа с привязкой данных и кодированием значений ключа с использованием баз данных SQLite в приложении Xamarin. Mac. Во-первых, он рассматривал предоставление C# класса для цели-C с помощью кодирования "ключ — значение" (КВК) и контрольного значения "ключ — значение" (кво). Далее показано, как использовать класс, совместимый с кво, и данные, привязывать их к элементам пользовательского интерфейса в Interface Builder Xcode. В статье также рассматривается работа с данными SQLite через SQLite.NET ORM и отображение этих данных в табличном представлении.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f81a9d232e1702d112e837a80d35403162e3adca
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 116225165b8ee27b896d3de8598f8fbf39400f52
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529332"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767531"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Часть 5. От привязки данных до MVVM
 
@@ -707,7 +707,6 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 ## <a name="summary"></a>Сводка
 
 XAML — это мощное средство для определения пользовательских интерфейсов приложений Xamarin.Forms, особенно если привязки данных и используются MVVM. Результат — это чистая, элегантные и потенциально оснащен инструментами, представление пользовательского интерфейса с поддержкой всех фона в коде.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

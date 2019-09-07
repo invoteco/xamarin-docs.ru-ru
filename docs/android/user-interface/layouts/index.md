@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: 79183963e59a7ca167ffbc3c0cc4b3628595389e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522648"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764476"
 ---
 # <a name="xamarinandroid-layouts"></a>Макеты Xamarin. Android
 
@@ -49,4 +49,3 @@ ms.locfileid: "69522648"
 - [Макеты с вкладками](~/android/user-interface/layouts/tab-layout/index.md) — это популярный шаблон пользовательского интерфейса в мобильных приложениях из-за простоты и удобства использования. Они обеспечивают единообразный и простой способ перехода между различными экранами в приложении.
 
     ![Пример макета с вкладками](images/tabbed-layout.png)
- 

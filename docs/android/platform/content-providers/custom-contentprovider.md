@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: e16aa1b96749047554b4f8e6887791d8ed4ff63b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f72baaa4c74eb4bf0bb5eec64211d6ea2b18076c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643694"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756682"
 ---
 # <a name="creating-a-custom-contentprovider"></a>Создание настраиваемого поставщика ContentProvider
 
@@ -28,7 +28,6 @@ _В предыдущем разделе было показано, как исп
 
 В Mono для Android класс поставщика содержимого должен иметь `[ContentProvider]` атрибут, указывающий URI (или URI), которые должны быть добавлены в **AndroidManifest. XML**.
 
-
 ### <a name="mime-type"></a>Тип MIME
 
 Стандартный формат для типов MIME состоит из двух частей. В `ContentProviders` Android обычно используются две строки для первой части типа MIME:
@@ -39,7 +38,6 @@ _В предыдущем разделе было показано, как исп
 
 Вторая часть типа MIME относится к конкретному приложению и должна использовать стандарт DNS с `vnd.` префиксом. В примере кода используется `vnd.com.xamarin.sample.Vegetables`.
 
-
 ### <a name="data-model-metadata"></a>Метаданные модели данных
 
 Использование приложений требует создания запросов URI для доступа к различным типам данных. Базовый URI можно расширить, чтобы он ссылался на определенную таблицу данных, а также может включать параметры для фильтрации результатов. Также должны быть объявлены столбцы и предложения, используемые в результирующем курсоре для вывода данных.
@@ -47,7 +45,6 @@ _В предыдущем разделе было показано, как исп
 Чтобы обеспечить построение только допустимых запросов URI, пользователь может предоставить допустимые строки как постоянные значения. Это упрощает доступ к, `ContentProvider` так как обеспечивает возможность обнаружения значений посредством завершения кода и предотвращает опечатки в строках.
 
 В предыдущем примере `android.provider.ContactsContract` класс предоставлял метаданные для данных Contacts. Для нашего пользовательского `ContentProvider` класса мы просто предоставляем константы в самом классе.
-
 
 ## <a name="implementation"></a>Реализация
 
@@ -60,7 +57,6 @@ _В предыдущем разделе было показано, как исп
 3. **Доступ к через его URI заполняется с помощью, доступ к которому осуществляется через его URI. `ContentProvider`**  &ndash; `CursorAdapter` `ContentProvider`
 
 Как уже говорилось `ContentProviders` , можно использовать приложения, отличные от того, где они определены. В этом примере данные используются в одном приложении, но следует помнить, что другие приложения также могут обращаться к нему, пока они узнают URI и сведения о схеме (которые обычно предоставляются как постоянные значения).
-
 
 ## <a name="create-a-database"></a>Создание базы данных
 
@@ -92,13 +88,11 @@ class VegetableDatabase  : SQLiteOpenHelper {
 }
 ```
 
-Сама реализация базы данных не требует предоставления каких `ContentProvider`-либо специальных рекомендаций, однако если предполагается `ContentProvider's` привязать данные к `ListView` элементу управления, то уникальный целочисленный столбец с именем `_id` должен быть частью результирующий набор. Дополнительные сведения об использовании `ListView` элемента управления см. в документе listviews [and Adapters](~/android/user-interface/layouts/list-view/index.md) .
-
+Сама реализация базы данных не требует предоставления каких `ContentProvider`-либо специальных рекомендаций, однако если предполагается `ContentProvider's` привязать данные к `ListView` элементу управления, то уникальный целочисленный столбец с именем `_id` должен быть частью результирующий набор. Дополнительные сведения об использовании `ListView` элемента управления см. в документе [listviews and Adapters](~/android/user-interface/layouts/list-view/index.md) .
 
 ## <a name="create-the-contentprovider"></a>Создание ContentProvider
 
 В оставшейся части этого раздела приводятся пошаговые инструкции о том, как был создан класс примера **симплеконтентпровидер/вежетаблепровидер. CS** .
-
 
 ### <a name="initialize-the-database"></a>Инициализация базы данных
 
@@ -117,8 +111,6 @@ public class VegetableProvider : ContentProvider
 ```
 
 Остальная часть кода будет формировать фактическую реализацию поставщика содержимого, которая позволяет обнаруживать и запрашивать данные.
-
-
 
 ## <a name="add-metadata-for-consumers"></a>Добавление метаданных для потребителей
 
@@ -158,7 +150,6 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-
 ## <a name="implement-the-uri-parsing-helper"></a>Реализация вспомогательного метода синтаксического анализа URI
 
 Поскольку использование кода использует URI для выполнения запросов `ContentProvider`, необходимо иметь возможность анализировать эти запросы, чтобы определить возвращаемые данные. Класс может помочь проанализировать URI, когда он был инициализирован с помощью шаблонов URI `ContentProvider` , поддерживаемых. `UriMatcher`
@@ -186,7 +177,6 @@ static UriMatcher BuildUriMatcher()
 ```
 
 Этот код является закрытым для `ContentProvider` класса. Дополнительные сведения см. в [документации по Уриматчер Google](xref:Android.Content.UriMatcher) .
-
 
 ## <a name="implement-the-querymethod"></a>Реализация Куеримесод
 
@@ -232,7 +222,6 @@ public override String GetType(Android.Net.Uri uri)
 }
 ```
 
-
 ## <a name="implement-the-other-overrides"></a>Реализация других переопределений
 
 Наш простой пример не позволяет изменять или удалять данные, но методы Insert, Update и DELETE должны быть реализованы, поэтому их можно добавить без реализации:
@@ -254,11 +243,9 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 
 Это завершает базовую `ContentProvider` реализацию. После установки приложения предоставляемые им данные будут доступны как внутри приложения, так и для любого другого приложения, которое знает универсальный код ресурса (URI) для ссылки на него.
 
-
 ## <a name="access-the-contentprovider"></a>Доступ к ContentProvider
 
 `VegetableProvider` После реализации доступ к нему осуществляется так же, как поставщик контактов в начале этого документа: получение курсора по указанному универсальному коду ресурса (URI), а затем использование адаптера для доступа к данным.
-
 
 ## <a name="bind-a-listview-to-a-contentprovider"></a>Привязка ListView к ContentProvider
 
@@ -285,8 +272,6 @@ listView.Adapter = adapter;
 Полученное приложение выглядит следующим образом:
 
 [![Снимок экрана: список приложений овощей, фруктам, цветок будс, Легумес, лампы, Туберс](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
-
-
 
 ## <a name="retrieve-a-single-item-from-a-contentprovider"></a>Получение одного элемента из ContentProvider
 
@@ -315,7 +300,6 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
   vegeCursor.Close();
 }
 ```
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

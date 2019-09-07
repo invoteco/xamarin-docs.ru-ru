@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 93e6797f2b00df32b8d3ae361f40fd487b7adac3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647719"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758314"
 ---
 # <a name="working-with-screen-sizes"></a>Работа с размерами экрана
 
@@ -45,13 +45,11 @@ ms.locfileid: "68647719"
 
 ![Файлы, отображаемые в разделе "ресурсы и макет"](screen-sizes-images/solution.png)
 
-
 ### <a name="boxinsetlayout"></a>боксинсетлайаут
 
 Вместо создания различных макетов для каждого типа экрана можно также создать единое представление, которое адаптируется к прямоугольным или круглым экранам.
 
 В этом [примере Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) показано, как использовать `BoxInsetLayout` для использования одного и того же макета на прямоугольных и круглых экранах.
-
 
 ## <a name="wear-ui-designer"></a>Конструктор неизносного пользовательского интерфейса
 
@@ -66,7 +64,6 @@ Xamarin Android Designer поддерживает как прямоугольн�
 Область конструктора в круглом стиле показана здесь:
 
 ![Область конструктора в круглом стиле](screen-sizes-images/design-round.png)
-
 
 ## <a name="wear-simulator"></a>Износ симулятора
 
@@ -85,4 +82,3 @@ Xamarin Android Designer поддерживает как прямоугольн�
 ## <a name="video"></a>Видео
 
 [Полноэкранные приложения для Android](https://www.youtube.com/watch?v=naf_WbtFAlY) — это износ из [Developers.Google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
-

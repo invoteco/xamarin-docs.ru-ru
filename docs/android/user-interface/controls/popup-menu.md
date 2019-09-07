@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 9b3e4177d6be5854e80952d091aa78787d9645bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8a808e6ea49338de5b6bd1618fc2227e6cf5f0b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644924"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764886"
 ---
 # <a name="xamarinandroid-popup-menu"></a>Всплывающее меню Xamarin. Android
 
 [Всплывающее меню](xref:Android.Widget.PopupMenu) (также называемое _контекстным меню_) — это меню, привязанное к определенному представлению. В следующем примере одно действие содержит кнопку. Когда пользователь нажмет кнопку, отображается всплывающее меню из трех элементов:
 
 [![Пример приложения с кнопкой и всплывающим меню с тремя элементами](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
-
 
 ## <a name="creating-a-popup-menu"></a>Создание всплывающего меню
 
@@ -57,7 +56,6 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-
 ## <a name="handling-menu-events"></a>Обработка событий меню
 
 Когда пользователь выбирает пункт меню, будет вызвано событие щелчка [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) , и меню будет закрыто. Касание в любом месте вне меню просто откроет его. В любом случае при закрытии меню будет вызвано его [дисмиссевент](xref:Android.Widget.PopupMenu.Dismiss) . Следующий код добавляет обработчики событий для `MenuItemClick` событий и: `DismissEvent`
@@ -77,8 +75,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

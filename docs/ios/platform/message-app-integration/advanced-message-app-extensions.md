@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bf6853ef94ff0be5382bab02192070a20884c31e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290948"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769682"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Расширенные расширения приложений для сообщений в Xamarin. iOS
 
 _В этой статье показаны дополнительные методы работы с расширениями приложений сообщений в решении Xamarin. iOS, которое интегрируется с приложением сообщений и предоставляет пользователю новые функциональные возможности._
-
 
 Новое в iOS 10, расширение приложения для обмена сообщениями интегрируется с приложением **сообщений** и предоставляет пользователю новые функциональные возможности. Расширение может передавать текст, наклейки, файлы мультимедиа и интерактивные сообщения.
 
@@ -55,7 +54,6 @@ _В этой статье показаны дополнительные мето
 Принимающий пользователь может ответить на интерактивное сообщение, коснувшись его всплывающего сообщения в журнале сообщений, чтобы загрузить расширение приложения сообщения, которое его создало. Расширение будет запущено в полноэкранном режиме и позволит пользователю создать ответ и отправить его обратному пользователю.
 
 [![](advanced-message-app-extensions-images/interactive02.png "Расширение запущено на весь экран")](advanced-message-app-extensions-images/interactive02.png#lightbox)
-
 
 Следующие разделы подробно рассматриваются ниже.
 
@@ -427,7 +425,6 @@ using Foundation;
 using Messages;
 using UIKit;
 
-
 namespace MessageExtension
 {
     public partial class MessagesViewController : MSMessagesAppViewController
@@ -605,7 +602,6 @@ API новых сообщений поддерживает откат, если 
 ## <a name="summary"></a>Сводка
 
 В этой статье представлены расширенные методы работы с расширениями приложений сообщений в решении Xamarin. iOS, которое интегрируется с приложением **сообщений** и предоставляет пользователю новые функции.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

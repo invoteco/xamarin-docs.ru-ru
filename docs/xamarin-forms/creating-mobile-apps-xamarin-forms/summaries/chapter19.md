@@ -1,18 +1,18 @@
 ---
 title: Сводка главе 19. Представления коллекций
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка главе 19. Представления коллекций
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка главе 19. Представления коллекций'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 795478805b582b956ee491bdfecd84485c1bc30e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bad46bead106304713bae91a7bf752db8080760a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334530"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760613"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Сводка главе 19. Представления коллекций
 
@@ -113,7 +113,7 @@ Xamarin.Forms определяет три представления, котор
 
 ### <a name="grouping-the-listview-items"></a>Группирование элементов ListView
 
-`ListView` поддерживает группирование элементов и перехода между этими группами. `ItemsSource` Свойство должно иметь значение в коллекцию коллекций: Объект, `ItemsSource` присваивается должен реализовать `IEnumerable`, и каждый элемент в коллекции необходимо также реализовать `IEnumerable`. Каждая группа должна содержать два свойства: текстовое описание группы и трехбуквенное сокращение.
+`ListView` поддерживает группирование элементов и перехода между этими группами. Для `ItemsSource` свойства необходимо задать коллекцию коллекций: Объект, для `ItemsSource` которого задано значение, `IEnumerable`должен реализовывать, а каждый элемент в коллекции должен также `IEnumerable`реализовывать. Каждая группа должна содержать два свойства: текстовое описание группы и трехбуквенное сокращение.
 
 [ `NamedColorGroup` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library создает семь групп `NamedColor` объектов. [ **ColorGroupList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) примере показано, как использовать эти группы с помощью [ `IsGroupingEnabled` ](xref:Xamarin.Forms.ListView.IsGroupingEnabled) свойство `ListView` присвоено `true`и [ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding) и [ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding) свойства, привязаны к свойствам в каждой группе.
 
@@ -225,8 +225,6 @@ Xamarin.Forms определяет три представления, котор
 ### <a name="a-tableview-menu"></a>Меню TableView
 
 Другим использованием `TableView` — это меню. [ **Команды MenuCommand** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/MenuCommands) образце показано меню, в котором вы можете переместить немного `BoxView` по экрану.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

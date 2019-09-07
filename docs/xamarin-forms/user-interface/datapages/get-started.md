@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e6f26fb96c0a538543c8e0b0574461ea99709631
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c6534067388b59c1e191426011fd0e6b8560348f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119478"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759735"
 ---
 # <a name="getting-started-with-datapages"></a>Приступая к работе с DataPages
 
@@ -52,7 +52,6 @@ ms.locfileid: "70119478"
 
 > [!IMPORTANT]
 > Также необходимо выполнить действия по [загрузке сборок темы (приведенных ниже)](#loadtheme) , добавив в iOS `AppDelegate` и Android `MainActivity`некоторый стандартный код. Это будет улучшена в будущих предварительной версии.
-
 
 ## <a name="3-add-a-xaml-page"></a>3. Добавьте страницу XAML
 
@@ -175,9 +174,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
-
 Создавать темы с нуля немного сложнее, но будущие выпуски предварительной версии сделают это проще.
-
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
@@ -206,8 +203,6 @@ var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
 x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

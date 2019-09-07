@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: fd94cd7a6d37e7fa00489e788f232842b319e5d3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6008663276151ef9512e4a370252da6861fa1b19
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292673"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769446"
 ---
 # <a name="social-framework-in-xamarinios"></a>Социальные платформы в Xamarin. iOS
 
@@ -58,7 +58,6 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 - `SetInitialText`— Добавляет начальный текст для отображения в твите.
 - `AddUrl`— Добавляет URL-адрес твита.
 - `AddImage`— Добавляет изображение в твит.
-
 
 После инициализации вызов `PresentVIewController` отображает представление, созданное `SLComposeViewController`. Пользователь может при необходимости изменить и отправить твит или отменить его отправку. В любом случае контроллер должен быть закрыт в `CompletionHandler`, где результат также можно проверить, чтобы увидеть, был ли твит отправлен или отменен, как показано ниже:
 
@@ -473,7 +472,6 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 ## <a name="summary"></a>Сводка
 
 В этой статье показано, как использовать социальные платформы для взаимодействия с Twitter и Facebook. В нем показано, где настроить учетные записи для каждой социальной сети в параметрах устройства. Также рассматривается использование `SLComposeViewController` для представления единого представления для публикации в социальных сетях. Кроме того, он рассматривал `SLRequest` класс, который используется для вызова API-интерфейса социальных сетей.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

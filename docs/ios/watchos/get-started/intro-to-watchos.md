@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 59d02db9fa2787e93ad88e4b6f37e0fef50572a5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df1177d55510571da3369d298bd05aa9bd0734a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293114"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767932"
 ---
 # <a name="introduction-to-watchos"></a>Введение в watchOS
 
@@ -102,7 +102,6 @@ Apple Watch имеет два размера граней: 38 и часы, ка�
 
 Дополнительные сведения о [работа с размерами экрана](~/ios/watchos/app-fundamentals/screen-sizes.md).
 
-
 ## <a name="limitations-of-watchos"></a>Ограничения для watchOS
 
 Существуют некоторые ограничения watchOS, которые следует учитывать при разработке приложений для watchOS:
@@ -119,7 +118,6 @@ Apple Watch имеет два размера граней: 38 и часы, ка�
 
 - API-интерфейсы, которые позволяют просмотреть, чтобы управлять iTunes на подключенный телефон являются закрытыми.
 
-
 ## <a name="further-reading"></a>Дополнительные сведения
 
 Ознакомьтесь с документацией из Apple:
@@ -129,7 +127,6 @@ Apple Watch имеет два размера граней: 38 и часы, ка�
 - [Просмотрите руководство по программированию Kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
 - [Рекомендации по работе с человеческим интерфейсом Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

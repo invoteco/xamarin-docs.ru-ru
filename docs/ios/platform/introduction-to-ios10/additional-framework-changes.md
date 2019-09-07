@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 620b89ba4682d65552fa5555c978b7eb5f437714
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db0ea7720f7b65434c5248fb16456441768e25c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290772"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752514"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Изменения дополнительных платформ iOS 10
 
@@ -210,7 +210,6 @@ iOS 10 вносит следующие улучшения в основную п
 В WebKit Framework в iOS 10 были внесены следующие улучшения.
 
 - В `WKWebView` класс добавлена поддержка просмотра и POP. `ShouldPreviewElement` Используйте метод, чтобы определить, должна ли в данном веб-представлении отображаться предварительный просмотр.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

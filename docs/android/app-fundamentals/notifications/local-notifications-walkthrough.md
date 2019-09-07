@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 61dedca1b89237bdd4669a63173b1c6e4fde072b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: caef124228ab4ec4356b10c0559d2abe33d1531f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755275"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Пошаговое руководство. Использование локальных уведомлений в Xamarin. Android
 
 _В этом пошаговом руководстве показано, как использовать локальные уведомления в приложениях Xamarin. Android. В нем демонстрируются основы создания и публикации локального уведомления. Когда пользователь щелкает уведомление в области уведомлений, он запускает второе действие._
-
 
 ## <a name="overview"></a>Обзор
 
@@ -35,7 +34,6 @@ _В этом пошаговом руководстве показано, как 
 Для начала создадим новый проект Android с помощью шаблона **приложения Android** . Давайте назовем этот проект **локалнотификатионс**. (Если вы не знакомы с созданием проектов Xamarin. Android, см. раздел [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
 
 Измените файл ресурсов Files **/Strings. XML** , чтобы он содержал два дополнительных строковых ресурса, которые будут использоваться при создании канала уведомления:
-
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,7 +102,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 ### <a name="define-the-notification-id"></a>Определение идентификатора уведомления
 
 Для наших уведомлений и каналов уведомлений потребуется уникальный идентификатор. Давайте изменим **MainActivity.CS** и добавим в `MainActivity` класс следующую переменную статического экземпляра:
@@ -117,7 +114,7 @@ internal static readonly string COUNT_KEY = "count";
 
 ### <a name="add-code-to-generate-the-notification"></a>Добавление кода для создания уведомления
 
-Далее необходимо создать новый обработчик событий для события кнопки `Click` . Добавьте следующий метод в `MainActivity`:
+Далее необходимо создать новый обработчик событий для события кнопки `Click` . Добавьте следующий метод к `MainActivity`:
 
 ```csharp
 void ButtonOnClick(object sender, EventArgs eventArgs)
@@ -173,7 +170,6 @@ protected override void OnCreate(Bundle bundle)
     button.Click += ButtonOnClick;
 }
 ```
-
 
 ### <a name="create-a-second-activity"></a>Создание второго действия
 
@@ -231,11 +227,9 @@ namespace LocalNotifications
 </LinearLayout>
 ```
 
-
 ### <a name="add-a-notification-icon"></a>Добавить значок уведомления
 
-Наконец, добавьте маленький значок, который будет отображаться в области уведомлений при запуске уведомления. [Этот значок](local-notifications-walkthrough-images/ic-stat-button-click.png) можно скопировать в свой проект или создать собственный пользовательский значок. Назовите файл Icon **МФ\_stat\_Button\_, щелкните. png** и скопируйте его в папку Resources **/Draw** . Не забудьте использовать **добавление > существующий элемент...** , чтобы включить этот файл значка в проект.
-
+Наконец, добавьте маленький значок, который будет отображаться в области уведомлений при запуске уведомления. [Этот значок](local-notifications-walkthrough-images/ic-stat-button-click.png) можно скопировать в свой проект или создать собственный пользовательский значок. Назовите файл Icon **МФ\_stat\_Button\_, щелкните. png** и скопируйте его в папку **Resources/Draw** . Не забудьте использовать **добавление > существующий элемент...** , чтобы включить этот файл значка в проект.
 
 ### <a name="run-the-application"></a>Запуск приложения
 
@@ -257,11 +251,9 @@ namespace LocalNotifications
 
 Поздравляем! На этом этапе вы завершили пошаговое руководство по локальному уведомлению Android, и у вас есть рабочий пример, на который можно ссылаться. Здесь больше больше уведомлений, чем показано здесь, поэтому если вы хотите получить дополнительные сведения, ознакомьтесь с [документацией Google по уведомлениям](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
-
 ## <a name="summary"></a>Сводка
 
 Это пошаговое руководство используется `NotificationCompat.Builder` для создания и вывода уведомлений. Он показал простой пример того, как запустить второе действие как способ реагирования на взаимодействие пользователя с уведомлением и продемонстрировать перенос данных из первого действия во второе действие.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

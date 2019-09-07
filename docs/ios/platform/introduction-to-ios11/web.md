@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/12/2017
-ms.openlocfilehash: b90673559d0b8a3728898b7d8dbc3207bb22520b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6068dd148bfc3c2a778ca34753374bcecccb55d9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280082"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752219"
 ---
 # <a name="webkit-and-safari-changes-in-ios-11"></a>Изменения WebKit и Safari в iOS 11
 
@@ -43,7 +43,6 @@ sfViewController.DismissButtonStyle = SFSafariViewControllerDismissButtonStyle.C
 
 Это значение можно изменить, пока `SFSafariViewController` представляется.
 
-
 В зависимости от содержимого, отображаемого в контроллере представления Safari, может потребоваться не сворачивать строки меню при прокрутке пользователем. Это можно настроить, задав для `BarCollapsedEnabled` `false`нового свойства значение:
 
 ```csharp
@@ -58,7 +57,6 @@ var sfViewController = new SFSafariViewController(url, config);
 Компания Apple также внесла изменения в сведения о конфиденциальности в контроллере представления Safari в iOS 11. Теперь просмотр данных, таких как файлы cookie и локальное хранилище, доступен только для каждого приложения, а не для всех экземпляров контроллера представления Safari. Это позволяет сохранить частное действие обзора пользователей в приложении.
 
 `SFSafariViewController` В iOS 11 также добавлены дополнительные функции, такие как поддержка перетаскивания `window.open()` для URL-адресов и поддержки для. Дополнительные сведения об этих новых функциях см. в [документации Apple сфсафаривиевконтроллер](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor).
-
 
 ## <a name="webkit"></a>WebKit
 
@@ -106,4 +104,3 @@ config.SetUrlSchemeHandler(new MyHandler(), "xamarin-asset");
 webView = new WKWebView (View.Frame, config);
 webView.LoadRequest (new NSUrlRequest("xamarin-asset://xamarin.com"));
 ```
-

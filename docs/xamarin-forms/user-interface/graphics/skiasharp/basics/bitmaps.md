@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 80f2b686e9802a93b0cf32420ccaef3e8877727c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738896"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759549"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Основы растрового изображения в SkiaSharp
 
@@ -68,7 +68,6 @@ HttpClient httpClient = new HttpClient();
 При использовании `HttpClient` с помощью приложений iOS и Android, необходимо задать свойства проекта, как описано в документах на  **[уровня безопасности транспорта (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
 Так как это наиболее удобный для использования `await` оператор с `HttpClient`, код не может быть выполнен в `BasicBitmapsPage` конструктор. Вместо этого он является частью `OnAppearing` переопределить. URL-адрес указывает на область веб-сайте Xamarin с некоторые образцы рисунков. Пакет веб-сайте позволяет добавления спецификацию для изменения размеров точечного рисунка для конкретного ширины:
-
 
 ```csharp
 protected override async void OnAppearing()

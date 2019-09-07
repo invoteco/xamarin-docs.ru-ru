@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 3b0e5d12f47ffb46ad009530bcc9c0b373496f63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279794"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765587"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Общие сведения о привязках цели-C
 
@@ -37,7 +37,6 @@ _Сведения о принципах работы процесса привя
 
 Вы можете использовать `btouch-native` для Xamarin. iOS (или `bmac-native` , если вы используете Xamarin. Mac) для непосредственного создания привязок. Это работает путем передачи определений C# API, созданных вручную (или с помощью цели Шарпие), в средство командной строки (`btouch-native` для iOS или `bmac-native` для Mac).
 
-
 Общий синтаксис для вызова этих средств:
 
 ```csharp
@@ -51,7 +50,6 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
 Приведенная выше команда создаст файл `cocos2d.dll` в текущем каталоге и будет содержать полностью привязанную библиотеку, которую можно использовать в проекте. Это средство, которое Visual Studio для Mac использует для создания привязок при использовании проекта привязки (описан [ниже](#bindingproject)).
-
 
 <a name="bindingproject" />
 

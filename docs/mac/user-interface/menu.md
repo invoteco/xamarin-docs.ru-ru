@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292440"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770988"
 ---
 # <a name="menus-in-xamarinmac"></a>Меню в Xamarin. Mac
 
@@ -1071,7 +1071,6 @@ public override void DidFinishLaunching (NSNotification notification)
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается работа с меню и элементами меню в приложении Xamarin. Mac. Сначала мы рассмотрели строку меню приложения, а затем рассматривали создание контекстных меню, далее мы рассмотрели меню строки состояния и настраиваемые меню закрепления. Наконец, мы охвачены всплывающие меню и раскрывающиеся списки.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b34c769eaa3aef5bf47a9bfa891859289b195f03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283786"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769210"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Воспроизведение звука в tvOS с помощью помощью avaudioplayer в Xamarin
 
@@ -33,8 +33,6 @@ ms.locfileid: "70283786"
 ## <a name="playing-sounds-in-tvos"></a>Воспроизведение звуков в tvOS
 
 Так как tvOS поддерживает те же классы панели элементов, что и iOS, дополнительные сведения о воспроизведении звука в приложении Xamarin. tvOS см. в статье воспроизведение звука в iOS [с помощью помощью avaudioplayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) документации.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

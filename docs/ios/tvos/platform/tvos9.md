@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290722"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769110"
 ---
 # <a name="introduction-to-tvos-9"></a>Введение в tvOS 9
 
@@ -175,11 +175,6 @@ _В этой статье представлены все новые и изме
 Вместо того чтобы отображать статическое изображение верхнего уровня, оно может содержать динамическую строку или элементы с фокусом или динамический набор заголовков с прокруткой. Оба этих динамического стиля позволяют выделить содержимое, предоставленное приложением, или перейти к наиболее часто используемым функциям.
 
 Дополнительные сведения см. в документации по [значкам и образам](~/ios/tvos/app-fundamentals/icons-images.md) , а также в [справочнике по платформе Apple твсервицес Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) для получения динамических сведений о верхнем полке.
-
-
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

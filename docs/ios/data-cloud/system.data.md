@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 36eeb517fee69742f900a0cf18e1d19d093dfc52
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 44d2e468efeacea919af2d243588d0da6d72945d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290121"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766541"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data в Xamarin. iOS
 
@@ -110,7 +110,6 @@ class Demo {
 > [!IMPORTANT]
 > Как упоминалось в примере кода выше, не рекомендуется внедрять строки в команды SQL, так как это делает код уязвимым для [внедрения кода SQL](https://en.wikipedia.org/wiki/SQL_injection).
 
-
 ### <a name="using-command-parameters"></a>Использование параметров команды
 
 В следующем коде показано, как использовать параметры команды для безопасного ввода текста, введенного пользователем, в базу данных (даже если текст содержит специальные символы SQL, например одинарные апострофы):
@@ -149,7 +148,6 @@ using (var addCmd = conn.CreateCommand ()) {
 - [System. Data. ODBC](xref:System.Data.Odbc)
 - Зависимость удалена из `System.Data.dll` , что привело к удалению метода [SqlConnection. енлистдистрибутедтрансактион (ITransaction).](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) `System.EnterpriseServices.dll`
 
-
 <a name="Mono.Data.Sqlite" />
 
 ### <a name="monodatasqlite"></a>Mono. Data. SQLite
@@ -170,4 +168,3 @@ using (var addCmd = conn.CreateCommand ()) {
 ## <a name="data-binding"></a>Привязка данных
 
 Привязка данных в настоящее время не поддерживается.
-

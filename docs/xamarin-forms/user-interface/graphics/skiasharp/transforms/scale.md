@@ -7,12 +7,12 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 2e9259bed6ad0ae5a926cb75ea74c1f379897220
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1adade4e66a6df504ba7c8ac3ff1f668c014fe93
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649279"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770453"
 ---
 # <a name="the-scale-transform"></a>Преобразование масштаба
 
@@ -342,7 +342,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 Код также отображает 10 типа "звезда" несколько раз, каждый раз, уменьшение масштабирования factor, 10% и постепенно изменения цвета от красного к синему:
 
 [![](scale-images/isotropicscaling-small.png "Тройной снимок экрана страницы мощности масштабирование")](scale-images/isotropicscaling-large.png#lightbox "тройной снимок экрана страницы мощности масштабирование")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198394"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763964"
 ---
 # <a name="packaging-wear-apps"></a>Упаковка неизносных приложений
 
@@ -31,7 +31,7 @@ ms.locfileid: "70198394"
 
 4. В диалоговом окне **Диспетчер ссылок** включите проект "износ" (щелкните, чтобы добавить галочку), а затем нажмите кнопку **ОК**.
 
-5. Измените имя пакета для проекта "износ", чтобы оно совпадало с именем пакета ручного проекта (имя пакета можно изменить в свойствах **> манифесте Android**).
+5. Измените имя пакета для проекта "износ", чтобы оно совпадало с именем пакета ручного проекта (имя пакета можно изменить в **свойствах > манифесте Android**).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -46,7 +46,6 @@ ms.locfileid: "70198394"
 5. Измените имя пакета для проекта "износ" так, чтобы оно совпадало с именем пакета ручного проекта (имя пакета можно изменить в разделе " **Параметры проекта > приложение Android**").
 
 -----
-
 
 Обратите внимание, что вы получите ошибку **XA5211** , если имя пакета приложения "износ" не соответствует имени пакета карманного приложения. Например:
 
@@ -74,8 +73,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
     </ProjectReference>
     ```
 
-- Добавляет приложение "износ" в качестве необработанного ресурса в ручной проект. 
-
+- Добавляет приложение "износ" в качестве **необработанного** ресурса в ручной проект. 
 
 ## <a name="manual-packaging"></a>Ручная упаковка
 
@@ -104,5 +102,4 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
         android:resource="@xml/wearable_app_desc"/>
     ```
 
-См. также [руководство](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)по паккгингию сайта разработчика Android.
-
+См. также [руководство по паккгингию](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)сайта разработчика Android.

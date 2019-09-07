@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 17. Совершенствование навыков работы в сетке
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 17. Совершенствование навыков работы в сетке
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 17. Совершенствование навыков работы в сетке'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333745"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760629"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Сводка Глава 17. Совершенствование навыков работы в сетке
 
@@ -34,7 +34,7 @@ ms.locfileid: "61333745"
 
 - [`Absolute`](xref:Xamarin.Forms.GridUnitType.Absolute) &mdash; Ширина или высота задается в аппаратно независимых единицах (число в XAML)
 - [`Auto`](xref:Xamarin.Forms.GridUnitType.Auto) &mdash; Высота или ширина будет определяться автоматически, основываясь на содержимом ячейки («Auto» в XAML)
-- [`Star`](xref:Xamarin.Forms.GridUnitType.Star) &mdash; Оставшиеся высоты или ширины распределяется пропорционально (число с "\*«, который называется *типа" звезда "*, в XAML)
+- [`Star`](xref:Xamarin.Forms.GridUnitType.Star) &mdash; Оставшиеся высоты или ширины распределяется пропорционально (число с "\*«, который называется *типа" звезда "* , в XAML)
 
 Каждый дочерний элемент элемента `Grid` также должен быть назначен строк и столбцов (явно или неявно). Охватывает строки и столбца диапазонов являются необязательными. Они все указываются с помощью присоединенного свойства связывания &mdash; свойства, которые определяются `Grid` но устанавливаться для дочерних элементов `Grid`. `Grid` Определяет четыре статических присоединенного привязываемые свойства:
 
@@ -101,8 +101,6 @@ ms.locfileid: "61333745"
 `Grid` Может помочь структура программы реагировать на изменение ориентации. [ **GridRgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) примере показан способ, который перемещает элемент между второй строкой телефона ориентированных на книжной и альбомной ориентацией телефона во втором.
 
 Инициализирует программу `Slider` элементов в диапазоне от 0 до 255, и привязок данных использует для отображения значения ползунков в шестнадцатеричном формате. Так как `Slider` значения представлены плавающими, точки, а также для шестнадцатеричного работает только с целыми числами, строку форматирования платформы .NET [ `DoubleToIntConvert` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки на помощь.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

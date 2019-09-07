@@ -6,12 +6,12 @@ ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 96e0991bb0805e61dfbf91e8479cbf1c9943f212
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fd3d94731f1a2a083be5f0e2f8ab541bc702a521
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287749"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766307"
 ---
 # <a name="accessing-the-graph-api"></a>Доступ к API Graph
 
@@ -27,7 +27,6 @@ ms.locfileid: "70287749"
 
 > [!IMPORTANT]
 > Примечание. Azure ADAL 3,0 в настоящее время является предварительной версией и может привести к критическим изменениям до выпуска окончательной версии. 
-
 
 ![](graph-images/06.-adal-nuget-package.jpg "Добавление ссылки на библиотеку проверки подлинности Azure Active Directory (Azure ADAL)")
 
@@ -71,7 +70,6 @@ public static async Task<AuthenticationResult> GetAccessToken
 ### <a name="handle-continuation-for-android"></a>Обработку продолжения для Android
 
 После завершения проверки подлинности последовательность должна вернуться в приложение. В случае Android он обрабатывается следующим кодом, который следует добавить в **MainActivity.CS**:
-
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -118,4 +116,3 @@ request.Headers.Authorization =
 var response = await client.SendAsync(request);
 var content = await response.Content.ReadAsStringAsync();
 ```
-

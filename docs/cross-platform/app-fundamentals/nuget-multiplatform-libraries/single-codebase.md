@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 966d7a21da0112383c08e862a357c3c1d4fb9c22
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fb30b07e958bddfcf0e0545ae17b925d7163c38a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289725"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766467"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Создание новой многоплатформенной библиотеки для NuGet
 
@@ -50,7 +50,6 @@ ms.locfileid: "70289725"
 
    ![](single-codebase-images/create-nuget-package.png "Файл пакета NuGet будет сохранен в папке bin как отладка, так и выпуск, в зависимости от конфигурации.")
 
-
 ## <a name="verifying-the-output"></a>Проверка выходных данных
 
 Пакеты NuGet также являются ZIP-файлами, поэтому можно проверить внутреннюю структуру созданного пакета.
@@ -75,7 +74,6 @@ ms.locfileid: "70289725"
 
 После преобразования в общий проект перейдите в[раздел](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) **Параметры проекта > пакет NuGet > справочные сборки**
 и убедитесь, что выбраны все необходимые профили (чтобы NuGet продолжал быть совместим с проектами. ранее он использовался в).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

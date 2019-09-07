@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/05/2017
-ms.openlocfilehash: a5dea7358e48ebb1961c1fa3253ad096d041c0cf
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 936c5b91a27fed1c00f3cf0c61d0184d5532c25a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279696"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753090"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Маршалирование исключений в Xamarin. iOS
 
@@ -330,7 +330,6 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 Мы перехватывать вызовы P/Invoke только для `objc_msgSend` семейства функций при попытке перехвата исключений цели-C. Это означает, что P/Invoke для другой функции C, которая затем создает исключения цели-C, по-прежнему будет работать со старым и неопределенным поведением (это может быть повышено в будущем).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 44ba9188a059cc28c7b4d89143cef1921a0b1701
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 2c290ac7d66147342087342bda5e5a19b4e6e6f7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978480"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763624"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Часть 2. Реализация Валкинггаме
 
@@ -151,7 +151,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input.Touch;
 
-
 namespace WalkingGame
 {
     public class CharacterEntity
@@ -255,7 +254,6 @@ protected override void LoadContent()
 
 Наконец, мы можем изменить метод Draw следующим образом:
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
@@ -279,7 +277,7 @@ protected override void Draw(GameTime gameTime)
 
 ## <a name="creating-the-animation-class"></a>Создание класса анимации
 
-В настоящее `CharacterEntity` время в нашем примере отображается полный файл **чарактершит. png** . Такое расположение нескольких образов в одном файле называется листом спрайта. Как правило, спрайт будет визуализировать только часть листа спрайтов. Мы изменим, `CharacterEntity` чтобы визуализировать часть этого **чарактершит. png**, и эта часть со временем изменится, чтобы отобразить анимацию прохода.
+В настоящее `CharacterEntity` время в нашем примере отображается полный файл **чарактершит. png** . Такое расположение нескольких образов в одном файле называется *листом спрайта*. Как правило, спрайт будет визуализировать только часть листа спрайтов. Мы изменим, `CharacterEntity` чтобы визуализировать часть этого **чарактершит. png**, и эта часть со временем изменится, чтобы отобразить анимацию прохода.
 
 Мы создадим `Animation` класс для управления логикой и состоянием анимации чарактерентити. Класс анимации будет общим классом, который можно использовать для любой сущности, а не только `CharacterEntity` для анимации. Ultimate класс предоставит, `CharacterEntity` который будет использоваться при рисовании самого себя. `Rectangle` `Animation` Мы также `AnimationFrame` создадим класс, который будет использоваться для определения анимации.
 
@@ -311,7 +309,6 @@ namespace WalkingGame
 Класс будет содержать объект `List<AnimationFrame>` , а также логику для переключения того, какой кадр в данный момент отображается в соответствии с количеством времени. `Animation`
 
 Чтобы добавить `Animation` класс, щелкните правой кнопкой мыши общий проект **валкинггаме** и выберите команду **Добавить > новый файл...** . Введите имя **анимации** и нажмите кнопку **создать** . Мы изменим `Animation.cs` файл, чтобы он содержал следующий код:
-
 
 ```csharp
 using System;
@@ -356,7 +353,6 @@ namespace WalkingGame
             double secondsIntoAnimation = 
                 timeIntoAnimation.TotalSeconds + gameTime.ElapsedGameTime.TotalSeconds;
 
-
             double remainder = secondsIntoAnimation % Duration.TotalSeconds;
 
             timeIntoAnimation = TimeSpan.FromSeconds (remainder);
@@ -371,7 +367,7 @@ namespace WalkingGame
 
 `frames` Элемент сохраняет данные для анимации. Код, который создает экземпляр анимации, будет добавлять `AnimationFrame` экземпляры `frames` в список с помощью `AddFrame` метода. Более полная реализация может предоставлять `public` методы или свойства для изменения `frames`, но мы будем ограничивать функциональные возможности добавления кадров в этом пошаговом руководстве.
 
-### <a name="duration"></a>Длительность
+### <a name="duration"></a>Продолжительность
 
 Duration возвращает общую длительность, `Animation,` полученную путем добавления длительности всех содержащихся `AnimationFrame` в нем экземпляров. Это значение может быть кэшировано `AnimationFrame` , если было неизменяемым объектом, но, поскольку мы реализовали аниматионфраме в качестве класса, который можно изменить после добавления в анимацию, необходимо вычислить это значение при обращении к свойству.
 
@@ -461,7 +457,6 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 ```
 
 Как упоминалось ранее, нам нужно вызвать `Animation.Update` для воспроизведения анимации на основе времени. Также необходимо назначить `currentAnimation`. Теперь мы присваиваем ему `currentAnimation` `walkDown`значение, но мы будем заменяем этот код позже, когда мы реализуем логику перемещения. Мы добавим `Update` `CharacterEntity` метод следующим образом:
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -661,7 +656,6 @@ public void Update(GameTime gameTime)
 
     this.X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
     this.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
 
     if (velocity != Vector2.Zero)
     {

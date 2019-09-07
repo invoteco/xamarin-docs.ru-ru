@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 15. Интерактивный интерфейс
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 15. Интерактивный интерфейс
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 15. Интерактивный интерфейс'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1c30f87b9173d2ca4de0b2d91ad13145031e9b0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61335305"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760760"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Сводка Глава 15. Интерактивный интерфейс
 
@@ -49,7 +49,7 @@ Xamarin.Forms содержит 20 допускающий создание экз
 - `ListView`: [**Глава 19. Представления коллекций**](chapter19.md)
 - `TableView`: [**Глава 19. Представления коллекций**](chapter19.md)
 - `Map`: [**Глава 28. Расположение и карты**](chapter28.md)
-- `OpenGLView`: NOT, описанные в этой книге (и не поддерживаются для платформ Windows)
+- `OpenGLView`: Не рассматривается в этой книге (и не поддерживает платформы Windows)
 
 ## <a name="slider-and-stepper"></a>Ползунок и несопоставимого
 
@@ -94,7 +94,7 @@ Xamarin.Forms содержит 20 допускающий создание экз
 
 - [`Increment`](xref:Xamarin.Forms.Stepper.Increment) типа `double`, инициализированный 1
 
-Визуально `Stepper` состоит из двух кнопок с меткой **&ndash;** и **+**. Нажав клавишу **&ndash;** уменьшает `Value` по `Increment` до минимального значения `Minimum`. Нажав клавишу **+** увеличивает `Value` по `Increment` максимум `Maximum`.
+Визуально `Stepper` состоит из двух кнопок с меткой **&ndash;** и **+** . Нажав клавишу **&ndash;** уменьшает `Value` по `Increment` до минимального значения `Minimum`. Нажав клавишу **+** увеличивает `Value` по `Increment` максимум `Maximum`.
 
 Это демонстрируется путем [ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo) образца.
 
@@ -238,8 +238,6 @@ Xamarin.Forms определяет три представления дают п
 [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/SetTimer) программы демонстрирует использование `TimePicker` для указания времени таймера. Программа работает только в том случае, если вы храните на переднем плане.
 
 **SetTimer** также демонстрируется использование [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) метод `Page` чтобы отобразить окно с предупреждением.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

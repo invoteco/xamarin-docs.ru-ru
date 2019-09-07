@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: 3171a89678e88a924198c3921d197c0f0378d29b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14e9b352a309de94a374b52141e3fd61715d8f75
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522624"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764384"
 ---
 # <a name="xamarinandroid-linearlayout"></a>Xamarin. Android элемент LinearLayout
 
@@ -120,7 +120,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[`Activity`](xref:Android.App.Activity) &ndash; `Resources.Layout.Main` Метод) загружает файл макета для, заданный идентификатором ресурса, относится к файлу макета RESOURCES/Layout/Main. axml. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+Метод) загружает файл макета [`Activity`](xref:Android.App.Activity)для, заданный идентификатором &ndash; `Resources.Layout.Main` ресурса, относится к файлу макета **Resources/Layout/Main. axml** . [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
 
 Запустите приложение. Вы должны увидеть следующее:
 
@@ -128,7 +128,6 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 Обратите внимание, что атрибуты XML определяют поведение каждого представления. Попробуйте поэкспериментировать с различными значениями `android:layout_weight` , чтобы увидеть, как будет распространяться фактическое пространство экрана на основе веса каждого элемента. Дополнительные сведения о том, как это делать, см. в документе [Общие объекты макета](https://developer.android.com/guide/topics/ui/declaring-layout.html) .[`LinearLayout`](xref:Android.Widget.LinearLayout)
 `android:layout_weight` обрабатывает атрибут.
-
 
 ## <a name="references"></a>Ссылки
 

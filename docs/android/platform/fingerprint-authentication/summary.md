@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08738a751fd630c6a413b1c7393f8007f5c97060
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d406b492e2f55604daf8a1c6b4be32f23b63f54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643549"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761222"
 ---
 # <a name="fingerprint-authentication-guidance"></a>Руководство по аутентификации отпечатков пальцев
 
@@ -33,9 +33,7 @@ ms.locfileid: "68643549"
 
 Сначала мы обсуждали сами `FingerprintManager` API отпечатков пальцев (и `FingerprintManagerCompat`). Мы рассмотрели `FingerprintManager.AuthenticationCallbacks` , как абстрактный класс должен быть расширен приложением и использоваться в качестве посредника между оборудованием отпечатков пальцев и самим приложением. Затем мы рассмотрели, как проверить целостность результатов сканера отпечатков пальцев `Cipher` с помощью объекта Java. Наконец, мы разработали несколько тестов, посвященных регистрации отпечатка пальца на устройстве и помощью **ADB** для имитации отпечатка пальца на эмуляторе. 
 
-Если вы еще не сделали этого, ознакомьтесь с [примером приложения](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) , прилагаемого к этому руководству. [Пример диалогового окна](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) отпечатка пальца перенесен из Java в Xamarin. Android и предоставляет еще один пример добавления проверки подлинности отпечатков пальцев в приложение Android.
-
-
+Если вы еще не сделали этого, ознакомьтесь с [примером приложения](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) , прилагаемого к этому руководству. [Пример диалогового окна отпечатка пальца](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) перенесен из Java в Xamarin. Android и предоставляет еще один пример добавления проверки подлинности отпечатков пальцев в приложение Android.
 
 ## <a name="related-links"></a>Связанные ссылки
 

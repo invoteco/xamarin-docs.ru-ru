@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6dbd0b3e7d14307a3b9e7de552e2d59e0fbbcaa4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292501"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768559"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Работа с tvOS текста и полями поиска в Xamarin
 
@@ -781,8 +781,6 @@ public override void ViewDidAppear (bool animated)
 ## <a name="summary"></a>Сводка
 
 Эта статья посвящена проектированию и работе с текстовыми полями и поиском в приложении Xamarin. tvOS. В нем было показано, как создать текст и найти содержимое коллекции в конструкторе интерфейсов, а также два разных способа представления поля поиска пользователю в tvOS.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

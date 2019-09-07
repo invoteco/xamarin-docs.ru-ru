@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9dc34f412549c4be6099b373ddae7cbd2e8d21c8
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980776"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759682"
 ---
 # <a name="xamarinforms-datapages"></a>Страницы на странице Xamarin. Forms
 
@@ -45,7 +45,6 @@ DataPages предоставляют API, чтобы быстро и легко 
 
 См `JsonDataSource`. [руководство по началу работы](get-started.md) с примером с помощью.
 
-
 ### <a name="pages--controls"></a>Страницы & элементы управления
 
 Для упрощения привязки к переданным источникам данных включены следующие страницы и элементы управления.
@@ -58,9 +57,7 @@ DataPages предоставляют API, чтобы быстро и легко 
 * **Хероимаже** — представление отрисовки изображения.
 * **ListItem** — предварительно созданное представление с макетом, похожее на собственные элементы списка iOS и Android.
 
-Примеры см. в справочнике по [элементам управления "страницы](controls.md) ".
-
-
+Примеры см. в [справочнике по элементам управления "страницы](controls.md) ".
 
 ### <a name="under-the-hood"></a>Внутри
 

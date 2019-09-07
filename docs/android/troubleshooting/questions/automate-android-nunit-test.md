@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 53dce7cc6cc614cde252aa34248fa299c89fafa3
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: e96f9a0ce4d1eec9bf853faceeb85a2acb4840af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887708"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761021"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Как автоматизировать тестовый проект Android NUnit?
 
@@ -91,10 +91,8 @@ adb shell am instrument
 
 Дополнительные сведения об использовании `adb shell am instrument` команды для выполнения модульных тестов см. в разделе Android Developer [Tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
-
 > [!NOTE]
 > В версии [Xamarin. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) имена пакетов по умолчанию для вызываемых оболочек Android будут основываться на md5sum имени экспортируемого типа с указанием сборки. Это позволяет предоставлять одно и то же полное имя из двух разных сборок и не возвращать ошибку упаковки. Поэтому убедитесь, что `Name` свойство `Instrumentation` атрибута используется для создания имени АКВ или класса, доступного для чтения.
 
 _В`adb` приведенной выше команде необходимо использовать имя АКВ_.
 Для переименования и рефакторинга C# класса потребуется изменить `RunTests` команду так, чтобы она использовала правильное имя АКВ.
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 60bf25d7d88a1772e8b742a336a5faaebdf964fa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1a91b92cc3e82bad02d630dde8ced1d1ba63e3fd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290803"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768474"
 ---
 # <a name="maps-in-xamarinios"></a>Карты в Xamarin. iOS
 
@@ -52,7 +52,6 @@ map.MapType = MKMapType.Hybrid;
 
 - Масштаб с помощью жеста сжатия
 - Панорамирование с помощью жеста панорамирования
-
 
 Эти функции можно включить или отключить, просто задав `ZoomEnabled` свойства `MKMapView` и `ScrollEnabled` экземпляра, где значение по умолчанию — true для обоих. Например, чтобы отобразить статическую карту, просто установите для соответствующих свойств значение false:
 
@@ -100,7 +99,6 @@ map.ShowsUserLocation = true;
 
 - `MKAnnotation` Объект, который содержит данные модели о заметке, такие как заголовок и расположение заметки.
 - Объект `MKAnnotationView` , который содержит изображение для отображения и, при необходимости, выноску, отображаемую при касании пользователем заметки.
-
 
 Map Kit использует шаблон делегирования iOS для добавления заметок к сопоставлению, `Delegate` где свойство `MKMapView` объекта задается экземпляру `MKMapViewDelegate`. Это реализация делегата, которая отвечает за возврат `MKAnnotationView` для заметки.
 
@@ -183,7 +181,6 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 - Ломаные линии — часто отображаются при отображении маршрута.
 - Окружности — используется для выделения круглой области на карте.
 
-
 Кроме того, можно создать пользовательские наложения для отображения произвольных геометрических объектов с детализированным, настроенным кодом рисования. Например, прогноз погоды будет хорошим кандидатом для пользовательского наложения.
 
 #### <a name="adding-an-overlay"></a>Добавление наложения
@@ -192,7 +189,6 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 - Создание объекта модели для оверлея и добавление его в `MKMapView` .
 - Создание представления для наложения в `MKMapViewDelegate` .
-
 
 Модель для наложения может быть любым `MKShape` подклассом. Xamarin. iOS включает `MKShape` подклассы для многоугольников, ломаных и кругов, `MKPolygon`через `MKPolyline` классы `MKCircle` , и соответственно.
 
@@ -231,7 +227,6 @@ iOS включает в себя API локального поиска с пом
 1. `MKLocalSearch` Создайте объект`MKLocalSearchRequest` из.
 1. Вызовите `MKLocalSearch` метод для объекта. `Start`
 1. `MKLocalSearchResponse` Получите объект в обратном вызове.
-
 
 Интерфейс API локального поиска не предоставляет пользовательский интерфейс. Для него даже не требуется использовать карту. Однако для использования локального поиска приложение должно предоставить какой-либо способ указать поисковый запрос и отобразить результаты. Кроме того, поскольку результаты будут содержать данные о расположении, часто имеет смысл отобразить их на карте.
 
@@ -279,8 +274,6 @@ NavigationItem.TitleView = searchController.SearchBar;
 Это приводит к отображению панели поиска на карте, как показано ниже:
 
  ![](images/07-searchbar.png "Панель поиска, отображаемая на карте")
-
-
 
 ### <a name="displaying-the-search-results"></a>Отображение результатов поиска
 
@@ -351,7 +344,6 @@ public class SearchResultsViewController : UITableViewController
             }
         });
 
-
     }
 }
 ```
@@ -382,7 +374,6 @@ public void Search (string forSearchString)
         }
     });
 
-
 }
 ```
 
@@ -406,8 +397,6 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
 > [!IMPORTANT]
 > `UISearchController`реализован в iOS 8. Если вы хотите поддерживать устройства более ранней версии, вам потребуется использовать `UISearchDisplayController`.
-
-
 
 ## <a name="summary"></a>Сводка
 

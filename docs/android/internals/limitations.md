@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524769"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757788"
 ---
 # <a name="limitations"></a>Ограничения
 
@@ -25,7 +25,7 @@ ms.locfileid: "69524769"
 
 ## <a name="limited-java-generation-support"></a>Ограниченная поддержка создания Java
 
-Чтобы код Java мог вызывать управляемый код, необходимо создать вызываемые [оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) . *По умолчанию*вызываемые оболочки Android будут содержать только (определенные) объявленные конструкторы и методы, которые переопределяют виртуальный метод Java (т [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute). е. он имеет) или реализуют метод интерфейса `Attribute`Java (интерфейс аналогичен).
+Чтобы код Java мог вызывать управляемый код, необходимо создать [вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) . *По умолчанию*вызываемые оболочки Android будут содержать только (определенные) объявленные конструкторы и методы, которые переопределяют виртуальный метод Java (т [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute). е. он имеет) или реализуют метод интерфейса `Attribute`Java (интерфейс аналогичен).
   
 До выпуска 4,1 дополнительные методы не могут быть объявлены. В выпуске [ `Export` 4,1 пользовательские атрибуты `ExportField` и можно использовать для объявления методов и полей Java в вызываемой оболочке Android](~/android/platform/java-integration/working-with-jni.md).
 
@@ -84,11 +84,9 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### <a name="generic-c-classes"></a>Универсальные C# классы
 
 Универсальные C# классы поддерживаются только частично. Существуют следующие ограничения.
-
 
 - Универсальные типы не могут `[Export]` использовать `[ExportField`или]. Попытка сделать это приведет к `XA4207` возникновению ошибки.
 

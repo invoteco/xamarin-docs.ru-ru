@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 63530595d9892ed99b7eace3d248e1bc0d0b37d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288405"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752637"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Покупка в приложении в Xamarin. iOS
 
@@ -55,7 +55,6 @@ ms.locfileid: "70288405"
 - **Комплект магазина** — объяснение классов, используемых для создания функций приобретения в приложении.
 - **Написание кода приложения для приобретения** — примеры создания покупки из приложения в приложении Xamarin. iOS.
 - **Отчеты** — обзор статистики, доступной через iTunes Connect.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

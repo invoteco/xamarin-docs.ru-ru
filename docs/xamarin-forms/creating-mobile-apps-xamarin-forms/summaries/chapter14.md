@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 14. Абсолютный макет
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 14. Абсолютный макет
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 14. Абсолютный макет'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c489bf244396cf180ed8e1272308048a14b67300
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334448"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771134"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Сводка Глава 14. Абсолютный макет
 
@@ -98,8 +98,6 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1 - layoutBounds.Height))
 [![Тройной снимок экрана часов матричного](images/ch14fg08-small.png "часы матричного")](images/ch14fg08-large.png#lightbox "матричного часов")
 
 [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) программы анимирует два `Label` объектов к экрану скачками по горизонтали и вертикали.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

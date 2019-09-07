@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 31602b14179691d13d8058c90cf20a6f7f667124
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f8dcda63c97c15367157b6a6cb857c0bfef79a27
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522818"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764588"
 ---
 # <a name="toolbar-compatibility"></a>Совместимость панели инструментов
-
 
 ## <a name="overview"></a>Обзор
 
@@ -34,14 +33,11 @@ ms.locfileid: "69522818"
 
 Каждый из этих шагов подробно описан в следующих разделах.
 
-
-
 ## <a name="set-the-minimum-and-target-android-version"></a>Установка минимальной и целевой версий Android
 
 Целевая платформа приложения должна быть установлена на уровне API 21 или выше, иначе приложение не будет развернуто должным образом. Если при развертывании приложения обнаружена ошибка, например, **идентификатор ресурса не найден для атрибута "тилемодекс" в пакете "Android"** , это связано с тем, что для целевой платформы не задано значение **Android 5,0 (API уровня 21-интерфейса)** или больше. 
 
 Задайте для целевого уровня платформы уровень API 21 или выше и задайте для параметров проекта уровня API Android минимальную версию Android, которую будет поддерживать приложение. Дополнительные сведения о настройке уровней API Android см. в разделе Общие сведения об [уровнях API Android](~/android/app-fundamentals/android-api-levels.md). В этом `ToolbarFun` примере для минимальной версии Android задано значение KitKat (API уровня 4,4). 
-
 
 ## <a name="install-the-appcompat-nuget-package"></a>Установка пакета AppCompat NuGet
 
@@ -51,11 +47,9 @@ ms.locfileid: "69522818"
 
 При установке этого NuGet также устанавливаются несколько других пакетов NuGet (например, **Xamarin. Android. support. анимированный. Vector.** , которые можно нарисовать, **Xamarin. Android. support. v4**и  **Xamarin. Android. support. Vector. Draw**). Дополнительные сведения об установке пакетов NuGet см. в [разделе Пошаговое руководство. Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Использование темы и панели инструментов AppCompat
 
 Библиотека AppCompat поставляется с несколькими `Theme.AppCompat` темами, которые можно использовать в любой версии Android, поддерживаемой библиотекой AppCompat. Тема примера приложения является производной от `Theme.Material.Light.DarkActionBar`, которая недоступна в версиях Android, предшествующих интерфейсу без описания операций. `ToolbarFun` Поэтому необходимо адаптироваться к использованию аналога AppCompat для этой `Theme.AppCompat.Light.DarkActionBar`темы. `ToolbarFun` Кроме того, `Toolbar` поскольку недоступно в версиях Android, предшествующих интерфейсу без описания операций, необходимо использовать `Toolbar`версию AppCompat. Поэтому макеты должны использовать `android.support.v7.widget.Toolbar` `Toolbar`вместо. 
-
 
 ### <a name="update-layouts"></a>Обновление макетов
 
@@ -86,7 +80,6 @@ ms.locfileid: "69522818"
 
 Обратите внимание `?attr` , что значения больше не начинаются с `android:` префикса (Помните `?` , что запись ссылается на ресурс в текущей теме). Если `?android:attr` все еще использовались здесь, Android будет ссылаться на значение атрибута из текущей платформы, а не из библиотеки AppCompat. Поскольку в этом примере используется `actionBarSize` объект, определенный библиотекой AppCompat `android:` , префикс удаляется. `android:theme` `ThemeOverlay.Material.Dark.ActionBar` &ndash; `ThemeOverlay.AppCompat.Dark.ActionBar` Аналогичным образом изменяется на `@style` , чтобы атрибут был задан в теме в библиотеке AppCompat, а не в. `@android:style` 
 
-
 ### <a name="update-the-style"></a>Обновление стиля
 
 Измените **Resources/Values/Styles. XML** и замените его содержимое следующим XML-кодом: 
@@ -105,8 +98,6 @@ ms.locfileid: "69522818"
 ```
 
 Имена элементов и родительские темы в этом примере больше не являются префиксами `android:` , так как мы используем библиотеку AppCompat. Кроме того, Родительская тема изменяется на версию `Light.DarkActionBar`AppCompat. 
-
-
 
 ### <a name="update-menus"></a>Обновить меню
 
@@ -147,7 +138,7 @@ xmlns:local="http://schemas.android.com/apk/res-auto">
 local:showAsAction="ifRoom"
 ```
 
-Аналогичным образом измените Resources **/Menu/edit_menus. XML** и замените его содержимое следующим XML-кодом:
+Аналогичным образом измените **Resources/Menu/edit_menus. XML** и замените его содержимое следующим XML-кодом:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -172,7 +163,6 @@ local:showAsAction="ifRoom"
 ```
 
 Как этот переключатель пространства имен обеспечивает поддержку `showAsAction` атрибута в версиях Android до уровня API 11? Пользовательский атрибут `showAsAction` и все возможные значения включаются в приложение при установке AppCompat NuGet. 
-
 
 ## <a name="subclass-appcompatactivity"></a>Подкласс Аппкомпатактивити
 
@@ -203,9 +193,6 @@ SupportActionBar.Title = "My AppCompat Toolbar";
 [![Полный снимок экрана приложения, работающего на устройстве KitKat, отображаются обе панели инструментов](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
 
 При использовании библиотеки AppCompat темы не нужно переключать на основе версии &ndash; Android. Библиотека AppCompat позволяет обеспечить согласованное взаимодействие с пользователем во всех поддерживаемых версиях Android. 
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

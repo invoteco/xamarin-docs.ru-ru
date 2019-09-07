@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 919eff45e11f60db51109904269addeec1038558
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286121"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752877"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Использование основной графической и основной анимации в Xamarin. iOS
 
@@ -25,7 +25,6 @@ ms.locfileid: "70286121"
 Перед началом загрузки образца *графиксдемо* , прилагаемого к этому руководству. Его можно скачать [здесь](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) и найти в каталоге **графиксвалксраугх** . Запустите проект с именем **GraphicsDemo_starter** , дважды щелкнув `DemoView` его, и откройте класс.
 
 ## <a name="drawing-a-path"></a>Рисование контура
-
 
 1. `DemoView` В`CGPath` добавьте переменную в класс и создайте ее экземпляр в конструкторе. Также объявите `CGPoint` две `initialPoint` переменные и `latestPoint`, которые будут использоваться для захвата сенсорной точки, из которой строится путь:
 
@@ -179,7 +178,6 @@ ms.locfileid: "70286121"
 ## <a name="summary"></a>Сводка
 
 В этой статье мы пошаговым примером того, как вместе связаны концепции графики и анимации. Во- `UIView` первых, мы показали, как использовать основные графические изображения для рисования пути в в ответ на касание пользователя. Затем мы показали, как использовать основную анимацию для перемещения изображения по этому пути.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

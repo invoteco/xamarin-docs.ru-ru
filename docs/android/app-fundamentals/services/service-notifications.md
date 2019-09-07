@@ -1,27 +1,26 @@
 ---
 title: Уведомления службы
-description: В этом руководстве рассматривается, как службу Android могут использовать локальные уведомления для отправки сведений для пользователя.
+description: В этом руководство объясняется, как служба Android может использовать локальные уведомления для отправки информации пользователю.
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d56f67254a9eae334fa8ac3f08d3ef270800c309
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5d25604db1f88702f4c24df21b3ebba6c9c2fc95
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012390"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754818"
 ---
 # <a name="service-notifications"></a>Уведомления службы
 
-_В этом руководстве рассматривается, как службу Android могут использовать локальные уведомления для отправки сведений для пользователя._
+_В этом руководство объясняется, как служба Android может использовать локальные уведомления для отправки информации пользователю._
 
+## <a name="service-notifications-overview"></a>Общие сведения об уведомлениях службы
 
-## <a name="service-notifications-overview"></a>Общие сведения о службе уведомлений
-
-Уведомления службы позволяют приложения для отображения сведений для пользователя, даже если приложение Android не находится на переднем плане. Это возможно для уведомлений для выполнения действий для пользователя, например при отображении действия из приложения. В следующем образце кода показано, как служба может отправлять уведомления пользователю:
+Уведомления службы позволяют приложению отображать сведения пользователю, даже если приложение Android не находится на переднем плане. Уведомление может предоставить пользователю действия, например отображение действия из приложения. В следующем примере кода показано, как служба может отправлять уведомления пользователю.
 
 ```csharp
 [Service]
@@ -46,18 +45,17 @@ public class MyService: Service
 }
 ```
 
-На этом снимке экрана приведен пример уведомления, которое отображается:
+На этом снимке экрана показан пример отображаемого уведомления:
 
-[![Значок, отображаемый в строке состояния](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
+[![Значок уведомления, отображаемый в строке состояния](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
-Когда слайды пользователя вниз экрана уведомлений сверху, отображается полный текст уведомления:
+Когда пользователь выводит на экран уведомление в верхней части экрана, отображается полное уведомление:
 
-![Notication, отображаются в области уведомлений](service-notifications-images/02-fullnotification.png)
+![Оповещение, отображаемое в области уведомлений](service-notifications-images/02-fullnotification.png)
 
+## <a name="updating-a-notification"></a>Обновление уведомления
 
-## <a name="updating-a-notification"></a>Обновление уведомление
-
-Чтобы обновить уведомление, служба будет повторно опубликовать уведомление, используя тот же идентификатор уведомления. Android, чтобы отобразить или обновить уведомление в строке состояния при необходимости.
+Чтобы обновить уведомление, служба повторно опубликует уведомление, используя тот же идентификатор уведомления. При необходимости Android отобразит или обновит уведомление в строке состояния.
 
 ```csharp 
 void UpdateNotification(string content)
@@ -79,8 +77,7 @@ Notification GetNotification(string content, PendingIntent intent)
 }
 ```
 
-Дополнительные сведения об уведомлениях о [локальных уведомлений](~/android/app-fundamentals/notifications/local-notifications.md) раздел [уведомлений Android](~/android/app-fundamentals/notifications/index.md) руководства.
-
+Дополнительные сведения об уведомлениях см. в разделе [локальные уведомления](~/android/app-fundamentals/notifications/local-notifications.md) в статье [об уведомлениях Android](~/android/app-fundamentals/notifications/index.md) .
 
 ## <a name="related-links"></a>Связанные ссылки
 

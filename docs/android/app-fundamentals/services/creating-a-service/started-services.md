@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644129"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755061"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Службы, запущенные с помощью Xamarin. Android
 
@@ -42,7 +42,7 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 - `StartCommandFlag.Redelivery`Это означает, что является повторной доставкой предыдущего `Intent`. `Intent` &ndash; Это значение указывается, когда служба была возвращена `StartCommandResult.RedeliverIntent` , но была остановлена, прежде чем она сможет правильно завершить работу.
 -`StartCommandFlag.Retry`Это значение получается, когда произошел сбой предыдущего `OnStartCommand` вызова, и Android пытается запустить службу повторно с тем же намерением, что и предыдущая попытка неудачной попытки. &dash;
- 
+
 Наконец, третий параметр — это целочисленное значение, уникальное для приложения, идентифицирующего запрос. Возможно, несколько вызывающих объектов могут вызывать один и тот же объект службы. Это значение используется для связывания запроса на прерывание службы с заданным запросом для запуска службы. Более подробно он будет обсуждаться в разделе [Остановка службы](#Stopping_the_Service). 
 
 Значение `StartCommandResult` возвращается службой в качестве предложения для Android на действиях, выполняемых в случае, если служба прервана из-за ограничений ресурсов. Существует три возможных значения для `StartCommandResult`:

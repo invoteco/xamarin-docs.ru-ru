@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1daf4822dd7debe98aabd58d42cb6ed29f95b90d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228253"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759361"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Обрезка изображения по границам области с помощью путей
 
@@ -56,7 +56,6 @@ public class MonkeyThroughKeyholePage : ContentPage
 ```
 
 Несмотря на то что `keyholePath` объект описывает очертания объекта стенка с замочной, координаты, является совершенно произвольные и что было удобно, если было придумано данные пути. По этой причине `PaintSurface` обработчик получает границы данного пути и вызовы `Translate` и `Scale` для перемещения путь относительно центральной части экрана и сделать его практически по высоте экрана:
-
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -510,7 +509,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 Он не очень похоже клевера конечного – четыре, но это изображение, в противном случае может оказаться непросто для подготовки к просмотру без усечения:
 
 [![Тройной снимок экрана с четырьмя листами клевера страницы](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

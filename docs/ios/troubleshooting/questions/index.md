@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 57908027c6e9215504f410c0f9c989d6fbe3adad
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a8549e03c96a5e21f7a235064ebd72fc671cf2b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290511"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769283"
 ---
 # <a name="ios-frequently-asked-questions"></a>Часто задаваемые вопросы о iOS
 
@@ -35,7 +35,6 @@ ms.locfileid: "70290511"
 
 ### <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logssymbolicate-ios-crashmd"></a>[Где найти dSYM-файл, чтобы выразить символами журналы с данными об аварийном завершении iOS?](symbolicate-ios-crash.md)
 В этом руководстве описываются основные шаги для журналов аварийного завершения симболикатинг iOS, помогающие диагностировать сбои. Он также содержит ссылки на дополнительные ресурсы для более сложных приемов символов & сведения о интерпретации журналов сбоев iOS.
-
 
 ### <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studioxs-mono-runtimemd"></a>[Как задать переменные среды выполнения Mono для проектов iOS в Xamarin Studio?](xs-mono-runtime.md)
 Если необходимо задать переменные среды выполнения для Mono, их можно задать в **параметрах проекта > запуска > страница Общие** .
@@ -61,7 +60,6 @@ ms.locfileid: "70290511"
 ### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Почему отправка приложения завершается ошибкой: "Запрещенные пути ("iTunesMetadata.plist") в…"?](itunesmetadata-disallowed-paths.md)
 Эта ошибка является результатом изменения в процессе проверки в магазине приложений Apple. Эта конкретная ошибка _не_ связана с конкретной версией Xamarin, которую вы установили, поэтому переход на использование более ранней версии _не_ поможет. Это руководство содержит ссылки на дополнительные сведения о том, как устранить проблему.
 
-
 ## <a name="diagnosing-specific-error-messages"></a>Диагностика конкретных сообщений об ошибках
 
 ### <a name="ios-designer-error-with-registerserviceporterror-registerserviceportmd"></a>[Ошибка конструктора iOS RegisterServicePort](error-registerserviceport.md)
@@ -83,8 +81,6 @@ ms.locfileid: "70290511"
 
 > [!IMPORTANT]
 > Приведенные ниже статьи относятся к проблемам, которые были решены в последних версиях Xamarin. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.
-
-
 
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[Размер IPA-файла составляет 0 байт](ipa-zero-bytes.md)
 В предыдущих версиях Xamarin существовали некоторые известные проблемы, которые могут привести к тому, что файл IPA в Windows будет иметь значение 0 байт.

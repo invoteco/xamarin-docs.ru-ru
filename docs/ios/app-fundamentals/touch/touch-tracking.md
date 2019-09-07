@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 00fa1a65d2a73220675d8142e70ac904a93e3042
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eca8a1bdc3c60ae4dbaabf022a9dbe91f7e30402
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281969"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767034"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Отслеживание пальцев с несколькими касаниями в Xamarin. iOS
 
@@ -41,7 +41,6 @@ class FingerPaintPolyline
 ```
 
 Каждая Ломаная линия имеет цвет, толщину штриха и графический [`CGPath`](xref:CoreGraphics.CGPath) объект iOS для накопления и отрисовки нескольких точек линии при ее прорисовке.
-
 
 Весь остальной код, показанный ниже, содержится в `UIView` производном названии. `FingerPaintCanvasView` Этот класс поддерживает словарь объектов типа `FingerPaintPolyline` в течение времени, когда они активно нарисованы одним или несколькими пальцами:
 
@@ -187,8 +186,6 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 [![](touch-tracking-images/image01.png "Отслеживание отдельных пальцев и рисование результатов на экране")](touch-tracking-images/image01.png#lightbox)
 
 Теперь вы узнали, как можно отключать отдельные пальцы на экране и отличать их друг от друга.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f66764fef5c54563ffd03274b1f86a8c0bcc637
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3b74acee34c367814fbd2a948fe490f4225aee00
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522140"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755390"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient Stack и селектор реализации SSL/TLS для Android
 
@@ -23,7 +23,7 @@ ms.locfileid: "69522140"
 > [!WARNING]
 > **Апрель 2018** — из-за повышенных требований к безопасности, включая соответствие требованиям PCI, основным поставщикам облачных услуг и веб-серверам требуется отключить поддержку протоколов TLS версий старше 1,2. Проекты Xamarin, созданные в предыдущих версиях Visual Studio по умолчанию, используют более старые версии TLS.
 >
-> Чтобы ваши приложения продолжали работать с этими серверами и службами, необходимо  **`Android HttpClient` обновить проекты Xamarin с помощью параметров и `Native TLS 1.2` , приведенных ниже, а затем повторно создать и повторно развернуть приложения** для пользователей.
+> Чтобы ваши приложения продолжали работать с этими серверами и службами, необходимо **обновить `Android HttpClient` проекты Xamarin с помощью параметров и `Native TLS 1.2` , приведенных ниже, а затем повторно создать и повторно развернуть приложения** для пользователей.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -32,7 +32,6 @@ ms.locfileid: "69522140"
 Ниже приведены рекомендуемые параметры для поддержки TLS 1,2.
 
 [![Параметры Visual Studio для Android](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -75,8 +74,6 @@ ms.locfileid: "69522140"
 - Обычно это происходит намного медленнее (например, шифрование), чем собственный API.
 - Для этого требуется более управляемый код, создавая более крупные приложения.
 
-
-
 ### <a name="choosing-a-handler"></a>Выбор обработчика
 
 Выбор между `AndroidClientHandler` и `HttpClientHandler` зависит от потребностей вашего приложения. `AndroidClientHandler`рекомендуется использовать для обеспечения актуальной поддержки безопасности, например.
@@ -98,7 +95,6 @@ ms.locfileid: "69522140"
 
 Начиная с Xamarin. Android 8,3, поставщик TLS по умолчанию является скучным`btls`протоколом SSL (). Если вы не хотите использовать скучный протокол SSL, можно вернуться к управляемой реализации SSL с предысторией, задав `$(AndroidTlsProvider)` для `legacy` свойства значение (Дополнительные сведения о настройке свойств сборки см. в разделе [процесс сборки](~/android/deploy-test/building-apps/build-process.md)).
 
-
 ### <a name="programatically-using-androidclienthandler"></a>Программное использование`AndroidClientHandler`
 
 `Xamarin.Android.Net.AndroidClientHandler` Является реализациейспециальнодля`HttpMessageHandler` Xamarin. Android.
@@ -113,7 +109,6 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 > [!NOTE]
 > Базовое устройство Android должно поддерживать TLS 1,2 (IE. Android 4,1 и более поздние версии). Обратите внимание, что официальная поддержка TLS 1,2 находится в Android 5.0 +. Однако некоторые устройства поддерживают TLS 1,2 в Android 4.1 +.
-
 
 ## <a name="ssltls-implementation-build-option"></a>Параметр сборки реализации SSL/TLS
 
@@ -180,7 +175,6 @@ var client = new HttpClient();
 -----
 
 Дополнительные сведения о переменных среды и Xamarin. Android см. в разделе с руководством по [среде Xamarin. Android](~/android/deploy-test/environment.md) .
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

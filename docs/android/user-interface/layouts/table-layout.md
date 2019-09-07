@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 1c477f030dc69394ba601b31d71a772f5037af48
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522295"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758395"
 ---
 # <a name="xamarinandroid-tablelayout"></a>Xamarin. Android Таблелайаут
 
@@ -118,13 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[`Activity`](xref:Android.App.Activity) &mdash; `Resource.Layout.Main` Метод) загружает файл макета для, заданный идентификатором ресурса, относится к файлу макета RESOURCES/Layout/Main. axml. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+Метод) загружает файл макета [`Activity`](xref:Android.App.Activity)для, заданный идентификатором &mdash; `Resource.Layout.Main` ресурса, относится к файлу макета **Resources/Layout/Main. axml** . [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
 
 Запустите приложение. Вы должны увидеть следующее:
 
 [![Пример снимка экрана приложения Таблелайаут, отображающего несколько строк таблицы](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
-
-
 
 ## <a name="references"></a>Ссылки
 

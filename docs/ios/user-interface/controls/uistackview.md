@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bde76891b4b01800384ee0579e3fbe14987c5420
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282689"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768389"
 ---
 # <a name="stack-views-in-xamarinios"></a>Представления стеков в Xamarin. iOS
 
@@ -270,8 +270,6 @@ UIView.Animate(0.25, ()=>{
 
 В этой статье рассматривается новый `UIStackView` элемент управления (для iOS 9) для управления набором подпросмотров в стеке по горизонтали или по вертикали в приложении Xamarin. iOS.
 Это начало работы с простым примером использования представлений стека для создания пользовательского интерфейса и завершения более подробного просмотра представлений стека, их свойств и функций.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

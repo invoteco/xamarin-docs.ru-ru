@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f0cdec005dc210600977d5c8f5606cff6570989
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ec5dd15ffb838d7062c8c769375289e7b07b24d2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290015"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766374"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Шаг 2. Настройка доступа к службе для мобильного приложения
 
@@ -30,8 +30,6 @@ ms.locfileid: "70290015"
    ![](configure-images/2.3-permissions.png "После выбора приложения снова выберите только что добавленное приложение в разделе разрешения для других приложений и предоставьте соответствующие права.")
 
 4. Наконец, **Сохраните** конфигурацию. Эти службы теперь должны быть доступны в мобильных приложениях!
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

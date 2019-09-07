@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
-ms.openlocfilehash: 7c98686a1aa99e250b3fd1d0fcc6ae64d625a11f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e6c5f6e19599624899f74b99dcaaae734d098b3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764195"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -33,7 +33,6 @@ _RecyclerView — это группа представлений для отоб
 
 В этом руководство объясняется, `RecyclerView` как использовать в приложениях Xamarin. Android. в нем объясняется `RecyclerView` `RecyclerView` , как добавить пакет в проект Xamarin. Android, и в нем описываются функции типичного приложения. Реальные примеры кода содержат сведения о том, как интегрироваться `RecyclerView` в приложение, как реализовать нажатие кнопки "Просмотр элементов" и как обновляться `RecyclerView` при изменении базовых данных. В этом учебнике предполагается, что вы знакомы с разработкой Xamarin. Android.
 
-
 ### <a name="requirements"></a>Требования
 
 Несмотря `RecyclerView` на то, что часто связывается с интерфейсом загрузки Android 5,0, оно &ndash; предоставляется в виде библиотеки `RecyclerView` поддержки для приложений, предназначенных для API уровня 7 (Android 2,1) и более поздних версий. Для использования `RecyclerView` в приложениях на основе Xamarin необходимо следующее:
@@ -41,7 +40,6 @@ _RecyclerView — это группа представлений для отоб
 - **Xamarin. Android** &ndash; Xamarin. Android 4,20 или более поздней версии должен быть установлен и настроен с помощью Visual Studio или Visual Studio для Mac.
 
 - Проект приложения должен содержать пакет **Xamarin. Android. support. версии 7. RecyclerView** . Дополнительные сведения об установке пакетов NuGet см. в [разделе Пошаговое руководство. Включение NuGet в проект](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
-
 
 ### <a name="overview"></a>Обзор
 
@@ -60,7 +58,6 @@ _RecyclerView — это группа представлений для отоб
 
 - `RecyclerView`включает встроенные анимации для элемента добавить и удалить. `ListView`Анимация требует некоторых дополнительных усилий в части разработчика приложения.
 
-
 ### <a name="sections"></a>Разделы
 
 #### <a name="recyclerview-parts-and-functionalityandroiduser-interfacelayoutsrecycler-viewparts-and-functionalitymd"></a>[RecyclerView части и функциональные возможности](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
@@ -76,13 +73,11 @@ _RecyclerView — это группа представлений для отоб
 
 В этом разделе добавляется дополнительный код для примера приложения, представленного в [базовом примере RecyclerView](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) , чтобы продемонстрировать, как обрабатывает события щелчка элемента и обновляются `RecyclerView` при изменении базового источника данных.
 
-
 ### <a name="summary"></a>Сводка
 
 В этом руководство было представлено мини-приложение Android `RecyclerView` . в нем было объяснено, как `RecyclerView` добавить библиотеку поддержки в `RecyclerView` проекты Xamarin. Android, как перезапускать представления, как она применяет шаблон представления для повышения эффективности и как различные вспомогательные классы, которые составляют `RecyclerView` совместную работу для вывода коллекций. В нем представлен пример кода для демонстрации `RecyclerView` того, как интегрирована в приложение, было объяснено `RecyclerView`, как настроить политику макета в соответствии с разделом в различных диспетчерах макета, и было описано, как управлять событиями щелчка элемента и уведомлять `RecyclerView`изменений в источнике данных.
 
-Дополнительные сведения о `RecyclerView`см. в справочнике по [классам RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
-
+Дополнительные сведения о `RecyclerView`см. в [справочнике по классам RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
 
 ## <a name="related-links"></a>Связанные ссылки
 

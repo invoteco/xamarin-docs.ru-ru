@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 4568b204989c3ebb89ba4441232a100678657e28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 97542c50041bfe24a3ad9494443ed8a4df85f113
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280659"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752228"
 ---
 # <a name="ios-7-user-interface-overview"></a>Обзор пользовательского интерфейса iOS 7
 
@@ -69,7 +69,7 @@ UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle
 В результате будет создано стандартное представление предупреждений с проигнорированным вложенным представлением, как показано ниже:
 
  ![](ios7-ui-images/alert.png "Пример Уиалертвиев")
- 
+
  Примечание. Уиалертвиев в iOS 8 устарел. Ознакомьтесь с рецептом [контроллера предупреждений](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) об использовании представления предупреждений в iOS 8 и более поздних версиях.
 
 ### <a name="uisegmentedcontrol"></a>уисегментедконтрол
@@ -253,7 +253,6 @@ public override bool PrefersStatusBarHidden ()
 
 > [!IMPORTANT]
 > Цвет оттенка не может быть `UIAppearance`задан с помощью.
-
 
 ### <a name="dynamic-type"></a>Динамический тип
 

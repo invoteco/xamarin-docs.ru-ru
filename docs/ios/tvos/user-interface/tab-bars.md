@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df19dcf542bd3a62a696c0d7d533b4e14390336e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768996"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Работа с контроллерами панели вкладок tvOS в Xamarin
 
@@ -121,7 +121,6 @@ ms.locfileid: "70283982"
 
 Используйте свойство объекта `UITabBar` для доступа к коллекции ,содержащейнуль-индексныймассив(0).`UITabBarItems` `Items` Свойство вернет текущую выбранную вкладку (Category) `UITabBarItem`как. `SelectedItem`
 
-
 <a name="Working-with-Tab-Bar-Items" />
 
 ## <a name="working-with-tab-bar-items"></a>Работа с элементами панели вкладок
@@ -144,9 +143,6 @@ TabBar.Items [2].BadgeValue = "10";
 ## <a name="summary"></a>Сводка
 
 В этой статье рассматривается проектирование и работа с контроллером панели вкладок в приложении Xamarin. tvOS.
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: e2d3a3590e8006c745d28026f3a359350f7ce940
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: a759569f9faf7c8e13768a68b203a8221d3b31cb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621067"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770713"
 ---
 # <a name="native-views-in-c"></a>Собственные представления в C\#
 
@@ -319,7 +319,6 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 ## <a name="summary"></a>Сводка
 
 В этой статье описываются способы добавления собственного представления макета Xamarin.Forms, созданные с помощью C# и переопределение макет пользовательские представления, чтобы исправить их измерения использования API.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fc0664ff32e63af5d0c80f69ff69f4992ad0c708
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121634"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770311"
 ---
 # <a name="customizing-listview-appearance"></a>Настройка внешнего вида ListView
 
@@ -294,12 +294,10 @@ XAML:
 
 ![](customizing-list-appearance-images/height-custom.png "ListView с фиксированную высоту строки")
 
-
 ### <a name="uneven-rows"></a>Неравномерное строк
 
 Если вы хотите отдельных строк для получения разной высоты, можно задать `HasUnevenRows` свойства `true`.
 Обратите внимание, что высота строк не нужно вручную задать один раз `HasUnevenRows` было присвоено `true`, так как значения высоты будет вычисляться автоматически с Xamarin.Forms.
-
 
 C#:
 
@@ -337,8 +335,6 @@ void OnImageTapped (object sender, EventArgs args)
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView с изменением размеров строк среды выполнения")
 
 Обратите внимание, что надежный вероятность снижения производительности, что если эта функция является чрезмерным.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

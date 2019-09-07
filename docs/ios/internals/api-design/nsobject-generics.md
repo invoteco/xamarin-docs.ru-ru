@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 531d0b2b6141cc0e1f4014f1d3422af3c6f8643a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 136efbd936bc39563c419a87ed48f6fc5436efa9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768546"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Универсальные подклассы Нсобжект в Xamarin. iOS
 
@@ -220,4 +220,3 @@ class Generic<T> : NSObject where T : NSObject
 ## <a name="performance"></a>Производительность
 
 Статический регистратор не может разрешить экспортируемый элемент в универсальном типе во время сборки, так как он обычно имеет значение, он должен быть просмотрен во время выполнения. Это означает, что вызов такого метода из цели-C немного медленнее, чем вызов членов из неуниверсальных классов.
-

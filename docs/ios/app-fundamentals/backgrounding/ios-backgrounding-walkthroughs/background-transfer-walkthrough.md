@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3e27cffa9e2605c3697536f226fe87fbbf1bfbbd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 47a07959bcfabc0980ccb90f2ae7a489e5e71223
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286882"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756236"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Фоновая перенаправление и NSURLSession в Xamarin. iOS
 
@@ -56,12 +56,10 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
 - *Дидрецеивечалленже* — вызывается для запроса учетных данных, когда требуется авторизация.
 - *Дидбекомеинвалидвисеррор* — вызывается, `NSURLSession` если станет недействительным.
 
-
 Для фоновых сеансов требуются более специализированные делегаты в зависимости от типов выполняемых задач. Фоновые сеансы ограничены двумя типами задач:
 
 - *Отправка задач* — задачи типа `NSUrlSessionUploadTask` используют `NSUrlSessionTaskDelegate` , который наследует от `NSUrlSessionDelegate` . Этот делегат предоставляет дополнительные методы отслеживания хода передачи, обработки перенаправления HTTP и т. д.
 - *Задачи скачивания* — задачи типа `NSUrlSessionDownloadTask` используйте `NSUrlSessionDownloadDelegate` , который наследует от `NSUrlSessionTaskDelegate` . Этот делегат предоставляет все методы для отправки задач, а также методы, связанные с загрузкой, для отслеживания хода загрузки и определения момента возобновления или завершения задачи загрузки.
-
 
 В следующем коде определяется задача, которую можно использовать для загрузки изображения из URL-адреса. Мы начнем задачу, вызывая `CreateDownloadTask` в нашем фоновом сеансе и передавая запрос URL-адреса:
 
@@ -96,7 +94,6 @@ API делегата сеанса предоставляет широкий на
 
 > [!IMPORTANT]
 > Фоновые сеансы запускаются в фоновом потоке, поэтому любые вызовы для обновления пользовательского интерфейса должны быть явно запущены в потоке пользовательского интерфейса путем вызова `InvokeOnMainThread` , чтобы избежать завершения работы приложения iOS. 
-
 
 ## <a name="handling-transfer-completion"></a>Обработка завершения перемещения
 
@@ -141,8 +138,6 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 ```
 
 В этом пошаговом руководстве мы рассмотрели основные шаги для реализации службы фоновой пересылки в iOS 7.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

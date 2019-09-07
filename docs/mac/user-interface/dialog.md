@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 723f751b93af304c7d70fb1250dbda2f0220e77e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 555ee8131c4d18988a7f208154d358a61a9773c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292215"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770597"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Диалоговые окна в Xamarin. Mac
 
@@ -63,7 +63,6 @@ _Лист_ — это модальное диалоговое окно, кото
 Диалоговое окно "Открыть" предоставляет пользователям единообразный способ поиска и открытия элемента в приложении:
 
 [![](dialog-images/dialog03.png "Диалоговое окно «Открыть»")](dialog-images/dialog03.png#lightbox)
-
 
 ### <a name="print-and-page-setup-dialogs"></a>Диалоговые окна настройки печати и страницы
 

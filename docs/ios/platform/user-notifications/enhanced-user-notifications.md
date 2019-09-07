@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ec63162a21333d0ff831ded1ab17a3d8bb0efaa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290573"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769377"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Расширенные уведомления пользователей в Xamarin. iOS
 
@@ -360,7 +360,6 @@ UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 
 Чтобы обновить существующее уведомление, просто создайте новое уведомление с измененными параметрами (например, новым временем активации) и добавьте его в систему с тем же идентификатором запроса, что и у уведомления, которое необходимо изменить. Пример
 
-
 ```csharp
 using UserNotifications;
 ...
@@ -664,8 +663,6 @@ namespace myApp {
 ## <a name="summary"></a>Сводка
 
 В этой статье описаны все способы улучшения уведомлений пользователей в iOS 10. В нем представлена новая платформа уведомлений пользователей и способы ее использования в приложении Xamarin. iOS или расширении приложения.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 89b7f70ae69987edbd465d669f1bac17ddebc7c8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bea058a1f275d6f02fe4cbdf70f8e47a11d1cf8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522441"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764122"
 ---
 # <a name="recyclerview-parts-and-functionality"></a>RecyclerView части и функциональные возможности
-
 
 `RecyclerView`обрабатывает некоторые задачи внутренне (например, прокрутку и повторное использование представлений), но это, по сути, руководитель, который координирует вспомогательные классы для отображения коллекции. `RecyclerView`делегирует задачи следующим вспомогательным классам:
 
@@ -51,7 +50,6 @@ ms.locfileid: "69522441"
 
 Если не расширить `ItemDecoration` и `ItemAnimator`, `RecyclerView` использует реализации по умолчанию. В этом руководство не объясняется, как создавать `ItemDecoration` пользовательские `ItemAnimator` классы и. Дополнительные сведения об этих классах см. в разделе [RecyclerView. итемдекоратион](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html) and [RecyclerView. итеманиматор](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
-
 <a name="recycling" />
 
 ### <a name="how-view-recycling-works"></a>Как работает перезапуск представлений
@@ -62,7 +60,7 @@ ms.locfileid: "69522441"
 
 1. Когда представление прокручивается и больше не отображается, оно становится *представлением отходов*.
 
-2. Представление "отходы" помещается в пул и становится представлением для *очистки*.
+2. Представление "отходы" помещается в пул и становится *представлением для очистки*.
     Этот пул представляет собой кэш представлений, отображающих данные одного и того же типа.
 
 3. При отображении нового элемента из пула перезапускается представление для повторного использования. Так как это представление должно быть повторно привязано адаптером перед отображением, оно называется « *грязным» представлением*.
@@ -74,8 +72,6 @@ ms.locfileid: "69522441"
 6. Перезапущенное представление переходит на экран, когда пользователь прокручивает `RecyclerView` к следующему элементу в списке. В то же время другое представление прокручивается и перезапускается в соответствии с описанными выше шагами.
 
 Помимо повторного использования представлений элементов, `RecyclerView` также использует другую оптимизацию эффективности: Просмотр владельцев. *Держатель представления* — это простой класс, который кэширует ссылки на представление. Каждый раз, когда адаптер увеличивает файл макета элемента, он также создает соответствующий держатель представления. Владелец представления использует `FindViewById` для получения ссылок на представления внутри неструктурированного файла макета элемента. Эти ссылки используются для загрузки новых данных в представления каждый раз, когда макет перезапускается для отображения новых данных.
- 
-
 
 ### <a name="the-layout-manager"></a>Диспетчер макетов
 
@@ -94,8 +90,7 @@ ms.locfileid: "69522441"
 
 Чтобы указать Диспетчер макетов, создайте экземпляр выбранного диспетчера макетов и передайте его в `SetLayoutManager` метод. Обратите внимание, что *необходимо* указать, &ndash; что диспетчер `RecyclerView` макетов не выбирает стандартный Диспетчер макетов по умолчанию.
 
-Дополнительные сведения о диспетчере макетов см. в справочнике по [классам RecyclerView. лайаутманажер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
-
+Дополнительные сведения о диспетчере макетов см. в [справочнике по классам RecyclerView. лайаутманажер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
 ### <a name="the-view-holder"></a>Держатель представления
 
@@ -106,8 +101,7 @@ ms.locfileid: "69522441"
 3. Реализуйте свойства, которые адаптер может использовать для доступа к этим ссылкам.
 
 Подробный пример `ViewHolder` реализации представлен в [базовом RecyclerView примере](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
-Дополнительные сведения о `RecyclerView.ViewHolder`см. в справочнике по [классам RecyclerView. виевхолдер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
+Дополнительные сведения о `RecyclerView.ViewHolder`см. в [справочнике по классам RecyclerView. виевхолдер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
 ### <a name="the-adapter"></a>Адаптер
 
@@ -131,8 +125,6 @@ ms.locfileid: "69522441"
 
 Диспетчер макетов вызывает эти методы при размещении элементов `RecyclerView`в. 
 
-
-
 ### <a name="notifying-recyclerview-of-data-changes"></a>Уведомление RecyclerView об изменениях данных
 
 `RecyclerView`не обновляет автоматическое отображение при изменении содержимого его источника данных; адаптер должен уведомлять об `RecyclerView` изменении в наборе данных. Набор данных может изменяться различными способами. Например, содержимое в элементе может измениться, или общая структура данных может быть изменена.
@@ -155,7 +147,6 @@ ms.locfileid: "69522441"
 Если точно известно, как был изменен набор данных, можно вызвать соответствующие методы выше, чтобы обновить `RecyclerView` наиболее эффективным способом. Если точно неизвестно, как был изменен набор данных, можно вызвать метод `NotifyDataSetChanged`, который гораздо менее эффективен, поскольку `RecyclerView` должен обновить все представления, видимые пользователю. Дополнительные сведения об этих методах см. в разделе [RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
 В следующем разделе приводится пример [базового RecyclerView](~/android/user-interface/layouts/recycler-view/recyclerview-example.md), который позволяет продемонстрировать реальные примеры кода для частей и функций, описанных выше.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

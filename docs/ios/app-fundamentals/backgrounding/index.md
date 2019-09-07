@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 161fda52002e8bb757db23c9b2a20a6befd132f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5afb87eb3f84e00427072ef6c4e2c19b46de0186
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289343"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766585"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Фоновое изменение в Xamarin. iOS
 
@@ -35,8 +35,6 @@ _Фоновая обработка или фоновое изменение — 
 ## <a name="summary"></a>Сводка
 
 В этом руководством мы предоставили различные способы выполнения фоновой обработки в iOS. Мы рассмотрели состояния приложений iOS и проверили фоновое воспроизведение ролей в жизненном цикле приложения iOS. Кроме того, мы узнали, как можно зарегистрировать отдельные задачи или целые приложения для работы в фоновом режиме в iOS. Наконец, мы подтронули наше представление о фоновом управлении iOS, создав приложения, которые выполняют обновления в фоновом режиме.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

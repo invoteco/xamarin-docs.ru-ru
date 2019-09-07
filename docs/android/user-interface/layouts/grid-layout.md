@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a14930d52b551b35dcf5a36e2475b021e5bf27d1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ad7e2e16784a309286d42d4562a52ef57671e477
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646592"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764561"
 ---
 # <a name="xamarinandroid-gridlayout"></a>Xamarin. Android GridLayout
 
@@ -20,7 +20,6 @@ ms.locfileid: "68646592"
  [![Обрезанное сообщение GridLayout, отображающее четыре ячейки](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout`работает с иерархией с плоским представлением, где дочерние представления задают свои расположения в сетке, указывая строки и столбцы, в которых они должны находиться. Таким образом, *GridLayout* может позиционировать представления в сетке, не требуя, чтобы в промежуточных представлениях была представлена табличная структура, например, в строках таблицы, используемых в таблелайаут. Благодаря поддержке плоской иерархии свойство *GridLayout* может более быстро разметки своих дочерних представлений. Давайте взглянем на пример, иллюстрирующий то, что эта концепция фактически означает в коде.
-
 
 ## <a name="creating-a-grid-layout"></a>Создание макета сетки
 
@@ -56,8 +55,6 @@ ms.locfileid: "68646592"
 
  [![Снимок экрана: приложение Гридлайаутдемо, отображающее четыре ячейки](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
-
-
 ## <a name="specifying-orientation"></a>Указание ориентации
 
 Обратите внимание, `TextView` что в приведенном выше коде XML не указана строка или столбец. Если эти значения не указаны, объект `GridLayout` назначает каждое дочернее представление по порядку на основе ориентации. Например, изменим ориентацию свойства GridLayout с горизонтального на вертикальную по вертикали следующим образом:
@@ -79,8 +76,6 @@ ms.locfileid: "68646592"
 Это приводит к следующему пользовательскому интерфейсу во время выполнения:
 
  [![Снимок экрана Гридлайаутдемо с ячейками, расположенными в вертикальной ориентации](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
-
-
 
 ### <a name="specifying-explicit-position"></a>Указание явной позицией
 
@@ -115,8 +110,6 @@ ms.locfileid: "68646592"
             android:layout_column="1"  />
 </GridLayout>
 ```
-
-
 
 ### <a name="specifying-spacing"></a>Указание интервала
 
@@ -175,8 +168,6 @@ ms.locfileid: "68646592"
  [![Снимок экрана Гридлайаутдемо, иллюстрирующий большие ячейки с отступами](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 Преимуществом использования нового `Space` представления является то, что оно позволяет использовать интервалы и не требует от нас устанавливать атрибуты для каждого дочернего представления.
-
-
 
 ### <a name="spanning-columns-and-rows"></a>Объединение столбцов и строк
 
@@ -241,7 +232,6 @@ ms.locfileid: "68646592"
 Это приводит к отображению макета `TextViews` , аналогичного макету, который мы ранее делали, с кнопкой, добавленной в нижнюю `GridLayout` часть, как показано ниже:
 
  [![Снимок экрана Гридлайаутдемо с кнопкой, охватывающей оба столбца](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

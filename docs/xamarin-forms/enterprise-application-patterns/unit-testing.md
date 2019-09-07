@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529070"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770686"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Модульное тестирование корпоративных приложений
 
@@ -225,7 +225,6 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 Поведение тестируемого объекта может быть изолировано путем замены зависимых объектов макетами объектов, имитирующих поведение зависимых объектов. Это позволяет выполнять модульные тесты без неудобного использования ресурсов, таких как веб-службы или базы данных.
 
 Тестирование моделей и моделей представлений из приложений MVVM идентично тестированию любых других классов, и можно использовать одни и те же средства и методики.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

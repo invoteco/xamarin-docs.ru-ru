@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286758"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768596"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Методы быстрого взаимодействия для watchOS 3 в Xamarin
 
@@ -98,7 +98,7 @@ watchOS 3 будет поддерживать четыре следующих р
 - Некоторый жест имеет приоритет над другими типами жестов, например:
   - Прокрутка
   - Force Touch
- 
+
 ### <a name="digital-crown-rotation"></a>Вращение Digital Crown
 
 Реализуя поддержку Digital Crown в своих приложениях watchOS 3, разработчик может обеспечить повышенную скорость навигации и взаимодействия с точностью для своих пользователей.
@@ -169,7 +169,6 @@ namespace MonkeyWatch.MonkeySeeExtension
 Знак (`+/-`) разностной разницы указывает направление, в котором пользователь переключается Digital Crown:
 
 [![](quick-interaction-techniques-images/quick03.png "Знак разностной разницы указывает направление, в котором пользователь переключается Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 Если пользователь прокручивается вверх, WatchKit возвратит положительные результаты, а при прокрутке вниз будет возвращено отрицательное число разностей, независимо от ориентации, в которой пользователь людьми в просмотр.
 

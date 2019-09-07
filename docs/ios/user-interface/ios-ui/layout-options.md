@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 335c385b5be77736f0e19852eb71f2a2329eb9a2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287040"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768259"
 ---
 # <a name="layout-options-in-xamarinios"></a>Параметры макета в Xamarin. iOS
 
@@ -40,7 +40,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 Чтобы проверить параметры автоподбора размера, включите различные **поддерживаемые ориентации устройств** в параметрах проекта:
 
  [![](layout-options-images/image43a.png "Параметры автоподбора размера")](layout-options-images/image43a.png#lightbox)
@@ -53,7 +52,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 Также можно настроить элементы управления с помощью конструктора. Если выбрать Struts, как показано ниже, изображение будет оставаться по правому краю без обрезки в нижней части представления:
 
  [![](layout-options-images/autoresize.png "Автоповорот")](layout-options-images/autoresize.png#lightbox)
@@ -63,10 +61,6 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
  [![](layout-options-images/image44a.png "Автоповорот")](layout-options-images/image44a.png#lightbox)
 
 Обратите внимание, что текстовые поля и текстовое поле растягиваются для сохранения одинаковых левого и правого полей из `FlexibleWidth` -за параметра. Изображение имеет гибкое и левое поле, что означает сохранение нижнего и правого полей — сохранение изображения в представлении при вращении экрана. Для сложных макетов обычно требуется сочетание этих параметров на каждом видимом элементе управления для сохранения соответствия пользовательского интерфейса и предотвращения перекрытия элементов управления при изменении границ представления (из-за вращения или другого события изменения размера).
-
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

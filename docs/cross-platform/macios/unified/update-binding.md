@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: da877cc10829c4067596263b2a3676413103282d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287377"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765427"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Миграция привязки в Unified API
 
@@ -134,7 +134,6 @@ IntPtr Constructor (CGRect frame);
 
 В качестве последнего шага по обновлению нашего проекта привязки для использования унифицированных интерфейсов API необходимо либо изменить объект `MakeFile` , используемый для сборки проекта, либо тип проекта Xamarin (если привязка выполняется в Visual Studio для Mac) и дать указание _btouch_ для привязки. для универсальных API, а не для классических.
 
-
 ### <a name="updating-a-makefile"></a>Обновление файла MakeFile
 
 Если мы используем Makefile для создания нашего проекта привязки в Xamarin. DLL, необходимо включить `--new-style` параметр командной строки и вызвать метод `btouch-native` вместо `btouch`.
@@ -149,7 +148,6 @@ PROJECT_ROOT=XMBindingLibrarySample
 PROJECT=$(PROJECT_ROOT)/XMBindingLibrarySample.xcodeproj
 TARGET=XMBindingLibrarySample
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
 
 all: XMBindingLibrary.dll
 
@@ -214,8 +212,6 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 ## <a name="summary"></a>Сводка
 
 В этой статье мы показали изменения, которые необходимо внести в существующий проект привязки Xamarin для поддержки новых унифицированных API-интерфейсов и 64-разрядных устройств, и шаги, необходимые для создания новой версии API, совместимой с 64-разрядной версией.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

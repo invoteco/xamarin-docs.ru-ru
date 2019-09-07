@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 2533ad80571e2c8fe94cb4a2dcb0ec0ff0dd68cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3dd321840c4be0729b843897ad51cf5bd2b61196
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643586"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758920"
 ---
 # <a name="intro-to-contentproviders"></a>Введение в Контентпровидерс
 
 _Операционная система Android использует поставщики содержимого для упрощения доступа к общим данным, таким как файлы мультимедиа, контакты и сведения о календаре. В этой статье представлен класс ContentProvider, а также два примера того, как его использовать._
-
 
 ## <a name="content-providers-overview"></a>Общие сведения о поставщиках содержимого
 
@@ -40,8 +39,6 @@ _Операционная система Android использует поста
 Custom `ContentProviders` — это удобный способ упаковки данных для использования в собственном приложении или для использования другими приложениями (включая особые варианты использования, такие как пользовательский поиск и копирование и вставка).
 
 В подразделах этого раздела приводятся некоторые простые примеры использования и `ContentProvider` написания кода.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

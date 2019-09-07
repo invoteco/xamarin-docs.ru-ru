@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/26/2017
-ms.openlocfilehash: b6bf2aa8925e29ed5120de5cc2d3146704259d87
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e0b899e69405874f381c3ab6f9a9200a856d7402
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767313"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Значки App Store в Xamarin. iOS
 
@@ -49,9 +49,6 @@ ms.locfileid: "70282406"
     ![Значок App Store](app-store-icon-images/image2.png)
 
 3. Щелкните значок и перейдите к изображению 1024 x 1024 пикселей. Сохраните каталог активов.
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

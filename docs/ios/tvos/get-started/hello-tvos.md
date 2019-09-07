@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9ad1c63dae312546315406d40858ce24802c6a58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281822"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769308"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Привет, tvOS краткое руководство по началу работы
 
@@ -489,7 +489,6 @@ partial void Clicked (UIButton sender)
 ## <a name="summary"></a>Сводка
 
 В этой статье предоставлено краткое руководство по разработке приложений для tvOS с Visual Studio для Mac путем создания простого приложения Hello, tvOS. В нем были рассмотрены основы подготовки устройств tvOS, создания интерфейса, кодирования для tvOS и тестирования в симуляторе tvOS.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: f37905f483ad31d05276383718a3295d4a288f28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285869"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768939"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
 
@@ -194,7 +194,7 @@ namespace Designer
 Чтобы добавить элемент управления в интерфейс, перетащите его с **панели элементов** и поместите в область конструктора. При добавлении или размещении элемента управления вертикальные и горизонтальные направляющие выделяют часто используемые положения макета, такие как Вертикальное центрирование, горизонтальное центрирование и поля:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
- 
+
 ![В области конструктора направляющие выделяют часто используемые положения макета](introduction-images/9-layoutguides-vsmac.png "В области конструктора направляющие выделяют часто используемые положения макета")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -220,7 +220,7 @@ namespace Designer
 ### <a name="constraints-toolbar"></a>Панель инструментов "ограничения"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
- 
+
 [![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов \"ограничения\"")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -316,7 +316,7 @@ namespace Designer
 Область конструктора поддерживает масштаб несколькими элементами управления:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
- 
+
 ![Элементы управления масштабом на нижней панели инструментов](introduction-images/16-zoomcontrols-vsmac.png "Элементы управления масштабом на нижней панели инструментов")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)

@@ -7,25 +7,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a4e165f6156bf5224881327049b2c3ed48b5c2fe
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8e9788b31bc397a45e4ac98a01bc788096bbd523
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522757"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762367"
 ---
 # <a name="viewpager-with-views"></a>ViewPager с представлениями
 
 _ViewPager — это Диспетчер макетов, позволяющий реализовать навигацию жестурал. Жестуралная навигация позволяет пользователю прокручивать влево и вправо для пошагового просмотра страниц данных. В этом руководстве объясняется, как реализовать прокрутку пользовательского интерфейса с помощью ViewPager и Пажертабстрип, используя представления в качестве страниц данных (в следующем руководстве описывается использование фрагментов для страниц)._
 
- 
 ## <a name="overview"></a>Обзор
 
 Это руководство содержит пошаговую демонстрацию того, как использовать `ViewPager` для реализации коллекции изображений листопадное и популярная деревьев. В этом приложении пользователь просматривает левое и правое по «каталогу дерева» для просмотра изображений дерева. В верхней части каждой страницы каталога имя дерева отображается в`PagerTabStrip`, а изображение дерева — `ImageView`в виде объекта. Адаптер используется для взаимодействия `ViewPager` с базовой моделью данных. Это приложение реализует адаптер, производный `PagerAdapter`от. 
 
 Хотя `ViewPager`приложения, основанные на службах `Fragment`, часто реализуются с помощью s, существуют некоторые сравнительно простые случаи использования, `Fragment`в которых не нужно использовать дополнительную сложность. Например, в базовом приложении Коллекция образов, показанном в этом пошаговом руководстве, не `Fragment`требуется использование s. Так как содержимое является статическим и пользователь просматривает только между разными образами, реализацию можно упростить, используя стандартные представления и макеты Android. 
-
-
 
 ## <a name="start-an-app-project"></a>Запуск проекта приложения
 
@@ -34,8 +31,6 @@ _ViewPager — это Диспетчер макетов, позволяющий 
 [![Снимок экрана: поддержка NuGet версии 4 выбрана в диспетчере пакетов NuGet](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 При этом также будут установлены дополнительные пакеты, реакуиред с помощью **библиотеки поддержки Android версии 4**.
-
-
 
 ## <a name="add-an-example-data-source"></a>Добавление примера источника данных
 
@@ -52,13 +47,11 @@ TreeCatalog treeCatalog = new TreeCatalog();
 int imageId = treeCatalog[2].imageId;
 ```
 
-Поскольку сведения о `TreeCatalog` реализации не важны для понимания `ViewPager`, `TreeCatalog` код не указан здесь. Исходный код `TreeCatalog` доступен по адресу [TreeCatalog.CS](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/TreePager/TreeCatalog.cs). Скачайте этот исходный файл (или скопируйте и вставьте код в новый файл **TreeCatalog.CS** ) и добавьте его в проект. Кроме того, скачайте и распакуйте [файлы образа](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true) в папку Resources **/Draw** и включите их в проект. 
-
-
+Поскольку сведения о `TreeCatalog` реализации не важны для понимания `ViewPager`, `TreeCatalog` код не указан здесь. Исходный код `TreeCatalog` доступен по адресу [TreeCatalog.CS](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/TreePager/TreeCatalog.cs). Скачайте этот исходный файл (или скопируйте и вставьте код в новый файл **TreeCatalog.CS** ) и добавьте его в проект. Кроме того, скачайте и распакуйте [файлы образа](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true) в папку **Resources/Draw** и включите их в проект. 
 
 ## <a name="create-a-viewpager-layout"></a>Создание макета ViewPager
 
-Откройте файл Resources **/Layout/Main. axml** и замените его содержимое следующим XML-кодом:
+Откройте файл **Resources/Layout/Main. axml** и замените его содержимое следующим XML-кодом:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,7 +70,6 @@ because `ViewPager` is packaged in a support library. `ViewPager` is
 available only from 
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK. 
-
 
 ## Set up ViewPager
 
@@ -112,7 +104,6 @@ protected override void OnCreate(Bundle bundle)
 [![Снимок экрана: приложение, отображающее пустой ViewPager](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 На этом этапе объект `ViewPager` пуст, так как в нем отсутствует адаптер для доступа к содержимому в **трикаталог**. В следующем разделе создается **пажерадаптер** для подключения `ViewPager` к **трикаталог**. 
-
 
 ## <a name="create-the-adapter"></a>Создание адаптера
 
@@ -169,8 +160,6 @@ namespace TreePager
 
 Этот код является заглушкой для `PagerAdapter` основной реализации. В следующих разделах каждый из этих методов заменяется рабочим кодом. 
 
-
-
 ### <a name="implement-the-constructor"></a>Реализация конструктора
 
 Когда приложение создает экземпляр `TreePagerAdapter`, оно предоставляет контекст `MainActivity`( `TreeCatalog`) и экземпляр. Добавьте следующие переменные и конструктор членов в начало `TreePagerAdapter` класса в **TreePagerAdapter.CS**: 
@@ -188,8 +177,6 @@ public TreePagerAdapter (Context context, TreeCatalog treeCatalog)
 
 Этот конструктор предназначен для хранения контекста и `TreeCatalog` экземпляра `TreePagerAdapter` , который будет использоваться. 
 
-
-
 ### <a name="implement-count"></a>Число реализаций
 
 `Count` Реализация относительно проста: она возвращает количество деревьев в каталоге дерева. Замените `Count` следующим кодом:
@@ -202,8 +189,6 @@ public override int Count
 ```
 
 `NumTrees` Свойство объекта`TreeCatalog` возвращает количество деревьев (число страниц) в наборе данных.
-
-
 
 ### <a name="implement-instantiateitem"></a>Реализация Инстантиатеитем
 
@@ -235,8 +220,6 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 
 Когда отображает изображение в `position`, оно отображается `ImageView`. `ViewPager` `InstantiateItem` Изначально вызывается дважды для заполнения первых двух страниц с представлениями. По мере прокрутки пользователь вызывается снова, чтобы поддерживать представления сразу за пределами текущего отображаемого элемента. 
 
-
-
 ### <a name="implement-destroyitem"></a>Реализация Дестройитем
 
 `DestroyItem` Метод удаляет страницу из заданной должности. В приложениях, в которых представление в любой заданной позиции может `ViewPager` измениться, необходимо удалить устаревшее представление в этой позиции, прежде чем заменить его новым представлением. В этом `TreeCatalog` примере представление в каждой позиции не изменяется, поэтому представление, удаленное с помощью `DestroyItem` , будет просто повторно Добавлено при `InstantiateItem` вызове для этой позиции. (Для повышения эффективности можно реализовать пул для перезапуска `View`, который будет повторно отображаться в той же позиции.) 
@@ -259,8 +242,6 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 3. Удаляет представление из `ViewPager`. 
 
-
-
 ### <a name="implement-isviewfromobject"></a>Реализация Исвиевфромобжект
 
 Когда пользователь просматривает слайды влево и вправо через страницы содержимого `ViewPager` , `IsViewFromObject` вызывает метод, чтобы убедиться `View` , что дочерний объект в данной позиции связан с объектом адаптера для той же позиции (следовательно, объект адаптера называется *ключ объекта*). Для относительно простых приложений Ассоциация — это одно из идентификаторов &ndash; , которое ключ объекта адаптера на этом экземпляре является представлением, которое ранее было возвращено `InstantiateItem` `ViewPager` в Via. Однако для других приложений ключ объекта может быть другим экземпляром класса адаптера, связанным с (но не аналогичным) дочерним представлением, которое `ViewPager` отображается в этой позиции. Только адаптер знает, связаны ли переданные представления и ключ объекта. 
@@ -273,7 +254,6 @@ public override bool IsViewFromObject(View view, Java.Lang.Object obj)
     return view == obj;
 }
 ```
-
 
 ## <a name="add-the-adapter-to-the-viewpager"></a>Добавление адаптера в ViewPager
 
@@ -288,8 +268,6 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 Основная реализация теперь завершает &ndash; сборку и запускает приложение. На экране появится первое изображение каталога дерева, как показано на рисунке слева на следующем снимке экрана. Проведите влево, чтобы увидеть другие представления в виде дерева, а затем проведите вправо для перемещения назад по каталогу дерева: 
 
 [![Снимки экрана Трипажер прокрутки приложений с помощью изображений в виде дерева](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
-
-
 
 ## <a name="add-a-pager-indicator"></a>Добавление индикатора страничного навигатора
 
@@ -320,8 +298,6 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 [![Снимок экрана крупный план пустого Пажертабстрип](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
-
-
 ### <a name="display-a-title"></a>Отображение заголовка
 
 Чтобы добавить заголовок на каждую вкладку страницы, реализуйте `GetPageTitleFormatted` метод `PagerAdapter`в классе, производном от. `ViewPager`вызывает `GetPageTitleFormatted` метод (Если реализован), чтобы получить строку заголовка, описывающую страницу в указанной позиции. Добавьте следующий метод `TreePagerAdapter` в класс в **TreePagerAdapter.CS**: 
@@ -339,8 +315,6 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 Для просмотра каждого изображения в виде дерева в каталоге можно прокрутить вперед и назад. 
 
-
-
 ### <a name="pagertitlestrip-variation"></a>Пажертитлестрип
 
 `PagerTitleStrip`очень похож на `PagerTabStrip` , за исключением того, что `PagerTabStrip` добавляет подчеркивание для текущей выбранной вкладки. Вы можете заменить `PagerTabStrip` `PagerTitleStrip` на в приведенном выше макете и запустить приложение еще раз, чтобы увидеть, `PagerTitleStrip`как оно выглядит: 
@@ -349,12 +323,9 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 Обратите внимание, что подчеркивание удаляется при `PagerTitleStrip`преобразовании в. 
 
-
- 
 ## <a name="summary"></a>Сводка
 
 В этом пошаговом руководстве представлен пошаговый пример создания базового `ViewPager`приложения без использования `Fragment`s. В нем представлен пример источника данных, содержащий изображения и строки заголовков, `ViewPager` макет для отображения изображений `PagerAdapter` и подкласс, который подключается `ViewPager` к источнику данных. Чтобы помочь пользователю перемещаться по набору данных, были добавлены инструкции, объясняющие, как добавить `PagerTabStrip` или `PagerTitleStrip` отобразить заголовок изображения в верхней части каждой страницы. 
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

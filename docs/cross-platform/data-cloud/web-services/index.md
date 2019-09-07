@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 3e5ce4496b4a2deb86bb2b7dd6d36e5e9b3f446c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f914a158135d34b59fa3d1b95972c988a44dd36b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287575"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765986"
 ---
 # <a name="introduction-to-web-services"></a>Введение в веб-службы
 
@@ -181,7 +181,6 @@ client.GetAsync<CustomersResponse>("",
 
 > [!IMPORTANT]
 > Хотя такие средства, как ServiceStack и Рестшарп, упрощают вызов и использование служб RESTFUL, иногда нетривиальным является использование XML или JSON, который не соответствует стандартным соглашениям о сериализации _DataContract_ . При необходимости вызовите запрос и выполните соответствующую сериализацию явным образом с помощью библиотеки ServiceStack. Text, описанной ниже.
-
 
 <a name="Options_for_consuming_RESTful_data" />
 

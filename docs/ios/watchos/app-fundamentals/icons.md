@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/26/2018
-ms.openlocfilehash: b3968f211ff5445e8b704bbd7897f4c46ecc2be9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e0bf9ec1553e6638398695157a11242b9885b168
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292596"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768101"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Работа со значками watchOS в Xamarin
 
@@ -82,7 +82,6 @@ ms.locfileid: "70292596"
 
 > [!NOTE]
 > Значки не могут иметь альфа-канал (приложение будет отклонено при отправке в магазине приложений, если имеется альфа-канал). Можно проверить, существует ли альфа-канал, и удалить его [с помощью предварительной версии приложения на Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

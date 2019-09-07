@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: b55c9d8a65dbb4e44605295043d1b302295030ce
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f79a07a04eddeea1441f7938fdef210a37fb920a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228059"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772891"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Часть 2. Синтаксис Essential XAML
 
@@ -85,7 +85,6 @@ _XAML предназначен главным образом для создан
 - `Label` — *объектного элемента*. Это объекта Xamarin.Forms, выраженный в виде XML-элемента.
 - `Text`, `VerticalOptions`, `FontAttributes` и `FontSize` являются *атрибуты свойства*. Они являются свойствами Xamarin.Forms выразить в виде атрибутов XML.
 - В этот последний фрагмент `TextColor` стала *элемент свойства*. Это свойство Xamarin.Forms, однако сейчас это XML-элемента.
-
 
 Определение свойства, элементы могут в сначала кажется воспринимает как нарушение синтаксиса XML, но это не так. Период не имеет специального значения в формате XML. Декодеру XML `Label.TextColor` — просто обычный дочерний элемент.
 

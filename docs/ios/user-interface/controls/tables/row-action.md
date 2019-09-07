@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: aabbbb706d4b6fcd022e30f726696b5d4f46167f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f15d586a0ca209fec088fc48ca975efae4ab8fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279516"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768365"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Работа с действиями строк в Xamarin. iOS
 
@@ -26,7 +26,6 @@ _В этом руководстве показано, как создавать 
 
 `UITableViewRowAction` Класс используется для определения действия, которое будет выполнено, когда пользователь просматривает строку в табличном представлении влево по горизонтали.
 Например, при редактировании таблицы прокрутка влево по строке по умолчанию отображает кнопку **Удалить** . Присоединив несколько экземпляров `UITableViewRowAction` класса к, можно определить `UITableView`несколько пользовательских действий, каждое из которых имеет собственный текст, форматирование и поведение.
-
 
 ## <a name="uiswipeactionsconfiguration"></a>уисвипеактионсконфигуратион
 
@@ -43,7 +42,6 @@ _В этом руководстве показано, как создавать 
 `UITableViewController`(а также `UITableViewSource` и `UITableViewDelegate`) содержат два метода: `GetLeadingSwipeActionsConfiguration` и `GetTrailingSwipeActionsConfiguration`, которые используются для реализации набора действий по считыванию в строке представления таблицы. Первое действие по прокрутке означает прокрутку с левой стороны экрана на языке слева направо и с правой стороны экрана на языке с письмом справа налево.
 
 В следующем примере (из примера [таблесвипеактионс](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) показано, как реализовать начальную конфигурацию считывания. Из контекстных действий создаются два действия, которые описаны [ниже](#create-uicontextualaction). Затем эти действия передаются в инициализированное [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations), которое используется в качестве возвращаемого значения.
-
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -180,8 +178,6 @@ table.Delegate = tableDelegate;
 [![](row-action-images/action01.png "Кнопка \"Привет\", отображаемая вместо кнопки \"Удалить\"")](row-action-images/action01.png#lightbox)
 
 Если пользователь нажмет кнопку **Hi** , `Hello World!` он будет записан в консоль в Visual Studio для Mac или Visual Studio при запуске приложения в режиме отладки.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

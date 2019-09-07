@@ -1,39 +1,33 @@
 ---
 title: Дополнительные понятия и внутренние компоненты
-description: Базовой архитектуры, лежащих в основе Xamarin.Android и ее API.
+description: Базовая архитектура для Xamarin. Android и ее разработки API.
 ms.prod: xamarin
 ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/21/2018
-ms.openlocfilehash: ba804e9757fb1354c39177e6f7cb9c97ea1b8188
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 4f860d493c5709e2f6c7f89e6f3a50981cf62dc3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864141"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757824"
 ---
 # <a name="advanced-concepts-and-internals"></a>Дополнительные понятия и внутренние компоненты
 
-_Этот раздел содержит разделы, в которых объясняется архитектура, проектирование API и ограничения для Xamarin.Android. Кроме того он включает в себя разделы, объясняющие и его реализация сбора мусора и сборок, которые доступны в Xamarin.Android. Так как Xamarin.Android [открытый](https://github.com/xamarin/xamarin-android), существует также возможность понять суть Xamarin.Android путем проверки ее исходный код._
-
+_В этом разделе содержатся разделы, объясняющие архитектуру, разработку API и ограничения для Xamarin. Android. Кроме того, он включает разделы, объясняющие реализацию сборки мусора и сборки, доступные в Xamarin. Android. Так как Xamarin. Android является [открытым исходным](https://github.com/xamarin/xamarin-android)кодом, можно также понять внутреннюю работу Xamarin. Android, изучив его исходный код._
 
 ## <a name="architectureandroidinternalsarchitecturemd"></a>[Архитектура](~/android/internals/architecture.md)
 
-В этой статье объясняется архитектура за приложения Xamarin.Android. Он объясняет выполнение приложений Xamarin.Android в среде выполнения Mono наряду с в среде выполнения Android виртуальной машины и объясняется такие ключевые концепции, как Android вызываемых оболочек и управляемых вызываемых оболочек. 
-
-
+В этой статье описывается базовая архитектура приложения Xamarin. Android. В этой статье объясняется, как приложения Xamarin. Android выполняются в среде выполнения Mono вместе с виртуальной машиной среды выполнения Android и объясняются такие ключевые понятия, как вызываемые оболочки Android и управляемые вызываемые оболочки. 
 
 ## <a name="api-designandroidinternalsapi-designmd"></a>[Структура API](~/android/internals/api-design.md)
 
-Помимо основных библиотеках базовых классов, которые являются частью Mono Xamarin.Android поставляется с привязками для различные интерфейсы API Android позволить разработчикам создавать собственные приложения Android с Mono.
+В дополнение к основным библиотекам базовых классов, которые являются частью Mono, Xamarin. Android поставляется с привязками для различных интерфейсов API Android, позволяя разработчикам создавать собственные приложения Android с Mono.
 
-В основе Xamarin.Android является подсистемой взаимодействия этим миром мосты C# со всем миром Java и предоставляет разработчикам доступ к API-интерфейсы Java в C# и других языков .NET.
-
-
+В ядре Xamarin. Android есть механизм взаимодействия, который связывает C# мир с Java и предоставляет разработчикам доступ к API-интерфейсам Java из C# или других языков .NET.
 
 ## <a name="assembliescross-platforminternalsavailable-assembliesmd"></a>[Сборки](~/cross-platform/internals/available-assemblies.md)
 
-Xamarin.Android поставляется с несколькими сборками. Так же, как Silverlight является расширенной подмножество классические сборки .NET, Xamarin.Android также является расширенной подмножеством несколько Silverlight и классические сборки .NET. 
-
+Xamarin. Android поставляется с несколькими сборками. Так же как Silverlight — это расширенное подмножество сборок для настольных систем .NET, Xamarin. Android также является расширенным подмножеством нескольких сборок Silverlight и настольных систем .NET. 

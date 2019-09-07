@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 2e4fa5f1fb96077b0237dbeac9074006e761bc09
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 63c8cb285c51d7c10e2109c9d0b7cffbd0fb0898
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655303"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770335"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Параметры макета в Xamarin.Forms
 
@@ -155,8 +155,6 @@ Content = new StackLayout
 ## <a name="summary"></a>Сводка
 
 В этой статье описано влияние, в которых [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) значения структуры зависит от того, выравнивание и расширения представления, относительно его родительского элемента. `Start`, `Center`, `End`, И `Fill` поля используются для определения представления выравнивания в макете родительский и `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, и `FillAndExpand` поля используются для определения Выравнивание предпочтения и определить ли представление будет занимать больше места, если он доступен в рамках [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

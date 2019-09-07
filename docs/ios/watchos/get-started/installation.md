@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/05/2017
-ms.openlocfilehash: 1bc7ba07676c66c411357b5ad043258fea611d71
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 790e32131822e83f092b352b91b4461392150657
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293128"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768048"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Установка и использование watchOS в Xamarin
 
@@ -47,7 +47,6 @@ watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
 Скачайте и запустите [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) образец, чтобы приступить к работе.
 Экраны из примера можно найти на [элементов управления](~/ios/watchos/user-interface/index.md) страницы.
-
 
 ## <a name="creating-a-new-project"></a>Создание нового проекта
 
@@ -103,7 +102,6 @@ watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
 Создание переходов по **Ctrl + перетаскивание** от кнопки, таблицы или интерфейса контроллера на другой контроллер.
 
-
 ### <a name="using-xcode-on-the-mac"></a>С помощью Xcode на компьютере Mac
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
@@ -123,7 +121,6 @@ watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
 При сохранении раскадровки в построителе интерфейса Xcode, автоматически добавит переменных экземпляров и действий, создаваемых для C# **. designer.cs** файлы в проекте расширения контрольных значений.
 
-
 ### <a name="adding-additional-screens-in-xcode"></a>Добавление дополнительных экранов в Xcode
 
 При добавлении дополнительных экранов (выходящие в шаблоне по умолчанию) в раскадровку с помощью конструктора Interface Builder Xcode **необходимо вручную добавить C# файлы кода** для каждого нового контроллера интерфейса.
@@ -132,11 +129,9 @@ watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
 *Конструктор iOS Xamarin делает это автоматически, вручную действия не требуются.*
 
-
 ## <a name="building"></a>Сборка
 
 Как и другие проекты iOS построения проекта, содержащего приложение просмотра. Процесс построения приведет к приложение iPhone (App), который содержит расширение просмотра (.appex), который в свою очередь содержит контрольные значения меньше кода приложение (App).
-
 
 ## <a name="launching"></a>Запуск
 
@@ -167,7 +162,6 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 Ссылаться на [форумы Apple](https://forums.developer.apple.com/thread/7783) инструкции по настройке симуляторов, если значения по умолчанию не работают.
 
-
 <a name="xcode6" />
 
 ### <a name="xcode-6-and-watchos-1"></a>Xcode 6 и watchOS 1
@@ -188,23 +182,15 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 Ссылаться на [страница "уведомления"](~/ios/watchos/platform/notifications.md) сведения как для обработки уведомлений в коде.
 
-
 Visual Studio для Mac можно запустить приложение watch с уведомлением _режимов запуска_ для уведомлений:
-
-
 
 Щелкните правой кнопкой мыши на проекте приложения watch и выберите **запуска с > Настраиваемая конфигурация...** :
 
-
 [![](installation-images/runwith-customparams-sml.png "Выполнение настраиваемой конфигурации")](installation-images/runwith-customparams.png#lightbox)
-
 
 Откроется **пользовательских параметров** окно, в котором можно выбрать **уведомления** (и предоставить полезные данные JSON), нажмите клавишу **запуска** для запуска приложения watch в симуляторе:
 
-
 [![](installation-images/runwith-execargs-sml.png "Настройка уведомлений и полезных данных")](installation-images/runwith-execargs.png#lightbox)
-
-
 
 ## <a name="debugging"></a>Отладка
 
@@ -227,8 +213,6 @@ To test the functionality in your  and
 -->
 
 Файлы шаблонов watchOS (такие как `InterfaceController`, `ExtensionDelegate`, `NotificationController`, и `ComplicationController`) поставляются с их методов требуется жизненного цикла, которые уже реализованы. Добавить `Console.WriteLine` вызовов "и" чтение **выходные данные приложения** чтобы лучше понять жизненный цикл события.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

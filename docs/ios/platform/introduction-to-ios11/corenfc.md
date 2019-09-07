@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: 6da32e22fbdb3b5b7d96d7ee93c2f25bba84cd78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752433"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Ядро NFC в Xamarin. iOS
 
@@ -141,7 +141,6 @@ Session?.BeginSession();
 - `queue`— Очередь, в которой обрабатываются обратные вызовы. Это может быть `null`, в этом случае следует `DispatchQueue.MainQueue` использовать при обновлении элементов управления пользовательского интерфейса (как показано в примере).
 - `invalidateAfterFirstRead`— Когда `true`, сканирование останавливается после первого успешного сканирования; при `false` продолжении сканирования будет выполнено несколько результатов, пока сканирование не будет отменено или не будет достигнуто время ожидания 60 секунд.
 
-
 ### <a name="3-cancel-the-scanning-session"></a>3. Отмена сеанса сканирования
 
 Пользователь может отменить сеанс сканирования с помощью предоставляемой системой кнопки в пользовательском интерфейсе:
@@ -159,7 +158,6 @@ Session.InvalidateSession();
 ## <a name="summary"></a>Сводка
 
 Коренфк позволяет приложению читать данные из NFC. Он поддерживает чтение различных форматов тегов (НДЕФ типы от 1 до 5), но не поддерживает запись и форматирование.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

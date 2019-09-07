@@ -1,6 +1,6 @@
 ---
-title: Как устранить ошибку PathTooLongException?
-description: В этой статье объясняется, как разрешить исключение PathTooLongException, которая может возникнуть при построении приложения.
+title: Разделы справки устранить ошибку PathTooLongException?
+description: В этой статье объясняется, как разрешить PathTooLongException, которые могут возникнуть при создании приложения.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 60EE1C8D-BE44-4612-B3B5-70316D71B1EA
@@ -8,32 +8,32 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: 443c3cc742ceb919e64a781e18c5a97c342abb44
-ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
+ms.openlocfilehash: 915f557db7955dc7b8b9f1bc5e014a683740052b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522919"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760818"
 ---
-# <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Как устранить ошибку PathTooLongException?
+# <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Разделы справки устранить ошибку PathTooLongException?
 
 ## <a name="cause"></a>Причина
 
-Имена путей, созданный в проект Xamarin.Android может быть довольно длинными.
-Например во время сборки могут создаваться путь следующего вида:
+Созданные имена путей в проекте Xamarin. Android могут быть довольно длинными.
+Например, во время сборки можно создать следующий путь:
 
 **C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\__library_projects__\\Xamarin.Forms.Platform.Android\\library_project_imports\\assets**
 
-В Windows (где Максимальная длина пути составляет [260 символов](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), **PathTooLongException** может создаваться во время построения проекта, если созданного пути превышает максимальную длину. 
+В Windows (где максимальная длина пути составляет [260 символов](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), **PathTooLongException** может быть создан при сборке проекта, если размер созданного пути превышает максимальную длину. 
 
 ## <a name="fix"></a>Fix
 
-`UseShortFileNames` MSBuild свойству `True` обойти эту ошибку, по умолчанию. Если присвоить этому свойству `True`, процесс сборки использует более короткие имена пути, чтобы уменьшить вероятность создания **PathTooLongException**.
-Например, если `UseShortFileNames` присваивается `True`, указанном выше пути сокращено до пути, аналогичную следующей:
+По умолчанию свойство `True` MSBuildимеетзначение,чтобыобойтиэтуошибку.`UseShortFileNames` Если это свойство имеет значение `True`, процесс сборки использует более короткие имена путей, чтобы снизить вероятность создания **PathTooLongException**.
+Например, если `UseShortFileNames` имеет `True`значение, приведенный выше путь сокращается до пути, аналогичного следующему:
 
-**C:\\некоторые\\Directory\\решение\\проекта\\obj\\Отладка\\lp\\1\\jl\\активы**
+**В.\\некоторые\\ресурсы\\для\\\\отладкиLP\\1 ЖЛресурсов\\проекта решения каталога\\\\\\**
 
-Чтобы вручную задать это свойство, добавьте следующее свойство MSBuild для проекта **.csproj** файла:
+Чтобы задать это свойство вручную, добавьте следующее свойство MSBuild в файл Project **. csproj** :
 
 ```xml
 <PropertyGroup>
@@ -41,7 +41,7 @@ ms.locfileid: "67522919"
 </PropertyGroup>
 ```
 
-Если установлен этот флаг не исправляет **PathTooLongException** ошибки, другой подход: определить [распространенный корень промежуточные выходные](https://blogs.msdn.microsoft.com/kirillosenkov/2015/04/04/using-a-common-intermediate-and-output-directory-for-your-solution/) для проектов в решении, задав `IntermediateOutputPath` в проект **.csproj** файл. Попробуйте использовать относительно короткий путь. Пример:
+Если установка этого флага не приводит к устранению ошибки **PathTooLongException** , то другой подход заключается в указании [общего корневого корня выходных данных](https://blogs.msdn.microsoft.com/kirillosenkov/2015/04/04/using-a-common-intermediate-and-output-directory-for-your-solution/) для проектов `IntermediateOutputPath` в решении путем установки в файле Project **. csproj** . Попробуйте использовать относительно короткий путь. Например:
 
 ```xml
 <PropertyGroup>
@@ -49,4 +49,4 @@ ms.locfileid: "67522919"
 </PropertyGroup>
 ```
 
-Дополнительные сведения о настройке свойств сборки см. в разделе [процесса сборки](~/android/deploy-test/building-apps/build-process.md).
+Дополнительные сведения о настройке свойств сборки см. в разделе [процесс сборки](~/android/deploy-test/building-apps/build-process.md).

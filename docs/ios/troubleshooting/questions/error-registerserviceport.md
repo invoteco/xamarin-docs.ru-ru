@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 68c87355a2a6a081e0fff741ffe8a4466abb540a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 815eb638b3e394dcfe4b60d716820c610b01f8a1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292604"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769325"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>Ошибка конструктора iOS RegisterServicePort
 
@@ -30,4 +30,3 @@ ms.locfileid: "70292604"
 Независимо от указанных выше результатов, если этот файл существует, то на вашем компьютере присутствует упомянутая выше ошибка шпионского по или вредоносного по.  
 
 Ниже приведена ссылка на действия по удалению программы-шпиона или вредоносной программы.[http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
-

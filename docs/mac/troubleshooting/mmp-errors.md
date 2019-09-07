@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 35de496d0684473fe3f6bc4ebadddc471b6b0cfe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ac50c665955f9bf234c46b3d4082fb628b61a33d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292891"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770028"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Сообщения об ошибках Xamarin. Mac (MMP)
 
@@ -616,7 +616,7 @@ Xamarin. Mac не поддерживает установку версии ми�
 <a name="MM8026" />
 
 #### <a name="mm8026--is-not-supported-when-the-dynamic-registrar-has-been-linked-away"></a>MM8026: * не поддерживается, если был связан динамический регистратор.
- 
+
 Обычно это указывает на ошибку в Xamarin. Mac, так как не следует связывать динамический регистратор, если это необходимо. Отправляйте ошибку по адресу [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
- 
+
 Можно заставить компоновщик обеспечить работу динамического регистратора, добавив `--optimize=-remove-dynamic-registrar` к дополнительным аргументам MMP в параметрах сборки Mac проекта.

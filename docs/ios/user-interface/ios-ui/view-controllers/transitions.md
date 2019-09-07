@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 45d9580899ac42dba300086b5d5694c07d177871
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bbba1cbb907e3744677ff6bbe39b97fb62616e33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287832"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768169"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Просмотр переходов контроллера в Xamarin. iOS
 
@@ -28,7 +28,6 @@ UIKit добавляет поддержку для настройки аними
 2. Реализуйте `UIViewControllerTransitioningDelegate` , чтобы создать класс аниматор, который является `UIViewControllerAnimatedTransitioning` экземпляром.
 3. Задайте для `UIViewControllerTransitioningDelegate` свойства экземпляр, а также отображаемый контроллер. `TransitioningDelegate`
 4. Представьте контроллер представления.
-
 
 Например, следующий код представляет контроллер представления типа `ControllerTwo` `UIViewController` -подкласс:
 
@@ -83,7 +82,6 @@ public class TransitioningDelegate : UIViewControllerTransitioningDelegate
 1. `TransitionDuration`— Возвращает длительность анимации в секундах.
 1. `AnimateTransition`— выполняет фактическую анимацию.
 
-
 Например, следующий класс реализует `UIViewControllerAnimatedTransitioning` , чтобы анимировать кадр представления контроллера:
 
 ```csharp
@@ -129,7 +127,6 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 - **Контроллеры навигации** — анимированный переход между `UICollectionViewController` двумя экземплярами может при необходимости `UINavigationController` обрабатываться автоматически при управлении ими.
 - **Макет перехода** — новый `UICollectionViewTransitionLayout` класс позволяет интерактивно переходить между макетами.
 
-
 ### <a name="navigation-controller-transitions"></a>Переходы контроллера навигации
 
 При использовании в контроллере навигации a `UICollectionViewController` включает поддержку анимированных переходов между контроллерами. Эта поддержка является встроенной и требует лишь нескольких простых действий для реализации:
@@ -138,7 +135,6 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 1. Добавьте экземпляр в `UICollectionViewController` корень стека контроллера навигации.
 1. Создайте вторую `UICollectionViewController` и `UseLayoutToLayoutNavigtionTransitions` присвойте свойству `true` значение.
 1. Помещает второй `UICollectionViewController` элемент в стек контроллера навигации.
-
 
 Следующий код добавляет `UICollectionViewController` подкласс с именем `ImagesCollectionViewController` в корень стека контроллера навигации, `UseLayoutToLayoutNavigationTransitions` свойство которого имеет значение `false`:
 
@@ -216,7 +212,6 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 1. Обработайте завершение перехода в обработчике `StartInteractiveTransition` завершения метода.
 1. Добавьте распознаватель жестов в представление коллекции.
 
-
 В следующем коде реализуется интерактивный переход макета в рамках распознавателя жестов сжатия:
 
 ```csharp
@@ -260,9 +255,6 @@ imagesController.CollectionView.AddGestureRecognizer (pinch);
 ```
 
 Когда пользователь сжимает представление коллекции, `TransitionProgress` задается относительно шкалы сжатия. В этой реализации, если пользователь завершает сжатие до завершения перехода 50%, переход отменяется. В противном случае переход завершается.
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 52ee92eca5fa0b3108b2ef96ef81bfb939e61a6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290760"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752911"
 ---
 # <a name="handoff-in-xamarinios"></a>Передачи в Xamarin. iOS
 
@@ -626,8 +626,6 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 ## <a name="summary"></a>Сводка
 
 В этой статье приводятся общие сведения о платформе передачи данных, используемой для продолжения действий пользователя между несколькими устройствами Apple пользователя. Далее показано, как включить и реализовать передачу в приложении Xamarin. iOS. И, наконец, обсуждаются различные типы доступных продолженностей и рекомендации по передаче.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

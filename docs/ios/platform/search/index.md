@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: eb88f7c1de12eee59ea4c2a271079e6b96c29b09
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e64ae5e04fbdd5b4c69a0b00c2bbc087b7cdf62a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286602"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769490"
 ---
 # <a name="search-apis-in-xamarinios"></a>Поиск API в Xamarin. iOS
 
@@ -89,8 +89,6 @@ _В этой статье описывается использование API-
 ## <a name="summary"></a>Сводка
 
 В этой статье были рассмотрены новые функции API поиска, предоставляемые iOS 9 для приложений Xamarin. iOS. Он охватывает [нсусерактивити](nsuseractivity.md), [основные важные](corespotlight.md) и [веб-разметки](web-markup.md) для индексирования содержимого. Он завершился коротким обсуждением того, когда следует использовать данный подход к поиску и какие типы содержимого должны индексироваться.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1cf22f070864492e14e1865c1cbbf8cf32e0df29
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285768"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753904"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. Привязка библиотеки Objective-C в iOS
 
@@ -56,15 +56,11 @@ _В этой статье приводятся пошаговые инструк
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-
 Как упоминалось выше, мы будем использовать программы командной строки Xcode (в `make` частности `lipo`и) в этом пошаговом руководстве. Команда — это очень распространенная служебная программа для UNIX, которая автоматизирует компиляцию исполняемых программ и библиотек с помощью _файла makefile_ , который указывает, как должна быть построена программа. `make` Команда является служебной программой командной строки OS X для создания файлов с несколькими архитектурами. она объединяет несколько `.a` файлов в один файл, который может использоваться всеми аппаратными архитектурами. `lipo`
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 Как упоминалось выше, мы будем использовать средства командной строки Xcode на **узле сборки Mac** (в частности `make` и `lipo`) в этом пошаговом руководстве. Команда — это очень распространенная служебная программа для UNIX, которая автоматизирует компиляцию исполняемых программ и библиотек с помощью _файла makefile_ для указания способа построения программы. `make` Команда является служебной программой командной строки OS X для создания файлов с несколькими архитектурами. она объединяет несколько `.a` файлов в один файл, который может использоваться всеми аппаратными архитектурами. `lipo`
-
 
 -----
 
@@ -272,9 +268,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 ![](walkthrough-images/bind03.png "Структура решения в обозреватель решений")
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. Запустите Visual Studio.
 
@@ -336,7 +330,6 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 Когда файл **добавляется в проект** , Xamarin. IOS автоматически устанавливает для файла **действие сборки** **обжкбиндингнативелибрари**и создает специальный файл с именем `libInfColorPickerSDK.linkwith.cs`.
 
-
 Этот файл содержит `LinkWith` атрибут, сообщающий Xamarin. iOS, как обрабатывается только что добавленная статическая библиотека. Содержимое этого файла показано в следующем фрагменте кода:
 
 ```csharp
@@ -347,7 +340,6 @@ using ObjCRuntime;
 
 `LinkWith` Атрибут определяет статическую библиотеку для проекта и некоторые важные флаги компоновщика.
 
-
 Далее нам нужно создать определения API для проекта Инфколорпиккер. В рамках этого пошагового руководства мы будем использовать цель Шарпие для создания файла **ApiDefinition.CS**.
 
 <a name="Using_Objective_Sharpie"/>
@@ -356,15 +348,11 @@ using ObjCRuntime;
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-
 Цель Шарпие — это средство командной строки (предоставляемое Xamarin), которое может помочь в создании определений, необходимых для привязки сторонней библиотеки цели-C к C#. В этом разделе мы будем использовать цель Шарпие для создания начального **ApiDefinition.CS** для проекта инфколорпиккер.
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 Цель Шарпие — это средство командной строки (предоставляемое Xamarin), которое может помочь в создании определений, необходимых для привязки сторонней библиотеки цели-C к C#. В этом разделе мы будем использовать цель Шарпие на нашем **узле сборки Mac** , чтобы создать первоначальный **ApiDefinition.CS** для проекта инфколорпиккер.
-
 
 -----
 
@@ -466,17 +454,13 @@ Europa:Resources kmullins$
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-
 Откройте оба этих файла в проекте привязки, созданном ранее. Скопируйте содержимое файла **InfColorPicker.CS** и вставьте его в файл **ApiDefinition.CS** , заменив существующий `namespace ...` блок кода содержимым файла **InfColorPicker.CS** ( `using` при этом инструкции без изменений):
 
 ![](walkthrough-images/os07.png "Файл Инфколорпиккерконтроллерделегате")
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 Откройте оба этих файла в проекте привязки, созданном ранее. Скопируйте содержимое файла **InfColorPicker.CS** (с **узла сборки Mac**) и вставьте его в файл **ApiDefinition.CS** , заменив существующий `namespace ...` блок кода содержимым файла **InfColorPicker.CS** ( без изменения `using` инструкций).
-
 
 -----
 
@@ -503,17 +487,13 @@ Europa:Resources kmullins$
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-
 На этом этапе наш проект привязки должен быть завершен и готов к сборке. Давайте создадим наш проект привязки и убедитесь, что мы завершили без ошибок:
 
 [Выполните сборку проекта привязки и убедитесь в отсутствии ошибок.](walkthrough-images/os12.png)
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 На этом этапе наш проект привязки должен быть завершен и готов к сборке. Давайте создадим наш проект привязки и убедитесь, что мы завершились без ошибок.
-
 
 -----
 
@@ -702,7 +682,6 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
 ```
 
 **Обновление ViewDidLoad** . необходимо изменить `ViewDidLoad` , чтобы использовался только что созданный обработчик событий. Измените `ViewController` и измените `ViewDidLoad` , чтобы они наглядели следующим фрагментом кода:
-
 
 ```csharp
 public override void ViewDidLoad ()

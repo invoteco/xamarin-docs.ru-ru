@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: d78363bf7d38f19a14f689c2825ea9c9934653e4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 022602c50386017b178672e20e3e352345feec0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280250"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767208"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Пошаговое руководство. Использование сенсорного ввода в Xamarin. iOS
 
@@ -35,11 +35,9 @@ ms.locfileid: "70280250"
 
 В этом примере мы продемонстрируем некоторые API сенсорного ввода. Выполните следующие действия, чтобы добавить код, необходимый для реализации событий касания:
 
-
 1. Откройте проект **Touch_Start**. Сначала запустите проект, чтобы убедиться, что все готово, и коснитесь кнопки **сенсорные примеры** . Вы увидите экран, аналогичный приведенному ниже (хотя ни одна из кнопок не будет работать):
 
     [![](ios-touch-walkthrough-images/image4.png "Пример приложения запускается с нерабочими кнопками")](ios-touch-walkthrough-images/image4.png#lightbox)
-
 
 1. Измените файл **TouchViewController.CS** и добавьте в класс `TouchViewController`следующие две переменные экземпляра:
 
@@ -49,7 +47,6 @@ ms.locfileid: "70280250"
     private bool touchStartedInside;
     #endregion
     ```
-
 
 1. Реализуйте `TouchesBegan` метод, как показано в следующем коде:
 
@@ -172,7 +169,6 @@ ms.locfileid: "70280250"
     [![](ios-touch-walkthrough-images/image4.png "Экран начального приложения")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "Экран после того, как пользователь перетаскивает кнопку")](ios-touch-walkthrough-images/image5.png#lightbox)
- 
 
 <a name="Gesture_Recognizer_Samples" />
 
@@ -189,7 +185,6 @@ ms.locfileid: "70280250"
  [![](ios-touch-walkthrough-images/image6.png "При нажатии кнопки \"примеры распознавателя жестов\" отображается этот экран")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Чтобы реализовать распознаватели жестов, выполните следующие действия.
-
 
 1. Измените файл **GestureViewController.CS** и добавьте следующую переменную экземпляра:
 
@@ -248,7 +243,6 @@ ms.locfileid: "70280250"
 
     Приведенный выше код сначала проверит состояние распознавателя жестов, а затем переместит изображение на экране. С помощью этого кода контроллер теперь может поддерживать перетаскивание одного изображения на экране.
 
-
 1. `UITapGestureRecognizer` Добавьте, который изменит изображение, отображаемое в даублетаучимаже. Добавьте следующий метод в `GestureViewController` контроллер:
 
     ```csharp
@@ -304,13 +298,10 @@ ms.locfileid: "70280250"
 
     Также обратите внимание, что мы инициализируем `originalImageFrame`значение.
 
-
 1. Запустите приложение и взаимодействуйте с двумя образами.
 На следующем снимке экрана приведен один из примеров этих взаимодействий:
     
     [![](ios-touch-walkthrough-images/image7.png "На этом снимке экрана показано взаимодействие перетаскивания")](ios-touch-walkthrough-images/image7.png#lightbox)
-
-
 
 <a name="Custom_Gesture_Recognizer"/>
 
@@ -321,7 +312,6 @@ ms.locfileid: "70280250"
  [![](ios-touch-walkthrough-images/image8.png "Приложение будет распознать, когда пользователь рисует на экране \"V\"")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Чтобы создать пользовательский распознаватель жестов, выполните следующие действия.
-
 
 1. Добавьте в проект новый класс с именем `CheckmarkGestureRecognizer`и сделайте его похожим на следующий код:
 
@@ -441,8 +431,6 @@ ms.locfileid: "70280250"
     Метод Reset вызывается, когда `State` свойство изменяется `Recognized` на или `Ended`. Это время для сброса любого внутреннего состояния, установленного в распознавателе пользовательских жестов.
 Теперь класс может начать новый раз при следующем взаимодействии пользователя с приложением и быть готовым к повторной попытке распознавания жеста.
 
-
-
 1. Теперь, когда мы определили пользовательский распознаватель жестов (`CheckmarkGestureRecognizer`), измените файл **CustomGestureViewController.CS** и добавьте следующие две переменные экземпляра:
 
     ```csharp
@@ -499,11 +487,7 @@ ms.locfileid: "70280250"
     
     [![](ios-touch-walkthrough-images/image10.png "Кнопка снята")](ios-touch-walkthrough-images/image10.png#lightbox)
 
-
-
 В приведенных выше трех разделах демонстрируются различные способы реагирования на события касания в iOS: использование событий касания, встроенные средства распознавания жестов или пользовательский распознаватель жестов.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

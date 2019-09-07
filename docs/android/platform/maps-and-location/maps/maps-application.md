@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: b436ea4f5d8c70f0ca641bea72d1230fc07c5086
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b950326eb5a124d5040caa0044309630a2a53d38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523780"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761674"
 ---
 # <a name="launching-the-maps-application"></a>Запуск приложения Maps
 
@@ -21,7 +21,6 @@ ms.locfileid: "69523780"
 [![Пример снимка экрана встроенного приложения Google Maps](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 При использовании приложения Maps карта не будет частью приложения. Вместо этого приложение запустит приложение Maps и загрузит карту извне. В следующем разделе рассматривается использование Xamarin. Android для запуска карт, аналогичных приведенным выше.
-
 
 ## <a name="creating-the-intent"></a>Создание цели
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Этот код необходим для запуска схемы, показанной на предыдущем снимке экрана. В дополнение к указанию широты и долготы, Схема универсального кода ресурса (URI) для Map поддерживает несколько других параметров.
 
-
 ## <a name="geo-uri-scheme"></a>Схема географического URI
 
 Приведенный выше код использовал географическую схему для создания универсального кода ресурса (URI). Эта схема URI поддерживает несколько форматов, перечисленных ниже.
@@ -48,15 +46,11 @@ StartActivity (mapIntent);
 
 - `geo:0,0?q=business+near+city`&ndash; Открывает приложение Maps и отображает результаты поиска с заметками. 
 
-
 Версии URI, которые принимают запрос (а именно адрес улицы или условия поиска), используют службу геокодирования Google для получения расположения, которое затем отображается на карте. Например, URI `geo:0,0?q=coop+Cambridge` приводит к отображению показанной ниже схемы:
 
 [![Пример снимка экрана, показывающий Google Maps с поисковым выражением](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
-
-
 Дополнительные сведения о схемах географических URI см. в разделе [Отображение расположения на карте](https://developer.android.com/guide/components/intents-common.html#Maps).
-
 
 ## <a name="street-view"></a>Представление улицы
 
@@ -92,6 +86,5 @@ google.streetview:cbll=lat,lng&cbp=1,yaw,,pitch,zoom&mz=mapZoom
 - `zoom`&ndash; Коэффициент увеличения для панорамы просмотра улицы, где 1,0 = нормальный масштаб, 2,0 = масштабное 2x, 3,0 = с масштабом 4X и т. д.
 
 - `mz`&ndash; Уровень масштаба карты, который будет использоваться при переходе к приложению Maps из представления улицы.
-
 
 Работа со встроенным приложением Maps или представлением улицы — это простой способ быстрого добавления поддержки сопоставления. Однако API карт Android обеспечивает более точный контроль над процессом сопоставления.

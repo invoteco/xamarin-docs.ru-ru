@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291900"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753325"
 ---
 # <a name="limitations-of-xamarinios"></a>Ограничения Xamarin. iOS
 
@@ -21,7 +21,6 @@ ms.locfileid: "70291900"
 Это ограничения Xamarin. iOS по сравнению с рабочим столом Mono:
 
  <a name="Limited_Generics_Support" />
-
 
 ## <a name="limited-generics-support"></a>Поддержка ограниченных универсальных шаблонов
 
@@ -32,7 +31,6 @@ ms.locfileid: "70291900"
 Некоторые распространенные проблемы, с которыми работают разработчики, включают:
 
  <a name="Generic_Subclasses_of_NSObjects_are_limited" />
-
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Универсальные подклассы Нсобжектс ограничены
 
@@ -47,9 +45,7 @@ class Foo<T> : UIView {
 > [!NOTE]
 > Хотя универсальные подклассы Нсобжектс возможны, существует ряд ограничений. Дополнительные сведения см. в [универсальных подклассах документа нсобжект](~/ios/internals/api-design/nsobject-generics.md) .
 
-
  <a name="No_Dynamic_Code_Generation" />
-
 
 ## <a name="no-dynamic-code-generation"></a>Без динамического создания кода
 
@@ -60,10 +56,7 @@ class Foo<T> : UIView {
 - Не поддерживается динамическое создание типов (без Type. GetType ("MyType ' 1")), хотя Поиск существующих типов (Type. GetType ("System. String"), например, работает прекрасно).
 - Обратные обратные вызовы должны быть зарегистрированы в среде выполнения во время компиляции.
 
-
-
  <a name="System.Reflection.Emit" />
-
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -72,7 +65,6 @@ class Foo<T> : UIView {
 - Среда выполнения динамического языка.
 - Все языки, созданные на основе среды динамического языка.
 - Транспарентпрокси удаленного взаимодействия или любое другое, которое привело бы к динамическому созданию кода средой выполнения.
-
 
   > [!IMPORTANT]
   > Не путайте **отражение. Emit** с **отражением**. Отражение. Emit — это динамическое создание кода и его JIT и компиляция в машинный код. Из-за ограничений на iOS (без JIT-компиляции) это не поддерживается.
@@ -94,7 +86,6 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
  <a name="Reverse_Callbacks" />
 
-
 ### <a name="reverse-callbacks"></a>Обратные обратные вызовы
 
 В стандартном моно можно передать C# экземпляры делегата в неуправляемый код вместо указателя на функцию. Среда выполнения обычно преобразует эти указатели функций в небольшой преобразователь, который позволяет неуправляемому коду осуществлять обратный вызов управляемого кода.
@@ -110,9 +101,7 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 Стек удаленного взаимодействия недоступен в Xamarin. iOS.
 
-
  <a name="Runtime_Disabled_Features" />
-
 
 ## <a name="runtime-disabled-features"></a>Функции, отключенные в среде выполнения
 
@@ -125,14 +114,10 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 - JIT-механизм
 - Средство проверки метаданных (так как отсутствует JIT-компилятор)
 
-
  <a name=".NET_API_Limitations" />
-
 
 ## <a name="net-api-limitations"></a>Ограничения API .NET
 
 Предоставляемый API .NET является подмножеством полной платформы, как не все доступно в iOS. [Список сборок, поддерживаемых в настоящее время](~/cross-platform/internals/available-assemblies.md), см. в разделе часто задаваемых вопросов.
-
-
 
 В частности, профиль API, используемый Xamarin. iOS, не включает System. Configuration, поэтому невозможно использовать внешние XML-файлы для настройки поведения среды выполнения.

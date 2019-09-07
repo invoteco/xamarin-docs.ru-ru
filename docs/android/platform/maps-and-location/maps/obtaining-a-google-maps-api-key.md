@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 6cb001a42f0cc98d0054523dffa0772b29188d73
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523819"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757536"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Получение ключа API Google Maps
 
@@ -23,7 +23,6 @@ ms.locfileid: "69523819"
 1. Получите отпечаток SHA-1 хранилища ключей, который используется для подписания приложения.
 2. Создайте проект в консоли Google API.
 3. Получение ключа API.
-
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>Получение отпечатка ключа подписывания
 
@@ -52,7 +51,6 @@ ms.locfileid: "69523819"
 
 -----
 
-
 Запустите keytool с помощью следующей команды (используя приведенные выше пути к файлам):
 
 ```shell
@@ -76,7 +74,6 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 ```
 
 -----
-
 
 ### <a name="production-keys"></a>Производственные ключи
 
@@ -132,7 +129,7 @@ Certificate fingerprints:
 
 После создания проекта API **консоли разработчика Google** необходимо создать ключ API Android. Приложения Xamarin. Android должны иметь ключ API, прежде чем им будет предоставлен доступ к API-интерфейсу карт Android версии 2.
 
-1. На отображаемой странице **SDK Maps для Android** (после нажатия кнопки **включить** на предыдущем шаге) перейдите на вкладку Учетные **данные** и нажмите кнопку **CREATE CREDENTIAL (создать учетные данные** ).
+1. На отображаемой странице **SDK Maps для Android** (после нажатия кнопки **включить** на предыдущем шаге) перейдите на вкладку **учетные данные** и нажмите кнопку **CREATE CREDENTIAL (создать учетные данные** ).
 
    [![Сообщение SDK Maps для учетных данных Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
@@ -148,7 +145,7 @@ Certificate fingerprints:
 
    [![Выбор приложений Android на странице учетных данных](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
 
-5. Чтобы добавить отпечаток SHA-1, щелкните **+ Добавить имя пакета и**отпечаток:
+5. Чтобы добавить отпечаток SHA-1, щелкните **+ Добавить имя пакета и отпечаток**:
 
    [![Щелкните Добавить имя пакета и отпечаток](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
@@ -156,7 +153,7 @@ Certificate fingerprints:
 
    [![Указано имя пакета — com. Xamarin. документацию. Android. Map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
-7. Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Щелкните **+ Добавить имя пакета и** отпечаток, чтобы добавить еще один отпечаток и имя пакета, как показано в следующем примере:
+7. Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Щелкните **+ Добавить имя пакета и отпечаток** , чтобы добавить еще один отпечаток и имя пакета, как показано в следующем примере:
 
    [![При добавлении другого отпечатка создается еще один сертификат SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 

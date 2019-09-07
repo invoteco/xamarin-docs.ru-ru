@@ -7,12 +7,12 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 586cf0eaa7b0f38af61c9f7d619b30a39023a19e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 33ed7f3477f44662f3392d2125b61818b3ed885f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652961"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759452"
 ---
 # <a name="integrating-with-xamarinforms"></a>Интеграция с Xamarin.Forms
 
@@ -238,7 +238,6 @@ public partial class ColorExplorePage : ContentPage
 Но лучший способ почувствовать эти две модели для экспериментов с ними:
 
 [![](integration-images/colorexplore-large.png "Тройной снимок экрана страницы изучение цвет")](integration-images/colorexplore-small.png#lightbox "тройной снимок экрана страницы изучение цвет")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 7b34e7658ad38f80cffa22d99eea42901a905a38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227932"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767614"
 ---
 # <a name="part-4-data-binding-basics"></a>Часть 4. Основы привязки данных
 
@@ -405,8 +405,6 @@ namespace XamlSamples
 ## <a name="summary"></a>Сводка
 
 Привязки данных предоставляют мощный механизм для связывания свойства между двумя объектами внутри страницы или между визуальными объектами и базовых данных. Но когда приложение готово к работе с источниками данных, шаблон архитектуры популярное приложение начинает разработок полезную парадигму программирования. Это рассматривается в [часть 5. От привязки данных до MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

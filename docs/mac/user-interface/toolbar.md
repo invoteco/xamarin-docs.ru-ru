@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280108"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772713"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Панели инструментов в Xamarin. Mac
 
@@ -357,7 +357,6 @@ public override void AwakeFromNib ()
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается работа с панелями инструментов и элементами панели инструментов в приложении Xamarin. Mac. В нем описано, как создавать и обслуживать панели инструментов в Interface Builder Xcode, как некоторые элементы управления пользовательского интерфейса автоматически работают с элементами панели инструментов, как C# работать с панелями инструментов в коде и как включать и отключать элементы панели инструментов.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

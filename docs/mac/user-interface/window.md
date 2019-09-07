@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df623efcc1da617ac6b700b42d3ac058dea817ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291537"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772642"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows в Xamarin. Mac
 
@@ -747,7 +747,6 @@ void OpenDialog (NSObject sender)
 - **Стиль** — позволяет настраивать стиль панели: Обычная панель (похоже на стандартное окно), панель служебной программы (содержит меньшее название), HUD панель (полупрозрачная, а строка заголовка является частью фона).
 - **Без активации** — определяет в панели окно ключа.
 - **Модальный документ** — если документ является модальным, панель перемещается только над окнами приложения, в противном случае — над всеми.
-
 
 Чтобы добавить новую панель, выполните следующие действия.
 

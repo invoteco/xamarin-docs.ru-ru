@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 45205859a55974414ee865b2141d2bb127e85bcc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763133"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Использование SQLite.NET с Xamarin. iOS
 
@@ -136,7 +136,6 @@ public static void DoSomeDataAccess () {
 - **[Ignore]** — приводит к тому, что SQLite.NET игнорирует это свойство. Это особенно полезно для свойств, которые имеют тип, который не может храниться в базе данных, или свойства, которые не могут быть автоматически разрешены в виде SQLite.
 - **[Unique]** — гарантирует уникальность значений в столбце базы данных.
 
-
 Большинство этих атрибутов являются необязательными, SQLite будет использовать значения по умолчанию для имен таблиц и столбцов. Всегда следует указывать целочисленный первичный ключ, чтобы можно было эффективно выполнять запросы на выборку и удаление данных.
 
 ## <a name="more-complex-queries"></a>Более сложные запросы
@@ -149,7 +148,6 @@ public static void DoSomeDataAccess () {
 - **Удалить** — удаляет объект, используя его первичный ключ.
 - **Запрос\<T >** — выполнение SQL-запроса, возвращающего ряд строк (в виде объектов).
 - **EXECUTE** — используйте этот метод (а не `Query` ), если не предполагается, что строки возвращаются из SQL (например, инструкции INSERT, Update и DELETE).
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Получение объекта по первичному ключу
 

@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 2ce4b0366e85580b6d9d816bd91f9ced93997b63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2ccf6966e85eddaa10b5651e1b0b48dec9203b28
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291490"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772204"
 ---
 # <a name="inspecting-live-applications"></a>Проверка интерактивных приложений
 
@@ -52,4 +52,3 @@ del.Database.AddCustomer (...)
 - Изменение сетки свойств недоступно для Mac, а в Windows ограничено несколько типов данных. Используйте REPL для более мощного редактирования.
 - При условии, что надстройка и расширение инспектора установлены и включены в интегрированной среде разработки, мы включаем код в приложение каждый раз, когда он запускается в режиме отладки. Если вы видите любое странное поведение в приложении, попробуйте отключить или удалить надстройку или расширение инспектора, перезапустить интегрированную среду разработки и выполнить повторную проверку. И сообщите нам об [ошибках](~/tools/inspector/install.md#reporting-bugs) , чтобы сообщить нам о ней!
 - Если проверка элемента пользовательского интерфейса приводит к тому, что он изменяется в любом случае, [сообщите нам](~/tools/inspector/install.md#reporting-bugs), так как это может указывать на ошибку.
-

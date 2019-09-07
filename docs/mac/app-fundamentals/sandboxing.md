@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290320"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770304"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Изолирование приложения Xamarin. Mac
 
@@ -562,8 +562,6 @@ find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executabl
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается изолированное приложение Xamarin. Mac. Во-первых, мы создали простое приложение Xamarin. Mac, чтобы продемонстрировать основы песочницы приложения. Далее мы показали, как разрешать нарушения "песочницы". Затем мы потратили углубленный взгляд на песочницу приложения и, наконец, рассматривали создание приложения Xamarin. Mac для песочницы приложения.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

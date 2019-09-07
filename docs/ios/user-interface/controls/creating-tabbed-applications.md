@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 005f858408ec4d10563e3d945cadb0f1af65a407
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dd9d93572ac10622345b1dff4145b737baf8aaae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292985"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769013"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Панели вкладки панели вкладок и контроллеры в Xamarin.iOS
 
@@ -28,7 +28,6 @@ ms.locfileid: "70292985"
 
 - Разрешение нескольких контроллеров для добавления к нему.
 - Предоставление с вкладками пользовательского интерфейса, с помощью `UITabBar` класса, чтобы разрешить пользователю переключаться между контроллерами и их представления. 
-
 
 Контроллеры добавляются к `UITabBarController` через его `ViewControllers` свойство, являющееся `UIViewController` массива. `UITabBarController` Сам обрабатывает загрузке правильной контроллера и представляющим его представление, в зависимости от выбранной вкладки.
 
@@ -46,7 +45,6 @@ ms.locfileid: "70292985"
 
  <a name="Creating_the_Application" />
 
-
 ### <a name="creating-the-application"></a>Создание приложения
 
 Начнем с создания нового приложения.
@@ -56,8 +54,6 @@ ms.locfileid: "70292985"
 [![](creating-tabbed-applications-images/newsolution1.png "Выберите шаблон пустого проекта")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
 [![](creating-tabbed-applications-images/newsolution2.png "Назовите проект TabbedApplication")](creating-tabbed-applications-images/newsolution2.png#lightbox)
-
-
 
 ### <a name="adding-the-uitabbarcontroller"></a>Добавление UITabBarController
 
@@ -72,7 +68,6 @@ ms.locfileid: "70292985"
 1. Задать базовый класс `TabController` для `UITabBarController` . 
 1. Создание `UIViewController` экземпляры, чтобы добавить `TabController` . 
 1. Добавить `UIViewController` экземпляров в массив, назначенный `ViewControllers` свойство `TabController` . 
-
 
 Добавьте следующий код, чтобы `TabController` класс для достижения следующие действия:
 
@@ -146,13 +141,11 @@ public partial class AppDelegate : UIApplicationDelegate
 
  <a name="Modifying_TabBarItems" />
 
-
 ### <a name="modifying-tabbaritems"></a>Изменение TabBarItems
 
 Теперь, когда у нас есть промежуточный вкладке приложения, давайте изменим `TabBarItem` изменение изображения и текст, отображаемый, а также чтобы добавить эмблему на одной из вкладок.
 
  <a name="Setting_a_System_Item" />
-
 
 #### <a name="setting-a-system-item"></a>Задание элемента системы
 
@@ -167,7 +160,6 @@ tab1.TabBarItem = new UITabBarItem (UITabBarSystemItem.Favorites, 0);
  ![](creating-tabbed-applications-images/04a-tabimage.png "Первая вкладка со значком типа \"звезда\"")
 
  <a name="Setting_the_Title_and_Image" />
-
 
 #### <a name="setting-the-title-and-image"></a>Настройка заголовка и изображения
 
@@ -201,7 +193,6 @@ tab2.View.BackgroundColor = UIColor.Orange;
 
  <a name="Setting_the_Badge_Value" />
 
-
 #### <a name="setting-the-badge-value"></a>Установка значения эмблемы
 
 Вкладки также можно отобразить индикатор событий. Например добавьте следующую строку кода, чтобы задать эмблему на третью вкладку:
@@ -222,13 +213,11 @@ tab3.TabBarItem.BadgeValue = null;
 
  <a name="Tabs_in_Non-RootViewController_Scenarios" />
 
-
 ## <a name="tabs-in-non-rootviewcontroller-scenarios"></a>Вкладки в сценариях не RootViewController
 
 В приведенном выше примере мы показали, как работать с `UITabBarController` где `RootViewController` окна. В этом примере мы рассмотрим, как использовать `UITabBarController` не `RootViewController` и показать, как это создается при помощи объектов Storyboard.
 
  <a name="Initial_Screen_Example" />
-
 
 ### <a name="initial-screen-example"></a>Пример начального экрана
 
@@ -237,7 +226,6 @@ tab3.TabBarItem.BadgeValue = null;
 [![](creating-tabbed-applications-images/inital-screen-application.png "На этом снимке экрана показан поток в приложении")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 Начнем с нового приложения в этом примере. Опять же, мы будем использовать **iPhone > приложение > пустой проект (C#)** шаблона, назвав проекта `InitialScreenDemo`.
-
 
 В этом примере нам потребуется раскадровки для хранения наших контроллеров представлений. Чтобы добавить раскадровку:
 
@@ -251,7 +239,6 @@ tab3.TabBarItem.BadgeValue = null;
 
 Существует несколько важных шагов, чтобы Обратите внимание, при добавлении раскадровки в файл ранее раскадровки, как описано в [введение в раскадровки](~/ios/user-interface/storyboards/index.md) руководства. Эти особые значения приведены ниже.
 
- 
 1. Добавьте свое имя раскадровки, чтобы **главный интерфейс** раздел `Info.plist`:
 
     [![](creating-tabbed-applications-images/project-options.png "Значение основной интерфейс MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
@@ -276,7 +263,6 @@ Visual Studio для Mac автоматически создает классы 
 
  <a name="Creating_the_UI" />
 
-
 #### <a name="creating-the-ui"></a>Создание пользовательского интерфейса
 
 Далее мы создадим простой пользовательский интерфейс для каждого из представлений ViewController использовании конструктора iOS Xamarin.
@@ -285,7 +271,6 @@ Visual Studio для Mac автоматически создает классы 
 
 - **Метка** : `Text` = **Первый**
 - **Кнопка** : `Title` = **Пользователь выполняет некоторое начальное действие**
-
 
 Мы Управление видимостью нашей кнопки в `TouchUpInside` событий и мы должны ссылаться на него в коде программной части. Давайте идентифицировать его с **имя** `aButton` в панели свойств, как показано на следующем снимке экрана:
 
@@ -329,7 +314,7 @@ partial void InitialActionCompleted (UIButton sender)
 В нашем раскадровке мы используем Segues обрабатывать переходы между TabBarController и наши контроллеров представлений. После взаимодействия с исходное представление, мы хотим загрузить их в TabBarController, представленные пользователю. Давайте настроим это в конструкторе.
 
 **CTRL + щелчок** и **перетащите** с помощью кнопки для TabBarController. На доступ к мыши появится контекстное меню. Мы хотим использовать модального перехода. 
- 
+
 Для настройки каждой из наших вкладок **Ctrl + щелчок** из TabBarController для каждого из наших контроллеров представлений в порядке от одного до трех, а затем выберите связь **вкладке** в контекстном меню, как показано ниже:
 
 [![](creating-tabbed-applications-images/context-menu.png "Выберите вкладку связь")](creating-tabbed-applications-images/context-menu.png#lightbox)
@@ -366,7 +351,6 @@ public override void ViewDidLoad ()
 ## <a name="summary"></a>Сводка
 
 В этой статье описаны способы использования `UITabBarController` в приложении. Мы рассмотрели способ загрузки контроллеров в каждой вкладке, а также настройке свойств на вкладках такие названия, изображения и эмблемы. Мы затем проверяются, с помощью раскадровки, как загрузить `UITabBarController` во время выполнения, если она не `RootViewController` окна.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

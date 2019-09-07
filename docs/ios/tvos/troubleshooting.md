@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 3fb479321686e4b956fc6ffee90dd5b0b2c16d9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291185"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769106"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Устранение неполадок приложений tvOS, созданных с помощью Xamarin
 
@@ -146,7 +146,6 @@ _"Приложения, которые содержат только срез ar
 
 Если вы отправляете приложение Xamarin. tvOS с поддержкой игровых контроллеров в магазин приложений Apple TV и получаете сообщение об ошибке в виде:
 
-
 _Обнаружена одна или несколько проблем с последней доставкой "имя приложения". Ваша доставка прошла успешно, но при следующей доставке может потребоваться устранить следующие проблемы:_
 
 _Недопустимый пакет — приложение, которое поддерживает игровые контроллеры, также должно поддерживать удаленное устройство Apple TV._
@@ -200,8 +199,6 @@ _Несовместимая Целевая платформа:. Нетпорта
 Обратите внимание, что номер профиля в пути должен совпадать с номером профиля PCL.
 
 Заполнив этот файл, вы сможете успешно добавить файл PCL в проект Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/14/2016
-ms.openlocfilehash: c5527db543a0b0d5218c37f0d75e22afcd59297a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 292734c0622ab35d5e48eec47593c3ffe4dc27e6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293150"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768692"
 ---
 # <a name="hello-watchos--walkthrough"></a>Привет, watchOS — пошаговое руководство
 
@@ -42,7 +42,6 @@ ms.locfileid: "70293150"
 
 Дважды щелкните интерфейс. Раскадровка в приложении Watch, чтобы запустить конструктор Xamarin iOS (если вы используете компьютер Mac, можно также щелкнуть правой кнопкой мыши и **Открыть с помощью > Xcode Interface Builder**).
 
-
 1. Убедитесь, что **панели элементов** и **свойства** отображаются.
 1. Щелкните, чтобы выбрать контроллер интерфейса,
 1. Задайте для идентификатора и заголовка контроллера интерфейса значение **интерфацеконтроллер** и **Hi Watch**,
@@ -62,7 +61,6 @@ ms.locfileid: "70293150"
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Задайте для идентификатора и заголовка контроллера интерфейса значение Интерфацеконтроллер и Hi Watch.")
 
 -----
-
 
 Создайте пользовательский интерфейс:
 
@@ -154,7 +152,6 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 Поздравляем, у вас есть приложение для просмотра контрольных значений!
 
 ![](hello-watch-images/running.png "Приложение, работающее в симуляторе")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 845257bc11d24865a01a992e99d39ad6c578b42c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 00a973e670ff5100a44ba158fe50f134781a97e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291462"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769510"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Поиск с основными Spotlight в Xamarin. iOS
 
@@ -132,8 +132,6 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 - **Поддержка пакетного обновления** . Если приложению требуется создать или изменить большую группу индексов одновременно, весь пакет можно отправить `Index` в метод `CSSearchableIndex` класса в одном вызове.
 - **Реагирование на изменения индекса** — с `CSSearchableIndexDelegate` помощью приложения можно реагировать на изменения и уведомления в индексе с возможностью поиска.
 - **Применение защиты данных** . используя классы защиты данных, можно реализовать безопасность элементов, добавляемых в индекс с возможностью поиска, с помощью ключевого прожектора Core.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

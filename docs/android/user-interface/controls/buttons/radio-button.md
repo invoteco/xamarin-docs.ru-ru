@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c1dabfcd481dccf50075c02c54019ee27499769f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510352"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758828"
 ---
 # <a name="radiobutton"></a>RadioButton
 
 В этом разделе вы создадите два взаимоисключающих переключателя (что позволяет отключить друг друга), используя[`RadioGroup`](xref:Android.Widget.RadioGroup)
 перетаскивани[`RadioButton`](xref:Android.Widget.RadioButton)
 мини-приложения. При нажатии любого из этих переключателей появится всплывающее сообщение.
-
 
 Откройте файл **Resources/Layout/Main. axml** и добавьте [`RadioButton`](xref:Android.Widget.RadioButton)два файла [`RadioGroup`](xref:Android.Widget.RadioGroup) , вложенные в (внутри [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 5fc5e6c1df911963ab765f5d49016eace8e2733f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d9174e9b2d6c056c94b405033a25eeb787c92f9f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768768"
 ---
 # <a name="monotouchdialog-json-markup"></a>Разметка JSON MonoTouch.Dialog
 
@@ -91,7 +91,6 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="Root_Element_Syntax" />
 
-
 ## <a name="root-element-syntax"></a>Синтаксис корневого элемента
 
 Корневой элемент содержит следующие значения:
@@ -99,11 +98,9 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 - `title`
 - `sections` (необязательно)
 
-
 Корневой элемент может отображаться внутри раздела как элемент для создания вложенного контроллера. В этом случае необходимо задать для дополнительного `"type"` свойства значение`"root"`
 
  <a name="url" />
-
 
 ### <a name="url"></a>url
 
@@ -111,13 +108,11 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="group" />
 
-
 ### <a name="group"></a>group
 
 Если этот параметр задан, то этот параметр задает GroupName для корневого элемента. Имена групп используются для выбора сводки, которая отображается как значение корневого элемента из одного из вложенных элементов в элементе. Это либо значение флажка, либо значение переключателя.
 
  <a name="radioselected" />
-
 
 ### <a name="radioselected"></a>радиоселектед
 
@@ -125,13 +120,11 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="title" />
 
-
 ### <a name="title"></a>заголовок
 
 Если он есть, это будет название, используемое для RootElement
 
  <a name="type" />
-
 
 ### <a name="type"></a>type
 
@@ -139,13 +132,11 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="sections" />
 
-
 ### <a name="sections"></a>разделы
 
 Это массив JSON с отдельными разделами
 
  <a name="Section_Syntax" />
-
 
 ## <a name="section-syntax"></a>Синтаксис раздела
 
@@ -155,9 +146,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 - `footer` (необязательно)
 - Массив `elements`
 
-
  <a name="header" />
-
 
 ### <a name="header"></a>заголовок
 
@@ -165,13 +154,11 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="footer" />
 
-
 ### <a name="footer"></a>Нижний колонтитул
 
 При наличии нижнего колонтитула отображается в нижней части раздела.
 
  <a name="elements" />
-
 
 ### <a name="elements"></a>элементы
 
@@ -182,11 +169,9 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 - `entry`строки (обычные или пароли)
 - `boolean`значения (с использованием параметров или изображений)
 
-
 Строковые элементы можно использовать в качестве кнопок, предоставляя метод, вызываемый при касании пользователем либо ячейки, либо принадлежности.
 
  <a name="Rendering_Elements" />
-
 
 ## <a name="rendering-elements"></a>Отрисовка элементов
 
@@ -230,7 +215,6 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="accessory" />
 
-
 ### <a name="accessory"></a>программу
 
 Определяет тип принадлежности, отображаемого в элементе отрисовки, возможные значения:
@@ -239,11 +223,9 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 - `detail-disclosure`
 - `disclosure-indicator`
 
-
 Если значение отсутствует, периферия не отображается
 
  <a name="background" />
-
 
 ### <a name="background"></a>фон
 
@@ -251,20 +233,17 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="caption" />
 
-
 ### <a name="caption"></a>пояснитель
 
 Основная строка, отображаемая в элементе отрисовки. Шрифт и цвет можно настроить, задав `"textcolor"` свойства и. `"font"` Стиль отрисовки определяется `"style"` свойством.
 
  <a name="color_and_detailcolor" />
 
-
 ### <a name="color-and-detailcolor"></a>цвет и детаилколор
 
 Цвет, используемый для основного текста или подробного текста.
 
  <a name="detailfont_and_font" />
-
 
 ### <a name="detailfont-and-font"></a>детаилфонт и Font
 
@@ -274,9 +253,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 - Helvetica
 - "Helvetica-14"
 
-
  <a name="linebreak" />
-
 
 ### <a name="linebreak"></a>LineBreak
 
@@ -289,11 +266,9 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 - `tail-truncation`
 - `word-wrap`
 
-
 И, `word-wrap` и могут использоваться вместе со `"lines"` свойством, имеющим значение 0, чтобы превратить элемент отрисовки в многострочный элемент. `character-wrap`
 
  <a name="ontap_and_onaccessorytap" />
-
 
 ### <a name="ontap-and-onaccessorytap"></a>ONTAP и онакцессоритап
 
@@ -316,13 +291,11 @@ class Foo {
 
  <a name="lines" />
 
-
 ### <a name="lines"></a>линии
 
 Если задано нулевое значение, автоматическое изменение размера элемента будет осуществляться в зависимости от содержимого содержащихся в нем строк. Чтобы это работало, необходимо также присвоить `"linebreak"` `"character-wrap"` свойству значение или `"word-wrap"`.
 
  <a name="style" />
-
 
 ### <a name="style"></a>стиль
 
@@ -334,9 +307,7 @@ class Foo {
 - `"value2"`
 - `"subtitle"`: текст с подзаголовоком.
 
-
  <a name="subtitle" />
-
 
 ### <a name="subtitle"></a>Подзаголовок
 
@@ -345,20 +316,17 @@ class Foo {
 
  <a name="textcolor" />
 
-
 ### <a name="textcolor"></a>TextColor
 
 Цвет, используемый для текста.
 
  <a name="value" />
 
-
 ### <a name="value"></a>value
 
 Вторичное значение, отображаемое в элементе отрисовки. Этот `"style"` параметр влияет на макет. Шрифт и цвет можно настроить с помощью параметров `"detailfont"` и. `"detailcolor"`
 
  <a name="Boolean_Elements" />
-
 
 ## <a name="boolean-elements"></a>Логические элементы
 
@@ -382,13 +350,11 @@ class Foo {
 
  <a name="type" />
 
-
 ### <a name="type"></a>type
 
 Для `"boolean"` типа можно задать значение или `"checkbox"`. Если задано значение Boolean, будет использоваться уислидер или Images (если `"on"` заданы и, и `"off"` ). Если задано значение CheckBox, будет использоваться флажок. `"group"` Свойство можно использовать, чтобы пометить логический элемент как принадлежащий определенной группе. Это полезно, если содержащий корневой элемент также имеет `"group"` свойство, как корневой каталог будет суммировать результаты с учетом всех логических значений (или флажков), принадлежащих одной группе.
 
  <a name="Entry_Elements" />
-
 
 ## <a name="entry-elements"></a>Элементы записи
 
@@ -423,13 +389,11 @@ class Foo {
 
  <a name="autocorrect" />
 
-
 ### <a name="autocorrect"></a>задать
 
 Определяет стиль автоматического исправления, используемый для записи. Возможные значения: true или false (строки `"yes"` и `"no"`).
 
  <a name="capitalization" />
-
 
 ### <a name="capitalization"></a>написание прописными буквами
 
@@ -440,16 +404,13 @@ class Foo {
 - `sentences`
 - `words`
 
-
  <a name="caption" />
-
 
 ### <a name="caption"></a>пояснитель
 
 Заголовок, используемый для записи
 
  <a name="keyboard" />
-
 
 ### <a name="keyboard"></a>клавиатура
 
@@ -465,16 +426,13 @@ class Foo {
 - `twitter`
 - `url`
 
-
  <a name="placeholder" />
-
 
 ### <a name="placeholder"></a>заполнителе
 
 Текст подсказки, отображаемый, если запись имеет пустое значение.
 
  <a name="return-key" />
-
 
 ### <a name="return-key"></a>ключ возврата
 
@@ -492,9 +450,7 @@ class Foo {
 - `send`
 - `yahoo`
 
-
  <a name="value" />
-
 
 ### <a name="value"></a>value
 
@@ -502,14 +458,12 @@ class Foo {
 
  <a name="Radio_Elements" />
 
-
 ## <a name="radio-elements"></a>Элементы Радио
 
 Элементы переключателей имеют `"radio"`тип. Выбранный элемент выбирается `radioselected` свойством содержащего его корневого элемента.
 Кроме того, если для `"group"` свойства задано значение, этот переключатель принадлежит этой группе.
 
  <a name="Date_and_Time_Elements" />
-
 
 ## <a name="date-and-time-elements"></a>Элементы даты и времени
 
@@ -535,7 +489,6 @@ class Foo {
 ```
 
  <a name="Html/Web_Element" />
-
 
 ## <a name="htmlweb-element"></a>HTML/Web-элемент
 

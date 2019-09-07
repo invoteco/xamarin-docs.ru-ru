@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2017
-ms.openlocfilehash: f9d49fc4bff91939c9924dc42a11ef31ffd87362
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e70cf426b2357570585c1c8f1cf21715858cb6f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289225"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758160"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Создание NuGet из существующих проектов библиотек
 
@@ -43,7 +43,6 @@ ms.locfileid: "70289225"
 На этом снимке экрана показано содержимое NuGet на основе PCL — включена только одна сборка PCL:
 
 ![](existing-library-images/nuget-output.png "Файлы, содержащиеся в пакете NuGet")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

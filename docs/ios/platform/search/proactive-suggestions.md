@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b79f64f154dbd7dde623d13385f111d3d5a5d3f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291728"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769539"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Общие сведения о упреждающих предложениях в Xamarin. iOS
 
@@ -534,7 +534,6 @@ textField.TextContentType = UITextContentType.FullStreetAddress;
 
 Когда приложение запускается с помощью объекта мапкит `MKDirectionsRequest` , оно должно автоматически начать перенаправление пользователя в запрошенное расположение или предоставить пользовательский интерфейс, который позволяет пользователю легко начать получать указания. Например:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -607,7 +606,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
   - После поступающих дома или на работу. 
 
 Включив простой вызов API в iOS 10, разработчик может создать более привлекательный интерфейс блокировки для пользователей приложения мультимедиа. Используя `MPPlayableContentManager` класс для управления воспроизведением мультимедиа, все элементы управления носителя (например, представленные музыкальным приложением) будут представлены на экране блокировки приложения.
-
 
 ```csharp
 using System;
@@ -682,8 +680,6 @@ namespace MonkeyPlayer
 ## <a name="summary"></a>Сводка
 
 В этой статье были рассмотрены упреждающие предложения и показано, как разработчик может использовать их для передачи трафика в приложение Xamarin. iOS. В нем рассмотрены действия по реализации упреждающего предложения и предоставлены рекомендации по использованию.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

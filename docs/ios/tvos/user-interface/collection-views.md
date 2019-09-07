@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280208"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769133"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Работа с представлениями коллекций tvOS в Xamarin
 
@@ -96,7 +96,6 @@ public CityCollectionView (IntPtr handle) : base (handle)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-    
 1. Запустите новое **приложение tvOS с одним представлением** в Visual Studio для Mac.
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его в конструкторе iOS.
 1. Добавьте представление изображения, метку и кнопку в существующее представление и настройте их так, чтобы они выглядели следующим образом: 
@@ -132,11 +131,9 @@ public CityCollectionView (IntPtr handle) : base (handle)
 
     [![](collection-views-images/collection11.png "Задайте удостоверение Цитицелл.")](collection-views-images/collection11.png#lightbox)
 1. Сохраните изменения.
-    
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
 1. Запустите новое **приложение с одним представлением tvOS** в Visual Studio.
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его в конструкторе iOS.
 1. Добавьте представление изображения, метку и кнопку в существующее представление и настройте их так, чтобы они выглядели следующим образом: 
@@ -170,7 +167,6 @@ public CityCollectionView (IntPtr handle) : base (handle)
 
     [![](collection-views-images/collection11vs.png "Задайте удостоверение Цитицелл.")](collection-views-images/collection11vs.png#lightbox)
 1. Сохраните изменения.
-    
 
 -----
 
@@ -286,7 +282,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 Дополнительные сведения о навигации и фокусе см. в документации по [работе с навигацией и фокусами](~/ios/tvos/app-fundamentals/navigation-focus.md) и [Siri удаленными устройствами и контроллерами Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -469,7 +464,6 @@ public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning 
 ### <a name="the-collection-view-delegate"></a>Делегат представления коллекции
 
 Затем добавьте в проект новый `CityViewDelegate` класс и сделайте его следующим:
-
 
 ```csharp
 using System;
@@ -684,7 +678,6 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Мы устанавливаем прозрачность предыдущего элемента, теряя фокус на ноль (0), и прозрачность следующего элемента получит фокус на 100%. Эти переходы также походят из анимации.
 
-
 ## <a name="configuring-the-collection-view-controller"></a>Настройка контроллера представления коллекции
 
 Теперь необходимо выполнить окончательную настройку в нашем представлении коллекции и позволить контроллеру установить свойство, которое мы определили, чтобы это представление коллекции можно было закрыть после того, как пользователь сделает выбор.
@@ -824,14 +817,11 @@ public override void ViewWillAppear (bool animated)
 
 Недавно добавленные в представления коллекций для iOS 9 — это возможность легко разрешить изменение порядка элементов в коллекции. Опять же, поскольку tvOS 9 является подмножеством iOS 9, это выполняется так же. Дополнительные сведения см. в нашем документе об [изменениях в представлении коллекции](~/ios/user-interface/controls/uicollectionview.md) .
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Сводка
 
 В этой статье рассматривается проектирование и работа с представлениями коллекций в приложении Xamarin. tvOS. Во первых, он рассматривал все элементы, составляющие представление коллекции. Далее показано, как спроектировать и реализовать представление коллекции с помощью раскадровки. Наконец, предоставляются ссылки на сведения о создании пользовательских макетов и переупорядочении элементов.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

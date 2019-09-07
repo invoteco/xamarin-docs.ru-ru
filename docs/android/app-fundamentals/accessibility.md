@@ -6,18 +6,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: f32f32e56ff4869c003b142f9ad67b0e54cfa353
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 982d5b81a22d6e69227081420a5947aed4d3aab1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197690"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755684"
 ---
 # <a name="accessibility-on-android"></a>Специальные возможности в Android
 
 На этой странице описывается, как использовать интерфейсы API специальных возможностей Android для создания приложений в соответствии с [контрольным списком специальных возможностей](~/cross-platform/app-fundamentals/accessibility.md).
 См. страницы специальных [возможностей iOS](~/ios/app-fundamentals/accessibility.md) и [доступность OS X](~/mac/app-fundamentals/accessibility.md) для других API-интерфейсов платформы.
-
 
 ## <a name="describing-ui-elements"></a>Описание элементов пользовательского интерфейса
 
@@ -66,7 +65,6 @@ someText.Hint = "Enter some text"; // displays (and is "read") when control is e
     android:id="@+id/someText"
     android:hint="Enter some text" />
 ```
-
 
 ### <a name="labelfor-links-input-fields-with-labels"></a>Лабелфор ссылки на поля ввода с метками
 
@@ -131,7 +129,6 @@ label.Focusable = false;
 
 Можно также контролировать порядок `nextFocusDown`фокуса с помощью атрибутов `nextFocusLeft` `nextFocusRight`,, `nextFocusUp` , обычно заданных в макете AXML. Используйте эти атрибуты, чтобы убедиться, что пользователь может легко перемещаться по элементам управления на экране.
 
-
 ## <a name="accessibility-and-localization"></a>Специальные возможности и локализация
 
 В примерах выше указание и описание содержимого задаются непосредственно в отображаемое значение. Предпочтительнее использовать значения в файле **Strings. XML** , например:
@@ -171,13 +168,11 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 Преимущество хранения текста в отдельном файле заключается в том, что в приложении может быть предоставлено несколько языковых переводов файла. Дополнительные сведения о добавлении локализованных строковых файлов в проект приложения см. в статье [руководство по локализации Android](~/android/app-fundamentals/localization.md) .
 
-
 ## <a name="testing-accessibility"></a>Тестирование специальных возможностей
 
 Выполните следующие [действия](https://developer.android.com/training/accessibility/testing.html#how-to) , чтобы включить Талкбакк и исследовать с помощью сенсорного ввода для проверки специальных возможностей на устройствах Android.
 
 Может потребоваться установить [талкбакк](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) из Google Play, если он не отображается в окне **Параметры > Специальные возможности**.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

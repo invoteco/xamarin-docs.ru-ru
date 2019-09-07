@@ -1,43 +1,43 @@
 ---
-title: Добавление AppCompat и материальное
-description: В этой статье объясняется, как преобразовать существующие приложения Xamarin.Forms Android использовать AppCompat и материальному дизайну.
+title: Добавление AppCompat и дизайна материалов
+description: В этой статье объясняется, как преобразовать существующие приложения Xamarin. Forms Android для использования AppCompat и дизайна материалов.
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a5b6466b1d2489cced4b1e3205ef672b8f6a4da7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293469"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770650"
 ---
-# <a name="adding-appcompat-and-material-design"></a>Добавление AppCompat и материальное
+# <a name="adding-appcompat-and-material-design"></a>Добавление AppCompat и дизайна материалов
 
-_Выполните следующие действия для преобразования существующих приложений Xamarin.Forms Android использовать AppCompat и материальному дизайну_
+_Выполните следующие действия, чтобы преобразовать существующие приложения Xamarin. Forms Android для использования AppCompat и дизайна материалов._
 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
 ## <a name="overview"></a>Обзор
 
-Эти инструкции описывают обновить существующие приложения Xamarin.Forms Android будет использовать библиотеку совместимости приложений и включение материальному дизайну в версии приложения Xamarin.Forms для Android.
+В этих инструкциях объясняется, как обновить существующие приложения Xamarin. Forms Android для использования библиотеки AppCompat и включения дизайна материалов в версии Android ваших приложений Xamarin. Forms.
 
-### <a name="1-update-xamarinforms"></a>1. Обновить Xamarin.Forms
+### <a name="1-update-xamarinforms"></a>1. Обновление Xamarin. Forms
 
-Убедитесь, что решение использует Xamarin.Forms 2.0 или более поздней версии. Обновите пакет Xamarin.Forms Nuget 2.0, если это необходимо.
+Убедитесь, что решение использует Xamarin. Forms 2,0 или более поздней версии. При необходимости обновите пакет NuGet Xamarin. Forms до 2,0.
 
 ### <a name="2-check-android-version"></a>2. Проверка версии Android
 
-Убедитесь, что проект Android целевая платформа — Android 6.0 (Marshmallow). Проверьте **проект Android > Параметры > Создать > Общие** выбранные параметры, чтобы убедиться в corrent framework:
+Убедитесь, что Целевая платформа проекта Android — Android 6,0 (Marshmallow). Проверьте **проект Android > параметры > сборки > общие** параметры, чтобы убедиться, что выбрана платформа Коррент:
 
- ![](appcompat-images/target-android-6-sml.png "Конфигурации сборки общие Android")
+ ![](appcompat-images/target-android-6-sml.png "Общая конфигурация сборки Android")
 
-### <a name="3-add-new-themes-to-support-material-design"></a>3. Добавить новые темы для поддержки материальному дизайну
+### <a name="3-add-new-themes-to-support-material-design"></a>3. Добавление новых тем для поддержки дизайна материалов
 
-Создайте следующие три файла в проект Android и вставьте в него содержимое ниже. Компания Google предоставляет [руководства по стилю](http://www.google.com/design/spec/style/color.html#color-color-palette) и [цвет палитры генератор](http://www.materialpalette.com/) поможет вам выбрать схему другой цвет в соответствии с указанной.
+Создайте следующие три файла в проекте Android и вставьте содержимое ниже. Google предоставляет [рекомендации по стилю](http://www.google.com/design/spec/style/color.html#color-color-palette) и [генератор цветовой палитры](http://www.materialpalette.com/) , которые помогают выбрать альтернативную цветовую схему для указанной.
 
 **Resources/values/colors.xml**
 
@@ -66,7 +66,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 </resources>
 ```
 
-Дополнительного стиля, которые должны быть включены в **v21 значения** папки, чтобы применить определенные свойства, при запуске Android Lollipop и более поздних версиях.
+Дополнительный стиль должен быть включен в папку **Values-V21** для применения конкретных свойств при запуске в комплекте программного интерфейса Android и более поздних версиях.
 
 **Resources/values-v21/style.xml**
 
@@ -80,11 +80,11 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Обновление файла AndroidManifest.xml
+### <a name="4-update-androidmanifestxml"></a>4. Обновление AndroidManifest. XML
 
-Чтобы обеспечить эту новую тему сведения является темой используется, и задайте **AndroidManifest** файл, добавив `android:theme="@style/MyTheme"` (оставьте остальную часть данных XML, так как она была).
+Чтобы обеспечить использование новых сведений о теме, задайте тему в файле **AndroidManifest** , добавив `android:theme="@style/MyTheme"` (оставьте остальной XML-файл).
 
-**Properties/AndroidManifest.xml**
+**Properties/AndroidManifest. XML**
 
 ```xml
 ...
@@ -93,11 +93,11 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 ...
 ```
 
-### <a name="5-provide-toolbar-and-tab-layouts"></a>5. Укажите макеты панели инструментов и вкладку
+### <a name="5-provide-toolbar-and-tab-layouts"></a>5. Предоставление макетов панелей инструментов и вкладок
 
-Создание **Tabbar.axml** и **Toolbar.axml** файлы в **ресурсы/макета** каталоге и вставьте в их содержимое из ниже:
+Создайте файлы **таббар. axml** и **Toolbar. axml** в каталоге **Resources/Layout** и вставьте их содержимое из следующего списка:
 
-**Resources/layout/Tabbar.axml**
+**RESOURCES/Layout/таббар. axml**
 
 ```xml
 <android.support.design.widget.TabLayout
@@ -113,10 +113,10 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
     app:tabMode="fixed" />
 ```
 
-Заданы несколько свойств для тех вкладок, включая тяжести вкладки для `fill` и режим `fixed`.
-Если у вас много вкладок можно переключиться в это чтобы прокручиваемые - прочтите Android [TabLayout документации](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) для получения дополнительных сведений.
+Для вкладок задано несколько свойств, включая значение параметра "сила притяжения `fill` " и " `fixed`режим".
+Если у вас много вкладок, вы можете переключиться на эту страницу, прочтите [документацию](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) по Android таблайаут, чтобы узнать больше.
 
-**Resources/layout/Toolbar.axml**
+**Ресурсы, макеты и панели инструментов. axml**
 
 ```xml
 <android.support.v7.widget.Toolbar
@@ -132,13 +132,12 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
     app:layout_scrollFlags="scroll|enterAlways" />
 ```
 
-В этих файлах мы создаем конкретной темы для панели инструментов, которые могут быть различными для вашего приложения.
-Ссылаться на [Hello инструментов](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) записи блога, чтобы узнать больше.
+В этих файлах мы создаем конкретную тему для панели инструментов, которая может различаться для вашего приложения.
+Дополнительные сведения см. в записи блога о [панели инструментов Hello](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) .
 
+### <a name="6-update-the-mainactivity"></a>6. Обновите`MainActivity`
 
-### <a name="6-update-the-mainactivity"></a>6. Обновление `MainActivity`
-
-В существующих приложениях Xamarin.Forms **MainActivity.cs** класс будет наследовать от `FormsApplicationActivity`. Его необходимо заменить `FormsAppCompatActivity` для включения новых функциональных возможностей.
+В существующих приложениях Xamarin. Forms класс **MainActivity.CS** будет наследовать `FormsApplicationActivity`от. Его необходимо заменить `FormsAppCompatActivity` на, чтобы включить новые функции.
 
 **MainActivity.cs**
 
@@ -146,7 +145,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 public class MainActivity : FormsAppCompatActivity  // was FormsApplicationActivity
 ```
 
-Наконец, «подключить» новые макеты на шаге 5 в `OnCreate` метод, как показано ниже:
+Наконец, «привязать новые макеты из шага 5 в `OnCreate` методе, как показано ниже:
 
 ```csharp
 protected override void OnCreate(Bundle bundle)

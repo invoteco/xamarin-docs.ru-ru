@@ -7,15 +7,14 @@ ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: c75db8bd29b7a57c46610abdd5e4024938fc9e1b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fec6cef22ddbc47aca0027aa026e0524b38bec4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280334"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768061"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>Работа с группами приложений watchOS в Xamarin
-
 
 Группы приложений предоставляют различным приложениям (или одному приложению и его расширениям) общее место хранения файлов. Группы приложений можно использовать для следующих данных:
 
@@ -39,14 +38,11 @@ ms.locfileid: "70280334"
 
 [![](app-groups-images/entitlements-sml.png "Настройте plist и введите идентификатор.")](app-groups-images/entitlements.png#lightbox)
 
-
 ### <a name="deployment"></a>Развертывание
 
 Убедитесь, что группа приложений правильно настроена в подготовке [развертывания](~/ios/watchos/deploy-test/index.md#App_Groups) .
 
-
 Дополнительные сведения см. в разделе [возможностей групп приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) документации.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

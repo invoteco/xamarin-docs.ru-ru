@@ -7,23 +7,20 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 0ea96eb3808daeb9f8764695d1b4b3d432727ff2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f47d4228fc1d3ec1b3b428b917f3c774103577d7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292481"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769187"
 ---
 # <a name="tvos-app-distribution-overview"></a>Общие сведения о распространении приложений tvOS
 
 _Этот документ содержит обзор методов распространения, доступных для приложения Xamarin. tvOS, и служит указателем на более подробные документы в разделе._
 
-
 После разработки приложения Xamarin. tvOS следующим шагом в жизненном цикле разработки программного обеспечения является распространение приложения пользователям, как показано в выделенном разделе схемы ниже:
 
-
 [![Обзор жизненного цикла разработки программного обеспечения](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
-
 
 Компания Apple предоставляет следующие способы распространения приложения tvOS, которое поддерживается Xamarin. tvOS:
 
@@ -83,8 +80,6 @@ _Этот документ содержит обзор методов распр
 ## <a name="summary"></a>Сводка
 
 В этой статье представлен краткий обзор механизмов распространения, доступных для приложений Xamarin. tvOS. В нем появился магазин приложений Apple TV, прямое и внутреннее развертывание, а также приведены ссылки на более подробные сведения.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dabbd21a2ad2ef3c77017ea92704ccdf69f7b36c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f92a338b58dfb82ff5d442ed856e246f4a8a5a8f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228210"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761854"
 ---
 # <a name="listview-performance"></a>Производительность элемента управления ListView
 
@@ -181,7 +181,6 @@ public class CustomListView : ListView
 `AbsoluteLayout` имеет возможность выполнять макеты без вызова одной из них. Это позволяет очень мощный для производительности. Если `AbsoluteLayout` нельзя использовать, рассмотрите возможность [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout). При использовании `RelativeLayout`, непосредственно передачи ограничения будут значительно быстрее, чем использование выражения API. Том, что выражение API использует JIT и в iOS дереве интерпретироваться, которое выполняется медленнее. Выражение API подходит для макетов страниц, в котором его требуется только на исходный макет и поворота, но в `ListView`, где он выполняется постоянно во время прокрутки, ее производительность может снижаться.
 
 Создание пользовательского средства визуализации для [ `ListView` ](xref:Xamarin.Forms.ListView) или ячейках является одним из подходов к уменьшению влияния вычисления макета на производительность прокрутки. Дополнительные сведения см. в разделе [Настройка ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) и [Настройка ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

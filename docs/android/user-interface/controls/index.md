@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: 31f6c0dd0d4f5452ebc2cbde0cc44cd9c47eeb9a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e3f6524f03612ee39c537f482b1db916ecf08a23
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510324"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759098"
 ---
 # <a name="xamarinandroid-controls-widgets"></a>Элементы управления Xamarin. Android (мини-приложения)
 
@@ -24,20 +24,17 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример Актионбар](images/action-bar.png)
 
-
 ## <a name="auto-completeandroiduser-interfacecontrolsauto-completemd"></a>[Автозаполнение](~/android/user-interface/controls/auto-complete.md)
 
 `AutoCompleteTextView`— Это редактируемый элемент текстового представления, который автоматически показывает варианты завершения при вводе пользователем. Список предложений отображается в раскрывающемся меню, из которого пользователь может выбрать элемент для замены содержимого поля ввода на.
 
 ![Пример автоматического завершения](images/auto-complete.png)
 
-
 ## <a name="buttonsandroiduser-interfacecontrolsbuttonsindexmd"></a>[Кнопки](~/android/user-interface/controls/buttons/index.md)
 
 Кнопки — это элементы пользовательского интерфейса, которые пользователь откасается для выполнения действия.
 
 ![Примеры кнопок](images/buttons.png)
-
 
 ## <a name="calendarandroiduser-interfacecontrolscalendarmd"></a>[Calendar](~/android/user-interface/controls/calendar.md)
 
@@ -46,13 +43,11 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример календаря](images/calendar.png)
 
-
 ## <a name="cardviewandroiduser-interfacecontrolscard-viewmd"></a>[CardView](~/android/user-interface/controls/card-view.md)
 
 `CardView`— это компонент пользовательского интерфейса, который представляет содержимое текста и изображения в представлениях, напоминающих карты. `CardView`реализуется как мини `FrameLayout` -приложение со скругленными углами и тенью. Как правило, `CardView` используется для представления одного элемента строки `ListView` в группе представлений или `GridView` .
 
 ![Пример представления карточки](images/cardview.png)
-
 
 ## <a name="edit-textandroiduser-interfacecontrolsedit-textmd"></a>[Изменить текст](~/android/user-interface/controls/edit-text.md)
 
@@ -60,13 +55,11 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример правки текста](images/edit-text.png)
 
-
 ## <a name="galleryandroiduser-interfacecontrolsgallerymd"></a>[Коллекция](~/android/user-interface/controls/gallery.md)
 
 `Gallery`— Это мини-приложение макета, которое используется для отображения элементов в списке с горизонтальной прокруткой; Он позиционирует текущее выделение в центре представления.
 
 ![Галерея примеров](images/gallery.png)
-
 
 ## <a name="navigation-barandroiduser-interfacecontrolsnavigation-barmd"></a>[Панель навигации](~/android/user-interface/controls/navigation-bar.md)
 
@@ -74,13 +67,11 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример панели навигации](images/navigation-bar.png)
 
-
 ## <a name="pickersandroiduser-interfacecontrolspickersindexmd"></a>[Средства выбора](~/android/user-interface/controls/pickers/index.md)
 
 Средства *выбора* — это элементы пользовательского интерфейса, которые позволяют пользователю выбрать дату или время с помощью диалоговых окон, предоставляемых Android.
 
 ![Пример средства выбора](images/picker.png)
-
 
 ## <a name="popup-menuandroiduser-interfacecontrolspopup-menumd"></a>[Всплывающее меню](~/android/user-interface/controls/popup-menu.md)
 
@@ -88,13 +79,11 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример всплывающего меню](images/popup-menu.png)
 
-
 ## <a name="ratingbarandroiduser-interfacecontrolsratingbarmd"></a>[ратингбар](~/android/user-interface/controls/ratingbar.md)
 
 `RatingBar` — Это элемент пользовательского интерфейса, который отображает рейтинг в звездах.
 
 ![Пример Ратингбар](ratingbar-images/01-ratingbar.png)
-
 
 ## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[Вертушка](~/android/user-interface/controls/spinner.md)
 
@@ -102,13 +91,11 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример счетчика](images/spinner.png)
 
-
 ## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[Коммутатор](~/android/user-interface/controls/switch.md)
 
 `Switch`— Это элемент пользовательского интерфейса, который позволяет пользователю переключаться между двумя состояниями, например включать или выключать. Значение `Switch` по умолчанию — OFF.
 
 ![Пример переключения](images/switch.png)
-
 
 ## <a name="textureviewandroiduser-interfacecontrolstexture-viewmd"></a>[TextureView](~/android/user-interface/controls/texture-view.md)
 
@@ -116,13 +103,11 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример представления текстуры](images/texture-view.png)
 
-
 ## <a name="toolbarandroiduser-interfacecontrolstool-barindexmd"></a>[ToolBar](~/android/user-interface/controls/tool-bar/index.md)
 
 Мини-приложение (впервые представленное в Android 5,0 без описания операций) может рассматриваться как обобщение интерфейса &ndash; панели действий, предназначенного для замены панели действий. `Toolbar` `Toolbar` Можно использовать в любом месте макета приложения, и это гораздо более настраиваемое, чем панель действий.
 
 ![Пример панели инструментов](images/toolbar.png)
-
 
 ## <a name="viewpagerandroiduser-interfacecontrolsview-pagerindexmd"></a>[ViewPager](~/android/user-interface/controls/view-pager/index.md) 
 
@@ -130,10 +115,8 @@ Xamarin. Android предоставляет все собственные эле
 
 ![Пример ViewPager](images/viewpager.png)
 
-
 ## <a name="webviewandroiduser-interfacecontrolsweb-viewmd"></a>[WebView](~/android/user-interface/controls/web-view.md)
 
 `WebView`— Это элемент пользовательского интерфейса, который позволяет создать собственное окно для просмотра веб-страниц (или даже разработать полный браузер).
 
 ![Пример веб-представления](images/web-view.png)
-

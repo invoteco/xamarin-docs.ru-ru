@@ -7,12 +7,12 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4e8c909ce7dfd9c8f6dccbf2685ff2658931b6a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 74335de66e74f6adc7c9488a1b78c31d36d03f14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656359"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759407"
 ---
 # <a name="skiasharp-transparency"></a>Прозрачность SkiaSharp
 
@@ -139,7 +139,6 @@ paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 Анимация переключается между двумя словами, понуждая пользователя «больше кода» (или возможно запросе «дополнительные кода»):
 
 [![Дополнительные код](transparency-images/CodeMoreCode.png "дополнительные код")](transparency-images/CodeMoreCode-Large.png#lightbox)
-
 
 В предыдущей статье на [ **основы растрового изображения в SkiaSharp**](bitmaps.md), было продемонстрировано отображение точечных рисунков с помощью одного из [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap*) методы `SKCanvas`. Все `DrawBitmap` методы включают в себя `SKPaint` объект в качестве последнего параметра. По умолчанию этот параметр имеет значение `null` и ее можно игнорировать. 
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: cf57142f0896b42c5c8ba726db723527e0e61452
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522920"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762389"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Панель навигации Xamarin. Android
 
@@ -25,7 +25,6 @@ ms.locfileid: "69522920"
 - `SystemUiFlagVisible`&ndash; Делает панель навигации видимой. 
 - `SystemUiFlagLowProfile`&ndash; Затемнение элементов управления на панели навигации. 
 - `SystemUiFlagHideNavigation`&ndash; Скрывает панель навигации. 
-
 
 Эти флаги можно применить к любому представлению в иерархии представлений, задав `SystemUiVisibility` свойство. Если для нескольких представлений задано это свойство, система объединяет их с операцией или и применяет их до тех пор, пока в окне, в котором установлены флаги, остается фокус. При удалении представления все установленные флаги также будут удалены.
 
@@ -64,8 +63,6 @@ tv.SystemUiVisibilityChange +=
         tv.Text = String.Format ("Visibility = {0}", e.Visibility);
   };
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

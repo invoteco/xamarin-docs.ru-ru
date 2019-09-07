@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 191d037d12d27e2c6ab475467853023f440c71d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 255f308078c892605b9ce20b17fd737c5582eaed
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291368"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768979"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Отображение изображений с помощью Xamarin. iOS
 
@@ -50,7 +50,6 @@ Visual Studio для Mac, как правило, автоматически вы
 
 - Хранение образов, настроенных в свойствах приложения, таких как образы запуска по умолчанию и значки приложений.
 - Хранение других изображений и файлов отдельно от кода, что упрощает управление (подкаталоги сохраняются при копировании содержимого каталога ресурсов).
-
 
 Каталог **Resources** особенно полезен в проекте библиотеки, поскольку в коде можно предположить, что эти образы будут скопированы в корневую папку приложения, что облегчит написание библиотек общего кода, требующих изображения, звук, видео, XML или другие файлы.
 

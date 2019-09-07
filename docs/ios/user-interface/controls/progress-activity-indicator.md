@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 62dadffbc4b8a5629969203938e4fa0130971664
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a2197a1ff9c37546fd97eb5a2459764ec05d4412
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283345"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768915"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Индикаторы хода выполнения и активности в Xamarin. iOS
 
@@ -46,7 +46,6 @@ iOS предоставляет два основных способа предо
 
 Задайте для `HidesWhenStopped` `StopAnimating()` свойства значение, чтобы индикатор действия исчезал после вызова. `true` По умолчанию задано значение `true` . В любой момент можно увидеть, выполняет ли индикатор действия вращающуюся анимацию, проверив `IsAnimating` свойство. 
 
-
 ### <a name="managing-activity-indicator-appearances"></a>Управление внешним видом индикаторов действий
 
 `UIActivityIndicatorViewStyle` Перечисление может быть передано в качестве параметра при создании экземпляра индикатора действия. С помощью этого параметра можно задать для визуального стиля `Gray`значение `White`, или `WhiteLarge`, например:
@@ -77,7 +76,6 @@ activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.White
 На панели свойств можно настроить следующие свойства:
 
 ![Панель свойств](progress-activity-indicator-images/progress-indicator3.png)
-
 
 ### <a name="managing-progress-bar-behavior"></a>Управление поведением индикатора выполнения
 
@@ -110,6 +108,3 @@ progressBar = new UIProgressView(UIProgressViewStyle.Default)
                 TrackTintColor = UIColor.Magenta
             }; 
 ```
-
-
-

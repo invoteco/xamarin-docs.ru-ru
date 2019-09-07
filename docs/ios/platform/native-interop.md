@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/28/2016
-ms.openlocfilehash: 75180152c3ed7056102038b9019f8017183c17ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279949"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769570"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Ссылки на собственные библиотеки в Xamarin. iOS
 
@@ -56,7 +56,6 @@ lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a lib
 
 Будет создана `libMyLibrary.a` универсальная библиотека (FAT), которая будет использоваться для всех целевых объектов разработки iOS.
 
-
 ### <a name="missing-required-architecture-i386"></a>Отсутствует требуемая архитектура i386
 
 Если вы получаете `does not implement methodSignatureForSelector` сообщение или `does not implement doesNotRecognizeSelector` в выходных данных среды выполнения при попытке использования библиотеки цели-C в симуляторе iOS, Библиотека, возможно, не была скомпилирована для архитектуры i386 (см. раздел [Создание универсального машинного кода). ](#building_native)См. раздел "библиотеки" выше).
@@ -80,7 +79,6 @@ lipo -info /full/path/to/libraryname.a
 - Перенесите библиотеку в проект
 - Настройка Xamarin. iOS для связи библиотеки
 - Получите доступ к методам из библиотеки.
-
 
 Чтобы **перенести библиотеку в проект**, выберите проект в обозревателе решений и нажмите кнопку **+ параметр + a**. Перейдите к Либмилибрари. a и добавьте его в проект. При появлении запроса укажите Visual Studio для Mac или Visual Studio, чтобы скопировать его в проект. После его добавления найдите Либфу. a в проекте, щелкните его правой кнопкой мыши и задайте для **действия сборки** значение **нет**.
 
@@ -113,7 +111,6 @@ lipo -info /full/path/to/libraryname.a
 - Общие библиотеки, являющиеся частью операционной системы.
 
 - Статические библиотеки, поставляемые вместе с приложением.
-
 
 Для доступа к методам, определенным в одной из них, используется [функция P/Invoke Mono](https://www.mono-project.com/docs/advanced/pinvoke/) , которая является той же технологией, которая используется в .NET, что примерно так:
 
@@ -174,4 +171,3 @@ public static extern double AnimalLibraryVersion();
 Поскольку в iOS можно использовать только статические библиотеки, не существует внешней общей библиотеки для компоновки, поэтому параметр path в атрибуте dllimport должен использовать специальное имя `__Internal` (Обратите внимание на символы двойной подчеркивания в начале имени), а не на имя пути.
 
 Это заставляет атрибут DllImport искать символ метода, на который вы ссылаетесь в текущей программе, вместо того, чтобы пытаться загрузить его из общей библиотеки.
-

@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647393"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770574"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Данные пути SVG в SkiaSharp
 
@@ -428,7 +428,6 @@ public class PrettyAnalogClockPage : ContentPage
 Кое-что особое делается с помощью секундной стрелки, тем не менее. Поскольку часы обновляются каждые 16 миллисекунд `Millisecond` свойство `DateTime` значение потенциально может использоваться для анимации Очистка стороны во-вторых, вместо одного, которое перемещает в дискретных переходов от секунды до секунды. Но этот код не допускает перемещение беспрепятственной. Вместо этого он использует Xamarin.Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) и [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) анимации, функции для разных видов перемещения плавности. Эти функции плавности вызвать секундной стрелки для перемещения по принципу jerkier &mdash; отзыва немного перед перемещается, а затем немного чрезмерно прокрутить его конечный эффект, к сожалению невозможно воспроизвести эти статического на снимках экрана:
 
 [![](path-data-images/prettyanalogclock-small.png "Тройной снимок экрана страницы довольно аналоговый часы")](path-data-images/prettyanalogclock-large.png#lightbox "тройной снимок экрана страницы довольно аналоговый часов")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

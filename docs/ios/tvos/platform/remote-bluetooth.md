@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 32deee1ea1e47438f4f671ac3ccaa09f4218a88b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 71a74d8f9046cd978a40b03da1921cd1fac9405f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290743"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769182"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri контроллеры удаленного подключения и Bluetooth для tvOS в Xamarin
 
@@ -364,8 +364,6 @@ Siri Remote имеет следующие характеристики при и
 ## <a name="summary"></a>Сводка
 
 В этой статье рассматривается новый удаленный Siri, поставляемый с Apple TV, жестами сенсорной поверхности и удаленными кнопками Siri. Далее рассматривается работа с жестами и раскадровками, жестами и кодом и событиями низкого уровня. Наконец, если обсуждалась работа с игровыми контроллерами.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

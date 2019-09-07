@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 97aa8c321362ebccc954a79f99b7bc69b5a0ad63
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 453da8c1b943591c331950ecb433bf0055faf85d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657064"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770361"
 ---
 # <a name="layout-compression"></a>Сжатие макета
 
@@ -117,7 +117,6 @@ CompressedLayout.SetIsHeadless(stackLayout, true);
 ## <a name="summary"></a>Сводка
 
 Сжатие макета позволяет удалить указанные макеты из визуального дерева с целью повышения скорости отрисовки страниц. В этом случае рост производительности зависит от сложности страницы, версии используемой операционной системы и устройства, на котором выполняется приложение. Однако наиболее заметное повышение производительности будет наблюдаться на старых устройствах.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

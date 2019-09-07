@@ -6,12 +6,12 @@ ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d3f756b1a551c7b6bcbe48129235d537312edff6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73f44acad3e30e4301a69e5f2422cd4dd1a3dbf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282139"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766564"
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Создание новых проектов библиотеки для платформы для NuGet
 
@@ -55,7 +55,6 @@ NuGet может содержать код, относящийся к iOS и And
 
     ![](platform-specific-images/create-nuget-package.png "Файл пакета NuGet будет сохранен в папке bin как отладка, так и выпуск, в зависимости от конфигурации.")
 
-
 ## <a name="verifying-the-output"></a>Проверка выходных данных
 
 Пакеты NuGet также являются ZIP-файлами, поэтому можно проверить внутреннюю структуру созданного пакета.
@@ -63,7 +62,6 @@ NuGet может содержать код, относящийся к iOS и And
 На этом снимке экрана показано содержимое зависимой от платформы NuGet, которая поддерживает iOS и Android и в ней были выбраны две эталонные сборки:
 
 ![](platform-specific-images/nuget-output.png "Файлы, содержащиеся в пакете NuGet")
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

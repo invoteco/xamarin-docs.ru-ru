@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ac23ae6fe094b8049ac1b3460d327716e4ece
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291679"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766804"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Элемент управления Menu watchOS (Force Touch) в Xamarin
 
@@ -28,7 +28,6 @@ ms.locfileid: "70291679"
 Принудительное касание не связано с каким бы то ни было определенным элементом на экране; к контроллеру интерфейса можно присоединить только одно меню, которое будет отображаться независимо от того, где на экране появляется Force Touch нажатии.
 
 Можно представить между одним и четырьмя параметрами меню.
-
 
 ## <a name="adding-a-menu"></a>Добавление меню
 
@@ -56,7 +55,6 @@ partial void MenuItemTapped ()
 Как и в изображениях вкладок в iOS, для изображений пунктов меню требуется непрозрачный шаблон с альфа-каналом, позволяющий отображать фон.
 
 Для лучшей производительности следует добавить изображения, используемые для меню, в проект Watch App (а не проект расширения приложения).
-
 
 ## <a name="changing-the-menu-items"></a>Изменение пунктов меню
 
@@ -90,8 +88,6 @@ void MenuItemTapped ()
 Метод может быть вызван для удаления всех элементов меню, *добавленных программным способом.* `ClearAllMenuItems`
 
 Не удается очистить элементы меню, настроенные в раскадровке.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

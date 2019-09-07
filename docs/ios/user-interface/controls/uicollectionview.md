@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 29483ca184786f8f0d2a7d0d9345608542d30e61
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282861"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768859"
 ---
 # <a name="collection-views-in-xamarinios"></a>Представления коллекций в Xamarin. iOS
 
@@ -43,7 +43,6 @@ iOS предоставляет класс макета с именем `UICollec
 - `ContentView`— Это представление содержит содержимое, которое представляет ячейка. Он отображается в самом верхнем z-порядке на экране.
 - `SelectedBackgroundView`— Ячейки имеют встроенную поддержку выбора. Это представление позволяет визуально отметьте, что ячейка выбрана. Он отображается непосредственно под тем, `ContentView` когда выбрана ячейка.
 - `BackgroundView`— Ячейки могут также отображать фон, который представлен в `BackgroundView` . Это представление отображается под `SelectedBackgroundView` .
-
 
 Устанавливая `ContentView` таким образом, что он меньше `BackgroundView` и `SelectedBackgroundView`, `BackgroundView` `SelectedBackgroundView` можно использовать для визуального выделения содержимого, тогда как при выборе ячейки, как показано ниже:
 
@@ -85,7 +84,6 @@ public class AnimalCell : UICollectionViewCell
 
  <a name="Supplementary_Views" />
 
-
 ## <a name="supplementary-views"></a>Дополнительные представления
 
 Дополнительные представления — это представления, которые представляют сведения, связанные с каждым `UICollectionView`разделом. Как и ячейки, дополнительные представления управляются данными. Если ячейки представляют данные элемента из источника данных, дополнительные представления представляют данные раздела, такие как категории книги на полке или жанр музыки в музыкальной библиотеке.
@@ -117,7 +115,6 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
  <a name="Decoration_Views" />
 
-
 ## <a name="decoration-views"></a>Представления оформления
 
 Декорированные представления — это чисто визуальные представления, которые могут `UICollectionView`отображаться в. В отличие от ячеек и дополнительных представлений они не управляются данными. Они всегда создаются в подклассе макета и затем могут меняться в качестве макета содержимого. Например, представление декорирования можно использовать для представления фона, который прокручивается с содержимым в `UICollectionView`, как показано ниже:
@@ -136,7 +133,6 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
     }
   }
  ```
-
 
 ## <a name="data-source"></a>источника данных
 
@@ -188,7 +184,6 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 
  <a name="Delegate" />
 
-
 ### <a name="delegate"></a>делегат
 
 Класс использует делегат типа `UICollectionViewDelegate` для поддержки `UICollectionView`взаимодействия с содержимым в. `UICollectionView` Это позволяет управлять:
@@ -197,11 +192,9 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 - **Выделение ячеек** — определяет, затрагивается ли ячейка в данный момент.
 - Меню **ячеек** — меню, отображаемое для ячейки в ответ на длительный жест нажатия.
 
-
 Как и в случае с источником данных `UICollectionViewController` , по умолчанию настроено как делегат `UICollectionView`для.
 
  <a name="Cell_HighLighting" />
-
 
 #### <a name="cell-highlighting"></a>Выделение ячеек
 
@@ -227,7 +220,6 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
  <a name="Disabling_Selection" />
 
-
 #### <a name="disabling-selection"></a>Отключение выделения
 
 Выбор по умолчанию включен в `UICollectionView`. Чтобы отключить выбор, переопределите `ShouldHighlightItem` и возвратите false, как показано ниже.
@@ -245,7 +237,6 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
  <a name="Cell_Menus" />
 
-
 #### <a name="cell-menus"></a>Меню ячеек
 
 Каждая ячейка в `UICollectionView` может отображать меню, которое позволяет при необходимости поддерживать вырезание, копирование и вставку. Чтобы создать меню редактирования для ячейки, выполните следующие действия.
@@ -254,13 +245,11 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 1. Переопределяйте `CanPerformAction` и возвращают значение true для каждого действия, которое может выполнять элемент, что может быть любым из вырезания, копирования или вставки.
 1. Переопределите `PerformAction` для выполнения операции редактирования, копирования и вставки.
 
-
 На следующем снимке экрана показано меню при длительной нажатии ячейки:
 
  [![](uicollectionview-images/04a-menu.png "На этом снимке экрана показано меню при длительной нажатии ячейки")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
-
 
 ## <a name="layout"></a>Макет
 
@@ -269,7 +258,6 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
  <a name="Layout_Basics" />
 
-
 ### <a name="layout-basics"></a>Основы макета
 
 Макеты в `UICollectionView` определяются в классе, который наследует от `UICollectionViewLayout`. Реализация макета отвечает за создание атрибутов макета для каждого элемента в `UICollectionView`. Существует два способа создания макета.
@@ -277,9 +265,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 - Используйте встроенный `UICollectionViewFlowLayout` .
 - Предоставьте пользовательский макет, наследуя от `UICollectionViewLayout` .
 
-
  <a name="Flow_Layout" />
-
 
 ### <a name="flow-layout"></a>Потоковый макет
 
@@ -289,13 +275,11 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 - Создайте экземпляр `UICollectionViewFlowLayout` :
 
-
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
 - Передайте экземпляр в конструктор класса `UICollectionView` :
-
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
@@ -306,7 +290,6 @@ simpleCollectionViewController = new SimpleCollectionViewController (layout);
  [![](uicollectionview-images/05-layout-orientation.png "Пример изменения ориентации")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
-
 
 #### <a name="section-inset"></a>Отступ раздела
 
@@ -323,7 +306,6 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
-
 #### <a name="subclassing-uicollectionviewflowlayout"></a>Подклассировать Уиколлектионвиевфловлайаут
 
 В выпуске `UICollectionViewFlowLayout` для непосредственного использования он также может быть подклассом для дальнейшей настройки макета содержимого вдоль линии. Например, это можно использовать для создания макета, который не заключает ячейки в сетку, а вместо этого создает одну строку с горизонтальной прокруткой, как показано ниже:
@@ -336,7 +318,6 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 - Переопределение `ShouldInvalidateLayoutForBoundsChange` , возвращающее значение true, чтобы при `UICollectionView` изменении границ изменений Макет ячеек будет пересчитан. В этом случае в этом случае код для преобразования, применяемый к ячейке центермост, будет применен во время прокрутки.
 - Переопределение `TargetContentOffset` для того, чтобы привязать ячейку центермост к центру `UICollectionView` по мере остановки прокрутки.
 - Переопределение `LayoutAttributesForElementsInRect` для возврата `UICollectionViewLayoutAttributes` массива. Каждый `UICollectionViewLayoutAttribute` из них содержит сведения о разметке конкретного элемента, включая такие свойства, `Center` как `Size` , `ZIndex` и `Transform3D` .
-
 
 В следующем коде показана такая реализация:
 
@@ -409,7 +390,6 @@ namespace SimpleCollectionView
 
  <a name="Custom_Layout" />
 
-
 ### <a name="custom-layout"></a>Пользовательский макет
 
 Помимо использования `UICollectionViewFlowLayout`, макеты также можно полностью настроить, наследуя непосредственно от `UICollectionViewLayout`.
@@ -420,16 +400,13 @@ namespace SimpleCollectionView
 - `CollectionViewContentSize`— Возвращает размер области, используемой для вывода содержимого.
 - `LayoutAttributesForElementsInRect`— Как и в приведенном ранее примере уиколлектионвиевфловлайаут, этот метод используется для предоставления сведений о том `UICollectionView` , как разметка каждого элемента. Однако, в отличие от `UICollectionViewFlowLayout` , при создании пользовательского макета можно располагать элементы, но вы выбираете их.
 
-
 Например, одно и то же содержимое может быть представлено в циклической структуре, как показано ниже:
 
  [![](uicollectionview-images/08-circle-layout.png "Круглый пользовательский макет, как показано здесь")](uicollectionview-images/08-circle-layout.png#lightbox)
 
 Очень мощное дело в макетах заключается в том, что для того, чтобы изменить макет с горизонтальной прокруткой, а затем к этому циклу, необходимо изменить только класс макета `UICollectionView` , предоставленный для. Ничего в `UICollectionView`, его делегат или код источника данных вообще не меняются.
 
-
 ## <a name="changes-in-ios-9"></a>Изменения в iOS 9
-
 
 В iOS 9 представление коллекции (`UICollectionView`) теперь поддерживает перетаскивание переупорядочения элементов из поля путем добавления нового распознавателя жестов по умолчанию и нескольких новых методов поддержки.
 
@@ -1045,7 +1022,6 @@ namespace CollectionView
       var end = unionRects.Count;
       List<UICollectionViewLayoutAttributes> attrs = new List<UICollectionViewLayoutAttributes> ();
 
-
       for (int i = 0; i < end; i++) {
         if (rect.IntersectsWith(unionRects[i])) {
           begin = i * (int)unionSize;
@@ -1235,7 +1211,6 @@ public override void AwakeFromNib ()
 - `GetTargetContentOffset`— Используется для получения смещения заданного элемента представления коллекции.
 - `GetTargetIndexPathForMove`— Получает `indexPath` объект для заданного элемента для операции перетаскивания.
 - `MoveItem`— Перемещает порядок заданного элемента в списке.
-
 
 ### <a name="uicollectionviewdatasource"></a>уиколлектионвиевдатасаурце
 

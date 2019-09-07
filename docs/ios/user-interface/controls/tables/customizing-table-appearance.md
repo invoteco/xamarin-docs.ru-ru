@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6eb942c0276bda28cb4be14fb31cdf820b9ccd5e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e81504b3411674c8f8f92bf9018d617dd1c4bc4c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291360"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768904"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Настройка внешнего вида таблицы в Xamarin. iOS
 
@@ -26,7 +26,6 @@ ms.locfileid: "70291360"
 - **Подзаголовок** — поддерживает `UIImageView` подзаголовок.
 - **Значение1** — подзаголовок с `UIImageView`правом краю, поддерживает.
 - **Значение2** — заголовок по правому краю, а подзаголовок — по левому краю (без изображения).
-
 
 На этих снимках экрана показано, как выглядит каждый стиль:
 
@@ -57,7 +56,6 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 - **Детаилбуттон** — реагирует на касание независимо от остальной части ячейки, позволяя ей выполнять различные функции для обращения к самой ячейке (например, открытие всплывающего окна или нового окна, которое не является частью `UINavigationController` стека).
 - **Дисклосуреиндикатор** — обычно используется для указания того, что при прикосновении к ячейке откроется другое представление.
 - **Детаилдисклосуребуттон** — сочетание `DetailButton` и `DisclosureIndicator`.
-
 
 Вот как они выглядят:
 
@@ -128,7 +126,6 @@ TableView.SeparatorInset.InsetRect(new CGRect(4, 4, 150, 2));
 - **Упдатецелл** — метод `UITableView.GetCell` , используемый для задания свойств ячейки.
 - **Лайаутсубвиевс** — задает расположение элементов управления пользовательского интерфейса. В примере каждая ячейка имеет одинаковый макет, но более сложная ячейка (особенно с различными размерами) может потребовать различных макетов в зависимости от отображаемого содержимого.
 
-
 Полный пример кода в **целлкустомтабле > CustomVegeCell.CS** приведен ниже.
 
 ```csharp
@@ -184,8 +181,6 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
     return cell;
 }
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

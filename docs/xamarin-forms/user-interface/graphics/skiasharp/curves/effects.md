@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 82755a6a87ec0a47c10aac7078beeab6e14c218d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228241"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759381"
 ---
 # <a name="path-effects-in-skiasharp"></a>Эффекты пути в SkiaSharp
 
@@ -943,7 +943,6 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 Последний аргумент обозначает начальное значение, используемое для формирования псевдослучайных последовательность, используемая для эффекта. Эффекта дрожания будет выглядеть немного отличается для разных начальные значения. Аргумент имеет значение по умолчанию, равным нулю, это означает, что тот же эффект достигается при каждом выполнении программы. Если требуется другой дрожание всякий раз, когда перерисовки экрана, можно задать начальное значение `Millisecond` свойство `DataTime.Now` значение (например).
 
-
 **Дрожание поэкспериментировать** страница позволяет поэкспериментировать с различными значениями в Обводка прямоугольник:
 
 [![Тройной снимок экрана страницы Життерексперимент](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
@@ -1412,8 +1411,6 @@ public class DashedHatchLinesPage : ContentPage
 [![Тройной снимок экрана со страницей пунктирных линий штриховки](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Теперь, когда вы увидели эффекты пути, от простых точек и тире странное сочетаниям использовать свое воображение и см. в разделе, можно создать.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

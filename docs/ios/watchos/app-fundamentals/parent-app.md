@@ -7,18 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 0049d69caabce545b2813dbd2b3905fe96f28fed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f3e56ab90d5205318539994bae7f4db153bb163
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292730"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768092"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Работа с watchOS родительское приложение в Xamarin
 
 > [!IMPORTANT]
 > Доступ только с помощью приведенных ниже примерах родительское приложение работает в watchOS 1 приложения watch.
-
 
 Для обмена данными между приложении для Apple watch и приложение iOS, которое объединяется с разными способами:
 
@@ -30,7 +29,6 @@ ms.locfileid: "70292730"
 
 Родительское приложение, также иногда называется приложения-контейнера.
 
-
 <a name="code" />
 
 ## <a name="run-code"></a>Выполните код
@@ -39,8 +37,6 @@ ms.locfileid: "70292730"
 Расширение контрольных значений можно запросить в родительское приложение iOS, то часть обработки на его имени с помощью `OpenParentApplication` метод.
 
 Это особенно полезно в тех случаях, для долго выполняющихся задач (включая сетевые запросы) - только родительского приложения iOS можно воспользоваться фоновую обработку для выполнения этих задач и сохранения полученных данных в расположении, доступном для расширения контрольных значений.
-
-
 
 ### <a name="watch-kit-app-extension"></a>Расширение приложения Watch Kit
 
@@ -57,12 +53,10 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 });
 ```
 
-
 ### <a name="ios-app"></a>Приложение iOS
 
 Все вызовы из расширения приложения watch направляются через приложения iPhone `HandleWatchKitExtensionRequest` метод.
 Если вы вносите различные запросы в приложении для Apple watch, то этот метод потребуется запросить `userInfo` словаря, чтобы определить способ обработки запроса.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -81,7 +75,6 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 }
 ```
-
 
 <a name="storage" />
 
@@ -142,8 +135,6 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
 Скачайте C# версии [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

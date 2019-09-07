@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 94ab5ca9fa34487457b93758dfac0ab514e702c8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2091e710352b25167b740e409955787ffec99e1c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286288"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768961"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Заметки и наложенные наложения в Xamarin. iOS
 
@@ -25,7 +25,6 @@ ms.locfileid: "70286288"
 Начнем с создания нового **пустого проекта iOS**и присвоив ему соответствующее имя. Начнем с добавления кода в наш контроллер представления для отображения MapView, а затем создадим новые классы для нашего Мапделегате и пользовательские заметки. Для этого выполните следующие действия:
 
 ## <a name="viewcontroller"></a>ViewController
-
 
 1. Добавьте следующие пространства имен `ViewController`в:
 
@@ -110,9 +109,7 @@ ms.locfileid: "70286288"
 
     `Maps Walkthrough Docs Sample`.
 
-
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs — класс для пользовательских заметок
-
 
 1. Мы будем использовать пользовательский класс для заметки с именем `ConferenceAnnotation`. Добавьте в проект следующий класс:
 
@@ -180,7 +177,6 @@ ms.locfileid: "70286288"
     ```
 
 Это завершает код в `ViewDidLoad`. Теперь нам нужно реализовать наш `MapDelegate` класс для создания представлений заметок и наложений соответственно.
-
 
 ## <a name="mapdelegate"></a>мапделегате
 
@@ -287,7 +283,6 @@ ms.locfileid: "70286288"
 ## <a name="summary"></a>Сводка
 
 В этой статье мы рассмотрели, как добавить заметку к карте, а также как добавить наложение для указанного многоугольника. Мы также показали, как добавить поддержку сенсорного ввода в заметку для анимации изображения на карте.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

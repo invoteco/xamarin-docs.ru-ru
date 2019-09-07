@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f472f19429f21c659e28ba1c7a8d2670e22ea6a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643039"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758954"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Актионбар для Xamarin. Android
 
 При использовании `TabActivity`код для создания значков вкладок не влияет на работу с платформой Android 4,0. Хотя функционально работает так же, как в версиях Android до 2,3, `TabActivity` сам класс был признан устаревшим в 4,0. Появился новый способ создания интерфейса с вкладками, использующий панель действий, которую мы обсудим далее.
-
 
 ## <a name="action-bar-tabs"></a>Вкладки панели действий
 
@@ -56,7 +55,6 @@ class SampleTabFragment: Fragment
             view.FindViewById<TextView> (Resource.Id.sampleTextView);            
         sampleTextView.Text = "sample fragment text";
 
-
         return view;
     }
 }
@@ -79,11 +77,9 @@ this.ActionBar.AddTab (tab);
 
 Полный пример см. в описании проекта *хеллотабсикс* в образце кода для этого документа.
 
-
 ## <a name="shareactionprovider"></a>шареактионпровидер
 
 `ShareActionProvider` Класс позволяет выполнить действие совместного доступа из панели действий. Он создает представление действий со списком приложений, которые могут справиться с намерением совместного использования, и сохраняет историю ранее использовавшихся приложений для быстрого доступа к ним в дальнейшем с панели действий. Это позволяет приложениям обмениваться данными с помощью взаимодействия с пользователем, которые согласованы на всем устройстве Android.
-
 
 ### <a name="image-sharing-example"></a>Пример общего доступа к изображению
 
@@ -91,11 +87,9 @@ this.ActionBar.AddTab (tab);
 
 [![Снимок экрана: значок приложения обмена сообщениями на панели действий](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
-
 Когда пользователь щелкает элемент на панели действий, запускается приложение для обмена сообщениями, содержащее общий образ, как показано ниже:
 
 [![Снимок экрана: приложение для обмена сообщениями, отображающее изображение обезьяны](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
-
 
 ### <a name="specifying-the-action-provider-class"></a>Указание класса поставщика действий
 
@@ -110,7 +104,6 @@ this.ActionBar.AddTab (tab);
       android:actionProviderClass="android.widget.ShareActionProvider" />
 </menu>
 ```
-
 
 ### <a name="inflating-the-menu"></a>При увеличении меню
 
@@ -128,7 +121,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-
 ### <a name="creating-the-intent"></a>Создание цели
 
 Будет использовать намерение, передаваемое `SetShareIntent` методу в приведенном выше коде, для запуска соответствующего действия. `ShareActionProvider` В этом случае мы создаем намерение отправить изображение с помощью следующего кода:
@@ -145,8 +137,6 @@ Intent CreateIntent ()
 ```
 
 Изображение в приведенном выше примере кода включается в качестве ресурса в приложение и копируется в общедоступное расположение при создании действия, поэтому оно будет доступно другим приложениям, таким как приложение для обмена сообщениями. Пример кода, прилагаемого к этой статье, содержит полный исходный код этого примера, иллюстрирующий его использование.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

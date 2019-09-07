@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290627"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766125"
 ---
 # <a name="apple-account-management"></a>Управление учетными записями Apple
 
@@ -55,7 +55,7 @@ ms.locfileid: "70290627"
     ![диалоговое окно FastLane.](apple-account-management-images/image2.png)
 
 3. Введите идентификатор Apple ID и пароль и нажмите кнопку **войти** . При этом учетные данные будут сохранены в защищенной цепочке ключей на этом компьютере. [FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) используется для безопасного управления учетными данными и передачи их на портал разработчика Apple.
- 
+
 4. Выберите параметр **всегда разрешать** в диалоговом окне предупреждения, чтобы разрешить Visual Studio использовать ваши учетные данные:
 
     ![Всегда разрешать диалоговое окно предупреждения](apple-account-management-images/image4.png)
@@ -81,13 +81,12 @@ ms.locfileid: "70290627"
     ![диалоговое окно имени пользователя и пароля](apple-account-management-images/prov1a.png)
 
 1. После успешного добавления учетной записи вы увидите идентификатор Apple ID и все команды, в которые входит ваш Apple ID.
- 
+
 1. Выберите любую команду и нажмите кнопку **Просмотр сведений...** . Отобразится список всех удостоверений подписывания и профилей подготовки, установленных на компьютере.
 
     ![диалоговое окно имени пользователя и пароля](apple-account-management-images/prov2.png)
 
 -----
-
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>Управление удостоверениями подписи и профилями подготовки
 

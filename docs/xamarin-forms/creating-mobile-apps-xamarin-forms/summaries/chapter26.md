@@ -7,12 +7,12 @@ ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 1f96a69cbb12748a77aa6ebeb92c4ac191ce4bad
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 1eb5153f8ab295696e373f4fdb65a4f8820a05bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120541"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770944"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Сводка Глава 26. Пользовательские макеты
 
@@ -189,8 +189,6 @@ ms.locfileid: "70120541"
 ### <a name="layout-and-layoutto"></a>Макет и LayoutTo
 
 Объект `Layout<T>` можно вызвать в производная `LayoutTo` вместо `Layout` для анимации макета. [ `AnimatedCartesianLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnimatedCartesianLayout.cs) Делает это и [ **AnimatedUnitCube** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/AnimatedUnitCube) в нем демонстрируется его.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

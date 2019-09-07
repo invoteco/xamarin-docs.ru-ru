@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f33e3f4f27afe7e0b98c4a1f71d77c4a1c7195ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73474aaeb138d52536dd8ad5a7dca9be566475af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289085"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769093"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Работа с панелями навигации tvOS в Xamarin
 
@@ -48,9 +48,7 @@ ms.locfileid: "70289085"
     [![](navigation-bars-images/navbar05.png "Действие \"элемент панели инструментов\"")](navigation-bars-images/navbar05.png#lightbox)
 1. Сохраните изменения.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
 1. Перетащите **панель навигации** из **панели элементов** и поместите ее в представление в верхней части экрана:
@@ -66,7 +64,6 @@ ms.locfileid: "70289085"
 
     [![](navigation-bars-images/navbar05-vs.png "Действия элемента панели инструментов")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Сохраните изменения.
-
 
 -----
 
@@ -133,8 +130,6 @@ namespace MySingleView
 ## <a name="summary"></a>Сводка
 
 В этой статье рассматривается проектирование и работа с панелями навигации в приложении Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

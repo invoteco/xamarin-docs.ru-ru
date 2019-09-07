@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647307"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759207"
 ---
 # <a name="lines-and-stroke-caps"></a>Линии и концы штрихов
 
@@ -237,7 +237,6 @@ IPhone в левой показана как `SKPointMode.Points` вызывае
 На снимке экрана универсальной платформы Windows показывает результат `SKPointMode.Polygon` значение. Линия проводится между последовательных точек в массиве, но если вы очень внимательно посмотрите, вы увидите, что эти строки не подключены. Каждая из этих отдельных строк начинается и заканчивается указанного отрезка. При выборе `Round` caps, могут отображаться строки должен быть подключен, но они действительно не подключены.
 
 Являются ли строки, подключен или не подключен является важным аспектом работа с контурами графики.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

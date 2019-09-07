@@ -7,12 +7,12 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: f526be2156c4d74cf695b6b11706e3bbb7f355bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642987"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772770"
 ---
 # <a name="non-affine-transforms"></a>Неаффинные преобразования
 
@@ -468,7 +468,6 @@ static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint p
 `a` И `b` значения вычисляются так, что третий преобразование аффинным. Код получает обратное преобразование аффинным и затем использует его для сопоставления в правом нижнем углу. Это точка (a, b).
 
 Другой неаффинные преобразования используется для имитации трехмерной графики. В следующей статье [ **трехмерных вращений** ](3d-rotation.md) вы см. в разделе о смене двухмерной графики в трехмерном пространстве.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

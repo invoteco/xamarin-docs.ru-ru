@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 16e805488969aadb0d0b8aa5c892248b7fa403c9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59047b8564db6415ea3c47d7dcb72b5d0c66d1dd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521205"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755590"
 ---
 # <a name="cpu-architectures"></a>Архитектура процессора
 
@@ -22,7 +22,6 @@ _Xamarin. Android поддерживает несколько архитекту
 
 При подготовке приложения к выпуску необходимо указать архитектуру ЦП платформы, которую поддерживает ваше приложение. Один APK-файл может содержать код для нескольких различных архитектур. Каждая коллекция кода, зависящего от архитектуры, связана с *двоичным интерфейсом приложения* (ABI). Каждый интерфейс ABI определяет, как должен взаимодействовать этот машинный код с Android во время выполнения.
 Дополнительные сведения о том, как это работает, см. в разделе [устройства &amp; с несколькими ядрами Xamarin. Android](~/android/deploy-test/multicore-devices.md).
-
 
 ## <a name="how-to-specify-supported-architectures"></a>Указание поддерживаемых архитектур
 
@@ -43,7 +42,6 @@ _Xamarin. Android поддерживает несколько архитекту
 [![Выбор ARMEABI и ARMEABI-V7A](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 Xamarin.Android поддерживает следующие варианты архитектуры:
 

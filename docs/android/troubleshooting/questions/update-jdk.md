@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 193f9f92f112608908d2feb50f815a670d48b39c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d3f4c602f7e581cab74b61072e248a22eede9a22
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523402"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762016"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Как обновить версию Java Development Kit (JDK)?
 
@@ -21,7 +21,7 @@ _В этой статье показано, как обновить версию
 
 ## <a name="overview"></a>Обзор
 
-Xamarin. Android использует пакет средств разработки Java (JDK) для интеграции с пакет SDK для Android для создания приложений Android и запуска конструктора Android. Для последних версий пакет SDK для Android (API 24 и выше) требуется JDK 8 (1,8). Кроме того, можно установить предварительную [версию Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK, в конечном итоге, заменит JDK 8 для разработки Xamarin. Android.
+Xamarin. Android использует пакет средств разработки Java (JDK) для интеграции с пакет SDK для Android для создания приложений Android и запуска конструктора Android. Для последних версий пакет SDK для Android (API 24 и выше) требуется JDK 8 (1,8). Кроме того, можно установить [предварительную версию Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK, в конечном итоге, заменит JDK 8 для разработки Xamarin. Android.
 
 Чтобы обновить Microsoft Mobile OpenJDK, см. статью [Предварительная версия Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Чтобы выполнить обновление до JDK 8, выполните следующие действия.
 
@@ -60,4 +60,3 @@ Mac OS автоматически установит новую версию JDK
 [![Настройка расположения JDK на вкладке "расположения Android"](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----
-

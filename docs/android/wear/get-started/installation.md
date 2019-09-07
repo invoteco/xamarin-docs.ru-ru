@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: d85c199f6243fc49c1ca924bbd60cfef48b6d91f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120007"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762226"
 ---
 # <a name="setup-and-installation"></a>Настройка и установка
 
@@ -45,7 +45,6 @@ _В этой статье рассматриваются этапы устано
 
 Эти действия описаны в следующих разделах.
 
-
 ### <a name="install-android-sdk-and-tools"></a>Установка пакет SDK для Android и средств 
 
 Запустите **диспетчер пакет SDK для Android**: 
@@ -59,7 +58,6 @@ _В этой статье рассматриваются этапы устано
 ![Запуск диспетчера пакет SDK для Android в Visual Studio для Mac](installation-images/xs/sdk-menu.png)
 
 -----
-
 
 Убедитесь, что установлены следующие пакет SDK для Android и средства:
 
@@ -79,11 +77,9 @@ _В этой статье рассматриваются этапы устано
 
 -----
 
-
 ## <a name="configuration"></a>Конфигурация
 
 Прежде чем можно будет использовать тест приложения, необходимо настроить эмулятор износа Android или фактическое устройство "износ Android". 
-
 
 ### <a name="android-wear-emulator"></a>Эмулятор износа Android
 
@@ -101,16 +97,13 @@ _В этой статье рассматриваются этапы устано
 
 Дополнительные сведения о настройке эмулятора износа для Android см. [в разделе Отладка износа Android в эмуляторе](~/android/wear/deploy-test/debug-on-emulator.md).
 
-
 ### <a name="android-wear-device"></a>Устройство "износ Android"
 
 Если вы используете устройство Android, например "износ Android", вы можете выполнить отладку приложения на этом устройстве вместо использования эмулятора. Сведения о разработке с помощью устройства "износ" см. [в разделе Отладка на устройстве с износом](~/android/wear/deploy-test/debug-on-device.md).
 
-
 ## <a name="create-your-first-android-wear-app"></a>Создание первого приложения "износ Android"
 
 Следуйте инструкциям по [привету,](~/android/wear/get-started/hello-wear.md) чтобы создать свое первое контрольное приложение.
-
 
 ## <a name="packaging-your-app"></a>Упаковка приложения
 
@@ -119,7 +112,6 @@ _В этой статье рассматриваются этапы устано
 При добавлении приложения "износ Android" в качестве ссылки на основное приложение Android оно автоматически считается проектом "износ Android" и будет создавать все необходимые XML-и метаданные. Кроме того, он проверяет соответствие номеров пакетов и версий, чтобы вы могли легко поставлять приложения в Google Play. 
 
 Дополнительные сведения о пакетировании приложений для износа см. в разделе [Работа с упаковкой](~/android/wear/deploy-test/packaging.md).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 18e7873eede87e9bb81c1c0b304bfc87c317c27a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769959"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Элементы управления изображениями watchOS в Xamarin
 
@@ -32,7 +32,6 @@ ms.locfileid: "70291517"
 
 ![](image-images/asset-watch-sml.png "В образе каталога активов можно использовать размеры набора для контрольных значений (38 и часы), чтобы указать разные изображения для каждого отображаемого размера.")
 
-
 ## <a name="images-on-the-watch"></a>Изображения на часах
 
 Наиболее эффективный способ отобразить изображения — *включить их в проект приложения Watch* и отобразить их с помощью `SetImage(string imageName)` метода.
@@ -51,7 +50,6 @@ myOtherImageControl.SetImage("Worry");
 ### <a name="background-images"></a>Фоновые изображения
 
 Та же логика применяется `SetBackgroundImage (string imageName)` `Button`к классам, `Group`и. `InterfaceController` Оптимальная производительность достигается за счет хранения образов в самом приложении.
-
 
 ## <a name="images-in-the-watch-extension"></a>Изображения в расширении контрольных значений
 
@@ -74,7 +72,6 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 }
 ```
 
-
 ## <a name="animations"></a>Анимации
 
 Чтобы анимировать набор изображений, все они должны начинаться с того же префикса и иметь числовой суффикс.
@@ -95,7 +92,6 @@ animatedImage.StartAnimating ();
 ```csharp
 animatedImage.StopAnimating ();
 ```
-
 
 <a name="cache" />
 
@@ -122,12 +118,9 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 Вы можете запросить содержимое кэша изображений в коде с помощью `WKInterfaceDevice.CurrentDevice.WeakCachedImages`.
 
-
 ### <a name="managing-the-cache"></a>Управление кэшем
 
 Кэш размером около 20 МБ. Он хранится в перезапусках приложения, и когда оно заполняется, вы обязаны очищать файлы с помощью `RemoveCachedImage` методов или `RemoveAllCachedImages` для `WKInterfaceDevice.CurrentDevice` объекта.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

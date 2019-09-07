@@ -6,12 +6,12 @@ ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 5aa35c53af39df63f0b6e0f960432cbc43dadc8a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b89a39329754d375ee69d677eb8088c2eeac662f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292470"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772247"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
@@ -28,5 +28,3 @@ Xamarin Inspector интегрируется с рабочим процессо�
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[Проверка интерактивных приложений](~/tools/inspector/inspect.md)
 
 Описывает, как использовать инспектор для подключения к приложению во время его выполнения из интегрированной среды разработки, что позволяет просматривать состояние и управлять им без приостановки.
-
-

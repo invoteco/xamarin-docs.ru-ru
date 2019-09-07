@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 66d7ae722281d9034cb4cdf1501662a7de396c2d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228007"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770242"
 ---
 # <a name="xamarinforms-text-styles"></a>Стили текста Xamarin.Forms
 
@@ -144,7 +144,6 @@ label.Style = Device.Styles.TitleStyle;
 ![Стили устройств с включенной поддержкой специальных возможностей](styles-images/post-access.png)
 
 Для обеспечения доступности, убедитесь, что встроенные стили основой для используются все стили, относящихся к тексту в приложении, и что вы используете стили согласованно. См. в разделе [стили](~/xamarin-forms/user-interface/styles/index.md) Дополнительные сведения о расширении и работы со стилями, в целом.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

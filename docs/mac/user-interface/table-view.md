@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b341ee5ee72c3a89ab14161862896585ed498fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291610"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772692"
 ---
 # <a name="table-views-in-xamarinmac"></a>Табличные представления в Xamarin. Mac
 
@@ -407,7 +407,6 @@ public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescri
 
 Сохраните изменения и вернитесь в Visual Studio для Mac для синхронизации с Xcode.
 
-
 Затем измените `ProductTableDelegate.cs` файл и добавьте следующий метод:
 
 ```csharp
@@ -435,7 +434,6 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 [![](table-view-images/select02.png "Инспектор атрибутов")](table-view-images/select02.png#lightbox)
 
 Сохраните изменения и вернитесь в Visual Studio для Mac для синхронизации с Xcode.
-
 
 Затем измените `ProductTableDelegate.cs` файл и добавьте следующий метод:
 

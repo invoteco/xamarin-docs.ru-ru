@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: fa0a3a75a4cc2cfd04b607f17206faa822af0474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fad17bdda9566eeabcbe173c19c4d951bed630a7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523641"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761283"
 ---
 # <a name="using-native-libraries"></a>Использование собственных библиотек
 
@@ -26,7 +26,6 @@ Xamarin. Android поддерживает использование собст�
 
 1. Путь "перехват"
 1. Использование `AndroidNativeLibrary/Abi` элемента в файле проекта
-
 
 При сканировании пути имя родительского каталога собственной библиотеки используется для указания целевого ABI библиотеки. Таким образом, если добавить `lib/armeabi/libfoo.so` в проект, то ABI будет "просканировано" как. `armeabi`
 
@@ -54,8 +53,6 @@ Xamarin. Android поддерживает использование собст�
 3. В раскрывающемся меню **отладчика** выберите **C++** (вместо .NET по умолчанию **(Xamarin)** ).
 
 Разработчики Visual C++ Studio могут увидеть пример [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) , чтобы попробовать выполнить C++ отладку из visual Studio 2019 или Visual Studio 2017 с помощью Xamarin; Дополнительные сведения см. в нашей записи [блога](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

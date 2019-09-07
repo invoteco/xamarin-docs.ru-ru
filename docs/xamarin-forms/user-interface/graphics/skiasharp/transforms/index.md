@@ -7,12 +7,12 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 39de35c8e43ebf2b3db25724ad761e3576ba5057
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d9c153f8da44c525b8851afb48682bd7a14a8c47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644955"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770494"
 ---
 # <a name="skiasharp-transforms"></a>Преобразование Skiasharp
 
@@ -84,7 +84,6 @@ Xamarin.Forms также поддерживает преобразований, 
 ## <a name="3d-rotation3d-rotationmd"></a>[Трехмерный поворот](3d-rotation.md)
 
 Используйте неаффинные преобразования для поворота 2D объектов в трехмерном пространстве.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

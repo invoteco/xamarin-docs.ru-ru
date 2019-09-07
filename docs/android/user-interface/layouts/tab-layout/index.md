@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5f67ec30ce04993701634387f7c2023a0f92004f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522358"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762192"
 ---
 # <a name="tabbed-layouts"></a>Макеты с вкладками
-
 
 ## <a name="overview"></a>Обзор
 
@@ -29,8 +28,6 @@ ms.locfileid: "69522358"
 - **Панель инструментов** — Это более новый и гибкий компонент панели действий, который `ActionBar`заменяет. &ndash; `Toolbar` `Toolbar`доступен в версии Android 5,0 без описания операций или более поздней версии. Она также доступна для более старых версий Android с помощью версии 7 пакета NuGet [библиотеки поддержки Android](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
     `Toolbar`в настоящее время является рекомендуемым компонентом панели действий для использования в приложениях Android.
     Дополнительные сведения см. в разделе [панель инструментов](~/android/user-interface/controls/tool-bar/index.md). 
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

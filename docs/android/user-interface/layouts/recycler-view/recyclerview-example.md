@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 0c6568f9283491f0e55c79c77fb8efb2ae75f33c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887534"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758609"
 ---
 # <a name="a-basic-recyclerview-example"></a>Пример базового RecyclerView
 
@@ -21,7 +21,6 @@ ms.locfileid: "69887534"
 [![Два снимка экрана приложения RecyclerView, использующего Кардвиевс для показа фотографий](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **Рециклервиевер** использует [кардвиев](~/android/user-interface/controls/card-view.md) для реализации каждого `RecyclerView` элемента фотографии в макете. Из `RecyclerView`-за преимуществ производительности этот пример приложения может быстро прокручивать большую коллекцию фотографий без заметных задержек.
-
 
 ### <a name="an-example-data-source"></a>Пример источника данных
 
@@ -46,7 +45,6 @@ mPhotoAlbum.RandomSwap ();
 ```
 
 Поскольку сведения о `PhotoAlbum` реализации не важны для понимания `RecyclerView`, `PhotoAlbum` исходный код здесь не представлен. Исходный код `PhotoAlbum` доступен по адресу [PhotoAlbum.CS](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) в примере приложения [рециклервиевер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) .
-
 
 ### <a name="layout-and-initialization"></a>Макет и инициализация
 
@@ -109,7 +107,7 @@ public class MainActivity : Activity
 
 ### <a name="layout-manager"></a>Диспетчер макетов
 
-Каждый элемент в `RecyclerView` состоит `CardView` из элемента, содержащего фотографию и подпись фотографии (подробные сведения см. в разделе «географические заполнитель [»](#view-holder) ). Предопределенный `LinearLayoutManager` параметр используется для размещения каждого `CardView` элемента в вертикальной прокрутке.
+Каждый элемент в `RecyclerView` состоит `CardView` из элемента, содержащего фотографию и подпись фотографии (подробные сведения см. в разделе «географические [заполнитель»](#view-holder) ). Предопределенный `LinearLayoutManager` параметр используется для размещения каждого `CardView` элемента в вертикальной прокрутке.
 
 ```csharp
 mLayoutManager = new LinearLayoutManager (this);
@@ -148,8 +146,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
 
 В этом примере `PhotoViewHolder` кода конструктору передается ссылка на представление родительского элемента `CardView`(), которое `PhotoViewHolder` является оболочкой. Обратите внимание, что вы всегда пересылаете представление родительского элемента в базовый конструктор. `ImageView` `TextView` `Image` `Caption` Конструктор вызывает `FindViewById` в представлении родительского элемента, чтобы нахождение всех ссылок на дочернее представление, и, сохраняя результаты в свойствах и соответственно. `PhotoViewHolder` Адаптер позже извлекает ссылки на представления из этих свойств, когда обновляет `CardView`эти дочерние представления новыми данными.
 
-Дополнительные сведения о `RecyclerView.ViewHolder`см. в справочнике по [классам RecyclerView. виевхолдер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
+Дополнительные сведения о `RecyclerView.ViewHolder`см. в [справочнике по классам RecyclerView. виевхолдер](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
 ### <a name="adapter"></a>Адаптер
 
@@ -180,10 +177,9 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 Диспетчер макетов вызывает эти методы при размещении элементов `RecyclerView`в. Реализация этих методов рассматривается в следующих разделах.
 
-
 #### <a name="oncreateviewholder"></a>онкреатевиевхолдер
 
-Диспетчер макетов вызывает `OnCreateViewHolder` , `RecyclerView` когда для представления элемента требуется новый владелец представления. `OnCreateViewHolder`увеличивает представление элемента из файла макета представления и заключает представление в новый `PhotoViewHolder` экземпляр. Конструктор находит и сохраняет ссылки на дочерние представления в макете, как описано ранее в заполнителье [представления.](#view-holder) `PhotoViewHolder`
+Диспетчер макетов вызывает `OnCreateViewHolder` , `RecyclerView` когда для представления элемента требуется новый владелец представления. `OnCreateViewHolder`увеличивает представление элемента из файла макета представления и заключает представление в новый `PhotoViewHolder` экземпляр. Конструктор находит и сохраняет ссылки на дочерние представления в макете, как описано ранее в [заполнителье представления.](#view-holder) `PhotoViewHolder`
 
 Каждый элемент строки представлен `CardView` объектом, который `ImageView` содержит (для фотографии) и `TextView` (для заголовка). Этот макет находится в файле **фотокардвиев. axml**:
 
@@ -243,7 +239,6 @@ public override RecyclerView.ViewHolder
 
 Полученный экземпляр `vh`заполнителя представления возвращается к вызывающему объекту (диспетчеру макетов).
 
-
 #### <a name="onbindviewholder"></a>онбиндвиевхолдер
 
 Когда Диспетчер макетов готов к отображению определенного представления в `RecyclerView`видимой области экрана, он вызывает `OnBindViewHolder` метод адаптера для заполнения элемента в указанной позиции строки содержимым из источника данных. `OnBindViewHolder`Получает сведения о фотографии для указанной позицией строки (ресурса изображения фотографии и строки для подписи фотографии) и копирует эти данные в связанные представления. Представления размещаются через ссылки, хранящиеся в объекте-владельцу представления (который передается `holder` через параметр):
@@ -267,7 +262,6 @@ public override void
 
 Обратите `OnBindViewHolder` внимание, что — это код, который напрямую работает со структурой данных. В этом случае понимает `OnBindViewHolder` , как `RecyclerView` сопоставить позицию элемента со связанным элементом данных в источнике данных. В этом случае сопоставление является простым, так как позиция может использоваться в качестве индекса массива в фотоальбоме. Однако более сложные источники данных могут потребовать дополнительного кода для установления такого сопоставления.
 
-
 #### <a name="itemcount"></a>ItemCount
 
 `ItemCount` Метод возвращает количество элементов в коллекции данных. В примере приложения Photo Viewer число элементов равно числу фотографий в фотоальбоме:
@@ -279,8 +273,7 @@ public override int ItemCount
 }
 ```
 
-Дополнительные сведения о `RecyclerView.Adapter`см. в справочнике по [классам RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
-
+Дополнительные сведения о `RecyclerView.Adapter`см. в [справочнике по классам RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
 ### <a name="putting-it-all-together"></a>Совместное размещение
 
@@ -377,9 +370,6 @@ android:hardwareAccelerated="true"
 
 Это базовое приложение поддерживает только обзор фотоальбома. Он не реагирует на события касания элемента и не обрабатывает изменения в базовых данных. Эта функция добавлена в [примере расширения RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
 
-
-
-
 ### <a name="changing-the-layoutmanager"></a>Изменение Лайаутманажер
 
 Из `RecyclerView`-за гибкости можно легко изменить приложение, чтобы использовать другой диспетчер макетов. В следующем примере он изменяется для отображения фотоальбома с макетом сетки, который прокручивается горизонтально, а не с вертикальным линейным макетом. Для этого экземпляр диспетчера макетов изменяется для использования `GridLayoutManager` следующим образом:
@@ -396,8 +386,6 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 Обратите внимание, что ни код адаптера, ни XML макета не были изменены для изменения стиля макета. 
 
 В следующем разделе, посвященном расширению [примера RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md), этот базовый пример приложения расширяется для обработки событий щелчка элемента `RecyclerView` и обновления при изменении базового источника данных.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

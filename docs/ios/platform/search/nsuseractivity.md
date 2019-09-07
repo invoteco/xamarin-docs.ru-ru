@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9714d78419754413ae5f1d0e5015a418fa8ab884
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291753"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769560"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Поиск с помощью Нсусерактивити в Xamarin. iOS
 
@@ -165,8 +165,6 @@ activity.BecomeCurrent();
 - Передается, так как поиск приложения предоставляет доступ к содержимому, переходу и (или) функциям`NSUserActivity`с помощью того же механизма, что и при приеме (), пользователи приложения могут с легкостью запустить действие на одном устройстве и продолжить работу на другом.
 - **Предложения Siri** . Вместе с стандартными предложениями, которые обычно делают Siri предложения, активные приложения могут быть предложены автоматически.
 - **Siri интеллектуальные напоминания** — пользователи смогут попросить Siri напомнить о действиях из вашего приложения.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

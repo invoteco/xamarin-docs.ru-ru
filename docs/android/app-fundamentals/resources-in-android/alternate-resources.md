@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3f1e2ef06fb439f4b3ef290b1a7f80856b126a8d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225776"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755201"
 ---
 # <a name="alternate-resources"></a>Альтернативные ресурсы
 
@@ -25,13 +25,12 @@ ms.locfileid: "70225776"
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Альтернативные ресурсы](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Альтернативные ресурсы](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 При добавлении квалификаторов к типу ресурса применяются следующие правила.
 
@@ -103,7 +102,6 @@ ms.locfileid: "70225776"
 
   - `12key`&ndash; Имеется 12-клавишная аппаратная клавиатура
 
-
 - **Доступность ключа навигации** &ndash; При наличии 5-дневной или d-дневной навигации (направленной панели). Это может измениться в течение времени существования приложения. Доступны следующие значения:
 
   - `navexposed`&ndash; для пользователя доступны ключи навигации.
@@ -122,9 +120,7 @@ ms.locfileid: "70225776"
 
 - **Версия платформы (уровень API)** Уровень API, поддерживаемый устройством в формате v*N*, где N — это целевой уровень API. &ndash; Например, версии 11 будет ориентироваться на устройство API 11 (Android 3,0).
 
-
 Более полные сведения об квалификаторах ресурсов см. в разделе [предоставление ресурсов](https://developer.android.com/guide/topics/resources/providing-resources.html) на веб-сайте разработчиков Android.
-
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Как Android определяет, какие ресурсы использовать
 
@@ -132,7 +128,7 @@ ms.locfileid: "70225776"
 
 Android определяет базу ресурсов путем итерации по следующему тесту правил.
 
-- **Исключение** непротиворечивых квалификаторов &ndash; например, если ориентация устройства книжная, то все альбомные каталоги ресурсов будут отклонены.
+- **Исключение непротиворечивых квалификаторов** &ndash; например, если ориентация устройства книжная, то все альбомные каталоги ресурсов будут отклонены.
 
 - **Игнорировать квалификаторы не поддерживаются** &ndash; Не все квалификаторы доступны для всех уровней API. Если каталог ресурсов содержит квалификатор, который не поддерживается устройством, этот каталог ресурсов будет проигнорирован.
 

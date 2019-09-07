@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/19/2016
-ms.openlocfilehash: cebacf6d845affe017e289fe4522a3b7c76d2942
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7ac96bce706d42d4334004e62762ff21231f0162
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766868"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS элементов управления пользовательского интерфейса в Xamarin
 
@@ -39,7 +39,6 @@ ms.locfileid: "70291784"
 |Текстовый ввод|`PresentTextInputController` Используйте`WKTextInputMode` и перечисление.<br />[Документация по вводу текста](~/ios/watchos/user-interface/text-input.md)<br />[Код каталога](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Digital Crown|Digital Crown можно использовать для управления средством выбора, или его поворот может быть записан в коде.<br />[Код каталога](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
 |Жесты|Существует четыре типа распознавания жестов, которые можно добавить в сцену: Коснитесь, проведите, панораму и Лонгпресс.<br />[Код каталога](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

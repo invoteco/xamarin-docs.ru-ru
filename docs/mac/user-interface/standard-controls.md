@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18ce7eb4dcd68596027f739579fd5a4b70497829
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292233"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772709"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Стандартные элементы управления в Xamarin. Mac
 
@@ -215,7 +215,6 @@ namespace AppKit
 
 [![](standard-controls-images/edit13.png "Настройка розетки или действия")](standard-controls-images/edit13.png#lightbox)
 
-
 Дополнительные сведения о работе с **розетками** и **действиями**см. в разделе " [розетки и действия](~/mac/get-started/hello-mac.md#outlets-and-actions) " статьи [Введение в Xcode и Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) документации.
 
 <a name="Synchronizing_Changes_with_Xcode" />
@@ -324,7 +323,6 @@ DisclosureButton.Activated += (sender, e) => {
 AppKit предоставляет несколько типов флажков и групп переключателей, которые можно использовать в разработке пользовательского интерфейса. Дополнительные сведения см. в разделе " [кнопки](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) [" руководства по использованию интерфейса пользователя ОС Apple X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
 [![](standard-controls-images/buttons02.png "Пример доступных типов CheckBox")](standard-controls-images/buttons02.png#lightbox)
-
 
 Флажки и переключатели (предоставляемые посредством **розеток**) имеют состояние (например, **On** и **Off**), состояние может быть `State` проверено или установлено `NSCellStateValue` с помощью свойства для перечисления. Например:
 
@@ -637,7 +635,6 @@ AppKit предоставляет несколько типов представ
 Кодирование "ключ-значение" (КВК) — это механизм непрямого доступа к свойствам объекта с помощью клавиш (специально отформатированных строк) для обнаружения свойств вместо доступа к ним через переменные`get/set`экземпляра или методы доступа (). Реализуя методы доступа, совместимые с кодированием значений, в приложении Xamarin. Mac, вы получаете доступ к другим macOS функциям, таким как контроль значений ключа (кво), привязка данных, основные данные, привязки Cocoa и сценарии.
 
 Дополнительные сведения см. в разделе [Простая привязка данных](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) в нашей [привязке данных и документации по кодированию "ключ-значение](~/mac/app-fundamentals/databinding.md) ".
-
 
 <a name="Summary" />
 

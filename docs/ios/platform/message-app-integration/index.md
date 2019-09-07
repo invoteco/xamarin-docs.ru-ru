@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2016
-ms.openlocfilehash: 7db2f0fee05b60180cdd54f2f2e5ae33339a0430
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cee6f5a6f9815c348f5446c6a75c2b1a0f4c10c6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290877"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769600"
 ---
 # <a name="message-app-integration-in-xamarinios"></a>Интеграция приложений с сообщениями в Xamarin. iOS
 
@@ -27,7 +27,6 @@ _В этих статьях показано, как включить расши
 ## <a name="advanced-message-app-extensionsiosplatformmessage-app-integrationintro-to-message-app-extensionsmd"></a>[Дополнительные расширения приложения для обмена сообщениями](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
 В этой статье показаны дополнительные методы работы с расширениями приложений сообщений в решении Xamarin. iOS, которое интегрируется с приложением **сообщений** и предоставляет пользователю новые функциональные возможности.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

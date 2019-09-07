@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283332"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770155"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>Структура пользовательского интерфейса. Storyboard/. XIB-меньше в Xamarin. Mac
 
@@ -45,7 +45,6 @@ _В этой статье рассматривается создание пол
 Теперь необходимо изменить файл **MainWindow.CS** , чтобы определить макет окна и изменить файл **ViewController.CS** или **MainWindowController.CS** , чтобы создать экземпляр нашего `MainWindow` класса, так как мы больше не используем. файл Storyboard или XIB.
 
 Современные приложения Xamarin. Mac, использующие раскадровки для своего пользовательского интерфейса, не могут автоматически включать файлы **MainWindow.CS**, **ViewController.CS** или **MainWindowController.CS** . При необходимости C# просто добавьте новый пустой класс в проект (**Добавить** > **новый файл...**  > Общийпустой > **класс**) и присвоить ему имя, совпадающее с отсутствующим файлом.
-
 
 ### <a name="defining-the-window-in-code"></a>Определение окна в коде
 
@@ -178,7 +177,6 @@ ContentView.AddSubview (ClickMeLabel);
 
 Опять же, `ContentView.AddSubview (ClickMeLabel)` метод `NSTextField` добавляет в представление содержимого, чтобы оно отображалось на экране при запуске приложения и открытом окне.
 
-
 ### <a name="adjusting-the-window-controller"></a>Настройка контроллера окна
 
 Поскольку структура `MainWindow` больше не загружается из файла. Storyboard или. XIB, необходимо внести некоторые изменения в контроллер окна. Измените файл **MainWindowController.CS** и сделайте его следующим:
@@ -268,7 +266,6 @@ Window.AwakeFromNib ();
 
 Это позволит вам программировать код в окне так же, как стандартное окно, загруженное из файла. Storyboard или. XIB.
 
-
 ### <a name="displaying-the-window"></a>Отображение окна
 
 После удаления файла. Storyboard или. XIB и изменения файлов **MainWindow.CS** и **MainWindowController.CS** вы будете использовать окно так же, как и в обычном окне, которое было создано в Xcode Interface Builder с XIB-файлом.
@@ -287,7 +284,6 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 ![Пример выполнения приложения](xibless-ui-images/run01.png "Пример выполнения приложения")
 
-
 ## <a name="adding-a-code-only-window"></a>Добавление окна только кода
 
 Если нужно добавить только код, ксиблесс окно в существующее приложение Xamarin. Mac, щелкните правой кнопкой мыши проект в **панель решения** и выберите **Добавить** > **новый файл..** . В диалоговом окне **новый файл** выберите **Xamarin. Mac** > **Cocoa Window с контроллером**, как показано ниже:
@@ -295,7 +291,6 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 ![Добавление нового контроллера окна](xibless-ui-images/add01.png "Добавление нового контроллера окна")
 
 Как и раньше, мы удалим файл по умолчанию. Storyboard или. XIB из проекта (в данном случае **секондвиндов. XIB**) и выполните действия, описанные в разделе [Переключение окна, чтобы использовать код](#Switching_a_Window_to_use_Code) , приведенный выше, чтобы охватить определение окна в коде.
-
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>Добавление элемента пользовательского интерфейса в окно в коде
 
@@ -309,7 +304,6 @@ MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
 Приведенный выше код создает новый `NSButton` объект и добавляет его `MyWindow` в экземпляр окна для вывода. По сути, любой элемент пользовательского интерфейса, который можно определить в Interface Builder Xcode в файле. Storyboard или. XIB, можно создать в коде и отобразить в окне.
-
 
 ## <a name="defining-the-menu-bar-in-code"></a>Определение строки меню в коде
 
@@ -359,12 +353,9 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Приведенный выше код создает меню строки состояния из кода и отображает его при запуске приложения. Дополнительные сведения о работе с меню см. в документации по [меню](~/mac/user-interface/menu.md) .
 
-
 ## <a name="summary"></a>Сводка
 
 В этой статье подробно рассматривается создание пользовательского интерфейса приложения Xamarin. Mac в коде в C# отличие от использования Interface Builder Xcode с файлами. Storyboard или. XIB.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

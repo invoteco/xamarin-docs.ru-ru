@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: a153c6115605ca2a58df233186fa45d200d8b99f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c1e7d6cbb2598f64a331257c9b14ecfa119193f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768791"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Создание объектов пользовательского интерфейса в Xamarin. iOS
 
@@ -43,11 +43,11 @@ using UIKit;
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
  [![](creating-ui-objects-images/image2b.png "Панель элементов")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  [![](creating-ui-objects-images/image2b-vs.png "Панель элементов — визуальный Стуио")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 -----
 
 При выборе элемента управления в области конструктора **панель свойств** покажет атрибуты для этого элемента управления. Поле **имени > удостоверений мини** -приложения >, которое заполняется на снимке экрана ниже, используется в качестве имени *розетки* . Вот как можно ссылаться на элемент управления в C#:
@@ -65,7 +65,7 @@ using UIKit;
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
  [![](creating-ui-objects-images/imagexcode.png "Контекстное меню раскадровки — Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](creating-ui-objects-images/imagexcode-vs.png "Контекстное меню раскадровки — Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
@@ -168,8 +168,6 @@ public override void ViewDidLoad () {
 `designer.cs` Файл не следует изменять вручную — интегрированная среда разработки (Visual Studio для Mac или Visual Studio) отвечает за синхронизацию с раскадровкой.
 
 Когда объекты пользовательского интерфейса добавляются программно в `View` или `ViewController`, вы самостоятельно создаете ссылки на объекты и управляете ими, поэтому файл конструктора не требуется.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

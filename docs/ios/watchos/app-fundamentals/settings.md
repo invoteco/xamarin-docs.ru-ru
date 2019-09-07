@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: bcb719451529cd5a9ca829b8693c425d752cc93b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 743e6550f75ff8319ba1c880da7ef43408f0d318
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283224"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768706"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Работа с параметрами watchOS в Xamarin
 
@@ -43,7 +43,6 @@ Apple Watch приложения могут использовать те же �
 
   [![](settings-images/rootplist-sml.png "Измените Сеттингс-ватч. пучок/root. plist")](settings-images/rootplist.png#lightbox)
 
-
 ## <a name="use-settings-in-the-watch-app"></a>Использование параметров в приложении для просмотра контрольных значений
 
 Чтобы получить доступ к значениям, выбранным пользователем, `NSUserDefaults` создайте экземпляр с помощью группы приложений и `NSUserDefaultsType.SuiteName`укажите:
@@ -64,8 +63,6 @@ var userName = shared.StringForKey ("name_preference");
 Пользователи будут взаимодействовать с параметрами через новое приложение **Apple Watch** на iPhone. Это приложение позволяет пользователю отображать или скрывать приложения в контрольном списке, а также изменять параметры, предоставляемые с помощью **параметров-Watch. пучок**.
 
 ![](settings-images/applewatch-1.png "Пример параметров приложения") ![](settings-images/applewatch-2.png "пример параметров приложения")
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

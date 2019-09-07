@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 92ad0353268c414a1394e98a7b2d23d23dc4df07
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b80573a728e1868254b5a89254ebc385b3baa12
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285381"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768072"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Развертывание приложений watchOS в App Store
 
@@ -82,7 +82,6 @@ ms.locfileid: "70285381"
 Они должны быть 312x390 пикселями и демонстрировать приложение Watch в действии.
 Для получения снимков экрана с таким размером можно использовать симулятор часы Watch.
 
-
 <a name="xamarin_studio" />
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio для Mac
@@ -128,7 +127,6 @@ Xcode автоматически отображает архивы, создан
    [![](appstore-images/itc-prerelease-sml.png "Страница настройки приложений в iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 Затем вы можете отправить приложение на утверждение на странице **версии** . Дополнительные сведения см. в статье [Обзор распространения приложений для iOS](~/ios/deploy-test/app-distribution/index.md) .
-
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
@@ -179,10 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 > [!IMPORTANT]
 > Обнаружена известная ошибка в Visual Studio для Mac поддержка значка просмотра: она ожидает изображение в виде 88x88 пикселя для **29x29@3x** изображения (которое должно быть 87x87 пикселей).
 
-
 Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** (в соответствии с [этим образцом](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
-
-
 
 ### <a name="invalid-watchkit-support"></a>Недопустимая поддержка WatchKit
 
@@ -198,10 +193,7 @@ Ensure you are using the latest version of Xcode and Xamarin's tools.
 > [!IMPORTANT]
 > Необходимо **заархивировать** приложение в Visual Studio для Mac, а затем переключиться на Xcode 6.2 + для проверки и отправки в iTunes Connect.
 
-
 Используйте стабильный канал Xamarin и Xcode 6.2 +.
-
-
 
 ### <a name="invalid-provisioning-profile"></a>Недопустимый профиль подготовки
 
@@ -261,8 +253,6 @@ Error MT5309: Native linking error: clang: error: no such file or directory:
 ```
 
 Эта ошибка, скорее всего, является результатом переименования установки Xcode из **Xcode. app**. Например, эта ошибка возникает при переименовании установки в **Xcode 6.2. app**.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

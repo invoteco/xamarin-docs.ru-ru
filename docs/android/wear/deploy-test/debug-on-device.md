@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2a0c21f5a985e7a0bbe5b2afac1520280a0bd5e8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9596ff34352337d892fc22df5651b2f78f8c33f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522128"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762163"
 ---
 # <a name="debug-on-a-wear-device"></a>Отладка в устройстве Android Wear
 
 _В этой статье объясняется, как выполнить отладку приложения Xamarin. Android износа на устройстве с износом._
-
 
 ## <a name="overview"></a>Обзор
 
@@ -37,11 +36,9 @@ _В этой статье объясняется, как выполнить от
 
 5. Убедитесь, что включена **Отладка ADB** .
 
-
 ## <a name="debugging-over-usb"></a>Отладка через USB
 
 Если у устройства "износ" есть USB-порт, вы можете подключить его к компьютеру, развернуть на нем и запустить или выполнить отладку приложения, как при использовании телефона Android (Дополнительные сведения см. [в разделе Отладка на устройстве](~/android/deploy-test/debugging/debug-on-device.md)).
-
 
 ## <a name="debugging-over-bluetooth"></a>Отладка через Bluetooth
 
@@ -121,7 +118,6 @@ adb -s 127.0.0.1:4444 pull /sdcard/DCIM/screencap.png
 adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 ```
 
-
 ### <a name="uninstalling-an-app"></a>Удаление приложения
 
 Вы можете удалить приложение с устройства "износ", введя следующую команду:
@@ -138,7 +134,6 @@ adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 
 Дополнительные сведения об отладке устройств Android с использованием Bluetooth см. в разделе [Отладка через Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
 
-
 ## <a name="debugging-a-wear-app-with-a-companion-phone-app"></a>Отладка приложения "износ" с помощью вспомогательного приложения для телефона
 
 Приложения "износ Android" упаковываются в сопутствующее приложение для телефонов Android для распространения на Google Play (Дополнительные сведения см. в разделе [Работа с упаковкой](~/android/wear/deploy-test/packaging.md)). Тем не менее вы по-прежнему разрабатываете приложение «износ» и его сопутствующее приложение отдельно. При освобождении приложения с помощью Google Play Маркет приложение "износ" будет упаковываться вместе с сопутствующим приложением и автоматически устанавливаться по возможности.
@@ -153,7 +148,6 @@ adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 
 4. Запуск и отладка приложения "износ" на устройстве.
 
- 
 ## <a name="summary"></a>Сводка
 
 В этой статье объясняется, как настроить устройство "износ Android" для износа из Visual Studio через Bluetooth и как выполнить отладку приложения "износ" с помощью вспомогательного приложения для телефона. Он также предоставляет общие советы по отладке для отладки приложения с помощью Bluetooth.

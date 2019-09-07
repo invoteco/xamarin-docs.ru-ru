@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 42284ded0bbb5dab36470b7d2f291df64c6df264
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281288"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767777"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS упреждающие предложения в Xamarin
 
 _В этой статье показано, как использовать упреждающие предложения в приложении watchOS 3 для управления участием, позволяя системе автоматически предоставлять пользователю полезную информацию._
 
-
 Новые возможности для watchOS 3, упреждающие предложения предоставляют пользователям возможность привлекаться к приложению Xamarin. iOS с помощью упреждающего предоставления пользователю полезной информации в нужное время.
-
 
 ## <a name="about-proactive-suggestions"></a>О упреждающих предложениях
 
@@ -300,7 +298,6 @@ attributes.SupportsNavigation = true;
 
 Когда приложение запускается с помощью объекта мапкит `MKDirectionsRequest` , оно должно автоматически начать перенаправление пользователя в запрошенное расположение или предоставить пользовательский интерфейс, который позволяет пользователю легко начать получать указания. Например:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -362,7 +359,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 ## <a name="summary"></a>Сводка
 
 В этой статье были рассмотрены упреждающие предложения и показано, как разработчик может использовать их для передачи трафика в приложение Xamarin. iOS для watchOS. В нем рассмотрены действия по реализации упреждающего предложения и предоставлены рекомендации по использованию.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

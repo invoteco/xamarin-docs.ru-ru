@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: b2660ec18d075279f9cb84be4521429c05974e59
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
+ms.openlocfilehash: 28a4fc6527a8c6990c47cdbbdc3163fc9350db83
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560277"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770267"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
@@ -220,8 +220,6 @@ Title="StackLayouts">
 ![](stack-layout-images/stack.png "Сложный макет StackLayout")
 
 Обратите внимание `StackLayouts` , что элементы являются вложенными, поскольку в некоторых случаях вложение макетов может быть проще, чем представление всех элементов в одном макете. Также Обратите внимание, что, поскольку `StackLayout` не поддерживающий наложения элементов, не имеют некоторые из макета изяществ найти страницу на страницах для других структур.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 66bea7d2a9660018c7cec9b7bafeadafd5029ed9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769422"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Распознавание речи в Xamarin. iOS
 
@@ -128,9 +128,6 @@ API распознавания речи можно использовать на
 
 > [!IMPORTANT]
 > Если не предоставить ни один из указанных выше `Info.plist` ключей (`NSSpeechRecognitionUsageDescription` или `NSMicrophoneUsageDescription`), приложение может завершиться сбоем без предупреждения при попытке получить доступ к распознаванию речи или микрофону для живого аудио.
-
-
-
 
 ### <a name="requesting-authorization"></a>Запрос авторизации
 
@@ -398,8 +395,6 @@ RecognitionTask.Cancel ();
 ## <a name="summary"></a>Сводка
 
 В этой статье представлен новый API распознавания речи и показано, как реализовать его в приложении Xamarin. iOS для поддержки непрерывного распознавания речи и транскрипция речи (из активных или записанных звуковых потоков) в текст. 
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

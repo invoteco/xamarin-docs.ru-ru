@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
-ms.openlocfilehash: fc316a9e6ab4261eaa956a987b47aeaf546344a2
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 7045bd4d3343d0c11c6cd52fa02cdc005175b8a7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675276"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772937"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Использование UrhoSharp в Xamarin.Forms
 
@@ -43,7 +43,7 @@ UrhoSharp можно использовать для отображения гр
 
 Повторите описанные выше действия для проектов для конкретной платформы (например, iOS и Android).
 
-## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Пошаговое руководство. Добавление в приложение Xamarin.Forms UrhoSharp
+## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Пошаговое руководство. Добавление UrhoSharp в приложение Xamarin. Forms
 
 В следующих шагах описано в примере UrhoSharp в Xamarin.Forms кода:
 
@@ -223,7 +223,6 @@ selectedBarSlider.ValueChanged += OnValuesSliderValueChanged;
 ## <a name="summary"></a>Сводка
 
 На этой странице отображаются как UrhoSharp может использоваться для добавления данных трехмерной визуализации в Xamarin.Forms. Чтение [UrhoSharp документации](~/graphics-games/urhosharp/index.md) Дополнительные сведения о том, как для построения кадром Urho, которые могут быть включены в приложениях Xamarin.Forms с помощью метода, показанного выше.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524087"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761429"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Интеграция Java с Xamarin. Android
 
@@ -38,12 +38,9 @@ _Экосистема Java включает в себя разнообразну
 
 Третья методика совершенно отличается от предыдущих двух: перенос кода из Java в C#. Перенос кода с одного языка на другой может оказаться очень трудоемким процессом, но можно уменьшить эти усилия с помощью средства, именуемого « *резкость*». Резкость — это средство с открытым исходным кодом, которое является JavaC# -преобразовательом. 
 
-
-
 ## <a name="summary"></a>Сводка
 
 В этом документе представлен общий обзор некоторых различных способов повторного использования библиотек из Java в приложении Xamarin. Android. В нем появились концепции привязок и управляемых вызываемых оболочек, а также обсуждаются варианты переноса кода Java в C#. 
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

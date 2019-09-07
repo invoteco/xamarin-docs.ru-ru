@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 4b1e232259d7b1816e64298b5c0b8853d8385c20
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6d3756f4215174e17ec45518f430dc38270e3289
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283856"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768703"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Тестирование на устройствах Apple Watch
 
@@ -64,7 +64,6 @@ ms.locfileid: "70283856"
 
 ![](device-images/options-selectprofile.png "Список профилей подготовки")
 
-
 <a name="testing" />
 
 ## <a name="testing-on-a-watch-device"></a>Тестирование на устройстве наблюдения
@@ -88,7 +87,6 @@ ms.locfileid: "70283856"
 
 8. Если контрольное приложение успешно установлено, значок останется на экране контрольных значений. Нажимайте его, чтобы начать тестирование приложения!
 
-
 ## <a name="troubleshooting"></a>Устранение неполадок
 
 Если во время развертывания возникает ошибка, используйте для просмотра дополнительных сведений об ошибке **представление > pad > Device log** . Ниже перечислены некоторые ошибки и их причины.
@@ -103,11 +101,9 @@ ms.locfileid: "70283856"
 
 Это будет исправлено в следующем выпуске, после чего можно повторно включить добавочные сборки, чтобы воспользоваться преимуществами более быстрого времени сборки.
 
-
 ### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Не удается запустить приложение во время отладки на устройстве
 
 При попытке отладки приложения наблюдения на физическом устройстве отображается только значок & загрузки счетчика (и в конечном итоге истечения времени ожидания). Это будет решено в следующем выпуске. обходной путь заключается в запуске сборки выпуска (которая не позволяет выполнять отладку).
-
 
 ### <a name="invalid-application-executable-or-application-verification-failed"></a>Недопустимый исполняемый файл приложения или сбой проверки приложения
 
@@ -131,8 +127,6 @@ Invalid executable/Application Verification Failed
 
 - **Идентификатор приложения** контрольного значения приложения имеет неправильное назначение (например, группы приложений) в центре разработки, которое не должно быть.
 
-
-
 ### <a name="install-never-finished"></a>Установка никогда не завершена
 
 ```csharp
@@ -142,7 +136,6 @@ SPErrorGizmoInstallNeverFinishedErrorMessage
 Эта ошибка может указывать на ненужные (и недопустимые) ключи в файле **info. plist** приложения Watch. Не следует включать ключи, предназначенные для приложения iOS или расширения просмотра в приложении Watch.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
-
 
 ### <a name="waiting-for-debugger-to-connect"></a>"Ожидание подключения отладчика"
 
@@ -156,4 +149,3 @@ waiting for debugger to connect
 
 Файл **Microsoft. BCL. Build. targets** , добавленный в **CSPROJ** , может повлиять на упаковку расширений iOS во время развертывания. Можно отвести к [ошибке](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Возможный обходной путь состоит в том, чтобы изменить CSPROJ-файл и вручную переместить **Microsoft. BCL. Build. targets** в последний элемент.
-

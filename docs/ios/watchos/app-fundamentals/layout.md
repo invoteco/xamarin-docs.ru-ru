@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 5272921cade2b9dadd24a4c917e6251ac591e178
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f9f8981325785d69d36ccd9d4de1cd69956a155
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768753"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Работа с watchOS макета в Xamarin
 
@@ -34,7 +34,6 @@ ms.locfileid: "70292312"
 
 - Используйте [ `Menu` управления](~/ios/watchos/user-interface/menu.md) предоставляют реже используемые функции для сохранения проекта приложения, ясным и четким.
 
-
 ## <a name="implementation"></a>Реализация
 
 Посмотрите, как набор включает следующие элементы управления для создания привлекательных watch макетов приложений:
@@ -55,7 +54,6 @@ ms.locfileid: "70292312"
 
 ![](layout-images/button-attributes.png "Укажите пропорциональное значение и корректировку смещения")
 
-
 ### <a name="group"></a>Группа
 
 `WKInterfaceGroup` — Это простой контейнер, можно настроить для стека управляет вертикально или горизонтально. Он включает в себя интервал между всеми элементами управления по умолчанию, но можно изменить интервал (и отступы) в **атрибуты** инспектора.
@@ -65,7 +63,6 @@ ms.locfileid: "70292312"
 Группы могут сами менять размер и расположение относительно вокруг них элементы управления и группы могут быть вложенными, создания сложных макетов.
 
 ![](layout-images/group-scene.png "Группы могут быть вложенными, создания сложных макетов")
-
 
 ### <a name="separator"></a>Separator
 
@@ -79,8 +76,6 @@ ms.locfileid: "70292312"
 
 Макет не был бы полным без `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`, и [других элементов управления](~/ios/watchos/user-interface/index.md).
 Они могут располагаться в макеты с помощью **группы** или параметры положение и размер каждого элемента управления.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

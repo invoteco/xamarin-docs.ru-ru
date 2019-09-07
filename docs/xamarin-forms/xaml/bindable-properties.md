@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 59ec82c222208ff0e73b0b7b5226d416d3a53398
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 50efd6b37d70fa835436c28c73b3d4f9fc6c7c83
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656603"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758093"
 ---
 # <a name="bindable-properties"></a>Привязываемые свойства
 
@@ -221,7 +221,6 @@ public static readonly BindableProperty SizeProperty =
 ## <a name="summary"></a>Сводка
 
 В этой статье предоставляются общие сведения о привязываемые свойства, а также показано, как создавать и использовать их. Может быть привязано — это специальный тип свойства, где значение свойства отслеживается системой свойств Xamarin.Forms.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 24. Переход по страницам
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 24. Переход по страницам
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 24. Переход по страницам'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ce56c30cd631e87d39c9c5bda101b67252a0762a
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 340aa8c7327ba75986b960d5e0f6bda66c116fc5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926897"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770930"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Сводка Глава 24. Переход по страницам
 
@@ -170,8 +170,6 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) клас
 ### <a name="something-like-a-real-life-app"></a>Что-то наподобие приложения реальной жизни
 
 [ **NoteTaker** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) образец также используется `MultiPageRestorableApp` и позволяет вводить и изменять заметок, которые сохраняются в `Properties` словаря.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4f1f1333c35a72e7243e892e7aac8d98603c973
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287242"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772599"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Структурированные представления в Xamarin. Mac
 
@@ -447,7 +447,6 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 
 Сохраните изменения и вернитесь в Visual Studio для Mac для синхронизации с Xcode.
 
-
 Затем измените `ProductOutlineDelegate.cs` файл и добавьте следующий метод:
 
 ```csharp
@@ -469,7 +468,6 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 [![](outline-view-images/select02.png "Инспектор атрибутов")](outline-view-images/select02.png#lightbox)
 
 Сохраните изменения и вернитесь в Visual Studio для Mac для синхронизации с Xcode.
-
 
 Затем измените `ProductOutlineDelegate.cs` файл и добавьте следующий метод:
 

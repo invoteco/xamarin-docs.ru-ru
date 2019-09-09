@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 122fd2782d8e4a0ea5843c536a169a70a91a7405
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9b4ecae0ce37aeb9893a4cb5e55da951789be182
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523998"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761440"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>Работа с JNI и Xamarin. Android
 
@@ -41,7 +41,7 @@ JNI, представленный в [пространстве имен Android.
 
 ## <a name="managed-callable-wrappers"></a>Управляемые вызываемые оболочки
 
-Управляемая обертка (**MCW**) представляет собой *привязку* для класса или интерфейса Java, который создает оболочку для всех механизмов JNI, чтобы код C# клиента не должен беспокоиться о базовой сложности JNI. Большинство из них состоит из управляемых вызываемых оболочек. `Mono.Android.dll`
+**Управляемая обертка** (**MCW**) представляет собой *привязку* для класса или интерфейса Java, который создает оболочку для всех механизмов JNI, чтобы код C# клиента не должен беспокоиться о базовой сложности JNI. Большинство из них состоит из управляемых вызываемых оболочек. `Mono.Android.dll`
 
 Управляемые вызываемые оболочки служат двум целям:
 
@@ -76,7 +76,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
     }
 }
 ```
-
 
 ### <a name="implementation-details"></a>Сведения о реализации
 
@@ -140,8 +139,6 @@ public class HelloAndroid extends android.app.Activity {
 
 Обратите внимание, что базовый класс сохраняется, а объявления собственного метода предоставляются для каждого метода, переопределяемого в управляемом коде.
 
-
-
 ### <a name="exportattribute-and-exportfieldattribute"></a>Експортаттрибуте и Експортфиелдаттрибуте
 
 Как правило, Xamarin. Android автоматически создает код Java, который состоит из АКВ; Это поколение основано на именах классов и методов, когда класс является производным от класса Java и переопределяет существующие методы Java. Однако в некоторых сценариях создание кода не является достаточным, как описано ниже:
@@ -160,14 +157,11 @@ public class HelloAndroid extends android.app.Activity {
 
 В примере проекта [експортаттрибуте](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) показано, как использовать эти атрибуты.
 
-
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>Устранение неполадок Експортаттрибуте и Експортфиелдаттрибуте
 
 - Сбой упаковки из-за отсутствия **Mono. Android. Export. dll** &ndash; при `ExportAttribute` использовании `ExportFieldAttribute` или в некоторых методах кода или зависимых библиотек необходимо добавить **Mono. Android. Export. dll**. Эта сборка изолирована для поддержки кода обратного вызова из Java. Он отделен от **Mono. Android. dll** , так как добавляет дополнительный размер в приложение.
 
 - В выпуске `MissingMethodException` Build, происходит для &ndash; методов экспорта в сборке `MissingMethodException` выпуска, выполняется для методов экспорта. (Эта проблема исправлена в последней версии Xamarin. Android.)
-
-
 
 ### <a name="exportparameterattribute"></a>експортпараметераттрибуте
 
@@ -181,8 +175,6 @@ public class HelloAndroid extends android.app.Activity {
 - ксмлресаурцепарсер
 
 Если типы, такие как, необходимы для экспортированных методов, `ExportParameterAttribute` необходимо использовать для явного предоставления соответствующего параметра или возвращаемого значения типу.
-
-
 
 ### <a name="annotation-attribute"></a>Атрибут заметки
 
@@ -206,8 +198,6 @@ public class HelloAndroid extends android.app.Activity {
 
 - Атрибуты на свойство не работают. Вместо этого используйте атрибуты для метода получения или задания свойства.
 
-
-
 ## <a name="class-binding"></a>Привязка класса
 
 Привязка класса означает написание управляемой вызываемой оболочки для упрощения вызова базового типа Java.
@@ -224,8 +214,6 @@ public class HelloAndroid extends android.app.Activity {
 
 - Если требуется подкласс, тип должен иметь настраиваемый атрибут [регистераттрибуте](xref:Android.Runtime.RegisterAttribute) в объявлении типа с [регистераттрибуте. донотженератеакв](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) установлен в `true`значение.
 
-
-
 ### <a name="declaring-type-handle"></a>Объявление маркера типа
 
 Для методов поиска полей и методов требуется ссылка на объект, ссылающийся на их объявляющий тип. По соглашению это значение хранится в `class_ref` поле:
@@ -236,7 +224,6 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 Дополнительные сведения о `CLASS` токене см. в разделе [JNI Type References](#_JNI_Type_References) .
 
-
 ### <a name="binding-fields"></a>Привязка полей
 
 Поля Java предоставляются в виде C# свойств, например поле Java [Java.lang.System.in](https://developer.android.com/reference/java/lang/System.html#in) привязывается как C# свойство [Java.lang.JavaSystem.in](xref:Java.Lang.JavaSystem.In).
@@ -244,7 +231,7 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 Привязка поля включает три набора методов:
 
-1. Метод *получения идентификатора поля* . Метод *получения поля* с идентификатором отвечает за возврат маркера поля, который будет использоваться методами значения *поля Get* и *set поля* . Получение идентификатора поля требует знания объявляющего типа, имени поля и [сигнатуры типа JNI](#JNI_Type_Signatures) поля.
+1. Метод *получения идентификатора поля* . Метод *получения поля с идентификатором* отвечает за возврат маркера поля, который будет использоваться методами значения *поля Get* и *set поля* . Получение идентификатора поля требует знания объявляющего типа, имени поля и [сигнатуры типа JNI](#JNI_Type_Signatures) поля.
 
 1. Методы *получения значения поля* . Эти методы занимают маркер поля и отвечают за считывание значения поля из Java.
     Используемый метод зависит от типа поля.
@@ -317,8 +304,6 @@ public static Java.Lang.Runtime GetRuntime ()
 Обратите внимание, что мы сохраняем обработчик метода в статическом поле `id_getRuntime`,. Это оптимизация производительности, поэтому при каждом вызове не требуется выполнять поиск обработчика метода. Не обязательно кэшировать обработчик метода таким образом. После получения маркера метода [жниенв. каллстатикобжектмесод](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) используется для вызова метода. `JNIEnv.CallStaticObjectMethod`Возвращает значение `IntPtr` типа, содержащее маркер возвращаемого экземпляра Java.
 [Java. lang. Object.&lt;GetObject T&gt;(IntPtr, жнихандлеовнершип)](xref:Java.Lang.Object.GetObject*) используется для преобразования дескриптора Java в экземпляр объекта со строгой типизацией.
 
-
-
 #### <a name="non-virtual-instance-method-binding"></a>Привязка метода не виртуального экземпляра
 
 Привязка метода `JNIEnv.GetMethodID` `JNIEnv.Call*Method` экземпляра или метода экземпляра, который не требует переопределения, предполагает использование для получения обработчика метода, а затем использует соответствующий метод в зависимости от типа возвращаемого значения метода. `final` Ниже приведен пример привязки для `Object.Class` свойства.
@@ -340,11 +325,9 @@ public Java.Lang.Class Class {
 Это оптимизация производительности, поэтому при каждом вызове не требуется выполнять поиск обработчика метода. Не обязательно кэшировать обработчик метода таким образом. После получения маркера метода [жниенв. каллстатикобжектмесод](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) используется для вызова метода. `JNIEnv.CallStaticObjectMethod`Возвращает значение `IntPtr` типа, содержащее маркер возвращаемого экземпляра Java.
 [Java. lang. Object.&lt;GetObject T&gt;(IntPtr, жнихандлеовнершип)](xref:Java.Lang.Object.GetObject*) используется для преобразования дескриптора Java в экземпляр объекта со строгой типизацией.
 
-
 ### <a name="binding-constructors"></a>Конструкторы привязки
 
 Конструкторы — это методы Java с именем `"<init>"`. Как и в случае с методами `JNIEnv.GetMethodID` экземпляра Java, используется для поиска обработчика конструктора. В отличие от методов Java, методы [жниенв. NewObject](xref:Android.Runtime.JNIEnv.NewObject*) используются для вызова обработчика метода конструктора. Возвращаемое значение `JNIEnv.NewObject` является JNI локальной ссылкой:
-
 
 ```csharp
 int value = 42;
@@ -361,7 +344,7 @@ IntPtr lrefInstance = JNIEnv.NewObject (class_ref, id_ctor_I, new JValue (value)
 
 1. Если `RegisterAttribute` тип имеет значение, а `RegisterAttribute.DoNotGenerateAcw` — `true` , то экземпляр `RegisterAttribute.Name` типа создается с помощью конструктора по умолчанию.
 
-1. В противном случае вызываемая [оболочка Android](~/android/platform/java-integration/android-callable-wrappers.md) ( `this.GetType` АКВ), соответствующая, создается с помощью конструктора по умолчанию. Вызываемые оболочки Android создаются во время создания пакета для `Java.Lang.Object` каждого подкласса `RegisterAttribute.DoNotGenerateAcw` , для которого не `true`задано значение.
+1. В противном случае [вызываемая оболочка Android](~/android/platform/java-integration/android-callable-wrappers.md) ( `this.GetType` АКВ), соответствующая, создается с помощью конструктора по умолчанию. Вызываемые оболочки Android создаются во время создания пакета для `Java.Lang.Object` каждого подкласса `RegisterAttribute.DoNotGenerateAcw` , для которого не `true`задано значение.
 
 Для типов, которые не являются привязками класса, это ожидаемая семантика: `Mono.Samples.HelloWorld.HelloAndroid` экземпляр C# экземпляра должен создавать экземпляр Java `mono.samples.helloworld.HelloAndroid` , который представляет собой созданную вызываемую оболочку Android.
 
@@ -418,7 +401,7 @@ public Integer (int value)
 
 ### <a name="supporting-inheritance-interfaces"></a>Поддержка наследования, интерфейсы
 
-Для создания подкласса типа Java или реализации интерфейса Java требуется создание вызываемых [оболочек Android](~/android/platform/java-integration/android-callable-wrappers.md) (АКВС), создаваемых для каждого `Java.Lang.Object` подкласса в процессе упаковки. Создание АКВ контролируется с помощью настраиваемого атрибута [Android. Runtime. регистераттрибуте](xref:Android.Runtime.RegisterAttribute) .
+Для создания подкласса типа Java или реализации интерфейса Java требуется создание [вызываемых оболочек Android](~/android/platform/java-integration/android-callable-wrappers.md) (АКВС), создаваемых для каждого `Java.Lang.Object` подкласса в процессе упаковки. Создание АКВ контролируется с помощью настраиваемого атрибута [Android. Runtime. регистераттрибуте](xref:Android.Runtime.RegisterAttribute) .
 
 Для C# типов `[Register]` конструктор настраиваемого атрибута требует один аргумент: [JNI упрощенный справочник по типам](#_Simplified_Type_References_1) для соответствующего типа Java. Это позволяет предоставлять разные имена между Java и C#.
 
@@ -457,8 +440,6 @@ partial class ManagedAdder : Adder {
 
 Здесь тип имеет `Adder` псевдоним для типа Java. `Adder` C# Атрибут используется для указания JNI имени `mono.android.test.Adder` типа `DoNotGenerateAcw` Java, а свойство используется для запрета создания АКВ. `[Register]` Это приведет к созданию АКВ для `ManagedAdder` типа, который правильно подклассет `mono.android.test.Adder` тип. Если свойство не использовалось, процесс сборки Xamarin. Android создавал бы новый `mono.android.test.Adder` тип Java. `RegisterAttribute.DoNotGenerateAcw` Это приведет к ошибкам компиляции, так как `mono.android.test.Adder` тип будет представлен дважды в двух отдельных файлах.
 
-
-
 ### <a name="binding-virtual-methods"></a>Привязка виртуальных методов
 
 `ManagedAdder`подклассировать тип Java `Adder` , но это не особенно интересно C# `Adder` : тип не определяет виртуальные методы, поэтому `ManagedAdder` не может переопределять ничего.
@@ -468,7 +449,6 @@ partial class ManagedAdder : Adder {
 1. **Привязка метода**
 
 1. **Регистрация метода**
-
 
 #### <a name="method-binding"></a>Привязка метода
 
@@ -529,8 +509,6 @@ partial class Adder {
 
 Если `GetType` не совпадает `ThresholdType` `ManagedAdder` `base.Add`, `Adder` то классдолженбытьподклассами(например,),иреализациябудетвызыватьсятолькопри`Adder.Add` вызове подкласса. Это не виртуальный вариант диспетчеризации, который `ThresholdClass` входит в состав. `ThresholdClass`Указывает, какой класс Java предоставит реализацию вызываемого метода.
 
-
-
 #### <a name="method-registration"></a>Регистрация метода
 
 Предположим, что у нас `ManagedAdder` есть обновленное определение `Adder.Add` , переопределяющее метод:
@@ -557,7 +535,6 @@ partial class ManagedAdder : Adder {
 
 1. *Метод соединителя* , `GetAddHandler` в данном случае.
     Методы соединителя будут обсуждаться далее.
-
 
 Первые два параметра позволяют процессу создания АКВ создать объявление метода для переопределения метода. Результирующий АКВ будет содержать следующий код:
 
@@ -682,8 +659,6 @@ public class Adder : Java.Lang.Object {
 }
 ```
 
-
-
 ### <a name="restrictions"></a>Ограничения
 
 При записи типа, который соответствует следующим критериям:
@@ -694,12 +669,9 @@ public class Adder : Java.Lang.Object {
 
 1. `RegisterAttribute.DoNotGenerateAcw` равно `true`
 
-
 Затем для взаимодействия GC тип *не должен* иметь полей, которые могут ссылаться `Java.Lang.Object` на подкласс или `Java.Lang.Object` в среде выполнения. Например, не допускаются поля `System.Object` типа и любого типа интерфейса. Разрешены типы, которые `Java.Lang.Object` не могут ссылаться на экземпляры, `System.String` такие `List<int>`как и. Это ограничение заключается в предотвращении преждевременной коллекции объектов сборщиком мусора.
 
 Если тип должен содержать поле экземпляра, которое может ссылаться на `Java.Lang.Object` экземпляр, то тип поля должен быть `System.WeakReference` или `GCHandle`.
-
-
 
 ## <a name="binding-abstract-methods"></a>Привязка абстрактных методов
 
@@ -708,7 +680,6 @@ public class Adder : Java.Lang.Object {
 1. Абстрактный метод является абстрактным. Он по-прежнему хранит `[Register]` атрибут и связанную с ним регистрацию метода. Привязка метода просто перемещается `Invoker` в тип.
 
 1. Создается `Invoker` тип, `abstract` не являющийся типом, который подклассировать абстрактный тип. `Invoker` Тип должен переопределять все абстрактные методы, объявленные в базовом классе, а переопределенная реализация — реализацией метода привязки, хотя невиртуальный вариант диспетчеризации можно игнорировать.
-
 
 Например, предположим, что приведенный `mono.android.test.Adder.add` выше метод `abstract`имел значение. Привязка будет изменена так, `Adder.Add` что была бы абстрактной, `AdderInvoker` и будет определен новый тип, который реализуется `Adder.Add`: C#
 
@@ -739,7 +710,6 @@ partial class AdderInvoker : Adder {
 
 Этот `Invoker` тип необходим только при получении ссылок JNI на экземпляры, созданные на языке Java.
 
-
 ## <a name="binding-interfaces"></a>Интерфейсы привязки
 
 Интерфейсы привязки концептуально похожи на классы привязки, содержащие виртуальные методы, но многие особенности отличаются неявными (и не настолько опасными) способами. Рассмотрим следующее [объявление интерфейса Java](https://github.com/xamarin/monodroid-samples/blob/master/SanityTests/Adder.java#L14):
@@ -751,8 +721,6 @@ public interface Progress {
 ```
 
 Привязки интерфейсов имеют две части: определение C# интерфейса и определение вызывающего объекта для интерфейса.
-
-
 
 ### <a name="interface-definition"></a>Определение интерфейса
 
@@ -773,7 +741,7 @@ public interface Progress {
 
 Члены интерфейса не будут вызываться напрямую вызовом Java &ndash; с помощью типа &ndash; вызывающего объекта, поэтому разрешена какая-либо гибкость.
 
-Интерфейс выполнения Java можно объявить [в C# следующим образом](https://github.com/xamarin/monodroid-samples/blob/master/SanityTests/ManagedAdder.cs#L83):
+Интерфейс выполнения Java можно [объявить в C# следующим образом](https://github.com/xamarin/monodroid-samples/blob/master/SanityTests/ManagedAdder.cs#L83):
 
 ```csharp
 [Register ("mono/android/test/Adder$Progress", DoNotGenerateAcw=true)]
@@ -814,8 +782,6 @@ partial class ISortedMapInvoker : Java.Lang.Object, ISortedMap {
 
 Определение вызывающего модуля состоит из шести разделов: конструктора, `Dispose` метода `ThresholdType` , элементов и `ThresholdClass` , `GetObject` метода, реализации метода интерфейса и реализации метода соединителя.
 
-
-
 #### <a name="constructor"></a>Конструктор
 
 Конструктору необходимо найти класс среды выполнения вызываемого экземпляра и сохранить класс среды выполнения в поле экземпляра `class_ref` :
@@ -835,7 +801,6 @@ partial class IAdderProgressInvoker {
 
 Примечание. Свойство должно использоваться в теле конструктора, а не в `handle` параметре, как `handle` в Android версии 4.0 параметр может быть недопустимым после завершения выполнения базового конструктора. `Handle`
 
-
 #### <a name="dispose-method"></a>Метод Dispose
 
 `Dispose` Метод должен освободить глобальную ссылку, выделенную в конструкторе:
@@ -851,7 +816,6 @@ partial class IAdderProgressInvoker {
     }
 }
 ```
-
 
 #### <a name="thresholdtype-and-thresholdclass"></a>Срешолдтипе и Срешолдкласс
 
@@ -872,10 +836,9 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-
 #### <a name="getobject-method"></a>Метод GetObject
 
-Для поддержки `GetObject` [Extensions. жавакаст&lt;T&gt;()](xref:Android.Runtime.Extensions.JavaCast*)требуется статический метод:
+Для поддержки `GetObject` [Extensions. жавакаст&lt;&gt;T ()](xref:Android.Runtime.Extensions.JavaCast*)требуется статический метод:
 
 ```csharp
 partial class IAdderProgressInvoker {
@@ -885,7 +848,6 @@ partial class IAdderProgressInvoker {
     }
 }
 ```
-
 
 #### <a name="interface-methods"></a>Методы интерфейса
 
@@ -902,8 +864,6 @@ partial class IAdderProgressInvoker {
     }
 }
 ```
-
-
 
 #### <a name="connector-methods"></a>Методы соединителя
 
@@ -936,7 +896,6 @@ int[] _values = (int[]) JNIEnv.GetArray(values, JniHandleOwnership.DoNotTransfer
 ```
 
 Однако обратите внимание, `JNIEnv.GetArray` что копирует весь массив между виртуальными машинами, поэтому для больших массивов это может привести к большому увеличению нагрузки на GC.
-
 
 ### <a name="complete-invoker-definition"></a>Полное определение вызывающего модуля
 
@@ -1014,7 +973,7 @@ new JValue (currentSum));
 
 Многие методы жниенв возвращают *ссылки на объекты* *JNI* , которые похожи `GCHandle`на s. JNI предоставляет три различных типа ссылок на объекты: локальные ссылки, глобальные ссылки и слабые глобальные ссылки. Все три представляются как `System.IntPtr`, *но* (в соответствии с разделом типов функций JNI) `IntPtr`не `JNIEnv` все возвращенные методы являются ссылками. Например, [жниенв. жетмесодид](xref:Android.Runtime.JNIEnv.GetMethodID*) возвращает `IntPtr`, но не возвращает ссылку на объект `jmethodID`, он возвращает. Дополнительные сведения см. в [документации по функции JNI](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html) .
 
-Локальные ссылки создаются большинством методов создания ссылок.
+Локальные ссылки создаются *большинством* методов создания ссылок.
 Android допускает существование ограниченного числа локальных ссылок в любое заданное время, обычно 512. Локальные ссылки можно удалить с помощью [жниенв. делетелокалреф](xref:Android.Runtime.JNIEnv.DeleteLocalRef*).
 В отличие от JNI, не все методы Reference Жниенв, возвращающие ссылки на объекты, возвращают локальные ссылки. [Жниенв. FindClass](xref:Android.Runtime.JNIEnv.FindClass*) возвращает *глобальную* ссылку. Настоятельно рекомендуется удалять локальные ссылки как можно быстрее, возможно, путем создания [объекта Java. lang. Object](xref:Java.Lang.Object) вокруг объекта и указания `JniHandleOwnership.TransferLocalRef` в [Java. lang. Object (дескриптор IntPtr, перемещение жнихандлеовнершип). ](xref:Java.Lang.Object#ctor*)конструктор.
 
@@ -1027,8 +986,6 @@ Android допускает существование ограниченного
 ### <a name="dealing-with-jni-local-references"></a>Работа с локальными ссылками JNI
 
 Методы [жниенв. жетобжектфиелд](xref:Android.Runtime.JNIEnv.GetObjectField*), [жниенв. жетстатикобжектфиелд](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), [жниенв. каллобжектмесод](xref:Android.Runtime.JNIEnv.CallObjectMethod*), [жниенв. каллнонвиртуалобжектмесод](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) `IntPtr` и [JNIEnv. CallStaticObjectMethod](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) возвращают, какой Содержит локальную ссылку JNI на объект Java или `IntPtr.Zero` значение, если был возвращен `null`язык Java. Из-за ограниченного количества локальных ссылок, которые можно исключать одновременно (512 записей), желательно обеспечить своевременное удаление ссылок. Существует три способа, с помощью которых локальные ссылки могут быть обработаны: явно удалить их `Java.Lang.Object` , создать экземпляр для их хранения и `Java.Lang.Object.GetObject<T>()` использовать для создания управляемой вызываемой обертки вокруг них.
-
-
 
 ### <a name="explicitly-deleting-local-references"></a>Явное удаление локальных ссылок
 
@@ -1054,7 +1011,6 @@ finally {
 - [Жнихандлеовнершип. трансферлокалреф](xref:Android.Runtime.JniHandleOwnership.TransferLocalRef) &ndash; . созданный `Java.Lang.Object` экземпляр создаст новую глобальную ссылку из `handle` параметра и `handle` будет удален с помощью [жниенв. делетелокалреф](xref:Android.Runtime.JNIEnv.DeleteLocalRef*) . Вызывающий объект не должен `handle` быть освобожден и не должен `handle` использоваться после завершения выполнения конструктора.
 
 - [Жнихандлеовнершип. трансферглобалреф](xref:Android.Runtime.JniHandleOwnership.TransferLocalRef) &ndash; `Java.Lang.Object` созданный`handle` экземпляр принимает владение параметром. Вызывающий объект не должен `handle` быть бесплатным.
-
 
 Так как методы вызова метода JNI возвращают локальные ссылки, `JniHandleOwnership.TransferLocalRef` обычно используется:
 
@@ -1087,7 +1043,6 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 
 1. Если `T` является абстрактным классом или интерфейсом, *должно* быть доступно средство *вызова* для `T` . Вызывающий объект — это не абстрактный тип, который `T` наследует `T` или реализует, и имеет то же `T` имя, что и суффикс вызывающего. Например, если T является интерфейсом `Java.Lang.IRunnable` , тип `Java.Lang.IRunnableInvoker` должен существовать и должен содержать требуемый `(IntPtr,
     JniHandleOwnership)` конструктор.
-
 
 Так как методы вызова метода JNI возвращают локальные ссылки, `JniHandleOwnership.TransferLocalRef` обычно используется:
 
@@ -1233,7 +1188,6 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 - [Жниенв. сетстатикфиелд](xref:Android.Runtime.JNIEnv.SetStaticField*)) &ndash; `float` записывает значения статических полей.
 
 - [Жниенв. сетстатикфиелд](xref:Android.Runtime.JNIEnv.SetStaticField*)) &ndash; `double` записывает значения статических полей.
-
 
 <a name="_Instance_Methods" />
 

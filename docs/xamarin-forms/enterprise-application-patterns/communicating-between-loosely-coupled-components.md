@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 4763e73f0eafa24cc4a2fc42a6d69b457d863b8d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d4ed362fdd5587eabc028949b82682922adead0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529149"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760310"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Взаимодействие между слабо связанными компонентами
 
@@ -123,7 +123,6 @@ MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys
 ## <a name="summary"></a>Сводка
 
 Класс Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) реализует шаблон "публикация-подписка", который обеспечивает взаимодействие на основе сообщений между компонентами, которые неудобно связывать по ссылкам объектов и типов. Этот механизм позволяет издателям и подписчикам взаимодействовать без ссылки друг на друга, помогая сократить зависимости между компонентами, а также разрешать независимое разработку и тестирование компонентов.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

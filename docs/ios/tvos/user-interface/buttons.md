@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 869e2e5c3b074c928f3c49ca87c1c1801154df91
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769968"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Работа с кнопками tvOS в Xamarin
 
@@ -63,7 +63,6 @@ ms.locfileid: "70291111"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
 1. Перетащите **кнопку** из **библиотеки** и поместите ее в представление: 
 
@@ -82,7 +81,6 @@ ms.locfileid: "70291111"
     [![](buttons-images/storyboard05.png "Редактор кода")](buttons-images/storyboard05.png#lightbox)
 1. Сохраните изменения во всех файлах.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
@@ -97,10 +95,7 @@ ms.locfileid: "70291111"
     [![](buttons-images/storyboard03vs.png "Вкладка \"события\"")](buttons-images/storyboard03vs.png#lightbox)
 1. Сохраните изменения во всех файлах.
 
-
-
 Измените файл контроллера представления (example `ViewController.cs`) и добавьте следующий код, чтобы обрабатывал выбранную кнопку:
-
 
 ```
 
@@ -128,9 +123,6 @@ namespace tvRemote
 
 > [!IMPORTANT]
 > Хотя при создании **обработчика событий**можно назначать такие `TouchUpInside` действия, `UIButton` как в конструкторе iOS, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или поддерживает события касания. При создании **действий** для элементов пользовательского интерфейса tvOS всегда следует использовать **тип действия** по умолчанию.
-
-
-
 
 Дополнительные сведения о работе с раскадровками см. в статье [Hello, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -189,9 +181,6 @@ View.AddSubview (button);
 
 > [!IMPORTANT]
 > Хотя можно назначать такие действия `TouchUpInside` `UIButton`, как, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или не поддерживает сенсорные события. Следует всегда использовать такие события, как **AllEvents** или **примаряктионтригжеред**.
-
-
-
 
 <a name="Styling-a-Button" />
 
@@ -262,8 +251,6 @@ button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ## <a name="summary"></a>Сводка
 
 В этой статье рассматривается проектирование и работа с кнопками внутри приложения Xamarin. tvOS. В нем было показано, как работать с кнопками в конструкторе iOS и как создавать C# кнопки в коде. Наконец, было показано, как изменить заголовок кнопки и изменить его стиль и внешний вид.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

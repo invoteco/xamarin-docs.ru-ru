@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 4197dfb38ac6118d20da2b87d0c686558d77b0f6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6dc0838bf63492dd06d5452cedbaf1d7fb8313c9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281576"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752316"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Изменения в StoreKit в iOS 6
 
@@ -246,7 +246,6 @@ http://itunes.apple.com/us/app/mwc-2012-unofficial/id496963922?mt=8
 
 - текстовый файл и
 - изображение, представляющее главу.
-
 
 Для начала выберите **файл > создать проект** в меню и выберите **содержимое покупки в приложении**:
 
@@ -484,7 +483,6 @@ public void SaveDownload (SKDownload download)
 ```
 
 Когда `FinishTransaction` вызывается метод, загруженные файлы больше не обязательно должны находиться `Cache` в каталоге. Все файлы должны быть скопированы перед `FinishTransaction`вызовом.
-
 
 ## <a name="other-considerations"></a>Другие вопросы
 

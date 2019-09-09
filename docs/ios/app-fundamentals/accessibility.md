@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/18/2016
-ms.openlocfilehash: 4a04f0ed4cbb336e331528c3d8265efb31388328
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766752"
 ---
 # <a name="accessibility-on-ios"></a>Специальные возможности в iOS
 
@@ -74,7 +74,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## <a name="accessibility-and-localization"></a>Специальные возможности и локализация
 
 Свойства специальных возможностей, такие как метка и подсказка, могут быть локализованы так же, как и другие тексты в пользовательском интерфейсе.
@@ -122,7 +121,6 @@ VoiceOver включается в приложении " **Параметры** 
 
 Выполните следующие [инструкции VoiceOver](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) , чтобы проверить доступность на устройствах iOS.
 
-
 ## <a name="simulator-testing"></a>Тестирование имитатора
 
 При тестировании в симуляторе доступен **инспектор специальных возможностей** , позволяющий проверить правильность настройки свойств и событий специальных возможностей. Чтобы включить инспектор в приложении " **Параметры** ", перейдите к **общей > Специальные возможности > специальные возможности инспектора специальных возможностей**:
@@ -135,8 +133,6 @@ VoiceOver включается в приложении " **Параметры** 
 ![](accessibility-images/tableview-a11y-sml.png "Использование инспектора специальных возможностей")
 
 Пока инспектор виден, используйте значок "X" в левом верхнем углу, чтобы временно показать и скрыть наложение, а также включить или отключить параметры специальных возможностей.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

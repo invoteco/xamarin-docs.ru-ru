@@ -1,18 +1,18 @@
 ---
 title: Сводка информации в главе 22. Анимация
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка информации в главе 22. Анимация
+description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка информации в главе 22. Анимация'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 935be5bd6696600644463eb4ec26410b546f42a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333213"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770999"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Сводка информации в главе 22. Анимация
 
@@ -197,8 +197,6 @@ Xamarin.Forms системы анимации может быть немного
 ## <a name="structuring-your-animations"></a>Структурирование анимациями
 
 Иногда полезно выразить анимации в XAML и использовать их в сочетании с MVVM. Это рассматривается в следующей главе, [ **Глава 23. Триггеры и поведения**](chapter23.md).
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

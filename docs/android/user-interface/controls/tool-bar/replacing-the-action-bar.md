@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: d59acaec36c63c62fe934f145d06bfbb78d11f6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: df6a479123dfc0fa2e5a47c9210a4bdf24d066e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522857"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762465"
 ---
 # <a name="replacing-the-action-bar"></a>Замена панели действий
 
@@ -33,15 +33,11 @@ ms.locfileid: "69522857"
 
 В следующих разделах подробно описывается этот процесс. Создается простое приложение, и его панель действий заменяется настроенной `Toolbar`. 
 
-
-
 ## <a name="start-an-app-project"></a>Запуск проекта приложения
 
 Создайте проект Android с именем **тулбарфун** (Дополнительные сведения о создании нового проекта Android см. в разделе [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) ). После создания проекта задайте для целевых и минимальных уровней API Android значение **Android 5,0 (уровень API 21-без описания)** или более поздней версии. Дополнительные сведения о настройке уровней версии Android см. в разделе Общие сведения об [уровнях API Android](~/android/app-fundamentals/android-api-levels.md). При сборке и запуске приложения отображается панель действий по умолчанию, как показано на следующем снимке экрана:
 
 [![Снимок экрана: панель действий по умолчанию](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
-
-
 
 ## <a name="create-a-custom-theme"></a>Создание пользовательской темы
 
@@ -71,7 +67,7 @@ ms.locfileid: "69522857"
 ```
 
 Параметр "Оливковый- `colorPrimary` зеленый" используется для фонового цвета панели инструментов. 
- 
+
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
@@ -85,8 +81,6 @@ ms.locfileid: "69522857"
 ```
 
 Дополнительные сведения о применении пользовательской темы к приложению см. в разделе [Использование пользовательских тем](~/android/user-interface/material-theme.md#customtheme). 
-
-
 
 ## <a name="define-a-toolbar-layout"></a>Определение макета панели инструментов
 
@@ -123,11 +117,9 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 
 Этот параметр используется, чтобы элементы меню отличались от более темного цвета фона.
 
-
-
 ## <a name="include-the-toolbar-layout"></a>Включить макет панели инструментов
 
-Измените файл макета Resources **/Layout/Main. axml** и замените его содержимое следующим XML-кодом:
+Измените файл макета **Resources/Layout/Main. axml** и замените его содержимое следующим XML-кодом:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -141,8 +133,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 ```
 
 Этот макет включает объект `Toolbar` , определенный в **Toolbar. XML** , и `RelativeLayout` использует, чтобы указать `Toolbar` , что компонент будет помещен в верхнюю часть пользовательского интерфейса (над кнопкой). 
-
-
 
 ## <a name="find-and-activate-the-toolbar"></a>Поиск и активация панели инструментов
 
@@ -168,7 +158,6 @@ ActionBar.Title = "My Toolbar";
 
 Если при выполнении приложения возникает исключение, см. раздел [Устранение неполадок](#troubleshooting) ниже.
 
- 
 ## <a name="add-menu-items"></a>Добавление пунктов меню 
 
 В этом разделе меню добавляются `Toolbar`в. Верхняя правая область `ToolBar` зарезервирована для пунктов &ndash; меню каждый пункт меню (также называемый *элементом действия*) может выполнять действия в рамках текущего действия или выполнять действия от имени всего приложения. 
@@ -185,12 +174,9 @@ ActionBar.Title = "My Toolbar";
 
 В следующих разделах подробно описывается этот процесс путем добавления элементов меню **Правка** и **сохранить** в настроенные `Toolbar`. 
 
-
-
 ### <a name="install-menu-icons"></a>Значки меню "установить"
 
-Продолжая работу `ToolbarFun` с примером приложения, добавьте значки меню в проект приложения. Загрузите [значки панели инструментов](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true), распакуйте и скопируйте содержимое извлеченных *mipmap-* папок в проект *mipmap-* Folders в **тулбарфун/** Resources и включите каждый добавленный файл значков в проект.
-
+Продолжая работу `ToolbarFun` с примером приложения, добавьте значки меню в проект приложения. Загрузите [значки панели инструментов](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true), распакуйте и скопируйте содержимое извлеченных *mipmap-* папок в проект *mipmap-* Folders в **тулбарфун/Resources** и включите каждый добавленный файл значков в проект.
 
 ### <a name="define-a-menu-resource"></a>Определение ресурса меню
 
@@ -226,7 +212,6 @@ ActionBar.Title = "My Toolbar";
 
 &ndash; `ifRoom` `Toolbar` Атрибуты пунктов меню Правка и сохранить имеют значение этот параметр приводит к тому, что эти пункты меню будут отображаться в, если для их отображения достаточно места. `showAsAction` Элемент меню « **настройки»** `showAsAction` задает `never` &ndash; , что меню « **настройки»** отображается в меню *переполнения* (три вертикальные точки). 
 
-
 ### <a name="implement-oncreateoptionsmenu"></a>Реализация Онкреатеоптионсмену
 
 Добавьте следующий метод в **MainActivity.CS**:
@@ -240,8 +225,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 ```
 
 Android вызывает `OnCreateOptionsMenu` метод, чтобы приложение могла указать ресурс меню для действия. В этом методе ресурс **top_menus. XML** преобразуется в переданный `menu`. Этот код приводит `Toolbar`к отображению новых элементов меню **Правка**, **сохранить**и **настройки** в. 
-
-
 
 ### <a name="implement-onoptionsitemselected"></a>Реализация Оноптионситемселектед
 
@@ -262,7 +245,7 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 
 [![Схема, иллюстрирующая расположение пунктов меню "Правка", "Сохранить" и "переполнение"](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png#lightbox)
 
-Когда пользователь отменяет пункт меню " **Правка** ", отображается всплывающее уведомление, указывающее `OnOptionsItemSelected` , что был вызван метод: 
+Когда пользователь **отменяет** пункт меню "Правка", отображается всплывающее уведомление, указывающее `OnOptionsItemSelected` , что был вызван метод: 
 
 [![Снимок экрана всплывающего уведомления при нажатии кнопки "изменить элемент"](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
@@ -271,7 +254,6 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 [![Снимок экрана: пункт меню "настройки", отображаемый в меню переполнения](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Дополнительные сведения о меню Android см. в разделе [меню](https://developer.android.com/guide/topics/ui/menus.html) разработчиков Android. 
- 
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
@@ -285,8 +267,7 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 
 Кроме того, может быть создано сообщение об ошибке следующего типа: _Java. lang. Иллегалстатиксцептион: Это действие уже содержит панель действий, предоставляемую окном дéкор._ 
 
-Чтобы исправить эту ошибку, убедитесь, что `android:theme` атрибут для пользовательской темы добавлен в `<application>` (в свойствах **/AndroidManifest. XML**), как описано выше в разделе [применение пользовательской темы](#apply-the-custom-theme). Кроме того `Toolbar` , эта ошибка может быть вызвана неправильной настройкой макета или пользовательской темы.
-
+Чтобы исправить эту ошибку, убедитесь, что `android:theme` атрибут для пользовательской темы добавлен в `<application>` (в **свойствах/AndroidManifest. XML**), как описано выше в разделе [применение пользовательской темы](#apply-the-custom-theme). Кроме того `Toolbar` , эта ошибка может быть вызвана неправильной настройкой макета или пользовательской темы.
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 1df10c4b8eaa30ce417feb2abae7f52b2494edf6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c248949024d0e13a24863368e88aa559fa496806
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526366"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755249"
 ---
 # <a name="android-resource-basics"></a>Основы ресурсов Android
 
@@ -20,11 +20,11 @@ ms.locfileid: "69526366"
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Файлы ресурсов](android-resource-basics-images/01-resource-files-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Файлы ресурсов](android-resource-basics-images/01-resource-files-xs.png)
- 
+
 -----
 
 В папке resources были созданы пять файлов, составляющих ресурсы по умолчанию:
@@ -39,7 +39,6 @@ ms.locfileid: "69526366"
 
 - Resource.Designer.CS&ndash; . Этот файл автоматически создается и обслуживается с помощью Xamarin. Android и содержит уникальный идентификатор, назначенный каждому ресурсу. Это очень похоже и идентично назначению файлу R. Java, который будет иметь приложение Android, написанное на Java. Оно автоматически создается средствами Xamarin. Android и будет повторно создано с течением времени.
 
-
 ## <a name="creating-and-accessing-resources"></a>Создание ресурсов и доступ к ним
 
 Создание ресурсов — это просто добавление файлов в каталог для рассматриваемого типа ресурса. На снимке экрана ниже показаны строковые ресурсы для немецких языков, добавленных в проект. При добавлении **Strings. XML** в файл **действие сборки** автоматически задается **AndroidResource** инструментами Xamarin. Android:
@@ -47,20 +46,18 @@ ms.locfileid: "69526366"
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Действие сборки для String. XML, установленное в AndroidResource](android-resource-basics-images/02-build-action-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Действие сборки для String. XML, установленное в AndroidResource](android-resource-basics-images/02-build-action-xs.png)
- 
+
 -----
- 
 
 Это позволяет средствам Xamarin. Android правильно компилировать и внедрять ресурсы в файл APK. Если по какой-либо причине для **действия сборки** не задано значение **ресурса Android**, файлы будут исключены из APK, а любая попытка загрузить или получить доступ к ресурсам приведет к ошибке во время выполнения и произойдет сбой приложения.
 
 Кроме того, важно отметить, что хотя Android поддерживает только имена файлов нижнего регистра для элементов ресурсов, Xamarin. Android немного более терпим отношению; Он будет поддерживать имена файлов в верхнем и нижнем регистре. Для имен образов используется строчная буква с символами подчеркивания в качестве разделителей (например, **My\_Image\_Name. png**). Обратите внимание, что имена ресурсов не могут быть обработаны, если в качестве разделителей используются дефисы или пробелы.
 
 После добавления ресурсов в проект существует два способа использования их в приложении &ndash; программным способом (внутри кода) или из XML-файлов.
-
 
 ## <a name="referencing-resources-programmatically"></a>Программное создание ссылок на ресурсы
 
@@ -106,7 +103,6 @@ public partial class Resource
 
 - **Имя ресурса** &ndash; это имя файла ресурса (без расширения) или значение атрибута Android: Name для ресурсов, которые находятся в элементе XML.
 
-
 ## <a name="referencing-resources-from-xml"></a>Ссылки на ресурсы из XML
 
 Доступ к ресурсам в XML-файле осуществляется с помощью специального синтаксиса:
@@ -136,7 +132,7 @@ public partial class Resource
 </LinearLayout>
 ```
 
-В [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) этом примере имеется, для которого требуется рисуемый ресурс с именем **Flag**. Атрибут`src` имеет значение`@drawable/flag`. `ImageView` Когда действие начинается, Android будет искать в ресурсе каталога **или** для файла с именем **Flag. png** (расширение файла может быть другим форматом изображения, например **Flag. jpg**) и загружать этот файл `ImageView`и отображать его в.
+В [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) этом примере имеется, для которого требуется рисуемый ресурс с именем **Flag**. Атрибут`src` имеет значение`@drawable/flag`. `ImageView` Когда действие начинается, Android будет искать в **ресурсе каталога или** для файла с именем **Flag. png** (расширение файла может быть другим форматом изображения, например **Flag. jpg**) и загружать этот файл `ImageView`и отображать его в.
 При запуске этого приложения он будет выглядеть примерно так, как на следующем рисунке:
 
 ![Локализованная Имажевиев](android-resource-basics-images/03-localized-screenshot.png)

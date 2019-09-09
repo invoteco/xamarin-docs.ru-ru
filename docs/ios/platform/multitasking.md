@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280163"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769632"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Многозадачность для iPad в Xamarin. iOS
 
@@ -40,7 +40,6 @@ iOS 9 добавляет поддержку многозадачности дл�
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
 **Поддержка многозадачности для iPad видео**
-
 
 <a name="Multitasking-QuickStart" />
 
@@ -251,8 +250,6 @@ public void NewEntry() {
 ## <a name="summary"></a>Сводка
 
 В этой статье описаны действия, которые необходимо выполнить, чтобы убедиться, что приложение Xamarin. iOS будет запущено и правильно работать в новой многозадачной возможности iOS 9 для iPad. Кроме того, он охватывает не все задачи для приложений, где это не подходит.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

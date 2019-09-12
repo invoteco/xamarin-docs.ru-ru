@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284842"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765932"
 ---
 # <a name="custom-linker-configuration"></a>Пользовательская конфигурация компоновщика
 
@@ -26,7 +26,6 @@ ms.locfileid: "70284842"
 
 - **Для Android**: для параметра **Действие сборки** укажите **LinkDescription**;
 - **Для iOS**: для параметра **Действие сборки** укажите **LinkDescription**.
-
 
 В следующем примере показано, как выглядит такой XML-файл.
 
@@ -60,8 +59,6 @@ ms.locfileid: "70284842"
 Второй раздел для `My.Own.Assembly.dll` обеспечит сохранение в типе `Foo` всех полей (т. е. атрибута `preserve="fields"`) и всех конструкторов (т. е. всех методов с именем `.ctor` на промежуточном языке). Тип `Bar` сохранит отдельные сигнатуры (не имена) для одного конструктора (который принимает один строковый параметр) и для конкретного строкового поля `_blah`.
 Пространство имен `My.Own.Namespace` сохранит все типы, которые оно содержит.
 И наконец, будут сохранены все поля и методы для любого типа, полное имя которого (включая пространство имен) соответствует подстановочному шаблону "My.Other\*". Подстановочный символ `*` может встречаться в шаблоне "полное имя типа" несколько раз.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

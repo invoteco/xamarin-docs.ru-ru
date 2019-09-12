@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 8fae741f308a8269facef5ca84d34adb48868aec
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68486013"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771452"
 ---
 # <a name="introduction-to-effects"></a>Общие сведения об эффектах
 
@@ -58,7 +58,6 @@ _Эффекты позволяют настраивать собственные
 - [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached) — вызывается, когда эффект отсоединяется от элемента управления Xamarin.Forms. В переопределенной версии этого метода в каждом зависящем от платформы классе эффекта выполняется очистка эффекта, например отмена регистрации обработчика событий.
 
 Кроме того, класс `PlatformEffect` предоставляет метод [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)), который также можно переопределить. Он вызывается при изменении свойства элемента. Переопределенная версия этого метода в каждом зависящем от платформы классе эффекта реагирует на изменения привязываемого свойства в элементе управления Xamarin.Forms. Следует всегда проверять наличие измененного свойства, так как это переопределение может вызываться многократно.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

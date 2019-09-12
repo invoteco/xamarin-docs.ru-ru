@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 437db399d1a8cafb19dbc57d7f2ea4141900d8db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9b2cb44dff7712953454a9add71f092956e3c759
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292361"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762775"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Использование mtouch для объединения приложений Xamarin.iOS в пакет
 
@@ -49,7 +49,6 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 - компиляция для развертывания на устройстве;
 - развертывание исполняемого файла на устройстве.
 
-
 ### <a name="building-for-the-simulator"></a>Компиляция для симулятора
 
 Самый распространенный и часто используемый сценарий на начальных этапах работы — это проверка приложений в симуляторе. Для нее вам нужно скомпилировать код в пакет для симулятора с помощью `mtouch -sim`. Это выполняется следующим образом:
@@ -70,9 +69,7 @@ $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 
  <a name="Running_your_Application" />
 
-
 ## <a name="running-your-application"></a>Запуск приложения
-
 
 ### <a name="launching-on-the-simulator"></a>Запуск в симуляторе
 
@@ -95,8 +92,6 @@ PID: 98460
 Press enter to terminate the application
 ```
 
-
-
 Настоятельно рекомендуем сохранять в файлах стандартные потоки вывода и ошибок, которые наверняка пригодятся при отладке. Выходные данные `Console.WriteLine` направляются в `stdout`, а выходные данные `Console.Error.WriteLine` и все остальные сообщения среды выполнения направляются в `stderr`.
 
 Чтобы сохранить их, установите флаги `--stdout` и `--stderr`.
@@ -106,7 +101,6 @@ Press enter to terminate the application
 ```
 
 Теперь в случае сбоя приложения вы сможете проверить выходные данные и сообщения об ошибках для диагностики проблемы.
-
 
 ### <a name="deploying-to-a-device"></a>Развертывание на устройстве
 
@@ -125,8 +119,6 @@ $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
 ## <a name="reference"></a>Справочник
 
 Сведения о других параметрах командной строки см. на странице документации по команде [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)).
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

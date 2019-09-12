@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: b9cecc8863cb4e68338d3226c5bf3744b7010e43
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: c561ab94d8cae28ac180c201795f67518aa2d8f9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617414"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757976"
 ---
 # <a name="setup-and-installation"></a>Настройка и установка
 
 В разделах этого документа содержатся сведения об установке и настройке Xamarin.Android для работы с Visual Studio в Windows и macOS, использовании диспетчера пакетов SDK для Android для скачивания и установки средств и компонентов пакета SDK для Android, которые необходимы для создания и тестирования приложения, настройке эмулятора Android для отладки и подключения физического устройства Android к компьютеру разработки для отладки и окончательного тестирования приложения.
-
 
 ## <a name="windows-installationandroidget-startedinstallationwindowsmd"></a>[Установка в Windows](~/android/get-started/installation/windows.md)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: dac059576b8821d218cca44ae1c049010e364cfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 71e509d87dc2a2947821084aea5668055f6f4678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739362"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771491"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Выбор фотографии в библиотеке рисунков
 
@@ -214,7 +214,6 @@ namespace DependencyServiceDemos.Droid
 ## <a name="uwp-implementation"></a>Реализация на универсальной платформе Windows
 
 В отличие от реализаций для iOS и Android, реализации средства выбора фотографий для универсальной платформы Windows не требуется класс `TaskCompletionSource`. Класс [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.UWP/Services/PhotoPickerService.cs) использует класс [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) для получения доступа к библиотеке фотографий. Так как метод `PickSingleFileAsync` объекта `FileOpenPicker` сам является асинхронным, метод `GetImageStreamAsync` может просто использовать `await` с этим методом (и другими асинхронными методами) и возвращать объект `Stream`:
-
 
 ```csharp
 [assembly: Dependency(typeof(PhotoPickerService))]

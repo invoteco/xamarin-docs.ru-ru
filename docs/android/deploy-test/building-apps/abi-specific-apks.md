@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0c3bb547a21457a1666db5fe84560e10e3bb8eb1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225768"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754275"
 ---
 # <a name="building-abi-specific-apks"></a>Создание пакетов APK для конкретного ABI
 
 _В этом документе объясняется, как с помощью Xamarin.Android создать пакет APK, предназначенный для одного конкретного интерфейса ABI._
-
-
 
 ## <a name="overview"></a>Обзор
 
@@ -27,7 +25,6 @@ _В этом документе объясняется, как с помощью
 - **Уменьшение размера APK**. В Google Play для файлов APK действует ограничение в 100 МБ. Создавая отдельные APK для конкретных устройств, вы можете уменьшить размер APK, так как каждый из них будет содержать лишь ограниченный набор файлов и ресурсов.
 
 - **Поддержка разных архитектур ЦП**. Если ваше приложение использует общие библиотеки для конкретных процессоров, их можно включать только в поставку для этих ЦП.
-
 
 Несколько пакетов APK усложняют процессы распространения, но эта проблема решена в Google Play. Google Play обеспечит доставку на устройство правильной версии APK, определяя ее по коду версии приложения и другим метаданным из файла **AndroidManifest.XML**. Подробный алгоритм и ограничения, применяемые Google Play для поддержки нескольких пакетов APK в приложении, можно узнать из [документации Google о поддержке нескольких APK](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
@@ -38,10 +35,7 @@ _В этом документе объясняется, как с помощью
 1. Сборка приложения с помощью **AndroidManifest.XML**, созданного на предыдущем шаге.
 1. Подготовка APK к выпуску, включая подписывание и оптимизацию для архива.
 
-
 В конце этой статьи представлено пошаговое руководство по выполнению всех этих шагов в сценарии [Rake](http://martinfowler.com/articles/rake.html).
-
-
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Создание кода версии для APK
 
@@ -68,7 +62,6 @@ Google рекомендует соблюдать определенные пра
 
 [![Схема формата для кода версии из восьми цифр с цветовым кодированием](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
-
 Google Play будет доставлять на устройства правильные пакеты APK, используя конфигурацию `versionCode` и APK. На устройство всегда доставляется APK с самым большим кодом версии. Для примера предположим, что у приложения есть три пакета APK с указанными здесь кодами версий.
 
 - 11413456: номер ABI — `armeabi`; уровень API — 14; экраны от малого до большого размеров; номер версии — 456.
@@ -83,18 +76,14 @@ Google Play будет доставлять на устройства прави
 - 21423457 : номер ABI — `armeabi-v7a`; уровень API — 14; экраны нормального или большого размеров; имя версии — 457.
 - 61923500 : номер ABI — `x86`; уровень API — 19; экраны обычного или большого размеров; имя версии — 500.
 
-
 Разработчику может потребоваться немало усилий, чтобы вручную отслеживать все эти версии. Процесс вычисления правильных значений `android:versionCode` и сборки APK следует автоматизировать.
 Пример такой автоматизации будет рассмотрен в пошаговом руководстве в конце этой статьи.
-
 
 ### <a name="create-a-temporary-androidmanifestxml"></a>Создание временного файла AndroidManifest.XML
 
 Этот шаг не является обязательным, но создание временных файлов **AndroidManifest.XML** для каждого интерфейса ABI позволит предотвратить ряд проблем, возникающих при утечке данных из одного пакета APK в другой. Например, очень важно сохранять уникальный атрибут `android:versionCode` для каждого APK.
 
 Механизм контроля будет разным для разных систем выполнения скриптов, но обычно он включает получение копии манифеста Android, который использовался во время разработки, внесение необходимых изменений и применение манифеста во время сборки.
-
-
 
 ### <a name="compiling-the-apk"></a>Компиляция пакета APK
 
@@ -120,8 +109,6 @@ Google Play будет доставлять на устройства прави
 
 - `<CS_PROJ FILE>` &ndash; — обозначает путь к файлу `.csproj` для проекта Xamarin.Android.
 
-
-
 ### <a name="sign-and-zipalign-the-apk"></a>Подписывание пакета APK и оптимизация для архива
 
 Каждый пакет APK необходимо подписать, чтобы распространять его через Google Play. Для этого можно применить приложение `jarsigner`, которое входит в комплект средств для разработчиков Java. Пример запуска `jarsigner` из командной строки приведен ниже:
@@ -136,7 +123,6 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <PATH/TO/KEYSTO
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-
 ## <a name="automating-apk-creation-with-rake"></a>Автоматизация создания APK с помощью Rake
 
 Пример [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK) содержит простой проект Android, в котором демонстрируется вычисление номера версии ABI и сборка трех отдельных APK для каждого из следующих ABI:
@@ -144,7 +130,6 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 - armeabi;
 - armeabi-v7a;
 - x86
-
 
 Файл [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb) в этом примере выполняет все шаги, описанные в предыдущих разделах:
 
@@ -157,7 +142,6 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 1. [Подписывание APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) с помощью рабочего хранилища ключей.
 
 1. [Оптимизация](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) APK для архива.
-
 
 Чтобы скомпилировать сразу все APK, входящие в приложения, запустите задачу Rake `build` из командной строки:
 
@@ -172,16 +156,12 @@ $ rake build
 
 [![Расположение папок для каждой платформы с файлами xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
-
 > [!NOTE]
 > Процесс сборки, описанный в этом руководстве, можно реализовать во многих системах сборки. Например, такой режим точно поддерживают [PowerShell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) и [Fake](http://fsharp.github.io/FAKE/), но мы пока не можем предложить для них готовых примеров.
-
 
 ## <a name="summary"></a>Сводка
 
 В этом руководстве представлены некоторые рекомендации о том, как создать Android APK для определенных интерфейсов ABI. Подробно обсуждается один из вариантов создания `android:versionCodes` для отслеживания архитектуры ЦП, для которой предназначен пакет APK. Также здесь предоставлено пошаговое руководство по сборке тестового проекта с помощью сценариев Rake.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

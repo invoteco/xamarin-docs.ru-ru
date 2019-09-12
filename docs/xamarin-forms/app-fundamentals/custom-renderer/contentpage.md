@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650919"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772023"
 ---
 # <a name="customizing-a-contentpage"></a>Настройка ContentPage
 
@@ -253,7 +253,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>Сводка
 
 В этой статье было показано, как создать пользовательский отрисовщик для страницы [`ContentPage`](xref:Xamarin.Forms.ContentPage), чтобы переопределять собственный способ отрисовки по умолчанию с помощью настройки в зависимости от платформы. `ContentPage` — это визуальный элемент, который отображает одно представление и занимает большую часть экрана.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

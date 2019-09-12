@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 45a85c8ac2f40e92078d46f5765aaf2af1518b77
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 103d4f40a1c368f576276c4cdcbdc585d2a1536a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650743"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771890"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Выделение региона на карте
 
@@ -304,7 +304,6 @@ namespace MapOverlay.UWP
 ## <a name="summary"></a>Сводка
 
 В этой статье были представлены сведения о добавлении многоугольного наложения на карту для выделения на ней региона. Многоугольники являются замкнутыми фигурами с заполненными внутренними частями.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

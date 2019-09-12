@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646749"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771646"
 ---
 # <a name="xamarinforms-binding-path"></a>Путь привязки Xamarin.Forms
 
@@ -162,8 +162,6 @@ ms.locfileid: "68646749"
 Когда Xamarin.Forms обрабатывает путь привязки, для каждого объекта, реализующего интерфейс `INotifyPropertyChanged`, в пути устанавливается обработчик `PropertyChanged`. Например, последняя привязка реагирует на изменение в первом элементе `Label`, так как меняется свойство `Text`.
 
 Если свойство в пути привязки не реализует интерфейс `INotifyPropertyChanged`, изменения этого свойства игнорируются. Некоторые изменения могут сделать путь привязки полностью недействительным, поэтому этот прием следует использовать, только если строка из свойств и вложенных свойств не может стать недействительной.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

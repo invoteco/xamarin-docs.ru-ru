@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: 2deee2bd7fa07f562bee02409d1a7a19cdac0be9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650851"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772007"
 ---
 # <a name="customizing-an-entry"></a>Настройка элемента управления Entry
 
@@ -212,7 +212,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>Сводка
 
 В этой статье было показано, как создать пользовательский отрисовщик для элемента управления Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry), чтобы переопределить собственный способ отрисовки по умолчанию с помощью настройки для конкретной платформы. Пользовательские отрисовщики обеспечивают удобный подход к настройке внешнего вида элементов управления Xamarin.Forms. Они могут использоваться для незначительных изменений стиля или сложной настройки макетов и поведения в зависимости от платформы.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

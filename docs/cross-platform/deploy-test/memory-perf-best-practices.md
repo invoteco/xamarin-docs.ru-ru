@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290191"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765948"
 ---
 # <a name="cross-platform-performance"></a>Кроссплатформенная производительность
 
@@ -173,7 +173,6 @@ public class Subscriber : IDisposable
 
 С помощью отложенной инициализации можно отложить создание объекта до момента его первого использования. Этот прием в основном используется, чтобы повысить быстродействие, избежать лишних вычислений и уменьшить требования к памяти.
 
-
 Применять отложенную инициализацию объектов, создание которых является ресурсоемким, рекомендуется в двух указанных ниже случаях:
 
 - Объект может не использоваться в приложении.
@@ -246,8 +245,6 @@ public class FaceDetection
 
 > [!IMPORTANT]
 > Класс `CancellationTokenSource` реализует интерфейс `IDisposable`, поэтому после завершения выполнения экземпляра `CancellationTokenSource.Dispose` должен быть вызван метод `CancellationTokenSource`.
-
-
 
 Дополнительные сведения см. в статье [Обзор поддержки асинхронного выполнения](~/cross-platform/platform/async.md).
 

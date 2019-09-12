@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 9c6edddd70fa7a74a72857a94dbed613b5b0d66d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7d442d14589b35632bce2b6caec09235138ec585
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657154"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771627"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Командный интерфейс Xamarin.Forms
 
@@ -338,7 +338,6 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 Когда метод `execute` `NewCommand` вызывает `RefreshCanExecutes`, свойство `NewCommand` получает вызов `ChangeCanExecute`, а `Button` вызывает метод `canExecute`, который теперь возвращает `false`, поскольку свойство `IsEditing` теперь имеет значение `true`.
 
 Обработчик `PropertyChanged` для нового объекта `PersonViewModel` вызывает метод `ChangeCanExecute` объекта `SubmitCommand`. Вот как реализуется свойство Command:
-
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged

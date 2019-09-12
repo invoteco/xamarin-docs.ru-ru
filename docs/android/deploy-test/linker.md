@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525417"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753843"
 ---
 # <a name="linking-on-android"></a>Компоновка в Android
 
@@ -19,16 +19,14 @@ ms.locfileid: "69525417"
 
 Давайте рассмотрим этот механизм на примере приложения [Привет, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a).
 
-|Конфигурация|Размер 1.2.0|Размер 4.0.1|
+|Параметр Configuration|Размер 1.2.0|Размер 4.0.1|
 |---|---|---|
 |Сборка выпуска без компоновщика|14.0 МБ|16.0 МБ|
 |Сборка выпуска с компоновщиком|4.2 МБ|2.9 МБ|
 
 Компоновка позволяет получить пакет, размер которого составляет около 30% от исходного размера пакета (без компоновщика) для версии 1.2.0 и всего 18% для версии 4.0.1.
 
-
-
-## <a name="control"></a>Контроль
+## <a name="control"></a>Элемент управления
 
 Работа компоновщика основана на *статического анализа*. Следовательно, он не сможет обнаружить зависимости, определяемые средой выполнения.
 
@@ -50,7 +48,6 @@ public class MyActivity {
 }
 ```
 
-
 ### <a name="linker-behavior"></a>Поведение компоновщика
 
 Основным механизмом для управления компоновщиком является раскрывающийся список **Поведение компоновщика** (или *Компоновка* в Visual Studio), который размещен в диалоговом окне **Параметры проекта**. Здесь доступны три варианта выбора:
@@ -58,7 +55,6 @@ public class MyActivity {
 1. **Не компоновать** (или *Нет* в Visual Studio)
 1. **Компоновать сборки пакета SDK** (*Только сборки пакета SDK*)
 1. **Компоновать все сборки** (*Сборки пакета SDK и пользователя*)
-
 
 Вариант **Не компоновать** отключает компоновщик. Сборка, размер которой приводится в графе "Сборка выпуска без компоновщика", была получена именно с этим значением параметра. Он может оказаться полезен при отладке ошибок среды выполнения, чтобы подтвердить или исключить проблемы компоновщика. Обычно для производственных сборок этот вариант применять не следует.
 
@@ -86,7 +82,6 @@ E/mono    (17755):   at LinkerScratch2.Activity1.OnCreate (Android.OS.Bundle bun
 E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_savedInstanceState) [0x00000] in <filename unknown>:0
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
-
 
 ### <a name="preserving-code"></a>Сохранение кода
 
@@ -149,8 +144,6 @@ namespace Android.Runtime
 
 В примерах выше атрибут `Preserve` объявляется в пространстве имен `Android.Runtime`, однако вы можете использовать атрибут `Preserve` в любом пространстве, так как компоновщик распознает этот атрибут по имени типа.
 
-
-
 ### <a name="falseflag"></a>falseflag
 
 Если атрибут [Preserve] использовать невозможно, можно создать специальный неисполняемый блок кода, благодаря которому компоновщик посчитает, что нужный вам тип используется. Например, такой подход можно реализовать так:
@@ -173,8 +166,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### <a name="linkskip"></a>linkskip
 
 Также можно указать, что к некоторому набору пользовательских сборок компоновка не применяется вовсе, сохраняя возможность исключать другие пользовательские сборки. Для этого выберите вариант поведения *Компоновать сборки пакета SDK* и установите свойство [AndroidLinkSkip MSBuild](~/android/deploy-test/building-apps/build-process.md) следующим образом:
@@ -185,14 +176,11 @@ class MyActivity {
 </PropertyGroup>
 ```
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
 **Действие сборки** можно применять с файлами, разместив в них [файл пользовательской конфигурации компоновщика](~/cross-platform/deploy-test/linker.md).
 RDL-файл. Файлы пользовательской конфигурации компоновщика позволяют сохранить нужные элементы `internal` и (или) `private`.
-
-
 
 ### <a name="custom-attributes"></a>Настраиваемые атрибуты
 
@@ -207,7 +195,6 @@ RDL-файл. Файлы пользовательской конфигураци
 - System.MonoTODOAttribute
 - System.Xml.MonoFIXAttribute
 
-
 При компоновке сборки для сборки выпуска из всех элементов удаляются пользовательские атрибуты следующих типов:
 
 - System.Diagnostics.DebuggableAttribute
@@ -219,7 +206,6 @@ RDL-файл. Файлы пользовательской конфигураци
 - System.Diagnostics.DebuggerStepThroughAttribute
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

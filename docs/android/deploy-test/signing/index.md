@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.openlocfilehash: 0a60031481f16a3a600cca090d39ec47cbb8ca9a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58506997"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756056"
 ---
 # <a name="signing-the-android-application-package"></a>Подписывание пакета приложения для Android
 
@@ -85,7 +85,6 @@ ms.locfileid: "58506997"
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
-
 > [!NOTE]
 > Обязательно сохраните резервную копию файла полученного хранилища ключей и пароль в безопасном месте &ndash; оно не указано в этом руководстве. Если вы потеряете файл хранилища ключей (например, сменили компьютер или переустановили macOS), вы не сможете подписать приложение тем же сертификатом, что и предыдущие версии.
 
@@ -121,7 +120,6 @@ ms.locfileid: "58506997"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-
 Как мы видим, новый сертификат был добавлен в хранилище ключей. Для публикации приложения в Google Play нажмите **Отмена** и перейдите к разделу [Публикация в Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 В противоположном случае нажмите **Далее** для публикации приложения *напрямую* (для независимого распространения), как это показано в следующем примере:
 
@@ -150,8 +148,6 @@ APK-файл подписан сертификатом и сохранен по 
 APK-файл готов к копированию из Finder в место назначения. Перед распространением рекомендуется установить APK-файл на устройство с Android и проверить работоспособность приложения. Дополнительные сведения о *прямой публикации* APK-файлов см. в разделе [Независимая публикация](~/android/deploy-test/publishing/publishing-independently.md).
 
 -----
-
-
 
 ## <a name="next-steps"></a>Следующие шаги
 

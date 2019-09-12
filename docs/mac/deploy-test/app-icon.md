@@ -7,17 +7,16 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6a4ea3950b9657e4e04c6465cc0a64ac3c1d266c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291557"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770142"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Значок приложения для приложений Xamarin.Mac
 
 _В этой статье описано, как создавать изображения, необходимые для использования значков приложения Хamarin.Mac, объединения изображений в файл ICNS и включения значков в проект Xamarin.Mac._
-
 
 ## <a name="overview"></a>Обзор
 
@@ -27,11 +26,9 @@ _В этой статье описано, как создавать изобра
 
 ![Редактор AppIcons.appiconset](app-icon-images/intro01.png "The AppIcon.appiconset editor")
 
-
 ## <a name="application-icon"></a>Значок приложения
 
 Первоклассный значок должен передавать основное назначение приложения Xamarin.Mac и давать представление об ожидаемых действиях при использовании приложения. Каждое приложение macOS должно поддерживать несколько размеров для отображения значка в программе Finder, на панели Dock, панели запуска и в других местах на компьютере.
-
 
 ## <a name="designing-the-icon"></a>Разработка значков
 
@@ -49,15 +46,14 @@ _В этой статье описано, как создавать изобра
 
 Перед разработкой значка приложения Xamarin.Mac ознакомьтесь с разделами о [коллекции значков приложений](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Gallery.html#//apple_ref/doc/uid/20000957-CH88-SW1) и [разработке значков приложений](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Designing.html#//apple_ref/doc/uid/20000957-CH87-SW1) на странице [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Рекомендации по работе с человеческим интерфейсом OS X) веб-сайта Apple.
 
-
 ## <a name="required-image-sizes-and-filenames"></a>Требуемые размеры изображений и имена файлов
 
 Как и для любого другого ресурса изображения, который разработчик будет использовать в приложении Xamarin.Mac, для значка приложения необходимы версии стандартного разрешения и разрешения Retina. И опять же, как и для любого другого изображения, при именовании файлов значков следует использовать формат `@2x`:
 
-- **Стандартное разрешение**  - _имя_изображения_ **.** _расширение_имени_файла_ (например, **icon_512x512.png**).
-- **Высокое разрешение**  - _имя_изображения_ **@2x.** _расширение_имени_файла_ (например, **icon_512x512@2x.png** ).
+- **Стандартное разрешение**  - _имя_изображения_**.**_расширение_имени_файла_ (например, **icon_512x512.png**).
+- **Высокое разрешение**  - _имя_изображения_**@2x.**_расширение_имени_файла_ (например, **icon_512x512@2x.png**).
 
-Например, чтобы указать версию значка приложения 512 x 512, именем файла будет **icon_512x512.png** и **icon_512x512@2x.png** .
+Например, чтобы указать версию значка приложения 512 x 512, именем файла будет **icon_512x512.png** и **icon_512x512@2x.png**.
 
 Чтобы значок отлично смотрелся во всех местах, где его видят пользователи, необходимо предоставить ресурсы в приведенных ниже размерах:
 
@@ -76,7 +72,6 @@ _В этой статье описано, как создавать изобра
 
 Дополнительные сведения см. в документации Apple о [предоставлении версий высокого разрешения всех графических ресурсов приложения](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3).
 
-
 ## <a name="packaging-the-icon-resources"></a>Упаковка ресурсов значка
 
 После разработки и сохранения значка с применением требуемых размеров и имен файлов в Visual Studio для Mac можно легко назначать их ресурсам изображений для использования в Xamarin.Mac.
@@ -90,7 +85,6 @@ _В этой статье описано, как создавать изобра
 
     [![Выбор изображения значка](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
 3. Сохраните изменения.
-
 
 ## <a name="using-the-icon"></a>Использование значка
 
@@ -108,11 +102,9 @@ _В этой статье описано, как создавать изобра
 
 ![Пример значка приложения на панели Dock в macOS](app-icon-images/icon04.png "An example of an app icon in the macOS dock")
 
-
 ## <a name="summary"></a>Сводка
 
 В этой статье описаны принципы работы с изображениями, необходимыми для создания значков приложений macOS, упаковки значков и их включения в проект Xamarin.Mac.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

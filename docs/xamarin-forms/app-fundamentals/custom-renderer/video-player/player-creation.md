@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e14008341e531844851452daeee4c730565a2843
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650491"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771785"
 ---
 # <a name="creating-the-platform-video-players"></a>Создание видеопроигрывателей платформы
 
@@ -155,7 +155,6 @@ namespace FormsVideoLibrary.Droid
 
 Переопределение метода `OnElementChanged` создает классы `VideoView` и `RelativeLayout` и задает параметры макета для класса `VideoView`, чтобы расположить его в центре класса `RelativeLayout`.
 
-
 ```csharp
 namespace FormsVideoLibrary.Droid
 {
@@ -284,7 +283,6 @@ namespace FormsVideoLibrary.UWP
 Все видеопроигрыватели в составе платформ поддерживают заданный по умолчанию набор элементов управления транспортировкой, в который входят кнопки для воспроизведения и приостановки, строка для указания текущей позиции в видео и для перемещения в новую позицию.
 
 Класс `VideoPlayer` определяет свойство с именем `AreTransportControlsEnabled` и задает значение по умолчанию `true`.
-
 
 ```csharp
 namespace FormsVideoLibrary
@@ -463,7 +461,6 @@ namespace FormsVideoLibrary.UWP
 ```
 
 Чтобы начать воспроизведение видео, требуется еще одно свойство. Это важное свойство `Source`, которое ссылается на видеофайл. Реализация свойства `Source` описывается в следующей статье — [Воспроизведение видео через Интернет](web-videos.md).
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

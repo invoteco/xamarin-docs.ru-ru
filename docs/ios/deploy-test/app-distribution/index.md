@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c7b31e05a5b9d75559fae14f467312f5abc8fe94
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a261d1fc86fac16cf48575616359b083daebf47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289814"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756547"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Общие сведения о распространении приложений Xamarin.iOS
 
@@ -20,9 +20,7 @@ _В этом документе содержатся общие сведения
 
 После разработки приложения Xamarin.iOS наступает следующий этап жизненного цикла разработки ПО — распространение приложения пользователям (см. выделенную часть на схеме ниже):
 
-
 [![](images/publishingdiagram.png "После разработки приложения iOS наступает следующий этап — распространение приложения пользователям, как показано на выделенной части схемы")](images/publishingdiagram.png#lightbox)
-
 
 Компания Apple предоставляет следующие способы распространения приложения iOS, поддерживаемые в Xamarin.iOS:
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: ff2b481fda34bc7a75c88c72a5e30f00c4b70d9d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864216"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754014"
 ---
 # <a name="deployment-and-testing"></a>Развертывание и тестирование
 
 В этом разделе перечислены руководства, в которых рассматриваются вопросы тестирования приложения, оптимизации его производительности, подготовки к выпуску, подписывания с помощью сертификата и публикации в магазине приложений.
-
 
 ## <a name="application-package-sizesapp-package-sizemd"></a>[Application Package Sizes](app-package-size.md) (Размеры пакета приложения)
 
@@ -62,7 +61,6 @@ ms.locfileid: "67864216"
 ## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Профилирование приложений Android](~/android/deploy-test/profiling.md)
 
 Это руководство поясняет, как использовать средства профилирования для изучения производительности и использования памяти в приложении Android.
-
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[Подготовка приложения к выпуску](~/android/deploy-test/release-prep/index.md)
 

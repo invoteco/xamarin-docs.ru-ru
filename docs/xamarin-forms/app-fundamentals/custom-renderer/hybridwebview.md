@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 0277a5abd4e34d092b231cd42746f9e05c91b8df
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 66e26704f22a73559eef04608726ab3b4a935385
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199948"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771923"
 ---
 # <a name="implementing-a-hybridwebview"></a>Реализация HybridWebView
 
@@ -507,7 +507,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>Сводка
 
 В этой статье показано, как создать настраиваемый отрисовщик для пользовательского элемента управления `HybridWebView`, который показывает, как улучшить зависящие от платформы веб-элементы управления, чтобы разрешить вызов кода C# из JavaScript.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

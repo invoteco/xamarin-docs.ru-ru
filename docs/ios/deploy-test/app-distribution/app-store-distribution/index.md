@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: 5cf57a42092535363071acffe993cd38a91b9805
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05034989c60868f8bff8164da7da90a7ff8788a3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290994"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763220"
 ---
 # <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -70,7 +70,6 @@ ms.locfileid: "70290994"
 
 3. В зависимости от привилегий вашей команды будет создано удостоверение подписывания, как показано ниже, или вам придется ждать, пока администратор или агент команды утвердит его:  [![](images/generated.png "Создание удостоверения подписывания и отображение диалогового окна")](images/generated.png#lightbox)
 
-
 <a name="creatingprofile" />
 
 ## <a name="creating-a-distribution-profile"></a>Создание профиля распространения
@@ -81,7 +80,6 @@ ms.locfileid: "70290994"
 
 Как и в случае с любым другим создаваемым профилем подготовки, идентификатор приложения требуется для идентификации приложения, которое распространяется на устройство пользователя. Если вы еще не создали идентификатор, выполните следующие действия, чтобы создать его:
 
-
 1. В [центре разработчиков Apple](https://developer.apple.com/account/overview.action) перейдите в раздел *Certificates, Identifiers and Profiles* (Сертификаты, идентификаторы и профили). В разделе **Identifiers** (Идентификаторы) выберите элемент **App IDs** (ИД приложений).
 2. Нажмите кнопку **+** и укажите **Name** (Имя) для идентификации приложения на портале.
 3. Префикс приложения уже должен быть задан в качестве идентификатора вашей команды. Изменить его невозможно. Выберите "Explicit" (Явный) или "Wildcard App ID" (Шаблон ИД приложения), а затем введите идентификатор пакета (имя DNS в обратном порядке):
@@ -89,7 +87,6 @@ ms.locfileid: "70290994"
     - **Wildcard**:com.[доменное_имя].*
 4. Выберите любые [службы приложений](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices), которые требуются приложению.
 5. Нажмите кнопку **Continue** (Продолжить) и следуйте инструкциям на экране, чтобы создать идентификатор приложения.
-
 
 ### <a name="creating-a-provisioning-profile"></a>Создание профиля подготовки
 
@@ -120,7 +117,6 @@ ms.locfileid: "70290994"
     [![](images/distribute06.png "Ввод имени нового профиля распространения")](images/distribute06.png#lightbox)
 
 7. Нажмите кнопку **Generate** (Создать), чтобы создать профиль и завершить процесс.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

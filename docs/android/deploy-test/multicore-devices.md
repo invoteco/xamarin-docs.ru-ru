@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 49370813f50e3b5f1a9193c542b9f5f13d65a8e1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829956"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753945"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Многоядерные устройства и Xamarin.Android
 
@@ -79,7 +79,7 @@ _ОС Android может работать в разных компьютерны
 > [!NOTE]
 > Хотя платформа Google TV работает на архитектуре x86, ее не поддерживает Android NDK.
 
-#### <a name="x8664"></a>x86_64
+#### <a name="x86_64"></a>x86_64
 
 Это имя ABI для процессоров, которые поддерживают 64-разрядный набор инструкций x86 (также известен как *x64* или *AMD64*). В Xamarin.Android 5.1 реализована поддержка этой архитектуры (дополнительные сведения см. в разделе о [поддержке 64-разрядной среды выполнения](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#64-bit-runtime-support)).
 
@@ -191,7 +191,6 @@ $APP/lib/libtwo.so # armeabi, NOT armeabi-v7a!
 ```
 
 В результате библиотека `armeabi` `libmonodroid.so` будет найдена первой в составе `.apk`, и именно `armeabi` `libmonodroid.so` будет извлекаться, даже если в файле присутствует библиотека `armeabi-v7a` `libmonodroid.so`, оптимизированная для целевого устройства. Это может приводить к дополнительным неочевидным ошибкам во время выполнения, так как `armeabi` не поддерживает многоядерные устройства.
-
 
 ##### <a name="installing-native-libraries-android-404-and-later"></a>Установка собственных библиотек: Android 4.0.4 и более поздние версии
 

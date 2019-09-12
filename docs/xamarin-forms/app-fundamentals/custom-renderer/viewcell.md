@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 6fd952fc929fc11d19d8ceb0153aa8d7702a21a7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889231"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771697"
 ---
 # <a name="customizing-a-viewcell"></a>Настройка ViewCell
 
@@ -573,7 +573,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>Сводка
 
 В этой статье показано, как создать пользовательский отрисовщик для [`ViewCell`](xref:Xamarin.Forms.ViewCell), размещенного в элементе управления Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView). Это предотвратит постоянные вызовы вычисления макета Xamarin.Forms во время прокрутки `ListView`.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 14be0fec50138aed7b2b3e8d48d49cad86abbb2b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 80e338319e4eeddcb3df287f86bcf89397d423f1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119417"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754044"
 ---
 # <a name="xamarinandroid-environment"></a>Среда Xamarin.Android
 
@@ -41,7 +41,6 @@ adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 ## <a name="xamarinandroid-environment-variables"></a>Переменные среды Xamarin.Android
 
 Xamarin.Android поддерживает переменную `XA_HTTP_CLIENT_HANDLER_TYPE`, значение которой можно задать с помощью `adb shell setprop debug.mono.env` или действия сборки `$(AndroidEnvironment)`.
-
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
@@ -100,7 +99,6 @@ Xamarin.Android поддерживает следующие системные �
     Не применяйте без крайней необходимости.
 - `timing`: вывод некоторых сведений о времени выполнения методов. Также создаются файлы `.__override__/methods.txt` и `.__override__/counters.txt`.
 
-
 ### `debug.mono.max_grefc`
 
 Значение системного свойства `debug.mono.max_grefc` должно быть целым числом.
@@ -151,13 +149,11 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 > Базовое устройство Android должно поддерживать протокол TLS 1.2.
 TLS 1.2 поддерживается во всех версиях Android начиная с 5.0.
 
-
 ## <a name="example"></a>Пример
 
 ```shell
 ## Comments are lines which start with '#'
 ## Blank lines are ignored.
-
 
 ## Enable GREF messages to `adb logcat`
 debug.mono.log=gref
@@ -165,8 +161,6 @@ debug.mono.log=gref
 ## Clear out a Mono environment variable to decrease logging
 MONO_LOG_LEVEL=
 ```
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

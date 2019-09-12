@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e2542a95ce7b62a017161da4fe206b83202c9085
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109709"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754142"
 ---
 # <a name="debug-on-device"></a>Отладка на устройстве
 
@@ -21,7 +21,6 @@ _В этой статье содержатся сведения об отлад�
 ## <a name="debug-on-device-overview"></a>Обзор отладки на устройстве
 
 Отладку приложения Xamarin.Android можно выполнить на устройстве Android с помощью Visual Studio для Mac или Visual Studio. Перед отладкой устройство необходимо [настроить для разработки](~/android/get-started/installation/set-up-device-for-development.md) и подключить к ПК или Mac.
-
 
 ## <a name="debug-application"></a>Отладка приложения
 
@@ -53,12 +52,9 @@ _В этой статье содержатся сведения об отлад�
 
 -----
 
-
-
 ## <a name="summary"></a>Сводка
 
 В этом документе рассматривалась процедура отладки приложения Xamarin.Android путем установки точки останова и выбора целевого устройства.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

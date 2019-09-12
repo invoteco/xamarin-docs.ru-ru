@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8e6f37fb607f4b0bc0ddfd41ad86dfe7ecbc03df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771808"
 ---
 # <a name="implementing-a-video-player"></a>Реализация видеопроигрывателя
 
@@ -65,10 +65,6 @@ ms.locfileid: "68650528"
 ## <a name="custom-video-positioningcustom-positioningmd"></a>[Настраиваемое размещение видео](custom-positioning.md)
 
 В каждом видеопроигрывателе платформы есть панель положения, которая показывает, сколько времени от видео прошло, и позволяет перемотать его вперед или назад до определенного места. В этой статье показано, как заменить панель положения пользовательским элементом управления.
-
-
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

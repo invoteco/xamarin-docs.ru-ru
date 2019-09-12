@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 84910bd499aa6894d86778a9bc4eb1467f063134
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: c331747677ee56f87458f51ef36a9bb2034beab1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225739"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754264"
 ---
 # <a name="build-process"></a>Процесс сборки
 
@@ -44,7 +44,6 @@ ms.locfileid: "70225739"
 Как известно, быстрое развертывание не работает на устройствах, которые блокируют синхронизацию `adb` с каталогом `/data/data/@PACKAGE_NAME@/files/.__override__`.
 
 Быстрое развертывание включено по умолчанию. Чтобы отключить его в отладочных сборках, нужно установить для свойства `$(EmbedAssembliesIntoApk)` значение `True`.
-
 
 ## <a name="msbuild-projects"></a>Проекты MSBuild
 
@@ -128,7 +127,6 @@ ms.locfileid: "70225739"
   # Use `/Library/Frameworks/Mono.framework/Commands/msbuild` on OS X
   MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
   ```
-
 
 ### <a name="packaging-properties"></a>Свойства упаковки
 
@@ -530,7 +528,6 @@ ms.locfileid: "70225739"
 
   - **West**: включить западные кодировки, такие как *Западноевропейская (Mac)* \[macintosh, CP10000\], *Исландская (Mac)* \[x-mac-icelandic, CP10079\], *Центральноевропейская (Windows)* \[iso-8859-2, CP1250\], *Западноевропейская (Windows)* \[iso-8859-1, CP1252\], *Греческая (Windows)* \[iso-8859-7, CP1253\], *Центральноевропейская (ISO)* \[iso-8859-2, CP28592\], *Латиница 3 (ISO)* \[iso-8859-3, CP28593\], *Греческая (ISO)* \[iso-8859-7, CP28597\], *Латиница 9 (ISO)*  \[iso-8859-15, CP28605\], *OEM - США* \[CP437\], *Западноевропейская (DOS)* \[CP850\], *Португальская (DOS)* \[CP860\], *Исландская (DOS)* \[CP861\], *Французская канадская (DOS)* \[CP863\] и *Скандинавская (DOS)* \[CP865\].
 
-
   ```xml
   <MandroidI18n>West</MandroidI18n>
   ```
@@ -548,7 +545,6 @@ ms.locfileid: "70225739"
 - **AndroidClassParser** — строковое свойство, которое определяет способ синтаксического анализа файлов `.jar`. Возможные значения:
 
   - **class-parse**: использует `class-parse.exe` для непосредственного синтаксического анализа байт-кода Java без использования виртуальной машины Java. Это значение является экспериментальным.
-
 
   - **jar2xml**: использует `jar2xml.jar` для отражения Java, чтобы извлекать типы и элементы из файла `.jar`.
 
@@ -579,7 +575,6 @@ ms.locfileid: "70225739"
     - Кэширование `jmethodID` конструкторов JCW для управляемых подклассов.
 
     Значение по умолчанию — `XAJavaInterop1`.
-
 
 ### <a name="resource-properties"></a>Свойства ресурса
 
@@ -680,13 +675,11 @@ Enter key password for keystore.alias
 
 *Действия сборки* [применяются к файлам](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) в рамках проекта и контролируют обработку файла.
 
-
 ### <a name="androidaarlibrary"></a>AndroidAarLibrary
 
 Действие сборки `AndroidAarLibrary` следует использовать для прямой ссылки на AAR-файлы. Действие сборки будет наиболее часто использоваться компонентами Xamarin. То есть они будут использовать его для включения ссылок на AAR-файлы, которые необходимы для работы Google Play и других служб.
 
 Файлы с действием сборки будут обрабатываться так же, как внедренные ресурсы, расположенные в проектах библиотек. AAR-файлы будут извлекаться в промежуточный каталог. Затем все активы, ресурсы и JAR-файлы будут включены в соответствующие группы элементов.
-
 
 ### <a name="androidboundlayout"></a>AndroidBoundLayout
 
@@ -696,7 +689,6 @@ Enter key password for keystore.alias
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
 
-
 <a name="AndroidEnvironment" />
 
 ### <a name="androidenvironment"></a>AndroidEnvironment
@@ -704,28 +696,23 @@ Enter key password for keystore.alias
 Файлы с действием сборки `AndroidEnvironment` используются для [инициализации переменных среды и свойств системы во время запуска процесса](~/android/deploy-test/environment.md).
 Действие сборки `AndroidEnvironment` может быть применено к нескольким файлам, и они будут оцениваться без какого либо порядка (поэтому не указывайте одну и ту же переменную среды или системное свойство в нескольких файлах).
 
-
 ### <a name="androidfragmenttype"></a>AndroidFragmentType
 
 Указывает полный тип по умолчанию, используемый для всех элементов макета `<fragment>` при создании кода привязок макета. По умолчанию свойство использует стандартный тип Android `Android.App.Fragment`.
-
 
 ### <a name="androidjavalibrary"></a>AndroidJavaLibrary
 
 Файлы с действием сборки `AndroidJavaLibrary` — это архивы Java (файлы `.jar`), которые будут включены в окончательный пакет Android.
 
-
 ### <a name="androidjavasource"></a>AndroidJavaSource
 
 Файлы с действием сборки `AndroidJavaSource` — это исходный код Java, который будет включен в окончательный пакет Android.
-
 
 ### <a name="androidlintconfig"></a>AndroidLintConfig
 
 Действие сборки «AndroidLintConfig» следует использовать в сочетании со свойством сборки `AndroidLintEnabled`. Файлы с этим действием сборки объединяются друг с другом и передаются инструментам Android `lint`. Это должны быть XML-файлы, которые содержат информацию о том, какие тесты требуется включить или отключить.
 
 Дополнительные сведения см. в [документации по lint](https://developer.android.com/studio/write/lint).
-
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -738,7 +725,6 @@ Enter key password for keystore.alias
 
 При сканировании пути имя родительского каталога собственной библиотеки используется для указания целевого ABI библиотеки. Таким образом при добавлении `lib/armeabi-v7a/libfoo.so` к сборке ABI будет сканироваться как `armeabi-v7a`.
 
-
 #### <a name="item-attribute-name"></a>Имя атрибута элемента
 
 **ABI** — указывает ABI собственной библиотеки.
@@ -750,7 +736,6 @@ Enter key password for keystore.alias
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
-
 
 ### <a name="androidresource"></a>AndroidResource
 
@@ -789,18 +774,15 @@ Enter key password for keystore.alias
 </ItemGroup>
 ```
 
-
 ### <a name="content"></a>Content
 
 Обычное действие сборки `Content` не поддерживается (потому что мы не выяснили, как его поддерживать без затратного шага первого запуска).
 
 Начиная с Xamarin.Android 5.1 при попытке использования действия сборки `@(Content)` возникает предупреждение `XA0101`.
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 Файлы с действием сборки *LinkDescription*  используются для [управления поведением компоновщика](~/cross-platform/deploy-test/linker.md).
-
 
 <a name="ProguardConfiguration" />
 
@@ -809,7 +791,6 @@ Enter key password for keystore.alias
 Файлы с действием сборки *ProguardConfiguration* содержат параметры, которые используются для управления поведением `proguard`. Дополнительные сведения об этом действии см. в разделе [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
 Эти файлы игнорируются, только если свойство MSBuild `$(EnableProguard)` не имеет значение `True`.
-
 
 ## <a name="target-definitions"></a>Определения целевых объектов
 

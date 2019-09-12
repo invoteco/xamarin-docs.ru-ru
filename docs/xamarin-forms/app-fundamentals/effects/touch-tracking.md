@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 94a10213f8ae42d6e8f3407b18051021d92be5bc
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 5fda0b78a80a25d122fbc58ef61fbeab22a547a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978564"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771345"
 ---
 # <a name="invoking-events-from-effects"></a>Вызов событий из эффекта
 
@@ -803,7 +803,6 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 ## <a name="summary"></a>Сводка
 
 В этой статье демонстрируется вызов событий в эффекте, а также описываются принципы написания и использования эффекта для низкоуровневой обработки мультисенсорного ввода.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

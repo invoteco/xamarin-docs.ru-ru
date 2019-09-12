@@ -6,18 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3852e2a1460cb5659cf5a00dcc17fb9a6e9c26a8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756069"
 ---
 # <a name="manually-uploading-the-apk"></a>Отправка пакета APK вручную
 
-
 В первый раз при отправке в Google Play (или если используется более ранняя версия Xamarin.Android) пакет APK необходимо вручную отправить через [Google Play Developer Console](https://play.google.com/apps/publish). В этом руководстве описываются действия по выполнению этого процесса. 
-
 
 ## <a name="google-play-developer-console"></a>Google Play Developer Console
 
@@ -54,13 +52,11 @@ ms.locfileid: "69525310"
 
 Отправленный пакет APK сохраняется в виде черновика. Его можно опубликовать только после предоставления дополнительных сведений в Google Play, как описано далее.
 
-
 ## <a name="store-listing"></a>Описание в Магазине
 
 Щелкните элемент **Описание в Магазине** в **Google Play Developer Console**, чтобы ввести сведения, которые потенциальные пользователи приложения увидят в Google Play: 
 
 [![Диалоговое окно "Описание в Магазине"](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
-
 
 ### <a name="graphics-assets"></a>Графические ресурсы
 
@@ -70,7 +66,6 @@ ms.locfileid: "69525310"
 
 Здесь отправляются все подготовленные ранее рекламные материалы. В разделе содержится руководство о том, какие рекламные ресурсы и в каком формате следует предоставить.
 
-
 ### <a name="categorization"></a>Классификация
 
 За разделом **ГРАФИЧЕСКИЕ РЕСУРСЫ** следует раздел **КЛАССИФИКАЦИЯ** для выбора типа и категории приложения:
@@ -79,7 +74,6 @@ ms.locfileid: "69525310"
 
 Оценка содержимого рассматривается после следующего раздела.
 
-
 ### <a name="contact-details"></a>Контактные сведения
 
 В конце страницы находится раздел **КОНТАКТНЫЕ СВЕДЕНИЯ**. Он используется для сбора контактных данных о разработчике приложения:
@@ -87,7 +81,6 @@ ms.locfileid: "69525310"
 [![Раздел "Контактные сведения"](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 В разделе **ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ** можно указать URL-адрес политики конфиденциальности для приложения, как показано выше.
-
 
 ## <a name="content-rating"></a>Оценка содержимого
 
@@ -111,7 +104,6 @@ ms.locfileid: "69525310"
 
 Элементы в списке "Средний уровень зрелости" являются субъективными, поэтому возможно, что рекомендации для этого уровня могут показаться достаточно строгими и для оценки списка "Высокий уровень зрелости". 
 
-
 ## <a name="pricing-amp-distribution"></a>Цены и распространение
 
 Щелкните элемент **Цены и распространение** в **Google Play Developer Console**. Если приложение является платным, укажите здесь цену.
@@ -122,13 +114,11 @@ Google Play не разрешит изменить бесплатное прил
 
 [![Диалоговое окно "Цены и распространение"](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-
 ### <a name="manage-countries"></a>Управление странами
 
 В следующем разделе **Управление странами** можно выбирать, в каких странах распространяется приложение:
 
 [![Диалоговое окно "Управление странами"](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
-
 
 ### <a name="other-information"></a>Другие сведения
 
@@ -137,7 +127,6 @@ Google Play не разрешит изменить бесплатное прил
 [![Раздел "Содержит рекламу"](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
 После этого раздела приводятся дополнительные доступные для выбора параметры, например участие в программе **Приложения для всей семьи** и распространение приложений через Google Play for Education (магазин приложений, ориентированный на образовательные учреждения).
-
 
 ### <a name="consent"></a>Согласие
 
@@ -148,8 +137,6 @@ Google Play не разрешит изменить бесплатное прил
 
 В этом руководстве приведены далеко не все сведения, имеющие отношение к публикации приложения Xamarin.Android.
 Дополнительную информацию о публикации приложения в Google Play см. на странице [Справочный центр — Google Play Console](https://support.google.com/googleplay/android-developer#topic=3450769).
-
-
 
 ## <a name="google-play-filters"></a>Фильтры Google Play
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6979b4d3e0d750ee962346a94dd832c86c92d995
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f8f2fc489c10d404b5864ea13c438e3e5508eabe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652952"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771361"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Страница с вкладками Xamarin.Forms
 
@@ -257,7 +257,6 @@ public class TabbedPageDemoPageCS : TabbedPage
 ## <a name="summary"></a>Сводка
 
 В этой статье демонстрируется использование TabbedPage для перехода по коллекции страниц. Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) состоит из списка вкладок и большой области сведений, где каждая вкладка загружает содержимое в область сведений.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

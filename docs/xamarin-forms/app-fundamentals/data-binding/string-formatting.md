@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 87972df2b15a5bc1f6323a6953f809379cae4a50
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771567"
 ---
 # <a name="xamarinforms-string-formatting"></a>Форматирование строк Xamarin.Forms
 
@@ -183,7 +183,6 @@ ms.locfileid: "68644528"
 Другой подход является более общим. Можно написать *преобразователь значений привязки*, как описано [**здесь**](converters.md).
 
 Тем не менее в следующей статье [**путь привязки**](binding-path.md) рассматривается более подробно, а также показано, как его можно использовать для ссылки на вложенные свойства и элементы в коллекциях.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

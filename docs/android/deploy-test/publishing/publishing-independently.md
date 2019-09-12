@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d324d1faa045dcfbb2b3e6dcc3000a67b5f9e10
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bd505e97ce4fcca2197f6c7da2de8411931900ab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525377"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753775"
 ---
 # <a name="publishing-independently"></a>Независимая публикация
 
@@ -29,18 +29,14 @@ ms.locfileid: "69525377"
 
 Посетите веб-сайт [visualstudio.com](https://visualstudio.microsoft.com/xamarin/), чтобы скачать Community Edition или получить дополнительные сведения о приобретении выпусков Professional и Enterprise.
 
-
 ## <a name="allow-installation-from-unknown-sources"></a>Разрешение установки из неизвестных источников
 
 По умолчанию Android запрещает пользователям скачивать и устанавливать приложения из расположений, отличных от Google Play. Чтобы разрешить установку не из Marketplace, перед установкой приложения пользователь должен выбрать на устройстве параметр *Неизвестные источники*. Он находится в разделе **Параметры > Безопасность**, как показано на следующем изображении:
 
 [![Экран параметров безопасности](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
-
 > [!IMPORTANT]
 > Некоторые поставщики сети могут запрещать установку приложений из неизвестных источников независимо от этого параметра.
-
-
 
 ## <a name="publishing-by-e-mail"></a>Публикация по электронной почте
 
@@ -50,11 +46,9 @@ ms.locfileid: "69525377"
 
 Несмотря на простоту, распространение по электронной почте располагает незначительным количеством механизмов защиты от пиратства или несанкционированного распространения. Этот вариант лучше всего подходит для небольших групп получателей приложения, которые не будут распространять приложение самостоятельно.
 
-
 ## <a name="publishing-by-web"></a>Публикация через Интернет
 
 Приложения можно распространять через веб-сервер. Для этого нужно отправить приложение на веб-сервер, а затем предоставить пользователям ссылку для скачивания. Когда пользователь устройства на платформе Android переходит по ссылке, а затем скачивает приложение, оно устанавливается автоматически.
-
 
 ## <a name="manually-installing-an-apk"></a>Установка пакета APK вручную
 

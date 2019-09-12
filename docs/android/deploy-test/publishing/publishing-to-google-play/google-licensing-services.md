@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/20/2017
-ms.openlocfilehash: 47b9d76cb0b7b2fc48fe83d291479f7d1ed00eb8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 934cc5124c71f631def0d534420cf75a12ee4079
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525218"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753601"
 ---
 # <a name="google-licensing-services"></a>Службы лицензирования Google
 
@@ -35,7 +35,6 @@ ms.locfileid: "69525218"
 - Google Play предоставляет такие сведения, как учетная запись Google, и данные о самом устройстве, например номер IMSI. 
 
 Служба лицензирования Google также является ключевым компонентом файлов расширения APK (они рассматриваются далее в этом документе). Файлы расширения APK используют службы лицензирования Google для получения URL-адресов файлов расширения, которые будут скачиваться.
-
 
 ## <a name="requirements"></a>Требования
 

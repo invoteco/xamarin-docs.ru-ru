@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 290c90820bad2d213f8f3a978437a55f7ca6069e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c26d912a4684f6ddbee46ae953ce5cf1a3db67bd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285785"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762722"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Общие сведения о Fastlane для iOS
 
@@ -80,18 +80,15 @@ Fastlane — это проект с открытым кодом, призван
 
 8. Запустите `which fastlane` еще раз и проверьте, что путь выглядит так: `/Users/[user]/.fastlane/bin`
 
-
 ## <a name="updating-fastlane"></a>Обновление Fastlane
 
 Fastlane — это активно развивающийся проект с открытым исходным кодом, и в нем регулярно публикуются новые выпуски. Когда доступна новая версия, система сообщает об этом при выполнении любой команды Fastlane:
 
 [![](images/fastlane-image0.png "Запрос на обновление Fastlane")](images/fastlane-image0.png#lightbox)
 
-
 Чтобы установить обновление для Fastlane, загрузите последнюю версию пакета [отсюда](https://download.fastlane.tools), а затем дважды щелкните пакет установки:
 
 [![](images/fastlane-image0a.png "Запуск пакета установки")](images/fastlane-image0a.png#lightbox)
-
 
 ## <a name="contents"></a>Описание
 

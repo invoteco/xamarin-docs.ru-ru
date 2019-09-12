@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 430f4fedc8e988c89826e3ae023fc25b7b798727
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 818b6afef395b081768f8bdd6538d5a8ecbad178
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525347"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753738"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Публикация в Магазин Amazon App Store
 
@@ -20,7 +20,6 @@ ms.locfileid: "69525347"
 [ ![Снимок экрана Магазина Amazon App Store](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 Amazon не ограничивает размер пакетов APK. Однако если размер пакета APK превышает 30 МБ, для распространения будет использоваться FTP, а не портал распространения мобильных приложений Amazon.
-
 
 ## <a name="submitting-apps-binary-info"></a>Отправка приложений: Двоичные данные
 
@@ -31,8 +30,6 @@ Amazon не ограничивает размер пакетов APK. Однак
 - **Снимки экранов** &ndash; Amazon требует как минимум три или максимум десять снимков экранов. Снимки экрана должны иметь размер 1024 (ширина) x 600 (высота) пикселей или 800 (ширина) x 480 (высота) пикселей. Допустимы форматы PNG и JPG.
 - **Рекламное изображение** &ndash; Чтобы приложение демонстрировалось в местах размещения рекламы, например на главной странице, можно дополнительно отправить рекламное изображение. Это должен быть PNG- или JPG-файл размером 1024 (ширина) x 500 (высота) пикселей в альбомной ориентации. Он может быть без анимации.
 - Можно предоставить обновления для пяти видеороликов.
-
-
 
 ## <a name="approval-process"></a>Процесс утверждения
 

@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: e24f450c16e144b313d5f8e3da0221fccdaa145b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dd6fac2434c5205acfec10e4830dc72ea42aa340
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285418"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756163"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Компиляция для разных устройств в Xamarin.iOS
 
 Вы можете настроить свойства сборки для исполняемого файла на странице свойств проекта **Сборка iOS**. Чтобы открыть эту страницу, щелкните имя проекта правой кнопкой мыши и выберите **Параметры > Сборка iOS** (в Visual Studio для Mac) или **Свойства** (в Visual Studio).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
-
 
 [![](compiling-for-different-devices-images/image1.png "Страница свойств проекта \"Сборка iOS\"")](compiling-for-different-devices-images/image1.png#lightbox) 
 
@@ -35,7 +34,6 @@ ms.locfileid: "70285418"
 
  <a name="SDK_Options" />
 
-
 ## <a name="sdk-options"></a>Параметры пакета SDK
 
 Visual Studio для Mac позволяет настроить для пакета SDK два важных свойства: версию пакета SDK для iOS, которая используется при сборке программы, и цель развертывания (которая обозначает минимально необходимую версию iOS).
@@ -48,13 +46,11 @@ Visual Studio для Mac позволяет настроить для пакет
 
  <a name="Linking" />
 
-
 ## <a name="linking"></a>Компоновка
 
 Страница с информацией о [компоновщике](~/ios/deploy-test/linker.md) позволит узнать, как компоновщик помогает уменьшить размер исполняемых файлов, и как его наиболее эффективно использовать.
 
  <a name="Code_Generation_Engine" />
-
 
 ## <a name="code-generation-engine"></a>Модуль создания кода
 
@@ -71,7 +67,6 @@ Visual Studio для Mac позволяет настроить для пакет
 [![](compiling-for-different-devices-images/image2a.png "Включение LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
-
 
 ## <a name="architecture-support"></a>Поддержка архитектур
 
@@ -114,13 +109,11 @@ Visual Studio для Mac позволяет настроить для пакет
 
  <a name="ARM_Thumb_Support" />
 
-
 ### <a name="arm-thumb-2-support"></a>Поддержка ARM Thumb-2
 
 Thumb — это более компактный набор инструкций, используемый процессорами ARM. Включив поддержку Thumb, вы сможете уменьшить размер исполняемого файла, но в ущерб времени его выполнения. Thumb поддерживается на ARMv7 и ARMv7s.
 
  <a name="Conditional_framwork_useage" />
-
 
 ## <a name="conditional-framework-usage"></a>Использование условной структуры
 
@@ -131,13 +124,9 @@ Thumb — это более компактный набор инструкций
 - Откройте **Параметры проекта** и перейдите к панели **Сборка iOS**.
 - Добавьте `'-gcc_flags "-weak_framework iAd"'` в раздел **Дополнительные параметры** для каждой конфигурации, к которой должна действовать слабая привязка:
 
-
 [![](compiling-for-different-devices-images/image3.png "Дополнительные параметры")](compiling-for-different-devices-images/image3.png#lightbox)
 
-
 Помимо этого, нужно запретить использование в коде тех типов, которые не существуют в более старых версиях iOS при работе на устройствах с этими версиями. Эту задачу можно решить несколькими способами, например с помощью синтаксического анализа `UIDevice.CurrentDevice.SystemVersion`.
-
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

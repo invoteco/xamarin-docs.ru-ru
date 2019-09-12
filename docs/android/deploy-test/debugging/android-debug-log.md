@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ef3ba27b9056e1de92aabb87f86416b2985d6e1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525709"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754226"
 ---
 # <a name="android-debug-log"></a>Журнал отладки Android
 
@@ -29,7 +29,6 @@ ms.locfileid: "69525709"
 > Инструмент **Журнал отладки** не работает с Xamarin Live Player.
 
 **Журнал отладки** не отображает сообщения журнала, созданные во время автономной работы приложения на устройстве (т. е. пока устройство не подключено к Visual Studio).
-
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Получение доступа к журналу отладки из Visual Studio
 
@@ -60,13 +59,11 @@ ms.locfileid: "69525709"
 
 - **Поле поиска** — ввод строк поиска в это поле позволяет выполнить фильтрацию по записям журнала.
 
-
 Когда отображается окно инструмента **Журнал отладки**, используйте раскрывающееся меню устройства, чтобы выбрать устройство Android для мониторинга:
 
 [![Расположение селектора устройства](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 После выбора устройства инструмент **Журнал устройств** автоматически добавляет записи журнала из работающего приложения &ndash; эти записи отображаются в таблице записей журнала. При переключении между устройствами ведение журнала устройств останавливается и запускается. Обратите внимание, что проект Android следует загрузить до того, как любые устройства будут отображаться в селекторе устройства. Если устройство не отображается в селекторе устройства, убедитесь, что оно доступно в раскрывающемся меню Visual Studio на устройстве рядом с кнопкой **Пуск**.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -104,7 +101,6 @@ ms.locfileid: "69525709"
 
 -----
 
-
 ## <a name="accessing-from-the-command-line"></a>Доступ из командной строки
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -129,11 +125,9 @@ $ ./adb logcat
 
 -----
 
-
 Если подключено несколько устройств, необходимо явно указать нужное устройство. Например, при выполнении команды **adb -d logcat** отображается только журнал подключенного физического устройства, а при выполнении команды **adb -e logcat** — только журнал запущенного эмулятора.
 
 Чтобы узнать дополнительные команды, введите **adb** и прочитайте сообщения справки.
-
 
 ## <a name="writing-to-the-debug-log"></a>Запись в журнал отладки
 

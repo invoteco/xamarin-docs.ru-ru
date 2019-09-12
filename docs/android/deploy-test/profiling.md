@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 44bed11e4d2ccf7baa39734a1b20e49b9ecf5f10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525583"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753983"
 ---
 # <a name="profiling-android-apps"></a>Профилирование приложений Android
 
@@ -24,14 +24,13 @@ ms.locfileid: "69525583"
 
 Это руководство содержит общие сведения о Xamarin Profiler, а также информацию о начале работы с Android Profiler.
 
- 
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
 Xamarin Profiler — это автономное приложение, интегрированное с Visual Studio и Visual Studio для Mac для профилирования приложений Xamarin из интегрированной среды разработки. Дополнительные сведения об использовании Xamarin Profiler см. в статье [Xamarin Profiler](~/tools/profiler/index.md).
 
 > [!NOTE]
 > Чтобы разблокировать компонент Xamarin Profiler в Visual Studio Enterprise для Windows или Visual Studio для Mac, вы должны быть подписчиком [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/).
- 
+
 ## <a name="android-studio-profiler"></a>Профилировщик Android Studio
 
 Android Studio 3.0 и более поздних версий включает в себя средство Android Profiler. Его можно использовать для измерения производительности приложения Xamarin Android, созданного с помощью Visual Studio, &ndash; без потребности в лицензии Visual Studio Enterprise. Однако в отличие от Xamarin Profiler средство Android Profiler не интегрировано с Visual Studio и может использоваться только для профилирования пакета приложения Android (APK), который был создан заранее и импортирован в Android Profiler.
@@ -100,7 +99,6 @@ Android Studio 3.0 и более поздних версий включает в
 15. Если нажать кнопку **RANDOMIZE** (Случайный выбор) для **XamagonXuzzle** (что приводит к смещению и рандомизации плиток), вы заметите повышение загрузки ЦП во время интервала рандомизации приложения:
 
     [![Загрузка ЦП при нажатии кнопки CPU "RANDOMIZE" (Случайный выбор)](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
-
 
 ### <a name="using-the-android-profiler"></a>Использование Android Profiler
 

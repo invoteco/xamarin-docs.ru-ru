@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c5271aab5342f065694e598bd5c2892ef1f18aeb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 04d96dad455cbcf8360f12ee97a0540e7e746d62
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656664"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771475"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Передача параметров эффекта в качестве свойств среды CLR
 
@@ -237,7 +237,6 @@ namespace EffectsDemo.UWP
 ## <a name="summary"></a>Сводка
 
 В этой статье было продемонстрировано использование свойств среды CLR для передачи параметров эффекту. Свойства среды CLR можно использовать для определения параметров эффекта, не реагирующих на изменения свойств во время выполнения.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

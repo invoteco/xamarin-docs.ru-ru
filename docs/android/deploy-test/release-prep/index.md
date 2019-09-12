@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119633"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756121"
 ---
 # <a name="preparing-an-application-for-release"></a>Подготовка приложения к выпуску
 
@@ -92,7 +92,6 @@ ms.locfileid: "70119633"
 ## <a name="shrink-the-apk"></a>Сокращение объема пакета APK
 
 Размер пакетов APK Xamarin.Android можно уменьшить, используя компоновщик Xamarin.Android, который удаляет ненужный *управляемый* код, и средство *ProGuard* из пакета SDK для Android, которое удаляет неиспользуемый *байт-код Java*. В процессе сборки сначала используется компоновщик Xamarin.Android для оптимизации управляемого кода (C#), а затем применяется ProGuard (если он включен) для оптимизации пакета APK на уровне байт-кода Java.
-
 
 ### <a name="configure-the-linker"></a>Настройка компоновщика
 
@@ -229,7 +228,6 @@ Dotfuscator CE входит в состав Visual Studio 2017.
 
 _Оптимизирующий компилятор LLVM_ создает быстрее скомпилированный код небольшого размера и преобразует AOT-скомпилированные сборки в машинный код, однако это происходит за счет увеличения времени сборки. Компилятор LLVM отключен по умолчанию. Для использования компилятора LLVM сначала необходимо включить параметр **Компиляция AOT** на странице [Свойства упаковки](#Set_Packaging_Properties).
 
-
 > [!NOTE]
 > Для использования параметра **Оптимизирующий компилятор LLVM** требуется корпоративная лицензия.  
 
@@ -364,7 +362,6 @@ _Оптимизирующий компилятор LLVM_ создает быст
 Здесь можно выбрать канал распространения:
 
 - **Специальный**. Сохраняет на диск подписанный пакет APK, который можно загружать на устройства Android в неопубликованном виде. В разделе [Подписывание пакета приложения](~/android/deploy-test/signing/index.md) вы узнаете, как создать удостоверение подписывания Android, как создать новый сертификат подписи для приложений Android и как опубликовать &ldquo;специальную&rdquo; версию приложения на диск. Этот способ удобен для тестирования пакета APK.
-
 
 - **Google Play** &ndash; Публикует пакет APK в Google Play.
     В разделе [Публикация в Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) вы узнаете, как подписать пакет APK и опубликовать его в магазине Google Play.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 1163f264fc54a461d8d95854524439589cdc81f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 399f411acd497b9d55ca81f670556430fe5f5503
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646983"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771290"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Создание DataTemplate в Xamarin.Forms
 
@@ -288,7 +288,6 @@ public class WithDataTemplatePageCS : ContentPage
 ## <a name="summary"></a>Сводка
 
 В этой статье были представлены сведения о создании шаблонов данных как встроенных, на основе пользовательского типа или в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). Встроенный шаблон следует использовать, если нет необходимости повторно использовать шаблон данных в другом месте. Шаблон данных можно использовать повторно, определив его как пользовательский тип или как ресурс на уровне элемента управления, страницы или приложения.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 96a7e6b9587d696479afd084613c79e2b03f956c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2970253ec15ca207b9f69e2b764e0a69f8037938
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292004"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753517"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin для разработчиков на Objective-C
 
@@ -30,7 +30,6 @@ Xamarin позволяет разработчикам, создающим реш
 
 - [Руководство по C# для разработчиков Objective-C](primer.md) быстро введет в курс дела тех разработчиков, которые уже знакомы с Objective-C и намерены перейти к использованию Xamarin и C#. 
 - [Пошаговое руководство: привязка библиотек Objective-C](~/ios/platform/binding-objective-c/walkthrough.md) поможет применить существующий код Objective-C в приложении Xamarin.iOS. 
-
 
 ## <a name="binding-objective-c"></a>Привязка Objective-C
 

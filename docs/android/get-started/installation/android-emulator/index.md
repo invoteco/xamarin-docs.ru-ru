@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 6ce8f633cdc0fd4616673eb047d640a8703b3a30
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cb8dc64a8c40496aaf2ea23a834effb58436618a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759078"
 ---
 # <a name="android-emulator-setup"></a>Настройка эмулятора Android
 
 _Это руководство описывает, как подготовить Android Emulator для тестирования приложения._
-
 
 ## <a name="overview"></a>Обзор
 
@@ -45,7 +44,5 @@ _Это руководство описывает, как подготовить
 
 После настройки Android Emulator см. статью [Отладка в Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md), чтобы узнать, как запустить эмулятор и использовать его для тестирования и отладки приложения.
 
-
 > [!NOTE]
 > В Android SDK Tools **26.0.1** и более поздних версий компания Google исключила поддержку существующих диспетчеров AVD и SDK, заменив их новыми средствами интерфейса командной строки (CLI). В связи с этим изменением теперь вместо диспетчеров устройств или пакетов SDK Google для Android Tools 26.0.1 и более поздних версий используются диспетчеры устройств или пакетов SDK Xamarin. Дополнительные сведения о диспетчере пакетов SDK Xamarin см. в разделе [Настройка пакета SDK для Android под Xamarin.Android](~/android/get-started/installation/android-sdk.md).
-

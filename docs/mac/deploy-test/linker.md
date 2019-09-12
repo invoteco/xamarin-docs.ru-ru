@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 00d5d5cf9cda38fbfc09fcfe8b4dcb56d00dee5b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b538df5e8e615f8594bd38cb13d9b45b0961dac
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291416"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770128"
 ---
 # <a name="xamarinmac-linker-options"></a>Параметры компоновщика Xamarin.Mac
 
@@ -53,7 +53,6 @@ _Компоновка является мощным средством опти�
 
 4. Компоновка платформы для целевой платформы Full (Полная) не появится в интегрированной среде разработки до следующего обновления. Пока вы можете добавить `--linkplatform` в раздел **Дополнительные аргументы mmp**.
 5. Чтобы сохранить внесенные изменения, нажмите кнопку **OK**.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

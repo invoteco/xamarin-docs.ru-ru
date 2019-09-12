@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/15/2017
-ms.openlocfilehash: 5f56a99e341f58bc06e8bf49305b5527a92f0413
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c190e92c8366644c00e0f03c314d535f43f8046b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289716"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768629"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Ручная подготовка для Xamarin.iOS
 
@@ -37,7 +37,7 @@ _Установив Xamarin.iOS для разработки приложений
 
 Чтобы создать удостоверение подписывания, выполните указанные ниже действия:
 
-1. Войдите в [раздел Certificates, Identifiers and Profiles (Сертификаты, идентификаторы и профили) на портале разработчика](https://developer.apple.com/account/overview.action) и выберите в столбце **iOS Apps** (Приложения iOS) раздел **Certificates** (Сертификаты). Чтобы создать сертификат, нажмите кнопку **+** :
+1. Войдите в [раздел Certificates, Identifiers and Profiles (Сертификаты, идентификаторы и профили) на портале разработчика](https://developer.apple.com/account/overview.action) и выберите в столбце **iOS Apps** (Приложения iOS) раздел **Certificates** (Сертификаты). Чтобы создать сертификат, нажмите кнопку **+**:
 
     [![](manual-provisioning-images/cert-plus.png "Нажмите кнопку \"+\", чтобы создать сертификат")](manual-provisioning-images/cert-plus.png#lightbox)
 
@@ -118,7 +118,7 @@ _Установив Xamarin.iOS для разработки приложений
 
    [![](manual-provisioning-images/add04.png "Щелкните ссылку \"Устройства\"")](manual-provisioning-images/add04.png#lightbox)
 
-9. Нажмите кнопку **+** :
+9. Нажмите кнопку **+**:
 
    [![](manual-provisioning-images/add05.png "Нажмите кнопку \"+\"")](manual-provisioning-images/add05.png#lightbox)
 
@@ -162,7 +162,7 @@ _Установив Xamarin.iOS для разработки приложений
 Чтобы вручную создать профиль подготовки для разработки, выполните указанные ниже действия:
 
 1. В браузере Safari перейдите в [Apple Developers Member Center](https://developer.apple.com/membercenter/index.action) и в разделе *Certificates, Identifiers & Profiles* (Сертификаты, идентификаторы и профили) выберите элемент Provisioning Profiles (Профили подготовки).
-2. Чтобы создать профиль, в правом верхнем углу нажмите кнопку **+** .
+2. Чтобы создать профиль, в правом верхнем углу нажмите кнопку **+**.
 3. В разделе **Development** (Разработка) установите переключатель в положение **iOS App Development** (Разработка приложений для iOS) и нажмите кнопку **Continue** (Продолжить).
 
     [![](manual-provisioning-images/provisioning-profile01.png "Выберите тип создаваемого профиля")](manual-provisioning-images/provisioning-profile01.png#lightbox)
@@ -252,7 +252,7 @@ Apple предоставляет ряд специальных служб при
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
-> Для начала выберите схему **Подготовка вручную** в разделе **Проект > Свойства подготовки…** .
+> Для начала выберите схему **Подготовка вручную** в разделе **Проект > Свойства подготовки…**.
 
 1. Подключите устройство к узлу сборки Mac.
 2. В файле **Info.plist** проекта проверьте, соответствует ли идентификатор пакета идентификатору приложения:
@@ -265,7 +265,6 @@ Apple предоставляет ряд специальных служб при
 
 4. В качестве конфигурации сборки должно быть выбрано значение **iPhone** или **iPad**, а не симулятор.
 5. В Visual Studio нажмите кнопку **Запуск**. Приложение должно запуститься на устройстве.
-
 
 -----
 

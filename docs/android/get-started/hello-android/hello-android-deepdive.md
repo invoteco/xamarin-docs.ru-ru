@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509575"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756717"
 ---
 # <a name="hello-android-deep-dive"></a>Знакомство с Android. Глубокое погружение
 
@@ -116,7 +116,6 @@ Visual Studio для Mac — это бесплатная интегрирова
 - **drawable** &ndash; в каталогах drawable размещаются [прорисовываемые ресурсы](https://developer.android.com/guide/topics/resources/drawable-resource.html), например изображения, в том числе растровые.
 
 - **mipmap** &ndash; каталог mipmap содержит прорисовываемые файлы для значков средства запуска с различной плотностью. В шаблоне по умолчанию каталог drawable содержит файл значка приложения **Icon.png**.
-
 
 ::: zone pivot="windows"
 

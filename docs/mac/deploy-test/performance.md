@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 48e5e71a9d4435852f72eb9be21f2e80cd124bfd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 12a2152424fac4024d8b83adb0c80c2499ec8b1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291098"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770107"
 ---
 # <a name="xamarinmac-performance"></a>Производительность Xamarin.Mac
 
@@ -60,7 +60,6 @@ ms.locfileid: "70291098"
 Чтобы избежать блокировки пользовательского интерфейса, по возможности следует использовать ключевое слово [async](~/cross-platform/platform/async.md) и потоки.
 
 В целях уведомления пользователей при выполнении длительных операций рекомендуется воспользоваться [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) или другими возможностями, указанными на странице [рекомендаций по работе с человеческим интерфейсом](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) на веб-сайте Apple.
-
 
 ## <a name="related-links"></a>Связанные ссылки
 

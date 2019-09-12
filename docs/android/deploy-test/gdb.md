@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: bc2c1c26bcb3dcf99a5598b6dccb6aad02513a28
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 0599b2374addf461e59948a1926de06e6e1e746a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197555"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754047"
 ---
 # <a name="gdb"></a>GDB
 
@@ -27,7 +27,6 @@ ms.locfileid: "70197555"
 1. [Отладочная сборка с быстрым развертыванием](#Debug_Builds_with_Fast_Deployment).
 1. [Отладочная сборка без быстрого развертывания](#Debug_Builds_without_Fast_Deployment).
 1. [Сборки выпуска](#Release_Builds).
-
 
 Если у вас возникли проблемы, переходите к разделу [Устранение неполадок](#Troubleshooting).
 
@@ -56,7 +55,6 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 Целевое устройство `_Gdb` запустит произвольное действие запуска, которое объявлено в вашем файле `AndroidManifest.xml`. Чтобы явным образом указать действие, используйте свойство MSBuild `RunActivity`. Запуск службы и других конструкций Android в настоящее время не поддерживается.
 
 Целевое устройство `_Gdb` создаст каталог `gdb-symbols` и скопирует в него содержимое каталогов `/system/lib` и `$APPDIR/lib` из целевого устройства.
-
 
 > [!NOTE]
 > Содержимое каталога `gdb-symbols` связано с целевым устройством Android, в котором вы выполняете развертывание, и не будет автоматически заменяться при изменении целевого устройства. (Можно считать это поведение ошибкой.) Изменив целевое устройство Android, этот каталог необходимо удалить вручную.
@@ -107,7 +105,6 @@ GNU gdb (GDB) 7.3.1-gg2
 ...
 (gdb) c
 ```
-
 
 ### <a name="including-gdbserver-in-your-app"></a>Добавление `gdbserver` в приложение
 

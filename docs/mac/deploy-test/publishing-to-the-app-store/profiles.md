@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: c0a4766abf8ded591bf348f2c2a7ba2283cdde00
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b2d9d49e37b195dadf3aa89fefb0911e4215d14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290236"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769917"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Профили подготовки для приложений Xamarin.Mac
 
@@ -90,7 +90,6 @@ ms.locfileid: "70290236"
 7. Профиль подготовки также появится в списке: 
 
     [![](profiles-images/certif26.png "Отображение установленных профилей")](profiles-images/certif26.png#lightbox)
-
 
 В случае изменения функций, используемых идентификатором приложения (например, включение iCloud или push-уведомлений), следует повторно создать профили подготовки для этого идентификатора приложения.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
-ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 376e35c8b82973ea1343966fad814db2d3a5e673
+ms.sourcegitcommit: e83035c746f165ee6d03f2e9fd0066ee4f20a9fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976553"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70906465"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Макет CollectionView Xamarin. Forms
 
@@ -128,7 +128,7 @@ CollectionView collectionView = new CollectionView
 
 В результате получается список из одного столбца, который по вертикали увеличивается по мере добавления новых элементов:
 
-[ ![Снимок экрана с вертикальным макетом списка CollectionView на вертикальном списке в iOS и Android](layout-images/vertical-list.png "CollectionView") ] (layout-images/vertical-list-large.png#lightbox "Вертикальный макет списка CollectionView")
+[ ![Снимок экрана с вертикальным макетом списка CollectionView на](layout-images/vertical-list.png "вертикальном списке") в iOS и Android CollectionView] (layout-images/vertical-list-large.png#lightbox "Вертикальный макет списка CollectionView")
 
 ## <a name="horizontal-list"></a>Горизонтальный список
 
@@ -528,7 +528,7 @@ CollectionView collectionView = new CollectionView
 
 Этот код приводит к вертикальной сетке с двумя столбцами с вертикальным расстоянием от 20 вокруг каждого элемента, а расстояние по горизонтали — 30 вокруг каждого элемента:
 
-[ ![Снимок экрана CollectionView с промежутком между элементами на устройствах iOS и Android](layout-images/vertical-grid-spacing.png "CollectionView") ] (layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView между элементами")
+[ ![Снимок экрана CollectionView с промежутком между элементами в Android](layout-images/vertical-grid-spacing.png "CollectionView") ] (layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView между элементами")
 
 ## <a name="item-sizing"></a>Размер элемента
 

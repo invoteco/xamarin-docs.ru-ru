@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/10/2019
-ms.openlocfilehash: de93927728271e9f0d9d2ef850b70eeeee249c84
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: 0694439f5e363399e0442c9883426c0f0bf5d989
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658112"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887438"
 ---
 # <a name="xamarinforms-activityindicator"></a>Активитиндикатор Xamarin. Forms
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
-Элемент управления Xamarin.[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms отображает анимацию, чтобы показать, что приложение вовлечено в длительное действие. В отличие [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)от, параметр `ActivityIndicator` не дает указания о ходе выполнения. Объект `ActivityIndicator` наследует от [`View`](xref:Xamarin.Forms.View).
+Элемент управления Xamarin. [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms отображает анимацию, чтобы показать, что приложение вовлечено в длительное действие. В отличие [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)от, параметр `ActivityIndicator` не дает указания о ходе выполнения. Объект `ActivityIndicator` наследует от [`View`](xref:Xamarin.Forms.View).
 
 На следующих снимках экрана `ActivityIndicator` показан элемент управления iOS и Android:
 

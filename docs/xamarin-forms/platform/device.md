@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: eb1358f039cc5d5a200f929fcc7dfa71ca863d2a
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 77cc414cd9b15f99f95d4a54f7af5ce6f028c41a
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121317"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887443"
 ---
 # <a name="xamarinforms-device-class"></a>Класс устройств Xamarin.Forms
 
@@ -114,7 +114,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) Значение извлекает [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) значение перечисления, представляющее текущее направление потока, который используется устройством. Направление потока — это направление, в котором глаз человека перемещается по элементам пользовательского интерфейса на странице. Перечисление имеет следующие значения.
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 В XAML [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) значение можно получить с помощью `x:Static` расширение разметки:
@@ -195,7 +195,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 | `InvokeOnMainThreadAsync` | `Action` | `Task` | Вызывает объект `Action` в основном потоке и ожидает его завершения. |
 | `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Вызывает объект `Func<Task<T>>` в основном потоке и ожидает его завершения. |
 | `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Вызывает объект `Func<Task>` в основном потоке и ожидает его завершения. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | `SynchronizationContext` Возвращает для основного потока. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Возвращает `SynchronizationContext` для основного потока. |
 
 В следующем коде показан пример использования `BeginInvokeOnMainThread` метода:
 

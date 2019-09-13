@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 50bcdcc23d1291071a6045544faad9388755116b
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 69682372e2b1ac84db2c6464ac3b05a58645a9e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225464"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753560"
 ---
 # <a name="metadata-and-markdown-template"></a>Шаблон метаданных и разметки Markdown
 
@@ -71,8 +71,6 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 - Не используйте служебные слова, такие как a, and, the, in, or и т. д.
 - Необходимо использовать формат Markdown и расширение имени файла .md.
 - Имена файлов не должны быть слишком длинными. Они являются частью URL-адресов статей.
-
-
 
 ## <a name="headings"></a>Заголовки
 
@@ -158,7 +156,6 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 1. Упорядоченного
 1. Списка
 
-
 #### <a name="ordered-list-with-an-embedded-list"></a>Упорядоченный список с внедренным списком.
 
 1. А
@@ -170,7 +167,6 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 1. упорядоченного
 1. списка
 
-
 ### <a name="unordered-lists"></a>Неупорядоченные списки
 
 - Вот
@@ -178,7 +174,6 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 - пример
 - маркированного
 - списка
-
 
 ##### <a name="unordered-list-with-an-embedded-list"></a>Неупорядоченный список с внедренным списком
 
@@ -193,7 +188,6 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
     1. Миссис Уайт
 - списки
 
-
 ## <a name="horizontal-rule"></a>Горизонтальная линия
 
 ---
@@ -207,7 +201,6 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 | столбец 1 по умолчанию | выровнен по левому краю     |    $1 |
 
 Для удобства можно использовать [средство создания таблиц Markdown](http://www.tablesgenerator.com/markdown_tables).
-
 
 ### <a name="inline-code-blocks-with-language-identifier"></a>Встроенные блоки кода с идентификатором языка
 

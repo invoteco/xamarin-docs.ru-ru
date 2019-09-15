@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: b8a7353ee67ee0686ad97428222c69dd095ee83a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290427"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985963"
 ---
 # <a name="xamarinios-errors"></a>Ошибки Xamarin. iOS
 
@@ -854,7 +854,7 @@ class Program {
 
 Чтобы устранить эту ошибку, рекомендуется обновить Xcode, чтобы получить необходимый пакет SDK. Если у вас установлено несколько версий Xcode или вы хотите использовать Xcode в расположении, отличном от расположения по умолчанию, убедитесь, что в настройках IDE задано правильное расположение Xcode.
 
-Кроме того, можно разрешить управляемому [компоновщику](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) удалять неиспользуемые API, в том числе (в большинстве случаев) новые, для которых требуется Указанная библиотека. Однако это не будет работать, если для проекта требуются API, появившиеся в более новом пакете SDK, чем тот, который предоставляет Xcode.
+Кроме того, можно разрешить управляемому [компоновщику](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) удалять неиспользуемые API, в том числе (в большинстве случаев) новые, для которых требуется Указанная библиотека. Однако это не будет работать, если для проекта требуются API, появившиеся в более новом пакете SDK, чем тот, который предоставляет Xcode.
 
 В качестве последнего страв решения используйте более раннюю версию Xamarin. iOS, которая не требует наличия этих новых пакетов SDK в процессе сборки.
 

@@ -252,6 +252,8 @@
               href: platform/ios13/get-started.md
             - name: Темный режим
               href: platform/ios13/dark-mode.md
+            - name: Вход с помощью Apple
+              href: platform/ios13/sign-in.md
             - name: Устранение неполадок
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
@@ -577,7 +579,7 @@
               items:
                 - name: Шаг 1. Регистровое
                   href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios
-                - name: Шаг 2. Настроить
+                - name: Шаг 2. Настройка
                   href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/ios
             - name: Доступ к API Graph
               href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/ios

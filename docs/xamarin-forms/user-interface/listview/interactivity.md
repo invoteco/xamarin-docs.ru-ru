@@ -7,22 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 3949dd85492a8181ee53e23b3ba2e986e59f8f47
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2d51f42339b1ff2a99f2a00bb5a9e662fb01d87
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121624"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998082"
 ---
-# <a name="listview-interactivity"></a>Интерактивность ListView
+# <a name="listview-interactivity"></a>Интерактивное взаимодействие с ListView
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView)поддерживает взаимодействие с данными, представленными в ней.
+Класс Xamarin. Forms [`ListView`](xref:Xamarin.Forms.ListView) поддерживает взаимодействие пользователя с данными, которые он представляет.
 
-<a name="selectiontaps" />
-
-## <a name="selection--taps"></a>Выбор & касания
+## <a name="selection-and-taps"></a>Выделение и касания
 
 [ `ListView` ](xref:Xamarin.Forms.ListView) Режим выбора управляется заданием [ `ListView.SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) свойство в значение [ `ListViewSelectionMode` ](xref:Xamarin.Forms.ListViewSelectionMode) перечисления:
 
@@ -49,7 +47,7 @@ ms.locfileid: "70121624"
 
 ![](interactivity-images/selection-default.png "ListView с выбором включена")
 
-### <a name="disabling-selection"></a>Отключение выделения
+### <a name="disable-selection"></a>Отключить выделение
 
 Чтобы отключить [ `ListView` ](xref:Xamarin.Forms.ListView) набора [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) свойства [ `None` ](xref:Xamarin.Forms.ListViewSelectionMode.None):
 
@@ -61,8 +59,6 @@ ms.locfileid: "70121624"
 var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 ```
 
-<a name="Context_Actions" />
-
 ## <a name="context-actions"></a>Контекстные действия
 
 Часто пользователей потребуется выполнить действие на элемент в `ListView`. Например рассмотрим список адресов электронной почты в почтовом приложении. В iOS можно проведите, чтобы удалить сообщение::
@@ -71,42 +67,13 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 Контекстные действия можно реализовать в C# и XAML. Далее вы найдете определенных направляющих для обоих, но сперва давайте взглянем на некоторые ключевые особенности реализации для обоих.
 
-Контекстные действия создаются с помощью `MenuItem`s. События касания для MenuItems вызываются с помощью MenuItem, не ListView. Это отличается от обработки события касания для ячеек, где ListView инициирует событие, а не ячейку. Поскольку ListView порождает событие, соответствующий обработчик событий получает сведения о ключе, например которого выбран или касание элемента.
+Контекстные действия создаются с `MenuItem` помощью элементов. События TAP для `MenuItems` объектов вызываются `MenuItem` самим собой, а не `ListView`. Это отличается от того, как события касания обрабатываются для ячеек `ListView` , где объект создает событие, а не ячейку. `ListView` Поскольку вызывает событие, его обработчик событий получает ключевые сведения, такие как выбор или касание элемента.
 
-По умолчанию элемент меню не имеет возможности узнать, какая ячейка, в которой он принадлежит. `CommandParameter` можно найти в `MenuItem` для хранения объектов, таких как объект MenuItem ViewCell. `CommandParameter` можно задать в XAML и C#.
-
-### <a name="c"></a>C\#
-
-Контекстные действия может быть реализован ни в одном `Cell` подкласс (пока она не используется в качестве заголовка группы), создав `MenuItem`s и добавления их в `ContextActions` коллекции для ячейки. У вас есть следующие свойства можно настроить для контекста действия:
-
-- **Текст** &ndash; строка, которая появляется в элементе меню.
-- **Нажата** &ndash; события при щелчке элемента.
-- **IsDestructive** &ndash; (Дополнительно) Если значение true, элемент отображается по-разному в iOS.
-
-Несколько контекстных действий можно добавить в ячейку, однако должны иметь только один `IsDestructive` присвоено `true`. В следующем коде показано, как будут добавлены контекстные действия `ViewCell`:
-
-```csharp
-var moreAction = new MenuItem { Text = "More" };
-moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-moreAction.Clicked += async (sender, e) => {
-    var mi = ((MenuItem)sender);
-    Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
-};
-
-var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
-deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-deleteAction.Clicked += async (sender, e) => {
-    var mi = ((MenuItem)sender);
-    Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
-};
-// add to the ViewCell's ContextActions property
-ContextActions.Add (moreAction);
-ContextActions.Add (deleteAction);
-```
+По умолчанию `MenuItem` не имеет способа узнать, к какой ячейке она принадлежит. Свойство доступно для хранения объектов, таких как объект, `MenuItem`лежащий в `ViewCell`основе. `MenuItem` `CommandParameter` Свойство может быть задано как в XAML, C#так и в. `CommandParameter`
 
 ### <a name="xaml"></a>XAML
 
-`MenuItem`s могут также создаваться в коллекции XAML декларативно. Ниже XAML демонстрирует настраиваемой ячейки с реализованы два контекстных действий:
+`MenuItem`элементы можно создавать в коллекции XAML. Ниже XAML демонстрирует настраиваемой ячейки с реализованы два контекстных действий:
 
 ```xaml
 <ListView x:Name="ContextDemoList">
@@ -114,10 +81,12 @@ ContextActions.Add (deleteAction);
     <DataTemplate>
       <ViewCell>
          <ViewCell.ContextActions>
-            <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
-               Text="More" />
-            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
-               Text="Delete" IsDestructive="True" />
+            <MenuItem Clicked="OnMore"
+                      CommandParameter="{Binding .}"
+                      Text="More" />
+            <MenuItem Clicked="OnDelete"
+                      CommandParameter="{Binding .}"
+                      Text="Delete" IsDestructive="True" />
          </ViewCell.ContextActions>
          <StackLayout Padding="15,0">
               <Label Text="{Binding title}" />
@@ -131,12 +100,14 @@ ContextActions.Add (deleteAction);
 Убедитесь в файл с выделенным кодом `Clicked` реализуются методы:
 
 ```csharp
-public void OnMore (object sender, EventArgs e) {
+public void OnMore (object sender, EventArgs e)
+{
     var mi = ((MenuItem)sender);
     DisplayAlert("More Context Action", mi.CommandParameter + " more context action", "OK");
 }
 
-public void OnDelete (object sender, EventArgs e) {
+public void OnDelete (object sender, EventArgs e)
+{
     var mi = ((MenuItem)sender);
     DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
 }
@@ -145,11 +116,40 @@ public void OnDelete (object sender, EventArgs e) {
 > [!NOTE]
 > `NavigationPageRenderer` Для Android имеет переопределяемый `UpdateMenuItemIcon` метод, который может использоваться для загрузки значки из настраиваемого `Drawable`. Это переопределение позволяет использовать изображения SVG в виде значков на `MenuItem` экземпляров на Android.
 
-<a name="Pull_to_Refresh" />
+### <a name="code"></a>Код
 
-## <a name="pull-to-refresh"></a>Потяните, чтобы обновить
+Контекстные действия могут быть реализованы `Cell` в любом подклассе (если он не используется как заголовок группы) путем создания `MenuItem` экземпляров `ContextActions` и их добавления в коллекцию для ячейки. У вас есть следующие свойства можно настроить для контекста действия:
 
-Пользователи привыкли, потянув вниз по списку данных обновит этого списка. [`ListView`](xref:Xamarin.Forms.ListView)поддерживает встроенную поддержку. Чтобы включить функцию "принудительное обновление", задайте [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) для `true`параметра значение:
+- **Текст** &ndash; строка, которая появляется в элементе меню.
+- **Нажата** &ndash; события при щелчке элемента.
+- **Разрушающая** &ndash; (необязательно.) Если значение равно true, элемент отрисовывается в iOS по-разному.
+
+Несколько контекстных действий можно добавить в ячейку, однако должны иметь только один `IsDestructive` присвоено `true`. В следующем коде показано, как будут добавлены контекстные действия `ViewCell`:
+
+```csharp
+var moreAction = new MenuItem { Text = "More" };
+moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+moreAction.Clicked += async (sender, e) =>
+{
+    var mi = ((MenuItem)sender);
+    Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
+};
+
+var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
+deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+deleteAction.Clicked += async (sender, e) =>
+{
+    var mi = ((MenuItem)sender);
+    Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
+};
+// add to the ViewCell's ContextActions property
+ContextActions.Add (moreAction);
+ContextActions.Add (deleteAction);
+```
+
+## <a name="pull-to-refresh"></a>Извлечь для обновления
+
+Пользователи привыкли, потянув вниз по списку данных обновит этого списка. [`ListView`](xref:Xamarin.Forms.ListView) Элемент управления поддерживает это готовые элементы. Чтобы включить функцию "принудительное обновление", задайте [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) для `true`параметра значение:
 
 ```xaml
 <ListView ...

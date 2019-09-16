@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/04/2019
-ms.openlocfilehash: 5d09d76a44a6322285a143230173d244848ba4a6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9d7dd98b98c7722d6fcdcb49c10e326732fa9f0b
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770230"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70997984"
 ---
 # <a name="xamarinforms-listview"></a>ListView Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 
 [`ListView`](xref:Xamarin.Forms.ListView)представляет собой представление для представления списков данных, особенно длинных списков, требующих прокрутки.
 
@@ -36,6 +36,7 @@ ms.locfileid: "70770230"
 Дополнительные сведения о привязке данных к `ListView` экземпляру см. в разделе [Источники данных в ListView](~/xamarin-forms/user-interface/listview/data-and-databinding.md).
 
 ## <a name="components"></a>Компоненты
+
 У `ListView` элемента управления есть ряд компонентов, позволяющих использовать собственные функции каждой платформы. Эти компоненты определены в следующих разделах.
 
 ### <a name="headers-and-footerscustomizing-list-appearancemdheaders-and-footers"></a>[Верхние и нижние колонтитулы](customizing-list-appearance.md#headers-and-footers)
@@ -55,7 +56,7 @@ ms.locfileid: "70770230"
 - [Встроенные ячейки](customizing-cell-appearance.md#built-in-cells), такие как `TextCell` и `ImageCell`, соответствуют собственным элементам управления и являются особенно производительными.
   - [`TextCell`](customizing-cell-appearance.md#textcell) Отображает строку текста (при необходимости с текстом подробностей). Текст сведений отображается как вторая строка меньший размер шрифта и Цвет диакритических знаков.
   - [`ImageCell`](customizing-cell-appearance.md#imagecell) Отображает изображение с текстом. Отображается как объект `TextCell` с изображением слева.
-- [Пользовательские ячейки](customizing-cell-appearance.md#customcells) используются для представления сложных данных. Например, пользовательскую ячейку можно использовать для представления списка композиций, включающих альбом и исполнителя.
+- [Пользовательские ячейки](customizing-cell-appearance.md#custom-cells) используются для представления сложных данных. Например, пользовательскую ячейку можно использовать для представления списка композиций, включающих альбом и исполнителя.
 
 На следующем снимке экрана `ListView` показан элемент с имажецелл элементами:
 
@@ -64,11 +65,12 @@ ms.locfileid: "70770230"
 Дополнительные сведения о настройке ячеек в `ListView`см. в разделе [Настройка внешнего вида ячеек ListView](customizing-cell-appearance.md).
 
 ## <a name="functionality"></a>Функция
+
 `ListView` Класс поддерживает несколько стилей взаимодействия.
 
 - Запрос [на обновление](interactivity.md#pull-to-refresh) позволяет пользователю извлекаться `ListView` вниз для обновления содержимого.
 - [Контекстные действия](interactivity.md#context-actions) позволяют разработчику указывать настраиваемые действия для отдельных элементов списка. Например можно реализовать действие прокрутки на iOS, или удерживайте действий на устройстве Android.
-- [Выбор](interactivity.md#selectiontaps) позволяет разработчику прикреплять функции к событиям выбора и девыделения для элементов списка.
+- [Выбор](interactivity.md#selection-and-taps) позволяет разработчику прикреплять функции к событиям выбора и девыделения для элементов списка.
 
 На следующем снимке экрана `ListView` показана контекстная операция.
 

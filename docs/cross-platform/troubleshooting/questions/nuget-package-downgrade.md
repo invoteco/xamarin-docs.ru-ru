@@ -6,12 +6,12 @@ ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 33f542d0da48f0cd3f7e1bcb85ae06137d8be3cd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fc504d1d7a9e990b3bcd90b3404e7db3d9fe7527
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288331"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021132"
 ---
 # <a name="how-do-i-downgrade-a-nuget-package"></a>Как перейти на использование более ранней версии пакета NuGet
 
@@ -43,4 +43,5 @@ Visual Studio для Mac & Visual Studio имеют функции для выб
 
     `Xamarin.Forms version:1.4`
 
-*Примечание. Если добавить пробел между `version:` & номера версии, поиск будет вести себя так, как будто версия не была указана.*
+> [!NOTE]
+> Если добавить пробел между `version:` & номера версии, поиск будет вести себя так, как будто версия не была указана.

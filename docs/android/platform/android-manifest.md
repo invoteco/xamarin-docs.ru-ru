@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: f1cc2f4685354687390866c0922a802591c7c054
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d65f0c8e717e8e8c995209f7dda1e8a44ee621c
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757710"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021110"
 ---
 # <a name="working-with-the-android-manifest"></a>Работа с манифестом Android
 
@@ -72,7 +72,8 @@ public class MyActivity : Activity
 <activity android:name="awesome.demo.activity" />
 ```
 
-*Примечание*. `Name` свойство следует использовать только в целях обратной совместимости, так как такое Переименование может замедлить Поиск во время выполнения. Если у вас есть устаревший код, который ожидает, что имя типа по умолчанию для действия должно основываться на пространстве имен в нижнем регистре и имени класса, см. раздел имя [вызываемой оболочки Android](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) для получения советов по обеспечению совместимости. 
+> [!NOTE]
+> `Name` Свойство следует использовать только в целях обратной совместимости, так как такое Переименование может замедлить Поиск во время выполнения. Если у вас есть устаревший код, который ожидает, что имя типа по умолчанию для действия должно основываться на пространстве имен в нижнем регистре и имени класса, см. раздел имя [вызываемой оболочки Android](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) для получения советов по обеспечению совместимости. 
 
 ### <a name="activity-title-bar"></a>Строка заголовка действия
 

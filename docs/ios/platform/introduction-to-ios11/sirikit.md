@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 8983ac0c860dafb3a3a0e4c90bd82bdf87c4c4f8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27adc8aa2ed0fec09fe38b9ea31834ea6e75f845
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752383"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033088"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Обновления SiriKit в iOS 11
 
@@ -147,6 +147,7 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 Класс должен наследовать от `INExtension`, а поскольку этот пример будет обрабатывать списки и заметки, он также реализует. `IINNotebookDomainHandling`
 
 > [!NOTE]
+>
 > - В .NET есть соглашение об использовании интерфейсов с прописными буквами `I`, которые в Xamarin соответствуют при связывании протоколов из пакета SDK для iOS.
 > - Xamarin также сохраняет имена типов из iOS, а Apple использует первые два символа в именах типов для отражения платформы, которой принадлежит тип.
 > - Для платформы типы начинаются с `IN*` префикса (например, `Intents` `INExtension`), но они _не_ являются интерфейсами.

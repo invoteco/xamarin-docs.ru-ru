@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037567"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004151"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -43,7 +43,7 @@ ms.locfileid: "61037567"
 
     Установите точки останова в двух обработчиках событий и нажмите на элементы в [`ListView`](xref:Xamarin.Forms.ListView). Обратите внимание, что событие [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) срабатывает только в том случае, когда элемент выбран в [`ListView`](xref:Xamarin.Forms.ListView), тогда как событие[`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) срабатывает при каждом касании элемента.
 
-    Дополнительные сведения о выборе элементов и нажатии кнопок, см. в разделе [Выбор & касание](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) в руководстве [Интерактивность ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
+    Дополнительные сведения о выборе элементов и нажатии кнопок, см. в разделе [Выбор & касание](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) в руководстве [Интерактивность ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -82,4 +82,4 @@ ms.locfileid: "61037567"
 
     Установите точки останова в двух обработчиках событий и нажмите на элементы в [`ListView`](xref:Xamarin.Forms.ListView). Обратите внимание, что событие [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) срабатывает только в том случае, когда элемент выбран в [`ListView`](xref:Xamarin.Forms.ListView), тогда как событие[`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) срабатывает при каждом касании элемента.
 
-    Дополнительные сведения о выборе элементов и нажатии кнопок, см. в разделе [Выбор & касание](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) в руководстве [Интерактивность ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
+    Дополнительные сведения о выборе элементов и о касаниях см. в разделе [Выделение и касания](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and

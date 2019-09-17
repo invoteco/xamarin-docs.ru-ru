@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: b8006b1ffe253ac57c1ab435690c5b378cc709fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 030f1ba87dde958aef156731de926427676163dc
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278671"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033486"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>Можно ли изменить выходной путь к файлу IPA?
 
@@ -45,6 +45,7 @@ ms.locfileid: "70278671"
 2. Задайте для DestinationFolder нужную выходную папку. Как правило, при необходимости можно использовать свойства MSBuild (например, $ (OutputPath)) в этом аргументе.
 
 ## <a name="notes"></a>Примечания
+
 - `CreateIpaDependsOn` Свойство определяется`Xamarin.iOS.Common.targets` в файле, который является частью Xamarin. iOS. Он ведет себя, как описано в разделе [Переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) в статье [как: Расширьте процесс](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)сборки Visual Studio.
 
 - Если вы предпочитаете, можно использовать задачу **перемещения** , а не задачу **копирования** . При выборе этого варианта и построении в Windows необходимо использовать полное имя `<Microsoft.Build.Tasks.Move>` задачи, чтобы избежать неоднозначности в задачах сборки ксамаринвс.
@@ -79,6 +80,7 @@ ms.locfileid: "70278671"
 2. `DestinationFolder` Присвойте свойству требуемую выходную папку. Как правило, при необходимости можно использовать свойства MSBuild `$(OutputPath)`(например,) в этом аргументе.
 
 ## <a name="notes"></a>Примечания
+
 - `CreateIpaDependsOn` Свойство определяется`Xamarin.iOS.Common.targets` в файле, который является частью Xamarin. iOS. t ведет себя, как описано в разделе [Переопределение предопределенных целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) в статье [как: Расширьте процесс](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)сборки Visual Studio.
 
 - Если вы предпочитаете, можно использовать задачу **перемещения** , а не задачу **копирования** . При выборе этого варианта и построении в Windows необходимо использовать полное имя `<Microsoft.Build.Tasks.Move>` задачи, чтобы избежать неоднозначности в задачах сборки ксамаринвс.

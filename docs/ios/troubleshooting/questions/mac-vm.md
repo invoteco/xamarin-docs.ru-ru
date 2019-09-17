@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 15ec78ed96d2dfa5e05db62c9bec9ab11e3abd59
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 870efc15bd7995aa193f775016bdb507554dca47
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291012"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033479"
 ---
 # <a name="can-i-use-a-mac-vm-with-xamarin"></a>Можно ли использовать виртуальную машину Mac с Xamarin? 
 
@@ -23,5 +23,6 @@ ms.locfileid: "70291012"
 Не Условия использования Apple не допускают такого использования.
 
 ### <a name="see-also"></a>См. также
+
 - [Юридическое лицо Apple](https://www.apple.com/legal/)
 - [Лицензионное соглашение на использование программного обеспечения для OS X Yosemite](http://images.apple.com/legal/sla/docs/OSX10103.pdf)

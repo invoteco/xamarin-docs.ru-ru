@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab8d29e876b96049cd4cfeb734b33724cba30624
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 4416eddfab4bfcf2b3274054db9bcfc60ed8fdec
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277410"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059790"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
 
@@ -14,6 +14,7 @@ ms.locfileid: "67277410"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
+>
 > - Создавать [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms в XAML.
 > - Отвечать на текст в изменении `Editor`.
 > - Настраивать поведение `Editor`.

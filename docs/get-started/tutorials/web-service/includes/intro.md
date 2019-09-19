@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b89c0ba1b865eecab304e8aebb06bc72568cc97
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277424"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107339"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
 
@@ -17,6 +17,7 @@ ms.locfileid: "67277424"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
+>
 > - Использовать диспетчер пакетов NuGet, чтобы добавить Newtonsoft.Json в проект Xamarin.Forms.
 > - Создавать классы веб-службы.
 > - Использовать классы веб-службы.

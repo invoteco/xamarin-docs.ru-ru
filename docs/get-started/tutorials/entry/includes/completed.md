@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: b01edc9807b63613a66f5c24706eb694fef6dfbc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e9c20f8ca0656f6bad72e1e09fbe873a9208be2b
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669809"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107333"
 ---
 Поздравляем с завершением этого руководства, в котором вы научились:
 
 > [!div class="checklist"]
+>
 > - Создавать [`Entry`](xref:Xamarin.Forms.Entry) Xamarin.Forms в XAML.
 > - Отвечать на текст в изменении `Entry`.
 > - Настраивать поведение `Entry`.

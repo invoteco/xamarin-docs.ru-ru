@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 004d7df72103ef332f802bd0019d2a99c6cc11a2
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 8f379e8639846d9a6424c4aaadf83ff89d7a8684
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277422"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107335"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
 
@@ -17,6 +17,7 @@ ms.locfileid: "67277422"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
+>
 > - Использовать диспетчер пакетов NuGet, чтобы добавить SQLite.NET в проект Xamarin.Forms.
 > - Создавать классы доступа к данным.
 > - Использовать классы доступа к данным.

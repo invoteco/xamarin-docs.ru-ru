@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f171a3f56c7fc516d409400aefa7e097e6ccbff6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 8820d52a2a41ce3c5de9cf1176d5a8a90a987900
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277425"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107338"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
 
@@ -13,6 +13,7 @@ ms.locfileid: "67277425"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
+>
 > - Создавать [`StackLayout`](xref:Xamarin.Forms.StackLayout) Xamarin.Forms в XAML.
 > - Задавать ориентацию `StackLayout`.
 > - Задавать выравнивание дочернего представления и расширения в `StackLayout`.

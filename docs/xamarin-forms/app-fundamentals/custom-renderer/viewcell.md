@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771697"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998046"
 ---
 # <a name="customizing-a-viewcell"></a>Настройка ViewCell
 
@@ -146,7 +146,7 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Элемент управления [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms используется для отображения списка данных, который заполняется с помощью свойства [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource). Стратегия кэширования [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) пытается свести к минимуму объем занимаемой памяти `ListView` и время выполнения путем повторного использования ячеек списка. Дополнительные сведения см. в разделе [Стратегия кэширования](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
+Элемент управления [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms используется для отображения списка данных, который заполняется с помощью свойства [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource). Стратегия кэширования [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) пытается свести к минимуму объем занимаемой памяти `ListView` и время выполнения путем повторного использования ячеек списка. Дополнительные сведения см. в разделе [Стратегия кэширования](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
 Каждая строка в списке содержит три элемента данных — имя, категорию и имя файла изображения. Макет каждой строки в списке определяется `DataTemplate` со ссылкой через привязываемое свойство [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate). `DataTemplate` определяет, что каждая строка данных в списке будет ячейкой `NativeCell`, отображающей свойства `Name`, `Category` и `ImageFilename` посредством привязки данных. Дополнительные сведения об элементе управления `ListView`см. в статье [ListView](~/xamarin-forms/user-interface/listview/index.md).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 51e802b1e142955fb3988432f9d9c7393f2ee0ea
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5d299112da87207f7486247e0ed6f00c35a35fe5
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292335"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106045"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Публикация приложений Xamarin.iOS в App Store
 
@@ -21,6 +21,7 @@ ms.locfileid: "70292335"
 В этом руководстве приведены действия по подготовке приложения к публикации в App Store и отправке его на проверку в компанию Apple. В частности, здесь описано следующее:
 
 > [!div class="checklist"]
+>
 > - Выполнение правил проверки приложений в App Store
 > - Настройка идентификатора и назначений приложения
 > - Настройка значка App Store и значков приложений
@@ -316,12 +317,11 @@ Apple проверяет публикуемые в App Store приложени
        <MtouchFloat32>true</MtouchFloat32>
        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
        <MtouchLink>SdkOnly</MtouchLink>
-       <MtouchArch>;ARMv7, ARM64</MtouchArch>
+       <MtouchArch>ARMv7, ARM64</MtouchArch>
        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
        <MtouchTlsProvider>Default</MtouchTlsProvider>
-       <PlatformTarget>x86&</PlatformTarget>
        <BuildIpa>true</BuildIpa>
-       <IpaPackageDir>$(OutputPath</IpaPackageDir>
+       <IpaPackageDir>$(OutputPath)</IpaPackageDir>
     </PropertyGroup>
     ```
 

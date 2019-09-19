@@ -5,12 +5,12 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: b12606317fd6cbc9a6a0f59364270595f1250abf
-ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
+ms.openlocfilehash: 86aa439d306bb861a1d24d93629056f9d3936363
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887340"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033045"
 ---
 # <a name="platform-support"></a>Поддержка платформ
 
@@ -26,6 +26,7 @@ Xamarin.Essentials поддерживает указанные ниже плат
 | UWP | 10.0.16299.0 или более поздней версии |
 
 > [!NOTE]
+>
 > * Tizen официально поддерживает группа разработчиков Samsung.
 > * Охват API в tvOS и watchOS ограничен. Дополнительные сведения см. в руководстве по функциям.
 

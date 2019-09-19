@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 69682372e2b1ac84db2c6464ac3b05a58645a9e3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8374e90ea6d460a0e0c22763db023654c3008b32
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753560"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105746"
 ---
 # <a name="metadata-and-markdown-template"></a>Шаблон метаданных и разметки Markdown
 
@@ -65,6 +65,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 ## <a name="file-name"></a>Имя файла
 
 В отношении имен файлов действуют указанные ниже правила.
+
 - Содержат только строчные буквы, цифры и дефисы.
 - Пробелы и знаки препинания недопустимы. Для разделения слов и чисел в именах файлов используйте дефисы.
 - Для обозначения действий используйте глаголы, например develop, buy, build, troubleshoot. Не используйте суффикс -ing.
@@ -75,6 +76,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 ## <a name="headings"></a>Заголовки
 
 Прописные буквы следует использовать как в предложениях. Всегда начинайте с прописной буквы:
+
 - первое слово заголовка;
 - Слово после двоеточия в заголовке или названии (например, How to: Sort an array (Практическое руководство. Сортировка массива).
 
@@ -131,6 +133,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 Для ссылки на интерфейс API можно использовать его уникальный идентификатор (UID), который формируется автоматически на основе исходного кода.
 
 Можно использовать один из следующих вариантов синтаксиса.
+
 1. Ссылка Markdown: `[link_text](xref:UID)`
 2. Автоматическая ссылка: `<xref:UID>`
 3. Сокращенная форма: `@UID`
@@ -143,6 +146,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 > В настоящее время простого способа определения уникальных идентификаторов нет. Лучший способ определения уникального идентификатора для интерфейса API — выполнить его поиск в этом репозитории: [docascode/coreapi](https://github.com/docascode/coreapi). Мы работаем над обеспечением более удобного способа.
 
 Если уникальный идентификатор содержит специальные символы \` или \#, они должны быть представлены в значении идентификатора в кодировке HTML как %60 и %23 соответственно, как в приведенных ниже примерах.
+
 - Пример @System.Threading.Tasks.Task\`1 становится `@System.Threading.Tasks.Task%601`
 - Пример: @System.Exception.\#ctor становится `@System.Exception.%23ctor`
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: e001f22759ac70bbf81a10bf5e56790497dab767
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985963"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105977"
 ---
 # <a name="xamarinios-errors"></a>Ошибки Xamarin. iOS
 
@@ -1598,6 +1598,7 @@ Parameter name: instruction
 Возникла непредвиденная ошибка при попытке оптимизации созданного кода привязки. Элемент, вызвавший ошибку, назван в сообщении об ошибке. Чтобы устранить эту проблему, необходимо предоставить сборку с именем (или содержащую тип или метод с именем) в новой ошибке в [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) вместе с полным журналом сборки с включенной детализацией (т. е `-v -v -v -v` . в **дополнительных аргументах mtouch**).
 
 Последняя цифра `x` будет:
+
 - `0`для имени сборки;
 - `1`для имени типа;
 - `3`для имени метода;

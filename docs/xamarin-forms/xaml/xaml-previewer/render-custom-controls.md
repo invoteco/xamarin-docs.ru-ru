@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 5b87c631574f159230e1dc23285b9087bcc94255
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 57c0fd540ef42c18462b4f989b21bac5ed05dc04
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767321"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105997"
 ---
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Прорисовка пользовательских элементов управления в средстве предварительного просмотра XAML
 
@@ -51,6 +51,7 @@ namespace MyProject
 
 ### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>Даже с `[DesignTimeVisible(true)]`, мой пользовательский элемент управления не подготовится к просмотру должным образом.
 Пользовательские элементы управления, которые сильно полагаются на код программной части или внутренние данные, не всегда работают в средстве предварительного просмотра XAML. Вы можете попробовать:
+
 * Перемещение элемента управления, чтобы он не был инициализирован, если [включен режим конструктора](index.md#detect-design-mode)
 * Настройка [данных времени разработки](design-time-data.md) для отображения фиктивных данных из серверной части
 

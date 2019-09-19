@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 19cc24c3937921f4f4d95584e1cd656c37b4155f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228159"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105965"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin.Forms
 
@@ -230,6 +230,7 @@ public class LabelPageCode : ContentPage
 Высоты [ `Label` ](xref:Xamarin.Forms.Label) и [ `Span` ](xref:Xamarin.Forms.Span) можно настроить, задав [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) свойство или [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) для `double` значение. В iOS и Android эти значения являются множители исходная высота строки, что и на универсальной платформе Windows (UWP) `Label.LineHeight` свойство имеет значение множителя от размера шрифта метки.
 
 > [!NOTE]
+>
 > - В iOS [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) и [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) свойства изменить высоту строки текста, которое может уместиться на одной строке и текст, который переносится на несколько строк.
 > - В Android [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) и [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) свойства только изменить высоту строки текста, который переносится на несколько строк.
 > - На UWP [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) свойство изменяет высоту строки текста, который переносится на несколько строк, и [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) не оказывает никакого влияния.

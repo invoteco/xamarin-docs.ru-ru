@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: df91699e0880bfae780b69f4b30be6667e8d64d9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f2bc6ce6c709f99c744554d80b065e34961904ac
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763112"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105857"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Использование iCloud с Xamarin. iOS
 
@@ -339,8 +339,7 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 ### <a name="displaying-icloud-documents"></a>Отображение документов iCloud
 
-Отображение данных не должно отличаться от любого другого класса модели
-- Свойства отображаются в элементах управления пользовательского интерфейса, которые, возможно, редактируются пользователем, а затем записываются обратно в модель.
+Отображение данных не должно отличаться от других классов модели. свойства отображаются в элементах управления пользовательского интерфейса, которые, возможно, редактируются пользователем и затем записываются обратно в модель.
 
 В примере **иклаудуидок\монкэйдокументвиевконтроллер.КС** отображает текст монкэйдокумент в `UITextView`. `ViewDidLoad`прослушивает уведомление, отправленное в `MonkeyDocument.LoadFromContents` методе. `LoadFromContents`вызывается, когда в iCloud есть новые данные для файла, поэтому уведомление указывает на то, что документ был обновлен.
 

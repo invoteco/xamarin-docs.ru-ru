@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 343f8d37d77726d2cdc06a74c44e476af00dde27
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3677117e30538c4df8c9b797acce0be602c3b59
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765156"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106089"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>Какие параметры проекта нужны отладчику
 
@@ -20,6 +20,7 @@ ms.locfileid: "70765156"
 Выполните следующие действия, чтобы проверить параметры среды:
 
 ## <a name="visual-studio"></a>Visual Studio
+
 1. Открытие параметров проекта
 2. Последовательно выберите **сборка > дополнительно...** Задать **полную** отладочную информацию
 3. Параметры для каждой платформы:
@@ -27,6 +28,7 @@ ms.locfileid: "70765156"
    - Перейдите в раздел отладки **iOS > отладка & инструментирования**. Установите флажок **включить отладку** .
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio для Mac
+
 1. Открытие параметров проекта
 2. Перейдите в раздел **сборка > компилятор > общие параметры**. Задать **полную** отладочную информацию
 3. Параметры для каждой платформы:

@@ -7,18 +7,21 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 59b72daecdc1159494d069bec044ee1891916d11
-ms.sourcegitcommit: fd349a121164c85545f4b0881940eefdd0cf3b65
+ms.openlocfilehash: 2a47876b7b53cf557014c772333e651146afe53f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896405"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106003"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Горячая перезагрузка XAML для Xamarin. Forms (Предварительная версия)
 
 ![Предварительная версия](~/media/shared/preview.png)
 
 Горячая перезагрузка XAML подключается к существующему рабочему процессу, чтобы повысить производительность и сэкономить время. Без горячей перезагрузки XAML необходимо создавать и развертывать приложения каждый раз, когда нужно увидеть изменение XAML. При использовании горячей перезагрузки при сохранении файла XAML изменения в работающем приложении отражаются в реальном времени. Кроме того, будет поддерживаться состояние навигации и данные, что позволит быстро выполнять итерацию по пользовательскому интерфейсу без потери места в приложении. Таким образом, при горячей перезагрузке XAML вы тратите меньше времени на повторное создание и развертывание приложений для проверки изменений пользовательского интерфейса.
+
+> [!NOTE]
+> Если вы создаете приложение WPF или UWP, см. статью [Горячая перезагрузка XAML для UWP и WPF](/visualstudio/debugger/xaml-hot-reload).
 
 ## <a name="system-requirements"></a>Требования к системе
 

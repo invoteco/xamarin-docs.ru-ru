@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6d40555c70072a4c057739b39cc24a4f885f2dc9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e9bd54523fa46625e9a9e6e46247b92987f3d427
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765296"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106077"
 ---
 # <a name="updating-component-references-to-nuget"></a>Обновление ссылок на компоненты в NuGet
 
@@ -202,6 +202,7 @@ _Он может содержать зависимости NuGet, но их мо
 Многие поставщики компонентов по-прежнему работают над переносом в NuGet, а другие (включая коммерческие продукты) могут изучить альтернативные варианты доставки.
 
 ## <a name="related-links"></a>Связанные ссылки
+
 - [Список популярных подключаемых модулей и библиотек Xamarin](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Установка и использование пакета NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Включение пакета NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

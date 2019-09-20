@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 40fa2d93b7fd756c284727566e8043f5084bd483
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
+ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757480"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119235"
 ---
 # <a name="platform-features"></a>Функции платформы
 
@@ -41,6 +41,10 @@ _Документы в этом разделе охватывают функци
 ## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Связывание приложений](~/android/platform/app-linking.md)
 
 В этом руководство объясняется, как Android 6,0 поддерживает _связывание приложений_, методику, которая позволяет мобильным приложениям отвечать на URL-адреса на веб-сайтах. В нем обсуждается, как реализовать компоновку приложений в приложении Android 6,0 и как настроить веб-сайт, чтобы предоставить мобильному приложению разрешения на обработку ссылок на приложения для домена.
+
+## <a name="android-10androidplatformandroid-10md"></a>[Android 10](~/android/platform/android-10.md)
+
+В этой статье представлен обзор новых возможностей Android 10, объясняется, как подготовить Xamarin. Android для разработки с Android 10 и ссылки на примеры приложений, иллюстрирующие использование функций Android Oreo в приложениях Xamarin. Android.
 
 ## <a name="android-9-pieandroidplatformpiemd"></a>[Круговая диаграмма Android 9](~/android/platform/pie.md)
 

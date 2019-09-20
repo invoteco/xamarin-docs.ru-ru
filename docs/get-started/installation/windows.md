@@ -1,19 +1,19 @@
 ---
-title: Установка Xamarin в Visual Studio 2019 г.
-description: В этом документе описывается установка Xamarin в Visual Studio 2019. В нем рассмотрены требования, процесс установки и проверка установки.
+title: Установка Xamarin в Visual Studio 2019
+description: В этом документе описывается, как установить Xamarin в Visual Studio 2019. В нем рассмотрены требования, процесс установки и проверка установки.
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 92ddbfb48131bdaf8ba12cef86e09e4c575200e9
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 970985e419c5710699b6bdda49da8b59ef3c6cb6
+ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865617"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119258"
 ---
-# <a name="installing-xamarin-in-visual-studio-2019"></a>Установка Xamarin в Visual Studio 2019 г.
+# <a name="installing-xamarin-in-visual-studio-2019"></a>Установка Xamarin в Visual Studio 2019
 
 <a name="requirements" />
 
@@ -21,21 +21,21 @@ ms.locfileid: "67865617"
 
 ## <a name="installation"></a>Установка
 
-[!include[](~/cross-platform/includes/install-xamarin-windows.md)]
+[!include[](~/cross-platform/includes/install-xamarin-windows-2019.md)]
 
-В Visual Studio 2019 г., убедитесь, что Xamarin установлен, щелкнув **помочь** меню. Если Xamarin установлен, вы увидите пункт меню **Xamarin**, как показано на снимке экрана:
+В Visual Studio 2019 убедитесь, что Xamarin установлен, щелкнув меню " **Справка** ". Если Xamarin установлен, вы увидите пункт меню **Xamarin**, как показано на снимке экрана:
 
 ![Пункт Xamarin в меню "Справка"](windows-images/12-xamarin-menu-item.png "Xamarin menu item on the Help menu")
 
 Кроме того, можно щелкнуть **Справка > О Microsoft Visual Studio** и, прокрутив список установленных продуктов, узнать, установлена ли среда Xamarin.
 
-![Visual Studio 2019 экран установленных продуктов](windows-images/13-xamarin-is-installed.png "Visual Studio 2019 экран установленных продуктов")
+![Экран установленных продуктов Visual Studio 2019](windows-images/13-xamarin-is-installed.png "Экран установленных продуктов Visual Studio 2019")
 
 Дополнительные сведения о поиске данных о версии см. в статье [Где можно найти сведения о версии и журналы?](~/cross-platform/troubleshooting/questions/version-logs.md)
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Установка Xamarin в Visual Studio 2019 позволяет приступить к написанию кода для приложений, но требует дополнительной настройки для построения и развертывания приложений в симуляторе, эмуляторе и на устройствах. Сведения в приведенных далее руководствах помогут завершить установку и начать создавать кроссплатформенные приложения.
+Установка Xamarin в Visual Studio 2019 позволяет начать писать код для приложений, но требует дополнительной настройки для создания и развертывания приложений в симуляторе, эмуляторе и устройстве. Сведения в приведенных далее руководствах помогут завершить установку и начать создавать кроссплатформенные приложения.
 
 ### <a name="ios"></a>iOS
 

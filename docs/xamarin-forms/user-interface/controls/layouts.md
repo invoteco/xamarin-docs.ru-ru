@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 82ca106f29eb28672abcbd282b60841bfdb4da8c
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 294b538b0e73344ffe9109a1e1091bc9b7591f63
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976485"
 ---
 # <a name="xamarinforms-layouts"></a>Макеты Xamarin.Forms
 
@@ -36,7 +36,7 @@ _Макеты Xamarin.Forms используются для создания э�
 
 |     |     |
 | --- | --- |
-| [`ContentView`](xref:Xamarin.Forms.ContentView) содержит один дочерний элемент, в котором заданы [ `Content` ](xref:Xamarin.Forms.ContentView.Content) свойство. `Content` Свойство может устанавливаться к любому `View` производных продуктов, включая другие `Layout` производные от него. `ContentView` обычно используется как элемент структурного и служит в качестве базового класса для [ `Frame` ](#frame).<br /><br />[Документация по API](xref:Xamarin.Forms.ContentView) | [![Пример ContentView](layouts-images/ContentView.png "пример ContentView")](layouts-images/ContentView-Large.png#lightbox "ContentView пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+| [`ContentView`](xref:Xamarin.Forms.ContentView) содержит один дочерний элемент, в котором заданы [ `Content` ](xref:Xamarin.Forms.ContentView.Content) свойство. `Content` Свойство может устанавливаться к любому `View` производных продуктов, включая другие `Layout` производные от него. `ContentView` обычно используется как элемент структурного и служит в качестве базового класса для [ `Frame` ](#frame).<br /><br />[Руководство](~/xamarin-forms/user-interface/layouts/contentview.md) по [API](xref:Xamarin.Forms.ContentView) / /[пример] (https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/ | [![Пример ContentView](layouts-images/ContentView.png "пример ContentView")](layouts-images/ContentView-Large.png#lightbox "ContentView пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
 <a named="frame" />
@@ -45,7 +45,7 @@ _Макеты Xamarin.Forms используются для создания э�
 
 |     |     |
 | --- | --- |
-| Класс является производным от [`ContentView`](#contentView) и отображает границу (рамку) вокруг ее дочернего элемента. [`Frame`](xref:Xamarin.Forms.Frame) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) Класс имеет значение по умолчанию [`Padding`](xref:Xamarin.Forms.Layout.Padding) 20, а также свойства, и. `Frame`<br /><br />[Документация по API](xref:Xamarin.Forms.Frame) / [руководство](~/xamarin-forms/user-interface/layouts/frame.md) / [образца](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![Frame пример](layouts-images/Frame.png "кадров пример")](layouts-images/Frame-Large.png#lightbox "кадров пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| Класс является производным от [`ContentView`](#contentView) и отображает границу (рамку) вокруг ее дочернего элемента. [`Frame`](xref:Xamarin.Forms.Frame) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) Класс имеет значение по умолчанию [`Padding`](xref:Xamarin.Forms.Layout.Padding) 20, а также свойства, и. `Frame`<br /><br />[Документация по API](xref:Xamarin.Forms.Frame) / [руководство](~/xamarin-forms/user-interface/layouts/frame.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![Frame пример](layouts-images/Frame.png "кадров пример")](layouts-images/Frame-Large.png#lightbox "кадров пример")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
 
 <a name="scrollView" />

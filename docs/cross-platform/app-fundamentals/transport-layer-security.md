@@ -3,19 +3,19 @@ title: Безопасность транспортного уровня (TLS) 1,
 description: В этом документе описано, как включить TLS 1,2 для проектов Xamarin. iOS, Xamarin. Android и Xamarin. Mac. В нем показано, как это сделать в Visual Studio 2019 и Visual Studio для Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 31069199e8ebc89da76b63e58651adea82db6882
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6175725ae3eea805680b4da81aa0458aa3f8a68c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526779"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280354"
 ---
 # <a name="transport-layer-security-tls-12"></a>Безопасность транспортного уровня (TLS) 1,2
 
-Использование последней версии [ протокола TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) важно для обеспечения безопасности сетевых подключений приложений.
+Использование последней версии протокола [_Transport Layer Security_ (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) важно для обеспечения безопасности сетевых подключений приложений.
 
 > [!WARNING]
 > **Апрель 2018** — из-за повышенных требований к безопасности, включая соответствие требованиям PCI, основным поставщикам облачных услуг и веб-серверам требуется отключить поддержку протоколов TLS версий старше 1,2. Проекты Xamarin, созданные в предыдущих версиях Visual Studio по умолчанию, используют более старые версии TLS.

@@ -1,104 +1,100 @@
 ---
-title: .NET, внедрение в Android
+title: Внедрение .NET в Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/15/2018
-ms.openlocfilehash: 6917267896cff796af4e5cff095720eaeccc7652
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61215538"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772222"
 ---
-# <a name="net-embedding-on-android"></a>.NET, внедрение в Android
+# <a name="net-embedding-on-android"></a>Внедрение .NET в Android
 
-В некоторых случаях может потребоваться добавить в существующий проект Android native библиотеку Xamarin .NET. Чтобы сделать это, можно использовать [Embeddinator до 4000](https://www.nuget.org/packages/Embeddinator-4000/) средство, чтобы превратить библиотеку .NET в собственной библиотеки, могут быть включены в собственное приложение Android на основе Java.
+В некоторых случаях может потребоваться добавить библиотеку Xamarin .NET к существующему собственному проекту Android. Для этого можно использовать средство [ембеддинатор-4000](https://www.nuget.org/packages/Embeddinator-4000/) , чтобы превратить библиотеку .NET в собственную библиотеку, которая может быть включена в собственное приложение Android на основе Java.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="xamarinandroid-requirements"></a>Требования к Xamarin.Android
+## <a name="xamarinandroid-requirements"></a>Требования Xamarin. Android
 
-Для Xamarin.Android для работы с внедрение .NET вам потребуется следующее:
+Для работы Xamarin. Android с внедрением .NET необходимо следующее:
 
--   **Xamarin.Android** &ndash; [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) должен быть установлен.
+- Необходимо установить **Xamarin. Android** &ndash; [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии.
 
--   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) должен быть установлен.
+- **Android Studio** Необходимо установить [Android Studio 3. x](https://developer.android.com/studio/) или более поздней версии. &ndash;
 
--   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) должен быть установлен.
+- **Пакет Java Developer Kit** &ndash;   Необходимо установить [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) или более поздней версии.
 
+## <a name="using-embeddinator-4000"></a>Использование Ембеддинатор-4000
 
-## <a name="using-embeddinator-4000"></a>С помощью Embeddinator до 4000
+Чтобы использовать библиотеку .NET в собственном проекте Android, выполните следующие действия.
 
-Чтобы использовать библиотеку .NET в собственный проект Android, сделайте следующее:
+1. Создайте проект C# Библиотеки Android.
 
-1.  Создание C# проект библиотеки Android.
+2. Установите [ембеддинатор-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-2.  Установка [Embeddinator до 4000](https://www.nuget.org/packages/Embeddinator-4000/).
-
-3.  Найдите **Embeddinator 4000.exe** и добавьте его в ваш **путь**. Пример:
+3. Откройте файл **Embeddinator-4000. exe** и добавьте его в свой **путь**. Например:
 
     ```cmd
     set PATH=%PATH%;C:\Users\USERNAME\.nuget\packages\embeddinator-4000\0.4.0\tools
     ```
 
-4.  Запустите Embeddinator до 4000 на сборку библиотеки. Пример:
+4. Запустите Ембеддинатор-4000 в сборке библиотеки. Например:
 
     ```cmd
     Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
     ```
 
-5.  Используйте созданный файл AAR в проекте Java в Android Studio.
-
+5. Используйте созданный файл AAR в проекте Java в Android Studio.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-## <a name="xamarinandroid-requirements"></a>Требования к Xamarin.Android
+## <a name="xamarinandroid-requirements"></a>Требования Xamarin. Android
 
-Для Xamarin.Android для работы с внедрение .NET вам потребуется следующее:
+Для работы Xamarin. Android с внедрением .NET необходимо следующее:
 
--   **Xamarin.Android** &ndash; [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) должен быть установлен.
+- Необходимо установить **Xamarin. Android** &ndash; [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии.
 
--   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) должен быть установлен.
+- **Android Studio** Необходимо установить [Android Studio 3. x](https://developer.android.com/studio/) или более поздней версии. &ndash;
 
--   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) должен быть установлен.
+- **Пакет Java Developer Kit** &ndash;   Необходимо установить [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) или более поздней версии.
 
--   **Mono** &ndash; [Mono 5.0](https://www.mono-project.com/download/) должен быть установлен (mono устанавливается вместе с Visual Studio для Mac).
+- **Моно** Должен быть установлен [моно 5,0](https://www.mono-project.com/download/) или более поздняя версия (моно установлен с Visual Studio для Mac). &ndash;
 
+## <a name="using-embeddinator-4000"></a>Использование Ембеддинатор-4000
 
-## <a name="using-embeddinator-4000"></a>С помощью Embeddinator до 4000
+Чтобы использовать библиотеку .NET в собственном проекте Android, выполните следующие действия.
 
-Чтобы использовать библиотеку .NET в собственный проект Android, сделайте следующее:
+1. Создайте проект C# Библиотеки Android.
 
-1.  Создание C# проект библиотеки Android.
+2. Установите [ембеддинатор-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-2.  Установка [Embeddinator до 4000](https://www.nuget.org/packages/Embeddinator-4000/).
-
-3.  Найдите **Embeddinator 4000.exe** и добавьте **mono** в путь. Пример:
+3. Откройте **файл Embeddinator-4000. exe** и добавьте **Mono** в свой путь. Например:
 
     ```bash
     export TOOLS=~/.nuget/packages/embeddinator-4000/0.4.0/tools
     export PATH=$PATH:/Library/Frameworks/Mono.framework/Commands
     ```
 
-4.  Запустите Embeddinator до 4000 на сборку библиотеки. Пример:
+4. Запустите Ембеддинатор-4000 в сборке библиотеки. Например:
 
     ```bash
     mono $TOOLS/Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
     ```
 
-5.  Используйте созданный файл AAR в проекте Java в Android Studio.
+5. Используйте созданный файл AAR в проекте Java в Android Studio.
 
 -----
 
-Варианты использования и командной строки описаны в [Embeddinator до 4000](https://github.com/mono/Embeddinator-4000/blob/master/Usage.md#java--c) документации.
-
+Параметры использования и командной строки описаны в документации по [ембеддинатор-4000](https://github.com/mono/Embeddinator-4000/blob/master/Usage.md#java--c) .
 
 ## <a name="callbacks"></a>Обратные вызовы
 
-Дополнительные сведения о [вызовы между C# и Java](callbacks.md).
+Сведения о [выполнении вызовов между C# и Java](callbacks.md).
 
 ## <a name="samples"></a>Примеры
 
-* [Образец приложения прогнозов погоды](https://github.com/jamesmontemagno/embeddinator-weather)
+- [Пример приложения Weather](https://github.com/jamesmontemagno/embeddinator-weather)

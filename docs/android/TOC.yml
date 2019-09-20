@@ -303,6 +303,8 @@
               href: platform/fragments/providing-backwards-compatibility.md
         - name: Компоновка приложения
           href: platform/app-linking.md
+        - name: Android 10
+          href: platform/android-10.md
         - name: "Android\_9 Pie"
           href: platform/pie.md
         - name: "Android\_8 Oreo"
@@ -463,7 +465,7 @@
               items:
                 - name: Шаг 1. Регистровое
                   href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/android
-                - name: Шаг 2. Настроить
+                - name: Шаг 2. Настройка
                   href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/android
             - name: Доступ к API Graph
               href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/android

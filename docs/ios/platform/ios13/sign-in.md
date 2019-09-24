@@ -7,30 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021403"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206361"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Вход с помощью Apple в Xamarin. iOS
-
-![Сейчас этот API находится в предварительной версии](~/media/shared/preview.png)
 
 Вход с помощью Apple — это новая служба, которая обеспечивает защиту идентификации для пользователей сторонних служб проверки подлинности. Начиная с iOS 13, Apple требует, чтобы любое новое приложение, использующее сторонние службы проверки подлинности, также предпредоставило вход с помощью Apple. При обновлении существующих приложений не требуется добавлять вход с помощью Apple до апреля 2020.
 
 В этом документе рассказывается, как можно добавить вход с помощью приложений Apple в iOS 13.
-
-## <a name="requirements"></a>Требования
-
-Для этого компонента требуется:
-
-* iOS 13
-* Xamarin. iOS 12,99
-* Visual Studio 2019 или Visual Studio 2019 для Mac с поддержкой Xcode 11.
-
-Дополнительные сведения см. в разделе [Приступая к работе](get-started.md) .
 
 ## <a name="apple-developer-setup"></a>Установка для разработчиков Apple
 

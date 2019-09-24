@@ -7,16 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019
-ms.openlocfilehash: d21afcc7d7b130528e9cceac47840acd49b91f59
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be487ab839e2fb4d21b85719a56dc34303317a5f
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70129976"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206385"
 ---
 # <a name="dark-mode-in-xamarinios"></a>Темный режим в Xamarin. iOS
-
-![Сейчас этот API находится в предварительной версии](~/media/shared/preview.png)
 
 Темный режим — это параметр на уровне системы для светлых и темных тем. Теперь пользователи iOS могут выбрать тему или разрешить iOS динамически изменять внешний вид в зависимости от среды и времени суток.
 

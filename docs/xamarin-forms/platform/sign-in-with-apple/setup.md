@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c46da6b4ed877cc85f98e6ef0ab2b9a28d811723
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: c1f75f4872d787e261ab6bbac3624e31538c6ff0
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986126"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206538"
 ---
 # <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Настройка входа с помощью Apple для Xamarin. Forms
-
-![Сейчас этот API находится в предварительной версии](~/media/shared/preview.png)
 
 В этом руководстве описывается последовательность действий, необходимых для настройки межплатформенных приложений с целью совершения входа с помощью Apple. Хотя настройка Apple выполняется прямо вперед на портале разработчика Apple, необходимо выполнить дополнительные действия, чтобы создать безопасное отношение между Android и Apple. 
 

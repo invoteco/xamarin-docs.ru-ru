@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c852a80136c8aae3a4da0fd3d8a8fa259e08aa4d
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021163"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206522"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Использование входа с Apple в Xamarin. Forms
-
-![Сейчас этот API находится в предварительной версии](~/media/shared/preview.png)
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
 
@@ -50,17 +48,17 @@ ms.locfileid: "71021163"
 8. Мобильное приложение анализирует фрагмент кода URI в `AppleAccount` и проверяет `nonce` полученное утверждение на соответствие `nonce` созданному в начале потока.
 9. Теперь мобильное приложение прошло проверку подлинности.
 
-## <a name="azure-functions"></a>Функции Azure
+## <a name="azure-functions"></a>Проверка
 
 В этом примере используются функции Azure. Кроме того, контроллер ASP.NET Core или аналогичное решение веб-сервера может обеспечить одну и ту же функциональность.
 
-### <a name="configuration"></a>Конфигурация
+### <a name="configuration"></a>Параметр Configuration
 
 При использовании функций Azure необходимо настроить несколько параметров приложения:
 
 - `APPLE_SIGNIN_KEY_ID`— Это ваш `KeyId` ранее.
 - `APPLE_SIGNIN_TEAM_ID`— Обычно это _идентификатор команды_ , найденный в [профиле членства](https://developer.apple.com/account/#/membership)
-- `APPLE_SIGNIN_SERVER_ID`: `ServerId` Это из предыдущего.  Это *не* _идентификатор набора_приложений, а *идентификатор* созданного *идентификатора служб* .
+- `APPLE_SIGNIN_SERVER_ID`. `ServerId` Это из предыдущего.  Это *не* _идентификатор набора_приложений, а *идентификатор* созданного *идентификатора служб* .
 - `APPLE_SIGNIN_APP_CALLBACK_URI`— Это настраиваемая схема URI, которую вы хотите перенаправить обратно в приложение.  В этом примере `xamarinformsapplesignin://` используется.
 - `APPLE_SIGNIN_REDIRECT_URI`— *URL-адрес перенаправления* , который вы настраиваете при создании *идентификатора служб* в разделе "Настройка *входа Apple* ".  Для тестирования он может выглядеть примерно так:`http://local.test:7071/api/applesignin_callback`
 - `APPLE_SIGNIN_P8_KEY`— Текстовое содержимое `.p8` файла со `\n` всеми удаленными символами новой строки, так что это одна длинная строка

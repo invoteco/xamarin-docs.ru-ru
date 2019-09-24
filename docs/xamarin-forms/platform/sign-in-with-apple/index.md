@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: f188350ff441ec16a333035c78ee0082b320d8ff
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: 1e436cf96367141873f16a09d8c818be4265226b
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986114"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206507"
 ---
 # <a name="sign-in-with-apple-in-xamarinforms"></a>Вход с помощью Apple в Xamarin. Forms
-
-![Сейчас этот API находится в предварительной версии](~/media/shared/preview.png)
 
 При входе с помощью Apple появилась новая служба, обеспечивающая защиту идентификации для пользователей. Начиная с iOS 13 Apple требуется, чтобы все приложения, использующие сторонние поставщики проверки подлинности, также предлагали вход с помощью Apple. Инструкции по использованию этого устройства с Xamarin. iOS см. [здесь](~/ios/platform/ios13/sign-in.md).
 

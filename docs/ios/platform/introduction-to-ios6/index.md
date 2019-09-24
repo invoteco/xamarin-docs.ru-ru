@@ -1,62 +1,55 @@
 ---
 title: Введение в iOS 6
-description: Этот документ содержит ссылки на руководства, описывающие возможности, представленные в iOS 6. Представления коллекций, PassKit, платформа для социальных сетей, и изменения в StoreKit обсуждаются.
+description: В этом документе содержатся ссылки на руководства, в которых описываются функции iOS 6. Обсуждаются представления коллекций, PassKit, социальные платформы и изменения в StoreKit.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f0cfeaa049355c2b524ead748696eafd884a1c54
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: dc8f2c3a11dd283db46fd0a2530fcca435da75f9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865692"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752056"
 ---
 # <a name="introduction-to-ios-6"></a>Введение в iOS 6
 
-_iOS 6 включает множество новых технологий для разработки приложений, которая позволяет использовать Xamarin.iOS 6 для C# разработчиков._
+_в iOS 6 реализовано множество новых технологий для разработки приложений, которые Xamarin. iOS 6 предоставляет C# разработчикам._
 
 [![](images/ios6-large.jpg "Логотип iOS 6")](images/ios6-large.jpg#lightbox)
 
-Благодаря iOS 6 и Xamarin.iOS 6 разработчики получили широкий набор возможностей в их распоряжении, для создания приложений iOS, включая объекты, что целевой объект iPhone 5.
-В этом документе приводится перечень доступны более интересных новых возможностей и ссылки на статьи, для каждого раздела справки. Кроме того он затрагивает несколько изменений, которые будут важны, так как разработчики перемещают iOS 6 и новое разрешение iPhone 5.
-
+В iOS 6 и Xamarin. iOS 6 разработчики теперь имеют множество возможностей при их реализации для создания приложений iOS, включая те, которые нацелены на iPhone 5.
+В этом документе перечислены некоторые из наиболее интересных новых функций и ссылки на статьи по каждому разделу. Кроме того, он касается нескольких изменений, которые будут важны, когда разработчики переходят на iOS 6 и новое разрешение iPhone 5.
 
 ## <a name="introduction-to-collection-viewsiosuser-interfacecontrolsuicollectionviewmd"></a>[Общие сведения о представлениях коллекций](~/ios/user-interface/controls/uicollectionview.md)
 
-Представления коллекций разрешить доступ к содержимому будет отображаться с использованием произвольного макетов. Они позволяют легко создавать макеты сеткоподобной по умолчанию, то же время поддерживает также пользовательских макетов. Дополнительные сведения см. в разделе, [введение к представлениям коллекции](~/ios/user-interface/controls/uicollectionview.md) [ ](~/ios/user-interface/controls/uicollectionview.md)руководства.
-
+Представления коллекций позволяют отображать содержимое с помощью произвольных макетов. Они позволяют легко создавать макеты, основанные на сетке, при поддержке пользовательских макетов. Дополнительные сведения см. в разделе [Введение в представления](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)коллекции.
 
 ## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[Введение в PassKit](~/ios/platform/passkit.md)
 
-Платформа PassKit позволяет приложениям взаимодействовать с цифровой проходов, управление которыми осуществляется в расчетной. Дополнительные сведения см. в разделе, [введение в руководство по пакету передачи](~/ios/platform/passkit.md).
+Платформа PassKit позволяет приложениям взаимодействовать с цифровыми проходами, управляемыми в приложении расчетной книжки. Дополнительные сведения см. в статье [Введение в проход по пакету](~/ios/platform/passkit.md).
 
+## <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Введение в EventKit](~/ios/platform/eventkit.md)
 
-## <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Общие сведения о EventKit](~/ios/platform/eventkit.md)
+Платформа EventKit предоставляет способ доступа к календарям, событиям календаря и данным напоминаний, которые хранятся в базе данных календаря. Доступ к календарям и событиям календаря был доступен с iOS 4, но теперь iOS 6 предоставляет доступ к данным напоминаний. Дополнительные сведения см [. в разделе](~/ios/platform/eventkit.md) [нтродуктион to EventKit](~/ios/platform/eventkit.md) Guide.
 
-Платформа EventKit предоставляет способ доступа к календарям, событиями календаря и напоминания данные хранятся в базе данных календаря. Доступ к календарям и календарь событий был доступен с iOS 4, но iOS 6 теперь предоставляет доступ к данным напоминания. Дополнительные сведения см. в разделе [я](~/ios/platform/eventkit.md) [Знакомство с EventKit](~/ios/platform/eventkit.md) руководства.
+## <a name="introduction-to-the-social-frameworkiosplatformsocial-frameworkmd"></a>[Введение в социальные платформы](~/ios/platform/social-framework.md)
 
-
-## <a name="introduction-to-the-social-frameworkiosplatformsocial-frameworkmd"></a>[Общие сведения о платформе социальной сети](~/ios/platform/social-framework.md)
-
-Платформа для социальных сетей предоставляет единый API для взаимодействия с социальными сетями, включая Twitter и Facebook, а также SinaWeibo для пользователей в Китае. Дополнительные сведения см. в разделе, [Общие сведения о платформе социальной сети](~/ios/platform/social-framework.md) руководства.
-
+Социальные платформы предоставляют унифицированный API для взаимодействия с социальными сетями, включая Twitter и Facebook, а также Синавеибо для пользователей в Китае. Дополнительные сведения см. в разделе Введение в руководством по [социальной инфраструктуре](~/ios/platform/social-framework.md) .
 
 ## <a name="changes-to-storekitchanges-to-storekitmd"></a>[Изменения в StoreKit](changes-to-storekit.md)
 
-Apple представила два новых возможностях Store Kit: приобретение и скачивание iTunes или содержимое приложения Store в приложении и размещения файлов содержимого, для покупки из приложений. Дополнительные сведения см. в разделе, [примет Store Kit](changes-to-storekit.md) руководства.
-
+Компания Apple предоставила две новые функции в магазине Store Kit: приобретение и скачивание содержимого iTunes или App Store из приложения, а также размещение файлов содержимого для покупок в приложении!. Дополнительные сведения см. в разделе [изменения для Store Kit](changes-to-storekit.md) Guide.
 
 ## <a name="other-changes"></a>Другие изменения
 
+### <a name="viewwillunload-and-viewdidunload-deprecated"></a>Виеввиллунлоад и Виевдидунлоад устарели
 
-### <a name="viewwillunload-and-viewdidunload-deprecated"></a>ViewWillUnload и ViewDidUnload устарело
+Методы `ViewWillUnload` и`UIViewController` в iOS 6 больше не вызываются. `ViewDidUnload` В предыдущих версиях iOS эти методы могли использоваться приложениями для сохранения состояния перед выгрузкой представления и кодом очистки соответственно.
 
-`ViewWillUnload` И `ViewDidUnload` методы `UIViewController` больше не вызываются в iOS 6. В предыдущих версиях iOS эти методы могут используемые приложения для сохранения состояния, прежде чем выгружает представления и код очистки соответственно.
-
-Например, Visual Studio для Mac будет создать метод, вызванный `ReleaseDesignerOutlets`, как показано ниже, который будет вызываться из `ViewDidUnload`:
+Например, Visual Studio для Mac создаст метод с именем `ReleaseDesignerOutlets`, показанный ниже, который затем будет вызываться из: `ViewDidUnload`
 
 ```csharp
 void ReleaseDesignerOutlets ()
@@ -68,11 +61,9 @@ void ReleaseDesignerOutlets ()
 }
 ```
 
-Тем не менее, в iOS 6, он больше не нужно вызывать `ReleaseDesignerOutlets`.   
-   
-   
-   
-Для кода очистки, iOS 6 приложения должны использовать `DidReceiveMemoryWarning`. Тем не менее, код, который вызывает `Dispose` должно проводиться расчетливо и только для памяти с большим объемом объектов, как показано ниже:
+Однако в iOS 6 больше не требуется вызывать `ReleaseDesignerOutlets`.   
+
+Для кода очистки приложения iOS 6 должны использовать `DidReceiveMemoryWarning`. Однако код, который вызывает `Dispose` , следует использовать экономно и только для объектов, интенсивно использующих память, как показано ниже:
 
 ```csharp
 if (myImageView != null){
@@ -83,26 +74,25 @@ if (myImageView != null){
 }
 ```
 
-Опять же, вызвав `Dispose` как описано выше редко требуется. В целом, наиболее приложения должны выполнять заключается в удалении обработчиков событий.
+Опять же, `Dispose` вызов, приведенный выше, должен быть редко нужен. Как правило, большинство приложений должны удалить обработчики событий.
 
-В случае сохранения состояния, приложения могут выполнять это в `ViewWillDisappear` и `ViewDidDisappear` вместо `ViewWillUnload`.
+В случае сохранения состояния приложения могут выполнять это в `ViewWillDisappear` и `ViewDidDisappear` вместо `ViewWillUnload`.
 
+### <a name="iphone-5-resolution"></a>Разрешение iPhone 5
 
-### <a name="iphone-5-resolution"></a>iPhone 5 разрешения
+устройства iPhone 5 имеют разрешение 640x1136. Приложения, нацеленные на предыдущие версии iOS, будут отображаться леттербоксед при запуске на iPhone 5, как показано ниже:
 
-устройства iPhone 5 иметь разрешение 640 x 1136. Приложения, ориентированные на предыдущих версиях iOS будут отображаться letterboxed при запуске на iPhone 5, как показано ниже:
+ [![](images/01-letterboxed.png "Приложения, нацеленные на предыдущие версии iOS, будут отображаться леттербоксед при запуске на iPhone 5")](images/01-letterboxed.png#lightbox)
 
- [![](images/01-letterboxed.png "Приложения, ориентированные на предыдущих версиях iOS будет отображаться letterboxed при запуске на iPhone 5")](images/01-letterboxed.png#lightbox)
+Чтобы приложение отображалось на устройстве iPhone 5 в полноэкранном режиме, просто добавьте образ с `Default-568h@2x.png` разрешением 640x1136. На следующем снимке экрана показано приложение, запущенное после включения этого образа:
 
-Чтобы приложение отображалось в полноэкранном режиме на iPhone 5, просто добавьте образ с именем `Default-568h@2x.png` необходимости разрешение 640 x 1136. На следующем снимке экрана показан приложение работало после этот образ был включен:
+ [![](images/02-fullscreen.png "На этом снимке экрана показано приложение, запущенное после включения этого образа")](images/02-fullscreen.png#lightbox)
 
- [![](images/02-fullscreen.png "На этом снимке экрана показано приложение работало после этот образ был включен")](images/02-fullscreen.png#lightbox)
+### <a name="subclassing-uinavigationbar"></a>Подклассировать Уинавигатионбар
 
-### <a name="subclassing-uinavigationbar"></a>Создание подкласса UINavigationBar
+В iOS 6 `UINavigationBar` можно создавать подклассы. Это позволяет получить дополнительный контроль над внешним видом и поведением `UINavigationBar`. Например, приложения могут создавать подклассы для добавления подпредставлений, анимировать эти представления и изменять границы `UINavigationBar`.
 
-В iOS 6 `UINavigationBar` может быть подклассом. Это позволяет дополнительный контроль над вида `UINavigationBar`. Например, приложения могут подкласс для добавления вложенных представлений, анимация эти представления и изменения границ `UINavigationBar`.
-
-В приведенном ниже коде показан пример подклассами `UINavigationBar` , добавляющий `UIImageView`:
+В приведенном ниже коде показан пример подкласса `UINavigationBar` , который `UIImageView`добавляет:
 
 ```csharp
 public class CustomNavBar : UINavigationBar
@@ -122,19 +112,19 @@ public class CustomNavBar : UINavigationBar
 }
 ```
 
-Добавление подкласса `UINavigationBar` для `UINavigationController`, использовать `UINavigationController` конструктор, принимающий тип `UINavigationBar` и `UIToolbar`, как показано ниже:
+Чтобы добавить `UINavigationBar` в объект `UINavigationController`подкласс, используйте `UINavigationController` конструктор, принимающий тип `UINavigationBar` и `UIToolbar`, как показано ниже:
 
 ```csharp
 navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolbar));
 ```
 
-С помощью этого `UINavigationBar` подкласс приводит представление изображения, отображаемого, как показано на следующем снимке экрана:
+Использование этого `UINavigationBar` подкласса приводит к отображению представления изображения, как показано на следующем снимке экрана:
 
- [![](images/03-navbar.png "В результате подкласс UINavigationBar представление изображения, отображаемого, как показано на следующем снимке экрана")](images/03-navbar.png#lightbox)
+ [![](images/03-navbar.png "Использование этого подкласса Уинавигатионбар приводит к отображению представления изображения, как показано на этом снимке экрана")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>Ориентация интерфейса
 
-До iOS 6 приложения может переопределять `ShouldAutorotateToInterfaceOrientation`, возвращая true для любого ориентаций конкретном контроллере поддерживается. Например следующий код будет использоваться для поддержки только книжной:
+До появления приложений iOS 6 можно `ShouldAutorotateToInterfaceOrientation`было переопределять, возвращая значение true для любой ориентации, поддерживаемой определенным контроллером. Например, следующий код будет использоваться для поддержки только книжной ориентации:
 
 ```csharp
 public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
@@ -144,7 +134,7 @@ public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientat
 ```
 
 В iOS 6 `ShouldAutorotateToInterfaceOrientation` является устаревшим.
-Вместо этого приложения можно переопределять `GetSupportedInterfaceOrientations` на контроллер корневого представления, как показано ниже:
+Вместо этого приложения могут `GetSupportedInterfaceOrientations` переопределяться на контроллере корневого представления, как показано ниже:
 
 ```csharp
 public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
@@ -153,4 +143,4 @@ public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
     }
 ```
 
-На устройстве iPad, по умолчанию для всех четырех направлениях Если `GetSupportedInterfaceOrientation` не реализован. На iPhone и iPod Touch, значение по умолчанию — все ориентации, за исключением `PortraitUpsideDown`.
+На iPad это значение по умолчанию равно всем четырем ориентация `GetSupportedInterfaceOrientation` , если не реализовано. На iPhone и iPod touch по умолчанию заданы все ориентации, `PortraitUpsideDown`Кроме.

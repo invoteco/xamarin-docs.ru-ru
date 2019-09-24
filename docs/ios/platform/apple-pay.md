@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: f264f210a9228fd213f0c041abb5b26023c796f4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1d9a65ab34cb0c02368f53679d38f1d07ec1f257
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753270"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198559"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay в Xamarin. iOS
 
@@ -43,8 +43,7 @@ Apple Pay доступен только в iOS 8 и более поздних в
 
 ## <a name="using-a-payment-processor-platform"></a>Использование платформы платежных процессоров
 
-Одной из основных частей Apple Pay является обработка платежей. Хотя это можно сделать самостоятельно, оно требует значительных знаний о шифровании
-- как описано в [документации по обработке платежей](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html)Apple.
+Одной из основных частей Apple Pay является обработка платежей. Хотя это можно сделать самостоятельно, оно требует значительных знаний о криптографии, как описано [в этом разделе.](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html)
 С другой стороны, платформы обработки платежей обрабатывают эти операции, позволяя сосредоточиться на создании приложения.
 
 Есть два варианта:

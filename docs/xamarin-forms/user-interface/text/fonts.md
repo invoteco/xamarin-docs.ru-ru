@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b2918dde7524a02aa318164933063a5546db031a
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529305"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198474"
 ---
 # <a name="fonts-in-xamarinforms"></a>Шрифты в Xamarin.Forms
 
@@ -155,7 +155,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 ### <a name="ios"></a>iOS
 
 Можно отобразить пользовательский шрифт, во-первых, гарантируя, что он загружается, а затем обращения к нему по имени с помощью Xamarin.Forms `Font` методы.
-Следуйте инструкциям в [этой записи блога](https://blog.xamarin.com/custom-fonts-in-ios/):
+Следуйте инструкциям в [этой записи блога](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
 
 1. Добавьте файл шрифта с **действием сборки: BundleResource**и
 2. Обновление **Info.plist** файл (**шрифты, предоставленные приложением**, или `UIAppFonts`, key), затем

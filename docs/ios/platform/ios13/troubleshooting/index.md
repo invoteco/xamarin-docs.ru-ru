@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2019
-ms.openlocfilehash: d2a2146a0b7345475e2eb93d52fb02387c833224
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e03990a74ac8477b56b109e26a97b05ad13dba53
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200046"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198458"
 ---
 # <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Советы по устранению неполадок в iOS 13 и Xamarin. iOS
 
@@ -32,6 +32,7 @@ ms.locfileid: "70200046"
 
 > [!NOTE]
 > В этих шагах предполагается, что у вас есть два Xcode приложения:
+>
 > - **Xcode11-Beta1. app** — бета-версия, которая не работает с симуляторами и Visual Studio для Mac.
 > - **Xcode102. app** — стабильная версия Xcode 10. Кроме того, можно назвать **Xcode. app**.
 >

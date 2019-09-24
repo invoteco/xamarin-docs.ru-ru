@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 6c529c8df7ef1e4372285a157f489941d795d7f6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655225"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198494"
 ---
 # <a name="xamarinforms-material-visual"></a>Визуальный элемент материалов Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 [Проектирование материалов](https://material.io) — это упрямого система разработки, созданная Google, которая предписывает размер, цвет, расстояния и другие аспекты того, как должны выглядеть и работать представления и макеты.
 
@@ -25,9 +25,9 @@ ms.locfileid: "68655225"
 Процесс включения визуального элемента "материалы" в Xamarin. Forms в приложении:
 
 1. Добавьте пакет NuGet [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) в проекты iOS и Android Platform. Этот пакет NuGet предоставляет оптимизированные для разработки материалов модули подготовки отчетов в iOS и Android. В iOS пакет предоставляет транзитивное зависимость для [Xamarin. iOS. материалкомпонентс](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), которая является C# привязкой к [компонентам материалов Google для iOS](https://material.io/develop/ios/). В Android пакет предоставляет целевые объекты сборки, чтобы обеспечить правильную настройку TargetFramework.
-1. Инициализируйте модули подготовки материалов в каждом проекте платформы. Дополнительные сведения см. в разделе Инициализация модулей [подготовки](#initialize-material-renderers)отчетов.
-1. [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Чтобы`Material` использовать модули подготовки материалов, присвоив свойству значение на всех страницах, которые должны применять правила дизайна материалов. Дополнительные сведения см. в разделе [Использование модулей подготовки](#consume-material-renderers)отчетов к просмотру.
-1. используемых Настройте модули подготовки материалов. Дополнительные сведения см. в разделе [Настройка модулей подготовки](#customize-material-renderers)отчетов к просмотру.
+1. Инициализируйте модули подготовки материалов в каждом проекте платформы. Дополнительные сведения см. в разделе [Инициализация модулей подготовки](#initialize-material-renderers)отчетов.
+1. [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Чтобы`Material` использовать модули подготовки материалов, присвоив свойству значение на всех страницах, которые должны применять правила дизайна материалов. Дополнительные сведения см. в разделе Использование модулей подготовки отчетов к [просмотру](#consume-material-renderers).
+1. используемых Настройте модули подготовки материалов. Дополнительные сведения см. в разделе Настройка модулей подготовки отчетов к [просмотру](#customize-material-renderers).
 
 > [!IMPORTANT]
 > В Android для модулей подготовки материалов требуется минимальная версия 5,0 (API 21) или более поздней версии, а также TargetFramework версии 9,0 (API 28). Кроме того, проект платформы требует наличия библиотек поддержки Android 28.0.0 или более поздней версии, и его тема должна наследовать от темы "компоненты материала" или продолжить наследовать от темы AppCompat. Дополнительные сведения см. в разделе [Приступая к работе с компонентами материал для Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
@@ -53,18 +53,18 @@ ms.locfileid: "68655225"
 
 После установки пакета NuGet для [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) модули подготовки материалов должны быть инициализированы в каждом проекте платформы.
 
-В iOS это должно произойти в **AppDelegate.CS** путем вызова `FormsMaterial.Init` метода *после* `Xamarin.Forms.Forms.Init` метода:
+В iOS это должно произойти в **AppDelegate.CS** путем вызова `Xamarin.Forms.FormsMaterial.Init` метода *после* `Xamarin.Forms.Forms.Init` метода:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
-FormsMaterial.Init();
+global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-В Android это должно произойти в **MainActivity.CS** путем вызова `FormsMaterial.Init` метода *после* `Xamarin.Forms.Forms.Init` метода:
+В Android это должно произойти в **MainActivity.CS** путем вызова `Xamarin.Forms.FormsMaterial.Init` метода *после* `Xamarin.Forms.Forms.Init` метода:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-FormsMaterial.Init(this, savedInstanceState);
+global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
 ## <a name="consume-material-renderers"></a>Использование модулей подготовки материалов

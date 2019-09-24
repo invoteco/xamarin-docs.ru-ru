@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9442116bf053768fe22d123d1c7e3d146f9b2834
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292571"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198507"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Создание пользовательского макета в Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Forms определяет четыре класса макета — StackLayout, AbsoluteLayout, RelativeLayout и сетки, и каждый упорядочивает его дочерние элементы по-разному. Тем не менее иногда это необходимо для организации содержимого страницы, с использованием макета, не поддерживаемых Xamarin.Forms. В этой статье объясняется, как создать класс пользовательского макета, а также демонстрирует класс WrapLayout, с учетом ориентации, который упорядочивает его дочерние элементы горизонтально по странице и затем создает оболочку для отображения последующих дочерних элементов для дополнительных строк._
+_Xamarin. Forms определяет пять классов макета — StackLayout, Абсолутелайаут, RelativeLayout, Grid и Флекслайаут, каждый из которых упорядочивает свои дочерние элементы по-разному. Тем не менее иногда это необходимо для организации содержимого страницы, с использованием макета, не поддерживаемых Xamarin.Forms. В этой статье объясняется, как создать класс пользовательского макета, а также демонстрирует класс WrapLayout, с учетом ориентации, который упорядочивает его дочерние элементы горизонтально по странице и затем создает оболочку для отображения последующих дочерних элементов для дополнительных строк._
 
 В Xamarin.Forms, все макета классы являются производными от [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) класса и ограничение универсального типа, [ `View` ](xref:Xamarin.Forms.View) и его производные типы. В свою очередь `Layout<T>` класс является производным от [ `Layout` ](xref:Xamarin.Forms.Layout) класс, который предоставляет механизм для определения положения и размера дочерних элементов.
 
@@ -427,7 +427,7 @@ async Task<ImageList> GetImageListAsync()
 
 - [WrapLayout (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Пользовательские макеты](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Создание пользовательских макетов в Xamarin.Forms (видео)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
+- [Создание пользовательских макетов в Xamarin.Forms (видео)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [Макет\<T >](xref:Xamarin.Forms.Layout`1)
 - [Макет](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

@@ -9,8 +9,6 @@
         - name: Требования
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Что такое Xamarin?
-          href: get-started/introduction-to-mobile-development.md
         - name: "Жизненный цикл разработки мобильного\_ПО"
           href: get-started/introduction-to-mobile-sdlc.md
         - name: Пошаговое руководство по созданию кроссплатформенного приложения

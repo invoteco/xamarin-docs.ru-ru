@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: 813bb59cf11f35f69620c30e8ba12281df08df75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a59f824e1d97966d8d0af92bc9bbcc8d80fcfa4d
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754506"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249927"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Удаленные уведомления с Google Cloud Messaging
 
@@ -312,7 +312,7 @@ public RegistrationIntentService() : base ("RegistrationIntentService") { }
 
 Основные функциональные возможности `RegistrationIntentService` находятся `OnHandleIntent` в методе. Давайте рассмотрим этот код, чтобы увидеть, как он регистрирует приложение с помощью GCM.
 
-##### <a name="request-a-registration-token"></a>Запрос маркера регистрации
+#### <a name="request-a-registration-token"></a>Запрос маркера регистрации
 
 `OnHandleIntent`сначала вызывает метод [InstanceId. токена](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) Google, чтобы запросить токен регистрации от gcm. Мы переносите этот код `lock` в, чтобы защититься от возможности одновременного &ndash; выполнения нескольких целей регистрации. это `lock` гарантирует, что эти способы обработки обрабатываются последовательно. Если не удалось получить маркер регистрации, выдается исключение и регистрируется ошибка. Если регистрация будет выполнена, для `token` параметра задается маркер регистрации, полученный от gcm: 
 
@@ -334,7 +334,7 @@ catch (Exception e)
     Log.Debug ...
 ```
 
-##### <a name="forward-the-registration-token-to-the-app-server"></a>Переадресация маркера регистрации на сервер приложений
+#### <a name="forward-the-registration-token-to-the-app-server"></a>Переадресация маркера регистрации на сервер приложений
 
 Если получен маркер регистрации (т. е. исключение не было создано), мы вызываем `SendRegistrationToAppServer` , чтобы связать маркер регистрации пользователя с учетной записью на стороне сервера (если таковая имеется), которая поддерживается нашим приложением. Так как эта реализация зависит от проекта сервера приложений, здесь приводится пустой метод: 
 
@@ -347,7 +347,7 @@ void SendRegistrationToAppServer (string token)
 
 В некоторых случаях серверу приложений не требуется маркер регистрации пользователя. в этом случае этот метод можно опустить. При отправке маркера регистрации на сервер `SendRegistrationToAppServer` приложений должен поддерживать логическое значение, указывающее, был ли маркер отправлен на сервер. Если это логическое значение false, `SendRegistrationToAppServer` отправляет маркер на сервер &ndash; приложений, в противном случае маркер уже был отправлен на сервер приложений в предыдущем вызове. 
 
-##### <a name="subscribe-to-the-notification-topic"></a>Подпишитесь на раздел уведомлений
+#### <a name="subscribe-to-the-notification-topic"></a>Подпишитесь на раздел уведомлений
 
 Затем мы вызываем наш `Subscribe` метод, чтобы указать GCM, что мы хотим оформить подписываться на раздел уведомлений. В `Subscribe`мы вызываем API [гкмпубсуб. Subscribe](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) для подписки клиентского приложения на все сообщения в `/topics/global`:
 

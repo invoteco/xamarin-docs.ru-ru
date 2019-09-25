@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 6e2e4cd854e60f6147104b6b1361d0ab7b234370
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fba49e21ac75ec1ebb00614f3891bebaa57a3ed5
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755802"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249753"
 ---
 # <a name="understanding-android-api-levels"></a>Общие сведения об уровнях API Android
 
@@ -33,6 +33,8 @@ Xamarin. Android предоставляет три параметра проек
 > [!NOTE]
 > Начиная с августа 2018, консоль Google Play потребует, чтобы новые приложения были нацелены на уровень API 26 (Android 8,0) или более поздней версии.
 Существующие приложения должны быть нацелены на уровень API 26 или выше, начиная с ноября 2018. Дополнительные сведения см. в статье [улучшение безопасности и производительности приложений на Google Play в течение года](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

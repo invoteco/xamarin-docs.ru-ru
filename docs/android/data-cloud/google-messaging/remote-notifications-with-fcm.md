@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: c76b22c84851c8952dc4e9181966632cf6e38041
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ece503ee305fc1319e766ee5ad52ad86cee122bc
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754682"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249943"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Удаленные уведомления с помощью Firebase Cloud Messaging
 
@@ -51,6 +51,8 @@ _В этом пошаговом руководстве представлено 
 ### <a name="set-the-package-name"></a>Задание имени пакета
 
 В [Firebase Cloud Messaging (облачная система обмена сообщениями](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)) вы указали имя пакета для приложения с поддержкой FCM. Это имя пакета также служит в качестве [*идентификатора приложения*](./firebase-cloud-messaging.md#fcm-in-action-app-id) , связанного с [ключом API](firebase-cloud-messaging.md#fcm-in-action-api-key). Настройте приложение для использования этого имени пакета:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ff07af00e1e647255ac56318c0685552823f510c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653509"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249680"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Хранение данных в локальной базе данных SQLite.NET
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 В этом кратком руководстве вы узнаете, как выполнять следующие задачи:
 
@@ -27,10 +27,10 @@ ms.locfileid: "68653509"
 
 Краткое руководство посвящено хранению данных в локальной базе данных SQLite.NET. Ниже показано итоговое приложение:
 
-Страница «заметки» [ ![(database-images/screenshots1-sml.png " ")]] (database-images/screenshots1.png#lightbox "Страница «заметки»") Страница ввода примечания страница(database-images/screenshots2.png#lightbox "записи примечания") [ ![(database-images/screenshots2-sml.png " ")]] 
+[![](database-images/screenshots1-sml.png "")Страница "заметки](database-images/screenshots1.png#lightbox "Страница «заметки»")" для записи заметки
+[(database-images/screenshots2-sml.png "") ![]](database-images/screenshots2.png#lightbox "Страница записи примечания")
 
-
-### <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Перед выполнением этого краткого руководства необходимо успешно выполнить [предыдущее краткое руководство](multi-page.md) . Также можно скачать [предыдущий пример краткого руководства](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) и использовать его в качестве отправной точки для этого краткого руководства.
 
@@ -58,7 +58,7 @@ ms.locfileid: "68653509"
 
     Этот пакет будет использоваться для включения операций базы данных в приложение.
 
-4. В **Обозреватель решений**в проекте **Notes** откройте **Note.CS** в папке Models и замените существующий код следующим кодом:
+4. В **Обозреватель решений**в проекте **Notes** откройте **Note.CS** в папке **Models** и замените существующий код следующим кодом:
 
     ```csharp
     using System;
@@ -275,7 +275,7 @@ ms.locfileid: "68653509"
 
     Этот пакет будет использоваться для включения операций базы данных в приложение.
 
-4. В **панель решения**в проекте **Notes** откройте **Note.CS** в папке Models и замените существующий код следующим кодом:
+4. В **панель решения**в проекте **Notes** откройте **Note.CS** в папке **Models** и замените существующий код следующим кодом:
 
     ```csharp
     using System;
@@ -300,7 +300,7 @@ ms.locfileid: "68653509"
     > [!WARNING]
     > Попытка создать приложение на этом этапе приведет к ошибкам, которые будут исправлены в последующих шагах.
 
-5. В **панель решения**добавьте новую папку с именем **Data** в проект notess .
+5. В **панель решения**добавьте новую папку с именем **Data** в проект **notess** .
 
 6. В **панель решения**в проекте **Notes** добавьте новый класс с именем **нотедатабасе** в папку **Data** .
 

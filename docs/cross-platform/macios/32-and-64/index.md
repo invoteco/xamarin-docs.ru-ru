@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f41d65c8981d4ef6ffcf1b812fbbbb7e72e7719
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509750"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249791"
 ---
 # <a name="3264-bit-platform-considerations"></a>рекомендации по 32/64-разрядной платформе
 
@@ -33,6 +33,8 @@ Classic API Xamarin (`XamMac.dll` и `monotouch.dll`) поддерживают �
 > Этот раздел включен по историческим причинам и помогает переместить старые проекты Xamarin. iOS в Unified API и поддержку 64-бит. Все новые проекты Xamarin. iOS будут использовать Unified API и целевой 64-бит по умолчанию.
 
 Для мобильных приложений Xamarin. iOS, преобразованных в Unified API, разработчики должны вручную обновить параметры сборки до 64-разрядной версии.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

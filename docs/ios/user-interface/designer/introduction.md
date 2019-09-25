@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768939"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250144"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
 
@@ -35,6 +35,8 @@ Xamarin Designer для iOS является конструктором визу
 Конструктор iOS позволяет разработчикам визуально проектировать пользовательский интерфейс приложения. Как описано в разделе [Общие сведения о раскадровках](~/ios/user-interface/storyboards/index.md) , раскадровка Описывает экраны (контроллеры представлений), которые составляют приложение, элементы интерфейса (представления), размещенные на этих контроллерах представления, и общий поток навигации приложения. 
 
 Контроллер представления состоит из двух частей: визуального представления в конструкторе iOS и связанного C# класса:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

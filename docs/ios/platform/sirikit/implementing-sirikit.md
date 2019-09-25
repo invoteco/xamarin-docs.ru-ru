@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27bf22403c9411d300e67bfdaef4aa4dfe74f6e0
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769785"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250184"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Реализация SiriKit в Xamarin. iOS
 
@@ -66,6 +66,8 @@ Siri работает с понятием **доменов**, группами �
 В случае с примером приложения Монкэйчат модели данных и код обработки, такие как доступ к сети и базе данных, будут перемещены в собственную библиотеку.
 
 Выполните следующие действия:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -1046,7 +1048,7 @@ public bool DisplaysMessage {
 }
 ```
 
-### <a name="considerations"></a>Рекомендации
+### <a name="considerations"></a>Особенности
 
 Компания Apple предлагает разработчикам принимать во внимание следующие соображения, касающиеся проектирования и реализации расширений пользовательского интерфейса.
 

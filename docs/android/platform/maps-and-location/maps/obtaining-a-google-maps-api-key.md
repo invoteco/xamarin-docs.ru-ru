@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3868b2a35894cdcd7a11c626268307338744ecb4
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757536"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250054"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Получение ключа API Google Maps
 
@@ -28,6 +28,8 @@ ms.locfileid: "70757536"
 
 Чтобы запросить ключ API карт из Google, необходимо знать отпечаток SHA-1 хранилища ключей, который используется для подписания приложения.
 Как правило, это означает, что необходимо определить отпечаток SHA-1 для хранилища ключей отладки, а затем отпечаток SHA-1 для хранилища ключей, используемого для подписи приложения для выпуска.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -123,7 +125,7 @@ Certificate fingerprints:
 
    [![Нажатие кнопки "включить" в разделе "панель мониторинга"](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-На этом этапе проект API создан и в него добавлен интерфейс Google Maps Android API версии 2. Однако этот API нельзя использовать в проекте, пока вы не создадите для него учетные данные. В следующем разделе показано, как создать ключ API и приложения Xamarin.Android утвержденный список, чтобы она авторизована для использования этого ключа.
+На этом этапе проект API создан и в него добавлен интерфейс Google Maps Android API версии 2. Однако этот API нельзя использовать в проекте, пока вы не создадите для него учетные данные. В следующем разделе объясняется, как создать ключ API и белый список приложения Xamarin. Android, чтобы ему было разрешено использовать этот ключ.
 
 ## <a name="obtaining-the-api-key"></a>Получение ключа API
 

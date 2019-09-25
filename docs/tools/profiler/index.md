@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: conceptdev
 ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: 745c59ad50f0e8ad50a8ec56549d99b7b5e72228
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b567985fcfd9e133587c5c285e17d21465fda659
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772475"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250075"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -50,6 +50,8 @@ Xamarin Profiler — это автономное приложение, инте�
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
 Xamarin Profiler предоставляет разработчикам способ профилирования приложений в Visual Studio для Mac или Visual Studio. Профилировщик собирает и отображает сведения о приложении, которые затем могут использоваться разработчиком для анализа поведения приложения. Существует несколько способов профилирования приложения с помощью Xamarin Profiler, а именно "профилирование памяти" и "Статистическая выборка". Они выполняются с помощью инструментов выделения и профилировщика времени соответственно.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

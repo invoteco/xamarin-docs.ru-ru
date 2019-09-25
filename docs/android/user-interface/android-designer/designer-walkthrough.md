@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f696e8159d929bf41596c4dc9498e682e361f412
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761444"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249989"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Использование Xamarin. Android Designer
 
@@ -31,6 +31,8 @@ _Эта статья представляет собой пошаговое ру
 ## <a name="walkthrough"></a>Пошаговое руководство
 
 Цель этого пошагового руководства — использовать Android Designer для создания пользовательского интерфейса для примера приложения браузера цветов. Приложение браузера цветов отображает список цветов, их имена и значения RGB. Вы узнаете, как добавлять мини-приложения в **область конструктора** , а также как визуально размещать эти мини-приложения. После этого вы узнаете, как изменить мини-приложения в интерактивном режиме на **область конструктора** или с помощью панели **свойств** конструктора. Наконец, вы увидите, как выглядит дизайн при запуске приложения на устройстве или в эмуляторе.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

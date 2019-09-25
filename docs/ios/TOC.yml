@@ -244,7 +244,7 @@
       items:
         - name: Обзор
           href: platform/index.md
-        - name: "iOS\_13 (предварительная версия)"
+        - name: iOS 13
           items:
             - name: "Введение в iOS\_13"
               href: platform/ios13/index.md
@@ -254,6 +254,8 @@
               href: platform/ios13/dark-mode.md
             - name: Вход с помощью Apple
               href: platform/ios13/sign-in.md
+            - name: Использование нескольких окон для iPad
+              href: platform/ios13/multi-window-ipad.md
             - name: Устранение неполадок
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12

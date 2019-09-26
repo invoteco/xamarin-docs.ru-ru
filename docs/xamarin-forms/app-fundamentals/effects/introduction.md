@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70771452"
 ---
 # <a name="introduction-to-effects"></a>Общие сведения об эффектах
@@ -38,7 +38,7 @@ _Эффекты позволяют настраивать собственные
 
 В приведенной ниже таблице перечислены пространства имен для класса `PlatformEffect` на каждой платформе и типы его свойств.
 
-|Platform|Пространство имен|Контейнер|Элемент управления|
+|Платформа|Пространство имен|Контейнер|Элемент управления|
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
 |Android|Xamarin.Forms.Platform.Android|ViewGroup|Просмотр|

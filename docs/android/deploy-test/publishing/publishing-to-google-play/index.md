@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755967"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250011"
 ---
 # <a name="publishing-to-google-play"></a>Публикация в Google Play
 
@@ -108,6 +108,8 @@ Google Play поддерживается не во всех странах ми�
 Это URL-адрес на видео в YouTube, в котором демонстрируется приложение. Длительность видео должна составлять от 30 секунд до 2 минут, и в нем должны быть показаны наиболее интересные функции приложения.
 
 ### <a name="publishing-to-google-play"></a>Публикация в Google Play
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

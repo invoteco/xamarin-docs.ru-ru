@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5113255d8776987783ad5e8f023e7b2b30924ea4
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756121"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250001"
 ---
 # <a name="preparing-an-application-for-release"></a>Подготовка приложения к выпуску
 
@@ -40,6 +40,8 @@ ms.locfileid: "70756121"
 ## <a name="specify-the-application-icon"></a>Указание значка приложения
 
 Настоятельно рекомендуется указывать значок приложения для каждого проекта Xamarin.Android. Некоторые магазины приложений не допускают публикацию приложений Android без значков. Указать значок приложения для проекта Xamarin.Android можно с помощью свойства `Icon` атрибута `Application`.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

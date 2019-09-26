@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: e5c8e02397e778cf3e71a0c8b4aa544074521cac
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b85289d9dbd60d5ee0238540e67773ed9085b672
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755942"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249965"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -313,6 +313,8 @@ Unknown option '-keep' in line 1 of file 'proguard.cfg'
 ```
 
 Как правило, эта проблема возникает в Windows из-за неправильной кодировки файла `.cfg`. ProGuard не удается обработать _метку порядка следования байтов_ (BOM), которая может находиться в текстовых файлах. Если метка BOM присутствует, ProGuard завершит работу с указанной выше ошибкой. 
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

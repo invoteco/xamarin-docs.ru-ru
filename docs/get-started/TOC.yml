@@ -2,6 +2,8 @@
   href: index.yml
   expanded: true
   items:
+    - name: Что такое Xamarin
+      href: what-is-xamarin.md
     - name: Требования
       href: requirements.md
     - name: Установка

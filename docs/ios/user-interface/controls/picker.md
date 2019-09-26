@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/14/2018
 ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70286390"
 ---
 # <a name="picker-control-in-xamarinios"></a>Элемент управления средства выбора в Xamarin. iOS
@@ -189,7 +189,7 @@ datePickerView.MaximumDate = NSDate.Now;
 datePickerView.MinuteInterval = 10;
 ```
 
-#### <a name="mode"></a>Mode
+#### <a name="mode"></a>Режим
 
 Выбор даты поддерживает четыре [режима](xref:UIKit.UIDatePickerMode), описанные ниже.
 
@@ -291,10 +291,10 @@ timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 
 Различные `NSDateFormatterStyle` значения отображают время следующим образом:
 
-- `NSDateFormatterStyle.Full`: 7:46:00 по восточному времени (лето)
-- `NSDateFormatterStyle.Long`: 7:47:00 (EDT)
-- `NSDateFormatterStyle.Medium`: 7:47:00 РМ
-- `NSDateFormatterSytle.Short`: 7:47 РМ
+- `NSDateFormatterStyle.Full`. 7:46:00 по восточному времени (лето)
+- `NSDateFormatterStyle.Long`. 7:47:00 (EDT)
+- `NSDateFormatterStyle.Medium`. 7:47:00 РМ
+- `NSDateFormatterSytle.Short`. 7:47 РМ
 
 ##### <a name="datestyle"></a>датестиле
 
@@ -307,10 +307,10 @@ dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 
 Различные `NSDateFormatterStyle` значения отображают даты следующим образом:
 
-- `NSDateFormatterStyle.Full`: Среда, 2 августа 2017 at 7:48 PM
-- `NSDateFormatterStyle.Long`: 2 августа 2017 at 7:49 PM
-- `NSDateFormatterStyle.Medium`: 2 августа 2017 г., 7:49 РМ
-- `NSDateFormatterStyle.Short`: 8/2/17, 7:50 РМ
+- `NSDateFormatterStyle.Full`. Среда, 2 августа 2017 at 7:48 PM
+- `NSDateFormatterStyle.Long`. 2 августа 2017 at 7:49 PM
+- `NSDateFormatterStyle.Medium`. 2 августа 2017 г., 7:49 РМ
+- `NSDateFormatterStyle.Short`. 8/2/17, 7:50 РМ
 
 > [!NOTE]
 > `DateFormat`и `DateStyle` предоставляютразличныеспособы`TimeStyle` указания форматирования даты и времени. / Последние свойства Set определяют выходные данные модуля форматирования даты.

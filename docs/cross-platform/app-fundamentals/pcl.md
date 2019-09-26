@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: a4ee81f7d59c9fb680dfd371a7aaba7660fb3343
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68681072"
 ---
 # <a name="portable-class-libraries-pcl"></a>Переносимые библиотеки классов (PCL)
@@ -37,7 +37,7 @@ ms.locfileid: "68681072"
 
 В таблице ниже показаны некоторые функции, зависящие от платформы .NET. Для написания сборки PCL, которая гарантированно будет выполняться на конкретных устройствах и платформах, вы просто выбираете, какая поддержка необходима при создании проекта.
 
-|Компонент|.NET Framework|Приложения универсальной платформы Windows|Silverlight|Windows Phone|Xamarin|
+|Функция|.NET Framework|Приложения универсальной платформы Windows|Silverlight|Windows Phone|Xamarin|
 |---|---|---|---|---|---|
 |Ядро|Y|Y|Y|Y|Y|
 |LINQ|Y|Y|Y|Y|Y|
@@ -86,7 +86,7 @@ ms.locfileid: "68681072"
 
 Добавление переносимой библиотеки классов в решение очень похоже на добавление обычного проекта библиотеки.
 
-1. В диалоговом окне **Новый проект** выберите параметр многоплатформенная **Библиотека > > переносимой библиотеке** :
+1. В диалоговом окне **Новый проект** выберите параметр **многоплатформенная библиотека > > переносимой библиотеке** :
 
     ![Создание нового проекта PCL](pcl-images/image2.png)
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770804"
 ---
 # <a name="accessing-remote-data"></a>Доступ к удаленным данным
@@ -53,7 +53,7 @@ ms.locfileid: "70770804"
 
 На рис. 10-1 показано взаимодействие классов, считывающих данные каталога из микрослужбы каталога для отображения в `CatalogView`.
 
-[Извлечение данных из микрослужбы каталога ![(accessing-remote-data-images/catalogdata.png " ")]] (accessing-remote-data-images/catalogdata-large.png#lightbox "Извлечение данных из микрослужбы каталога")
+[![](accessing-remote-data-images/catalogdata.png "Извлечение данных из микрослужбы каталога")](accessing-remote-data-images/catalogdata-large.png#lightbox "Извлечение данных из микрослужбы каталога")
 
 **Рис. 10-1**. Извлечение данных из микрослужбы каталога
 
@@ -158,7 +158,7 @@ public async Task<IActionResult> Items(
 
 На рис. 10-2 показано взаимодействие классов, которые отправляют данные корзины, отображаемые в `BasketView`, в микрослужбу корзины.
 
-[Отправка данных в микрослужбу корзины ![(accessing-remote-data-images/basketdata.png " ")]] (accessing-remote-data-images/basketdata-large.png#lightbox "Отправка данных в микрослужбу корзины")
+[![](accessing-remote-data-images/basketdata.png "Отправка данных в микрослужбу корзины")](accessing-remote-data-images/basketdata-large.png#lightbox "Отправка данных в микрослужбу корзины")
 
 **Рис. 10-2**. Отправка данных в микрослужбу корзины
 

@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
 ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70754461"
 ---
 # <a name="using-data-in-an-app"></a>Использование данных в приложении
@@ -75,7 +75,7 @@ public int SaveStock (Stock item)
 
 Обычно для реальных приложений требуется проверка (например, обязательные поля, минимальная длина или другие бизнес-правила). Хорошие межплатформенные приложения реализуют как можно большую часть логической проверки в общем коде, передавая ошибки проверки обратно в пользовательский интерфейс для вывода в соответствии с возможностями платформы.
 
-## <a name="delete"></a>Оператор delete
+## <a name="delete"></a>Удаление
 
 В `Insert` `Update` отличие от методов и, метод может принимать только значение первичного ключа, а не полный `Stock` объект. `Delete<T>` В этом примере `Stock` объект передается в метод, но в `Delete<T>` метод передается только свойство ID.
 

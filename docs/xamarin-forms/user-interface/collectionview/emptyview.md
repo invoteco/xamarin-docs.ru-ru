@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: c6a2a53f267a7f6764ec441944193e8c5ecd9189
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739194"
 ---
 # <a name="xamarinforms-collectionview-emptyview"></a>CollectionView Емптивиев Xamarin. Forms
 
 ![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)определяет следующие свойства, которые можно использовать для предоставления отзывов пользователей, когда нет данных для показа:
 
@@ -55,7 +55,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 
 В результате, поскольку коллекция, привязанная к данным, `null`имеет значение, то строка, [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) заданная в качестве значения свойства, отображается следующим образом:
 
-[ ![Снимок экрана: вертикальный список CollectionView с пустым представлением текста, в iOS и Android](emptyview-images/null-itemssource.png "CollectionView Vertical List с пустым представлением текста") ] (emptyview-images/null-itemssource-large.png#lightbox "Вертикальный список CollectionView с пустым представлением текста")
+[![Снимок экрана: вертикальный список CollectionView с пустым представлением текста, в iOS и Android](emptyview-images/null-itemssource.png "Вертикальный список CollectionView с пустым представлением текста")](emptyview-images/null-itemssource-large.png#lightbox "Вертикальный список CollectionView с пустым представлением текста")
 
 ## <a name="display-views-when-data-is-unavailable"></a>Отображать представления, если данные недоступны
 
@@ -112,7 +112,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) Когда выполняет ,`FilterCommand`коллекция, отображаемая, фильтруется для условия поиска, хранящегося в свойстве. [`SearchBar`](xref:Xamarin.Forms.SearchBar) Если операция фильтрации не возвращает данные, то в [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) качестве значения свойства будет указан набор.
 
-[ ![Снимок экрана: вертикальный список CollectionView с настраиваемым пустым представлением в вертикальном списке iOS и Android](emptyview-images/filter-multiple-views.png "CollectionView с настраиваемым пустым представлением") ] (emptyview-images/filter-multiple-views-large.png#lightbox "Вертикальный список CollectionView с настраиваемым пустым представлением")
+[![Снимок экрана CollectionView списка с настраиваемым пустым представлением в iOS и Android](emptyview-images/filter-multiple-views.png "Вертикальный список CollectionView с настраиваемым пустым представлением")](emptyview-images/filter-multiple-views-large.png#lightbox "Вертикальный список CollectionView с настраиваемым пустым представлением")
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Отображать шаблонный пользовательский тип, если данные недоступны
 
@@ -178,7 +178,7 @@ public class FilterData : BindableObject
 
 Свойству задается `FilterData` объект, а `Filter` данные свойства привязываются к [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) свойству. [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) [`CollectionView`](xref:Xamarin.Forms.CollectionView) `Filter` Когда выполняет ,`FilterCommand`коллекция, отображаемая, фильтруется для условия поиска, хранящегося в свойстве. [`SearchBar`](xref:Xamarin.Forms.SearchBar) Если операция фильтрации не возвращает никаких данных, то [`Label`](xref:Xamarin.Forms.Label) отображается значение, заданное [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)в [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) свойстве, которое задается в качестве значения свойства.
 
-[ ![Снимок экрана CollectionViewого вертикального списка с пустым шаблоном представления в](emptyview-images/emptyviewtemplate.png "списке по вертикали iOS и Android CollectionView с пустым шаблоном представления") ] (emptyview-images/emptyviewtemplate-large.png#lightbox "Вертикальный список CollectionView с пустым шаблоном представления")
+[![Снимок экрана CollectionView списка с пустым шаблоном представления в iOS и Android](emptyview-images/emptyviewtemplate.png "Вертикальный список CollectionView с пустым шаблоном представления")](emptyview-images/emptyviewtemplate-large.png#lightbox "Вертикальный список CollectionView с пустым шаблоном представления")
 
 > [!NOTE]
 > При отображении пользовательского типа с шаблоном, когда данные недоступны, [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) свойству может быть присвоено представление, содержащее несколько дочерних представлений.
@@ -253,7 +253,7 @@ void ToggleEmptyView(bool isToggled)
 
 `ToggleEmptyView` Метод [`ContentView`](xref:Xamarin.Forms.ContentView) задает для свойства`collectionView`объектаодиниз двух [объектов`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) , хранящихся в, в зависимости от [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) значения свойства. [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) Когда выполняет ,`FilterCommand`коллекция, отображаемая, фильтруется для условия поиска, хранящегося в свойстве. [`SearchBar`](xref:Xamarin.Forms.SearchBar) Если операция фильтрации не возвращает никаких данных, то `ContentView` объект, заданный `EmptyView` как свойство, отображается следующим образом:
 
-[ ![Снимок экрана CollectionViewого вертикального списка с замененными пустыми представлениями в вертикальном списке iOS и Android](emptyview-images/swap.png "CollectionView с переключенными пустыми представлениями") ] (emptyview-images/swap-large.png#lightbox "Вертикальный список CollectionView с замененными пустыми представлениями")
+[![Снимок экрана CollectionViewого вертикального списка с замененными пустыми представлениями в iOS и Android](emptyview-images/swap.png "Вертикальный список CollectionView с замененными пустыми представлениями")](emptyview-images/swap-large.png#lightbox "Вертикальный список CollectionView с замененными пустыми представлениями")
 
 Дополнительные сведения о словарях ресурсов см. в статье [словари ресурсов Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
@@ -324,7 +324,7 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 Класс определяет `DefaultTemplate` свойства и`OtherTemplate` , [длякоторыхустановленыразныешаблоныданных.`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `SearchTermTemplateSelector` Переопределение возвращает `DefaultTemplate`, при котором пользователю выводится сообщение, если поисковый запрос не равен Xamarin. `OnSelectTemplate` Если поисковый запрос равен Xamarin, то `OnSelectTemplate` переопределение возвращает `OtherTemplate`, которое отображает базовое сообщение для пользователя:
 
-[ ![Снимок экрана: Выбор шаблона пустого представления среды выполнения CollectionView в iOS и]в(emptyview-images/datatemplateselector.png "среде выполнения Android пустое выделение шаблона представления в CollectionView") ] (emptyview-images/datatemplateselector-large.png#lightbox "Выбор шаблона пустого представления среды выполнения в CollectionView")
+[![Снимок экрана: Выбор шаблона пустого представления среды выполнения CollectionView в iOS и Android](emptyview-images/datatemplateselector.png "Выбор шаблона пустого представления среды выполнения в CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "Выбор шаблона пустого представления среды выполнения в CollectionView")
 
 Дополнительные сведения о селекторах шаблонов данных см. [в разделе Создание DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 

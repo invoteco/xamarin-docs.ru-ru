@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: 2142882add91d613263d11fa4c1e6d7ad142c7c7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68656007"
 ---
 # <a name="webview-zoom-on-android"></a>WebView Zoom в Android
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Эта платформа Android включает контроль [`WebView`](xref:Xamarin.Forms.WebView)сжатия и масштабирования для. Он используется в XAML путем задания `WebView.EnableZoomControls` свойству и `WebView.DisplayZoomControls` связываемым свойствам `boolean` значений:
 
@@ -47,7 +47,7 @@ webView.On<Android>()
 
 В результате можно включить [`WebView`](xref:Xamarin.Forms.WebView)сжатие сжатия в, и элементы управления масштабом можно заменять `WebView`на:
 
-[ ![Снимок экрана с масштабным WebView в Android](webview-zoom-controls-images/webview-zoom.png "Zoom WebView") ] (webview-zoom-controls-images/webview-zoom-large.png#lightbox "Масштабное WebView")
+[![Снимок экрана с масштабным WebView в Android](webview-zoom-controls-images/webview-zoom.png "Масштабное WebView")](webview-zoom-controls-images/webview-zoom-large.png#lightbox "Масштабное WebView")
 
 > [!IMPORTANT]
 > Элементы управления масштабом должны быть включены и отображены с помощью соответствующих связываемых свойств или методов, которые будут наложены [`WebView`](xref:Xamarin.Forms.WebView)на.

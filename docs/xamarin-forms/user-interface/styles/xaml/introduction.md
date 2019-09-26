@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 35f8dad3590c07ceb3c93aa735b8c02d75098498
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228170"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Общие сведения о стилях Xamarin. Forms
@@ -105,10 +105,10 @@ public class NoStylesPageCS : ContentPage
 
 Каждый [`Style`](xref:Xamarin.Forms.Style) экземпляр содержит коллекцию из одного или нескольких [`Setter`](xref:Xamarin.Forms.Setter) объектов [`Property`](xref:Xamarin.Forms.Setter.Property) , [`Value`](xref:Xamarin.Forms.Setter.Value)каждый `Setter` из которых имеет и. — Это имя привязываемого свойства элемента, к которому применяется стиль, `Value` а — это значение, которое применяется к свойству. `Property`
 
-Каждый [`Style`](xref:Xamarin.Forms.Style) экземпляр может быть *явным*или неявным:
+Каждый [`Style`](xref:Xamarin.Forms.Style) экземпляр может быть *явным*или *неявным*:
 
 - *Явный* [`Style`](xref:Xamarin.Forms.Style) экземпляр [`Style`](xref:Xamarin.Forms.NavigableElement.Style) определяется с помощью`x:Key` указания изначения`x:Key` , а также путем присвоения свойству целевого элемента ссылки. [`TargetType`](xref:Xamarin.Forms.Style.TargetType) Дополнительные сведения о *явных* стилях см. в разделе [явные стили](~/xamarin-forms/user-interface/styles/explicit.md).
-- Неявный [`Style`](xref:Xamarin.Forms.Style) экземпляр определяется [`TargetType`](xref:Xamarin.Forms.Style.TargetType)путем указания только. Затем `Style` экземпляр будет автоматически применен ко всем элементам этого типа. Обратите внимание, что в `TargetType` `Style` подклассах объекта не применяется автоматически. Дополнительные сведения о неявных стилях см. в разделе неявные [стили](~/xamarin-forms/user-interface/styles/implicit.md).
+- *Неявный* [`Style`](xref:Xamarin.Forms.Style) экземпляр определяется [`TargetType`](xref:Xamarin.Forms.Style.TargetType)путем указания только. Затем `Style` экземпляр будет автоматически применен ко всем элементам этого типа. Обратите внимание, что в `TargetType` `Style` подклассах объекта не применяется автоматически. Дополнительные сведения о *неявных* стилях см. в разделе [Неявные стили](~/xamarin-forms/user-interface/styles/implicit.md).
 
 При создании [`Style`](xref:Xamarin.Forms.Style) [`TargetType`](xref:Xamarin.Forms.Style.TargetType) свойство всегда является обязательным. В следующем примере кода показан *явный* стиль (Примечание), `x:Key`созданный в XAML:
 
@@ -128,7 +128,7 @@ public class NoStylesPageCS : ContentPage
 
 Стили более низкого уровня в иерархии представлений имеют приоритет над определенных выше вверх. Например, установка [ `Style` ](xref:Xamarin.Forms.Style) , задает [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) для `Red` приложения будут переопределены уровень стиль уровня страницы, который задает `Label.TextColor` для `Green`. Аналогичным образом стиль уровня будут переопределены уровня стиль элемента управления. Кроме того, если `Label.TextColor` свойство задано непосредственно для свойства элемента управления, это имеет приоритет над любыми стилями.
 
-В статьях этого раздела показано, как создавать и применять *явные* и неявные стили, как создавать глобальные стили, наследование стилей, как реагировать на изменения стиля во время выполнения, а также как использовать встроенные стили, входящие в Xamarin. Forms.
+В статьях этого раздела показано, как создавать и применять *явные* и *неявные* стили, как создавать глобальные стили, наследование стилей, как реагировать на изменения стиля во время выполнения, а также как использовать встроенные стили, входящие в Xamarin. Forms.
 
 > [!NOTE]
 > **Что такое Стилеид?**

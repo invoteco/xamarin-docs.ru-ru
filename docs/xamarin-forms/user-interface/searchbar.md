@@ -8,19 +8,19 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658026"
 ---
 # <a name="xamarinforms-searchbar"></a>Сеарчбар Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
 Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) — это элемент управления вводом пользователя, используемый для запуска поиска. `SearchBar` Элемент управления поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана `SearchBar` показан запрос с результатами, `ListView`отображаемыми в:
 
-[ ![Снимок экрана Сеарчбар в iOS и Android](searchbar-images/device-searchbars-cropped.png "Сеарчбар в iOS и Android") ] (searchbar-images/device-searchbars.png#lightbox "Сеарчбар в iOS и Android")
+[![Снимок экрана сеарчбар в iOS и Android](searchbar-images/device-searchbars-cropped.png "Сеарчбар в iOS и Android")](searchbar-images/device-searchbars.png#lightbox "Сеарчбар в iOS и Android")
 
 `SearchBar` Класс определяет следующие свойства:
 
@@ -82,7 +82,7 @@ SearchBar searchBar = new SearchBar
 
 На следующем снимке экрана показан `SearchBar` итоговый элемент управления:
 
-[ ![Снимок экрана настраиваемого Сеарчбар в iOS и Android],(searchbar-images/device-searchbars-styled-cropped.png "настроенном Сеарчбар в iOS и Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Настраиваемые сеарчбар в iOS и Android")
+[![Снимок экрана настраиваемого сеарчбар в iOS и Android](searchbar-images/device-searchbars-styled-cropped.png "Настраиваемые сеарчбар в iOS и Android")](searchbar-images/device-searchbars-styled.png#lightbox "Настраиваемые Сеарчбар в iOS и Android")
 
 ## <a name="perform-a-search-with-event-handlers"></a>Выполнение поиска с помощью обработчиков событий
 

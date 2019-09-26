@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887909"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Использование расширения разметки XAML
@@ -143,7 +143,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Ниже приведен пример, запущенный.
 
-[![Демонстрация x: Static](consuming-images/staticdemo-small.png "Демонстрация x: Static")](consuming-images/staticdemo-large.png#lightbox "Демонстрация x: Static")
+[![демонстрация] в виде x:Static (consuming-images/staticdemo-small.png "демонстрация") в виде x:Static](consuming-images/staticdemo-large.png#lightbox "Демонстрация в виде x:Static")
 
 <a name="reference" />
 
@@ -185,9 +185,9 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-Оба `x:Reference` выражения используйте сокращенную версию `ReferenceExtension` имя класса и исключить `Name=` часть выражения. В первом примере `x:Reference` расширение разметки, внедренного в `Binding` расширение разметки. Обратите внимание, что `Source` и `StringFormat` параметров разделяются запятыми. Вот ее запуск.
+Оба `x:Reference` выражения используйте сокращенную версию `ReferenceExtension` имя класса и исключить `Name=` часть выражения. В первом примере `x:Reference` расширение разметки, внедренного в `Binding` расширение разметки. Обратите внимание, что `Source` и `StringFormat` параметров разделяются запятыми. Вот работающая программа:
 
-[![Демонстрация x: Reference](consuming-images/referencedemo-small.png "Демонстрация x: Reference")](consuming-images/referencedemo-large.png#lightbox "Демонстрация x: Reference")
+[![демонстрация x:Reference](consuming-images/referencedemo-small.png "демонстрация x:Reference")](consuming-images/referencedemo-large.png#lightbox "Демонстрация x:Reference")
 
 <a name="type" />
 
@@ -242,7 +242,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Ниже приведен на главную страницу открытия в **расширения разметки**:
 
-[![Main страницы](consuming-images/mainpage-small.png "Main страницы")](consuming-images/mainpage-large.png#lightbox "главной страницы")
+[![Главная страница](consuming-images/mainpage-small.png "Главная страница")](consuming-images/mainpage-large.png#lightbox "Главная страница")
 
 Каждый `CommandParameter` свойству `x:Type` расширение разметки, которое ссылается на один из других страниц. `Command` Свойство привязано к свойству с именем `NavigateCommand`. Это свойство определено в `MainPage` файл с выделенным кодом:
 
@@ -325,7 +325,7 @@ public partial class TypeDemoPage : ContentPage
 
 Метод, который выполняется при `Button` нажата создает новый экземпляр аргумента, задает его `VerticalOptions` свойство и добавляет ее к `StackLayout`. Три `Button` элементы затем используют страницу с динамически созданным представления:
 
-[![Демонстрация x: Type](consuming-images/typedemo-small.png "Демонстрация x: Type")](consuming-images/typedemo-large.png#lightbox "Демонстрация x: Type")
+[![x:Type — демонстрация](consuming-images/typedemo-small.png "x:Type — демонстрация")](consuming-images/typedemo-large.png#lightbox "x:Type — демонстрация")
 
 <a name="array" />
 
@@ -382,7 +382,7 @@ public partial class TypeDemoPage : ContentPage
 
 `ViewCell` Создается простой `BoxView` для каждой записи цвет:
 
-[![Демонстрация x: Array](consuming-images/arraydemo-small.png "Демонстрация x: Array")](consuming-images/arraydemo-large.png#lightbox "Демонстрация x: Array")
+[![демонстрация Расx:Array](consuming-images/arraydemo-small.png "демонстрация Расx:Array")](consuming-images/arraydemo-large.png#lightbox "Демонстрация расx:Array")
 
 Существует несколько способов, чтобы указать отдельные `Color` элементов в этом массиве. Можно использовать `x:Static` расширение разметки:
 
@@ -453,9 +453,9 @@ public partial class TypeDemoPage : ContentPage
 
 Затем вы обнаружите, что для одного из `Label` элементов, требуется, чтобы все значения свойств в явном `Style` за исключением `FontFamily`, который вы хотите иметь значение по умолчанию. Вы можете определить другой `Style` для этой цели, но более простой подход заключается в задании `FontFamily` свойство конкретного `Label` для `x:Null`, как показано в центре `Label`.
 
-Вот ее запуск.
+Вот работающая программа:
 
-[![Демонстрация x: Null](consuming-images/nulldemo-small.png "Демонстрация x: Null")](consuming-images/nulldemo-large.png#lightbox "Демонстрация x: Null")
+[![демонстрация x:NULL](consuming-images/nulldemo-small.png "демонстрация x:NULL")](consuming-images/nulldemo-large.png#lightbox "Демонстрация x:Null")
 
 Обратите внимание, что, четыре из `Label` элементы имеют шрифт serif, но центре `Label` имеет шрифта без засечек по умолчанию.
 
@@ -497,9 +497,9 @@ public partial class TypeDemoPage : ContentPage
 
 В этом примере все три `OnPlatform` выражения используйте сокращенную версию `OnPlatformExtension` имя класса. Три `OnPlatform` набор расширений разметки [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), и [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) свойства [ `BoxView` ](xref:Xamarin.Forms.BoxView) в разные значения для iOS, Android и универсальной платформы Windows. Расширения разметки также предоставляют значения по умолчанию для этих свойств на платформах, которые не заданы, при этом Избавляясь от `Default=` часть выражения. Обратите внимание на то, что свойства расширения разметки, заданные разделяются запятыми.
 
-Вот ее запуск.
+Вот работающая программа:
 
-[![Демонстрация OnPlatform](consuming-images/onplatformdemo-small.png "Демонстрация OnPlatform")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
+[![Демонстрационная демонстрация](consuming-images/onplatformdemo-small.png "Демонстрационная демонстрация")](consuming-images/onplatformdemo-large.png#lightbox "Демонстрационная демонстрация")
 
 <a name="onidiom" />
 
@@ -535,9 +535,9 @@ public partial class TypeDemoPage : ContentPage
 
 В этом примере все три `OnIdiom` выражения используйте сокращенную версию `OnIdiomExtension` имя класса. Три `OnIdiom` набор расширений разметки [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), и [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) свойства [ `BoxView` ](xref:Xamarin.Forms.BoxView) в разные значения для phone, планшетных и настольных систем идиом. Расширения разметки также предоставляют значения по умолчанию для этих свойств на стили, которые не указаны, устраняя `Default=` часть выражения. Обратите внимание на то, что свойства расширения разметки, заданные разделяются запятыми.
 
-Вот ее запуск.
+Вот работающая программа:
 
-[![Демонстрация OnIdiom](consuming-images/onidiomdemo-small.png "Демонстрация OnIdiom")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
+[![Демонстрация Onidiomы](consuming-images/onidiomdemo-small.png "Демонстрация Onidiomы")](consuming-images/onidiomdemo-large.png#lightbox "Демонстрация onidiomы")
 
 ## <a name="datatemplate-markup-extension"></a>Расширение разметки DataTemplate
 
@@ -585,7 +585,7 @@ public partial class TypeDemoPage : ContentPage
 
 Вот работающая программа:
 
-[ ![Снимок экрана с демонстрацией расширения разметки фонтимаже](consuming-images/fontimagedemo.png "фонтимаже") ] (consuming-images/fontimagedemo-large.png#lightbox "Демонстрация фонтимаже")
+[![Снимок экрана расширения разметки фонтимаже](consuming-images/fontimagedemo.png "Демонстрация фонтимаже")](consuming-images/fontimagedemo-large.png#lightbox "Демонстрация Фонтимаже")
 
 Сведения о отображении значков шрифтов путем указания данных значка шрифта в `FontImageSource` объекте см. в разделе [Отображение значков шрифтов](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 

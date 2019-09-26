@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: f1a3e8bb8959588e64339f70268370440f356be9
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68738963"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Выбор CollectionView Xamarin. Forms
 
 ![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)определяет следующие свойства, управляющие выбором элемента:
 
@@ -82,7 +82,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 На следующих снимках экрана показан выбор одного элемента [`CollectionView`](xref:Xamarin.Forms.CollectionView)в:
 
-[ ![Снимок экрана: вертикальный список CollectionView с одним выделением в списке по вертикали для iOS и Android](selection-images/single-selection.png "CollectionView с одним выбором") ] (selection-images/single-selection-large.png#lightbox "Вертикальный список CollectionView с одним выделением")
+[![Снимок экрана с одним выделенным вертикальным списком CollectionView в iOS и Android](selection-images/single-selection.png "Вертикальный список CollectionView с одним выделением")](selection-images/single-selection-large.png#lightbox "Вертикальный список CollectionView с одним выделением")
 
 ## <a name="multiple-selection"></a>Выбор нескольких элементов
 
@@ -125,7 +125,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 На следующих снимках экрана показано выделение нескольких элементов [`CollectionView`](xref:Xamarin.Forms.CollectionView)в:
 
-[ ![Снимок экрана: вертикальный список CollectionView с множественным выделением, в списках iOS и Android](selection-images/multiple-selection.png "CollectionView по вертикали с множественным выделением") ] (selection-images/multiple-selection-large.png#lightbox "Вертикальный список CollectionView с множественным выделением")
+[![Снимок экрана: вертикальный список CollectionView с множественным выделением в iOS и Android](selection-images/multiple-selection.png "Вертикальный список CollectionView с множественным выделением")](selection-images/multiple-selection-large.png#lightbox "Вертикальный список CollectionView с множественным выделением")
 
 ## <a name="single-pre-selection"></a>Один предварительный выбор
 
@@ -188,7 +188,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 Таким образом, когда [`CollectionView`](xref:Xamarin.Forms.CollectionView) появится четвертый элемент в списке, он будет предварительно выбран:
 
-[ ![Снимок экрана CollectionViewного вертикального списка с одним предварительным выбором, в](selection-images/single-pre-selection.png "списке по вертикали iOS и Android CollectionView с одним предварительным выбором") ] (selection-images/single-pre-selection-large.png#lightbox "Вертикальный список CollectionView с одним предварительным выбором")
+[![Снимок экрана CollectionViewого вертикального списка с одним предварительным выбором, в iOS и Android](selection-images/single-pre-selection.png "Вертикальный список CollectionView с одним предварительным выбором")](selection-images/single-pre-selection-large.png#lightbox "Вертикальный список CollectionView с одним предварительным выбором")
 
 ## <a name="multiple-pre-selection"></a>Множественный предварительный выбор
 
@@ -256,7 +256,7 @@ namespace CollectionViewDemos.ViewModels
 
 Таким образом, при [`CollectionView`](xref:Xamarin.Forms.CollectionView) появлении второго, четвертого и пятого элементов в списке будут предварительно выбраны:
 
-[ ![Снимок экрана: вертикальный список CollectionView с несколькими предварительными выбранными элементами в списке по вертикали для iOS и Android](selection-images/multiple-pre-selection.png "CollectionView с несколькими предварительными вариантами") ] (selection-images/multiple-pre-selection-large.png#lightbox "Вертикальный список CollectionView с несколькими предварительными выбранными") элементами
+[![Снимок экрана: вертикальный список CollectionView с несколькими предварительными выбранными элементами в iOS и Android](selection-images/multiple-pre-selection.png "Вертикальный список CollectionView с несколькими предварительными выбранными") элементами](selection-images/multiple-pre-selection-large.png#lightbox "Вертикальный список CollectionView с несколькими предварительными выбранными элементами")
 
 ## <a name="clearing-selections"></a>Очистка выделенных элементов
 
@@ -305,7 +305,7 @@ namespace CollectionViewDemos.ViewModels
 
 В этом примере [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) свойству присваивается значение `Grid` , поскольку корневым [`Grid`](xref:Xamarin.Forms.Grid)элементом [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) объекта является. `Selected` `LightSkyBlue`Указывает, [что`CollectionView`](xref:Xamarin.Forms.CollectionView) при [выборе`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) элемента в параметре для элемента будет установлено значение: [`VisualState`](xref:Xamarin.Forms.VisualState)
 
-[![Снимок экрана CollectionView вертикальный список пользовательских одного выделения цветом, в iOS и Android](selection-images/single-selection-color.png "CollectionView вертикальный список пользовательских одного выделения цветом")](selection-images/single-selection-color-large.png#lightbox "Вертикальный список CollectionView пользовательских одного выделения цветом")
+[![Снимок экрана CollectionViewого вертикального списка с пользовательским цветом одного выделения в iOS и Android](selection-images/single-selection-color.png "Вертикальный список CollectionView с пользовательским одним цветом выделения")](selection-images/single-selection-color-large.png#lightbox "Вертикальный список CollectionView с пользовательским одним цветом выделения")
 
 Дополнительные сведения о визуальных состояниях см. в разделе [Диспетчер визуальных состояний Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 

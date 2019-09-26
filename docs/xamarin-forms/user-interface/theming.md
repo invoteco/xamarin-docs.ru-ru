@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
 ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69529288"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Их применение в приложении Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Приложения Xamarin. Forms могут динамически реагировать на изменения стиля во время выполнения с `DynamicResource` помощью расширения разметки. Это расширение разметки аналогично `StaticResource` расширению разметки в том, что оба используют ключ словаря для выборки значения [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)из. Однако, хотя `StaticResource` расширение разметки выполняет поиск по одному словарю `DynamicResource` , расширение разметки сохраняет ссылку на ключ словаря. Таким образом, если значение, связанное с ключом, заменяется, это изменение применяется [`VisualElement`](xref:Xamarin.Forms.VisualElement)к. Это позволяет реализовать среду выполнения в приложениях Xamarin. Forms.
 
@@ -29,7 +29,7 @@ ms.locfileid: "69529288"
 
 На следующих снимках экрана показаны страницы с темами и приложение iOS с использованием светлой темы и приложения Android с использованием темной темы:
 
-[![Снимок экрана: Главная страница приложения с темой, в iOS и Android] (theming-images/main-page-both-themes.png "Главная страница приложения с темой") ] (theming-images/main-page-both-themes-large.png#lightbox "Главная страница приложения с темой") Снимок экрана [ ![со страницей сведений в приложении с темой, на](theming-images/detail-page-both-themes.png "странице сведений о приложениях")iOS и Android на](theming-images/detail-page-both-themes-large.png#lightbox "странице сведений о приложении с темой") 
+[![Снимок экрана: Главная страница приложения с темой, в iOS и Android] (theming-images/main-page-both-themes.png "Главная страница приложения с темой") ](theming-images/main-page-both-themes-large.png#lightbox "Главная страница приложения с темой") Снимок экрана [ ![со страницей сведений в приложении с темой, на](theming-images/detail-page-both-themes.png "странице сведений о") iOS и Android в приложении с темой](theming-images/detail-page-both-themes-large.png#lightbox "Страница сведений о приложении с темой") 
 
 
 ## <a name="define-themes"></a>Определение тем

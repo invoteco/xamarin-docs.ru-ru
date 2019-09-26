@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888547"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Данные CollectionView в Xamarin. Forms
 
 ![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)определяет следующие свойства, определяющие отображаемые данные, и его внешний вид:
 
@@ -76,11 +76,11 @@ collectionView.ItemsSource = new string[]
 
 По умолчанию [`CollectionView`](xref:Xamarin.Forms.CollectionView) отображает элементы в вертикальном списке, как показано на следующих снимках экрана:
 
-[ ![Снимок экрана CollectionView, содержащий текстовые элементы, в текстовых элементах iOS и Android](populate-data-images/text.png "в CollectionView") ] (populate-data-images/text-large.png#lightbox "Текстовые элементы в CollectionView")
+[![Снимок экрана CollectionView, содержащий текстовые элементы, в iOS и Android](populate-data-images/text.png "Текстовые элементы в CollectionView")](populate-data-images/text-large.png#lightbox "Текстовые элементы в CollectionView")
 
 Сведения о том, как изменить [`CollectionView`](xref:Xamarin.Forms.CollectionView) макет, см. в разделе [Определение макета](layout.md). Сведения о том `CollectionView`, как определить внешний вид каждого элемента в, см. в разделе [Определение внешнего вида элемента](#define-item-appearance).
 
-### <a name="data-binding"></a>Привязка данных
+### <a name="data-binding"></a>привязка данных,
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)может заполняться данными с помощью привязки данных для привязки своего [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) свойства `IEnumerable` к коллекции. В XAML это достигается с помощью `Binding` расширения разметки:
 
@@ -186,7 +186,7 @@ public class Monkey
 
 На следующих снимках экрана показан результат создания шаблонов каждого элемента в списке:
 
-[ ![Снимок экрана CollectionView, где размещается каждый элемент, в шаблонных элементах iOS и Android](populate-data-images/datatemplate.png "в CollectionView") ] (populate-data-images/datatemplate-large.png#lightbox "Элементы шаблона в CollectionView")
+[![Снимок экрана CollectionView, где для каждого элемента используется шаблон, в iOS и Android](populate-data-images/datatemplate.png "Элементы шаблона в CollectionView")](populate-data-images/datatemplate-large.png#lightbox "Элементы шаблона в CollectionView")
 
 Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -243,7 +243,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 Класс определяет `AmericanMonkey` свойства и`OtherMonkey` , [длякоторыхустановленыразныешаблоныданных.`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `MonkeyDataTemplateSelector` Переопределение`AmericanMonkey` Возвращает шаблон, который отображает имя и расположение обезьяны в синем, если имя обезьяны содержит "America". `OnSelectTemplate` Если имя обезьяны не содержит "America", то `OnSelectTemplate` переопределение `OtherMonkey` Возвращает шаблон, который отображает имя и расположение обезьяны в серебристом виде:
 
-[ ![Снимок экрана: Выбор шаблона элемента среды выполнения CollectionView,](populate-data-images/datatemplateselector.png "Выбор шаблона элемента среды выполнения") iOS и Android в CollectionView] (populate-data-images/datatemplateselector-large.png#lightbox "Выбор шаблона элемента среды выполнения в CollectionView")
+[![Снимок экрана выбора шаблона элемента среды выполнения CollectionView в iOS и Android](populate-data-images/datatemplateselector.png "Выбор шаблона элемента среды выполнения в CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Выбор шаблона элемента среды выполнения в CollectionView")
 
 Дополнительные сведения о селекторах шаблонов данных см. [в разделе Создание DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 

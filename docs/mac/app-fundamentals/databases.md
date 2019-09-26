@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70769912"
 ---
 # <a name="databases-in-xamarinmac"></a>Базы данных в Xamarin. Mac
@@ -532,7 +532,7 @@ public void Create(SqliteConnection conn) {
 command.CommandText = "INSERT INTO [People] (ID, Name, Occupation, isManager, ManagerID) VALUES (@COL1, @COL2, @COL3, @COL4, @COL5)";
 ```
 
-Позже мы задали значения для параметров с помощью `Parameters.AddWithValue` метода `SQLiteCommand`в. С помощью параметров мы гарантируете, что значения (такие как одинарные кавычки) будут правильно кодироваться перед отправкой в SQLite. Пример
+Позже мы задали значения для параметров с помощью `Parameters.AddWithValue` метода `SQLiteCommand`в. С помощью параметров мы гарантируете, что значения (такие как одинарные кавычки) будут правильно кодироваться перед отправкой в SQLite. Пример:
 
 ```csharp
 command.Parameters.AddWithValue ("@COL1", ID);

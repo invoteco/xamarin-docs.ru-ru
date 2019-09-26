@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 242673efb38931eb678432a28f24db0ad9b8cb7d
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228215"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms карты
@@ -25,7 +25,7 @@ Xamarin.Forms.Maps использует карту собственного API-
 
 Элемент управления map был использован в [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) пример, как показано ниже.
 
- [![Карты в образце MobileCRM](map-images/maps-zoom-sml.png "пример элемента управления Map")](map-images/maps-zoom.png#lightbox "пример элемента управления Map")
+ [![Карты в образце мобилекрм](map-images/maps-zoom-sml.png "Пример Map Control")](map-images/maps-zoom.png#lightbox "Пример Map Control")
 
 Функциональностью карты можно улучшить путем создания [сопоставить пользовательское средство отрисовки](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -201,7 +201,7 @@ slider.ValueChanged += (sender, e) =>
 };
 ```
 
-[![Карты с zoom](map-images/maps-zoom-sml.png "масштаб элемента управления Map")](map-images/maps-zoom.png#lightbox "масштаб элемента управления Map")
+[![Карты с масштабом](map-images/maps-zoom-sml.png "Масштаб Map Control")](map-images/maps-zoom.png#lightbox "Масштаб Map Control")
 
 Кроме того [`Map`](xref:Xamarin.Forms.Maps.Map) , класс `MoveToLastRegionOnLayoutChange` имеет свойство типа `bool`, которое поддерживается связываемым свойством. По умолчанию это свойство `true`имеет значение, которое указывает, что отображаемая область отображения будет перемещена из текущей области в ее ранее заданную область при изменении макета, например при смене устройства. Если для `false`этого свойства задано значение, отображаемая область отображения останется в центре при изменении макета. В следующем примере показано задание этого свойства:
 
@@ -324,7 +324,7 @@ MyMap.MoveToRegion(
 
 На следующих снимках экрана [`Map`](xref:Xamarin.Forms.Maps.Map) показано, [`Pin`](xref:Xamarin.Forms.Maps.Pin) как отобразить коллекцию с помощью привязки данных:
 
-[ ![Снимок экрана с привязками к данным на карте iOS и Android](map-images/pins-itemssource.png "с закрепленными данными") ] (map-images/pins-itemssource-large.png#lightbox "Сопоставьте с закрепленными данными")
+[![Снимок экрана с привязками к данным в iOS и Android](map-images/pins-itemssource.png "Сопоставьте с закрепленными данными")](map-images/pins-itemssource-large.png#lightbox "Сопоставьте с закрепленными данными")
 
 ### <a name="choose-item-appearance-at-runtime"></a>Выбор внешнего вида элемента во время выполнения
 

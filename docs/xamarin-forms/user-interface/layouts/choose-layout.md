@@ -8,21 +8,21 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69894001"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Выбор макета Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Классы макета Xamarin. Forms позволяют упорядочивать и группировать элементы управления ИП в приложении. Выбор класса макета требует знания того, как макет позиционирует свои дочерние элементы, и как макет изменяет свои дочерние элементы. Кроме того, может потребоваться вложение макетов для создания желаемого макета.
 
 На следующем рисунке показаны типичные макеты, которые можно достичь с помощью основных классов макета Xamarin. Forms:
 
-[ ![Основные классы макета в классах макета Xamarin. Forms](images/layouts.png "Xamarin. Forms") ] (images/layouts-large.png#lightbox "Классы макета Xamarin. Forms")
+[![Основные классы макета в Xamarin. Forms](images/layouts.png "Классы макета Xamarin. Forms")](images/layouts-large.png#lightbox "Классы макета Xamarin. Forms")
 
 ## <a name="stacklayout"></a>StackLayout
 

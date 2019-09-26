@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70760222"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Введение в разработку корпоративных приложений
@@ -89,7 +89,7 @@ ms.locfileid: "70760222"
 
 В этом руководством рассматривается создание кросс-платформенных корпоративных приложений с помощью Xamarin. Forms и использование мобильного приложения eShopOnContainers в качестве примера. На рис. 1-2 показаны страницы из мобильного приложения eShopOnContainers, которые предоставляют функциональные возможности, описанные выше.
 
-[ ![(introduction-images/screenshots.png " ")]Мобильное приложение eShopOnContainers] (introduction-images/screenshots-large.png#lightbox "Мобильное приложение eShopOnContainers")
+[![](introduction-images/screenshots.png "Мобильное приложение eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "Мобильное приложение eShopOnContainers")
 
 **Рис. 1-2**. Мобильное приложение eShopOnContainers
 

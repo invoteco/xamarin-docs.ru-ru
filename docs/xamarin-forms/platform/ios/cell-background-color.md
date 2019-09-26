@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68651374"
 ---
 # <a name="cell-background-color-on-ios"></a>Цвет фона ячейки в iOS
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Эта платформа iOS задает цвет фона по умолчанию для [`Cell`](xref:Xamarin.Forms.Cell) экземпляров. Он используется в XAML путем установки `Cell.DefaultBackgroundColor` свойства [`Color`](xref:Xamarin.Forms.Color)BIND в значение:
 
@@ -56,7 +56,7 @@ viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 
 В результате в качестве цвета фона в [`Cell`](xref:Xamarin.Forms.Cell) можно задать определенное [`Color`](xref:Xamarin.Forms.Color)значение:
 
-[ ![Снимок экрана: ячейки заголовка синего группы в ListView iOS](cell-background-color-images/group-header-cell-color.png "с синей ячейкой заголовка группы") ] (cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView с синей ячейкой заголовка группы")
+[![Снимок экрана: ячейки заголовка синего группы в iOS](cell-background-color-images/group-header-cell-color.png "ListView с синей ячейкой заголовка группы")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView с синей ячейкой заголовка группы")
 
 ## <a name="related-links"></a>Связанные ссылки
 

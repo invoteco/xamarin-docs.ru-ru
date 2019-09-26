@@ -8,21 +8,21 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2019
 ms.openlocfilehash: 14abf2e7eff64d2e3e9656bf1ca76f4cee615408
-ms.sourcegitcommit: 5ef92b44f0d10c58013d3c3dd6283509f1499587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69986074"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Введение в Xamarin. Forms CollectionView
 
 ![Сейчас этот API предварительно выпущен](~/media/shared/preview.png)
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 Представление [`CollectionView`](xref:Xamarin.Forms.CollectionView) служит для вывода списков данных с различными спецификациями макета. Она нацелена на предоставление более гибкой и производительной альтернативы [`ListView`](xref:Xamarin.Forms.ListView). Например, на следующих снимках экрана показан `CollectionView` объект, использующий вертикальную сетку двух столбцов и допускающий множественный выбор:
 
-[ ![Снимок экрана: вертикальный макет сетки CollectionView, в iOS и Android](introduction-images/verticalgrid-multipleselection.png "CollectionView вертикальная сетка с множественным выделением") ] (introduction-images/verticalgrid-multipleselection-large.png#lightbox "Вертикальный макет сетки CollectionView с множественным выделением")
+[![Снимок экрана с вертикальным макетом сетки CollectionView в iOS и Android](introduction-images/verticalgrid-multipleselection.png "Вертикальный макет сетки CollectionView с множественным выделением")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "Вертикальный макет сетки CollectionView с множественным выделением")
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)доступна в Xamarin. Forms 4,0. Однако в настоящее время он эксперименталь и может использоваться только путем добавления следующей строки кода в `AppDelegate` класс в iOS или `MainActivity` в класс в Android перед вызовом `Forms.Init`:
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
 ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739145"
 ---
 # <a name="xamarinforms-checkbox"></a>Флажок Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
 Xamarin. Forms `CheckBox` — это тип кнопки, которая может быть либо установлена, либо пустой. Если флажок установлен, он считается включенным. Если флажок пуст, он считается отключенным.
 
@@ -108,7 +108,7 @@ checkBox.CheckedChanged += (sender, e) =>
 
 На приведенных ниже снимках экрана в iOS отображается [`Label`](xref:Xamarin.Forms.Label) форматирование, `CheckBox` когда пусто, а `Label` на снимке экрана Android `CheckBox` отображается форматирование при проверке.
 
-[ ![Снимок экрана: флажок "привязка данных" на устройстве iOS и Android](checkbox-images/checkbox-databinding.png "с привязкой к данным") ] (checkbox-images/checkbox-databinding-large.png#lightbox "Флажок привязки данных")
+[![Снимок экрана: флажок привязки данных в iOS и Android](checkbox-images/checkbox-databinding.png "Флажок привязки данных")](checkbox-images/checkbox-databinding-large.png#lightbox "Флажок привязки данных")
 
 Дополнительные сведения о триггерах см. в разделе [триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 

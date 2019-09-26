@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70769994"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Привязка данных и кодирование значений ключа в Xamarin. Mac
@@ -173,7 +173,7 @@ Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
 
 Дополнительные сведения см. [в статье Введение в знакомство с руководством по программированию](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i)для Apple.
 
-## <a name="data-binding"></a>Привязка данных
+## <a name="data-binding"></a>привязка данных,
 
 В следующих разделах показано, как можно использовать кодирование значений и ключ-значение для привязки данных к элементам пользовательского интерфейса в Interface Builder Xcode вместо чтения и записи значений с помощью C# кода. Таким образом, _модель данных_ отделяется от представлений, используемых для их отображения, что делает приложение Xamarin. Mac более гибким и удобным в обслуживании. Кроме того, значительно сокращается объем кода, который должен быть написан.
 

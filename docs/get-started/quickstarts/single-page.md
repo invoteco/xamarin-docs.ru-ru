@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68654997"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Создание одной страницы приложения Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 В этом кратком руководстве вы узнаете, как выполнять следующие задачи:
 
@@ -28,7 +28,7 @@ ms.locfileid: "68654997"
 
 Краткое руководство посвящено созданию кросс-платформенного приложения Xamarin. Forms, которое позволяет ввести примечание и сохранить его в хранилище устройств. Ниже показано итоговое приложение:
 
-[![](single-page-images/screenshots-sml.png "Приложение «Заметки»")](single-page-images/screenshots.png#lightbox "Приложение «Заметки»")
+[![](single-page-images/screenshots-sml.png "Приложение Notes")](single-page-images/screenshots.png#lightbox "Приложение Notes")
 
 ::: zone pivot="windows"
 
@@ -144,7 +144,7 @@ ms.locfileid: "68654997"
     }
     ```
 
-    Этот код определяет поле `_fileName`, которое ссылается на файл с именем `notes.txt`, где будут храниться данные с заметками в локальной папке данных для приложения. При выполнении конструктора страниц файл считывается, если он существует, и отображается в [`Editor`](xref:Xamarin.Forms.Editor). При нажатии кнопки **Сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который сохраняет содержимое `Editor` в файле. При нажатии кнопки **Удалить** `Button` выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл при условии, что он существует, и весь текст из `Editor`. Дополнительные сведения о взаимодействии с пользователем см. в разделе [реагирование на действия пользователя](deepdive.md#responding-to-user-interaction) в кратком руководстве по [Xamarin. Forms](deepdive.md).
+    Этот код определяет поле `_fileName`, которое ссылается на файл с именем `notes.txt`, где будут храниться данные с заметками в локальной папке данных для приложения. При выполнении конструктора страниц файл считывается, если он существует, и отображается в [`Editor`](xref:Xamarin.Forms.Editor). При нажатии кнопки **Сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который сохраняет содержимое `Editor` в файле. При нажатии кнопки **Удалить** `Button` выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл при условии, что он существует, и весь текст из `Editor`. Дополнительные сведения о взаимодействии с пользователем см. в разделе [реагирование на действия пользователя](deepdive.md#responding-to-user-interaction) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в файле **MainPage.xaml.cs**, нажав клавиши **CTRL+S**, и закройте файл.
 
@@ -177,7 +177,7 @@ ms.locfileid: "68654997"
 
     ![](single-page-images/vs/ios-start.png "Панель инструментов Visual Studio для iOS")
 
-    Примечания в симуляторе iOS [ ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Примечания в симуляторе iOS")
+    [![](single-page-images/vs/notes-ios.png "Примечания в симуляторе iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Примечания в симуляторе iOS")
 
     Введите примечание и нажмите кнопку **Сохранить**.
 
@@ -294,7 +294,7 @@ ms.locfileid: "68654997"
     }
     ```
 
-    Этот код определяет поле `_fileName`, которое ссылается на файл с именем `notes.txt`, где будут храниться данные с заметками в локальной папке данных для приложения. При выполнении конструктора страниц файл считывается, если он существует, и отображается в [`Editor`](xref:Xamarin.Forms.Editor). При нажатии кнопки **Сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который сохраняет содержимое `Editor` в файле. При нажатии кнопки **Удалить** `Button` выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл при условии, что он существует, и весь текст из `Editor`. Дополнительные сведения о взаимодействии с пользователем см. в разделе [реагирование на действия пользователя](deepdive.md#responding-to-user-interaction) в кратком руководстве по [Xamarin. Forms](deepdive.md).
+    Этот код определяет поле `_fileName`, которое ссылается на файл с именем `notes.txt`, где будут храниться данные с заметками в локальной папке данных для приложения. При выполнении конструктора страниц файл считывается, если он существует, и отображается в [`Editor`](xref:Xamarin.Forms.Editor). При нажатии кнопки **Сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который сохраняет содержимое `Editor` в файле. При нажатии кнопки **Удалить** `Button` выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл при условии, что он существует, и весь текст из `Editor`. Дополнительные сведения о взаимодействии с пользователем см. в разделе [реагирование на действия пользователя](deepdive.md#responding-to-user-interaction) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в файле **MainPage.xaml.cs**, нажав клавиши **CTRL+S**, и закройте файл.
 
@@ -327,7 +327,7 @@ ms.locfileid: "68654997"
 
     ![](single-page-images/vs/ios-start.png "Панель инструментов Visual Studio для iOS")
 
-    Примечания в симуляторе iOS [ ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Примечания в симуляторе iOS")
+    [![](single-page-images/vs/notes-ios.png "Примечания в симуляторе iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Примечания в симуляторе iOS")
 
     Введите примечание и нажмите кнопку **Сохранить**.
 
@@ -448,7 +448,7 @@ ms.locfileid: "68654997"
     }
     ```
 
-    Этот код определяет поле `_fileName`, которое ссылается на файл с именем `notes.txt`, где будут храниться данные с заметками в локальной папке данных для приложения. При выполнении конструктора страниц файл считывается, если он существует, и отображается в [`Editor`](xref:Xamarin.Forms.Editor). При нажатии кнопки **Сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который сохраняет содержимое `Editor` в файле. При нажатии кнопки **Удалить** `Button` выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл при условии, что он существует, и весь текст из `Editor`. Дополнительные сведения о взаимодействии с пользователем см. в разделе [реагирование на действия пользователя](deepdive.md#responding-to-user-interaction) в кратком руководстве по [Xamarin. Forms](deepdive.md).
+    Этот код определяет поле `_fileName`, которое ссылается на файл с именем `notes.txt`, где будут храниться данные с заметками в локальной папке данных для приложения. При выполнении конструктора страниц файл считывается, если он существует, и отображается в [`Editor`](xref:Xamarin.Forms.Editor). При нажатии кнопки **Сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который сохраняет содержимое `Editor` в файле. При нажатии кнопки **Удалить** `Button` выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл при условии, что он существует, и весь текст из `Editor`. Дополнительные сведения о взаимодействии с пользователем см. в разделе [реагирование на действия пользователя](deepdive.md#responding-to-user-interaction) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **MainPage.xaml.cs**, выбрав **Файл > Сохранить** (или нажав клавиши **&#8984; + S**), а затем закройте файл.
 
@@ -468,7 +468,7 @@ ms.locfileid: "68654997"
 
       ![](single-page-images/vsmac/start.png "Панель инструментов Visual Studio для Mac")
 
-      Примечания в симуляторе iOS [ ![(single-page-images/vsmac/notes-ios.png " ")]] (single-page-images/vsmac/notes-ios-large.png#lightbox "Примечания в симуляторе iOS")
+      [![](single-page-images/vsmac/notes-ios.png "Примечания в симуляторе iOS")](single-page-images/vsmac/notes-ios-large.png#lightbox "Примечания в симуляторе iOS")
 
     Введите примечание и нажмите кнопку **Сохранить**.
 

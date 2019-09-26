@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888639"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Прокрутка Xamarin. Forms CollectionView
 
 ![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)определяет два [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) метода: прокрутка элементов в представление. Одна из перегрузок прокручивается элемент по указанному индексу в представление, а другой Прокручивает указанный элемент в представление. Обе перегрузки имеют дополнительные аргументы, которые можно указать, чтобы указать точную позицию элемента после завершения прокрутки и следует ли анимировать прокрутку.
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)Определяет событие, которое возникает при вызове одного [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) из методов. [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) `IsAnimated` `Index` `Item` `ScrollToPosition`Объект, `ScrollToRequested` сопровождающий событие, имеет множество свойств, включая,, и. [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) Эти свойства задаются из аргументов, указанных в `ScrollTo` вызовах метода.
 
-Кроме того, [`CollectionView`](xref:Xamarin.Forms.CollectionView) `Scrolled` определяет событие, которое срабатывает для указания на то, что произошла прокрутка. `ItemsViewScrolledEventArgs` Объект, `Scrolled` сопровождающий событие, имеет много свойств. Дополнительные сведения см. в разделе [Определение](#detect-scrolling)прокрутки.
+Кроме того, [`CollectionView`](xref:Xamarin.Forms.CollectionView) `Scrolled` определяет событие, которое срабатывает для указания на то, что произошла прокрутка. `ItemsViewScrolledEventArgs` Объект, `Scrolled` сопровождающий событие, имеет много свойств. Дополнительные сведения см. в разделе [Определение прокрутки](#detect-scrolling).
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)также определяет `ItemsUpdatingScrollMode` свойство, представляющее поведение `CollectionView` прокрутки при добавлении новых элементов к нему. Дополнительные сведения об этом свойстве см. в разделе [управление позицией прокрутки при добавлении новых элементов](#control-scroll-position-when-new-items-are-added).
 
@@ -115,7 +115,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 В этом примере кода создается минимальная прокрутка, необходимая для прокрутки элемента на представление:
 
-[ ![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении, в iOS и Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView Vertical List с прокруткой элемента") ] (scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
+[![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении в iOS и Android](scrolling-images/scrolltoposition-makevisible.png "Вертикальный список CollectionView с прокруткой элемента")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
 
 > [!NOTE]
 > Элемент используется по умолчанию, `position` Если аргумент `ScrollTo` не указан при вызове метода. [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition)
@@ -130,7 +130,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Этот пример кода приводит к прокрутке элемента до начала представления:
 
-[ ![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении, в iOS и Android](scrolling-images/scrolltoposition-start.png "CollectionView Vertical List с прокруткой элемента") ] (scrolling-images/scrolltoposition-start-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
+[![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении в iOS и Android](scrolling-images/scrolltoposition-start.png "Вертикальный список CollectionView с прокруткой элемента")](scrolling-images/scrolltoposition-start-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
 
 ### <a name="center"></a>Центр
 
@@ -142,7 +142,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 В этом примере кода показано, что элемент прокручивается в центр представления:
 
-[ ![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении, в iOS и Android](scrolling-images/scrolltoposition-center.png "CollectionView Vertical List с прокруткой элемента") ] (scrolling-images/scrolltoposition-center-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
+[![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении в iOS и Android](scrolling-images/scrolltoposition-center.png "Вертикальный список CollectionView с прокруткой элемента")](scrolling-images/scrolltoposition-center-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
 
 ### <a name="end"></a>Конец
 
@@ -154,7 +154,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Этот пример кода приводит к прокрутке элемента до конца представления:
 
-[ ![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении, в iOS и Android](scrolling-images/scrolltoposition-end.png "CollectionView Vertical List с прокруткой элемента") ] (scrolling-images/scrolltoposition-end-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
+[![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении в iOS и Android](scrolling-images/scrolltoposition-end.png "Вертикальный список CollectionView с прокруткой элемента")](scrolling-images/scrolltoposition-end-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
 
 ## <a name="disable-scroll-animation"></a>Отключить анимацию прокрутки
 
@@ -211,7 +211,7 @@ CollectionView collectionView = new CollectionView
 
 По умолчанию [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) свойство имеет `SnapPointsType.None`значение, которое гарантирует, что прокрутка не привязывает элементы, как показано на следующих снимках экрана:
 
-[ ![Снимок экрана: вертикальный список CollectionView без точек привязки, в iOS и Android](scrolling-images/snappoints-none.png "CollectionView по вертикали без точек привязки") ] (scrolling-images/snappoints-none-large.png#lightbox "Вертикальный список CollectionView без точек привязки")
+[![Снимок экрана с вертикальным списком CollectionView без точек привязки в iOS и Android](scrolling-images/snappoints-none.png "Вертикальный список CollectionView без точек привязки")](scrolling-images/snappoints-none-large.png#lightbox "Вертикальный список CollectionView без точек привязки")
 
 ### <a name="snap-points-alignment"></a>Выравнивание точек привязки
 
@@ -264,7 +264,7 @@ CollectionView collectionView = new CollectionView
 
 Когда пользователь настраивается для инициации прокрутки, верхний элемент будет соответствовать верхней части представления:
 
-[ ![Снимок экрана: CollectionView вертикальный список с точками привязки для запуска, в iOS и Android](scrolling-images/snappoints-start.png "CollectionView в вертикальном списке с начальной точкой привязки") ] (scrolling-images/snappoints-start-large.png#lightbox "Вертикальный список CollectionView с начальной точкой привязки")
+[![Снимок экрана с CollectionView вертикальным списком с точками привязки для запуска в iOS и Android](scrolling-images/snappoints-start.png "Вертикальный список CollectionView с начальной точкой привязки")](scrolling-images/snappoints-start-large.png#lightbox "Вертикальный список CollectionView с начальной точкой привязки")
 
 #### <a name="center"></a>Центр
 
@@ -308,7 +308,7 @@ CollectionView collectionView = new CollectionView
 
 Когда пользователь настраивается для инициации прокрутки, верхний элемент выравнивается по центру в верхней части представления:
 
-[ ![Снимок экрана CollectionView списка с центральными точками привязки, в iOS и Android CollectionView в](scrolling-images/snappoints-center.png "вертикальном списке с центральными точками привязки") ] (scrolling-images/snappoints-center-large.png#lightbox "Вертикальный список CollectionView с центральными точками привязки")
+[![Снимок экрана с вертикальным CollectionView списком с центральными точками привязки в iOS и Android](scrolling-images/snappoints-center.png "Вертикальный список CollectionView с центральными точками привязки")](scrolling-images/snappoints-center-large.png#lightbox "Вертикальный список CollectionView с центральными точками привязки")
 
 #### <a name="end"></a>Конец
 
@@ -352,7 +352,7 @@ CollectionView collectionView = new CollectionView
 
 Когда пользователь настраивается для инициации прокрутки, нижний элемент будет соответствовать нижней части представления:
 
-[ ![Снимок экрана: вертикальный список CollectionView с конечными точками привязки, в iOS и Android CollectionView в](scrolling-images/snappoints-end.png "вертикальном списке с конечными точками привязки") ] (scrolling-images/snappoints-end-large.png#lightbox "Вертикальный список CollectionView с конечными точками привязки")
+[![Снимок экрана с CollectionView вертикальным списком с конечными точками привязки в iOS и Android](scrolling-images/snappoints-end.png "Вертикальный список CollectionView с конечными точками привязки")](scrolling-images/snappoints-end-large.png#lightbox "Вертикальный список CollectionView с конечными точками привязки")
 
 ## <a name="related-links"></a>Связанные ссылки
 

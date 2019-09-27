@@ -7,14 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206361"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319527"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Вход с помощью Apple в Xamarin. iOS
+
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Вход с помощью Apple — это новая служба, которая обеспечивает защиту идентификации для пользователей сторонних служб проверки подлинности. Начиная с iOS 13, Apple требует, чтобы любое новое приложение, использующее сторонние службы проверки подлинности, также предпредоставило вход с помощью Apple. При обновлении существующих приложений не требуется добавлять вход с помощью Apple до апреля 2020.
 
@@ -204,10 +206,6 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 #endregion
 ```
-
-## <a name="summary"></a>Сводка
-
-В этой статье впервые появился вход с Apple для iOS.
 
 ## <a name="related-links"></a>Связанные ссылки
 

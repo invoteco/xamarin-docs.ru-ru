@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: df011a6eb72b6eb30af0a197d4be48b0f2494384
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206522"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319510"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Использование входа с Apple в Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 Войдите в систему с помощью Apple для всех новых приложений в iOS 13, использующих сторонние службы проверки подлинности. Сведения о реализации между iOS и Android сильно отличаются. В этом руководстве описано, как это можно сделать сегодня в Xamarin. Forms.
 
@@ -52,7 +52,7 @@ ms.locfileid: "71206522"
 
 В этом примере используются функции Azure. Кроме того, контроллер ASP.NET Core или аналогичное решение веб-сервера может обеспечить одну и ту же функциональность.
 
-### <a name="configuration"></a>Параметр Configuration
+### <a name="configuration"></a>Конфигурация
 
 При использовании функций Azure необходимо настроить несколько параметров приложения:
 

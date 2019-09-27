@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 96d2fe0b03ad7067d6fece072742ea2796224f8b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: baf5d7a348c96cc2c43fd909bcc543fbfbfe81ce
+ms.sourcegitcommit: 58b21bf0eda3a7cea91a95b479f499c9d499b6d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250124"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71310792"
 ---
 # <a name="images-in-xamarinforms"></a>Образы в Xamarin.Forms
 
@@ -274,7 +274,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 Кэширование включено по умолчанию и сохраняется локально на 24 часа. Чтобы отключить кэширование для конкретного изображения, создать экземпляр источник изображения следующим образом:
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri="http://server.com/image" };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
 ```
 
 Чтобы задать периодом указанным кэшем (например, 5 дней) следует создать источник изображения следующим образом:

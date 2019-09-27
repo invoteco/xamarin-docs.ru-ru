@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 31dfcc26121b0683db476b0c4be9a420efe5b66f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771239"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198575"
 ---
 # <a name="xamarinforms-triggers"></a>Триггеры Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Триггеры позволяют декларативно задавать действия в XAML, которые изменяют внешний вид элементов управления при изменении событий или свойств.
 
@@ -144,7 +144,7 @@ ms.locfileid: "70771239"
 
 - Переопределение метода `Invoke`, который вызывается при каждом выполнении условий триггера.
 
-- Необязательное предоставление свойств, которые можно задать в XAML при объявлении триггера (например, `Anchor`, `Scale` и `Length` в этом примере).
+- Необязательное предоставление свойств, которые можно задать в XAML. Пример см. в описании `VisualElementPopTriggerAction` класса в прилагаемом примере приложения.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -158,7 +158,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-Свойства, предоставляемые действием триггера, можно задать в объявлении XAML следующим образом.
+Затем триггер события можно использовать из XAML:
 
 ```xaml
 <EventTrigger Event="TextChanged">

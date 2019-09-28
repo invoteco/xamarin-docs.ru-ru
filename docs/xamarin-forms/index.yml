@@ -56,29 +56,29 @@ sections:
         style: cards
         className: cardsB
         items:
-          - href: ~/xamarin-forms/app-fundamentals/
+          - href: ~/xamarin-forms/app-fundamentals/index.yml
             html: 'Все, что необходимо знать для разработки приложений Xamarin.Forms, например, навигация, жесты, привязка данных и многое другое.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/xamarin-forms/app-fundamentals/
+              href: ~/xamarin-forms/app-fundamentals/index.yml
             title: Принципы работы приложения
-          - href: ~/xamarin-forms/user-interface
+          - href: ~/xamarin-forms/user-interface/index.yml
             html: 'Дополнительные сведения о полном наборе элементов управления пользовательского интерфейса, доступного в Xamarin.Forms XAML.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/xamarin-forms/user-interface/
+              href: ~/xamarin-forms/user-interface/index.yml
             title: Пользовательский интерфейс
-          - href: ~/xamarin-forms/xaml/
+          - href: ~/xamarin-forms/xaml/index.yml
             html: Создавайте пользовательские интерфейсы декларативно и предоставляйте к ним общий доступ на платформах мобильных и классических приложений.
             image:
               src: ~/media/icons/i_xaml-forms.svg
-              href: ~/xamarin-forms/xaml/
+              href: ~/xamarin-forms/xaml/index.yml
             title: XAML
-          - href: ~/xamarin-forms/platform/
+          - href: ~/xamarin-forms/platform/index.yml
             html: 'Работа с функциями платформы Xamarin.Forms, такими как пользовательские отрисовщики, и другими важными функциями каждого выпуска.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/xamarin-forms/platform/
+              href: ~/xamarin-forms/platform/index.yml
             title: Функции платформы
           - href: ~/essentials/index.md?context=xamarin/xamarin-forms
             html: 'Кроссплатформенные API-интерфейсы для общих задач, таких как доступ к файлам, сведения об устройстве, параметры оборудования и многих других.'
@@ -86,23 +86,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/xamarin-forms
             title: Xamarin.Essentials
-          - href: ~/xamarin-forms/data-cloud/
+          - href: ~/xamarin-forms/data-cloud/index.yml
             html: 'Локальное и удаленное хранение данных, извлечение данных и другие облачные службы Azure.'
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/xamarin-forms/data-cloud/
+              href: ~/xamarin-forms/data-cloud/index.yml
             title: Данные и облачные службы Azure
-          - href: ~/xamarin-forms/deploy-test/
+          - href: ~/xamarin-forms/deploy-test/index.yml
             html: 'Инструкции по созданию и развертыванию приложений, а также советы по их предварительному тестированию!'
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/xamarin-forms/deploy-test/
+              href: ~/xamarin-forms/deploy-test/index.yml
             title: Развертывание и тестирование
-          - href: ~/xamarin-forms/internals/
+          - href: ~/xamarin-forms/internals/index.yml
             html: 'Дополнительные сведения о структуре Xamarin.Forms и помощь по использованию функций, например локализации и специальных возможностей.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/xamarin-forms/internals/
+              href: ~/xamarin-forms/internals/index.yml
             title: Дополнительные понятия и внутренние компоненты
   - title: Справочник
     items:

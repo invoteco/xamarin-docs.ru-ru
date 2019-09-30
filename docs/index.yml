@@ -1,0 +1,233 @@
+### YamlMime:Hub
+title: Документация по Xamarin
+summary: Xamarin позволяет создавать собственные приложения для Android, iOS и macOS с помощью кода .NET и пользовательских интерфейсов платформы. Xamarin.Forms позволяет создавать собственные приложения с общим кодом пользовательского интерфейса на C# или XAML.
+brand: xamarin
+metadata:
+  title: Документация по Xamarin
+  description: Xamarin позволяет создавать собственные приложения для Android, iOS и macOS с помощью кода .NET и пользовательских интерфейсов платформы. Xamarin.Forms позволяет создавать собственные приложения с общим кодом пользовательского интерфейса на C# или XAML.
+  ms.topic: hub-page
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 09/26/2019
+  ms.openlocfilehash: c0509abcaaa10263c3f0c4c3d19fd765ded521e1
+  ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71326199"
+highlightedContent:
+  items:
+  - title: Установка и настройка
+    itemType: download
+    url: ~/get-started/installation/index.md
+  - title: Что такое Xamarin?
+    itemType: overview
+    url: ~/get-started/what-is-xamarin.md
+  - title: Новое в документации по Xamarin
+    itemType: get-started
+    url: ~/whats-new/index.yml
+  - title: Совершенствуйтесь в разработке мобильных приложений
+    itemType: learn
+    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+productDirectory:
+  items:
+  - title: Кроссплатформенность Xamarin.Forms
+    imageSrc: https://docs.microsoft.com/media/logos/logo_xamarin.svg
+    links:
+    - url: ~/get-started/what-is-xamarin-forms.md
+      text: Что такое Xamarin.Forms?
+    - url: ~/get-started/index.yml
+      text: Создание приложения для Android и iOS
+    - url: ~/xamarin-forms/xaml/index.yml
+      text: Xamarin.Forms и XAML
+    - url: ~/xamarin-forms/index.yml
+      text: Документация по платформе
+  - title: Android
+    imageSrc: https://docs.microsoft.com/media/logos/logo_android.svg
+    links:
+    - url: ~/android/get-started/hello-android/hello-android-quickstart.md
+      text: Создание приложения Android
+    - url: ~/android/platform/android-10.md
+      text: Android 10
+    - url: ~/android/index.yml
+      text: Документация по платформе
+  - title: iOS
+    imageSrc: https://docs.microsoft.com/media/common/i_web-apps.svg
+    links:
+    - url: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
+      text: Создание приложения iOS
+    - url: ~/ios/platform/ios13/index.md
+      text: iOS 13
+    - url: ~/ios/index.yml
+      text: Документация по платформе
+  - title: Mac
+    imageSrc: https://docs.microsoft.com/media/common/i_xplat-code.svg
+    links:
+    - url: ~/mac/get-started/hello-mac.md
+      text: Создание приложения для Mac
+    - url: ~/mac/index.yml
+      text: Документация по платформе
+conceptualContent:
+  title: Начало работы с Xamarin.Forms
+  summary: Создавайте кроссплатформенные приложения для Android и iOS, используя C# и .NET в среде Visual Studio на Windows и macOS.
+  items:
+  - title: Создание первого приложения
+    links:
+    - text: Файл > Создать
+      url: ~/get-started/quickstarts/single-page.md
+      itemType: get-started
+    - text: Добавление навигации
+      url: ~/get-started/quickstarts/multi-page.md
+      itemType: get-started
+    - text: Добавление базы данных
+      url: ~/get-started/quickstarts/database.md
+      itemType: get-started
+    - text: Стиль приложения
+      url: ~/get-started/quickstarts/styling.md
+      itemType: get-started
+    footerLink:
+      url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started
+      text: Найти пример
+  - title: Прохождение руководства
+    links:
+    - text: Макет "стопка"
+      url: ~/get-started/tutorials/stacklayout/index.yml
+      itemType: tutorial
+    - text: Метки
+      url: ~/get-started/tutorials/label/index.yml
+      itemType: tutorial
+    - text: Кнопки
+      url: ~/get-started/tutorials/button/index.yml
+      itemType: tutorial
+    - text: Образы
+      url: ~/get-started/tutorials/image/index.yml
+      itemType: tutorial
+    footerLink:
+      url: ~/get-started/tutorials/index.yml
+      text: Дополнительные сведения
+  - title: Используйте имеющиеся знания
+    links:
+    - text: Классические приложения .NET (UWP, WPF, WinForms)
+      itemType: overview
+      url: ~/cross-platform/desktop/index.md
+    - text: Android и Java
+      itemType: overview
+      url: ~/android/get-started/java-developers.md
+    - text: iOS и Objective-C
+      itemType: overview
+      url: ~/ios/get-started/objective-c-developers/index.md
+    - text: Дополнительные руководства по разработке
+      itemType: get-started
+      url: ~/cross-platform/index.yml
+additionalContent:
+  sections:
+  - title: Стандартные задачи Xamarin.Forms
+    summary: Важные понятия для создания приложений для Android и iOS с использованием Xamarin.Forms
+    items:
+    - title: Жизненный цикл приложения
+      summary: Узнайте, как приложения запускаются и переходят в фоновый режим.
+      url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
+    - title: Отображение списка данных
+      summary: Используйте ListView для прокрутки и выбора данных.
+      url: ~/xamarin-forms/user-interface/listview/index.md
+    - title: Использование XAML и привязка данных
+      summary: Используйте шаблон MVVM для отображения данных в пользовательском интерфейсе.
+      url: ~/xamarin-forms/xaml/xaml-basics/index.md
+    - title: Функции конкретных платформ
+      summary: Используйте функции, доступные только в Android или iOS, в приложениях Xamarin.Forms.
+      url: ~/xamarin-forms/platform/index.yml
+    - title: Xamarin.Essentials
+      summary: Кроссплатформенные API-интерфейсы для стандартных функций устройств.
+      url: ~/essentials/platform-feature-support.md
+    - title: Доступ к веб-службе REST
+      summary: Совместное использование кода с помощью таких технологий управления версиями, как Git и TFVC.
+      url: ~/xamarin-forms/data-cloud/web-services/rest.md
+    - title: Развертывание на устройствах с Android и iOS
+      summary: Отправка приложений на тестовые устройства и в магазины приложений.
+      url: ~/xamarin-forms/deploy-test/index.yml
+    - title: Отрисовка графики SkiaSharp
+      summary: Кроссплатформенная отрисовка двухмерной векторной графики.
+      url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
+  - title: Средства мобильной разработки
+    items:
+    - title: Симулятор iOS для Windows
+      summary: Используйте iOS Simulator с помощью Visual Studio в Windows.
+      url: ~/tools/ios-simulator/index.md
+    - title: Profiler
+      summary: Определяйте и устраняйте проблемы с производительностью.
+      url: ~/tools/profiler/index.md
+    - title: Внедрение кода .NET
+      summary: Позволяет использовать код .NET в других языках программирования.
+      url: ~/tools/dotnet-embedding/index.md
+    - title: MonoGame
+      summary: Создание игр для мобильных устройств, компьютеров и игровых приставок с помощью C#.
+      url: ~/graphics-games/monogame/introduction/index.md
+  - title: Обзор платформ Xamarin
+    items:
+    - title: Кроссплатформенность Xamarin.Forms
+      links:
+      - text: Принципы работы приложения
+        url: ~/xamarin-forms/app-fundamentals/index.yml
+      - text: Пользовательский интерфейс
+        url: ~/xamarin-forms/user-interface/index.yml
+      - text: Xamarin.Forms и XAML
+        url: ~/xamarin-forms/xaml/index.yml
+      - text: Функции платформы
+        url: ~/xamarin-forms/platform/index.yml
+      - text: Облачные службы Azure
+        url: ~/xamarin-forms/data-cloud/index.yml
+      - text: Развертывание и тестирование
+        url: ~/xamarin-forms/deploy-test/index.yml
+      - text: Дополнительные понятия и внутренние компоненты
+        url: ~/xamarin-forms/internals/index.yml
+      - text: Примеры
+        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+    - title: Android
+      links:
+      - text: Принципы работы приложения
+        url: ~/android/app-fundamentals/index.md
+      - text: Пользовательский интерфейс
+        url: ~/android/user-interface/index.md
+      - text: Функции платформы
+        url: ~/android/platform/index.md
+      - text: Облачные службы Azure
+        url: ~/android/data-cloud/index.md
+      - text: Развертывание и тестирование
+        url: ~/android/deploy-test/index.md
+      - text: Дополнительные понятия и внутренние компоненты
+        url: ~/android/internals/index.md
+      - text: Примеры
+        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
+    - title: iOS
+      links:
+      - text: Принципы работы приложения
+        url: ~/android/app-fundamentals/index.md
+      - text: Пользовательский интерфейс
+        url: ~/android/user-interface/index.md
+      - text: Функции платформы
+        url: ~/android/platform/index.md
+      - text: Облачные службы Azure
+        url: ~/android/data-cloud/index.md
+      - text: Развертывание и тестирование
+        url: ~/android/deploy-test/index.md
+      - text: Дополнительные понятия и внутренние компоненты
+        url: ~/android/internals/index.md
+      - text: Примеры
+        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS
+    - title: Mac
+      links:
+      - text: Принципы работы приложения
+        url: ~/android/app-fundamentals/index.md
+      - text: Пользовательский интерфейс
+        url: ~/android/user-interface/index.md
+      - text: Функции платформы
+        url: ~/android/platform/index.md
+      - text: Облачные службы Azure
+        url: ~/android/data-cloud/index.md
+      - text: Развертывание и тестирование
+        url: ~/android/deploy-test/index.md
+      - text: Дополнительные понятия и внутренние компоненты
+        url: ~/android/internals/index.md
+      - text: Примеры
+        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
+  footer: '[Блоги](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Сообщество разработчиков](https://developercommunity.visualstudio.com/spaces/8/index.html)'

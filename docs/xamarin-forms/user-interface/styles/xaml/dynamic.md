@@ -85,7 +85,7 @@ public partial class DynamicStylesPage : ContentPage
 Когда `OnButtonClicked` выполняется обработчик событий, `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`. Результат показан на следующих снимках экрана.
 
 [![Пример динамического](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
-[стиля"синий"впримересзеленымстилем![](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
+[![стиля"синий"впримересзеленымстилем](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 В следующем примере кода показаны эквивалентные страницы на языке C#:
 
@@ -164,7 +164,7 @@ public class DynamicStylesPageCS : ContentPage
 В файле кода, конструктор создает [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) запись с ключом `searchBarStyle`, как в предыдущем примере, демонстрируются динамические стили. Когда `OnButtonClicked` выполняется обработчик событий, `searchBarStyle` служит для переключения между `blueSearchBarStyle` и `greenSearchBarStyle`. Результат показан на следующих снимках экрана.
 
 [![](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
-[Примеробщего![наследования динамического стиля с синим примером](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
+[![Примеробщего наследования динамического стиля с синим примером](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 В следующем примере кода показаны эквивалентные страницы на языке C#:
 

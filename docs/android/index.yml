@@ -56,23 +56,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/android/get-started/index.md
             title: Начало работы
-          - href: ~/android/app-fundamentals/
+          - href: ~/android/app-fundamentals/index.md
             html: 'Все, что вам нужно знать для создания приложений Android, например работа с файлами, изображениями, базами данных и т. д.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/android/app-fundamentals/
+              href: ~/android/app-fundamentals/index.md
             title: Принципы работы приложения
-          - href: ~/android/user-interface
+          - href: ~/android/user-interface/index.md
             html: 'Дополнительные сведения о полном наборе мини-приложений элементов управления пользовательского интерфейса, доступного на Android.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/android/user-interface/
+              href: ~/android/user-interface/index.md
             title: Пользовательский интерфейс
-          - href: ~/android/platform/
+          - href: ~/android/platform/index.md
             html: 'Использование функций платформы Android (например, проверка подлинности по отпечаткам пальцев) и новейших функций в Android 8.0 Oreo.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/android/platform/
+              href: ~/android/platform/index.md
             title: Функции платформы
           - href: ~/essentials/index.md?context=xamarin/android
             html: Кроссплатформенные API-интерфейсы для мобильных приложений.
@@ -80,29 +80,29 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/android
             title: Xamarin.Essentials
-          - href: ~/android/data-cloud/
+          - href: ~/android/data-cloud/index.md
             html: 'Локальное и удаленное хранение данных, извлечение данных и другие облачные службы.'
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/android/data-cloud/
+              href: ~/android/data-cloud/index.md
             title: Данные и облачные службы
-          - href: ~/android/deploy-test/
+          - href: ~/android/deploy-test/index.md
             html: 'Инструкции по созданию и развертыванию приложений в Google Play, а также советы по их предварительному тестированию!'
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/android/deploy-test/
+              href: ~/android/deploy-test/index.md
             title: Развертывание и тестирование
-          - href: ~/android/internals/
+          - href: ~/android/internals/index.md
             html: 'Дополнительные сведения о структуре Xamarin.Android и помощь по использованию функций, например локализации и специальных возможностей.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
-              href: ~/android/internals/
+              href: ~/android/internals/index.md
             title: Дополнительные понятия и внутренние компоненты
-          - href: ~/android/wear/
+          - href: ~/android/wear/index.md
             html: Разработка приложений для Android Wear.
             image:
               src: ~/media/icons/i_android-wear.svg
-              href: ~/android/wear/
+              href: ~/android/wear/index.md
             title: Android Wear
   - title: Справочник
     items:

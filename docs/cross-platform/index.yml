@@ -18,7 +18,7 @@ abstract:
       - href: /visualstudio/mac/
         text: Visual Studio для Mac
 sections:
-  - title: Приступая к работе
+  - title: Начало работы
     items:
       - type: paragraph
         text: 'Сведения о создании приложений с помощью Xamarin и C# для Android, iOS, macOS, UWP и т. д.'
@@ -32,7 +32,7 @@ sections:
           - image:
               src: ~/media/icons/i_desktop-phone.svg
             text: Xamarin.Forms
-            href: ~/get-started/quickstarts/index.md
+            href: ~/get-started/quickstarts/index.yml
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
             text: Android
@@ -45,7 +45,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
             text: Mac
             href: ~/mac/get-started/hello-mac.md
-  - title: Направляющие
+  - title: Руководства
     items:
       - type: list
         style: cards
@@ -57,17 +57,17 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/cross-platform/get-started/index.md
             title: Создание мобильных приложений
-          - href: ~/cross-platform/platform
+          - href: ~/cross-platform/platform/index.md
             html: 'Xamarin поддерживает C#, F# и подсистему шаблонов Razor.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/cross-platform/platform
-            title: Языковая поддержка
-          - href: ~/cross-platform/app-fundamentals/
+              href: ~/cross-platform/platform/index.md
+            title: Поддержка языков
+          - href: ~/cross-platform/app-fundamentals/index.md
             html: Необходимые сведения для создания приложений.
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/cross-platform/app-fundamentals/
+              href: ~/cross-platform/app-fundamentals/index.md
             title: Общий доступ к коду
           - href: ~/cross-platform/deploy-test/performance.md
             html: Рекомендации по обеспечению безопасности и повышению производительности приложения.
@@ -75,15 +75,15 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
               href: ~/cross-platform/deploy-test/performance.md
             title: Производительность и безопасность
-          - href: ~/cross-platform/deploy-test/
+          - href: ~/cross-platform/deploy-test/index.md
             html: Советы по отладке и развертыванию.
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/cross-platform/deploy-test/
+              href: ~/cross-platform/deploy-test/index.md
             title: Развертывание и отладка
-          - href: ~/cross-platform/desktop/
+          - href: ~/cross-platform/desktop/index.md
             html: 'Рекомендации для разработчиков классических приложений .NET, заинтересованных в создании мобильных приложений.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: ~/cross-platform/desktop/
+              href: ~/cross-platform/desktop/index.md
             title: Разработчики классических приложений

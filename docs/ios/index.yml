@@ -21,7 +21,7 @@ abstract:
       - href: /visualstudio/
         text: Visual Studio
 sections:
-  - title: Приступая к работе
+  - title: Начало работы
     items:
       - type: paragraph
         text: 'Сведения о создании приложения iOS с помощью Xamarin и C#.'
@@ -30,7 +30,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Установка
+            text: Настройка
             href: ~/ios/get-started/installation/index.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
@@ -44,7 +44,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
             text: iOS 13
             href: ~/ios/platform/ios13/index.md
-  - title: Направляющие
+  - title: Руководства
     items:
       - type: list
         style: cards
@@ -56,23 +56,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/ios/get-started/index.md
             title: Начало работы
-          - href: ~/ios/app-fundamentals/
+          - href: ~/ios/app-fundamentals/index.md
             html: 'Все, что вам нужно знать для создания приложений iOS, например работа с файлами, изображениями, базами данных и т. д.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/ios/app-fundamentals/
+              href: ~/ios/app-fundamentals/index.md
             title: Принципы работы приложения
-          - href: ~/ios/user-interface
+          - href: ~/ios/user-interface/index.md
             html: 'Дополнительные сведения о полном наборе элементов управления пользовательского интерфейса, доступного для iOS в UIKit.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/ios/user-interface/
+              href: ~/ios/user-interface/index.md
             title: Пользовательский интерфейс
-          - href: ~/ios/platform/
+          - href: ~/ios/platform/index.md
             html: 'Использование функций платформы iOS (например, ARKit и CoreML) и других функций в iOS 11.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/ios/platform/
+              href: ~/ios/platform/index.md
             title: Функции платформы
           - href: ~/essentials/index.md?context=xamarin/ios
             html: Кроссплатформенные API-интерфейсы для мобильных приложений.
@@ -80,35 +80,35 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/ios
             title: Xamarin.Essentials
-          - href: ~/ios/data-cloud/
+          - href: ~/ios/data-cloud/index.md
             html: 'Локальное и удаленное хранение данных, извлечение данных и другие облачные службы.'
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/ios/data-cloud/
+              href: ~/ios/data-cloud/index.md
             title: Данные и облачные службы
-          - href: ~/ios/deploy-test/
+          - href: ~/ios/deploy-test/index.md
             html: 'Инструкции по созданию и развертыванию приложений в App Store, а также советы по их предварительному тестированию!'
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/ios/deploy-test/
+              href: ~/ios/deploy-test/index.md
             title: Развертывание и тестирование
-          - href: ~/ios/internals/
+          - href: ~/ios/internals/index.md
             html: 'Подробные сведения о том, как работает Xamarin.iOS.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/ios/internals/
+              href: ~/ios/internals/index.md
             title: Дополнительные понятия и внутренние компоненты
-          - href: ~/ios/watchos/
+          - href: ~/ios/watchos/index.md
             html: Создание приложений для Apple Watch!
             image:
               src: ~/media/icons/i_watchos.svg
-              href: ~/ios/watchos/
+              href: ~/ios/watchos/index.md
             title: watchOS
-          - href: ~/ios/tvos/
+          - href: ~/ios/tvos/index.md
             html: Создание приложений для Apple TV!
             image:
               src: ~/media/icons/i_tvos.svg
-              href: ~/ios/tvos/
+              href: ~/ios/tvos/index.md
             title: tvOS
   - title: Справочник
     items:

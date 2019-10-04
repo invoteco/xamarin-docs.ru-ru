@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
+ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888972"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71674566"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Навигация в оболочке Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Оболочка Xamarin.Forms предоставляет улучшенные возможности навигации по интерфейсу на основе URI, позволяя переходить на любую страницу в приложении без соблюдения строгой иерархии. Кроме того, они также дают возможность перехода назад без необходимости прохода всех страниц в стеке навигации.
 
@@ -178,7 +178,7 @@ bears
 
 Следующие форматы маршрутов считаются недопустимыми.
 
-| Формат | Пояснение |
+| Формат | Объяснение |
 | --- | --- |
 | *маршрут* или /*маршрут* | Маршруты в визуальной иерархии нельзя принудительно передать в стек навигации. |
 | //*страница* или / / /*страница* | В настоящее время глобальные маршруты не могут быть единственной страницей в стеке навигации. Таким образом, абсолютная маршрутизация для глобальных маршрутов не поддерживается. |
@@ -211,7 +211,7 @@ bears
 
 Класс `Shell` определяет событие `Navigating`, которое возникает перед выполнением любого перехода — программного или вызванного действием пользователя. Объект `ShellNavigatingEventArgs`, который прилагается к событию `Navigating`, содержит следующие свойства:
 
-| Свойство | type | ОПИСАНИЕ |
+| Свойство. | type | ОПИСАНИЕ |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI текущей страницы. |
 | `Source` | `ShellNavigationSource` | Тип выполненного перехода. |
@@ -226,7 +226,7 @@ bears
 
 Класс `Shell` также определяет событие `Navigated`, которое возникает при завершении навигации. Объект `ShellNavigatedEventArgs`, который прилагается к событию `Navigating`, содержит следующие свойства:
 
-| Свойство | type | ОПИСАНИЕ |
+| Свойство. | type | ОПИСАНИЕ |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI текущей страницы. |
 | `Previous`| `ShellNavigationState` | URI предыдущей страницы. |
@@ -302,8 +302,8 @@ public partial class ElephantDetailPage : ContentPage
 
 - `Command` с типом `ICommand`, который выполняется при нажатии кнопки "Назад".
 - `CommandParameter` с типом `object`, который передается как параметр в `Command`.
-- `IconOveride` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource), который содержит значок для кнопки "Назад".
-- `IsEnabled` с типом `boolean`, который указывает, доступна ли кнопка перехода назад. По умолчанию используется значение `true`.
+- `IconOverride` с типом [`ImageSource`](xref:Xamarin.Forms.ImageSource), который содержит значок для кнопки "Назад".
+- `IsEnabled` с типом `boolean`, который указывает, доступна ли кнопка перехода назад. Значение по умолчанию — `true`.
 - `TextOverride` с типом `string`, который содержит текст для кнопки "Назад".
 
 Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 Свойство `Command` получает значение `ICommand` для выполнения при нажатии кнопки "Назад", а в свойстве `IconOverride` сохраняется значок, используемый для кнопки "Назад":
 
-[![Снимок экрана с переопределением значка для кнопки "Назад" в оболочке для ОС iOS и Android](navigation-images/back-button.png "Переопределение значка для кнопки \"Назад\"")](navigation-images/back-button-large.png#lightbox "Переопределение значка для кнопки \"Назад\"")
+[![Снимок экрана с переопределением значка для кнопки "Назад" в оболочке для iOS и Android](navigation-images/back-button.png "Переопределение значка для кнопки \"Назад\" в оболочке")](navigation-images/back-button-large.png#lightbox "Переопределение значка кнопки "Назад" в оболочке")
 
 ## <a name="related-links"></a>Связанные ссылки
 

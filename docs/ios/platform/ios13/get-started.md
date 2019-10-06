@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: 1f190ef2f99e71c8cf21680f9902caccf3454450
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ed9eb5dc80935c8401f5bd8c9be1c301af3480f5
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206321"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975763"
 ---
 # <a name="get-started-with-ios-13"></a>Начало работы с iOS 13
 
@@ -22,9 +22,9 @@ ms.locfileid: "71206321"
 
 1. **Установка Xcode 11** . Зарегистрированные разработчики Apple могут загрузить и установить последнюю версию Xcode 11 с [портала для разработчиков Apple](https://developer.apple.com/download/) или из **магазина приложений**.
 
-2. **Запустите Xcode 11** — запустите Xcode 11 перед обновлением и запуском Visual Studio для Mac, так как в нем устанавливаются средства, необходимые Xamarin.
+2. **Запустите Xcode 11** — запустите Xcode 11 перед обновлением и запуском Visual Studio для Mac или Visual Studio 2019, так как в нем устанавливаются средства, необходимые для работы Xamarin.
 
-3. В Visual Studio для Mac выберите **Visual Studio > проверить наличие обновлений...** , выберите **стабильный** канал и установите доступные обновления.
+3. **Обновление Visual Studio для Mac и Visual Studio 2019** — убедитесь, что у вас установлена последняя стабильная версия Xamarin.
 
 4. Используемых **Установка iOS 13 на устройствах iOS** . для тестирования приложений, использующих API-интерфейсы, появившиеся в Xcode 11, зарегистрированные разработчики Apple могут [загрузить](https://developer.apple.com/download) и установить операционную систему на своих устройствах. 
 

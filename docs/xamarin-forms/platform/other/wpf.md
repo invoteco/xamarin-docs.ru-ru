@@ -8,18 +8,21 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: 8fcad4799cd53892106b3e221cff0dfbc737e10d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 38d9b42b3a29ea46d05a1d1cc4e38641d2445786
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70760041"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997174"
 ---
 # <a name="wpf-platform-setup"></a>Установка платформы WPF
 
 ![Предварительный просмотр](~/media/shared/preview.png)
 
 Xamarin. Forms теперь имеет поддержку предварительной версии для Windows Presentation Foundation (WPF). В этой статье показано, как добавить проект WPF в решение Xamarin. Forms.
+
+> [!IMPORTANT]
+> Поддержка Xamarin. Forms для WPF предоставляется сообществом. Дополнительные сведения см. в статье [Поддержка платформы в Xamarin. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
 Прежде чем начать, создайте новое решение Xamarin. Forms в Visual Studio 2019 или используйте существующее решение Xamarin. Forms, например [**боксвиевклокк**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). Приложения WPF можно добавлять только в решение Xamarin. Forms в Windows.
 
@@ -35,17 +38,17 @@ Xamarin. Forms теперь имеет поддержку предварител
 
 1. В Visual Studio 2019 щелкните правой кнопкой мыши имя решения в **Обозреватель решений** и выберите **Добавить > новый проект...** .
 
-2. В окне **Новый проект** слева выберите **Visual C#**  и **классический рабочий стол Windows**. В списке типов проектов выберите **приложение WPF (.NET Framework)** . 
+2. В окне **Новый проект** слева выберите **Visual C#**  и **классический рабочий стол Windows**. В списке типов проектов выберите **приложение WPF (.NET Framework)** .
 
 3. Введите имя проекта с расширением **WPF** , например **боксвиевклокк. WPF**. Нажмите кнопку **Обзор** , выберите папку **боксвиевклокк** и нажмите кнопку **выбрать папку**. Проект WPF будет размещен в том же каталоге, что и другие проекты в решении.
 
-    ![Добавить новый проект WPF](wpf-images/add-new-project.png "Добавить новый проект WPF")
+    ![Добавление нового проекта WPF](wpf-images/add-new-project.png "Добавление нового проекта WPF")
 
     Нажмите кнопку ОК, чтобы создать проект.
 
 4. В **Обозреватель решений**щелкните правой кнопкой мыши новый проект **боксвиевклокк. WPF** и выберите пункт **Управление пакетами NuGet**. Перейдите на вкладку **Обзор** , установите флажок **включить предварительные выпуски** и найдите **Xamarin. Forms**.
 
-    ![Выберите пакет NuGet](wpf-images/select-nuget-package.png "Выберите пакет NuGet")
+    ![Выбор пакета NuGet](wpf-images/select-nuget-package.png "Выбор пакета NuGet")
 
     Выберите этот пакет и нажмите кнопку " **установить** ".
 
@@ -53,19 +56,19 @@ Xamarin. Forms теперь имеет поддержку предварител
 
 6. Щелкните правой кнопкой мыши имя решения в **Обозреватель решений** и выберите пункт **Управление пакетами NuGet для решения**. Выберите вкладку **Обновление** и пакет **Xamarin. Forms** . Выберите все проекты и обновите их до одной версии Xamarin. Forms:
 
-    ![Обновление пакета NuGet](wpf-images/update-nuget-package.png "Обновление пакета NuGet") 
+    ![Обновление пакета]NuGet(wpf-images/update-nuget-package.png "Обновление пакета NuGet")
 
 7. В проекте WPF щелкните правой кнопкой мыши **ссылки**. В диалоговом окне **Диспетчер ссылок** выберите **проекты** слева и установите флажок рядом с проектом **боксвиевклокк** :
 
-    ![Ссылка на общий проект](wpf-images/reference-shared-project.png "Ссылка на общий проект")
+    ![Ссылка на общий проект](wpf-images/reference-shared-project.png "ссылки") на общий проект
 
-8. Измените файл **MainWindow. XAML** проекта WPF. В теге добавьте объявление пространства имен XML для сборки и пространства имен **Xamarin. Forms. Platform. WPF:** `Window`
+8. Измените файл **MainWindow. XAML** проекта WPF. В теге `Window` добавьте объявление пространства имен XML для сборки и пространства имен **Xamarin. Forms. Platform. WPF** :
 
     ```xaml
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    Теперь измените `Window` тег на `wpf:FormsApplicationPage`. Измените значение параметра на имя приложения, например **боксвиевклокк.** `Title` Завершенный файл XAML должен выглядеть следующим образом:
+    Теперь измените тег `Window` на `wpf:FormsApplicationPage`. Измените значение параметра `Title` на имя приложения, например **боксвиевклокк**. Завершенный файл XAML должен выглядеть следующим образом:
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"
@@ -78,26 +81,26 @@ Xamarin. Forms теперь имеет поддержку предварител
             mc:Ignorable="d"
             Title="BoxViewClock" Height="450" Width="800">
         <Grid>
-        
+
         </Grid>
     </wpf:FormsApplicationPage>
     ```
 
-9. Измените файл **MainWindow.XAML.CS** проекта WPF. Добавьте две новые `using` директивы:
+9. Измените файл **MainWindow.XAML.CS** проекта WPF. Добавьте две новые директивы `using`:
 
     ```csharp
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.WPF;
     ```
 
-    Измените базовый класс `MainWindow` с `Window` на `FormsApplicationPage`. `InitializeComponent` После вызова добавьте следующие две инструкции:
+    Измените базовый класс `MainWindow` с `Window` на `FormsApplicationPage`. После вызова `InitializeComponent` добавьте следующие две инструкции:
 
     ```csharp
     Forms.Init();
     LoadApplication(new BoxViewClock.App());
     ```
-    
-    Кроме комментариев и неиспользуемых `using` директив, полный файл **MainWindows.XAML.CS** должен выглядеть следующим образом:
+
+    За исключением комментариев и неиспользуемых директив `using`, полный файл **MainWindows.XAML.CS** должен выглядеть следующим образом:
 
     ```csharp
     using Xamarin.Forms;
@@ -120,15 +123,15 @@ Xamarin. Forms теперь имеет поддержку предварител
 
 10. Щелкните правой кнопкой мыши проект WPF в **Обозреватель решений** и выберите **Назначить запускаемым проектом**. Нажмите клавишу F5, чтобы запустить программу с помощью отладчика Visual Studio на рабочем столе Windows:
 
-    ![Часы боксвиев в WPF] (wpf-images/wpf-boxviewclock.png "Часы боксвиев в WPF" )
+    Часы ![боксвиев]WPF(wpf-images/wpf-boxviewclock.png "боксвиев часов" )
 
 ## <a name="next-steps"></a>Следующие шаги
 
 ### <a name="platform-specifics"></a>Особенности платформы
 
-Вы можете определить, на какой платформе выполняется приложение Xamarin. Forms, из кода или XAML. Это позволяет изменять характеристики программы при выполнении в WPF. В коде Сравните значение `Device.RuntimePlatform` `Device.WPF` с константой (которая равна строке "WPF"). Если найдено совпадение, приложение работает в WPF.
+Вы можете определить, на какой платформе выполняется приложение Xamarin. Forms, из кода или XAML. Это позволяет изменять характеристики программы при выполнении в WPF. В коде Сравните значение `Device.RuntimePlatform` с константой `Device.WPF` (которая равна строке "WPF"). Если найдено совпадение, приложение работает в WPF.
 
-В XAML можно использовать `OnPlatform` тег для выбора значения свойства, характерного для платформы:
+В XAML можно использовать тег `OnPlatform`, чтобы выбрать значение свойства, относящееся к платформе:
 
 ```xaml
 <Button.TextColor>

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760568"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997167"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Обработка файлов в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _Обработку файлов в Xamarin.Forms можно выполнить с помощью кода в библиотеке .NET Standard или внедренных ресурсов._
 
@@ -58,7 +58,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 Эти операции продемонстрированы в примере приложения, включающем в себя страницу, которая сохраняет и загружает текст:
 
-[![Сохранение и загрузка текст](files-images/saveandload-sml.png "Сохранение и загрузка файлов в приложении")](files-images/saveandload.png#lightbox "Сохранение и загрузка файлов в приложении")
+[![Сохранение и Загрузка текста](files-images/saveandload-sml.png "Сохранение и загрузка файлов в приложении")](files-images/saveandload.png#lightbox "Сохранение и загрузка файлов в приложении")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
@@ -68,34 +68,35 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Настройка действия при сборке для внедренного ресурса](files-images/vs-embeddedresource-sml.png "Настройка BuildAction EmbeddedResource")](files-images/vs-embeddedresource.png#lightbox "Настройка BuildAction EmbeddedResource")
+[![Настройка параметра действия сборки внедренного ресурса](files-images/vs-embeddedresource-sml.png "EmbeddedResource") действие при построении](files-images/vs-embeddedresource.png#lightbox "Настройка EmbeddedResource")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Текстовый файл, внедренный в PCL, настройка действия при сборке для внедренного ресурса](files-images/xs-embeddedresource-sml.png "Настройка BuildAction EmbeddedResource")](files-images/xs-embeddedresource.png#lightbox "Настройка BuildAction EmbeddedResource")
+[![Текстовый файл, внедренный в библиотеку .NET Standard, Настройка параметра действия сборки внедренного ресурса](files-images/xs-embeddedresource-sml.png "EmbeddedResource") действие](files-images/xs-embeddedresource.png#lightbox "Настройка EmbeddedResource")
 
 -----
 
-`GetManifestResourceStream` используется для доступа к внедренному файлу с помощью его **идентификатора ресурса**. По умолчанию идентификатор ресурса представляет собой имя файла с префиксом в виде пространства имен по умолчанию для проекта, куда он внедрен. В этом случае используется сборка **WorkingWithFiles** и имя файла **PCLTextResource.txt**, поэтому идентификатор ресурса имеет вид `WorkingWithFiles.PCLTextResource.txt`.
+`GetManifestResourceStream` используется для доступа к внедренному файлу с помощью его **идентификатора ресурса**. По умолчанию идентификатор ресурса — это имя файла с префиксом пространства имен по умолчанию для проекта, в котором он внедрен. в этом случае сборка является **воркингвисфилес** , а имя файла — **либтекстресаурце. txt**, поэтому идентификатор ресурса — `WorkingWithFiles.LibTextResource.txt`.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibTextResource.txt");
 string text = "";
-using (var reader = new System.IO.StreamReader (stream)) {
+using (var reader = new System.IO.StreamReader (stream))
+{  
     text = reader.ReadToEnd ();
 }
 ```
 
 После этого можно воспользоваться переменной `text`, чтобы отобразить текст или использовать его в коде иным образом. Этот снимок экрана [примера приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) отображает текст, отрисованный в элементе управления `Label`.
 
- [![Текстовый файл, внедренный в PCL](files-images/pcltext-sml.png "Внедренный в PCL текстовый файл, отображаемый в приложении")](files-images/pcltext.png#lightbox "Внедренный в PCL текстовый файл, отображаемый в приложении")
+ [![Текстовый файл, внедренный в](files-images/pcltext-sml.png "внедренный текстовый файл библиотеки .NET standard в библиотеке .NET Standard, отображаемой в приложении")](files-images/pcltext.png#lightbox "Внедренный текстовый файл в библиотеке .NET Standard, отображаемой в приложении")
 
 Загрузка и десериализация XML выполняется так же просто. В следующем коде показан XML-файл, который загружается и десериализируется из ресурса, а затем привязывается к `ListView` для отображения. Этот XML-файл содержит массив объектов `Monkey` (класс определен в примере кода).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
     var serializer = new XmlSerializer(typeof(List<Monkey>));
@@ -105,7 +106,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Внедренный в PCL XML-файл, отображаемый в ListView](files-images/pclxml-sml.png "Внедренный XML-файл в PCL, отображаемый в ListView")](files-images/pclxml.png#lightbox "Внедренный XML-файл в PCL, отображаемый в ListView")
+ [![XML-файл, внедренный в библиотеку .NET Standard, отображается во](files-images/pclxml-sml.png "внедренном XML-файле ListView в библиотеке .NET Standard, отображаемой в ListView")](files-images/pclxml.png#lightbox "Внедренный XML-файл в библиотеке .NET Standard, отображаемой в ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -139,9 +140,9 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Упорядочение ресурсов
 
-В приведенных выше примерах предполагается, что файл внедряется в корень проекта библиотеки .NET Standard, то есть идентификатор ресурса имеет форму **пространство_имен.имя_файла.расширение**, например `WorkingWithFiles.PCLTextResource.txt` и `WorkingWithFiles.iOS.SharedTextResource.txt`.
+В приведенных выше примерах предполагается, что файл внедряется в корень проекта библиотеки .NET Standard, то есть идентификатор ресурса имеет форму **пространство_имен.имя_файла.расширение**, например `WorkingWithFiles.LibTextResource.txt` и `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
-Можно упорядочить внедренные ресурсы по папкам. Если внедренный ресурс помещается в папку, ее имя становится частью идентификатора ресурса (разделенного точками), таким образом, формат идентификатора ресурса принимает вид **пространство_имен.папка.имя_файла.расширение**. Если поместить файлы, используемые в примере приложения, в папку **MyFolder**, соответствующие идентификаторы ресурсов примут вид `WorkingWithFiles.MyFolder.PCLTextResource.txt` и `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
+Можно упорядочить внедренные ресурсы по папкам. Если внедренный ресурс помещается в папку, ее имя становится частью идентификатора ресурса (разделенного точками), таким образом, формат идентификатора ресурса принимает вид **пространство_имен.папка.имя_файла.расширение**. Если поместить файлы, используемые в примере приложения, в папку **MyFolder**, соответствующие идентификаторы ресурсов примут вид `WorkingWithFiles.MyFolder.LibTextResource.txt` и `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
 <a name="Debugging_Embedded_Resources" />
 

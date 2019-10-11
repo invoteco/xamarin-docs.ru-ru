@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759533"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032581"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Рисование простого кружка в SkiaSharp
 
@@ -26,7 +26,7 @@ _Познакомьтесь с основами SkiaSharp документе, в
 
 ![](circle-images/circleexample.png "Синий круг, выделены красным")
 
-[ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) Страницы класс является производным от `ContentPage` и содержит два `using` директивы для SkiaSharp пространств имен:
+[ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) Страницы класс является производным от `ContentPage` и содержит два `using` директивы для SkiaSharp пространств имен:
 
 ```csharp
 using SkiaSharp;
@@ -143,7 +143,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ниже приведен программу на iOS, Android и универсальной платформы Windows.
 
-[![](circle-images/simplecircle-small.png "Тройной снимок экрана страницы простого кружка")](circle-images/simplecircle-large.png#lightbox "тройной снимок экрана страницы простого кружка")
+[![](circle-images/simplecircle-small.png "Тройной снимок экрана простой круговой страницы")](circle-images/simplecircle-large.png#lightbox "Тройной снимок экрана простой круговой страницы")
 
 При запуске программы самостоятельно, вы можете включить телефон или симулятор сторону, чтобы увидеть, как перерисовке рисунок. Каждый раз, когда должна быть перерисована, рисунок `PaintSurface` обработчик событий вызывается снова.
 
@@ -154,7 +154,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 > [!NOTE]
 > `SKPaint` Класс определяет [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) Чтобы включить сглаживание при подготовке к просмотру рисунков. Сглаживание обычно приводит к визуально более гладкие грани, поэтому возможно, нужно присвоить этому свойству `true` в большинстве вашей `SKPaint` объектов. Для простоты данное свойство содержит _не_ в большинство образцов страниц.
 
-Хотя Ширина контура окружности равна 25 пикселям &mdash; или одному кварталу радиуса круга &mdash; , она выглядит более тонкой, и есть веская причина этого: Половина ширины линии скрыта синим кругом. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
+Хотя Ширина контура окружности задается как 25 пикселов &mdash; или 1 четверть радиуса круга &mdash; кажется более тоньше, и есть веская причина этого: Половина ширины линии скрыта синим кругом. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
 
 В приведенном ниже примере [интеграция с Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) статья демонстрирует это визуально.
 

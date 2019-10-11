@@ -200,6 +200,7 @@
 ### [ProgressBar](user-interface/progressbar.md)
 ### [SearchBar](user-interface/searchbar.md)
 ### [Slider](user-interface/slider.md)
+### [Экран-заставка](user-interface/splashscreen.md)
 ### [Шаговый переключатель](user-interface/stepper.md)
 ### [Стили](user-interface/styles/index.md)
 #### [Задание стиля приложений Xamarin.Forms с помощью стилей XAML](user-interface/styles/xaml/index.md)

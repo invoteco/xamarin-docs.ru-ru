@@ -145,6 +145,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: slider.md
             title: Slider
+          - href: splashscreen.md
+            html: 'Узнайте, как создать экраны-заставки для приложений Xamarin.Forms.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: splashscreen.md
+            title: Заставка
           - href: stepper.md
             html: 'Сведения об элементе управления Stepper, позволяющем пользователю выбрать числовое значение из определенных вариантов.'
             image:

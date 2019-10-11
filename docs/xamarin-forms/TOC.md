@@ -253,7 +253,7 @@
 #### [Цвет курсора для записи](platform/ios/entry-cursor-color.md)
 #### [Размер шрифта для записи](platform/ios/entry-font-size.md)
 #### [Форматирование](platform/ios/formatting.md)
-#### [Стиль представления модальной страницы iPad](platform/ios/ipad-page-presentation-style.md)
+#### [Стиль представления модальной страницы](platform/ios/page-presentation-style.md)
 #### [Крупные заголовки страниц](platform/ios/page-large-title.md)
 #### [Стиль заголовка группы ListView](platform/ios/listview-group-header-style.md)
 #### [Анимации строк ListView](platform/ios/listview-row-animations.md)

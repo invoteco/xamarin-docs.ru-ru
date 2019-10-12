@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 87d99c62f20e6cfd23605d1917a577ac0d95038f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772461"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273113"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Макет для планшетных и настольных приложений
 
@@ -42,7 +42,7 @@ Xamarin. Forms поддерживает все типы устройств, до
 До версии iOS 9 все приложения заняли весь экран на устройстве, но некоторые iPad теперь могут выполнять [многозадачные разбиение экрана](~/ios/platform/multitasking.md).
 Это означает, что ваше приложение может занимать только тонкий столбец на стороне экрана, 50% от ширины экрана или всего экрана.
 
-Пример разделения экрана для iPad [ ![(tablet-images/ipad-sml.png " ")]] (tablet-images/ipad.png#lightbox "пример разделения экрана для iPad")
+[![](tablet-images/ipad-sml.png "Пример разделения экрана для iPad")](tablet-images/ipad.png#lightbox "Пример разделения экрана для iPad")
 
 Работа с разделением экрана означает, что вы должны проектировать приложение так, чтобы оно работало с шириной в 320 пикселей в ширину или в ширину 1366 пикселов.
 
@@ -59,7 +59,7 @@ Xamarin. Forms поддерживает все типы устройств, до
 
 В дополнение к полноэкранному режиму приложения, работающие на планшетах и настольных компьютерах под управлением Windows, можно изменять размеры до произвольных измерений.
 
-Пример экранного разделителя Windows [ ![(tablet-images/splitscreen-sml.png " ")]] (tablet-images/splitscreen.png#lightbox "Пример экранного разделителя Windows")
+[![](tablet-images/splitscreen-sml.png "Пример экранного разделителя Windows")](tablet-images/splitscreen.png#lightbox "Пример экранного разделителя Windows")
 
 <a name="optimize" />
 
@@ -69,7 +69,7 @@ Xamarin. Forms поддерживает все типы устройств, до
 
 ### <a name="deviceidiom"></a>Device.Idiom
 
-[`Device`](~/xamarin-forms/platform/device.md) Класс можно использовать для изменения поведения приложения или пользовательского интерфейса. `Device.Idiom` Используя перечисление, можно
+Для изменения поведения приложения или пользовательского интерфейса можно использовать класс [`Device`](~/xamarin-forms/platform/device.md) . Используя перечисление `Device.Idiom`, можно
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone)
@@ -84,11 +84,11 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 ### <a name="leveraging-masterdetailpage"></a>Использование Мастердетаилпаже
 
-Идеально подходит для более крупных экранов, особенно на iPad, где [`UISplitViewController`](xref:UIKit.UISplitViewController) используется для обеспечения собственного интерфейса iOS. [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
+[@No__t-1](xref:Xamarin.Forms.MasterDetailPage) идеально подходит для более крупных экранов, особенно на iPad, где он использует [`UISplitViewController`](xref:UIKit.UISplitViewController) для предоставления собственного интерфейса iOS.
 
-Просмотрите [эту запись блога Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) , чтобы увидеть, как можно адаптировать пользовательский интерфейс, чтобы на телефонах использовался один макет, а более крупные экраны `MasterDetailPage`могли использовать другое (с).
+Просмотрите [эту запись блога Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) , чтобы увидеть, как можно адаптировать пользовательский интерфейс, чтобы на телефонах использовался один макет, а более крупные экраны могли использовать другое (с `MasterDetailPage`).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Блог Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
+- [Блог Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 - [Пример Мишоппе](https://github.com/jamesmontemagno/myshoppe)

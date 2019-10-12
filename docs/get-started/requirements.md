@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2019
-ms.openlocfilehash: a79f22fa96c4c34d2a9704e9aa3be3825895a15b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4584867e457661b2dfaa43fcbde7b1adcabeb85
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291585"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273101"
 ---
 # <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
 
@@ -24,9 +24,11 @@ _Требования к платформе и системные требова
 
 Приложения Xamarin.Forms могут быть написаны для следующих операционных систем:
 
-- iOS 8 или более поздние версии;
-- Android 5,0 (API 21) или более поздней версии ([Дополнительные сведения](#android))
+- iOS 9 или более поздней версии
+- Android 4.4 (API 19) или более поздние версии ([подробнее](#android));
 - универсальная платформа Windows для Windows 10 ([подробнее](#windows10));
+
+Однако в качестве минимального API рекомендуется использовать Android 5,0 (API 21). Это гарантирует полную совместимость со всеми библиотеками поддержки Android, при этом нацеливание на большинство устройств Android.
 
 Предполагается, что разработчики знакомы с [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 

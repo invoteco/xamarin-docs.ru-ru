@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: 293fc8e3f8965e3109a0a549897dd23c34c46917
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: df9fa43d2071d273104edafbe6b880a97afb3f96
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198463"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273140"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 с Xamarin
 
@@ -78,7 +78,7 @@ Visual Studio 2019 рекомендуется использовать для с
 
 ### <a name="configure-a-device-or-emulator"></a>Настройка устройства или эмулятора
 
-Если вы используете физическое устройство, например пиксель, вы можете скачать обновление Android 10, перейдя к `System`  >  `System update`  >  `Check for update` в параметрах вашего телефона. Если вы предпочитаете вспышку устройства, ознакомьтесь с инструкциями по миганию [образа фабрики](https://developers.google.com/android/ota) или оборудования [OTA](https://developers.google.com/android/ota) на устройстве.
+Если используется физическое устройство, например пиксель, можно скачать обновление для Android 10, перейдя в `System` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 в параметрах телефона. Если вы предпочитаете вспышку устройства, ознакомьтесь с инструкциями по миганию [образа фабрики](https://developers.google.com/android/images) или оборудования [OTA](https://developers.google.com/android/ota) на устройстве.
 
 Если вы используете эмулятор, создайте виртуальное устройство для API уровня 29 и выберите образ на основе x86. Сведения об использовании Android Device Manager для создания виртуальных устройств и управления ими см. в статье [Управление виртуальными устройствами с помощью Android Device Manager.](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/device-manager) Сведения об использовании Android Emulator для тестирования и отладки см. в разделе [Отладка в Android Emulator.](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
@@ -88,29 +88,29 @@ Visual Studio 2019 рекомендуется использовать для с
 
 ## <a name="enhance-your-app-with-android-10-features-and-apis"></a>Расширьте возможности приложения с помощью функций и API-интерфейсов Android 10
 
-Затем, когда будете готовы, Познакомьтесь с Android 10 и Узнайте о [новых функциях и интерфейсах API](https://developer.android.com/preview/api-overview.html) , которые можно использовать. Ниже приведены некоторые из основных возможностей, с которыми можно начать работу.
+Далее, когда вы будете готовы, Познакомьтесь с Android 10 и Узнайте о [новых функциях и API-интерфейсах](https://developer.android.com/preview/api-overview.html), которые можно использовать @no__t 1. Ниже приведены некоторые из основных возможностей, с которыми можно начать работу.
 
 Эти функции рекомендуются для каждого приложения:
 
-- **Темная тема.**  Обеспечьте единообразную работу пользователей, которые включают в себя темную тему на уровне всей системы, добавив [темную тему](https://developer.android.com/preview/features/darktheme) или включив [Force-темный](https://developer.android.com/preview/features/darktheme#force_dark).
+- **Темная тема:** @no__t — 1Ensureная работа для пользователей, которые включают в себя темную тему на уровне всей системы, добавляя [темную тему](https://developer.android.com/preview/features/darktheme) Or, включив функцию [Force темного цвета](https://developer.android.com/preview/features/darktheme#force_dark).
 
 ![Темная тема](~/android/platform/android-10-images/darktheme.png)
 
-- **Поддержка [жестурал навигации](https://developer.android.com/preview/features/gesturalnav)**  в приложении с помощью границ и убедитесь, что пользовательские жесты дополняются жестами навигации системы.
+- **Поддержка [жестурал навигации](https://developer.android.com/preview/features/gesturalnav)** @no__t — 2in приложение, перейдем к пограничным, и убедитесь, что пользовательские жесты дополняются с помощью жестов навигации системы.
 
 ![Навигация по жестам](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Оптимизировать для фолдаблес:**  Создавайте простые и пограничные возможности на современных инновационных устройствах, [оптимизируя фолдаблес](https://developer.android.com/preview/features/foldables).
+- **Оптимизация для фолдаблес:**  Deliver — простое, пограничные возможности на современных инновационных устройствах путем [оптимизации для фолдаблес](https://developer.android.com/preview/features/foldables).
 
 ![Свертываемые](~/android/platform/android-10-images/foldable.png)
 
 Эти функции рекомендуются, если это уместно для вашего приложения:
 
-- **Более интерактивные уведомления.**  если ваши уведомления включают сообщения, включите [предлагаемые ответы и действия в уведомлениях](https://developer.android.com/preview/features#smart-suggestions) , чтобы привлечь пользователей и позволить им мгновенно принимать меры.
-- **Улучшенные биометрические показатели.**  если вы используете биометрическую проверку подлинности, переходите на [биометрикпромпт](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), чтобы обеспечить поддержку проверки подлинности отпечатков пальцев на современных устройствах.
-- **Расширенная запись.**  для поддержки записи субтитров или игрового процесса включите [запись воспроизведения звука](https://developer.android.com/preview/features/playback-capture). Это отличный способ получить доступ к большему кругу пользователей и сделать приложение более доступным.
-- **Лучшие кодеки:**  для мультимедийных приложений попробуйте [AV1](https://en.wikipedia.org/wiki/AV1) для потоковой передачи видео и [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) для динамического диапазона видео. Для потоковой передачи речи и музыки можно использовать кодировку [опус](http://opus-codec.org/) , а для «musicians» доступен [собственный API](https://developer.android.com/preview/features/midi) MIDI.
-- **Улучшенные сетевые интерфейсы API.**  если ваше приложение управляет устройствами Интернета вещей через Wi-Fi, попробуйте использовать новые  [интерфейсы API сетевого подключения](https://developer.android.com/preview/features#peer2peer)для таких функций, как Настройка, скачивание или печать.
+- **Более интерактивные уведомления:** @no__t — 1If ваши уведомления включают сообщения, позволяют [предлагать ответы и действия в уведомлениях](https://developer.android.com/preview/features#smart-suggestions) to привлекать пользователей и позволить им мгновенно принимать меры.
+- **Улучшенная Биометрия:** @no__t — 1If вы используете биометрическую проверку подлинности, переходите на [биометрикпромпт](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), чтобы обеспечить поддержку проверки подлинности отпечатков пальцев на современных устройствах.
+- Расширенная **запись:**  To поддерживает субтитры или записи игрового процесса, включите [запись воспроизведения звука](https://developer.android.com/preview/features/playback-capture). Это отличный способ получить доступ к большему кругу пользователей и сделать приложение более доступным.
+- **Улучшенные кодеки:** @no__tные мультимедийные приложения. попробуйте [AV1](https://en.wikipedia.org/wiki/AV1) for Video Streaming и [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) for High динамический диапазон видео. Для потоковой передачи речи и музыки можно использовать кодировку [опус](http://opus-codec.org/) , а для «musicians» — [собственный API MIDI](https://developer.android.com/preview/features/midi) is.
+- **Улучшенные сетевые интерфейсы API:** @no__t — 1If ваше приложение управляет устройствами Интернета вещей через Wi-Fi, попробуйте использовать новые [api сетевого подключения](https://developer.android.com/preview/features#peer2peer) for такие функции, как Настройка, скачивание или печать.
 
 Это лишь некоторые из многих новых функций и API-интерфейсов в Android 10. Чтобы увидеть их все, посетите [сайт Android 10 для разработчиков](https://developer.android.com/about/versions/10/highlights).
 
@@ -121,7 +121,7 @@ Visual Studio 2019 рекомендуется использовать для с
 - [Чтобы обеспечить стабильность и совместимость приложений, платформа Android теперь ограничена интерфейсами, не являющимися пакетами SDK, которые приложение может использовать в Android 10](https://developer.android.com/about/versions/10/behavior-changes-10#non-sdk-restrictions).
 - [Общая память изменена](https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory).
 - [Среда выполнения Android & правильность AOT](https://developer.android.com/about/versions/10/behavior-changes-10#system-only-oat).
-- [Должны `USE_FULL_SCREEN_INTENT`быть запрошены разрешения для полноэкранных целей ](https://developer.android.com/about/versions/10/behavior-changes-10#full-screen-intents).
+- [Разрешения для полноэкранных целей должны запрашивать `USE_FULL_SCREEN_INTENT`](https://developer.android.com/about/versions/10/behavior-changes-10#full-screen-intents).
 - [Поддержка фолдаблес](https://developer.android.com/about/versions/10/behavior-changes-10#foldables).
 
 ## <a name="summary"></a>Сводка

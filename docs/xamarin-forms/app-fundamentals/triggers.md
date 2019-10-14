@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198575"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997150"
 ---
 # <a name="xamarinforms-triggers"></a>Триггеры Xamarin.Forms
 
@@ -278,6 +278,11 @@ XAML приведен ниже. Обратите внимание на указ�
 
 Другим способом реализации изменений при срабатывании триггера является добавление коллекций `EnterActions` и `ExitActions` и указание реализаций класса `TriggerAction<T>`.
 
+Коллекция [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) служит для определения списка `IList` объектов [`TriggerAction`](xref:Xamarin.Forms.TriggerAction), которые будут вызываться при соблюдении условия триггера. Коллекция [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) служит для определения списка `IList` объектов `TriggerAction`, которые будут вызываться, когда условие триггера больше не соблюдается.
+
+> [!NOTE]
+> Объекты [`TriggerAction`](xref:Xamarin.Forms.TriggerAction), определенные в коллекциях `EnterActions` и `ExitActions`, игнорируются классом [`EventTrigger`](xref:Xamarin.Forms.EventTrigger).    
+
 В триггер можно добавить *обе* коллекции `EnterActions` и `ExitActions`, а также `Setter`, но следует помнить, что `Setter` вызываются мгновенно (они не ожидают завершения `EnterAction` или `ExitAction`). Кроме того, можно выполнить все действия в коде и вообще не использовать `Setter`.
 
 ```xaml
@@ -292,7 +297,7 @@ XAML приведен ниже. Обратите внимание на указ�
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -327,8 +332,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
-
-Примечание. Коллекции `EnterActions` и `ExitActions` игнорируются в **триггерах событий**.
 
 ## <a name="related-links"></a>Связанные ссылки
 

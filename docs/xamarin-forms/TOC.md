@@ -101,6 +101,7 @@
 #### [Жест сжатия](app-fundamentals/gestures/pinch.md)
 #### [Панорама](app-fundamentals/gestures/pan.md)
 #### [Прокрутка](app-fundamentals/gestures/swipe.md)
+### [Локальные уведомления](app-fundamentals/local-notifications.md)
 ### [Локализация](app-fundamentals/localization/index.md)
 #### [Локализация строк и изображений](app-fundamentals/localization/text.md)
 #### [Локализация справа налево](app-fundamentals/localization/right-to-left.md)

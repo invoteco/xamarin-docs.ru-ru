@@ -7,39 +7,39 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: cbc39ee38ce623ce446d50494829119058fc88dc
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 5bc36f03eac4ced7c19a0053dfea93dbe2ca4497
+ms.sourcegitcommit: 850dd7a3ed10eb3f66692e765d3e31438cff0288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976477"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72531010"
 ---
 # <a name="xamarinforms-menuitem"></a>Меню Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
-Класс Xamarin. Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) определяет пункты меню для меню, такие как `ListView` контекстные меню элементов и всплывающие меню приложения оболочки.
+Класс [`MenuItem`](xref:Xamarin.Forms.MenuItem) Xamarin. Forms определяет пункты меню для меню, такие как контекстные меню `ListView` элементов и всплывающие меню приложения оболочки.
 
-На следующих снимках `MenuItem` экрана показаны объекты `ListView` в контекстном меню в iOS и Android:
+На следующих снимках экрана показаны `MenuItem` объекты в контекстном меню `ListView` в iOS и Android:
 
-[ !["MenuItems в iOS и Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems в iOS и Android") ] (menuitem-images/menuitem-demo-full.png#lightbox "MenuItems в iOS и Androidfull image")
+[!["MenuItems в iOS и Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems в iOS и Android")](menuitem-images/menuitem-demo-full.png#lightbox "MenuItems в iOS и Android full image")
 
-`MenuItem` Класс определяет следующие свойства:
+Класс `MenuItem` определяет следующие свойства:
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command)— Это `ICommand` , которое позволяет привязать пользовательские действия, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)аргумент, указывающий параметр, который должен быть передан в `Command`. `object`
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)`ImageSource` значение, определяющее значок вывода.
-* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive)значение, указывающее, `MenuItem` удаляет ли связанный элемент пользовательского интерфейса из списка. `bool`
-* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled)`bool` значение, определяющее, реагирует ли этот объект на вводимые пользователем данные.
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text)`string` значение, указывающее отображаемый текст.
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command) — это `ICommand`, который позволяет привязать действия пользователя, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) — это `object`, указывающий параметр, который должен быть передан `Command`.
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) — это `ImageSource` значение, определяющее значок вывода.
+* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) — это `bool` значение, указывающее, удаляет ли `MenuItem` связанный с ним элемент пользовательского интерфейса из списка.
+* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) — это `bool` значение, определяющее, реагирует ли этот объект на вводимые пользователем данные.
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text) — это `string` значение, указывающее отображаемый текст.
 
-Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, `MenuItem` поэтому экземпляр может быть целевым объектом привязок данных.
+Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, поэтому экземпляр `MenuItem` может быть целевым объектом привязок данных.
 
 ## <a name="create-a-menuitem"></a>Создание элемента меню
 
-`MenuItem`объекты можно использовать в контекстном меню `ListView` элементов объекта. Наиболее распространенным шаблоном является создание `MenuItem` объектов `ViewCell` в экземпляре, `DataTemplate` который используется в `ListView`качестве объекта для s `ItemTemplate`. Когда объект заполняется, он создает каждый элемент `MenuItem` с помощью, предоставляя варианты при активации контекстного меню для элемента. `DataTemplate` `ListView`
+`MenuItem` объекты можно использовать в контекстном меню элементов объекта `ListView`. Наиболее распространенный шаблон — создание `MenuItem` объектов в экземпляре `ViewCell`, который используется в качестве объекта `DataTemplate` для `ListView`s `ItemTemplate`. Когда объект `ListView` заполняется, он создает каждый элемент с помощью `DataTemplate`, предоставляя возможность выбора `MenuItem` при активации контекстного меню для элемента.
 
-В следующем примере показано `MenuItem` создание экземпляра в контексте `ListView` объекта:
+В следующем примере показано создание экземпляра `MenuItem` в контексте объекта `ListView`.
 
 ```xaml
 <ListView>
@@ -56,7 +56,7 @@ ms.locfileid: "69976477"
 </ListView>
 ```
 
-Также `MenuItem` можно создать в коде:
+@No__t_0 также можно создать в коде:
 
 ```csharp
 // A function returns a ViewCell instance that
@@ -96,7 +96,7 @@ ListView listView = new ListView
 
 ## <a name="define-menuitem-behavior-with-events"></a>Определение поведения элемента MenuItem с помощью событий
 
-Класс `MenuItem` представляет событие `Clicked`. Обработчик событий может быть присоединен к этому событию, чтобы реагировать на касания или на `MenuItem` экземпляр в XAML:
+Класс `MenuItem` представляет событие `Clicked`. Обработчик событий может быть присоединен к этому событию, чтобы реагировать на касания или на экземпляр `MenuItem` в XAML:
 
 ```xaml
 <MenuItem ...
@@ -110,7 +110,7 @@ MenuItem item = new MenuItem { ... }
 item.Clicked += OnItemClicked;
 ```
 
-В `OnItemClicked` предыдущих примерах указан обработчик событий. В следующем коде показан пример реализации:
+В предыдущих примерах был указан обработчик событий `OnItemClicked`. В следующем коде показан пример реализации:
 
 ```csharp
 void OnItemClicked(object sender, EventArgs e)
@@ -127,7 +127,7 @@ void OnItemClicked(object sender, EventArgs e)
 
 ## <a name="define-menuitem-behavior-with-mvvm"></a>Определение поведения MenuItem с помощью MVVM
 
-Класс поддерживает шаблон Model-View-ViewModel (MVVM) через [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объекты и `ICommand` интерфейс. `MenuItem` В следующем коде XAML `MenuItem` показаны экземпляры, привязанные к командам, определенным в ViewModel:
+Класс `MenuItem` поддерживает шаблон Model-View-ViewModel (MVVM) через [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объекты и интерфейс `ICommand`. В следующем коде XAML показаны `MenuItem` экземпляры, привязанные к командам, определенным в ViewModel:
 
 ```xaml
 <ContentPage.BindingContext>
@@ -157,7 +157,7 @@ void OnItemClicked(object sender, EventArgs e)
 </StackLayout>
 ```
 
-В предыдущем примере два `MenuItem` объекта определяются с их `Command` свойствами и, `CommandParameter` привязанными к командам в ViewModel. ViewModel содержит команды, упоминаемые в XAML:
+В предыдущем примере определены два `MenuItem` объектов с их `Command` и `CommandParameter` свойства, привязанные к командам в ViewModel. ViewModel содержит команды, упоминаемые в XAML:
 
 ```csharp
 public class ListPageViewModel : INotifyPropertyChanged
@@ -176,7 +176,7 @@ public class ListPageViewModel : INotifyPropertyChanged
 }
 ```
 
-Пример приложения включает `DataService` класс, используемый для получения списка элементов для заполнения `ListView` объектов. Создается экземпляр ViewModel, элементы `DataService` класса и задаются `BindingContext` как в коде программной части:
+Пример приложения включает класс `DataService`, используемый для получения списка элементов для заполнения объектов `ListView`. Создается экземпляр ViewModel, элементы класса `DataService` и устанавливаются в качестве `BindingContext` в коде программной части:
 
 ```csharp
 public MenuItemXamlMvvmPage()
@@ -189,9 +189,9 @@ public MenuItemXamlMvvmPage()
 ## <a name="menuitem-icons"></a>Значки MenuItem
 
 > [!WARNING]
-> `MenuItem`на устройствах Android отображаются только значки. На других платформах будет отображаться только текст, заданный `Text` свойством.
+> `MenuItem` объекты отображаются только значки на устройстве Android. На других платформах будет отображаться только текст, заданный свойством `Text`.
 
- Значки задаются с `IconImageSource` помощью свойства. Если указан значок, то текст, заданный `Text` свойством, не будет отображаться. На следующем снимке экрана `MenuItem` показан значок со значком на Android:
+ Значки задаются с помощью свойства `IconImageSource`. Если указан значок, то текст, заданный свойством `Text`, не будет отображаться. На следующем снимке экрана показан `MenuItem` со значком на Android:
 
 ![Снимок экрана значка MenuItem в Android](menuitem-images/menuitem-android-icon.png "Снимок экрана значка MenuItem в Android")
 
@@ -201,11 +201,11 @@ public MenuItemXamlMvvmPage()
 
 К контекстным меню обращаются и отображаются по-разному на каждой платформе.
 
-В Android контекстное меню активируется длительным нажатием элемента списка. Контекстное меню заменяет заголовок и область панели навигации, а `MenuItem` параметры отображаются горизонтальными кнопками.
+В Android контекстное меню активируется длительным нажатием элемента списка. Контекстное меню заменяет заголовок и область панели навигации, а параметры `MenuItem` отображаются как горизонтальные кнопки.
 
 !["Снимок экрана контекстного меню в Android"](menuitem-images/menuitem-android-icon.png "Снимок экрана: контекстное меню в Android")
 
-В iOS контекстное меню активируется функцией прокрутки на элементе списка. Контекстное меню отображается в элементе списка и `MenuItems` отображается в виде горизонтальных кнопок.
+В iOS контекстное меню активируется функцией прокрутки на элементе списка. Контекстное меню отображается в элементе списка, а `MenuItems` отображаются как горизонтальные кнопки.
 
 !["Снимок экрана контекстного меню в iOS"](menuitem-images/menuitem-ios-contextmenu.png "Снимок экрана: контекстное меню в iOS")
 
@@ -215,5 +215,5 @@ public MenuItemXamlMvvmPage()
 
 ## <a name="related-links"></a>Связанные ссылки
 
-* [Демонстрации MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+* [Демонстрации MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 * [Изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md)

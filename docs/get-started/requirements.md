@@ -6,13 +6,13 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/01/2019
-ms.openlocfilehash: e4584867e457661b2dfaa43fcbde7b1adcabeb85
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
-ms.translationtype: MT
+ms.date: 10/16/2019
+ms.openlocfilehash: 3d215519a2046c19fb1d9d5dbf7d140ae1452de6
+ms.sourcegitcommit: 841590e3ed1b46473ab84e357e045afa7cfef549
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273101"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72531800"
 ---
 # <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
 
@@ -71,14 +71,16 @@ _Требования к платформе и системные требова
 
 ## <a name="mac-system-requirements"></a>Требования к системе Mac
 
-Visual Studio для Mac можно использовать для разработки приложений Xamarin. Forms в macOS High Сьерра (10,13) или более поздней версии. Для разработки приложений iOS рекомендуется установить по крайней мере пакет SDK iOS 10 и Xcode 9.
+Visual Studio для Mac можно использовать для разработки приложений Xamarin. Forms в macOS High Сьерра (10,13) или более поздней версии. Для разработки приложений iOS рекомендуется использовать последнюю версию Xcode, iOS и macOS.
 
 > [!NOTE]
 > Приложения Windows нельзя разрабатывать в macOS.
 
 ## <a name="windows-system-requirements"></a>Требования к системе Windows
 
-Приложения Xamarin.Forms для iOS и Android можно создавать в любой установке Windows, которая поддерживает возможности разработки Xamarin. Для этого в ОС Windows 7 и более поздних версиях следует установить Visual Studio 2017 или более позднюю версию. Для разработки в iOS требуется подключенный к сети компьютер Mac.
+Приложения Xamarin.Forms для iOS и Android можно создавать в любой установке Windows, которая поддерживает возможности разработки Xamarin. Для полной поддержки функций текущей платформы используйте последнюю версию Visual Studio. 
+
+Для разработки iOS требуется сетевой компьютер Mac, использующий последнюю версию Xcode и минимальную версию macOS, указанную Apple.
 
 <a name="windows10" />
 
@@ -88,7 +90,7 @@ Visual Studio для Mac можно использовать для разраб
 
 - Windows 10 (рекомендуется самая последняя версия, не менее создателей обновлений)
 
-- Visual Studio 2019 рекомендуется (минимум Visual Studio 2017 версии 15,8)
+- Visual Studio 2019 рекомендуется
 
 - [Пакет средств разработки Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 

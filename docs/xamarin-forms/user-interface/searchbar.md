@@ -8,45 +8,45 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69658026"
 ---
 # <a name="xamarinforms-searchbar"></a>Сеарчбар Xamarin. Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) — это элемент управления вводом пользователя, используемый для запуска поиска. `SearchBar` Элемент управления поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана `SearchBar` показан запрос с результатами, `ListView`отображаемыми в:
+[@No__t_1](xref:Xamarin.Forms.SearchBar) Xamarin. Forms — это пользовательский элемент управления вводом, используемый для запуска поиска. Элемент управления `SearchBar` поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана показан `SearchBar` запрос с результатами, отображаемыми в `ListView`:
 
-[![Снимок экрана сеарчбар в iOS и Android](searchbar-images/device-searchbars-cropped.png "Сеарчбар в iOS и Android")](searchbar-images/device-searchbars.png#lightbox "Сеарчбар в iOS и Android")
+[![Снимок экрана Сеарчбар в iOS и Android](searchbar-images/device-searchbars-cropped.png "Сеарчбар в iOS и Android")](searchbar-images/device-searchbars.png#lightbox "Сеарчбар в iOS и Android")
 
-`SearchBar` Класс определяет следующие свойства:
+Класс `SearchBar` определяет следующие свойства:
 
-* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)значение типа `Color` , определяющее цвет кнопки отмены.
-* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)значение перечисления, которое определяет, является ли `SearchBar` шрифт полужирным, курсивом или ни тем ни другого. `FontAttributes`
-* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily)значение типа `string` , определяющее семейство шрифтов, используемое `SearchBar`.
-* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize)может быть `NamedSize` значением перечисления `double` или значением, представляющим определенные размеры шрифтов на разных платформах.
-* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment)`TextAlignment` значение перечисления, определяющее выравнивание текста запроса по горизонтали.
-* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder)`string` значение, определяющее текст заполнителя, например "Поиск...".
-* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor)значение типа `Color` , определяющее цвет текста заполнителя.
-* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand)— Это `ICommand` , которое позволяет привязать пользовательские действия, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
-* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)аргумент, указывающий параметр, который должен быть передан в `SearchCommand`. `object`
-* [`Text`](xref:Xamarin.Forms.SearchBar.Text)Объект `string` , содержащий текст запроса `SearchBar`в.
-* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor)значение типа `Color` , определяющее цвет текста запроса.
+* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) — это `Color`, определяющая цвет кнопки отмены.
+* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) — это `FontAttributes` перечислимое значение, определяющее, является ли шрифт `SearchBar` полужирным, курсивом или ни одной.
+* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) — это `string`, который определяет семейство шрифтов, используемое `SearchBar`.
+* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) может быть `NamedSize` значением перечисления или `double` значением, представляющим определенные размеры шрифтов на разных платформах.
+* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) — это `TextAlignment` перечислимое значение, определяющее выравнивание текста запроса по горизонтали.
+* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) — это `string`, который определяет текст заполнителя, например "Поиск...".
+* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) — это `Color`, определяющая цвет текста заполнителя.
+* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) — это `ICommand`, который позволяет привязать действия пользователя, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
+* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) — это `object`, указывающий параметр, который должен быть передан `SearchCommand`.
+* [`Text`](xref:Xamarin.Forms.SearchBar.Text) — это `string`, содержащий текст запроса в `SearchBar`.
+* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor) — это `Color`, определяющая цвет текста запроса.
 
-Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, `SearchBar` что означает возможность настройки и назначения привязок данных. Указание свойств `SearchBar` шрифта в согласуется с настройками текста в других [элементах управления "текст" Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md). Дополнительные сведения см. [в статье шрифты в Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md).
+Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что `SearchBar` может быть настроена и быть целью привязок данных. Указание свойств шрифта в `SearchBar` согласуется с настройкой текста в других [элементах управления "текст" Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md). Дополнительные сведения см. [в статье шрифты в Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md).
 
 ## <a name="create-a-searchbar"></a>Создание Сеарчбар
 
-Экземпляр `SearchBar` можно создать в XAML. Его необязательное `Placeholder` свойство можно задать для определения текста подсказки в поле ввода запроса. Значение по умолчанию для `Placeholder` параметра — пустая строка, поэтому не отображается заполнитель, если он не задан. В следующем примере показано, как создать экземпляр `SearchBar` в XAML с помощью необязательного `Placeholder` набора свойств:
+В XAML можно создать экземпляр `SearchBar`. Необязательное свойство `Placeholder` может быть установлено для определения текста подсказки в поле ввода запроса. Значением по умолчанию для `Placeholder` является пустая строка, поэтому не отображается заполнитель, если он не задан. В следующем примере показано, как создать экземпляр `SearchBar` в XAML с помощью необязательного набора свойств `Placeholder`:
 
 ```xaml
 <SearchBar Placeholder="Search items..." />
 ```
 
-Также `SearchBar` можно создать в коде:
+@No__t_0 также можно создать в коде:
 
 ```csharp
 SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
@@ -54,7 +54,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
 
 ### <a name="searchbar-appearance-properties"></a>Свойства внешнего вида Сеарчбар
 
-`SearchBar` Элемент управления определяет множество свойств, которые настраивают внешний вид элемента управления. В следующем примере показано, как создать экземпляр `SearchBar` в XAML с несколькими указанными свойствами:
+Элемент управления `SearchBar` определяет множество свойств, которые настраивают внешний вид элемента управления. В следующем примере показано, как создать экземпляр `SearchBar` в XAML с несколькими указанными свойствами:
 
 ```xaml
 <SearchBar Placeholder="Search items..."
@@ -66,7 +66,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
            FontAttributes="Italic" />
 ```
 
-Эти свойства также можно указать при создании `SearchBar` объекта в коде:
+Эти свойства также можно указать при создании объекта `SearchBar` в коде:
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,32 +80,32 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-На следующем снимке экрана показан `SearchBar` итоговый элемент управления:
+На следующем снимке экрана показан результирующий элемент управления `SearchBar`:
 
-[![Снимок экрана настраиваемого сеарчбар в iOS и Android](searchbar-images/device-searchbars-styled-cropped.png "Настраиваемые сеарчбар в iOS и Android")](searchbar-images/device-searchbars-styled.png#lightbox "Настраиваемые Сеарчбар в iOS и Android")
+[![Снимок экрана настраиваемого Сеарчбар в iOS и Android](searchbar-images/device-searchbars-styled-cropped.png "Настраиваемые Сеарчбар в iOS и Android")](searchbar-images/device-searchbars-styled.png#lightbox "Настраиваемые Сеарчбар в iOS и Android")
 
 ## <a name="perform-a-search-with-event-handlers"></a>Выполнение поиска с помощью обработчиков событий
 
-Поиск можно выполнить с помощью `SearchBar` элемента управления, присоединив обработчик событий к одному из следующих событий:
+Поиск можно выполнить с помощью элемента управления `SearchBar`, присоединив обработчик событий к одному из следующих событий:
 
-* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed)вызывается, когда пользователь либо нажимает кнопку поиска, либо нажимает клавишу ВВОД.
-* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged)вызывается всякий раз, когда изменяется текст в поле запроса.
+* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) вызывается, когда пользователь либо нажимает кнопку поиска, либо нажимает клавишу ВВОД.
+* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged) вызывается всякий раз, когда изменяется текст в поле запроса.
 
-В следующем примере показан обработчик событий, присоединенный к `TextChanged` событию в XAML и `ListView` использующий для отображения результатов поиска:
+В следующем примере показан обработчик событий, присоединенный к событию `TextChanged` в XAML и использующий `ListView` для отображения результатов поиска:
 
 ```xaml
 <SearchBar TextChanged="OnTextChanged" />
 <ListView x:Name="searchResults" >
 ```
 
-Обработчик событий можно также присоединить к `SearchBar` созданному в коде:
+Обработчик событий можно также присоединить к `SearchBar`, созданному в коде:
 
 ```csharp
 SearchBar searchBar = new SearchBar {/*...*/};
 searchBar.TextChanged += OnTextChanged;
 ```
 
-Обработчик событий в файле кода программной части одинаков, создается ли объект с `SearchBar` помощью XAML или кода: `TextChanged`
+Обработчик событий `TextChanged` в файле кода программной части одинаков, создается ли `SearchBar` с помощью XAML или кода:
 
 ```csharp
 void OnTextChanged(object sender, EventArgs e)
@@ -115,13 +115,13 @@ void OnTextChanged(object sender, EventArgs e)
 }
 ```
 
-В предыдущем примере подразумевается существование `DataService` класса `GetSearchResults` с методом, способным возвращать элементы, соответствующие запросу. `SearchBar` `ItemsSource` Значение свойства элемента управления передается в `ListView` метод,арезультатиспользуетсядляобновлениясвойстваэлементауправления.`GetSearchResults` `Text` Общий результат заключается в том, что результаты поиска отображаются в `ListView` элементе управления.
+Предыдущий пример подразумевает существование класса `DataService` с методом `GetSearchResults`, способным возвращать элементы, соответствующие запросу. Значение свойства `Text` элемента управления `SearchBar` передается методу `GetSearchResults`, а результат используется для обновления свойства `ItemsSource` элемента управления `ListView`. Общий результат заключается в том, что результаты поиска отображаются в элементе управления `ListView`.
 
 Пример приложения предоставляет `DataService` реализацию класса, которую можно использовать для тестирования функций поиска.
 
 ## <a name="perform-a-search-using-a-viewmodel"></a>Выполнение поиска с помощью ViewModel
 
-Поиск может выполняться без обработчиков событий путем привязки `SearchCommand` свойств и `SearchCommandParameter` к `ICommand` реализациям. Пример проекта демонстрирует эти реализации с помощью шаблона Model-View-ViewModel (MVVM). Дополнительные сведения о привязках данных с помощью MVVM см. [в разделе привязки данных с помощью MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
+Поиск может выполняться без обработчиков событий путем привязки свойств `SearchCommand` и `SearchCommandParameter` к реализациям `ICommand`. Пример проекта демонстрирует эти реализации с помощью шаблона Model-View-ViewModel (MVVM). Дополнительные сведения о привязках данных с помощью MVVM см. [в разделе привязки данных с помощью MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 В примере приложения ViewModel содержит следующий код:
 
@@ -157,9 +157,9 @@ public class SearchViewModel : INotifyPropertyChanged
 ```
 
 > [!NOTE]
-> ViewModel предполагает наличие `DataService` класса, способного выполнять поиск. `DataService` Класс, включая пример данных, доступен в примере приложения.
+> В ViewModel предполагается существование `DataService` класса, способного выполнять поиск. Класс `DataService`, включая примеры данных, доступен в примере приложения.
 
-В следующем коде XAML показано, как привязать `SearchBar` к примеру ViewModel, `ListView` с элементом управления, отображающим результаты поиска:
+В следующем коде XAML показано, как привязать `SearchBar` к примеру ViewModel, с `ListView`ным элементом управления, отображающим результаты поиска:
 
 ```xaml
 <ContentPage ...>
@@ -178,9 +178,9 @@ public class SearchViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-В этом примере задается `BindingContext` как экземпляр `SearchViewModel` класса. Он `SearchCommand` привязывает `SearchCommandParameter` свойство `PerformSearch` `SearchBar` к в ViewModel и привязывает `Text` свойство к свойству. `ICommand` Свойство привязано `SearchResults` к свойству ViewModel. `ListView.ItemsSource`
+Этот пример задает `BindingContext` как экземпляр класса `SearchViewModel`. Он привязывает свойство `SearchCommand` к `PerformSearch` `ICommand` в ViewModel и привязывает свойство `SearchBar` `Text` к свойству `SearchCommandParameter`. Свойство `ListView.ItemsSource` привязано к свойству `SearchResults` класса ViewModel.
 
-Дополнительные сведения о `ICommand` интерфейсе и привязках см. в разделе [Привязка данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md) и [интерфейс ICommand](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+Дополнительные сведения об интерфейсе `ICommand` и привязках см. в разделе [Привязка данных в Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md) и [интерфейс ICommand](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
 ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "71198494"
 ---
 # <a name="xamarinforms-material-visual"></a>Визуальный элемент материалов Xamarin. Forms
@@ -26,11 +26,11 @@ ms.locfileid: "71198494"
 
 1. Добавьте пакет NuGet [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) в проекты iOS и Android Platform. Этот пакет NuGet предоставляет оптимизированные для разработки материалов модули подготовки отчетов в iOS и Android. В iOS пакет предоставляет транзитивное зависимость для [Xamarin. iOS. материалкомпонентс](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), которая является C# привязкой к [компонентам материалов Google для iOS](https://material.io/develop/ios/). В Android пакет предоставляет целевые объекты сборки, чтобы обеспечить правильную настройку TargetFramework.
 1. Инициализируйте модули подготовки материалов в каждом проекте платформы. Дополнительные сведения см. в разделе [Инициализация модулей подготовки](#initialize-material-renderers)отчетов.
-1. [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Чтобы`Material` использовать модули подготовки материалов, присвоив свойству значение на всех страницах, которые должны применять правила дизайна материалов. Дополнительные сведения см. в разделе Использование модулей подготовки отчетов к [просмотру](#consume-material-renderers).
+1. Чтобы использовать модули подготовки материалов, установите для свойства [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) значение `Material` на всех страницах, которые должны применять правила проектирования материалов. Дополнительные сведения см. в разделе Использование модулей подготовки отчетов к [просмотру](#consume-material-renderers).
 1. используемых Настройте модули подготовки материалов. Дополнительные сведения см. в разделе Настройка модулей подготовки отчетов к [просмотру](#customize-material-renderers).
 
 > [!IMPORTANT]
-> В Android для модулей подготовки материалов требуется минимальная версия 5,0 (API 21) или более поздней версии, а также TargetFramework версии 9,0 (API 28). Кроме того, проект платформы требует наличия библиотек поддержки Android 28.0.0 или более поздней версии, и его тема должна наследовать от темы "компоненты материала" или продолжить наследовать от темы AppCompat. Дополнительные сведения см. в разделе [Приступая к работе с компонентами материал для Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
+> В Android для модулей подготовки материалов требуется минимальная версия 5,0 (API 21) или более поздней версии, а также TargetFramework версии 9,0 (API 28). Кроме того, проект платформы требует наличия библиотек поддержки Android 28.0.0 или более поздней версии, и его тема должна наследовать от темы "компоненты материала" или продолжить наследовать от темы AppCompat. Дополнительные сведения см. в статье [Начало работы с материальными компонентами для Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
 
 Модули подготовки материалов в настоящее время включены в пакет [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet для следующих представлений:
 
@@ -47,20 +47,20 @@ ms.locfileid: "71198494"
 - [`Slider`](xref:Xamarin.Forms.Slider)
 - [`Stepper`](xref:Xamarin.Forms.Stepper)
 
-С функциональной точки зрения материала визуализаторов ничем не отличаются, для модулей подготовки отчетов по умолчанию.
+Функционально, модули подготовки материалов по умолчанию не отличаются от модулей подготовки отчетов.
 
 ## <a name="initialize-material-renderers"></a>Инициализация модулей подготовки материалов
 
 После установки пакета NuGet для [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) модули подготовки материалов должны быть инициализированы в каждом проекте платформы.
 
-В iOS это должно произойти в **AppDelegate.CS** путем вызова `Xamarin.Forms.FormsMaterial.Init` метода *после* `Xamarin.Forms.Forms.Init` метода:
+В iOS это должно произойти в **AppDelegate.CS** путем вызова метода `Xamarin.Forms.FormsMaterial.Init` *после* метода `Xamarin.Forms.Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
 global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-В Android это должно произойти в **MainActivity.CS** путем вызова `Xamarin.Forms.FormsMaterial.Init` метода *после* `Xamarin.Forms.Forms.Init` метода:
+В Android это должно произойти в **MainActivity.CS** путем вызова метода `Xamarin.Forms.FormsMaterial.Init` *после* метода `Xamarin.Forms.Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -69,7 +69,7 @@ global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
 ## <a name="consume-material-renderers"></a>Использование модулей подготовки материалов
 
-Приложения могут отказаться от использования модулей подготовки материалов, установив [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) свойство на странице, макете или представлении, чтобы: `Material`
+Приложения могут отказаться от использования модулей подготовки материалов, установив свойство [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) на странице, макете или представлении, чтобы `Material`:
 
 ```xaml
 <ContentPage Visual="Material"
@@ -85,24 +85,24 @@ ContentPage contentPage = new ContentPage();
 contentPage.Visual = VisualMarker.Material;
 ```
 
-Свойству можно задать любой тип, реализующий `IVisual`, с [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) классом, который предоставляет следующие `IVisual` свойства: [`Visual`](xref:Xamarin.Forms.VisualElement.Visual)
+Свойству [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) можно присвоить любой тип, реализующий `IVisual`, с классом [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) , который предоставляет следующие свойства `IVisual`:
 
-- `Default`— Указывает, что представление должно отображаться с помощью модуля подготовки отчетов по умолчанию.
-- `MatchParent`— Указывает, что представление должно использовать тот же модуль подготовки отчетов, что и его непосредственного родителя.
-- `Material`— Указывает, что представление должно быть отображено с помощью модуля подготовки материалов.
+- `Default` — указывает, что представление должно отображаться с помощью модуля подготовки отчетов по умолчанию.
+- `MatchParent` — указывает, что представление должно использовать тот же модуль подготовки отчетов, что и его непосредственного родителя.
+- `Material` — указывает, что представление должно отображаться с помощью модуля подготовки материалов.
 
 > [!IMPORTANT]
-> Свойство определяется в классе с представлениями, которые наследуют значение свойстваотсвоихродителей.`Visual` [`VisualElement`](xref:Xamarin.Forms.VisualElement) [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Таким образом, установка `Visual` свойства для гарантирует [`ContentPage`](xref:Xamarin.Forms.ContentPage) , что все поддерживаемые представления на странице будут использовать этот визуальный элемент. Кроме того `Visual` свойство можно переопределить для представления.
+> Свойство [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) определено в классе [`VisualElement`](xref:Xamarin.Forms.VisualElement) , в котором представления наследуют значение свойства `Visual` от своих родителей. Поэтому установка свойства `Visual` в [`ContentPage`](xref:Xamarin.Forms.ContentPage) гарантирует, что все поддерживаемые представления на странице будут использовать этот визуальный элемент. Кроме того, свойство `Visual` может быть переопределено в представлении.
 
 На следующих снимках экрана показан пользовательский интерфейс, отображаемый с помощью модулей подготовки отчетов по умолчанию:
 
 [![Снимок экрана модулей подготовки отчетов по умолчанию в iOS и Android](material-visual-images/default-renderers.png "Представления, использующие модули подготовки отчетов по умолчанию")](material-visual-images/default-renderers-large.png#lightbox)
 
-На следующих снимках экрана показано тот же пользовательский интерфейс, с помощью материалов модулей подготовки отчетов к просмотру:
+На следующих снимках экрана показан один и тот же пользовательский интерфейс, отображаемый с помощью модулей подготовки материалов:
 
 [![Снимок экрана модулей подготовки материалов в iOS и Android](material-visual-images/material-renderers.png "Представления, использующие модули подготовки материалов")](material-visual-images/material-renderers-large.png#lightbox)
 
-Основные видимые различия между модулями подготовки отчетов по умолчанию и модулями подготовки материалов, показанными здесь, заключаются [`Button`](xref:Xamarin.Forms.Button) в том, что модули подготовки отчетов [`Frame`](xref:Xamarin.Forms.Frame) записывают текст и округляют углы границ. Однако модули подготовки материалов используют собственные элементы управления, поэтому для таких областей, как шрифты, тени, цвета и повышения прав, могут существовать различия в пользовательском интерфейсе.
+Основные видимые различия между модулями подготовки отчетов по умолчанию и модулями подготовки материалов, показанными здесь, означают, что модули подготовки материалов записывают [`Button`](xref:Xamarin.Forms.Button) текста и округляют углы [`Frame`](xref:Xamarin.Forms.Frame) границ. Однако модули подготовки материалов используют собственные элементы управления, поэтому для таких областей, как шрифты, тени, цвета и повышения прав, могут существовать различия в пользовательском интерфейсе.
 
 > [!NOTE]
 > Компоненты проектирования материалов тесно соответствуют рекомендациям Google. В результате визуализаторы дизайна материалов перемещаются в сторону изменения размера и поведения. Если требуется больший контроль над стилями или поведением, можно по-прежнему создать собственный [результат](~/xamarin-forms/app-fundamentals/effects/index.md), [поведение](~/xamarin-forms/app-fundamentals/behaviors/index.md)или [пользовательский модуль подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) отчетов для получения необходимых сведений.
@@ -124,7 +124,7 @@ contentPage.Visual = VisualMarker.Material;
 - `MaterialSliderRenderer`
 - `MaterialStepperRenderer`
 
-В следующем примере кода показан пример настройки `MaterialProgressBarRenderer` класса:
+В следующем примере кода показан пример настройки класса `MaterialProgressBarRenderer`.
 
 ```csharp
 using Xamarin.Forms.Material.Android;
@@ -139,10 +139,10 @@ namespace MyApp.Android
 }
 ```
 
-В этом примере `ExportRendererAttribute` объект указывает `CustomMaterialProgressBarRenderer` , что класс будет использоваться для отрисовки [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) представления с `IVisual` типом, зарегистрированным в качестве третьего аргумента.
+В этом примере `ExportRendererAttribute` указывает, что класс `CustomMaterialProgressBarRenderer` будет использоваться для отрисовки представления [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) с типом `IVisual`, зарегистрированным в качестве третьего аргумента.
 
 > [!NOTE]
-> Модуль подготовки отчетов, указывающий `IVisual` тип (как часть его `ExportRendererAttribute`), будет использоваться для визуализации входящих в представления, а не для модуля подготовки к просмотру по умолчанию. Во время выбора модуля подготовки отчетов `Visual` свойства представления проверен и включены в процесс выбора модуля подготовки отчетов.
+> Модуль подготовки отчетов, указывающий тип `IVisual`, в составе его `ExportRendererAttribute`, будет использоваться для отрисовки включенных в представления, а не для модуля подготовки по умолчанию. Во время выбора модуля визуализации свойство `Visual` представления проверяется и включается в процесс выбора модуля подготовки отчетов.
 
 Дополнительные сведения о пользовательских модулях подготовки отчетов см. в разделе [пользовательские модули подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов.
 

@@ -7,15 +7,15 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/28/2016
 ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70288054"
 ---
 # <a name="building-cross-platform-applications"></a>Создание кроссплатформенных приложений
 
-Существует два варианта совместного использования кода между несколькими платформами для мобильных приложений: Проекты общих ресурсов и переносимые библиотеки классов. Эти параметры [обсуждаются здесь](~/cross-platform/app-fundamentals/code-sharing.md). также доступны дополнительные сведения о [переносимых библиотеках классов](~/cross-platform/app-fundamentals/pcl.md) и [общих проектах](~/cross-platform/app-fundamentals/shared-projects.md) .
+Существует два варианта совместного использования кода между многоплатформенными мобильными приложениями: проекты общих ресурсов и переносимые библиотеки классов. Эти параметры [обсуждаются здесь](~/cross-platform/app-fundamentals/code-sharing.md). также доступны дополнительные сведения о [переносимых библиотеках классов](~/cross-platform/app-fundamentals/pcl.md) и [общих проектах](~/cross-platform/app-fundamentals/shared-projects.md) .
 
 <a name="Sections" />
 
@@ -46,7 +46,7 @@ ms.locfileid: "70288054"
 Задача — это простое приложение списка задач для iOS, Android и Windows Phone.
 В нем демонстрируются основы создания кросс-платформенного приложения с помощью Xamarin и используется локальная база данных SQLite.
 
- Список задач списка задач [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ список [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) списка [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Прочтите [Пример использования задач](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
@@ -63,8 +63,8 @@ ms.locfileid: "70288054"
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Параметры общего доступа к коду](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Пример использования: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Практический пример: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Пример приложения для задач (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Разработка мобильных приложений Xamarin: Основы кросс- C# платформенного и Xamarin. Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Разработка мобильных приложений Xamarin. Основные принципы работы C# различных платформ и Xamarin. Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Разработка мобильных приложений C# с помощью Грег Шакклес (O'Reilly)](http://shop.oreilly.com/product/0636920024002.do)
 - [Профессиональная кросс-платформенная разработка мобильных C# приложений в Скотт Олсон, Джон Хантер, Бен Хоржен, Кенни вернувшиеся (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

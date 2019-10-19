@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: 3d215519a2046c19fb1d9d5dbf7d140ae1452de6
-ms.sourcegitcommit: 841590e3ed1b46473ab84e357e045afa7cfef549
-ms.translationtype: HT
+ms.openlocfilehash: 46a72534fba7a45323a82ad121e5844410472812
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72531800"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584350"
 ---
 # <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
 
@@ -71,7 +71,7 @@ _Требования к платформе и системные требова
 
 ## <a name="mac-system-requirements"></a>Требования к системе Mac
 
-Visual Studio для Mac можно использовать для разработки приложений Xamarin. Forms в macOS High Сьерра (10,13) или более поздней версии. Для разработки приложений iOS рекомендуется использовать последнюю версию Xcode, iOS и macOS.
+Visual Studio для Mac можно использовать для разработки приложений Xamarin. Forms в macOS High Сьерра (10,13) или более поздней версии. Для разработки приложений iOS рекомендуется использовать последнюю версию Xcode, iOS и macOS. Требования к конкретной версии см. в последних [заметках о выпуске Xamarin. iOS](/xamarin/ios/release-notes/).
 
 > [!NOTE]
 > Приложения Windows нельзя разрабатывать в macOS.

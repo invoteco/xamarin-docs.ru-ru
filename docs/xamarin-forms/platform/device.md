@@ -1,34 +1,34 @@
 ---
-title: Класс устройств Xamarin.Forms
-description: В этой статье объясняется, как использовать класс устройств Xamarin.Forms, возможность точного управления функциональные возможности и макеты на каждой платформы.
+title: Класс устройств Xamarin. Forms
+description: В этой статье объясняется, как использовать класс устройств Xamarin. Forms для точного управления функциональными возможностями и макетами на уровне платформы.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 77cc414cd9b15f99f95d4a54f7af5ce6f028c41a
-ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
+ms.openlocfilehash: e77dc003e3786767f873e71514ebb3b7aef8c8d6
+ms.sourcegitcommit: 8f78139333aa54d9247710008bcfae15f7fd5392
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887443"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583549"
 ---
-# <a name="xamarinforms-device-class"></a>Класс устройств Xamarin.Forms
+# <a name="xamarinforms-device-class"></a>Класс устройств Xamarin. Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
-[ `Device` ](xref:Xamarin.Forms.Device) Класс содержит несколько свойств и методов, чтобы помочь разработчикам настраивать макет и функций на каждой платформы.
+Класс [`Device`](xref:Xamarin.Forms.Device) содержит ряд свойств и методов, помогающих разработчикам настраивать макет и функциональность для отдельных платформ.
 
-Помимо методов и свойств, предназначенных для целевого кода на конкретных типах и размерах оборудования `Device` , класс включает методы, которые можно использовать для взаимодействия с элементами управления пользовательского интерфейса из фоновых потоков. Дополнительные сведения см. в разделе [взаимодействие с интерфейсом пользователя из фоновых потоков](#interact-with-the-ui-from-background-threads).
+Помимо методов и свойств, предназначенных для целевого кода на конкретных типах и размерах оборудования, класс `Device` содержит методы, которые можно использовать для взаимодействия с элементами управления пользовательского интерфейса из фоновых потоков. Дополнительные сведения см. в разделе [взаимодействие с интерфейсом пользователя из фоновых потоков](#interact-with-the-ui-from-background-threads).
 
 ## <a name="providing-platform-specific-values"></a>Предоставление значений для конкретной платформы
 
-До Xamarin.Forms 2.3.4, платформы, приложение было запущено на удалось получить, изучив [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) свойство и его для сравнения [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), и [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) значений перечисления. Аналогично, один из [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) перегрузки может использоваться для предоставления значений, зависящих от платформы к элементу управления.
+До Xamarin. Forms 2.3.4 платформа, в которой выполнялось приложение, может быть получена путем проверки свойства [`Device.OS`](xref:Xamarin.Forms.Device.OS) и его сравнения с перечислением [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)и [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) данные. Аналогичным образом один из [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) перегрузок можно использовать для предоставления для элемента управления значений, зависящих от платформы.
 
-Тем не менее поскольку Xamarin.Forms 2.3.4 эти API устарели и заменены. [ `Device` ](xref:Xamarin.Forms.Device) Класс теперь содержит общедоступный строковые константы, определяющие платформ — [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`() Устаревшая версия), `Device.WinRT` (устаревшая версия), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), и [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). Аналогичным образом [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) перегрузки были заменены [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) и [ `On` ](xref:Xamarin.Forms.On) API-интерфейсы.
+Однако, поскольку Xamarin. Forms 2.3.4 эти API-интерфейсы являются устаревшими и замененными. Класс [`Device`](xref:Xamarin.Forms.Device) теперь содержит константы открытых строк, которые обозначают платформы: [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone` (устарело), `Device.WinRT` (не рекомендуется), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP)и [1](xref:Xamarin.Forms.Device.macOS). Аналогичным образом перегрузки [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) были заменены [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) и [`On`](xref:Xamarin.Forms.On) API.
 
-В C#, специфические для платформы значения можно задать путем создания `switch` оператором в [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) свойства, а затем предоставить `case` инструкций для необходимых платформ:
+В C#значения, зависящие от платформы, можно предоставить, создав инструкцию `switch` в свойстве [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) , а затем предоставив инструкции `case` для требуемых платформ:
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) И [ `On` ](xref:Xamarin.Forms.On) классы предоставляют те же функциональные возможности, в XAML:
+Классы [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) и [`On`](xref:Xamarin.Forms.On) предоставляют те же функции в XAML:
 
 ```xaml
 <StackLayout>
@@ -60,27 +60,27 @@ layout.Margin = new Thickness(5, top, 5, 0);
 </StackLayout>
 ```
 
-[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) Класс — это универсальный класс, который должен быть создан при помощи `x:TypeArguments` атрибут, который соответствует целевому типу. В [ `On` ](xref:Xamarin.Forms.On) класс, [ `Platform` ](xref:Xamarin.Forms.On.Platform) атрибут может принимать один `string` значение или несколько разделенных запятыми `string` значения.
+Класс [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) является универсальным классом, который должен быть создан с помощью атрибута `x:TypeArguments`, соответствующего целевому типу. В классе [`On`](xref:Xamarin.Forms.On) атрибут [`Platform`](xref:Xamarin.Forms.On.Platform) может принимать одно значение `string` или несколько `string` значений с разделителями-запятыми.
 
 > [!IMPORTANT]
-> Предоставляя некорректное `Platform` значение в атрибута `On` не приведут к ошибке. Вместо этого код будет выполняться без значения платформы, которые применяются.
+> Указание неверного значения `Platform` атрибута в классе `On` не приведет к ошибке. Вместо этого код будет выполняться без применения значения, зависящего от платформы.
 
-Кроме того `OnPlatform` расширение разметки, которая может использоваться в XAML для настройки внешнего вида пользовательского интерфейса на каждой платформы. Дополнительные сведения см. в разделе [расширение разметки OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+Кроме того, расширение разметки `OnPlatform` можно использовать в XAML для настройки внешнего вида пользовательского интерфейса на уровне платформы. Дополнительные сведения см. в разделе [расширение разметки для платформы](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
-## <a name="deviceidiom"></a>Device.Idiom
+## <a name="deviceidiom"></a>Device. идиом
 
-`Device.Idiom` Свойство может использоваться для изменения макеты или функциональные возможности в зависимости от устройства приложение выполняется на. [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) Перечисление содержит следующие значения:
+Свойство `Device.Idiom` можно использовать для изменения макетов или функций в зависимости от устройства, на котором работает приложение. Перечисление [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) содержит следующие значения:
 
-- **Телефон** — iPhone, iPod touch и уже, чем 600 частные интерфейсы Android ^
-- **Tablet** — iPad, Windows и Android устройств шире, чем 600 спады ^
-- **Рабочий стол** — возвращаются только в [приложений универсальной платформы Windows](~/xamarin-forms/platform/windows/installation/index.md) на настольных компьютерах Windows 10 (возвращает `Phone` на мобильных устройствах Windows, в том числе в сценариях непрерывное множество решений)
-- **TV** — Tizen TV устройств
-- **Контрольные значения** — Tizen watch устройств
-- **Неподдерживаемый** – не используется
+- **Телефон** — устройства iPhone, iPod Touch и Android с узким пределом, чем 600 DIP. ^
+- **Планшет** — iPad, устройства Windows и устройства Android, ширина которых превышает 600 DIP ^
+- **Настольный** компьютер — возвращается только в [приложениях UWP](~/xamarin-forms/platform/windows/installation/index.md) на настольных компьютерах с windows 10 (Возвращает `Phone` на мобильных устройствах Windows, в том числе в сценариях с Continuum).
+- **ТВ** – Tizen телевизионные устройства
+- **Watch** — Tizen Watch Devices
+- **Не поддерживается** — не используется
 
-*^ частные интерфейсы не обязательно является количество физических пикселей*
+*значение ^ DIP не обязательно является физическим числом пикселей*
 
-`Idiom` Свойство особенно полезно для создания макетов, которые используют преимущества экраны больше, следующим образом:
+Свойство `Idiom` особенно полезно для создания макетов, которые используют преимущества более крупных экранов, например:
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -90,7 +90,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 }
 ```
 
-[ `OnIdiom` ](xref:Xamarin.Forms.OnIdiom`1) Класс предоставляет те же функциональные возможности, в XAML:
+Класс [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) предоставляет те же функции в XAML:
 
 ```xaml
 <StackLayout>
@@ -105,46 +105,46 @@ if (Device.Idiom == TargetIdiom.Phone) {
 </StackLayout>
 ```
 
-[ `OnIdiom` ](xref:Xamarin.Forms.OnPlatform`1) Класс — это универсальный класс, который должен быть создан при помощи `x:TypeArguments` атрибут, который соответствует целевому типу.
+Класс [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) является универсальным классом, который должен быть создан с помощью атрибута `x:TypeArguments`, соответствующего целевому типу.
 
-Кроме того `OnIdiom` расширение разметки, которая может использоваться в XAML для настройки внешнего вида пользовательского интерфейса на идиому устройства, приложения на основе. Дополнительные сведения см. в разделе [расширение разметки OnIdiom](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
+Кроме того, расширение разметки `OnIdiom` можно использовать в XAML для настройки внешнего вида пользовательского интерфейса на основе идиомы устройства, на котором выполняется приложение. Дополнительные сведения см. в разделе [расширение разметки onidiom](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
 
-## <a name="deviceflowdirection"></a>Device.FlowDirection
+## <a name="deviceflowdirection"></a>Device. FlowDirection
 
-[ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) Значение извлекает [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) значение перечисления, представляющее текущее направление потока, который используется устройством. Направление потока — это направление, в котором глаз человека перемещается по элементам пользовательского интерфейса на странице. Перечисление имеет следующие значения.
+Значение [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) извлекает значение перечисления [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) , представляющее текущее направление потока, используемое устройством. Направление потока — это направление, в котором глаз человека перемещается по элементам пользовательского интерфейса на странице. Перечисление имеет следующие значения.
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-В XAML [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) значение можно получить с помощью `x:Static` расширение разметки:
+В XAML [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) значение можно получить с помощью расширения разметки `x:Static`.
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
 ```
 
-Эквивалентный код на C# является:
+Эквивалентный код в C# имеет следующее:
 
 ```csharp
 this.FlowDirection = Device.FlowDirection;
 ```
 
-Дополнительные сведения о направлении, см. в разделе [справа налево локализации](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
+Дополнительные сведения о направлении потока см. [в разделе локализация справа налево](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
-## <a name="devicestyles"></a>Device.Styles
+## <a name="devicestyles"></a>Device. Styles
 
-[ `Styles` Свойство](~/xamarin-forms/user-interface/styles/index.md) содержит определения встроенных стилей, которые могут применяться для некоторых элементов управления (такие как `Label`) `Style` свойство. Ниже приведены доступные стили.
+[Свойство `Styles`](~/xamarin-forms/user-interface/styles/index.md) содержит встроенные определения стилей, которые можно применить к некоторым элементам управления (например, `Label`) `Style` свойства. Доступны следующие стили:
 
 - BodyStyle
-- CaptionStyle
-- ListItemDetailTextStyle
-- ListItemTextStyle
-- SubtitleStyle
-- TitleStyle
+- каптионстиле
+- листитемдетаилтекстстиле
+- листитемтекстстиле
+- субтитлестиле
+- титлестиле
 
-## <a name="devicegetnamedsize"></a>Device.GetNamedSize
+## <a name="devicegetnamedsize"></a>Device. Жетнамедсизе
 
-`GetNamedSize` можно использовать при задании [ `FontSize` ](~/xamarin-forms/user-interface/text/fonts.md) в C# кода:
+`GetNamedSize` можно использовать при настройке [`FontSize`](~/xamarin-forms/user-interface/text/fonts.md) в C# коде:
 
 ```csharp
 myLabel.FontSize = Device.GetNamedSize (NamedSize.Small, myLabel);
@@ -155,30 +155,34 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-## <a name="deviceopenuri"></a>Device.OpenUri
+## <a name="deviceopenuri"></a>Device. Опенури
 
-`OpenUri` Метод может использоваться для запуска операций на базовой платформы, такие как открытие URL-адрес собственного веб-браузера (**Safari** в iOS или **Internet** в Android).
+Метод `OpenUri` можно использовать для активации операций на базовой платформе, таких как открытие URL-адреса в собственном веб-браузере (**Safari** в iOS или **Интернете** в Android).
 
 ```csharp
 Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 ```
 
-[Пример WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) включает пример использования `OpenUri` открывать URL-адреса и сработать телефонные звонки.
+[Пример WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) включает пример использования `OpenUri` для открытия URL-адресов, а также для вызова телефонных звонков.
 
-[Пример Maps](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) также использует `Device.OpenUri` для отображения карт и направлений, используя собственные **сопоставляет** приложения на iOS и Android.
+В [примере Maps](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) также используется `Device.OpenUri` для показа карт и направлений с помощью приложений собственных **карт** в iOS и Android.
 
-## <a name="devicestarttimer"></a>Device.StartTimer
+## <a name="devicestarttimer"></a>Device. Старттимер
 
-`Device` Класс также имеет `StartTimer` метод, который предоставляет простой способ запустить задачи, зависящие от времени, работающая в общем коде Xamarin.Forms, включая библиотеку .NET Standard. Передайте `TimeSpan` для установки интервала и возврата `true` следует таймер или `false` для ее остановки после текущего вызова.
+Класс `Device` также содержит метод `StartTimer`, который предоставляет простой способ запуска зависимых от времени задач, которые работают в общем коде Xamarin. Forms, включая библиотеку .NET Standard. Передайте `TimeSpan`, чтобы задать интервал и вернуть `true`, чтобы таймер выполнялся или `false` для его завершения после текущего вызова.
 
 ```csharp
-Device.StartTimer (new TimeSpan (0, 0, 60), () => {
+Device.StartTimer (new TimeSpan (0, 0, 60), () =>
+{
     // do something every 60 seconds
     return true; // runs again, or false to stop
 });
 ```
 
-Если код внутри таймер взаимодействует с помощью пользовательского интерфейса (такие как установка текст `Label` или отображая оповещение) должно выполняться внутри `BeginInvokeOnMainThread` выражение (см. ниже).
+Если код внутри таймера взаимодействует с пользовательским интерфейсом (например, задание текста `Label` или отображение предупреждения), его следует выполнять в `BeginInvokeOnMainThread` выражении (см. ниже).
+
+> [!NOTE]
+> Классы `System.Timers.Timer` и `System.Threading.Timer` являются .NET Standard альтернативами использования метода `Device.StartTimer`.
 
 ## <a name="interact-with-the-ui-from-background-threads"></a>Взаимодействие с пользовательским интерфейсом из фоновых потоков
 
@@ -186,18 +190,18 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Приложения иногда используют фоновые потоки для выполнения потенциально длительных операций, таких как извлечение данных из веб-службы. Если код, выполняемый в фоновом потоке, должен иметь доступ к элементам пользовательского интерфейса, он должен запустить этот код в основном потоке.
 
-Класс включает следующие `static` методы, которые можно использовать для взаимодействия с элементами пользовательского интерфейса из фоновых потоков: `Device`
+Класс `Device` включает следующие методы `static`, которые можно использовать для взаимодействия с элементами пользовательского интерфейса из фоновых потоков.
 
-| Метод | Аргументы | Возвращает | Цель |
+| Метод | Аргументы | Returns | Цель |
 |---|---|---|---|
-| `BeginInvokeOnMainThread` | `Action` | `void` | Вызывает объект `Action` в основном потоке и не ожидает его завершения. |
+| `BeginInvokeOnMainThread` | `Action` | `void` | Вызывает `Action` в основном потоке и не ожидает его завершения. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Вызывает объект `Func<T>` в основном потоке и ожидает его завершения. |
 | `InvokeOnMainThreadAsync` | `Action` | `Task` | Вызывает объект `Action` в основном потоке и ожидает его завершения. |
 | `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Вызывает объект `Func<Task<T>>` в основном потоке и ожидает его завершения. |
 | `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Вызывает объект `Func<Task>` в основном потоке и ожидает его завершения. |
 | `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Возвращает `SynchronizationContext` для основного потока. |
 
-В следующем коде показан пример использования `BeginInvokeOnMainThread` метода:
+В следующем коде показан пример использования метода `BeginInvokeOnMainThread`:
 
 ```csharp
 Device.BeginInvokeOnMainThread (() =>
@@ -209,5 +213,5 @@ Device.BeginInvokeOnMainThread (() =>
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример устройства](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
-- [Образец стилей](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Пример стилей](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Устройство](xref:Xamarin.Forms.Device)

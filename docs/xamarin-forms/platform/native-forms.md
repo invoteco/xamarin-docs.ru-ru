@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms в проектах Xamarin Native
-description: В этой статье объясняется, как использовать производные ContentPage страниц, которые напрямую добавляются в собственные проекты Xamarin и как перемещаться между ними.
+title: Xamarin. Forms в проектах Xamarin Native
+description: В этой статье объясняется, как использовать страницы, производные от ContentPage, которые непосредственно добавляются в собственные проекты Xamarin, и как осуществляется переход между ними.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
@@ -8,36 +8,36 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/19/2019
 ms.openlocfilehash: 0c84b844455b8a792b8cbe2f4dac97097e5ebd97
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69621057"
 ---
-# <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms в проектах Xamarin Native
+# <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin. Forms в проектах Xamarin Native
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 
-Как правило, приложения Xamarin.Forms включает в себя одну или несколько страниц, которые являются производными от [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), и эти страницы являются общими для всех платформ в проекте библиотеки .NET Standard или общий проект. Тем не менее, исходные формы позволяет `ContentPage`-производным страницы, чтобы добавить непосредственно в собственных приложений Xamarin.iOS, Xamarin.Android и универсальной платформы Windows. По сравнению с необходимости использовать собственный проект `ContentPage`-производных страниц из проекта библиотеки .NET Standard или общий проект, добавление страниц проектов в машинном коде преимущество — что страниц можно расширить с помощью собственного представления. Исходные представления затем можно присвоить имя в XAML с `x:Name` и на которые имеются ссылки из кода. Дополнительные сведения о собственном представлениях см. в разделе [исходные представления](~/xamarin-forms/platform/native-views/index.md).
+Как правило, приложение Xamarin. Forms включает одну или несколько страниц, производных от [`ContentPage`](xref:Xamarin.Forms.ContentPage), и эти страницы совместно используются всеми платформами в проекте библиотеки .NET Standard или в общем проекте. Однако собственные формы позволяют добавлять `ContentPage` страницы, которые можно добавить непосредственно в собственные приложения Xamarin. iOS, Xamarin. Android и UWP. По сравнению с тем, что собственный проект использует страницы, производные от `ContentPage`, из проекта библиотеки .NET Standard или из общего проекта, преимущество добавления страниц непосредственно в собственные проекты заключается в том, что страницы можно расширять с помощью собственных представлений. Собственные представления могут называться в XAML с `x:Name` и ссылаться на них из кода программной части. Дополнительные сведения о собственных представлениях см. в разделе [собственные представления](~/xamarin-forms/platform/native-views/index.md).
 
-Процесс получения Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производных от page в собственный проект выглядит следующим образом:
+Процесс использования на странице, производной от Xamarin. Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)в проекте машинного кода, выглядит следующим образом:
 
-1. Добавьте пакет Xamarin.Forms NuGet в собственный проект.
-1. Добавить [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производных страницы и зависимые компоненты в собственный проект.
+1. Добавьте пакет NuGet Xamarin. Forms в собственный проект.
+1. Добавьте в собственный проект страницу, производную от [`ContentPage`](xref:Xamarin.Forms.ContentPage), и все зависимости.
 1. Вызовите метод `Forms.Init`.
-1. Сконструировать экземпляр [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница производной и преобразовать его в соответствующий собственный тип, с помощью одного из следующих методов расширения: `CreateViewController` для iOS, `CreateSupportFragment` для Android, или `CreateFrameworkElement` для UWP.
-1. Перейдите в представление собственного типа [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница, с помощью собственного API-навигации производной.
+1. Создайте экземпляр страницы, производной от [`ContentPage`](xref:Xamarin.Forms.ContentPage), и преобразуйте ее в соответствующий собственный тип с помощью одного из следующих методов расширения: `CreateViewController` для iOS, `CreateSupportFragment` для Android или `CreateFrameworkElement` для UWP.
+1. Перейдите к представлению собственного типа для страницы, производной от [`ContentPage`](xref:Xamarin.Forms.ContentPage), с помощью собственного API навигации.
 
-Xamarin.Forms должны инициализироваться, вызвав `Forms.Init` метод, прежде чем можно создать собственный проект [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница производной. Выбор места для этого в основном зависит от времени наиболее удобное в блок-схеме приложения — может быть выполнена при запуске приложения или непосредственно перед `ContentPage`-создается производный страницы. В этой статье и сопутствующие примеры приложений `Forms.Init` метод вызывается при запуске приложения.
+Xamarin. Forms необходимо инициализировать, вызвав метод `Forms.Init`, прежде чем собственный проект сможет создать страницу, производную от [`ContentPage`](xref:Xamarin.Forms.ContentPage). Выбор времени выполнения этого действия зависит от того, когда он наиболее удобен в потоке приложения. он может быть выполнен при запуске приложения или непосредственно перед созданием страницы, производной от `ContentPage`. В этой статье и сопутствующих примерах приложений метод `Forms.Init` вызывается при запуске приложения.
 
 > [!NOTE]
-> **NativeForms** примера приложения решения не содержит все проекты Xamarin.Forms. Вместо этого он состоит из проекта Xamarin.iOS, проект Xamarin.Android и проекта универсальной платформы Windows. Каждый проект имеет собственный проект, использующий собственные формы для использования [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страниц. Тем не менее, нет причин, почему не могли использовать собственные проекты `ContentPage`-страниц на основе проекта библиотеки .NET Standard или общий проект.
+> Решение примера приложения **нативеформс** не содержит проектов Xamarin. Forms. Вместо этого он состоит из проекта Xamarin. iOS, проекта Xamarin. Android и проекта UWP. Каждый проект является собственным проектом, который использует собственные формы для использования производных от [`ContentPage`](xref:Xamarin.Forms.ContentPage)страниц. Однако нет причин, по которым в собственных проектах не удалось использовать страницы, производные от `ContentPage`, из проекта библиотеки .NET Standard или из общего проекта.
 
-Если вы используете собственные формы, Xamarin.Forms такие функции, как [ `DependencyService` ](xref:Xamarin.Forms.DependencyService), [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)и механизм привязки данных, все по-прежнему работали. Тем не менее Навигация по страницам выполняется с помощью собственного API-навигации.
+При использовании собственных форм такие функции Xamarin. Forms, как [`DependencyService`](xref:Xamarin.Forms.DependencyService), [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)и механизм привязки данных, все еще работают. Однако Навигация по страницам должна выполняться с помощью собственного API навигации.
 
 ## <a name="ios"></a>iOS
 
-В iOS `FinishedLaunching` в Переопределите `AppDelegate` класса обычно является местом для выполнения приложения задач, связанных с запуска. Он вызывается после запуска и приложения обычно переопределяется, чтобы настроить главное окно и просмотреть контроллера. В следующем коде показано в примере `AppDelegate` класс в приложении-примере:
+В iOS переопределение `FinishedLaunching` в классе `AppDelegate` обычно является местом для выполнения задач, связанных с запуском приложения. Он вызывается после запуска приложения и обычно переопределяется для настройки главного окна и контроллера представления. В следующем примере кода показан класс `AppDelegate` в примере приложения:
 
 ```csharp
 [Register("AppDelegate")]
@@ -75,22 +75,22 @@ public class AppDelegate : UIApplicationDelegate
 }
 ```
 
-`FinishedLaunching` Метод выполняет следующие задачи:
+Метод `FinishedLaunching` выполняет следующие задачи:
 
-- Xamarin.Forms инициализируется путем вызова `Forms.Init` метод.
-- Ссылку на `AppDelegate` класса хранится в `static` `Instance` поля. Это позволяет предоставить механизм для других классов для вызова методов, определенных в `AppDelegate` класса.
-- `UIWindow`, Который является основной контейнер для представлений в собственные приложения iOS, создается.
-- `FolderPath` Свойство инициализируется по пути на устройстве, где будут храниться данные о заметках.
-- `NotesPage` Класс, являющийся Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страницы, определенные в XAML, создается и преобразовать `UIViewController` с помощью `CreateViewController` метода расширения.
-- `Title` Свойство `UIViewController` имеет значение, отображаемые на `UINavigationBar`.
-- Объект `AppNavigationController` создается для управления иерархической навигации. Это класс пользовательского контроллера навигации, производный от `UINavigationController`. Объект управляет стеком контроллеров представления, а переданный `UIViewController` в конструктор значение будет представлено первоначально при `AppNavigationController` загрузке. `AppNavigationController`
-- Объект задается в качестве верхнего `UIViewController` уровня `UIWindow` для `UIWindow`, а задается как ключевое окно для приложения и становится видимым. `AppNavigationController`
+- Xamarin. Forms инициализируется путем вызова метода `Forms.Init`.
+- Ссылка на класс `AppDelegate` хранится в поле `static` `Instance`. Это необходимо для предоставления другим классам механизма вызова методов, определенных в классе `AppDelegate`.
+- Создается `UIWindow`, который является основным контейнером для представлений в собственных приложениях iOS.
+- Свойство `FolderPath` инициализируется по пути на устройстве, где будут храниться данные о заметках.
+- Класс `NotesPage`, являющийся производной от Xamarin. Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)страницей, определенной в XAML, создается и преобразуется в `UIViewController` с помощью метода расширения `CreateViewController`.
+- Свойство `Title` `UIViewController` задано, которое будет отображаться на `UINavigationBar`.
+- Для управления иерархической навигацией создается `AppNavigationController`. Это класс пользовательского контроллера навигации, который является производным от `UINavigationController`. Объект `AppNavigationController` управляет стеком контроллеров представления, и `UIViewController`, переданный в конструктор, будут первоначально представлены при загрузке `AppNavigationController`.
+- Объект `AppNavigationController` задается в качестве `UIViewController` верхнего уровня для `UIWindow`, а `UIWindow` задается как ключевое окно для приложения и становится видимым.
 
-Один раз `FinishedLaunching` успешного выполнения метода, определенного пользовательского интерфейса в Xamarin.Forms `NotesPage` класс будет отображаться, как показано на следующем снимке экрана:
+После выполнения метода `FinishedLaunching` будет отображаться пользовательский интерфейс, определенный в классе Xamarin. Forms `NotesPage`, как показано на следующем снимке экрана:
 
-[![Снимок экрана приложения Xamarin. iOS, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/ios-notespage.png "-приложении Xamarin. iOS с помощью пользовательского интерфейса XAML")](native-forms-images/ios-notespage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. iOS, использующего пользовательский интерфейс, определенный в XAML](native-forms-images/ios-notespage.png "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")](native-forms-images/ios-notespage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
 
-При взаимодействии с пользовательским интерфейсом, например нажатием кнопки **+** [`Button`](xref:Xamarin.Forms.Button), будет создан `NotesPage` следующий обработчик событий в коде программной части:
+При взаимодействии с пользовательским интерфейсом, например при нажатии **+** [`Button`](xref:Xamarin.Forms.Button), в `NotesPage` кода программной части будет создан следующий обработчик событий:
 
 ```csharp
 void OnNoteAddedClicked(object sender, EventArgs e)
@@ -99,7 +99,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-`static` `AppDelegate.Instance` Поле позволяет `AppDelegate.NavigateToNoteEntryPage` метод должен быть вызван, как показано в следующем примере кода:
+Поле `static` `AppDelegate.Instance` позволяет вызывать метод `AppDelegate.NavigateToNoteEntryPage`, который показан в следующем примере кода:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
@@ -113,11 +113,11 @@ public void NavigateToNoteEntryPage(Note note)
 }
 ```
 
-`NavigateToNoteEntryPage` Метод преобразует Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница для производной `UIViewController` с `CreateViewController` метод расширения и наборы `Title` свойство `UIViewController`. `UIViewController` Затем помещается в `AppNavigationController` по `PushViewController` метод. Таким образом, пользовательский Интерфейс определен в Xamarin.Forms `NoteEntryPage` класс будет отображаться, как показано на следующем снимке экрана:
+Метод `NavigateToNoteEntryPage` преобразует страницу, производную от [`ContentPage`](xref:Xamarin.Forms.ContentPage)Xamarin. Forms, в `UIViewController` с помощью метода расширения `CreateViewController` и задает свойство `Title` `UIViewController`. Затем `UIViewController` передается на `AppNavigationController` методом `PushViewController`. Таким образом, Пользовательский интерфейс, определенный в классе Xamarin. Forms `NoteEntryPage`, будет отображаться, как показано на следующем снимке экрана:
 
-[![Снимок экрана приложения Xamarin. iOS, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/ios-noteentrypage.png "-приложении Xamarin. iOS с помощью пользовательского интерфейса XAML")](native-forms-images/ios-noteentrypage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. iOS, использующего пользовательский интерфейс, определенный в XAML](native-forms-images/ios-noteentrypage.png "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")](native-forms-images/ios-noteentrypage-large.png#lightbox "Приложение Xamarin. iOS с пользовательским интерфейсом XAML")
 
-`AppNavigationController` `NoteEntryPage` `NotesPage` `UIViewController` Когда отображается, обратная Навигация будет `UIViewController` открывать класс для класса из, возвращая пользователя к классу для класса. `NoteEntryPage` Однако при извлечении `UIViewController` из собственного стека навигации для iOS не удаляется `UIViewController` и присоединенный `Page` объект автоматически. Таким образом, `AppNavigationController` класс `PopViewController` переопределяет метод, чтобы удалить контроллеры представления при обратной навигации:
+Когда отображается `NoteEntryPage`, обратная Навигация будет открывать `UIViewController` класса `NoteEntryPage` из `AppNavigationController`, возвращая пользователю `UIViewController` для класса `NotesPage`. Однако извлечение `UIViewController` из собственного стека навигации iOS не приводит к автоматическому удалению `UIViewController` и присоединенного `Page` объекта. Таким образом, класс `AppNavigationController` переопределяет метод `PopViewController`, чтобы удалить контроллеры представления при обратной навигации:
 
 ```csharp
 public class AppNavigationController : UINavigationController
@@ -136,14 +136,14 @@ public class AppNavigationController : UINavigationController
 }
 ```
 
-Переопределение вызывает метод для `UIViewController` объекта, извлеченного из собственного стека навигации iOS. `Dispose` `PopViewController` Невыполнение этого действия приведет `UIViewController` к потере потерянного и присоединенного `Page` объекта.
+Переопределение `PopViewController` вызывает метод `Dispose` для объекта `UIViewController`, извлеченного из собственного стека навигации iOS. Невыполнение этого действия приведет к потере `UIViewController` и присоединенного `Page` объекта.
 
 > [!IMPORTANT]
 > Потерянные объекты не могут быть собраны в мусор и поэтому вызывают утечку памяти.
 
 ## <a name="android"></a>Android
 
-В Android `OnCreate` в Переопределите `MainActivity` класса обычно является местом для выполнения приложения задач, связанных с запуска. В следующем коде показано в примере `MainActivity` класс в приложении-примере:
+В Android переопределение `OnCreate` в классе `MainActivity` обычно является местом для выполнения задач, связанных с запуском приложения. В следующем примере кода показан класс `MainActivity` в примере приложения:
 
 ```csharp
 public class MainActivity : AppCompatActivity
@@ -176,23 +176,23 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-`OnCreate` Метод выполняет следующие задачи:
+Метод `OnCreate` выполняет следующие задачи:
 
-- Xamarin.Forms инициализируется путем вызова `Forms.Init` метод.
-- Ссылку на `MainActivity` класса хранится в `static` `Instance` поля. Это позволяет предоставить механизм для других классов для вызова методов, определенных в `MainActivity` класса.
-- `Activity` Содержимое устанавливается из ресурса макета. В приложении-примере макет состоит из `LinearLayout` , содержащий `Toolbar`и `FrameLayout` в качестве контейнера фрагмента.
-- `Toolbar` Извлекается и задать в качестве панели действий для `Activity`, и задайте заголовок панели действий.
-- `FolderPath` Свойство инициализируется по пути на устройстве, где будут храниться данные о заметках.
-- `NotesPage` Класс, являющийся Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страницы, определенные в XAML, создается и преобразовать `Fragment` с помощью `CreateSupportFragment` метода расширения.
-- `SupportFragmentManager` Класс создает и фиксирует транзакцию, которая заменяет `FrameLayout` с экземпляром `Fragment` для `NotesPage` класса.
+- Xamarin. Forms инициализируется путем вызова метода `Forms.Init`.
+- Ссылка на класс `MainActivity` хранится в поле `static` `Instance`. Это необходимо для предоставления другим классам механизма вызова методов, определенных в классе `MainActivity`.
+- Содержимое `Activity` задается из ресурса макета. В примере приложения макет состоит из `LinearLayout`, содержащего `Toolbar`, и `FrameLayout`, который будет использоваться в качестве контейнера фрагментов.
+- @No__t_0 извлекается и задается в качестве панели действий для `Activity`, а также задается заголовок панели действий.
+- Свойство `FolderPath` инициализируется по пути на устройстве, где будут храниться данные о заметках.
+- Класс `NotesPage`, являющийся производной от Xamarin. Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)страницей, определенной в XAML, создается и преобразуется в `Fragment` с помощью метода расширения `CreateSupportFragment`.
+- Класс `SupportFragmentManager` создает и фиксирует транзакцию, которая заменяет экземпляр `FrameLayout` `Fragment` для класса `NotesPage`.
 
-Дополнительные сведения о фрагментах см. в разделе [фрагментов](~/android/platform/fragments/index.md).
+Дополнительные сведения о фрагментах см. в разделе [фрагменты](~/android/platform/fragments/index.md).
 
-Один раз `OnCreate` успешного выполнения метода, определенного пользовательского интерфейса в Xamarin.Forms `NotesPage` класс будет отображаться, как показано на следующем снимке экрана:
+После выполнения метода `OnCreate` будет отображаться пользовательский интерфейс, определенный в классе Xamarin. Forms `NotesPage`, как показано на следующем снимке экрана:
 
-[![Снимок экрана приложения Xamarin. Android, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/android-notespage.png "-приложении Xamarin. Android с помощью пользовательского интерфейса XAML")](native-forms-images/android-notespage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. Android, использующего пользовательский интерфейс, определенный в XAML](native-forms-images/android-notespage.png "Приложение Xamarin. Android с пользовательским интерфейсом XAML")](native-forms-images/android-notespage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
 
-При взаимодействии с пользовательским интерфейсом, например нажатием кнопки **+** [`Button`](xref:Xamarin.Forms.Button), будет создан `NotesPage` следующий обработчик событий в коде программной части:
+При взаимодействии с пользовательским интерфейсом, например при нажатии **+** [`Button`](xref:Xamarin.Forms.Button), в `NotesPage` кода программной части будет создан следующий обработчик событий:
 
 ```csharp
 void OnNoteAddedClicked(object sender, EventArgs e)
@@ -201,7 +201,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-`static` `MainActivity.Instance` Поле позволяет `MainActivity.NavigateToNoteEntryPage` метод должен быть вызван, как показано в следующем примере кода:
+Поле `static` `MainActivity.Instance` позволяет вызывать метод `MainActivity.NavigateToNoteEntryPage`, который показан в следующем примере кода:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
@@ -218,15 +218,15 @@ public void NavigateToNoteEntryPage(Note note)
 }
 ```
 
-`NavigateToNoteEntryPage` Метод преобразует Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-страница для производной `Fragment` с `CreateSupportFragment` метод расширения и добавляет `Fragment` в тот фрагмент обратно в стек. Таким образом, пользовательский Интерфейс определен в Xamarin.Forms `NoteEntryPage` будет отображаться, как показано на следующем снимке экрана:
+Метод `NavigateToNoteEntryPage` преобразует страницу, производную от [`ContentPage`](xref:Xamarin.Forms.ContentPage)Xamarin. Forms, в `Fragment` с помощью метода расширения `CreateSupportFragment` и добавляет `Fragment` в стек назад фрагмента. Таким образом, Пользовательский интерфейс, определенный в `NoteEntryPage` Xamarin. Forms, будет отображаться, как показано на следующем снимке экрана:
 
-[![Снимок экрана приложения Xamarin. Android, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный в XAML](native-forms-images/android-noteentrypage.png "-приложении Xamarin. Android с помощью пользовательского интерфейса XAML")](native-forms-images/android-noteentrypage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
+[![Снимок экрана приложения Xamarin. Android, использующего пользовательский интерфейс, определенный в XAML](native-forms-images/android-noteentrypage.png "Приложение Xamarin. Android с пользовательским интерфейсом XAML")](native-forms-images/android-noteentrypage-large.png#lightbox "Приложение Xamarin. Android с пользовательским интерфейсом XAML")
 
-При `NoteEntryPage` отображается, коснувшись обратной стрелки появится всплывающее `Fragment` для `NoteEntryPage` из фрагмента стек переходов назад, возвращая пользователю `Fragment` для `NotesPage` класса.
+Когда отображается `NoteEntryPage`, коснитесь стрелки назад, чтобы открыть `Fragment` для `NoteEntryPage` из стека фрагмента, возвращая пользователя в `Fragment` для класса `NotesPage`.
 
 ### <a name="enable-back-navigation-support"></a>Включить поддержку обратной навигации
 
-`SupportFragmentManager` Класс имеет `BackStackChanged` события, возникающего при каждом изменении содержимого фрагмента стек переходов назад. `OnCreate` Метод в `MainActivity` класс содержит анонимный обработчик для этого события:
+Класс `SupportFragmentManager` имеет событие `BackStackChanged`, которое срабатывает при каждом изменении содержимого стека фрагмента. Метод `OnCreate` в классе `MainActivity` содержит анонимный обработчик событий для этого события:
 
 ```csharp
 SupportFragmentManager.BackStackChanged += (sender, e) =>
@@ -238,7 +238,7 @@ SupportFragmentManager.BackStackChanged += (sender, e) =>
 };
 ```
 
-Этот обработчик событий отображает кнопки "Назад" на панели действий, при условии, что имеется один или несколько `Fragment` свернет во фрагменте стека. Ответ при нажатии кнопки "Назад", обрабатывается `OnOptionsItemSelected` переопределить:
+Этот обработчик событий отображает кнопку назад на панели действий при условии, что один или несколько экземпляров `Fragment` в стеке назад фрагмента. Ответ на нажатие кнопки назад обрабатывается переопределением `OnOptionsItemSelected`:
 
 ```csharp
 public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
@@ -252,18 +252,18 @@ public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
 }
 ```
 
-`OnOptionsItemSelected` Переопределение вызывается каждый раз при выборе элемента в меню "Параметры". Эта реализация извлекает текущий фрагмент из фрагмента стек переходов назад, если был выбран "Назад", а также есть один или несколько `Fragment` свернет во фрагменте стека.
+Переопределение `OnOptionsItemSelected` вызывается всякий раз, когда выбран элемент в меню Параметры. Эта реализация выводит текущий фрагмент из стека фрагмента, при условии что выбрана кнопка «назад» и имеется один или несколько экземпляров `Fragment` в стеке «фрагмент».
 
 ### <a name="multiple-activities"></a>Несколько действий
 
-Если приложение состоит из нескольких действий [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производных страниц могут быть внедрены в каждое из действий. В этом случае `Forms.Init` метод должны вызываться только в `OnCreate` переопределить первого `Activity` , внедряет Xamarin.Forms `ContentPage`. Тем не менее это имеет следующие последствия:
+Если приложение состоит из нескольких действий, страницы, производные от [`ContentPage`](xref:Xamarin.Forms.ContentPage), могут быть внедрены в каждое из действий. В этом сценарии `Forms.Init` метод должен вызываться только в переопределении `OnCreate` первого `Activity`, который внедряет `ContentPage` Xamarin. Forms. Однако это имеет следующие последствия.
 
-- Значение `Xamarin.Forms.Color.Accent` будет взято из `Activity` вызвавшую `Forms.Init` метод.
-- Значение `Xamarin.Forms.Application.Current` будут связаны с `Activity` вызвавшую `Forms.Init` метод.
+- Значение `Xamarin.Forms.Color.Accent` будет взято из `Activity`, который вызвал метод `Forms.Init`.
+- Значение `Xamarin.Forms.Application.Current` будет связано с `Activity`, который вызвал метод `Forms.Init`.
 
 ### <a name="choose-a-file"></a>Выбор файла
 
-При внедрении [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страницы, использующей [ `WebView` ](xref:Xamarin.Forms.WebView) , требуется для поддержки HTML «Выбрать файл» кнопки, `Activity` необходимо переопределить `OnActivityResult` метод:
+При внедрении страницы, производной от [`ContentPage`](xref:Xamarin.Forms.ContentPage), которая использует [`WebView`](xref:Xamarin.Forms.WebView) , который должен поддерживать HTML-кнопку "выбрать файл", `Activity` потребуется переопределить метод `OnActivityResult`:
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -275,9 +275,9 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 ## <a name="uwp"></a>UWP
 
-На UWP, собственного `App` класса обычно является местом для выполнения приложения задач, связанных с запуска. Xamarin.Forms обычно инициализируется, в приложениях универсальной платформы Windows в `OnLaunched` переопределить в собственной `App` класс, для передачи `LaunchActivatedEventArgs` аргумент `Forms.Init` метод. По этой причине собственных приложений универсальной платформы Windows, которые используют Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производных от page, проще всего можно вызвать `Forms.Init` метода из `App.OnLaunched` метод.
+В UWP класс Native `App` обычно является местом для выполнения задач, связанных с запуском приложения. Xamarin. Forms обычно инициализируются в приложениях UWP Xamarin. Forms в `OnLaunched` переопределении в собственном `App` классе для передачи аргумента `LaunchActivatedEventArgs` в метод `Forms.Init`. По этой причине собственные приложения UWP, которые используют страницу, производную от Xamarin. Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage), наиболее легко вызывают метод `Forms.Init` из метода `App.OnLaunched`.
 
-По умолчанию, собственного `App` класса запускает `MainPage` класс как первая страница приложения. В следующем коде показано в примере `MainPage` класс в приложении-примере:
+По умолчанию класс собственного `App` запускает класс `MainPage` в качестве первой страницы приложения. В следующем примере кода показан класс `MainPage` в примере приложения:
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -298,18 +298,18 @@ public sealed partial class MainPage : Page
 }
 ```
 
-`MainPage` Конструктор выполняет следующие задачи:
+Конструктор `MainPage` выполняет следующие задачи:
 
-- На странице включено кэширование, чтобы новый `MainPage` не создается, когда пользователь переходит на страницу.
-- Ссылку на `MainPage` класса хранится в `static` `Instance` поля. Это позволяет предоставить механизм для других классов для вызова методов, определенных в `MainPage` класса.
-- `FolderPath` Свойство инициализируется по пути на устройстве, где будут храниться данные о заметках.
-- `NotesPage` Класс, являющийся Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производным страницы, определенные в XAML, создается и преобразовать `FrameworkElement` с помощью `CreateFrameworkElement` метод расширения, а затем задайте как содержимое `MainPage` класса.
+- Для страницы включено кэширование, чтобы новая `MainPage` не создавалась, когда пользователь переходит на страницу.
+- Ссылка на класс `MainPage` хранится в поле `static` `Instance`. Это необходимо для предоставления другим классам механизма вызова методов, определенных в классе `MainPage`.
+- Свойство `FolderPath` инициализируется по пути на устройстве, где будут храниться данные о заметках.
+- Класс `NotesPage`, который является страницей, производной от [`ContentPage`](xref:Xamarin.Forms.ContentPage)Xamarin. Forms, определенной в XAML, создается и преобразуется в `FrameworkElement` с помощью метода расширения `CreateFrameworkElement`, а затем устанавливается в качестве содержимого класса `MainPage`.
 
-Один раз `MainPage` конструктор выполнен, пользовательский Интерфейс определен в Xamarin.Forms `NotesPage` класс будет отображаться, как показано на следующем снимке экрана:
+После выполнения конструктора `MainPage` будет отображаться пользовательский интерфейс, определенный в классе Xamarin. Forms `NotesPage`, как показано на следующем снимке экрана:
 
-[![Снимок экрана приложения UWP, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный с](native-forms-images/uwp-notespage.png " помощью приложения UWP в XAML Xamarin. Forms с помощью пользовательского интерфейса XAML Xamarin. Forms")](native-forms-images/uwp-notespage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
+[![Снимок экрана приложения UWP, использующего пользовательский интерфейс, определенный с помощью Xamarin. Forms XAML](native-forms-images/uwp-notespage.png "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")](native-forms-images/uwp-notespage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
 
-При взаимодействии с пользовательским интерфейсом, например нажатием кнопки **+** [`Button`](xref:Xamarin.Forms.Button), будет создан `NotesPage` следующий обработчик событий в коде программной части:
+При взаимодействии с пользовательским интерфейсом, например при нажатии **+** [`Button`](xref:Xamarin.Forms.Button), в `NotesPage` кода программной части будет создан следующий обработчик событий:
 
 ```csharp
 void OnNoteAddedClicked(object sender, EventArgs e)
@@ -318,7 +318,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-`static` `MainPage.Instance` Поле позволяет `MainPage.NavigateToNoteEntryPage` метод должен быть вызван, как показано в следующем примере кода:
+Поле `static` `MainPage.Instance` позволяет вызывать метод `MainPage.NavigateToNoteEntryPage`, который показан в следующем примере кода:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
@@ -330,15 +330,15 @@ public void NavigateToNoteEntryPage(Note note)
 }
 ```
 
-Навигация в универсальной платформы Windows обычно выполняется с помощью `Frame.Navigate` метод, который принимает `Page` аргумент. Xamarin.Forms определяет `Frame.Navigate` метод расширения, который принимает [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-производный экземпляр страницы. Таким образом, когда `NavigateToNoteEntryPage` выполняет метод, пользовательский Интерфейс, определенный в Xamarin.Forms `NoteEntryPage` будет отображаться, как показано на следующем снимке экрана:
+Навигация в UWP обычно выполняется с помощью метода `Frame.Navigate`, который принимает `Page` аргумент. Xamarin. Forms определяет `Frame.Navigate` метод расширения, который принимает экземпляр страницы, производной от [`ContentPage`](xref:Xamarin.Forms.ContentPage). Поэтому при выполнении метода `NavigateToNoteEntryPage` будет отображаться пользовательский интерфейс, определенный в `NoteEntryPage` Xamarin. Forms, как показано на следующем снимке экрана:
 
-[![Снимок экрана приложения UWP, ИСПОЛЬЗУЮЩЕГО пользовательский интерфейс, определенный с](native-forms-images/uwp-noteentrypage.png " помощью приложения UWP в XAML Xamarin. Forms с помощью пользовательского интерфейса XAML Xamarin. Forms")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
+[![Снимок экрана приложения UWP, использующего пользовательский интерфейс, определенный с помощью Xamarin. Forms XAML](native-forms-images/uwp-noteentrypage.png "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Приложение UWP с пользовательским интерфейсом XAML Xamarin. Forms")
 
-При `NoteEntryPage` отображается, коснувшись обратной стрелки появится всплывающее `FrameworkElement` для `NoteEntryPage` из стек переходов назад в приложении, возвращая пользователю `FrameworkElement` для `NotesPage` класса.
+Когда отображается `NoteEntryPage`, коснитесь стрелки назад, чтобы открыть `FrameworkElement` для `NoteEntryPage` из стека обратного приложения, возвращая пользователя в `FrameworkElement` для класса `NotesPage`.
 
 ### <a name="enable-back-navigation-support"></a>Включить поддержку обратной навигации
 
-На универсальной платформы Windows приложения необходимо включить переходов назад для всех оборудования и программного обеспечения назад кнопок, на другое устройство конструктивными. Это можно сделать, зарегистрировав обработчик событий для `BackRequested` событие, которое может быть выполнена в `OnLaunched` метод в собственной `App` класса:
+В UWP приложения должны включить обратную навигацию для всех кнопок возврата оборудования и программного обеспечения в различных конструктивных параметрах устройства. Это можно сделать, зарегистрировав обработчик событий для события `BackRequested`, которое может быть выполнено в методе `OnLaunched` в собственном `App` классе:
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -357,7 +357,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-При запуске приложения, `GetForCurrentView` метод извлекает `SystemNavigationManager` объект связанный с текущим представлением, а затем регистрирует обработчик событий для `BackRequested` событий. Приложение получает это событие, только если его активным, а в ответ, вызывает `OnBackRequested` обработчик событий:
+При запуске приложения метод `GetForCurrentView` извлекает объект `SystemNavigationManager`, связанный с текущим представлением, а затем регистрирует обработчик событий для события `BackRequested`. Приложение получает это событие только в том случае, если оно является приложением переднего плана, а в ответе вызывает обработчик событий `OnBackRequested`:
 
 ```csharp
 void OnBackRequested(object sender, BackRequestedEventArgs e)
@@ -371,9 +371,9 @@ void OnBackRequested(object sender, BackRequestedEventArgs e)
 }
 ```
 
-`OnBackRequested` Вызовов обработчика событий `GoBack` метод корневого фрейма приложения и наборы `BackRequestedEventArgs.Handled` свойства `true` пометить событие как обработанное. Сбой пометки события как обработанного может привести к тому, что событие будет пропущено.
+Обработчик событий `OnBackRequested` вызывает метод `GoBack` в корневом фрейме приложения и задает для свойства `BackRequestedEventArgs.Handled` значение `true`, чтобы пометить событие как обработанное. Сбой пометки события как обработанного может привести к тому, что событие будет пропущено.
 
-Приложение выбирает, следует ли отображать кнопку "назад" в строке заголовка. Это достигается путем установки `AppViewBackButtonVisibility` задается одно из `AppViewBackButtonVisibility` значений перечисления:
+Приложение выбирает, следует ли отображать кнопку "назад" в строке заголовка. Это достигается путем присвоения свойству `AppViewBackButtonVisibility` одного из значений перечисления `AppViewBackButtonVisibility`.
 
 ```csharp
 void OnNavigated(object sender, NavigationEventArgs e)
@@ -383,11 +383,11 @@ void OnNavigated(object sender, NavigationEventArgs e)
 }
 ```
 
-`OnNavigated` Обработчик событий, который выполняется в ответ на `Navigated` события, обновляет видимость заголовка окна кнопки "Назад", когда происходит переход по страницам. Это гарантирует, что Назад кнопка панели заголовка является видимым, если стек переходов назад в приложении не является пустым или удалены из заголовка, если стек переходов назад в приложении является пустым.
+Обработчик событий `OnNavigated`, выполняемый в ответ на срабатывание события `Navigated`, обновляет видимость кнопки «назад» в строке заголовка при переходе по страницам. Это гарантирует, что кнопка «назад» в строке заголовка будет видна, если стек в приложении не пуст или удален из строки заголовка, если резервный стек в приложении пуст.
 
-Дополнительные сведения о поддержке переходов назад на UWP, см. в разделе [истории переходов и обратной навигации для приложений UWP](/windows/uwp/design/basics/navigation-history-and-backwards-navigation/).
+Дополнительные сведения о поддержке обратной навигации в UWP см. в статье [журнал навигации и обратная Навигация для приложений UWP](/windows/uwp/design/basics/navigation-history-and-backwards-navigation/).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [NativeForms (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+- [Нативеформс (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 - [Исходные представления](~/xamarin-forms/platform/native-views/index.md)

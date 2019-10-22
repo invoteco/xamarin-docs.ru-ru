@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70756761"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Стиль для кросс-платформенного приложения Xamarin. Forms
@@ -26,10 +26,10 @@ ms.locfileid: "70756761"
 
 В кратком руководстве описывается, как можно присвоить различные типы приложений Xamarin. Forms в стиле XAML. Ниже показано итоговое приложение:
 
-[![](styling-images/screenshots1-sml.png "")Страница "заметки](styling-images/screenshots1.png#lightbox "Страница «заметки»")" для записи заметки
-[(styling-images/screenshots2-sml.png "") ![]](styling-images/screenshots2.png#lightbox "Страница записи примечания")
+[![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
+[![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>Необходимые компоненты
 
 Перед выполнением этого краткого руководства необходимо успешно выполнить [предыдущее краткое руководство](database.md) . Также можно скачать [предыдущий пример краткого руководства](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) и использовать его в качестве отправной точки для этого краткого руководства.
 
@@ -77,7 +77,7 @@ ms.locfileid: "70756761"
     </Application>
     ```
 
-    Этот код определяет [`Thickness`](xref:Xamarin.Forms.Thickness) значение, [`Color`](xref:Xamarin.Forms.Color) ряд значений [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) и неявные стили для и [`ContentPage`](xref:Xamarin.Forms.ContentPage). Обратите внимание, что эти стили, которые находятся на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)приложения, могут использоваться в рамках всего приложения. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код определяет [`Thickness`](xref:Xamarin.Forms.Thickness) значение, ряд [`Color`ных](xref:Xamarin.Forms.Color) значений и неявные стили для [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) и [`ContentPage`](xref:Xamarin.Forms.ContentPage). Обратите внимание, что эти стили, которые находятся на [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)уровня приложения, можно использовать в приложении. Дополнительные сведения о стилизации XAML см. в разделе [стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в файле **app. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
@@ -116,7 +116,7 @@ ms.locfileid: "70756761"
     </ContentPage>
     ```
 
-    Этот код добавляет неявный стиль для [`ListView`](xref:Xamarin.Forms.ListView) объекта на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и задает `ListView.Margin` для свойства значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `ListView` , что неявный стиль был добавлен к `ResourceDictionary`уровню страницы, так как он используется `NotesPage`только объектом. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код добавляет неявный стиль для [`ListView`](xref:Xamarin.Forms.ListView) на [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)уровня страницы и задает для свойства `ListView.Margin` значение, определенное в `ResourceDictionary` уровня приложения. Обратите внимание, что `ListView` неявный стиль был добавлен к `ResourceDictionary` на уровне страницы, так как он используется только `NotesPage`. Дополнительные сведения о стилизации XAML см. в разделе [стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **нотеспаже. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
@@ -165,13 +165,13 @@ ms.locfileid: "70756761"
     </ContentPage>
     ```
 
-    Этот код добавляет Неявные стили [`Editor`](xref:Xamarin.Forms.Editor) для [`Button`](xref:Xamarin.Forms.Button) представлений и на `StackLayout.Margin` уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и присваивает свойству значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `Editor` , `Button` что Неявные стили были добавлены на уровне `ResourceDictionary`страницы, так как они используются только в `NoteEntryPage`. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код добавляет Неявные стили для [`Editor`](xref:Xamarin.Forms.Editor) и [`Button`](xref:Xamarin.Forms.Button) представлений в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)на уровне страницы и задает для свойства `StackLayout.Margin` значение, определенное в `ResourceDictionary` уровня приложения. Обратите внимание, что Неявные стили `Editor` и `Button` были добавлены в `ResourceDictionary` уровня страницы, так как они используются только `NoteEntryPage`. Дополнительные сведения о стилизации XAML см. в разделе [стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **нотинтрипаже. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
 5. Создайте и запустите проект на каждой платформе. Дополнительные сведения см. [в разделе Создание краткого руководства](single-page.md#building-the-quickstart).
 
-    В **нотеспаже** нажмите **+** кнопку, чтобы перейти к **нотинтрипаже** и ввести Примечание. На каждой странице Обратите внимание на то, как стили изменились в предыдущем кратком руководстве.
+    В **нотеспаже** нажмите кнопку **+** , чтобы перейти к **нотинтрипаже** и ввести Примечание. На каждой странице Обратите внимание на то, как стили изменились в предыдущем кратком руководстве.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -218,7 +218,7 @@ ms.locfileid: "70756761"
     </Application>
     ```
 
-    Этот код определяет [`Thickness`](xref:Xamarin.Forms.Thickness) значение, [`Color`](xref:Xamarin.Forms.Color) ряд значений [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) и неявные стили для и [`ContentPage`](xref:Xamarin.Forms.ContentPage). Обратите внимание, что эти стили, которые находятся на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)приложения, могут использоваться в рамках всего приложения. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код определяет [`Thickness`](xref:Xamarin.Forms.Thickness) значение, ряд [`Color`ных](xref:Xamarin.Forms.Color) значений и неявные стили для [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) и [`ContentPage`](xref:Xamarin.Forms.ContentPage). Обратите внимание, что эти стили, которые находятся на [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)уровня приложения, можно использовать в приложении. Дополнительные сведения о стилизации XAML см. в разделе [стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в файле **app. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
@@ -257,7 +257,7 @@ ms.locfileid: "70756761"
     </ContentPage>
     ```
 
-    Этот код добавляет неявный стиль для [`ListView`](xref:Xamarin.Forms.ListView) объекта на уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и задает `ListView.Margin` для свойства значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `ListView` , что неявный стиль был добавлен к `ResourceDictionary`уровню страницы, так как он используется `NotesPage`только объектом. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код добавляет неявный стиль для [`ListView`](xref:Xamarin.Forms.ListView) на [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)уровня страницы и задает для свойства `ListView.Margin` значение, определенное в `ResourceDictionary` уровня приложения. Обратите внимание, что `ListView` неявный стиль был добавлен к `ResourceDictionary` на уровне страницы, так как он используется только `NotesPage`. Дополнительные сведения о стилизации XAML см. в разделе [стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **нотеспаже. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
@@ -306,13 +306,13 @@ ms.locfileid: "70756761"
     </ContentPage>
     ```
 
-    Этот код добавляет Неявные стили [`Editor`](xref:Xamarin.Forms.Editor) для [`Button`](xref:Xamarin.Forms.Button) представлений и на `StackLayout.Margin` уровне [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)страницы и присваивает свойству значение, определенное на уровне `ResourceDictionary`приложения. Обратите внимание `Editor` , `Button` что Неявные стили были добавлены на уровне `ResourceDictionary`страницы, так как они используются только в `NoteEntryPage`. Дополнительные сведения о стилизации XAML см. в разделе [Стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код добавляет Неявные стили для [`Editor`](xref:Xamarin.Forms.Editor) и [`Button`](xref:Xamarin.Forms.Button) представлений в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)на уровне страницы и задает для свойства `StackLayout.Margin` значение, определенное в `ResourceDictionary` уровня приложения. Обратите внимание, что Неявные стили `Editor` и `Button` были добавлены в `ResourceDictionary` уровня страницы, так как они используются только `NoteEntryPage`. Дополнительные сведения о стилизации XAML см. в разделе [стилизация](deepdive.md#styling) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **нотинтрипаже. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
 5. Создайте и запустите проект на каждой платформе. Дополнительные сведения см. [в разделе Создание краткого руководства](single-page.md#building-the-quickstart).
 
-    В **нотеспаже** нажмите **+** кнопку, чтобы перейти к **нотинтрипаже** и ввести Примечание. На каждой странице Обратите внимание на то, как стили изменились в предыдущем кратком руководстве.
+    В **нотеспаже** нажмите кнопку **+** , чтобы перейти к **нотинтрипаже** и ввести Примечание. На каждой странице Обратите внимание на то, как стили изменились в предыдущем кратком руководстве.
 
 ::: zone-end
 

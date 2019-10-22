@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/11/2019
-ms.openlocfilehash: 0094fbc73e88dc4e84d8bf415db30c17f955ddcc
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
-ms.translationtype: MT
+ms.date: 10/11/2019
+ms.openlocfilehash: 71b917cc6b090d78c9d9bdd7373b9bba74babee9
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69976606"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697019"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin. Forms
 
@@ -63,7 +63,7 @@ _Представления Xamarin. Forms — это стандартные б�
 
 |     |     |
 | --- | --- |
-| [`Map`](xref:Xamarin.Forms.Maps.Map) отображает карту. Необходимо установить пакет NuGet для **Xamarin. Forms. Maps** . Для Android и универсальная платформа Windows требуется ключ авторизации на карте.<br /><br />[Документация по API](xref:Xamarin.Forms.Maps.Map) / [руководство](~/xamarin-forms/user-interface/map.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Пример Map](views-images/Map.png "Пример Map")](views-images/Map-Large.png#lightbox "Пример Map")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
+| [`Map`](xref:Xamarin.Forms.Maps.Map) отображает карту. Необходимо установить пакет NuGet для **Xamarin. Forms. Maps** . Для Android и универсальная платформа Windows требуется ключ авторизации на карте.<br /><br />[Документация по API](xref:Xamarin.Forms.Maps.Map) / [руководство](~/xamarin-forms/user-interface/map/index.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Пример Map](views-images/Map.png "Пример Map")](views-images/Map-Large.png#lightbox "Пример Map")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-that-initiate-commands"></a>Представления, инициирующие команды
@@ -80,6 +80,13 @@ _Представления Xamarin. Forms — это стандартные б�
 |     |     |
 | --- | --- |
 | `ImageButton` — прямоугольный объект, отображающий изображение, который запускает событие `Clicked` при нажатии.<br /><br /> [Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)  /  [Guide](~/xamarin-forms/user-interface/imagebutton.md) | [![Пример с ImageButton](views-images/ImageButton.png "Пример с ImageButton")](views-images/ImageButton-Large.png#lightbox "Пример с ImageButton")<br /> [Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="refreshview"></a>рефрешвиев
+
+|     |     |
+| --- | --- |
+| `RefreshView` — это контейнерный элемент управления, который предоставляет функции получения обновлений для прокручиваемого содержимого. @No__t_0, определяемые свойством `Command`, выполняется при активации обновления, а свойство `IsRefreshing` указывает текущее состояние элемента управления.<br /><br /> [Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)  /  [Guide](~/xamarin-forms/user-interface/refreshview.md) | [![Пример Рефрешвиев](views-images/RefreshView.png "Пример Рефрешвиев")](views-images/RefreshView-Large.png#lightbox "RefreshView Example")<br /> [Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="searchbar"></a>Панель поиска
@@ -176,6 +183,13 @@ _Представления Xamarin. Forms — это стандартные б�
 |     |     |
 
 ## <a name="views-that-display-collections"></a>Представления, отображающие коллекции
+
+### <a name="carouselview"></a>карауселвиев
+
+|     |     |
+| --- | --- |
+| [`CarouselView`](xref:Xamarin.Forms.CarouselView) отображает прокручиваемый список элементов данных. Задайте для свойства `ItemsSource` коллекцию объектов и задайте для свойства `ItemTemplate` объект [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , описывающий форматирование элементов. @No__t_0 событие сигнализирует, что отображаемый в данный момент элемент был изменен, который доступен как свойство `CurrentItem`.<br /><br />[Пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)  /  [Guide](~/xamarin-forms/user-interface/carouselview/index.md) | [![Пример Карауселвиев](views-images/CarouselView.png "Пример Карауселвиев")](views-images/CarouselView-Large.png#lightbox "Пример Карауселвиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselViewDemoPage.xaml) |
+|     |     |
 
 ### <a name="collectionview"></a>CollectionView
 

@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68757274"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Предварительный просмотр XAML для Xamarin. Forms
@@ -52,7 +52,7 @@ _Просмотр макетов Xamarin. Forms, отображаемых при
 
 Кнопка **Предварительный просмотр** отображается в редакторе при открытии страницы XAML. Показать или скрыть предварительный просмотр, нажав кнопки **предварительного просмотра** или **разбиения** в левом нижнем углу окна документа XAML:
 
-[![Предварительный просмотр Xamarin. Forms включен с кнопкой "Просмотр" или "разделить"](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[Предварительный просмотр ![Xamarin. Forms включен с кнопкой "Просмотр" или "разделить"](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > В более ранних версиях Visual Studio для Mac кнопка **Предварительный просмотр** находится в правом верхнем углу окна.
@@ -64,14 +64,14 @@ _Просмотр макетов Xamarin. Forms, отображаемых при
 Ниже перечислены параметры, доступные в верхней части области просмотра.
 
 * **Android** — отображение версии экрана Android
-* **iOS** — отображение версии экрана iOS (*Примечание. Если вы используете Visual Studio в Windows, для использования этого режима*необходимо [связать с компьютером Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) .
+* **iOS** — показывать версию iOS на экране (*Примечание. Если вы используете Visual Studio в Windows, для использования этого режима необходимо [связать с компьютером Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)* )
 * **Устройство** -раскрывающийся список устройств Android или iOS, включая разрешение и размер экрана
 * **Книжная (значок)** — использует книжную ориентацию для предварительного просмотра.
 * **Альбомная (значок)** — использует альбомную ориентацию для предварительного просмотра
 
 ## <a name="detect-design-mode"></a>Обнаружить режим конструктора
 
-Статическое [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) свойство сообщает, выполняется ли приложение в предварительном просмотре. С его помощью можно указать код, который будет выполняться только в том случае, если приложение не выполняется в предварительном просмотре:
+Статическое свойство [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) указывает, выполняется ли приложение в предварительном просмотре. С его помощью можно указать код, который будет выполняться только в том случае, если приложение не выполняется в предварительном просмотре:
 
 ```csharp
 if (DesignMode.IsDesignModeEnabled)
@@ -95,10 +95,10 @@ if (!DesignMode.IsDesignModeEnabled)
 
 * Для запуска средства предварительного просмотра может потребоваться некоторое время. Вы увидите "Инициализация прорисовки", пока она не будет готова.
 * Попробуйте закрыть и снова открыть XAML файл.
-* Убедитесь, что `App` у класса есть конструктор без параметров.
+* Убедитесь, что у класса `App` есть конструктор без параметров.
 * Проверьте версию Xamarin. Forms — она должна быть как минимум Xamarin. Forms 3,6. Вы можете обновить последнюю версию Xamarin. Forms с помощью NuGet.
 * Проверьте установку JDK. для предварительного просмотра Android требуется по меньшей мере [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
-* Попробуйте обернуть все инициализированные классы в C# код страницы в. `if (!DesignMode.IsDesignModeEnabled)`
+* Попробуйте обернуть все инициализированные классы в C# код страницы в `if (!DesignMode.IsDesignModeEnabled)`.
 
 ### <a name="custom-controls-arent-rendering"></a>Пользовательские элементы управления не подготовится к просмотру
 

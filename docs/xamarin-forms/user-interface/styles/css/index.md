@@ -1,27 +1,27 @@
 ---
 title: Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
-description: Xamarin.Forms поддерживает стили визуальных элементов с помощью каскадных таблиц стилей (CSS).
+description: Xamarin. Forms поддерживает визуальные элементы стиля с помощью каскадные таблицы стилей (CSS).
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
 ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/11/2019
-ms.openlocfilehash: a86d4c6d6737bd6de5e6f115111e072863927fbe
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.date: 09/19/2019
+ms.openlocfilehash: 6cece2c7cad401a9dc6f14b689c5c9e5ab757df5
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198839"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696881"
 ---
-# <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
+# <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Стилизация приложений Xamarin. Forms с помощью каскадные таблицы стилей (CSS)
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
-_Xamarin.Forms поддерживает стили визуальных элементов с помощью каскадных таблиц стилей (CSS)._
+_Xamarin. Forms поддерживает визуальные элементы стиля с помощью каскадные таблицы стилей (CSS)._
 
-Приложения Xamarin.Forms можно применить различные стили с помощью CSS. Таблица стилей состоит из списка правил, с каждым правилом, состоящий из одного или нескольких селекторов и блок объявления. Блок объявления состоит из списка объявлений в фигурные скобки, в каждое объявление, состоящий из свойства, двоеточие и значение. Если существует несколько объявлений в блоке, точки с запятой вставляется в качестве разделителя. В следующем примере кода показан код CSS с Xamarin.Forms:
+Приложения Xamarin. Forms можно использовать в стиле CSS. Таблица стилей состоит из списка правил с каждым правилом, состоящим из одного или нескольких селекторов и блока объявления. Блок объявления состоит из списка объявлений в фигурных скобках с каждым объявлением, состоящим из свойства, двоеточия и значения. При наличии нескольких объявлений в блоке в качестве разделителя вставляется точка с запятой. В следующем примере кода показаны некоторые CSS, совместимые с Xamarin. Forms:
 
 ```css
 navigationpage {
@@ -71,31 +71,31 @@ stacklayout>image {
 }
 ```
 
-В Xamarin.Forms анализируются и вычисляется во время выполнения, а не время компиляции таблицы стилей CSS и повторного анализа, при использовании таблицы стилей.
+В Xamarin. Forms таблицы стилей CSS анализируются и оцениваются во время выполнения, а не во время компиляции, а таблицы стилей повторно анализируются при использовании.
 
 > [!NOTE]
-> В настоящее время все стили, возможна с помощью стилей XAML не может выполняться с CSS. Тем не менее стили XAML можно использовать в дополнение к CSS для свойств, которые в настоящее время не поддерживаются в Xamarin.Forms. Дополнительные сведения о стилях XAML см. в разделе [Задание стиля приложений Xamarin.Forms с помощью стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
+> В настоящее время все стили, которые можно реализовать с помощью стиля XAML, не могут быть выполнены с помощью CSS. Однако стили XAML можно использовать для дополнения CSS для свойств, которые в настоящее время не поддерживаются Xamarin. Forms. Дополнительные сведения о стилях XAML см. в руководстве по [оформлению приложений Xamarin.Forms с использованием стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-[MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) пример демонстрирует использование CSS для стиля простое приложение и показан на снимках экрана ниже:
+В примере [монкэйаппксс](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) показано использование CSS для стиля простого приложения и показано на следующих снимках экрана:
 
-[![Страница MonkeyApp Main с Дизайн CSS](css-images/MonkeyAppMainPage.png "MonkeyApp главной страницы с Дизайн CSS")](css-images/MonkeyAppMainPage-Large.png#lightbox "MonkeyApp главной страницы с Дизайн CSS")
+[![Главная страница Монкэйапп с стилизацией CSS](css-images/MonkeyAppMainPage.png "Главная страница Монкэйапп с стилизацией CSS")](css-images/MonkeyAppMainPage-Large.png#lightbox "Главная страница Монкэйапп с стилизацией CSS")
 
-[![Страница сведений MonkeyApp с Дизайн CSS](css-images/MonkeyAppDetailPage.png "страницу сведений о MonkeyApp с Дизайн CSS")](css-images/MonkeyAppDetailPage-Large.png#lightbox "страницу сведений о MonkeyApp с Дизайн CSS")
+[![Страница сведений о Монкэйапп с стилизацией CSS](css-images/MonkeyAppDetailPage.png "Страница сведений о Монкэйапп с стилизацией CSS")](css-images/MonkeyAppDetailPage-Large.png#lightbox "Страница сведений о Монкэйапп с стилизацией CSS")
 
-## <a name="consuming-a-style-sheet"></a>Использование стилей
+## <a name="consuming-a-style-sheet"></a>Использование таблицы стилей
 
-Процесс добавления стилей к решению выглядит следующим образом:
+Процесс добавления таблицы стилей в решение выглядит следующим образом:
 
-1. Добавьте пустой CSS-файл в проект библиотеки .NET Standard.
-1. Задайте действие сборки файла CSS **EmbeddedResource**.
+1. Добавьте пустой CSS файл в проект библиотеки .NET Standard.
+1. Задайте для действия сборки файла CSS значение **EmbeddedResource**.
 
 ### <a name="loading-a-style-sheet"></a>Загрузка таблицы стилей
 
-Существует ряд подходов, которые могут использоваться для загрузки таблицы стилей.
+Существует ряд подходов, которые можно использовать для загрузки таблицы стилей.
 
 ### <a name="xaml"></a>XAML
 
-Таблицу стилей можно загружать и синтаксический анализ при помощи [ `StyleSheet` ](xref:Xamarin.Forms.StyleSheets.StyleSheet) класса перед добавлением [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+Таблицу стилей можно загрузить и проанализировать с помощью класса [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) , прежде чем добавлять в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```xaml
 <Application ...>
@@ -105,12 +105,12 @@ stacklayout>image {
 </Application>
 ```
 
-[ `StyleSheet.Source` ](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) Свойство задает стилей как URI относительно расположения внешнего файла XAML или относительно корневого каталога проекта, если URI начинается с `/`.
+Свойство [`StyleSheet.Source`](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) указывает таблицу стилей как URI относительно расположения ВКЛЮЧАЮЩего XAML-файла или относительно корневого каталога проекта, если URI начинается с `/`.
 
 > [!WARNING]
-> CSS-файл не удастся загрузить, если действие построения не присвоено **EmbeddedResource**.
+> Если для действия сборки не задано значение **EmbeddedResource**, Загрузка CSS-файла будет невозможна.
 
-Кроме того, можно загружать и анализировать с помощью стилей [ `StyleSheet` ](xref:Xamarin.Forms.StyleSheets.StyleSheet) класса перед добавлением [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), по встраивания его в `CDATA` разделе:
+Кроме того, таблицу стилей можно загрузить и проанализировать с помощью класса [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) , прежде чем добавлять его в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)путем встраивания в `CDATA` разделе:
 
 ```xaml
 <ContentPage ...>
@@ -127,11 +127,11 @@ stacklayout>image {
 </ContentPage>
 ```
 
-Дополнительные сведения о словарях ресурсов, см. в разделе [словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md).
+Дополнительные сведения о словарях ресурсов см. в разделе [словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 ### <a name="c"></a>C\#
 
-В C#таблица стилей может быть загружена из `StringReader` [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)и добавлена в:
+В C#таблица стилей может быть загружена из `StringReader` и добавлена в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```csharp
 public partial class MyPage : ContentPage
@@ -148,17 +148,17 @@ public partial class MyPage : ContentPage
 }
 ```
 
-Аргумент `StyleSheet.FromReader` метод `TextReader` который считан стилей.
+Аргументом метода `StyleSheet.FromReader` является `TextReader`, который считывает таблицу стилей.
 
 ## <a name="selecting-elements-and-applying-properties"></a>Выбор элементов и применение свойств
 
-CSS использует селекторы для определения элементов, которые целевых. Стили с совпадающими селекторы применяются последовательно, в порядке определения. Стили, определенные на конкретном элементе всегда применяются последнего. Дополнительные сведения о поддерживаемых селекторы, см. в разделе [ссылку селектор](#selector-reference).
+CSS использует селекторы для определения целевых элементов. Стили с соответствующими селекторами применяются последовательно в порядке определения. Стили, определенные для конкретного элемента, всегда применяются последними. Дополнительные сведения о поддерживаемых селекторах см. в разделе [Справочник по селектору](#selector-reference).
 
-CSS использует свойства для применения стиля к выбранному элементу. Каждое свойство имеет набор возможных значений, и некоторые свойства могут повлиять на любого типа элемента, а другие относятся только к группам элементов. Дополнительные сведения о поддерживаемых свойствах см. в разделе [ссылку на свойство](#property-reference).
+В CSS для стиля выбранного элемента используются свойства. Каждое свойство имеет набор возможных значений, а некоторые свойства могут влиять на любой тип элемента, а другие — на группы элементов. Дополнительные сведения о поддерживаемых свойствах см. в разделе [Справочник по свойствам](#property-reference).
 
 ### <a name="selecting-elements-by-type"></a>Выбор элементов по типу
 
-Можно выбрать элементы в визуальном дереве типом, без учета регистра с `element` селектор:
+Элементы в визуальном дереве можно выбрать по типу с нечувствительным к регистру `element` Selector:
 
 ```css
 stacklayout {
@@ -166,14 +166,14 @@ stacklayout {
 }
 ```
 
-Этот выбор определяет любой [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) элементов на страницах, которые используют таблицу стилей и устанавливает их поля толщина 20.
+Этот селектор определяет все элементы [`StackLayout`](xref:Xamarin.Forms.StackLayout) на страницах, использующих таблицу стилей, и устанавливает для их полей однородную толщину в 20 символов.
 
 > [!NOTE]
-> `element` Селектор не определяет подклассы указанного типа.
+> Селектор `element` не определяет подклассы указанного типа.
 
-### <a name="selecting-elements-by-base-class"></a>Выбор элементов в базовом классе
+### <a name="selecting-elements-by-base-class"></a>Выбор элементов по базовому классу
 
-Можно выбрать элементы в визуальном дереве базовым классом, без учета регистра с `^base` селектор:
+Элементы в визуальном дереве могут быть выбраны базовым классом с нечувствительным к регистру `^base` Selector:
 
 ```css
 ^contentpage {
@@ -181,14 +181,14 @@ stacklayout {
 }
 ```
 
-Этот выбор определяет любой [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) элементы, которые используют таблицу стилей и задает фоновый цвет для `lightgray`.
+Этот селектор определяет все [`ContentPage`](xref:Xamarin.Forms.ContentPage) элементы, использующие таблицу стилей, и задает для них цвет фона `lightgray`.
 
 > [!NOTE]
-> `^base` Селектор относится к Xamarin.Forms и не является частью спецификации CSS.
+> Селектор `^base` зависит от Xamarin. Forms и не является частью спецификации CSS.
 
 ### <a name="selecting-an-element-by-name"></a>Выбор элемента по имени
 
-С учетом регистра можно выбрать отдельные элементы в визуальном дереве `#id` селектор:
+Отдельные элементы в визуальном дереве можно выбрать с помощью селектора `#id` с учетом регистра:
 
 ```css
 #listView {
@@ -196,7 +196,7 @@ stacklayout {
 }
 ```
 
-Этот выбор определяет элемент которого [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойству `listView`. Тем не менее если `StyleId` свойство не задано, средство выбора будет переключиться на использование `x:Name` элемента. Таким образом, в следующем примере XAML `#listView` селектор определит [ `ListView` ](xref:Xamarin.Forms.ListView) которого `x:Name` атрибуту присваивается `listView`и назначит цвет фона `lightgray`.
+Этот селектор определяет элемент, свойство [`StyleId`](xref:Xamarin.Forms.Element.StyleId) которого имеет значение `listView`. Однако если свойство `StyleId` не задано, селектор будет возвращаться к использованию `x:Name` элемента. Таким образом, в следующем примере кода XAML `#listView` селектор определит [`ListView`](xref:Xamarin.Forms.ListView) , атрибут `x:Name` которого имеет значение `listView`, и установит для него цвет фона, равный `lightgray`.
 
 ```xaml
 <ContentPage ...>
@@ -211,9 +211,9 @@ stacklayout {
 </ContentPage>
 ```
 
-### <a name="selecting-elements-with-a-specific-class-attribute"></a>Выбор элементов с помощью определенного класса атрибута
+### <a name="selecting-elements-with-a-specific-class-attribute"></a>Выбор элементов с указанным атрибутом класса
 
-Можно выбрать элементы с атрибутом определенного класса с учетом регистра `.class` селектор:
+Элементы с указанным атрибутом класса можно выбрать с помощью селектора `.class` с учетом регистра:
 
 ```css
 .detailPageTitle {
@@ -228,7 +228,7 @@ stacklayout {
 }
 ```
 
-Класс CSS могут быть назначены элемент XAML, задав [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) свойство элемента, требуется имя класса CSS. Таким образом, в следующем примере XAML, стили определяются `.detailPageTitle` класс назначаются первому [ `Label` ](xref:Xamarin.Forms.Label), тогда как стили, определенные с `.detailPageSubtitle` класс назначаются второй `Label`.
+Класс CSS может быть назначен элементу XAML путем присвоения свойству [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) элемента имени класса CSS. Поэтому в следующем примере XAML стили, определенные классом `.detailPageTitle`, присваиваются первой [`Label`](xref:Xamarin.Forms.Label), а стили, определенные классом `.detailPageSubtitle`, назначаются второму `Label`.
 
 ```xaml
 <ContentPage ...>
@@ -245,9 +245,9 @@ stacklayout {
 </ContentPage>
 ```
 
-### <a name="selecting-child-elements"></a>Выбрав дочерние элементы
+### <a name="selecting-child-elements"></a>Выбор дочерних элементов
 
-Можно выбрать дочерних элементов в визуальном дереве с без учета регистра `element element` селектор:
+Дочерние элементы в визуальном дереве можно выбрать с помощью селектора `element element` без учета регистра:
 
 ```css
 listview image {
@@ -256,7 +256,7 @@ listview image {
 }
 ```
 
-Этот выбор определяет любой [ `Image` ](xref:Xamarin.Forms.Image) элементы, являющиеся дочерними для [ `ListView` ](xref:Xamarin.Forms.ListView) элементов и устанавливает их высоту и ширину до 60. Таким образом, в следующем примере XAML `listview image` селектор определит [ `Image` ](xref:Xamarin.Forms.Image) , является дочерним элементом [ `ListView` ](xref:Xamarin.Forms.ListView)и задает его высоту и ширину до 60.
+Этот селектор определяет все элементы [`Image`](xref:Xamarin.Forms.Image) , являющиеся дочерними элементами [`ListView`](xref:Xamarin.Forms.ListView) элементов, и устанавливает их высоту и ширину 60. Поэтому в следующем примере кода XAML `listview image` селектор определит [`Image`](xref:Xamarin.Forms.Image) , являющийся дочерним по отношению к [`ListView`](xref:Xamarin.Forms.ListView), и установит высоту и ширину 60.
 
 ```xaml
 <ContentPage ...>
@@ -282,11 +282,11 @@ listview image {
 ```
 
 > [!NOTE]
-> `element element` Селектор не требуется дочерний элемент, чтобы быть _прямой_ дочерний элемент родителя — дочерний элемент может иметь другого родителя. Выбор выполняется при условии, что первый элемент является предком.
+> Селектор `element element` не требует, чтобы дочерний элемент был _прямым_ дочерним элементом родительского элемента — дочерний элемент может иметь другой родитель. Выполняется выбор, если предком является указанный первый элемент.
 
-### <a name="selecting-direct-child-elements"></a>Выбор дочерних элементов
+### <a name="selecting-direct-child-elements"></a>Выбор прямых дочерних элементов
 
-Прямой дочерних элементов в визуальном дереве можно выбрать с без учета регистра `element>element` селектор:
+Прямые дочерние элементы в визуальном дереве можно выбрать с помощью селектора `element>element` без учета регистра:
 
 ```css
 stacklayout>image {
@@ -295,7 +295,7 @@ stacklayout>image {
 }
 ```
 
-Этот выбор определяет любой [ `Image` ](xref:Xamarin.Forms.Image) элементы, которые являются прямыми потомками [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) элементов и устанавливает их высоту и ширину 200. Таким образом, в следующем примере XAML `stacklayout>image` селектор определит [ `Image` ](xref:Xamarin.Forms.Image) это является прямым потомком [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)и присваивает его высоту и ширину 200.
+Этот селектор определяет все элементы [`Image`](xref:Xamarin.Forms.Image) , которые являются прямыми дочерними элементами [`StackLayout`](xref:Xamarin.Forms.StackLayout) элементов, и устанавливает их высоту и ширину 200. Поэтому в следующем примере кода XAML `stacklayout>image` селектор определит [`Image`](xref:Xamarin.Forms.Image) , который является прямым дочерним элементом [`StackLayout`](xref:Xamarin.Forms.StackLayout), и устанавливает высоту и ширину 200.
 
 ```xaml
 <ContentPage ...>
@@ -313,166 +313,168 @@ stacklayout>image {
 ```
 
 > [!NOTE]
-> `element>element` Селектор требует, что дочерний элемент является _прямой_ дочерний элемент родителя.
+> Селектор `element>element` требует, чтобы дочерний элемент был _прямым_ дочерним элементом родительского элемента.
 
-## <a name="selector-reference"></a>Выбор ссылки
+## <a name="selector-reference"></a>Справочник по селектору
 
-Xamarin.Forms поддерживает следующие селекторы CSS:
+В Xamarin. Forms поддерживаются следующие селекторы CSS:
 
 |Селектор|Пример|Описание|
 |---|---|---|
-|`.class`|`.header`|Выбирает все элементы с `StyleClass` свойство, содержащее «заголовок». Обратите внимание на то, что этот селектор чувствительно к регистру.|
-|`#id`|`#email`|Выбирает все элементы с `StyleId` присвоено `email`. Если `StyleId` не указан, возврат к `x:Name`. При использовании XAML, `x:Name` предпочтительнее, чем `StyleId`. Обратите внимание на то, что этот селектор чувствительно к регистру.|
+|`.class`|`.header`|Выбирает все элементы со свойством `StyleClass`, содержащим "заголовок". Обратите внимание, что в этом селекторе учитывается регистр.|
+|`#id`|`#email`|Выбирает все элементы, для которых `StyleId` задано значение `email`. Если параметр `StyleId` не установлен, для перехода на `x:Name`. При использовании XAML `x:Name` предпочтительнее, чем `StyleId`. Обратите внимание, что в этом селекторе учитывается регистр.|
 |`*`|`*`|Выбирает все элементы.|
-|`element`|`label`|Выбирает все элементы типа `Label`, но не подклассы. Обратите внимание, что этот селектор без учета регистра.|
-|`^base`|`^contentpage`|Выбирает все элементы с `ContentPage` в качестве базового класса, включая `ContentPage` сам. Обратите внимание, что этот селектор не учитывает регистр и не является частью спецификации CSS.|
-|`element,element`|`label,button`|Выбирает все `Button` элементы и все `Label` элементы. Обратите внимание, что этот селектор без учета регистра.|
-|`element element`|`stacklayout label`|Выбирает все `Label` элементов внутри `StackLayout`. Обратите внимание, что этот селектор без учета регистра.|
-|`element>element`|`stacklayout>label`|Выбирает все `Label` элементов при помощи `StackLayout` как непосредственным родительским. Обратите внимание, что этот селектор без учета регистра.|
-|`element+element`|`label+entry`|Выбирает все `Entry` элементы, непосредственно следующие за `Label`. Обратите внимание, что этот селектор без учета регистра.|
-|`element~element`|`label~entry`|Выбирает все `Entry` элементов предшествует `Label`. Обратите внимание, что этот селектор без учета регистра.|
+|`element`|`label`|Выбирает все элементы типа `Label`, но не подклассы. Обратите внимание, что этот селектор не учитывает регистр.|
+|`^base`|`^contentpage`|Выбирает все элементы с `ContentPage` в качестве базового класса, включая `ContentPage` самого себя. Обратите внимание, что этот селектор не учитывает регистр и не является частью спецификации CSS.|
+|`element,element`|`label,button`|Выбирает все элементы `Button` и все элементы `Label`. Обратите внимание, что этот селектор не учитывает регистр.|
+|`element element`|`stacklayout label`|Выбирает все элементы `Label` внутри `StackLayout`. Обратите внимание, что этот селектор не учитывает регистр.|
+|`element>element`|`stacklayout>label`|Выбирает все элементы `Label` с `StackLayout` в качестве прямого родителя. Обратите внимание, что этот селектор не учитывает регистр.|
+|`element+element`|`label+entry`|Выбирает все элементы `Entry` непосредственно после `Label`. Обратите внимание, что этот селектор не учитывает регистр.|
+|`element~element`|`label~entry`|Выбирает все элементы `Entry`, предшествующие `Label`. Обратите внимание, что этот селектор не учитывает регистр.|
 
-Стили с совпадающими селекторы применяются последовательно, в порядке определения. Стили, определенные на конкретном элементе всегда применяются последнего.
+Стили с соответствующими селекторами применяются последовательно в порядке определения. Стили, определенные для конкретного элемента, всегда применяются последними.
 
 > [!TIP]
-> Селекторы можно объединить без ограничений, таких как `StackLayout>ContentView>label.email`.
+> Селекторы можно сочетать без ограничений, например `StackLayout>ContentView>label.email`.
 
-В настоящее время поддерживаются следующие селекторы:
+Следующие селекторы в настоящее время не поддерживаются:
 
 - `[attribute]`
-- `@media` и `@supports`
-- `:` и `::`
+- `@media` и `@supports`.
+- `:` и `::`.
 
 > [!NOTE]
-> Специфичность и переопределений специфичность не поддерживаются.
+> Определение приоритетности и переопределений с определенными параметрами не поддерживаются.
 
 ## <a name="property-reference"></a>Справочник по свойствам
 
-Следующие свойства CSS, поддерживаемых Xamarin.Forms (в **значения** столбцов, типы являются _курсивом_, тогда как строковые литералы являются `gray`):
+Xamarin. Forms поддерживают следующие свойства CSS (в столбце « **значения** » типы имеют _курсив_, а строковые литералы — `gray`):
 
-|Свойство.|Применение|Значения|Пример|
+|свойство;|Применение|Значения|Пример|
 |---|---|---|---|
-|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
-|`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
-|`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
-|`background-color`|`VisualElement`|_Цвет_ \| `initial` |`background-color: springgreen;`|
-|`background-image`|`Page`|_Строка_ \| `initial` |`background-image: bg.png;`|
-|`border-color`|`Button`, `Frame`, `ImageButton`|_Цвет_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_Double_ \| `initial` |`border-radius: 10;`|
-|`border-width`|`Button`, `ImageButton`|_Double_ \| `initial` |`border-width: .5;`|
-|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_Цвет_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
-|`column-gap`|`Grid`|_Double_ \| `initial`|`column-gap: 9;`|
+|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| 0 1 2 3 4 5 6 7 @no__ t_18 9 0 1 2 |`align-content: space-between;`|
+|`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| 0 1 2 |`align-items: flex-start;`|
+|`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| 0 1 2 3 4|`align-self: flex-end;`|
+|`background-color`|`VisualElement`|_цветовая_ \| `initial` |`background-color: springgreen;`|
+|`background-image`|`Page`|_строка_ \| `initial` |`background-image: bg.png;`|
+|`border-color`|`Button`значение `Frame`значение `ImageButton`|_цветовая_ \| `initial`|`border-color: #9acd32;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_двойной_ \| `initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_двойной_ \| `initial` |`border-width: .5;`|
+|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_цветовая_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
+|`column-gap`|`Grid`|_двойной_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
-|`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
-|`flex-basis`|`VisualElement`|_число с плавающей запятой_ \| `auto` \| `initial`. Кроме того, можно указать значение в диапазоне 0 – 100% параметром `%` входа.|`flex-basis: 25%;`|
-|`flex-grow`|`VisualElement`|_число с плавающей запятой_ \| `initial`|`flex-grow: 1.5;`|
-|`flex-shrink`|`VisualElement`|_число с плавающей запятой_ \| `initial`|`flex-shrink: 1;`|
+|`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| 0 1 2|`flex-direction: column-reverse;`|
+|`flex-basis`|`VisualElement`|\| с _плавающей запятой_ `auto` \| `initial`. Кроме того, значение в процентах от 0% до 100% можно указать с помощью `%` знака.|`flex-basis: 25%;`|
+|`flex-grow`|`VisualElement`|`initial` \| с _плавающей запятой_|`flex-grow: 1.5;`|
+|`flex-shrink`|`VisualElement`|`initial` \| с _плавающей запятой_|`flex-shrink: 1;`|
 |`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
-|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_Строка_ \| `initial` |`font-family: Consolas;`|
-|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_двойные_ \| _namedsize_ \| `initial` |`font-size: 12;`|
+|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_строка_ \| `initial` |`font-family: Consolas;`|
+|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_ \| _намедсизе_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
-|`height`|`VisualElement`|_Double_ \| `initial` |`min-height: 250;`|
-|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
-|`line-height`|`Label`, `Span`|_Double_ \| `initial` |`line-height: 1.8;`|
-|`margin`|`View`|_Толщина_ \| `initial` |`margin: 6 12;`|
-|`margin-left`|`View`|_Толщина_ \| `initial` |`margin-left: 3;`|
-|`margin-top`|`View`|_Толщина_ \| `initial` |`margin-top: 2;`|
-|`margin-right`|`View`|_Толщина_ \| `initial` |`margin-right: 1;`|
-|`margin-bottom`|`View`|_Толщина_ \| `initial` |`margin-bottom: 6;`|
-|`max-lines`|`Label`|_int_ \| `initial`|`max-lines: 2;`|
-|`min-height`|`VisualElement`|_Double_ \| `initial` |`min-height: 50;`|
-|`min-width`|`VisualElement`|_Double_ \| `initial` |`min-width: 112;`|
-|`opacity`|`VisualElement`|_Double_ \| `initial` |`opacity: .3;`|
-|`order`|`VisualElement`|_int_ \| `initial`|`order: -1;`|
-|`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_Толщина_ \| `initial` |`padding: 6 12 12;`|
-|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_Double_ \| `initial`|`padding-left: 3;`|
-|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _Double_ \| `initial` |`padding-top: 4;`|
-|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _Double_ \| `initial` |`padding-right: 2;`|
-|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _Double_ \| `initial` |`padding-bottom: 6;`|
+|`height`|`VisualElement`|_двойной_ \| `initial` |`min-height: 250;`|
+|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| 0 1 2 3 4 5 6 7 @no__ t_18 9 0|`justify-content: flex-end;`|
+|`line-height`|`Label`, `Span`|_двойной_ \| `initial` |`line-height: 1.8;`|
+|`margin`|`View`|_толщина_ \| `initial` |`margin: 6 12;`|
+|`margin-left`|`View`|_толщина_ \| `initial` |`margin-left: 3;`|
+|`margin-top`|`View`|_толщина_ \| `initial` |`margin-top: 2;`|
+|`margin-right`|`View`|_толщина_ \| `initial` |`margin-right: 1;`|
+|`margin-bottom`|`View`|_толщина_ \| `initial` |`margin-bottom: 6;`|
+|`max-lines`|`Label`|`initial` \| _int_|`max-lines: 2;`|
+|`min-height`|`VisualElement`|_двойной_ \| `initial` |`min-height: 50;`|
+|`min-width`|`VisualElement`|_двойной_ \| `initial` |`min-width: 112;`|
+|`opacity`|`VisualElement`|_двойной_ \| `initial` |`opacity: .3;`|
+|`order`|`VisualElement`|`initial` \| _int_|`order: -1;`|
+|`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_толщина_ \| `initial` |`padding: 6 12 12;`|
+|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_двойной_ \| `initial`|`padding-left: 3;`|
+|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _двойной_ \| `initial` |`padding-top: 4;`|
+|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _двойной_ \| `initial` |`padding-right: 2;`|
+|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _двойной_ \| `initial` |`padding-bottom: 6;`|
 |`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
-|`row-gap`|`Grid`| _Double_ \| `initial`|`row-gap: 12;`|
-|`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left` и `right` следует избегать в средах справа налево.| `text-align: right;`|
+|`row-gap`|`Grid`| _двойной_ \| `initial`|`row-gap: 12;`|
+|`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| 0 1 2 3 4 5 6. в средах с письмом справа налево следует избегать `left` и `right`.| `text-align: right;`|
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
-|`transform-origin`|`VisualElement`| _двойные_, _double_ \| `initial` |`transform-origin: 7.5, 12.5;`|
-|`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
-|`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
-|`width`|`VisualElement`|_Double_ \| `initial`|`min-width: 320;`|
+|`transform-origin`|`VisualElement`| _Double_, _Двойное_ \| `initial` |`transform-origin: 7.5, 12.5;`|
+|`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| 0 1 2 3 4 5 6|`vertical-align: bottom;`|
+|`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| 0|`visibility: hidden;`|
+|`width`|`VisualElement`|_двойной_ \| `initial`|`min-width: 320;`|
 
 > [!NOTE]
-> `initial` значение является допустимым для всех свойств. Он очищает значение (Сброс к значениям по умолчанию), установленного из другой стиль.
+> `initial` является допустимым значением для всех свойств. Он очищает значение (сбрасывается до значения по умолчанию), установленное из другого стиля.
 
-В настоящее время поддерживаются следующие свойства:
+Следующие свойства в настоящее время не поддерживаются:
 
-- `all: initial`.
-- Свойства макета (поле или сетки).
-- Собирательные свойства, такие как `font`, и `border`.
+- `all: initial`
+- Свойства макета (Box или Grid).
+- Сокращенные свойства, такие как `font` и `border`.
 
-Кроме того, не `inherit` наследования значения и поэтому не поддерживается. Поэтому невозможно например, задать `font-size` свойства в макете и ожидать, что все [ `Label` ](xref:Xamarin.Forms.Label) экземпляров в макете, чтобы наследовать значение. Единственным исключением является `direction` свойство, которое имеет значение по умолчанию из `inherit`.
+Кроме того, отсутствует `inherit` значение, поэтому наследование не поддерживается. Поэтому вы не можете, например, задать свойство `font-size` в макете и ожидает, что все экземпляры [`Label`](xref:Xamarin.Forms.Label) в макете наследуют это значение. Единственным исключением является свойство `direction`, которое имеет значение по умолчанию `inherit`.
 
 ### <a name="xamarinforms-specific-properties"></a>Свойства, относящиеся к Xamarin. Forms
 
-Также поддерживаются следующие свойства CSS Xamarin.Forms для конкретных (в **значения** столбцов, типы являются _курсивом_, тогда как строковые литералы являются `gray`):
+Также поддерживаются следующие свойства CSS, относящиеся к Xamarin. Forms (в столбце **значения** типы имеют _курсив_, а строковые литералы `gray`):
 
-|Свойство.|Применение|Значения|Пример|
+|свойство;|Применение|Значения|Пример|
 |---|---|---|---|
-|`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|_заключенный в кавычки текст_ \| `initial` |`-xf-placeholder: Enter name;`|
-|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_Цвет_ \| `initial` |`-xf-placeholder-color: green;`|
-|`-xf-max-length`|`Entry`, `Editor`|_int_ \| `initial` |`-xf-max-length: 20;`|
-|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_Цвет_ \| `initial` |`-xf-bar-background-color: teal;`|
-|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_Цвет_ \| `initial` |`-xf-bar-text-color: gray`|
-|`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` поддерживается только на `ScrollView`. |`-xf-orientation: horizontal;`|
+|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_цветовая_ \| `initial` |`-xf-bar-background-color: teal;`|
+|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_цветовая_ \| `initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
+|`-xf-max-length`|`Entry`, `Editor`|`initial` \| _int_ |`-xf-max-length: 20;`|
+|`-xf-max-track-color`|`Slider`|_цветовая_ \| `initial` |`-xf-max-track-color: red;`|
+|`-xf-min-track-color`|`Slider`|_цветовая_ \| `initial` |`-xf-min-track-color: yellow;`|
+|`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` поддерживается только в `ScrollView`. |`-xf-orientation: horizontal;`|
+|`-xf-placeholder`|`Entry`значение `Editor`значение `SearchBar`|`initial` \| _текста в кавычках_ |`-xf-placeholder: Enter name;`|
+|`-xf-placeholder-color`|`Entry`значение `Editor`значение `SearchBar`|_цветовая_ \| `initial` |`-xf-placeholder-color: green;`|
+|`-xf-spacing`|`StackLayout`|_двойной_ \| `initial` |`-xf-spacing: 8;`|
+|`-xf-thumb-color`|`Slider`, `Switch`|_цветовая_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
-|`-xf-min-track-color`|`Slider`|_Цвет_ \| `initial` |`-xf-min-track-color: yellow;`|
-|`-xf-max-track-color`|`Slider`|_Цвет_ \| `initial` |`-xf-max-track-color: red;`|
-|`-xf-thumb-color`|`Slider`|_Цвет_ \| `initial` |`-xf-thumb-color: limegreen;`|
-|`-xf-spacing`|`StackLayout`|_Double_ \| `initial` |`-xf-spacing: 8;`|
+|`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
+|`-xf-visual`|`VisualElement`|_строка_ \| `initial` |`-xf-visual: material;`|
 
 ### <a name="xamarinforms-shell-specific-properties"></a>Специальные свойства оболочки Xamarin. Forms
 
-Также поддерживаются следующие свойства CSS, относящиеся к оболочке Xamarin. Forms (в столбце **значения** типы имеют _курсив_, а строковые `gray`литералы):
+Также поддерживаются следующие свойства CSS, относящиеся к оболочке Xamarin. Forms (в столбце **значения** типы имеют _курсив_, а строковые литералы `gray`):
 
-|Свойство.|Применение|Значения|Пример|
+|свойство;|Применение|Значения|Пример|
 |---|---|---|---|
-|`-xf-flyout-background`|`Shell`|_Цвет_ \| `initial` |`-xf-flyout-background: red;`|
-|`-xf-shell-background`|`Element`|_Цвет_ \| `initial` |`-xf-shell-background: green;`|
-|`-xf-shell-disabled`|`Element`|_Цвет_ \| `initial` |`-xf-shell-disabled: blue;`|
-|`-xf-shell-foreground`|`Element`|_Цвет_ \| `initial` |`-xf-shell-foreground: yellow;`|
-|`-xf-shell-tabbar-background`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-background: white;`|
-|`-xf-shell-tabbar-disabled`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
-|`-xf-shell-tabbar-foreground`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
-|`-xf-shell-tabbar-title`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
-|`-xf-shell-tabbar-unselected`|`Element`|_Цвет_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
-|`-xf-shell-title`|`Element`|_Цвет_ \| `initial` |`-xf-shell-title: teal;`|
-|`-xf-shell-unselected`|`Element`|_Цвет_ \| `initial` |`-xf-shell-unselected: limegreen;`|
+|`-xf-flyout-background`|`Shell`|_цветовая_ \| `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_цветовая_ \| `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_цветовая_ \| `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_цветовая_ \| `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_цветовая_ \| `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_цветовая_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_цветовая_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_цветовая_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_цветовая_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_цветовая_ \| `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_цветовая_ \| `initial` |`-xf-shell-unselected: limegreen;`|
 
-### <a name="color"></a>Color
+### <a name="color"></a>Цвет
 
-Следующие `color` поддерживаются значения:
+Поддерживаются следующие значения `color`:
 
-- `X11` [цвета](https://en.wikipedia.org/wiki/X11_color_names/), который соответствует цветов CSS, предварительно определенные цвета UWP и Xamarin.Forms цвета. Обратите внимание на то, что эти значения цвета нечувствительны к регистру.
-- шестнадцатеричный цвета: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
-- цвета RGB: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. Значения находятся в диапазоне от 0 до 255, или 0 – 100%.
-- RGBA цвета: `rgba(255, 0, 0, 0.8)`, `rgba(100%, 0%, 0%, 0.8)`. Значение непрозрачности находится в диапазоне от 0,0-1.0.
-- цвета HSL: `hsl(120, 100%, 50%)`. H значение находится в диапазоне от 0 до 360, а s и l — в диапазоне 0 – 100%.
-- цвета hsla: `hsla(120, 100%, 50%, .8)`. Значение непрозрачности находится в диапазоне от 0,0-1.0.
+- `X11` [цвета](https://en.wikipedia.org/wiki/X11_color_names/), соответствующие цветам CSS, предварительно определенным цветам UWP и цветам Xamarin. Forms. Обратите внимание, что в этих цветовых значениях регистр не учитывается.
+- Шестнадцатеричные цвета: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
+- цвета RGB: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. Значения находятся в диапазоне 0-255 или 0%-100%.
+- цвета RGBA: `rgba(255, 0, 0, 0.8)`, `rgba(100%, 0%, 0%, 0.8)`. Значение непрозрачности находится в диапазоне от 0,0 до 1,0.
+- цвета HSL: `hsl(120, 100%, 50%)`. Значение h находится в диапазоне 0-360, а s и l — в диапазоне 0%-100%.
+- цвета хсла: `hsla(120, 100%, 50%, .8)`. Значение непрозрачности находится в диапазоне от 0,0 до 1,0.
 
 ### <a name="thickness"></a>Thickness
 
-Один, два, три или четыре `thickness` поддерживаются значения, отделенных друг от друга пробелами:
+Поддерживаются одно, два, три или четыре значения `thickness`, каждое из которых отделяется пробелом:
 
-- Одно значение указывает толщина.
-- Два значения указывают толщину вертикальной, а затем по горизонтали.
-- Три значения соответствуют верхней части страницы по горизонтали (слева и справа), а затем толщина нижней.
-- Четыре значения указывают верхней, а затем правой, нижней, а затем толщину левой.
+- Одно значение обозначает однородную толщину.
+- Два значения указывают вертикальную толщину по горизонтали.
+- Три значения указываются сверху, затем горизонтально (слева и справа), затем толщина нижней части.
+- Четыре значения указываются сверху, справа, снизу, затем слева.
 
 > [!NOTE]
-> CSS `thickness` значения отличаются от XAML [ `Thickness` ](xref:Xamarin.Forms.Thickness) значения. Например, в XAML двух значений — `Thickness` указывающее толщину горизонтальной, а затем по вертикали, то время как значение четырех `Thickness` указывает слева, сверху, а затем справа, снизу толщины. Кроме того, XAML `Thickness` значения с разделителями-запятыми.
+> Значения `thickness` CSS отличаются от значений [`Thickness`](xref:Xamarin.Forms.Thickness) XAML. Например, в XAML `Thickness` с двумя значениями обозначает горизонтальную и вертикальную толщину, а `Thickness` четыре значения — слева, сверху, справа и снизу. Кроме того, значения XAML `Thickness` разделяются запятыми.
 
-### <a name="namedsize"></a>NamedSize
+### <a name="namedsize"></a>намедсизе
 
-Без учета регистра следующие `namedsize` поддерживаются значения:
+Поддерживаются следующие `namedsize` значения без учета регистра:
 
 - `default`
 - `micro`
@@ -480,9 +482,9 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 - `medium`
 - `large`
 
-Точный смысл каждого `namedsize` значение зависит от платформы и зависящие от представления.
+Точное значение каждого `namedsize` значения зависит от платформы и от представления.
 
-## <a name="css-in-xamarinforms-with-xamarinuniversity"></a>CSS в Xamarin.Forms с помощью Xamarin.University
+## <a name="css-in-xamarinforms-with-xamarinuniversity"></a>CSS в Xamarin. Forms с Xamarin. Университет
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
@@ -490,6 +492,6 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [MonkeyAppCSS (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+- [Монкэйаппксс (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Задание стиля приложений Xamarin.Forms с помощью стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -8,24 +8,24 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2018
 ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289434"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Демонстрация жизненного цикла приложения для Xamarin. iOS
 
-В этой статье и [образце кода](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) демонстрируются четыре состояния приложений в iOS, а также роль `AppDelegate` методов уведомления приложения о том, что состояния изменяются. Приложение будет печатать обновления в консоли при каждом изменении состояния приложения:
+В этой статье и [образце кода](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) демонстрируются четыре состояния приложений в iOS, а также роль `AppDelegate` методов уведомления приложения об изменении состояний. Приложение будет печатать обновления в консоли при каждом изменении состояния приложения:
 
-[![](application-lifecycle-demo-images/image3-sml.png "Пример приложения")](application-lifecycle-demo-images/image3.png#lightbox)
+[![](application-lifecycle-demo-images/image3-sml.png "The sample app")](application-lifecycle-demo-images/image3.png#lightbox)
 
-[![](application-lifecycle-demo-images/image4.png "Приложение будет печатать обновления в консоли при каждом изменении состояния приложения")](application-lifecycle-demo-images/image4.png#lightbox)
+[![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## <a name="walkthrough"></a>Пошаговое руководство
 
 1. Откройте проект **жизненного цикла** в решении **лифецикледемо** .
-1. `AppDelegate` Откройте класс. В методы жизненного цикла добавлено ведение журнала, указывающее, когда приложение изменило состояние:
+1. Откройте класс `AppDelegate`. В методы жизненного цикла добавлено ведение журнала, указывающее, когда приложение изменило состояние:
 
     ```csharp
     public override void OnActivated(UIApplication application)
@@ -51,11 +51,11 @@ ms.locfileid: "70289434"
     }
     ```
 
-1. Запустите приложение в симуляторе или на устройстве. `OnActivated`будет вызываться при запуске приложения. Теперь приложение находится в _активном_ состоянии.
-1. Нажмите кнопку "домой" на симуляторе или устройстве, чтобы перенести приложение в фоновый режим. `OnResignActivation`и `DidEnterBackground` будут вызываться при переходе приложения из `Active` в `Inactive` `Backgrounded` состояние и. Так как для выполнения в фоновом режиме не задан код приложения, приложение считается _приостановленным_ в памяти.
-1. Вернитесь к приложению, чтобы вернуть его на передний план. `WillEnterForeground`и `OnActivated` оба будут вызваны:
+1. Запустите приложение в симуляторе или на устройстве. `OnActivated` будет вызываться при запуске приложения. Теперь приложение находится в _активном_ состоянии.
+1. Нажмите кнопку "домой" на симуляторе или устройстве, чтобы перенести приложение в фоновый режим. `OnResignActivation` и `DidEnterBackground` будут вызываться при переходе приложения с `Active` на `Inactive` и в состояние `Backgrounded`. Так как для выполнения в фоновом режиме не задан код приложения, приложение считается _приостановленным_ в памяти.
+1. Вернитесь к приложению, чтобы вернуть его на передний план. будут вызваны оба `WillEnterForeground` и `OnActivated`:
 
-    ![](application-lifecycle-demo-images/image4.png "Изменения состояния, выводимые на консоль")
+    ![](application-lifecycle-demo-images/image4.png "State changes printed to the console")
 
     Следующая строка кода в контроллере представления выполняется, когда приложение перешел на передний план из фона и изменяет текст, отображаемый на экране:
 
@@ -73,7 +73,7 @@ ms.locfileid: "70289434"
 
     [![Проведите вверх, чтобы удалить работающее приложение](application-lifecycle-demo-images/app-switcher-swipe-sml.png "Проведите вверх, чтобы удалить работающее приложение")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
 
-iOS завершит работу приложения. Обратите `WillTerminate` внимание, что не вызывается, так как приложение уже _приостановлено_ в фоновом режиме.
+iOS завершит работу приложения. Обратите внимание, что `WillTerminate` не вызывается, так как приложение уже _приостановлено_ в фоновом режиме.
 
 ## <a name="related-links"></a>Связанные ссылки
 

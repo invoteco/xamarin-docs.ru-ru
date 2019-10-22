@@ -9,10 +9,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
 ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70290606"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>расширения iOS в Xamarin. iOS
@@ -21,13 +21,13 @@ ms.locfileid: "70290606"
 
 **Создание расширений в видео iOS**
 
-Расширения, представленные в iOS 8, являются специализированными `UIViewControllers` , которые представлены в iOS внутри стандартных контекстов, например в **центре уведомлений**, как пользовательские типы клавиатуры, запрошенные пользователем, для выполнения специализированного ввода или других контекстов. как и при редактировании фотографии, в которой расширение может предоставлять специальные фильтры эффектов.
+Расширения, представленные в iOS 8, являются специализированными `UIViewControllers`, которые поддерживаются iOS в стандартных контекстах, например в **центре уведомлений**, как пользовательские типы клавиатуры, запрошенные пользователем, для выполнения специализированного ввода или других контекстов, таких как изменение фотографии, в которой расширение может предоставлять специальные фильтры эффектов.
 
 Все расширения устанавливаются вместе с приложением-контейнером (с элементами, написанными с помощью унифицированных API-интерфейсов 64) и активируются из определенной точки расширения в ведущем приложении. И поскольку они будут использоваться как дополнения к существующим системным функциям, они должны быть высокопроизводительными, экономичными и надежными. 
 
 ## <a name="extension-points"></a>Точки расширения
 
-|Тип|Описание|Точка расширения|Ведущее приложение|
+|Type|Описание|Точка расширения|Ведущее приложение|
 |--- |--- |--- |--- |
 |Действие|Специализированный редактор или средство просмотра для определенного типа мультимедиа|`com.apple.ui-services`|Любой|
 |Поставщик документов|Разрешает приложению использовать удаленное хранилище документов|`com.apple.fileprovider-ui`|Приложения, использующие [уидокументпиккервиевконтроллер](xref:UIKit.UIDocumentPickerViewController)|
@@ -49,9 +49,9 @@ ms.locfileid: "70290606"
 - Расширения не могут получить доступ к камерам или телефонам устройства (хотя они могут обращаться к существующим файлам мультимедиа)
 - Расширения не могут получить данные из воздушных раскрывающихся данных (хотя они могут передавать данные через перетаскивание воздуха)
 - [Уиактионшит](xref:UIKit.UIActionSheet) и [уиалертвиев](xref:UIKit.UIAlertView) недоступны; расширения должны использовать [уиалертконтроллер](xref:UIKit.UIAlertController)
-- Несколько членов [UIApplication](xref:UIKit.UIApplication) недоступны: [UIApplication. шаредаппликатион](xref:UIKit.UIApplication.SharedApplication), [UIApplication. OpenURL](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication. бегинигнорингинтерактионевентс](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) и [UIApplication. ендигнорингинтерактионевентс](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
+- Несколько членов [UIApplication](xref:UIKit.UIApplication) недоступны: [UIApplication. шаредаппликатион](xref:UIKit.UIApplication.SharedApplication), [UIApplication. OpenURL](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication. бегинигнорингинтерактионевентс](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) и [ UIApplication. Ендигнорингинтерактионевентс](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - iOS обеспечивает ограничение использования памяти размером 16 МБ для современных расширений.
-- По умолчанию расширения клавиатуры не имеют доступа к сети. Это влияет на отладку на устройстве (это ограничение не применяется в симуляторе), так как Xamarin. iOS требует доступа к сети для работы отладки. Можно запросить сетевой доступ, задав `Requests Open Access` значение в файле info. `Yes`plist проекта. Дополнительные сведения об ограничениях на расширение клавиатуры см. в разделе о [пользовательской клавиатуре](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) Apple.
+- По умолчанию расширения клавиатуры не имеют доступа к сети. Это влияет на отладку на устройстве (это ограничение не применяется в симуляторе), так как Xamarin. iOS требует доступа к сети для работы отладки. Можно запросить сетевой доступ, задав значение `Requests Open Access` в файле info. plist проекта для `Yes`. Дополнительные сведения об ограничениях на расширение клавиатуры см. в разделе о [пользовательской клавиатуре](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) Apple.
 
 Сведения об индивидуальных ограничениях см. в статье программное обеспечение для [программирования расширения приложения](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/)Apple.
 
@@ -67,7 +67,7 @@ ms.locfileid: "70290606"
 
 Расширение может быть простым, например, одним [UIViewController](xref:UIKit.UIViewController) или более сложными расширениями, которые представляют несколько экранов пользовательского интерфейса. Когда пользователь встречает _точки расширения_ (например, при совместном использовании образа), у него будет возможность выбрать из расширений, зарегистрированных для этой точки расширения. 
 
-Если выбрать одно из расширений приложения, будет создан его `UIViewController` экземпляр и начнется жизненный цикл стандартного контроллера представления. Однако, в отличие от обычного приложения, которое приостановлено, но обычно не завершается, когда пользователь заканчивает взаимодействие с ними, расширения загружаются, выполняются, а затем завершаются повторно.
+Если выбрать одно из расширений приложения, будет создан экземпляр его `UIViewController` и начнется жизненный цикл стандартного контроллера представления. Однако, в отличие от обычного приложения, которое приостановлено, но обычно не завершается, когда пользователь заканчивает взаимодействие с ними, расширения загружаются, выполняются, а затем завершаются повторно.
 
 Расширения могут взаимодействовать со своими ведущими приложениями через объект [нсекстенсионконтекст](xref:Foundation.NSExtensionContext) . Некоторые расширения имеют операции, получающие асинхронные обратные вызовы с результатами. Эти обратные вызовы будут выполняться в фоновых потоках, и расширение должно учитывать это. Например, с помощью [нсобжект. инвокеонмаинсреад](xref:Foundation.NSObject.InvokeOnMainThread*) , если требуется обновить пользовательский интерфейс. Дополнительные сведения см. в разделе [взаимодействие с ведущим приложением](#communicating-with-the-host-app) .
 
@@ -89,13 +89,13 @@ ms.locfileid: "70290606"
 
 Кроме того, проект расширения имеет следующие требования.
 
-- Он должен иметь идентификатор пакета, который начинается с идентификатора пакета приложения контейнера. Например, если у приложения-контейнера есть идентификатор `com.myCompany.ContainerApp`пакета, идентификатором расширения может быть: `com.myCompany.ContainerApp.MyExtension` 
+- Он должен иметь идентификатор пакета, который начинается с идентификатора пакета приложения контейнера. Например, если у приложения-контейнера есть идентификатор пакета `com.myCompany.ContainerApp`, идентификатор расширения может быть `com.myCompany.ContainerApp.MyExtension`: 
 
   ![](extensions-images/bundleidentifiers.png) 
-- Он должен определить ключ `NSExtensionPointIdentifier`с соответствующим значением ( `Info.plist` `com.apple.widget-extension` например, для мини-приложения центра уведомлений) в файле.
-- Он также `NSExtensionPrincipalClass` *должен определить* `NSExtensionMainStoryboard` ключ или ключ в `Info.plist` файле с соответствующим значением:
-  - Используйте ключ, чтобы указать имя раскадровки, которая представляет основной пользовательский интерфейс для расширения (минус `.storyboard`). `NSExtensionMainStoryboard` Например, `Main` `Main.storyboard` для файла.
-  - `NSExtensionPrincipalClass` Используйте ключ, чтобы указать класс, который будет инициализирован при запуске расширения. Значение должно соответствовать `UIViewController`значению **регистра** : 
+- Он должен определять ключ `NSExtensionPointIdentifier` с соответствующим значением (например, `com.apple.widget-extension` для **текущего** мини-приложения центра уведомлений) в его `Info.plist` файле.
+- Он также *должен определять* `NSExtensionMainStoryboard`ный ключ или `NSExtensionPrincipalClass`ный ключ в `Info.plist` файле с соответствующим значением:
+  - Используйте ключ `NSExtensionMainStoryboard`, чтобы указать имя раскадровки, которая представляет основной пользовательский интерфейс для расширения (за вычетом `.storyboard`). Например, `Main` для файла `Main.storyboard`.
+  - Используйте ключ `NSExtensionPrincipalClass`, чтобы указать класс, который будет инициализирован при запуске расширения. Значение должно соответствовать значению **регистра** `UIViewController`: 
 
   ![](extensions-images/registerandprincipalclass.png)
 
@@ -108,7 +108,7 @@ ms.locfileid: "70290606"
 
 В следующем пошаговом руководстве вы создадите мини-приложение с примером **сегодня** , которое вычисляет день и количество дней, оставшихся в году:
 
-[![](extensions-images/carpediemscreenshot-sm.png "Пример мини-приложения сегодня, которое вычисляет день и количество дней, оставшихся в году")](extensions-images/carpediemscreenshot.png#lightbox)
+[![](extensions-images/carpediemscreenshot-sm.png "An example Today widget that calculates the day and number of days remaining in the year")](extensions-images/carpediemscreenshot.png#lightbox)
 
 ### <a name="creating-the-solution"></a>Создание решения
 
@@ -116,26 +116,26 @@ ms.locfileid: "70290606"
 
 1. Сначала создайте проект iOS, **единый Просмотр приложения** и нажмите кнопку **Далее** : 
 
-    [![](extensions-images/today01.png "Сначала создайте проект iOS, единый Просмотр приложения и нажмите кнопку Далее.")](extensions-images/today01.png#lightbox)
+    [![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png#lightbox)
 2. Вызовите проект `TodayContainer` и нажмите кнопку **Далее** : 
 
-    [![](extensions-images/today02.png "Вызов проекта Тодайконтаинер и нажатие кнопки \"Далее\"")](extensions-images/today02.png#lightbox)
+    [![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png#lightbox)
 3. Проверьте **имя проекта** и **имя_решения** и нажмите кнопку " **создать** ", чтобы создать решение: 
 
-    [![](extensions-images/today03.png "Проверьте имя проекта и имя_решения и нажмите кнопку \"создать\", чтобы создать решение.")](extensions-images/today03.png#lightbox)
+    [![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png#lightbox)
 4. Затем в **Обозреватель решений**щелкните решение правой кнопкой мыши и добавьте новый проект **расширения iOS** из шаблона " **Today** ". 
 
-    [![](extensions-images/today04.png "Затем в обозреватель решений щелкните решение правой кнопкой мыши и добавьте новый проект расширения iOS из шаблона \"Today\".")](extensions-images/today04.png#lightbox)
+    [![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png#lightbox)
 5. Вызовите проект `DaysRemaining` и нажмите кнопку **Далее** : 
 
-    [![](extensions-images/today05.png "Вызов проекта Дайсремаининг и нажатие кнопки \"Далее\"")](extensions-images/today05.png#lightbox)
+    [![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png#lightbox)
 6. Проверьте проект и нажмите кнопку **создать** , чтобы создать его: 
 
-    [![](extensions-images/today06.png "Проверьте проект и нажмите кнопку \"создать\", чтобы создать его.")](extensions-images/today06.png#lightbox)
+    [![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png#lightbox)
 
 В полученном решении теперь должно быть два проекта, как показано ниже:
 
-[![](extensions-images/today07.png "В полученном решении теперь должно быть два проекта, как показано ниже.")](extensions-images/today07.png#lightbox)
+[![](extensions-images/today07.png "The resulting Solution should now have two projects, as shown here")](extensions-images/today07.png#lightbox)
 
 ### <a name="creating-the-extension-user-interface"></a>Создание пользовательского интерфейса расширения
 
@@ -145,12 +145,12 @@ ms.locfileid: "70290606"
 
 Чтобы создать пользовательский интерфейс с раскадровкой, выполните следующие действия.
 
-1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл проекта расширения, чтобы открыть его для редактирования: 
+1. В **Обозреватель решений**дважды щелкните файл `Main.storyboard` проекта расширения, чтобы открыть его для редактирования: 
 
-    [![](extensions-images/today08.png "Дважды щелкните файл проекты расширения Main. Storyboard, чтобы открыть его для редактирования.")](extensions-images/today08.png#lightbox)
-2. Выберите метку, которая была автоматически добавлена в пользовательский интерфейс с помощью шаблона, и присвойте ей **имя** `TodayMessage` на вкладке **мини** -приложение **обозревателя свойств**: 
+    [![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
+2. Выберите метку, которая была автоматически добавлена в пользовательский интерфейс с помощью шаблона, и присвойте ей **имя** `TodayMessage` на вкладке **мини** -приложение **обозревателя свойств**. 
 
-    [![](extensions-images/today09.png "Выберите метку, которая была автоматически добавлена в пользовательский интерфейс с помощью шаблона, и присвойте ей имя Тодаймессаже на вкладке мини-приложение обозревателя свойств.")](extensions-images/today09.png#lightbox)
+    [![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
 3. Сохраните изменения в раскадровке.
 
 #### <a name="using-code"></a>Использование кода
@@ -159,19 +159,19 @@ ms.locfileid: "70290606"
 
 1. В **Обозреватель решений**выберите проект **дайсремаининг** , добавьте новый класс и вызовите его `CodeBasedViewController`: 
 
-    [![](extensions-images/code01.png "Аелект проект Дайсремаининг, добавьте новый класс и назовите его Кодебаседвиевконтроллер")](extensions-images/code01.png#lightbox)
-2. Опять же, в **Обозреватель решений**дважды щелкните `Info.plist` файл расширения, чтобы открыть его для редактирования: 
+    [![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
+2. Опять же, в **Обозреватель решений**дважды щелкните файл `Info.plist` расширения, чтобы открыть его для редактирования: 
 
-    [![](extensions-images/code02.png "Дважды щелкните файл Extensions info. plist, чтобы открыть его для редактирования.")](extensions-images/code02.png#lightbox)
-3. Выберите **представление исходного кода** (в нижней части экрана) и откройте `NSExtension` узел: 
+    [![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
+3. Выберите **представление исходного кода** (в нижней части экрана) и откройте узел `NSExtension`: 
 
-    [![](extensions-images/code03.png "Выберите представление исходного кода в нижней части экрана и откройте узел Нсекстенсион.")](extensions-images/code03.png#lightbox)
-4. Удалите ключ и `NSExtensionPrincipalClass` добавьте со значением `CodeBasedViewController`: `NSExtensionMainStoryboard` 
+    [![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
+4. Удалите ключ `NSExtensionMainStoryboard` и добавьте `NSExtensionPrincipalClass` со значением `CodeBasedViewController`. 
 
-    [![](extensions-images/code04.png "Удалите ключ Нсекстенсионмаинсторибоард и добавьте НсекстенсионпринЦипалкласс со значением Кодебаседвиевконтроллер")](extensions-images/code04.png#lightbox)
+    [![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
 5. Сохраните изменения.
 
-Затем измените `CodeBasedViewController.cs` файл и сделайте его следующим:
+Затем измените файл `CodeBasedViewController.cs` и сделайте его следующим:
 
 ```csharp
 using System;
@@ -207,11 +207,11 @@ namespace DaysRemaining
 }
 ```
 
-Обратите внимание `[Register("CodeBasedViewController")]` , что соответствует значению, указанному `NSExtensionPrincipalClass` для приведенного выше.
+Обратите внимание, что `[Register("CodeBasedViewController")]` соответствует значению, указанному для `NSExtensionPrincipalClass` выше.
 
 ### <a name="coding-the-extension"></a>Кодирование расширения
 
-После создания пользовательского интерфейса откройте `TodayViewController.cs` `CodeBasedViewController.cs` файл или (на основе метода, используемого для создания пользовательского интерфейса выше), измените метод **ViewDidLoad** и сделайте его следующим:
+После создания пользовательского интерфейса откройте файл `TodayViewController.cs` или `CodeBasedViewController.cs` (на основе метода, используемого для создания пользовательского интерфейса выше), измените метод **ViewDidLoad** и сделайте его следующим:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -232,15 +232,15 @@ public override void ViewDidLoad ()
 }
 ```
 
-При использовании метода пользовательского интерфейса на основе кода замените `// Insert code to power extension here...` комментарий новым кодом, приведенным выше. После вызова базовой реализации (и вставки метки для версии на основе кода) Этот код выполняет простое вычисление для получения дня года и количества оставшихся дней. Затем оно отобразит сообщение в метке (`TodayMessage`), созданной в конструкторе пользовательского интерфейса.
+При использовании метода пользовательского интерфейса на основе кода замените `// Insert code to power extension here...` комментария новым кодом, приведенным выше. После вызова базовой реализации (и вставки метки для версии на основе кода) Этот код выполняет простое вычисление для получения дня года и количества оставшихся дней. Затем оно отобразит сообщение в метке (`TodayMessage`), созданной в конструкторе пользовательского интерфейса.
 
-Обратите внимание на то, как подобный процесс является обычным процессом написания приложения. Расширение `UIViewController` имеет тот же жизненный цикл, что и контроллер представления в приложении, за исключением того, что расширения не имеют фоновых режимов и не приостанавливаются после того, как пользователь завершит их использование. Вместо этого расширения многократно инициализируются и освобождаются при необходимости.
+Обратите внимание на то, как подобный процесс является обычным процессом написания приложения. @No__t_0 расширения имеет тот же жизненный цикл, что и контроллер представления в приложении, за исключением того, что расширения не имеют фоновых режимов и не приостанавливаются после того, как пользователь завершит их использование. Вместо этого расширения многократно инициализируются и освобождаются при необходимости.
 
 ### <a name="creating-the-container-app-user-interface"></a>Создание пользовательского интерфейса приложения контейнера
 
-В этом пошаговом руководстве приложение-контейнер просто используется как метод для доставки и установки расширения и не предоставляет собственной функциональности. Измените `Main.storyboard` файл тодайконтаинер и добавьте некоторый текст, определяющий функцию расширения, и способ ее установки:
+В этом пошаговом руководстве приложение-контейнер просто используется как метод для доставки и установки расширения и не предоставляет собственной функциональности. Измените файл `Main.storyboard` Тодайконтаинер и добавьте текст, определяющий функцию расширения, и способ ее установки:
 
-[![](extensions-images/today10.png "Измените файл main. Storyboard Тодайконтаинерс и добавьте некоторый текст, определяющий функцию Extensions, и способ ее установки.")](extensions-images/today10.png#lightbox)
+[![](extensions-images/today10.png "Edit the TodayContainers Main.storyboard file and add some text defining the Extensions function and how to install it")](extensions-images/today10.png#lightbox)
 
 Сохраните изменения в раскадровке.
 
@@ -248,25 +248,25 @@ public override void ViewDidLoad ()
 
 Чтобы проверить расширение в симуляторе iOS, запустите приложение **тодайконтаинер** . Отобразится главное представление контейнера:
 
-[![](extensions-images/run01.png "Будет отображено главное представление \"контейнеры\"")](extensions-images/run01.png#lightbox)
+[![](extensions-images/run01.png "The containers main view will be displayed")](extensions-images/run01.png#lightbox)
 
 Затем нажмите кнопку " **домой** " в симуляторе, проведите вниз в верхней части экрана, чтобы открыть **Центр уведомлений**, перейдите на вкладку " **сегодня** " и нажмите кнопку " **изменить** ":
 
-[![](extensions-images/run02.png "Нажмите кнопку \"домой\" в симуляторе, проведите вниз в верхней части экрана, чтобы открыть центр уведомлений, перейдите на вкладку \"сегодня\" и нажмите кнопку \"Изменить\".")](extensions-images/run02.png#lightbox)
+[![](extensions-images/run02.png "Hit the Home button in the Simulator, swipe down from the top of the screen to open the Notification Center, select the Today tab and click the Edit button")](extensions-images/run02.png#lightbox)
 
 Добавьте расширение **дайсремаининг** в представление " **сегодня** " и нажмите кнопку **done (Готово** ).
 
-[![](extensions-images/run03.png "Добавление расширения Дайсремаининг в представление \"сегодня\" и нажатие кнопки \"Готово\"")](extensions-images/run03.png#lightbox)
+[![](extensions-images/run03.png "Add the DaysRemaining Extension to the Today view and click the Done button")](extensions-images/run03.png#lightbox)
 
 Новое мини-приложение будет добавлено в представление " **сегодня** ", и результаты будут отображены:
 
-[![](extensions-images/run04.png "Новое мини-приложение будет добавлено в представление \"сегодня\", и результаты будут отображены")](extensions-images/run04.png#lightbox)
+[![](extensions-images/run04.png "The new widget will be added to the Today view and the results will be displayed")](extensions-images/run04.png#lightbox)
 
 ## <a name="communicating-with-the-host-app"></a>Взаимодействие с ведущим приложением
 
-Представленное выше расширение, созданное ранее, не взаимодействует с ведущим приложением ( **текущий** экран). Если это так, будет использоваться свойство [ExtensionContext](xref:Foundation.NSExtensionContext) классов `TodayViewController` или `CodeBasedViewController`. 
+Представленное выше расширение, созданное ранее, не взаимодействует с ведущим приложением ( **текущий** экран). Если это так, будет использоваться свойство [екстенсионконтекст](xref:Foundation.NSExtensionContext) классов `TodayViewController` или `CodeBasedViewController`. 
 
-Для расширений, которые будут получать данные из их ведущих приложений, данные представляются в виде массива объектов [нсекстенсионитем](xref:Foundation.NSExtensionItem) , хранящихся в свойстве [инпутитемс](xref:Foundation.NSExtensionContext.InputItems) [екстенсионконтекст](xref:Foundation.NSExtensionContext) расширения `UIViewController`.
+Для расширений, которые будут получать данные из их ведущих приложений, данные представляются в виде массива объектов [нсекстенсионитем](xref:Foundation.NSExtensionItem) , хранящихся в свойстве [инпутитемс](xref:Foundation.NSExtensionContext.InputItems) [екстенсионконтекст](xref:Foundation.NSExtensionContext) `UIViewController`.
 
 Другое расширение, например модули редактирования фотографий, может отличать пользователя от завершения или отмены использования. Она будет возвращена в ведущее приложение с помощью методов [комплетерекуест](xref:Foundation.NSExtensionContext.CompleteRequest*) и [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) свойства [екстенсионконтекст](xref:Foundation.NSExtensionContext) .
 
@@ -286,7 +286,7 @@ public override void ViewDidLoad ()
 
 При работе с расширениями используйте универсальный идентификатор типа (UTI) для создания и управления данными, которыми обмениваются приложения, другие приложения и (или) службы.
 
-Статический класс определяет следующие вспомогательные свойства, связанные с `kUTType...` определениями Apple: `MobileCoreServices.UTType`
+Статический класс `MobileCoreServices.UTType` определяет следующие вспомогательные свойства, относящиеся к определениям `kUTType...` Apple.
 
 - `kUTTypeAlembic` - `Alembic`
 - `kUTTypeAliasFile` - `AliasFile`

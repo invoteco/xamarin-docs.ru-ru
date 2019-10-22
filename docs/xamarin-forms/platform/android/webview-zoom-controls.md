@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: 2142882add91d613263d11fa4c1e6d7ad142c7c7
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68656007"
 ---
 # <a name="webview-zoom-on-android"></a>WebView Zoom в Android
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Эта платформа Android включает контроль [`WebView`](xref:Xamarin.Forms.WebView)сжатия и масштабирования для. Он используется в XAML путем задания `WebView.EnableZoomControls` свойству и `WebView.DisplayZoomControls` связываемым свойствам `boolean` значений:
+Эта платформа Android включает контроль сжатия и масштабирования для [`WebView`](xref:Xamarin.Forms.WebView). Он используется в XAML путем задания `WebView.EnableZoomControls` и `WebView.DisplayZoomControls` связываемых свойств для `boolean` значений:
 
 ```xaml
 <ContentPage ...
@@ -29,7 +29,7 @@ ms.locfileid: "68656007"
 </ContentPage>
 ```
 
-Свойство, доступное для `WebView.DisplayZoomControls` `WebView`привязки, определяет, включено ли сжатие сжатия в, а свойство, доступное для привязки, определяет, будут ли элементы управления масштабом наложены `WebView.EnableZoomControls` [`WebView`](xref:Xamarin.Forms.WebView)на.
+@No__t_0 свойство, доступное для привязки, определяет, включено ли сжатие сжатием на [`WebView`](xref:Xamarin.Forms.WebView), а свойство `WebView.DisplayZoomControls` привязки определяет, будут ли в `WebView` наложены элементы управления масштабом.
 
 Кроме того, можно использовать интерфейс, зависящий от C# платформы, с помощью API Fluent:
 
@@ -43,18 +43,18 @@ webView.On<Android>()
     .DisplayZoomControls(true);
 ```
 
-`WebView.On<Android>` Метод указывает, что этой платформы будет выполняться только в Android. Метод в пространстве имен используется для управления включением сжатия в [`WebView`.](xref:Xamarin.Forms.WebView) `WebView.EnableZoomControls` [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) Метод в том же пространстве имен используется для управления тем `WebView`, наложены ли элементы управления Zoom на. `WebView.DisplayZoomControls` Кроме того, `WebView.ZoomControlsEnabled` можно использовать `WebView.ZoomControlsDisplayed` методы и для возврата к включению элементов управления сжатием в масштабе и масштабом соответственно.
+Метод `WebView.On<Android>` указывает, что эта платформа будет запускаться только в Android. Метод `WebView.EnableZoomControls` в пространстве имен [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) используется для управления включением сжатия в [`WebView`](xref:Xamarin.Forms.WebView). Метод `WebView.DisplayZoomControls` в том же пространстве имен используется для управления тем, наложены ли на `WebView` элементы управления масштабом. Кроме того, можно использовать методы `WebView.ZoomControlsEnabled` и `WebView.ZoomControlsDisplayed`, чтобы вернуться к включению элементов управления сжатием в масштабе и масштабом соответственно.
 
-В результате можно включить [`WebView`](xref:Xamarin.Forms.WebView)сжатие сжатия в, и элементы управления масштабом можно заменять `WebView`на:
+В результате можно включить сжатие сжатия в [`WebView`](xref:Xamarin.Forms.WebView), и элементы управления масштабом можно будет заменять на `WebView`:
 
 [![Снимок экрана с масштабным WebView в Android](webview-zoom-controls-images/webview-zoom.png "Масштабное WebView")](webview-zoom-controls-images/webview-zoom-large.png#lightbox "Масштабное WebView")
 
 > [!IMPORTANT]
-> Элементы управления масштабом должны быть включены и отображены с помощью соответствующих связываемых свойств или методов, которые будут наложены [`WebView`](xref:Xamarin.Forms.WebView)на.
+> Элементы управления масштабом должны быть включены и отображены с помощью соответствующих связываемых свойств или методов, которые будут наложены на [`WebView`](xref:Xamarin.Forms.WebView).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ПлатформспеЦификс (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API АндроидспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [АндроидспеЦифик. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

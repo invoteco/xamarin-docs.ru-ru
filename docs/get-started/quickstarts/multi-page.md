@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68653798"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Выполнение навигации в приложении Xamarin. Forms с несколькими страницами
@@ -28,10 +28,10 @@ ms.locfileid: "68653798"
 
 В кратком руководстве описывается, как превратить одноплатформенное приложение Xamarin. Forms, которое может хранить одну заметку, в многостраничное приложение, способное хранить несколько заметок. Ниже показано итоговое приложение:
 
-[![](multi-page-images/screenshots1-sml.png "")Страница "заметки](multi-page-images/screenshots1.png#lightbox "Страница «заметки»")" для записи заметки
-[(multi-page-images/screenshots2-sml.png "") ![]](multi-page-images/screenshots2.png#lightbox "Страница записи примечания")
+[![](multi-page-images/screenshots1-sml.png "Notes Page")](multi-page-images/screenshots1.png#lightbox "Notes Page")
+[![](multi-page-images/screenshots2-sml.png "Note Entry Page")](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>Необходимые компоненты
 
 Перед выполнением этого краткого руководства необходимо успешно выполнить [предыдущее краткое руководство](single-page.md) . Также можно скачать [предыдущий пример краткого руководства](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) и использовать его в качестве отправной точки для этого краткого руководства.
 
@@ -41,23 +41,23 @@ ms.locfileid: "68653798"
 
 1. Запустите Visual Studio. В окне "Пуск" щелкните решение " **Примечания** " в списке "последние проекты/решения" или нажмите кнопку **Открыть проект или**решение, а затем в диалоговом окне **Открыть проект/решение** выберите файл решения для проекта Notes:
 
-    ![](multi-page-images/vs/open-solution.png "Открытие проекта")
+    ![](multi-page-images/vs/open-solution.png "Open Project")
 
 2. В **Обозреватель решений**щелкните правой кнопкой мыши проект **Notes** и выберите **Добавить > Новая папка**:
 
-    ![](multi-page-images/vs/add-new-item.png "Добавление нового элемента")
+    ![](multi-page-images/vs/add-new-item.png "Add New Item")
 
 3. В **Обозреватель решений**назовите новые **модели**папок:
 
-    ![](multi-page-images/vs/name-folder.png "Папка Models")
+    ![](multi-page-images/vs/name-folder.png "Models Folder")
 
 4. В **Обозреватель решений**выберите папку **модели** , щелкните ее правой кнопкой мыши и выберите **Добавить > новый элемент...** :
 
-    ![](multi-page-images/vs/add-new-models-file.png "Добавление нового файла")
+    ![](multi-page-images/vs/add-new-models-file.png "Add New File")
 
 5. В диалоговом окне **Добавление нового элемента** выберите **визуальные C# элементы > класс**, присвойте новому файлу **Примечание**и нажмите кнопку **Добавить** :
 
-    ![](multi-page-images/vs/add-note-class.png "Добавление класса Note")
+    ![](multi-page-images/vs/add-note-class.png "Add Note Class")
 
     В результате в папку **Models** проекта **Notes** будет добавлен класс **Note** .
 
@@ -77,13 +77,13 @@ ms.locfileid: "68653798"
     }
     ```
 
-    Этот класс определяет `Note` модель, которая будет хранить данные о каждой заметке в приложении.    
+    Этот класс определяет модель `Note`, которая будет хранить данные о каждой заметке в приложении.    
 
     Сохраните изменения в **Note.CS** , нажав клавиши **CTRL + S**, и закройте файл.
 
 7. В **Обозреватель решений**щелкните правой кнопкой мыши проект **Notes** и выберите **Добавить > новый элемент..** . В диалоговом окне **Добавление нового элемента** выберите  **C# визуальные элементы > странице Xamarin. Forms > Content**, назовите новый файл **нотинтрипаже**и нажмите кнопку **Добавить** :
 
-    ![](multi-page-images/vs/add-note-entry-page.png "Добавление Xamarin. Forms ContentPage")
+    ![](multi-page-images/vs/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
     При этом в корневую папку проекта будет добавлена новая страница с именем **нотинтрипаже** . Эта страница будет второй страницей в приложении.
 
@@ -114,7 +114,7 @@ ms.locfileid: "68653798"
       </ContentPage>
       ```
 
-      Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) для ввода текста, и два [`Button`](xref:Xamarin.Forms.Button) экземпляра, которые направляют приложение для сохранения или удаления файла. Два `Button` экземпляра располагаются горизонтально [`Grid`](xref:Xamarin.Forms.Grid)в, с `Editor` помощью и `Grid` располагаются вертикально в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Кроме того `Editor` , компонент использует привязку данных для привязки `Text` к свойству `Note` модели. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+      Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) для ввода текста, и двух экземпляров [`Button`](xref:Xamarin.Forms.Button) , которые направляют приложение для сохранения или удаления файла. Два экземпляра `Button` горизонтально размещаются в [`Grid`](xref:Xamarin.Forms.Grid), а `Editor` и `Grid` располагаются вертикально в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Кроме того, `Editor` использует привязку данных для привязки к свойству `Text` модели `Note`. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
       Сохраните изменения в **нотинтрипаже. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
@@ -169,7 +169,7 @@ ms.locfileid: "68653798"
       }
       ```
 
-      Этот код сохраняет `Note` экземпляр, представляющий одну заметку, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) на странице. При нажатии кнопки `OnSaveButtonClicked` " **сохранить** [`Button`](xref:Xamarin.Forms.Button) " выполняется обработчик события, который либо сохраняет содержимое в `Editor` новый файл со случайно сформированным именем файла, либо в существующий файл, если заметка обновляется. В обоих случаях файл хранится в папке локальных данных приложений для приложения. Затем метод перейдет назад на предыдущую страницу. При нажатии кнопки `OnDeleteButtonClicked` " **Удалить** `Button` " выполняется обработчик события, который удаляет файл, если он существует, и переходит назад к предыдущей странице. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+      Этот код сохраняет `Note` экземпляр, представляющий отдельную заметку, в [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) страницы. При нажатии кнопки **сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который либо сохраняет содержимое `Editor` в новый файл со случайно сформированным именем файла, либо в существующий файл, если заметка обновляется. В обоих случаях файл хранится в папке локальных данных приложений для приложения. Затем метод перейдет назад на предыдущую страницу. При нажатии `Button` **удаления** выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл, если он существует, и переходит назад на предыдущую страницу. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
       Сохраните изменения в **NoteEntryPage.XAML.CS** , нажав клавиши **CTRL + S**, и закройте файл.
 
@@ -205,7 +205,7 @@ ms.locfileid: "68653798"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, состоящий из [`ListView`](xref:Xamarin.Forms.ListView) [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)и. Использует привязку данных для вывода всех заметок, извлекаемых приложением, и выбора примечания будет переходить к, `NoteEntryPage` где можно изменить заметку. `ListView` Кроме того, можно создать новую заметку, нажав кнопку `ToolbarItem`. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код декларативно определяет пользовательский интерфейс для страницы, состоящий из [`ListView`](xref:Xamarin.Forms.ListView) и [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). @No__t_0 использует привязку данных для вывода всех заметок, извлекаемых приложением, и выбора примечания будет переходить к `NoteEntryPage`, где можно изменить заметку. Кроме того, можно создать новую заметку, нажав кнопку `ToolbarItem`. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **нотеспаже. XAML** , нажав клавиши **CTRL + S**, и закройте файл.
 
@@ -272,7 +272,7 @@ ms.locfileid: "68653798"
     }
     ```    
 
-    Этот код определяет функциональные возможности для `NotesPage`. При появлении `OnAppearing` страницы выполняется метод, который заполняется [`ListView`](xref:Xamarin.Forms.ListView) заметками, полученными из папки локальных данных приложения. [Принажатиикнопкивыполняетсяобработчиксобытия.`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) `OnNoteAddedClicked` Этот метод переходит `NoteEntryPage`к, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) присвоив параметру `NoteEntryPage` значение нового `Note` экземпляра. `ListView` Если`OnListViewItemSelected` выбран элемент в, выполняется обработчик события. Этот метод выполняет переход `NoteEntryPage`к, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) устанавливая `NoteEntryPage` объект в выбранном `Note` экземпляре. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код определяет функциональные возможности для `NotesPage`. При появлении страницы выполняется метод `OnAppearing`, который заполняет [`ListView`](xref:Xamarin.Forms.ListView) всеми заметками, полученными из папки локальных данных приложения. При нажатии [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) выполняется обработчик событий `OnNoteAddedClicked`. Этот метод переходит к `NoteEntryPage`, устанавливая [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) `NoteEntryPage` на новый экземпляр `Note`. При выборе элемента в `ListView` выполняется обработчик событий `OnListViewItemSelected`. Этот метод переходит к `NoteEntryPage`, устанавливая [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) `NoteEntryPage` выбранному экземпляру `Note`. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **NotesPage.XAML.CS** , нажав клавиши **CTRL + S**, и закройте файл.
 
@@ -303,7 +303,7 @@ ms.locfileid: "68653798"
     }
     ```
 
-    Этот код добавляет объявление пространства имен для `System.IO` пространства имен и добавляет объявление для статического `FolderPath` свойства типа `string`. `FolderPath` Свойство используется для хранения пути на устройстве, где будут храниться данные о заметках. Кроме того, код инициализирует `FolderPath` свойство `App` в конструкторе и инициализирует [`MainPage`](xref:Xamarin.Forms.Application.MainPage) свойство [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , `NotesPage`чтобы оно было размещено в экземпляре. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код добавляет объявление пространства имен для пространства имен `System.IO` и добавляет объявление для статического свойства `FolderPath` типа `string`. Свойство `FolderPath` используется для хранения пути на устройстве, где будут храниться данные примечания. Кроме того, код инициализирует свойство `FolderPath` в конструкторе `App` и инициализирует свойство [`MainPage`](xref:Xamarin.Forms.Application.MainPage) как [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , где размещается экземпляр `NotesPage`. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в файле **App.xaml.cs**, нажав клавиши **CTRL+S**, и закройте файл.
 
@@ -313,7 +313,7 @@ ms.locfileid: "68653798"
 
 15. Создайте и запустите проект на каждой платформе. Дополнительные сведения см. [в разделе Создание краткого руководства](single-page.md#building-the-quickstart).
 
-    В **нотеспаже** нажмите **+** кнопку, чтобы перейти к **нотинтрипаже** и ввести Примечание. После сохранения примечания приложение вернется обратно к **нотеспаже**.
+    В **нотеспаже** нажмите кнопку **+** , чтобы перейти к **нотинтрипаже** и ввести Примечание. После сохранения примечания приложение вернется обратно к **нотеспаже**.
 
     Введите число заметок, отличающихся длиной, для отслеживания поведения приложения.
 
@@ -324,23 +324,23 @@ ms.locfileid: "68653798"
 
 1. Запуск Visual Studio для Mac В окне Пуск щелкните **Открыть**и в диалоговом окне выберите файл решения для проекта Notes.
 
-    ![](multi-page-images/vsmac/open-solution.png "Открытие решения")
+    ![](multi-page-images/vsmac/open-solution.png "Open Solution")
 
 2. В **панель решения**выберите проект **notess** , щелкните правой кнопкой мыши и выберите **Добавить > Новая папка**:
 
-    ![](multi-page-images/vsmac/add-new-folder.png "Добавить новую папку")
+    ![](multi-page-images/vsmac/add-new-folder.png "Add New Folder")
 
 3. В **панель решения**назовите новые **модели**папок:
 
-    ![](multi-page-images/vsmac/name-folder.png "Папка Models")
+    ![](multi-page-images/vsmac/name-folder.png "Models Folder")
 
 4. В **панель решения**выберите папку **Models** , щелкните ее правой кнопкой мыши и выберите **Добавить > новый файл...** :
 
-    ![](multi-page-images/vsmac/add-new-models-file.png "Добавление нового файла")
+    ![](multi-page-images/vsmac/add-new-models-file.png "Add New File")
 
 5. В диалоговом окне **новый файл** выберите **Общие > пустой класс**, присвойте новому файлу имя **Note**и нажмите кнопку **создать** :
 
-    ![](multi-page-images/vsmac/add-note-class.png "Добавление класса Note")
+    ![](multi-page-images/vsmac/add-note-class.png "Add Note Class")
 
     В результате в папку **Models** проекта **Notes** будет добавлен класс **Note** .
 
@@ -360,13 +360,13 @@ ms.locfileid: "68653798"
     }
     ```
 
-    Этот класс определяет `Note` модель, которая будет хранить данные о каждой заметке в приложении.
+    Этот класс определяет модель `Note`, которая будет хранить данные о каждой заметке в приложении.
 
     Сохраните изменения в **Note.CS** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
 7. В **панель решения**выберите проект **notess** , щелкните правой кнопкой мыши и выберите **Добавить > новый файл...** . В диалоговом окне **новый файл** выберите **Forms > Forms ContentPage XAML**, назовите новый файл **нотинтрипаже**и нажмите кнопку **создать** :
 
-    ![](multi-page-images/vsmac/add-note-entry-page.png "Добавление Xamarin. Forms ContentPage")
+    ![](multi-page-images/vsmac/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
     При этом в корневую папку проекта будет добавлена новая страница с именем **нотинтрипаже** . Эта страница будет второй страницей в приложении.
 
@@ -397,7 +397,7 @@ ms.locfileid: "68653798"
       </ContentPage>
       ```
 
-      Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) для ввода текста, и два [`Button`](xref:Xamarin.Forms.Button) экземпляра, которые направляют приложение для сохранения или удаления файла. Два `Button` экземпляра располагаются горизонтально [`Grid`](xref:Xamarin.Forms.Grid)в, с `Editor` помощью и `Grid` располагаются вертикально в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Кроме того `Editor` , компонент использует привязку данных для привязки `Text` к свойству `Note` модели. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+      Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) для ввода текста, и двух экземпляров [`Button`](xref:Xamarin.Forms.Button) , которые направляют приложение для сохранения или удаления файла. Два экземпляра `Button` горизонтально размещаются в [`Grid`](xref:Xamarin.Forms.Grid), а `Editor` и `Grid` располагаются вертикально в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Кроме того, `Editor` использует привязку данных для привязки к свойству `Text` модели `Note`. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
       Сохраните изменения в **нотинтрипаже. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
@@ -452,7 +452,7 @@ ms.locfileid: "68653798"
       }
       ```
 
-      Этот код сохраняет `Note` экземпляр, представляющий одну заметку, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) на странице. При нажатии кнопки `OnSaveButtonClicked` " **сохранить** [`Button`](xref:Xamarin.Forms.Button) " выполняется обработчик события, который либо сохраняет содержимое в `Editor` новый файл со случайно сформированным именем файла, либо в существующий файл, если заметка обновляется. В обоих случаях файл хранится в папке локальных данных приложений для приложения. Затем метод перейдет назад на предыдущую страницу. При нажатии кнопки `OnDeleteButtonClicked` " **Удалить** `Button` " выполняется обработчик события, который удаляет файл, если он существует, и переходит назад к предыдущей странице. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+      Этот код сохраняет `Note` экземпляр, представляющий отдельную заметку, в [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) страницы. При нажатии кнопки **сохранить** [`Button`](xref:Xamarin.Forms.Button) выполняется обработчик событий `OnSaveButtonClicked`, который либо сохраняет содержимое `Editor` в новый файл со случайно сформированным именем файла, либо в существующий файл, если заметка обновляется. В обоих случаях файл хранится в папке локальных данных приложений для приложения. Затем метод перейдет назад на предыдущую страницу. При нажатии `Button` **удаления** выполняется обработчик событий `OnDeleteButtonClicked`, который удаляет файл, если он существует, и переходит назад на предыдущую страницу. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
       Сохраните изменения в **NoteEntryPage.XAML.CS** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
@@ -488,7 +488,7 @@ ms.locfileid: "68653798"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, состоящий из [`ListView`](xref:Xamarin.Forms.ListView) [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)и. Использует привязку данных для вывода всех заметок, извлекаемых приложением, и выбора примечания будет переходить к, `NoteEntryPage` где можно изменить заметку. `ListView` Кроме того, можно создать новую заметку, нажав кнопку `ToolbarItem`. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код декларативно определяет пользовательский интерфейс для страницы, состоящий из [`ListView`](xref:Xamarin.Forms.ListView) и [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). @No__t_0 использует привязку данных для вывода всех заметок, извлекаемых приложением, и выбора примечания будет переходить к `NoteEntryPage`, где можно изменить заметку. Кроме того, можно создать новую заметку, нажав кнопку `ToolbarItem`. Дополнительные сведения о привязке данных см. в разделе [Привязка данных](deepdive.md#data-binding) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **нотеспаже. XAML** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
@@ -555,7 +555,7 @@ ms.locfileid: "68653798"
     }
     ```    
 
-    Этот код определяет функциональные возможности для `NotesPage`. При появлении `OnAppearing` страницы выполняется метод, который заполняется [`ListView`](xref:Xamarin.Forms.ListView) заметками, полученными из папки локальных данных приложения. [Принажатиикнопкивыполняетсяобработчиксобытия.`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) `OnNoteAddedClicked` Этот метод переходит `NoteEntryPage`к, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) присвоив параметру `NoteEntryPage` значение нового `Note` экземпляра. `ListView` Если`OnListViewItemSelected` выбран элемент в, выполняется обработчик события. Этот метод выполняет переход `NoteEntryPage`к, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) устанавливая `NoteEntryPage` объект в выбранном `Note` экземпляре. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код определяет функциональные возможности для `NotesPage`. При появлении страницы выполняется метод `OnAppearing`, который заполняет [`ListView`](xref:Xamarin.Forms.ListView) всеми заметками, полученными из папки локальных данных приложения. При нажатии [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) выполняется обработчик событий `OnNoteAddedClicked`. Этот метод переходит к `NoteEntryPage`, устанавливая [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) `NoteEntryPage` на новый экземпляр `Note`. При выборе элемента в `ListView` выполняется обработчик событий `OnListViewItemSelected`. Этот метод переходит к `NoteEntryPage`, устанавливая [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) `NoteEntryPage` выбранному экземпляру `Note`. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в **NotesPage.XAML.CS** , выбрав **Файл > Сохранить** (или нажав клавиши  **&#8984; + S**) и закройте файл.
 
@@ -586,7 +586,7 @@ ms.locfileid: "68653798"
     }
     ```
 
-    Этот код добавляет объявление пространства имен для `System.IO` пространства имен и добавляет объявление для статического `FolderPath` свойства типа `string`. `FolderPath` Свойство используется для хранения пути на устройстве, где будут храниться данные о заметках. Кроме того, код инициализирует `FolderPath` свойство `App` в конструкторе и инициализирует [`MainPage`](xref:Xamarin.Forms.Application.MainPage) свойство [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , `NotesPage`чтобы оно было размещено в экземпляре. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
+    Этот код добавляет объявление пространства имен для пространства имен `System.IO` и добавляет объявление для статического свойства `FolderPath` типа `string`. Свойство `FolderPath` используется для хранения пути на устройстве, где будут храниться данные примечания. Кроме того, код инициализирует свойство `FolderPath` в конструкторе `App` и инициализирует свойство [`MainPage`](xref:Xamarin.Forms.Application.MainPage) как [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , где размещается экземпляр `NotesPage`. Дополнительные сведения о навигации см. в разделе [Навигация](deepdive.md#navigation) в [кратком руководстве по Xamarin. Forms](deepdive.md).
 
     Сохраните изменения в файле **App.xaml.cs**, выбрав **Файл > Сохранить** или нажав клавиши **&#8984;+S**, и закройте файл.
 
@@ -596,7 +596,7 @@ ms.locfileid: "68653798"
 
 15. Создайте и запустите проект на каждой платформе. Дополнительные сведения см. [в разделе Создание краткого руководства](single-page.md#building-the-quickstart).
 
-    В **нотеспаже** нажмите **+** кнопку, чтобы перейти к **нотинтрипаже** и ввести Примечание. После сохранения примечания приложение вернется обратно к **нотеспаже**.
+    В **нотеспаже** нажмите кнопку **+** , чтобы перейти к **нотинтрипаже** и ввести Примечание. После сохранения примечания приложение вернется обратно к **нотеспаже**.
 
     Введите число заметок, отличающихся длиной, для отслеживания поведения приложения.
 

@@ -1,36 +1,32 @@
 ---
 title: Введение в Xamarin. Forms Карауселвиев
-description: Карауселвиев — это представление для представления данных в виде схемы, похожей на «обойму».
+description: Карауселвиев — это представление для представления данных в прокручиваемом макете, где пользователи могут перемещаться для перемещения по коллекции элементов.
 ms.prod: xamarin
 ms.assetid: 2a96e4bd-c29b-4658-bb4c-ab00872b0f8f
 ms.technology: xamarin-forms
-author: pauldipietro
-ms.author: padipi
-ms.date: 09/09/2019
-ms.openlocfilehash: 7979f6ed362c580d9cf80f19b3bc0ea7550ca70c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/08/2019
+ms.openlocfilehash: 2fe4d984f36880493a9a04d99b63876551366477
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70985973"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696973"
 ---
 # <a name="xamarinforms-carouselview-introduction"></a>Введение в Xamarin. Forms Карауселвиев
 
-![](~/media/shared/preview.png "Этот API в настоящее время предоставляется в режиме предварительной версии")
+![](~/media/shared/preview.png "This API is currently pre-release")
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)представляет собой представление для представления информации в виде, похожем на обойму.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) представляет собой представление для представления данных в прокручиваемом макете, где пользователи могут перемещаться для перемещения по коллекции элементов. По умолчанию `CarouselView` отображает элементы по горизонтали. На экране будет отображаться один элемент с жестами прокрутки, приводящими к пересылке и обратной навигации по коллекции элементов.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)доступна в Xamarin. Forms 4,3. Однако в настоящее время он эксперименталь и может использоваться только путем добавления следующей строки кода в `AppDelegate` класс в iOS или `MainActivity` в класс в Android перед вызовом `Forms.Init`:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) доступен в Xamarin. forms 4,3. Однако в настоящее время это экспериментальное и может использоваться только путем добавления следующей строки кода в класс `AppDelegate` в iOS или в класс `MainActivity` в Android перед вызовом `Forms.Init`:
 
 ```csharp
-Forms.SetFlags("CollectionView_Experimental");
+Forms.SetFlags("CarouselView_Experimental");
 ```
 
-_Примечание. На момент написания этой статьи Карауселвиев по-прежнему использует флаг CollectionView, чтобы включить его функциональность._
-
 > [!IMPORTANT]
-> [`CarouselView`](xref:Xamarin.Forms.CarouselView)доступна в iOS и Android, но некоторые функции могут быть частично доступны только на универсальная платформа Windows.
+> [`CarouselView`](xref:Xamarin.Forms.CarouselView) доступен в iOS и Android, но некоторые функции могут быть доступны только частично на универсальная платформа Windows.
 
-## <a name="when-to-use-carouselview"></a>Когда следует использовать Карауселвиев
-
-Несмотря на то, что Карауселвиев значительно из реализации CollectionView, его назначение является более специализированным. Хотя использование CollectionView и Карауселвиев осуществляется по собственному усмотрению, они обычно используются в приложениях для выделения информации и ограничены в общем количестве используемых элементов.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) использует большую часть своей реализации с [`CollectionView`](xref:Xamarin.Forms.CollectionView). Однако эти два элемента управления имеют разные варианты использования. `CollectionView` обычно используется для представления списков данных любой длины, в то время как `CarouselView` обычно используется для выделения информации в списке ограниченной длины.

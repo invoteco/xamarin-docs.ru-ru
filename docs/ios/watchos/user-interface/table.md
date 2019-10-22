@@ -8,24 +8,24 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766957"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Элементы управления таблицы watchOS в Xamarin
 
 Элемент управления `WKInterfaceTable` watchOS гораздо проще, чем его аналог в iOS, но выполняет аналогичную роль. Он создает прокручиваемый список строк, которые могут иметь пользовательские макеты и реагировать на события касания.
 
-![](table-images/table-list-sml.png "Список отслеживаемых таблиц")![](table-images/table-detail-sml.png)
+![](table-images/table-list-sml.png "Список отслеживаемых таблиц") ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="adding-a-table"></a>Добавление таблицы
 
 Перетащите элемент управления **Table** в сцену. По умолчанию он будет выглядеть следующим образом (отображая одну неопределенную структуру строк):
 
-[![](table-images/add-table-sml.png "Добавление таблицы")](table-images/add-table.png#lightbox)
+[![](table-images/add-table-sml.png "Adding a table")](table-images/add-table.png#lightbox)
 
 Присвойте таблице имя в поле **имя** панели **свойств** , чтобы на нее можно было ссылаться в коде.
 
@@ -35,13 +35,13 @@ ms.locfileid: "70766957"
 
 Чтобы задать **класс** для контроллера строк, выберите строку в **структуре документа** и введите имя класса на панели **свойств** :
 
-[![](table-images/add-row-controller-sml.png "Ввод имени класса на панели «Свойства»")](table-images/add-row-controller.png#lightbox)
+[![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
 
 После установки класса для контроллера строки интегрированная среда разработки создаст соответствующий C# файл в проекте. Перетащите элементы управления (например, метки) в строку и присвойте им имена, чтобы на них можно было ссылаться в коде.
 
 ## <a name="create-and-populate-rows"></a>Создание и заполнение строк
 
-`SetNumberOfRows`создает классы контроллеров строк для каждой строки, используя `Identifier` для выбора нужного для нее класса. Если вы назначаете свой контроллер строк настраиваемому `Identifier`, измените **значение по умолчанию** в следующем фрагменте кода на используемый идентификатор. Для каждой *строки* создается при `SetNumberOfRows` вызове и отображении таблицы. `RowController`
+`SetNumberOfRows` создает классы контроллеров строк для каждой строки, используя `Identifier` для выбора нужной единицы. Если вы назначаете контроллеру строки настраиваемый `Identifier`, измените **значение по умолчанию** в следующем фрагменте кода на используемый идентификатор. @No__t_0 *для каждой строки* создается при вызове `SetNumberOfRows` и отображении таблицы.
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -51,7 +51,7 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 > [!IMPORTANT]
 > Строки таблицы не виртуализованы, как в iOS. Попробуйте ограничить число строк (Apple рекомендует меньше 20).
 
-После создания строк необходимо заполнить каждую ячейку (например `GetCell` , в iOS). Этот фрагмент кода из [примера ватчтаблес](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) обновляет метку в каждой строке.
+После создания строк необходимо заполнить каждую ячейку (например, `GetCell` в iOS). Этот фрагмент кода из [примера ватчтаблес](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) обновляет метку в каждой строке.
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -61,18 +61,18 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> Использование `SetNumberOfRows` и последующее выполнение цикла по `GetRowController` использованию приводит к тому, что вся таблица будет отправлена в контрольное значение. В последующих представлениях таблицы, если необходимо добавить или удалить определенные строки, используйте `InsertRowsAt` `RemoveRowsAt` для повышения производительности.
+> Использование `SetNumberOfRows`, а затем циклическое использование `GetRowController` приводит к отправке всей таблицы в контрольное значение. В последующих представлениях таблицы, если необходимо добавить или удалить определенные строки, используйте `InsertRowsAt` и `RemoveRowsAt` для повышения производительности.
 
 ## <a name="respond-to-taps"></a>Реагирование на касания
 
 Вы можете ответить на выбор строк двумя разными способами:
 
-- Реализуйте `DidSelectRow` метод в контроллере интерфейса или
-- Создайте перехода для раскадровки и реализуйте `GetContextForSegue` , если хотите, чтобы выбор строк открывал другую сцену.
+- Реализуйте метод `DidSelectRow` в контроллере интерфейса.
+- Создайте перехода для раскадровки и реализуйте `GetContextForSegue`, если хотите, чтобы выбор строк открывал другую сцену.
 
 ### <a name="didselectrow"></a>дидселектров
 
-Чтобы программно обрабатывал выбор строк, `DidSelectRow` реализуйте метод. Чтобы открыть новую сцену, используйте `PushController` и передайте идентификатор сцены и используемый контекст данных:
+Чтобы программно обрабатывал выбор строк, реализуйте метод `DidSelectRow`. Чтобы открыть новую сцену, используйте `PushController` и передайте идентификатор сцены и используемый контекст данных:
 
 ```csharp
 public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
@@ -87,9 +87,9 @@ public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
 ### <a name="getcontextforsegue"></a>жетконтекстфорсегуе
 
 Перетащите перехода на раскадровку из строки таблицы в другую сцену (удерживайте нажатой клавишу **CTRL** при перетаскивании).
-Обязательно выберите перехода и присвойте ему идентификатор на панели **свойств** (например `secondLevel` , в примере ниже).
+Обязательно выберите перехода и присвойте ему идентификатор на панели **свойств** (например, `secondLevel` в примере ниже).
 
-В контроллере интерфейса реализуйте `GetContextForSegue` метод и верните контекст данных, который должен быть предоставлен для сцены, представленной перехода.
+В контроллере интерфейса реализуйте метод `GetContextForSegue` и возвратите контекст данных, который должен быть предоставлен для сцены, представленной перехода.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier, WKInterfaceTable table, nint rowIndex)
@@ -101,19 +101,19 @@ public override NSObject GetContextForSegue (string segueIdentifier, WKInterface
 }
 ```
 
-Эти данные передаются в целевую сцену раскадровки в `Awake` методе.
+Эти данные передаются в целевую сцену раскадровки в методе `Awake`.
 
 ## <a name="multiple-row-types"></a>Несколько типов строк
 
 По умолчанию элемент управления "Таблица" имеет один тип строки, который можно спроектировать. Чтобы добавить дополнительные строки "Templates", используйте поле " **строки** " на панели **свойств** , чтобы создать дополнительные контроллеры строк.
 
-![](table-images/prototype-rows1.png "Задание количества строк прототипа")
+![](table-images/prototype-rows1.png "Setting the number of Prototype rows")
 
 Если задать для свойства **Rows** значение **3** , будут созданы дополнительные заполнители для перетаскивания элементов управления в. Для каждой строки задайте имя **класса** на панели **свойств** , чтобы обеспечить создание класса контроллера строк.
 
-![](table-images/prototype-rows2.png "Строки прототипа в конструкторе")
+![](table-images/prototype-rows2.png "The prototype rows in the designer")
 
-Чтобы заполнить таблицу с разными типами строк, `SetRowTypes` используйте метод, чтобы указать тип контроллера строки, используемый для каждой строки в таблице. Используйте идентификаторы строк, чтобы указать, какой контроллер строки следует использовать для каждой строки.
+Чтобы заполнить таблицу с разными типами строк, используйте метод `SetRowTypes`, чтобы указать тип контроллера строки, используемый для каждой строки в таблице. Используйте идентификаторы строк, чтобы указать, какой контроллер строки следует использовать для каждой строки.
 
 Число элементов в этом массиве должно соответствовать числу строк, которые должны находиться в таблице:
 
@@ -142,20 +142,20 @@ for (var i = 0; i < rows.Count; i++) {
 
 в watchOS 3 появилась новая функция для таблиц: возможность прокрутки страниц сведений, связанных с каждой строкой, без возврата к таблице и выбора другой строки. Экраны сведений можно прокручивать путем прокрутки вверх или вниз или с помощью Digital Crown.
 
-![](table-images/table-scroll-sml.png "Пример вертикального разбиения на страницы")![](table-images/table-detail-sml.png)
+![](table-images/table-scroll-sml.png "Пример вертикального разбиения на страницы") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > Эта функция в настоящее время доступна только путем редактирования раскадровки в Xcode Interface Builder.
 
-Чтобы включить эту функцию, выберите элемент `WKInterfaceTable` в области конструктора и установите флажок **вертикальная детализация разбиения на страницы** :
+Чтобы включить эту функцию, выберите `WKInterfaceTable` в области конструктора и установите флажок **вертикальная разбивка на страницы** :
 
-![](table-images/vertical-detail-paging-sml.png "Выбор параметра «вертикальный Просмотр данных»")
+![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
 
-Как [описано в Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) , для работы функции разбиения по страницам необходимо использовать переходов. Перепишите любой существующий код, использующий `PushController` вместо него переходов.
+Как [описано в Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) , для работы функции разбиения по страницам необходимо использовать переходов. Перепишите существующий код, который использует `PushController` для использования переходов.
 
 <a name="add_row_controller" />
 
-## <a name="appendix-row-controller-code-example"></a>Приложение. Пример кода контроллера строки
+## <a name="appendix-row-controller-code-example"></a>Приложение. пример кода контроллера строки
 
 Интегрированная среда разработки автоматически создает два файла кода при создании контроллера строк в конструкторе. Код в этих созданных файлах приведен ниже для справки.
 
@@ -176,7 +176,7 @@ namespace WatchTablesExtension
 }
 ```
 
-Другой **Designer.CS** -файл — это частичное определение класса, которое содержит сведения о параметрах и действиях, создаваемых на поверхности конструктора, например в этом примере `WKInterfaceLabel` с одним элементом управления:
+Другой **Designer.CS** -файл представляет собой разделяемое определение класса, которое содержит все доступные и действия, которые создаются на поверхности конструктора, например в этом примере с одним `WKInterfaceLabel` элементом управления:
 
 ```csharp
 using Foundation;
@@ -208,6 +208,6 @@ namespace WatchTables.OnWatchExtension
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchTables (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
-- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Ватчтаблес (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [Ватчкиткаталог (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Doc в таблице Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable)

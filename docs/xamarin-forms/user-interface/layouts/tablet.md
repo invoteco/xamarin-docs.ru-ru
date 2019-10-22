@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
 ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273113"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Макет для планшетных и настольных приложений
@@ -42,7 +42,7 @@ Xamarin. Forms поддерживает все типы устройств, до
 До версии iOS 9 все приложения заняли весь экран на устройстве, но некоторые iPad теперь могут выполнять [многозадачные разбиение экрана](~/ios/platform/multitasking.md).
 Это означает, что ваше приложение может занимать только тонкий столбец на стороне экрана, 50% от ширины экрана или всего экрана.
 
-[![](tablet-images/ipad-sml.png "Пример разделения экрана для iPad")](tablet-images/ipad.png#lightbox "Пример разделения экрана для iPad")
+[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 Работа с разделением экрана означает, что вы должны проектировать приложение так, чтобы оно работало с шириной в 320 пикселей в ширину или в ширину 1366 пикселов.
 
@@ -59,7 +59,7 @@ Xamarin. Forms поддерживает все типы устройств, до
 
 В дополнение к полноэкранному режиму приложения, работающие на планшетах и настольных компьютерах под управлением Windows, можно изменять размеры до произвольных измерений.
 
-[![](tablet-images/splitscreen-sml.png "Пример экранного разделителя Windows")](tablet-images/splitscreen.png#lightbox "Пример экранного разделителя Windows")
+[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
 <a name="optimize" />
 
@@ -67,7 +67,7 @@ Xamarin. Forms поддерживает все типы устройств, до
 
 Вы можете настроить пользовательский интерфейс Xamarin. Forms в зависимости от того, используется ли телефонное или планшетное или настольное устройство. Это означает, что вы можете оптимизировать взаимодействие с пользователем для больших экранных устройств, например планшетов и настольных компьютеров.
 
-### <a name="deviceidiom"></a>Device.Idiom
+### <a name="deviceidiom"></a>Device. идиом
 
 Для изменения поведения приложения или пользовательского интерфейса можно использовать класс [`Device`](~/xamarin-forms/platform/device.md) . Используя перечисление `Device.Idiom`, можно
 
@@ -84,7 +84,7 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 ### <a name="leveraging-masterdetailpage"></a>Использование Мастердетаилпаже
 
-[@No__t-1](xref:Xamarin.Forms.MasterDetailPage) идеально подходит для более крупных экранов, особенно на iPad, где он использует [`UISplitViewController`](xref:UIKit.UISplitViewController) для предоставления собственного интерфейса iOS.
+[@No__t_1](xref:Xamarin.Forms.MasterDetailPage) идеально подходит для более крупных экранов, особенно на iPad, где он использует [`UISplitViewController`](xref:UIKit.UISplitViewController) для предоставления собственного интерфейса iOS.
 
 Просмотрите [эту запись блога Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) , чтобы увидеть, как можно адаптировать пользовательский интерфейс, чтобы на телефонах использовался один макет, а более крупные экраны могли использовать другое (с `MasterDetailPage`).
 

@@ -1,45 +1,37 @@
 ---
-title: Xamarin.Forms ScrollView
-description: В этой статье объясняется, как использовать класс Xamarin.Forms ScrollView для представления макеты, не может поместиться на экран только один, и которые имеют содержимое освободить место для клавиатуры.
+title: Скроллвиев Xamarin. Forms
+description: В этой статье объясняется, как использовать класс Xamarin. Forms Скроллвиев для представления макетов, которые не могут уместиться только на одном экране, и которые имеют содержимое, освобождая место для клавиатуры.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 131b9dc64db1ea0dba3982bd71459c2a281743bc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 09/17/2019
+ms.openlocfilehash: 8d523c6da6ca7feaf6894123822f789f37455865
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770282"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696856"
 ---
-# <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
+# <a name="xamarinforms-scrollview"></a>Скроллвиев Xamarin. Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView) содержит макеты и позволяет им прокрутки вне экрана. `ScrollView` также позволяет разрешить представления автоматически перейти на видимой области экрана, когда отображается клавиатуры.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) содержит макеты и позволяет им прокручивать экран. `ScrollView` также используется, чтобы разрешить представлениям автоматически перемещаться в видимую часть экрана при отображении клавиатуры.
 
-[![](scroll-view-images/layouts-sml.png "Макеты Xamarin.Forms")](scroll-view-images/layouts.png#lightbox "макеты Xamarin.Forms")
-
-В этой статье рассматриваются следующие действия:
-
-- **[Назначение](#purpose)**  &ndash; цели и задачи `ScrollView` и когда она используется.
-- **[Использование](#usage)**  &ndash; способы использования `ScrollView` на практике.
-- **[Свойства](#properties)**  &ndash; открытых свойств, которые можно считывать и изменять.
-- **[Методы](#methods)**  &ndash; открытые методы, которые могут быть вызваны для прокручивания представления.
-- **[События](#events)**  &ndash; события, которые могут использоваться для прослушивания изменения состояния представления.
+[![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>Цель
 
-`ScrollView` можно использовать для обеспечения отображения большего представления хорошо на телефонах меньшего размера. Например макет, который работает на устройстве iPhone 6s могут быть обрезаны на iPhone 4s. С помощью `ScrollView` позволит усеченные части макет для отображения на экране меньшего размера.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) можно использовать для того, чтобы более крупные представления хорошо отображались на небольших телефонах. Например, макет, который работает на iPhone 6S, может быть обрезан на iPhone 4S. Использование `ScrollView` позволит отображать обрезанные части макета на экране меньшего размера.
 
 ## <a name="usage"></a>Использование
 
 > [!NOTE]
-> `ScrollView`s не должен быть вложенным. Кроме того `ScrollView`s не должен быть вложенным с другими элементами управления, которые предоставляют прокрутка, подобно `ListView` и `WebView`.
+> [`ScrollView`](xref:Xamarin.Forms.ScrollView) объекты не должны быть вложенными. Кроме того, `ScrollView`s не должны быть вложенными с другими элементами управления, обеспечивающими прокрутку, например `ListView` и `WebView`.
 
-`ScrollView` предоставляет `Content` свойство, которое может быть присвоено одно представление или макета. Рассмотрим следующий пример макета с очень больших boxView, за которым следует `Entry`:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) предоставляет свойство `Content`, для которого можно задать одно представление или макет. Рассмотрим этот пример макета с очень большим Боксвиев, за которым следует `Entry`:
 
 ```xaml
 <ContentPage.Content>
@@ -62,30 +54,33 @@ stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest =
 stack.Children.Add(new Entry());
 ```
 
-Прежде чем пользователь выполняет прокрутку вниз, только `BoxView` отображается:
+Перед прокруткой пользователя отображается только `BoxView`:
 
-![](scroll-view-images/scroll-start.png "BoxView в ScrollView")
+![](scroll-view-images/scroll-start.png "BoxView in ScrollView")
 
-Обратите внимание, что, когда пользователь начинает вводить текст в `Entry`, представление прокручивается, чтобы закрепить на экране:
+Обратите внимание, что когда пользователь начинает вводить текст в `Entry`, представление прокручивается, чтобы оно оставалось видимым на экране:
 
-![](scroll-view-images/scroll-end.png "Запись в ScrollView")
+![](scroll-view-images/scroll-end.png "Entry in ScrollView")
 
 ## <a name="properties"></a>Свойства
 
-`ScrollView` определяет следующие свойства:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) определяет следующие свойства:
 
-- [`ContentSize`](xref:Xamarin.Forms.ScrollView.ContentSizeProperty) Получает [ `Size` ](xref:Xamarin.Forms.Size) значение, представляющее размер содержимого.
-- [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) Возвращает или задает [ `ScrollOrientation` ](xref:Xamarin.Forms.ScrollOrientation) значение перечисления, представляющее направление прокрутки `ScrollView`.
-- [`ScrollX`](xref:Xamarin.Forms.ScrollView.ScrollXProperty) Возвращает `double` , представляющий текущий позиция прокрутки по оси Х.
-- [`ScrollY`](xref:Xamarin.Forms.ScrollView.ScrollYProperty) Возвращает `double` , представляющий текущую позицию прокрутки Y.
-- [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibilityProperty) Возвращает или задает [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) значение, представляющее горизонтальная полоса прокрутки видима.
-- [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.VerticalScrollBarVisibilityProperty) Возвращает или задает [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) значение, представляющее вертикальная полоса прокрутки видима.
+- [`ContentSize`](xref:Xamarin.Forms.ScrollView.ContentSizeProperty) получает значение [`Size`](xref:Xamarin.Forms.Size) , представляющее размер содержимого.
+- [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) получает или задает значение перечисления [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) , представляющее направление прокрутки `ScrollView`.
+- [`ScrollX`](xref:Xamarin.Forms.ScrollView.ScrollXProperty) получает `double`, представляющий текущую позицией прокрутки по оси X.
+- [`ScrollY`](xref:Xamarin.Forms.ScrollView.ScrollYProperty) получает `double`, представляющий текущую точку прокрутки по оси Y.
+- [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibilityProperty) получает или задает значение [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) , представляющее, когда отображается горизонтальная полоса прокрутки.
+- [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.VerticalScrollBarVisibilityProperty) получает или задает [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) значение, представляющее, когда отображается вертикальная полоса прокрутки.
+
+> [!NOTE]
+> Прокрутку можно отключить, задав для свойства [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) значение `Neither`.
 
 ## <a name="methods"></a>Методы
 
-`ScrollView` предоставляет `ScrollToAsync` метод, который может использоваться для прокручивания представления с помощью координат или укажите конкретное представление, которое следует сделать видимой.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) предоставляет метод `ScrollToAsync`, который можно использовать для прокрутки представления либо с помощью координат, либо путем указания конкретного представления, которое следует сделать видимым.
 
-При использовании координаты, указать `x` и `y` координаты, а также логическое значение, указывающее, является ли прокрутка анимации:
+При использовании координат укажите `x` и `y` координаты, а также логическое значение, указывающее, следует ли анимировать прокрутку:
 
 ```csharp
 scroll.ScrollToAsync(0, 150, true); //scrolls so that the position at 150px from the top is visible
@@ -93,18 +88,21 @@ scroll.ScrollToAsync(0, 150, true); //scrolls so that the position at 150px from
 scroll.ScrollToAsync(label, ScrollToPosition.Start, true); //scrolls so that the label is at the start of the list
 ```
 
-Во время прокрутки с определенным элементом `ScrollToPosition` перечисления указывает, где в представление элемента будет отображаться:
+> [!IMPORTANT]
+> Метод `ScrollToAsync` не приведет к прокрутке, если свойство [`ScrollView.Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) имеет значение `Neither`.
 
-- **Center** &ndash; прокручивает элемент относительно центральной части видимой части представления.
-- **Конец** &ndash; прокручивает элемент в конец видимой части представления.
-- **MakeVisible** &ndash; прокручивает элемент, чтобы он отображается в представлении.
-- **Запуск** &ndash; прокручивает элемент в начало видимой части представления.
+При прокрутке к определенному элементу перечисление `ScrollToPosition` указывает, где будет отображаться элемент:
 
-`IsAnimated` Свойство определяет, как представление прокручивается. Если задано значение true, создавать плавную анимацию будет использоваться, вместо того, чтобы мгновенно Перемещение содержимого в представление.
+- **Центр** &ndash; прокручивает элемент до центра видимой части представления.
+- **End** &ndash; прокручивает элемент до конца видимой части представления.
+- **Макевисибле** &ndash; прокручивает элемент таким образом, чтобы он был виден в представлении.
+- **Start** &ndash; прокручивает элемент до начала видимой части представления.
 
-## <a name="events"></a>События
+Свойство `IsAnimated` указывает, как будет прокручиваться представление. Если задано значение `true`, будет использоваться плавная анимация, а не мгновенное перемещение содержимого в представление.
 
-`ScrollView` определяет только одно событие `Scrolled`. `Scrolled` вызывается после завершения прокрутки представления. Обработчик событий для `Scrolled` принимает `ScrolledEventArgs`, который имеет `ScrollX` и `ScrollY` свойства. Следующий подход демонстрирует обновление метки с использованием текущей позиции прокрутки `ScrollView`:
+## <a name="events"></a>события
+
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) определяет только одно событие, `Scrolled`. `Scrolled` возникает после завершения прокрутки представления. Обработчик событий для `Scrolled` принимает `ScrolledEventArgs`, который имеет свойства `ScrollX` и `ScrollY`. Ниже показано, как обновить метку с текущей позицией прокрутки `ScrollView`.
 
 ```csharp
 Label label = new Label { Text = "Position: " };
@@ -114,9 +112,9 @@ scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
 };
 ```
 
-Обратите внимание, что позиции прокрутки может быть отрицательным, из-за эффекта bounce при прокрутке в конце списка.
+Обратите внимание, что позиции прокрутки могут быть отрицательными из-за того, что при прокрутке в конце списка будет действовать стрелка.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Макет (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Пример BusinessTumble (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Пример Бусинесстумбле (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

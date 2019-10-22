@@ -1,66 +1,67 @@
 ---
-title: Функции платформы Windows
-description: В этой статье описывается поддержка платформ Windows, которая доступна в Xamarin.Forms.
+title: Возможности платформы Windows
+description: В этой статье описывается поддержка платформы Windows, доступная в Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/08/2018
-ms.openlocfilehash: 9367e22ede733ee2d93feccc001836fb4dc02564
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 09/20/2019
+ms.openlocfilehash: 0e2db2a054c871668b5787a53ffbe4464f982174
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60858100"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696920"
 ---
-# <a name="windows-platform-features"></a>Функции платформы Windows
+# <a name="windows-platform-features"></a>Возможности платформы Windows
 
-При разработке приложения Xamarin.Forms для платформ Windows требуется Visual Studio. [Страница "размер"](~/get-started/requirements.md) содержит дополнительные сведения о необходимых компонентах.
+Для разработки приложений Xamarin. Forms для платформ Windows требуется Visual Studio. На [странице требования](~/get-started/requirements.md) содержатся дополнительные сведения о предварительных требованиях.
 
-![](images/allhanselman.png "Приложения Xamarin.Forms, работающие на Windows")
+![](images/allhanselman.png "Xamarin.Forms Applications Running on Windows")
 
 ## <a name="platform-specifics"></a>Особенности платформы
 
 Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов.
 
-Предоставляются следующие функциональные возможности платформы для представления Xamarin.Forms, страницы и макеты на универсальной платформе Windows (UWP):
+Для представлений, страниц и макетов Xamarin. Forms на универсальная платформа Windows (UWP) предоставляются следующие специальные функции платформы.
 
-- Установка ключа доступа для [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. в разделе [VisualElement ключи доступа в Windows](visualelement-access-keys.md).
-- Отключение режима устаревших цвет в поддерживаемой [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. в разделе [VisualElement прежних версий цветовой режим на Windows](legacy-color-mode.md).
+- Установка ключа доступа для [`VisualElement`](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе ключи доступа висуалелемент в Windows](visualelement-access-keys.md).
+- Отключение устаревшего цветового режима на поддерживаемом [`VisualElement`](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе режим Висуалелемент прежних цветов в Windows](legacy-color-mode.md).
 
-Следующие функциональные возможности платформы предоставляется для представления Xamarin.Forms для UWP:
+Для представлений Xamarin. Forms в UWP предусмотрены следующие функции для конкретных платформ:
 
-- Обнаружение, порядок чтения из текстового содержимого в [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), и [ `Label` ](xref:Xamarin.Forms.Label) экземпляров. Дополнительные сведения см. в разделе [InputView порядок чтения на Windows](inputview-reading-order.md).
-- Включение поддержки жест касания в [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. в разделе [ListView SelectionMode в Windows](listview-selectionmode.md).
-- Включение [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) для взаимодействия с подсистемой проверки орфографии. Дополнительные сведения см. в разделе [SearchBar проверку орфографии Windows](searchbar-spell-check.md).
-- Включение [ `WebView` ](xref:Xamarin.Forms.WebView) на отображение оповещений JavaScript в диалоговом окне сообщения универсальной платформы Windows. Дополнительные сведения см. в разделе [WebView предупреждения JavaScript на Windows](webview-javascript-alert.md).
+- Обнаружение порядка чтения из текстового содержимого в [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor)и экземплярах [`Label`](xref:Xamarin.Forms.Label) . Дополнительные сведения см. [в разделе Инпутвиев Read Order on Windows](inputview-reading-order.md).
+- Включение поддержки жестов касания в [`ListView`](xref:Xamarin.Forms.ListView). Дополнительные сведения см. [в разделе ListView SelectionMode в Windows](listview-selectionmode.md).
+- Включение изменения направления извлечения `RefreshView`. Дополнительные сведения см. [в статье направление извлечения рефрешвиев в Windows](refreshview-pulldirection.md).
+- Включение [`SearchBar`](xref:Xamarin.Forms.SearchBar) для взаимодействия с модулем проверки орфографии. Дополнительные сведения см. [в разделе сеарчбар проверка орфографии on Windows](searchbar-spell-check.md).
+- Включение [`WebView`](xref:Xamarin.Forms.WebView) для вывода оповещений JavaScript в диалоговом окне сообщения UWP. Дополнительные сведения см. [в статье WebView JavaScript Alerts on Windows](webview-javascript-alert.md).
 
-Следующие функциональные возможности платформы предоставляется для страницы Xamarin.Forms для UWP:
+Для страниц Xamarin. Forms в UWP предусмотрены следующие функции для конкретной платформы:
 
-- Свертывание [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) панели навигации. Дополнительные сведения см. в разделе [MasterDetailPage панели навигации в Windows](masterdetailpage-navigation-bar.md).
-- Настройка параметров размещения панели инструментов. Дополнительные сведения см. в разделе [расположение панели инструментов страницы на Windows](page-toolbar-placement.md).
-- Включение значков страниц, отображаемых на [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) панели инструментов. Дополнительные сведения см. в разделе [TabbedPage значки на Windows](tabbedpage-icons.md).
+- Свертывание панели навигации [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) . Дополнительные сведения см. [в разделе Мастердетаилпаже навигационная Bar on Windows](masterdetailpage-navigation-bar.md).
+- Настройка параметров размещения панели инструментов. Дополнительные сведения см. [в разделе расположение панели инструментов страницы в Windows](page-toolbar-placement.md).
+- Включение отображения значков страниц на панели инструментов [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . Дополнительные сведения см. [в разделе Таббедпаже значки в Windows](tabbedpage-icons.md).
 
 ## <a name="platform-support"></a>Поддержка платформ
 
-Шаблоны Xamarin.Forms, доступные в Visual Studio, содержат проект универсальной платформы Windows (UWP).
+Шаблоны Xamarin. Forms, доступные в Visual Studio, содержат проект универсальная платформа Windows (UWP).
 
 > [!NOTE]
-> Поддержка версий 1.x и 2.x Xamarin.Forms _Windows Phone 8 Silverlight_, _Windows Phone 8.1_, и _Windows 8.1_ разработки приложений. Тем не менее эти типы проектов стали нерекомендуемыми.
+> Xamarin. Forms 1. x и 2. x поддерживают _Windows Phone 8 Silverlight_, _Windows Phone 8,1_и _Windows 8.1_ разработки приложений. Однако эти типы проектов являются устаревшими.
 
 ## <a name="getting-started"></a>Начало работы
 
-Перейдите к **файл > Создать > проект** в Visual Studio и выберите один из **кросс-платформенных > пустое приложение (Xamarin.Forms)** шаблоны, чтобы приступить к работе.
+Перейдите в **файл > новый проект >** в Visual Studio и выберите один из шаблонов **между платформами > пустое приложение (Xamarin. Forms)** , чтобы приступить к работе.
 
-Старые решения Xamarin.Forms, или были созданы в macOS, не будет иметь все проекты Windows, перечисленных выше (но их необходимо вручную добавить). Если на платформу Windows, необходимо еще в решении, посетите [инструкции по установке](installation/index.md) для добавления нужного Windows проект типа в секунду.
+Старые решения Xamarin. Forms, созданные на macOS, не будут содержать все перечисленные выше проекты Windows (но их необходимо добавить вручную). Если нужная платформа Windows еще не находится в решении, ознакомьтесь с [инструкциями по установке](installation/index.md) , чтобы добавить нужный тип проекта Windows/с.
 
 ## <a name="samples"></a>Примеры
 
-[Все примеры](https://github.com/xamarin/xamarin-forms-book-preview-2) для книга Чарльза Петцольда [ *Создание мобильных приложений с помощью Xamarin.Forms* ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) включают в себя проекты универсальной платформы Windows (для Windows 10).
+[Все примеры](https://github.com/xamarin/xamarin-forms-book-preview-2) для книги Чарльз Петцольд, [*создающей мобильные приложения с помощью Xamarin. Forms, включают в*](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) себя универсальная платформа Windows проектов (для Windows 10).
 
-[«Scott Hanselman» демонстрационное приложение](https://github.com/jamesmontemagno/Hanselman.Forms) доступна отдельно, а также включают проекты Apple Watch и Android Wear (соответственно с помощью Xamarin.iOS и Xamarin.Android, Xamarin.Forms не выполняется на этих платформах).
+[Демонстрационное приложение "Скотт Hanselman"](https://github.com/jamesmontemagno/Hanselman.Forms) доступно отдельно, а также включает проекты Apple Watch и Android (с использованием Xamarin. iOS и Xamarin. Android соответственно, Xamarin. Forms не выполняется на этих платформах).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Проекты установки Windows](~/xamarin-forms/platform/windows/installation/index.md)
+- [Настройка проектов Windows](~/xamarin-forms/platform/windows/installation/index.md)

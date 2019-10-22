@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
 ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71250144"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
@@ -70,13 +70,13 @@ Xamarin Designer для iOS является конструктором визу
 
 Чтобы получить доступ к кнопке в коде и управлять ей, она должна иметь уникальный идентификатор. Укажите уникальный идентификатор, нажав кнопку, открыв **панель свойств**и задав в поле **имя** значение, например "SubmitButton":
 
-[![Задание имени кнопки в панель свойств](introduction-images/4-settingbuttonname-vsmac.png "Задание имени кнопки в панель свойств")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
+[![Задание имени кнопки в Панель свойств](introduction-images/4-settingbuttonname-vsmac.png "Задание имени кнопки в Панель свойств")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Чтобы получить доступ к кнопке в коде и управлять ей, она должна иметь уникальный идентификатор. Укажите уникальный идентификатор, нажав кнопку, открыв окно " **Свойства**" и задав в поле " **имя** " значение, например "SubmitButton":
 
-[![Задание имени кнопки в окне "Свойства"](introduction-images/4-settingbuttonname-vs.png "Задание имени кнопки в окне \"Свойства\"")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
+[![Задание имени кнопки в окне "Свойства"](introduction-images/4-settingbuttonname-vs.png "Задание имени кнопки в окне "Свойства"")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
 -----
 
@@ -84,21 +84,21 @@ Xamarin Designer для iOS является конструктором визу
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-В **панель решения**перейдите к **ViewController.CS** и щелкните индикатор раскрытия, чтобы определить, что определение `ViewController` класса контроллера представления охватывает два файла, каждый из которых содержит определение [разделяемого класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+В **панель решения**, перейдя к **ViewController.CS** и щелкнув индикатор раскрытия, можно увидеть, что определение класса `ViewController` контроллера представления охватывает два файла, каждый из которых содержит определение [разделяемого класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
-[![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.Designer.CS](introduction-images/5-twoviewcontrollerfiles-vsmac.png "два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
+[![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "Два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-В **Обозреватель решений**перейдите к **ViewController.CS** и щелкните индикатор раскрытия, чтобы определить, что определение `ViewController` класса контроллера представления охватывает два файла, каждый из которых содержит [разделяемый класс](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) . макроопределения
+В **Обозреватель решений**, перейдя к **ViewController.CS** и щелкнув индикатор раскрытия, можно увидеть, что определение класса `ViewController` контроллера представления охватывает два файла, каждый из которых содержит определение [разделяемого класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
-[![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.Designer.CS](introduction-images/5-twoviewcontrollerfiles-vs.png "два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
+[![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "Два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
-- **ViewController.CS** должен быть заполнен пользовательским кодом, связанным `ViewController` с классом. В этом файле `ViewController` класс может отвечать на различные методы жизненного цикла контроллера представления iOS, настраивать пользовательский интерфейс и отвечать на вводимые пользователем данные, такие как нажатия кнопки.
+- **ViewController.CS** должен быть заполнен пользовательским кодом, связанным с классом `ViewController`. В этом файле класс `ViewController` может отвечать на различные методы жизненного цикла контроллера представления iOS, настраивать пользовательский интерфейс и отвечать на вводимые пользователем данные, такие как нажатия кнопки.
 
-- **ViewController.Designer.CS** — это созданный файл, созданный конструктором iOS для преобразования визуально сконструированного интерфейса в код. Так как изменения в этом файле будут перезаписаны, его не следует изменять. Объявления свойств в этом файле позволяют коду в `ViewController` классе получать доступ по **имени**, элементам управления, настроенным в конструкторе iOS. При открытии **ViewController.Designer.CS** открывается следующий код:
+- **ViewController.Designer.CS** — это созданный файл, созданный конструктором iOS для преобразования визуально сконструированного интерфейса в код. Так как изменения в этом файле будут перезаписаны, его не следует изменять. Объявления свойств в этом файле позволяют коду в `ViewController`ном классе получать доступ по **имени**, элементам управления, настроенным в конструкторе iOS. При открытии **ViewController.Designer.CS** открывается следующий код:
 
 ```csharp
 namespace Designer
@@ -121,9 +121,9 @@ namespace Designer
 }
 ```
 
-Объявление свойства соединяет весь `ViewController` класс, а не только файл ViewController.Designer.cs — с кнопкой, определенной в раскадровке. `SubmitButton` Поскольку **ViewController.CS** определяет часть `ViewController` класса, у него есть доступ к `SubmitButton`.
+Объявление свойства `SubmitButton` подключает весь класс `ViewController`, а не только **ViewController.Designer.CS** -файл, к кнопке, определенной в раскадровке. Поскольку **ViewController.CS** определяет часть класса `ViewController`, он имеет доступ к `SubmitButton`.
 
-На следующем снимке экрана показано, что IntelliSense `SubmitButton` теперь распознает ссылку в **ViewController.CS**:
+На следующем снимке экрана показано, что IntelliSense теперь распознает ссылку на `SubmitButton` в **ViewController.CS**:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -223,11 +223,11 @@ namespace Designer
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов \"ограничения\"")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
+[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов "ограничения"")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vs.png "Панель инструментов \"ограничения\"")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
+[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vs.png "Панель инструментов "ограничения"")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -274,11 +274,11 @@ namespace Designer
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора] . (introduction-images/13-bottomtoolbar-vsmac.png "Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора") .](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
+[![Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.](introduction-images/13-bottomtoolbar-vsmac.png "Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора] . (introduction-images/13-bottomtoolbar-vs.png "Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора") .](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
+[![Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.](introduction-images/13-bottomtoolbar-vs.png "Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -300,8 +300,8 @@ namespace Designer
 
 Если [включены](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [классы размера](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , кнопка **изменить признаки** появится в развернутой нижней панели инструментов.  При нажатии кнопки " **изменить признаки** " отображаются параметры для создания варианта интерфейса на основе класса Size, представленного выбранным устройством и ориентацией. Рассмотрим следующие примеры:
 
-- Если выбрано значение **iPhone SE** / **Книжная**, контекстном меню Action предоставит параметры для создания варианта интерфейса для компактной ширины, класса обычного размера высоты. 
-- Если выбран режим "**альбомный** / **полный экран** **" iPad Pro 9,7 "**  / , контекстном меню Action предоставит варианты для создания варианта интерфейса для обычной ширины, класса обычного размера высоты.
+- Если выбрано значение **iPhone SE**  / **Книжная**, контекстном меню Action предоставит параметры для создания варианта интерфейса для минимальной ширины, класса обычного размера высоты. 
+- Если установлен флажок **iPad Pro 9,7 "**  / **Альбомная**  /  во**весь экран** , контекстном меню Action предоставит параметры для создания варианта интерфейса для обычной ширины, класса обычного размера высоты.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
@@ -349,11 +349,11 @@ namespace Designer
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-### <a name="properties-window"></a>Окно свойств
+### <a name="properties-window"></a>Окно \"Свойства\"
 
 Используйте **окно Свойства** для изменения идентификатора, визуальных стилей, специальных возможностей и поведения элемента управления. На следующем снимке экрана показаны параметры **окна свойств** для кнопки:
 
-[![Окно "Свойства" для кнопки](introduction-images/17-buttonpropertieswindow-vs.png "Окно \"Свойства\" для кнопки")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
+[![Окно "Свойства" для кнопки](introduction-images/17-buttonpropertieswindow-vs.png "Окно "Свойства" для кнопки")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
 
 #### <a name="properties-window-sections"></a>Разделы окна "Свойства"
 
@@ -406,19 +406,19 @@ namespace Designer
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-Чтобы указать пользовательские обработчики событий для различных событий, используйте вкладку **события** **панель свойств**. Например, на следующем `HandleClick` снимке экрана метод обрабатывает **касание** кнопки в событии:
+Чтобы указать пользовательские обработчики событий для различных событий, используйте вкладку **события** **панель свойств**. Например, на приведенном ниже снимке экрана метод `HandleClick` обрабатывает **всплывающие** кнопки в событии.
 
 [![Панель свойств с набором обработчика событий для кнопки](introduction-images/19-buttonpropertiespadevents-vsmac.png "Панель свойств с набором обработчика событий для кнопки")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Чтобы указать пользовательские обработчики событий для различных событий, используйте вкладку **события** **окна свойства**. Например, на следующем `HandleClick` снимке экрана метод обрабатывает **касание** кнопки в событии:
+Чтобы указать пользовательские обработчики событий для различных событий, используйте вкладку **события** **окна свойства**. Например, на приведенном ниже снимке экрана метод `HandleClick` обрабатывает **всплывающие** кнопки в событии.
 
 [![Окно свойств с набором обработчиков событий для кнопки](introduction-images/19-buttonpropertieswindowevents-vs.png "Окно свойств с набором обработчиков событий для кнопки")](introduction-images/19-buttonpropertieswindowevents-vs-large.png#lightbox)
 
 -----
 
-После указания обработчика событий необходимо добавить метод с таким же именем в соответствующий класс контроллера представления. В противном случае при нажатии кнопки возникнет исключение:`unrecognized selector`
+После указания обработчика событий необходимо добавить метод с таким же именем в соответствующий класс контроллера представления. В противном случае при нажатии кнопки возникнет исключение `unrecognized selector`:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 

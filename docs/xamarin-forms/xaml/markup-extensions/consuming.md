@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/18/2019
-ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.date: 09/27/2019
+ms.openlocfilehash: a8698975d2609599e1404fbb9c87c617a54f23d7
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69887909"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696344"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Использование расширений разметки XAML
 
@@ -32,16 +32,17 @@ ms.locfileid: "69887909"
 
 Дополнительные расширения разметки XAML исторически поддерживаются другими реализациями XAML и также поддерживаются Xamarin. Forms. Они описаны более полно в других статьях:
 
-- `StaticResource` &ndash; ссылки на объекты из словаря ресурсов, как описано в статье [**словари ресурсов**](~/xamarin-forms/xaml/resource-dictionaries.md).
-- `DynamicResource` &ndash; реагировать на изменения в объектах в словаре ресурсов, как описано в статье [**динамические стили**](~/xamarin-forms/user-interface/styles/dynamic.md).
-- `Binding` &ndash; установить связь между свойствами двух объектов, как описано в статье [**Привязка данных**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; выполняет привязку данных из шаблона элемента управления, как описано в статье [**Привязка к шаблону элемента управления**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `StaticResource`-ссылки на объекты из словаря ресурсов, как описано в статье [**словари ресурсов**](~/xamarin-forms/xaml/resource-dictionaries.md).
+- `DynamicResource` — реагирование на изменения объектов в словаре ресурсов, как описано в статье [**динамические стили**](~/xamarin-forms/user-interface/styles/dynamic.md).
+- `Binding` — установите связь между свойствами двух объектов, как описано в статье [**Привязка данных**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- `TemplateBinding` — выполняет привязку данных из шаблона элемента управления, как описано в статье [**Привязка к шаблону элемента управления**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `RelativeSource` — задает источник привязки относительно положения целевого объекта привязки, как описано в статье [относительные привязки](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 В [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) разметке используются пользовательские расширения разметки [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). Это расширение разметки описано в статье [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
-## <a name="xstatic-markup-extension"></a>Расширение разметки x:Static
+## <a name="xstatic-markup-extension"></a>расширение разметки x:Static
 
 Расширение разметки `x:Static` поддерживается классом [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) . Класс содержит одно свойство с именем [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) типа `string`, для которого задано имя общей константы, статического свойства, статического поля или члена перечисления.
 
@@ -191,7 +192,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 <a name="type" />
 
-## <a name="xtype-markup-extension"></a>Расширение разметки x:Type
+## <a name="xtype-markup-extension"></a>x:Type - расширение разметки
 
 @No__t_0 расширением разметки является XAML-эквивалентом C# ключевого слова [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) . Он поддерживается классом [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) , который определяет одно свойство с именем [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) типа `string`, для которого задано имя класса или структуры. Расширение разметки `x:Type` возвращает объект [`System.Type`](xref:System.Type) этого класса или структуры. `TypeName` является свойством содержимого `TypeExtension`, поэтому `TypeName=` не требуется, если `x:Type` отображается с фигурными скобками.
 
@@ -329,7 +330,7 @@ public partial class TypeDemoPage : ContentPage
 
 <a name="array" />
 
-## <a name="xarray-markup-extension"></a>Расширение разметки x:Array
+## <a name="xarray-markup-extension"></a>x:Array - расширение разметки
 
 Расширение разметки `x:Array` позволяет определить массив в разметке. Он поддерживается классом [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) , который определяет два свойства:
 
@@ -406,7 +407,7 @@ public partial class TypeDemoPage : ContentPage
 
 <a name="null" />
 
-## <a name="xnull-markup-extension"></a>Расширение разметки x:NULL
+## <a name="xnull-markup-extension"></a>x:Null - расширение разметки
 
 Расширение разметки `x:Null` поддерживается классом [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) . Он не имеет свойств и является просто эквивалентом ключевого слова C# [`null`](/dotnet/csharp/language-reference/keywords/null/) в XAML.
 
@@ -481,7 +482,7 @@ public partial class TypeDemoPage : ContentPage
 > [!NOTE]
 > Средство синтаксического анализа XAML позволяет сократить класс [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) как `OnPlatform`.
 
-Свойство `Default` — это свойство содержимого `OnPlatformExtension`. Поэтому для выражений разметки XAML, выраженных с фигурными скобками, можно исключить `Default=` часть выражения, если она является первым аргументом.
+Свойство `Default` — это свойство содержимого `OnPlatformExtension`. Поэтому для выражений разметки XAML, выраженных с фигурными скобками, можно исключить `Default=` часть выражения, если она является первым аргументом. Если свойство `Default` не задано, по умолчанию будет установлено значение свойства [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) , при условии, что расширение разметки нацелено на [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 
 > [!IMPORTANT]
 > Средство синтаксического анализа XAML требует, чтобы значения правильного типа были предоставлены свойствам, которые занимают расширение разметки `OnPlatform`. Если требуется преобразование типа, расширение разметки `OnPlatform` будет пытаться выполнить его с помощью преобразователей по умолчанию, предоставляемых Xamarin. Forms. Однако существует несколько преобразований типов, которые невозможно выполнить с помощью преобразователей по умолчанию. в таких случаях для свойства `Converter` должно быть задано `IValueConverter` реализация.

@@ -7,17 +7,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/22/2018
 ms.openlocfilehash: 5539bab417c5efc0064cd1753cb74c7524463ee5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70765911"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Обновление Объединенных приложений Xamarin. Mac до 64-bit
 
 По состоянию на Январь 2018 компания Apple требует, чтобы новые [отправки хранилища приложений Mac нацелились на 64-бит](https://developer.apple.com/news/?id=06282017a). Приложения, уже доступные в Mac App Store, должны быть обновлены до 64-х июня 2018.
 
-В **файле** > **Новый** шаблон проекта Xamarin. Mac по умолчанию создаются 64-разрядные приложения, поэтому все недавно созданные приложения уже совместимы с 64 и не будут требовать каких-либо изменений.
+В **файле**  > **новом** шаблоне проекта Xamarin. Mac по умолчанию создаются 64-разрядные приложения, поэтому все недавно созданные приложения уже совместимы с 64 и не будут требовать каких-либо изменений.
 
 ## <a name="targeting-64-bit"></a>Нацеливание на 64-разр.
 
@@ -25,7 +25,7 @@ ms.locfileid: "70765911"
 
    ![Контекстное меню проекта](mac-64-bit-images/1-contextual_menu-vsmac.png "Контекстное меню проекта")
 
-2. Выберите **Сборка Mac** и задайте **Поддерживаемые архитектуры** для **\_x86 64**:
+2. Выберите **Сборка Mac** и задайте **Поддерживаемые архитектуры** для **x86 \_64**:
 
    [![Настройка поддерживаемых архитектур для x86_64](mac-64-bit-images/2-project_options-vsmac.png "Настройка поддерживаемых архитектур для x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 
@@ -46,7 +46,7 @@ file was built for i386 which is not the architecture being linked (x86_64):
 PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary 
 ```
 
-Эту ошибку можно выполнить во время выполнения, `dlopen` вернувшись `IntPtr.Zero` вместо ожидаемого маркера.
+Эту ошибку можно выполнить в среде выполнения, `dlopen` возвращая `IntPtr.Zero` вместо ожидаемого маркера.
 
 #### <a name="example-error-resulting-from-a-statically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Пример ошибки, полученной из-за статической связанной сторонней зависимости, не предназначенной для 64-разрядной платформы:
 

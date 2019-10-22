@@ -8,37 +8,37 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: a824c892d21df9264b772bed09a4aef893f3b949
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68647911"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Связываемые макеты в Xamarin. Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
-Макеты с возможностью привязки позволяют любому классу макета, производному от [`Layout<T>`](xref:Xamarin.Forms.Layout`1) класса, создавать его содержимое путем привязки к коллекции элементов с возможностью задать внешний вид каждого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)с помощью. Связываемые макеты предоставляются `BindableLayout` классом, который предоставляет следующие вложенные свойства:
+Макеты с возможностью привязки позволяют любому классу макета, производному от класса [`Layout<T>`](xref:Xamarin.Forms.Layout`1) , создавать его содержимое путем привязки к коллекции элементов с возможностью задать внешний вид каждого элемента с помощью [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Связываемые макеты предоставляются классом `BindableLayout`, который предоставляет следующие вложенные свойства:
 
-- `ItemsSource`— Указывает коллекцию `IEnumerable` элементов, отображаемых макетом.
-- `ItemTemplate`— Задает объект [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , применяемый к каждому элементу в коллекции элементов, отображаемых макетом.
-- `ItemTemplateSelector`— Указывает [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) , который будет использоваться для [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) выбора элемента во время выполнения.
+- `ItemsSource` — указывает коллекцию элементов `IEnumerable`, отображаемых макетом.
+- `ItemTemplate` — указывает [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , применяемый к каждому элементу в коллекции элементов, отображаемых макетом.
+- `ItemTemplateSelector` — указывает [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) , который будет использоваться для выбора [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) для элемента во время выполнения.
 
-Эти свойства могут быть присоединены к [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)классам [`Grid`](xref:Xamarin.Forms.Grid), [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) [`FlexLayout`](xref:Xamarin.Forms.FlexLayout),, [`StackLayout`](xref:Xamarin.Forms.StackLayout) и, которые все являются производными от [`Layout<T>`](xref:Xamarin.Forms.Layout`1) класса.
+Эти свойства могут быть присоединены к классам [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), [`FlexLayout`](xref:Xamarin.Forms.FlexLayout), [`Grid`](xref:Xamarin.Forms.Grid), [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)и [`StackLayout`](xref:Xamarin.Forms.StackLayout) , которые являются производными от класса [1](xref:Xamarin.Forms.Layout`1) .
 
 > [!NOTE]
-> Свойство имеет приоритет, если `ItemTemplate` заданы свойства `ItemTemplateSelector`и. `ItemTemplate`
+> Свойство `ItemTemplate` имеет приоритет, если заданы свойства `ItemTemplate` и `ItemTemplateSelector`.
 
-`Layout<T>` [Класс`Children`](xref:Xamarin.Forms.Layout`1.Children) предоставляет коллекцию, в которую добавляются дочерние элементы макета. Если свойство установлено в коллекцию элементов и присоединяется [`Layout<T>`](xref:Xamarin.Forms.Layout`1)к классу, производному от, каждый элемент в `Layout<T>.Children` коллекции добавляется в коллекцию для просмотра макетом. `BinableLayout.ItemsSource` Класс `Layout<T>`, производный от, обновит свои дочерние представления при изменении базовой коллекции. Дополнительные сведения о цикле макета Xamarin. Forms см. [в разделе Создание пользовательского макета](~/xamarin-forms/user-interface/layouts/custom.md).
+Класс `Layout<T>` предоставляет коллекцию [`Children`](xref:Xamarin.Forms.Layout`1.Children) , в которую добавляются дочерние элементы макета. Если свойство `BinableLayout.ItemsSource` задано как коллекция элементов и присоединено к производному от [`Layout<T>`](xref:Xamarin.Forms.Layout`1)классу, каждый элемент в коллекции добавляется в коллекцию `Layout<T>.Children` для просмотра макетом. После этого класс, производный от `Layout<T>`, обновит свои дочерние представления при изменении базовой коллекции. Дополнительные сведения о цикле макета Xamarin. Forms см. [в разделе Создание пользовательского макета](~/xamarin-forms/user-interface/layouts/custom.md).
 
-Макеты с возможностью привязки следует использовать только в том случае, если коллекция отображаемых элементов невелика, а прокрутка и выбор не требуются. Хотя возможность прокрутки может быть предоставлена путем заключения в оболочку [`ScrollView`](xref:Xamarin.Forms.ScrollView)связываемого макета, это не рекомендуется, так как в структурах, поддерживающих связывание, отсутствует виртуализация пользовательского интерфейса. Если требуется прокрутка, следует использовать прокручиваемое представление, которое включает в себя виртуализацию [`CollectionView`](xref:Xamarin.Forms.CollectionView)пользовательского интерфейса, например [`ListView`](xref:Xamarin.Forms.ListView) или. Несоблюдение этой рекомендации может привести к проблемам с производительностью.
+Макеты с возможностью привязки следует использовать только в том случае, если коллекция отображаемых элементов невелика, а прокрутка и выбор не требуются. Хотя возможность прокрутки может быть предоставлена путем обертывания связываемого макета в [`ScrollView`](xref:Xamarin.Forms.ScrollView), это не рекомендуется, так как в структурах, поддерживающих связывание, отсутствует ВИРТУАЛИЗАЦИЯ пользовательского интерфейса. Если требуется прокрутка, следует использовать прокручиваемое представление, которое включает в себя виртуализацию пользовательского интерфейса, например [`ListView`](xref:Xamarin.Forms.ListView) или [`CollectionView`](xref:Xamarin.Forms.CollectionView). Несоблюдение этой рекомендации может привести к проблемам с производительностью.
 
 > [!IMPORTANT]
->Хотя технически можно присоединить связываемый макет к любому классу [`Layout<T>`](xref:Xamarin.Forms.Layout`1) макета, производному от класса, это не всегда целесообразно, особенно [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)для классов, [`Grid`](xref:Xamarin.Forms.Grid)и [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Например, рассмотрим ситуацию, когда нужно отобразить коллекцию данных в [`Grid`](xref:Xamarin.Forms.Grid) с использованием связываемого макета, где каждый элемент в коллекции является объектом, содержащим несколько свойств. Каждая строка в `Grid` должна отображать объект из коллекции, каждый столбец `Grid` в котором отображает одно из свойств объекта. Поскольку для связываемого макета может содержаться только один объект, необходимо, чтобы этот объект был классом макета, содержащим несколько представлений, каждый из которых отображает одно из свойств объекта в определенном `Grid` столбце. [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) Хотя этот сценарий может быть реализован с помощью связываемых макетов, он приводит к использованию `Grid` родителя, содержащего `Grid` дочерний элемент для каждого элемента в привязанной коллекции, что является очень неэффективным `Grid` и проблематичным использованием макета.
+>Хотя технически можно присоединить связываемый макет к любому классу макета, производному от класса [`Layout<T>`](xref:Xamarin.Forms.Layout`1) , это не всегда целесообразно, особенно для классов [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), [`Grid`](xref:Xamarin.Forms.Grid)и [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Например, рассмотрим ситуацию, когда нужно отобразить коллекцию данных в [`Grid`](xref:Xamarin.Forms.Grid) с помощью макета с возможностью привязки, где каждый элемент в коллекции является объектом, содержащим несколько свойств. Каждая строка в `Grid` должна отображать объект из коллекции, каждый столбец в `Grid` отображает одно из свойств объекта. Поскольку [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) для связываемого макета может содержать только один объект, необходимо, чтобы этот объект был классом макета, содержащим несколько представлений, каждый из которых отображает одно из свойств объекта в определенном `Grid` столбце. Несмотря на то, что этот сценарий может быть реализован с помощью связываемых макетов, он приводит к получению родительской `Grid`, содержащей дочерний `Grid` для каждого элемента в привязанной коллекции, что является очень неэффективным и проблематичным использованием макета `Grid`.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Заполнение связываемого макета данными
 
-Связываемый макет заполняется данными путем установки его `ItemsSource` свойства в любую коллекцию, реализующую `IEnumerable`, [`Layout<T>`](xref:Xamarin.Forms.Layout`1)и присоединение ее к производному классу:
+Связываемый макет заполняется данными путем присвоения свойству `ItemsSource` любой коллекции, реализующей `IEnumerable`, и присоединения ее к производному от [`Layout<T>`](xref:Xamarin.Forms.Layout`1)классу:
 
 ```xaml
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
@@ -52,11 +52,11 @@ var grid = new Grid();
 BindableLayout.SetItemsSource(grid, items);
 ```
 
-`BindableLayout` [`Label`](xref:Xamarin.Forms.Label) `IEnumerable` `BindableLayout.ItemTemplate` Если вложенное свойство задано для макета, но присоединенное свойство не задано, каждый элемент в коллекции будет отображаться объектом, созданным классом. `BindableLayout.ItemsSource`
+Если присоединенное свойство `BindableLayout.ItemsSource` задано для макета, но присоединенное `BindableLayout.ItemTemplate` свойство не задано, каждый элемент в коллекции `IEnumerable` будет отображаться [`Label`](xref:Xamarin.Forms.Label) , созданного классом `BindableLayout`.
 
 ## <a name="defining-item-appearance"></a>Определение внешнего вида элемента
 
-Внешний вид каждого элемента в макете с возможностью привязки можно определить, установив `BindableLayout.ItemTemplate` для присоединенного свойства значение. [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)
+Внешний вид каждого элемента в макете с возможностью привязки можно определить, задав для присоединенного свойства `BindableLayout.ItemTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <StackLayout BindableLayout.ItemsSource="{Binding User.TopFollowers}"
@@ -83,7 +83,7 @@ BindableLayout.SetItemsSource(stackLayout, viewModel.User.TopFollowers);
 BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 ```
 
-В этом примере каждый элемент в `TopFollowers` коллекции будет отображаться `CircleImage` в представлении, определенном в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+В этом примере каждый элемент в коллекции `TopFollowers` будет отображен `CircleImage` представлением, определенным в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ![Связываемый макет с DataTemplate](bindable-layouts-images/top-followers.png "Связываемый макет с шаблоном данных")
 
@@ -91,7 +91,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Выбор внешнего вида элемента во время выполнения
 
-Внешний вид каждого элемента в макете с возможностью привязки можно выбрать во время выполнения на основе значения элемента, установив `BindableLayout.ItemTemplateSelector` [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)для присоединенного свойства значение:
+Внешний вид каждого элемента в макете с возможностью привязки можно выбрать во время выполнения на основе значения элемента, установив для присоединенного свойства `BindableLayout.ItemTemplateSelector` [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector):
 
 ```xaml
 <FlexLayout BindableLayout.ItemsSource="{Binding User.FavoriteTech}"
@@ -108,7 +108,7 @@ BindableLayout.SetItemsSource(flexLayout, viewModel.User.FavoriteTech);
 BindableLayout.SetItemTemplateSelector(flexLayout, dataTemplateSelector);
 ```
 
-Объект [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) , используемый в примере приложения, показан в следующем примере:
+[@No__t_1](xref:Xamarin.Forms.DataTemplateSelector) , используемые в примере приложения, показаны в следующем примере:
 
 ```csharp
 public class TechItemTemplateSelector : DataTemplateSelector
@@ -123,7 +123,7 @@ public class TechItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-Класс определяет `DefaultTemplate` свойства и`XamarinFormsTemplate` , [длякоторыхустановленыразныешаблоныданных.`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `TechItemTemplateSelector` `OnSelectTemplate` Метод`XamarinFormsTemplate`возвращает, который отображает элемент темно-красного цвета с сердце рядом с ним, когда элемент равен "Xamarin. Forms". Если элемент не равен "Xamarin. Forms", `OnSelectTemplate` метод `DefaultTemplate`возвращает объект, который отображает элемент, используя цвет [`Label`](xref:Xamarin.Forms.Label)по умолчанию:
+Класс `TechItemTemplateSelector` определяет `DefaultTemplate` и `XamarinFormsTemplate` свойства [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , для которых заданы разные шаблоны данных. Метод `OnSelectTemplate` возвращает `XamarinFormsTemplate`, который отображает элемент темно-красного цвета с сердце рядом с ним, когда элемент равен «Xamarin. Forms». Если элемент не равен "Xamarin. Forms", метод `OnSelectTemplate` возвращает `DefaultTemplate`, который отображает элемент, используя цвет по умолчанию [`Label`](xref:Xamarin.Forms.Label):
 
 ![Связываемый макет с DataTemplateSelector](bindable-layouts-images/favorite-tech.png "Связываемый макет с помощью селектора шаблона данных")
 

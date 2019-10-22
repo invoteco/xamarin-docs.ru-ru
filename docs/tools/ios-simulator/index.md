@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2019
 ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289705"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Удаленный симулятор iOS для Windows
@@ -19,7 +19,7 @@ ms.locfileid: "70289705"
 
 [![симулятор iOS под управлением Windows](images/hero-sml.png "симулятор iOS под управлением Windows")](images/hero.png#lightbox)
 
-## <a name="getting-started"></a>Приступая к работе
+## <a name="getting-started"></a>Начало работы
 
 Удаленный симулятор iOS для Windows устанавливается автоматически в составе Xamarin в Visual Studio 2019 и Visual Studio 2017. Чтобы использовать его, выполните следующие действия.
 
@@ -34,13 +34,13 @@ ms.locfileid: "70289705"
 
 - **Главная** — имитирует кнопку Главная на устройстве iOS.
 - **Блокировка** — блокирует симулятор (Проведите пальцем, чтобы разблокировать).
-- **Снимок экрана** — сохранение снимка экрана симулятора (хранящегося в **\\симуляторе пиктурес\ксамарин\иос**).
+- **Снимок экрана** — сохранение снимка экрана симулятора (хранящегося в **симуляторе пиктурес\ксамарин\иос \\** ).
 - [**Параметры**](#settings) — отображает клавиатуру, расположение и другие параметры.
 - [**Другие параметры**](#other-options) — предоставляет различные варианты симулятора, такие как вращение, жесты встряхните и сенсорный идентификатор.
 
     [![Пример карт для симуляторов iOS](images/maps-app-sml.png "Пример карт для симуляторов iOS")](images/maps-app.png#lightbox)
 
-## <a name="settings"></a>Настройки
+## <a name="settings"></a>Параметры
 
 Щелкнув значок шестеренки на панели инструментов, можно открыть окно **Параметры** :
 

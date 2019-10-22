@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69658026"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696422"
 ---
 # <a name="xamarinforms-searchbar"></a>Сеарчбар Xamarin. Forms
 
@@ -25,10 +25,12 @@ ms.locfileid: "69658026"
 Класс `SearchBar` определяет следующие свойства:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) — это `Color`, определяющая цвет кнопки отмены.
+* `CharacterSpacing` типа `double` — интервал между символами `SearchBar`ого текста.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) — это `FontAttributes` перечислимое значение, определяющее, является ли шрифт `SearchBar` полужирным, курсивом или ни одной.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) — это `string`, который определяет семейство шрифтов, используемое `SearchBar`.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) может быть `NamedSize` значением перечисления или `double` значением, представляющим определенные размеры шрифтов на разных платформах.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) — это `TextAlignment` перечислимое значение, определяющее выравнивание текста запроса по горизонтали.
+* `VerticalTextAlignment` — это `TextAlignment` перечислимое значение, определяющее вертикальное выравнивание текста запроса.
 * [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) — это `string`, который определяет текст заполнителя, например "Поиск...".
 * [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) — это `Color`, определяющая цвет текста заполнителя.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) — это `ICommand`, который позволяет привязать действия пользователя, такие как касания пальца или щелчки, к командам, определенным в ViewModel.

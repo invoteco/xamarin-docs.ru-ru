@@ -8,26 +8,26 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/14/2018
 ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70286390"
 ---
 # <a name="picker-control-in-xamarinios"></a>Элемент управления средства выбора в Xamarin. iOS
 
-[`UIPickerView`](xref:UIKit.UIPickerView) Позволяет выбрать значение из списка путем прокрутки отдельных компонентов интерфейса, похожего на круг.
+[@No__t_1](xref:UIKit.UIPickerView) позволяет выбрать значение из списка путем прокрутки отдельных компонентов интерфейса, похожего на круг.
 
-Выборки часто используются для выбора даты и времени. Apple предоставляет[`UIDatePicker`](xref:UIKit.UIDatePicker)
+Выборки часто используются для выбора даты и времени. Apple предоставляет [`UIDatePicker`](xref:UIKit.UIDatePicker)
 класс для этой цели.
 
-В этой статье описывается, как реализовать и использовать `UIPickerView` элементы `UIDatePicker` управления и.
+В статье описывается реализация и использование элементов управления `UIPickerView` и `UIDatePicker`.
 
 ## <a name="uipickerview"></a>уипиккервиев
 
 ### <a name="implementing-a-picker"></a>Реализация средства выбора
 
-Реализация средства выбора путем создания нового `UIPickerView`экземпляра:
+Реализация средства выбора путем создания экземпляра нового `UIPickerView`:
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(
@@ -59,7 +59,7 @@ public override void ViewDidLoad()
 }
 ```
 
-[`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) Базовый класс реализует два интерфейса,[`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
+Базовый класс [`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) реализует два интерфейса, [`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
 и [`IUIPickerViewDelegate`](xref:UIKit.IUIPickerViewDelegate), объявляющие различные методы, определяющие данные средства выбора и способ обработки взаимодействия:
 
 ```csharp
@@ -126,13 +126,13 @@ public class PeopleModel : UIPickerViewModel
 
 ![Средство выбора с двумя компонентами](picker-images/image3.png "Средство выбора с двумя компонентами")
 
-Чтобы указать количество компонентов в средстве выбора, используйте[`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
+Чтобы указать число компонентов в средстве выбора, используйте [`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
 метод.
 
 ### <a name="customizing-a-pickers-appearance"></a>Настройка внешнего вида средства выбора
 
-Чтобы настроить внешний вид средства выбора, используйте[`UIPickerView.UIPickerViewAppearance`](xref:UIKit.UIPickerView.UIPickerViewAppearance)
-класс или переопределить [`GetView`](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) методы и [`GetRowHeight`](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) в. `UIPickerViewModel`
+Чтобы настроить внешний вид средства выбора, используйте [`UIPickerView.UIPickerViewAppearance`](xref:UIKit.UIPickerView.UIPickerViewAppearance)
+или переопределите методы [`GetView`](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) и [`GetRowHeight`](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) в `UIPickerViewModel`.
 
 ## <a name="uidatepicker"></a>уидатепиккер
 
@@ -161,7 +161,7 @@ UIPickerView pickerView = new UIPickerView(
 
 #### <a name="minimum-and-maximum-date"></a>Минимальная и максимальная дата
 
-[`MinimumDate`](xref:UIKit.UIDatePicker.MinimumDate)и [`MaximumDate`](xref:UIKit.UIDatePicker.MaximumDate) ограничьте диапазон дат, доступных в средстве выбора даты. Например, следующий код ограничивает выбор даты до 60 лет, ведущих до текущего момента:
+[`MinimumDate`](xref:UIKit.UIDatePicker.MinimumDate) и [`MaximumDate`](xref:UIKit.UIDatePicker.MaximumDate) ограничивают диапазон дат, доступных в средстве выбора даты. Например, следующий код ограничивает выбор даты до 60 лет, ведущих до текущего момента:
 
 ```csharp
 var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -174,7 +174,7 @@ datePickerView.MaximumDate = NSDate.Now;
 ```
 
 > [!TIP]
-> Можно явно привести `DateTime` `NSDate`к типу:
+> Можно явно привести `DateTime` к `NSDate`:
 >
 > ```csharp
 > DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
@@ -183,7 +183,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 #### <a name="minute-interval"></a>Интервал в минутах
 
-[`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) Свойство задает интервал времени, в течение которого средство выбора будет отображать минуты:
+Свойство [`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) задает интервал, в течение которого в средстве выбора будут отображаться минуты:
 
 ```csharp
 datePickerView.MinuteInterval = 10;
@@ -195,7 +195,7 @@ datePickerView.MinuteInterval = 10;
 
 ##### <a name="uidatepickermodetime"></a>Уидатепиккермоде. время
 
-`UIDatePickerMode.Time`Отображает время с селектором часов и минут, а также необязательное обозначение AM или PM.
+`UIDatePickerMode.Time` отображает время с помощью селектора часов и минут, а также необязательного обозначения AM или PM:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Time;
@@ -205,7 +205,7 @@ datePickerView.Mode = UIDatePickerMode.Time;
 
 ##### <a name="uidatepickermodedate"></a>Уидатепиккермоде. Дата
 
-`UIDatePickerMode.Date`Отображает дату с селектором "месяц, день" и "год":
+`UIDatePickerMode.Date` отображает дату с селектором месяца, дня и года:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Date;
@@ -213,40 +213,40 @@ datePickerView.Mode = UIDatePickerMode.Date;
 
 ![Уидатепиккермоде. Дата](picker-images/image7.png "Уидатепиккермоде. Дата")
 
-Порядок селекторов зависит от языкового стандарта выбора даты, который по умолчанию использует язык системы. На приведенном выше рисунке показана структура селекторов в `en_US` языковом стандарте, но следующий порядок меняется на день | Месяц | Год
+Порядок селекторов зависит от языкового стандарта выбора даты, который по умолчанию использует язык системы. На приведенном выше рисунке показана структура селекторов в `en_US` национальной настройке, но следующий порядок меняется на день | Месяц | Год
 
 ```csharp
 datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 ```
 
-![День | Месяц | Год],(picker-images/image9.png "день | Месяц | Year (год") )
+![День | Месяц | Год](picker-images/image9.png "День | Месяц | Год")
 
 ##### <a name="uidatepickermodedateandtime"></a>Уидатепиккермоде. Датеандтиме
 
-`UIDatePickerMode.DateAndTime`Отображает сокращенное представление даты, время в часах и минутах, а также необязательное обозначение AM или PM (в зависимости от того, используется ли 12-или 24-часовой формат):
+`UIDatePickerMode.DateAndTime` Отображает сокращенное представление даты, время в часах и минутах, а также необязательное обозначение AM или PM (в зависимости от того, используется ли 12-или 24-часовой формат):
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
 ```
 
-![Уидатепиккермоде. датеандтиме](picker-images/image6.png "Уидатепиккермоде. датеандтиме")
+![Уидатепиккермоде. Датеандтиме](picker-images/image6.png "Уидатепиккермоде. Датеандтиме")
 
-Как и в случае, порядок селекторов и использование 12 или 24 часового времени зависят от языкового стандарта выбора даты. [`UIDatePickerMode.Date`](#uidatepickermodedate)
+Как и в случае с [`UIDatePickerMode.Date`](#uidatepickermodedate), порядок селекторов и использование 12 или 24 часового времени зависят от языкового стандарта выбора даты.
 
 > [!TIP]
-> Используйте свойство для записи значения элемента выбора даты в режиме `UIDatePickerMode.Time`, `UIDatePickerMode.Date`или `UIDatePickerMode.DateAndTime`. `Date` Это значение хранится в виде `NSDate`.
+> Используйте свойство `Date` для записи значения элемента выбора даты в режиме `UIDatePickerMode.Time`, `UIDatePickerMode.Date` или `UIDatePickerMode.DateAndTime`. Это значение хранится в виде `NSDate`.
 
 ##### <a name="uidatepickermodecountdowntimer"></a>Уидатепиккермоде. Каунтдовнтимер
 
-`UIDatePickerMode.CountDownTimer`Отображает значения часов и минут:
+`UIDatePickerMode.CountDownTimer` отображает значения часов и минут:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;
 ```
 
-!["Уидатепиккермоде. каунтдовнтимер"](picker-images/image5.png "Уидатепиккермоде. каунтдовнтимер")
+!["Уидатепиккермоде. Каунтдовнтимер"](picker-images/image5.png "Уидатепиккермоде. Каунтдовнтимер")
 
-Свойство захватывает значение элемента выбора даты в `UIDatePickerMode.CountDownTimer` режиме. `CountDownDuration` Например, чтобы добавить значение обратного отсчета к текущей дате:
+Свойство `CountDownDuration` захватывает значение элемента выбора даты в `UIDatePickerMode.CountDownTimer`ном режиме. Например, чтобы добавить значение обратного отсчета к текущей дате:
 
 ```csharp
 var currentTime = NSDate.Now;
@@ -258,9 +258,9 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 #### <a name="nsdateformatter"></a>нсдатеформаттер
 
-Чтобы отформатировать `NSDate`, [`NSDateFormatter`](xref:Foundation.NSDateFormatter)используйте.
+Чтобы отформатировать `NSDate`, используйте [`NSDateFormatter`](xref:Foundation.NSDateFormatter).
 
-Чтобы использовать `NSDateFormatter`, вызовите его [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) метод. Например:
+Чтобы использовать `NSDateFormatter`, вызовите его метод [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) . Пример:
 
 ```csharp
 var date = NSDate.Now;
@@ -273,7 +273,7 @@ var formattedDate = formatter.ToString(d);
 
 ##### <a name="dateformat"></a>DateFormat
 
-Свойство (строка) `NSDateFormatter` позволяет задать настраиваемую спецификацию формата даты: [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat)
+Свойство [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat) (строка) `NSDateFormatter` допускает настраиваемую спецификацию формата даты:
 
 ```csharp
 NSDateFormatter dateFormat = new NSDateFormatter();
@@ -282,38 +282,38 @@ dateFormat.DateFormat = "yyyy-MM-dd";
 
 ##### <a name="timestyle"></a>тиместиле
 
-[`TimeStyle`](xref:Foundation.NSDateFormatter.TimeStyle) Свойство (`NSDateFormatter` определяет форматирование времени на основе предварительно заданных стилей: [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle)
+Свойство [`TimeStyle`](xref:Foundation.NSDateFormatter.TimeStyle) ( [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle) `NSDateFormatter` определяет форматирование времени на основе предварительно заданных стилей:
 
 ```csharp
 NSDateFormatter timeFormat = new NSDateFormatter();
 timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 ```
 
-Различные `NSDateFormatterStyle` значения отображают время следующим образом:
+Различные значения `NSDateFormatterStyle` отображают время следующим образом:
 
-- `NSDateFormatterStyle.Full`. 7:46:00 по восточному времени (лето)
-- `NSDateFormatterStyle.Long`. 7:47:00 (EDT)
-- `NSDateFormatterStyle.Medium`. 7:47:00 РМ
-- `NSDateFormatterSytle.Short`. 7:47 РМ
+- `NSDateFormatterStyle.Full`:7:46:00 часов США (лето)
+- `NSDateFormatterStyle.Long`:7:47:00 в EDT
+- `NSDateFormatterStyle.Medium`:7:47:00 PM
+- `NSDateFormatterSytle.Short`:7:47 PM
 
 ##### <a name="datestyle"></a>датестиле
 
-[`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle) Свойство ()`NSDateFormatter`задает форматирование даты на основе предварительно заданных стилей: `NSDateFormatterStyle`
+Свойство [`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle) (`NSDateFormatterStyle`) `NSDateFormatter` задает форматирование даты на основе предварительно заданных стилей:
 
 ```csharp
 NSDateFormatter dateTimeformat = new NSDateFormatter();
 dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 ```
 
-Различные `NSDateFormatterStyle` значения отображают даты следующим образом:
+Различные значения `NSDateFormatterStyle` отображают даты следующим образом:
 
-- `NSDateFormatterStyle.Full`. Среда, 2 августа 2017 at 7:48 PM
-- `NSDateFormatterStyle.Long`. 2 августа 2017 at 7:49 PM
-- `NSDateFormatterStyle.Medium`. 2 августа 2017 г., 7:49 РМ
-- `NSDateFormatterStyle.Short`. 8/2/17, 7:50 РМ
+- `NSDateFormatterStyle.Full`: среда, 2 августа 2017 в 7:48 PM
+- `NSDateFormatterStyle.Long`:2 августа 2017 at 7:49 PM
+- `NSDateFormatterStyle.Medium`:2 августа 2017 г., 7:49 PM
+- `NSDateFormatterStyle.Short`:8/2/17, 7:50 PM
 
 > [!NOTE]
-> `DateFormat`и `DateStyle` предоставляютразличныеспособы`TimeStyle` указания форматирования даты и времени. / Последние свойства Set определяют выходные данные модуля форматирования даты.
+> `DateFormat` и `DateStyle` / `TimeStyle` предоставляют различные способы указания форматирования даты и времени. Последние свойства Set определяют выходные данные модуля форматирования даты.
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "69894001"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Выбор макета Xamarin. Forms
@@ -26,9 +26,9 @@ ms.locfileid: "69894001"
 
 ## <a name="stacklayout"></a>StackLayout
 
-Объект [`StackLayout`](xref:Xamarin.Forms.StackLayout) упорядочивает элементы в одномерном стеке: по горизонтали или по вертикали. Свойство задает направление элементов, а ориентация по умолчанию — [`Vertical`.](xref:Xamarin.Forms.StackOrientation) [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) `StackLayout`обычно используется для упорядочения подраздела пользовательского интерфейса на странице.
+[@No__t_1](xref:Xamarin.Forms.StackLayout) организует элементы в одномерном стеке: по горизонтали или по вертикали. Свойство [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) задает направление элементов, а ориентация по умолчанию — [`Vertical`](xref:Xamarin.Forms.StackOrientation). `StackLayout` обычно используется для размещения подраздела пользовательского интерфейса на странице.
 
-В следующем коде XAML показано, как создать вертикальный [`StackLayout`](xref:Xamarin.Forms.StackLayout) , содержащий три [`Label`](xref:Xamarin.Forms.Label) объекта:
+В следующем коде XAML показано, как создать вертикальный [`StackLayout`](xref:Xamarin.Forms.StackLayout) содержащий три [`Label`](xref:Xamarin.Forms.Label) объектов:
 
 ```xaml
 <StackLayout Margin="20,35,20,25">
@@ -38,9 +38,9 @@ ms.locfileid: "69894001"
 </StackLayout>
 ```
 
-В, если размер элемента не задан явно, он расширяется, чтобы заполнить доступную ширину или высоту, [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) если свойство имеет значение [`Horizontal`.](xref:Xamarin.Forms.StackOrientation) [`StackLayout`](xref:Xamarin.Forms.StackLayout)
+В [`StackLayout`](xref:Xamarin.Forms.StackLayout), если размер элемента не задан явно, он расширяется, чтобы заполнить доступную ширину или высоту, если свойство [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) имеет значение [`Horizontal`](xref:Xamarin.Forms.StackOrientation).
 
-Объект [`StackLayout`](xref:Xamarin.Forms.StackLayout) часто используется в качестве родительского макета, который содержит другие дочерние макеты. Однако не [`Grid`](xref:Xamarin.Forms.Grid) следует использовать для воспроизведения макета с помощью сочетания `StackLayout` объектов. `StackLayout` В следующем коде показан пример этого неправильного практического занятия.
+[@No__t_1](xref:Xamarin.Forms.StackLayout) часто используется в качестве родительского макета, который содержит другие дочерние макеты. Однако `StackLayout` не следует использовать для воспроизведения макета [`Grid`](xref:Xamarin.Forms.Grid) с помощью сочетания объектов `StackLayout`. В следующем коде показан пример этого неправильного практического занятия.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -71,18 +71,18 @@ ms.locfileid: "69894001"
 Такой метод неэффективен, так как выполняются ненужные вычисления макета. Вместо этого желаемый макет можно лучше добиться с помощью [`Grid`](xref:Xamarin.Forms.Grid).
 
 > [!TIP]
-> При использовании метода [`StackLayout`](xref:Xamarin.Forms.StackLayout)убедитесь, что только один дочерний элемент имеет [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands)значение. В этом случае указанный дочерний элемент будет занимать максимальное пространство, предоставляемое ему макетом `StackLayout`. Выполнять эти вычисления несколько раз слишком затратно.
+> При использовании [`StackLayout`](xref:Xamarin.Forms.StackLayout)убедитесь, что для одного дочернего элемента задано значение [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands). В этом случае указанный дочерний элемент будет занимать максимальное пространство, предоставляемое ему макетом `StackLayout`. Выполнять эти вычисления несколько раз слишком затратно.
 
 Дополнительные сведения см. в разделе [Xamarin. Forms StackLayout](stack-layout.md).
 
 ## <a name="grid"></a>Grid
 
-Объект [`Grid`](xref:Xamarin.Forms.Grid) используется для отображения элементов в строках и столбцах, которые могут иметь пропорциональные или абсолютные размеры. Строки и столбцы сетки указываются с [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) помощью свойств и. [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions)
+[@No__t_1](xref:Xamarin.Forms.Grid) используется для отображения элементов в строках и столбцах, которые могут иметь пропорциональные или абсолютные размеры. Строки и столбцы сетки указываются с помощью свойств [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) и [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) .
 
-Чтобы разместить элементы в конкретных [`Grid`](xref:Xamarin.Forms.Grid) ячейках, [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) используйте вложенные свойства и [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) . Чтобы сделать элементы охватывающими несколько строк и столбцов, используйте [`Grid.RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) вложенные свойства и. [`Grid.ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty)
+Чтобы разместить элементы в конкретных [`Grid`](xref:Xamarin.Forms.Grid) ячейках, используйте вложенные свойства [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) и [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) . Чтобы сделать элементы охватывающими несколько строк и столбцов, используйте присоединенные свойства [`Grid.RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) и [`Grid.ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) .
 
 > [!NOTE]
-> [`Grid`](xref:Xamarin.Forms.Grid) Макет не следует путать с таблицами и не предназначен для представления табличных данных. В `Grid` отличие от таблиц HTML, предназначено для размещения содержимого. Для отображения табличных данных рассмотрите возможность использования [ListView](~/xamarin-forms/user-interface/listview/index.md), [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)или [таблевиев](~/xamarin-forms/user-interface/tableview.md).
+> Макет [`Grid`](xref:Xamarin.Forms.Grid) не следует путать с таблицами и не предназначен для представления табличных данных. В отличие от таблиц HTML, `Grid` предназначен для размещения содержимого. Для отображения табличных данных рассмотрите возможность использования [ListView](~/xamarin-forms/user-interface/listview/index.md), [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)или [таблевиев](~/xamarin-forms/user-interface/tableview.md).
 
 В следующем коде XAML показано, как создать [`Grid`](xref:Xamarin.Forms.Grid) с двумя строками и двумя столбцами:
 
@@ -111,20 +111,20 @@ ms.locfileid: "69894001"
 В этом примере размер работает следующим образом:
 
 - Каждая строка имеет явную высоту в 50 единиц, независимых от устройства.
-- Ширина первого столбца устанавливается равным [`Auto`](xref:Xamarin.Forms.GridLength.Auto), и поэтому она имеет ширину, необходимую для дочерних элементов. В данном случае это 200 единиц, не зависящих от устройства, для размещения ширины первой [`Label`](xref:Xamarin.Forms.Label).
+- Ширина первого столбца устанавливается равным [`Auto`](xref:Xamarin.Forms.GridLength.Auto)и, таким образом, имеет ширину, необходимую для его дочерних элементов. В данном случае это 200 независимых от устройства единиц для размещения ширины первого [`Label`](xref:Xamarin.Forms.Label).
 
-Пространство может распространяться в пределах столбца или строки с помощью автоматического изменения размера, что позволяет изменять размер столбцов и строк в соответствии с содержимым. Это достигается путем установки высоты [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)или ширины [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) [`Auto`](xref:Xamarin.Forms.GridLength.Auto)типа в. Пропорциональное изменение размера также можно использовать для распределения доступного пространства между строками и столбцами сетки по взвешенным пропорциям. Это достигается путем установки высоты `RowDefinition`или ширины `ColumnDefinition`объекта в значение, которое использует `*` оператор.
+Пространство может распространяться в пределах столбца или строки с помощью автоматического изменения размера, что позволяет изменять размер столбцов и строк в соответствии с содержимым. Это достигается путем установки высоты [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)или ширины [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition)для [`Auto`](xref:Xamarin.Forms.GridLength.Auto). Пропорциональное изменение размера также можно использовать для распределения доступного пространства между строками и столбцами сетки по взвешенным пропорциям. Это достигается путем установки высоты `RowDefinition` или ширины `ColumnDefinition` для значения, которое использует оператор `*`.
 
 > [!CAUTION]
-> Старайтесь сделать так, чтобы [`Auto`](xref:Xamarin.Forms.GridLength.Auto) максимально допустимое число строк и столбцов было равно размеру. Из-за каждой строки или столбца с автоматическим размером обработчик макета будет выполнять дополнительные вычисления макета. Если возможно, используйте строки и столбцы фиксированного размера. Кроме того, можно задать для строк и столбцов занимать пропорциональный объем пространства со [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) значением перечисления.
+> Постарайтесь, чтобы максимально допустимое число строк и столбцов было равно [`Auto`](xref:Xamarin.Forms.GridLength.Auto) размеру. Из-за каждой строки или столбца с автоматическим размером обработчик макета будет выполнять дополнительные вычисления макета. Если возможно, используйте строки и столбцы фиксированного размера. Кроме того, можно задать для строк и столбцов занимать пропорциональный объем пространства со значением перечисления [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) .
 
 Дополнительные сведения см. в разделе [Сетка Xamarin. Forms](grid.md).
 
 ## <a name="flexlayout"></a>FlexLayout
 
-[Аналогично`StackLayout`](xref:Xamarin.Forms.StackLayout) тому, что отображает дочерние элементы в стеке по горизонтали или по вертикали. [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) `FlexLayout` Однако может также заключить свои дочерние элементы, если слишком много подходит для одной строки или столбца, а также обеспечивает более детализированный контроль над размером, ориентацией и выравниванием дочерних элементов.
+[@No__t_1](xref:Xamarin.Forms.FlexLayout) похож на [`StackLayout`](xref:Xamarin.Forms.StackLayout) в том, что он отображает дочерние элементы в стеке по горизонтали или по вертикали. Однако `FlexLayout` может также заключить свои дочерние элементы, если слишком много подходит для одной строки или столбца, а также обеспечивает более детализированный контроль над размером, ориентацией и выравниванием дочерних элементов.
 
-В следующем коде XAML показано, как создать [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) объект, отображающий его представления в одном столбце:
+В следующем коде XAML показано, как создать [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) , отображающий представления в одном столбце:
 
 ```xaml
 <FlexLayout Direction="Column"
@@ -138,22 +138,22 @@ ms.locfileid: "69894001"
 
 В этом примере макет работает следующим образом:
 
-- Свойство имеет значение, что приводит к тому, что дочерние элементы объекта `FlexLayout` упорядочиваются в один столбец элементов. `Column` [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction)
-- [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) Свойство имеет`Center`значение, что приводит к горизонтальному центрированию каждого элемента.
-- [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) Свойство имеет`SpaceEvenly`значение, которое выделяет все оставшиеся вертикальные промежутки между всеми элементами, а также над первым элементом и под последним элементом.
+- Свойство [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction) имеет значение `Column`, в результате чего дочерние элементы `FlexLayout` будут упорядочены в один столбец элементов.
+- Свойство [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) имеет значение `Center`, что приводит к горизонтальному центрированию каждого элемента.
+- Свойство [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) имеет значение `SpaceEvenly`, которое выделяет все оставшиеся вертикальные промежутки между всеми элементами, а также над первым элементом и под последним элементом.
 
 Дополнительные сведения см. в разделе [Xamarin. Forms флекслайаут](flex-layout.md).
 
 ## <a name="relativelayout"></a>RelativeLayout
 
-Объект [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) используется для размещения и изменения размеров элементов относительно свойств макета или элементов того же уровня. По умолчанию элемент размещается в левом верхнем углу макета. `RelativeLayout` Можно использовать для создания пользовательских интерфейсов, которые масштабируются пропорционально по размеру устройств.
+[@No__t_1](xref:Xamarin.Forms.RelativeLayout) используется для размещения и изменения размеров элементов относительно свойств макета или элементов того же уровня. По умолчанию элемент размещается в левом верхнем углу макета. @No__t_0 можно использовать для создания пользовательских интерфейсов, которые пропорционально масштабируются по размерам устройств.
 
-[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)В, позиции и размеры указываются как ограничения. Ограничения имеют [`Factor`](xref:Xamarin.Forms.ConstraintExpression.Factor) свойства [`Constant`](xref:Xamarin.Forms.ConstraintExpression.Constant) и, которые можно использовать для определения позиций и размеров в виде нескольких (или дробей) свойств других объектов, а также константы. Кроме того, константы могут быть отрицательными.
+В [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)позиции и размеры указываются как ограничения. Ограничения имеют [`Factor`](xref:Xamarin.Forms.ConstraintExpression.Factor) и [`Constant`](xref:Xamarin.Forms.ConstraintExpression.Constant) свойства, которые можно использовать для определения позиций и размеров как нескольких (или дробей) свойств других объектов, а также константы. Кроме того, константы могут быть отрицательными.
 
 > [!NOTE]
-> [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) Поддерживает элементы позиционирования за пределами собственных границ.
+> [@No__t_1](xref:Xamarin.Forms.RelativeLayout) поддерживает размещение элементов за пределами собственных границ.
 
-В следующем коде XAML показано, как упорядочивать элементы в [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout):
+В следующем коде XAML показано, как упорядочивать элементы в [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout).
 
 ```xaml
 <RelativeLayout>
@@ -183,28 +183,28 @@ ms.locfileid: "69894001"
 
 В этом примере макет работает следующим образом:
 
-- Синим [`BoxView`](xref:Xamarin.Forms.BoxView) образом присваивается явный размер 50x50 аппаратно-независимых единиц. Он размещается в левом верхнем углу макета, который является положением по умолчанию.
+- Синему [`BoxView`у](xref:Xamarin.Forms.BoxView) предоставляется явный размер 50x50 аппаратно-независимых единиц. Он размещается в левом верхнем углу макета, который является положением по умолчанию.
 - Красный [`BoxView`](xref:Xamarin.Forms.BoxView) получает явный размер 50x50 аппаратно-независимых единиц. Он размещается в правом верхнем углу макета.
-- Серый цвет [`BoxView`](xref:Xamarin.Forms.BoxView) имеет явную ширину 15 независимых от устройства единиц, а высота равна 75% от высоты родительского элемента.
-- Зеленый цвет [`BoxView`](xref:Xamarin.Forms.BoxView) не имеет явно заданного размера. Его расположение задается относительно `BoxView` именованного. `pole`
+- Серый [`BoxView`](xref:Xamarin.Forms.BoxView) имеет явную ширину 15 независимых от устройства единиц, а высота равна 75% от высоты родительского элемента.
+- Зеленому [`BoxView`у](xref:Xamarin.Forms.BoxView) не присваивается явный размер. Его расположение задается относительно `BoxView` с именем `pole`.
 
 > [!WARNING]
-> Старайтесь не использовать `RelativeLayout` при любой возможности. В противном случае ЦП будет испытывать значительно большую нагрузку.
+> Старайтесь не использовать `RelativeLayout`, когда это возможно. В противном случае ЦП будет испытывать значительно большую нагрузку.
 
 Дополнительные сведения см. в разделе [Xamarin. Forms RelativeLayout](relative-layout.md).
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
-Объект [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) используется для размещения и изменения размеров элементов с помощью явных значений или значений относительно размера макета. Значение положения указывается в левом верхнем углу дочернего угла относительно левого верхнего угла `AbsoluteLayout`.
+[@No__t_1](xref:Xamarin.Forms.AbsoluteLayout) используется для размещения и изменения размеров элементов с помощью явных значений или значений относительно размера макета. Значение положения указывается в левом верхнем углу дочернего угла относительно левого верхнего угла `AbsoluteLayout`.
 
-[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) Следует рассматривать как макет специального назначения, который будет использоваться только в том случае, если можно наложить размер дочерних элементов или если размер элемента не влияет на расположение других дочерних элементов. Стандартным применением этого макета является создание наложения, которая охватывает страницу с другими элементами управления, что может защитить пользователя от взаимодействия с обычными элементами управления на странице.
+[@No__t_1](xref:Xamarin.Forms.AbsoluteLayout) следует рассматривать как макет специального назначения, который будет использоваться только в том случае, если можно наложить размер дочерних элементов или если размер элемента не влияет на расположение других дочерних элементов. Стандартным применением этого макета является создание наложения, которая охватывает страницу с другими элементами управления, что может защитить пользователя от взаимодействия с обычными элементами управления на странице.
 
 > [!IMPORTANT]
-> `HorizontalOptions` И `VerticalOptions` свойства не оказывают влияния на дочерние элементы `AbsoluteLayout`.
+> Свойства `HorizontalOptions` и `VerticalOptions` не влияют на дочерние элементы `AbsoluteLayout`.
 
-[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)В [присоединяемоесвойствоиспользуетсядляуказаниягоризонтальнойивертикальнойпозиций,шириныивысотыэлемента.`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) Кроме того [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) , присоединенное свойство указывает, как будут интерпретироваться границы макета.
+В [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)вложенное свойство [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) используется для указания горизонтальной и вертикальной позиций, ширины и высоты элемента. Кроме того, присоединенное свойство [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) указывает, как будут интерпретироваться границы макета.
 
-В следующем коде XAML показано, как упорядочивать элементы в [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout):
+В следующем коде XAML показано, как упорядочивать элементы в [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout).
 
 ```xaml
 <AbsoluteLayout Margin="40">
@@ -224,20 +224,20 @@ ms.locfileid: "69894001"
 
 В этом примере макет работает следующим образом:
 
-- Каждому [`BoxView`](xref:Xamarin.Forms.BoxView) параметру присваивается явный размер 100x100, и он отображается в той же положении горизонтально по центру.
-- Красный [`BoxView`](xref:Xamarin.Forms.BoxView) угол поворачивается на 30 градусов, а зеленый `BoxView` — на 60 градусов.
-- Для каждого [`BoxView`](xref:Xamarin.Forms.BoxView) [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) свойства присоединенноесвойствоимеетзначение,указывающее,чторасположениепропорциональноостальномупространствупосле`PositionProportional`ширины и высоты.
+- Каждому [`BoxView`у](xref:Xamarin.Forms.BoxView) присваивается явный размер 100x100, и она отображается в том же положении горизонтально по центру.
+- Красный [`BoxView`](xref:Xamarin.Forms.BoxView) поворачивается на 30 градусов, а зеленый `BoxView` поворачивается на 60 градусов.
+- Для каждого [`BoxView`](xref:Xamarin.Forms.BoxView)присоединяемое свойство [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) имеет значение `PositionProportional`, указывающее, что расположение пропорционально оставшееся пространство после ширины и высоты учитывается для.
 
 > [!CAUTION]
-> Старайтесь не использовать [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) свойство, когда это возможно, так как оно приведет к тому, что обработчик макетов будет выполнять дополнительные вычисления макета.
+> По возможности старайтесь не использовать свойство [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) , так как оно приведет к выполнению дополнительных расчетов макета обработчиком макетов.
 
 Дополнительные сведения см. в разделе [Xamarin. Forms абсолутелайаут](absolute-layout.md).
 
 ## <a name="input-transparency"></a>Прозрачность ввода
 
-Каждый визуальный элемент имеет [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) свойство, которое используется для определения того, получает ли элемент входные данные. Значение по умолчанию — `false`, гарантируя, что элемент получает входные данные.
+Каждый визуальный элемент имеет свойство [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) , которое используется для определения того, получает ли элемент входные данные. Его значение по умолчанию — `false`, гарантируя, что элемент получает входные данные.
 
-Если это свойство задано для класса макета, его значение передается в дочерние элементы. Поэтому присвоение [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) свойству значения `true` класса макета приведет к тому, что все элементы в макете не будут получать входные данные.
+Если это свойство задано для класса макета, его значение передается в дочерние элементы. Поэтому установка свойства [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) в значение `true` класса макета приведет к тому, что все элементы в макете не будут получать входные данные.
 
 ## <a name="layout-performance"></a>Производительность макета
 

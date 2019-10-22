@@ -8,39 +8,39 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769959"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Элементы управления изображениями watchOS в Xamarin
 
-предоставляет watchOS [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) управления для отображения изображений и простой анимации. Некоторые элементы управления также могут иметь фоновое изображение (например, кнопки, группы и контроллеры интерфейса).
+watchOS предоставляет элемент управления [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) для вывода изображений и простых анимаций. Некоторые элементы управления также могут иметь фоновое изображение (например, кнопки, группы и контроллеры интерфейса).
 
-![](image-images/image-walkway.png "Рисунок отображение Apple Watch") ![](image-images/image-animation.png "Apple Watch с простая анимация")
+![](image-images/image-walkway.png "Apple Watch отображения рисунка") ![](image-images/image-animation.png "Apple Watch с простой анимацией")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Используйте образы каталога активов, чтобы добавить образы для просмотра приложений комплекта.
-Только **@2x** версии являются обязательными, так как все смотреть устройства имеют отображает Retina.
+Требуются только **@2x** версии, так как на всех устройствах наблюдения отображается Retina.
 
-![](image-images/asset-universal-sml.png "Требуются только 2x версии, так как на всех устройствах контрольных значений отображается Retina")
+![](image-images/asset-universal-sml.png "Only 2x versions are required, since all watch devices have Retina displays")
 
 Рекомендуется убедиться, что изображения имеют правильный размер для просмотра контрольных значений. *Избегайте* использования изображений с неправильным размером (особенно больших) и масштабирования для их показа в контрольном списке.
 
 Вы можете использовать размеры набора для просмотра (38 и часы) в образе каталога активов, чтобы указать разные изображения для каждого отображаемого размера.
 
-![](image-images/asset-watch-sml.png "В образе каталога активов можно использовать размеры набора для контрольных значений (38 и часы), чтобы указать разные изображения для каждого отображаемого размера.")
+![](image-images/asset-watch-sml.png "You can use the Watch Kit sizes 38mm and 42mm in an asset catalog image to specify different images for each display size")
 
 ## <a name="images-on-the-watch"></a>Изображения на часах
 
-Наиболее эффективный способ отобразить изображения — *включить их в проект приложения Watch* и отобразить их с помощью `SetImage(string imageName)` метода.
+Наиболее эффективный способ отобразить изображения — *включить их в проект приложения Watch* и отобразить их с помощью метода `SetImage(string imageName)`.
 
 Например, пример [ватчкиткаталог](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/) содержит несколько изображений, добавленных в каталог активов в проекте Watch App.
 
-![](image-images/asset-whale-sml.png "Пример Ватчкиткаталог содержит несколько изображений, добавленных в каталог активов в проекте Watch App.")
+![](image-images/asset-whale-sml.png "The WatchKitCatalog sample has a number of images added to an asset catalog in the watch app project")
 
-Они могут быть эффективно загружены и отображены в контрольном списке с помощью `SetImage` с параметром name строки:
+Их можно эффективно загрузить и отобразить в контрольном списке с помощью `SetImage` с параметром name строки:
 
 ```csharp
 myImageControl.SetImage("Whale");
@@ -49,17 +49,17 @@ myOtherImageControl.SetImage("Worry");
 
 ### <a name="background-images"></a>Фоновые изображения
 
-Та же логика применяется `SetBackgroundImage (string imageName)` `Button`к классам, `Group`и. `InterfaceController` Оптимальная производительность достигается за счет хранения образов в самом приложении.
+Та же логика применяется к `SetBackgroundImage (string imageName)` классов `Button`, `Group` и `InterfaceController`. Оптимальная производительность достигается за счет хранения образов в самом приложении.
 
 ## <a name="images-in-the-watch-extension"></a>Изображения в расширении контрольных значений
 
 Помимо загрузки образов, которые хранятся в самом приложении, можно отправить изображения из пакета расширений в приложение Watch для просмотра (или же можно загрузить изображения из удаленного расположения и отобразить их).
 
-Чтобы загрузить изображения из расширения Watch, создайте `UIImage` экземпляры, а затем вызовите `SetImage` их `UIImage` с помощью объекта.
+Чтобы загрузить изображения из расширения Watch, создайте `UIImage` экземпляры, а затем вызовите `SetImage` с помощью объекта `UIImage`.
 
 Например, пример [ватчкиткаталог](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) содержит образ с именем **бумблеби** в проекте расширения Watch:
 
-![](image-images/asset-bumblebee-sml.png "Пример Ватчкиткаталог содержит образ с именем Бумблеби в проекте расширения Watch.")
+![](image-images/asset-bumblebee-sml.png "The WatchKitCatalog sample has an image named Bumblebee in the watch extension project")
 
 Следующий код приведет к следующему:
 
@@ -78,16 +78,16 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 В примере [ватчкиткаталог](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) имеется серия нумерованных изображений в проекте Watch App с префиксом **шины** :
 
-![](image-images/asset-bus-animation-sml.png "В примере Ватчкиткаталог имеется серия нумерованных изображений в проекте Watch App с префиксом шины.")
+![](image-images/asset-bus-animation-sml.png "The WatchKitCatalog sample has a series of numbered images in the watch app project with the Bus prefix")
 
-Чтобы отобразить эти изображения в виде анимации, сначала загрузите изображение с помощью `SetImage` с именем префикса, а затем `StartAnimating`вызовите:
+Чтобы отобразить эти изображения в виде анимации, сначала загрузите изображение, используя `SetImage` с именем префикса, а затем вызовите `StartAnimating`:
 
 ```csharp
 animatedImage.SetImage ("Bus");
 animatedImage.StartAnimating ();
 ```
 
-Вызовите `StopAnimating` элемент управления Image, чтобы прерывать цикл анимации:
+Вызовите `StopAnimating` для элемента управления Image, чтобы закончить циклическую анимацию:
 
 ```csharp
 animatedImage.StopAnimating ();
@@ -95,14 +95,14 @@ animatedImage.StopAnimating ();
 
 <a name="cache" />
 
-## <a name="appendix-caching-images-watchos-1"></a>Приложение. Кэширование образов (watchOS 1)
+## <a name="appendix-caching-images-watchos-1"></a>Приложение. кэширование образов (watchOS 1)
 
 > [!IMPORTANT]
 > приложения watchOS 3 выполняются на устройстве полностью. Следующая информация предназначена только для приложений watchOS 1.
 
 Если приложение многократно использует образ, хранящийся в расширении (или загружен), можно кэшировать образ в хранилище контрольных значений, чтобы повысить производительность последующих экранов.
 
-Используйте метод `AddCachedImage` `SetImage` s для передачи изображения в контрольное значение, а затем используйте параметр с именем Image в качестве строки для его вывода: `WKInterfaceDevice`
+Используйте метод `WKInterfaceDevice`s `AddCachedImage` для передачи изображения в контрольное значение, а затем используйте `SetImage` с параметром имени образа в качестве строки для его вывода:
 
 ```csharp
 var device = WKInterfaceDevice.CurrentDevice;
@@ -120,9 +120,9 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 ### <a name="managing-the-cache"></a>Управление кэшем
 
-Кэш размером около 20 МБ. Он хранится в перезапусках приложения, и когда оно заполняется, вы обязаны очищать файлы с помощью `RemoveCachedImage` методов или `RemoveAllCachedImages` для `WKInterfaceDevice.CurrentDevice` объекта.
+Кэш размером около 20 МБ. Он хранится в перезапусках приложения, и когда оно заполняется, вы обязаны очищать файлы с помощью `RemoveCachedImage` или `RemoveAllCachedImages` методов для объекта `WKInterfaceDevice.CurrentDevice`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Ватчкиткаталог (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Документ с изображением Apple](https://developer.apple.com/documentation/watchkit/wkinterfaceimage)

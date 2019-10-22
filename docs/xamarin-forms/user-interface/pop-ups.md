@@ -1,36 +1,34 @@
 ---
 title: Отображать всплывающие окна
-description: 'В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. В этой статье показано использование API-интерфейсов предупреждений и листов действий для вывода диалоговых окон с простыми вопросами и руководством пользователей по задачам.'
+description: Xamarin. Forms предоставляет три всплывающих элемента пользовательского интерфейса — оповещение, лист действий и запрос. В этой статье демонстрируется использование API предупреждений, листов действий и интерфейсов командной строки для вывода диалоговых окон, предлагающих пользователям простые вопросы, помогающие пользователям выполнять задачи и выводить запросы.
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 3b6b2ea2d497c9fdce2c323c7f7a793a4186aa4f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 09/25/2019
+ms.openlocfilehash: ddf0b96295f7153803db65a1fd741cc5df473730
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656114"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697091"
 ---
 # <a name="display-pop-ups"></a>Отображать всплывающие окна
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-_В Xamarin.Forms существует два всплывающих элемента пользовательского интерфейса: предупреждение и лист действий. В этой статье показано использование API-интерфейсов предупреждений и листов действий для вывода диалоговых окон с простыми вопросами и руководством пользователей по задачам._
-
-Вывод предупреждения или вариантов на выбор — стандартная задача в пользовательском интерфейсе. В Xamarin.Forms есть два метода, относящихся к классу [`Page`](xref:Xamarin.Forms.Page), для взаимодействия с пользователем посредством всплывающих элементов: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) и [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). Эти элементы визуализируются на каждой платформе с помощью соответствующих собственных элементов управления.
+Отображение предупреждения, предоставление пользователю возможности выбора или отображение запроса — это обычная задача пользовательского интерфейса. Xamarin. Forms содержит три метода [`Page`](xref:Xamarin.Forms.Page) класса для взаимодействия с пользователем через всплывающее окно: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)и `DisplayPromptAsync`. Эти элементы визуализируются на каждой платформе с помощью соответствующих собственных элементов управления.
 
 ## <a name="display-an-alert"></a>Отображение оповещений
 
 На всех платформах, поддерживаемых Xamarin.Forms, есть модальный всплывающий элемент, позволяющий выводить предупреждения или задавать простые вопросы пользователю. Для вывода предупреждений в Xamarin.Forms используйте метод [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) на любой странице [`Page`](xref:Xamarin.Forms.Page). Следующая строка отображает простое сообщение:
 
 ```csharp
-DisplayAlert ("Alert", "You have been alerted", "OK");
+await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![](pop-ups-images/alert.png "Диалоговое окно предупреждения с одной кнопкой")
+![](pop-ups-images/alert.png "Alert Dialog with One Button")
 
 В этом примере не предполагается получение сведений от пользователя. Предупреждение отображается в модальном режиме, и после его закрытия пользователь продолжает работать с приложением.
 
@@ -44,7 +42,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayAlert](pop-ups-images/alert2-sml.png "Диалоговое окно предупреждения с двумя кнопками")](pop-ups-images/alert2.png#lightbox "Диалоговое окно предупреждения с двумя кнопками")
+[![дисплайалерт](pop-ups-images/alert2-sml.png "Диалоговое окно предупреждения с двумя кнопками")](pop-ups-images/alert2.png#lightbox "Диалоговое окно предупреждения с двумя кнопками")
 
 ## <a name="guide-users-through-tasks"></a>Рекомендации для пользователей по задачам
 
@@ -60,7 +58,7 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![](pop-ups-images/action.png "Диалоговое окно с листом действий")
+![](pop-ups-images/action.png "ActionSheet Dialog")
 
 Кнопка `destroy` отрисовывается не так, как другие. Ее можно оставить со значением `null` или указать в качестве третьего строкового параметра. В следующем примере используется кнопка `destroy`.
 
@@ -72,7 +70,45 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayActionSheet](pop-ups-images/action2-sml.png "Диалоговое окно с листом действий и кнопкой удаления")](pop-ups-images/action2.png#lightbox "Диалоговое окно с листом действий и кнопкой удаления")
+[![дисплайактионшит](pop-ups-images/action2-sml.png "Диалоговое окно листа действий с кнопкой "уничтожить"")](pop-ups-images/action2.png#lightbox "Диалоговое окно листа действий с кнопкой "уничтожить"")
+
+## <a name="display-a-prompt"></a>Отображение запроса
+
+Чтобы отобразить запрос, вызовите `DisplayPromptAsync` в любом [`Page`](xref:Xamarin.Forms.Page), передав заголовок и сообщение в качестве `string` аргументов:
+
+```csharp
+string result = await DisplayPromptAsync("Question 1", "What's your name?");
+```
+
+Запрос отображается в модальном виде:
+
+[![Снимок экрана: модальная строка в iOS и Android](pop-ups-images/simple-prompt.png "Модальная строка")](pop-ups-images/simple-prompt-large.png#lightbox "Модальная строка")
+
+Если нажата кнопка ОК, то возвращенный ответ возвращается в виде `string`. Если нажата кнопка Отмена, возвращается `null`.
+
+Полный список аргументов для метода `DisplayPromptAsync`:
+
+- `title` типа `string` — это заголовок, отображаемый в командной строке.
+- `message` типа `string` — это сообщение, отображаемое в командной строке.
+- `accept` типа `string` — это текст кнопки Accept. Это необязательный аргумент, значение по умолчанию которого — ОК.
+- `cancel` типа `string` — это текст кнопки Отмена. Это необязательный аргумент, значение по умолчанию которого — Cancel.
+- `placeholder` типа `string` — это текст заполнителя, отображаемый в командной строке. Это необязательный аргумент, значение по умолчанию которого — `null`.
+- `maxLength` типа `int` — это максимальная длина ответа пользователя. Это необязательный аргумент, значение по умолчанию которого равно-1.
+- `keyboard` типа `Keyboard` — это тип клавиатуры, используемый для ответа пользователя. Это необязательный аргумент, значение по умолчанию которого — `Keyboard.Default`.
+
+В следующем примере показано задание некоторых необязательных аргументов:
+
+```csharp
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+}
+```
+
+Этот код ограничивает число символов, которое может быть введено равным 2, и отображает числовую клавиатуру для ввода данных пользователем:
+
+[![Снимок экрана: модальная строка в iOS и Android](pop-ups-images/keyboard-prompt.png "Модальная строка")](pop-ups-images/keyboard-prompt-large.png#lightbox "Модальная строка")
+
+> [!NOTE]
+> В настоящее время метод `DisplayPromptAsync` реализован только в iOS и Android.
 
 ## <a name="related-links"></a>Связанные ссылки
 

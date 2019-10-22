@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: e77dc003e3786767f873e71514ebb3b7aef8c8d6
-ms.sourcegitcommit: 8f78139333aa54d9247710008bcfae15f7fd5392
+ms.openlocfilehash: 25ddbea75d0fd6858f848499281da5d5f0b68171
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583549"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697189"
 ---
 # <a name="xamarinforms-device-class"></a>Класс устройств Xamarin. Forms
 
@@ -154,18 +154,6 @@ someLabel.FontSize = Device.OnPlatform (
       Device.GetNamedSize (NamedSize.Large, someLabel)
 );
 ```
-
-## <a name="deviceopenuri"></a>Device. Опенури
-
-Метод `OpenUri` можно использовать для активации операций на базовой платформе, таких как открытие URL-адреса в собственном веб-браузере (**Safari** в iOS или **Интернете** в Android).
-
-```csharp
-Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
-```
-
-[Пример WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) включает пример использования `OpenUri` для открытия URL-адресов, а также для вызова телефонных звонков.
-
-В [примере Maps](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) также используется `Device.OpenUri` для показа карт и направлений с помощью приложений собственных **карт** в iOS и Android.
 
 ## <a name="devicestarttimer"></a>Device. Старттимер
 

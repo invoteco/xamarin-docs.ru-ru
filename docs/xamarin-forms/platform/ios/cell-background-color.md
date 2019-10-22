@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68651374"
 ---
 # <a name="cell-background-color-on-ios"></a>Цвет фона ячейки в iOS
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Эта платформа iOS задает цвет фона по умолчанию для [`Cell`](xref:Xamarin.Forms.Cell) экземпляров. Он используется в XAML путем установки `Cell.DefaultBackgroundColor` свойства [`Color`](xref:Xamarin.Forms.Color)BIND в значение:
+Эта платформа iOS задает цвет фона по умолчанию для экземпляров [`Cell`](xref:Xamarin.Forms.Cell) . Он используется в XAML путем установки для свойства `Cell.DefaultBackgroundColor` BIND значения [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...
@@ -41,7 +41,7 @@ ms.locfileid: "68651374"
 </ContentPage>
 ```
 
-Кроме того его можно будет использовать с помощью C# с помощью текучего API:
+Кроме того, его можно использовать с C# помощью API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -52,14 +52,14 @@ var viewCell = new ViewCell { View = ... };
 viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 ```
 
-`ListView.On<iOS>` Метод указывает, что этой платформы будет выполняться только на устройствах iOS. Метод в пространстве имен задает для цвета фона ячейки указанный [`Color`](xref:Xamarin.Forms.Color)объект. [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) `Cell.SetDefaultBackgroundColor` Кроме того, `Cell.DefaultBackgroundColor` метод можно использовать для получения текущего цвета фона ячейки.
+Метод `ListView.On<iOS>` указывает, что эта платформа будет запускаться только в iOS. Метод `Cell.SetDefaultBackgroundColor` в пространстве имен [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) задает цвет фона ячейки указанным [`Color`](xref:Xamarin.Forms.Color). Кроме того, можно использовать метод `Cell.DefaultBackgroundColor` для получения текущего цвета фона ячейки.
 
-В результате в качестве цвета фона в [`Cell`](xref:Xamarin.Forms.Cell) можно задать определенное [`Color`](xref:Xamarin.Forms.Color)значение:
+В результате цвет фона в [`Cell`](xref:Xamarin.Forms.Cell) может быть задан для определенного [`Color`](xref:Xamarin.Forms.Color):
 
 [![Снимок экрана: ячейки заголовка синего группы в iOS](cell-background-color-images/group-header-cell-color.png "ListView с синей ячейкой заголовка группы")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView с синей ячейкой заголовка группы")
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ПлатформспеЦификс (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Создание особенностей платформы](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API ИосспеЦифик](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

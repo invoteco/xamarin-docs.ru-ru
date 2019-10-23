@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 807f0b7b2969d9f1039beb1a7ec7d535be5c84dc
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277418"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678735"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -33,11 +33,11 @@ ms.locfileid: "67277418"
     Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). По умолчанию `Grid` помещает свои дочерние представления в одном месте. Таким образом, `Grid`, который содержит несколько дочерних элементов, должен указывать столбцы и строки, которые будут рассматриваться в следующем упражнении. Кроме того, свойство [`Margin`](xref:Xamarin.Forms.View.Margin) указывает позицию отрисовки `Grid` в [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
     > [!NOTE]
-    > В дополнение к свойству [`Margin`](xref:Xamarin.Forms.View.Margin), у [`Grid`](xref:Xamarin.Forms.Grid) также можно установить свойство [`Padding`](xref:Xamarin.Forms.Layout.Padding). Значение свойства [`Padding`](xref:Xamarin.Forms.Layout.Padding) задает расстояние между представлениями в `Grid`. Дополнительные сведения см. в статье [Поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+    > В дополнение к свойству [`Margin`](xref:Xamarin.Forms.View.Margin), у [`Grid`](xref:Xamarin.Forms.Grid) также можно установить свойство [`Padding`](xref:Xamarin.Forms.Layout.Padding). Значение свойства [`Padding`](xref:Xamarin.Forms.Layout.Padding) указывает расстояние между границами `Grid` и его дочерних элементов. Дополнительные сведения см. в статье [Поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 1. На панели инструментов Visual Studio нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана с меткой в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая меткуs")
+    [![Снимок экрана: метка в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая меткуs")
 
     Дополнительные сведения о [`Grid`](xref:Xamarin.Forms.Grid) см. в статье [Сетка Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -70,8 +70,8 @@ ms.locfileid: "67277418"
     > [!NOTE]
     > В дополнение к свойству [`Margin`](xref:Xamarin.Forms.View.Margin), у [`Grid`](xref:Xamarin.Forms.Grid) также можно установить свойство [`Padding`](xref:Xamarin.Forms.Layout.Padding). Значение свойства [`Padding`](xref:Xamarin.Forms.Layout.Padding) задает расстояние между представлениями в `Grid`. Дополнительные сведения см. в статье [Поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана с меткой в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая меткуs")
+    [![Снимок экрана: метка в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая меткуs")
 
     Дополнительные сведения о [`Grid`](xref:Xamarin.Forms.Grid) см. в статье [Сетка Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

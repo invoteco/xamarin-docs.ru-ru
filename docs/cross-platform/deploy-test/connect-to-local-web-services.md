@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: a29cc650d9aa3976b6fd7aaaa82e233317684335
-ms.sourcegitcommit: 20c645f41620d5124da75943de1b690261d00660
+ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
+ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72426563"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526816"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Подключение к локальным веб-службам из iOS Simulator и Android Emulator
 
@@ -27,7 +27,7 @@ ms.locfileid: "72426563"
 Но приложению, выполняемому в iOS Simulator или Android Emulator, нужна доработка, чтобы оно могло использовать локальную веб-службу, предоставляемую по протоколу HTTPS. В этом сценарии процесс выглядит следующим образом:
 
 1. Создайте самозаверяющий сертификат разработки на своем компьютере. Дополнительные сведения см. в разделе [Создание сертификата разработки](#create-a-development-certificate).
-1. Настройте проект на использование управляемого сетевого стека `HttpClient` для отладочной сборки. Дополнительные сведения см. в разделе [Настройка проекта](#configure-your-project).
+1. Настройте проект на использование соответствующего сетевого стека `HttpClient` для отладочной сборки. Дополнительные сведения см. в разделе [Настройка проекта](#configure-your-project).
 1. Укажите адрес своего локального компьютера. Дополнительные сведения см. в разделе [Указание адреса локального компьютера](#specify-the-local-machine-address).
 1. Выполните обход проверки безопасности сертификата разработки. Дополнительные сведения см. в разделе [Обход проверки безопасности сертификата](#bypass-the-certificate-security-check).
 
@@ -66,7 +66,7 @@ dotnet dev-certs https --help
 
 ### <a name="android"></a>Android
 
-Приложения Xamarin под управлением Android могут использовать управляемый сетевой стек `HttpClientHandler` или собственный сетевой стек `AndroidClientHandler`. По умолчанию новые проекты для платформы Android используют сетевой стек `AndroidClientHandler` для поддержки протокола TLS 1.2 и собственные API для повышения производительности и уменьшения размера исполняемого файла. Дополнительные сведения о сетевых стеках Android см. в статье [Стек HttpClient и селектор реализации SSL/TLS для Android](~/android/app-fundamentals/http-stack.md).
+Приложения Xamarin под управлением Android могут использовать управляемый сетевой стек `HttpClient` или собственный сетевой стек `AndroidClientHandler`. По умолчанию новые проекты для платформы Android используют сетевой стек `AndroidClientHandler` для поддержки протокола TLS 1.2 и собственные API для повышения производительности и уменьшения размера исполняемого файла. Дополнительные сведения о сетевых стеках Android см. в статье [Стек HttpClient и селектор реализации SSL/TLS для Android](~/android/app-fundamentals/http-stack.md).
 
 ## <a name="specify-the-local-machine-address"></a>Указание адреса локального компьютера
 

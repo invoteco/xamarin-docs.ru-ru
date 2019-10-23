@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ea10a3cc4eca0708d1de1aee68bed74c960cbc2
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.openlocfilehash: 80688c0796a112bcb444a15cd96a6b176b8c16e0
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67560018"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72715244"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -15,7 +15,7 @@ ms.locfileid: "67560018"
     > [!IMPORTANT]
     > Для фрагментов кода на C# и XAML в этом руководстве необходимо решение с именем **StackLayoutTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/quickstarts/deepdive.md#anatomy-of-a-xamarinforms-application) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/quickstarts/deepdive.md).
 
 1. В **обозревателе решений** в проекте **StackLayoutTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
 
@@ -37,9 +37,9 @@ ms.locfileid: "67560018"
     > [!NOTE]
     > В дополнение к свойству [`Margin`](xref:Xamarin.Forms.View.Margin), свойства [`Padding`](xref:Xamarin.Forms.Layout.Padding) и [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) также могут быть установлены на [`StackLayout`](xref:Xamarin.Forms.StackLayout). Значение свойства [`Padding`](xref:Xamarin.Forms.Layout.Padding) задает расстояние между представлениями в `StackLayout`, а значение свойства [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) задает объем пространства между каждым дочерним элементом в `StackLayout`. Дополнительные сведения см. в статье [Поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана дочерних представлений в StackLayout на iOS и Android](../images/create-stacklayout.png "StackLayout, содержащая экземпляры Label")](../images/create-stacklayout-large.png#lightbox "StackLayout, содержащая экземпляры Label")
+    [![Снимок экрана: дочерние представления в StackLayout в iOS и Android](../images/create-stacklayout.png "StackLayout, содержащий экземпляры метки")](../images/create-stacklayout-large.png#lightbox "StackLayout, содержащий экземпляры метки")
 
     Дополнительные сведения о [`StackLayout`](xref:Xamarin.Forms.StackLayout) см. в статье [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "67560018"
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана дочерних представлений в StackLayout на iOS и Android](../images/create-stacklayout.png "StackLayout, содержащая экземпляры Label")](../images/create-stacklayout-large.png#lightbox "StackLayout, содержащая экземпляры Label")
+    [![Снимок экрана: дочерние представления в StackLayout в iOS и Android](../images/create-stacklayout.png "StackLayout, содержащий экземпляры метки")](../images/create-stacklayout-large.png#lightbox "StackLayout, содержащий экземпляры метки")
 
     Дополнительные сведения о [`StackLayout`](xref:Xamarin.Forms.StackLayout) см. в статье [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
 

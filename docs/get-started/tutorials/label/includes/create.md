@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ec74a049adaa72010bf0566691e4d1f066058d4a
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277414"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678734"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,11 +31,11 @@ ms.locfileid: "67277414"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Button.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что текст будет выравниваться по горизонтали по центру.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Button.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что `Label` будет выравниваться по горизонтали по центру.
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана метки, выровненной по центру, в iOS и Android](../images/create-label.png "Метка по центру")](../images/create-label-large.png#lightbox "Метка по центру")
+    [![Снимок экрана: выровненная по центру метка в сетке в iOS и Android](../images/create-label.png "Выровненная по центру метка")](../images/create-label-large.png#lightbox "Выровненная по центру метка")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -64,6 +64,6 @@ ms.locfileid: "67277414"
 
     Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Button.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что текст будет выравниваться по горизонтали по центру.
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана метки, выровненной по центру, в iOS и Android](../images/create-label.png "Метка по центру")](../images/create-label-large.png#lightbox "Метка по центру")
+    [![Снимок экрана: выровненная по центру метка в сетке в iOS и Android](../images/create-label.png "Выровненная по центру метка")](../images/create-label-large.png#lightbox "Выровненная по центру метка")

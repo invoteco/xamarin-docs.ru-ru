@@ -43,6 +43,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: button.md
             title: Кнопка
+          - href: carouselview/index.md
+            html: Сведения о представлении данных в макете линейной карусели с помощью CarouselView.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: collectionview/index.md
+            title: CarouselView
           - href: checkbox.md
             html: Сведения о задании логического значения с помощью CheckBox.
             image:
@@ -74,7 +80,7 @@ sections:
               href: datepicker.md
             title: DatePicker
           - href: pop-ups.md
-            html: 'Сведения о том, как отображать диалоговые окна, задающие пользователям простые вопросы и помогающие им выполнять определенные задачи.'
+            html: 'Сведения о том, как отображать диалоговые окна, задающие пользователям простые вопросы, помогающие им выполнять определенные задачи и выводящие запросы.'
             image:
               src: ~/media/icons/i_user-interface.svg
               href: pop-ups.md
@@ -109,11 +115,11 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: listview/index.md
             title: ListView
-          - href: map.md
+          - href: map/index.md
             html: 'Сведения об использовании элемента управления Map, включая настройку платформы и заполнение карты отметками.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: map.md
+              href: map/index.md
             title: Карты
           - href: menuitem.md
             html: 'Узнайте, как использовать класс MenuItem для добавления элементов в контекстное меню ячеек ListView.'
@@ -133,6 +139,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: progressbar.md
             title: ProgressBar
+          - href: refreshview.md
+            html: 'Сведения об использовании RefreshView, предоставляющего функцию "Потяните, чтобы обновить" для прокручиваемого содержимого.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: refreshview.md
+            title: RefreshView
           - href: searchbar.md
             html: Сведения о поиске с помощью элемента управления SearchBar.
             image:

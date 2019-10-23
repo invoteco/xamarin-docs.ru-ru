@@ -200,6 +200,7 @@
 #### [Инициализация и настройка](user-interface/map/index.md)
 #### [Закрепления](user-interface/map/pins.md)
 #### [Многоугольники и ломаные линии](user-interface/map/polygons.md)
+#### [Геокодирование](user-interface/map/geocoder.md)
 ### [MenuItem](user-interface/menuitem.md)
 ### [Средство выбора](user-interface/picker/index.md)
 #### [Задание свойства ItemsSource средства выбора](user-interface/picker/populating-itemssource.md)

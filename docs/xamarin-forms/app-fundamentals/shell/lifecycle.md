@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/25/2019
-ms.openlocfilehash: c008cc29d2ceae073459766597040af653329d71
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2ed51763b5866c15e91d88a6a1a58c7285fb5973
+ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893960"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749768"
 ---
 # <a name="xamarinforms-shell-lifecycle"></a>Жизненный цикл оболочки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Приложения оболочки учитывают жизненный цикл Xamarin.Forms, и событие `Appearing` возникает, когда страница собирается отображаться на экране, а событие `Disappearing` возникает, когда страница собирается исчезнуть с экрана. Эти события распространяются на страницы и могут быть обработаны путем переопределения методов [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) или [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) на странице.
 
@@ -39,6 +39,6 @@ ms.locfileid: "69893960"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Xaminals (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Жизненный цикл приложения Xamarin.Forms](~/xamarin-forms/app-fundamentals/app-lifecycle.md)
 - [Модальные страницы Xamarin.Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md)

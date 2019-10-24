@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 94a537c88f28971bf7f2778f33a35e4c251afd38
-ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
+ms.openlocfilehash: 98def647c38f69ec4f942a06e2187841c4e04459
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72424846"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697166"
 ---
 # <a name="customizing-a-map-pin"></a>Настройка закрепления карты
 
@@ -35,7 +35,7 @@ _В этой статье содержатся сведения о создан�
 Далее мы рассмотрим каждый элемент отдельно в целях реализации отрисовщика `CustomMap`, который отображает собственную карту с настраиваемым закреплением, а также настраиваемое представление закрепленных данных на каждой платформе.
 
 > [!NOTE]
-> Перед использованием необходимо инициализировать и настроить [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps). Дополнительные сведения см. на веб-сайте [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> Перед использованием необходимо инициализировать и настроить [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps). Дополнительные сведения см. на веб-сайте [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
 
 <a name="Creating_the_Custom_Map" />
 
@@ -654,7 +654,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Элемент управления Maps](~/xamarin-forms/user-interface/map.md)
+- [Элемент управления Maps](~/xamarin-forms/user-interface/map/index.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [API карт](~/android/platform/maps-and-location/maps/maps-api.md)
 - [Настраиваемое закрепление (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: 7aa0c5833682518b02fca9fe73a9f69b168e60eb
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.openlocfilehash: 051bbc1732dc1b074d27080f74621a57a80aaaa4
+ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696965"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749819"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Макет Карауселвиев Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет следующие свойства, управляющие макетом.
 
@@ -290,6 +290,6 @@ void OnImageTapped(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Карауселвиев (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+- [Карауселвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Локализация справа налево](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Прокрутка Xamarin. Forms Карауселвиев](scrolling.md)

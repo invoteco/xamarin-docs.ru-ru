@@ -7,52 +7,54 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: b361bc988b66d38fc33ceb866a2c5ec83153f8d0
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 0812347e85b0ccb6aa0bbb16649a89bb4d961c9b
+ms.sourcegitcommit: a14edebf00f3e0f8944e59042ca7aa5c42173e30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200012"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72780354"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Тулбаритем Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
-Класс Xamarin. Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) — это специальный тип кнопки, который можно добавить `Page` в `ToolbarItems` коллекцию объекта. Каждый `ToolbarItem` объект будет отображаться в виде кнопки на панели навигации приложения. `ToolbarItem` Экземпляр может иметь значок и отображаться как первичный или вторичный элемент меню. Класс наследует от [`MenuItem`.](xref:Xamarin.Forms.MenuItem) `ToolbarItem`
+Класс [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Xamarin. Forms — это специальный тип кнопки, который можно добавить в коллекцию `ToolbarItems` объекта `Page`. Каждый объект `ToolbarItem` будет отображаться в виде кнопки на панели навигации приложения. Экземпляр `ToolbarItem` может иметь значок и отображаться как первичный или вторичный элемент меню. Класс `ToolbarItem` наследует от [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
-На следующих снимках `ToolbarItem` экрана показаны объекты на панели навигации в iOS и Android:
+На следующих снимках экрана показаны `ToolbarItem` объекты на панели навигации в iOS и Android:
 
-!["Демонстрационный снимок экрана тулбаритем на Android и iOS"](toolbaritem-images/toolbaritem-device-screenshot.png "Демонстрационный снимок экрана тулбаритем на устройствах Android и iOS")
+!["Демонстрационный снимок экрана Тулбаритем на Android и iOS"](toolbaritem-images/toolbaritem-device-screenshot.png "Демонстрационный снимок экрана Тулбаритем на устройствах Android и iOS")
 
-`ToolbarItem` Класс определяет следующие свойства:
+Класс `ToolbarItem` определяет следующие свойства:
 
-* [`Order`](xref:Xamarin.Forms.ToolbarItem.Order)значение перечисления, которое определяет, отображается `ToolbarItem` ли экземпляр в основном или дополнительном меню. `ToolbarItemOrder`
-* [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority)значение, определяющее порядок вывода элементов `Page` в `ToolbarItems` коллекции объекта. `integer`
+* [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) — это `ToolbarItemOrder` перечислимое значение, которое определяет, отображается ли экземпляр `ToolbarItem` в главном или дополнительном меню.
+* [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority) — это `integer` значение, определяющее порядок вывода элементов в коллекции `ToolbarItems` `Page` объекта.
 
-Класс наследует следующие свойства, `MenuItem` обычно используемые из класса: `ToolbarItem`
+Класс `ToolbarItem` наследует следующие свойства, обычно используемые классом `MenuItem`:
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command)— Это `ICommand` , которое позволяет привязать пользовательские действия, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)аргумент, указывающий параметр, который должен быть передан в `Command`. `object`
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)значение, определяющее значок `ToolbarItem` вывода объекта. `ImageSource`
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text)значение типа `string` , определяющее отображаемый текст `ToolbarItem` объекта.
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command) — это `ICommand`, который позволяет привязать действия пользователя, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) — это `object`, указывающий параметр, который должен быть передан `Command`.
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) — это `ImageSource` значение, определяющее значок вывода объекта `ToolbarItem`.
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text) — это `string`, который определяет отображаемый текст объекта `ToolbarItem`.
 
-Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, `ToolbarItem` поэтому экземпляр может быть целевым объектом привязок данных.
+Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, поэтому экземпляр `ToolbarItem` может быть целевым объектом привязок данных.
 
 > [!NOTE]
-> Альтернативой созданию панели инструментов из [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) объектов является [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) присвоение присоединенному свойству класса макета, содержащего несколько представлений. Дополнительные сведения см. [в разделе Отображение представлений на панели навигации](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md#displaying-views-in-the-navigation-bar).
+> Альтернативой созданию панели инструментов из [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) объектов является установка [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) присоединенным свойством класса макета, который содержит несколько представлений. Дополнительные сведения см. [в разделе Отображение представлений на панели навигации](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md#displaying-views-in-the-navigation-bar).
 
 ## <a name="create-a-toolbaritem"></a>Создание Тулбаритем
 
-Экземпляр `ToolbarItem` объекта можно создать на языке XAML. Свойства `Text` и`IconImageSource` можно задать, чтобы определить способ отображения кнопки на панели навигации. В следующем примере показано, как создать экземпляр `ToolbarItem` с некоторыми наборами общих свойств:
+В XAML можно создать экземпляр объекта `ToolbarItem`. Свойства `Text` и `IconImageSource` можно задать, чтобы определить способ отображения кнопки на панели навигации. В следующем примере показано, как создать экземпляр `ToolbarItem` с заданными общими свойствами и добавить его в коллекцию `ToolbarItems` `ContentPage`.
 
 ```xaml
-<ToolbarItem Text="Example Item"
-             IconImageSource="example_icon.png"
-             Order="Primary"
-             Priority="0" />
+<ContentPage.ToolbarItems>
+    <ToolbarItem Text="Example Item"
+                 IconImageSource="example_icon.png"
+                 Order="Primary"
+                 Priority="0" />
+</ContentPage.ToolbarItems>
 ```
 
-В этом примере создается `ToolbarItem` объект, который содержит текст, значок и отображается первым в области основной панели навигации. Можно также создать в коде и добавить `ToolbarItems` в коллекцию: `ToolbarItem`
+В этом примере создается объект `ToolbarItem`, который содержит текст, значок и отображается первым в области основной панели навигации. @No__t_0 также можно создать в коде и добавить в коллекцию `ToolbarItems`:
 
 ```csharp
 ToolbarItem item = new ToolbarItem
@@ -67,14 +69,14 @@ ToolbarItem item = new ToolbarItem
 this.ToolbarItems.Add(item);
 ```
 
-Файл, представленный, `string`предоставленный в `IconImageSource` качестве свойства, должен существовать в каждом проекте платформы.
+Файл, представленный `string`, предоставленный в качестве свойства `IconImageSource`, должен существовать в каждом проекте платформы.
 
 > [!NOTE]
-> Ресурсы изображений обрабатываются по-разному на каждой платформе. `ImageSource` Может поступать из источников, включая локальный файл или внедренный ресурс, универсальный код ресурса (URI) или поток. Дополнительные сведения о настройке `IconImageSource` свойств и изображений в Xamarin. Forms см. в разделе [изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md).
+> Ресурсы изображений обрабатываются по-разному на каждой платформе. @No__t_0 может поступать из источников, включая локальный файл или внедренный ресурс, универсальный код ресурса (URI) или поток. Дополнительные сведения о настройке свойства `IconImageSource` и изображений в Xamarin. Forms см. в разделе [изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md).
 
 ## <a name="define-button-behavior"></a>Определение поведения кнопки
 
-Класс наследует `Clicked` событие от `MenuItem` класса. `ToolbarItem` Обработчик событий может быть присоединен к `Clicked` событию, чтобы реагировать на касания или на `ToolbarItem` экземпляры в XAML:
+Класс `ToolbarItem` наследует событие `Clicked` из класса `MenuItem`. Обработчик событий может быть присоединен к событию `Clicked`, чтобы реагировать на касания или на экземпляры `ToolbarItem` в XAML:
 
 ```xaml
 <ToolbarItem ...
@@ -88,7 +90,7 @@ ToolbarItem item = new ToolbarItem { ... }
 item.Clicked += OnItemClicked;
 ```
 
-В `OnItemClicked` предыдущих примерах указан обработчик событий. В следующем коде показан пример реализации:
+В предыдущих примерах был указан обработчик событий `OnItemClicked`. В следующем коде показан пример реализации:
 
 ```csharp
 void OnItemClicked(object sender, EventArgs e)
@@ -98,22 +100,22 @@ void OnItemClicked(object sender, EventArgs e)
 }
 ```
 
-`ToolbarItem`объекты также могут использовать `Command` свойства и `CommandParameter` для реагирования на ввод пользователя без обработчиков событий. Дополнительные сведения об `ICommand` интерфейсе и привязке данных MVVM см. в разделе [поведение MVVM в Xamarin. Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
+`ToolbarItem` объекты также могут использовать свойства `Command` и `CommandParameter`, чтобы реагировать на ввод пользователя без обработчиков событий. Дополнительные сведения о `ICommand` интерфейсе и привязке данных MVVM см. в разделе [поведение MVVM в элементе меню Xamarin. Forms](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
 ## <a name="primary-and-secondary-menus"></a>Главное и дополнительное меню
 
-Перечисление `Default`имеет `Primary`значения, `Secondary`и. `ToolbarItemOrder`
+Перечисление `ToolbarItemOrder` имеет значения `Default`, `Primary` и `Secondary`.
 
-Если свойство имеет `Primary`значение, `ToolbarItem` объект будет отображаться на главной панели навигации на всех платформах. `Order` `ToolbarItem`объекты имеют приоритет над заголовком страницы, который будет обрезан, чтобы освободить место для элементов. На следующих снимках `ToolbarItem` экрана показаны объекты в основном меню iOS и Android:
+Если свойство `Order` имеет значение `Primary`, то объект `ToolbarItem` будет отображаться на главной панели навигации на всех платформах. `ToolbarItem` объекты имеют приоритет над заголовком страницы, который будет обрезан, чтобы освободить место для элементов. На следующих снимках экрана показаны `ToolbarItem` объекты в основном меню iOS и Android:
 
-![Снимок экрана "первичное меню тулбаритем для Android и iOS"](toolbaritem-images/toolbaritem-primary-menu.png "Снимок экрана основного меню тулбаритем на устройствах Android и iOS")
+![Снимок экрана "первичное меню Тулбаритем для Android и iOS"](toolbaritem-images/toolbaritem-primary-menu.png "Снимок экрана основного меню Тулбаритем на устройствах Android и iOS")
 
-Если свойство имеет `Secondary`значение, поведение зависит от разных платформ. `Order` В UWP и Android меню `Secondary` Items (элементы) отображается в виде трех точек, которые можно коснуться или щелкнуть для отображения элементов в вертикальном списке. В iOS меню `Secondary` Items (элементы) отображается под панелью навигации в виде горизонтального списка. На следующих снимках экрана показано дополнительное меню в iOS и Android:
+Если свойство `Order` имеет значение `Secondary`, поведение зависит от разных платформ. В UWP и Android меню `Secondary` элементы отображается в виде трех точек, которые можно коснуться или щелкнуть для отображения элементов в вертикальном списке. В iOS меню `Secondary` Items (элементы) отображается под панелью навигации в виде горизонтального списка. На следующих снимках экрана показано дополнительное меню в iOS и Android:
 
-![Снимок экрана "тулбаритем-дополнительное меню" для Android и iOS "](toolbaritem-images/toolbaritem-secondary-menu.png "Снимок экрана дополнительного меню тулбаритем в Android и iOS")
+![Снимок экрана "Тулбаритем-дополнительное меню" для Android и iOS "](toolbaritem-images/toolbaritem-secondary-menu.png "Снимок экрана дополнительного меню Тулбаритем в Android и iOS")
 
 > [!WARNING]
-> Поведение значка `ToolbarItem` в объектах, `Order` для `Secondary` которых задано свойство, не согласовано на разных платформах. Не устанавливайте `IconImageSource` свойство для элементов, отображаемых во вторичном меню.
+> Поведение значков в `ToolbarItem` объектах, свойство `Order` которых имеет значение `Secondary`, не согласовано на разных платформах. Не устанавливайте свойство `IconImageSource` для элементов, отображаемых во вторичном меню.
 
 ## <a name="related-links"></a>Связанные ссылки
 

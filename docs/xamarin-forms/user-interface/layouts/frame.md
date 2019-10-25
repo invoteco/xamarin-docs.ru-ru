@@ -22,7 +22,7 @@ ms.locfileid: "69976502"
 
 На следующем снимке экрана показаны `Frame` элементы управления в iOS и Android:
 
-[![ "примеры кадров в iOS и Android"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Примеры кадров в iOS и Android")
+[![примеры кадров в iOS и Android](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Примеры кадров в iOS и Android")
 
 Класс `Frame` определяет следующие свойства:
 
@@ -84,7 +84,7 @@ Frame frame = new Frame
 
 Объединение объекта `Frame` с объектом `Layout`, таким как объект `StackLayout`, позволяет создавать более сложный пользовательский интерфейс. На следующем снимке экрана показан пример карточки, созданной с помощью объекта `Frame`:
 
-[Снимок экрана с картой, созданной с помощью кадра "!["](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Снимок экрана Карты, созданной с помощью кадра")
+[![Снимок экрана с картой, созданной с помощью кадра](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Снимок экрана Карты, созданной с помощью кадра")
 
 В следующем коде XAML показано, как создать карточку с помощью класса `Frame`:
 

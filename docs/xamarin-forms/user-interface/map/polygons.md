@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/20/2019
-ms.openlocfilehash: b45a7af917e9147f519056ee5a9e5d06da51113a
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.openlocfilehash: 42c00a060e0477aff4ea02f6213fa751b2adf4dd
+ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697665"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810495"
 ---
 # <a name="xamarinforms-map-polygons-and-polylines"></a>Геомногоугольники и ломаные линии на карте Xamarin. Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-[![ "демонстрация многоугольников и ломаных линий в iOS и Android"](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
+[!["демонстрация многоугольников и ломаных линий в iOS и Android"](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
 
 элементы `Polygon` и `Polyline` позволяют выделять определенные области на карте. @No__t_0 является полностью замкнутой фигурой, которая может иметь цвет обводки и заливки. @No__t_0 — это линия, которая не полностью заключает в себя область.
 
@@ -40,9 +40,41 @@ ms.locfileid: "72697665"
 
 ## <a name="create-a-polygon"></a>Создание многоугольника
 
-Объект `Polygon` можно добавить в карту, создав его экземпляр и добавив его в коллекцию `MapElements` Map:
+Объект `Polygon` можно добавить в карту, создав его экземпляр и добавив его в коллекцию `MapElements` Map. Это можно сделать в XAML следующим образом:
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+     <maps:Map>
+         <maps:Map.MapElements>
+             <maps:Polygon StrokeColor="#FF9900"
+                           StrokeWidth="8"
+                           FillColor="#88FF9900">
+                 <maps:Polygon.Geopath>
+                     <maps:Position>
+                         <x:Arguments>
+                             <x:Double>47.6368678</x:Double>
+                             <x:Double>-122.137305</x:Double>
+                         </x:Arguments>
+                     </maps:Position>
+                     ...
+                 </maps:Polygon.Geopath>
+             </maps:Polygon>
+         </maps:Map.MapElements>
+     </maps:Map>
+</ContentPage>
+```
+
+Эквивалентный код на C# выглядит так:
 
 ```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map
+{
+  // ...
+};
+
 // instantiate a polygon
 Polygon polygon = new Polygon
 {
@@ -61,32 +93,10 @@ Polygon polygon = new Polygon
         new Position(47.6384943, -122.1361248),
         new Position(47.6372943, -122.1376912)
     }
-}
+};
 
 // add the polygon to the map's MapElements collection
 map.MapElements.Add(polygon);
-```
-
-@No__t_0 также можно создать на языке XAML:
-
-```xaml
-<maps:Map x:Name="map">
-    <maps:Map.MapElements>
-        <maps:Polygon StrokeColor="#FF9900"
-                      StrokeWidth="8"
-                      FillColor="#88FF9900">
-            <maps:Polygon.Geopath>
-                <maps:Position>
-                    <x:Arguments>
-                        <x:Double>47.6368678</x:Double>
-                        <x:Double>-122.137305</x:Double>
-                    </x:Arguments>
-                </maps:Position>
-                ...
-            </maps:Polygon.Geopath>
-        </maps:Polygon>
-    </maps:Map.MapElements>
-</maps:Map>
 ```
 
 Свойства `StrokeColor` и `StrokeWidth` указываются для настройки контура многоугольника. Значение свойства `FillColor` соответствует значению свойства `StrokeColor`, но имеет заданное значение альфа, чтобы сделать его прозрачным, позволяя отображать базовую карту через фигуру. Свойство `GeoPath` содержит список объектов `Position`, определяющих географические координаты точек многоугольника. @No__t_0 объект отображается на карте после добавления в коллекцию `MapElements` `Map`.
@@ -96,9 +106,37 @@ map.MapElements.Add(polygon);
 
 ## <a name="create-a-polyline"></a>Создание ломаной линии
 
-Объект `Polyline` можно добавить в карту, создав его экземпляр и добавив его в коллекцию `MapElements` Map:
+Объект `Polyline` можно добавить в карту, создав его экземпляр и добавив его в коллекцию `MapElements` Map. Это можно сделать в XAML следующим образом:
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+     <maps:Map>
+         <maps:Map.MapElements>
+             <maps:Polyline StrokeColor="Blue"
+                            StrokeWidth="12">
+                 <maps:Polyline.Geopath>
+                     <maps:Position>
+                         <x:Arguments>
+                             <x:Double>47.6381401</x:Double>
+                             <x:Double>-122.1317367</x:Double>
+                         </x:Arguments>
+                     </maps:Position>
+                     ...
+                 </maps:Polyline.Geopath>
+             </maps:Polyline>
+         </maps:Map.MapElements>
+     </maps:Map>
+</ContentPage>
+```
 
 ```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map
+{
+  // ...
+};
 // instantiate a polyline
 Polyline polyline = new Polyline
 {
@@ -123,30 +161,8 @@ Polyline polyline = new Polyline
 map.MapElements.Add(polyline);
 ```
 
-@No__t_0 также можно создать на языке XAML:
-
-```xaml
-<maps:Map x:Name="map">
-    <maps:Map.MapElements>
-        <maps:Polyline StrokeColor="Blue"
-                       StrokeWidth="12">
-            <maps:Polyline.Geopath>
-                <maps:Position>
-                    <x:Arguments>
-                        <x:Double>47.6381401</x:Double>
-                        <x:Double>-122.1317367</x:Double>
-                    </x:Arguments>
-                </maps:Position>
-                ...
-            </maps:Polyline.Geopath>
-        </maps:Polyline>
-    </maps:Map.MapElements>
-</maps:Map>
-```
-
 Свойства `StrokeColor` и `StrokeWidth` указываются для настройки линии. Свойство `GeoPath` содержит список объектов `Position`, определяющих географические координаты точек ломаной линии. @No__t_0 объект отображается на карте после добавления в коллекцию `MapElements` `Map`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример проекта схемы](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Схема Xamarin. Forms](~/xamarin-forms/user-interface/map/index.md)
+- [Пример Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 78288680a1a522b2c6c413e1f8a2cec2a07835d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a6eb3167fd0880984a74245c4653642ea3979354
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656983"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678841"
 ---
 # <a name="right-to-left-localization"></a>Локализация справа налево
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _Локализация справа налево поддерживает направление потока справа налево в приложениях Xamarin.Forms._
 
@@ -32,7 +32,7 @@ _Локализация справа налево поддерживает на�
 
 Установка для свойства [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) значения [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) в элементе в общем случае указывает выравнивание по правому краю, порядок чтения справа налево и поток элементов управления справа налево:
 
-[![TodoItemPage на арабском языке с направлением потока справа налево](rtl-images/TodoItemPage-Arabic.png "TodoItemPage на арабском языке с направлением потока справа налево")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage на арабском языке с направлением потока справа налево")
+[![TodoItemPage на арабском языке с написанием справа налево](rtl-images/TodoItemPage-Arabic.png "TodoItemPage на арабском языке с написанием справа налево")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage на арабском языке с написанием справа налево")
 
 > [!TIP]
 > Сначала свойство [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) следует задать только в начальном макете. Изменение этого значения во время выполнения приводит к ресурсоемкому процессу, который негативно влияет на производительность.
@@ -72,7 +72,7 @@ this.FlowDirection = Device.FlowDirection;
 </array>
 ```
 
-![Поддерживаемые языки в файле Info.plist](rtl-images/ios-locales.png "Поддерживаемые языки в файле Info.plist")
+![Поддерживаемые языки Info.plist](rtl-images/ios-locales.png "Поддерживаемые языки Info.plist")
 
 Подробнее об этом см. в разделе [Основы локализации в iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
 
@@ -145,6 +145,46 @@ using System.Resources;
 - Выравнивание текста [`Editor`](xref:Xamarin.Forms.Editor) определяется языковым стандартом устройства, а не свойством [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - Свойство [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) не наследуется дочерними объектами [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage).
 - Выравнивание текста [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) определяется языковым стандартом устройства, а не свойством [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+
+## <a name="force-right-to-left-layout"></a>Принудительное использование макета с написанием справа налево
+
+В приложениях Xamarin.iOS и Xamarin.Android можно на постоянной основе принудительно использовать макет с написанием справа налево независимо от параметров устройства, изменив соответствующие проекты платформы.
+
+### <a name="ios"></a>iOS
+
+В приложениях Xamarin.iOS можно на постоянной основе принудительно использовать макет с написанием справа налево, изменив класс **AppDelegate** следующим образом:
+
+1. Объявите функцию `IntPtr_objc_msgSend` как первую строку в классе `AppDelegate`:
+
+   ```csharp
+   [System.Runtime.InteropServices.DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
+   internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
+   ```
+
+1. Перед возвратом из метода `FinshedLaunching` вызовите функцию `IntPtr_objc_msgSend` из метода `FinishedLaunching`:
+
+   ```csharp
+   bool result = base.FinishedLaunching(app, options);
+
+   ObjCRuntime.Selector selector = new ObjCRuntime.Selector("setSemanticContentAttribute:");
+   IntPtr_objc_msgSend(UIView.Appearance.Handle, selector.Handle, UISemanticContentAttribute.ForceRightToLeft);
+
+   return result;
+   ```
+
+Такой подход удобен для приложений, которым постоянно требуется макет с написанием справа налево, и устраняет необходимость задавать свойство [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+
+Дополнительные сведения о методе `IntrPtr_objc_msgSend` см. в разделе [Селекторы Objective-C в Xamarin.iOS](~/ios/internals/objective-c-selectors.md).
+
+### <a name="android"></a>Android
+
+В приложениях Xamarin.Android можно на постоянной основе принудительно использовать макет с написанием справа налево, включив в класс **MainActivity** следующую строку:
+
+```csharp
+Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
+```
+
+Такой подход удобен для приложений, которым постоянно требуется макет с написанием справа налево, и устраняет необходимость задавать свойство [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Поддержка языков с направлением потока справа налево с использованием Xamarin.University
 

@@ -6,25 +6,25 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 09/25/2019
+ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739254"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695933"
 ---
 # <a name="xamarinforms-shell-search"></a>Поиск в оболочке Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Оболочка Xamarin.Forms включает встроенные функции поиска, предоставляемые классом `SearchHandler`. Возможность поиска можно добавить на страницу, указав для присоединенного свойства `Shell.SearchHandler` в качестве значения объект подкласса `SearchHandler`. После этого в верхней части страницы появится поле поиска:
 
-[![Снимок экрана с SearchHandler в оболочке для iOS и Android](search-images/searchhandler.png "SearchHandler в оболочке")](search-images/searchhandler-large.png#lightbox "SearchHandler в оболочке")
+[![Снимок экрана: объект SearchHandler оболочки на iOS и Android](search-images/searchhandler.png "Объект SearchHandler оболочки")](search-images/searchhandler-large.png#lightbox "Объект SearchHandler оболочки")
 
 При вводе запроса в поле поиска обновляется свойство `Query`, а при каждом обновлении выполняется метод `OnQueryChanged`. Этот метод может быть переопределен для заполнения данными области поисковых подсказок:
 
-[![Снимок экрана с результатами поиска SearchHandler в оболочке для iOS и Android](search-images/search-suggestions.png "Результаты поиска SearchHandler в оболочке")](search-images/search-suggestions-large.png#lightbox "Результаты поиска SearchHandler в оболочке")
+[![Снимок экрана: результаты поиска в объекте SearchHandler оболочки на iOS и Android](search-images/search-suggestions.png "Результаты поиска в объекте SearchHandler оболочки")](search-images/search-suggestions-large.png#lightbox "Результаты поиска в объекте SearchHandler оболочки")
 
 При выборе результата из области поисковых подсказок выполняется метод `OnItemSelected`. Этот метод может быть переопределен, чтобы вызвать соответствующую реакцию, например переход на страницу подробных сведений.
 
@@ -99,15 +99,15 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 Свойству `ShowsResults` присваивается значение `true`, чтобы поисковые подсказки отображались по мере ввода поискового запроса пользователем:
 
-[![Снимок экрана с результатами поиска SearchHandler в оболочке для iOS и Android](search-images/search-results.png "Результаты поиска SearchHandler в оболочке")](search-images/search-results-large.png#lightbox "Результаты поиска SearchHandler в оболочке")
+[![Снимок экрана: результаты поиска в объекте SearchHandler оболочки на iOS и Android](search-images/search-results.png "Результаты поиска в объекте SearchHandler оболочки")](search-images/search-results-large.png#lightbox "Результаты поиска в объекте SearchHandler оболочки")
 
 По мере изменения поискового запроса данные в области поисковых подсказок обновляются:
 
-[![Снимок экрана с результатами поиска SearchHandler в оболочке для iOS и Android](search-images/search-results-change.png "Результаты поиска SearchHandler в оболочке")](search-images/search-results-change-large.png#lightbox "Результаты поиска SearchHandler в оболочке")
+[![Снимок экрана: результаты поиска в объекте SearchHandler оболочки на iOS и Android](search-images/search-results-change.png "Результаты поиска в объекте SearchHandler оболочки")](search-images/search-results-change-large.png#lightbox "Результаты поиска в объекте SearchHandler оболочки")
 
 При выборе результата поиска происходит переход к `MonkeyDetailPage` и отображаются данные о выбранной обезьяне:
 
-[![Снимок экрана с данными об обезьяне для iOS и Android](search-images/detailpage.png "Сведения об обезьяне")](search-images/detailpage-large.png#lightbox "Сведения об обезьяне")
+[![Снимок экрана: сведения об обезьяне для iOS и Android](search-images/detailpage.png "Сведения об обезьяне")](search-images/detailpage-large.png#lightbox "Сведения об обезьяне")
 
 ## <a name="define-search-results-item-appearance"></a>Определения внешнего вида элементов в результатах поиска
 
@@ -172,7 +172,7 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 На следующих снимках экрана представлены результаты применения шаблона для всех элементов в области поисковых подсказок:
 
-[![Снимок экрана с шаблонными результатами поиска SearchHandler в оболочке для iOS и Android](search-images/search-results-template.png "Шаблонные результаты поиска SearchHandler в оболочке")](search-images/search-results-template-large.png#lightbox "Шаблонные результаты поиска SearchHandler в оболочке")
+[![Снимок экрана: шаблонные результаты поиска в объекте SearchHandler оболочки на iOS и Android](search-images/search-results-template.png "Шаблонные результаты поиска в объекте SearchHandler оболочки")](search-images/search-results-template-large.png#lightbox "Шаблонные результаты поиска в объекте SearchHandler оболочки")
 
 Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -211,12 +211,14 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 - `BackgroundColor` с типом `Color` определяет цвет фона для текста поля поиска.
 - `CancelButtonColor` с типом `Color` определяет цвет кнопки "Отмена".
+- `CharacterSpacing` с типом `double` представляет собой интервал между знаками текста `SearchHandler`.
 - `FontAttributes` с типом `FontAttributes` указывает, является ли шрифт поля поиска наклонным или жирным.
 - `FontFamily` с типом `string` определяет семейство шрифтов, используемое для текста поля поиска.
 - `FontSize` с типом `double` определяет размер шрифта для текста поля поиска.
 - `HorizontalTextAlignment` с типом `TextAlignment` определяет горизонтальное выравнивание для текста поля поиска.
 - `PlaceholderColor` с типом `Color` определяет цвет текста заполнителя в поле поиска.
 - `TextColor` с типом `Color` определяет цвет текста в поле поиска.
+- `VerticalTextAlignment` с типом `TextAlignment` определяет вертикальное выравнивание для текста поля поиска.
 
 ## <a name="searchhandler-keyboard"></a>Клавиатура SearchHandler
 

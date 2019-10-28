@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771279"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Общие сведения о шаблонах данных Xamarin.Forms
@@ -90,7 +90,7 @@ public WithoutDataTemplatePageCS()
 
 При отображении объектов в коллекции [`ListView`](xref:Xamarin.Forms.ListView) вызывает `ToString`. Так как переопределения `Person.ToString` нет, `ToString` возвращает имя типа каждого объекта, как показано на следующих снимках экрана.
 
-![](introduction-images/no-data-template.png "ListView без шаблона данных")
+![](introduction-images/no-data-template.png "ListView without a Data Template")
 
 Объект `Person` может переопределять метод `ToString` для отображения осмысленных данных, как показано в следующем примере кода.
 
@@ -107,7 +107,7 @@ public class Person
 
 В результате в [`ListView`](xref:Xamarin.Forms.ListView) отображается значение свойства `Person.Name` для каждого объекта в коллекции, как показано на следующих снимках экрана.
 
-![](introduction-images/override-tostring.png "ListView с шаблоном данных")
+![](introduction-images/override-tostring.png "ListView with a Data Template")
 
 Переопределение `Person.ToString` могло бы возвращать форматированную строку, состоящую из значений свойств `Name`, `Age` и `Location`. Однако такой подход не позволяет полностью контролировать внешний вид каждого элемента данных. Чтобы добиться большей гибкости, можно создать шаблон [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), определяющий внешний вид данных.
 

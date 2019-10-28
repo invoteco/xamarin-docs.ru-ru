@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
-ms.date: 04/26/2018
-ms.openlocfilehash: adedb10f3baf7faa97260ebbc94e3d1802b7d847
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.date: 10/16/2019
+ms.openlocfilehash: ebfe139d614db95c7dd1af0c76926d934144d74f
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105950"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584339"
 ---
 # <a name="system-requirements"></a>Требования к системе
 
@@ -59,6 +59,7 @@ ms.locfileid: "71105950"
 > [!NOTE]
 >
 > - Xamarin для Visual Studio поддерживает все выпуски Visual Studio 2019 и Visual Studio 2017 (Community, Professional и Enterprise).
+> - Для использования последних пакетов SDK для Android и iOS требуется последняя версия Visual Studio. Требования к конкретной версии см. в [заметках о выпуске Xamarin.Android](/xamarin/android/release-notes/) и [заметках о выпуске Xamarin.iOS](/xamarin/ios/release-notes/).
 > - Для разработки приложений Xamarin.Forms для универсальной платформы Windows (UWP) требуется Windows 10 с Visual Studio 2017. Рекомендуется использовать Visual Studio 2019.
 
 ### <a name="testing--debugging-on-windows"></a>Тестирование и отладка в Windows

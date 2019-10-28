@@ -7,13 +7,13 @@ ms.technology: xamarin-ios
 ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
-ms.date: 10/05/2018
-ms.openlocfilehash: 1b43598cc8df31d8a113adbfe90e368aab233334
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.date: 10/16/2019
+ms.openlocfilehash: f8193dfbb68634702fdb12e330970d4a83d8e601
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287367"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584315"
 ---
 # <a name="get-started-with-xamarinios"></a>Начало работы с Xamarin.iOS
 
@@ -23,13 +23,16 @@ Xamarin.iOS позволяет разработчикам создавать с�
 
 Для выполнения сборки для Xamarin.iOS необходимы следующие компоненты:
 
+- последняя версия Visual Studio;
 - актуальный пакет SDK iOS;
 - актуальная версия Xcode;
-- Mac OS High Sierra (10.13) и более поздних версий.
+- минимальная версия macOS, необходимая для Xcode.
+
+Требования к конкретной версии см. в [последних заметках о выпуске Xamarin.iOS](/xamarin/ios/release-notes/).
 
 Актуальная версия Xcode доступна для скачивания в [центре разработчиков iOS](https://developer.apple.com/devcenter/ios/index.action#downloads) (требуются данные для входа) или в магазине Mac App Store:
 
-![Снимок экрана страницы описания Xcode в Mac App Store](installation/images/xcode.png "Xcode в Mac App Store")
+![Снимок экрана страницы описания Xcode в Mac App Store](installation/images/xcode.png "Xcode в магазине Mac App Store")
 
 ## <a name="getting-started-series"></a>Материалы по началу работы
 

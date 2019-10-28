@@ -1,83 +1,66 @@
 ---
-title: Переносимые Visual Basic.NET
-description: В этом руководстве объясняется, как Visual Basic можно использовать для записи проекты переносимой библиотеки классов (PCL), которые могут использоваться в решениях, предназначенных для Xamarin.iOS и Xamarin.Android.
+title: Visual Basic и .NET Standard
+description: В этом руководство объясняется, как Visual Basic можно использовать для написания проектов .NET Standard, которые можно использовать в решениях, предназначенных для Xamarin. iOS и Xamarin. Android.
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
-author: asb3993
-ms.author: amburns
-ms.date: 03/23/2017
-ms.openlocfilehash: e4c8c43b4df1a7bfc5436f14564c6d0164216c46
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+author: conceptdev
+ms.author: crdun
+ms.date: 04/24/2019
+ms.openlocfilehash: 1e58dd4d7310c7f903433ce0b84123c39fbb5c8e
+ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61167197"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72959103"
 ---
-# <a name="portable-visual-basicnet"></a>Переносимые Visual Basic.NET
+# <a name="visual-basic-and-net-standard"></a>Visual Basic и .NET Standard
 
-Проекты Xamarin iOS и Android не поддерживаются Visual Basic; Однако разработчики могут использовать переносимые библиотеки классов для миграции существующего кода Visual Basic для iOS и Android, или записи значительную часть логики своих приложений в Visual Basic. Приложения Xamarin.Forms можно создавать полностью в Visual Basic (за исключением фонового кода XAML, пользовательские модули подготовки отчетов и служб зависимостей).
+Проекты Xamarin Android и iOS изначально не поддерживают Visual Basic; Однако разработчики могут использовать библиотеки [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) для переноса существующего кода Visual Basic в Android и iOS или писать значительную часть логики приложения в Visual Basic. Приложения Xamarin. Forms можно полностью создавать в Visual Basic (за исключением пользовательских модулей подготовки отчетов, служб зависимостей и кода XAML).
 
 ## <a name="requirements"></a>Требования
 
-Поддержка библиотек переносимый класс была добавлена в Xamarin.Android 4.10.1, Xamarin.iOS 7.0.4 и Xamarin Studio 4.2, это означает, что все проекты Xamarin, созданных с помощью этих средств можно включить сборок переносимой библиотеки Классов Visual Basic.
-
-Создание и компиляция переносимые библиотеки классов Visual Basic необходимо использовать Visual Studio на Windows (Visual Studio 2012 или более поздняя).
+Для создания и компиляции Visual Basic библиотек .NET Standard необходимо использовать Visual Studio в Windows (Visual Studio 2017 или более поздней версии).
 
 > [!NOTE]
-> Библиотеки Visual Basic можно создавать только и скомпилирован с использованием Visual Studio. Xamarin.iOS и Xamarin.Android не поддерживает язык Visual Basic.
+> Библиотеки Visual Basic можно создавать и компилировать только с помощью Visual Studio. Xamarin. Android и Xamarin. iOS не поддерживают язык Visual Basic.
 >
-> Если вы работаете только в Visual Studio могут ссылаться на проект Visual Basic проектов Xamarin.iOS и Xamarin.Android.
+> Если вы работаете только в Visual Studio, вы можете ссылаться на проект Visual Basic из проектов Xamarin. Android и Xamarin. iOS.
 >
-> Если ваши проекты iOS и Android должен также быть загружен в Visual Studio для Mac вы должны ссылаться на выходной сборки переносимой библиотеки Классов Visual Basic.
+> Если проекты Android и iOS также должны быть загружены в Visual Studio для Mac следует ссылаться на выходную сборку из сборки Visual Basic.
 
+## <a name="creating-a-visual-basicnet-net-standard-library"></a>Создание библиотеки .NET Standard Visual Basic.NET
 
-## <a name="creating-a-visual-basicnet-pcl"></a>Создание Visual Basic.NET PCL
+В этом разделе описано, как создать библиотеку Visual Basic .NET Standard с помощью Visual Studio 2019.
+Затем на библиотеку можно ссылаться в других проектах, включая приложения Xamarin. Android, Xamarin. iOS и Xamarin. Forms.
 
-В этом разделе описано, как создать Visual Basic переносимой библиотеки классов с помощью Visual Studio.
-Затем библиотеку можно ссылаться в других проектах, в том числе приложения Xamarin.iOS, Xamarin.Android и Xamarin.Forms.
+При добавлении библиотеки .NET Standard Visual Basic в Visual Studio необходимо внимательно выбрать правильный тип проекта:
 
-### <a name="creating-a-pcl"></a>Создание PCL
+1. В Visual Studio 2019 выберите **создать новый проект**.
 
-При добавлении переносимую библиотеку Классов Visual Basic в Visual Studio необходимо выбрать профиль, который описывает, какие платформы библиотеки должны быть совместимы с. Профили описаны во введении к документу переносимой библиотеки Классов.
+2. Введите **Visual Basic библиотеку** , чтобы отфильтровать параметры проекта, и выберите параметр **библиотека классов (.NET Standard)** со значком Visual Basic:
 
-Ниже приведены действия, чтобы создать переносимую библиотеку Классов и выберите его профиль.
+    [Фильтр![для библиотеки Visual Basic](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
-1.  В **новый проект** выберите **Visual Basic > Библиотека классов (переносимая)** параметр:
+3. На следующем экране введите имя проекта и нажмите кнопку **создать**.
 
-    [![](images/image1-sml.png "Создание нового переносимой библиотеки Visual Basic")](images/image1.png#lightbox)
+4. Проект Visual Basic будет выглядеть так, как показано в **Обозреватель решений** следующим образом:
 
-1.  Visual Studio будет немедленно предложено со следующими **Добавление переносимой библиотеки классов** диалоговое окно, чтобы профиль можно настроить. Установка флажка платформы, необходимые для поддержки и нажмите клавишу **ОК**.
+    [![пустой проект Visual Basic](images/new-library-sml.png)](images/new-library.png#lightbox)
 
-    [![](images/image2-sml.png "Выберите профиль PCL, выбор платформ")](images/image2.png#lightbox)
-
-1.  Проект переносимой библиотеки Классов Visual Basic будет отображаться, как показано в **обозревателе решений** следующим образом:
-
-    [![](images/image3-sml.png "Пустой проект переносимой библиотеки Классов Visual Studio")](images/image3.png#lightbox)
-
-
-Переносимая библиотека Классов теперь готов для кода Visual Basic для добавления. Проекты переносимой библиотеки Классов можно ссылаться в других проектах (проекты приложений, проекты библиотек и даже в других проектах переносимой библиотеки Классов).
-
-### <a name="editing-the-pcl-profile"></a>Изменение профиля PCL
-
-Профиль PCL, (который определяет, какие платформы, Переносимая библиотека Классов совместима с) можно просмотреть и изменить, щелкнув правой кнопкой мыши на проект и выбрав **свойства > Библиотека > изменение...** . На этом снимке экрана показан итоговый диалогового окна:
-
- [![](images/image4-sml.png "Изменение профиля PCL в свойствах проекта")](images/image4.png#lightbox)
-
-Если профиль изменяется после кода уже был добавлен в переносимую библиотеку классов, это возможно, что библиотека больше не будут компилироваться, если код ссылается на функции, которые не являются частью вновь выбранный профиль.
-
+Теперь проект готов к добавлению кода Visual Basic. На .NET Standard проекты могут ссылаться другие проекты (проекты приложений или проекты библиотек).
 
 ## <a name="summary"></a>Сводка
 
-В этой статье показано, как использовать код Visual Basic в приложениях Xamarin, с помощью Visual Studio и переносимых библиотек классов. Несмотря на то, что Xamarin не поддерживает напрямую Visual Basic, компиляции Visual Basic в переносимую библиотеку Классов позволяет код, созданный с помощью Visual Basic должны быть включены в приложениях iOS и Android.
+В этой статье показано, как использовать код Visual Basic в приложениях Xamarin с помощью Visual Studio. Несмотря на то, что Xamarin не поддерживает Visual Basic напрямую, компиляция Visual Basic в библиотеку .NET Standard позволяет включать код, написанный с Visual Basic, в приложения Android и iOS.
 
-Ниже описывается использование Visual Basic.NET PCL в собственном режиме или приложений Xamarin.Forms:
+На следующих страницах описывается использование библиотек .NET Standard Visual Basic.NET в приложениях в машинном или Xamarin. Forms.
 
-- [Создания собственных приложений Xamarin.iOS и Xamarin.Android, использующих VB](native-apps.md)
-- [Создание приложений Xamarin.Forms с помощью VB](xamarin-forms.md)
-
+- [Создание собственных приложений Xamarin. iOS и Xamarin. Android, использующих VB](native-apps.md)
+- [Создание приложений Xamarin. Forms с помощью VB](xamarin-forms.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [TaskyPortableVB (пример)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [XamarinFormsVB (пример)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
-- [Кроссплатформенная разработка в .NET Framework (Microsoft)](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+- [Таскивб (пример)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+- [Ксамаринформсвб (пример)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [.NET Standard и Xamarin](~/cross-platform/app-fundamentals/net-standard.md)
+- [.NET Standard](/dotnet/standard/net-standard/)

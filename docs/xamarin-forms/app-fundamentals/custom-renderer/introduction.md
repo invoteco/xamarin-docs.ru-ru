@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771882"
 ---
 # <a name="introduction-to-custom-renderers"></a>Общие сведения о настраиваемых отрисовщиках
@@ -56,7 +56,7 @@ public class MyEntry : Entry
 
 После этого пользовательский элемент управления `MyEntry` отрисовывается на каждой платформе на сером фоне, как показано на следующих снимках экрана:
 
-![](introduction-images/screenshots.png "Пользовательский элемент управления MyEntry на каждой платформе")
+![](introduction-images/screenshots.png "MyEntry Custom Control on each Platform")
 
 Изменение цвета фона элемента управления на каждой платформе было достигнуто исключительно посредством создания подкласса элемента управления. Однако возможности этого метода ограничены, так как он не позволяет воспользоваться преимуществами усовершенствования и настройками конкретной платформы. Если в них есть потребность, нужно реализовать настраиваемые отрисовщики.
 

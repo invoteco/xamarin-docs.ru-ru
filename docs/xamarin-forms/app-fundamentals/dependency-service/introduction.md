@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
 ms.openlocfilehash: b27b4b0c3c5662c6cc1c2c151dd9ebe1523da3a4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71198517"
 ---
 # <a name="xamarinforms-dependencyservice-introduction"></a>Общие сведения о классе Xamarin.Forms DependencyService
@@ -29,7 +29,7 @@ ms.locfileid: "71198517"
 
 На следующей схеме показано, как собственные функции платформы вызываются в приложении Xamarin.Forms.
 
-![Обнаружение служб с помощью класса Xamarin.Forms DependencyService](introduction-images/dependency-service.png "Обнаружение служб с помощью DependencyService")
+![Обнаружение служб с помощью класса Xamarin.Forms DependencyService](introduction-images/dependency-service.png "Расположение службы DependencyService")
 
 ## <a name="create-an-interface"></a>Создание интерфейса
 

@@ -6,12 +6,12 @@ ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 37540053cee03a83582fe19ffb1dcf9e1cf4564c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "67832545"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011747"
 ---
 # <a name="introduction-to-urhosharp"></a>Введение в UrhoSharp
 
@@ -19,7 +19,7 @@ ms.locfileid: "67832545"
 
 UrhoSharp — это мощное средство трехмерной игры для разработчиков Xamarin и .NET.  Он похож на SceneKit и SpriteKit Apple и включает в себя физику, навигацию, сети и многое другое, в то же время перекрестно на платформу.
 
-Это привязка .NET к подсистеме [Urho3D](http://urho3d.github.io/) , позволяющая разработчикам писать код на различных платформах, предназначенных для Android, iOS, Windows и Mac, с одной и той же базой кода и может быть отображен в системах OpenGL и Direct3D.
+Это привязка .NET к подсистеме [Urho3D](https://urho3d.github.io/) , позволяющая разработчикам писать код на различных платформах, предназначенных для Android, iOS, Windows и Mac, с одной и той же базой кода и может быть отображен в системах OpenGL и Direct3D.
 
 UrhoSharp — это модуль игры с множеством функциональных возможностей.
 

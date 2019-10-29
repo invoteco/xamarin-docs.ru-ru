@@ -3,15 +3,15 @@ title: Обновление существующих приложений iOS
 description: В этом документе описаны действия, которые необходимо выполнить для обновления приложения Xamarin. iOS с Classic API на Unified API.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: c74efef96a15a950122041eb52dc09835bb8940b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9b531bd095781c80c5f3418725d57f8f6bbb06fd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279553"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015031"
 ---
 # <a name="updating-existing-ios-apps"></a>Обновление существующих приложений iOS
 
@@ -31,13 +31,13 @@ Xamarin предоставляет инструментарий для Visual St
 
 ## <a name="automated-updating"></a>Автоматическое обновление
 
-После исправления предупреждений выберите существующий проект iOS в Visual Studio для Mac или Visual Studio и выберите **перенести в Xamarin. iOS Unified API** из меню **проект** . Например:
+После исправления предупреждений выберите существующий проект iOS в Visual Studio для Mac или Visual Studio и выберите **перенести в Xamarin. iOS Unified API** из меню **проект** . Пример:
 
-![](updating-ios-apps-images/beta-tool1.png "Выберите пункт перенести в Xamarin. iOS Unified API из меню проект.")
+![](updating-ios-apps-images/beta-tool1.png "Choose Migrate to Xamarin.iOS Unified API from the Project menu")
 
 Перед выполнением автоматизированной миграции необходимо согласиться с этим предупреждением (очевидно, что перед начинать в этом Adventure необходимо убедиться в наличии резервных копий и системы управления версиями):
 
-![](updating-ios-apps-images/beta-tool2.png "Согласиться с этим предупреждением, прежде чем будет выполняться автоматический перенос")
+![](updating-ios-apps-images/beta-tool2.png "Agree to this warning before the automated migration will run")
 
 Это средство, по сути, автоматизирует все шаги, описанные в разделе **обновление вручную** , и является предлагаемым методом преобразования существующего проекта Xamarin. iOS в Unified API.
 
@@ -47,45 +47,45 @@ Xamarin предоставляет инструментарий для Visual St
 
 ### <a name="1-update-project-type--build-target"></a>1. Обновление типа проекта & целевой объект сборки
 
-Измените версию проекта в файлах **CSPROJ** с `6BC8ED88-2882-458C-8E55-DFD12B67127B` на `FEACFBD2-3405-455C-9665-78FE426C6842`. Измените файл **CSPROJ** в текстовом редакторе, заменив первый элемент в `<ProjectTypeGuids>` элементе, как показано ниже.
+Измените версию проекта в файлах **CSPROJ** с `6BC8ED88-2882-458C-8E55-DFD12B67127B` на `FEACFBD2-3405-455C-9665-78FE426C6842`. Измените файл **CSPROJ** в текстовом редакторе, заменив первый элемент в элементе `<ProjectTypeGuids>`, как показано ниже:
 
-![](updating-ios-apps-images/csproj.png "Измените файл CSPROJ в текстовом редакторе, заменив первый элемент в элементе ProjectTypeGuids, как показано ниже.")
+![](updating-ios-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
 
-Измените элемент **Import** , который содержит `Xamarin.MonoTouch.CSharp.targets` `Xamarin.iOS.CSharp.targets` , как показано ниже:
+Измените элемент **Import** , содержащий `Xamarin.MonoTouch.CSharp.targets`, на `Xamarin.iOS.CSharp.targets`, как показано ниже.
 
-![](updating-ios-apps-images/csproj2.png "Измените элемент Import, содержащий Xamarin. with Touch. CSharp. targets, на Xamarin. iOS. CSharp. targets, как показано ниже.")
+![](updating-ios-apps-images/csproj2.png "Change the Import element that contains Xamarin.MonoTouch.CSharp.targets to Xamarin.iOS.CSharp.targets as shown")
 
-### <a name="2-update-project-references"></a>2. Обновить ссылки проекта
+### <a name="2-update-project-references"></a>2. Обновление ссылок проекта
 
 Разверните узел **ссылки** проекта приложения iOS. Вначале будет показана * неработающая **ссылка, как на этом** снимке экрана (так как мы только что изменили тип проекта):
 
-![](updating-ios-apps-images/references.png "Вначале будет показана Неработающая ссылка, похожая на этот снимок экрана, так как изменился тип проекта")
+![](updating-ios-apps-images/references.png "It will initially show a broken- monotouch reference similar to this screenshot because the project type changed")
 
 Щелкните правой кнопкой мыши проект приложения iOS, чтобы **изменить ссылки**, а затем щелкните ссылку на **однокасание** и удалите ее с помощью красной кнопки "X".
 
-![](updating-ios-apps-images/references-delete-monotouch-sml.png "Щелкните правой кнопкой мыши проект приложения iOS, чтобы изменить ссылки, а затем щелкните ссылку на касание и удалите ее с помощью красной кнопки X")
+![](updating-ios-apps-images/references-delete-monotouch-sml.png "Right-click on the iOS application project to Edit References, then click on the monotouch reference and delete it using the red X button")
 
 Теперь прокрутите список ссылок до конца и тикайте сборку **Xamarin. iOS** .
 
-![](updating-ios-apps-images/references-add-xamarinios-sml.png "Теперь прокрутите список ссылок до конца и затактовйте сборку Xamarin. iOS.")
+![](updating-ios-apps-images/references-add-xamarinios-sml.png "Now scroll to the end of the references list and tick the Xamarin.iOS assembly")
 
 Нажмите кнопку **ОК** , чтобы сохранить изменения ссылок на проект.
 
-### <a name="3-remove-monotouch-from-namespaces"></a>3. Удалить из пространств имен бескасание
+### <a name="3-remove-monotouch-from-namespaces"></a>3. Удаление из пространств имен с одним касанием
 
-Удалите префикс « **нечувствительный к касанию** » из пространств имен в `using` операторах или в любом месте полного имени класса ClassName (например, `MonoTouch.UIKit`будет просто `UIKit`).
+Удалите префикс **нечувствительного касания** из пространств имен в операторах `using` или в любом месте полного имени класса ClassName (например, `MonoTouch.UIKit` просто `UIKit`).
 
-### <a name="4-remap-types"></a>4. Типы пересопоставления
+### <a name="4-remap-types"></a>4. Сопоставление типов
 
 Были введены [собственные типы](~/cross-platform/macios/nativetypes.md) , которые заменяют некоторые ранее использовавшиеся типы, например экземпляры `System.Drawing.RectangleF` с `CoreGraphics.CGRect` (например,). Полный список типов можно найти на странице " [собственные типы](~/cross-platform/macios/nativetypes.md) ".
 
-### <a name="5-fix-method-overrides"></a>5. Исправить переопределения методов
+### <a name="5-fix-method-overrides"></a>5. Исправление переопределений методов
 
-Для `UIKit` некоторых методов сигнатура была изменена для использования новых [собственных типов](~/cross-platform/macios/nativetypes.md) (например, `nint`). Если пользовательские подклассы переопределяют эти методы, сигнатуры больше не будут совпадать и будут приводить к ошибкам. Исправьте эти переопределения метода, изменив подкласс в соответствии с новой сигнатурой, используя собственные типы.
+Для некоторых `UIKit` методов была изменена сигнатура для использования новых [собственных типов](~/cross-platform/macios/nativetypes.md) (например, `nint`). Если пользовательские подклассы переопределяют эти методы, сигнатуры больше не будут совпадать и будут приводить к ошибкам. Исправьте эти переопределения метода, изменив подкласс в соответствии с новой сигнатурой, используя собственные типы.
 
-Примеры включают изменение `public override int NumberOfSections (UITableView tableView)` для возврата `nint` и изменения возвращаемого типа `nint`и типов параметров в `public override int RowsInSection (UITableView tableView, int section)` .
+Примеры включают изменение `public override int NumberOfSections (UITableView tableView)` возвращают `nint` и изменение типа возвращаемого значения и типов параметров в `public override int RowsInSection (UITableView tableView, int section)` на `nint`.
 
-## <a name="considerations"></a>Рекомендации
+## <a name="considerations"></a>Особенности
 
 При преобразовании существующего проекта Xamarin. iOS из Classic API в новый Unified API необходимо учитывать следующие моменты, если это приложение полагается на один или несколько компонентов или пакетов NuGet.
 

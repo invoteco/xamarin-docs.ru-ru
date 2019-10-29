@@ -4,21 +4,21 @@ description: iOS позволяет применять параметры виз
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/15/2018
-ms.openlocfilehash: b0f09a729c6998e7a728bfc3d805058e7a43a54a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a7f0fe9d0dc07d892686e6596f3cc09a2587513
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287082"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003379"
 ---
 # <a name="appearance-api-in-xamarinios"></a>Интерфейс API внешнего вида в Xamarin. iOS
 
 _iOS позволяет применять параметры визуальных свойств на уровне статического класса, а не на отдельных объектах, чтобы изменение применялось ко всем экземплярам этого элемента управления в приложении._
 
-Эта функция предоставляется в Xamarin. iOS через статическое `Appearance` свойство для всех элементов управления UIKit, которые его поддерживают. Таким образом, внешний вид (свойства как цвет оттенка и фоновое изображение) можно легко настроить, чтобы обеспечить единообразное оформление приложения. API внешнего вида был представлен в iOS 5, а некоторые части его не рекомендуются в iOS 9. он по-прежнему является хорошим способом достижения некоторых стилей и эффектов в приложениях Xamarin. iOS.
+Эта функция предоставляется в Xamarin. iOS через статическое свойство `Appearance` для всех элементов управления UIKit, которые его поддерживают. Таким образом, внешний вид (свойства как цвет оттенка и фоновое изображение) можно легко настроить, чтобы обеспечить единообразное оформление приложения. API внешнего вида был представлен в iOS 5, а некоторые части его не рекомендуются в iOS 9. он по-прежнему является хорошим способом достижения некоторых стилей и эффектов в приложениях Xamarin. iOS.
 
 ## <a name="overview"></a>Обзор
 
@@ -28,14 +28,14 @@ iOS позволяет настраивать внешний вид многих
 
 - **Непосредственно на экземпляре элемента управления** — можно задать цвет оттенка, фоновое изображение и положение заголовка (а также другие атрибуты) во многих элементах управления, включая панели инструментов, панели навигации, кнопки и ползунки.
 
-- **Задать значения по умолчанию для статического свойства внешнего вида** — настраиваемые атрибуты для каждого элемента управления предоставляются через `Appearance` статическое свойство. Все настройки, применяемые к этим свойствам, будут использоваться по умолчанию для любого элемента управления этого типа, созданного после установки свойства.
+- **Задать значения по умолчанию для статического свойства внешнего вида** — настраиваемые атрибуты для каждого элемента управления предоставляются через статическое свойство `Appearance`. Все настройки, применяемые к этим свойствам, будут использоваться по умолчанию для любого элемента управления этого типа, созданного после установки свойства.
 
 Пример приложения "внешний вид" демонстрирует все три метода, как показано на снимках экрана:
 
-[![](introduction-to-the-appearance-api-images/appearance01-sml.png "Пример приложения \"внешний вид\" демонстрирует все три метода")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![](introduction-to-the-appearance-api-images/appearance01-sml.png "The Appearance sample application demonstrates all three methods")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 Начиная с iOS 8, прокси-сервер внешнего вида был расширен до Траитколлектионс.
- `AppearanceForTraitCollection`можно использовать для задания внешнего вида по умолчанию для определенной коллекции признаков. Дополнительные сведения см. в статье [Введение в раскадровки](~/ios/user-interface/storyboards/unified-storyboards.md) .
+ `AppearanceForTraitCollection` можно использовать для задания внешнего вида по умолчанию для определенной коллекции признаков. Дополнительные сведения см. в статье [Введение в раскадровки](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ## <a name="setting-appearance-properties"></a>Задание свойств внешнего вида
 
@@ -54,7 +54,7 @@ UIProgressView.Appearance.ProgressTintColor = UIColor.Yellow;
 UIProgressView.Appearance.TrackTintColor = UIColor.Orange;
 ```
 
-Стили зеленого элемента задаются подобным образом в `ViewDidLoad` методе, который переопределяет значения по умолчанию и статический класс *внешнего вида* :
+Стили зеленого элемента задаются подобным образом в методе `ViewDidLoad`, который переопределяет значения по умолчанию и статический класс *внешнего вида* :
 
 ```csharp
 slider2.ThumbTintColor = UIColor.FromRGB (0,127,70); // dark green
@@ -69,7 +69,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 ## <a name="using-uiappearance-in-xamarinforms"></a>Использование Уиаппеаранце в Xamarin. Forms
 
-API внешнего вида можно использовать при [оформлении стиля приложения iOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) в решениях Xamarin. Forms. Несколько строк в `AppDelegate` классе могут помочь реализовать определенную цветовую схему без необходимости создания [пользовательского модуля подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов.
+API внешнего вида можно использовать при [оформлении стиля приложения iOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) в решениях Xamarin. Forms. Несколько строк в классе `AppDelegate` могут помочь реализовать определенную цветовую схему без необходимости создания [пользовательского модуля подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов.
 
 ### <a name="custom-themes-and-uiappearance"></a>Пользовательские темы и Уиаппеаранце
 
@@ -77,7 +77,7 @@ iOS позволяет многим визуальным атрибутам эл
 
 Чтобы лучше понять концепцию, рассмотрим пример.
 
-Чтобы изменить конкретный `UISegmentedControl` цвет на пурпурный, мы будем ссылаться на конкретный элемент управления на нашем экране следующим образом `ViewDidLoad`:
+Чтобы изменить конкретный `UISegmentedControl` для пурпурного оттенка, мы будем ссылаться на конкретный элемент управления на нашем экране следующим образом `ViewDidLoad`:
 
 ```csharp
 sg1.TintColor = UIColor.Magenta;
@@ -85,13 +85,13 @@ sg1.TintColor = UIColor.Magenta;
 
 Также можно задать значение на панели свойств конструктора:
 
-[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Оттенок Панель свойств")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Properties Pad Tint")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 На рисунке ниже показано, что этот параметр задает оттенок только для элемента управления с именем "SG1".
 
-[![](introduction-to-the-appearance-api-images/image53.png "Настройка оттенок отдельных элементов управления")](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image53.png "Setting the individual control tint")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
-Чтобы задать множество элементов управления таким образом, это будет полностью неэффективно, поэтому мы можем задать статическое `Appearance` свойство для самого класса. Это показано в следующем коде:
+Установка многих элементов управления таким способом будет полностью неэффективной, поэтому мы можем задать статическое свойство `Appearance` для самого класса. Это показано в следующем коде:
 
 ```csharp
 UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
@@ -99,9 +99,9 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 На приведенном ниже рисунке показаны как сегментированные элементы управления, для которых установлен стиль «пурпурный»:
 
-[![](introduction-to-the-appearance-api-images/image54.png "Настройка оттенка элемента управления внешнего вида")](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image54.png "Setting the Appearance control tint")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
-`Appearance`свойства должны быть установлены на раннем этапе жизненного цикла приложения, например в `FinishedLaunching` событии AppDelegate или в ViewController до отображения затронутых элементов управления.
+`Appearance` свойства должны быть установлены на раннем этапе жизненного цикла приложения, например в событии `FinishedLaunching` AppDelegate или в ViewController до отображения затронутых элементов управления.
 
 Более подробные сведения см. в статье [Введение в интерфейс API внешнего вида](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) .
 

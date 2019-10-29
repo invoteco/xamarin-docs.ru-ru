@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: d20e27fdbb1f62c2aebb7122d7f0c042b3ac9085
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: cbc3bceffacd9669c1e2e667faadc2939fd4aa1f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71997186"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005928"
 ---
 # <a name="gtk-platform-setup"></a>Установка платформы GTK #
 
@@ -26,7 +26,7 @@ Xamarin. Forms теперь имеет поддержку предварител
 Прежде чем начать, создайте новое решение Xamarin. Forms или используйте существующее решение Xamarin. Forms, например [**гамеофлифе**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
 > [!NOTE]
-> Хотя эта статья посвящена добавлению приложения GTK # в решение Xamarin. Forms в VS2017 и Visual Studio для Mac, его также можно выполнить в [MonoDevelop](http://www.monodevelop.com/) для Linux.
+> Хотя эта статья посвящена добавлению приложения GTK # в решение Xamarin. Forms в VS2017 и Visual Studio для Mac, его также можно выполнить в [MonoDevelop](https://www.monodevelop.com/) для Linux.
 
 ## <a name="adding-a-gtk-app"></a>Добавление приложения GTK #
 

@@ -3,26 +3,26 @@ title: Пример реального мира с использованием 
 description: В этом документе показано, как использовать целевое Шарпие для автоматического C# создания определений привязки из кокоапод.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 0f730b1c0a0deacdb84c198cfe4af47308a268cc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf117880eb46b028d709a44aa453e111b007b441
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290031"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016265"
 ---
 # <a name="real-world-example-using-cocoapods"></a>Пример реального мира с использованием CocoaPods
 
 > [!NOTE]
 > В этом примере используется [Афнетворкинг кокоапод](https://cocoapods.org/pods/AFNetworking).
 
-Новая версия в версии 3,0, Целевая Шарпие поддерживает привязку CocoaPods и даже включает команду`sharpie pod`(), чтобы сделать загрузку, настройку и сборку CocoaPods очень простой. Прежде чем использовать эту функцию, следует [ознакомиться с CocoaPods](https://cocoapods.org) в целом.
+Новая версия в версии 3,0, Целевая Шарпие поддерживает привязку CocoaPods и даже включает команду (`sharpie pod`), чтобы сделать процесс загрузки, настройки и сборки CocoaPods очень простым. Прежде чем использовать эту функцию, следует [ознакомиться с CocoaPods](https://cocoapods.org) в целом.
 
 ## <a name="creating-a-binding-for-a-cocoapod"></a>Создание привязки для Кокоапод
 
-`sharpie pod` Команда имеет один глобальный параметр и две подкоманды:
+Команда `sharpie pod` имеет один глобальный параметр и две подкоманды:
 
 ```bash
 $ sharpie pod -help
@@ -37,7 +37,7 @@ Available Commands:
   bind         Bind an existing Xamarin C# CocoaPods project
 ```
 
-`init` Подкоманда также имеет некоторую полезную справку:
+Кроме того, подкоманда `init` имеет некоторую полезную справку:
 
 ```bash
 $ sharpie pod init -help
@@ -48,7 +48,7 @@ Init Options:
                    it even if one already exists
 ```
 
-В `init`можно указать несколько имен кокоапод и подспецификаций.
+Для `init`можно указать несколько имен Кокоапод и подспецификаций.
 
 ```bash
 $ sharpie pod init ios AFNetworking
@@ -93,4 +93,4 @@ Done.
 
 - [Общие сведения о цели привязки в C](~/cross-platform/macios/binding/overview.md)
 - [Цель привязки-библиотеки C](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Пошаговое руководство: Привязка библиотеки цели iOS-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Пошаговое руководство. привязка библиотеки цели iOS-C](~/ios/platform/binding-objective-c/walkthrough.md)

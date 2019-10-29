@@ -3,15 +3,15 @@ title: Функции Шарпие цели
 description: В этом документе содержатся ссылки на различные руководства, которые помогают описать цель Шарпие, как ее использовать и выводимые данные.
 ms.prod: xamarin
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: dfbfd443b06518bccbf3b71fcc27acac0bca7481
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40f73a3f069c762266704d710080c324aa731ecf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279101"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016179"
 ---
 # <a name="objective-sharpie-features"></a>Функции Шарпие цели
 
@@ -24,8 +24,8 @@ ms.locfileid: "70279101"
 ## <a name="native-frameworksnative-frameworksmd"></a>[**Собственные платформы**](native-frameworks.md)
 
 Некоторые библиотеки распространяются как платформы, а не как исходные.
-Цель Шарпие позволяет использовать эти библиотеки с `-framework` параметром.
+Цель Шарпие позволяет использовать эти библиотеки с параметром `-framework`.
 
 ## <a name="verifyverifymd"></a>[**Проверка**](verify.md)
 
-Цель Шарпие добавить `Verify` атрибуты, чтобы сообщить, что необходимо вручную проверить и обновить созданную привязку. 
+Цель Шарпие добавить атрибуты `Verify`, чтобы сообщить, что необходимо вручную проверить и обновить созданную привязку. 

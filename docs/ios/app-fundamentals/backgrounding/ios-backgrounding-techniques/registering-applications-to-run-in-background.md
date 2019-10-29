@@ -4,15 +4,15 @@ description: В этом документе описывается, как за�
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6466d4c7edf6fde38fd3e9e8a6aaa48c2e5f9b4a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 61b7926f28253acbcc45bc204c466d76a00c72b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757689"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010836"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Регистрация приложений Xamarin. iOS для запуска в фоновом режиме
 
@@ -34,15 +34,15 @@ ms.locfileid: "70757689"
 
 Приложения можно зарегистрировать, задав свойство **необходимые фоновые режимы** в файле *info. plist*приложения. Приложение может зарегистрироваться в любом количестве категорий, которое требуется:
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Настройка фоновых режимов")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "Setting the background modes")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 Пошаговое руководство по регистрации приложения для обновления расположения в фоновом режиме см. в разделе [Пошаговое руководство по расположению фона](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
 ## <a name="application-does-not-run-in-background-property"></a>Приложение не запускается в фоновом свойстве
 
-Другое свойство, которое можно задать в *info. plist* , — это приложение, которое *не выполняется в фоновом режиме*, или `UIApplicationExitsOnSuspend` свойство:
+Другое свойство, которое можно задать в *info. plist* , — это приложение, которое *не выполняется в фоновом режиме*или `UIApplicationExitsOnSuspend` свойство:
 
- [![](registering-applications-to-run-in-background-images/plist.png "Идет отключение фонового выполнения")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/plist.png "Disabling Background Running")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 Это аналогично тому, как установка параметра обновления фонового приложения в значение OFF в iOS 7 +, за исключением того, что ее можно изменить только на стороне разработчика и доступна для iOS 4 и более поздних версий. Приложение будет приостановлено сразу после ввода фона и не сможет выполнить обработку.
 

@@ -4,15 +4,15 @@ description: В этом документе описывается пример 
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 060e4b8e7856e0024e6d236652c2b04c1da16f66
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766847"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008253"
 ---
 # <a name="using-data-in-an-ios-app"></a>Использование данных в приложении iOS
 
@@ -99,7 +99,7 @@ public int DeleteStock(Stock stock)
 Это можно легко сделать в мобильном приложении, добавив существующий файл базы данных SQLite в приложение и скопировав его в доступный для записи каталог, прежде чем обращаться к нему. Так как SQLite является стандартным форматом файлов, который используется на многих платформах, для создания файла базы данных SQLite доступно несколько средств.
 
 - **Расширение SQLite Manager Firefox** — работает в Mac и Windows и создает файлы, совместимые с iOS и Android.
-- **Командная строка** — см. [www.SQLite.org/SQLite.HTML](http://www.sqlite.org/sqlite.html) .
+- **Командная строка** — см. [www.SQLite.org/SQLite.HTML](https://www.sqlite.org/sqlite.html) .
 
 При создании файла базы данных для распространения вместе с приложением следует соблюдать имена таблиц и столбцов, чтобы убедиться, что они соответствуют предполагаемому коду, особенно если вы используете SQLite.NET, который ожидает, что имена будут соответствовать вашим C# классам и свойствам ( или связанные настраиваемые атрибуты).
 

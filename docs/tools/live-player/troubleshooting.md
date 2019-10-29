@@ -3,15 +3,15 @@ title: Устранение неполадок Xamarin Live Player
 description: В этом документе описаны известные проблемы с Xamarin Live Player и возможными исправлениями. В нем обсуждаются проблемы подключения, проблемы с конфигурацией и многое другое.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 04a377bad42ff680247759036327035d61757b42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d51241bee5f4ddc06032006071fa8296be37f2fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290167"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005946"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Устранение неполадок Xamarin Live Player
 
@@ -74,7 +74,7 @@ ms.locfileid: "70290167"
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Ошибка при попытке развернуть сообщение в интегрированной среде разработки
 
-**"IOException: не удается считать данные из транспортного соединения: Операция с неблокирующим сокетом блокирует "**
+**"IOException: не удается считать данные из транспортного соединения: операция на неблокирующем сокете блокирует"**
 
 Эта ошибка часто возникает, когда мобильное устройство, на котором работает Xamarin Live Player, находится не в той же сети, что и компьютер с Visual Studio. Это часто происходит при подключении к устройству, которое было успешно парно.
 
@@ -87,7 +87,7 @@ ms.locfileid: "70290167"
 
 Если не удается подключиться к устройству через Wi-Fi, можно попытаться вручную настроить устройство с помощью файла конфигурации, выполнив следующие действия:
 
-**Шаг 1. Открыть файл конфигурации**
+**Шаг 1. Открытие файла конфигурации**
 
 Перейдите к папке данных приложения:
 
@@ -96,21 +96,21 @@ ms.locfileid: "70290167"
 
 В этой папке найдите файл **плайердевицелист. XML** , если он не существует, и создайте его.
 
-**Шаг 2. Получение IP-адреса**
+**Шаг 2. получение IP-адреса**
 
 В приложении Xamarin Live Player перейдите к разделу **о > подключения проверка > начать проверку подключения**.
 
 Запишите IP-адрес. IP-адрес должен быть указан при настройке устройства.
 
-**Шаг 3. Получение кода связывания**
+**Шаг 3. получение кода связывания**
 
 В Xamarin Live Player **пару пара** или **пара**нажмите клавишу **Ввод вручную**. Отобразится числовой код, в котором потребуется обновить файл конфигурации.
 
-**Шаг 4. Создать GUID**
+**Шаг 4. Создание GUID**
 
-Перейдите к: https://www.guidgenerator.com/online-guid-generator.aspx и создайте новый GUID и убедитесь, что верхний регистр включен.
+Перейдите к: https://www.guidgenerator.com/online-guid-generator.aspx и создайте новый идентификатор GUID и убедитесь, что верхний регистр включен.
 
-**Шаг 5. Настройка устройства**
+**Шаг 5. Настройка устройства**
 
 Откройте **файл плайердевицелист. XML** в редакторе, например Visual Studio или Visual Studio Code. Вам нужно настроить устройство вручную в этом файле. По умолчанию файл должен содержать следующий пустой `Devices` XML-элемент:
 
@@ -154,7 +154,7 @@ ms.locfileid: "70290167"
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: "Resource. Layout" не содержит определения для "Main"
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs:" ресурс. Layout "не содержит определения для" Main "
 
 Эта ошибка возникает для проектов Android с пользовательскими интерфейсами, определенными в файлах AXML.
 Файлы AXML в настоящее время не поддерживаются в Xamarin Live Player.

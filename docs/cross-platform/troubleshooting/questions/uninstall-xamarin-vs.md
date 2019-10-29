@@ -3,15 +3,15 @@ title: Как полностью удалить Xamarin для Visual Studio?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 1596e7ed7b3f6d71e13f19a64d111873efb7445c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ed0171c2b6bd98e5b29ec100d0235131d36acb05
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764937"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013337"
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Как полностью удалить Xamarin для Visual Studio?
 
@@ -25,11 +25,11 @@ ms.locfileid: "70764937"
 
 2. В обозревателе удалите все оставшиеся файлы из папок расширения Xamarin Visual Studio (все версии, включая _программные файлы_ и _программные файлы (x86)_ ):
 
-    _C:\\Program Files\\MicrosoftVisualStudio1\\0 Common7IDE\\Extensions\\Xamarin\*\*\\_
+    _В.\\Program Files\*\\Microsoft Visual Studio 1\*0\\Common7\\IDE\\Extensions\\Xamarin_
 
 3. Удалите также каталог кэша компонента MEF Visual Studio:
 
-    _% LocalAppData%\\0\\\*\\компонентмоделкаче\\Microsoft VisualStudio 1_
+    _% LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*. 0\\Компонентмоделкаче_
 
     На самом деле этот шаг часто достаточно для разрешения таких ошибок, как:
 
@@ -45,29 +45,29 @@ ms.locfileid: "70764937"
 
     (См. также расширение " [Очистка кэша компонентов MEF](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) " для Visual Studio.  См. [ошибку 40781, комментарий 19,](https://bugzilla.xamarin.com/show_bug.cgi?id=40781#c19) чтобы получить более подробные сведения о вышестоящей неполадке в Visual Studio, которая может вызвать эти ошибки.)
 
-4. Также проверьте каталог _виртуалсторе_ , чтобы узнать, _\\_ могли ли Windows хранить файлы оверлея для каталогов Xamarin или _компонентмоделкаче_ .
+4. Также проверьте каталог _виртуалсторе_ , чтобы узнать, могли ли Windows хранить файлы оверлея для _расширений\\каталогов Xamarin_ или _компонентмоделкаче_ .
 
-    _% LocalAppData%\\виртуалсторе_
+    _% LOCALAPPDATA%\\Виртуалсторе_
 
 5. Откройте редактор реестра (`regedit`).
 
 6. Найдите следующий раздел:
 
-    _HKey\_\_Локальное\\программное\\обеспечениеWOW6432NodeMicrosoft\\Windows CurrentVersionSharedDlls\\\\\\_
+    _HKEY\_локальный\_компьютер\\программное обеспечение\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\SharedDlls_
 
 7. Найдите и удалите все записи, соответствующие этому шаблону.
 
-    _C:\\Program Files\\MicrosoftVisualStudio1\\0 Common7IDE\\Extensions\\Xamarin\*\*\\_
+    _В.\\Program Files\*\\Microsoft Visual Studio 1\*0\\Common7\\IDE\\Extensions\\Xamarin_
 
 8. Найдите следующий раздел.
 
-    _HKey\_текущее\\пользовательское\\программное\\обеспечение Microsoft VisualStudio1\\0екстенсионманажер\\пендингделетионс\*\_\\_
+    _HKEY\_текущий\_пользователь\\программное обеспечение\\Microsoft\\VisualStudio\\1\*0\\Екстенсионманажер\\Пендингделетионс_
 
 9. Удалите все записи, которые могут иметь отношение к Xamarin.  Вот пример, который используется для того, чтобы вызвать проблемы в старых версиях Xamarin:
 
     _Моно. VisualStudio. Shell, 1.0_
 
-10. Откройте командную `cmd.exe` строку администратора и `devenv /setup` выполните команды и `devenv /updateconfiguration` для каждой установленной версии Visual Studio.  Например, для Visual Studio 2015:
+10. Откройте `cmd.exe` командной строки администратора, а затем выполните команды `devenv /setup` и `devenv /updateconfiguration` для каждой установленной версии Visual Studio.  Например, для Visual Studio 2015:
 
     ```
     "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" /setup
@@ -89,7 +89,7 @@ ms.locfileid: "70764937"
 3. Если расширения загружены правильно, проблема, скорее всего, вызвана некоторыми из сохраненных параметров для исходного пользователя:
 
     - **В обозревателе** — _% LocalAppData%\\Microsoft\\VisualStudio\\1\*. 0_
-    - **В Regedit** _—\_hKey\_Current\\User Software\\Microsoft\\VisualStudio\*1.0\\_
-    - **В Regedit** — _\_hKey\_Current\\user\\Software программа Microsoft\\VisualStudio1\\0\_config\*_
+    - **В редакторе реестра** — _HKEY\_CURRENT\_пользователь\\Software\\Microsoft\\VisualStudio\\1\*. 0_
+    - **В редакторе реестра** — _HKEY\_CURRENT\_пользователь\\Software\\Microsoft\\VisualStudio\\1\*. 0\_config_
 
 4. Если эти сохраненные параметры действительно выглядят как проблема, можно попытаться выполнить резервное копирование и удалить их.

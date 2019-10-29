@@ -3,15 +3,15 @@ title: Объединение компонентов Сервисов Google Pla
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 8a7fd77a3f6460f0edbd76f8a4ccf45b32b3ed87
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 100ef7ffd7e05db0ed8b2af6b9990fc3a0ac1fa9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284980"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014150"
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>Объединение компонентов Сервисов Google Play и NuGet
 
@@ -30,11 +30,11 @@ Google фактически поставляется только с двумя 
 - `google-play-services-froyo.jar`
 - `google-play-services.jar`
 
-Несоответствие существовало из-за того, что наши `aapt.exe` средства не были должным образом сообщать, какой уровень API ресурсов был использован для данного приложения. Это означало, что при попытке использовать привязку Сервисы Google Play (KitKat) на более низком уровне API, например Gingerbread, были получены ошибки компиляции.
+Несоответствие существовало из-за того, что наши средства неправильно сообщают `aapt.exe`, какой уровень API ресурсов был использован для данного приложения. Это означало, что при попытке использовать привязку Сервисы Google Play (KitKat) на более низком уровне API, например Gingerbread, были получены ошибки компиляции.
 
 ## <a name="unifying-google-play-services"></a>Объединение Сервисы Google Play
 
-В более последних версиях Xamarin. Android теперь мы говорим `aapt.exe` , какую версию ресурсов следует использовать, поэтому эта проблема исчезает.
+В более последних версиях Xamarin. Android теперь мы обкажем `aapt.exe`, какую версию ресурсов использовать, поэтому эта проблема исчезает.
 
 Это означает, что нет никакой реальной причины для создания отдельных пакетов для Gingerbread/ICS/Желлибеан/KitKat (Однако нам по-прежнему требуется отдельная привязка для Фройо, так как это совершенно другой JAR-файл).
 
@@ -49,7 +49,7 @@ Google фактически поставляется только с двумя 
 
 ### <a name="note-about-gingerbread"></a>Примечание о Gingerbread
 
-Gingerbread не поддерживает поддержку фрагментов по умолчанию, поэтому некоторые классы в привязке не будут использоваться в приложении во время выполнения на устройстве Gingerbread. Такие классы `MapFragment` , как, не будут работать в Gingerbread, вместо них `SupportMapFragment`следует использовать вариант поддержки. Разработчику необходимо понять, какой из них использовать. Эта несовместимость отмечена Google в своей Сервисы Google Play документации.
+Gingerbread не поддерживает поддержку фрагментов по умолчанию, поэтому некоторые классы в привязке не будут использоваться в приложении во время выполнения на устройстве Gingerbread. Такие классы, как `MapFragment`, не будут работать в Gingerbread, а вместо этого следует использовать их вариант поддержки `SupportMapFragment`. Разработчику необходимо понять, какой из них использовать. Эта несовместимость отмечена Google в своей Сервисы Google Play документации.
 
 ### <a name="what-happens-to-the-old-componentsnugets"></a>Что происходит со старыми компонентами или NuGet?
 

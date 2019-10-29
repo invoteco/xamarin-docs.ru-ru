@@ -3,15 +3,15 @@ title: Управление учетными записями Apple
 description: В этом документе описывается, как использовать функции управления учетными записями Apple в Visual Studio для Mac и Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 81f161442b33eee94f32c506947ed029fd40aadb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766125"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016348"
 ---
 # <a name="apple-account-management"></a>Управление учетными записями Apple
 
@@ -39,7 +39,7 @@ ms.locfileid: "70766125"
 
 - Убедитесь, что вы подключены к Интернету. Это связано с тем, что FastLane взаимодействует напрямую с порталом разработчика Apple.
 - Убедитесь, что у вас [установлены средства FastLane](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Убедитесь, что у вас есть новейшие средства [https://download.fastlane.tools](https://download.fastlane.tools)FastLane из.
+- Убедитесь, что у вас есть новейшие средства FastLane из [https://download.fastlane.tools](https://download.fastlane.tools).
 - Перед началом убедитесь, что все лицензионные соглашения принимаются на [портале разработчика](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Добавление учетной записи разработчика Apple
@@ -50,7 +50,7 @@ ms.locfileid: "70766125"
 
     ![Параметры учетной записи разработчика Apple](apple-account-management-images/image1.png)
 
-2. **+** Нажмите кнопку, чтобы открыть диалоговое окно входа, как показано ниже: 
+2. Нажмите кнопку **+** , чтобы открыть диалоговое окно входа, как показано ниже: 
 
     ![диалоговое окно FastLane.](apple-account-management-images/image2.png)
 
@@ -144,7 +144,7 @@ ms.locfileid: "70766125"
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Если при входе в учетную запись возникают проблемы, попробуйте выполнить следующие действия.
 
-- Откройте приложение цепочки ключей и в разделе Категория выберите *пароли*. `deliver.`Поиск и удаление всех записей.
+- Откройте приложение цепочки ключей и в разделе Категория выберите *пароли*. Выполните поиск по запросу `deliver.`и удалите все записи.
 
 ### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"Ошибка при добавлении учетной записи. Выполните вход с использованием пароля для конкретного приложения.
 

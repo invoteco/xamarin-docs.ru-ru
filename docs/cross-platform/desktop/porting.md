@@ -2,15 +2,15 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: Руководство по переносу приложений для настольных компьютеров
 description: Простое объяснение того, как отделить существующие Windows Forms или приложения WPF для создания кросс-платформенных приложений для работы в macOS, iOS, Android, а также UWP/Windows 10.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 2a678c2b1880cb69b1bece85ed558309aa611a62
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 181034a4936b2da010a2fcd280ded1a3419d43ae
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290346"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016453"
 ---
 # <a name="desktop-app-porting-guidance"></a>Руководство по переносу приложений для настольных компьютеров
 

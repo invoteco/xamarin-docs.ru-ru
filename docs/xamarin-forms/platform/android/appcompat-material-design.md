@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: a5b6466b1d2489cced4b1e3205ef672b8f6a4da7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770650"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005450"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Добавление AppCompat и дизайна материалов
 
@@ -25,7 +25,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 В этих инструкциях объясняется, как обновить существующие приложения Xamarin. Forms Android для использования библиотеки AppCompat и включения дизайна материалов в версии Android ваших приложений Xamarin. Forms.
 
-### <a name="1-update-xamarinforms"></a>1. Обновление Xamarin. Forms
+### <a name="1-update-xamarinforms"></a>1. обновление Xamarin. Forms
 
 Убедитесь, что решение использует Xamarin. Forms 2,0 или более поздней версии. При необходимости обновите пакет NuGet Xamarin. Forms до 2,0.
 
@@ -33,13 +33,13 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 Убедитесь, что Целевая платформа проекта Android — Android 6,0 (Marshmallow). Проверьте **проект Android > параметры > сборки > общие** параметры, чтобы убедиться, что выбрана платформа Коррент:
 
- ![](appcompat-images/target-android-6-sml.png "Общая конфигурация сборки Android")
+ ![](appcompat-images/target-android-6-sml.png "Android General Build Configuration")
 
 ### <a name="3-add-new-themes-to-support-material-design"></a>3. Добавление новых тем для поддержки дизайна материалов
 
-Создайте следующие три файла в проекте Android и вставьте содержимое ниже. Google предоставляет [рекомендации по стилю](http://www.google.com/design/spec/style/color.html#color-color-palette) и [генератор цветовой палитры](http://www.materialpalette.com/) , которые помогают выбрать альтернативную цветовую схему для указанной.
+Создайте следующие три файла в проекте Android и вставьте содержимое ниже. Google предоставляет [рекомендации по стилю](https://www.google.com/design/spec/style/color.html#color-color-palette) и [генератор цветовой палитры](https://www.materialpalette.com/) , которые помогают выбрать альтернативную цветовую схему для указанной.
 
-**Resources/values/colors.xml**
+**Resources/Values/Colors. XML**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 </resources>
 ```
 
-**Resources/values/style.xml**
+**Resources/Values/Style. XML**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 Дополнительный стиль должен быть включен в папку **Values-V21** для применения конкретных свойств при запуске в комплекте программного интерфейса Android и более поздних версиях.
 
-**Resources/values-v21/style.xml**
+**Resources/Values-V21/Style. XML**
 
 ```xml
 <resources>
@@ -80,9 +80,9 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Обновление AndroidManifest. XML
+### <a name="4-update-androidmanifestxml"></a>4. обновление AndroidManifest. XML
 
-Чтобы обеспечить использование новых сведений о теме, задайте тему в файле **AndroidManifest** , добавив `android:theme="@style/MyTheme"` (оставьте остальной XML-файл).
+Чтобы обеспечить использование новых сведений о теме, задайте тему в файле **AndroidManifest** , добавив `android:theme="@style/MyTheme"` (оставьте остальную часть XML-файла).
 
 **Properties/AndroidManifest. XML**
 
@@ -93,7 +93,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 ...
 ```
 
-### <a name="5-provide-toolbar-and-tab-layouts"></a>5. Предоставление макетов панелей инструментов и вкладок
+### <a name="5-provide-toolbar-and-tab-layouts"></a>5. предоставление макетов панелей инструментов и вкладок
 
 Создайте файлы **таббар. axml** и **Toolbar. axml** в каталоге **Resources/Layout** и вставьте их содержимое из следующего списка:
 
@@ -113,7 +113,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
     app:tabMode="fixed" />
 ```
 
-Для вкладок задано несколько свойств, включая значение параметра "сила притяжения `fill` " и " `fixed`режим".
+Для вкладок задано несколько свойств, в том числе сила притяжения на вкладку `fill` и режим для `fixed`.
 Если у вас много вкладок, вы можете переключиться на эту страницу, прочтите [документацию](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) по Android таблайаут, чтобы узнать больше.
 
 **Ресурсы, макеты и панели инструментов. axml**
@@ -135,9 +135,9 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 В этих файлах мы создаем конкретную тему для панели инструментов, которая может различаться для вашего приложения.
 Дополнительные сведения см. в записи блога о [панели инструментов Hello](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) .
 
-### <a name="6-update-the-mainactivity"></a>6. Обновите`MainActivity`
+### <a name="6-update-the-mainactivity"></a>6. обновление `MainActivity`
 
-В существующих приложениях Xamarin. Forms класс **MainActivity.CS** будет наследовать `FormsApplicationActivity`от. Его необходимо заменить `FormsAppCompatActivity` на, чтобы включить новые функции.
+В существующих приложениях Xamarin. Forms класс **MainActivity.CS** будет наследовать от `FormsApplicationActivity`. Его необходимо заменить на `FormsAppCompatActivity`, чтобы включить новые функции.
 
 **MainActivity.cs**
 
@@ -145,7 +145,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 public class MainActivity : FormsAppCompatActivity  // was FormsApplicationActivity
 ```
 
-Наконец, «привязать новые макеты из шага 5 в `OnCreate` методе, как показано ниже:
+Наконец, «присоединить новые макеты на шаге 5 в методе `OnCreate`, как показано ниже:
 
 ```csharp
 protected override void OnCreate(Bundle bundle)

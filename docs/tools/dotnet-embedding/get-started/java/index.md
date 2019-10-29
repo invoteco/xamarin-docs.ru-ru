@@ -3,15 +3,15 @@ title: Начало работы с Java
 description: В этом документе описывается, как приступить к использованию внедрения .NET с помощью Java. В нем обсуждаются требования к системе, установка и поддерживаемые платформы.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 8d6bc284d07ce1be11ad273f875b75a70ae14a0f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 09ea33724c2b1184654ce7768ea1cb2525b62c28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278406"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007369"
 ---
 # <a name="getting-started-with-java"></a>Начало работы с Java
 
@@ -59,7 +59,7 @@ nuget install Embeddinator-4000
 
 В настоящее время Java находится в состоянии предварительной версии для macOS, Windows и Android.
 
-Платформа выбирается путем передачи `--platform=<platform>` аргумента командной строки в средство внедрения .NET. В `macOS`настоящее `Windows`время поддерживаются, и `Android` .
+Платформа выбирается путем передачи аргумента командной строки `--platform=<platform>` в средство внедрения .NET. В настоящее время поддерживаются `macOS`, `Windows`и `Android`.
 
 ### <a name="macos-and-windows"></a>macOS и Windows
 

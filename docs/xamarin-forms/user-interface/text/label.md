@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
-ms.openlocfilehash: 6ea8195d422da3c64175b164c5fbf2885eb234ab
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 10/28/2019
+ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
+ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696385"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72980878"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin. Forms
 
@@ -70,32 +70,6 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 
 Результат заключается в том, что символы в тексте, отображаемом [`Label`](xref:Xamarin.Forms.Label) , размещаются `CharacterSpacing` независимыми от устройства единицами.
 
-## <a name="padding"></a>Заполнение
-
-Заполнение представляет пространство между элементом и его дочерними элементами и используется для отделения элемента от его собственного содержимого. Заполнение можно применять к экземплярам [`Label`](xref:Xamarin.Forms.Label) , присвоив свойству `Label.Padding` значение [`Thickness`](xref:Xamarin.Forms.Thickness) .
-
-```xaml
-<Label Text="Padded text"
-       Padding="20" />
-```
-
-Эквивалентный код на C# выглядит так:
-
-```csharp
-Label label = new Label
-{
-    Text = "Padded text",
-    Padding = new Thickness(20)
-};
-```
-
-> [!IMPORTANT]
-> В iOS при создании [`Label`](xref:Xamarin.Forms.Label) , который задает свойство `Padding`, будет применено заполнение, а значение заполнения можно будет обновить позже. Однако при создании `Label`, который не задает свойство `Padding`, попытка его установки в дальнейшем не повлияет.
->
-> В Android и универсальная платформа Windows значение свойства `Padding` может быть указано при создании `Label` или более поздней версии.
-
-Дополнительные сведения о заполнении см. в разделе [поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
-
 ## <a name="colors"></a>Цвета
 
 Метки можно настроить для использования пользовательского цвета текста с помощью свойства BIND [`TextColor`](xref:Xamarin.Forms.Label.TextColor) .
@@ -151,7 +125,7 @@ public partial class LabelPage : ContentPage
 - **Хеадтрункатион** &ndash; усекает заголовок текста, отображая его конец.
 - **Чарактерврап** &ndash; заключает текст на новую строку с границей символа.
 - **Миддлетрункатион** &ndash; отображает начало и конец текста, а середина заменяется многоточием.
-- @No__t_1 без **переноса** не переносит текст, отображая всего столько же текста, сколько может уместиться в одной строке.
+- &ndash; без **переноса** не переносит текст, отображая всего столько же текста, сколько может уместиться в одной строке.
 - **Таилтрункатион** &ndash; показывает начало текста с усечением конца.
 - **WordWrap** &ndash; заключает текст на границе слова.
 
@@ -184,7 +158,6 @@ var label =
 На следующих снимках экрана показан результат установки свойства `MaxLines` равным 2, если текст достаточно длинный, чтобы занимать более 2 строк:
 
 ![Пример метки Макслинес](label-images/label-maxlines.png)
-
 
 ## <a name="display-html"></a>Отображать HTML
 
@@ -391,6 +364,48 @@ var label = new Label
 
 ![Пример span LineHeight](label-images/span-lineheight.png)
 
+## <a name="padding"></a>Заполнение
+
+Заполнение представляет пространство между элементом и его дочерними элементами и используется для отделения элемента от его собственного содержимого. Заполнение можно применять к экземплярам [`Label`](xref:Xamarin.Forms.Label) , присвоив свойству `Label.Padding` значение [`Thickness`](xref:Xamarin.Forms.Thickness) .
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> В iOS при создании [`Label`](xref:Xamarin.Forms.Label) , который задает свойство `Padding`, будет применено заполнение, а значение заполнения можно будет обновить позже. Однако при создании `Label`, который не задает свойство `Padding`, попытка его установки в дальнейшем не повлияет.
+>
+> В Android и универсальная платформа Windows значение свойства `Padding` может быть указано при создании `Label` или более поздней версии.
+
+Дополнительные сведения о заполнении см. в разделе [поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
+
 ## <a name="hyperlinks"></a>Гиперссылки
 
 Текст, отображаемый [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) экземпляры, можно преобразовать в гиперссылки с помощью следующего подхода:
@@ -443,7 +458,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-@No__t_0 выполняет метод `Launcher.OpenAsync`, передавая значение свойства [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) в качестве параметра. Метод `Launcher.OpenAsync` предоставляется Xamarin. Essentials и открывается в веб-браузере. Таким образом, общий результат заключается в том, что при касании гиперссылки на странице появляется веб-браузер, и открывается URL-адрес, связанный с гиперссылкой.
+`TapCommand` выполняет метод `Launcher.OpenAsync`, передавая значение свойства [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) в качестве параметра. Метод `Launcher.OpenAsync` предоставляется Xamarin. Essentials и открывается в веб-браузере. Таким образом, общий результат заключается в том, что при касании гиперссылки на странице появляется веб-браузер, и открывается URL-адрес, связанный с гиперссылкой.
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>Создание повторно используемого класса гиперссылки
 

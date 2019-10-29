@@ -4,15 +4,15 @@ description: В этом документе описываются различ�
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eefe57abd4ebf4986411a1d717aebd131ebf408f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70767020"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008338"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Общие сведения о хранении данных в приложениях Xamarin. iOS
 
@@ -54,13 +54,13 @@ SQLite — это ядро базы данных с открытым кодом,
 - Поддерживаются только переименование таблиц и ADDCOLUMN. В схему невозможно внести другие изменения.
 - Представления доступны только для чтения.
 
-Вы можете узнать больше о SQLite на веб-сайте — [SQLite.org](http://SQLite.org) , но все сведения, необходимые для использования SQLite с Xamarin, содержатся в этом документе и связанных образцах. Ядро базы данных SQLite встроено во все версии iOS.
+Вы можете узнать больше о SQLite на веб-сайте — [SQLite.org](https://SQLite.org) , но все сведения, необходимые для использования SQLite с Xamarin, содержатся в этом документе и связанных образцах. Ядро базы данных SQLite встроено во все версии iOS.
 Хотя в этой главе не рассматривается, SQLite также можно использовать в приложениях Windows Phone и Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows и Windows Phone
 
 SQLite также можно использовать на платформах Windows, хотя эти платформы не рассматриваются в этом документе.
-Дополнительные сведения см. в блоге по [задачам](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) и [задачам](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) , а также ознакомьтесь с [блогом Тим Хойер (](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+Дополнительные сведения см. [в](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) [блоге Тим Хойер (](https://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 ## <a name="related-links"></a>Связанные ссылки
 

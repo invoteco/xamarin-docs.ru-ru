@@ -3,15 +3,15 @@ title: Почему Visual Studio не включает проект библи
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: b9009db8-e716-43aa-b40e-6f28a8eb1b82
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 37fa93ef7377456d61d1a5f5de56d5de6b0f3c7f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: aba2e9dacd930c6302a96a8daf929eadab485922
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282910"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73012758"
 ---
 # <a name="why-doesnt-visual-studio-include-my-referenced-library-project-in-my-build"></a>Почему Visual Studio не включает проект библиотеки в сборку, которая на него ссылается?
 
@@ -28,4 +28,4 @@ Visual Studio использует **Configuration Manager** , чтобы опр
 > [!NOTE]
 > Серые поля обрабатываются автоматически и не должны изменяться.
 
-Презентация следующих шагов:[http://screencast.com/t/zLoQOpEn](http://screencast.com/t/zLoQOpEn)
+Презентация следующих шагов: [https://screencast.com/t/zLoQOpEn](https://screencast.com/t/zLoQOpEn)

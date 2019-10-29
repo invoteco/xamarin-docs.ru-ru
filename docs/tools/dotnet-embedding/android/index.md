@@ -2,15 +2,15 @@
 title: Внедрение .NET в Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/15/2018
-ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fef422b799ab5280aef205f4d5e55fd91050da39
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772222"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007337"
 ---
 # <a name="net-embedding-on-android"></a>Внедрение .NET в Android
 
@@ -22,9 +22,9 @@ ms.locfileid: "70772222"
 
 Для работы Xamarin. Android с внедрением .NET необходимо следующее:
 
-- Необходимо установить **Xamarin. Android** &ndash; [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии.
+- Необходимо установить **Xamarin. android** &ndash;[xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии.
 
-- **Android Studio** Необходимо установить [Android Studio 3. x](https://developer.android.com/studio/) или более поздней версии. &ndash;
+- Необходимо установить **Android Studio** &ndash;[Android Studio 3. x](https://developer.android.com/studio/) или более поздней версии.
 
 - **Пакет Java Developer Kit** &ndash;   Необходимо установить [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) или более поздней версии.
 
@@ -36,13 +36,13 @@ ms.locfileid: "70772222"
 
 2. Установите [ембеддинатор-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-3. Откройте файл **Embeddinator-4000. exe** и добавьте его в свой **путь**. Например:
+3. Откройте файл **Embeddinator-4000. exe** и добавьте его в свой **путь**. Пример:
 
     ```cmd
     set PATH=%PATH%;C:\Users\USERNAME\.nuget\packages\embeddinator-4000\0.4.0\tools
     ```
 
-4. Запустите Ембеддинатор-4000 в сборке библиотеки. Например:
+4. Запустите Ембеддинатор-4000 в сборке библиотеки. Пример:
 
     ```cmd
     Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
@@ -56,13 +56,13 @@ ms.locfileid: "70772222"
 
 Для работы Xamarin. Android с внедрением .NET необходимо следующее:
 
-- Необходимо установить **Xamarin. Android** &ndash; [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии.
+- Необходимо установить **Xamarin. android** &ndash;[xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) или более поздней версии.
 
-- **Android Studio** Необходимо установить [Android Studio 3. x](https://developer.android.com/studio/) или более поздней версии. &ndash;
+- Необходимо установить **Android Studio** &ndash;[Android Studio 3. x](https://developer.android.com/studio/) или более поздней версии.
 
 - **Пакет Java Developer Kit** &ndash;   Необходимо установить [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) или более поздней версии.
 
-- **Моно** Должен быть установлен [моно 5,0](https://www.mono-project.com/download/) или более поздняя версия (моно установлен с Visual Studio для Mac). &ndash;
+- Необходимо установить **mono** &ndash;[Mono 5,0](https://www.mono-project.com/download/) или более поздней версии (моно установлен с Visual Studio для Mac).
 
 ## <a name="using-embeddinator-4000"></a>Использование Ембеддинатор-4000
 
@@ -72,14 +72,14 @@ ms.locfileid: "70772222"
 
 2. Установите [ембеддинатор-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-3. Откройте **файл Embeddinator-4000. exe** и добавьте **Mono** в свой путь. Например:
+3. Откройте **файл Embeddinator-4000. exe** и добавьте **Mono** в свой путь. Пример:
 
     ```bash
     export TOOLS=~/.nuget/packages/embeddinator-4000/0.4.0/tools
     export PATH=$PATH:/Library/Frameworks/Mono.framework/Commands
     ```
 
-4. Запустите Ембеддинатор-4000 в сборке библиотеки. Например:
+4. Запустите Ембеддинатор-4000 в сборке библиотеки. Пример:
 
     ```bash
     mono $TOOLS/Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll

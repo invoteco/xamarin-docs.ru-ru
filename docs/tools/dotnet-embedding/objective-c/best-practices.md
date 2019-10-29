@@ -3,15 +3,15 @@ title: Рекомендации по внедрению .NET для цели-C
 description: В этом документе описаны различные рекомендации по использованию внедрения .NET с целью-C. В нем обсуждается предоставление подмножества управляемого кода, предоставление API чункиер, именование и многое другое.
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: ff04c001193eb897aac81cdc66ed535c76d81717
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2f632e3218d817aa0162a63ea81c61ca18c52b93
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285118"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73006789"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Рекомендации по внедрению .NET для цели-C
 
@@ -66,7 +66,7 @@ Person *p = [[Person alloc] initWithFirstName:@"Sebastien" lastName:@"Pouliot"];
 
 ### <a name="types"></a>Типы
 
-Цель-C не поддерживает пространства имен. Как `UIView` правило, его типы начинаются с префикса 2 (для Apple) или 3 (для третьей стороны), например для представления UIKit, которое обозначает платформу.
+Цель-C не поддерживает пространства имен. Как правило, его типы начинаются с префикса 2 (для Apple) или 3 (для третьей стороны), например `UIView` для представления UIKit, которое обозначает платформу.
 
 Для типов .NET пропуск пространства имен невозможно, так как он может привести к дублированию или путанице имен. Это делает существующие типы .NET очень длинными, например
 
@@ -101,15 +101,15 @@ id reader = [[XAMXmlConfigReader alloc] init];
 Соглашения об именовании в цели-C отличаются от .NET (в стиле Camel, а не в стиле Pascal, более подробно).
 Ознакомьтесь с [рекомендациями по написанию кода для Cocoa](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingMethods.html#//apple_ref/doc/uid/20001282-BCIGIJJF).
 
-С точки зрения разработчика "цель-C" метод с `Get` префиксом подразумевает, что вы не владеете экземпляром, т. е. [правилом Get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
+С точки зрения разработчика "цель-C" метод с префиксом `Get` подразумевает, что вы не владеете экземпляром, т. е. [правилом Get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
 
-Это правило именования не имеет соответствия в мире GC для .NET; метод .NET с `Create` префиксом будет вести себя одинаково в .NET. Однако для разработчиков цели-C это обычно означает, что вы владеете возвращаемым экземпляром, т. е. [правилом создания](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
+Это правило именования не имеет соответствия в мире GC для .NET; метод .NET с префиксом `Create` будет вести себя одинаково в .NET. Однако для разработчиков цели-C это обычно означает, что вы владеете возвращаемым экземпляром, т. е. [правилом создания](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
 
 ## <a name="exceptions"></a>Исключения
 
 В .NET широко распространено использование исключений для сообщения об ошибках. Однако они работают достаточно долго и не сильно идентичны в цели-C. Когда это возможно, их следует скрыть от разработчика цели-C.
 
-Например, шаблон .NET `Try` будет намного проще в использовании из кода цели-C:
+Например, шаблон .NET `Try` гораздо легче будет использовать из кода цели-C:
 
 ```csharp
 public int Parse (string number)
@@ -127,13 +127,13 @@ public bool TryParse (string number, out int value)
 }
 ```
 
-### <a name="exceptions-inside-init"></a>Исключения внутри`init*`
+### <a name="exceptions-inside-init"></a>Исключения в `init*`
 
 В .NET конструктор должен либо быть выполнен, либо возвращать (_надеюсь_) допустимый экземпляр или вызывать исключение.
 
-В отличие от, цель-C `init*` позволяет возвращать `nil` значение, если экземпляр не может быть создан. Это распространенный, но не общий шаблон, используемый во многих платформах Apple. В некоторых других случаях `assert` может произойти (и завершить текущий процесс).
+В отличие от этого, цель-C позволяет `init*` возвращать `nil`, если экземпляр не может быть создан. Это распространенный, но не общий шаблон, используемый во многих платформах Apple. В некоторых других случаях может произойти `assert` (и завершить текущий процесс).
 
-Генератор соответствует тому же `return nil` шаблону для созданных `init*` методов. Если создается управляемое исключение, оно будет напечатано (с помощью `NSLog`) и `nil` будет возвращено вызывающему.
+Генератор соответствует тому же шаблону `return nil` для созданных методов `init*`. Если создается управляемое исключение, оно будет напечатано (с помощью `NSLog`) и `nil` будет возвращено вызывающему.
 
 ## <a name="operators"></a>Операторы
 
@@ -141,4 +141,4 @@ public bool TryParse (string number, out int value)
 
 ["Понятные"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) именованные методы создаются в качестве предпочтений перегрузкам операторов при их обнаружении и могут привести к упрощению использования API.
 
-Классы, переопределяющие `==` операторы `!=` анд\ор, должны также переопределять стандартный метод Equals (Object).
+Классы, переопределяющие операторы `==` анд\ор `!=`, должны также переопределять стандартный метод Equals (Object).

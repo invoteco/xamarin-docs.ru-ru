@@ -4,15 +4,15 @@ description: В этом документе содержатся общие св
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 204bf087a51132fdd204990c3b92453ecce96a53
-ms.sourcegitcommit: 20c645f41620d5124da75943de1b690261d00660
+ms.openlocfilehash: 58a1fd68dda2216a62fe6f30cf61d6d2ec7d40d5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72426575"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003675"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Создание объектов пользовательского интерфейса в Xamarin. iOS
 
@@ -88,7 +88,7 @@ using UIKit;
 
 Дополнительные сведения о том, как Interface Builder Xcode интегрируется с Visual Studio для Mac, см. в документе о [создании кода XIB](~/ios/internals/xib-code-generation.md#generated) .
 
-## <a name="using-c"></a>Использование C @ no__t-0
+## <a name="using-c"></a>Использование C\#
 
 Если вы решили создать объект пользовательского интерфейса с помощью C# (например, в представлении или контроллере представления), выполните следующие действия.
 
@@ -122,7 +122,7 @@ public override void ViewDidLoad () {
 
 Файл `ControlsViewController.cs` предназначен для *вашего кода*. Именно здесь реализуются такие методы жизненного цикла `View`, как `ViewDidLoad` и `ViewWillAppear`, и где можно добавлять собственные свойства, поля и методы.
 
-@No__t-0 генерируется код, содержащий разделяемый класс. Когда вы назначите имя элемента управления в области конструктора в Visual Studio для Mac или создаете розетку или действие в Xcode, соответствующее свойство или разделяемый метод добавляется в файл конструктора (designer.cs). В приведенном ниже коде показан пример кода, созданного для двух кнопок и текстового представления, где одна из кнопок также имеет событие `TouchUpInside`.
+`ControlsViewController.designer.cs` создается код, содержащий разделяемый класс. Когда вы назначите имя элемента управления в области конструктора в Visual Studio для Mac или создаете розетку или действие в Xcode, соответствующее свойство или разделяемый метод добавляется в файл конструктора (designer.cs). В приведенном ниже коде показан пример кода, созданного для двух кнопок и текстового представления, где одна из кнопок также имеет событие `TouchUpInside`.
 
 Эти элементы разделяемого класса позволяют коду ссылаться на элементы управления и реагировать на действия, объявленные в области конструктора:
 

@@ -4,15 +4,15 @@ description: В этом документе описываются группы 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: fec6cef22ddbc47aca0027aa026e0524b38bec4e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e117fce77e9cdc8d9e9dc8b9ed7b3aa22eca4e39
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768061"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001715"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>Работа с группами приложений watchOS в Xamarin
 
@@ -28,23 +28,23 @@ ms.locfileid: "70768061"
 
 ### <a name="provisioning"></a>Подготовка
 
-Группа приложений будет иметь идентификатор, который обычно является идентификатором пакета с `group.` префиксом. Например, можно использовать идентификатор `com.xamarin.WatchSettings` пакета и группу `group.com.xamarin.WatchSettings`приложений.
+Группа приложений будет иметь идентификатор, который обычно является ИДЕНТИФИКАТОРом пакета с префиксом `group.`. Например, можно использовать идентификатор пакета `com.xamarin.WatchSettings` и группу приложений `group.com.xamarin.WatchSettings`.
 
-[![](app-groups-images/app-group-sml.png "Используйте идентификатор пакета com. Xamarin. Ватчсеттингс и группу приложений Group. com. Xamarin. Ватчсеттингс")](app-groups-images/app-group.png#lightbox)
+[![](app-groups-images/app-group-sml.png "Use the Bundle ID com.xamarin.WatchSettings and the app group   group.com.xamarin.WatchSettings")](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
 Кроме настройки профиля подготовки, **включите группы приложений** в поле "права **. plist** " и введите идентификатор, который вы выбрали:
 
-[![](app-groups-images/entitlements-sml.png "Настройте plist и введите идентификатор.")](app-groups-images/entitlements.png#lightbox)
+[![](app-groups-images/entitlements-sml.png "Configure the plist and enter the ID")](app-groups-images/entitlements.png#lightbox)
 
 ### <a name="deployment"></a>Развертывание
 
 Убедитесь, что группа приложений правильно настроена в подготовке [развертывания](~/ios/watchos/deploy-test/index.md#App_Groups) .
 
-Дополнительные сведения см. в разделе [возможностей групп приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) документации.
+Дополнительные сведения см. в документации по [возможностям группы приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Apple обмена данными с содержащего приложение](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Совместное использование данных Apple с содержащим приложением](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
 - [Документ группы приложений Apple](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)

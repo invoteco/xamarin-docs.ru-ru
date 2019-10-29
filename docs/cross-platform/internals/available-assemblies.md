@@ -3,15 +3,15 @@ title: Доступные сборки
 description: В этом документе перечислены сборки, доступные для использования в Xamarin. iOS, Xamarin. Android и Xamarin. Mac. Он также содержит ссылки на документацию по библиотекам .NET Standard и переносимым библиотекам классов.
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: 3d3524a0f99d78fc356dc7c4bb3e3aca1940a718
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 238011b4762f2d394629e75fbde476e618219df2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278451"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016353"
 ---
 # <a name="available-assemblies"></a>Доступные сборки
 
@@ -46,7 +46,7 @@ ms.locfileid: "70278451"
 > |Mono.Security.dll|Криптографические API.|✓|✓|✓|
 > |monotouch.dll|Эта сборка содержит C# привязку к API кокоатауч. Она доступна только в классических проектах iOS.|✓| | |
 > |MonoTouch. &#8203;Dialog-1. dll| |✓| | |
-> |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
+> |MonoTouch. &#8203;NUnitLite. dll| |✓| | |
 > |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |OpenTK-1.0.dll|API-интерфейсы OpenGL/Open Object, расширенные для обеспечения поддержки устройств iPhone.|✓|✓|✓|
 > |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен:<br />System.Collections.Specialized<br />Системой. &#8203;ComponentModel<br />System. ComponentModel. Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System. IO. Compression. FileSystem<br />System.Net<br />System .NET. Cache<br />Система .NET. mail<br />System .NET. MIME<br />System.Net. &#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System. Runtime. &#8203;InteropServices<br />System.Runtime.Versioning<br />System. Security. &#8203;AccessControl<br />System.Security.Authentication<br />System. Security. &#8203;Шифрование<br />System. Security. Permissions<br />System.Threading<br />Системные. Timers|✓|✓|✓|
@@ -67,15 +67,15 @@ ms.locfileid: "70278451"
 > |Системой. &#8203;Transactions. dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); часть поддержки [System. Data](~/ios/data-cloud/system.data.md) .|✓|✓|✓|
 > |System. Web. &#8203;Services. dll|Основные веб-службы из профиля .NET 3,5 с удаленными компонентами сервера.|✓|✓|✓|
 > |Системой. &#8203;Windows. dll| |✓|✓|✓|
-> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |Системой. &#8203;XML. dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System. XML. &#8203;LINQ. dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|Эта сборка содержит C# привязку к API кокоатауч. Это используется только в Объединенных проектах iOS.|✓| | |
 > |Java.Interop.dll| | |✓| |
 > |Mono.Android.dll| | |✓| |
 > |Моно. Android. &#8203;Export. dll| | |✓| |
 > |Mono.Posix.dll| | |✓| |
-> |System.&#8203;EnterpriseServices.dll| | |✓| |
+> |Системой. &#8203;EnterpriseServices. dll| | |✓| |
 > |Xamarin. Android. &#8203;NUnitLite. dll| | |✓| |
 > |Моно. CompilerServices. &#8203;Симболвритер. dll|Для модулей записи компилятора.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|

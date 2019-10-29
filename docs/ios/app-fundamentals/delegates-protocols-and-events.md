@@ -4,15 +4,15 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/17/2017
-ms.openlocfilehash: d42263733c7fa793713738be4b389eaa4850f38b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: b63d5dcd8ac1a82c1f120cc5a690985557f7e68f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68649357"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004399"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>События, протоколы и делегаты в Xamarin. iOS
 
@@ -52,7 +52,7 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-Приведенный выше код работает в методе `ViewDidLoad` UIViewController. @No__t_0ая переменная ссылается на кнопку, которую можно добавить либо в конструкторе iOS, либо с помощью кода. На следующем рисунке показана кнопка, добавленная в конструктор iOS:
+Приведенный выше код работает в методе `ViewDidLoad` UIViewController. `aButton`ая переменная ссылается на кнопку, которую можно добавить либо в конструкторе iOS, либо с помощью кода. На следующем рисунке показана кнопка, добавленная в конструктор iOS:
 
 [![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "A button added in iOS Designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
@@ -225,7 +225,7 @@ var sampleCoordinate =
 map.AddAnnotation (new SampleMapAnnotation (sampleCoordinate));
 ```
 
-Переменная Map здесь является экземпляром `MKMapView`, который представляет собой класс, представляющий саму карту. @No__t_0 будет использовать данные `Coordinate`, производные от экземпляра `SampleMapAnnotation`, чтобы разместить представление заметок на карте.
+Переменная Map здесь является экземпляром `MKMapView`, который представляет собой класс, представляющий саму карту. `MKMapView` будет использовать данные `Coordinate`, производные от экземпляра `SampleMapAnnotation`, чтобы разместить представление заметок на карте.
 
 Протокол `MKAnnotation` предоставляет известный набор возможностей для любых объектов, реализующих его, без потребителя (в данном случае — карта), которым необходимо знать сведения о реализации. Это упрощает добавление в карту множества возможных аннотаций.
 

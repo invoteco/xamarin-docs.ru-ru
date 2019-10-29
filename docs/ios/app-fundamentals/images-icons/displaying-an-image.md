@@ -4,15 +4,15 @@ description: В этой статье описывается включение 
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2018
-ms.openlocfilehash: eaef454de77387ea2a6732fa00797a6a4f0e3cd1
-ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
+ms.openlocfilehash: cda45f01dae2dc17c2517a7f013acacde7906a4b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71975880"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004485"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Отображение изображения в Xamarin. iOS
 
@@ -34,29 +34,29 @@ _В этой статье описывается включение ресурс
 
 1. В **Обозреватель решений**дважды щелкните файл `Assets.xcassets`, чтобы открыть его для редактирования:
 
-    ![](displaying-an-image-images/imageset01.png "Ресурсы Assets. xcassets в обозреватель решений")
+    ![](displaying-an-image-images/imageset01.png "The Assets.xcassets in the Solution Explorer")
 2. Щелкните правой кнопкой мыши **список активы** и выберите **создать набор изображений**:
 
-    ![](displaying-an-image-images/imageset02.png "Добавление нового набора изображений")
+    ![](displaying-an-image-images/imageset02.png "Adding a New Image Set")
 3. Выберите новый набор изображений, и откроется редактор:
 
-    ![](displaying-an-image-images/imageset03.png "Редактор набора изображений")
+    ![](displaying-an-image-images/imageset03.png "The Image Set editor")
 4. Здесь можно перетащить изображения для каждого из различных устройств и необходимых разрешений.
-5. Дважды щелкните **имя** нового набора изображений в **списке ресурсов** , чтобы изменить его: ![](displaying-an-image-images/imageset04.png "Изменение имени нового набора изображений")
+5. Дважды щелкните **имя** нового набора изображений в **списке ресурсов** , чтобы изменить его:![](displaying-an-image-images/imageset04.png "Изменение имени нового набора изображений")
 
 При использовании **набора изображений** в конструкторе iOS просто выберите имя набора из раскрывающегося списка в редакторе свойств:
 
-![](displaying-an-image-images/imageset06.png "Выберите имя набора изображений из раскрывающегося списка")
+![](displaying-an-image-images/imageset06.png "Select an image set's name from the dropdown list")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Откройте каталог активов из **Обозреватель решений**и в левом верхнем углу нажмите кнопку **со знаком «плюс** »:
 
-    ![](displaying-an-image-images/asset5.png "Нажмите кнопку «плюс»")
+    ![](displaying-an-image-images/asset5.png "Click the Plus button")
 
 2. Выберите **Добавить набор изображений** , и откроется редактор набора изображений для нового набора изображений. Здесь можно перетащить изображения для каждого из различных устройств и необходимых разрешений.
 
-    ![](displaying-an-image-images/asset7.png "Редактор набора изображений")
+    ![](displaying-an-image-images/asset7.png "The image set editor")
 
 ### <a name="renaming-an-image-set"></a>Переименование набора изображений
 
@@ -64,13 +64,13 @@ _В этой статье описывается включение ресурс
 
 1. В **Обозреватель решений**дважды щелкните файл **каталога активов** , чтобы открыть его для редактирования:
 
-    ![](displaying-an-image-images/rename01.png "Каталог активов в обозреватель решений")
+    ![](displaying-an-image-images/rename01.png "The Asset Catalog in the Solution Explorer")
 2. Выберите **набор изображений** для переименования:
 
-    ![](displaying-an-image-images/rename02.png "Выберите набор изображений для переименования")
+    ![](displaying-an-image-images/rename02.png "Select the Image Set to rename")
 3. В **обозревателе свойств**прокрутите вниз и выберите **имя**(в разделе **Прочие** ):
 
-    ![](displaying-an-image-images/rename03.png "Выберите имя в разделе \"Прочие\".")
+    ![](displaying-an-image-images/rename03.png "Select Name under the Misc section")
 4. Введите новое **имя** **набора изображений** и сохраните изменения.
 
 -----
@@ -82,27 +82,27 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> Если изображения, назначенные набору изображений, отображаются неправильно, убедитесь, что используется правильное имя файла с методом `FromBundle` ( **набор изображений** , а не имя родительского **каталога активов** ). Для изображений PNG расширение `.png` можно опустить. Для других форматов изображений требуется расширение (например, `PurpleMonkey.jpg`).
+> Если изображения, назначенные набору изображений, отображаются неправильно, убедитесь, что используется правильное имя файла с методом `FromBundle` ( **набор изображений** , а не имя родительского **каталога активов** ). Для изображений PNG можно опустить расширение `.png`. Для других форматов изображений требуется расширение (например, `PurpleMonkey.jpg`).
 
 ### <a name="using-vector-images-in-asset-catalogs"></a>Использование векторных изображений в каталогах активов
 
-Начиная с iOS 8 в **наборы изображений** добавлен специальный класс **vector** , позволяющий разработчику включать в кассету изображение в формате **PDF** в качестве, в том числе отдельные файлы точечных рисунков с разными разрешениями. Используя этот метод, предоставьте один векторный файл для разрешения @no__t 0 (в формате векторного PDF-файла), а версии файла `@2x` и `@3x` будут созданы во время компиляции и включены в пакет приложения.
+Начиная с iOS 8 в **наборы изображений** добавлен специальный класс **vector** , позволяющий разработчику включать в кассету изображение в формате **PDF** в качестве, в том числе отдельные файлы точечных рисунков с разными разрешениями. Используя этот метод, предоставьте один векторный файл для разрешения `@1x` (в формате векторного PDF-файла), а `@2x` и `@3x` версии файла будут создаваться во время компиляции и включаться в пакет приложения.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![](displaying-an-image-images/imageset05.png "Векторные изображения в редакторе каталогов активов")
+![](displaying-an-image-images/imageset05.png "Vector Images in the Asset Catalogs editor")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](displaying-an-image-images/asset8.png "Векторные изображения в редакторе каталогов активов")
+![](displaying-an-image-images/asset8.png "Vector Images in the Asset Catalogs editor")
 
 -----
 
-Например, если разработчик включает файл `MonkeyIcon.pdf` в качестве вектора каталога активов с разрешением 150px x 150px, в окончательный пакет приложений при его компиляции будут включены следующие ресурсы растрового изображения:
+Например, если разработчик включает файл `MonkeyIcon.pdf` в качестве вектора каталога активов с разрешением 150px x 150px, в окончательный набор приложений при его компиляции будут включены следующие ресурсы растрового изображения:
 
-- разрешение `MonkeyIcon@1x.png`-150px x 150px.
-- разрешение `MonkeyIcon@2x.png`-300 пикселей x 300 пикселей.
-- разрешение `MonkeyIcon@3x.png`-450px x 450px.
+- разрешение `MonkeyIcon@1x.png` 150px x 150px.
+- разрешение `MonkeyIcon@2x.png` 300 пикселей x 300 пикселей.
+- разрешение `MonkeyIcon@3x.png` 450px x 450px.
 
 При использовании векторных изображений PDF в каталогах активов следует учитывать следующее:
 
@@ -118,11 +118,11 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![](displaying-an-image-images/templateimage01.png "Режим рендеринга, настроенный на изображение шаблона")](displaying-an-image-images/templateimage01.png#lightbox)
+[![](displaying-an-image-images/templateimage01.png "The Render Mode set to Template Image")](displaying-an-image-images/templateimage01.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](displaying-an-image-images/templateimage01vs.png "Режим рендеринга, настроенный на шаблон")](displaying-an-image-images/templateimage01vs.png#lightbox)
+[![](displaying-an-image-images/templateimage01vs.png "The Render Mode set to Template")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
 -----
 
@@ -130,11 +130,11 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![](displaying-an-image-images/templateimage03.png "Установка цвета оттенка для выделения изображения")](displaying-an-image-images/templateimage03.png#lightbox)
+[![](displaying-an-image-images/templateimage03.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](displaying-an-image-images/templateimage03vs.png "Установка цвета оттенка для выделения изображения")](displaying-an-image-images/templateimage03vs.png#lightbox)
+[![](displaying-an-image-images/templateimage03vs.png "Set the Tint to colorize the image")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
 -----
 
@@ -155,53 +155,53 @@ if (MyIcon.Image != null) {
 }
 ```
 
-Поскольку свойство `RenderMode` объекта `UIImage` доступно только для чтения, используйте метод `ImageWithRenderingMode` для создания нового экземпляра изображения с требуемым параметром режима рендеринга.
+Поскольку свойство `RenderMode` `UIImage` доступно только для чтения, используйте метод `ImageWithRenderingMode`, чтобы создать новый экземпляр изображения с требуемым параметром режима рендеринга.
 
-Существует три возможных параметра для `UIImage.RenderMode` через перечисление `UIImageRenderingMode`:
+Существует три возможных параметра для `UIImage.RenderMode` с помощью перечисления `UIImageRenderingMode`.
 
-- `AlwaysOriginal` — принудительное отображение изображения в качестве исходного файла исходного изображения без внесения изменений.
+- `AlwaysOriginal` — принудительное отображение изображения в качестве исходного файла исходного изображения без каких-либо изменений.
 - `AlwaysTemplate` — принудительное отображение изображения в виде шаблона путем выделения цветом пикселов указанного цвета `Tint`.
-- `Automatic` — отображает изображение в виде шаблона или исходного файла в зависимости от среды, в которой он используется. Например, если изображение используется в `UIToolBar`, `UINavigationBar`, `UITabBar` или `UISegmentControl`, оно будет рассматриваться как шаблон.
+- `Automatic` — отображает изображение в виде шаблона или исходного файла в зависимости от среды, в которой он используется. Например, если образ используется в `UIToolBar`, `UINavigationBar`, `UITabBar` или `UISegmentControl` он будет рассматриваться как шаблон.
 
 ## <a name="adding-new-assets-collections"></a>Добавление новых коллекций активов
 
-При работе с изображениями в каталогах активов могут возникнуть случаи, когда потребуется новая коллекция, вместо того чтобы добавлять все образы приложения в коллекцию `Assets.xcassets`. Например, при проектировании ресурсов по запросу.
+При работе с изображениями в каталогах активов могут возникнуть ситуации, когда потребуется новая коллекция, а не все образы приложения в коллекцию `Assets.xcassets`. Например, при проектировании ресурсов по запросу.
 
 Чтобы добавить новый каталог ресурсов в проект, выполните следующие действия.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Щелкните правой кнопкой мыши **имя проекта** в **Обозреватель решений** и выберите **добавить** > **новый файл...**
-2. Выберите **iOS** > **Каталог активов**, введите **имя** коллекции и нажмите кнопку **создать** :
+2. Выберите **iOS** > **Каталог ресурсов**, введите **имя** коллекции и нажмите кнопку **создать** :
 
-    ![](displaying-an-image-images/asset01.png "Создание нового каталога активов")
+    ![](displaying-an-image-images/asset01.png "Creating a new Asset Catalog")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. В обозреватель решений щелкните правой кнопкой мыши папку **каталоги активов** и выберите **Добавить > новый каталог ресурсов**.
 2. Присвойте ему имя и нажмите кнопку **Добавить**:
 
-    ![](displaying-an-image-images/asset1.png "Создание нового каталога активов")
+    ![](displaying-an-image-images/asset1.png "Creating a new Asset Catalog")
 
 -----
 
-Отсюда можно работать с коллекцией так же, как по умолчанию коллекция `Assets.xcassets` автоматически включается в проект.
+Отсюда коллекцию можно обрабатывать таким же образом, как и коллекция по умолчанию `Assets.xcassets`, автоматически включаемая в проект.
 
 ## <a name="using-images-with-controls"></a>Использование изображений с элементами управления
 
-Кроме использования образов для поддержки приложения, iOS также использует изображения с такими типами элементов управления приложений, как панели вкладок, панели инструментов, панели навигации, таблицы и кнопки. Простой способ создания изображения в элементе управления — присвоение экземпляру `UIImage` свойства `Image` элемента управления.
+Кроме использования образов для поддержки приложения, iOS также использует изображения с такими типами элементов управления приложений, как панели вкладок, панели инструментов, панели навигации, таблицы и кнопки. Простым способом создания изображения на элементе управления является назначение `UIImage` экземпляра свойству `Image` элемента управления.
 
 ### <a name="frombundle"></a>фромбундле
 
-Вызов метода `FromBundle` — это синхронный (блокирующий) вызов, который имеет ряд встроенных функций загрузки и управления изображениями, таких как поддержка кэширования и автоматическая обработка файлов изображений для различных решений.
+Вызов метода `FromBundle` является синхронным (блокирующий) вызовом с несколькими встроенными функциями загрузки и управления изображениями, такими как поддержка кэширования и автоматическая обработка файлов изображений для различных решений.
 
-В следующем примере показано, как задать изображение `UITabBarItem` на `UITabBar`:
+В следующем примере показано, как задать изображение `UITabBarItem` на `UITabBar`.
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-Предполагается, что `MyImage` — имя ресурса изображения, добавленного в каталог активов выше. При работе с образами каталога активов просто укажите имя набора изображений в методе `FromBundle` для изображений в формате **PNG** :
+Предполагая, что `MyImage` — имя ресурса изображения, добавляемого в каталог активов выше. При работе с образами каталога активов просто укажите имя набора изображений в методе `FromBundle` для изображений в формате **PNG** :
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
@@ -221,47 +221,47 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-![](displaying-an-image-images/display01.png "Добавлен образец ресурса изображения")
+![](displaying-an-image-images/display01.png "A sample Image Asset has been added")
 
 Чтобы отобразить его в раскадровке, выполните следующие действия:
 
 1. Дважды щелкните файл `Main.storyboard` в **Обозреватель решений** , чтобы открыть его для редактирования в конструкторе iOS.
 2. Выберите **представление изображения** из **области элементов**:
 
-     ![](displaying-an-image-images/display02.png "Выбор представления изображения из панели элементов")
+     ![](displaying-an-image-images/display02.png "Select an Image View from the Toolbox")
 3. Перетащите представление изображения в область конструктора и установите его расположение и размер по мере необходимости:
 
-    ![](displaying-an-image-images/display03.png "Новое представление изображений на область конструктора")
+    ![](displaying-an-image-images/display03.png "A new Image View on the Design Surface")
 4. В разделе **мини** -приложения в **обозревателе свойств** выберите нужный ресурс **изображения** .
 
-    ![](displaying-an-image-images/display04.png "Выберите нужный ресурс изображения для отображения")
+    ![](displaying-an-image-images/display04.png "Select the desired Image asset to be displayed")
 5. В разделе " **представление** " используйте **режим** , чтобы управлять изменением размера изображения при изменении размера **представления изображения** .
 6. Выбрав **представление изображения** , щелкните его еще раз, чтобы добавить **ограничения**:
 
-    ![](displaying-an-image-images/display05.png "Добавление ограничений")
+    ![](displaying-an-image-images/display05.png "Adding Constraints")
 7. Перетащите маркер "T" на каждом крае **представления изображения** на соответствующую сторону экрана, чтобы "закрепить" изображение на сторонах. Таким образом, **представление изображений** будет сжиматься и увеличиваться при изменении размера экрана.
 8. Сохраните изменения в раскадровке.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](displaying-an-image-images/display01vs.png "Добавлен образец ресурса изображения")
+![](displaying-an-image-images/display01vs.png "A sample Image Asset has been added")
 
 Чтобы отобразить его в раскадровке, выполните следующие действия:
 
 1. Дважды щелкните файл `Main.storyboard` в **Обозреватель решений** , чтобы открыть его для редактирования в конструкторе iOS.
 2. Выберите **представление изображения** из **области элементов**:
 
-     ![](displaying-an-image-images/display02vs.png "Выбор представления изображения из панели элементов")
+     ![](displaying-an-image-images/display02vs.png "Select an Image View from the Toolbox")
 3. Перетащите представление изображения в область конструктора и установите его расположение и размер по мере необходимости:
 
-    ![](displaying-an-image-images/display03vs.png "Новое представление изображений на область конструктора")
+    ![](displaying-an-image-images/display03vs.png "A new Image View on the Design Surface")
 4. В разделе **мини** -приложения в **обозревателе свойств** выберите нужный ресурс **изображения** .
 
-    ![](displaying-an-image-images/display04vs.png "Выберите нужный ресурс изображения для отображения")
+    ![](displaying-an-image-images/display04vs.png "Select the desired Image asset to be displayed")
 5. В разделе " **представление** " используйте **режим** , чтобы управлять изменением размера изображения при изменении размера **представления изображения** .
 6. Выбрав **представление изображения** , щелкните его еще раз, чтобы добавить **ограничения**:
 
-    ![](displaying-an-image-images/display05vs.png "Добавление ограничений")
+    ![](displaying-an-image-images/display05vs.png "Adding Constraints")
 7. Перетащите маркер "T" на каждом крае **представления изображения** на соответствующую сторону экрана, чтобы "закрепить" изображение на сторонах. Таким образом, **представление изображений** будет сжиматься и увеличиваться при изменении размера экрана.
 8. Сохраните изменения в раскадровке.
 
@@ -285,7 +285,7 @@ imageView.Image = UIImage.FromBundle ("Kemah");
 View.AddSubview (imageView);
 ```
 
-Этот код создает новый `UIImageView` и присваивает ему исходный размер и расположение. Затем он загружает изображение из ресурса изображения, добавленного в проект, и добавляет `UIImageView` в родительский `UIView`, чтобы отобразить его.
+Этот код создает новый `UIImageView` и присваивает ему исходный размер и расположение. Затем он загружает изображение из ресурса изображения, добавленного в проект, и добавляет `UIImageView` к родительскому `UIView`, чтобы отобразить его.
 
 ## <a name="related-links"></a>Связанные ссылки
 

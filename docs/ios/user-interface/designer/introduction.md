@@ -4,15 +4,15 @@ description: В этом руководством описывается Xamarin
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 6b02a0f8476cf47ca6df279653095fe0845b36c9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71250144"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004575"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
 
@@ -76,7 +76,7 @@ Xamarin Designer для iOS является конструктором визу
 
 Чтобы получить доступ к кнопке в коде и управлять ей, она должна иметь уникальный идентификатор. Укажите уникальный идентификатор, нажав кнопку, открыв окно " **Свойства**" и задав в поле " **имя** " значение, например "SubmitButton":
 
-[![Задание имени кнопки в окне "Свойства"](introduction-images/4-settingbuttonname-vs.png "Задание имени кнопки в окне Свойства")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
+[![Задание имени кнопки в окне "Свойства"](introduction-images/4-settingbuttonname-vs.png "Задание имени кнопки в окне "Свойства"")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
 -----
 
@@ -223,11 +223,11 @@ namespace Designer
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов ограничения")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
+[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов "ограничения"")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vs.png "Панель инструментов ограничения")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
+[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vs.png "Панель инструментов "ограничения"")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -353,7 +353,7 @@ namespace Designer
 
 Используйте **окно Свойства** для изменения идентификатора, визуальных стилей, специальных возможностей и поведения элемента управления. На следующем снимке экрана показаны параметры **окна свойств** для кнопки:
 
-[![Окно "Свойства" для кнопки](introduction-images/17-buttonpropertieswindow-vs.png "Окно Свойства для кнопки")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
+[![Окно "Свойства" для кнопки](introduction-images/17-buttonpropertieswindow-vs.png "Окно "Свойства" для кнопки")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
 
 #### <a name="properties-window-sections"></a>Разделы окна "Свойства"
 

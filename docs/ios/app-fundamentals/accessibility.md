@@ -4,15 +4,15 @@ description: В этом документе описывается доступ�
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/18/2016
-ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 31cae6d6770b4c8fc4ff722e67f4ddce8ffdd7c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766752"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011300"
 ---
 # <a name="accessibility-on-ios"></a>Специальные возможности в iOS
 
@@ -44,7 +44,7 @@ displayOnlyText.AccessibilityTraits = UIAccessibilityTrait.Header | UIAccessibil
 
 ### <a name="what-is-accessibilityidentifier"></a>Что такое Акцессибилитидентифиер?
 
-@No__t_0 используется для задания уникального ключа, который можно использовать для ссылки на элементы пользовательского интерфейса через API UIAutomation.
+`AccessibilityIdentifier` используется для задания уникального ключа, который можно использовать для ссылки на элементы пользовательского интерфейса через API UIAutomation.
 
 Значение `AccessibilityIdentifier` никогда не будет обводиться или отображаться для пользователя.
 
@@ -138,4 +138,4 @@ VoiceOver включается в приложении " **Параметры** 
 
 - [Кросс-платформенные специальные возможности](~/cross-platform/app-fundamentals/accessibility.md)
 - [Специальные возможности iOS (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [VoiceOver iOS](http://www.apple.com/accessibility/ios/voiceover/)
+- [VoiceOver iOS](https://www.apple.com/accessibility/ios/voiceover/)

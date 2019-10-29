@@ -3,15 +3,15 @@ title: Создание привязок с целью Шарпие
 description: В этом разделе приводятся общие сведения о цели Шарпие, средстве командной строки Xamarin, используемом для автоматизации процесса создания привязки к библиотеке цели-C.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765715"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016181"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Создание привязок с целью Шарпие
 
@@ -44,7 +44,7 @@ _В этом разделе приводятся общие сведения о 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Загрузка целевого Шарпие](https://aka.ms/objective-sharpie)
-- [Пошаговое руководство: Привязка библиотеки цели-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Пошаговое руководство. привязка библиотеки цели-C](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Привязка библиотек Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Сведения о привязке](~/cross-platform/macios/binding/overview.md)
 - [Справочное руководство по типам привязки](~/cross-platform/macios/binding/binding-types-reference.md)

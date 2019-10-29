@@ -2,15 +2,15 @@
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: Кросс-платформенные разработчики для настольных систем
 description: Этот документ содержит ссылки на различные руководства, описывающие Xamarin. Forms для разработчиков WPF и Windows Forms. В связанном содержимом рассматриваются жизненный цикл приложения, элементы управления пользовательского интерфейса, руководство по переносу и примеры.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: e4c14b3f6458180c6da9f123cab5aad406091667
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dad7548ab576f03ab2e7e3fca94f0ab45918367e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290366"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016456"
 ---
 # <a name="cross-platform-for-desktop-developers"></a>Кросс-платформенные разработчики для настольных систем
 
@@ -34,4 +34,4 @@ ms.locfileid: "70290366"
 
 ## <a name="learn-more"></a>Дополнительные сведения
 
-[ Созданиеэлектронной![](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [документации пошаблонамкорпоративныхприложенийнамобильныхустройствахэлектроннаякнига![](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
+[![создание электронной](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) документации по [![мобильных приложений шаблоны электронной](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md) документации

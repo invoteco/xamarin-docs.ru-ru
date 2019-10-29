@@ -2,15 +2,15 @@
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: Сравнение элементов управления ИП
 description: В этом документе представлено сравнение элементов управления пользовательского интерфейса между Xamarin. Forms, Windows Forms и WPF. Он также содержит ссылки на другую документацию, которая сравнивает WPF с Xamarin. Forms.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ac1c7872253f11ddd58e362501827058fd9a28a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 854d05d004276fa4ce3ccdfc63c541217c6c7acd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290396"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016496"
 ---
 # <a name="ui-controls-comparison"></a>Сравнение элементов управления ИП
 
@@ -26,7 +26,7 @@ ms.locfileid: "70290396"
 |[CheckBox](https://msdn.microsoft.com/library/system.windows.forms.checkbox(v=vs.110).aspx)|[CheckBox](https://msdn.microsoft.com/library/system.windows.controls.checkbox(v=vs.110).aspx)|Параметр|
 |[CheckedListBox](https://msdn.microsoft.com/library/system.windows.forms.checkedlistbox(v=vs.110).aspx)|[ListBox](https://msdn.microsoft.com/library/system.windows.controls.listbox(v=vs.110).aspx) с композицией.|ListView с композицией.|
 |[ColorDialog](https://msdn.microsoft.com/library/system.windows.forms.colordialog(v=vs.110).aspx)|-|-|
-|[ComboBox](https://msdn.microsoft.com/library/system.windows.forms.combobox(v=vs.110).aspx)|[Поле со списком](https://msdn.microsoft.com/library/system.windows.controls.combobox(v=vs.110).aspx) (не поддерживает автозавершение)|Средство выбора|
+|[ComboBox](https://msdn.microsoft.com/library/system.windows.forms.combobox(v=vs.110).aspx)|[ComboBox](https://msdn.microsoft.com/library/system.windows.controls.combobox(v=vs.110).aspx) (не поддерживает автозавершение)|Средство выбора|
 |[ContextMenuStrip](https://msdn.microsoft.com/library/system.windows.forms.contextmenustrip(v=vs.110).aspx)|[ContextMenu](https://msdn.microsoft.com/library/system.windows.controls.contextmenu(v=vs.110).aspx)|-|
 |[DataGridView](https://msdn.microsoft.com/library/system.windows.forms.datagridview(v=vs.110).aspx)|[DataGrid](https://msdn.microsoft.com/library/system.windows.controls.datagrid(v=vs.110).aspx)|-|
 |[DateTimePicker](https://msdn.microsoft.com/library/system.windows.forms.datetimepicker(v=vs.110).aspx)|[DatePicker](https://msdn.microsoft.com/library/system.windows.controls.datepicker(v=vs.110).aspx)|DatePicker & TimePicker|
@@ -38,9 +38,9 @@ ms.locfileid: "70290396"
 |[Форма](https://msdn.microsoft.com/library/system.windows.forms.form(v=vs.110).aspx)|[Окно](https://msdn.microsoft.com/library/system.windows.window(v=vs.110).aspx)|Страница|
 |[GroupBox](https://msdn.microsoft.com/library/system.windows.forms.groupbox(v=vs.110).aspx)|[GroupBox](https://msdn.microsoft.com/library/system.windows.controls.groupbox(v=vs.110).aspx)|-|
 |[HelpProvider](https://msdn.microsoft.com/library/system.windows.forms.helpprovider(v=vs.110).aspx)|Нет эквивалентного элемента управления (Используйте подсказки).|-|
-|[HScrollBar](https://msdn.microsoft.com/library/system.windows.forms.hscrollbar(v=vs.110).aspx)|[Полоса прокрутки](https://msdn.microsoft.com/library/system.windows.controls.primitives.scrollbar(v=vs.110).aspx) (Прокрутка встроена в контейнерные элементы управления)|Использование Скроллвиев|
+|[HScrollBar](https://msdn.microsoft.com/library/system.windows.forms.hscrollbar(v=vs.110).aspx)|[ScrollBar](https://msdn.microsoft.com/library/system.windows.controls.primitives.scrollbar(v=vs.110).aspx) (прокрутка встроена в контейнерные элементы управления)|Использование Скроллвиев|
 |[ImageList](https://msdn.microsoft.com/library/system.windows.forms.imagelist(v=vs.110).aspx)|-|-|
-|[Label](https://msdn.microsoft.com/library/system.windows.forms.label(v=vs.110).aspx)|[Label](https://msdn.microsoft.com/library/system.windows.controls.label(v=vs.110).aspx)|Метка|
+|[Метка](https://msdn.microsoft.com/library/system.windows.forms.label(v=vs.110).aspx)|[Метка](https://msdn.microsoft.com/library/system.windows.controls.label(v=vs.110).aspx)|Метка|
 |[LinkLabel](https://msdn.microsoft.com/library/system.windows.forms.linklabel(v=vs.110).aspx)|Нет эквивалентного элемента управления (можно использовать класс [Hyperlink](https://msdn.microsoft.com/library/system.windows.documents.hyperlink(v=vs.110).aspx) для размещения гиперссылок в содержимом нефиксированного формата).|-|
 |[ListBox](https://msdn.microsoft.com/library/system.windows.forms.listbox(v=vs.110).aspx)|[ListBox](https://msdn.microsoft.com/library/system.windows.controls.listbox(v=vs.110).aspx)|Использовать ListView|
 |[ListView](https://msdn.microsoft.com/library/system.windows.forms.listview(v=vs.110).aspx)|[ListView](https://msdn.microsoft.com/library/system.windows.controls.listview(v=vs.110).aspx)|ListView|

@@ -3,15 +3,15 @@ title: Привязка Objective-C
 description: Этот документ содержит ссылки на различные руководства, в которых описывается создание C# привязок к коду цели-C, позволяя разработчикам использовать готовые библиотеки в приложениях Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765757"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016283"
 ---
 # <a name="binding-objective-c"></a>Привязка Objective-C
 
@@ -38,7 +38,7 @@ ms.locfileid: "70765757"
 
 В дополнение к приведенным ниже примерам на [странице привязки iOS](~/ios/platform/binding-objective-c/index.md) возвращаются ссылки на эти общие ресурсы привязки.
 
-### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Пошаговое руководство: Привязка библиотеки цели-C](~/ios/platform/binding-objective-c/walkthrough.md)
+### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Пошаговое руководство. привязка библиотеки цели-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
 В этой статье приводятся пошаговые инструкции по созданию проекта привязки с использованием проекта [инфколорпиккер](https://github.com/InfinitApps/InfColorPicker) цели-C с открытым исходным кодом в качестве примера. Библиотека Инфколорпиккер предоставляет доступный для повторного использования контроллер представлений, позволяющий пользователю выбирать цвет на основе его представления HSB, что делает выбор цветов более удобным для пользователя. Целевое Шарпие будет использоваться для помощи в процессе привязки.
 

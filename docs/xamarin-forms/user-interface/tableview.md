@@ -1,24 +1,24 @@
 ---
-title: Xamarin.Forms TableView
-description: В этой статье объясняется, как использовать класс Xamarin.Forms TableView для представления прокручивающиеся меню, параметры и формы ввода в приложениях.
+title: Таблевиев Xamarin. Forms
+description: В этой статье объясняется, как использовать класс Xamarin. Forms Таблевиев для представления прокручиваемых меню, настроек и форм ввода в приложениях.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/14/2018
-ms.openlocfilehash: 558eb9f476fd6b566f1f161c01fc809498a4c4a8
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.date: 09/25/2019
+ms.openlocfilehash: 67625aa413880023cce6d3e5e21e4d3bd0ec8e4c
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "70997998"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695986"
 ---
-# <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
+# <a name="xamarinforms-tableview"></a>Таблевиев Xamarin. Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
 
-[`TableView`](xref:Xamarin.Forms.TableView)— Это представление для отображения прокручиваемых списков данных или вариантов выбора, где имеются строки, которые не используют один и тот же шаблон. В отличие от [ListView](~/xamarin-forms/user-interface/listview/index.md) `TableView` не имеет концепции `ItemsSource`, поэтому элементы должны добавляться вручную в качестве дочерних элементов.
+[`TableView`](xref:Xamarin.Forms.TableView) — это представление для отображения прокручиваемых списков данных или вариантов выбора, в которых есть строки, которые не используют один шаблон. В отличие от [ListView](~/xamarin-forms/user-interface/listview/index.md) `TableView` не имеет концепции `ItemsSource`, поэтому элементы должны добавляться вручную в качестве дочерних элементов.
 
 ![Пример Таблевиев](tableview-images/tableview-all-sml.png)
 
@@ -26,19 +26,19 @@ ms.locfileid: "70997998"
 
 ## <a name="use-cases"></a>Варианты использования
 
-[`TableView`](xref:Xamarin.Forms.TableView)полезно в следующих случаях:
+[`TableView`](xref:Xamarin.Forms.TableView) удобно использовать в следующих случаях:
 
-- представления списка параметров,
-- Сбор данных в форме, или
-- Отображение данных, который представляется по-разному из строки строки (например, номера, проценты и изображения).
+- представление списка параметров
+- сбор данных в форме или
+- Отображение данных, которые представлены по-разному из строки в строку (например, числа, проценты и изображения).
 
-[`TableView`](xref:Xamarin.Forms.TableView)обрабатывает прокрутку и размещение строк в привлекательных разделах, что часто требуется для приведенных выше сценариев. `TableView` Элемент управления использует каждой платформы базовый эквивалентного представления, если она доступна, создание собственного вида для каждой платформы.
+[`TableView`](xref:Xamarin.Forms.TableView) выполняет прокрутку и размещение строк в привлекательных разделах, что часто требуется для приведенных выше сценариев. Элемент управления `TableView` использует собственное эквивалентное представление каждой платформы, если оно доступно, создавая собственный внешний вид для каждой платформы.
 
 <a name="TableView_Structure" />
 
-## <a name="structure"></a>Структура
+## <a name="structure"></a>structure
 
-Элементы в разделе [`TableView`](xref:Xamarin.Forms.TableView) упорядочены по разделам. В корне объекта `TableView` [`TableRoot`](xref:Xamarin.Forms.TableRoot)—, который является родительским для одного или нескольких [`TableSection`](xref:Xamarin.Forms.TableSection) экземпляров. Каждый [`TableSection`](xref:Xamarin.Forms.TableSection) из них состоит из заголовка и одного или [`ViewCell`](xref:Xamarin.Forms.ViewCell) нескольких экземпляров:
+Элементы в [`TableView`](xref:Xamarin.Forms.TableView) организованы по разделам. В корне `TableView` находится [`TableRoot`](xref:Xamarin.Forms.TableRoot), который является родительским для одного или нескольких экземпляров [`TableSection`](xref:Xamarin.Forms.TableSection) . Каждый [`TableSection`](xref:Xamarin.Forms.TableSection) состоит из заголовка и одного или нескольких [`ViewCell`](xref:Xamarin.Forms.ViewCell) экземпляров:
 
 ```xaml
 <TableView Intent="Settings">
@@ -73,55 +73,56 @@ Content = new TableView
 
 ## <a name="appearance"></a>Вид
 
-[`TableView`](xref:Xamarin.Forms.TableView)предоставляет свойство, которое можно задать любому [`TableIntent`](xref:Xamarin.Forms.TableIntent) из членов перечисления: [`Intent`](xref:Xamarin.Forms.TableView.Intent)
+[`TableView`](xref:Xamarin.Forms.TableView) предоставляет свойство [`Intent`](xref:Xamarin.Forms.TableView.Intent) , для которого можно задать любой из [`TableIntent`](xref:Xamarin.Forms.TableIntent) членов перечисления:
 
-- `Data`— для использования при отображении записей данных. Обратите внимание, что [ListView](~/xamarin-forms/user-interface/listview/index.md) может быть лучшим вариантом для прокрутки списков данных.
-- `Form`— используется, если Таблевиев выступает в качестве формы.
-- `Menu`— для использования при показе меню выбора.
-- `Settings`— для использования при отображении списка параметров конфигурации.
+- `Data` — для использования при отображении записей данных. Обратите внимание, что [ListView](~/xamarin-forms/user-interface/listview/index.md) может быть лучшим вариантом для прокрутки списков данных.
+- `Form` — используется, если Таблевиев выступает в качестве формы.
+- `Menu` — для использования при показе меню выбора.
+- `Settings` — для использования при отображении списка параметров конфигурации.
 
-Выбранное [`TableView`](xref:Xamarin.Forms.TableView) значение может повлиять на то, как отображается на каждой платформе. [`TableIntent`](xref:Xamarin.Forms.TableIntent) Даже если не очистить различия, рекомендуется выбрать `TableIntent` , наиболее точно соответствующий, как вы планируете использовать в таблице.
+Выбранное значение [`TableIntent`](xref:Xamarin.Forms.TableIntent) может влиять на отображение [`TableView`](xref:Xamarin.Forms.TableView) на каждой платформе. Даже если различий нет, рекомендуется выбрать `TableIntent`, который наиболее полно соответствует предполагаемому использованию таблицы.
 
-Кроме того, цвет текста, отображаемого для каждого из [`TableSection`](xref:Xamarin.Forms.TableSection) них, можно изменить, `TextColor` задав для [`Color`](xref:Xamarin.Forms.Color)свойства значение.
+Кроме того, цвет текста, отображаемого для каждого [`TableSection`](xref:Xamarin.Forms.TableSection) , можно изменить, задав свойству `TextColor` значение [`Color`](xref:Xamarin.Forms.Color).
 
 <a name="Built-In_Cells" />
 
 ## <a name="built-in-cells"></a>Встроенные ячейки
 
-Xamarin.Forms в состав встроенных ячеек для сбора и отображения сведений. Хотя [`ListView`](xref:Xamarin.Forms.ListView) [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) и [`TableView`](xref:Xamarin.Forms.TableView) могут использовать все одни и те же ячейки и [`EntryCell`](xref:Xamarin.Forms.EntryCell) наиболее актуальны для `TableView` сценария.
+Xamarin. Forms поставляется со встроенными ячейками для сбора и отображения информации. Хотя [`ListView`](xref:Xamarin.Forms.ListView) и [`TableView`](xref:Xamarin.Forms.TableView) могут использовать все одни и те же ячейки, [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) и [`EntryCell`](xref:Xamarin.Forms.EntryCell) наиболее актуальны для сценария `TableView`.
 
-См. в разделе [внешний вид ячейки ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) подробное описание [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) и [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell).
+Подробное описание [текстцелл](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) и [имажецелл](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell)см. в разделе [представление ячеек ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) .
 
 <a name="switchcell" />
 
-### <a name="switchcell"></a>SwitchCell
+### <a name="switchcell"></a>свитчцелл
 
-[`SwitchCell`](xref:Xamarin.Forms.SwitchCell) Представляет элемент управления, используемый для представления и запись Вкл/Выкл или `true` / `false` состояние. Он определяет следующие свойства:
+[`SwitchCell`](xref:Xamarin.Forms.SwitchCell) — это элемент управления, используемый для показа и записи данных о состоянии или `true`/`false`. Он определяет следующие свойства:
 
-- `Text`— текст, отображаемый рядом с параметром.
-- `On`— Указывает, отображается ли переключатель как on или OFF.
-- `OnColor`[`Color`](xref:Xamarin.Forms.Color) — параметр параметра, если он находится в положении ON.
+- `Text` — текст, отображаемый рядом с параметром.
+- `On` — указывает, отображается ли переключатель как on или OFF.
+- `OnColor` — [`Color`](xref:Xamarin.Forms.Color) параметра, если он находится в положении ON.
 
 Все эти свойства могут быть связаны.
 
-[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)также предоставляет `OnChanged` событие, позволяющее реагировать на изменения в состоянии ячейки.
+[`SwitchCell`](xref:Xamarin.Forms.SwitchCell) также предоставляет событие `OnChanged`, что позволяет реагировать на изменения состояния ячейки.
 
 ![Пример Свитчцелл](tableview-images/switch-cell.png)
 
 <a name="entrycell" />
 
-### <a name="entrycell"></a>EntryCell
+### <a name="entrycell"></a>ентрицелл
 
-[`EntryCell`](xref:Xamarin.Forms.EntryCell) полезно при необходимости отображать текстовые данные, пользователь может редактировать. Он определяет следующие свойства:
+[`EntryCell`](xref:Xamarin.Forms.EntryCell) удобно использовать в тех случаях, когда необходимо отображать текстовые данные, которые пользователь может изменять. Он определяет следующие свойства:
 
-- `Keyboard`— Клавиатура, отображаемая во время редактирования. Существуют параметры для таких вещей, как числовые значения, электронной почты, номера телефонов, и т.д. [Документация по API см. в разделе](xref:Xamarin.Forms.Keyboard).
-- `Label`— Текст метки, отображаемый слева от поля ввода текста.
-- `LabelColor`— Цвет текста метки.
-- `Placeholder`— Текст, отображаемый в поле ввода, если он имеет значение null или пуст. Этот текст исчезает, когда начинается запись текста.
-- `Text`— Текст в поле ввода.
-- `HorizontalTextAlignment`— Горизонтальное выравнивание текста. Может быть, влево или вправо центру. [Документация по API см. в разделе](xref:Xamarin.Forms.TextAlignment).
+- `Keyboard` — клавиатура, отображаемая во время редактирования. Существуют такие параметры, как числовые значения, электронная почта, Номера телефонов и т. д. [Документация по API см. в разделе](xref:Xamarin.Forms.Keyboard).
+- `Label` — текст метки, отображаемый слева от поля ввода текста.
+- `LabelColor` — цвет текста метки.
+- `Placeholder` — текст, отображаемый в поле ввода, если он имеет значение null или пуст. Этот текст исчезает при начале ввода текста.
+- `Text` — текст в поле ввода.
+- `HorizontalTextAlignment` — горизонтальное выравнивание текста. Значения выравниваются по центру, по левому или по правому краю. [Документация по API см. в разделе](xref:Xamarin.Forms.TextAlignment).
+- `VerticalTextAlignment` — вертикальное выравнивание текста. Значения: `Start`, `Center`или `End`.
 
-[`EntryCell`](xref:Xamarin.Forms.EntryCell)также предоставляет `Completed` событие, которое срабатывает, когда пользователь нажимает кнопку "Готово" на клавиатуре при редактировании текста.
+[`EntryCell`](xref:Xamarin.Forms.EntryCell) также предоставляет событие `Completed`, которое срабатывает, когда пользователь нажимает кнопку "Готово" на клавиатуре при редактировании текста.
 
 ![Пример Ентрицелл](tableview-images/entry-cell.png)
 
@@ -129,15 +130,15 @@ Xamarin.Forms в состав встроенных ячеек для сбора 
 
 ## <a name="custom-cells"></a>Пользовательские ячейки
 
-При встроенной ячейки недостаточно, пользовательские ячейки можно использовать для представления и записать данные способом, который лучше всего подходит для вашего приложения. Например можно представить ползунок, чтобы разрешить пользователю выбирать прозрачность изображения.
+Если встроенные ячейки недостаточно, можно использовать пользовательские ячейки для представления и записи данных способом, который имеет смысл для вашего приложения. Например, может потребоваться Показать ползунок, чтобы позволить пользователю выбрать непрозрачность изображения.
 
-Все пользовательские ячейки должен быть производным от [ `ViewCell` ](xref:Xamarin.Forms.ViewCell), тот же базовый класс, что все ячейки, встроенные типы использования.
+Все пользовательские ячейки должны быть производными от [`ViewCell`](xref:Xamarin.Forms.ViewCell)— того же базового класса, который используется всеми встроенными типами ячеек.
 
-Ниже приведен пример пользовательского ячейки:
+Пример пользовательской ячейки:
 
 ![Пример пользовательской ячейки](tableview-images/custom-cell.png)
 
-В следующем примере показан XAML, используемый для создания на [`TableView`](xref:Xamarin.Forms.TableView) снимках экрана выше:
+В следующем примере показан XAML, используемый для создания [`TableView`](xref:Xamarin.Forms.TableView) на снимках экрана выше:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -194,21 +195,21 @@ table.Root = new TableRoot ()
 Content = table;
 ```
 
-Корневым элементом [`TableView`](xref:Xamarin.Forms.TableView) в [`TableRoot`](xref:Xamarin.Forms.TableRoot)является [`TableSection`](xref:Xamarin.Forms.TableSection) , а сразу под ним `TableRoot`находится. Определяется непосредственно в, а [`StackLayout`](xref:Xamarin.Forms.StackLayout) используется для управления макетом пользовательской ячейки, хотя здесь можно использовать любой макет. `TableSection` [`ViewCell`](xref:Xamarin.Forms.ViewCell)
+Корневым элементом в [`TableView`](xref:Xamarin.Forms.TableView) является [`TableRoot`](xref:Xamarin.Forms.TableRoot), и [`TableSection`](xref:Xamarin.Forms.TableSection) непосредственно под `TableRoot`. [`ViewCell`](xref:Xamarin.Forms.ViewCell) определяется непосредственно в `TableSection`, а [`StackLayout`](xref:Xamarin.Forms.StackLayout) используется для управления макетом пользовательской ячейки, хотя здесь можно использовать любой макет.
 
 > [!NOTE]
-> В отличие [`ListView`](xref:Xamarin.Forms.ListView)от [`TableView`](xref:Xamarin.Forms.TableView) , не требует, чтобы пользовательские (или любые) `ItemTemplate`ячейки были определены в.
+> В отличие [`ListView`](xref:Xamarin.Forms.ListView) от [`TableView`](xref:Xamarin.Forms.TableView) не требует, чтобы пользовательские (или любые) ячейки были определены в `ItemTemplate`.
 
 ## <a name="row-height"></a>Высота строки
 
-[ `TableView` ](xref:Xamarin.Forms.TableView) Класс имеет два свойства, которые могут использоваться для изменения высоты строки ячеек:
+Класс [`TableView`](xref:Xamarin.Forms.TableView) имеет два свойства, которые можно использовать для изменения высоты строки ячеек:
 
-- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) — Задает высоту каждой строки `int`.
-- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) — строки имеют различные значения высоты, если значение `true`. Обратите внимание, что при задании этого свойства `true`, высоты строк автоматически вычисляются и применены с Xamarin.Forms.
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) — задает высоту каждой строки в `int`.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) — строки имеют различные значения высоты, если задано значение `true`. Обратите внимание, что при установке этого свойства в значение `true`высота строк будет автоматически вычисляться и применяться в Xamarin. Forms.
 
-При высоту содержимого ячейки в [ `TableView` ](xref:Xamarin.Forms.TableView) изменяется строка высота неявно обновится на Android и универсальной платформы Windows (UWP). Тем не менее, в iOS он должен иметь возможность для обновления, задав [ `HasUnevenRows` ](xref:Xamarin.Forms.TableView.HasUnevenRows) свойства `true` и вызвав [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) метод.
+При изменении высоты содержимого ячейки в [`TableView`](xref:Xamarin.Forms.TableView) ее высота неявным образом обновляется в Android и универсальная платформа Windows (UWP). Однако в iOS необходимо принудительно обновить, задав для свойства [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) значение `true` и вызвав метод [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) .
 
-В следующем примере показан XAML [ `TableView` ](xref:Xamarin.Forms.TableView) , содержащий [ `ViewCell` ](xref:Xamarin.Forms.ViewCell):
+В следующем примере XAML показан [`TableView`](xref:Xamarin.Forms.TableView) , содержащий [`ViewCell`](xref:Xamarin.Forms.ViewCell):
 
 ```xaml
 <ContentPage ...>
@@ -238,7 +239,7 @@ Content = table;
 </ContentPage>
 ```
 
-Когда [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) шифрованию, `OnViewCellTapped` выполняется обработчик событий:
+При нажатии [`ViewCell`](xref:Xamarin.Forms.ViewCell) выполняется обработчик `OnViewCellTapped` событий:
 
 ```csharp
 void OnViewCellTapped(object sender, EventArgs e)
@@ -248,19 +249,19 @@ void OnViewCellTapped(object sender, EventArgs e)
 }
 ```
 
-`OnViewCellTapped` Обработчик событий показывает или скрывает второй [ `Label` ](xref:Xamarin.Forms.Label) в [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)и явным образом обновляет размер ячейки, вызвав [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) метод.
+Обработчик событий `OnViewCellTapped` показывает или скрывает второй [`Label`](xref:Xamarin.Forms.Label) в [`ViewCell`](xref:Xamarin.Forms.ViewCell)и явно обновляет размер ячейки путем вызова метода [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) .
 
-На следующих снимках экрана показано ячейки до касание после:
+На следующих снимках экрана показана ячейка перед тем, как коснуться:
 
 ![ViewCell до изменения размера](tableview-images/cell-beforeresize.png)
 
-Далее на снимках экрана Показать ячейки после касание после:
+На следующих снимках экрана показана ячейка после нажатия на:
 
 ![ViewCell после изменения размера](tableview-images/cell-afterresize.png)
 
 > [!IMPORTANT]
-> Если эта функция является чрезмерным, есть вероятность, strong снижения производительности.
+> Если эта функция используется слишком сильно, снижение производительности может снизить производительность.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [TableView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
+- [Таблевиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)

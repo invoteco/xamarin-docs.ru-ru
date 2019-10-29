@@ -4,15 +4,15 @@ description: В этом разделе рассматриваются стру�
 ms.prod: xamarin
 ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 4f6043190087d34ccaa4a63fcc801843194273ad
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4157e73379be2adc7c92b8cdbc05c4cc4489daec
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291885"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022326"
 ---
 # <a name="ios-advanced-concepts-and-internals"></a>Дополнительные понятия и внутренние компоненты iOS
 

@@ -3,15 +3,15 @@ title: Создание новой многоплатформенной библ
 description: В этом документе описывается создание многоплатформенной библиотеки для использования с NuGet. Этот метод подходит для бизнес-логики и алгоритмов, которые могут быть полностью выражены в библиотеке базовых классов .NET и, таким образом, выполняться на всех целевых платформах без кода, зависящего от платформы.
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fb30b07e958bddfcf0e0545ae17b925d7163c38a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7dabb420aa094e67fae689f47b3b64a8fe1a6ed4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766467"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016706"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Создание новой многоплатформенной библиотеки для NuGet
 
@@ -30,25 +30,25 @@ ms.locfileid: "70766467"
 
 2. Выберите **многоплатформенную библиотеку** из раздела **многоплатформенная > Библиотека** :
 
-   [![](single-codebase-images/mulitplatform-library-sml.png "Настройка многоплатформенной библиотеки для одной базы кода")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Введите **имя** и **Описание**и выберите **Single для всех платформ**:
 
-   [![](single-codebase-images/single-configure-sml.png "Настройка многоплатформенной библиотеки для одной базы кода")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/single-configure.png#lightbox)
 
 4. Завершите работу мастера. В решении создается один проект библиотеки.
 
 5. Щелкните правой кнопкой мыши новый проект библиотеки и выберите пункт **Параметры**. Раздел **Build > General** позволяет задать **целевую платформу** — выберите переносимый профиль PCL .NET или версию .NET Standard:
 
-   [![](single-codebase-images/single-choose-type-sml.png "Выберите PCL или .NET Standard для типа библиотеки")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Choose PCL or .NET Standard for library type")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. Кроме того, в окне **Параметры проекта** откройте раздел **NuGet Package > метаданных** и введите [необходимые метаданные](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (а также любые необязательные метаданные):
 
-   [![](single-codebase-images/single-metadata-sml.png "Введите необходимые метаданные")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Enter required metadata")](single-codebase-images/single-metadata.png#lightbox)
 
 7. Щелкните правой кнопкой мыши проект библиотеки и выберите команду **создать пакет NuGet** (или выполните сборку или развертывание решения), а файл пакета NuGet **. nupkg** будет сохранен в папке **/bin/** (Отладка или выпуск, в зависимости от конфигурации):
 
-   ![](single-codebase-images/create-nuget-package.png "Файл пакета NuGet будет сохранен в папке bin как отладка, так и выпуск, в зависимости от конфигурации.")
+   ![](single-codebase-images/create-nuget-package.png "The NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
 
 ## <a name="verifying-the-output"></a>Проверка выходных данных
 
@@ -56,7 +56,7 @@ ms.locfileid: "70766467"
 
 На этом снимке экрана показано содержимое NuGet на основе PCL — включена только одна сборка PCL:
 
-![](single-codebase-images/nuget-output.png "Файлы, содержащиеся в пакете NuGet")
+![](single-codebase-images/nuget-output.png "Files contained in the NuGet package")
 
 <a name="add-platforms" />
 
@@ -66,14 +66,14 @@ ms.locfileid: "70766467"
 
 Если существующий проект PCL или проект .NET Standard необходимо расширить для включения кода, зависящего от платформы, это можно сделать, щелкнув правой кнопкой мыши проект и выбрав **добавить > добавить реализацию платформы...** :
 
-[![](single-codebase-images/add-later-sml.png "Меню \"добавить реализацию платформы\"")](single-codebase-images/add-later.png#lightbox)
+[![](single-codebase-images/add-later-sml.png "Add platform implementation menu")](single-codebase-images/add-later.png#lightbox)
 
 В решение можно добавить один или несколько проектов платформы, а при необходимости можно преобразовать существующую библиотеку PCL или .NET Standard в общий проект:
 
-[![](single-codebase-images/add-later-platforms-sml.png "Добавление параметров платформы, таких как iOS, Android и Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
+[![](single-codebase-images/add-later-platforms-sml.png "Add platform options such as iOS, Android, and Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
-После преобразования в общий проект перейдите в[раздел](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) **Параметры проекта > пакет NuGet > справочные сборки**
-и убедитесь, что выбраны все необходимые профили (чтобы NuGet продолжал быть совместим с проектами. ранее он использовался в).
+После преобразования в общий проект перейдите в раздел **Параметры проекта > пакет NuGet > ссылочные сборки**
+[разделе](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) и убедитесь, что выбраны все необходимые профили (чтобы NuGet продолжала быть совместимой с проектами, ранее использовался в).
 
 ## <a name="related-links"></a>Связанные ссылки
 

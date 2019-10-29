@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A6FE770B-A19A-4BF8-95E9-2CF880D4AFC5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 162378c00f3e20574d04dc373fcc492a9407b88d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5996cfa3c0a18fc186ea862a2b3d7910594e1281
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761033"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027009"
 ---
 # <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Почему моя сборка выпуска Android не подключается к Интернету?
 
@@ -20,13 +20,13 @@ ms.locfileid: "70761033"
 
 Наиболее распространенной причиной этой проблемы является то, что **Интернет** -разрешение автоматически включается в отладочную сборку, но его необходимо задать вручную для сборки выпуска. Это связано с тем, что разрешение «Интернет» позволяет отладчику присоединяться к процессу, как описано в [статье](~/android/deploy-test/building-apps/build-process.md)«DebugSymbols».
 
-## <a name="fix"></a>Fix
+## <a name="fix"></a>Исправление
 
 Чтобы устранить эту проблему, можно запросить разрешение Интернета в манифесте Android. Это можно сделать с помощью редактора манифеста или кодовприложений манифеста:
 
-- Исправить в редакторе: В проекте Android перейдите в раздел **Свойства — > AndroidManifest. XML — > необходимые разрешения** и проверьте **Интернет** .
+- Исправить в редакторе. в проекте Android перейдите в раздел **Properties-> AndroidManifest. XML-> необходимые разрешения** и проверьте **Интернет** .
 
-- Исправление в Кодовприложений: Откройте AndroidManifest в редакторе исходного кода и добавьте тег `<Manifest>` разрешения в Теги:
+- Исправление в Кодовприложений: Откройте AndroidManifest в редакторе исходного кода и добавьте тег разрешения в теги `<Manifest>`:
 
     ```xml
     <Manifest>

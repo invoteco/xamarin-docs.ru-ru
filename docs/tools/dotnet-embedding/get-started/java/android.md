@@ -3,15 +3,15 @@ title: Начало работы с Android
 description: В этом документе описывается, как приступить к использованию внедрения .NET с Android. В нем обсуждается установка внедрения .NET, создание проекта библиотеки Android, использование созданных выходных данных в проекте Android Studio и другие соображения.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 9b0da6f5b195ecef5fd4e5e2b4585b660573a5be
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcda03d41cb3bafcfb3ee4b92046014cc5b0c119
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278559"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029767"
 ---
 # <a name="getting-started-with-android"></a>Начало работы с Android
 
@@ -70,9 +70,9 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> Не забудьте `[Register]` атрибут. Дополнительные сведения см. в разделе [ограничения](#current-limitations-on-android).
+> Не забывайте атрибут `[Register]`. Дополнительные сведения см. в разделе [ограничения](#current-limitations-on-android).
 
-Выполните построение проекта. Результирующая сборка будет сохранена в `bin/Debug/hello-from-csharp.dll`.
+Выполните построение проекта. Полученная сборка будет сохранена в `bin/Debug/hello-from-csharp.dll`.
 
 ## <a name="installing-net-embedding-from-nuget"></a>Установка внедрения .NET из NuGet
 
@@ -111,7 +111,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 
 ![Зависимости Android Studio](android-images/androidstudiodependencies.png)
 
-В действии добавьте новый `onResume` метод и используйте следующий код для запуска C# действия:
+В действии добавьте новый метод `onResume` и используйте следующий код для запуска C# действия:
 
 ```java
 import hello_from_csharp.*;
@@ -159,7 +159,7 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 Обратите внимание на то, что произошло здесь:
 
-- У нас есть C# класс, `HelloActivity`который подклассировать Java
+- У нас есть C# класс,`HelloActivity`, который подклассировать на Java
 - У нас есть файлы ресурсов Android
 - Мы использовали их из Java в Android Studio
 
@@ -169,7 +169,7 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 - Сборки .NET, включаемые в **активы или сборки**
 - Изменения **AndroidManifest. XML** для ваших C# действий и т. д.
 - Ресурсы и активы Android из библиотек .NET
-- [Вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) для `Java.Lang.Object` любого подкласса
+- [Вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) для любого подкласса `Java.Lang.Object`
 
 Если вы ищете дополнительное пошаговое руководство, ознакомьтесь с приведенным ниже видео, в котором демонстрируется внедрение [демонстрационного финжерпаинта](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) Чарльз Петцольд в проект Android Studio.
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Текущие ограничения в Android
 
-Прямо сейчас, если вы подпишете подкласс `Java.Lang.Object`, Xamarin. Android создаст заглушку Java (вызываемую оболочку Android) вместо внедрения .NET. Поэтому необходимо следовать тем же правилам для экспорта C# в Java как Xamarin. Android. Пример:
+Сейчас, если подкласс `Java.Lang.Object`, Xamarin. Android создаст заглушку Java (вызываемую оболочку Android) вместо внедрения .NET. Поэтому необходимо следовать тем же правилам для экспорта C# в Java как Xamarin. Android. Пример:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -223,10 +223,10 @@ public class ViewSubclass : TextView
 }
 ```
 
-- `[Register]`требуется для соответствия требуемому имени пакета Java
-- `[Export]`требуется для того, чтобы метод был виден Java
+- `[Register]` требуется для соответствия требуемому имени пакета Java
+- `[Export]` требуется сделать метод видимым для Java
 
-Мы можем использовать `ViewSubclass` в Java следующим образом:
+Можно использовать `ViewSubclass` в Java следующим образом:
 
 ```java
 import mono.embeddinator.android.ViewSubclass;

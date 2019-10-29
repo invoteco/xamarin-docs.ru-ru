@@ -3,21 +3,21 @@ title: Вызываемые оболочки Android для Xamarin. Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: b55cffc19eec5ae95a0a0aba8053bdaaa49e7747
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7278fd624bb3147c2e1a1a1a79adde68813a9888
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761478"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020150"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Вызываемые оболочки Android для Xamarin. Android
 
-Вызываемые оболочки Android (АКВС) требуются всякий раз, когда среда выполнения Android вызывает управляемый код. Эти оболочки являются обязательными, так как в среде выполнения не существует способа регистрации классов с помощью графики (среда выполнения Android). (В частности, [функция JNI дефинекласс ()](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) не поддерживается средой выполнения Android.} Таким же вызываемые оболочки Android составляют отсутствие поддержки регистрации типов во время выполнения. 
+Вызываемые оболочки Android (АКВС) требуются всякий раз, когда среда выполнения Android вызывает управляемый код. Эти оболочки являются обязательными, так как в среде выполнения не существует способа регистрации классов с помощью графики (среда выполнения Android). (В частности, [функция JNI дефинекласс ()](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) не поддерживается средой выполнения Android.} Таким же вызываемые оболочки Android составляют отсутствие поддержки регистрации типов во время выполнения. 
 
-*Каждый раз* Код Android должен выполнять `virtual` метод интерфейса или `overridden` , реализованный в управляемом коде, Xamarin. Android должен предоставить прокси-сервер Java, чтобы этот метод был отправлен в соответствующий управляемый тип. Эти типы прокси Java — это код Java, имеющий тот же базовый класс и список интерфейсов Java, что и управляемый тип, реализующий те же конструкторы и объявляющие переопределенный базовый класс и методы интерфейса. 
+*Каждый раз* Код Android должен выполнить `virtual` или метод интерфейса, который `overridden` или реализован в управляемом коде, Xamarin. Android должен предоставить прокси-сервер Java, чтобы этот метод был отправлен в соответствующий управляемый тип. Эти типы прокси Java — это код Java, имеющий тот же базовый класс и список интерфейсов Java, что и управляемый тип, реализующий те же конструкторы и объявляющие переопределенный базовый класс и методы интерфейса. 
 
 Вызываемые оболочки Android создаются программой **monodroid. exe** во время [процесса сборки](~/android/deploy-test/building-apps/build-process.md): они формируются для всех типов, которые (прямо или косвенно) наследуют [Java. lang. Object](xref:Java.Lang.Object). 
 
@@ -25,7 +25,7 @@ ms.locfileid: "70761478"
 
 Имена пакетов для вызываемых оболочек Android основаны на MD5SUM имени экспортируемого типа с указанием сборки. Такая методика именования позволяет сделать то же полное имя типа доступным для разных сборок, не вводя ошибку упаковки. 
 
-Из-за этой схемы именования MD5SUM вы не можете напрямую обращаться к типам по имени. Например, следующая `adb` команда не будет работать, так как имя `my.ActivityType` типа не создается по умолчанию: 
+Из-за этой схемы именования MD5SUM вы не можете напрямую обращаться к типам по имени. Например, следующая `adb`ная команда не будет работать, так как имя типа `my.ActivityType` не создается по умолчанию: 
 
 ```shell
 adb shell am start -n My.Package.Name/my.ActivityType
@@ -38,7 +38,7 @@ java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivit
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Если требуется *доступ* к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, вот код, объявляющий действие с полным именем `My.ActivityType`:
+Если требуется *доступ* к типам по имени, можно объявить имя для этого типа в объявлении атрибута. Например, ниже приведен код, объявляющий действие с полным именем `My.ActivityType`:
 
 ```csharp
 namespace My {
@@ -49,7 +49,7 @@ namespace My {
 }
 ```
 
-`ActivityAttribute.Name` Свойство можно задать, чтобы явно объявить имя этого действия: 
+Для свойства `ActivityAttribute.Name` можно задать явное объявление имени этого действия: 
 
 ```csharp
 namespace My {
@@ -60,7 +60,7 @@ namespace My {
 }
 ```
 
-После добавления `my.ActivityType` этого параметра свойства к нему можно получить доступ по имени из внешнего кода и из `adb` скриптов. `Service` `Application` `Activity` `ContentProvider` `BroadcastReceiver`Атрибут может быть задан для многих различных типов, включая,,, и: `Name` 
+После добавления этого параметра свойства `my.ActivityType` к нему можно получить доступ по имени из внешнего кода и из сценариев `adb`. Атрибут `Name` можно задать для множества различных типов, включая `Activity`, `Application`, `Service`, `BroadcastReceiver`и `ContentProvider`. 
 
 - [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
 - [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
@@ -74,7 +74,7 @@ namespace My {
 
 Иногда может потребоваться реализовать интерфейс Android, например [Android. Content. икомпоненткаллбаккс](xref:Android.Content.IComponentCallbacks). Поскольку все классы и интерфейс Android расширяют интерфейс [Android. Runtime. ижаваобжект](xref:Android.Runtime.IJavaObject) , возникает вопрос: как реализовать `IJavaObject`? 
 
-На этот вопрос был получен ответ: причина, по которой все типы Android `IJavaObject` должны быть реализованы, заключается в том, что Xamarin. Android имеет вызываемую оболочку Android для предоставления в Android, т. е. прокси-сервер Java для данного типа. Так как **monodroid. exe** ищет `Java.Lang.Object` подклассы и `Java.Lang.Object` реализует `IJavaObject,` ответ, очевидно: подкласс `Java.Lang.Object`: 
+Был получен ответ на вопрос. Причина, по которой все типы Android должны реализовать `IJavaObject` так, чтобы Xamarin. Android имел вызываемую оболочку Android для предоставления в Android, т. е. прокси-сервер Java для данного типа. Поскольку **monodroid. exe** ищет только подклассы `Java.Lang.Object`, а `Java.Lang.Object` реализует `IJavaObject,` ответ очевидна: подкласс `Java.Lang.Object`: 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -93,7 +93,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 
 ## <a name="implementation-details"></a>Сведения о реализации
 
-*Оставшаяся часть этой страницы содержит сведения о реализации, которые могут быть изменены без предварительного уведомления* . (и предоставляется здесь только потому, что разработчикам интересно, что происходит.) 
+*Оставшаяся часть этой страницы предоставляет сведения о реализации, которые могут быть изменены без предварительного уведомления* (и представлены здесь только потому, что разработчикам интересно, что происходит). 
 
 Например, при наличии следующего C# источника:
 
@@ -150,4 +150,4 @@ public class HelloAndroid
 }
 ```
 
-Обратите внимание, что базовый класс сохраняется, `native` а объявления методов предоставляются для каждого метода, переопределяемого в управляемом коде. 
+Обратите внимание, что базовый класс сохраняется, и для каждого метода, переопределяемого в управляемом коде, предоставляются `native` объявления методов. 

@@ -3,24 +3,24 @@ title: Xamarin. Android элемент LinearLayout
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2018
-ms.openlocfilehash: 14e9b352a309de94a374b52141e3fd61715d8f75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b1cff01c66ae2581a68286e62bd8c8c5fb7f9d72
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764384"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028956"
 ---
 # <a name="xamarinandroid-linearlayout"></a>Xamarin. Android элемент LinearLayout
 
-[`LinearLayout`](xref:Android.Widget.LinearLayout)является[`ViewGroup`](xref:Android.Views.ViewGroup)
-, отображающий дочерний элемент[`View`](xref:Android.Views.View)
+[`LinearLayout`](xref:Android.Widget.LinearLayout) является [`ViewGroup`](xref:Android.Views.ViewGroup)
+, отображающий дочерние [`View`](xref:Android.Views.View)
 элементы в линейном направлении: по вертикали или по горизонтали.
 
 Следует соблюдать осторожность при чрезмерном использовании [`LinearLayout`](xref:Android.Widget.LinearLayout).
-Если вы приступите к [`LinearLayout`](xref:Android.Widget.LinearLayout)вложению нескольких, возможно, стоит рассмотреть возможность использования[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+Если вы приступите к вложению нескольких [`LinearLayout`](xref:Android.Widget.LinearLayout), попробуйте использовать [`RelativeLayout`](xref:Android.Widget.RelativeLayout)
 Используйте.
 
 Запустите новый проект с именем **хеллолинеарлайаут**.
@@ -103,13 +103,13 @@ ms.locfileid: "70764384"
 </LinearLayout>
 ```
 
-Внимательно изучите этот XML-код. Существует корень[`LinearLayout`](xref:Android.Widget.LinearLayout)
-, определяющий ориентацию по вертикали &ndash; для всех [`View`](xref:Android.Views.View)дочерних элементов s (из которых он имеет два), будет вертикально размещается в стеке. Первый дочерний элемент является другим[`LinearLayout`](xref:Android.Widget.LinearLayout)
-в котором используется горизонтальная ориентация, а второй дочерний —[`LinearLayout`](xref:Android.Widget.LinearLayout)
-для этого используется вертикальная ориентация. Каждый из этих вложенных [`LinearLayout`](xref:Android.Widget.LinearLayout)элементов s содержит несколько[`TextView`](xref:Android.Widget.TextView)
-, которые ориентированы друг на друга в соответствии со своими родительскими [`LinearLayout`](xref:Android.Widget.LinearLayout)элементами.
+Внимательно изучите этот XML-код. Существует корневой [`LinearLayout`](xref:Android.Widget.LinearLayout)
+, определяющий ориентацию по вертикали &ndash; все дочерние [`View`](xref:Android.Views.View)s (из которых он имеет два) будут вертикально стеками. Первый дочерний элемент является еще одним [`LinearLayout`](xref:Android.Widget.LinearLayout)
+При этом используется горизонтальная ориентация, а второй дочерний — [`LinearLayout`](xref:Android.Widget.LinearLayout)
+для этого используется вертикальная ориентация. Каждый из этих вложенных [`LinearLayout`](xref:Android.Widget.LinearLayout)s содержит несколько [`TextView`](xref:Android.Widget.TextView)
+элементы, которые ориентированы друг на друга в соответствии со своими родительскими [`LinearLayout`](xref:Android.Widget.LinearLayout).
 
-Теперь откройте **HelloLinearLayout.CS** и убедитесь, что он загружает макет **ресурсов/макета/Main. axml** в[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Теперь откройте **HelloLinearLayout.CS** и убедитесь, что он загружает макет **ресурсов/макета/основной. axml** в [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 Method
 
 ```csharp
@@ -120,18 +120,18 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-Метод) загружает файл макета [`Activity`](xref:Android.App.Activity)для, заданный идентификатором &ndash; `Resources.Layout.Main` ресурса, относится к файлу макета **Resources/Layout/Main. axml** . [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+Метод [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) загружает файл макета для [`Activity`](xref:Android.App.Activity), определяемый идентификатором ресурса, &ndash; `Resources.Layout.Main` ссылается на файл макета **Resources/Layout/Main. axml** .
 
 Запустите приложение. Вы должны увидеть следующее:
 
-[![Снимок экрана первого элемент LinearLayout приложения по горизонтали, по вертикали](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
+[Снимок экрана первого элемент LinearLayout приложения по горизонтали, второй по вертикали![](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Обратите внимание, что атрибуты XML определяют поведение каждого представления. Попробуйте поэкспериментировать с различными значениями `android:layout_weight` , чтобы увидеть, как будет распространяться фактическое пространство экрана на основе веса каждого элемента. Дополнительные сведения о том, как это делать, см. в документе [Общие объекты макета](https://developer.android.com/guide/topics/ui/declaring-layout.html) .[`LinearLayout`](xref:Android.Widget.LinearLayout)
-`android:layout_weight` обрабатывает атрибут.
+Обратите внимание, что атрибуты XML определяют поведение каждого представления. Попробуйте поэкспериментировать с различными значениями для `android:layout_weight`, чтобы увидеть, как будет распространяться фактическое пространство на экране в зависимости от веса каждого элемента. Дополнительные сведения о том, как [`LinearLayout`](xref:Android.Widget.LinearLayout) , см. в документе [Общие объекты макета](https://developer.android.com/guide/topics/ui/declaring-layout.html) .
+обрабатывает атрибут `android:layout_weight`.
 
 ## <a name="references"></a>Ссылки
 
 - [`LinearLayout`](xref:Android.Widget.LinearLayout)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](http://creativecommons.org/licenses/by/2.5/)._
+_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](https://creativecommons.org/licenses/by/2.5/)._

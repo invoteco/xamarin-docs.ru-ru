@@ -4,15 +4,15 @@ description: Обзор макетов с вкладками в Android
 ms.prod: xamarin
 ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2017
-ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4ca4200d0f9036ed76e20e3a1840303e7bb3b7e3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762192"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028779"
 ---
 # <a name="tabbed-layouts"></a>Макеты с вкладками
 
@@ -20,13 +20,13 @@ ms.locfileid: "70762192"
 
 Вкладки — это популярный шаблон пользовательского интерфейса в мобильных приложениях из-за простоты и удобства использования. Они обеспечивают единообразный и простой способ перехода между различными экранами в приложении. У Android есть несколько API для интерфейсов с вкладками: 
 
-- **Актионбар** &ndash; Это часть нового набора API, представленного в Android 3,0 (API уровня 11) с целью предоставления единообразного интерфейса навигации и переключения просмотра. Он был перенесен на Android 2,2 (API уровня 8) с помощью [библиотеки поддержки Android версии 7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
+- **Актионбар** &ndash; это является частью нового набора API, который появился в Android 3,0 (API уровня 11) с целью предоставления единообразного интерфейса навигации и переключения просмотра. Он был перенесен на Android 2,2 (API уровня 8) с помощью [библиотеки поддержки Android версии 7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
 
-- **Пажертабстрип** Указывает на текущую, следующую и предыдущую страницы `ViewPager`. &ndash; `ViewPager`доступно только через [библиотеку поддержки Android версии 4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+- **Пажертабстрип** &ndash; указывает на текущую, следующую и предыдущую страницы `ViewPager`. `ViewPager` доступен только через [библиотеку поддержки Android версии 4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
      Дополнительные сведения о `PagerTabStrip`см. в разделе [ViewPager](~/android/user-interface/controls/view-pager/index.md).
 
-- **Панель инструментов** — Это более новый и гибкий компонент панели действий, который `ActionBar`заменяет. &ndash; `Toolbar` `Toolbar`доступен в версии Android 5,0 без описания операций или более поздней версии. Она также доступна для более старых версий Android с помощью версии 7 пакета NuGet [библиотеки поддержки Android](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
-    `Toolbar`в настоящее время является рекомендуемым компонентом панели действий для использования в приложениях Android.
+- **Панель инструментов** &ndash; `Toolbar` — это более новый и гибкий компонент панели действий, который заменяет `ActionBar`. `Toolbar` доступна в интерфейсе поддержки Android 5,0 или более поздней версии. Кроме того, она также доступна для более ранних версий Android с помощью пакета NuGet [версии 7 Library (поддержка Android](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) ). 
+    в настоящее время `Toolbar` является рекомендуемым компонентом панели действий для использования в приложениях Android.
     Дополнительные сведения см. в разделе [панель инструментов](~/android/user-interface/controls/tool-bar/index.md). 
 
 ## <a name="related-links"></a>Связанные ссылки

@@ -3,8 +3,8 @@ documentType: LandingData
 title: Руководство по созданию кроссплатформенных приложений
 metadata:
   description: Руководство по созданию кроссплатформенных приложений для разработчиков мобильных приложений.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 04/25/2018
   ms.topic: landing-page
 abstract:
@@ -18,7 +18,7 @@ abstract:
       - href: /visualstudio/mac/
         text: Visual Studio для Mac
 sections:
-  - title: Начало работы
+  - title: Приступая к работе
     items:
       - type: paragraph
         text: 'Сведения о создании приложений с помощью Xamarin и C# для Android, iOS, macOS, UWP и т. д.'
@@ -45,7 +45,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
             text: Mac
             href: ~/mac/get-started/hello-mac.md
-  - title: Руководства
+  - title: Направляющие
     items:
       - type: list
         style: cards
@@ -62,7 +62,7 @@ sections:
             image:
               src: ~/media/icons/i_app-build.svg
               href: ~/cross-platform/platform/index.md
-            title: Поддержка языков
+            title: Языковая поддержка
           - href: ~/cross-platform/app-fundamentals/index.md
             html: Необходимые сведения для создания приложений.
             image:

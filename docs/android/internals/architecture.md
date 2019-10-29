@@ -3,15 +3,15 @@ title: Архитектура
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 06817c563f12425e5c339cb8f2560f37f9ace0b5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fe0903eca5c907fc104728ca0ad7c676a45a5180
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756695"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027913"
 ---
 # <a name="architecture"></a>Архитектура
 
@@ -22,7 +22,7 @@ ms.locfileid: "70756695"
 
 В Android большинство систем, таких как аудио, графика, OpenGL и телефония, недоступны непосредственно в собственных приложениях, они доступны только через API-интерфейсы Java среды выполнения Android, размещенные в одном из пространств имен [Java](xref:Java.Lang). * или [Android. ](xref:Android). * пространства имен. Архитектура выглядит примерно так:
 
-[![Схема Mono и ART над ядром и ниже привязок .NET/Java +](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
+[![диаграмма Mono и ART над ядром и ниже привязок .NET/Java +](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Разработчики Xamarin. Android получают доступ к различным функциям в операционной системе либо путем вызова интерфейсов API .NET, которые они узнают (для низкоуровневого доступа), либо с помощью классов, предоставляемых в пространствах имен Android, которые предоставляют мост для API-интерфейсов Java, предоставляемых Среда выполнения Android.
 
@@ -56,7 +56,7 @@ ms.locfileid: "70756695"
 
 Глобальные ссылки можно явно освободить, вызвав [Java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose) в управляемой вызываемой оболочке. Это приведет к удалению сопоставления между экземпляром Java и управляемым экземпляром и разрешающим сбор экземпляра Java. При повторном доступе к экземпляру Java из управляемого кода для него будет создана новая управляемая обертка.
 
-Следует соблюдать осторожность при удалении управляемых вызываемых оболочек, если экземпляр может быть случайно совместно использоваться потоками, так как удаление экземпляра повлияет на ссылки из других потоков. Для обеспечения максимальной безопасности только `Dispose()` экземпляры, выделенные с помощью `new` *или* из методов, которым *известно* , всегда выделяют новые экземпляры, а не кэшированные экземпляры, которые могут вызвать случайное совместное использование экземпляров многопоточно.
+Следует соблюдать осторожность при удалении управляемых вызываемых оболочек, если экземпляр может быть случайно совместно использоваться потоками, так как удаление экземпляра повлияет на ссылки из других потоков. Для обеспечения максимальной безопасности только `Dispose()` экземпляров, выделенных с помощью `new` *или* из *методов, которые всегда* выделяют новые экземпляры, а не кэшированные экземпляры, которые могут вызвать случайное совместное использование экземпляров между потоками.
 
 ## <a name="managed-callable-wrapper-subclasses"></a>Управляемые подклассы вызываемой оболочки
 
@@ -92,11 +92,11 @@ ms.locfileid: "70756695"
 
 4. Конструктор *TextView* вызывает *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* .
 
-5. *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* вызывает *логтекстбокс. n_getDefaultMovementMethod ()* , который вызывает *TextView. n_getDefaultMovementMethod ()* , который вызывает [Java. lang. Object.GetObject&lt; TextView&gt; (Handle, жнихандлеовнершип. доноттрансфер)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. ApiDemo. логтекстбокс. жетдефаултмовементмесод ()* вызывает *логтекстбокс. n_getDefaultMovementMethod ()* , который вызывает *TextView. n_getDefaultMovementMethod ()* , который вызывает [Java. lang. Object. GetObject @no_ _t_4_ TextView&gt; (Handle, Жнихандлеовнершип. Доноттрансфер)](xref:Java.Lang.Object.GetObject*) .
 
-6. *Java. lang. Object.&lt;GetObject TextView&gt;()* проверяет, уже существует ли соответствующий C# экземпляр для *Handle* . Если это так, возвращается значение. В этом сценарии нет, поэтому *Object.&lt;GetObject&gt;t ()* должен создать его.
+6. *Java. lang. Object. getobject&lt;TextView&gt;()* проверяет, уже существует ли соответствующий C# экземпляр для *Handle* . Если это так, возвращается значение. В этом сценарии нет, поэтому *Object. getobject&lt;t&gt;()* должен создать его.
 
-7. *Object&lt;. GetObject T&gt;()* ищет конструктор *логтекстбокс (IntPtr, жнихандлеовнешип)* , вызывает его, создает сопоставление между *дескриптором* и созданным экземпляром и возвращает созданный экземпляр.
+7. *Object. getobject&lt;t&gt;()* ищет конструктор *логтекстбокс (IntPtr, жнихандлеовнешип)* , вызывает его, создает сопоставление между *дескриптором* и созданным экземпляром и возвращает созданный экземпляр.
 
 8. *TextView. n_GetDefaultMovementMethod ()* вызывает метод получения свойства *логтекстбокс. дефаултмовементмесод* .
 
@@ -165,8 +165,8 @@ I/mono-stdout( 2993): [Managed: Value=]
 
 ## <a name="application-startup"></a>Запуск приложения
 
-Когда запускается действие, служба и т. д., Android сначала проверяет наличие процесса, выполняющегося для размещения действия или службы, а также т. д. Если такого процесса не существует, создается новый процесс, считывается [AndroidManifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) и загружается и создается экземпляр типа, указанный в [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) атрибуте. Далее создается экземпляр всех типов, заданных [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) значениями атрибутов, и вызывается метод [ContentProvider. аттачинфо% 28)](xref:Android.Content.ContentProvider.AttachInfo*) . Для этого в Xamarin. Android можно добавить *Mono. MonoRuntimeProvider* *ContentProvider* в AndroidManifest. XML во время процесса сборки. *Моно. Метод MonoRuntimeProvider. Аттачинфо ()* отвечает за загрузку среды выполнения Mono в процесс.
+Когда запускается действие, служба и т. д., Android сначала проверяет наличие процесса, выполняющегося для размещения действия или службы, а также т. д. Если такого процесса не существует, создается новый процесс, считывается [AndroidManifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) и загружается и создается экземпляр типа, указанный в атрибуте [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) . Далее создается экземпляр всех типов, заданных [/manifest/application/provider/@android:nameными](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) значениями атрибутов, и вызывается метод [ContentProvider. аттачинфо %28)](xref:Android.Content.ContentProvider.AttachInfo*) . Для этого в Xamarin. Android можно добавить *Mono. MonoRuntimeProvider* *ContentProvider* в AndroidManifest. XML во время процесса сборки. *Моно. Метод MonoRuntimeProvider. Аттачинфо ()* отвечает за загрузку среды выполнения Mono в процесс.
 Все попытки использовать Mono до этого момента завершатся ошибкой. ( *Примечание*. Именно поэтому типы, которые подклассировать [Android. app. Application](xref:Android.App.Application) , должны предоставить [конструктор (IntPtr, жнихандлеовнершип)](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), так как экземпляр приложения создается до инициализации Mono.)
 
-После завершения `AndroidManifest.xml` инициализации процесса осуществляется поиск имени класса действия или службы или т. д. для запуска. Например, [ /manifest/application/activity/@android:name атрибут](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) используется для определения имени действия, которое необходимо загрузить. Для действий этот тип должен наследовать [Android. app. Activity](xref:Android.App.Activity).
+После завершения инициализации процесса `AndroidManifest.xml` обращается к, чтобы найти имя класса действия или службы или т. д. для запуска. Например, [атрибут/manifest/application/activity/@android:name](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) используется для определения имени действия, которое необходимо загрузить. Для действий этот тип должен наследовать [Android. app. Activity](xref:Android.App.Activity).
 Указанный тип загружается с помощью [класса. форнаме ()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (который требует, чтобы тип был типом Java, поэтому вызываемые оболочки Android), а затем создается экземпляр. Создание экземпляра вызываемой оболочки Android вызовет создание экземпляра соответствующего C# типа. Затем Android вызовет [действие. OnCreate (набор)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , которое приведет к вызову соответствующего [действия. OnCreate (набор)](xref:Android.App.Activity.OnCreate*) , и вы не будете состязания.

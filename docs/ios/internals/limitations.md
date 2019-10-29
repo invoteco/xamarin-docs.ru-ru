@@ -4,15 +4,15 @@ description: В этом документе описаны ограничени�
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753325"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022308"
 ---
 # <a name="limitations-of-xamarinios"></a>Ограничения Xamarin. iOS
 

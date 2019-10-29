@@ -4,15 +4,15 @@ description: В этом документе описаны различные и
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 628d2c8efe9459378c64c55d653eac14c55e0815
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768585"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028274"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Дополнительные изменения в watchOS 3 Framework
 
@@ -27,8 +27,8 @@ _В этой статье рассматриваются дополнитель�
 - Корневые объекты [нсманажедобжектконтекст](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) поддерживают одновременную ошибку и выборку без сериализации.
 - Класс [нсперсистентсторекурдинатор](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) поддерживает пул хранилищ данных SQLite.
 - [Нсманажедобжектконтекст](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) объекты с хранилищами данных SQLite в режиме журнала Wal поддерживают новую функцию создания запросов, где контексты управляемых объектов (MOC) могут быть закреплены в конкретных версиях базы данных для последующей выборки и сбоя транзакций.
-- Использование высокого уровня `NSPersistenceContainer` для ссылки на [нсманажедобжектмодел](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) и другие основные ресурсы по `NSPersistentStoreCoordinator`настройке данных.
-- Было добавлено несколько новых удобных методов для `NSManagedObject` упрощения выборки и создания подклассов.
+- Использование `NSPersistenceContainer` высокого уровня для ссылки на `NSPersistentStoreCoordinator`, [нсманажедобжектмодел](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) и другие основные ресурсы настройки данных.
+- Добавлены несколько новых удобных методов для `NSManagedObject` упрощения выборки и создания подклассов.
 
 Дополнительные сведения см. в [справочнике по основной платформе данных](https://developer.apple.com/reference/coredata)Apple.
 
@@ -53,9 +53,9 @@ _В этой статье рассматриваются дополнитель�
 
 В HealthKit Framework для наблюдения за OS 3 были внесены следующие улучшения.
 
-- Используйте новый класс [хкворкаутконфигуратион](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) , чтобы указать `ActivityType` и `LocationType` для тренировки.
-- Для работы с коляска связанными данными о работоспособности были добавлены новые [хквхилчаирусеобжект](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) и `WheelchairUse` метод класса [хкхеалссторе](https://developer.apple.com/reference/healthkit/hkhealthstore) .
-- Добавлены новые ключи метаданных для типов `HKWeatherConditionClear` погоды (например, и `HKWeatherConditionCloudy`), а также были добавлены типы тренировок (такие `HKWorkoutActivityTypeWheelchairRunPace`как `HKWorkoutActivityTypeFlexibility` и).
+- Используйте новый класс [хкворкаутконфигуратион](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) , чтобы указать `ActivityType` и `LocationType` тренировки.
+- Для работы с коляска связанными данными о работоспособности были добавлены новые [хквхилчаирусеобжект](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) и метод `WheelchairUse` класса [хкхеалссторе](https://developer.apple.com/reference/healthkit/hkhealthstore) .
+- Добавлены новые ключи метаданных для типов погоды (например, `HKWeatherConditionClear` и `HKWeatherConditionCloudy`) и типы тренировок (такие как `HKWorkoutActivityTypeFlexibility` и `HKWorkoutActivityTypeWheelchairRunPace`).
 
 ## <a name="homekit"></a>HomeKit
 
@@ -70,14 +70,14 @@ _В этой статье рассматриваются дополнитель�
 В PassKit Framework для наблюдения за OS 3 были внесены следующие улучшения.
 
 - Расширяет платформу для поддержки безопасных платежей в приложении на Apple Watch как физических товаров, так и услуг.
-- Теперь доступны следующие классы: [Пкпаймент](https://developer.apple.com/reference/passkit/pkpayment), [пкпайментмесод](https://developer.apple.com/reference/passkit/pkpaymentmethod), [пкпайментрекуест](https://developer.apple.com/reference/passkit/pkpaymentrequest) и [пкпайменттокен](https://developer.apple.com/reference/passkit/pkpaymenttoken)
+- Теперь доступны следующие классы: [пкпаймент](https://developer.apple.com/reference/passkit/pkpayment), [пкпайментмесод](https://developer.apple.com/reference/passkit/pkpaymentmethod), [пкпайментрекуест](https://developer.apple.com/reference/passkit/pkpaymentrequest) и [пкпайменттокен](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
 ## <a name="uikit"></a>UIKit
 
 В UIKit Framework для наблюдения за OS 3 были внесены следующие улучшения.
 
-- Для поддержки динамического типа в метках текстовые поля и текстовые поля используют новый `PreferredFontForTextStyle` метод `UIFont` класса.
-- `ColorWithDisplayP3` Метод добавлен для поддержки расширенного цвета.
+- Для поддержки динамического типа в метках текстовые поля и текстовые поля используют новый метод `PreferredFontForTextStyle` класса `UIFont`.
+- Для поддержки расширенного цвета был добавлен метод `ColorWithDisplayP3`.
 
 ## <a name="related-links"></a>Связанные ссылки
 

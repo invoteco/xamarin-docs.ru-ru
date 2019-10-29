@@ -3,15 +3,15 @@ title: Xamarin Workbooks
 description: Xamarin Workbooks предоставить сочетание документации и кода, которое идеально подходит для экспериментов, обучения и создания руководств и учебных пособий.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/23/2018
-ms.openlocfilehash: ea065a0eea9be95b0513acd4ee3950efe9a4e53d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 899431b1d3bdefb5737cb0b4ffc8d53c4ffc39f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288093"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029645"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
@@ -25,7 +25,7 @@ Xamarin Workbooks является программным обеспечение
 
 Попробуйте и сообщите нам, что вы думаете, или в случае каких-либо [ошибок](~/tools/workbooks/install.md#reporting-bugs). У нас тоже есть [форум](https://forums.xamarin.com/categories/inspector) .
 
-[![](images/interactive-1.0.0-urho-planet-earth-small.png "Пример книги на основе UrhoSharp")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "A sample UrhoSharp based workbook")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[Установка и требования](install.md)
 

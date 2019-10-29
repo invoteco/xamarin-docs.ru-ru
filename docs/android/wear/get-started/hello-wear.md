@@ -4,15 +4,15 @@ description: Создайте свое первое приложение "изн
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2018
-ms.openlocfilehash: ce82f10fdb8159d2007d490747329c1a3b5aeecd
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250071"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028668"
 ---
 # <a name="hello-wear"></a>Основные сведения о Wear
 
@@ -32,11 +32,11 @@ _Создайте свое первое приложение "износ Android
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Создание нового приложения "износ Android" в диалоговом окне "Создание проекта"](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![создании нового приложения "износ Android" в диалоговом окне "Создание проекта"](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Создание нового приложения "износ Android" в диалоговом окне "Создание решения"](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![создании нового приложения "износ Android" в диалоговом окне создания решения](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -48,21 +48,21 @@ _Создайте свое первое приложение "износ Android
 
 Убедитесь, что для параметра **Минимальная Целевая версия Android** установлено значение **Android 5,0 (без описания операций)** или более поздней версии: 
 
-[![Настройка требуемой версии .NET Framework для Android 5,0 в Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![настройки целевой платформы на Android 5,0 в Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 Убедитесь, что для целевой платформы задано значение **Android 5,0 (без описания операций)** или более поздней версии:
 
-[![Настройка целевой платформы на Android 5,0 в Visual Studio для Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![настройки целевой платформы на Android 5,0 в Visual Studio для Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
 Дополнительные сведения о настройке целевой платформы см. в разделе [Основные сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md).
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. Изменение макета **Main. axml**
+### <a name="3-edit-the-mainaxml-layout"></a>3. изменение макета **Main. axml**
 
-Настройте макет таким образом, чтобы `TextView` он содержал `Button` и для образца: 
+Настройте макет так, чтобы в нем содержался `TextView` и `Button` для примера: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +103,7 @@ android:layout_height="match_parent">
 </FrameLayout>
 ```
 
-### <a name="4-edit-the-mainactivitycs-source"></a>4. Изменение источника **MainActivity.CS**
+### <a name="4-edit-the-mainactivitycs-source"></a>4. изменение источника **MainActivity.CS**
 
 Добавьте код для увеличения счетчика и отобразит его при нажатии кнопки: 
 
@@ -137,17 +137,17 @@ public class MainActivity : Activity
 
 Если вы используете устройство Android, например "износ Android", вы можете запустить приложение на устройстве, а не в эмуляторе. Дополнительные сведения об отладке на устройстве с износом см. в разделе [Отладка на устройстве с износом](~/android/wear/deploy-test/debug-on-device.md).
 
-### <a name="6-run-the-android-wear-app"></a>6.  Запуск приложения "износ Android"
+### <a name="6-run-the-android-wear-app"></a>6. Запуск приложения "износ Android"
 
 Устройство "износ Android" должно отобразиться в меню устройства. Прежде чем начать отладку, обязательно выберите правильное устройство "износ Android" или AVD. Выбрав устройство, нажмите кнопку Воспроизвести, чтобы развернуть приложение в эмуляторе или на устройстве.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Выбор "износа AVD" в меню "устройство" Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![выборе «износа AVD» в меню устройств Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Выбор "износа AVD" в меню "устройство" Visual Studio для Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![выборе «износа AVD» в меню устройств Visual Studio для Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -159,11 +159,11 @@ public class MainActivity : Activity
 
 После успешного развертывания приложения на экране устройства «износ» появится экран следующего вида:
 
-[![Начальный экран приложения "износ"](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![начальный экран приложения "износ"](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Коснитесь элемента **Click Me!** на лицевой стороне устройства «износ» и увидите шаг счетчика с каждым касанием:
 
-[![Снимок экрана приложения "износ" после трех щелчков](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![снимок экрана приложения "износ" после трех щелчков](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## <a name="next-steps"></a>Следующие шаги
 

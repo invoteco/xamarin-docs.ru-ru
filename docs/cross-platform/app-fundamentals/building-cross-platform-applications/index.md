@@ -3,15 +3,15 @@ title: Создание кроссплатформенных приложени�
 description: В этом разделе рассказывается о том, как создавать приложения с помощью платформы разработки Xamarin, а также как работать с приложением Xamarin для разработки мобильных приложений, а затем тестировать и развертывать их в различных магазинах приложений.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/28/2016
-ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: b3444b962a032ceaeeba36f63ad975b3d80a9f14
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70288054"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016932"
 ---
 # <a name="building-cross-platform-applications"></a>Создание кроссплатформенных приложений
 
@@ -46,7 +46,7 @@ ms.locfileid: "70288054"
 Задача — это простое приложение списка задач для iOS, Android и Windows Phone.
 В нем демонстрируются основы создания кросс-платформенного приложения с помощью Xamarin и используется локальная база данных SQLite.
 
- список [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) списка [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ [список задач](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [![списка](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) задач![
 
 Прочтите [Пример использования задач](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
@@ -65,6 +65,6 @@ ms.locfileid: "70288054"
 - [Параметры общего доступа к коду](~/cross-platform/app-fundamentals/code-sharing.md)
 - [Практический пример: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Пример приложения для задач (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Разработка мобильных приложений Xamarin. Основные принципы работы C# различных платформ и Xamarin. Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
-- [Разработка мобильных приложений C# с помощью Грег Шакклес (O'Reilly)](http://shop.oreilly.com/product/0636920024002.do)
-- [Профессиональная кросс-платформенная разработка мобильных C# приложений в Скотт Олсон, Джон Хантер, Бен Хоржен, Кенни вернувшиеся (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)
+- [Разработка мобильных приложений Xamarin. Основные принципы работы C# различных платформ и Xamarin. Forms (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Разработка мобильных приложений C# с помощью Грег Шакклес (O'Reilly)](https://shop.oreilly.com/product/0636920024002.do)
+- [Профессиональная кросс-платформенная разработка мобильных C# приложений в Скотт Олсон, Джон Хантер, Бен Хоржен, Кенни вернувшиеся (Wrox)](https://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

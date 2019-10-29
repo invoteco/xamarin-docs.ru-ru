@@ -4,15 +4,15 @@ description: В этой статье объясняется, как выпол�
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 9596ff34352337d892fc22df5651b2f78f8c33f6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 965ed4e802c05f8450192c0fec17fe31e464c779
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762163"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028698"
 ---
 # <a name="debug-on-a-wear-device"></a>Отладка в устройстве Android Wear
 
@@ -86,7 +86,7 @@ _В этой статье объясняется, как выполнить от
     Target: connected
     ```
 
-6. Выполнив описанные выше действия, `adb devices` вы отобразите состояние телефона и устройства "износ Android":
+6. После выполнения описанных выше действий `adb devices` отображает состояние телефона и устройства "износ Android":
 
     ```
     List of devices attached
@@ -126,7 +126,7 @@ adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 adb -s 127.0.0.1:4444 uninstall <package name>
 ```
 
-Например, чтобы удалить приложение с именем `com.xamarin.weartest`пакета, введите следующую команду:
+Например, чтобы удалить приложение с именем пакета `com.xamarin.weartest`, введите следующую команду:
 
 ```shell
 adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest

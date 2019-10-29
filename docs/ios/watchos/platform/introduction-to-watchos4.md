@@ -4,15 +4,15 @@ description: Этот документ содержит общие сведен�
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: 7f2440cfa7ac3149fd190c6752c9b2829681b602
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 947e64c010d60a13a79a7832413d6f0226fdbdb4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028239"
 ---
 # <a name="introduction-to-watchos-4"></a>Введение в watchOS 4
 

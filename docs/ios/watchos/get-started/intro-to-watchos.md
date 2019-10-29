@@ -1,139 +1,139 @@
 ---
 title: Введение в watchOS
-description: Этот документ содержит обзор watchOS, описывающий жизненного цикла приложения, типы интерфейсов пользователя, размеры экранов, ограничения и многое другое.
+description: Этот документ содержит обзор watchOS, описывающих жизненный цикл приложения, типы пользовательского интерфейса, размеры экрана, ограничения и многое другое.
 ms.prod: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: df1177d55510571da3369d298bd05aa9bd0734a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b3c2908d8ae9a68189fbff4d47afa49da21b88a5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767932"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030195"
 ---
 # <a name="introduction-to-watchos"></a>Введение в watchOS
 
 > [!NOTE]
-> Ознакомьтесь с [введение в watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md) обзор новых функций.
+> Ознакомьтесь с [введением в watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md) для получения общих сведений о новейших функциях.
 
 ## <a name="about-watchos"></a>О watchOS
 
-Решение приложение watchOS содержит 3 проектов:
+Решение приложения watchOS имеет 3 проекта:
 
-- **Просмотрите расширения** — проект, содержащий код приложения watch.
-- **Просмотрите приложение** — раскадровки пользовательского интерфейса и ресурсов.
-- **Родительское приложение iOS** — это приложение является обычной iPhone. Приложение просмотра и расширение объединяются в iPhone для доставки часы пользователя.
+- **Просмотр расширения** — проект, содержащий код для приложения Watch.
+- **Watch App** — содержит раскадровку и ресурсы пользовательского интерфейса.
+- **родительское приложение iOS** — это приложение, которое является обычным приложением iPhone. Приложение для наблюдения и расширение поставляются в приложение iPhone для доставки в часы пользователя.
 
-В watchOS 1 приложения код расширения выполняется на iPhone, Apple Watch, фактически внешнему дисплею. приложения для watchOS 2 и 3 выполнять полностью в Apple Watch. На следующей схеме показано это различие:
+В приложениях watchOS 1 код в расширении выполняется на iPhone — Apple Watch фактически является внешним отображением. приложения watchOS 2 и 3 выполняются полностью на Apple Watch. Это различие показано на схеме ниже:
 
-[![](intro-to-watchos-images/arch-sml.png "На этой схеме показана разница между watchOS 1 и watchOS 2 (и более поздними).")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
 
-Независимо от того, какую версию watchOS предназначено в Visual Studio для Mac в панели решения законченное решение будет выглядеть следующим образом:
+Независимо от того, какая версия watchOS предназначена, в Visual Studio для Mac Панель решения полное решение будет выглядеть примерно так:
 
-[![](intro-to-watchos-images/projectstructure-sml.png "Панель решения")](intro-to-watchos-images/projectstructure.png#lightbox)
+[![](intro-to-watchos-images/projectstructure-sml.png "The Solution Pad")](intro-to-watchos-images/projectstructure.png#lightbox)
 
-*Родительское приложение* в watchOS решение — это приложение регулярных операций ввода-вывода. Это единственный проект в решение, которое является видимым **на телефоне**. Варианты использования для этого приложения будет включать в руководствах, экраны администрирования и средний уровень фильтрации, cacheing и т. д. Тем не менее, пользователь может устанавливать и запускать приложения watch/расширения без **когда-нибудь** с открытыми в родительское приложение, поэтому при необходимости в родительское приложение на выполнение для однократной инициализации или администрирования, необходимо запрограммировать на watch приложения и расширения, информирующее пользователя.
+*Родительское приложение* в решении watchOS — это регулярное приложение iOS. Это единственный проект в решении, который отображается **на телефоне**. Варианты использования для этого приложения включают руководства, экраны администрирования и фильтрацию среднего уровня, кэширование и т. д. Однако пользователь может установить и запустить контрольное приложение или расширение **, не открывая** родительское приложение, поэтому, если необходимо, чтобы родительское приложение выполнялось для однократной инициализации или администрирования, необходимо запрограммировать свое приложение или расширение. пользователь, который.
 
-Несмотря на то, что в родительское приложение предоставляет приложение просмотра и расширение, они выполняются в разные «песочницы».
+Несмотря на то, что родительское приложение доставляет приложение Watch и расширение, они выполняются в разных изолированных средах.
 
-В watchOS 1 они могут обмениваться данными через группу общего приложения или с помощью статической функции `WKInterfaceController.OpenParentApplication`, который будет активировать `UIApplicationDelegate.HandleWatchKitExtensionRequest` метод в приложении родительского `AppDelegate` (см. в разделе [работа с в родительское приложение](~/ios/watchos/app-fundamentals/parent-app.md)).
+На watchOS 1 они могут обмениваться данными через общую группу приложений или через статическую функцию `WKInterfaceController.OpenParentApplication`, которая активирует метод `UIApplicationDelegate.HandleWatchKitExtensionRequest` в `AppDelegate` родительского приложения (см. раздел [Работа с родительским приложением](~/ios/watchos/app-fundamentals/parent-app.md)).
 
-В watchOS 2 или более поздней версии платформы подключения Контрольное значение используется для связи с родительским приложением с помощью `WCSession` класса.
+В watchOS 2 или более поздней версии инфраструктура подключения к данным используется для взаимодействия с родительским приложением с помощью класса `WCSession`.
 
 ## <a name="application-lifecycle"></a>Жизненный цикл приложения
 
-В расширении watch подкласс `WKInterfaceController` класс создается для каждой сцены раскадровки.
+В расширении Watch для каждой сцены раскадровки создается подкласс класса `WKInterfaceController`.
 
-Эти `WKInterfaceController` классы являются аналогом `UIViewController` объекты в программировании операций ввода-вывода, но не имеют тот же уровень доступа к представлению.
-К примеру нельзя динамически добавлять элементы управления к или реструктуризации пользовательского интерфейса.
-Можно, тем не менее, скрыть и Показать элементы управления и, в некоторых элементах управления, изменить их размер, прозрачность и параметры внешнего вида.
+Эти `WKInterfaceController` классы аналогичны `UIViewController` объектам в программировании iOS, но не имеют такого же уровня доступа к представлению.
+Например, нельзя динамически добавлять элементы управления в пользовательский интерфейс или переструктурировать его.
+Однако вы можете скрывать и отображать элементы управления и, с некоторыми элементами управления, изменять размер, прозрачность и параметры внешнего вида.
 
-Жизненный цикл `WKInterfaceController` объект включает в себя следующие вызовы:
+Жизненный цикл объекта `WKInterfaceController` включает следующие вызовы:
 
-- [Спящий](xref:WatchKit.WKInterfaceController.Awake*) режима: В этом методе следует выполнять большую часть инициализации.
-- [Виллактивате](xref:WatchKit.WKInterfaceController.WillActivate) : Вызывается вскоре перед тем, как приложение Watch будет отображаться пользователю. Используйте этот метод для выполнения последнего момента инициализации, запуска анимации и т. д.
-- На этом этапе появится в приложении для Apple Watch и расширение начинает отвечать на запросы для ввода данных пользователем и обновление отображение приложения Watch на логике приложения.
-- [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) после Watch приложения закрыто пользователем, этот метод вызывается. После возврата этого метода, элементы управления пользовательского интерфейса не может изменяться до следующего `WillActivate` вызывается. Этот метод также будет вызываться при разрыве подключения для iPhone.
-- После отключения расширения оно является недоступным для программы. Ожидающие асинхронные функции **не** вызываться. Просмотрите набор расширений не используют фоновую обработку режимов. Если программа активируется пользователем, но приложение не было завершено в операционной системе, будет первый метод, вызываемый `WillActivate`.
+- [Спящий](xref:WatchKit.WKInterfaceController.Awake*) режима. большую часть инициализации следует выполнять в этом методе.
+- [Виллактивате](xref:WatchKit.WKInterfaceController.WillActivate) : вызывается вскоре перед отображением приложения Watch для пользователя. Используйте этот метод для выполнения последней инициализации, запуска анимации и т. д.
+- На этом этапе отображается приложение Watch, и расширение начинает отвечать на введенные пользователем данные и обновляет отображение приложения в соответствии с логикой приложения.
+- [Диддеактивате](xref:WatchKit.WKInterfaceController.DidDeactivate) После закрытия контрольного приложения пользователем вызывается этот метод. После возврата этого метода элементы управления пользовательского интерфейса не могут быть изменены до следующего `WillActivate` вызова. Этот метод также будет вызываться, если подключение к iPhone разорвано.
+- После деактивации расширения оно становится недоступным для программы. Ожидающие асинхронные функции **не будут** вызываться. Расширения набора наблюдения не могут использовать режимы фоновой обработки. Если программа повторно активируется пользователем, но не была прервана операционной системой, первый метод, вызываемый, будет `WillActivate`.
 
-![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "Обзор жизненного цикла приложения")
+![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "Application Lifecycle overview")
 
 ## <a name="types-of-user-interface"></a>Типы пользовательского интерфейса
 
-Существует три типа взаимодействия, которую пользователь может иметь с приложение для Apple watch.
-Все программируются с помощью пользовательских вложенных классов `WKInterfaceController`, поэтому универсально применяется последовательность описанные выше жизненного цикла (уведомления программируются с помощью вложенных классов `WKUserNotificationController`, который сам является подклассом `WKInterfaceController`):
+Существует три типа взаимодействия, которые пользователь может использовать с вашим приложением для просмотра контрольных данных.
+Все они запрограммированы с помощью пользовательских подклассов `WKInterfaceController`, поэтому ранее обсуждаемая последовательность жизненного цикла применяется глобально (уведомления запрограммированы с помощью подклассов `WKUserNotificationController`, которые сами по себе являются подклассами `WKInterfaceController`):
 
-### <a name="normal-interaction"></a>Обычный взаимодействия
+### <a name="normal-interaction"></a>Нормальное взаимодействие
 
-Большая часть взаимодействия Контрольные значения/расширение приложения будет более вложенные классы `WKInterfaceController` , написанный в соответствии с сцен в приложении watch **Interface.storyboard**. Это подробно рассматривается в [установки](~/ios/watchos/get-started/installation.md) и [Приступая к работе](~/ios/watchos/get-started/index.md) статей.
-На следующем рисунке показана часть [каталога контрольного значения Kit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) образца раскадровки. Для каждой сцены, показали здесь, имеется соответствующий пользовательский `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`т. д.) в проекте расширения.
+Большая часть отслеживания взаимодействия между приложениями и расширениями будет состоять из подклассов `WKInterfaceController`, которые вы пишете в соответствии с сценами в интерфейсе вашего приложения-наблюдателя. **раскадровка**. Это подробно описано в статьях об [установке](~/ios/watchos/get-started/installation.md) и [Начало работы](~/ios/watchos/get-started/index.md) .
+На следующем рисунке показана часть раскадровки с примером в [каталоге контрольного комплекта](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) . Для каждого показанного здесь сцены имеется соответствующий пользовательский `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`и т. д.) в проекте расширения.
 
-![](intro-to-watchos-images/scenes.png "Примеры взаимодействия норм.")
+![](intro-to-watchos-images/scenes.png "Normal Interaction examples")
 
 ### <a name="notifications"></a>Уведомления
 
-[Уведомления](~/ios/watchos/platform/notifications.md) являются основной вариант использования для Apple Watch. Поддерживаются локальные и удаленные уведомления. Взаимодействие с уведомлениями, происходит в два этапа, вызывается короткое и длинное вид.
+[Уведомления](~/ios/watchos/platform/notifications.md) являются основным вариантом использования для Apple Watch. Поддерживаются как локальные, так и удаленные уведомления. Взаимодействие с уведомлениями происходит в два этапа: «короткий» и «длительный».
 
-Короткий выглядит кратко, отображаться значок приложения, его имя и название (как указано с `WKInterfaceController.SetTitle`).
+Короткий вид отображается вкратце и отображает значок приложения Watch, его имя и название (как указано в `WKInterfaceController.SetTitle`).
 
-Long выглядеть объединяет предоставляемая системой **переплета** области и кнопки закрытия с пользовательское содержимое на основе раскадровки.
+Длинный вид сочетает в себе предоставляемую системой **лентой** область и кнопку закрыть с пользовательским содержимым на основе раскадровки.
 
-`WKUserNotificationInterfaceController` расширяет `WKInterfaceController` с методами `DidReceiveLocalNotification` и `DidReceiveRemoteNotification`.
-Переопределите эти методы для реагирования на события уведомления.
+`WKUserNotificationInterfaceController` расширяет `WKInterfaceController` с помощью методов `DidReceiveLocalNotification` и `DidReceiveRemoteNotification`.
+Переопределите эти методы, чтобы реагировать на события уведомления.
 
-Дополнительные сведения о разработке пользовательского интерфейса уведомлений, см. [Apple Watch рекомендациям по интерфейсам](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1)
+Дополнительные сведения о проектировании пользовательского интерфейса для уведомлений см. в [Apple Watch рекомендации по](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1) работе с человеком.
 
-![](intro-to-watchos-images/notifications.png "Примеры уведомлений")
+![](intro-to-watchos-images/notifications.png "Sample notifications")
 
 ## <a name="screen-sizes"></a>Размеры экрана
 
-Apple Watch имеет два размера граней: 38 и часы, как с соотношением дисплея 5:4, так и с Retinaным дисплеем. Готовый к применению размеров являются:
+Apple Watch имеет два размера граней: 38 и часы, а также отношение числа 5:4 и Retina. Их пригодные для их работы размеры:
 
-- 38 136 x 170 логических пикселов (272 x 340 пикселей)
-- Часы 156 x 195 логические Пиксели (312 x 390 пикселей).
+- 38:136 x 170 логических пикселов (272 x 340 пикселов)
+- Часы: 156 x 195 логические Пиксели (312 x 390 пикселей).
 
-Используйте `WKInterfaceDevice.ScreenBounds` определить на какие display выполняется приложение для Apple Watch.
+Используйте `WKInterfaceDevice.ScreenBounds`, чтобы определить, на каком мониторе работает ваше приложение.
 
-Как правило проще разрабатывать разработки текст и макет с более ограниченный отображение 38 мм и увеличить масштаб.
-При запуске в среде большего размера, уменьшение масштаба может привести к некрасиво перекрытие или усечения текста.
+Как правило, проще разрабатывать макет текста и макета с более ограниченным отображением в формате 38, а затем увеличивать масштаб.
+Если начать работу с более крупной средой, то масштабирование может привести к неверному перекрытию или усечению текста.
 
-Дополнительные сведения о [работа с размерами экрана](~/ios/watchos/app-fundamentals/screen-sizes.md).
+Узнайте больше о [работе с размерами экранов](~/ios/watchos/app-fundamentals/screen-sizes.md).
 
-## <a name="limitations-of-watchos"></a>Ограничения для watchOS
+## <a name="limitations-of-watchos"></a>Ограничения watchOS
 
-Существуют некоторые ограничения watchOS, которые следует учитывать при разработке приложений для watchOS:
+Существуют некоторые ограничения watchOS, которые следует учитывать при разработке приложений watchOS.
 
-- Apple Watch устройства обеспечивают ограниченную хранилища — помните дискового пространства, перед загрузкой больших файлов (например) аудио- или фильма файлы).
+- Apple Watch устройства имеют ограниченный объем хранения, прежде чем загружать большие файлы (например, файлы аудио или фильмов).
 
-- Многие watchOS [элементов управления](~/ios/watchos/user-interface/index.md) имеют аналоги в UIKit, но различные классы (`WKInterfaceButton` вместо `UIButton`, `WKInterfaceSwitch` для `UISwitch`т. д.) и имеют ограниченный набор методов, по сравнению с их UIKit эквиваленты. Кроме того, watchOS имеет некоторые элементы управления, такие как `WKInterfaceDate` (для отображения даты и времени), UIKit не поддерживает.
+- Многие [элементы управления](~/ios/watchos/user-interface/index.md) watchOS имеют аналог в UIKit, но являются разными классами (`WKInterfaceButton`, а не `UIButton`, `WKInterfaceSwitch` для `UISwitch`и т. д.) и имеют ограниченный набор методов по сравнению с их эквивалентами UIKit. Кроме того, watchOS содержит некоторые элементы управления, такие как `WKInterfaceDate` (для отображения даты и времени), которых нет у UIKit.
 
-  - Нельзя настроить маршрутизацию уведомления только в часы или iPhone только (какому роду элементов управления, пользователь имеет на маршрутизацию не объявлено компанией Apple).
+  - Вы не можете маршрутизировать уведомления только для просмотра или только для iPhone (тип управления, который пользователь повлияет на маршрутизацию, не был объявлен компанией Apple).
 
-Некоторые другие ограничения и часто задаваемые вопросы:
+Некоторые другие известные ограничения/часто задаваемые вопросы:
 
-- Apple не разрешает пользовательские Контрольные значения сторонних лиц.
+- Apple не будет разрешать сторонние пользовательские наблюдатели.
 
-- API-интерфейсы, которые позволяют просмотреть, чтобы управлять iTunes на подключенный телефон являются закрытыми.
+- Интерфейсы API, позволяющие отслеживать управление iTunes на подключенном телефоне, являются частными.
 
 ## <a name="further-reading"></a>Дополнительные сведения
 
-Ознакомьтесь с документацией из Apple:
+Ознакомьтесь с документацией от Apple:
 
-- [Разработка набора контрольных значений](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
+- [Разработка для контрольного набора](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
 
-- [Просмотрите руководство по программированию Kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
+- [Руководство по программированию для контрольного комплекта](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
-- [Рекомендации по работе с человеческим интерфейсом Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
+- [Apple Watch рекомендации по работе с человеком](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [watchOS 3 каталога (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [watchOS 1 каталога (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Установка и настройка](~/ios/watchos/get-started/installation.md)
-- [Первое приложение просмотра видео](https://blog.xamarin.com/your-first-watch-kit-app/)
-- [В разработке Apple для Watch руководства](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
+- [Каталог watchOS 3 (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Каталог watchOS 1 (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Установка и установка](~/ios/watchos/get-started/installation.md)
+- [Первое видео о приложении](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [Руководство по разработке Apple для контрольного набора](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Советы по WatchKit Apple](https://developer.apple.com/watchkit/tips/)
 - [Введение в watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

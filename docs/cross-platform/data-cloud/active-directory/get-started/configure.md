@@ -3,15 +3,15 @@ title: Шаг 2. Настройка доступа к службе для моб
 description: В этом документе описывается, как предоставить приложению Xamarin доступ к приложению Azure, защищенному с помощью Azure Active Directory.
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: ec5dd15ffb838d7062c8c769375289e7b07b24d2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: eeac7b0b70b2f11304a374de7522f28d4bcad6c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766374"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016670"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Шаг 2. Настройка доступа к службе для мобильного приложения
 
@@ -19,15 +19,15 @@ ms.locfileid: "70766374"
 
 1. На вкладке **Настройка** перейдите к разделу **разрешения для других приложений** :
 
-   ![](configure-images/2.1-configure.png "На вкладке Настройка перейдите к разделу разрешения для других приложений.")
+   ![](configure-images/2.1-configure.png "On the Configure tab, locate permissions to other applications section")
 
 2. Нажмите кнопку **Добавить приложение** . На следующем экране появится список всех приложений, защищенных с помощью Azure Active Directory. Выберите приложения, к которым требуется доступ из мобильного приложения.
 
-   ![](configure-images/2.2-add-application.png "Выберите приложения, к которым требуется доступ из мобильного приложения.")
+   ![](configure-images/2.2-add-application.png "Select the applications that needs to be accessed from the mobile application")
 
 3. После выбора приложения снова выберите только что добавленное приложение в разделе **разрешения для других приложений** и предоставьте соответствующие права.
 
-   ![](configure-images/2.3-permissions.png "После выбора приложения снова выберите только что добавленное приложение в разделе разрешения для других приложений и предоставьте соответствующие права.")
+   ![](configure-images/2.3-permissions.png "After selecting the application, once again select the newly-added application in permissions to other   applications section and give appropriate rights")
 
 4. Наконец, **Сохраните** конфигурацию. Эти службы теперь должны быть доступны в мобильных приложениях!
 

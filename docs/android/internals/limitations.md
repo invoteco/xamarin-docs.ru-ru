@@ -1,17 +1,17 @@
 ---
-title: Xamarin. Android и Настольные системы — различия в среде выполнения Mono
+title: Xamarin. Android и настольные компьютеры — различия в среде выполнения Mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8fe0e3a9adedb161c527ccdf6d6c3a7cd06a1d86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757788"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027842"
 ---
 # <a name="limitations"></a>Ограничения
 
@@ -25,16 +25,16 @@ ms.locfileid: "70757788"
 
 ## <a name="limited-java-generation-support"></a>Ограниченная поддержка создания Java
 
-Чтобы код Java мог вызывать управляемый код, необходимо создать [вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) . *По умолчанию*вызываемые оболочки Android будут содержать только (определенные) объявленные конструкторы и методы, которые переопределяют виртуальный метод Java (т [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute). е. он имеет) или реализуют метод интерфейса `Attribute`Java (интерфейс аналогичен).
+Чтобы код Java мог вызывать управляемый код, необходимо создать [вызываемые оболочки Android](~/android/platform/java-integration/android-callable-wrappers.md) . *По умолчанию*вызываемые оболочки Android будут содержать только (определенные) объявленные конструкторы и методы, переопределяющие виртуальный метод Java (т. е. он имеет [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)) или реализуют метод интерфейса Java (также `Attribute`).
   
-До выпуска 4,1 дополнительные методы не могут быть объявлены. В выпуске [ `Export` 4,1 пользовательские атрибуты `ExportField` и можно использовать для объявления методов и полей Java в вызываемой оболочке Android](~/android/platform/java-integration/working-with-jni.md).
+До выпуска 4,1 дополнительные методы не могут быть объявлены. В выпуске 4,1 [пользовательские атрибуты `Export` и `ExportField` можно использовать для объявления методов и полей Java в вызываемой оболочке Android](~/android/platform/java-integration/working-with-jni.md).
 
 ### <a name="missing-constructors"></a>Отсутствующие конструкторы
 
-Конструкторы остаются сложными, [`ExportAttribute`](xref:Java.Interop.ExportAttribute) если не используется. Алгоритм создания конструкторов вызываемой оболочки Android заключается в том, что конструктор Java будет выдаваться в следующих случаях:
+Конструкторы остаются сложными, если не используется [`ExportAttribute`](xref:Java.Interop.ExportAttribute) . Алгоритм создания конструкторов вызываемой оболочки Android заключается в том, что конструктор Java будет выдаваться в следующих случаях:
 
 1. Существует сопоставление Java для всех типов параметров
-2. Базовый класс объявляет тот же конструктор &ndash; , который является обязательным, поскольку вызываемая оболочка Android *должна* вызывать соответствующий конструктор базового класса; никакие аргументы по умолчанию не используются (так как простого способа определить, какие значения следует использовать в Java).
+2. Базовый класс объявляет тот же конструктор &ndash; это необходимо, поскольку вызываемая оболочка Android *должна* вызывать соответствующий конструктор базового класса; нельзя использовать аргументы по умолчанию (так как нет простого способа определить, какие значения следует использовать в Java).
 
 Например, рассмотрим следующий класс.
 
@@ -47,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Хотя это выглядит совершенно логично, полученная обертка Android *в сборках выпуска* не будет содержать конструктор по умолчанию. Следовательно, при попытке запустить эту службу (например [`Context.StartService`](xref:Android.Content.Context.StartService*), произойдет сбой:
+Хотя это выглядит совершенно логично, полученная обертка Android *в сборках выпуска* не будет содержать конструктор по умолчанию. Следовательно, если вы попытаетесь запустить эту службу (например, [`Context.StartService`](xref:Android.Content.Context.StartService*), она завершится ошибкой:
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -70,7 +70,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-Обходной путь заключается в объявлении конструктора по умолчанию, оформлении его с `ExportAttribute`помощью и [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)установке: 
+Обходной путь заключается в объявлении конструктора по умолчанию, оформлении его с помощью `ExportAttribute`и задании [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString): 
 
 ```csharp
 [Service]
@@ -88,7 +88,7 @@ class MyIntentService : IntentService {
 
 Универсальные C# классы поддерживаются только частично. Существуют следующие ограничения.
 
-- Универсальные типы не могут `[Export]` использовать `[ExportField`или]. Попытка сделать это приведет к `XA4207` возникновению ошибки.
+- Универсальные типы не могут использовать `[Export]` или `[ExportField`]. Попытка сделать это приведет к возникновению ошибки `XA4207`.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -101,7 +101,7 @@ class MyIntentService : IntentService {
     }
     ```
 
-- Универсальные методы не могут `[Export]` использовать `[ExportField]`или:
+- Универсальные методы не могут использовать `[Export]` или `[ExportField]`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -116,7 +116,7 @@ class MyIntentService : IntentService {
     }
     ```
 
-- `[ExportField]`не может использоваться в методах, которые `void`возвращают:
+- `[ExportField]` не может использоваться в методах, которые возвращают `void`:
 
     ```csharp
     public class Example : Java.Lang.Object

@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: c14c03d4f618644382aa80b5e0e7fc5b7a46fa9b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760880"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026969"
 ---
 # <a name="android-frequently-asked-questions"></a>Часто задаваемые вопросы о Android
 
@@ -36,7 +36,7 @@ ms.locfileid: "70760880"
 
 ### <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packagesinstall-android-support-librarymd"></a>[Как вручную установить вспомогательные библиотеки Android, необходимые для пакетов Xamarin.Android.Support?](install-android-support-library.md)
 
-В этом руководстве приведены примеры действий по установке `Xamarin.Android.Support.v4` библиотеки поддержки в Windows & Mac.
+В этом руководстве приведены примеры действий по установке библиотеки поддержки `Xamarin.Android.Support.v4` в Windows & Mac.
 
 ### <a name="what-usb-drivers-do-i-need-to-debug-android-on-windowsandroid-drivers-debug-windowsmd"></a>[Какие драйверы USB нужны для отладки Android в Windows?](android-drivers-debug-windows.md)
 
@@ -59,7 +59,7 @@ ms.locfileid: "70760880"
 
 ### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[Оптимизированные пакеты NuGet поддержки Android v4 и v13 в Xamarin](android-support-v4v13-libraries.md)
 
-`Support-v4`и `Support-v13` не могут использоваться вместе в одном приложении, то есть они являются взаимоисключающими. Это связано с `Support-v13` тем, что фактически содержит все типы и `Support-v4`реализацию. Если вы попробуете и ссылаетесь на оба проекта в одном проекте, возникнут ошибки с повторяющимися типами.
+`Support-v4` и `Support-v13` нельзя использовать вместе в одном приложении, то есть они являются взаимоисключающими. Это связано с тем, что `Support-v13` фактически содержит все типы и реализацию `Support-v4`. Если вы попробуете и ссылаетесь на оба проекта в одном проекте, возникнут ошибки с повторяющимися типами.
 
 ### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[Разделы справки устранить ошибку PathTooLongException?](path-too-long-exception.md)
 

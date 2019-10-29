@@ -4,15 +4,15 @@ description: Создание приложений для устройств And
 ms.prod: xamarin
 ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2018
-ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 63fb9c3b1484026cb390a8a475c711562dfd0771
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758333"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028595"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -61,9 +61,9 @@ ms.locfileid: "70758333"
 
 |Описание|Снимок экрана|
 |--- |--- |
-|[Android L и многое другое](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; В предварительной версии Android L для разработчиков появились новые API-интерфейсы, которые позволяют разработчикам воспользоваться преимуществами, включая проектирование материалов, уведомления и новые анимации.|![Снимок экрана презентации](images/video-android-l.png)|
-|[C#в моей Ушкие и в моих глаза: Носимого пользователем вычисления с помощью Google](https://www.youtube.com/watch?v=80H8tXByZQc) Glass и Android могут показаться что-нибудь из будущего (или мини-приложения инспектора), но многие люди уже используют будущее сегодня! &ndash; C#разработчики узнают это и уже имеют средства и навыки для использования возможностей носимого пользователем устройств (от развития до 2014).|![Снимок экрана презентации](images/video-eyes-ears.png)|
-|[Новые возможности Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Light, Android TV, автозапуск для Android, проектирование материалов и искусство; что это означает в качестве разработчика Xamarin? от развития 2014.|![Снимок экрана презентации](Images/video-whats-new.png)|
+|[Android l и т. д. дополнительные](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Предварительная версия Android l Developer представила множество новых API-интерфейсов для разработчиков, использующих преимущества, включая проектирование материалов, уведомления и новые анимации.|![Снимок экрана презентации](images/video-android-l.png)|
+|[в моей ушкие и в моих глазах: Google Glass и Android износ&ndash;носимого пользователем вычисления могут показаться что-нибудь из будущего (или мини-приложения инспектора), но многие люди уже сейчас приносят будущее! C# ](https://www.youtube.com/watch?v=80H8tXByZQc) C#разработчики узнают это и уже имеют средства и навыки для использования возможностей носимого пользователем устройств (от развития до 2014).|![Снимок экрана презентации](images/video-eyes-ears.png)|
+|[Новые возможности Xamarin. android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Light, Android TV, автозапуск Android, проектирование материалов и искусство; что это означает для разработчика Xamarin? от развиваться 2014.|![Снимок экрана презентации](Images/video-whats-new.png)|
 
 <!--
 

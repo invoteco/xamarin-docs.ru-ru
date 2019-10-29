@@ -4,29 +4,29 @@ description: Представления коллекций позволяют о
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 078d5a2d5c05f39a9c6d8d081b08faa7b4b8ec67
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: b7f8452f0f085a8a15f188534851e8926d13f377
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021835"
 ---
 # <a name="collection-views-in-xamarinios"></a>Представления коллекций в Xamarin. iOS
 
 _Представления коллекций позволяют отображать содержимое с помощью произвольных макетов. Они позволяют легко создавать макеты, основанные на сетке, а также поддерживать пользовательские макеты._
 
-Представления коллекций, доступные в `UICollectionView` классе, являются новой концепцией в iOS 6, что приводит к показу нескольких элементов на экране с помощью макетов. Шаблоны для предоставления данных `UICollectionView` для создания элементов и взаимодействия с этими элементами следуют тем же моделям делегирования и источников данных, которые обычно используются в разработке iOS.
+Представления коллекций, доступные в классе `UICollectionView`, являются новой концепцией в iOS 6, что приводит к показу нескольких элементов на экране с помощью макетов. Закономерности предоставления данных `UICollectionView` для создания элементов и взаимодействия с этими элементами следуют тем же данным о делегировании и шаблонах источников данных, которые обычно используются в разработке iOS.
 
-Однако представления коллекций работают с подсистемой макета, которая не зависит `UICollectionView` от самого себя. Таким образом, простое предоставление другого макета позволяет легко изменять представление коллекции.
+Однако представления коллекций работают с подсистемой макета, которая не зависит от самого `UICollectionView`. Таким образом, простое предоставление другого макета позволяет легко изменять представление коллекции.
 
-iOS предоставляет класс макета с именем `UICollectionViewFlowLayout` , который позволяет создавать макеты на основе строк, такие как сетка, без дополнительной работы. Кроме того, можно создать пользовательские макеты, позволяющие представить любую презентацию.
+iOS предоставляет класс макета с именем `UICollectionViewFlowLayout`, который позволяет создавать макеты на основе строк, такие как сетка, без дополнительной работы. Кроме того, можно создать пользовательские макеты, позволяющие представить любую презентацию.
 
 ## <a name="uicollectionview-basics"></a>Основы Уиколлектионвиев
 
-`UICollectionView` Класс состоит из трех различных элементов:
+Класс `UICollectionView` состоит из трех различных элементов:
 
 - **Ячейки** — представления, управляемые данными для каждого элемента
 - **Дополнительные представления** — управляемые данными представления, связанные с разделом.
@@ -34,21 +34,21 @@ iOS предоставляет класс макета с именем `UICollec
 
 ## <a name="cells"></a>Ячейки
 
-Ячейки — это объекты, представляющие один элемент в наборе данных, представленном представлением коллекции. Каждая ячейка является экземпляром `UICollectionViewCell` класса, который состоит из трех различных представлений, как показано на рисунке ниже.
+Ячейки — это объекты, представляющие один элемент в наборе данных, представленном представлением коллекции. Каждая ячейка является экземпляром класса `UICollectionViewCell`, который состоит из трех различных представлений, как показано на рисунке ниже.
 
- [![](uicollectionview-images/01-uicollectionviewcell.png "Каждая ячейка состоит из трех различных представлений, как показано ниже.")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
+ [![](uicollectionview-images/01-uicollectionviewcell.png "Each cell is composed of three different views, as shown here")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
 
-`UICollectionViewCell` Класс имеет следующие свойства для каждого из этих представлений:
+Класс `UICollectionViewCell` имеет следующие свойства для каждого из этих представлений:
 
-- `ContentView`— Это представление содержит содержимое, которое представляет ячейка. Он отображается в самом верхнем z-порядке на экране.
-- `SelectedBackgroundView`— Ячейки имеют встроенную поддержку выбора. Это представление позволяет визуально отметьте, что ячейка выбрана. Он отображается непосредственно под тем, `ContentView` когда выбрана ячейка.
-- `BackgroundView`— Ячейки могут также отображать фон, который представлен в `BackgroundView` . Это представление отображается под `SelectedBackgroundView` .
+- `ContentView` — это представление содержит содержимое, которое представляет ячейка. Он отображается в самом верхнем z-порядке на экране.
+- `SelectedBackgroundView` — ячейки имеют встроенную поддержку выбора. Это представление позволяет визуально отметьте, что ячейка выбрана. Он отображается сразу под `ContentView` при выборе ячейки.
+- `BackgroundView` — ячейки могут также отображать фон, который отображается в `BackgroundView`. Это представление отображается под `SelectedBackgroundView`.
 
-Устанавливая `ContentView` таким образом, что он меньше `BackgroundView` и `SelectedBackgroundView`, `BackgroundView` `SelectedBackgroundView` можно использовать для визуального выделения содержимого, тогда как при выборе ячейки, как показано ниже:
+Установив `ContentView` таким образом, чтобы они были меньше `BackgroundView` и `SelectedBackgroundView`, можно использовать `BackgroundView`, чтобы визуально кадрировать содержимое, а `SelectedBackgroundView` будет отображаться при выборе ячейки, как показано ниже. :
 
- [![](uicollectionview-images/02-cells.png "Различные элементы ячейки")](uicollectionview-images/02-cells.png#lightbox)
+ [![](uicollectionview-images/02-cells.png "The different cell elements")](uicollectionview-images/02-cells.png#lightbox)
 
-Ячейки на снимке экрана выше создаются `UICollectionViewCell` путем наследования из и `ContentView`установки свойств, `SelectedBackgroundView` и `BackgroundView` соответственно, как показано в следующем коде:
+Ячейки на снимке экрана выше создаются путем наследования от `UICollectionViewCell` и задания свойств `ContentView`, `SelectedBackgroundView` и `BackgroundView`, соответственно, как показано в следующем коде:
 
 ```csharp
 public class AnimalCell : UICollectionViewCell
@@ -86,19 +86,19 @@ public class AnimalCell : UICollectionViewCell
 
 ## <a name="supplementary-views"></a>Дополнительные представления
 
-Дополнительные представления — это представления, которые представляют сведения, связанные с каждым `UICollectionView`разделом. Как и ячейки, дополнительные представления управляются данными. Если ячейки представляют данные элемента из источника данных, дополнительные представления представляют данные раздела, такие как категории книги на полке или жанр музыки в музыкальной библиотеке.
+Дополнительные представления — это представления, которые представляют сведения, связанные с каждым разделом `UICollectionView`. Как и ячейки, дополнительные представления управляются данными. Если ячейки представляют данные элемента из источника данных, дополнительные представления представляют данные раздела, такие как категории книги на полке или жанр музыки в музыкальной библиотеке.
 
 Например, можно использовать вспомогательное представление для представления заголовка для определенного раздела, как показано на рисунке ниже.
 
- [![](uicollectionview-images/02a-supplementary-view.png "Вспомогательное представление, используемое для представления заголовка для определенного раздела, как показано здесь")](uicollectionview-images/02a-supplementary-view.png#lightbox)
+ [![](uicollectionview-images/02a-supplementary-view.png "A Supplementary View used to present a header for a particular section, as shown here")](uicollectionview-images/02a-supplementary-view.png#lightbox)
 
-Чтобы использовать вспомогательное представление, сначала необходимо зарегистрировать его в `ViewDidLoad` методе:
+Чтобы использовать вспомогательное представление, его сначала необходимо зарегистрировать в методе `ViewDidLoad`:
 
 ```csharp
 CollectionView.RegisterClassForSupplementaryView (typeof(Header), UICollectionElementKindSection.Header, headerId);
 ```
 
-Затем представление должно возвращаться с помощью `GetViewForSupplementaryElement`, созданного с помощью `DequeueReusableSupplementaryView`, и наследует от `UICollectionReusableView`. В следующем фрагменте кода создается Супплементаривиев, показанный на снимке экрана выше:
+Затем представление необходимо возвратить с помощью `GetViewForSupplementaryElement`, созданного с помощью `DequeueReusableSupplementaryView`и наследовать от `UICollectionReusableView`. В следующем фрагменте кода создается Супплементаривиев, показанный на снимке экрана выше:
 
 ```csharp
 public override UICollectionReusableView GetViewForSupplementaryElement (UICollectionView collectionView, NSString elementKind, NSIndexPath indexPath)
@@ -117,11 +117,11 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="decoration-views"></a>Представления оформления
 
-Декорированные представления — это чисто визуальные представления, которые могут `UICollectionView`отображаться в. В отличие от ячеек и дополнительных представлений они не управляются данными. Они всегда создаются в подклассе макета и затем могут меняться в качестве макета содержимого. Например, представление декорирования можно использовать для представления фона, который прокручивается с содержимым в `UICollectionView`, как показано ниже:
+Декорирование представлений — это только визуальные представления, которые могут отображаться в `UICollectionView`. В отличие от ячеек и дополнительных представлений они не управляются данными. Они всегда создаются в подклассе макета и затем могут меняться в качестве макета содержимого. Например, представление декорирования можно использовать для представления фона, которое прокручивается с содержимым в `UICollectionView`, как показано ниже:
 
- [![](uicollectionview-images/02c-decoration-view.png "Представление \"Оформление\" с красным фоном")](uicollectionview-images/02c-decoration-view.png#lightbox)
+ [![](uicollectionview-images/02c-decoration-view.png "Decoration View with a red background")](uicollectionview-images/02c-decoration-view.png#lightbox)
 
- Приведенный ниже фрагмент кода изменяет фон на красный в классе Samples `CircleLayout` :
+ Фрагмент кода, приведенный ниже, изменяет фон на красный в `CircleLayout` классе Samples:
 
  ```csharp
  public class MyDecorationView : UICollectionReusableView
@@ -136,34 +136,34 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="data-source"></a>источника данных
 
-Как и в других частях iOS, таких `UITableView` как `MKMapView`и `UICollectionView` , получает свои данные из *источника данных* **`UICollectionViewDataSource`** , который предоставляется в Xamarin. iOS через класс. Этот класс отвечает за предоставление содержимого `UICollectionView` следующим образом:
+Как и в других частях iOS, таких как `UITableView` и `MKMapView`, `UICollectionView` получает данные из *источника данных*, который предоставляется в Xamarin. iOS через класс **`UICollectionViewDataSource`** . Этот класс отвечает за предоставление содержимого в `UICollectionView`, например:
 
-- **Ячейки** — возвращаются из `GetCell` метода.
-- **Дополнительные представления** — возвращаются из `GetViewForSupplementaryElement` метода.
-- **Число разделов,** возвращаемое `NumberOfSections` методом. Значение по умолчанию равно 1, если не реализовано.
-- **Количество элементов в разделе** , возвращаемых `GetItemsCount` методом.
+- **Ячейки** — возвращаются из метода `GetCell`.
+- **Дополнительные представления** — возвращаются из метода `GetViewForSupplementaryElement`.
+- **Число разделов** — возвращается методом `NumberOfSections`. Значение по умолчанию равно 1, если не реализовано.
+- **Количество элементов в разделе** , возвращаемых методом `GetItemsCount`.
 
 ### <a name="uicollectionviewcontroller"></a>уиколлектионвиевконтроллер
-Для удобства `UICollectionViewController` класс доступен. Он автоматически настраивается как делегат, который обсуждается в следующем разделе, и источник данных для его `UICollectionView` представления.
+Для удобства доступен класс `UICollectionViewController`. Он автоматически настраивается как делегат, который обсуждается в следующем разделе, и источник данных для его `UICollectionView` представления.
 
-`UITableView`Как ивслучае,классбудетвызыватьегоисточникданныхтолькодляполученияячеекдляэлементов,наявляющихся`UICollectionView` на экране.
+Как и в случае с `UITableView`, класс `UICollectionView` будет вызывать его источник данных только для получения ячеек для элементов, наявляющихся на экране.
 Ячейки, проходящие за пределами экрана, помещаются в очередь для повторного использования, как показано на следующем рисунке:
 
- [![](uicollectionview-images/03-cell-reuse.png "Ячейки, проходящие за пределами экрана, помещаются в очередь для повторного использования, как показано ниже.")](uicollectionview-images/03-cell-reuse.png#lightbox)
+ [![](uicollectionview-images/03-cell-reuse.png "Cells that scroll off the screen are placed in to a queue for reuse as shown here")](uicollectionview-images/03-cell-reuse.png#lightbox)
 
-Повторное использование ячеек было упрощено `UITableView`с помощью `UICollectionView` и. Больше не нужно создавать ячейку непосредственно в источнике данных, если она недоступна в очереди повторного использования, так как ячейки регистрируются в системе. Если ячейка недоступна, когда вызов удаляет ячейку из очереди повторного использования, iOS создаст его автоматически на основе зарегистрированного типа или NIB.
+Повторное использование ячеек было упрощено с помощью `UICollectionView` и `UITableView`. Больше не нужно создавать ячейку непосредственно в источнике данных, если она недоступна в очереди повторного использования, так как ячейки регистрируются в системе. Если ячейка недоступна, когда вызов удаляет ячейку из очереди повторного использования, iOS создаст его автоматически на основе зарегистрированного типа или NIB.
 Аналогичная методика также доступна для дополнительных представлений.
 
-Например, рассмотрим следующий код, который регистрирует `AnimalCell` класс:
+Например, рассмотрим следующий код, который регистрирует класс `AnimalCell`:
 
 ```csharp
 static NSString animalCellId = new NSString ("AnimalCell");
 CollectionView.RegisterClassForCell (typeof(AnimalCell), animalCellId);
 ```
 
-Если требуется ячейка `UICollectionView` , так как ее элемент находится на экране, `GetCell` вызывается метод источника данных. `UICollectionView` Подобно тому, как это работает с уитаблевиев, этот метод отвечает за настройку ячейки из резервных данных, которая `AnimalCell` в данном случае является классом.
+Если `UICollectionView` требуется ячейка, так как ее элемент находится на экране, `UICollectionView` вызывает метод `GetCell` источника данных. Аналогично тому, как это работает с Уитаблевиев, этот метод отвечает за настройку ячейки из резервных данных, которая в данном случае является классом `AnimalCell`.
 
-В следующем коде показана реализация `GetCell` , которая `AnimalCell` возвращает экземпляр:
+В следующем коде показана реализация `GetCell`, которая возвращает экземпляр `AnimalCell`:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, Foundation.NSIndexPath indexPath)
@@ -178,31 +178,31 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 }
 ```
 
-Вызов `DequeReusableCell` — это место, где ячейка будет либо выведена из очереди повторного использования, либо, если ячейка недоступна в очереди, созданной на основе типа, зарегистрированного в `CollectionView.RegisterClassForCell`вызове.
+Вызов `DequeReusableCell` заключается в том, где ячейка будет либо выведена из очереди повторного использования, либо, если ячейка недоступна в очереди, созданной на основе типа, зарегистрированного в вызове функции `CollectionView.RegisterClassForCell`.
 
-В этом случае, зарегистрировав `AnimalCell` класс, iOS создает новый `AnimalCell` внутренний и возвращает его при вызове отмены очереди, после чего она настраивается с помощью изображения, содержащегося в классе животного, и возвращается для отображения в `UICollectionView`.
+В этом случае, зарегистрировав класс `AnimalCell`, iOS создает новый `AnimalCell` внутренне и возвращает его при вызове отмены в очередь ячейки, после чего она настраивается с помощью изображения, содержащегося в классе животного, и возвращается для отображения в `UICollectionView`.
 
  <a name="Delegate" />
 
 ### <a name="delegate"></a>делегат
 
-Класс использует делегат типа `UICollectionViewDelegate` для поддержки `UICollectionView`взаимодействия с содержимым в. `UICollectionView` Это позволяет управлять:
+Класс `UICollectionView` использует делегат типа `UICollectionViewDelegate` для поддержки взаимодействия с содержимым в `UICollectionView`. Это позволяет управлять:
 
 - **Выбор ячейки** — определяет, выбрана ли ячейка.
 - **Выделение ячеек** — определяет, затрагивается ли ячейка в данный момент.
 - Меню **ячеек** — меню, отображаемое для ячейки в ответ на длительный жест нажатия.
 
-Как и в случае с источником данных `UICollectionViewController` , по умолчанию настроено как делегат `UICollectionView`для.
+Как и в случае с источником данных, `UICollectionViewController` настраивается по умолчанию как делегат для `UICollectionView`.
 
  <a name="Cell_HighLighting" />
 
 #### <a name="cell-highlighting"></a>Выделение ячеек
 
-При нажатии ячейки ячейка переходит в выделенное состояние и не выбирается до тех пор, пока пользователь не отрывает палец от ячейки. Это позволяет временно изменить внешний вид ячейки до ее фактического выбора. После выбора отображается ячейка `SelectedBackgroundView` . На рисунке ниже показано выделенное состояние непосредственно перед выбором.
+При нажатии ячейки ячейка переходит в выделенное состояние и не выбирается до тех пор, пока пользователь не отрывает палец от ячейки. Это позволяет временно изменить внешний вид ячейки до ее фактического выбора. После выбора отображается `SelectedBackgroundView` ячейки. На рисунке ниже показано выделенное состояние непосредственно перед выбором.
 
- [![](uicollectionview-images/04-cell-highlight.png "На этом рисунке показано выделенное состояние непосредственно перед выбором.")](uicollectionview-images/04-cell-highlight.png#lightbox)
+ [![](uicollectionview-images/04-cell-highlight.png "This figure shows the highlighted state just before the selection occurs")](uicollectionview-images/04-cell-highlight.png#lightbox)
 
-Для реализации выделения `ItemHighlighted` `UICollectionViewDelegate` можно использовать методы и `ItemUnhighlighted` . Например, следующий код будет применять желтый фон элемента `ContentView` , когда ячейка выделяется, и белый фон при невыделенном виде, как показано на рисунке выше:
+Чтобы реализовать выделение, можно использовать методы `ItemHighlighted` и `ItemUnhighlighted` `UICollectionViewDelegate`. Например, следующий код будет применять желтый фон `ContentView` при выделении ячейки и белый фон при невыделенном виде, как показано на рисунке выше:
 
 ```csharp
 public override void ItemHighlighted (UICollectionView collectionView, NSIndexPath indexPath)
@@ -220,9 +220,9 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
  <a name="Disabling_Selection" />
 
-#### <a name="disabling-selection"></a>Отключение выделения
+#### <a name="disabling-selection"></a>Отключение выбора
 
-Выбор по умолчанию включен в `UICollectionView`. Чтобы отключить выбор, переопределите `ShouldHighlightItem` и возвратите false, как показано ниже.
+По умолчанию в `UICollectionView`включен выбор. Чтобы отключить выбор, переопределите `ShouldHighlightItem` и возвратите false, как показано ниже:
 
 ```csharp
 public override bool ShouldHighlightItem (UICollectionView collectionView, NSIndexPath indexPath)
@@ -233,7 +233,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 Если выделение отключено, процесс выбора ячейки также отключается. Кроме того, существует также `ShouldSelectItem` метод, который управляет выбором напрямую, хотя если `ShouldHighlightItem` реализуется и возвращает значение false, `ShouldSelectItem` не вызывается.
 
- `ShouldSelectItem`позволяет включать или отключать выбор для отдельных элементов, если `ShouldHighlightItem` не реализован. Он также позволяет выделять выделение без выделения, `ShouldHighlightItem` Если реализуется и возвращает значение true `ShouldSelectItem` , тогда как возвращает значение false.
+ `ShouldSelectItem` позволяет включать или отключать выбор для отдельных элементов, если `ShouldHighlightItem` не реализован. Он также позволяет выделять выделение без выделения, если `ShouldHighlightItem` реализуется и возвращает true, тогда как `ShouldSelectItem` возвращает значение false.
 
  <a name="Cell_Menus" />
 
@@ -241,19 +241,19 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 Каждая ячейка в `UICollectionView` может отображать меню, которое позволяет при необходимости поддерживать вырезание, копирование и вставку. Чтобы создать меню редактирования для ячейки, выполните следующие действия.
 
-1. Переопределяйте `ShouldShowMenu` и возвращают значение true, если элемент должен отображать меню.
-1. Переопределяйте `CanPerformAction` и возвращают значение true для каждого действия, которое может выполнять элемент, что может быть любым из вырезания, копирования или вставки.
-1. Переопределите `PerformAction` для выполнения операции редактирования, копирования и вставки.
+1. Переопределите `ShouldShowMenu` и возвратите значение true, если элемент должен отобразить меню.
+1. Переопределите `CanPerformAction` и возвратите значение true для каждого действия, которое может выполнить элемент, что будет любым из вырезания, копирования или вставки.
+1. Переопределите `PerformAction`, чтобы выполнить изменение, копирование копии операции вставки.
 
 На следующем снимке экрана показано меню при длительной нажатии ячейки:
 
- [![](uicollectionview-images/04a-menu.png "На этом снимке экрана показано меню при длительной нажатии ячейки")](uicollectionview-images/04a-menu.png#lightbox)
+ [![](uicollectionview-images/04a-menu.png "This screenshot show the menu when a cell is long pressed")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
 
 ## <a name="layout"></a>Макет
 
-`UICollectionView`поддерживает систему макета, которая позволяет управлять расположением всех ее элементов, ячеек, дополнительных представлений и декорирований, независимо от `UICollectionView` самого себя.
+`UICollectionView` поддерживает систему макета, которая позволяет управлять расположением всех ее элементов, ячеек, дополнительных представлений и Декорирований, независимо от самого `UICollectionView`.
 Используя систему макета, приложение может поддерживать макеты, такие как сетка, как показано в этой статье, а также предоставлять пользовательские макеты.
 
  <a name="Layout_Basics" />
@@ -262,38 +262,38 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 Макеты в `UICollectionView` определяются в классе, который наследует от `UICollectionViewLayout`. Реализация макета отвечает за создание атрибутов макета для каждого элемента в `UICollectionView`. Существует два способа создания макета.
 
-- Используйте встроенный `UICollectionViewFlowLayout` .
-- Предоставьте пользовательский макет, наследуя от `UICollectionViewLayout` .
+- Используйте встроенные `UICollectionViewFlowLayout`.
+- Предоставьте пользовательский макет путем наследования от `UICollectionViewLayout`.
 
  <a name="Flow_Layout" />
 
 ### <a name="flow-layout"></a>Потоковый макет
 
-`UICollectionViewFlowLayout` Класс предоставляет макет на основе строк, который подходит для упорядочения содержимого в сетке ячеек, как мы видели.
+Класс `UICollectionViewFlowLayout` предоставляет макет на основе линий, который подходит для упорядочения содержимого в сетке ячеек, как мы видели.
 
 Чтобы использовать потоковый макет:
 
-- Создайте экземпляр `UICollectionViewFlowLayout` :
+- Создайте экземпляр `UICollectionViewFlowLayout`.
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
-- Передайте экземпляр в конструктор класса `UICollectionView` :
+- Передайте экземпляр в конструктор `UICollectionView`:
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
 ```
 
-Это все, что необходимо для размещения содержимого в сетке. Кроме того, при изменении `UICollectionViewFlowLayout` ориентации маркеры соответствующим образом переупорядочивают содержимое, как показано ниже:
+Это все, что необходимо для размещения содержимого в сетке. Кроме того, при изменении ориентации `UICollectionViewFlowLayout` обрабатывает содержимое соответствующим образом, как показано ниже:
 
- [![](uicollectionview-images/05-layout-orientation.png "Пример изменения ориентации")](uicollectionview-images/05-layout-orientation.png#lightbox)
+ [![](uicollectionview-images/05-layout-orientation.png "Example of the orientation changes")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
 
 #### <a name="section-inset"></a>Отступ раздела
 
-Чтобы предоставить некоторое пространство вокруг `UIContentView`, макеты `SectionInset` имеют свойство типа `UIEdgeInsets`. Например, приведенный ниже код предоставляет буфер размером 50 пикселей вокруг каждого раздела в, `UIContentView` когда: `UICollectionViewFlowLayout`
+Для предоставления некоторого пространства вокруг `UIContentView`макеты имеют свойство `SectionInset` типа `UIEdgeInsets`. Например, приведенный ниже код предоставляет буфер размером 50 пикселей вокруг каждого раздела `UIContentView` при его компоновке `UICollectionViewFlowLayout`:
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
@@ -302,22 +302,22 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 Это приводит к отступу вокруг раздела, как показано ниже.
 
- [![](uicollectionview-images/06-sectioninset.png "Отступ вокруг раздела, как показано здесь")](uicollectionview-images/06-sectioninset.png#lightbox)
+ [![](uicollectionview-images/06-sectioninset.png "Spacing around the section as shown here")](uicollectionview-images/06-sectioninset.png#lightbox)
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
 #### <a name="subclassing-uicollectionviewflowlayout"></a>Подклассировать Уиколлектионвиевфловлайаут
 
-В выпуске `UICollectionViewFlowLayout` для непосредственного использования он также может быть подклассом для дальнейшей настройки макета содержимого вдоль линии. Например, это можно использовать для создания макета, который не заключает ячейки в сетку, а вместо этого создает одну строку с горизонтальной прокруткой, как показано ниже:
+В выпуске, чтобы использовать `UICollectionViewFlowLayout` напрямую, его также можно подклассировать для дальнейшей настройки макета содержимого вдоль линии. Например, это можно использовать для создания макета, который не заключает ячейки в сетку, а вместо этого создает одну строку с горизонтальной прокруткой, как показано ниже:
 
- [![](uicollectionview-images/07-line-layout.png "Одна строка с горизонтальным прокруткой")](uicollectionview-images/07-line-layout.png#lightbox)
+ [![](uicollectionview-images/07-line-layout.png "A single row with a horizontal scrolling effect")](uicollectionview-images/07-line-layout.png#lightbox)
 
-Для реализации этого с помощью подклассов `UICollectionViewFlowLayout` требуется:
+Для реализации этого подкласса `UICollectionViewFlowLayout` требуется:
 
 - Инициализация любых свойств макета, которые применяются к самому макету или ко всем элементам в макете в конструкторе.
-- Переопределение `ShouldInvalidateLayoutForBoundsChange` , возвращающее значение true, чтобы при `UICollectionView` изменении границ изменений Макет ячеек будет пересчитан. В этом случае в этом случае код для преобразования, применяемый к ячейке центермост, будет применен во время прокрутки.
-- Переопределение `TargetContentOffset` для того, чтобы привязать ячейку центермост к центру `UICollectionView` по мере остановки прокрутки.
-- Переопределение `LayoutAttributesForElementsInRect` для возврата `UICollectionViewLayoutAttributes` массива. Каждый `UICollectionViewLayoutAttribute` из них содержит сведения о разметке конкретного элемента, включая такие свойства, `Center` как `Size` , `ZIndex` и `Transform3D` .
+- Переопределение `ShouldInvalidateLayoutForBoundsChange`, возвращая значение true, чтобы при изменении границ `UICollectionView` Макет ячеек будет пересчитан. В этом случае в этом случае код для преобразования, применяемый к ячейке центермост, будет применен во время прокрутки.
+- Переопределение `TargetContentOffset` для того, чтобы ячейка центермост была привязана к центру `UICollectionView` по мере того, как прокрутка останавливается.
+- Переопределение `LayoutAttributesForElementsInRect` для возврата массива `UICollectionViewLayoutAttributes`. Каждый `UICollectionViewLayoutAttribute` содержит сведения о разметке конкретного элемента, включая такие свойства, как `Center`, `Size`, `ZIndex` и `Transform3D`.
 
 В следующем коде показана такая реализация:
 
@@ -392,19 +392,19 @@ namespace SimpleCollectionView
 
 ### <a name="custom-layout"></a>Пользовательский макет
 
-Помимо использования `UICollectionViewFlowLayout`, макеты также можно полностью настроить, наследуя непосредственно от `UICollectionViewLayout`.
+В дополнение к использованию `UICollectionViewFlowLayout`макеты также можно полностью настроить, наследуя непосредственно от `UICollectionViewLayout`.
 
 Ниже приведены ключевые методы переопределения.
 
-- `PrepareLayout`— Используется для выполнения начальных геометрических вычислений, которые будут использоваться в процессе макета.
-- `CollectionViewContentSize`— Возвращает размер области, используемой для вывода содержимого.
-- `LayoutAttributesForElementsInRect`— Как и в приведенном ранее примере уиколлектионвиевфловлайаут, этот метод используется для предоставления сведений о том `UICollectionView` , как разметка каждого элемента. Однако, в отличие от `UICollectionViewFlowLayout` , при создании пользовательского макета можно располагать элементы, но вы выбираете их.
+- `PrepareLayout` — используется для выполнения начальных геометрических вычислений, которые будут использоваться в процессе макета.
+- `CollectionViewContentSize` — возвращает размер области, используемой для вывода содержимого.
+- `LayoutAttributesForElementsInRect` — как в приведенном выше примере Уиколлектионвиевфловлайаут, этот метод используется для предоставления сведений `UICollectionView` о том, как разметка каждого элемента. Однако, в отличие от `UICollectionViewFlowLayout`, при создании пользовательского макета можно размещать элементы, но вы выбираете их.
 
 Например, одно и то же содержимое может быть представлено в циклической структуре, как показано ниже:
 
- [![](uicollectionview-images/08-circle-layout.png "Круглый пользовательский макет, как показано здесь")](uicollectionview-images/08-circle-layout.png#lightbox)
+ [![](uicollectionview-images/08-circle-layout.png "A circular custom layout as shown here")](uicollectionview-images/08-circle-layout.png#lightbox)
 
-Очень мощное дело в макетах заключается в том, что для того, чтобы изменить макет с горизонтальной прокруткой, а затем к этому циклу, необходимо изменить только класс макета `UICollectionView` , предоставленный для. Ничего в `UICollectionView`, его делегат или код источника данных вообще не меняются.
+Преимущество макетов заключается в том, что для изменения макета с горизонтальной сеткой на макет с переходом по горизонтали, а для последующего перехода к такому циклу требуется только класс макета, предоставленный `UICollectionView` быть изменен. В `UICollectionView`ничего не меняется, его делегат или код источника данных вообще не изменяется.
 
 ## <a name="changes-in-ios-9"></a>Изменения в iOS 9
 
@@ -412,7 +412,7 @@ namespace SimpleCollectionView
 
 Используя эти новые методы, можно легко реализовать перетаскивание для изменения порядка в представлении коллекции и иметь возможность настройки внешнего вида элементов на любом этапе процесса изменения порядка.
 
-[![](uicollectionview-images/intro01.png "Пример процесса изменения порядка")](uicollectionview-images/intro01.png#lightbox)
+[![](uicollectionview-images/intro01.png "An example of the reordering process")](uicollectionview-images/intro01.png#lightbox)
 
 В этой статье мы рассмотрим реализацию перетаскивания в приложении Xamarin. iOS, а также некоторые другие изменения, внесенные в iOS 9 в элемент управления "представление коллекции":
 
@@ -429,8 +429,8 @@ namespace SimpleCollectionView
 Как упоминалось выше, одно из наиболее значительных изменений в представлении коллекции в iOS 9 было добавлением простой перетаскивания функциональности из поля.
 
 В iOS 9 самый быстрый способ добавить изменение порядка в представление коллекции — использовать `UICollectionViewController`.
-Контроллер представления коллекции теперь имеет `InstallsStandardGestureForInteractiveMovement` свойство, добавляющее Стандартный *распознаватель жестов* , поддерживающий перетаскивание для изменения порядка элементов в коллекции.
-Так как значение по умолчанию равно `true`, необходимо `MoveItem` реализовать метод `UICollectionViewDataSource` класса для поддержки перетаскивания. Пример:
+Контроллер представления коллекции теперь имеет свойство `InstallsStandardGestureForInteractiveMovement`, которое добавляет стандартный *распознаватель жестов* , поддерживающий перетаскивание для изменения порядка элементов в коллекции.
+Поскольку значение по умолчанию — `true`, необходимо реализовать метод `MoveItem` класса `UICollectionViewDataSource` для поддержки перетаскивания. Пример:
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -444,19 +444,19 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 ### <a name="simple-reordering-example"></a>Простой пример переупорядочивания
 
-В качестве краткого примера запустите новый проект Xamarin. iOS и измените файл **Main. Storyboard** . Перетащите элемент `UICollectionViewController` на поверхность конструктора:
+В качестве краткого примера запустите новый проект Xamarin. iOS и измените файл **Main. Storyboard** . Перетащите `UICollectionViewController` в область конструктора:
 
-[![](uicollectionview-images/quick01.png "Добавление Уиколлектионвиевконтроллер")](uicollectionview-images/quick01.png#lightbox)
+[![](uicollectionview-images/quick01.png "Adding a UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
 
 Выберите представление коллекции (это проще всего сделать в структуре документа). На вкладке Макет Панель свойств задайте следующие размеры, как показано на снимке экрана ниже:
 
-- **Размер ячейки**: Ширина — 60 | Высота — 60
-- **Размер заголовка**: Ширина — 0 | Высота — 0
-- **Размер нижнего колонтитула**: Ширина — 0 | Высота — 0
-- **Минимальный промежуток**: Для ячеек — 8 | Для строк — 8
-- **Раздел инсетс**: Top — 16 | Снизу — 16 | Left — 16 | Справа — 16
+- **Размер ячейки**: ширина — 60 | Высота — 60
+- **Размер заголовка**: ширина — 0 | Высота — 0
+- **Размер нижнего колонтитула**: ширина — 0 | Высота — 0
+- **Минимальный промежуток**: для ячеек — 8 | Для строк — 8
+- **Раздел инсетс**: Top – 16 | Снизу — 16 | Left — 16 | Справа — 16
 
-[![](uicollectionview-images/quick04.png "Настройка размеров представлений коллекций")](uicollectionview-images/quick04.png#lightbox)
+[![](uicollectionview-images/quick04.png "Set the Collection View sizes")](uicollectionview-images/quick04.png#lightbox)
 
 Затем измените ячейку по умолчанию:
 
@@ -464,23 +464,23 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 - Добавить метку, которая будет использоваться в качестве заголовка для ячейки
 - Присвоить идентификатору повторного использования значение **Cell**
 
-[![](uicollectionview-images/quick02.png "Изменение ячейки по умолчанию")](uicollectionview-images/quick02.png#lightbox)
+[![](uicollectionview-images/quick02.png "Edit the default Cell")](uicollectionview-images/quick02.png#lightbox)
 
 Добавьте ограничения, чтобы поместить метку в центре ячейки по мере изменения размера:
 
-На панели **свойств** для _Коллектионвиевцелл_ и задайте **классу** `TextCollectionViewCell`значение:
+На панели **свойств** _коллектионвиевцелл_ и задайте для **класса** значение `TextCollectionViewCell`.
 
-[![](uicollectionview-images/quick05.png "Присвойте классу значение Текстколлектионвиевцелл")](uicollectionview-images/quick05.png#lightbox)
+[![](uicollectionview-images/quick05.png "Set the Class to TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
-В `Cell`качестве **представления для повторного использования коллекции** задайте следующие значения:
+Задайте `Cell`**представление для повторного использования коллекции** :
 
-[![](uicollectionview-images/quick06.png "Задать представление коллекции для повторного использования в ячейке")](uicollectionview-images/quick06.png#lightbox)
+[![](uicollectionview-images/quick06.png "Set the Collection Reusable View to Cell")](uicollectionview-images/quick06.png#lightbox)
 
 Наконец, выберите метку и назовите ее `TextLabel`:
 
-[![](uicollectionview-images/quick07.png "имя метки Текстлабел")](uicollectionview-images/quick07.png#lightbox)
+[![](uicollectionview-images/quick07.png "name label TextLabel")](uicollectionview-images/quick07.png#lightbox)
 
-`TextCollectionViewCell` Измените класс и добавьте следующие свойства:
+Измените класс `TextCollectionViewCell` и добавьте следующие свойства:
 
 ```csharp
 using System;
@@ -507,9 +507,9 @@ namespace CollectionView
 }
 ```
 
-`Text` Здесь свойство метки представлено как заголовок ячейки, поэтому его можно задать из кода.
+Здесь свойство `Text` метки предоставляется в качестве заголовка ячейки, поэтому его можно задать из кода.
 
-Добавьте в проект C# новый класс и вызовите его `WaterfallCollectionSource`. Измените файл и сделайте его следующим:
+Добавьте в проект C# новый класс и вызовите его`WaterfallCollectionSource`. Измените файл и сделайте его следующим:
 
 ```csharp
 using System;
@@ -577,9 +577,9 @@ namespace CollectionView
 ```
 
 Этот класс будет источником данных для нашего представления коллекции и предоставит сведения для каждой ячейки в коллекции.
-Обратите внимание `MoveItem` , что метод реализуется, чтобы разрешить перетаскивание элементов в коллекции.
+Обратите внимание, что метод `MoveItem` реализуется, чтобы разрешить перетаскивание элементов в коллекции.
 
-Добавьте еще один C# новый класс в проект и вызовите `WaterfallCollectionDelegate`его. Измените этот файл и сделайте его следующим:
+Добавьте еще один C# новый класс в проект и вызовите его`WaterfallCollectionDelegate`. Измените этот файл и сделайте его следующим:
 
 ```csharp
 using System;
@@ -631,7 +631,7 @@ namespace CollectionView
 
 Это будет действовать в качестве делегата для нашего представления коллекции. Методы были переопределены для выделения ячейки, когда пользователь взаимодействует с ней в представлении коллекции.
 
-Добавьте в проект C# один последний класс и вызовите его `WaterfallCollectionView`. Измените этот файл и сделайте его следующим:
+Добавьте в проект C# один последний класс и вызовите его`WaterfallCollectionView`. Измените этот файл и сделайте его следующим:
 
 ```csharp
 using System;
@@ -666,21 +666,21 @@ namespace CollectionView
 }
 ```
 
-Обратите `DataSource` внимание `Delegate` , что и, что мы создали выше, задаются при создании представления коллекции из его раскадровки (или файла **XIB** ).
+Обратите внимание, что `DataSource` и `Delegate`, созданные выше, задаются при создании представления коллекции из его раскадровки (или файла **XIB** ).
 
-Снова измените файл **Main. Storyboard** и выберите представление коллекции и перейдите к **свойствам**. Присвойте **классу** пользовательский `WaterfallCollectionView` класс, который мы определили выше:
+Снова измените файл **Main. Storyboard** и выберите представление коллекции и перейдите к **свойствам**. Присвойте **классу** пользовательский класс `WaterfallCollectionView`, который мы определили выше:
 
 Сохраните изменения, внесенные в пользовательский интерфейс, и запустите приложение.
 Если пользователь выбирает элемент из списка и перетаскивает его в новое место, другие элементы будут анимироваться автоматически по мере того, как они переходят за пределы элемента.
 Когда пользователь удаляет элемент в новом расположении, он перейдет в это место. Пример:
 
-[![](uicollectionview-images/intro01.png "Пример перетаскивания элемента в новое место")](uicollectionview-images/intro01.png#lightbox)
+[![](uicollectionview-images/intro01.png "An example of dragging an item to a new location")](uicollectionview-images/intro01.png#lightbox)
 
 <a name="Using-a-Custom-Gesture-Recognizer" />
 
 ### <a name="using-a-custom-gesture-recognizer"></a>Использование пользовательского распознавателя жестов
 
-В случаях, когда вы не можете `UICollectionViewController` использовать и должен использовать обычный `UIViewController`или если вы хотите повысить управляемость жеста перетаскивания, можно создать собственный распознаватель жестов и добавить его в представление коллекции при загрузке представления. Пример:
+В случаях, когда нельзя использовать `UICollectionViewController` и необходимо использовать обычный `UIViewController`или если вы хотите дополнительно контролировать жест перетаскивания, можно создать собственный распознаватель жестов и добавить его в представление коллекции при загрузке представления. Пример:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -718,10 +718,10 @@ public override void ViewDidLoad ()
 
 Здесь мы используем несколько новых методов, добавленных в представление коллекции для реализации и управления операцией перетаскивания:
 
-- `BeginInteractiveMovementForItem`— Отмечает начало операции перемещения.
-- `UpdateInteractiveMovementTargetPosition`— Отправляется при обновлении расположения элемента.
-- `EndInteractiveMovement`— Отмечает конец перемещения элемента.
-- `CancelInteractiveMovement`— Помечает пользователя, который отменяет операцию перемещения.
+- `BeginInteractiveMovementForItem`-отмечает начало операции перемещения.
+- `UpdateInteractiveMovementTargetPosition` — отправляется при обновлении расположения элемента.
+- `EndInteractiveMovement` — отмечает конец перемещения элемента.
+- `CancelInteractiveMovement` — помечает пользователя, который отменяет операцию перемещения.
 
 При запуске приложения операция перетаскивания будет работать точно так же, как распознаватель по умолчанию, который поставляется с представлением коллекции.
 
@@ -731,7 +731,7 @@ public override void ViewDidLoad ()
 
 В iOS 9 были добавлены несколько новых методов для работы с перетаскиванием и пользовательскими макетами в представлении коллекции. Чтобы изучить эту функцию, добавим к коллекции пользовательский макет.
 
-Сначала добавьте в проект новый C# класс с `WaterfallCollectionLayout` именем. Измените его и сделайте так, чтобы он выглядел следующим образом:
+Сначала добавьте в проект новый C# класс с именем`WaterfallCollectionLayout`. Измените его и сделайте так, чтобы он выглядел следующим образом:
 
 ```csharp
 using System;
@@ -1123,7 +1123,7 @@ namespace CollectionView
 ```
 
 Этот класс можно использовать для предоставления пользовательского двух столбцов, каскадного макета типа в представление коллекции.
-В коде используется кодирование значений ключа (с помощью `WillChangeValue` методов и `DidChangeValue` ) для предоставления привязки данных для наших вычисленных свойств в этом классе.
+В коде используется кодирование значений "ключ — значение" (с помощью методов `WillChangeValue` и `DidChangeValue`) для предоставления привязки данных для наших вычисленных свойств в этом классе.
 
 Затем измените `WaterfallCollectionSource` и внесите следующие изменения и дополнения:
 
@@ -1149,7 +1149,7 @@ public WaterfallCollectionSource (WaterfallCollectionView collectionView)
 
 При этом будет создана случайная высота для каждого элемента, который будет отображаться в списке.
 
-Затем измените `WaterfallCollectionView` класс и добавьте следующее вспомогательное свойство:
+Затем измените класс `WaterfallCollectionView` и добавьте следующее вспомогательное свойство:
 
 ```csharp
 public WaterfallCollectionSource Source {
@@ -1183,7 +1183,7 @@ public override void AwakeFromNib ()
 
 Если снова запустить приложение Xamarin. iOS, представление коллекции будет выглядеть следующим образом:
 
-[![](uicollectionview-images/custom01.png "Представление коллекции теперь будет выглядеть следующим образом:")](uicollectionview-images/custom01.png#lightbox)
+[![](uicollectionview-images/custom01.png "The collection view will now look like this")](uicollectionview-images/custom01.png#lightbox)
 
 Мы по-прежнему можем перетаскивать элементы, как и раньше, но теперь размер элементов изменится в соответствии с новым расположением при их удалении.
 
@@ -1193,79 +1193,79 @@ public override void AwakeFromNib ()
 
 ### <a name="uicollectionview"></a>UICollectionView
 
-В `UICollectionView` класс для iOS 9 были внесены следующие изменения или дополнения:
+В класс `UICollectionView` для iOS 9 были внесены следующие изменения или дополнения:
 
-- `BeginInteractiveMovementForItem`— Отмечает начало операции перетаскивания.
-- `CancelInteractiveMovement`— Информирует представление коллекции о том, что пользователь отменил операцию перетаскивания.
-- `EndInteractiveMovement`— Информирует представление коллекции о том, что пользователь завершил операцию перетаскивания.
-- `GetIndexPathsForVisibleSupplementaryElements`— Возвращает элемент `indexPath` верхнего или нижнего колонтитула в разделе представления коллекции.
-- `GetSupplementaryView`— Возвращает заданный верхний или нижний колонтитул.
-- `GetVisibleSupplementaryViews`— Возвращает список всех видимых верхних и нижних колонтитулов.
-- `UpdateInteractiveMovementTargetPosition`— Информирует представление коллекции о том, что пользователь переместил или перемещает элемент во время операции перетаскивания.
+- `BeginInteractiveMovementForItem` — отмечает начало операции перетаскивания.
+- `CancelInteractiveMovement` — информирует представление коллекции о том, что пользователь отменил операцию перетаскивания.
+- `EndInteractiveMovement` — информирует представление коллекции о том, что пользователь завершил операцию перетаскивания.
+- `GetIndexPathsForVisibleSupplementaryElements` — возвращает `indexPath` верхнего или нижнего колонтитула в разделе представления коллекции.
+- `GetSupplementaryView` — возвращает заданный верхний или нижний колонтитул.
+- `GetVisibleSupplementaryViews` — возвращает список всех видимых верхних и нижних колонтитулов.
+- `UpdateInteractiveMovementTargetPosition` — информирует представление коллекции о том, что пользователь переместил или перемещает элемент во время операции перетаскивания.
 
 ### <a name="uicollectionviewcontroller"></a>уиколлектионвиевконтроллер
 
-В `UICollectionViewController` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewController` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `InstallsStandardGestureForInteractiveMovement`— Если `true` будет использоваться новый распознаватель жестов, который автоматически поддерживает возможность перетаскивания.
-- `CanMoveItem`— Информирует представление коллекции, если для данного элемента можно изменить порядок перетаскивания.
-- `GetTargetContentOffset`— Используется для получения смещения заданного элемента представления коллекции.
-- `GetTargetIndexPathForMove`— Получает `indexPath` объект для заданного элемента для операции перетаскивания.
-- `MoveItem`— Перемещает порядок заданного элемента в списке.
+- `InstallsStandardGestureForInteractiveMovement` — если `true` новый распознаватель жестов, автоматически поддерживающий перетаскивание, будет использоваться.
+- `CanMoveItem` — информирует представление коллекции, если Переупорядочение данного элемента может быть перемещено.
+- `GetTargetContentOffset` — используется для получения смещения заданного элемента представления коллекции.
+- `GetTargetIndexPathForMove` — получает `indexPath` заданного элемента для операции перетаскивания.
+- `MoveItem` — перемещает порядок заданного элемента в списке.
 
 ### <a name="uicollectionviewdatasource"></a>уиколлектионвиевдатасаурце
 
-В `UICollectionViewDataSource` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewDataSource` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `CanMoveItem`— Информирует представление коллекции, если для данного элемента можно изменить порядок перетаскивания.
-- `MoveItem`— Перемещает порядок заданного элемента в списке.
+- `CanMoveItem` — информирует представление коллекции, если Переупорядочение данного элемента может быть перемещено.
+- `MoveItem` — перемещает порядок заданного элемента в списке.
 
 ### <a name="uicollectionviewdelegate"></a>уиколлектионвиевделегате
 
-В `UICollectionViewDelegate` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewDelegate` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `GetTargetContentOffset`— Используется для получения смещения заданного элемента представления коллекции.
-- `GetTargetIndexPathForMove`— Получает `indexPath` объект для заданного элемента для операции перетаскивания.
+- `GetTargetContentOffset` — используется для получения смещения заданного элемента представления коллекции.
+- `GetTargetIndexPathForMove` — получает `indexPath` заданного элемента для операции перетаскивания.
 
 ### <a name="uicollectionviewflowlayout"></a>уиколлектионвиевфловлайаут
 
-В `UICollectionViewFlowLayout` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewFlowLayout` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `SectionFootersPinToVisibleBounds`— Фиксирует нижние колонтитулы раздела до видимых границ представления коллекции.
-- `SectionHeadersPinToVisibleBounds`— Фиксирует заголовки разделов в видимых границах представления коллекции.
+- `SectionFootersPinToVisibleBounds` — фиксирует нижние колонтитулы раздела до видимых границ представления коллекции.
+- `SectionHeadersPinToVisibleBounds` — фиксирует заголовки разделов с видимыми границами представления коллекции.
 
 ### <a name="uicollectionviewlayout"></a>уиколлектионвиевлайаут
 
-В `UICollectionViewLayout` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewLayout` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `GetInvalidationContextForEndingInteractiveMovementOfItems`— Возвращает контекст недействительности в конце операции перетаскивания, когда пользователь либо завершает перетаскивание, либо отменяет его.
-- `GetInvalidationContextForInteractivelyMovingItems`— Возвращает контекст недействительности в начале операции перетаскивания.
-- `GetLayoutAttributesForInteractivelyMovingItem`— Получает атрибуты макета для данного элемента при перетаскивании элемента.
-- `GetTargetIndexPathForInteractivelyMovingItem`— Возвращает `indexPath` объект элемента, который находится в заданной точке при перетаскивании элемента.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` — Возвращает контекст недействительности в конце операции перетаскивания, когда пользователь либо завершает перетаскивание, либо отменяет его.
+- `GetInvalidationContextForInteractivelyMovingItems` — Возвращает контекст недействительности в начале операции перетаскивания.
+- `GetLayoutAttributesForInteractivelyMovingItem` — получает атрибуты макета для данного элемента при перетаскивании элемента.
+- `GetTargetIndexPathForInteractivelyMovingItem` — возвращает `indexPath` элемента, который находится в заданной точке при перетаскивании элемента.
 
 ### <a name="uicollectionviewlayoutattributes"></a>уиколлектионвиевлайаутаттрибутес
 
-В `UICollectionViewLayoutAttributes` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewLayoutAttributes` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `CollisionBoundingPath`— Возвращает путь конфликта двух элементов во время операции перетаскивания.
-- `CollisionBoundsType`— Возвращает тип конфликта (как `UIDynamicItemCollisionBoundsType`), произошедший во время операции перетаскивания.
+- `CollisionBoundingPath` — Возвращает путь конфликта двух элементов во время операции перетаскивания.
+- `CollisionBoundsType` — Возвращает тип конфликта (как `UIDynamicItemCollisionBoundsType`), произошедший во время операции перетаскивания.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>уиколлектионвиевлайаутинвалидатионконтекст
 
-В `UICollectionViewLayoutInvalidationContext` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewLayoutInvalidationContext` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `InteractiveMovementTarget`— Возвращает целевой элемент операции перетаскивания.
-- `PreviousIndexPathsForInteractivelyMovingItems`— Возвращает `indexPaths` список других элементов, вовлеченных в операцию перетаскивания для изменения порядка.
-- `TargetIndexPathsForInteractivelyMovingItems`— Возвращает `indexPaths` элементы, которые будут переупорядочены в результате операции перетаскивания.
+- `InteractiveMovementTarget` — возвращает целевой элемент операции перетаскивания.
+- `PreviousIndexPathsForInteractivelyMovingItems` — возвращает `indexPaths` других элементов, вовлеченных в операцию перетаскивания для изменения порядка.
+- `TargetIndexPathsForInteractivelyMovingItems` — возвращает `indexPaths` элементов, которые будут переупорядочены в результате операции перетаскивания.
 
 ### <a name="uicollectionviewsource"></a>уиколлектионвиевсаурце
 
-В `UICollectionViewSource` класс в iOS 9 были внесены следующие изменения или дополнения.
+В класс `UICollectionViewSource` в iOS 9 были внесены следующие изменения или дополнения:
 
-- `CanMoveItem`— Информирует представление коллекции, если для данного элемента можно изменить порядок перетаскивания.
-- `GetTargetContentOffset`— Возвращает смещения элементов, которые будут перемещены с помощью операции перетаскивания.
-- `GetTargetIndexPathForMove`— Возвращает `indexPath` объект, который будет перемещен во время операции перетаскивания.
-- `MoveItem`— Перемещает порядок заданного элемента в списке.
+- `CanMoveItem` — информирует представление коллекции, если Переупорядочение данного элемента может быть перемещено.
+- `GetTargetContentOffset` — возвращает смещения элементов, которые будут перемещены с помощью операции перетаскивания.
+- `GetTargetIndexPathForMove` — возвращает `indexPath` элемента, который будет перемещен во время операции перетаскивания.
+- `MoveItem` — перемещает порядок заданного элемента в списке.
 
 ## <a name="summary"></a>Сводка
 

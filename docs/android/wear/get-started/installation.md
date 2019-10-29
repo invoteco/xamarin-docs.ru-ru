@@ -4,15 +4,15 @@ description: В этой статье рассматриваются этапы 
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 83ec214ae1838959355e99322ce5a809ead004fa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762226"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028731"
 ---
 # <a name="setup-and-installation"></a>Настройка и установка
 
@@ -22,13 +22,13 @@ _В этой статье рассматриваются этапы устано
 
 Для создания приложений "износ Android" на основе Xamarin необходимо следующее:
 
-- **Visual Studio или Visual Studio для Mac** &ndash; Требуется Visual Studio 2017 Community или более поздней версии.
+- Требуется **Visual Studio или Visual Studio для Mac** &ndash; visual Studio 2017 Community или более поздней версии.
 
-- **Xamarin. Android** &ndash; Xamarin. Android 4,17 или более поздней версии должен быть установлен и настроен с помощью Visual Studio или Visual Studio для Mac.
+- **Xamarin. android** &ndash; Xamarin. Android 4,17 или более поздней версии должен быть установлен и настроен с помощью Visual Studio или Visual Studio для Mac.
 
 - **Пакет SDK для Android** -пакет SDK для Android 5.0.1 (API 21) или более поздней версии должен быть установлен с помощью диспетчера пакет SDK для Android.
 
-- **Пакет Java Developer Kit** Для разработки Xamarin Android требуется [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) , если вы разрабатываете для API уровня 24 или выше (JDK 1,8 также поддерживает уровни API, предшествующие 24). &ndash;
+- Для **Java Developer Kit** &ndash; разработке Xamarin Android требуется [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) , если вы разрабатываете для API уровня 24 или выше (JDK 1,8 также поддерживает уровни API, предшествующие 24).
 
 Вы можете продолжать использовать [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) при разработке специально для API уровня 23 или более ранней версии.
 
@@ -65,7 +65,7 @@ _В этой статье рассматриваются этапы устано
 - Android 4.4 W (API20) или
 - Android 5.0.1 (API21) или более поздней версии.
 
-Если вы не установили последнюю версию пакета SDK и средств, скачайте необходимые средства SDK *и* биты API (для поиска &ndash; выбранных интерфейсов API может потребоваться прокрутить немного): 
+Если вы не установили последнюю версию пакета SDK и средств, скачайте необходимые средства SDK *и* биты API (для их поиска может потребоваться прокрутить бит, &ndash; показанный ниже набор API): 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -77,7 +77,7 @@ _В этой статье рассматриваются этапы устано
 
 -----
 
-## <a name="configuration"></a>Конфигурация
+## <a name="configuration"></a>Параметр Configuration
 
 Прежде чем можно будет использовать тест приложения, необходимо настроить эмулятор износа Android или фактическое устройство "износ Android". 
 

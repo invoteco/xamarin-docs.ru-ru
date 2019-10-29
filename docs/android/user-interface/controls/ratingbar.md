@@ -4,25 +4,25 @@ description: Добавление мини-приложения Ратингба
 ms.prod: xamarin
 ms.assetid: d7a1f9bb-926d-4f93-9e8e-0fa933e330e7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 51f88dba25ca2b4f7e33bb8b5c813c43a214c062
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 529fecb4e24e83ef7b783815843e132347d99262
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764855"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029143"
 ---
 # <a name="xamarinandroid-ratingbar"></a>Xamarin. Android Ратингбар
 
-Ратингбар — это мини-приложение пользовательского интерфейса, которое отображает рейтинг от одной до пяти звезд. Пользователь может выбрать оценку, съемки на звездочку в этом разделе. вы создадите мини-приложение, позволяющее пользователю предоставить рейтинг с помощью [`RatingBar`](xref:Android.Widget.RatingBar) мини – приложения.
+Ратингбар — это мини-приложение пользовательского интерфейса, которое отображает рейтинг от одной до пяти звезд. Пользователь может выбрать оценку, съемки на звездочку в этом разделе. вы создадите мини-приложение, позволяющее пользователю предоставить рейтинг с помощью мини-приложения [`RatingBar`](xref:Android.Widget.RatingBar) .
 
 ![Пример Ратингбар](ratingbar-images/01-ratingbar.png)
 
 ## <a name="creating-a-ratingbar"></a>Создание Ратингбар
 
-1. Откройте файл **Resource/Layout/Main. axml** и добавьте[`RatingBar`](xref:Android.Widget.RatingBar)
+1. Откройте файл **Resource/Layout/Main. axml** и добавьте [`RatingBar`](xref:Android.Widget.RatingBar)
    элемент (внутри [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
    ```xml
@@ -33,9 +33,9 @@ ms.locfileid: "70764855"
             android:stepSize="1.0"/>
    ```
 
-   `android:numStars` Атрибут определяет количество звезд для отображения в строке рейтинга. Атрибут определяет гранулярность для каждой звезды (например, `0.5` значение, которое позволило бы получить оценку в половину звезды). `android:stepSize`
+   Атрибут `android:numStars` определяет количество звезд для отображения в строке рейтинга. Атрибут `android:stepSize` определяет гранулярность для каждой звезды (например, значение `0.5` будет допускать оценку в половину звезды).
 
-2. Чтобы сделать что-то при установке новой оценки, добавьте следующий код в конец элемента[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+2. Чтобы сделать что-то при установке новой оценки, добавьте следующий код в конец [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
    Method
 
     ```csharp
@@ -46,6 +46,6 @@ ms.locfileid: "70764855"
     };
     ```
 
-    Это захватывает [`RatingBar`](xref:Android.Widget.RatingBar) мини-приложение из макета с [`FindViewById`](xref:Android.App.Activity.FindViewById*) помощью, а затем задает метод события, который определяет действие, выполняемое, когда пользователь устанавливает рейтинг. В этом случае в простом [`Toast`](xref:Android.Widget.Toast) сообщении отображается новая оценка.
+    Это захватывает мини-приложение [`RatingBar`](xref:Android.Widget.RatingBar) из макета с [`FindViewById`](xref:Android.App.Activity.FindViewById*) , а затем задает метод события, который затем определяет действие, выполняемое, когда пользователь задает оценку. В этом случае в простом [`Toast`](xref:Android.Widget.Toast) сообщении отображается новая оценка.
 
 3. Запустите приложение.

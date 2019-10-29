@@ -4,15 +4,15 @@ description: С появлением износа Android Google вы больш
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 3b1d27b1489cb71d4bd1922c2de993567ddf36bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70758500"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028612"
 ---
 # <a name="introduction-to-android-wear"></a>Введение в Android Wear
 
@@ -152,17 +152,17 @@ Android износ 2,0 — это самое главное обновление
 Ниже приведены некоторые примеры устройств, которые могут выполнять износ Android.
 
 - [Motorola 360](https://moto360.motorola.com/)
-- [LG G, часы](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-- [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-- [Живая шестеренка Samsung](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
-- [Sony Смартватч 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-- [Плата ASUS Зенватч](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
+- [LG G, часы](https://www.lg.com/us/smart-watches/lg-W100-g-watch)
+- [LG G Watch R](https://www.lg.com/us/smartwatch/g-watch-r)
+- [Живая шестеренка Samsung](https://www.samsung.com/global/microsite/gear/gearlive_design.html)
+- [Sony Смартватч 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
+- [Плата ASUS Зенватч](https://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 ## <a name="further-reading"></a>Дополнительные сведения
 
 Ознакомьтесь с документацией по износу Android Google:
 
-- [Об износе Android](http://www.android.com/wear/)
+- [Об износе Android](https://www.android.com/wear/)
 - [Разработка приложения "износ Android"](https://developer.android.com/design/wear/index.html)
 - [Библиотека Android. support. носимого пользователем](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [Неизнос Android 2,0](https://developer.android.com/wear/preview/index.html)

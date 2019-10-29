@@ -3,26 +3,26 @@ title: Xamarin. Android Текстуревиев
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2017
-ms.openlocfilehash: 2857033c5cd69e9696d2ce82feaf8212300da2c5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d6b1b01cf9597a1d7ae9de762eff1514b494663
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764813"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029122"
 ---
 # <a name="xamarinandroid-textureview"></a>Xamarin. Android Текстуревиев
 
-`TextureView` Класс представляет собой представление, которое использует двухмерную отрисовку с аппаратным ускорением для отображения потока содержимого видео или OpenGL. Например, на следующем снимке экрана показано `TextureView` , как отобразить динамический канал с камеры устройства:
+Класс `TextureView` — это представление, которое использует двухмерную отрисовку с аппаратным ускорением для отображения видео или потока содержимого OpenGL. Например, на следующем снимке экрана показан `TextureView`, отображающий динамический канал с камеры устройства:
 
-[![Пример снимка экрана динамического изображения с камеры устройства](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
+[![Пример снимка экрана в реальном времени с камеры устройства](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
-В отличие `SurfaceView` от класса, который также можно использовать для отображения содержимого OpenGL или видео, текстуревиев не подготавливается к просмотру в отдельном окне.
-Таким образом `TextureView` , может поддерживать преобразования представлений, как и любое другое представление. Например, поворот `TextureView` можно выполнить, просто задав его `Rotation` свойство, его прозрачность, установив его `Alpha` свойство и т. д.
+В отличие от класса `SurfaceView`, который также можно использовать для отображения содержимого OpenGL или видео, Текстуревиев не подготавливается к просмотру в отдельном окне.
+Таким образом, `TextureView` может поддерживать преобразования представлений, как и любое другое представление. Например, поворот `TextureView` можно выполнить, просто задав свойство `Rotation`, его прозрачность, установив свойство `Alpha` и т. д.
 
-Таким образом, `TextureView` теперь мы можем выполнять такие действия, как отображение активного потока из камеры и преобразование его, как показано в следующем коде:
+Таким образом, с `TextureView` мы можем выполнять такие действия, как отображение живого потока из камеры и преобразование его, как показано в следующем коде:
 
 ```csharp
 public class TextureViewActivity : Activity,
@@ -65,14 +65,14 @@ public class TextureViewActivity : Activity,
 }
 ```
 
-Приведенный выше код создает `TextureView` экземпляр в `OnCreate` методе действия и `TextureView`задает действие в качестве `SurfaceTextureListener`. Для этого действие `TextureView.ISurfaceTextureListener` реализует интерфейс. `SurfaceTextureListener` Система будет вызывать `OnSurfaceTextAvailable` метод, когда объект `SurfaceTexture` готов к использованию. В этом методе передается `SurfaceTexture` переданный объект и задается текстура предварительной версии камеры. Затем мы можем выполнять обычные операции на основе представлений, такие как установка `Rotation` и `Alpha`, как в примере выше. Полученное приложение, выполняемое на устройстве, показано ниже:
+Приведенный выше код создает экземпляр `TextureView` в методе `OnCreate` действия и задает действие в качестве `SurfaceTextureListener``TextureView`. Чтобы быть `SurfaceTextureListener`, действие реализует интерфейс `TextureView.ISurfaceTextureListener`. Система будет вызывать метод `OnSurfaceTextAvailable`, когда `SurfaceTexture` готов к использованию. В этом методе передается `SurfaceTexture`, переданный в, и задается текстура предварительной версии камеры. Затем мы можем выполнять обычные операции на основе представлений, например задавать `Rotation` и `Alpha`, как показано в примере выше. Полученное приложение, выполняемое на устройстве, показано ниже:
 
-[![Пример приложения, выполняемого на устройстве с отображением изображения](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
+[![пример приложения, выполняемого на устройстве, в котором отображается изображение](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
-Чтобы использовать `TextureView`, необходимо включить аппаратное ускорение, которое по умолчанию будет иметь уровень API 14. Кроме того, поскольку в этом примере используется камера, как `android.permission.CAMERA` разрешение, так `android.hardware.camera` и функция должны быть установлены в **AndroidManifest. XML**.
+Чтобы использовать `TextureView`, необходимо включить аппаратное ускорение, которое по умолчанию будет иметь уровень API 14. Кроме того, поскольку в этом примере используется камера, как разрешение `android.permission.CAMERA`, так и функция `android.hardware.camera` должны быть установлены в **AndroidManifest. XML**.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Текстуревиевдемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
-- [Знакомство со Южным Сандвичевым](http://www.android.com/about/ice-cream-sandwich/)
+- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
 - [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

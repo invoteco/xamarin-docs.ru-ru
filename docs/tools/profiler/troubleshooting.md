@@ -3,15 +3,15 @@ title: Устранение неполадок Xamarin Profiler
 description: В этом документе содержатся сведения об устранении неполадок, связанных с Xamarin Profiler. Здесь описываются проблемы, связанные с ведением журнала и диагностикой, интегрированной средой разработки и другими разделами.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: c6a05e332bf0c08f8c7ea328c2793f7d0bf00fb7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285700"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019214"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Устранение неполадок Xamarin Profiler
 
@@ -25,9 +25,9 @@ ms.locfileid: "70285700"
 
 ### <a name="getting-log-outputs"></a>Получение выходных данных журнала
 
-В журналы Mac сохраняются в `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
+На компьютерах Mac журналы сохраняются в `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
-В Windows эти данные сохраняются, `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` и каждый раз при отправке проблемы следует включать последний журнал.
+В Windows эти данные сохраняются в `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` добавьте последний журнал при каждой отправке проблемы.
 
 Мы добавим ведение журнала по мере того, как мы собираемся, чтобы эти выходные данные были увеличены и стали более полезными в течение времени.
 
@@ -37,17 +37,17 @@ ms.locfileid: "70285700"
 
 **MLPD** -файл — это сжатый выход профилировщика среды выполнения Mono. Xamarin Profiler графический пользовательский интерфейс считывает данные из **MLPD** и отображает их для пользователя. файлы **. MLPD** являются полезными средствами отладки для Xamarin, так как они помогают нашим инженерам диагностировать проблемы, с которыми может столкнуться профилировщик.
 
-**MLPD** для текущего сеанса автоматически сохраняется в `/tmp` каталоге Mac и может быть идентифицирован по метке времени. Если включить ведение журнала, первый выход будет указывать путь к **MLPD** файлу. Файл **. MLPD** , как правило, сохраняется в каталоге, начиная с ~/Вар/фолдерс...
+**MLPD** для текущего сеанса автоматически сохраняется в каталоге `/tmp` Mac, и его можно определить по метке времени. Если включить ведение журнала, первый выход будет указывать путь к **MLPD** файлу. Файл **. MLPD** , как правило, сохраняется в каталоге, начиная с ~/Вар/фолдерс...
 
 **MLPD** для текущего сеанса также можно сохранить, выбрав **Файл > Сохранить как...** . из меню профилировщика:
 
 **Visual Studio для Mac**:
 
-![](troubleshooting-images/image17.png "Сохранение файла. MLPD в Visual Studio для Mac")
+![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Сохранение файла. MLPD в Visual Studio")
+![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
 
 Важно отметить, что **. MLPD** содержит много информации, и размер файла будет большим.
 
@@ -73,13 +73,13 @@ ms.locfileid: "70285700"
 
 Если при использовании профилировщика в Visual Studio вы выпустили эту ошибку:
 
-![](troubleshooting-images/error.png "Поле \"ошибка\" при использовании профилировщика в Visual Studio")
+![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
 
 Обычно это связано с невозможностью запуска симулятора или эмулятора. Попробуйте и запустите приложение обычным образом, исправьте возникающие проблемы и попытайтесь снова использовать профилировщик.
 
 #### <a name="to-watch-a-specific-thread"></a>Просмотр определенного потока
 
-Если у вас есть какой-то поток, который вы хотели бы отслеживать, то лучше приступить к именованию потока в самом начале его создания, `ThreadName` чтобы получить `0x0`вместо. Например, чтобы задать имя потока как `UI`, можно использовать следующий код:
+Если у вас есть поток, который вы хотели бы отслеживать, то лучше приступить к именованию потока в самом начале его создания, чтобы получить `ThreadName` вместо `0x0`. Например, чтобы задать имя потока как `UI`, можно использовать следующий код:
 
 ```csharp
 RunOnUiThread (() => {

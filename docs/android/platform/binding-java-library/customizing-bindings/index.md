@@ -4,15 +4,15 @@ description: Можно настроить привязку Xamarin. Android, и
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04f3720d8684129476c955819390e91330a7800a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756644"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020646"
 ---
 # <a name="customizing-bindings"></a>Настройка привязок
 
@@ -24,7 +24,7 @@ Xamarin. Android автоматизирует большую часть проц
 
 - Устранение ошибок сборки, вызванных отсутствием типов, запутанными типами, повторяющимися именами, проблемами видимости класса и другими ситуациями, которые не могут быть разрешены средствами Xamarin. Android. 
 
-- Изменение сопоставления, которое используется Xamarin. Android для привязки API Android к C# различным типам в (например, многие разработчики предпочитают сопоставлять константы Java `int` с C# `enum` константами).
+- Изменение сопоставления, которое используется Xamarin. Android для привязки API Android к различным типам в C# (например, многие разработчики предпочитают сопоставлять константы Java `int`с C#`enum`константами).
 
 - Удаление неиспользуемых типов, которые не должны быть привязаны. 
 

@@ -1,83 +1,83 @@
 ---
-title: Работа с watchOS навигации в Xamarin
-description: В этом документе описывается работа с навигацией в приложении watchOS. В нем описывается модальное интерфейсы, иерархической навигации и интерфейсы на основе страниц.
+title: Работа с навигацией watchOS в Xamarin
+description: В этом документе описывается работа с навигацией в приложении watchOS. В нем обсуждаются модальные интерфейсы, иерархическая навигация и интерфейсы на основе страниц.
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d3565e359ccbad9f7b779969f4273a8cbae4d438
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768722"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021751"
 ---
-# <a name="working-with-watchos-navigation-in-xamarin"></a>Работа с watchOS навигации в Xamarin
+# <a name="working-with-watchos-navigation-in-xamarin"></a>Работа с навигацией watchOS в Xamarin
 
-Самый простой навигации вариант доступен в watch — это простой [модального всплывающего окна](#modal) , отображается поверх текущей сцены.
+Простейший параметр навигации, доступный в контрольном списке, представляет собой простое [модальное всплывающее окно](#modal) , отображаемое поверх текущей сцены.
 
-Для приложения watch несколькими сцены существует две парадигмы навигации доступны:
+Для приложений с несколькими сценами доступно две парадигмы навигации:
 
 - [Иерархическая навигация](#Hierarchical_Navigation)
-- [При использовании интерфейсов](#Page-Based_Interfaces)
+- [Интерфейсы на основе страниц](#Page-Based_Interfaces)
 
 <a name="modal"/>
 
-## <a name="modal-interfaces"></a>Модальное интерфейсы
+## <a name="modal-interfaces"></a>Модальные интерфейсы
 
-Используйте `PresentController` метод, чтобы открыть контроллера интерфейса в модальном режиме. Контроллер интерфейса должна быть уже определена в **Interface.storyboard**.
+Используйте метод `PresentController`, чтобы открыть контроллер интерфейса в модальном режиме. Контроллер интерфейса уже должен быть определен в **интерфейсе. Storyboard**.
 
 ```csharp
 PresentController ("pageController","some context info");
 ```
 
-Контроллеры, представленные как модальная использовать весь экран (описывающих предыдущих сцены). По умолчанию присваивается заголовок **отменить** и его приводит к отмене использования контроллера.
+Модально представленные контроллеры используют весь экран (охватывает предыдущую сцену). По умолчанию для заголовка задано значение **Отмена** , и его нажатие приведет к отклонению контроллера.
 
-Чтобы программное закрытие контроллера как модальная представленные, вызовите `DismissController`.
+Чтобы программно закрыть модально представленный контроллер, вызовите `DismissController`.
 
 ```csharp
 DismissController();
 ```
 
-Модальное экранов можно использовать структуру на основе страницы или в одной сценой.
+Модальные экраны могут быть либо одной сценой, либо использовать макет на основе страниц.
 
 <a name="Hierarchical_Navigation"/>
 
 ## <a name="hierarchical-navigation"></a>Иерархическая навигация
 
-Представляет сцены как стек, который может быть перехода назад, аналогично тому, как `UINavigationController` работает в iOS. Сцены можно помещается в стек навигации и выводятся из (программно или по выбору пользователя).
+Представляет собой такие сцены, как стек, к которому можно перейти обратно, аналогично тому, как `UINavigationController` работает в iOS. Монтажные кадры можно помещаться в стек навигации и выключать (программно или по выбору пользователя).
 
-![](navigation-images/hierarchy-1.png "Сцены может быть помещается в стек переходов") ![](navigation-images/hierarchy-2.png "сцены может извлекаться из стека навигации")
+![](navigation-images/hierarchy-1.png "Сцены можно помещаться в стек навигации") ![](navigation-images/hierarchy-2.png "Сцены можно извлекать из стека навигации")
 
-Как и в iOS, left-edge-жеста перетаскивания переходит обратно в родительский контроллер в стеке иерархической навигации.
+Как и в iOS, левый-краевый прокрутка переходит назад к родительскому контроллеру в иерархическом стеке навигации.
 
-Оба [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) и [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) примеры содержат иерархической навигации.
+Примеры [ватчкиткаталог](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) и [ватчтаблес](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) включают иерархическую навигацию.
 
-### <a name="pushing-and-popping-in-code"></a>Перемещая и выталкивая в коде
+### <a name="pushing-and-popping-in-code"></a>Отправка и выталкивания в коде
 
-Посмотрите, пакет не требует чрезмерно сбой «контроллер навигации» создаваться как iOS - попросту образоваться контроллера, используя `PushController` метода в стек навигации будут автоматически созданы и.
+В комплекте наблюдения не требуется создание контроллера навигации с чрезмерным арчингом, как iOS. просто отправьте контроллер с помощью метода `PushController`, и стек навигации будет создан автоматически.
 
 ```csharp
 PushController("secondPageController","some context info");
 ```
 
-Экран Контрольные значения будет включать **обратно** кнопка в верхнем левом углу, но можно также программно удалить сцены из стека навигации с помощью `PopController`.
+Экран контрольного значения будет включать кнопку **назад** в левом верхнем углу, но можно также программно удалить сцену из стека навигации с помощью `PopController`.
 
 ```csharp
 PopController();
 ```
 
-Так как с iOS, он также можно вернуть в корень стека навигации с помощью `PopToRootController`.
+Как и в iOS, можно также вернуться к корню стека навигации с помощью `PopToRootController`.
 
 ```csharp
 PopToRootController();
 ```
 
-### <a name="using-segues"></a>С помощью использования объекта Segue
+### <a name="using-segues"></a>Использование переходов
 
-Однако они плохо могут создаваться между сценами в раскадровке для определения иерархической навигации. Чтобы получить контекст для целевого сцены, вызовов операционной системы `GetContextForSegue` для инициализации нового контроллера интерфейса.
+Переходов можно создать между сценами в раскадровке, чтобы определить иерархическую навигацию. Чтобы получить контекст для целевой сцены, операционная система вызывает `GetContextForSegue` для инициализации нового контроллера интерфейса.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier)
@@ -91,13 +91,13 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 <a name="Page-Based_Interfaces"/>
 
-## <a name="page-based-interfaces"></a>При использовании интерфейсов
+## <a name="page-based-interfaces"></a>Интерфейсы на основе страниц
 
-При использовании интерфейсов считайте слева направо, аналогично тому, как `UIPageViewController` работает в iOS. Индикатор точки отображаются в нижней части экрана, чтобы показать, какие страницы отображается в данный момент.
+Интерфейсы на основе страниц проведите слева направо, аналогично тому, как `UIPageViewController` работает в iOS. Точки индикаторов отображаются вдоль нижней части экрана, чтобы показать, какая страница в настоящий момент отображается.
 
-![](navigation-images/paged-1.png "Первая страница образец") ![](navigation-images/paged-2.png "образец второй страницы") ![](navigation-images/paged-5.png "пятой странице образца")
+![](navigation-images/paged-1.png "Пример первой страницы")![](navigation-images/paged-2.png "Вторая страница образца")![](navigation-images/paged-5.png "Пример пятой страницы")
 
-Чтобы сделать интерфейс на основе страницы основной пользовательский Интерфейс для приложения watch, используйте `ReloadRootControllers` с массивом контроллеры интерфейса и контекстов:
+Чтобы сделать интерфейс на основе страниц основным ИНТЕРФЕЙСом для вашего приложения наблюдения, используйте `ReloadRootControllers` с массивом контроллеров интерфейса и контекстов:
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };
@@ -105,7 +105,7 @@ var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 ReloadRootControllers (controllerNames, contexts);
 ```
 
-Вы также можете отправить основанная на контроллер, который не является корнем с помощью `PresentController` из одного из других сцен в приложении.
+Также можно предоставить контроллер на основе страниц, не являющийся корневым, с помощью `PresentController` из одного из других сцен в приложении.
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };
@@ -115,5 +115,5 @@ PresentController (controllerNames, contexts);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (пример)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)
+- [Ватчкиткаталог (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Ватчтаблес (пример)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

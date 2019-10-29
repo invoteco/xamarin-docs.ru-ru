@@ -4,15 +4,15 @@ description: В этом документе представлен общий о
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2878d1bea3590b8c3a7aabfebef8a0f2cca67551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292958"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017050"
 ---
 # <a name="introduction-to-macos-mojave"></a>Введение в macOS Mojave
 

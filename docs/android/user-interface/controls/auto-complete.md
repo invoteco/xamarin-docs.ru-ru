@@ -3,28 +3,28 @@ title: Автоматическое заполнение для Xamarin. Android
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2018
-ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5a11ab06321b890d8f1f5a35a8456b06a900fbcc
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762437"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029368"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Автоматическое заполнение для Xamarin. Android
 
-`AutoCompleteTextView`— Это редактируемый элемент текстового представления, который автоматически показывает варианты завершения при вводе пользователем. Список предложений отображается в раскрывающемся меню, из которого пользователь может выбрать элемент для замены содержимого поля ввода на.
+`AutoCompleteTextView` является редактируемым элементом текста представления, который автоматически показывает варианты завершения при вводе пользователем. Список предложений отображается в раскрывающемся меню, из которого пользователь может выбрать элемент для замены содержимого поля ввода на.
 
 ![Пример автоматического завершения](images/auto-complete.png)
 
 ## <a name="overview"></a>Обзор
 
-Чтобы создать мини-приложение ввода текста, предоставляющее варианты автозавершения, используйте[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
-». Предложения принимаются из коллекции строк, связанных с мини-приложением, [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)через.
+Чтобы создать мини-приложение ввода текста, предоставляющее варианты автозавершения, используйте [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+». Предложения получаются из коллекции строк, связанных с мини-приложением, с помощью [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter).
 
-В этом руководстве вы создадите элемент[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+В этом руководстве вы создадите [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 Мини-приложение, содержащее предложения по названию страны.
 
 ```xml
@@ -45,14 +45,14 @@ ms.locfileid: "70762437"
 </LinearLayout>
 ```
 
-[`TextView`](xref:Android.Widget.TextView) — Это метка, представляющая собой[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+[`TextView`](xref:Android.Widget.TextView) — это метка, которая вводит [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 ».
 
 ## <a name="tutorial"></a>Учебник
 
 Запустите новый проект с именем *хеллоаутокомплете*.
 
-Создайте XML-файл с `list_item.xml` именем и сохраните его в папке **ресурсов или макета** . Задайте для `AndroidResource`действия сборки этого файла значение. Измените файл, чтобы он выглядел следующим образом:
+Создайте XML-файл с именем `list_item.xml` и сохраните его в папке **ресурсов или макета** . Задайте для действия сборки этого файла значение `AndroidResource`. Измените файл, чтобы он выглядел следующим образом:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -88,7 +88,7 @@ ms.locfileid: "70762437"
 </LinearLayout>
 ```
 
-Откройте **MainActivity.CS** и вставьте следующий код для[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Откройте **MainActivity.CS** и вставьте следующий код для [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 Method
 
 ```csharp
@@ -106,11 +106,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-После того как для `main.xml` представления содержимого задан макет, элемент[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
-Мини-приложение записывается из [`FindViewById`](xref:Android.App.Activity.FindViewById*)макета с помощью. Затем инициализируется для `list_item.xml` привязки макета к `COUNTRIES` каждому элементу списка в массиве строк (определяется на следующем шаге). [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) Наконец, `SetAdapter()` вызывается метод, чтобы [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) связать с[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+После того как для представления содержимого задан макет `main.xml`, [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+Мини-приложение записывается из макета с [`FindViewById`](xref:Android.App.Activity.FindViewById*). Затем инициализируется новый [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) для привязки `list_item.xml` макета к каждому элементу списка в `COUNTRIES` массиве строк (определяется на следующем шаге). Наконец, вызывается `SetAdapter()` для связывания [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) с [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 мини-приложения, чтобы массив строк заполнил список предложений.
 
-`MainActivity` Внутри класса добавьте массив строк:
+В классе `MainActivity` добавьте массив строк.
 
 ```csharp
 static string[] COUNTRIES = new string[] {
@@ -158,17 +158,17 @@ static string[] COUNTRIES = new string[] {
 };
 ```
 
-Это список предложений, которые будут предоставлены в раскрывающемся списке, когда пользователь вводит в[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+Это список предложений, которые будут предоставлены в раскрывающемся списке, когда пользователь вводит данные в [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 ».
 
 Запустите приложение. По мере ввода вы увидите нечто вроде:
 
-[![Пример автозаполнения снимок экрана со списком имен, содержащих "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
+[![пример автозаполнения снимок экрана со списком имен, содержащих "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 ## <a name="more-information"></a>Дополнительные сведения
 
-Обратите внимание, что использование жестко закодированного массива строк не является рекомендуемым подходом к проектированию, поскольку код приложения должен сосредоточиться на поведении, а не на содержимом. Содержимое приложения, например строки, должно быть внешним из кода для упрощения и упрощения локализации содержимого. Жестко запрограммированные строки используются в этом учебнике только для того, чтобы сделать его простым и сосредоточиться на[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
-». Вместо этого приложение должно объявлять такие строковые массивы в XML-файле. Это можно сделать с помощью `<string-array>` ресурса в файле проекта. `res/values/strings.xml` Например:
+Обратите внимание, что использование жестко закодированного массива строк не является рекомендуемым подходом к проектированию, поскольку код приложения должен сосредоточиться на поведении, а не на содержимом. Содержимое приложения, например строки, должно быть внешним из кода для упрощения и упрощения локализации содержимого. Жестко запрограммированные строки используются в этом учебнике только для того, чтобы сделать его простым и сосредоточиться на [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+». Вместо этого приложение должно объявлять такие строковые массивы в XML-файле. Это можно сделать с помощью `<string-array>` ресурса в файле проекта `res/values/strings.xml`. Пример:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -185,7 +185,7 @@ static string[] COUNTRIES = new string[] {
 </resources>
 ```
 
-Чтобы использовать эти строки ресурсов для [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter), замените исходный элемент[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+Чтобы использовать эти строки ресурсов для [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter), замените исходное [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 строка конструктора со следующим:
 
 ```csharp
@@ -195,8 +195,8 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### <a name="references"></a>Ссылки
 
-- [Рецепт аутокомплететекствиев](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Пример проекта Xamarin. Android для`AutoCompleteTextView`
+- [Аутокомплететекствиев рецепт](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; проект Xamarin. Android для `AutoCompleteTextView`
 - [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 - [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](http://creativecommons.org/licenses/by/2.5/). Это руководство основано на [руководстве по автоматическому заполнению Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._
+_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](https://creativecommons.org/licenses/by/2.5/). Это руководство основано на [руководстве по автоматическому заполнению Android *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

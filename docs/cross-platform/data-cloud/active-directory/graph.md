@@ -3,15 +3,15 @@ title: Доступ к API Graph
 description: В этом документе описывается добавление Azure Active Directory проверки подлинности в мобильное приложение, созданное с помощью Xamarin.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fd3d94731f1a2a083be5f0e2f8ab541bc702a521
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7ccfc082f86d0a0c6f8d29a477101edb72f9c92f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766307"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016632"
 ---
 # <a name="accessing-the-graph-api"></a>Доступ к API Graph
 
@@ -26,9 +26,9 @@ ms.locfileid: "70766307"
 Убедитесь, что выбран параметр **Показывать предварительные пакеты** , чтобы включить этот пакет, так как он по-прежнему доступен в предварительной версии.
 
 > [!IMPORTANT]
-> Примечание. Azure ADAL 3,0 в настоящее время является предварительной версией и может привести к критическим изменениям до выпуска окончательной версии. 
+> Примечание. в настоящее время Azure ADAL 3,0 сейчас является предварительной версией и может привести к критическим изменениям до выпуска окончательной версии. 
 
-![](graph-images/06.-adal-nuget-package.jpg "Добавление ссылки на библиотеку проверки подлинности Azure Active Directory (Azure ADAL)")
+![](graph-images/06.-adal-nuget-package.jpg "Add a reference to Azure Active Directory Authentication Library (Azure ADAL)")
 
 Теперь в приложении необходимо добавить следующие переменные уровня класса, необходимые для потока проверки подлинности.
 
@@ -45,11 +45,11 @@ public static string graphApiVersion = "2013-11-08";
 AuthenticationResult authResult = null;
 ```
 
-Обратите внимание `commonAuthority`на одну вещь. Когда конечная точка проверки `common`подлинности имеет значение, приложение становится **многоклиентским**, что означает, что любой пользователь может использовать вход с учетными данными Active Directory. После проверки подлинности этот пользователь будет работать в контексте собственного Active Directory — т. е. он увидит подробные сведения о его Active Directory.
+Обратите внимание на то, что `commonAuthority`. Когда конечная точка проверки подлинности `common`, приложение становится **многоклиентским**, что означает, что любой пользователь может использовать вход с учетными данными Active Directory. После проверки подлинности этот пользователь будет работать в контексте собственного Active Directory — т. е. он увидит подробные сведения о его Active Directory.
 
 ### <a name="write-method-to-acquire-access-token"></a>Метод Write для получения маркера доступа
 
-Следующий код (для Android) начнет проверку подлинности и после завершения присвоить результат `authResult`в. Реализации iOS и Windows Phone немного отличаются: второй параметр (`Activity`) отличается в iOS и отсутствует в Windows Phone.
+Следующий код (для Android) начнет проверку подлинности и после завершения присвоит результат в `authResult`. Реализации iOS и Windows Phone немного отличаются: второй параметр (`Activity`) отличается в iOS и отсутствует в Windows Phone.
 
 ```csharp
 public static async Task<AuthenticationResult> GetAccessToken
@@ -63,9 +63,9 @@ public static async Task<AuthenticationResult> GetAccessToken
 }  
 ```
 
-В приведенном выше коде `AuthenticationContext` отвечает за проверку подлинности с помощью коммонаусорити. Он имеет `AcquireTokenAsync` метод, принимающий параметры в качестве ресурса, к которому необходимо получить доступ, в данном `clientId`случае `graphResourceUri`, и `returnUri`. `returnUri` После завершения проверки подлинности приложение вернется к. Этот код останется одинаковым для всех платформ, однако последний параметр `AuthorizationParameters`,, будет отличаться на разных платформах и отвечает за управление потоком проверки подлинности.
+В приведенном выше коде `AuthenticationContext` отвечает за проверку подлинности с помощью Коммонаусорити. Он имеет `AcquireTokenAsync` метод, принимающий параметры в качестве ресурса, к которому необходимо получить доступ, в данном случае `graphResourceUri`, `clientId`и `returnUri`. После завершения проверки подлинности приложение вернется к `returnUri`. Этот код останется одинаковым для всех платформ, однако последний параметр, `AuthorizationParameters`, будет отличаться на разных платформах и отвечает за управление потоком проверки подлинности.
 
-В случае с Android или iOS мы передаем `this` параметр в `AuthorizationParameters(this)` для совместного использования контекста, в то время как в Windows он передается без какого `AuthorizationParameters()`-либо параметра в качестве нового.
+В случае Android или iOS мы передаем параметр `this` в `AuthorizationParameters(this)` для совместного использования контекста, в то время как в Windows он передается без какого-либо параметра в качестве нового `AuthorizationParameters()`.
 
 ### <a name="handle-continuation-for-android"></a>Обработку продолжения для Android
 
@@ -81,7 +81,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 ### <a name="handle-continuation-for-windows-phone"></a>Обработку продолжения для Windows Phone
 
-Для Windows Phone измените `OnActivated` метод в файле **app.XAML.CS** , используя приведенный ниже код.
+Для Windows Phone измените метод `OnActivated` в файле **app.XAML.CS** , используя приведенный ниже код.
 
 ```csharp
 protected override void OnActivated(IActivatedEventArgs args)
@@ -99,11 +99,11 @@ protected override void OnActivated(IActivatedEventArgs args)
 Теперь при запуске приложения появится диалоговое окно проверки подлинности.
 После успешной проверки подлинности потребуются разрешения на доступ к ресурсам (в нашем случае API Graph):
 
-![](graph-images/08.-authentication-flow.jpg "После успешной проверки подлинности потребуются разрешения на доступ к ресурсам в нашем случае API Graph")
+![](graph-images/08.-authentication-flow.jpg "Upon successful authentication, it will ask your permissions to access the resources in our case Graph API")
 
-Если проверка подлинности прошла успешно и вы разрешили приложению доступ к ресурсам, вы `AccessToken` должны `RefreshToken` получить поле `authResult`со списком и в. Эти маркеры необходимы для дальнейших вызовов API и для авторизации с Azure Active Directory в фоновом режиме.
+Если проверка подлинности прошла успешно и вы разрешили приложению доступ к ресурсам, вы должны получить `AccessToken` и `RefreshToken` поле со списком в `authResult`. Эти маркеры необходимы для дальнейших вызовов API и для авторизации с Azure Active Directory в фоновом режиме.
 
-![](graph-images/07.-access-token-for-authentication.jpg "Эти маркеры необходимы для дальнейших вызовов API и для авторизации с Azure Active Directory в фоновом режиме")
+![](graph-images/07.-access-token-for-authentication.jpg "These tokens are   required for further API calls and for authorization with Azure Active Directory behind the scenes")
 
 Например, приведенный ниже код позволяет получить список пользователей из Active Directory. URL-адрес Web API можно заменить на веб-API, защищенный с помощью Azure AD.
 

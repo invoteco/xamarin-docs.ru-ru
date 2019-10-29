@@ -3,15 +3,15 @@ title: Упаковка неизносных приложений
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763964"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028645"
 ---
 # <a name="packaging-wear-apps"></a>Упаковка неизносных приложений
 
@@ -47,7 +47,7 @@ ms.locfileid: "70763964"
 
 -----
 
-Обратите внимание, что вы получите ошибку **XA5211** , если имя пакета приложения "износ" не соответствует имени пакета карманного приложения. Например:
+Обратите внимание, что вы получите ошибку **XA5211** , если имя пакета приложения "износ" не соответствует имени пакета карманного приложения. Пример:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -62,7 +62,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 - Проверяет совпадение имен пакетов. 
 
-- Создает XML и добавляет его в проект карманного приложения, чтобы связать его с приложением "износ". Например: 
+- Создает XML и добавляет его в проект карманного приложения, чтобы связать его с приложением "износ". Пример: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -95,7 +95,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
     </wearableApp>
     ```
 
-5. Вручную добавьте `<meta-data />` элемент в элемент **AndroidManifest. XML** `<application>` карманного проекта, который ссылается на новый ресурс XML:
+5. Вручную добавьте элемент `<meta-data />` в элемент `<application>` **AndroidManifest. XML** ручного проекта, который ссылается на новый ресурс XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"

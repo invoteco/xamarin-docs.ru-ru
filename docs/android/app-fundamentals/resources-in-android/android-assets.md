@@ -3,15 +3,15 @@ title: Использование ресурсов Android
 ms.prod: xamarin
 ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: e3b7ccf74773e5a391b8f133ccc241ca0e18bfcb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9c8db5ad7bcb012befb2fa8dcd1ecd13fa355a55
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755158"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025433"
 ---
 # <a name="using-android-assets"></a>Использование ресурсов Android
 
@@ -22,7 +22,7 @@ _Ресурсы_ предоставляют возможность включа�
 
 ## <a name="add-asset-to-project"></a>Добавить ресурс в проект
 
-Ресурсы находятся в `Assets` папке проекта. Добавьте в эту папку новый текстовый файл с именем `read_asset.txt`. Поместите в него некоторый текст, например "я пришел от ресурса!".
+Ресурсы находятся в папке `Assets` проекта. Добавьте новый текстовый файл в эту папку с именем `read_asset.txt`. Поместите в него некоторый текст, например "я пришел от ресурса!".
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -34,7 +34,7 @@ Visual Studio должно задать для этого файла **дейс�
 
 Visual Studio для Mac должен задать для этого файла **действие сборки** **AndroidAsset**:
 
-[![Установка для действия сборки значения AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
+[![установка AndroidAsset для действия сборки](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
@@ -42,7 +42,7 @@ Visual Studio для Mac должен задать для этого файла 
 
 ## <a name="reading-assets"></a>Чтение ресурсов
 
-Ресурсы считываются с помощью [ассетманажер](xref:Android.Content.Res.AssetManager). Экземпляр `AssetManager` объекта доступен при доступе к свойству [Assets](xref:Android.Content.Context.Assets) в `Android.Content.Context`, такому как действие.
+Ресурсы считываются с помощью [ассетманажер](xref:Android.Content.Res.AssetManager). Экземпляр `AssetManager` доступен при доступе к свойству [Assets](xref:Android.Content.Context.Assets) на `Android.Content.Context`, например к действию.
 В следующем коде мы откроем ресурс **read_asset. txt** , прочтите его содержимое и отобразите с помощью TextView.
 
 ```csharp
@@ -76,4 +76,4 @@ protected override void OnCreate (Bundle bundle)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [ассетманажер](xref:Android.Content.Res.AssetManager)
-- [Контекст](xref:Android.Content.Context)
+- [Локального](xref:Android.Content.Context)

@@ -3,15 +3,15 @@ title: Xamarin Live Player для Xamarin. Forms
 description: В этом документе обсуждаются Xamarin Live Player для Xamarin. Forms, описание установки, Xamarin Live Player приложение, примеры для использования с Xamarin Live Player, ограничениями и устранением неполадок.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 02a4f5970e1c94385316c80b53d8262f47db6c60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d5f3fb2a793f658334555aae3328e69134b2666a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278834"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029673"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player для Xamarin. Forms
 
@@ -27,7 +27,7 @@ ms.locfileid: "70278834"
 
 ## <a name="how-xamarin-live-player-worked"></a>Как Xamarin Live Player работало
 
-[![Xamarin Live Player: Код, сканирование, тестирование](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+[![Xamarin Live Player: код, сканирование, тестирование](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. Включите *Xamarin Live Player* в **разделе "настройки**", а затем выберите устройство в списке " **устройства** ".
 2. Управление устройствами Live Player для сканирования QR-кода для связывания устройства с Visual Studio.

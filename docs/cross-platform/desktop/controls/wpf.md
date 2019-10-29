@@ -2,15 +2,15 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'WPF и Xamarin. Forms: сходства & различия'
 description: В этом документе сравнивается и противопоставляется WPF и Xamarin. Forms. В нем обсуждаются шаблоны элементов управления, XAML, инфраструктура привязки, шаблоны данных, ItemsControl, UserControl, Навигация и Навигация по URL-адресам.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 798839457a418d457bac83e6e20397722423dbac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71106033"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016490"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF и Xamarin. Forms: сходства & различия
 
@@ -174,7 +174,7 @@ WPF содержит редко используемые `NavigationService`, к
 |Вкладки|TabbedPage|
 |Прокрутка влево/вправо|карауселвиев|
 
-@No__t_0 является наиболее распространенным подходом, и каждая страница имеет свойство `Navigation`, которое можно использовать для отправки или POP-страниц в стеке навигации. Это ближайший эквивалент `NavigationService`, найденный в WPF.
+`NavigationPage` является наиболее распространенным подходом, и каждая страница имеет свойство `Navigation`, которое можно использовать для отправки или POP-страниц в стеке навигации. Это ближайший эквивалент `NavigationService`, найденный в WPF.
 
 ### <a name="url-navigation"></a>Навигация по URL-адресу
 

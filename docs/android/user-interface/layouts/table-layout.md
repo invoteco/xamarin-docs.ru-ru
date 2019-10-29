@@ -3,20 +3,20 @@ title: Xamarin. Android Таблелайаут
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4175b1fa62b2bc0e4209d13934c2bdbdd1e2a085
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758395"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028748"
 ---
 # <a name="xamarinandroid-tablelayout"></a>Xamarin. Android Таблелайаут
 
-[`TableLayout`](xref:Android.Widget.TableLayout)является[`ViewGroup`](xref:Android.Views.ViewGroup)
-, отображающий дочерний элемент[`View`](xref:Android.Views.View)
+[`TableLayout`](xref:Android.Widget.TableLayout) является [`ViewGroup`](xref:Android.Views.ViewGroup)
+, отображающий дочерние [`View`](xref:Android.Views.View)
 элементы в строках и столбцах.
 
 Запустите новый проект с именем **хеллотаблелайаут**.
@@ -102,12 +102,12 @@ ms.locfileid: "70758395"
 </TableLayout>
 ```
 
-Обратите внимание, что это напоминает структуру HTML-таблицы. Тот[`TableLayout`](xref:Android.Widget.TableLayout)
-элемент подобен HTML- `<table>` элементу;[`TableRow`](xref:Android.Widget.TableRow)
-параметр подобен `<tr>` элементу, но для ячеек можно использовать любой [`View`](xref:Android.Views.View) тип элемента. В этом примере[`TextView`](xref:Android.Widget.TextView)
-используется для каждой ячейки. В некоторых строках также имеется базовый [`View`](xref:Android.Views.View)элемент, который используется для рисования горизонтальной линии.
+Обратите внимание, что это напоминает структуру HTML-таблицы. [`TableLayout`](xref:Android.Widget.TableLayout)
+элемент подобен HTML-элементу `<table>`; [`TableRow`](xref:Android.Widget.TableRow)
+объект подобен элементу `<tr>`; но для ячеек можно использовать любой тип элемента [`View`](xref:Android.Views.View) . В этом примере это [`TextView`](xref:Android.Widget.TextView)
+используется для каждой ячейки. В некоторых строках также имеется базовый [`View`](xref:Android.Views.View), который используется для отрисовки горизонтальной линии.
 
-Убедитесь, что действие **хеллотаблелайаут** загружает этот макет в[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Убедитесь, что действие **хеллотаблелайаут** загружает этот макет в [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 Method
 
 ```csharp
@@ -118,11 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-Метод) загружает файл макета [`Activity`](xref:Android.App.Activity)для, заданный идентификатором &mdash; `Resource.Layout.Main` ресурса, относится к файлу макета **Resources/Layout/Main. axml** . [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+Метод [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) загружает файл макета для [`Activity`](xref:Android.App.Activity), определяемый идентификатором ресурса, &mdash; `Resource.Layout.Main` ссылается на файл макета **Resources/Layout/Main. axml** .
 
 Запустите приложение. Вы должны увидеть следующее:
 
-[![Пример снимка экрана приложения Таблелайаут, отображающего несколько строк таблицы](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[снимок экрана![пример приложения Таблелайаут, отображающего несколько строк таблицы](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 ## <a name="references"></a>Ссылки
 
@@ -130,4 +130,4 @@ protected override void OnCreate (Bundle savedInstanceState)
 - [`TableRow`](xref:Android.Widget.TableRow)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](http://creativecommons.org/licenses/by/2.5/)._
+_Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в [лицензии Creative commons attribution 2,5](https://creativecommons.org/licenses/by/2.5/)._

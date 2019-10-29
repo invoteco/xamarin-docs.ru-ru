@@ -3,21 +3,21 @@ title: Microsoft Azure и Xamarin
 description: В этом документе содержатся ссылки на документацию по Подключенные службы в Visual Studio для Mac, мобильных приложениях Azure, Active Directory проверки подлинности и WebAPI.
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 273a1a8fec4cf40893ff94fef4b1394065a8547b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766101"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016613"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure и Xamarin
 
-[![](images/evolve-mikej-azure-sml.png "Функции служб приложений Azure легко добавлять в приложения Xamarin, включая облачное хранилище данных и Push-уведомления между платформами.")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
-[Усовершенствовано в 2016 г. Разработка подключенных приложений с помощью Azure и Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[Развитие 2016: Разработка подключенных приложений с помощью Azure и Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Подключенные службы в Visual Studio для Mac
 
@@ -35,7 +35,7 @@ Xamarin также предлагает пакеты NuGet для обмена �
 [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md) можно использовать для входа пользователей в приложения Xamarin с помощью [компонента Xamarin. auth](https://www.nuget.org/packages/Xamarin.Auth/).
 Затем приложения могут получить доступ к дополнительным службам, таким как Office 365.
 
-## <a name="webapi"></a>WebAPI
+## <a name="webapi"></a>webAPI
 
 Веб-API Майкрософт предоставляет интерфейс, подобный ОСТАЛЬному, который может легко использоваться приложениями Xamarin.
 Вы можете легко развернуть [веб-сайт Azure](https://trywebsites.azurewebsites.net/) и создать приложение на основе WebAPI для подключения к приложениям Xamarin.
@@ -58,6 +58,6 @@ Xamarin также предлагает пакеты NuGet для обмена �
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример Azure PCL (by @paulbatum) (пример)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
+- [Пример Azure PCL (@paulbatum) (пример)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
 - [портал Azure](https://azure.microsoft.com/)
 - [Мобильный клиент для Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

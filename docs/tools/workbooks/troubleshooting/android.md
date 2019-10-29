@@ -3,15 +3,15 @@ title: Устранение неполадок Xamarin Workbooks в Android
 description: Этот документ содержит советы по устранению неполадок при работе с Xamarin Workbooks на Android. В нем обсуждается поддержка эмулятора, книги, которые не загружаются, и другие разделы.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 04f02e6136d9d489a36e994575519e579770ac3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: be19005ab1125c060ab0111e9f37568d5f4abe45
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291160"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029592"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Устранение неполадок Xamarin Workbooks в Android
 
@@ -22,7 +22,7 @@ ms.locfileid: "70291160"
 Мы рекомендуем использовать эмулятор Google вместе с HAXM, если он поддерживается компьютером.
 Если в системе необходимо включить Hyper-V, вместо этого перейдите в Android Emulator Visual Studio.
 
-Необходим эмулятор, работающий под управлением Android 5,0 или более поздней версии. Эмуляторы ARM не поддерживаются. Используйте `x86` только `x86_64` устройства или.
+Необходим эмулятор, работающий под управлением Android 5,0 или более поздней версии. Эмуляторы ARM не поддерживаются. Используйте только `x86` или `x86_64` устройства.
 
 Ознакомьтесь с [документацией по настройке эмуляторов Android][android-emu] , если вы не знакомы с этим процессом.
 
@@ -42,7 +42,7 @@ ms.locfileid: "70291160"
 1. **Убедитесь, что все критические сетевые операции завершены, так как это может временно отключить Windows от Интернета.**
 1. Закройте Эмуляторы.
 1. Откройте `Hyper-V Manager`.
-1. В `Actions`разделе откройте `Virtual Switch Manager...`.
+1. В разделе `Actions`откройте `Virtual Switch Manager...`.
 1. Удалите все виртуальные коммутаторы.
 1. Нажмите кнопку `OK`.
 1. Запуск VS Android Emulator. Возможно, вам будет предложено повторно создать коммутатор виртуальной сети.

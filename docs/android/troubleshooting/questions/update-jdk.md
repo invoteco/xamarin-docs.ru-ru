@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2018
-ms.openlocfilehash: d3f4c602f7e581cab74b61072e248a22eede9a22
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0f7499551db7d86d7978b9c3e1f562a2f054c202
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019521"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Как обновить версию Java Development Kit (JDK)?
 
@@ -41,7 +41,7 @@ Xamarin. Android использует пакет средств разработ
 
 4. Откройте Visual Studio и обновите **расположение пакета разработки Java** , чтобы оно указывало на новый JDK в разделе **сервис > параметры > Xamarin > Android параметры > расположение пакета Java Development Kit**:
 
-    [![Параметр пути для JDK на странице параметров Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [Параметр пути![для JDK на странице параметров Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Не забудьте перезапустить Visual Studio после обновления расположения.
 
@@ -57,6 +57,6 @@ Xamarin. Android использует пакет средств разработ
 
 Mac OS автоматически установит новую версию JDK в качестве значения по умолчанию, обновив **/систем/либрари/фрамеворкс/жававм.фрамеворк/версионс/куррент**. Затем можно дважды проверить, что в качестве расположения **пакета SDK для Java (JDK)** задано ожидаемое значение по умолчанию **/usr** в разделе **Visual Studio для Mac параметры > > проекты > расположения пакета SDK > расположения пакетов Android > > Java SDK (JDK)** :
 
-[![Настройка расположения JDK на вкладке "расположения Android"](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
+[![установки расположения JDK на вкладке расположения Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----

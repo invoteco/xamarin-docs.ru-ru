@@ -4,65 +4,65 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/16/2017
-ms.openlocfilehash: c004fb7717f78750e7ac1e8dc1856a32ba808638
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8685be4bb1cc45ff04dc8d9f7d8e64e7b1483b60
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61227690"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027029"
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>Где можно задать свои расположения пакета SDK для Android?
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-В Visual Studio, перейдите к **Сервис > Параметры > Xamarin > Параметры Android** для просмотра и задайте расположение пакета SDK для Android:
+В Visual Studio перейдите к **меню сервис > параметры > параметры Xamarin > Android** , чтобы просмотреть и задать расположение пакет SDK для Android.
 
-[![Вкладка "расположения" пример в установках](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
+[Вкладка «примеры расположения![» в разделе «настройки»](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
 Расположение по умолчанию для каждого пути выглядит следующим образом:
 
-- Расположение пакета Java Development Kit: 
+- Расположение пакета средств разработки Java: 
 
-    **C:\\Program Files\\Java\\jdk1.8.0_131**
+    **В.\\программные файлы\\Java\\JDK 1.8.0 _131**
 
-- Расположение пакета SDK для Android: 
+- Расположение пакет SDK для Android: 
 
     **C:\\Program Files (x86)\\Android\\android-sdk**
 
-- Расположение пакета Android NDK: 
+- Расположение Android NDK: 
 
-    **C:\\ProgramData\\Microsoft\\AndroidNDK64\\android ndk-r13b**
+    **В.\\папка ProgramData\\Microsoft\\AndroidNDK64\\Android-NDK-r13b**
 
-Обратите внимание на то, что номер версии NDK могут отличаться. Например, а не из **android ndk-r13b**, это может быть более ранней версии, такие как **android ndk-r10e**.
+Обратите внимание, что номер версии NDK может отличаться. Например, вместо **Android-NDK-r13b**это может быть более ранняя версия, например **Android-NDK-r10e**.
 
-Чтобы задать расположение пакета SDK для Android, введите полный путь к каталогу пакета SDK для Android в **расположение пакета Android SDK** поле. Перейдите к расположению пакета SDK для Android в проводнике, скопируйте путь из адресной строки и вставьте этот путь в **расположение пакета Android SDK** поле.
-Например, если ваше расположение пакета SDK для Android находится в **C:\\пользователей\\имя пользователя\\AppData\\локального\\Android\\Sdk**, Очистить старый путь в  **Расположение пакета Android SDK** , вставьте в этот путь, а щелкните **ОК**.
+Чтобы задать расположение пакет SDK для Android, введите полный путь к каталогу пакет SDK для Android в поле **пакет SDK для Android Location (расположение** ). Можно переходить к расположению пакет SDK для Android в проводнике, скопировать путь из адресной строки и вставить этот путь в поле **расположение пакет SDK для Android** .
+Например, если пакет SDK для Android расположен в папке **C:\\пользователи\\имя_пользователя\\AppData\\Local\\Android\\SDK**, очистите старый путь в поле **Расположение пакет SDK для Android** , вставьте его по указанному пути. и нажмите кнопку **ОК**.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-В Visual Studio для Mac, перейдите к **параметры > проекты > расположения SDK > Android**. В **Android** щелкните **расположения** tab для просмотра и задайте расположение пакета SDK:
+В Visual Studio для Mac перейдите к пункту **настройки > проекты > расположения пакетов SDK > Android**. На странице **Android** перейдите на вкладку **расположения** , чтобы просмотреть и задать расположение пакета SDK:
 
-[![Вкладка "расположения" пример в установках](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
+[Вкладка «примеры расположения![» в разделе «настройки»](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
 Расположение по умолчанию для каждого пути выглядит следующим образом:
 
-- Расположение пакета SDK для Android: 
+- Расположение пакет SDK для Android: 
 
-    **~/Library/Developer/Xamarin/Android-SDK-MacOSX**
+    **~/Либрари/девелопер/ксамарин/андроид-СДК-макоскс**
 
-- Расположение пакета Android NDK: 
+- Расположение Android NDK: 
 
-    **~/Library/Developer/Xamarin/Android-ndk/Android-ndk-r14b**
+    **~/Library/Developer/Xamarin/android-ndk/android-ndk-r14b**
 
-- Расположение пакета Java SDK (JDK): 
+- Расположение пакета SDK для Java (JDK): 
 
     **/usr**
 
-Обратите внимание на то, что номер версии NDK могут отличаться. Например, а не из **android ndk-r14b**, это может быть более ранней версии, такие как **android ndk-r10e**.
+Обратите внимание, что номер версии NDK может отличаться. Например, вместо **Android-NDK-r14b**это может быть более ранняя версия, например **Android-NDK-r10e**.
 
-Чтобы задать расположение пакета SDK для Android, введите полный путь к каталогу пакета SDK для Android в **расположение пакета Android SDK** поле. Вы можете выбрать папку пакета SDK для Android в средстве поиска, нажмите клавишу **CTRL +&#8984;+ I** Чтобы просмотреть сведения о папке, щелкните и перетащите путь справа от **где:**, скопируйте, а затем вставьте его в **пакета SDK для Android Расположение** поле **расположения** вкладки. Например, если ваше расположение пакета SDK для Android находится в **~/Library/Developer/Android/Sdk**, Очистить старый путь в **расположение пакета Android SDK** , вставьте в этот путь, а щелкните **ОК**.
+Чтобы задать расположение пакет SDK для Android, введите полный путь к каталогу пакет SDK для Android в поле **пакет SDK для Android Location (расположение** ). Можно выбрать папку пакет SDK для Android в Finder, нажать **сочетание клавиш&#8984;Ctrl + + I** , чтобы просмотреть сведения о папке, щелкнуть и перетащить путь справа от раздела **:** , скопировать, а затем вставить его в поле **Расположение пакет SDK для Android** на вкладке **расположения** . Например, если расположение пакет SDK для Android находится в папке **~/либрари/девелопер/андроид/СДК**, очистите старый путь в поле **Расположение пакет SDK для Android** , вставьте этот путь и нажмите кнопку **ОК**.
 
 -----

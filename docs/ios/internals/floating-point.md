@@ -4,15 +4,15 @@ description: В этом документе описывается, как Xamar
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 1ecb00fecaf14afb8c6d5c59297eb26821ed791a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: af0e37b41a7bbe831bc629b1fd916f62819b3711
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291925"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022341"
 ---
 # <a name="floating-point-operations-in-xamarinios"></a>Операции с плавающей точкой в Xamarin. iOS
 

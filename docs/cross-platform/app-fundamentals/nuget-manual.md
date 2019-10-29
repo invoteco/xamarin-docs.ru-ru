@@ -3,15 +3,15 @@ title: Создание пакетов NuGet для Xamarin вручную
 description: В этом документе содержатся советы по созданию пакетов NuGet, предназначенных для платформы Xamarin. Здесь описываются профили Xamarin для пакетов NuGet, PCL NuGet с зависимостями платформы и ссылки на различные примеры с открытым исходным кодом.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289191"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016766"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Создание пакетов NuGet для Xamarin вручную
 
@@ -51,7 +51,7 @@ _На этой странице содержатся некоторые сове
 
 Можно указать версию с набором чисел без десятичной запятой или указать ее с помощью десятичных разделителей. Без десятичной запятой NuGet просто принимает каждое число и преобразует его в версию, вставляя символ "." между каждой цифрой.
 
-В приведенном выше "MonoAndroid10" означает "Android 1,0". Это означает, что [Целевая платформа](~/android/app-fundamentals/android-api-levels.md) проекта должна иметь версию Android 1,0 или более позднюю. Версия указывается в `<TargetFrameworkVersion>` элементе в файле проекта.
+В приведенном выше "MonoAndroid10" означает "Android 1,0". Это означает, что [Целевая платформа](~/android/app-fundamentals/android-api-levels.md) проекта должна иметь версию Android 1,0 или более позднюю. Версия указывается в элементе `<TargetFrameworkVersion>` в файле проекта.
 
 Для уточнения:
 
@@ -63,11 +63,11 @@ _На этой странице содержатся некоторые сове
 
 Профили PCL ограничены тем, какие API-интерфейсы .NET Framework имеют доступ, и, конечно, не могут получить доступ к коду, зависящему от платформы. Эти сторонние ссылки обсуждают различные подходы к созданию пакетов NuGet, использующих PCL и собственные API для обеспечения совместимости с Xamarin и другими платформами:
 
-- [Как сделать переносимые библиотеки классов пригодными для вас](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [Прием Bait и переключение PCL](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Создание пакета NuGet PCL, который работает с Xamarin. iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Как сделать переносимые библиотеки классов пригодными для вас](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [Прием Bait и переключение PCL](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Создание пакета NuGet PCL, который работает с Xamarin. iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-Этот внешний [список профилей PCL с именем целевого объекта NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) также является полезной ссылкой.
+Этот внешний [список профилей PCL с именем целевого объекта NuGet](https://portablelibraryprofiles.stephencleary.com) также является полезной ссылкой.
 
 ## <a name="examples"></a>Примеры
 

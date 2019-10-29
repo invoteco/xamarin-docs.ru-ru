@@ -4,29 +4,29 @@ description: В этом документе описываются различ�
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768345"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021845"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Части и функции таблиц в Xamarin. iOS
 
 Уитаблевиев может иметь стиль "Группировка" или "обычный" и состоит из следующих частей:
 
 - [Заголовок раздела](#Section_Header)
-- [Ячейки](#Cells) (или строки, если предпочитаете)
+- [Ячейки](#Cells) (или строки, если вы предпочитаете)
 - [Нижний колонтитул раздела](#Section_Footer)
 - [Index](#Index)
-- [Режим правки](#Edit_Features) (включает операцию "Прокрутка для удаления" и перетаскивание маркеров для изменения порядка строк) 
+- [Режим редактирования](#Edit_Features) (включает операцию "прокрутить для удаления" и перетаскивание маркеров для изменения порядка строк) 
 
 На этих снимках экрана показано, как отображаются строки разделов, верхние и нижние колонтитулы, элементы управления правки и индекс.
 
- [![](table-parts-and-functionality-images/image1a.png "На этих снимках экрана показано, как отображаются строки разделов, верхние и нижние колонтитулы, элементы управления правки и индекс.")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
 
 Эти компоненты подробно описаны ниже.
 
@@ -72,7 +72,7 @@ ms.locfileid: "70768345"
 
 Ниже показаны основные классы, используемые для отображения табличных представлений.
 
-[![](table-parts-and-functionality-images/classdiagram.png "Здесь показаны основные классы, используемые для отображения табличных представлений.")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 Назначение каждого класса описывается ниже.
 

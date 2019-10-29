@@ -3,8 +3,8 @@ documentType: LandingData
 title: Xamarin.iOS
 metadata:
   description: Xamarin.iOS предоставляет полный пакет SDK для iOS для разработчиков .NET.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 09/28/2018
   ms.topic: landing-page
   ms.technology: xamarin-ios
@@ -21,7 +21,7 @@ abstract:
       - href: /visualstudio/
         text: Visual Studio
 sections:
-  - title: Начало работы
+  - title: Приступая к работе
     items:
       - type: paragraph
         text: 'Сведения о создании приложения iOS с помощью Xamarin и C#.'
@@ -30,7 +30,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Настройка
+            text: Установка
             href: ~/ios/get-started/installation/index.md
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
@@ -44,7 +44,7 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
             text: iOS 13
             href: ~/ios/platform/ios13/index.md
-  - title: Руководства
+  - title: Направляющие
     items:
       - type: list
         style: cards

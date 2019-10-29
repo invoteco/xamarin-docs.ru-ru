@@ -4,15 +4,15 @@ description: В этой статье рассматривается изоли�
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 02059c43d26c2e685abd685231fe5faf3d7a6bfe
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770304"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030111"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Изолирование приложения Xamarin. Mac
 
@@ -389,7 +389,7 @@ _Повербокс_ — это технология безопасности ma
 
 Кроме того, применяются следующие изменения наследования:
 
-- @No__t_2  -  **неизолированных приложений** `NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
+- `NSOpenPanel` - **неизолированных приложений** `NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
 
 ### <a name="security-scoped-bookmarks-and-persistent-resource-access"></a>Закладки с областью действия безопасности и постоянный доступ к ресурсам
 
@@ -475,7 +475,7 @@ Exception Type:  EXC_BAD_INSTRUCTION (SIGILL)
 2. Введите `asctl container acl list -bundle <container-name>`.
 3. Нажмите клавишу **Ввод** , чтобы выполнить команду.
 
-@No__t_0 обычно является идентификатором пакета для приложения Xamarin. Mac.
+`<container-name>` обычно является идентификатором пакета для приложения Xamarin. Mac.
 
 ## <a name="designing-a-xamarinmac-app-for-the-app-sandbox"></a>Разработка приложения Xamarin. Mac для песочницы приложения
 

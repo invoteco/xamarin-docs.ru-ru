@@ -4,15 +4,15 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: e9c87b76dc6845962450b8cb6fab921ea1748832
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aeaa1bb1273bc062e0ac76eaa09722827f15797f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768317"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028394"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Работа с размерами экрана watchOS в Xamarin
 
@@ -30,11 +30,11 @@ Apple Watch доступен на двух размерах экрана:
 
 По умолчанию в конструкторе Visual Studio для Mac отображаются контроллеры интерфейса наблюдения в **любом Apple Watch**.
 
-![](screen-sizes-images/screen-any-sml.png "Конструктор отображает контроллеры интерфейса наблюдения в любом Apple Watch")
+![](screen-sizes-images/screen-any-sml.png "The Designer displays watch interface controllers at Any Apple Watch")
 
 Используйте меню Размер, чтобы изменить и просмотреть раскадровку на любом из доступных размеров экрана: **38** или **часы**:
 
-![](screen-sizes-images/screen-menu-sml.png "Выбор размера 38 или часы")
+![](screen-sizes-images/screen-menu-sml.png "Selecting the 38mm or 42mm size")
 
 Увеличение размера экрана иногда приводит к отображению содержимого, которое было бы усечено или скрыто на уменьшенном экране.
 Обязательно проверьте оба размера.
@@ -43,7 +43,7 @@ Apple Watch доступен на двух размерах экрана:
 
 Приложение должно отображать на экране одно и то же содержимое, независимо от размера, а также расширять или изменять элементы контракта соответствующим образом. В конструкторе Visual Studio для Mac в инспекторе атрибутов следует использовать параметр **относительно контейнера** или **размера, чтобы вместить содержимое в соответствии** с предпочтениями к фиксированным размерам.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Используйте параметр \"относительно контейнера\" или \"размер\", чтобы вместить содержимое в качестве приоритета к фиксированным размерам")
+![](screen-sizes-images/sizeattributepanel-sml.png "Use Relative to Container or Size to Fit Content in preference to fixed sizes")
 
 Так как экран контрольных значений окружается черной косметической панелью, не рекомендуется использовать заполнение вокруг интерфейса. Разрешите элементам находиться на край экрана и разрешите декоративной панели форму естественной границы вокруг приложения.
 
@@ -51,13 +51,13 @@ Apple Watch доступен на двух размерах экрана:
 
 При тестировании в симуляторе можно легко переключаться между двумя размерами экрана с помощью меню **оборудования > устройства** .
 
-![](screen-sizes-images/simulator.png "Симулятор может переключаться между двумя размерами экрана с помощью меню \"устройство оборудования\"")
+![](screen-sizes-images/simulator.png "The simulator can switch between the two screen sizes using the Hardware Device menu")
 
 ## <a name="image-resources"></a>Ресурсы изображений
 
 Если один ресурс-контейнер не выглядит хорошо в разных размерах, следует использовать несколько ресурсов изображения. Каталоги ресурсов изображений позволяют указывать отдельные точечные рисунки для каждого размера:
 
-![](screen-sizes-images/images-xcassets.png "Редактор каталога активов изображений")
+![](screen-sizes-images/images-xcassets.png "Image asset catalog editor")
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded

@@ -4,33 +4,33 @@ ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: 444A894D-5197-4726-934F-79BA80A71CB0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2018
-ms.openlocfilehash: 0363213d76d9a67b559614741edf37d296848075
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4d9ef88f39914f8fa5e578577ee9f6977c2bc88e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761658"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020269"
 ---
-# <a name="fragments-walkthrough-ndash-landscape"></a>Пошаговое руководство &ndash; . альбомная ориентация
+# <a name="fragments-walkthrough-ndash-landscape"></a>Фрагменты пошаговое руководство &ndash; альбомная ориентация
 
-В [пошаговом руководстве &ndash; «фрагменты» в разделе 1](./walkthrough.md) показано, как создавать и использовать фрагменты в приложении Android, предназначенном для небольших экранов на телефоне. Следующим шагом в этом пошаговом руководстве является изменение приложения, чтобы воспользоваться преимуществами дополнительного пространства на планшете &ndash; , в котором всегда будет список воспроизведения `TitlesFragment`() и `PlayQuoteFragment` будет динамически добавляться к действию в ответ на выбор, сделанный пользователем:
+В [пошаговом руководстве &ndash; части 1](./walkthrough.md) показано, как создавать и использовать фрагменты в приложении Android, предназначенном для небольших экранов на телефоне. Следующим шагом в этом пошаговом руководстве является изменение приложения для использования преимуществ дополнительного горизонтального пространства на планшетном &ndash; будет одно действие, которое всегда будет списком воспроизведений (`TitlesFragment`) и `PlayQuoteFragment` будет динамически добавляться к действию в r еспонсе выбор, сделанный пользователем:
 
-[![Приложение, работающее на планшете](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
+[Приложение![, работающее на планшетном компьютере](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
 
 На телефонах, работающих в альбомном режиме, также будет выгодно это улучшение:
 
-[![Приложение, работающее на телефоне Android в альбомном режиме](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![приложение, работающее на телефоне Android в альбомном режиме](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
 ## <a name="updating-the-app-to-handle-landscape-orientation"></a>Идет обновление приложения для работы с альбомной ориентацией
 
 Следующие изменения будут созданы на основе работы, выполненной в [пошаговом руководстве по телефону](./walkthrough.md) .
 
-1. Создайте альтернативный макет для вывода `TitlesFragment` и. `PlayQuoteFragment`
-1. Обновите `TitlesFragment` , чтобы определить, одновременно ли на устройстве отображаются оба фрагмента, и измените поведение соответствующим образом.
-1. Обновите `PlayQuoteActivity` , чтобы закрыть, когда устройство находится в альбомном режиме.
+1. Создайте альтернативный макет для вывода `TitlesFragment` и `PlayQuoteFragment`.
+1. Обновите `TitlesFragment`, чтобы определить, одновременно ли на устройстве отображаются оба фрагмента, и измените поведение соответствующим образом.
+1. Обновите `PlayQuoteActivity`, чтобы закрыть устройство в альбомном режиме.
 
 ## <a name="1-create-an-alternate-layout"></a>1. Создание альтернативного макета
 
@@ -40,11 +40,11 @@ ms.locfileid: "70761658"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Альтернативный макет в обозреватель решений](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
+[![альтернативный макет в обозреватель решений](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Альтернативный макет в Панель решения](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
+[![альтернативный макет в Панель решения](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
 
 -----
 
@@ -74,21 +74,21 @@ ms.locfileid: "70761658"
 </LinearLayout>
 ```
 
-Корневое представление действия получает идентификатор `two_fragments_layout` ресурса и имеет два подпредставления `fragment` , а и `FrameLayout`. Хотя статически загружены, объект выступает в `FrameLayout` качестве заполнителя, который будет заменен во время `PlayQuoteFragment`выполнения. `fragment` Каждый раз при выборе нового воспроизведения в `TitlesFragment` `playquote_container` будет обновлен новый экземпляр `PlayQuoteFragment`.
+Корневое представление действия получает идентификатор ресурса `two_fragments_layout` и имеет два подпредставления, `fragment` и `FrameLayout`. При статической загрузке `fragment` `FrameLayout` выступает в качестве заполнителя, который будет заменен `PlayQuoteFragment`ом во время выполнения. Каждый раз, когда в `TitlesFragment`выбрано новое воспроизведение, `playquote_container` будет обновлен с новым экземпляром `PlayQuoteFragment`.
 
-Каждое из подчиненных представлений будет занимать полную высоту их родителя. Ширина каждого подпредставления определяется `android:layout_weight` атрибутами и. `android:layout_width` В этом примере каждое Подпредставление будет занимать 50% ширины, предоставляемой родителем. Дополнительные сведения о _весе макета_см. [в документе Google на элемент LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear.html) .
+Каждое из подчиненных представлений будет занимать полную высоту их родителя. Ширина каждого подпредставления определяется `android:layout_weight` и `android:layout_width` атрибутами. В этом примере каждое Подпредставление будет занимать 50% ширины, предоставляемой родителем. Дополнительные сведения о _весе макета_см. [в документе Google на элемент LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear.html) .
 
-## <a name="2-changes-to-titlesfragment"></a>2. Изменения в Титлесфрагмент
+## <a name="2-changes-to-titlesfragment"></a>2. изменения в Титлесфрагмент
 
-После создания альтернативного макета необходимо обновить `TitlesFragment`. Когда приложение отображает два фрагмента одного действия, `TitlesFragment` следует `PlayQuoteFragment` загрузить в родительское действие. В противном случае `PlayQuoteActivity` `PlayQuoteFragment`должен запустить узел, на котором размещается. `TitlesFragment` Логический флаг поможет `TitlesFragment` определить, какое поведение следует использовать. Этот флаг будет инициализирован в `OnActivityCreated` методе.
+После создания альтернативного макета необходимо обновить `TitlesFragment`. Когда приложение отображает два фрагмента одного действия, `TitlesFragment` должны загружать `PlayQuoteFragment` в родительском действии. В противном случае `TitlesFragment` должен запустить `PlayQuoteActivity`, на котором размещается `PlayQuoteFragment`. Логический флаг поможет `TitlesFragment` определить, какое поведение следует использовать. Этот флаг будет инициализирован в методе `OnActivityCreated`.
 
-Сначала добавьте переменную экземпляра в начало `TitlesFragment` класса:
+Сначала добавьте переменную экземпляра в начало класса `TitlesFragment`:
 
 ```csharp
 bool showingTwoFragments;
 ```
 
-Затем добавьте следующий фрагмент кода для `OnActivityCreated` инициализации переменной: 
+Затем добавьте следующий фрагмент кода, чтобы `OnActivityCreated` инициализировать переменную: 
 
 ```csharp
 var quoteContainer = Activity.FindViewById(Resource.Id.playquote_container);
@@ -101,9 +101,9 @@ if (showingTwoFragments)
 }
 ```
 
-Если устройство `FrameLayout` работает в альбомном режиме, на экране будет отображаться идентификатор `playquote_container` ресурса, поэтому `showingTwoFragments` он будет инициализирован в `true`. Если устройство работает в книжной ориентации, `playquote_container` оно не будет отображаться на экране, поэтому `showingTwoFragments` будет `false`иметь значение.
+Если устройство работает в альбомном режиме, `FrameLayout` с ИДЕНТИФИКАТОРом ресурса `playquote_container` будет отображаться на экране, поэтому `showingTwoFragments` будет инициализирована `true`. Если устройство работает в книжной ориентации, `playquote_container` не будет отображаться на экране, поэтому `showingTwoFragments` будет `false`.
 
-Метод должен изменить способ отображения квоты &ndash; в фрагменте или запуске нового действия. `ShowPlayQuote`  Обновите `ShowPlayQuote` метод, чтобы загрузить фрагмент при отображении двух фрагментов, иначе он должен запустить действие:
+Методу `ShowPlayQuote` потребуется изменить способ отображения цитаты &ndash; либо в фрагменте, либо при запуске нового действия.  Обновите метод `ShowPlayQuote`, чтобы загрузить фрагмент при отображении двух фрагментов, в противном случае он должен запустить действие:
 
 ```csharp
 void ShowPlayQuote(int playId)
@@ -134,7 +134,7 @@ void ShowPlayQuote(int playId)
 }
 ```
 
-Если пользователь выбрал воспроизведение, отличное от того, в котором в данный момент отображается `PlayQuoteFragment`в, то создается новый `PlayQuoteFragment` объект, который `playquote_container` заменит содержимое в контексте `FragmentTransaction`.
+Если пользователь выбрал воспроизведение, отличающееся от того, который в данный момент отображается в `PlayQuoteFragment`, создается новая `PlayQuoteFragment`, которая заменит содержимое `playquote_container` в контексте `FragmentTransaction`.
 
 ### <a name="complete-code-for-titlesfragment"></a>Полный код для Титлесфрагмент
 
@@ -208,9 +208,9 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-## <a name="3-changes-to-playquoteactivity"></a>3. Изменения в Плайкуотеактивити
+## <a name="3-changes-to-playquoteactivity"></a>3. изменения в Плайкуотеактивити
 
-Есть одна последняя информация, которую следует предпринять: `PlayQuoteActivity` не требуется, если устройство находится в альбомном режиме. Если устройство находится в альбомном режиме, `PlayQuoteActivity` оно не должно быть видимым. Обновите `OnCreate` `PlayQuoteActivity` метод таким образом, чтобы он закрыл себя. Этот код является окончательной версией `PlayQuoteActivity.OnCreate`:
+Есть одна последняя информация: `PlayQuoteActivity` не требуется, если устройство находится в альбомном режиме. Если устройство находится в альбомном режиме, `PlayQuoteActivity` не должно быть видимым. Обновите метод `OnCreate` `PlayQuoteActivity` так, чтобы он закрылся. Этот код является окончательной версией `PlayQuoteActivity.OnCreate`:
 
 ```csharp
 protected override void OnCreate(Bundle savedInstanceState)
@@ -230,12 +230,12 @@ protected override void OnCreate(Bundle savedInstanceState)
 }
 ```
 
-Это изменение добавляет проверку ориентации устройства. Если он находится в альбомном режиме, `PlayQuoteActivity` он закроется.
+Это изменение добавляет проверку ориентации устройства. Если он находится в альбомном режиме, `PlayQuoteActivity` закроется.
 
 ## <a name="4-run-the-application"></a>4. Запуск приложения
 
 После завершения этих изменений запустите приложение, переворачивайте устройство в альбомный режим (при необходимости), а затем выберите воспроизведение. Цитата должна отображаться на том же экране, что и список воспроизведения:
 
-[![Приложение, работающее на телефоне Android в альбомном режиме](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![приложение, работающее на телефоне Android в альбомном режиме](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-[![Приложение, работающее на планшете Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
+[![приложение, работающее на планшете Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)

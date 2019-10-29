@@ -3,21 +3,21 @@ title: GridLayout
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: bd05596ce8c6f8acb81b3ca68c6393a0be47768a
-ms.sourcegitcommit: cb13fadbaa6d19dea94b9005bda20c2efd1b8039
+ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72541913"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029011"
 ---
 # <a name="xamarinandroid-gridlayout"></a>Xamarin. Android GridLayout
 
-@No__t_0 — это новый подкласс `ViewGroup`, который поддерживает размещение представлений в двухмерной сетке аналогично таблице HTML, как показано ниже:
+`GridLayout` — это новый подкласс `ViewGroup`, который поддерживает размещение представлений в двухмерной сетке аналогично таблице HTML, как показано ниже:
 
- [![Cropped GridLayout, отображающий четыре ячейки](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
+ [![с обрезанным GridLayout отображение четырех ячеек](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` работает с иерархией с плоским представлением, где дочерние представления задают свои расположения в сетке, указывая строки и столбцы, в которых они должны находиться. Таким образом, *GridLayout* может позиционировать представления в сетке, не требуя, чтобы в промежуточных представлениях была представлена табличная структура, например, в строках таблицы, используемых в таблелайаут. Благодаря поддержке плоской иерархии свойство *GridLayout* может более быстро разметки своих дочерних представлений. Давайте взглянем на пример, иллюстрирующий то, что эта концепция фактически означает в коде.
 
@@ -49,11 +49,11 @@ ms.locfileid: "72541913"
 
 Макет изменит размеры строк и столбцов таким образом, чтобы ячейки могли вместить их содержимое, как показано на следующей схеме:
 
- [![Diagram макета, где две ячейки слева меньше, чем справа](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
+ [![диаграмма макета, показывающая две ячейки слева меньше, чем справа](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 При запуске в приложении происходит следующий пользовательский интерфейс:
 
- [![Screenshot приложения Гридлайаутдемо, отображающего четыре ячейки](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [Снимок экрана:![приложения Гридлайаутдемо, отображающего четыре ячейки](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## <a name="specifying-orientation"></a>Указание ориентации
 
@@ -71,11 +71,11 @@ ms.locfileid: "72541913"
 
 Теперь `GridLayout` будет располагать ячейки сверху вниз в каждом столбце, а не слева направо, как показано ниже:
 
- [![Diagram, иллюстрирующие расположение ячеек в вертикальной ориентации](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [Диаграмма![, иллюстрирующая расположение ячеек в вертикальной ориентации](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 Это приводит к следующему пользовательскому интерфейсу во время выполнения:
 
- [![Screenshot Гридлайаутдемо с ячейками, расположенными в вертикальной ориентации](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [Снимок экрана Гридлайаутдемо с ячейками, расположенными в вертикальной ориентации![](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### <a name="specifying-explicit-position"></a>Указание явной позицией
 
@@ -165,13 +165,13 @@ ms.locfileid: "72541913"
 
 Этот XML-код создает пространство в `GridLayout`, как показано ниже:
 
- [![Screenshot Гридлайаутдемо, иллюстрирующих большие ячейки с отступами](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [Снимок экрана Гридлайаутдемо, иллюстрирующий большие ячейки с отступами![](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 Преимуществом использования нового `Space` представления является то, что оно позволяет использовать интервалы и не требует от нас задавать атрибуты для каждого дочернего представления.
 
 ### <a name="spanning-columns-and-rows"></a>Объединение столбцов и строк
 
-@No__t_0 также поддерживает ячейки, охватывающие несколько столбцов и строк. Например, предположим, что мы добавили в `GridLayout` другую строку, содержащую кнопку, как показано ниже:
+`GridLayout` также поддерживает ячейки, охватывающие несколько столбцов и строк. Например, предположим, что мы добавили в `GridLayout` другую строку, содержащую кнопку, как показано ниже:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -216,7 +216,7 @@ ms.locfileid: "72541913"
 
 Это приведет к тому, что первый столбец `GridLayout` растягивается в соответствии с размером кнопки, как показано здесь:
 
-[![Screenshot Гридлайаутдемо с кнопкой, охватывающей только первый столбец](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
+[![снимок экрана Гридлайаутдемо с кнопкой, охватывающей только первый столбец](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 Чтобы избежать растягивания первого столбца, можно установить кнопку, чтобы она занимала два столбца, задав его ColumnSpan следующим образом:
 
@@ -231,10 +231,10 @@ ms.locfileid: "72541913"
 
 Это приведет к разметке `TextViews`, похожей на макет, который мы ранее делали, с кнопкой, добавленной в нижнюю часть `GridLayout`, как показано ниже:
 
- [![Screenshot Гридлайаутдемо с кнопками, охватывающими оба столбца](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [Снимок экрана Гридлайаутдемо с кнопкой, охватывающей оба столбца![](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Гридлайаутдемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Знакомство со Южным Сандвичевым](http://www.android.com/about/ice-cream-sandwich/)
+- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
 - [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

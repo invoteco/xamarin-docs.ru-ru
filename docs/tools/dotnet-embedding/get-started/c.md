@@ -3,15 +3,15 @@ title: Начало работы с C#
 description: В этом документе описывается, как использовать внедрение .NET для внедрения кода .NET в приложение C. В нем обсуждается использование внедрения .NET в Visual Studio 2019 и Visual Studio для Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/19/2018
-ms.openlocfilehash: 1dc68a709f8e1f864961bbe87af112b648b0dd2a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9660eccd3e14a6c4ecad901064650fe1e25458f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278737"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029784"
 ---
 # <a name="getting-started-with-c"></a>Начало работы с C#
 
@@ -71,7 +71,7 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-Так как флаг был передан средству, при внедрении .NET также должны быть скомпилированы выходные файлы в общую библиотеку, которую можно найти рядом с созданными файлами, файлом либманажед. dylib на macOS и **Managed. dll** в Windows. `--compile`
+Поскольку в средство был передан флаг `--compile`, при внедрении .NET также должны быть скомпилированы выходные файлы в общую библиотеку, которую можно найти рядом с созданными файлами, файлом **либманажед. dylib** на macOS и **Managed. dll** в Windows.
 
 Для использования общей библиотеки можно включить **управляемый h** -файл заголовка c, который предоставляет объявления c, соответствующие соответствующим управляемым API-интерфейсам управляемых библиотек, и связать с ранее упомянутой общей библиотекой.
 

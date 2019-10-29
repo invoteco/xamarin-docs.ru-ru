@@ -3,15 +3,15 @@ title: начало работы с помощью пакета SDK для Xamar
 description: В этом документе описывается, как приступить к работе с пакетом SDK для Xamarin Workbooks, который можно использовать для разработки интеграции для Xamarin Workbooks.
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 8e3dc65f9f615ff893f3526d53d99da25045c794
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4a9e9113f83dd89b622de3e1f74f458efd4f07f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283969"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73018690"
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>начало работы с помощью пакета SDK для Xamarin Workbooks
 
@@ -19,7 +19,7 @@ ms.locfileid: "70283969"
 
 ## <a name="general-overview"></a>Общие сведения
 
-Интеграция Xamarin Workbooks — это небольшие библиотеки, которые используют [ `Xamarin.Workbooks.Integrations` ][nuget] пакет SDK для NuGet для интеграции с агентами Xamarin Workbooks и инспектора для предоставления расширенных возможностей.
+Интеграция Xamarin Workbooks — это небольшие библиотеки, использующие пакет SDK для [NuGet`Xamarin.Workbooks.Integrations`][nuget] для интеграции с агентами Xamarin Workbooks и инспектора для предоставления расширенных возможностей.
 
 Есть три основных шага по началу разработки интеграции — мы будем структурировать их здесь.
 
@@ -29,15 +29,15 @@ ms.locfileid: "70283969"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Visual Studio для Mac шаблона переносимой библиотеки](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
+[Шаблон![переносимой библиотеки Visual Studio для Mac](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Шаблон переносимой библиотеки Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
+[Шаблон переносимой библиотеки![Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
 В Visual Studio необходимо выбрать следующие целевые платформы для переносимой библиотеки:
 
-[![Платформы переносимых библиотек в Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
+[Платформы переносимых библиотек![Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
 
 -----
 
@@ -45,7 +45,7 @@ ms.locfileid: "70283969"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Visual Studio для Mac NuGet](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
+[![NuGet Visual Studio для Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -57,7 +57,7 @@ ms.locfileid: "70283969"
 
 ## <a name="building-an-integration"></a>Создание интеграции
 
-Мы создадим простую интеграцию. Мы очень рады зеленому цвету, поэтому мы добавим зеленый цвет в виде представления для каждого объекта. Сначала создайте новый класс с именем `SampleIntegration`и реализуйте наш `IAgentIntegration` интерфейс:
+Мы создадим простую интеграцию. Мы очень рады зеленому цвету, поэтому мы добавим зеленый цвет в виде представления для каждого объекта. Сначала создайте новый класс с именем `SampleIntegration`и реализуем наш интерфейс `IAgentIntegration`:
 
 ```csharp
 using Xamarin.Interactive;
@@ -70,7 +70,7 @@ public class SampleIntegration : IAgentIntegration
 }
 ```
 
-Мы хотим добавить [представление](~/tools/workbooks/sdk/representations.md) для каждого объекта, который является зеленым цветом. Мы выполним это с помощью поставщика представлений. Поставщики наследуют от `RepresentationProvider` класса — нам нужно просто переопределить: `ProvideRepresentations`
+Мы хотим добавить [представление](~/tools/workbooks/sdk/representations.md) для каждого объекта, который является зеленым цветом. Мы выполним это с помощью поставщика представлений. Поставщики наследуют от класса `RepresentationProvider`. для нас нужно просто переопределить `ProvideRepresentations`:
 
 ```csharp
 using Xamarin.Interactive.Representations;
@@ -86,9 +86,9 @@ class SampleRepresentationProvider : RepresentationProvider
 ```
 
 Мы возвращаем `Color`, предварительно созданный тип представления в пакете SDK.
-Вы заметите, что возвращаемый тип здесь `IEnumerable<object>`— &mdash;один поставщик представлений может возвращать множество представлений для объекта! Все поставщики представлений вызываются для каждого объекта, поэтому важно не делать никаких предположений относительно того, какие объекты передаются вам.
+Вы заметите, что возвращаемый тип здесь является `IEnumerable<object>`&mdash;один поставщик представлений может возвращать множество представлений для объекта! Все поставщики представлений вызываются для каждого объекта, поэтому важно не делать никаких предположений относительно того, какие объекты передаются вам.
 
-Заключительным этапом является факт регистрации поставщика с помощью агента и указания книг, где найти наш тип интеграции. Чтобы зарегистрировать поставщик, добавьте следующий код `IntegrateWith` в метод `SampleIntegration` в созданном ранее классе:
+Заключительным этапом является факт регистрации поставщика с помощью агента и указания книг, где найти наш тип интеграции. Чтобы зарегистрировать поставщик, добавьте этот код в метод `IntegrateWith` в созданном ранее классе `SampleIntegration`:
 
 ```csharp
 agent.RepresentationManager.AddProvider (new SampleRepresentationProvider ());
@@ -100,7 +100,7 @@ agent.RepresentationManager.AddProvider (new SampleRepresentationProvider ());
 [assembly: AgentIntegration (typeof (SampleIntegration))]
 ````
 
-Во время разработки может оказаться более удобным использовать `AddProvider` перегрузки `RepresentationManager` , позволяющие зарегистрировать простой обратный вызов для представления в книге, а затем `RepresentationProvider` переместить этот код в реализацию один раз. все готово. Пример для визуализации [`OxyPlot`][oxyplot] `PlotModel` может выглядеть следующим образом:
+Во время разработки может оказаться удобнее использовать перегрузки `AddProvider` на `RepresentationManager`, которые позволяют зарегистрировать простой обратный вызов для представления в книге, а затем переместить этот код в реализацию `RepresentationProvider` после завершения работы. Пример визуализации [`OxyPlot`][oxyplot] `PlotModel` может выглядеть следующим образом:
 
 ```csharp
 InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
@@ -111,7 +111,7 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 ```
 
 > [!NOTE]
-> Эти API позволяют быстро приступить к работе, но мы не рекомендуем предоставлять полную интеграцию только с помощью&mdash;этих интерфейсов. они обеспечивают очень небольшой контроль над тем, как ваши типы обрабатываются клиентом.
+> Эти API позволяют быстро приступить к работе, но мы не рекомендуем предоставлять полную интеграцию только с помощью их&mdash;они обеспечивают очень небольшой контроль над тем, как ваши типы обрабатываются клиентом.
 
 После регистрации представления ваша интеграция готова к поставке.
 
@@ -119,7 +119,7 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 
 Чтобы отправить интеграцию, необходимо добавить ее в пакет NuGet.
 Вы можете отправить его с помощью NuGet существующей библиотеки или, если вы создаете новый пакет, вы можете использовать этот файл Template. nuspec в качестве отправной точки.
-Вам потребуется заполнить разделы, относящиеся к вашей интеграции. Наиболее важной частью является то, что все файлы для интеграции должны находиться в `xamarin.interactive` каталоге в корне пакета. Это позволяет нам легко найти все необходимые файлы для интеграции, независимо от того, используется ли существующий пакет или создается новый.
+Вам потребуется заполнить разделы, относящиеся к вашей интеграции. Наиболее важной частью является то, что все файлы для интеграции должны находиться в каталоге `xamarin.interactive` в корне пакета. Это позволяет нам легко найти все необходимые файлы для интеграции, независимо от того, используется ли существующий пакет или создается новый.
 
 ```xml
 <?xml version="1.0"?>
@@ -147,15 +147,15 @@ nuget pack MyIntegration.nuspec
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Книга с интеграцией](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
+[![книги с интеграцией](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Книга с интеграцией](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
+[![книги с интеграцией](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 
 -----
 
-Обратите внимание, что не `#r` видны никакие директивы или что-либо для инициализации интеграции — книги потратили все это за кулисами.
+Обратите внимание, что не отображаются директивы `#r` или что-либо для инициализации интеграции — книги потратили все это на все это за кулисами.
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 4a3f3849725f0d3b8e8bc8d43c1cd3f87f044616
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9c9b9f5a205a2eef7db9f27e8d09b10ce65a4318
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761049"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027045"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Настройка параметров памяти Java для конструктора Android
 
@@ -22,27 +22,27 @@ ms.locfileid: "70761049"
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>Новые свойства конструктора Android и соответствующие параметры Java
 
-Следующие имена свойств соответствуют указанному [параметру командной строки](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html) Java.
+Следующие имена свойств соответствуют указанному [параметру командной строки](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html) Java.
 
 - **Андроиддесигнержаварендерерминмемори** -XMS
 
 - **Андроиддесигнержаварендерермаксмемори** — Xmx
 
-- **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
+- **Андроиддесигнержаварендерерпермсизе** -XX: макспермсизе
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Откройте решение в Visual Studio.
 
-2. Выберите каждый проект Android один на один в обозреватель решений и дважды щелкните [отобразить все файлы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) в каждом проекте. Проекты, не содержащие `.axml` файлов макета, можно пропустить. Этот шаг гарантирует, что каждый каталог проекта будет содержать `.csproj.user` файл.
+2. Выберите каждый проект Android один на один в обозреватель решений и дважды щелкните [отобразить все файлы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) в каждом проекте. Можно пропустить проекты, которые не содержат файлы макета `.axml`. Этот шаг гарантирует, что каждый каталог проекта будет содержать файл `.csproj.user`.
 
 3. Выйдите из Visual Studio.
 
-4. Нахождение `.csproj.user` файла для каждого из проектов, выполненных на шаге 2.
+4. Поиск файла `.csproj.user` для каждого из проектов, выполненных на шаге 2.
 
-5. Измените каждый `.csproj.user` файл в текстовом редакторе.
+5. Измените каждый файл `.csproj.user` в текстовом редакторе.
 
-6. Добавьте в `<PropertyGroup>` элемент все или все новые свойства памяти конструктора Android. Можно использовать существующий `<PropertyGroup>` или создать новый. Ниже приведен полный пример `.csproj.user` файла, включающий в себя все 3 атрибута, для которых заданы значения по умолчанию:
+6. Добавьте все или все новые свойства памяти конструктора Android в элемент `<PropertyGroup>`. Можно использовать существующий `<PropertyGroup>` или создать новый. Ниже приведен полный пример `.csproj.user` файла, который содержит все 3 атрибута, для которых заданы значения по умолчанию:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -58,29 +58,29 @@ ms.locfileid: "70761049"
     </Project>
     ```
 
-7. Сохраните и закройте все обновленные `.csproj.user` файлы.
+7. Сохраните и закройте все обновленные файлы `.csproj.user`.
 
 8. Перезапустите Visual Studio и повторно откройте решение.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-1. Откройте решение в Visual Studio для Mac, чтобы каталог решения содержал `.userprefs` файл.
+1. Откройте решение в Visual Studio для Mac, чтобы каталог решения содержал файл `.userprefs`.
 
 2. Закройте Visual Studio для Mac.
 
-3. Нахождение `.userprefs` файла в каталоге решения.
+3. В каталоге решения щелкните файл `.userprefs`.
 
-4. `.userprefs` Измените файл в текстовом редакторе.
+4. Измените файл `.userprefs` в текстовом редакторе.
 
-5. Нахождение существующего XML-элемента в следующем формате. Последняя часть этого имени элемента будет соответствовать имени проекта: В этом примере — «AndroidApplication1»:
+5. Нахождение существующего XML-элемента в следующем формате. Последняя часть имени элемента будет соответствовать имени проекта: "AndroidApplication1" в этом примере:
 
     ```xml
     <MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >
     ```
 
-6. Если элемент не существует, создайте его в любом месте внутри `<Properties>` вмещающего элемента. `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >` Не забудьте заменить "AndroidApplication1" именем своего проекта.
+6. Если элемент `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >` не существует, создайте его в любом месте внутри вложенного элемента `<Properties>`. Не забудьте заменить "AndroidApplication1" именем своего проекта.
 
-7. Добавьте все или все новые свойства памяти конструктора Android в качестве атрибутов элемента. Ниже приведен полный пример `.userprefs` файла, включающий в себя все 3 атрибута, для которых заданы значения по умолчанию:
+7. Добавьте все или все новые свойства памяти конструктора Android в качестве атрибутов элемента. Ниже приведен полный пример `.userprefs` файла, который содержит все 3 атрибута, для которых заданы значения по умолчанию:
 
     ```xml
     <Properties StartupItem="AndroidApplication1\AndroidApplication1.csproj">
@@ -94,9 +94,9 @@ ms.locfileid: "70761049"
     </Properties>
     ```
 
-8. Повторите шаги 5-7 для каждого проекта Android в решении, содержащем `.axml` файлы макета. (То есть добавьте по одному `<MonoDevelop.Ide.ItemProperties.ProjectName>` элементу для каждого проекта.)
+8. Повторите шаги 5-7 для каждого проекта Android в решении, содержащем файлы макета `.axml`. (То есть добавьте один элемент `<MonoDevelop.Ide.ItemProperties.ProjectName>` для каждого проекта.)
 
-9. Сохраните и закройте `.userprefs` файл.
+9. Сохраните и закройте файл `.userprefs`.
 
 10. Перезапустите Visual Studio для Mac и снова откройте решение.
 

@@ -4,15 +4,15 @@ description: Большинству приложений предъявляют�
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 2343603199661ea39b1f0af172ce0ccf48a2cd66
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9906e617b7072ebf7b1213a7278d117dc4f560ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754589"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023860"
 ---
 # <a name="xamarinandroid-data-access"></a>Доступ к данным Xamarin. Android
 
@@ -29,9 +29,9 @@ _Большинству приложений предъявляются неко
 
 Большая часть кода в этом разделе полностью кросс-платформенная и будет работать на iOS или Android без изменения. Обсуждаются два примера приложений:
 
-- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; Простые операции с данными записывают результаты в элемент управления отображением текста;
+- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; простые операции с данными записывают результаты в элемент управления отображением текста;
 
-- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; Интегрирует операции с данными в небольшое рабочее приложение, которое перечисляет и редактирует простую структуру данных.
+- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; интегрирует операции с данными в небольшое рабочее приложение, которое перечисляет и редактирует простую структуру данных.
 
 Оба примера решения содержат проекты образцов приложений для iOS и Android.
 

@@ -3,15 +3,15 @@ title: Использование данных в приложении Android
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
-ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: c0ff15c516fa2eb85ac9748004df5a14425b510c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754461"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023738"
 ---
 # <a name="using-data-in-an-app"></a>Использование данных в приложении
 
@@ -94,7 +94,7 @@ public int DeleteStock(Stock stock)
 
 - **Расширение SQLite Manager Firefox** &ndash; работает на компьютерах Mac и Windows и создает файлы, совместимые с iOS и Android.
 
-- @No__t_1 **командной строки** см. в разделе [www.SQLite.org/SQLite.HTML](http://www.sqlite.org/sqlite.html) .
+- &ndash; **командной строки** см. в разделе [www.SQLite.org/SQLite.HTML](https://www.sqlite.org/sqlite.html) .
 
 При создании файла базы данных для распространения вместе с приложением следует соблюдать имена таблиц и столбцов, чтобы убедиться, что они соответствуют предполагаемому коду, особенно если вы используете SQLite.NET, который ожидает, что имена будут соответствовать вашим C# классам и свойствам ( или связанные настраиваемые атрибуты).
 

@@ -4,15 +4,15 @@ description: Мы рассмотрели теории о сохранении с
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: febb9b297712a97c03613468b79ca583ec300e77
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: e449e6a62d0c8ca283f20c689477c1f1482611c5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887726"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017007"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Пошаговое руководство. Сохранение состояния действия
 
@@ -20,9 +20,9 @@ _Мы рассмотрели теории о сохранении состоян
 
 ## <a name="activity-state-walkthrough"></a>Пошаговое руководство по состоянию действий
 
-Откройте проект **ActivityLifecycle_Start** (в примере [активитилифецикле](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle) ), выполните сборку и запустите его. Это очень простой проект, который содержит два действия для демонстрации жизненного цикла действия и способов вызова различных методов жизненного цикла. При запуске приложения отображается экран `MainActivity` .
+Откройте проект **ActivityLifecycle_Start** (в примере [активитилифецикле](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle) ), выполните сборку и запустите его. Это очень простой проект, который содержит два действия для демонстрации жизненного цикла действия и способов вызова различных методов жизненного цикла. При запуске приложения отображается экран `MainActivity`.
 
-[![Действие экран](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
+[![действия экрана](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>Просмотр переходов состояния
 
@@ -48,7 +48,7 @@ _Мы рассмотрели теории о сохранении состоян
 
 В результате *действие б* запускается и отображается вместо *действия a*: 
 
-[![Экран действия б](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
+[экран![действия б](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 Когда мы нажимайте кнопку " **назад** ", *действие б* уничтожается и возобновляется *действие A* : 
 
@@ -63,13 +63,13 @@ _Мы рассмотрели теории о сохранении состоян
 
 ### <a name="adding-a-click-counter"></a>Добавление счетчика щелчков
 
-Теперь мы изменим приложение, чтобы у нас была кнопка, которая подсчитывает и отображает количество щелчков мышью. Сначала добавим переменную `MainActivity`экземпляра в: `_counter`
+Теперь мы изменим приложение, чтобы у нас была кнопка, которая подсчитывает и отображает количество щелчков мышью. Сначала добавим переменную экземпляра `_counter` в `MainActivity`:
 
 ```csharp
 int _counter = 0;
 ```
 
-Теперь измените файл макета **Resource/Layout/Main. axml** и добавьте новый `clickButton` , отображающий количество раз, когда пользователь нащелкнул кнопку. Результирующий **Main. axml** должен выглядеть следующим образом: 
+Теперь измените файл макета **Resource/Layout/Main. axml** и добавьте новый `clickButton`, отображающий количество раз, когда пользователь нащелкнул кнопку. Результирующий **Main. axml** должен выглядеть следующим образом: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,7 +90,7 @@ int _counter = 0;
 </LinearLayout>
 ```
 
-Добавим следующий код в конец метода [OnCreate](xref:Android.App.Activity.OnCreate*) в `MainActivity` &ndash; этом коде, обрабатывающий события Click из `clickButton`:
+Добавим следующий код в конец метода [OnCreate](xref:Android.App.Activity.OnCreate*) в `MainActivity` &ndash; этот код обрабатывает события click из `clickButton`:
 
 ```csharp
 var clickbutton = FindViewById<Button> (Resource.Id.clickButton);
@@ -104,13 +104,13 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 } ;
 ```
 
-При повторной сборке и запуске приложения появляется новая кнопка, которая увеличивает и отображает значение `_counter` по каждому щелчку:
+При повторной сборке и запуске приложения появляется новая кнопка, которая увеличивает и отображает значение `_counter` для каждого щелчка:
 
-[![Добавить число касаний](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
+[![добавить число касаний](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 Но при вращении устройства в альбомный режим этот счетчик будет потерян:
 
-[![При переходе к альбому счетчик устанавливается в нулевое значение](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
+[![с поворотом на альбомную устанавливает счетчик обратно в ноль](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 Изучая выходные данные приложения, мы видим, что *действие A* было приостановлено, остановлено, уничтожено, повторно создано, перезапущено, затем возобновлено во время смены с книжной на альбомную. 
 
@@ -128,7 +128,7 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 ### <a name="adding-code-to-preserve-instance-state"></a>Добавление кода для сохранения состояния экземпляра
 
-Добавим метод для `MainActivity` сохранения состояния экземпляра. До уничтожения *действия A* Android автоматически вызывает [онсавеинстанцестате](xref:Android.App.Activity.OnSaveInstanceState*) и передает в [пакет](xref:Android.OS.Bundle) , который мы можем использовать для хранения состояния экземпляра. Давайте воспользуемся им, чтобы сохранить число щелчков в виде целого числа:
+Добавим метод в `MainActivity`, чтобы сохранить состояние экземпляра. До уничтожения *действия A* Android автоматически вызывает [онсавеинстанцестате](xref:Android.App.Activity.OnSaveInstanceState*) и передает в [пакет](xref:Android.OS.Bundle) , который мы можем использовать для хранения состояния экземпляра. Давайте воспользуемся им, чтобы сохранить число щелчков в виде целого числа:
 
 ```csharp
 protected override void OnSaveInstanceState (Bundle outState)
@@ -141,7 +141,7 @@ protected override void OnSaveInstanceState (Bundle outState)
 }
 ```
 
-Когда *действие* а воссоздается и возобновляется, Android передает его `Bundle` обратно в наш `OnCreate` метод. Добавим код для `OnCreate` `_counter` восстановления значения `Bundle`из переданного объекта. Добавьте следующий код непосредственно перед строкой, где `clickbutton` определено: 
+Когда *действие* а воссоздается и возобновляется, Android передает этот `Bundle` обратно в метод `OnCreate`. Добавим код в `OnCreate`, чтобы восстановить значение `_counter` из переданного `Bundle`. Добавьте следующий код непосредственно перед строкой, где определено `clickbutton`: 
 
 ```csharp
 if (bundle != null)
@@ -153,7 +153,7 @@ if (bundle != null)
 
 Выполните сборку и запустите приложение еще раз, а затем нажмите вторую кнопку несколько раз. При вращении устройства в альбомный режим счетчик сохраняется.
 
-[![При повороте экрана отображается число четырех сохраненных](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
+[![при повороте экрана отображается число четырех сохраненных](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 Давайте взглянем на окно вывод, чтобы увидеть, что произошло:
 
@@ -169,7 +169,7 @@ if (bundle != null)
 [ActivityLifecycle.MainActivity] Activity A - OnResume
 ```
 
-Перед вызовом метода [OnStop](xref:Android.App.Activity.OnStop) был вызван наш новый метод `OnSaveInstanceState` для сохранения значения `_counter` в `Bundle`. Приложение Android передавало это `Bundle` `_counter` значение при вызове `OnCreate` нашего метода, и мы смогли использовать его для восстановления значения, в котором мы остановились.
+Перед вызовом метода [OnStop](xref:Android.App.Activity.OnStop) был вызван наш новый метод `OnSaveInstanceState` для сохранения `_counter` значения в `Bundle`. При вызове метода `OnCreate` Android передал этот `Bundle` назад, и мы смогли использовать его для восстановления значения `_counter` в то место, где мы остановились.
 
 ## <a name="summary"></a>Сводка
 

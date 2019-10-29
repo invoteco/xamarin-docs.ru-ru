@@ -3,15 +3,15 @@ title: Приложение Xamarin Live Player
 description: В этом документе описывается приложение Xamarin Live Player, которое можно использовать для предварительного просмотра изменений кода на устройстве. В нем обсуждаются программы установки, примеры, журналы, параметры, Управление устройствами и многое другое.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: d4cf596d70be746e85f21bace3e5ddf662076e6d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f1d3adfad3b9d2a64990ff11f81bf3a1a39825bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772316"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029661"
 ---
 # <a name="xamarin-live-player-app"></a>Приложение Xamarin Live Player
 
@@ -39,19 +39,19 @@ ms.locfileid: "70772316"
 
 Нажмите кнопку со сведениями **(i)** в нижней части приложения, чтобы открыть меню **параметров** :
 
-[![Снимок экрана: меню параметров](player-images/options-sml.png)](player-images/options.png#lightbox)
+[Снимок экрана![меню параметров](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Журналы
 
 Просмотрите журналы, чтобы диагностировать проблемы.
 
-### <a name="settings"></a>Настройки
+### <a name="settings"></a>Параметры
 
 - Переключить отображение ошибок компиляции и времени выполнения.
 - Сведения о версии.
 - Отправить отзыв.
 
-[![Снимок экрана параметров](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![снимок экрана параметров](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>Управление устройствами
 

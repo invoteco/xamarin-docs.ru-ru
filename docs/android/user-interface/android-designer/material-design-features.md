@@ -4,15 +4,15 @@ description: В этом разделе описываются функции к
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 67755baf18ad5277e7c2fe8be705522a9b668ff3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43397fb855bdf872cf17b315044f34a468c22d00
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756826"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029453"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Функции проектирования материалов Xamarin. Android Designer
 
@@ -20,7 +20,7 @@ _В этом разделе описываются функции констру
 
 > [!Video https://youtube.com/embed/E3_ZjIOzVzY]
 
-**Усовершенствовано в 2016 г. Все могут создавать привлекательные приложения с помощью дизайна материалов**
+**Развивайте 2016: все могут создавать привлекательные приложения с помощью дизайна материалов.**
 
 ## <a name="overview"></a>Обзор
 
@@ -30,9 +30,9 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 В этом руководство мы рассмотрим следующие функции конструктора:
 
-- *Сетка материалов* &ndash; Наложение на область конструктора, показывающее сетку, расстояния и кэйлинес, которые помогут разместить элементы макета в соответствии с рекомендациями по проектированию материалов.
+- *Сетка материалов* &ndash; наложение на область конструктора, которое показывает сетку, расстояния и кэйлинес, которые помогут разместить элементы макета в соответствии с рекомендациями по проектированию материалов.
 
-- *Редактор тем* &ndash; Редактор ресурсов небольшого цвета, позволяющий задать сведения о цвете для подмножества темы. Например, можно просмотреть и изменить цвета материала, такие как `colorPrimary`, `colorPrimaryDark`и `colorAccent`.
+- *Редактор тем* &ndash; небольшом редакторе ресурсов цвета, который позволяет задавать сведения о цвете для подмножества темы. Например, можно просмотреть и изменить такие цвета материала, как `colorPrimary`, `colorPrimaryDark`и `colorAccent`.
 
 Мы рассмотрим каждую из этих функций и предоставим примеры их использования.
 
@@ -40,7 +40,7 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 Меню сетки конструктора материалов доступно на панели инструментов в верхней части конструктора:
 
-[![Сетка проектирования материалов](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
+[Сетка конструктора материалов![](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
 
 Если щелкнуть значок сетки конструктора материалов, конструктор отобразит наложенный на область конструктора, содержащий следующие элементы:
 
@@ -50,9 +50,9 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 - Сетка (синие линии)
 
-Эти элементы можно увидеть на предыдущем снимке экрана. Каждый из этих элементов наложения можно настроить. Если щелкнуть многоточие рядом с меню сетки конструктора материалов, откроется диалоговое окно контекстном меню Action, позволяющее отключить или включить сетку, настроить размещение кэйлинес и задать расстояния. Обратите внимание, что все значения `dp` выражаются в (не зависящие от плотности Пиксели):
+Эти элементы можно увидеть на предыдущем снимке экрана. Каждый из этих элементов наложения можно настроить. Если щелкнуть многоточие рядом с меню сетки конструктора материалов, откроется диалоговое окно контекстном меню Action, позволяющее отключить или включить сетку, настроить размещение кэйлинес и задать расстояния. Обратите внимание, что все значения выражаются в `dp` (не зависящие от плотности Пиксели):
 
-[![Настройка сетки, кэйлине и промежутков](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
+[Настройка![сетки, кэйлине и промежутков](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
 
 Чтобы добавить новый кэйлине, введите новое значение смещения в поле **смещение** , выберите расположение (**слева**, **сверху**, **справа**или **снизу**) и щелкните значок +, чтобы добавить новый кэйлине. Аналогичным образом, чтобы добавить новый отступ, введите размер и смещение (в DP) в поля **Размер** и **смещение** соответственно. Выберите расположение (**слева**, **сверху**, **справа**или **снизу**) и щелкните значок +, чтобы добавить новый отступ.
 
@@ -62,23 +62,23 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 **Редактор тем** позволяет настраивать сведения о цвете для подмножества атрибутов темы. Чтобы открыть **Редактор тем**, щелкните значок кисти на панели инструментов:
 
-[![Значок редактора тем](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
+[значок редактора тематических![](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
 
 Несмотря на то, что **редактор темы** доступен с панели инструментов для всех версий Android и уровней API, только подмножество описанных ниже возможностей доступно только в том случае, если целевой уровень API более ранний, чем API 21 (программная поддержка Android 5,0).
 
-В левой панели **редактора темы** отображается список цветов, составляющих текущую выбранную тему (в этом примере мы `Default Theme`используем):
+В левой панели **редактора темы** отображается список цветов, составляющих текущую выбранную тему (в данном примере используется `Default Theme`):
 
-[![Редактор тем](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
+[![редактор тем](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
 
 При выборе цвета слева на правой панели отображаются следующие вкладки, помогающие изменить этот цвет:
 
-- **Наследовать** &ndash; Отображает схему наследования стилей для выбранного цвета и перечисляет разрешенный цвет и код цвета, назначенные этому цвету темы.
+- **Наследовать** &ndash; отображает схему наследования стилей для выбранного цвета и перечисляет разрешенный цвет и код цвета, назначенные этому цвету темы.
 
-- **Палитра цветов** &ndash; Позволяет изменить выбранный цвет на любое произвольное значение.
+- **Средство выбора цвета** &ndash; позволяет изменить выбранный цвет на любое произвольное значение.
 
-- **Палитра материалов** &ndash; Позволяет изменить выбранный цвет на значение, соответствующее дизайну материалов.
+- **Палитра материалов** &ndash; позволяет изменить выбранный цвет на значение, соответствующее дизайну материалов.
 
-- **Ресурсы** &ndash; Позволяет изменить выбранный цвет на один из других имеющихся цветовых ресурсов в теме.
+- **Ресурсы** &ndash; позволяют изменить выбранный цвет на один из других имеющихся цветовых ресурсов в теме.
 
 Давайте подробно рассмотрим каждую из этих вкладок.
 
@@ -86,16 +86,16 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 Как показано в следующем примере, на вкладке **inherit** (наследование) перечислено наследование стиля для цвета **фона** **темы по умолчанию**:
 
-[![Наследование вкладки](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
+[Вкладка наследования![](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
-В этом примере **тема по умолчанию** наследуется от стиля, который `@color/background_material_light` использует, но переопределяет его с параметром `color/material_grey_50`, имеющим значение `#fffafafa`кода цвета.
+В этом примере **тема по умолчанию** наследуется от стиля, который использует `@color/background_material_light`, но переопределяет его `color/material_grey_50`, имеющего значение кода цвета `#fffafafa`.
 Дополнительные сведения о наследовании стилей см. в разделе [стили и темы](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Палитра
 
 На следующем снимке экрана показана **Палитра цветов**:
 
-[![Палитра цветов](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
+[Средство выбора цвета![](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
 
 В этом примере цвет **фона** можно изменить на любое значение с помощью различных средств.
 
@@ -111,7 +111,7 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 На вкладке **ресурсы** представлен список цветовых ресурсов, уже имеющихся в теме.
 
-[![Источников](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
+[Ресурсы![](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
 
 С помощью вкладки **ресурсы** можно ограничить выбор списком цветов. Помните, что при выборе ресурса цвета, который уже назначен другой части темы, два смежных элемента пользовательского интерфейса могут "выполняться вместе" (так как они имеют одинаковый цвет) и труднее отличать пользователя.
 
@@ -119,16 +119,16 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 На вкладке **Палитра материалов** открывается **Палитра цветов конструирования материалов**. Выбор значения цвета из этой палитры ограничивает выбор цвета так, чтобы он соответствовал рекомендациям по проектированию материалов:
 
-[![Палитра материалов](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
+[Палитра материалов![](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
 
 В верхней части цветовой палитры отображаются основные цвета дизайна материала, а в нижней части палитры отображается диапазон оттенков для выбранного основного цвета. Например, при выборе элемента **Indigo**в нижней части диалогового окна отображается коллекция оттенков **Indigo** .
-При выборе оттенка цвет свойства изменяется на выбранный цветовой тон. В следующем примере `Background Tint` кнопка изменена на *Indigo 500*:
+При выборе оттенка цвет свойства изменяется на выбранный цветовой тон. В следующем примере `Background Tint` кнопки изменяется на *Indigo 500*:
 
 ![Выберите Indigo 500](material-design-features-images/vs/10-indigo-w158.png)
 
-`Background Tint`присваивается код цвета для *Indigo 500* (`#ff3f51b5`), а конструктор обновляет цвет фона, чтобы отразить это изменение:
+для `Background Tint` задан код цвета для *Indigo 500* (`#ff3f51b5`), а конструктор обновляет цвет фона, чтобы отразить это изменение:
 
-[![Фоновый оттенок изменен](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
+[Фоновый оттенок![изменен](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
 
 Дополнительные сведения о цветовой палитре «проектирование материалов» см. в разделе [руководство по цветовой палитре](https://material.io/design/color/)конструирования материалов.
 
@@ -140,7 +140,7 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 При изменении ресурса цвета появляется сообщение с сообщением о *том, что текущая тема содержит несохраненные изменения*:
 
-[![Предупреждение о несохраненных изменениях](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
+[предупреждение о несохраненных изменениях![](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
 
 Цвет **фона** в конструкторе изменился на новый выбор цветов, но это изменение еще не сохранено. На этом этапе можно выполнить одно из следующих действий.
 
@@ -150,7 +150,7 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 В следующем примере была нажата <kbd>комбинация клавиш CTRL + S</kbd> , чтобы изменения были сохранены в **аппсеме**:
 
-[![Изменения, сохраненные в Аппсеме](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
+[![изменения, сохраненные в Аппсеме](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
 
 ## <a name="summary"></a>Сводка
 
@@ -161,13 +161,13 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 В этом руководство мы рассмотрим следующие функции конструктора:
 
-- *Сетка проектирования материалов* &ndash; Наложение на область конструктора, показывающее сетку, расстояния и кэйлинес, которые помогут разместить элементы макета в соответствии с рекомендациями по проектированию материалов.
+- *Сетка конструктора материалов* &ndash; наложение на область конструктора, показывающее сетку, расстояния и кэйлинес, которые помогут разместить элементы макета в соответствии с рекомендациями по проектированию материалов.
 
-- *Цветовая палитра дизайна материалов* &ndash; Диалоговое окно панели свойств, помогающее выбрать цвет из официальной палитры конструирования материалов.
+- *Цветовая палитра конструирования материалов* &ndash; диалоговое окно панели свойств, помогающее выбрать цвет из палитры «официальная конструкция материалов».
 
-- *Типографская шкала* Диалоговое окно панели свойств, в котором можно выбрать параметры, совместимые с конструктором материалов `textAppearance` для свойства текстовых полей. &ndash;
+- *Типографская шкала* &ndash; диалоговое окно панели свойств, в котором можно выбрать параметры, совместимые с конструктором, для свойства `textAppearance` текстовых полей.
 
-- *Редактор тем* &ndash; Редактор ресурсов небольшого цвета, позволяющий задать сведения о цвете для подмножества темы. Например, можно просмотреть и изменить цвета материала, такие как `colorPrimary`, `colorPrimaryDark`и `colorAccent`.
+- *Редактор тем* &ndash; небольшом редакторе ресурсов цвета, который позволяет задавать сведения о цвете для подмножества темы. Например, можно просмотреть и изменить такие цвета материала, как `colorPrimary`, `colorPrimaryDark`и `colorAccent`.
 
 Мы рассмотрим каждую из этих функций и предоставим примеры их использования.
 
@@ -175,7 +175,7 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 Меню сетки конструктора материалов доступно на панели инструментов в верхней части конструктора:
 
-[![Сетка проектирования материалов](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
+[Сетка конструктора материалов![](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 Если щелкнуть значок сетки конструктора материалов, конструктор отобразит наложенный на область конструктора, содержащий следующие элементы:
 
@@ -187,11 +187,11 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 Эти элементы можно увидеть на следующем снимке экрана:
 
-[![Кэйлине, зазоры и сетка](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
+[![Кэйлине, расстояний и Grid](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
-Каждый из этих элементов наложения можно настроить. Если нажать кнопку с многоточием (&hellip;) рядом с меню сетки конструктора материалов, откроется диалоговое окно контекстном меню Action, которое позволяет отключить или включить сетку, настроить размещение кэйлинес и задать расстояния. Обратите внимание, что все значения `dp` выражаются в (не зависящие от плотности Пиксели):
+Каждый из этих элементов наложения можно настроить. Если нажать кнопку с многоточием (&hellip;) рядом с меню сетки конструктора материалов, откроется диалоговое окно контекстном меню Action, которое позволяет отключить или включить сетку, настроить размещение кэйлинес и задать расстояния. Обратите внимание, что все значения выражаются в `dp` (не зависящие от плотности Пиксели):
 
-[![Настройка сетки, кэйлине и промежутков](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
+[Настройка![сетки, кэйлине и промежутков](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 Чтобы добавить новый кэйлине, введите новое значение смещения в поле **смещение** , выберите расположение (**слева**, **сверху**, **справа**или **снизу**) и щелкните значок + (появляется справа при вводе значения), чтобы добавить новый кэйлине. Аналогичным образом, чтобы добавить новый отступ, введите размер и смещение (в DP) в поля **Размер** и **смещение** соответственно. Выберите расположение (**слева**, **сверху**, **справа**или **снизу**) и щелкните значок +, чтобы добавить новый отступ.
 
@@ -201,62 +201,62 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 Каждый элемент панели свойств, который принимает цвет, теперь имеет дополнительный значок палитры, который можно использовать для открытия палитры цветов «дизайн материалов», как показано на следующем снимке экрана:
 
-[![Значок цвета](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
+[значок цвета![](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 При щелчке этого значка открывается диалоговое окно контекстном меню Action, позволяющее настроить цвет этого свойства из палитры цветов конструктора материалов:
 
-[![Цветовая палитра дизайна материалов](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
+[Цветовая палитра конструктора материалов![](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 В верхней части цветовой палитры отображаются основные цвета дизайна материала, а в нижней части палитры отображается диапазон оттенков для выбранного основного цвета. Например, при выборе элемента **Indigo**в нижней части диалогового окна отображается коллекция оттенков **Indigo** .
-При выборе оттенка цвет свойства изменяется на выбранный цветовой тон. В следующем примере `Background Tint` кнопка изменена на *Indigo 500*:
+При выборе оттенка цвет свойства изменяется на выбранный цветовой тон. В следующем примере `Background Tint` кнопки изменяется на *Indigo 500*:
 
-[![Выберите Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![выберите Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
-`Background Tint`присваивается код цвета для *Indigo 500* (`#ff3f51b5`), а конструктор обновляет цвет фона кнопки, чтобы отразить это изменение:
+для `Background Tint` задан код цвета для *Indigo 500* (`#ff3f51b5`), а конструктор обновляет цвет фона кнопки, чтобы отразить это изменение:
 
-[![Изменения фонового оттенка](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
+[![изменения фонового оттенка](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 Дополнительные сведения о цветовой палитре «проектирование материалов» см. в разделе [руководство по цветовой палитре](https://material.io/design/color/)конструирования материалов.
 
 ## <a name="typographic-scale"></a>Типографская шкала
 
-В разделе **вид текста** вкладки **стиль** панели `TextAppearance` **свойств** имеется значок, который позволяет выбрать стиль, который соответствует спецификации дизайна материалов:
+В разделе **вид текста** вкладки **стиль** панели **свойств** имеется значок, позволяющий выбрать один из `TextAppearance` стиля, который соответствует спецификации дизайна материалов:
 
-[![Вкладка «стиль»](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
+[Вкладка «стиль![»](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 При щелчке этого значка открывается диалоговое окно " **типографская шкала** " контекстном меню Action, в котором представлен список предварительно настроенных стилей текста, которые можно выбрать.
 
-[![Выбор стиля текста](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
+[Выбор стиля текста![](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 В следующем примере при нажатии кнопки **экран 1** изменяется текст кнопки на крупный шрифт **экрана 1**:
 
-[![Отображение 1 стиля](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
+[![отобразить 1 стиль](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
 Стиль текста в диалоговом окне « **типографская шкала** » соответствует параметру **темы** . Например, если в конструкторе выбрана **светло** -тема, список доступных стилей текста будет зеркальным отображением **светлой** темы:
 
-[![Светло-тема](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
+[![ная тема](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 ## <a name="theme-editor"></a>Редактор тем
 
 **Редактор тем** позволяет настраивать сведения о цвете для подмножества атрибутов темы. Чтобы открыть **Редактор тем**, щелкните значок кисти на панели инструментов:
 
-[![Значок редактора тем](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
+[значок редактора тематических![](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 Несмотря на то, что **редактор темы** доступен с панели инструментов для всех версий Android и уровней API, только подмножество описанных ниже возможностей доступно только в том случае, если целевой уровень API более ранний, чем API 21 (программная поддержка Android 5,0).
 
-В левой панели **редактора темы** отображается список цветов, составляющих текущую выбранную тему (в этом примере мы `Default Theme`используем):
+В левой панели **редактора темы** отображается список цветов, составляющих текущую выбранную тему (в данном примере используется `Default Theme`):
 
-[![Редактор тем](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
+[![редактор тем](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 При выборе цвета слева на правой панели отображаются следующие вкладки, помогающие изменить этот цвет:
 
-- **Наследовать** &ndash; Отображает схему наследования стилей для выбранного цвета и перечисляет разрешенный цвет и код цвета, назначенные этому цвету темы.
+- **Наследовать** &ndash; отображает схему наследования стилей для выбранного цвета и перечисляет разрешенный цвет и код цвета, назначенные этому цвету темы.
 
-- **Палитра цветов** &ndash; Позволяет изменить выбранный цвет на любое произвольное значение.
+- **Средство выбора цвета** &ndash; позволяет изменить выбранный цвет на любое произвольное значение.
 
-- **Палитра материалов** &ndash; Позволяет изменить выбранный цвет на значение, соответствующее дизайну материалов.
+- **Палитра материалов** &ndash; позволяет изменить выбранный цвет на значение, соответствующее дизайну материалов.
 
-- **Ресурсы** &ndash; Позволяет изменить выбранный цвет на один из других имеющихся цветовых ресурсов в теме.
+- **Ресурсы** &ndash; позволяют изменить выбранный цвет на один из других имеющихся цветовых ресурсов в теме.
 
 Давайте подробно рассмотрим каждую из этих вкладок.
 
@@ -264,16 +264,16 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 Как показано в следующем примере, на вкладке **inherit** (наследование) перечислено наследование стиля для цвета **фона** **темы по умолчанию**:
 
-[![Наследование вкладки](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
+[Вкладка наследования![](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
-В этом примере **тема по умолчанию** наследуется от стиля, который `@color/background_material_dark` использует, но переопределяет его с параметром `color/material_grey_850`, имеющим значение `#ff303030`кода цвета.
+В этом примере **тема по умолчанию** наследуется от стиля, который использует `@color/background_material_dark`, но переопределяет его `color/material_grey_850`, имеющего значение кода цвета `#ff303030`.
 Дополнительные сведения о наследовании стилей см. в разделе [стили и темы](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Палитра
 
 На следующем снимке экрана показана **Палитра цветов**:
 
-[![Палитра цветов](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
+[Средство выбора цвета![](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 В этом примере цвет **фона** можно изменить на любое значение с помощью различных средств.
 
@@ -289,7 +289,7 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 На вкладке **ресурсы** представлен список цветовых ресурсов, уже имеющихся в теме.
 
-[![Источников](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
+[Ресурсы![](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 С помощью вкладки **ресурсы** можно ограничить выбор списком цветов. Помните, что при выборе ресурса цвета, который уже назначен другой части темы, два смежных элемента пользовательского интерфейса могут "выполняться вместе" (так как они имеют одинаковый цвет) и труднее отличать пользователя.
 
@@ -297,17 +297,17 @@ Xamarin. Android Designer включает функции, упрощающие 
 
 На вкладке **Палитра материалов** открывается **Палитра цветов дизайн материалов** , описанная [выше](#material-design-color-palette). Выбор значения цвета из этой палитры ограничивает выбор цвета, чтобы он соответствовал рекомендациям по проектированию материалов.
 
-[![Палитра материалов](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
+[Палитра материалов![](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 ### <a name="creating-a-new-theme"></a>Создание новой темы
 
 В следующем примере мы будем использовать палитру «материал» для создания новой пользовательской темы. Сначала мы изменим цвет **фона** на *синий 900*:
 
-[![Изменить фон на синий 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
+[![изменить фон на синий 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 При изменении ресурса цвета появляется сообщение с сообщением о *том, что текущая тема содержит несохраненные изменения*:
 
-[![Предупреждение о несохраненных изменениях](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
+[предупреждение о несохраненных изменениях![](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 Изменение цвета в конструкторе выполнено, но это изменение еще не сохранено. На этом этапе можно выполнить одно из следующих действий.
 

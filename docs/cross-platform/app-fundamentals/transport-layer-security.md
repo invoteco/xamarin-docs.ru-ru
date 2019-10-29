@@ -3,15 +3,15 @@ title: Безопасность транспортного уровня (TLS) 1,
 description: В этом документе описано, как включить TLS 1,2 для проектов Xamarin. iOS, Xamarin. Android и Xamarin. Mac. В нем показано, как это сделать в Visual Studio 2019 и Visual Studio для Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: 6175725ae3eea805680b4da81aa0458aa3f8a68c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8999efc3e954f4917e6c91a1e325d16e41c48b19
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280354"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016681"
 ---
 # <a name="transport-layer-security-tls-12"></a>Безопасность транспортного уровня (TLS) 1,2
 
@@ -35,13 +35,13 @@ ms.locfileid: "70280354"
 
 Эти параметры можно найти в **свойствах проекта > параметры Android** , а затем нажать кнопку **Дополнительно** :
 
-[![Настройка HttpClient и TLS в Visual Studio](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
+[![настройке HttpClient и TLS в Visual Studio](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 Эти параметры можно найти в окне " **Параметры проекта" > "сборка > вкладка" сборка Android** ":
 
-[![Настройка HttpClient и TLS в Visual Studio для Mac](transport-layer-security-images/android-mac-sml.png)](transport-layer-security-images/android-mac.png#lightbox)
+[![настроить HttpClient и TLS в Visual Studio для Mac](transport-layer-security-images/android-mac-sml.png)](transport-layer-security-images/android-mac.png#lightbox)
 
 -----
 
@@ -53,13 +53,13 @@ ms.locfileid: "70280354"
 
 Этот параметр можно найти в **свойствах проекта > сборка iOS**:
 
-[![Настройка HttpClient и TLS в Visual Studio](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
+[![настройке HttpClient и TLS в Visual Studio](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 Этот параметр можно найти в **параметрах проекта > сборка > вкладка сборки iOS** :
 
-[![Настройка HttpClient в Visual Studio для Mac](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
+[![настроить HttpClient в Visual Studio для Mac](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
 
 -----
 
@@ -67,7 +67,7 @@ ms.locfileid: "70280354"
 
 В Visual Studio для Mac, чтобы включить TLS 1,2 в приложении Xamarin. Mac, обновите параметр **реализации HttpClient** в параметрах **проекта > сборка Mac >** .
 
-[![Настройка HttpClient в Visual Studio для Mac](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)
+[![настроить HttpClient в Visual Studio для Mac](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)
 
 > [!WARNING]
 > Будущий выпуск Xamarin.Mac 4.8 будет поддерживать только macOS 10.9 или более поздней версии.
@@ -80,7 +80,7 @@ ms.locfileid: "70280354"
 
 ### <a name="httpclient-implementation"></a>Реализация HttpClient
 
-Разработчики Xamarin всегда могли использовать собственные сетевые классы в своем коде, однако существует также параметр, который определяет, какой сетевой стек используется `HttpClient` классами. Это предоставляет знакомый API .NET, который обладает преимуществами скорости и безопасности собственной платформы.
+Разработчики Xamarin всегда могли использовать собственные сетевые классы в своем коде, однако существует также параметр, определяющий, какой сетевой стек используется классами `HttpClient`. Это предоставляет знакомый API .NET, который обладает преимуществами скорости и безопасности собственной платформы.
 
 Доступны следующие варианты.
 
@@ -89,7 +89,7 @@ ms.locfileid: "70280354"
 
 Управляемый стек обеспечивает наивысший уровень совместимости с существующим кодом .NET, однако он может быть медленнее, что приведет к увеличению размера исполняемого файла.
 
-Собственные параметры могут быть более быстрыми и иметь более высокий уровень безопасности (включая TLS 1,2), но могут не предоставлять все функции и `HttpClient` возможности класса.
+Собственные параметры могут быть более быстрыми и иметь более высокий уровень безопасности (включая TLS 1,2), но могут не предоставлять все функции и параметры класса `HttpClient`.
 
 ### <a name="ssltls-implementation-android"></a>Реализация SSL/TLS (Android)
 

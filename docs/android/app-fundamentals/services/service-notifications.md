@@ -4,15 +4,15 @@ description: В этом руководство объясняется, как �
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 5d25604db1f88702f4c24df21b3ebba6c9c2fc95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b02785863f89ef6a273c52c09f45a99c17cb6242
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754818"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024537"
 ---
 # <a name="service-notifications"></a>Уведомления службы
 
@@ -47,7 +47,7 @@ public class MyService: Service
 
 На этом снимке экрана показан пример отображаемого уведомления:
 
-[![Значок уведомления, отображаемый в строке состояния](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
+[значок уведомления![, отображаемый в строке состояния](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 Когда пользователь выводит на экран уведомление в верхней части экрана, отображается полное уведомление:
 

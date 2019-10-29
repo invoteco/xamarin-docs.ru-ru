@@ -3,15 +3,15 @@ title: Локализация приложения и строковые рес�
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 45fe5c783e737fb913730082841e0dfafc555684
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7191c37e81da728dfda21da2eaecc95f7b58a401
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755136"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025079"
 ---
 # <a name="application-localization-and-string-resources"></a>Локализация приложения и строковые ресурсы
 
@@ -19,7 +19,7 @@ ms.locfileid: "70755136"
 
 Например, на рисунке ниже показано приложение, работающее на трех разных национальных настройках, но текст, отображаемый в каждой кнопке, зависит от локали, для каждого устройства установлено значение:
 
-[![Примеры трех разных языковых стандартов](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
+[![примеры трех разных языковых стандартов](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 В этом примере содержимое файла макета **Main. axml** выглядит примерно так:
 

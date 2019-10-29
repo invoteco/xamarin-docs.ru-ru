@@ -5,26 +5,26 @@ ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 24203d8a3a4356fb4de08d132c164d9f2d19a0c9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61d1adfc997b34302f1f89f56653af906ca90135
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291793"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022220"
 ---
 # <a name="binding-ios-libraries"></a>Привязка библиотек iOS
 
 Используйте следующие ссылки, чтобы узнать о привязке целевых библиотек C и CocoaPods для Xamarin. iOS и Xamarin. Mac:
 
 - [**Общие сведения**](~/cross-platform/macios/binding/overview.md) -
-  Описывает, как работает привязка.
-- [**Цель привязки-библиотеки C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Инструкции по привязке библиотек цели-C для использования в проектах Xamarin.
-- [**Справочное руководство по определению типа**](~/cross-platform/macios/binding/binding-types-reference.md) -
-  Описывает все атрибуты, доступные для привязки авторов, чтобы управлять процессом создания привязки.
+  описывает, как работает привязка.
+- [**Цели привязки — библиотеки C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  инструкции по привязке библиотек цели-c для использования в проектах Xamarin.
+- [**Справочное руководство по определению типов**](~/cross-platform/macios/binding/binding-types-reference.md) -
+  описывает все атрибуты, доступные для привязки авторов, чтобы управлять процессом создания привязки.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

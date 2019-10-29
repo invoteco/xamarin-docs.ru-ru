@@ -4,15 +4,15 @@ description: В этой статье рассматривается работ�
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: be737dfb92cf2ce90dc64dd527f908d52cf2c580
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 6d40dd3cc994ef8ab21ffb9658f226d36cd97913
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770351"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021770"
 ---
 # <a name="xib-files-in-xamarinmac"></a>файлы XIB в Xamarin. Mac
 
@@ -447,7 +447,7 @@ void ShowPreferences (NSObject sender)
 }
 ```
 
-@No__t_0ная строка создает новый экземпляр контроллера окна, который загружает окно из XIB-файла и расширяет его. В `preferences.Window.MakeKeyAndOrderFront (this);` строке отображается новое окно для пользователя.
+`var preferences = new PreferencesWindowController ();`ная строка создает новый экземпляр контроллера окна, который загружает окно из XIB-файла и расширяет его. В `preferences.Window.MakeKeyAndOrderFront (this);` строке отображается новое окно для пользователя.
 
 Если запустить код и выбрать **Параметры...** в **меню приложение**, откроется окно:
 

@@ -4,19 +4,19 @@ description: В этом документе описывается разраб�
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/14/2018
-ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: ac96363378e91c60956d28352535733c7e954e6a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70286390"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021994"
 ---
 # <a name="picker-control-in-xamarinios"></a>Элемент управления средства выбора в Xamarin. iOS
 
-[@No__t_1](xref:UIKit.UIPickerView) позволяет выбрать значение из списка путем прокрутки отдельных компонентов интерфейса, похожего на круг.
+[`UIPickerView`](xref:UIKit.UIPickerView) позволяет выбрать значение из списка путем прокрутки отдельных компонентов интерфейса, похожего на круг.
 
 Выборки часто используются для выбора даты и времени. Apple предоставляет [`UIDatePicker`](xref:UIKit.UIDatePicker)
 класс для этой цели.

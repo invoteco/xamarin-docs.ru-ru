@@ -3,15 +3,15 @@ title: Службы, запущенные с помощью Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: f5b5f8cf224c18852a0a0e7e4f591b49905ba026
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70755061"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024766"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Службы, запущенные с помощью Xamarin. Android
 
@@ -77,7 +77,7 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 ### <a name="using-startid-to-stop-a-service"></a>Использование Стартид для завершения службы
 
-Несколько вызывающих объектов могут запросить запуск службы. Если имеется необработанный запрос на запуск, служба может использовать `startId`, переданные в `OnStartCommand`, чтобы предотвратить преждевременное прекращение работы службы. @No__t_0 будет соответствовать последнему вызову `StartService` и будет увеличиваться каждый раз при вызове. Таким образом, если последующий запрос к `StartService` еще не привел к вызову `OnStartCommand`, служба может вызвать `StopSelfResult`, передав ей Последнее значение `startId` полученного объекта (вместо просто вызова `StopSelf`). Если вызов `StartService` еще не привел к вызову метода `OnStartCommand`, система не будет прекращать работу службы, так как `startId`, используемое в вызове `StopSelf`, не будет соответствовать последнему вызову `StartService`.
+Несколько вызывающих объектов могут запросить запуск службы. Если имеется необработанный запрос на запуск, служба может использовать `startId`, переданные в `OnStartCommand`, чтобы предотвратить преждевременное прекращение работы службы. `startId` будет соответствовать последнему вызову `StartService`и будет увеличиваться каждый раз при вызове. Таким образом, если последующий запрос к `StartService` еще не привел к вызову `OnStartCommand`, служба может вызвать `StopSelfResult`, передав ей Последнее значение `startId` полученного объекта (вместо просто вызова `StopSelf`). Если вызов `StartService` еще не привел к вызову метода `OnStartCommand`, система не будет прекращать работу службы, так как `startId`, используемое в вызове `StopSelf`, не будет соответствовать последнему вызову `StartService`.
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -4,15 +4,15 @@ description: Документы, описывающие внутреннюю р�
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ffcf4d3a491cb6ad865da35d387782b7bd1fca01
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4712b7b75e735da047d7f44f7c6c47f42b9ad7a8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283578"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030661"
 ---
 # <a name="tvos-in-xamarin-internals"></a>tvOS в Xamarin — внутренние 
 
@@ -54,7 +54,7 @@ ms.locfileid: "70283578"
 
 ### <a name="linking-native-librariesiosplatformnative-interopmd"></a>[Связывание собственных библиотек](~/ios/platform/native-interop.md)
 
-Xamarin. iOS поддерживает связывание с собственными библиотеками C и библиотеками цели-C. В этом документе описывается, как связать собственные библиотеки C с проектом Xamarin. iOS. Сведения о том, как сделать то же самое для библиотек цели-c&nbsp; , см. в документе « [Binding цели-c» Types](~/ios/platform/binding-objective-c/index.md)&nbsp;.
+Xamarin. iOS поддерживает связывание с собственными библиотеками C и библиотеками цели-C. В этом документе описывается, как связать собственные библиотеки C с проектом Xamarin. iOS. Сведения о том, как сделать то же самое для библиотек цели-C, см. в разделе&nbsp; [Binding цели-C типы](~/ios/platform/binding-objective-c/index.md)&nbsp;документа.
 
 ## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Селекторы цели-C](~/ios/internals/objective-c-selectors.md)
 

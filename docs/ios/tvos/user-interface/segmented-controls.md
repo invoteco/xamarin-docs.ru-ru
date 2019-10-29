@@ -4,21 +4,21 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: deac7c5eee4ac0276c9d1a67cbfede8fc41378d6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0bedd898232b39898e6079a204bd7409587cde82
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769061"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030395"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Работа с сегментированными элементами управления tvOS в Xamarin
 
 Сегментированный элемент управления предоставляет набор линейных элементов, каждый из которых может содержать значок или текст, и используется для предоставления пользователю набора связанных вариантов.
 
-[![](segmented-controls-images/segment01.png "Элементы управления образцами сегментов")](segmented-controls-images/segment01.png#lightbox)
+[![](segmented-controls-images/segment01.png "Sample segment controls")](segmented-controls-images/segment01.png#lightbox)
 
 У Apple есть следующие рекомендации по работе с сегментированными элементами управления:
 
@@ -42,7 +42,7 @@ ms.locfileid: "70769061"
 
 Apple предлагает следующие рекомендации по работе с текстом сегмента:
 
-- **Используйте короткие, понятные существительные** — заголовок сегмента должен четко определять тип содержимого, которое пользователь должен рассчитывать при выборе данного сегмента. Например: Музыка или видео.
+- **Используйте короткие, понятные существительные** — заголовок сегмента должен четко определять тип содержимого, которое пользователь должен рассчитывать при выборе данного сегмента. Например: музыка или видео.
 - **Используйте прописные буквы в названиях регистров** — каждое слово в названии сегментов должно быть прописными, за исключением статей, комбинаций и предварительных позиций менее четырех (4) символов.
 - **Используйте короткие заголовки, чтобы не заменять заголовки и заменять** тип содержимого, которое будет рассчитываться при выборе сегмента.
 
@@ -56,34 +56,34 @@ Apple предлагает следующие рекомендации по ра
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-1. В **панель решения**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
+1. В **панель решения**дважды щелкните файл `Main.storyboard` и откройте его для редактирования.
 1. Перетащите **элемент управления "сегмент** " из **панели элементов** и поместите его в представление: 
 
-    [![](segmented-controls-images/segment02.png "Элемент управления \"сегмент\"")](segmented-controls-images/segment02.png#lightbox)
+    [![](segmented-controls-images/segment02.png "A Segment Control")](segmented-controls-images/segment02.png#lightbox)
 1. На **вкладке мини** -приложение панели **свойств**можно настроить несколько свойств элемента управления "сегмент", например его **стиль** и **состояние**: 
 
-    [![](segmented-controls-images/segment03.png "Вкладка мини-приложения")](segmented-controls-images/segment03.png#lightbox)
+    [![](segmented-controls-images/segment03.png "The Widget Tab")](segmented-controls-images/segment03.png#lightbox)
 1. Используйте поле **сегменты** для управления количеством сегментов в контроллере.
 1. Выберите данный сегмент из **раскрывающегося списка сегмент** , чтобы настроить его отдельные свойства, такие как **заголовок** или **изображение** , а также управлять тем, **включен** или **выбран** данный сегмент при отображении элемента управления.
-1. Наконец, назначайте **имена** элементам управления, чтобы вы могли реагировать на них C# в коде. Например: 
+1. Наконец, назначайте **имена** элементам управления, чтобы вы могли реагировать на них C# в коде. Пример: 
 
-    [![](segmented-controls-images/segment04.png "Назначение имени")](segmented-controls-images/segment04.png#lightbox)
+    [![](segmented-controls-images/segment04.png "Assign a Name")](segmented-controls-images/segment04.png#lightbox)
 1. Сохраните изменения.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
+1. В **Обозреватель решений**дважды щелкните файл `Main.storyboard` и откройте его для редактирования.
 1. Перетащите **элемент управления "сегмент** " из **панели элементов** и поместите его в представление: 
 
-    [![](segmented-controls-images/segment02-vs.png "Элемент управления \"сегмент\"")](segmented-controls-images/segment02-vs.png#lightbox)
+    [![](segmented-controls-images/segment02-vs.png "A Segment Control")](segmented-controls-images/segment02-vs.png#lightbox)
 1. На **вкладке мини** -приложение **обозревателя свойств**можно настроить несколько свойств элемента управления "сегмент", например его **стиль** и **состояние**: 
 
-    [![](segmented-controls-images/segment03-vs.png "Вкладка мини-приложения")](segmented-controls-images/segment03-vs.png#lightbox)
+    [![](segmented-controls-images/segment03-vs.png "The Widget Tab")](segmented-controls-images/segment03-vs.png#lightbox)
 1. Используйте поле **сегменты** для управления количеством сегментов в контроллере.
 1. Выберите данный сегмент из **раскрывающегося списка сегмент** , чтобы настроить его отдельные свойства, такие как **заголовок** или **изображение** , а также управлять тем, **включен** или **выбран** данный сегмент при отображении элемента управления.
-1. Наконец, назначайте **имена** элементам управления, чтобы вы могли реагировать на них C# в коде. Например: 
+1. Наконец, назначайте **имена** элементам управления, чтобы вы могли реагировать на них C# в коде. Пример: 
 
-    [![](segmented-controls-images/segment04-vs.png "Назначение имени")](segmented-controls-images/segment04-vs.png#lightbox)
+    [![](segmented-controls-images/segment04-vs.png "Assign a Name")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Сохраните изменения.
 
 -----
@@ -125,9 +125,9 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-В приведенном выше примере элемент управления "сегмент" был представлен как `PlayerCount` имя `PlayerCountChanged` и действие события. Дополнительные сведения о работе с действиями и их вызовами см. в разделе о [написании кода с помощью](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) [tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md).
+В приведенном выше примере элемент управления "сегмент" был представлен в качестве имени `PlayerCount` и действия `PlayerCountChanged` события. Дополнительные сведения о работе с действиями и их вызовами см. в разделе о [написании кода с помощью](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) [tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md).
 
-`SelectedSegment` Свойство возвращает или задает выбранный в данный момент сегмент как нулевой (0) индекс. Поэтому, если у вас пять (5) сегментов, первый сегмент будет иметь нулевой индекс (0), а последний — четыре (4).
+Свойство `SelectedSegment` Возвращает или задает выбранный в данный момент сегмент как нулевой индекс на основе нуля (0). Поэтому, если у вас пять (5) сегментов, первый сегмент будет иметь нулевой индекс (0), а последний — четыре (4).
 
 <a name="Modifying-Segments" />
 
@@ -143,7 +143,7 @@ SegmentedControl.InsertSegment(UIImage.FromFile("icon.png"), 0, true);
 SegmentedControl.InsertSegment("New Segment", 0, true);
 ```
 
-Второй параметр определяет, где сегмент будет вставлен с нулевым (0) индексом. Если последний параметр является `true` анимированным, будет использоваться анимация вставки.
+Второй параметр определяет, где сегмент будет вставлен с нулевым (0) индексом. Если последний параметр — `true` то вставка будет анимирована.
 
 Чтобы удалить заданный сегмент, используйте следующую команду:
 
@@ -157,7 +157,7 @@ SegmentedControl.RemoveSegmentAtIndex(0, true);
 SegmentedControl.RemoveAllSegments();
 ```
 
-Опять же, если последний параметр — `true`, удаление будет анимировано. `NumberOfSegments` Используйте свойство, чтобы вернуть текущее количество сегментов.
+Опять же, если последний параметр имеет `true`, удаление будет анимировано. Чтобы получить текущее количество сегментов, используйте свойство `NumberOfSegments`.
 
 Чтобы получить **заголовок** или **значок** для данного сегмента, используйте следующую команду:
 
@@ -206,10 +206,10 @@ SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIContr
 
 Где `UIControlState` указывает состояние элемента управления, для которого задается изображение:
 
-- Обычный
+- Норм.
 - Деле
-- отключено
-- Selected
+- Отключено.
+- Выбранные
 - Focused
 
 И `UIBarMetrics` указывает метрики для использования в качестве:
@@ -225,7 +225,7 @@ SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIContr
 SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlState.Normal, UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-Где первая `UIControlState` указывает состояние сегмента слева от разделителя, а второе `UIControlState` — состояние сегмента справа...
+Где первая `UIControlState` указывает состояние сегмента слева от разделителя, а второй `UIControlState` указывает состояние сегмента справа...
 
 <a name="Summary" />
 

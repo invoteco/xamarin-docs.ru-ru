@@ -4,15 +4,15 @@ description: В этом документе описывается, как ис�
 ms.prod: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: d321e8061d3091abeaa3cff6a6af9172c981cb60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7d9fe2a651d8d75d8dd9d8c0dd1225350a58373d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291205"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031885"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Подготовка уведомлений в Xamarin. iOS
 
@@ -20,14 +20,14 @@ ms.locfileid: "70291205"
 
 В центре уведомлений пользователи могут указать, что приложение должно прекратить доставку подготовительных уведомлений, продолжить их подготовку или сделать их более наглядными.
 
-## <a name="sample-app-redgreennotifications"></a>Пример приложения: редгриннотификатионс
+## <a name="sample-app-redgreennotifications"></a>Пример приложения: Редгриннотификатионс
 
 Ознакомьтесь с примером приложения [редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , которое отправляет подготовленные уведомления.
 
 ## <a name="sending-provisional-notifications"></a>Отправка подготовленных уведомлений
 
-Чтобы отправить подготовленные уведомления, укажите `UNAuthorizationOptions.Provisional` в качестве параметра[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
-`UNUserNotificationCenter`метод:
+Чтобы отправить подготовленные уведомления, укажите `UNAuthorizationOptions.Provisional` в качестве параметра для [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
+метод `UNUserNotificationCenter`:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -41,7 +41,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Если пользователь продвигает подготовленные уведомления для выразительной доставки, `UNAuthorizationOptions` значения, передаваемые в `RequestAuthorization` , будут определять новые параметры доставки уведомлений ( `UNAuthorizationOptions.Alert` в приведенном выше `UNAuthorizationOptions.Sound`коде и).
+Если пользователь продвигает подготовленные уведомления для выразительной доставки, `UNAuthorizationOptions` значения, переданные в `RequestAuthorization`, будут определять новые параметры доставки уведомлений (в приведенном выше коде `UNAuthorizationOptions.Alert` и `UNAuthorizationOptions.Sound`).
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -4,15 +4,15 @@ description: Социальные платформы предоставляют 
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 6008663276151ef9512e4a370252da6861fa1b19
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9c5714d5819831047d10d83b4de01fc826b9cc01
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769446"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031470"
 ---
 # <a name="social-framework-in-xamarinios"></a>Социальные платформы в Xamarin. iOS
 
@@ -20,32 +20,29 @@ _Социальные платформы предоставляют унифиц
 
 Использование социальных сетей позволяет приложениям взаимодействовать с социальными сетями из одного API без необходимости управлять проверкой подлинности. Он включает в себя контроллер представления, предоставляемый системой, а также абстракцию, которая позволяет использовать API-интерфейсы социальных сетей по протоколу HTTP.
 
-> [!IMPORTANT]
-> Сведения о межплатформенном API для подключения к различным социальным сетям см. в компоненте [Xamarin. Social](http://components.xamarin.com/view/xamarin.social/) в хранилище компонентов Xamarin.
-
 ## <a name="connecting-to-twitter"></a>Подключение к Twitter
 
 ### <a name="twitter-account-settings"></a>Параметры учетной записи Twitter
 
 Чтобы подключиться к Twitter с помощью социальной платформы, необходимо настроить учетную запись в параметрах устройства, как показано ниже.
 
- [![](social-framework-images/twitter01.png "Параметры учетной записи Twitter")](social-framework-images/twitter01.png#lightbox)
+ [![](social-framework-images/twitter01.png "Twitter Account Settings")](social-framework-images/twitter01.png#lightbox)
 
 После того как учетная запись введена и проверена с помощью Twitter, любое приложение на устройстве, которое использует классы социальных сетей для доступа к Twitter, будет использовать эту учетную запись.
 
 ### <a name="sending-tweets"></a>Отправка твитов
 
-В состав платформы социальных сетей входит контроллер `SLComposeViewController` с именем, который представляет собой системное представление для редактирования и отправки твитов. На следующем снимке экрана показан пример этого представления:
+В состав платформы социальных сетей входит контроллер с именем `SLComposeViewController`, который представляет собой системное представление для редактирования и отправки твитов. На следующем снимке экрана показан пример этого представления:
 
- [![](social-framework-images/twitter02.png "На этом снимке экрана показан пример Слкомпосевиевконтроллер")](social-framework-images/twitter02.png#lightbox)
+ [![](social-framework-images/twitter02.png "This screenshot shows an example of the SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
 
-Чтобы использовать `SLComposeViewController` с Twitter, необходимо создать экземпляр контроллера, `FromService` вызвав метод с помощью `SLServiceType.Twitter` метода, как показано ниже:
+Чтобы использовать `SLComposeViewController` с Twitter, необходимо создать экземпляр контроллера, вызвав метод `FromService` с `SLServiceType.Twitter`, как показано ниже:
 
 ```csharp
 var slComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
 ```
 
-После возвращения `SLComposeViewController` экземпляра его можно использовать для предоставления пользовательского интерфейса для публикации в Twitter. Тем не менее, первое, что нужно сделать, — это проверить доступность социальных сетей, Twitter в данном случае, вызвав `IsAvailable`:
+После возврата экземпляра `SLComposeViewController` его можно использовать для предоставления пользовательского интерфейса для публикации в Twitter. Тем не менее, первое, что нужно сделать, — это проверить доступность социальной сети, Twitter в данном случае, вызвав `IsAvailable`:
 
 ```csharp
 if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
@@ -53,11 +50,11 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController`никогда не отправляет твит непосредственно без взаимодействия с пользователем. Однако его можно инициализировать с помощью следующих методов:
+ `SLComposeViewController` никогда не отправляет твит напрямую без взаимодействия с пользователем. Однако его можно инициализировать с помощью следующих методов:
 
-- `SetInitialText`— Добавляет начальный текст для отображения в твите.
-- `AddUrl`— Добавляет URL-адрес твита.
-- `AddImage`— Добавляет изображение в твит.
+- `SetInitialText` — добавляет начальный текст для отображения в твите.
+- `AddUrl` — добавляет URL-адрес твита.
+- `AddImage` — добавляет изображение в твит.
 
 После инициализации вызов `PresentVIewController` отображает представление, созданное `SLComposeViewController`. Пользователь может при необходимости изменить и отправить твит или отменить его отправку. В любом случае контроллер должен быть закрыт в `CompletionHandler`, где результат также можно проверить, чтобы увидеть, был ли твит отправлен или отменен, как показано ниже:
 
@@ -72,7 +69,7 @@ slComposer.CompletionHandler += (result) => {
 
 #### <a name="tweet-example"></a>Пример твитов
 
-В следующем примере кода демонстрируется `SLComposeViewController` использование для представления, используемого для отправки твита:
+Следующий код демонстрирует использование `SLComposeViewController` для представления представления, используемого для отправки твита:
 
 ```csharp
 using System;
@@ -252,7 +249,7 @@ var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?cou
 var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 ```
 
-Этот пример ограничивает возвращаемые результаты до десяти последних записей, включая `?count=10` в URL-адрес. Наконец, он присоединяет запрос к учетной записи Twitter (которая была загружена ранее) и выполняет вызов Twitter для получения данных:
+Этот пример ограничивает возвращаемые результаты последними десятьми записями, включая `?count=10` в URL-адресе. Наконец, он присоединяет запрос к учетной записи Twitter (которая была загружена ранее) и выполняет вызов Twitter для получения данных:
 
 ```csharp
 // Request data
@@ -283,7 +280,7 @@ request.PerformRequest ((data, response, error) => {
 
 Если данные были успешно загружены, отобразятся необработанные данные JSON (как показано в примере ниже).
 
-[![](social-framework-images/twitter03.png "Пример вывода необработанных данных JSON")](social-framework-images/twitter03.png#lightbox)
+[![](social-framework-images/twitter03.png "An example of the raw JSON data display")](social-framework-images/twitter03.png#lightbox)
 
 В реальном приложении результаты JSON можно затем проанализировать как обычные и результаты, представленные пользователю. Сведения о том, как анализировать JSON, см. в статье [Введение в веб-службы](~/cross-platform/data-cloud/web-services/index.md) .
 
@@ -293,7 +290,7 @@ request.PerformRequest ((data, response, error) => {
 
 Подключение к Facebook с помощью социальной инфраструктуры практически идентично процессу, используемому для Twitter, показанного выше. Учетная запись пользователя Facebook должна быть настроена в параметрах устройства, как показано ниже.
 
-[![](social-framework-images/facebook01.png "Параметры учетной записи Facebook")](social-framework-images/facebook01.png#lightbox)
+[![](social-framework-images/facebook01.png "Facebook Account Settings")](social-framework-images/facebook01.png#lightbox)
 
 После настройки любое приложение на устройстве, использующем социальные платформы, будет использовать эту учетную запись для подключения к Facebook.
 
@@ -301,7 +298,7 @@ request.PerformRequest ((data, response, error) => {
 
 Так как социальные платформы — единый API, предназначенный для доступа к нескольким социальным сетям, код остается практически одинаковым независимо от используемой социальной сети.
 
-Например, `SLComposeViewController` можно использовать точно так же, как в приведенном выше примере Twitter, но единственным отличием является переключение на параметры и параметры, относящиеся к Facebook. Например:
+Например, `SLComposeViewController` можно использовать точно так же, как в примере Twitter, показанном ранее, единственным отличием является переключение на параметры и параметры, относящиеся к Facebook. Пример:
 
 ```csharp
 using System;
@@ -365,13 +362,13 @@ namespace SocialFrameworkDemo
 }
 ```
 
-При использовании с Facebook `SLComposeViewController` отображает представление, которое выглядит почти так же, как и пример Twitter, в этом случае в качестве заголовка отображается **Facebook** :
+При использовании с Facebook `SLComposeViewController` отображает представление, которое выглядит почти так же, как в примере с Twitter, в этом случае в качестве заголовка отображается **Facebook** .
 
-[![](social-framework-images/facebook02.png "Слкомпосевиевконтроллер дисплей")](social-framework-images/facebook02.png#lightbox)
+[![](social-framework-images/facebook02.png "The SLComposeViewController display")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>Вызов API Graph Facebook
 
-Как и в примере с Twitter, `SLRequest` объект социальной инфраструктуры можно использовать с API Graph в Facebook. Например, следующий код возвращает сведения из API Graph по учетной записи Xamarin (путем расширения кода, приведенного выше):
+Как и в примере с Twitter, объект `SLRequest` социальной среды можно использовать с API Graph Facebook. Например, следующий код возвращает сведения из API Graph по учетной записи Xamarin (путем расширения кода, приведенного выше):
 
 ```csharp
 using Accounts;
@@ -471,7 +468,7 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 
 ## <a name="summary"></a>Сводка
 
-В этой статье показано, как использовать социальные платформы для взаимодействия с Twitter и Facebook. В нем показано, где настроить учетные записи для каждой социальной сети в параметрах устройства. Также рассматривается использование `SLComposeViewController` для представления единого представления для публикации в социальных сетях. Кроме того, он рассматривал `SLRequest` класс, который используется для вызова API-интерфейса социальных сетей.
+В этой статье показано, как использовать социальные платформы для взаимодействия с Twitter и Facebook. В нем показано, где настроить учетные записи для каждой социальной сети в параметрах устройства. Также рассматривается использование `SLComposeViewController` для представления единого представления для публикации в социальных сетях. Кроме того, он проверил класс `SLRequest`, который используется для вызова API-интерфейса социальных сетей.
 
 ## <a name="related-links"></a>Связанные ссылки
 

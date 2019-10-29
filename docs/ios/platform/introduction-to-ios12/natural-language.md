@@ -4,15 +4,15 @@ description: В этом документе описывается платфо�
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/20/2018
-ms.openlocfilehash: 7b0d07f2153a0395146506a371631e0bcf75ebef
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1598bad7bdbea8334b7fdfa2b950400b698579b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292910"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031984"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Использование платформы естественного языка с Xamarin. iOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "70292910"
 
 Класс [нслингуистиктагжер](xref:Foundation.NSLinguisticTagger) по-прежнему доступен. Однако платформа естественного языка является предпочтительным механизмом для обработки на естественном языке.
 
-## <a name="sample-app-xamarinnl"></a>Пример приложения: ксамариннл
+## <a name="sample-app-xamarinnl"></a>Пример приложения: Ксамариннл
 
 Чтобы узнать, как использовать платформу естественного языка с Xamarin. iOS, ознакомьтесь с [примером приложения ксамариннл](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl).
 В этом примере приложения демонстрируется использование платформы естественного языка для:
@@ -33,7 +33,7 @@ ms.locfileid: "70292910"
 
 ## <a name="recognizing-languages"></a>Распознавание языков
 
-На вкладке **распознавателя** примера приложения демонстрируется использование элемента[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
+На вкладке **распознавателя** примера приложения показано, как использовать [`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 для определения языка блока текста.
 
 > [!NOTE]
@@ -43,8 +43,8 @@ ms.locfileid: "70292910"
 
 Нажмите кнопку **язык** , чтобы указать главный язык в введенных данных пользователя.
 
-`HandleDetermineLanguageButtonTap` Метод`LanguageRecognizerViewController` объекта использует[`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
-`NLLanguageRecognizer` метод для выборки[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
+Метод `HandleDetermineLanguageButtonTap` `LanguageRecognizerViewController` использует [`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
+метод `NLLanguageRecognizer` для выборки [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 для основного языка, найденного в тексте:
 
 ```csharp
@@ -63,9 +63,9 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 Коснитесь кнопки **вероятности языка** , чтобы получить список языковых значений для вводимых пользователем данных.
 
-Метод класса создает экземпляр`NLLanguageRecognizer`изапрашиваетего `HandleLanguageProbabilitiesButtonTap` `LanguageRecognizerViewController`[`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
-текст пользователя. Затем он вызывает распознаватель языка[`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
-метод, который извлекает словарь языков и связанных с ними вероятностей. Затем `LanguageRecognizerTableViewController` класс визуализирует эти языки и вероятности.
+Метод `HandleLanguageProbabilitiesButtonTap` класса `LanguageRecognizerViewController` создает `NLLanguageRecognizer` и запрашивает его [`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
+текст пользователя. Затем он вызывает [`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*) распознавателя языка
+метод, который извлекает словарь языков и связанных с ними вероятностей. Затем класс `LanguageRecognizerTableViewController` визуализирует эти языки и вероятности.
 
 ```csharp
 partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
@@ -141,7 +141,7 @@ partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
 - `Urdu`
 - `Vietnamese`
 
-Полный список поддерживаемых языков доступен в составе[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
+Полный список поддерживаемых языков доступен в составе [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 Документация по API перечисления.
 
 ## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>Разбиение текста на слова, предложения и абзацы
@@ -150,9 +150,9 @@ partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
 
 Нажмите кнопку **слова** или **предложения** , чтобы получить список токенов. Каждый токен связан с словом или предложением в исходном тексте.
 
-`ShowTokens`разделяет входные данные пользователя на маркеры, вызывая метод[`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
-метод класса `NLTokenizer`. Этот метод возвращает массив[`NSValue`](xref:Foundation.NSValue)
-объекты, каждый из которых `NSRange` является оболочкой для значения, соответствующего маркеру в исходном тексте.
+`ShowTokens` разделяет входные данные пользователя на маркеры путем вызова [`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
+метод `NLTokenizer`. Этот метод возвращает массив [`NSValue`](xref:Foundation.NSValue)
+объекты, каждый из которых обтекает `NSRange` значение, соответствующее маркеру в исходном тексте.
 
 ```csharp
 void ShowTokens(NLTokenUnit unit)
@@ -168,7 +168,7 @@ void ShowTokens(NLTokenUnit unit)
 }
 ```
 
-`LanguageTokenizerTableViewController`отображает один маркер в каждой ячейке таблицы. Он извлекает `NSRange` из маркера `NSValue`, находит соответствующую строку в исходном тексте и задает метку в ячейке представления таблицы:
+`LanguageTokenizerTableViewController` отображает один маркер в каждой ячейке таблицы. Он извлекает `NSRange` из маркера `NSValue`, находит соответствующую строку в исходном тексте и задает метку в ячейке представления таблицы:
 
 ```csharp
 public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -182,7 +182,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 ## <a name="tagging-named-entities-and-parts-of-speech"></a>Разметка именованных сущностей и частей речи
 
-На вкладке Создание **тегов** примера приложения ксамариннл показано, как использовать[`NLTagger`](xref:NaturalLanguage.NLTagger)
+На вкладке Создание **тегов** примера приложения ксамариннл показано, как использовать [`NLTagger`](xref:NaturalLanguage.NLTagger)
 класс, связывающий категории с токенами входной строки.
 Платформа естественного языка включает встроенную поддержку распознавания людей, мест, организаций и частей речи.
 
@@ -191,13 +191,13 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 Коснитесь **именованных сущностей** или **частей кнопки речи** , чтобы получить:
 
-- Массив объектов, `NSValue` каждый из которых является `NSRange` оболочкой для маркера в исходном тексте.
-- Массив [`NLTag`](xref:NaturalLanguage.NLTag) значений — категории `NSValue` для токенов по одному индексу массива.
+- Массив объектов `NSValue`, каждый из которых обтекает `NSRange` для маркера в исходном тексте.
+- Массив значений [`NLTag`](xref:NaturalLanguage.NLTag) — категории для токенов `NSValue` по одному индексу массива.
 
-`LanguageTaggerViewController` Ви`HandleNamedEntitiesButtonTap`каждый вызов [`NLTagScheme`](xref:NaturalLanguage.NLTagScheme) `NLTagScheme.NameType` передается на – либо`NLTagScheme.LexicalClass` (для частей речи), либо (для именованных сущностей). `ShowTags` `HandlePartsOfSpeechButtonTap`
+В `LanguageTaggerViewController``HandlePartsOfSpeechButtonTap` и `HandleNamedEntitiesButtonTap` каждый вызов `ShowTags`, передающий [`NLTagScheme`](xref:NaturalLanguage.NLTagScheme) — либо `NLTagScheme.LexicalClass` (для частей речи), либо `NLTagScheme.NameType` (для именованных сущностей).
 
-`ShowTags`создает экземпляр класса `NLTagScheme` с массивом типов, для которых он будет запрашиваться (в данном случае `NLTagScheme` только переданное значение). `NLTagger` Затем он использует[`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
-`NLTagger` для определения тегов, относящихся к тексту во входных данных пользователя.
+`ShowTags` создает `NLTagger`, создавая его экземпляр с массивом типов `NLTagScheme`, для которых он будет запрашиваться (в данном случае только переданное `NLTagScheme` значение). Затем он использует [`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
+в `NLTagger`, чтобы определить теги, относящиеся к тексту в вводимых пользователем данных.
 
 ```csharp
 void ShowTags(NLTagScheme tagScheme)
@@ -217,7 +217,7 @@ void ShowTags(NLTagScheme tagScheme)
 }
 ```
 
-Затем Теги отображаются в таблице с помощью `LanguageTaggerTableViewController`.
+Затем Теги отображаются в таблице `LanguageTaggerTableViewController`.
 
 Возможные `NLTag` значения:
 
@@ -253,7 +253,7 @@ void ShowTags(NLTagScheme tagScheme)
 - `Word`
 - `WordJoiner`
 
-Полный список поддерживаемых тегов доступен в составе[`NLTag`](xref:NaturalLanguage.NLTag)
+Полный список поддерживаемых тегов доступен в составе [`NLTag`](xref:NaturalLanguage.NLTag)
 Документация по API перечисления.
 
 ## <a name="related-links"></a>Связанные ссылки

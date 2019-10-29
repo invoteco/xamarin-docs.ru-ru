@@ -1,24 +1,24 @@
 ---
-title: 'Почему работа приложения iOS 9 завершается ошибкой: System.Exception: Не удалось маршалировать объект Objective-C?'
+title: 'Почему приложение iOS 9 завершается с ошибкой: System. Exception: не удалось маршалировать объект цели-C?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: 62a63dc5156d1acf9ad6ca15029978131c151726
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1bb67eaa884e523e96ef1015daaa6b959ea1512d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290469"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031093"
 ---
-# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>Почему работа приложения iOS 9 завершается ошибкой: System.Exception: Не удалось маршалировать объект Objective-C?
+# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>Почему приложение iOS 9 завершается с ошибкой: System. Exception: не удалось маршалировать объект цели-C?
 
 Может появиться сообщение об ошибке этой формы:
 
-> System.Exception: Не удалось маршалировать объект цели-C... Не удалось найти существующий управляемый экземпляр для этого объекта...
+> System. Exception: не удалось маршалировать объект цели-C... Не удалось найти существующий управляемый экземпляр для этого объекта...
 
 Изменения API в iOS 9 потребовали использования конструктора обратного вызова при вызове неуправляемого кода, так как этот интерфейс API теперь предполагает его. Чтобы добавить конструктор обратного вызова в класс, используйте следующую строку: 
 

@@ -4,21 +4,21 @@ description: В iOS 12 можно создавать интерактивные 
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 572b369755e37f123fbfdf5850a635e7ada12a9b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e629cd8f481558991d02c7fb879502ebd54753bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291236"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031941"
 ---
 # <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Пользовательские интерфейсы интерактивного уведомления в Xamarin. iOS
 
 [Расширения содержимого уведомлений](~/ios/platform/user-notifications/advanced-user-notifications.md), появившиеся в iOS 10, позволяют создавать настраиваемые пользовательские интерфейсы для уведомлений. Начиная с iOS 12, пользовательские интерфейсы уведомлений могут содержать интерактивные элементы, такие как кнопки и ползунки.
 
-## <a name="sample-app-redgreennotifications"></a>Пример приложения: редгриннотификатионс
+## <a name="sample-app-redgreennotifications"></a>Пример приложения: Редгриннотификатионс
 
 Пример приложения [редгриннотификатионс](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) содержит расширение содержимого уведомлений с интерактивным пользовательским интерфейсом.
 
@@ -58,15 +58,15 @@ ms.locfileid: "70291236"
 
 Обратите внимание на следующие возможности.
 
-- `UNNotificationExtensionCategory` Массив указывает тип категорий уведомлений, обрабатываемых расширением содержимого.
-- Для поддержки интерактивного содержимого расширение уведомления устанавливает `UNNotificationExtensionUserInteractionEnabled` ключ в `true`значение.
-- `UNNotificationExtensionInitialContentSizeRatio` Ключ задает начальное соотношение высоты и ширины для интерфейса расширения содержимого.
+- `UNNotificationExtensionCategory` массив указывает тип категорий уведомлений, обрабатываемых расширением содержимого.
+- Для поддержки интерактивного содержимого расширение содержимого уведомлений устанавливает для `UNNotificationExtensionUserInteractionEnabled` ключа значение `true`.
+- Ключ `UNNotificationExtensionInitialContentSizeRatio` задает начальное соотношение высоты и ширины для интерфейса расширения содержимого.
 
 ## <a name="interactive-interface"></a>Интерактивный интерфейс
 
-**Маининтерфаце. Storyboard**, определяющий интерфейс для расширения содержимого уведомлений, представляет собой стандартную раскадровку, содержащую один контроллер представления. В примере приложения контроллер представления имеет тип `NotificationViewController`и содержит представление изображения, три кнопки и ползунок. Раскадровка связывает эти элементы управления с обработчиками, определенными в **NotificationViewController.CS**:
+**Маининтерфаце. Storyboard**, определяющий интерфейс для расширения содержимого уведомлений, представляет собой стандартную раскадровку, содержащую один контроллер представления. В примере приложения контроллер представления имеет тип `NotificationViewController`и содержит представление изображений, три кнопки и ползунок. Раскадровка связывает эти элементы управления с обработчиками, определенными в **NotificationViewController.CS**:
 
-- Обработчик кнопки **запустить приложение** вызывает `PerformNotificationDefaultAction` метод действия для `ExtensionContext`, который запускает приложение:
+- Обработчик кнопки **запустить приложение** вызывает метод действия `PerformNotificationDefaultAction` для `ExtensionContext`, который запускает приложение:
 
     ```csharp
     partial void HandleLaunchAppButtonTap(UIButton sender)
@@ -75,7 +75,7 @@ ms.locfileid: "70291236"
     }
     ```
 
-    В приложении центр `Delegate` уведомлений пользователя (в примере приложения `AppDelegate`) может отвечать `DidReceiveNotificationResponse` на взаимодействие в методе:
+    В приложении `Delegate` центра уведомлений пользователей (в примере приложения `AppDelegate`) может реагировать на взаимодействие в методе `DidReceiveNotificationResponse`:
 
     ```csharp
     [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -87,7 +87,7 @@ ms.locfileid: "70291236"
             // ...
     ```
 
-- Обработчик кнопки **закрытия уведомления** вызывает `DismissNotificationContentExtension` On `ExtensionContext`, который закрывает уведомление:
+- Обработчик кнопки **закрытия уведомления** вызывает `DismissNotificationContentExtension` на `ExtensionContext`, который закрывает уведомление:
 
     ```csharp
     partial void HandleDismissNotificationButtonTap(UIButton sender)

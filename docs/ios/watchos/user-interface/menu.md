@@ -4,15 +4,15 @@ description: В этом документе описывается исполь�
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: f848433a5a668e247142aa4f47374c2c6531b55d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766804"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032697"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Элемент управления Menu watchOS (Force Touch) в Xamarin
 
@@ -31,7 +31,7 @@ ms.locfileid: "70766804"
 
 ## <a name="adding-a-menu"></a>Добавление меню
 
-@No__t_0 необходимо добавить в `InterfaceController` раскадровки во время разработки. При перетаскивании элемента управления Menu на контроллер интерфейса отсутствует визуальное указание на просмотр раскадровки, но **меню** появляется на панели **структуры документа** :
+`Menu` необходимо добавить в `InterfaceController` раскадровки во время разработки. При перетаскивании элемента управления Menu на контроллер интерфейса отсутствует визуальное указание на просмотр раскадровки, но **меню** появляется на панели **структуры документа** :
 
 ![](menu-images/menu-action.png "Editing a menu at design time")
 

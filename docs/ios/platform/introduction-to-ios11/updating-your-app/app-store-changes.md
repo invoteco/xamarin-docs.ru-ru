@@ -4,15 +4,15 @@ description: В этом документе рассматриваются из�
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 356509fb6f588b96a2a1224879675bbad36f8524
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752325"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032139"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Изменения в магазине приложений в iOS 11
 
@@ -50,7 +50,7 @@ ms.locfileid: "70752325"
 
 ![Раздел продвижения App Store в iTunes Connect](app-store-changes-images/image4.png)
 
-Также необходимо добавить `ShouldAddStorePayment` метод `SKPaymentTransactionObserver` в протокол в приложении.
+Также необходимо добавить метод `ShouldAddStorePayment` к протоколу `SKPaymentTransactionObserver` в приложении.
 
 Дополнительные сведения о специальных возможностях покупки в приложении см. на странице [покупки в приложении](https://developer.apple.com/app-store/promoting-in-app-purchases/) Apple.
 

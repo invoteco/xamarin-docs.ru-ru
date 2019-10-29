@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: e10a04627b903c02140a6a2ead5c379c1e8bdcf6
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 0c777b8d5326963e959d8bb13d81d7058caa6bde
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021378"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030939"
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Почему сборка iOS завершается ошибкой "В цепочке ключей не удалось найти допустимые ключи подписывания кода iPhone"?
 
@@ -22,7 +22,7 @@ ms.locfileid: "71021378"
 
 ### <a name="provisioning-devices"></a>Подготовка устройств
 
-Если вы еще не подготовили устройство iOS, выполните приведенные ниже инструкции по полному пошаговому процессу. [Рекомендации по подготовке устройств](~/ios/get-started/installation/device-provisioning/index.md)
+Если вы еще не подготовили устройство iOS, в следующем разделе вы узнаете, как выполнить полный пошаговый процесс: [руководство по подготовке устройств](~/ios/get-started/installation/device-provisioning/index.md) .
 
 ## <a name="bug-when-using-ios-simulator"></a>Ошибка при использовании симулятора iOS
 
@@ -33,7 +33,7 @@ ms.locfileid: "71021378"
 
 ### <a name="how-to-fix"></a>Как исправить
 
-Проблему можно устранить, удалив `<CodesignEntitlements>` флаг из отладочных сборок в файле CSPROJ. Это можно сделать следующим образом:
+Проблему можно устранить, удалив флаг `<CodesignEntitlements>` из отладочных сборок в файле CSPROJ. Это можно сделать следующим образом:
 
 > [!WARNING]
 > Ошибки в CSPROJ-файлах могут нарушить работу проекта, поэтому рекомендуется создать резервную копию файлов перед попыткой.
@@ -41,9 +41,9 @@ ms.locfileid: "71021378"
 1. Щелкните правой кнопкой мыши проект iOS в области решение и выберите команду **Выгрузить проект** .
 2. Еще раз щелкните проект правой кнопкой мыши и выберите **изменить [имя_проекта]. csproj.**
 3. Найдите группы PropertyGroup отладки. они должны начинаться с флагов, которые выглядят следующим образом:
-   - См`<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">`
-   - Отпускании`<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">`
-4. В каждой из сборок, использующих симулятор, удалите или закомментируйте следующее свойство:`<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>`
+   - Отладка: `<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">`
+   - Выпуск: `<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">`
+4. В каждой из сборок, использующих симулятор, удалите или закомментируйте следующее свойство: `<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>`
 5. Перезагрузите проект, и вы сможете развернуть его в симуляторе.
 
 ### <a name="next-steps"></a>Следующие шаги

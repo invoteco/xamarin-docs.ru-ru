@@ -4,15 +4,15 @@ description: В этой статье представлено дополнит�
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ef3d25974f61bb1ac763831ab9a1f6b62d11abbe
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769668"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030767"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Настройка приложения tvOS в iTunes Connect
 
@@ -38,11 +38,11 @@ _В этой статье представлено дополнительное 
 
 Выполнив все описанные выше действия, откройте запись iTunes Connect и выберите Добавить поддержку tvOS на боковой панели слева:
 
-[![](itunes-connect-images/connect01.png "Добавление поддержки tvOS с помощью боковой панели слева")](itunes-connect-images/connect01.png#lightbox)
+[![](itunes-connect-images/connect01.png "Add tvOS support using the left hand sidebar")](itunes-connect-images/connect01.png#lightbox)
 
 Затем будут доступны экраны конкретной информации tvOS для данной записи iTunes Connect:
 
-[![](itunes-connect-images/connect02.png "Экран сведений о конкретной tvOS")](itunes-connect-images/connect02.png#lightbox)
+[![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
@@ -50,7 +50,7 @@ _В этой статье представлено дополнительное 
 
 На боковой панели слева выберите **1,0 Подготовка к отправке** в разделе приложение tvOS:
 
-[![](itunes-connect-images/connect03.png "Сведения о версии tvOS")](itunes-connect-images/connect03.png#lightbox)
+[![](itunes-connect-images/connect03.png "tvOS Version Information")](itunes-connect-images/connect03.png#lightbox)
 
 На этом экране укажите следующие сведения:
 
@@ -62,7 +62,7 @@ _В этой статье представлено дополнительное 
 
 После введения необходимых сведений нажмите кнопку **сохранить** в правом верхнем углу экрана, чтобы сохранить изменения:
 
-[![](itunes-connect-images/connect04.png "Сведения о версии tvOS, готовые к отправке")](itunes-connect-images/connect04.png#lightbox)
+[![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
@@ -70,7 +70,7 @@ _В этой статье представлено дополнительное 
 
 Когда вы готовы отправить ваше приложение Xamarin. tvOS в магазин приложений Apple TV для проверки, вернитесь в запись iTunes Connect приложения и нажмите кнопку **Отправить для проверки** в правом верхнем углу экрана:
 
-[![](itunes-connect-images/connect05.png "Отправить для проверки")](itunes-connect-images/connect05.png#lightbox)
+[![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
 <a name="Summary" />
 

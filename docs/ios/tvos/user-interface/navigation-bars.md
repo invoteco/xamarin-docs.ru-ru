@@ -4,23 +4,23 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 73474aaeb138d52536dd8ad5a7dca9be566475af
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aa376385b000b83a41fdcdc7a4d3c8bf1553f0a7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769093"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030481"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Работа с панелями навигации tvOS в Xamarin
 
 Панели навигации можно добавить в верхнюю часть представлений для отображения заголовка и необязательных кнопок панели навигации. Обычно они используются при переходе пользователя с главной страницы, например представления таблицы, коллекции или меню к вложенному представлению, в котором отображаются подробные сведения о выбранном элементе.
 
-[![](navigation-bars-images/navbar01.png "Пример панели навигации")](navigation-bars-images/navbar01.png#lightbox)
+[![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
 
-В дополнение к названию (отображаемому в центре) панели навигации могут содержать одну или несколько кнопок панели навигации (`UIBarButtonItem`) в левой и правой частях панели.
+Помимо названия (отображаемого в центре), панели навигации могут содержать одну или несколько кнопок панели навигации (`UIBarButtonItem`) в левой и правой границах панели.
 
 > [!IMPORTANT]
 > По умолчанию панели навигации полностью прозрачны. Следует соблюдать осторожность, чтобы содержимое панели навигации оставалось доступным для чтения над содержимым под ним. Например, когда содержимое в представлении таблицы или коллекции прокручивается под ним.
@@ -36,16 +36,16 @@ ms.locfileid: "70769093"
 1. В **панель решения**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
 1. Перетащите **панель навигации** из **панели элементов** и поместите ее в представление в верхней части экрана:
 
-    [![](navigation-bars-images/navbar02.png "Панель навигации")](navigation-bars-images/navbar02.png#lightbox)
+    [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
 1. Дважды щелкните **панель навигации** , чтобы выбрать **элемент навигации**. На вкладке **мини** -приложение **панель свойств**можно задать **заголовок**:
 
-    [![](navigation-bars-images/navbar03.png "Задание заголовка")](navigation-bars-images/navbar03.png#lightbox)
+    [![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
 1. Затем можно добавить один или несколько **элементов панели** на одну из них.
 
-    [![](navigation-bars-images/navbar04.png "Элемент панели инструментов")](navigation-bars-images/navbar04.png#lightbox)
+    [![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
 1. Наконец, подсоединить **элементы кнопки линейчатой панели** к действиям на вкладке **события** **обозревателя свойств**:
 
-    [![](navigation-bars-images/navbar05.png "Действие \"элемент панели инструментов\"")](navigation-bars-images/navbar05.png#lightbox)
+    [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
 1. Сохраните изменения.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -53,24 +53,24 @@ ms.locfileid: "70769093"
 1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
 1. Перетащите **панель навигации** из **панели элементов** и поместите ее в представление в верхней части экрана:
 
-    [![](navigation-bars-images/navbar02-vs.png "Панель навигации")](navigation-bars-images/navbar02-vs.png#lightbox)
+    [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
 1. Дважды щелкните **панель навигации** , чтобы выбрать **элемент навигации**. На вкладке **мини** -приложение **обозревателя свойств**можно задать **заголовок**:
 
-    [![](navigation-bars-images/navbar03-vs.png "Задание заголовка")](navigation-bars-images/navbar03-vs.png#lightbox)
+    [![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
 1. Затем можно добавить один или несколько **элементов панели** на одну из них.
 
-    [![](navigation-bars-images/navbar04-vs.png "Элементы панели инструментов")](navigation-bars-images/navbar04-vs.png#lightbox)
+    [![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
 1. Наконец, подсоединить **элементы кнопки линейчатой панели** к действиям на вкладке **события** **обозревателя свойств**:
 
-    [![](navigation-bars-images/navbar05-vs.png "Действия элемента панели инструментов")](navigation-bars-images/navbar05-vs.png#lightbox)
+    [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Сохраните изменения.
 
 -----
 
 > [!IMPORTANT]
-> Хотя можно назначить такие события, как `TouchUpInside` элемент пользовательского интерфейса (например, уибуттон) в конструкторе iOS, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или поддержки сенсорных событий. Следует всегда использовать `Primary Action` событие при создании обработчиков событий для элементов пользовательского интерфейса tvOS.
+> Хотя можно назначить события, такие как `TouchUpInside`, элементу пользовательского интерфейса (например, Уибуттон) в конструкторе iOS, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или не поддерживает события касания. При создании обработчиков событий для элементов пользовательского интерфейса tvOS всегда следует использовать событие `Primary Action`.
 
-В следующем коде приводится пример обработчиков событий для трех различных барбуттонитемс: `ShowFirstHotel`, `ShowSecondHotel`и `ShowThirdHotel`. При щелчке по каждому элементу изменяется фоновое `HotelImage` изображение. Это редактируется в файле контроллера представления (пример `ViewController.cs`):
+В следующем коде приводится пример обработчиков событий для трех различных Барбуттонитемс: `ShowFirstHotel`, `ShowSecondHotel`и `ShowThirdHotel`. При щелчке по каждому элементу изменяется фоновое изображение `HotelImage`. Это редактируется в файле контроллера представления (пример `ViewController.cs`):
 
 ```csharp
 using System;
@@ -121,7 +121,7 @@ namespace MySingleView
 }
 ```
 
-При условии, что `Enabled` `true` свойство кнопки не охватывается другим элементом управления или представлением, можно сделать элемент с фокусом с помощью Siri Remote.
+Пока свойство `Enabled` кнопки `true` и не охватывается другим элементом управления или представлением, его можно сделать с помощью Siri Remote.
 
 Дополнительные сведения о работе с раскадровками см. в статье [Hello, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md).
 

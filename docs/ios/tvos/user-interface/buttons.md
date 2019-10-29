@@ -4,21 +4,21 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 869e2e5c3b074c928f3c49ca87c1c1801154df91
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 559944e5ae168fd3b45c4d25a86705c5032b2e04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769968"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030494"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Работа с кнопками tvOS в Xamarin
 
-Используйте экземпляр `UIButton` класса для создания фокуса, выбираемой в окне tvOS кнопки. Когда пользователь нажимает кнопку, он отправляет сообщение о действии в целевой объект, позволяя приложению Xamarin. tvOS реагировать на входные данные пользователя.
+Используйте экземпляр класса `UIButton` для создания фокуса, выбираемой в окне tvOS кнопки. Когда пользователь нажимает кнопку, он отправляет сообщение о действии в целевой объект, позволяя приложению Xamarin. tvOS реагировать на входные данные пользователя.
 
-[![](buttons-images/buttons01.png "Примеры кнопок")](buttons-images/buttons01.png#lightbox)
+[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 Дополнительные сведения о работе с фокусом и навигации по Siri Remote см. в документации по [работе с навигацией](~/ios/tvos/app-fundamentals/navigation-focus.md) и [Siri удаленными устройствами и контроллерами Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -28,7 +28,7 @@ ms.locfileid: "70769968"
 
 В tvOS кнопки используются для действий конкретного приложения и могут содержать заголовок, значок или и то, и другое. По мере того, как пользователь переходит по пользовательскому интерфейсу приложения с помощью [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), фокус перемещается на заданную кнопку, что делает изменение цвета текста и фона. Тень также применяется к кнопке, которая позволяет добавить трехмерный эффект, чтобы он отображался над остальной частью пользовательского интерфейса.
 
-[![](buttons-images/buttons01.png "Примеры кнопок")](buttons-images/buttons01.png#lightbox)
+[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 У Apple есть следующие рекомендации по работе с кнопками:
 
@@ -63,39 +63,39 @@ ms.locfileid: "70769968"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
+1. В **Обозреватель решений**дважды щелкните файл `Main.storyboard` и откройте его для редактирования.
 1. Перетащите **кнопку** из **библиотеки** и поместите ее в представление: 
 
-    [![](buttons-images/storyboard01.png "Кнопка")](buttons-images/storyboard01.png#lightbox)
+    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
 1. В **обозревателе свойств**можно настроить несколько свойств кнопки, например ее **заголовок** и **Цвет текста**: 
 
-    [![](buttons-images/storyboard02.png "Свойства кнопки")](buttons-images/storyboard02.png#lightbox)
-1. Затем перейдите на **вкладку События** и назовите **событие** с помощью **кнопки** и позвоните в него `ButtonPressed`: 
+    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+1. Затем перейдите на **вкладку События** и позвоните **событие** с **кнопки** и вызовите его `ButtonPressed`: 
 
-    [![](buttons-images/storyboard03.png "Вкладка \"события\"")](buttons-images/storyboard03.png#lightbox)
-1. Вы будете автоматически переключаться на `ViewController.cs` представление, где можно разместить новое действие в коде с помощью клавиш со стрелками **вверх** и **вниз** : 
+    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+1. Вы будете автоматически переключиться в представление `ViewController.cs`, где можно поместить новое действие в код с помощью клавиш со стрелками **вверх** и **вниз** : 
 
-    [![](buttons-images/storyboard04.png "Размещение нового действия в коде")](buttons-images/storyboard04.png#lightbox)
+    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
 1. Нажмите клавишу **Ввод** , чтобы выбрать расположение: 
 
-    [![](buttons-images/storyboard05.png "Редактор кода")](buttons-images/storyboard05.png#lightbox)
+    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. Сохраните изменения во всех файлах.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его для редактирования.
+1. В **Обозреватель решений**дважды щелкните файл `Main.storyboard` и откройте его для редактирования.
 1. Перетащите **кнопку** из **библиотеки** и поместите ее в представление: 
 
-    [![](buttons-images/storyboard01vs.png "Кнопка")](buttons-images/storyboard01vs.png#lightbox)
+    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
 1. В **обозревателе свойств**можно настроить несколько свойств кнопки, например ее **заголовок** и **Цвет текста**: 
 
-    [![](buttons-images/storyboard02vs.png "Обозреватель свойств")](buttons-images/storyboard02vs.png#lightbox)
-1. Затем перейдите на **вкладку События** и назовите **событие** с помощью **кнопки** и позвоните в него `ButtonPressed`: 
+    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+1. Затем перейдите на **вкладку События** и позвоните **событие** с **кнопки** и вызовите его `ButtonPressed`: 
 
-    [![](buttons-images/storyboard03vs.png "Вкладка \"события\"")](buttons-images/storyboard03vs.png#lightbox)
+    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. Сохраните изменения во всех файлах.
 
-Измените файл контроллера представления (example `ViewController.cs`) и добавьте следующий код, чтобы обрабатывал выбранную кнопку:
+Измените файл контроллера представления (пример `ViewController.cs`) и добавьте следующий код, чтобы обрабатывал выбранную кнопку:
 
 ```
 
@@ -119,10 +119,10 @@ namespace tvRemote
 
 -----
 
-При условии, что `Enabled` `true` свойство кнопки не охватывается другим элементом управления или представлением, можно сделать элемент с фокусом с помощью Siri Remote. Если пользователь нажимает кнопку и щелкает сенсорную поверхность, `ButtonPressed` будет выполнено определенное выше действие.
+Пока свойство `Enabled` кнопки `true` и не охватывается другим элементом управления или представлением, его можно сделать с помощью Siri Remote. Если пользователь нажимает кнопку и щелкает сенсорную поверхность, будет выполнено действие `ButtonPressed`, определенное выше.
 
 > [!IMPORTANT]
-> Хотя при создании **обработчика событий**можно назначать такие `TouchUpInside` действия, `UIButton` как в конструкторе iOS, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или поддерживает события касания. При создании **действий** для элементов пользовательского интерфейса tvOS всегда следует использовать **тип действия** по умолчанию.
+> Хотя можно назначать такие действия, как `TouchUpInside` `UIButton` в конструкторе iOS при создании **обработчика событий**, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или поддерживает события касания. При создании **действий** для элементов пользовательского интерфейса tvOS всегда следует использовать **тип действия** по умолчанию.
 
 Дополнительные сведения о работе с раскадровками см. в статье [Hello, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -130,7 +130,7 @@ namespace tvRemote
 
 ## <a name="buttons-and-code"></a>Кнопки и код
 
-При необходимости можно создать в C# коде и добавить в представление приложения tvOS. `UIButton` Например:
+При необходимости `UIButton` можно создать в C# коде и добавить в представление приложения tvOS. Пример:
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -158,13 +158,13 @@ View.AddSubview (button);
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Затем задайте заголовок для кнопки. `UIButtons`отличаются от большинства `UIKit` элементов управления тем, что они имеют состояние, поэтому нельзя просто изменить название, его необходимо изменить для `UIControlState`определенного. Например:
+Затем задайте заголовок для кнопки. `UIButtons` отличаются от большинства элементов управления `UIKit` в том, что они имеют состояние, поэтому вы не можете просто изменить заголовок, его необходимо изменить для конкретной `UIControlState`. Пример:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Затем используйте `AllEvents` событие, чтобы увидеть, когда пользователь нащелкнул кнопку. Пример
+Затем используйте событие `AllEvents`, чтобы увидеть, когда пользователь нащелкнул кнопку. Пример
 
 ```csharp
 button.AllEvents += (sender, e) => {
@@ -180,31 +180,31 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> Хотя можно назначать такие действия `TouchUpInside` `UIButton`, как, он никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или не поддерживает сенсорные события. Следует всегда использовать такие события, как **AllEvents** или **примаряктионтригжеред**.
+> Хотя можно назначать такие действия, как `TouchUpInside` `UIButton`, оно никогда не будет вызываться, так как Apple TV не имеет сенсорного экрана или не поддерживает сенсорные события. Следует всегда использовать такие события, как **AllEvents** или **примаряктионтригжеред**.
 
 <a name="Styling-a-Button" />
 
 ## <a name="styling-a-button"></a>Стилизация кнопки
 
-tvOS предоставляет несколько свойств `UIButton` , которые можно использовать для предоставления его заголовка и стиля с такими объектами, как цвет фона и изображения.
+tvOS предоставляет несколько свойств `UIButton`, которые можно использовать для предоставления его заголовка и стиля с такими же свойствами, как цвет фона и изображения.
 
 <a name="Button-Titles" />
 
 ### <a name="button-titles"></a>Заголовки кнопок
 
-Как было показано выше, `UIButtons` они отличаются от большинства `UIKit` элементов управления тем, что они имеют состояние, поэтому нельзя просто изменить название, его необходимо `UIControlState`изменить для определенного. Например:
+Как уже говорилось выше, `UIButtons` отличаются от большинства `UIKit` элементов управления тем, что они имеют состояние, поэтому вы не можете просто изменить заголовок, его необходимо изменить для конкретной `UIControlState`. Пример:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Цвет заголовка для кнопки можно задать с помощью `SetTitleColor` метода. Например:
+Цвет заголовка для кнопки можно задать с помощью метода `SetTitleColor`. Пример:
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-Можно настроить тень заголовка с помощью `SetTitleShadowColor`. Например:
+Можно настроить тень заголовка с помощью `SetTitleShadowColor`. Пример:
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -216,7 +216,7 @@ button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-Кроме того, в качестве заголовка кнопки можно использовать текст с атрибутами. Например:
+Кроме того, в качестве заголовка кнопки можно использовать текст с атрибутами. Пример:
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -228,15 +228,15 @@ myButton.SetAttributedTitle (highlightedAttributedTitle, UIControlState.Highligh
 
 ### <a name="button-images"></a>Изображения кнопок
 
-`UIButton` Может иметь присоединенный к нему образ и может использовать изображение в качестве фона.
+К `UIButton` может быть присоединен образ, который может использовать изображение в качестве фона.
 
-Чтобы задать фоновое изображение кнопки для заданного `UIControlState`объекта, используйте следующий код:
+Чтобы задать фоновое изображение кнопки для заданного `UIControlState`, используйте следующий код:
 
 ```csharp
 button.SetBackgroundImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-`AdjustsImageWhenHiglighted` Задайте для`true` свойства значение, чтобы изображение было светлее выделять нажатием кнопки (это значение по умолчанию). `AdjustsImageWhenDisabled` Задайте для`true` свойства значение, чтобы изображение было темнее, когда кнопка отключена (опять же, это значение по умолчанию).
+Задайте для свойства `AdjustsImageWhenHiglighted` значение `true`, чтобы изображение было светлее изображаться при выделении кнопки (это значение по умолчанию). Задайте для свойства `AdjustsImageWhenDisabled` значение `true`, чтобы изображение было темнее, если кнопка отключена (опять же, это значение по умолчанию).
 
 Чтобы задать изображение, отображаемое на кнопке, используйте следующий код:
 
@@ -244,7 +244,7 @@ button.SetBackgroundImage(UIImage.FromFile("my image.png"), UIControlState.Norma
 button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-`TintColor` Используйте свойство для задания цветового оттенка, который применяется как к названию, так и к изображению кнопки. Для кнопок `Custom` типа это свойство не оказывает никакого влияния, необходимо `TintColor` реализовать поведение самостоятельно.
+Свойство `TintColor` используется для задания цветового оттенка, применяемого как к названию, так и к изображению кнопки. Для кнопок типа `Custom` это свойство не действует, необходимо реализовать поведение `TintColor` самостоятельно.
 
 <a name="Summary" />
 

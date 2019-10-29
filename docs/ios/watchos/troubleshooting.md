@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: efd120e785e55bfa3806cd193bd5f155f35a5e18
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767730"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032730"
 ---
 # <a name="watchos-troubleshooting"></a>Устранение неполадок watchOS
 
@@ -23,9 +23,9 @@ ms.locfileid: "70767730"
 
 - [Удаление альфа-канала из изображений значков](#noalpha)
 
-- [Ручное добавление файлов контроллера интерфейса](#add) для Xcode Interface Builder.
+- [Добавление файлов контроллера интерфейса](#add) для Interface Builder Xcode вручную.
 
-- [Запуск WatchApp из командной строки](#command_line)
+- [Запуск ватчапп из командной строки](#command_line).
 
 <a name="knownissues" />
 
@@ -36,18 +36,18 @@ ms.locfileid: "70767730"
 <a name="deploy" />
 
 - Более ранние выпуски Visual Studio для Mac неправильно отображают один из значков **апплекомпанионсеттингс** как 88x88 пикселов; Это приводит к **ошибке отсутствующего значка** при попытке отправить в App Store.
-    Этот значок должен быть 87x87 пикселей (29 единиц для **@3x** экранов Retina). Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** (в соответствии с [этим образцом](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Этот значок должен быть 87x87 пикселями (29 единиц для **@3x** Retina экранов). Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** (в соответствии с [этим образцом](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - Если **идентификатор пакета WKApp "info. > plist** " проекта расширения контрольных значений [неправильно установлен](~/ios/watchos/get-started/project-references.md) в соответствии с **идентификатором пакета**приложения Watch, отладчику не удастся подключиться, и Visual Studio для Mac будет ожидать сообщение *"ожидание завершения работы отладчика Connect "* .
 
-- Отладка поддерживается в режиме **уведомлений** , но может быть ненадежной. Повторная попытка иногда будет работать. Убедитесь, что значение **info. plist** `WKCompanionAppBundleIdentifier` приложения Watch установлено в соответствии с идентификатором пакета приложения iOS (родительское или контейнером), которое выполняется на устройстве iPhone.
+- Отладка поддерживается в режиме **уведомлений** , но может быть ненадежной. Повторная попытка иногда будет работать. Убедитесь, что параметр Watch App **plist** `WKCompanionAppBundleIdentifier` установлен в соответствие идентификатору пакета для родительского приложения iOS/контейнера (IE). это приложение, которое выполняется на устройстве iPhone.
 
 - в конструкторе iOS не отображаются стрелки точки входа для быстрого просмотра или контроллеров интерфейса уведомлений.
 
-- Нельзя добавить две `WKNotificationControllers` к раскадровке.
-    Решение Элемент в XML-коде раскадровки всегда вставляется с `id`тем же. `notificationCategory` Чтобы обойти эту проблему, можно добавить два (или более) контроллера уведомлений, открыть файл раскадровки в текстовом редакторе, а затем вручную изменить `id` элемент на уникальный.
+- В раскадровку нельзя добавить два `WKNotificationControllers`.
+    Обходное решение. элемент `notificationCategory` в XML-коде раскадровки всегда вставляется с тем же `id`. Чтобы обойти эту проблему, можно добавить два (или более) контроллера уведомлений, открыть файл раскадровки в текстовом редакторе, а затем вручную изменить элемент `id` на уникальный.
 
-    [![](troubleshooting-images/duplicate-id-sml.png "Открытие файла раскадровки в текстовом редакторе и ручное изменение элемента ID на уникальный")](troubleshooting-images/duplicate-id.png#lightbox)
+    [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - При попытке запустить приложение может появиться сообщение об ошибке "приложение не было собрано". Это происходит после **очистки** , если запускаемый проект установлен в проект расширения Watch.
     Исправлением является выбор **сборки > перестроить все** , а затем повторно запустить приложение.
@@ -74,9 +74,9 @@ with an alpha channel. Icons should not have an alpha channel.
 
 2. Диалоговое окно, которое отображается, будет содержать флажок **альфа** -канала, если имеется канал Alpha.
 
-    ![](troubleshooting-images/remove-alpha-sml.png "Появление диалогового окна будет включать альфа флажок, если присутствует альфа-канала")
+    ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
 
-3. *Untick* **альфа-канал** флажок и **Сохранить** файл в нужном месте.
+3. Снимите флажок **альфа-канала** и **Сохраните** файл в нужном месте.
 
 4. Теперь изображение значка должно передавать проверки Apple.
 
@@ -87,19 +87,19 @@ with an alpha channel. Icons should not have an alpha channel.
 > [!IMPORTANT]
 > Поддержка WatchKit в Xamarin включает проектирование раскадровок просмотра в конструкторе iOS (как в Visual Studio для Mac, так и в Visual Studio), что не требует действий, описанных ниже. Просто присвойте контроллеру интерфейса имя класса на панели свойств Visual Studio для Mac, и файлы C# кода будут созданы автоматически.
 
-*Если* использовании построителя интерфейс Xcode, выполните следующие действия для создания новых контроллеров интерфейс для наблюдения за приложения и включите синхронизацию с Xcode, выходов и действия, доступные в C#:
+*Если* вы используете Xcode Interface Builder, выполните следующие действия, чтобы создать новые контроллеры интерфейсов для приложения для просмотра контрольных данных и включить синхронизацию с Xcode, чтобы обеспечить доступность C#розеток и действий в.
 
 1. Откройте интерфейс Watch приложения **. раскадровка** в **Xcode Interface Builder**.
 
-    ![](troubleshooting-images/add-6.png "Открытие раскадровки в построителе интерфейс Xcode")
+    ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
 
-2. Перетащите новый `InterfaceController` элемент на раскадровку:
+2. Перетащите новый `InterfaceController` на раскадровку:
 
-    ![](troubleshooting-images/add-1.png "Интерфацеконтроллер")
+    ![](troubleshooting-images/add-1.png "A InterfaceController")
 
 3. Теперь можно перетаскивать элементы управления на контроллер интерфейса (например, Метки и кнопки), но вы не можете создавать розетки или действия, так как отсутствует **h** -файл заголовка. Следующие шаги приведут к созданию обязательного файла заголовка **. h** .
 
-    ![](troubleshooting-images/add-2.png "Кнопка в макете")
+    ![](troubleshooting-images/add-2.png "A button in the layout")
 
 4. Закройте раскадровку и вернитесь к Visual Studio для Mac. Создайте новый C# файл **MyInterfaceController.CS** (или любое требуемое имя) в проекте " **Контрольное расширение приложения** " (а не в приложении для просмотра, где находится Раскадровка). Добавьте следующий код (с обновлением пространства имен, ClassName и имени конструктора):
 
@@ -137,7 +137,7 @@ with an alpha channel. Icons should not have an alpha channel.
     }
     ```
 
-5. Создайте еще один C# файл **MyInterfaceController.Designer.CS** в проекте " **Контрольное расширение приложения** " и добавьте приведенный ниже код. Не забудьте обновить пространство имен, ClassName и `Register` атрибут:
+5. Создайте еще один C# файл **MyInterfaceController.Designer.CS** в проекте " **Контрольное расширение приложения** " и добавьте приведенный ниже код. Не забудьте обновить пространство имен, ClassName и атрибут `Register`:
 
     ```csharp
     using Foundation;
@@ -158,34 +158,34 @@ with an alpha channel. Icons should not have an alpha channel.
     > [!TIP]
     > Можно (необязательно) сделать этот файл дочерним узлом первого файла, перетащив его на другой C# файл в Visual Studio для Mac панель решения. Затем он будет выглядеть следующим образом:
 
-    ![](troubleshooting-images/add-5.png "Панель решения")
+    ![](troubleshooting-images/add-5.png "The Solution pad")
 
-6. Выберите **Сборка > собрать все** , чтобы в ходе синхронизации Xcode был распознан новый класс (через `Register` атрибут), который мы использовали.
+6. Выберите **сборка > собрать все** , чтобы Xcodeная синхронизация расзнала новый класс (через атрибут `Register`), который мы использовали.
 
 7. Повторно откройте раскадровку, щелкнув файл раскадровки Watch приложения правой кнопкой мыши и выбрав пункт **Открыть с помощью > Xcode Interface Builder**:
 
-    ![](troubleshooting-images/add-6.png "Открытие раскадровки в построителе интерфейса")
+    ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Выберите новый контроллер интерфейса и присвойте ему значение className, указанное выше, например. `MyInterfaceController`.
+8. Выберите новый контроллер интерфейса и присвойте ему значение className, указанное выше, например. `MyInterfaceController`
     Если все работало правильно, оно должно появиться автоматически в раскрывающемся списке **класс:** , и его можно выбрать из этого списка.
 
-    ![](troubleshooting-images/add-4.png "Пользовательский класс параметров")
+    ![](troubleshooting-images/add-4.png "Setting a custom class")
 
 9. Выберите представление **редактора помощника** в Xcode (значок с двумя перекрывающимися кружками), чтобы можно было увидеть раскадровку и код параллельно:
 
-    ![](troubleshooting-images/add-7.png "Элемент панели инструментов редактора помощника")
+    ![](troubleshooting-images/add-7.png "The Assistant Editor toolbar item")
 
     Если фокус находится на панели кода, убедитесь, что вы просматриваете файл заголовка **h** и не щелкнули правой кнопкой мыши в строке навигации, и выберите нужный файл (**минтерфацеконтроллер. h**).
 
-    ![](troubleshooting-images/add-8.png "Выберите MyInterfaceController")
+    ![](troubleshooting-images/add-8.png "Select MyInterfaceController")
 
 10. Теперь вы можете создавать розетки и действия, **удерживая нажатой клавишу CTRL + перетаскивание** из раскадровки в файл заголовка **h** .
 
-    ![](troubleshooting-images/add-9.png "Создание выходов и действий")
+    ![](troubleshooting-images/add-9.png "Creating outlets and actions")
 
     При освобождении перетаскивания вам будет предложено выбрать, следует ли создать розетку или действие, и выбрать его имя:
 
-    ![](troubleshooting-images/add-a.png "Розетки и диалоговое окно действий")
+    ![](troubleshooting-images/add-a.png "The outlet and an action dialog")
 
 11. Когда изменения раскадровки сохранены и Xcode закрывается, вернитесь в Visual Studio для Mac. Он определит изменения в файле заголовка и автоматически добавит код в файл **Designer.CS** :
 
@@ -224,7 +224,7 @@ with an alpha channel. Icons should not have an alpha channel.
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-Параметр, который необходимо обновить, чтобы отразить ваше приложение `launchsimwatch`:
+Параметр, который необходимо обновить для отражения приложения, `launchsimwatch`:
 
 ### <a name="--launchsimwatch"></a>--лаунчсимватч
 
@@ -241,7 +241,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ## <a name="notification-mode"></a>Режим уведомления
 
-Чтобы проверить [режим **уведомления** ](~/ios/watchos/platform/notifications.md)приложения `watchlaunchmode` , присвойте параметру `Notification` значение и укажите путь к JSON-файлу, содержащему полезные данные тестового уведомления.
+Чтобы проверить [режим **уведомления** ](~/ios/watchos/platform/notifications.md)приложения, задайте для параметра `watchlaunchmode` значение `Notification` и укажите путь к JSON-файлу, содержащему полезные данные тестового уведомления.
 
 Параметр полезных данных является *обязательным* для режима уведомления.
 
@@ -283,7 +283,7 @@ with an alpha channel. Icons should not have an alpha channel.
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
 ```
 
-**Время выполнения и тип устройства**
+**Среда выполнения и тип устройства**
 
 Пример
 
@@ -293,5 +293,5 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [Ватчкиткаталог (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Ватчтаблес (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

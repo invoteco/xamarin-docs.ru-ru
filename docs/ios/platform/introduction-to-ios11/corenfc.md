@@ -4,15 +4,15 @@ description: В этом документе описывается чтение 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752433"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032195"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Ядро NFC в Xamarin. iOS
 
@@ -31,7 +31,7 @@ _Чтение тегов NFC с помощью iOS 11_
 
 На этой странице описывается конфигурация, необходимая для использования Коренфк, и демонстрируется использование API с помощью [примера кода "нфктагреадер"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Конфигурация
+## <a name="configuration"></a>Параметр Configuration
 
 Чтобы включить Коренфк, необходимо настроить три элемента в проекте:
 
@@ -63,7 +63,7 @@ _Чтение тегов NFC с помощью iOS 11_
 
 Создайте новый **идентификатор приложения** и убедитесь, что служба **чтения тегов NFC** имеет импульсные показания:
 
-[![Страница "новый идентификатор приложения" портала разработчика с выбранным чтением NFC-тегов](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[страница идентификатора нового приложения на портале разработчика![с выбранным чтением NFC-тегов](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 Затем необходимо создать новый профиль подготовки для этого идентификатора приложения, а затем скачать и установить его на компьютере Mac для разработки.
 
@@ -71,12 +71,12 @@ _Чтение тегов NFC с помощью iOS 11_
 
 После настройки проекта добавьте `using CoreNFC;` в начало файла и выполните следующие три шага, чтобы реализовать функцию чтения тегов NFC:
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Применить`INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Реализация `INFCNdefReaderSessionDelegate`
 
 Интерфейс имеет два метода для реализации:
 
-- `DidDetect`— Вызывается при успешном считывании тега.
-- `DidInvalidate`— Вызывается при возникновении ошибки или при достижении времени ожидания 60 секунд.
+- `DidDetect` — вызывается при успешном считывании тега.
+- `DidInvalidate` — вызывается при возникновении ошибки или при достижении времени ожидания 60 секунд.
 
 #### <a name="diddetect"></a>диддетект
 
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-Этот метод может вызываться несколько раз (и может передаваться массив сообщений), если в сеансе разрешено несколько операций чтения тегов. Этот параметр задается с помощью третьего параметра `Start` метода (см. [Шаг 2](#step2)).
+Этот метод может вызываться несколько раз (и может передаваться массив сообщений), если в сеансе разрешено несколько операций чтения тегов. Этот параметр задается с помощью третьего параметра метода `Start` (см. [Шаг 2](#step2)).
 
 #### <a name="didinvalidate"></a>дидинвалидате
 
@@ -125,7 +125,7 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 
 <a name="step2" />
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. Запуск`NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. Запуск `NFCNdefReaderSession`
 
 Сканирование должно начаться с запроса пользователя, например нажатия кнопки.
 Следующий код создает и запускает сеанс сканирования:
@@ -135,11 +135,11 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-Ниже приведены параметры для `NFCNdefReaderSession` конструктора.
+Ниже приведены параметры для конструктора `NFCNdefReaderSession`.
 
-- `delegate`— Реализация `INFCNdefReaderSessionDelegate`. В примере кода делегат реализуется в контроллере представления таблицы, поэтому `this` используется в качестве параметра делегата.
-- `queue`— Очередь, в которой обрабатываются обратные вызовы. Это может быть `null`, в этом случае следует `DispatchQueue.MainQueue` использовать при обновлении элементов управления пользовательского интерфейса (как показано в примере).
-- `invalidateAfterFirstRead`— Когда `true`, сканирование останавливается после первого успешного сканирования; при `false` продолжении сканирования будет выполнено несколько результатов, пока сканирование не будет отменено или не будет достигнуто время ожидания 60 секунд.
+- `delegate` — реализация `INFCNdefReaderSessionDelegate`. В примере кода делегат реализуется в контроллере представления таблицы, поэтому `this` используется в качестве параметра делегата.
+- `queue` — очередь, в которой обрабатываются обратные вызовы. Это может быть `null`. в этом случае следует использовать `DispatchQueue.MainQueue` при обновлении элементов управления пользовательского интерфейса (как показано в примере).
+- `invalidateAfterFirstRead` — при `true`проверка останавливается после первой успешной проверки; Когда `false` сканирование будет продолжено, и несколько результатов будут возвращены, пока сканирование не будет отменено или не будет достигнуто время ожидания 60 секунд.
 
 ### <a name="3-cancel-the-scanning-session"></a>3. Отмена сеанса сканирования
 
@@ -147,13 +147,13 @@ Session?.BeginSession();
 
 ![Кнопка "Отмена" при сканировании](corenfc-images/scan-cancel-sml.png)
 
-Приложение может программно отменить сканирование, вызвав `InvalidateSession` метод:
+Приложение может программно отменить проверку, вызвав метод `InvalidateSession`:
 
 ```csharp
 Session.InvalidateSession();
 ```
 
-В обоих случаях будет вызван `DidInvalidate` метод делегата.
+В обоих случаях будет вызван метод `DidInvalidate` делегата.
 
 ## <a name="summary"></a>Сводка
 

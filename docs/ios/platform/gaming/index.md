@@ -4,15 +4,15 @@ description: В этой статье рассматриваются новые 
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b1fa8cd69a2255d462066be88ad7ef695b71076e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fd79153520036ae49fd6fd9abe652e2c7459b30d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753109"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032506"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>Игровые API iOS в Xamarin. iOS
 
@@ -21,7 +21,7 @@ _В этой статье рассматриваются новые возмож
 Компания Apple внесла несколько усовершенствований в игровые API в iOS 9, которые упрощают внедрение игр и аудио в приложение Xamarin. iOS.
 Они включают в себя простоту разработки через высокоуровневые платформы и использование возможностей GPU устройства iOS для повышения скорости и возможностей работы с графикой.
 
-[![](images/flocking01.png "Пример приложения, в котором работает флоккинг")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png#lightbox)
 
 Сюда входят Гамеплайкит, Реплайкит, модели ввода-вывода, Металкит и металлические шейдеры производительности, а также новые улучшенные функции металлов, SceneKit и SpriteKit.
 
@@ -56,7 +56,7 @@ _В этой статье рассматриваются новые возмож
 
 Рассмотрим следующую карту:
 
-[![](images/gkpathfindpath.png "Пример пасфиндинг Map")](images/gkpathfindpath.png#lightbox)
+[![](images/gkpathfindpath.png "An example pathfinding map")](images/gkpathfindpath.png#lightbox)
 
 С помощью пасфиндинг C# этот код может найти способ через карту:
 
@@ -145,7 +145,7 @@ protected Func<GKRuleSystem, bool> mod(int m)
 }
 ```
 
-На основе заданного набора правил (`GKRule`) и известного набора входов экспертная система (`GKRuleSystem`) создаст прогнозируемый результат (`fizzbuzz` для нашего примера выше).
+На основе заданного набора правил (`GKRule`) и известного набора входных данных экспертная система (`GKRuleSystem`) создаст прогнозируемый результат (`fizzbuzz` для нашего примера выше).
 
 ### <a name="flocking"></a>флоккинг
 
@@ -365,15 +365,15 @@ public override void ViewWillLayoutSubviews ()
 
 При запуске небольшие анимированные _«боидс»_ будут флокк вокруг отвода пальца:
 
-[![](images/flocking01.png "Небольшой анимированный Боидс будет флокк вокруг отвода пальца")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "The little animated Boids will flock around the finger taps")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Другие примеры Apple
 
 В дополнение к приведенным выше примерам компания Apple предоставляет следующие примеры приложений, которые можно перекодировать в C# и Xamarin. iOS:
 
-- [Фауринаров: Использование Гамеплайкит Minmax специалист по стратегиям для соперников ии](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [Ажентскаталог: Использование системы агентов в Гамеплайкит](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
-- [Демоботс: Создание кросс-платформенной игры с помощью SpriteKit и Гамеплайкит](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
+- [Фауринаров: использование Гамеплайкит Minmax специалист по стратегиям для соперников ии](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
+- [Ажентскаталог: использование системы агентов в Гамеплайкит](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [Демоботс: создание кросс-платформенной игры с помощью SpriteKit и Гамеплайкит](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
 
@@ -427,7 +427,7 @@ public override void ViewWillLayoutSubviews ()
 
 Новая Реплайкит платформа Apple позволяет легко добавлять записи игр в свою игру iOS и позволять пользователю быстро и легко редактировать и предоставлять общий доступ к этому видео в приложении.
 
-Дополнительные сведения см. в статье Apple, посвященной [социальным сетям с реплайкит и Game Center видео](https://developer.apple.com/videos/wwdc/2015/?id=605) и их [демоботс: Создание кросс-платформенной игры с помощью SpriteKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) и гамеплайкит Sample App.
+Дополнительные сведения см. в статье Apple to [реплайкит and Game Center Video](https://developer.apple.com/videos/wwdc/2015/?id=605) and [Демоботс: создание кросс-платформенной игры с помощью SpriteKit и гамеплайкит](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) Sample App.
 
 ## <a name="scenekit"></a>SceneKit
 
@@ -440,10 +440,10 @@ public override void ViewWillLayoutSubviews ()
 Компания Apple добавила следующие новые функции в SceneKit для iOS 9:
 
 - Xcode теперь предоставляет редактор сцены, позволяющий быстро создавать игры и интерактивные трехмерные приложения путем редактирования сцен непосредственно из Xcode.
-- Классы `SCNView` и`SCNSceneRenderer` можно использовать для включения визуализации металла (на поддерживаемых устройствах iOS).
-- Классы `SCNAudioPlayer` и`SCNNode` можно использовать для добавления пространственных звуковых эффектов, которые автоматически отслеживанием расположения проигрывателя в приложении iOS.
+- Классы `SCNView` и `SCNSceneRenderer` можно использовать для обеспечения визуализации металла (на поддерживаемых устройствах iOS).
+- Классы `SCNAudioPlayer` и `SCNNode` можно использовать для добавления пространственных звуковых эффектов, которые автоматически отслеживанием расположения проигрывателя в приложении iOS.
 
-Дополнительные сведения см. в [документации по SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) и [справочнике по SceneKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) Apple и [Fox: Создание игры SceneKit с примером проекта редактора](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) сцены Xcode.
+Дополнительные сведения см. в [документации по SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) и [справочнике по SceneKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) Apple и [Fox: создание игры SceneKit с помощью примера проекта Xcode сцены](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) .
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -455,12 +455,12 @@ public override void ViewWillLayoutSubviews ()
 
 Компания Apple добавила следующие новые функции в SpriteKit для iOS 9:
 
-- Пространственный звуковой эффекты, который автоматически следит за положением проигрывателя с `SKAudioNode` классом.
+- Пространственный звуковой эффекты, который автоматически следит за положением проигрывателя с помощью класса `SKAudioNode`.
 - Xcode теперь содержит редактор сцены и редактор действий для простой двухмерной игры и создания приложений.
-- Поддержка быстрой прокрутки игр с новыми объектами камеры`SKCameraNode`().
+- Поддержка быстрой прокрутки игр с новыми объектами камеры (`SKCameraNode`).
 - На устройствах iOS, поддерживающих металла, SpriteKit будет автоматически использовать его для подготовки к просмотру, даже если вы уже использовали пользовательские шейдеры OpenGL ES.
 
-Дополнительные сведения см. в справочнике [по SpriteKit документации](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) и их [демоботс. Создание кросс-платформенной игры с помощью SpriteKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) и гамеплайкит Sample App.
+Дополнительные сведения см. в [документации по SpriteKit](~/ios/platform/introduction-to-ios8.md#spritekit) [Framework Apple SpriteKit](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) Platform и их [Демоботс: создание кросс-платформенной игры с помощью SpriteKit и гамеплайкит](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) Sample App.
 
 ## <a name="summary"></a>Сводка
 

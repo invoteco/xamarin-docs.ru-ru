@@ -4,15 +4,15 @@ description: В этом разделе мы рассмотрим, как исп
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 764be6319e95b16dc043bebd2abfb27ba0696457
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769755"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031406"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Пошаговое руководство. Использование локальных уведомлений в Xamarin. iOS
 
@@ -25,11 +25,11 @@ _В этом разделе мы рассмотрим, как использов
 
 Позвольте создать простое приложение, которое будет отображать локальные уведомления в действии. Это приложение будет иметь одну кнопку. При нажатии кнопки будет создано локальное уведомление. По истечении указанного периода времени будет отображено уведомление.
 
-1. В Visual Studio для Mac создайте новое решение для iOS с одним представлением и назовите его `Notifications`.
-1. `Main.storyboard` Откройте файл и перетащите кнопку на представление. Назовите кнопку **кнопки и**присвойте ей название **добавить уведомление**. В этот момент может потребоваться задать некоторые [ограничения](~/ios/user-interface/designer/designer-auto-layout.md) для кнопки: 
+1. В Visual Studio для Mac создайте новое решение для iOS с одним представлением и вызовите его `Notifications`.
+1. Откройте файл `Main.storyboard` и перетащите кнопку на представление. Назовите кнопку **кнопки и**присвойте ей название **добавить уведомление**. В этот момент может потребоваться задать некоторые [ограничения](~/ios/user-interface/designer/designer-auto-layout.md) для кнопки: 
 
-    ![](local-notifications-in-ios-walkthrough-images/image3.png "Задание некоторых ограничений для кнопки")
-1. `ViewController` Измените класс и добавьте в метод ViewDidLoad следующий обработчик событий:
+    ![](local-notifications-in-ios-walkthrough-images/image3.png "Setting some constraints on the button")
+1. Измените класс `ViewController` и добавьте следующий обработчик событий в метод ViewDidLoad:
 
     ```csharp
     button.TouchUpInside += (sender, e) =>
@@ -57,7 +57,7 @@ _В этом разделе мы рассмотрим, как использов
 
     Этот код создает уведомление, использующее звук, устанавливает значение значка значок 1 и отображает предупреждение для пользователя.
 
-1. Затем измените файл `AppDelegate.cs`, добавьте следующий код `FinishedLaunching` в метод. Мы проверили, работает ли устройство под управлением iOS 8, если это так, поэтому **нам нужно запросить** разрешение пользователя на получение уведомлений:
+1. Затем измените файл `AppDelegate.cs`. сначала добавьте следующий код в метод `FinishedLaunching`. Мы проверили, работает ли устройство под управлением iOS 8, если это так, поэтому **нам нужно запросить** разрешение пользователя на получение уведомлений:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -69,7 +69,7 @@ _В этом разделе мы рассмотрим, как использов
     }
     ```
 
-1. По-прежнему добавьте следующий метод ,которыйбудетвызыватьсяприполученииуведомления:`AppDelegate.cs`
+1. По-прежнему в `AppDelegate.cs`добавьте следующий метод, который будет вызываться при получении уведомления:
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
@@ -85,7 +85,7 @@ _В этом разделе мы рассмотрим, как использов
     }
     ```
 
-1. Необходимо обменять случай, когда уведомление было запущено из-за локального уведомления. Измените метод `FinishedLaunching` в, чтобы `AppDelegate` включить в него следующий фрагмент кода:
+1. Необходимо обменять случай, когда уведомление было запущено из-за локального уведомления. Измените метод `FinishedLaunching` в `AppDelegate`, чтобы включить следующий фрагмент кода:
 
     ```csharp
     // check for a notification
@@ -112,7 +112,8 @@ _В этом разделе мы рассмотрим, как использов
 
 1. Наконец, запустите приложение. В iOS 8 вам будет предложено разрешить уведомления. Нажмите кнопку **ОК** , а затем нажмите кнопку **добавить уведомление** . После небольшой паузы вы увидите диалоговое окно предупреждения, как показано на следующих снимках экрана:
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "Подтверждение возможность отправлять уведомления") ![](local-notifications-in-ios-walkthrough-images/image1.png "кнопки Добавить уведомление") ![](local-notifications-in-ios-walkthrough-images/image2.png "диалоговое окно уведомления для оповещения")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "Подтверждение возможности отправки уведомлений") ![](local-notifications-in-ios-walkthrough-images/image1.png "Кнопка добавления уведомления")
+    ![](local-notifications-in-ios-walkthrough-images/image2.png "The notification alert dialog")
 
 ## <a name="summary"></a>Сводка
 

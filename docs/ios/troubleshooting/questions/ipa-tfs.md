@@ -4,19 +4,19 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 9c7b7e598f66d930b5e16ef19b8bc108d8b6701a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4493b1a0d06e2f44ee9a11a250395f058baa0548
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291056"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031018"
 ---
 # <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Как скопировать выходные файлы IPA в папку сброса TFS?
 
-Откройте файл для проекта приложения iOS в текстовом редакторе, а затем добавьте в конец файла следующие строки (непосредственно перед закрывающим `</Project>` тегом): `.csproj`
+Откройте файл `.csproj` для проекта приложения iOS в текстовом редакторе, а затем добавьте следующие строки в конце (непосредственно перед закрывающим тегом `</Project>`):
 
 ```xml
 <PropertyGroup>
@@ -40,15 +40,15 @@ ms.locfileid: "70291056"
 
 ## <a name="notes"></a>Примечания
 
-- Это та же общая методика, о которой [можно изменить выходной путь к файлу IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). Две важные точки `$(TF_BUILD_BINARIESDIRECTORY)` задаются в качестве папки назначения и добавляют дополнительное условие, `CopyIpa` которое будет выполняться только для сборок TFS.
+- Это та же общая методика, о которой [можно изменить выходной путь к файлу IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). Два важных момента задают `$(TF_BUILD_BINARIESDIRECTORY)` в качестве папки назначения и добавляют дополнительное условие, поэтому `CopyIpa` будет выполняться только для сборок TFS.
 
 - Описание `TF_BUILD_BINARIESDIRECTORY` см. в разделе [стандартные переменные сборки](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Документация по установке TFS для использования с Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
-- [Задача сборки DevOps Azure: Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
-- [Задача сборки DevOps Azure: Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
+- [Задача сборки Azure DevOps: Xamarin. Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
+- [Задача сборки Azure DevOps: Xamarin. iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>Следующие шаги
 

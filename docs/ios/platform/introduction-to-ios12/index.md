@@ -4,15 +4,15 @@ description: В этом документе представлено общее 
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
-ms.openlocfilehash: b3f3db32e87d83ea4e076d439df3342e5ca2ed50
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39d954626bc9e789446e7f1deac67e2e0fca51c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284636"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032008"
 ---
 # <a name="introduction-to-ios-12"></a>Введение в iOS 12
 
@@ -56,7 +56,7 @@ iOS 12 облегчает пользователям и разработчика
 
 - Автозаполнение паролей и автоматическое создание надежных паролей позволяют автоматически создавать, хранить и использовать надежные пароли в приложениях iOS при регистрации и входе в приложение.
 - Автозаполнение кода безопасности позволяет использовать коды проверки подлинности на основе SMS без ручной вырезания и вставления или запоминания.
-- `ASWebAuthenticationSession` Класс упрощает процесс работы со службами федеративной проверки подлинности.
+- Класс `ASWebAuthenticationSession` упрощает процесс работы со службами федеративной проверки подлинности.
 - Расширения поставщика учетных данных позволяют сторонним приложениям пароля предоставлять имена пользователей и пароли для входа в поля.
 
 ## <a name="healthkit-updates"></a>Обновления HealthKit
@@ -80,4 +80,4 @@ iOS 12 облегчает пользователям и разработчика
 В iOS 12 компания Apple устарела:
 
 - OpenGL ES, [поощрение разработчиков](https://developer.apple.com/ios/whats-new/) для внедрения металла.
-- [`UIWebView`](xref:UIKit.UIWebView), [в пользу `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
+- [`UIWebView`](xref:UIKit.UIWebView), [в пользу `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).

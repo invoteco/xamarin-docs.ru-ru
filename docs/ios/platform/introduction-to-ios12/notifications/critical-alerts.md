@@ -4,15 +4,15 @@ description: В этом документе описывается исполь�
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 54a214215f77b66f6a4b134dcb8d27b26c44fb6c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43b810b95e4da2927030617e68c0ade824a0beaa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291293"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031977"
 ---
 # <a name="critical-alerts-in-xamarinios"></a>Критические оповещения в Xamarin. iOS
 
@@ -28,8 +28,8 @@ ms.locfileid: "70291293"
 
 Запрос на авторизацию уведомления приложения предлагает пользователю разрешить или запретить уведомления приложения. Если запрос на авторизацию уведомления запрашивает разрешение на отправку критических оповещений, приложение также предоставит пользователю возможность принять участие в критических оповещениях.
 
-Следующий код запрашивает разрешение на отправку критических предупреждений и стандартных уведомлений и звуков путем передачи соответствующего[`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
-[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)значения:
+Следующий код запрашивает разрешение на отправку критических предупреждений и стандартных уведомлений и звуков, передавая соответствующие [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
+значения для [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -45,11 +45,11 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>Локальные критические оповещения
 
-Чтобы отправить локальное критическое оповещение, создайте[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-и задайте для `Sound` его свойства значение:
+Чтобы отправить локальное критическое оповещение, создайте [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+и задайте для свойства `Sound` значение:
 
-- `UNNotificationSound.DefaultCriticalSound`, который использует звуковое оповещение по умолчанию.
-- `UNNotificationSound.GetCriticalSound`, который позволяет указать пользовательский звук, объединенный с вашим приложением и томом.
+- `UNNotificationSound.DefaultCriticalSound`, которая использует звуковое оповещение по умолчанию.
+- `UNNotificationSound.GetCriticalSound`, который позволяет указать пользовательский звук, объединенный с приложением и томом.
 
 Затем создайте `UNNotificationRequest` из содержимого уведомления и добавьте его в центр уведомлений:
 

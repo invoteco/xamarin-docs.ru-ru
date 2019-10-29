@@ -4,21 +4,21 @@ description: В этом документе описывается работа 
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: be0208accfdc287f93cf635a22c6409cd03483e9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769133"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030506"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Работа с представлениями коллекций tvOS в Xamarin
 
 Представления коллекций позволяют отображать группу содержимого с помощью произвольных макетов. Используя встроенную поддержку, они позволяют легко создавать линейные макеты, схожие с сеткой, а также поддерживают пользовательские макеты.
 
-[![](collection-views-images/collection01.png "Пример представления коллекции")](collection-views-images/collection01.png#lightbox)
+[![](collection-views-images/collection01.png "Sample collection view")](collection-views-images/collection01.png#lightbox)
 
 Представление коллекции поддерживает коллекцию элементов, использующих как делегат, так и источник данных для обеспечения взаимодействия с пользователем и содержимого коллекции. Поскольку представление коллекции основано на подсистеме макета, которая не зависит от самого представления, предоставление другого макета может легко изменить представление данных представления коллекции на лету.
 
@@ -26,7 +26,7 @@ ms.locfileid: "70769133"
 
 ## <a name="about-collection-views"></a>О представлениях коллекций
 
-Как упоминалось выше, представление коллекции (`UICollectionView`) управляет упорядоченной коллекцией элементов и представляет эти элементы настраиваемыми макетами. Представления коллекций работают так же, как табличные представления (`UITableView`), за исключением того, что они могут использовать макеты для представления элементов не только в одном столбце.
+Как упоминалось выше, представление коллекции (`UICollectionView`) управляет упорядоченной коллекцией элементов и представляет эти элементы с настраиваемыми макетами. Представления коллекций работают так же, как табличные представления (`UITableView`), за исключением того, что они могут использовать макеты для представления элементов не только в одном столбце.
 
 При использовании представления коллекции в tvOS приложение несет ответственность за предоставление данных, связанных с коллекцией, с помощью источника данных (`UICollectionViewDataSource`). Данные представления коллекции могут быть упорядочены и представлены в разных группах (разделах).
 
@@ -34,13 +34,13 @@ ms.locfileid: "70769133"
 
 При необходимости в представление коллекции можно добавить дополнительные представления, которые будут использоваться в качестве верхнего и нижнего колонтитулов для разделов и ячеек. Макет представления коллекции отвечает за определение размещения этих представлений вместе с отдельными ячейками.
 
-Представление коллекции может реагировать на взаимодействие с пользователем с помощью делегата`UICollectionViewDelegate`(). Этот делегат также отвечает за определение того, может ли данная ячейка получить фокус, если ячейка была выделена или если она была выбрана. В некоторых случаях делегат определяет размер отдельных ячеек.
+Представление коллекции может реагировать на взаимодействие с пользователем с помощью делегата (`UICollectionViewDelegate`). Этот делегат также отвечает за определение того, может ли данная ячейка получить фокус, если ячейка была выделена или если она была выбрана. В некоторых случаях делегат определяет размер отдельных ячеек.
 
 <a name="Collection-View-Layouts" />
 
 ## <a name="collection-view-layouts"></a>Макеты представлений коллекций
 
-Ключевой функцией представления коллекции является его разделение между данными, представленными для представления, и его макетом. Макет представления коллекции (`UICollectionViewLayout`) отвечает за предоставление Организации и расположения ячеек (и любых вспомогательных представлений) в презентации представления коллекции.
+Ключевой функцией представления коллекции является его разделение между данными, представленными для представления, и его макетом. Макет представления коллекции (`UICollectionViewLayout`) отвечает за предоставление Организации и расположения ячеек (и любых дополнительных представлений) с помощью представления коллекции в режиме просмотра.
 
 Отдельные ячейки создаются представлением коллекции из присоединенного источника данных, а затем упорядочиваются и отображаются в заданном макете представления коллекции.
 
@@ -56,10 +56,10 @@ ms.locfileid: "70769133"
 
 Поскольку представления коллекций создавались для работы с большими коллекциями элементов, отдельные ячейки могут быть выведены из очереди и повторно использованы для предотвращения ограничений памяти. Существует два разных метода вывода представлений из очереди:
 
-- `DequeueReusableCell`— Создает или возвращает ячейку заданного типа (как указано в раскадровке приложения).
-- `DequeueReusableSupplementaryView`— Создает или возвращает вспомогательное представление заданного типа (как указано в раскадровке приложения).
+- `DequeueReusableCell` — создает или возвращает ячейку заданного типа (как указано в раскадровке приложения).
+- `DequeueReusableSupplementaryView` — создает или возвращает вспомогательное представление заданного типа (как указано в раскадровке приложения).
 
-Перед вызовом любого из этих методов необходимо зарегистрировать класс, раскадровку или `.xib` файл, используемый для создания представления ячейки с представлением коллекции. Например:
+Перед вызовом любого из этих методов необходимо зарегистрировать класс, раскадровку или файл `.xib`, используемый для создания представления ячейки с представлением коллекции. Пример:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -70,7 +70,7 @@ public CityCollectionView (IntPtr handle) : base (handle)
 }
 ```
 
-Где `typeof(CityCollectionViewCell)` предоставляет класс, который поддерживает представление и `CityViewDatasource.CardCellId` предоставляет идентификатор, используемый, когда ячейка (или представление) выводится из очереди.
+Где `typeof(CityCollectionViewCell)` предоставляет класс, поддерживающий представление, и `CityViewDatasource.CardCellId` предоставляет идентификатор, используемый при выстановке ячейки (или представления) из очереди.
 
 После того как ячейка выводится из очереди, она настраивается данными для элемента, который она представляет, и возвращается в представление коллекции для отображения.
 
@@ -78,10 +78,10 @@ public CityCollectionView (IntPtr handle) : base (handle)
 
 ## <a name="about-collection-view-controllers"></a>Сведения об контроллерах представления коллекций
 
-Контроллер представления коллекции (`UICollectionViewController`) — это специализированный контроллер представления (`UIViewController`), обеспечивающий следующее поведение.
+Контроллер представления коллекции (`UICollectionViewController`) является специализированным контроллером представления (`UIViewController`), который обеспечивает следующее поведение:
 
-- Он отвечает за загрузку представления коллекции из раскадровки или `.xib` файла и создание экземпляра представления. При создании в коде автоматически создается новое ненастроенное представление коллекции.
-- После загрузки представления коллекции контроллер пытается загрузить его источник данных и делегат из раскадровки или `.xib` файла. Если они отсутствуют, он задается как источник обоих.
+- Он отвечает за загрузку представления коллекции из файла раскадровки или `.xib` и создание экземпляра представления. При создании в коде автоматически создается новое ненастроенное представление коллекции.
+- После загрузки представления коллекции контроллер пытается загрузить его источник данных и делегат из файла раскадровки или `.xib`. Если они отсутствуют, он задается как источник обоих.
 - Гарантирует, что данные загружаются перед заполнением представления коллекции при первом отображении, а затем перезагружаются и очищаются при каждом последующем отображении.
 
 Кроме того, контроллер представления коллекции предоставляет переопределяемые методы, которые можно использовать для управления жизненным циклом представления коллекции, например `AwakeFromNib` и `ViewWillDisplay`.
@@ -97,80 +97,80 @@ public CityCollectionView (IntPtr handle) : base (handle)
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Запустите новое **приложение tvOS с одним представлением** в Visual Studio для Mac.
-1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его в конструкторе iOS.
+1. В **Обозреватель решений**дважды щелкните файл `Main.storyboard` и откройте его в конструкторе iOS.
 1. Добавьте представление изображения, метку и кнопку в существующее представление и настройте их так, чтобы они выглядели следующим образом: 
 
-    [![](collection-views-images/collection02.png "Образец макета")](collection-views-images/collection02.png#lightbox)
-1. Присвойте **имя** представлению изображения и метке на **вкладке мини** -приложение **обозревателя свойств**. Например: 
+    [![](collection-views-images/collection02.png "Sample layout")](collection-views-images/collection02.png#lightbox)
+1. Присвойте **имя** представлению изображения и метке на **вкладке мини** -приложение **обозревателя свойств**. Пример: 
 
-    [![](collection-views-images/collection03.png "Задание имени")](collection-views-images/collection03.png#lightbox)
+    [![](collection-views-images/collection03.png "Setting the name")](collection-views-images/collection03.png#lightbox)
 1. Затем перетащите контроллер представления коллекции на раскадровку: 
 
-    [![](collection-views-images/collection04.png "Контроллер представления коллекции")](collection-views-images/collection04.png#lightbox)
+    [![](collection-views-images/collection04.png "A Collection View Controller")](collection-views-images/collection04.png#lightbox)
 1. Перетащите элемент управления из кнопки в контроллер представления коллекции и выберите команду **Отправить** из всплывающего окна: 
 
-    [![](collection-views-images/collection05.png "Выбор отправки из всплывающего окна")](collection-views-images/collection05.png#lightbox)
+    [![](collection-views-images/collection05.png "Select Push from the popup")](collection-views-images/collection05.png#lightbox)
 1. При запуске приложения это представление коллекции будет отображаться каждый раз, когда пользователь нажмет кнопку.
 1. Выберите представление коллекции и введите следующие значения на **вкладке Макет** **обозревателя свойств**. 
 
-    [![](collection-views-images/collection06.png "Обозреватель свойств")](collection-views-images/collection06.png#lightbox)
+    [![](collection-views-images/collection06.png "The Properties Explorer")](collection-views-images/collection06.png#lightbox)
 1. Определяет размер отдельных ячеек и границ между ячейками и внешним ребром представления коллекции.
-1. Выберите контроллер представления коллекции и задайте для `CityCollectionViewController` его класса значение на **вкладке мини**-приложение: 
+1. Выберите контроллер представления коллекции и задайте для его класса значение `CityCollectionViewController` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection07.png "Присвойте классу значение Цитиколлектионвиевконтроллер")](collection-views-images/collection07.png#lightbox)
-1. Выберите представление коллекции и задайте для `CityCollectionView` его класса значение на **вкладке мини**-приложение: 
+    [![](collection-views-images/collection07.png "Set the class to CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
+1. Выберите представление коллекции и задайте для его класса значение `CityCollectionView` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection08.png "Присвойте классу значение Цитиколлектионвиев")](collection-views-images/collection08.png#lightbox)
-1. Выберите ячейку представление коллекции и задайте для `CityCollectionViewCell` ее класса значение на **вкладке мини**-приложение: 
+    [![](collection-views-images/collection08.png "Set the class to CityCollectionView")](collection-views-images/collection08.png#lightbox)
+1. Выберите ячейку представление коллекции и задайте для ее класса значение `CityCollectionViewCell` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection09.png "Присвойте классу значение Цитиколлектионвиевцелл")](collection-views-images/collection09.png#lightbox)
-1. На **вкладке мини** -приложение убедитесь, что макет `Flow` имеет значение, а **направление прокрутки** — `Vertical` для представления коллекция: 
+    [![](collection-views-images/collection09.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
+1. На **вкладке мини** -приложение убедитесь, что **Макет** `Flow`, а **направление прокрутки** `Vertical` для представления коллекции: 
 
-    [![](collection-views-images/collection10.png "Вкладка мини-приложения")](collection-views-images/collection10.png#lightbox)
-1. Выберите ячейку представление коллекции и задайте ее **удостоверение** `CityCell` на **вкладке мини**-приложение: 
+    [![](collection-views-images/collection10.png "The Widget Tab")](collection-views-images/collection10.png#lightbox)
+1. Выберите ячейку представление коллекции и задайте для ее **удостоверения** значение `CityCell` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection11.png "Задайте удостоверение Цитицелл.")](collection-views-images/collection11.png#lightbox)
+    [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
 1. Сохраните изменения.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Запустите новое **приложение с одним представлением tvOS** в Visual Studio.
-1. В **Обозреватель решений**дважды щелкните `Main.storyboard` файл и откройте его в конструкторе iOS.
+1. В **Обозреватель решений**дважды щелкните файл `Main.storyboard` и откройте его в конструкторе iOS.
 1. Добавьте представление изображения, метку и кнопку в существующее представление и настройте их так, чтобы они выглядели следующим образом: 
 
-    [![](collection-views-images/collection02vs.png "Настройка макета")](collection-views-images/collection02vs.png#lightbox)
-1. Присвойте **имя** представлению изображения и метке на **вкладке мини** -приложение **обозревателя свойств**. Например: 
+    [![](collection-views-images/collection02vs.png "Configure the layout")](collection-views-images/collection02vs.png#lightbox)
+1. Присвойте **имя** представлению изображения и метке на **вкладке мини** -приложение **обозревателя свойств**. Пример: 
 
-    [![](collection-views-images/collection03vs.png "Обозреватель свойств")](collection-views-images/collection03vs.png#lightbox)
+    [![](collection-views-images/collection03vs.png "The Properties Explorer")](collection-views-images/collection03vs.png#lightbox)
 1. Затем перетащите контроллер представления коллекции на раскадровку: 
 
-    [![](collection-views-images/collection04vs.png "Контроллер представления коллекции")](collection-views-images/collection04vs.png#lightbox)
+    [![](collection-views-images/collection04vs.png "A Collection View Controller")](collection-views-images/collection04vs.png#lightbox)
 1. Перетащите элемент управления из кнопки в контроллер представления коллекции и выберите команду **Отправить** из всплывающего окна: 
 
-    [![](collection-views-images/collection05vs.png "Выбор отправки из всплывающего окна")](collection-views-images/collection05vs.png#lightbox)
+    [![](collection-views-images/collection05vs.png "Select Push from the popup")](collection-views-images/collection05vs.png#lightbox)
 1. При запуске приложения это представление коллекции будет отображаться каждый раз, когда пользователь нажмет кнопку.
 1. Выберите представление коллекции и на **вкладке Макет** **обозревателя свойств** введите **ширину** _361_ и **высоту** _256_ . 
 1. Определяет размер отдельных ячеек и границ между ячейками и внешним ребром представления коллекции.
-1. Выберите контроллер представления коллекции и задайте для `CityCollectionViewController` его класса значение на **вкладке мини**-приложение: 
+1. Выберите контроллер представления коллекции и задайте для его класса значение `CityCollectionViewController` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection07vs.png "Присвойте классу значение Цитиколлектионвиевконтроллер")](collection-views-images/collection07vs.png#lightbox)
-1. Выберите представление коллекции и задайте для `CityCollectionView` его класса значение на **вкладке мини**-приложение: 
+    [![](collection-views-images/collection07vs.png "Set the class to CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
+1. Выберите представление коллекции и задайте для его класса значение `CityCollectionView` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection08vs.png "Присвойте классу значение Цитиколлектионвиев")](collection-views-images/collection08vs.png#lightbox)
-1. Выберите ячейку представление коллекции и задайте для `CityCollectionViewCell` ее класса значение на **вкладке мини**-приложение: 
+    [![](collection-views-images/collection08vs.png "Set the class to CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
+1. Выберите ячейку представление коллекции и задайте для ее класса значение `CityCollectionViewCell` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection09vs.png "Присвойте классу значение Цитиколлектионвиевцелл")](collection-views-images/collection09vs.png#lightbox)
-1. На **вкладке мини** -приложение убедитесь, что макет `Flow` имеет значение, а **направление прокрутки** — `Vertical` для представления коллекция: 
+    [![](collection-views-images/collection09vs.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
+1. На **вкладке мини** -приложение убедитесь, что **Макет** `Flow`, а **направление прокрутки** `Vertical` для представления коллекции: 
 
-    [![](collection-views-images/collection10vs.png "Вкладка мини-приложения Tне")](collection-views-images/collection10vs.png#lightbox)
-1. Выберите ячейку представление коллекции и задайте ее **удостоверение** `CityCell` на **вкладке мини**-приложение: 
+    [![](collection-views-images/collection10vs.png "Tthe Widget Tab")](collection-views-images/collection10vs.png#lightbox)
+1. Выберите ячейку представление коллекции и задайте для ее **удостоверения** значение `CityCell` на **вкладке мини**-приложение: 
 
-    [![](collection-views-images/collection11vs.png "Задайте удостоверение Цитицелл.")](collection-views-images/collection11vs.png#lightbox)
+    [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Сохраните изменения.
 
 -----
 
-Если бы мы выбрали `Custom` **Макет**представления коллекции, можно было бы указать пользовательский макет. Компания Apple предоставляет встроенные `UICollectionViewFlowLayout` `UICollectionViewDelegateFlowLayout` возможности, которые могут легко представлять данные в макете на основе сетки ( `flow` они используются в стиле макета). 
+Если бы мы выбрали `Custom` для **макета**представления коллекции, можно было бы указать пользовательский макет. Компания Apple предоставляет встроенные `UICollectionViewFlowLayout` и `UICollectionViewDelegateFlowLayout`, которые могут легко представлять данные в макете на основе сетки (они используются в стиле макета `flow`). 
 
 Дополнительные сведения о работе с раскадровками см. в статье [Hello, tvOS краткое руководство по началу работы](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -186,7 +186,7 @@ public CityCollectionView (IntPtr handle) : base (handle)
 
 Во-первых, мы создадим модель для наших данных, содержащую имя файла отображаемого изображения, заголовок и флаг, позволяющий выбрать город.
 
-`CityInfo` Создайте класс и сделайте его следующим:
+Создайте класс `CityInfo` и сделайте его следующим:
 
 ```csharp
 using System;
@@ -216,7 +216,7 @@ namespace tvCollection
 
 ### <a name="the-collection-view-cell"></a>Ячейка представления коллекции
 
-Теперь необходимо определить, как будут представлены данные для каждой ячейки. `CityCollectionViewCell.cs` Измените файл (созданный автоматически из файла раскадровки) и сделайте его следующим:
+Теперь необходимо определить, как будут представлены данные для каждой ячейки. Измените файл `CityCollectionViewCell.cs` (созданный автоматически из файла раскадровки) и сделайте его следующим:
 
 ```csharp
 using System;
@@ -289,7 +289,7 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 
 После создания нашей модели данных и определения структуры ячеек давайте создадим источник данных для нашего представления коллекции. Источник данных несет ответственность за не только предоставление резервных данных, но также вывод в очередь ячеек для отображения отдельных ячеек на экране.
 
-`CityViewDatasource` Создайте класс и сделайте его следующим:
+Создайте класс `CityViewDatasource` и сделайте его следующим:
 
 ```csharp
 using System;
@@ -382,7 +382,7 @@ namespace tvCollection
 }
 ```
 
-Подробно рассмотрим этот класс. Сначала наследуется от `UICollectionViewDataSource` и указать ярлык для идентификатора ячейки (который мы присвоили в конструкторе iOS):
+Подробно рассмотрим этот класс. Сначала наследуется от `UICollectionViewDataSource` и предоставить ярлык для идентификатора ячейки (который мы присвоили в конструкторе iOS):
 
 ```csharp
 public static NSString CardCellId = new NSString ("CityCell");
@@ -406,7 +406,7 @@ public void PopulateCities() {
 }
 ```
 
-Затем мы переопределяем `NumberOfSections` метод и возвращаем количество разделов (групп элементов), которое имеет представление коллекции. В этом случае существует только один:
+Затем мы переопределяем метод `NumberOfSections` и возвращаем количество разделов (групп элементов), которые содержит представление коллекции. В этом случае существует только один:
 
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
@@ -439,7 +439,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 }
 ```
 
-После получения ячейки представления коллекции нашего `CityCollectionViewCell` типа мы заполняем ее данным элементом.
+После получения ячейки представления коллекции для нашего типа `CityCollectionViewCell` заполняется заданным элементом.
 
 <a name="Responding-to-User-Events" />
 
@@ -451,7 +451,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 ### <a name="the-app-delegate"></a>Делегат приложения
 
-Нам нужен способ связать выбранный в данный момент элемент из представления коллекции обратно в вызывающее представление. Мы будем использовать пользовательское свойство на нашем `AppDelegate`. `AppDelegate.cs` Измените файл и добавьте следующий код:
+Нам нужен способ связать выбранный в данный момент элемент из представления коллекции обратно в вызывающее представление. Мы будем использовать пользовательское свойство на нашем `AppDelegate`. Измените файл `AppDelegate.cs` и добавьте следующий код:
 
 ```csharp
 public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning Circle", true);
@@ -463,7 +463,7 @@ public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning 
 
 ### <a name="the-collection-view-delegate"></a>Делегат представления коллекции
 
-Затем добавьте в проект новый `CityViewDelegate` класс и сделайте его следующим:
+Затем добавьте в проект новый класс `CityViewDelegate` и сделайте его следующим:
 
 ```csharp
 using System;
@@ -517,7 +517,7 @@ namespace tvCollection
 }
 ```
 
-Давайте подробнее рассмотрим этот класс. Сначала наследуется от `UICollectionViewDelegateFlowLayout`. Причина, по которой мы наследуем от этого класса `UICollectionViewDelegate` , заключается в том, что мы используем встроенную `UICollectionViewFlowLayout` для представления наших элементов, а не пользовательский тип макета.
+Давайте подробнее рассмотрим этот класс. Сначала наследуется от `UICollectionViewDelegateFlowLayout`. Причина, по которой мы наследуем от этого класса, а не `UICollectionViewDelegate`, заключается в том, что мы используем встроенную `UICollectionViewFlowLayout` для представления наших элементов, а не пользовательского типа макета.
 
 Далее мы возвращаем размер отдельных элементов, используя следующий код:
 
@@ -542,7 +542,7 @@ public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Мы проверяем, имеет ли установленный флаг для `CanSelect` `true` определенного фрагмента резервных данных значение и возвращают его. Дополнительные сведения о навигации и фокусе см. в документации по [работе с навигацией и фокусами](~/ios/tvos/app-fundamentals/navigation-focus.md) и [Siri удаленными устройствами и контроллерами Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
+Мы проверяем, имеет ли установленный флаг `CanSelect` для заданной части резервных данных значение `true` и возвращать его. Дополнительные сведения о навигации и фокусе см. в документации по [работе с навигацией и фокусами](~/ios/tvos/app-fundamentals/navigation-focus.md) и [Siri удаленными устройствами и контроллерами Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
 Наконец, мы реагируем на пользователя, который выбирает элемент с помощью следующего кода:
 
@@ -557,13 +557,13 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Здесь мы устанавливаем `SelectedCity` свойство `AppDelegate` для элемента, который выбрал пользователь, и закрыл контроллер представления коллекции, вернувшись к представлению, вызвавшему US. Мы еще не определили `ParentController` свойство нашего представления коллекции, мы сделаем это дальше.
+Здесь мы зададим для свойства `SelectedCity` `AppDelegate` элемент, выбранный пользователем, и закрыл контроллер представления коллекции, вернувшись к представлению, вызвавшему US. Мы еще не определили свойство `ParentController` представления коллекции, мы сделаем это далее.
 
 <a name="Configuring-the-Collection-View" />
 
 ## <a name="configuring-the-collection-view"></a>Настройка представления коллекции
 
-Теперь нам нужно изменить представление коллекции и назначить наш источник данных и делегат. `CityCollectionView.cs` Измените файл (созданный для нас автоматически из раскадровки) и сделайте его следующим:
+Теперь нам нужно изменить представление коллекции и назначить наш источник данных и делегат. Измените файл `CityCollectionView.cs` (созданный автоматически из нашей раскадровки) и сделайте его следующим:
 
 ```csharp
 using System;
@@ -625,7 +625,7 @@ namespace tvCollection
 }
 ```
 
-Сначала мы предоставляем ярлык для доступа к нашему `AppDelegate`: 
+Сначала мы предоставляем ярлык для доступа к нашим `AppDelegate`: 
 
 ```csharp
 public static AppDelegate App {
@@ -682,7 +682,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Теперь необходимо выполнить окончательную настройку в нашем представлении коллекции и позволить контроллеру установить свойство, которое мы определили, чтобы это представление коллекции можно было закрыть после того, как пользователь сделает выбор.
 
-`CityCollectionViewController.cs` Измените файл (созданный автоматически из нашей раскадровки) и сделайте его следующим:
+Измените файл `CityCollectionViewController.cs` (созданный автоматически из раскадровки) и сделайте его следующим:
 
 ```csharp
 // This file has been autogenerated from a class added in the UI designer.
@@ -726,7 +726,7 @@ namespace tvCollection
 
 Теперь, когда все части объединены для заполнения и управления представлением коллекции, необходимо внести окончательные изменения в главное представление, чтобы объединить все вместе.
 
-`ViewController.cs` Измените файл (созданный автоматически из нашей раскадровки) и сделайте его следующим:
+Измените файл `ViewController.cs` (созданный автоматически из раскадровки) и сделайте его следующим:
 
 ```csharp
 using System;
@@ -777,7 +777,7 @@ namespace MySingleView
 }
 ```
 
-Следующий код изначально отображает выбранный элемент из `SelectedCity` свойства `AppDelegate` и переводит его, когда пользователь сделал выбор из представления коллекции:
+Следующий код первоначально отображает выбранный элемент из свойства `SelectedCity` `AppDelegate` и повторно отображает его, когда пользователь сделал выбор из представления коллекции:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -797,17 +797,17 @@ public override void ViewWillAppear (bool animated)
 
 При наличии всех действий при сборке и запуске приложения основное представление отображается со значением города по умолчанию:
 
-[![](collection-views-images/run01.png "Основной экран")](collection-views-images/run01.png#lightbox)
+[![](collection-views-images/run01.png "The main screen")](collection-views-images/run01.png#lightbox)
 
 Если пользователь **наберет кнопку "выбрать представление** ", отобразится представление коллекции:
 
-[![](collection-views-images/run02.png "Представление коллекции")](collection-views-images/run02.png#lightbox)
+[![](collection-views-images/run02.png "The collection view")](collection-views-images/run02.png#lightbox)
 
-Любой город, `CanSelect` свойство которого имеет `false` значение, будет отображаться серым цветом, и пользователь не сможет установить фокус на него. Когда пользователь выделяет элемент (сделать его активным), заголовок отображается и может использовать эффект фокусировки для тонкого наклона изображения в трехмерном виде.
+Любой город, свойство `CanSelect` которого имеет значение `false`, будет отображаться серым цветом, и пользователь не сможет установить фокус на него. Когда пользователь выделяет элемент (сделать его активным), заголовок отображается и может использовать эффект фокусировки для тонкого наклона изображения в трехмерном виде.
 
 Когда пользователь щелкает выбранное изображение, представление коллекции закрывается, а главное представление снова отображается с новым изображением:
 
-[![](collection-views-images/run03.png "Новое изображение на начальном экране")](collection-views-images/run03.png#lightbox)
+[![](collection-views-images/run03.png "A new image on the home screen")](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items" />
 

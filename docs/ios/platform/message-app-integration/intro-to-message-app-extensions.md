@@ -4,15 +4,15 @@ description: В этой статье показано, как включить 
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 37f2942c97f7604fbd72a6dd38de518d3668ee9e
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 51a89533390eb1be8c1f36e0121229fb5a942279
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031666"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Основные сведения о расширении приложения для сообщений в Xamarin. iOS
 
@@ -37,7 +37,7 @@ _В этой статье показано, как включить расшир
 
 Кроме того, в iOS 10 добавлена встроенная возможность добавления атрибутов приложений, которая позволяет пользователю легко обнаружить приложение. Например, если один пользователь отправляет другое содержимое из приложения, которое не устанавливало второй пользователь (например, наклейка), имя отправляющего приложения отображается под содержимым в журнале сообщений. Если пользователь нажмет имя приложения, будет открыто приложение для хранения сообщений и приложение, выбранное в магазине.
 
-Расширения приложений для работы с сообщениями похожи на существующие приложения iOS, знакомые разработчикам с созданием и получат доступ ко всем стандартным платформам и функциям стандартного приложения iOS. Например:
+Расширения приложений для работы с сообщениями похожи на существующие приложения iOS, знакомые разработчикам с созданием и получат доступ ко всем стандартным платформам и функциям стандартного приложения iOS. Пример:
 
 - Они имеют доступ к покупкам в приложении.
 - У них есть доступ к Apple Pay.
@@ -87,7 +87,7 @@ _В этой статье показано, как включить расшир
 - Изображения не могут быть меньше 100x100 точек или больше, чем 206 x 206 точек.
 
 > [!IMPORTANT]
-> Изображения наклейок всегда должны предоставляться `@3x` при разрешении в диапазоне от 300 x 300 до 618 x 618 пикселей. Система будет автоматически формировать `@2x` версии и `@1x` при необходимости в среде выполнения.
+> Изображения наклейок всегда должны быть предоставлены в `@3x` разрешением в диапазоне пикселей 300 x 300 до 618 x 618. Система автоматически создаст `@2x` и `@1x` версии во время выполнения по мере необходимости.
 
 Компания Apple предлагает протестировать ресурсы изображений наклейки на различных цветных фоне (например, белый, черный, красный, желтый и многоцветный) и фотографии, чтобы обеспечить наилучшее представление всех возможных ситуаций.
 
@@ -99,7 +99,7 @@ _В этой статье показано, как включить расшир
 
 Используйте инспектор атрибутов Xcode, чтобы задать размер для всего пакета наклеек и предоставить только ресурсы изображений, соответствующие запрошенному размеру, для получения наилучших результатов в браузере наклейок в приложении "сообщения".
 
-Дополнительные сведения см. в справочнике [по нашим приложениям](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) и [сообщениям](https://developer.apple.com/reference/messages) Apple.
+Дополнительные сведения см. в справочнике [по нашим приложениям](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) и [сообщениям](https://developer.apple.com/reference/messages)Apple.
 
 ## <a name="creating-a-custom-sticker-experience"></a>Создание пользовательских интерфейсов наклейок
 
@@ -121,15 +121,15 @@ _В этой статье показано, как включить расшир
 
 1. Запустите Visual Studio для Mac.
 2. Откройте решение, чтобы добавить расширение приложения сообщений в.
-3. Выберите**расширения** **iOS** >  iMessage расширение и нажмите кнопку Далее: > 
+3. Выберите **расширения** > **iOS** > **расширение iMessage** и нажмите кнопку **Далее** :
 
-    [![](intro-to-message-app-extensions-images/message01.png "Выбор расширения iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message01.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Введите **имя расширения** и нажмите кнопку **Далее** :
 
-    [![](intro-to-message-app-extensions-images/message02.png "Введите имя расширения")](intro-to-message-app-extensions-images/message02.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message02.png "Enter an Extension Name")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. Нажмите кнопку **создать** , чтобы создать расширение:
 
-    [![](intro-to-message-app-extensions-images/message03.png "Нажмите кнопку \"создать\"")](intro-to-message-app-extensions-images/message03.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -143,39 +143,39 @@ _В этой статье показано, как включить расшир
 
 -----
 
-По умолчанию `MessagesViewController.cs` файл будет добавлен в решение. Это Главная точка входа в расширение, которая наследуется от `MSMessageAppViewController` класса.
+По умолчанию файл `MessagesViewController.cs` будет добавлен в решение. Это Главная точка входа в расширение, которая наследуется от класса `MSMessageAppViewController`.
 
 Платформа сообщений предоставляет классы для предоставления пользователям доступных наклеек:
 
-- `MSStickerBrowserViewController`— Управляет представлением, в котором будут представлены наклейки. Он также соответствует `IMSStickerBrowserViewDataSource` интерфейсу, который возвращает число наклеек и наклейку для заданного индекса браузера.
-- `MSStickerBrowserView`— Это представление, в котором будут отображаться доступные наклейки.
-- `MSStickerSize`— Определяет отдельные размеры ячеек для сетки наклеек, представленных в представлении браузера.
+- `MSStickerBrowserViewController` — управляет представлением, в котором будут представлены наклейки. Он также соответствует интерфейсу `IMSStickerBrowserViewDataSource`, который возвращает число наклеек и наклейку для заданного индекса браузера.
+- `MSStickerBrowserView` — это представление, в котором будут отображаться доступные наклейки.
+- `MSStickerSize` — определяет отдельные размеры ячеек для сетки наклеек, представленных в представлении браузера.
 
 ### <a name="creating-a-custom-sticker-browser"></a>Создание пользовательского браузера наклейок
 
-Разработчик может дополнительно настроить взаимодействие наклейок для пользователя, предоставив пользовательский браузер наклейок (`MSMessageAppBrowserViewController`) в расширении приложения сообщений. Пользовательский браузер наклейок изменяет способ представления наклеек пользователям при выборе наклейок для включения в поток сообщений.
+Разработчик может дополнительно настроить работу наклейок для пользователя, предоставив пользовательский браузер наклейок (`MSMessageAppBrowserViewController`) в расширении приложения сообщений. Пользовательский браузер наклейок изменяет способ представления наклеек пользователям при выборе наклейок для включения в поток сообщений.
 
 Выполните следующие действия:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-1. В **панель решения**щелкните правой кнопкой мыши имя проекта расширения и выберите **Добавить** > **новый файл...**  >  **iOS |**  > **Контроллер интерфейса**Apple Watch.
-2. Введите `StickerBrowserViewController` в поле **имя** и нажмите кнопку **New (создать** ):
+1. В **панель решения**щелкните правой кнопкой мыши имя проекта расширения и выберите **Добавить** > **новый файл...**  > **iOS | Apple Watch** **контроллер интерфейса** > .
+2. Введите `StickerBrowserViewController` для **имени** и нажмите кнопку **New (создать** ):
 
-    [![](intro-to-message-app-extensions-images/browser01.png "Введите Стиккербровсервиевконтроллер для имени")](intro-to-message-app-extensions-images/browser01.png#lightbox)
-3. `StickerBrowserViewController.cs` Откройте файл для редактирования.
+    [![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
+3. Откройте файл `StickerBrowserViewController.cs` для редактирования.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. В **Обозреватель решений**щелкните правой кнопкой мыши имя проекта расширения и выберите **Добавить** > **новый файл...**  >  **iOS |**  > **Контроллер интерфейса**Apple Watch.
-2. Введите `StickerBrowserViewController` в поле **имя** и нажмите кнопку **New (создать** ):
+1. В **Обозреватель решений**щелкните правой кнопкой мыши имя проекта расширения и выберите **Добавить** > **новый файл...**  > **iOS | Apple Watch** **контроллер интерфейса** > .
+2. Введите `StickerBrowserViewController` для **имени** и нажмите кнопку **New (создать** ):
 
-    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Введите Стиккербровсервиевконтроллер для имени")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
-3. `StickerBrowserViewController.cs` Откройте файл для редактирования.
+    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
+3. Откройте файл `StickerBrowserViewController.cs` для редактирования.
 
 -----
 
-Сделайте так `StickerBrowserViewController.cs` , чтобы они выглядели следующим образом:
+Сделайте `StickerBrowserViewController.cs` выглядеть следующим образом:
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ namespace MonkeyStickers
 public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
 ```
 
-И переопределяет два метода `MSStickerBrowserViewController` класса, чтобы предоставить данные для браузера из этого хранилища данных:
+И переопределяет два метода класса `MSStickerBrowserViewController`, чтобы предоставить данные для браузера из этого хранилища данных:
 
 ```csharp
 public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
@@ -284,7 +284,7 @@ public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, n
 }
 ```
 
-Метод получает путь к ресурсу изображения из пакета расширения и использует его для создания нового экземпляра `MSSticker` объекта из этого ресурса, который добавляется в коллекцию: `CreateSticker`
+Метод `CreateSticker` получает путь к ресурсу изображения из пакета расширения и использует его для создания нового экземпляра `MSSticker` из этого ресурса, который добавляется в коллекцию:
 
 ```csharp
 private void CreateSticker (string assetName, string localizedDescription)
@@ -311,9 +311,9 @@ private void CreateSticker (string assetName, string localizedDescription)
 }
 ```
 
-Метод вызывается из `ViewDidLoad` , чтобы создать наклейку из именованного ресурса изображения (включенного в пакет приложения) и добавить его в коллекцию наклеек. `LoadSticker`
+Метод `LoadSticker` вызывается из `ViewDidLoad`, чтобы создать наклейку из именованного ресурса изображения (включенного в пакет приложения) и добавить его в коллекцию наклеек.
 
-Чтобы реализовать пользовательский браузер наклейок, измените `MessagesViewController.cs` файл и сделайте его следующим:
+Чтобы реализовать пользовательский браузер наклейок, измените файл `MessagesViewController.cs` и сделайте его следующим:
 
 ```csharp
 using System;
@@ -361,7 +361,7 @@ namespace MonkeyStickers
 public StickerBrowserViewController BrowserViewController { get; set;}
 ```
 
-В `ViewDidLoad` методе создается экземпляр и настраивается новый браузер:
+В методе `ViewDidLoad` создается и настраивается новый браузер:
 
 ```csharp
 // Create new browser and configure it
@@ -393,7 +393,7 @@ View.AddSubview (BrowserViewController.View);
 
 Это представление наклейок может переключаться между этими режимами программным путем или вручную пользователем.
 
-Взгляните на следующий пример обработки переключения между двумя разными режимами представления. Для каждого состояния потребуется два разных контроллера представления. Обработчик обрабатывает компактное представление и выглядит следующим образом: `StickerBrowserViewController`
+Взгляните на следующий пример обработки переключения между двумя разными режимами представления. Для каждого состояния потребуется два разных контроллера представления. `StickerBrowserViewController` обрабатывает **компактное** представление и выглядит следующим образом:
 
 ```csharp
 using System;
@@ -494,7 +494,7 @@ namespace MessageExtension
 }
 ```
 
-Будет работать развернутое представление наклейок и выглядеть следующим образом: `AddStickerViewController`
+`AddStickerViewController` будет работать с **развернутым** представлением наклейок и выглядеть следующим образом:
 
 ```csharp
 using System;
@@ -546,7 +546,7 @@ namespace MessageExtension
 }
 ```
 
-`MessageViewController` Реализует эти контроллеры представлений для сохранения запрошенного состояния:
+`MessageViewController` реализует эти контроллеры представлений для сохранения запрошенного состояния:
 
 ```csharp
 using System;
@@ -666,7 +666,7 @@ namespace MessageExtension
 }
 ```
 
-Когда пользователь запрашивает добавить новую наклейку в доступную коллекцию, новый `AddStickerViewController` объект становится видимым контроллером, а представление наклейок переходит в **развернутое** представление:
+Когда пользователь запрашивает добавление новой наклейки в доступную коллекцию, новый `AddStickerViewController` становится видимым контроллером, а представление наклейок переходит в **развернутое** представление:
 
 ```csharp
 // Switch to expanded view mode
@@ -686,7 +686,7 @@ public void AddStickerToCollection (MSSticker sticker)
 }
 ```
 
-`DidTransition` Метод переопределен для управления переключением между двумя режимами:
+Метод `DidTransition` переопределяется для управления переключением между двумя режимами:
 
 ```csharp
 public override void DidTransition (MSMessagesAppPresentationStyle presentationStyle)

@@ -95,6 +95,7 @@
 ##### [Параметры в качестве свойств среды CLR](app-fundamentals/effects/passing-parameters/clr-properties.md)
 ##### [Параметры в качестве вложенных свойств](app-fundamentals/effects/passing-parameters/attached-properties.md)
 #### [Вызов событий](app-fundamentals/effects/touch-tracking.md)
+#### [Повторно используемый RoundEffect](app-fundamentals/effects/reusable-roundeffect.md)
 ### [Жесты](app-fundamentals/gestures/index.md)
 #### [Жест касания](app-fundamentals/gestures/tap.md)
 #### [Жест сжатия](app-fundamentals/gestures/pinch.md)

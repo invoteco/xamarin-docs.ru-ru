@@ -1,21 +1,21 @@
 ---
-title: Привет, Android (несколько экранов). Подробные сведения
+title: Привет, Android (несколько экранов) Глубокое погружение
 description: В этом руководстве из двух частей в базовое предложение Phoneword (созданное в руководстве по началу работы с Android) добавляется функционал для работы со вторым экраном. Попутно вводятся сведения об основных стандартных блоках приложения Android. Здесь также приводится более подробная информация об архитектуре Android, позволяющая лучше понять структуру и функциональные возможности приложения Android.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 3eee66032a33e66d3a6a22ca43cb931fbd59888f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4acbfe810abefd9a25721ddf59c9f4f197afdf28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122989"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020983"
 ---
-# <a name="hello-android-multiscreen-deep-dive"></a>Привет, Android (несколько экранов). Подробные сведения
+# <a name="hello-android-multiscreen-deep-dive"></a>Привет, Android (несколько экранов) Глубокое погружение
 
 _В этом руководстве из двух частей описано, как добавить функции для работы со вторым экраном в базовое предложение Phoneword (см. в руководство по началу работы с Android). Попутно вводятся сведения об основных стандартных блоках приложения Android. Здесь также приводится подробная информация об архитектуре Android с описанием структуры и возможностей приложений Android._
 

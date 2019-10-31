@@ -4,15 +4,15 @@ description: В этой статье описывается установка 
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f5b92bc202cbf9765a63219ad653442152c3eb24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925050"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020714"
 ---
 # <a name="set-up-device-for-development"></a>Настройка устройства для разработки
 
@@ -71,7 +71,7 @@ _В этой статье рассказывается о том, как нас�
 
 ### <a name="download-the-usb-drivers"></a>Скачивание USB-драйверов
 
-Для работы устройств Google Nexus (за исключением Galaxy Nexus) требуется USB-драйвер Google. Драйвер для Galaxy Nexus [распространяет компания Samsung](http://www.samsung.com/us/support/downloads/).
+Для работы устройств Google Nexus (за исключением Galaxy Nexus) требуется USB-драйвер Google. Драйвер для Galaxy Nexus [распространяет компания Samsung](https://www.samsung.com/us/support/downloads/).
 Все остальные устройства Android должны использовать [USB-драйвер от соответствующего изготовителя](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Установите пакет **USB-драйвера Google**, запустив диспетчер пакетов SDK для Android и открыв папку **Дополнения**, как показано на следующем снимке экрана:
@@ -183,7 +183,7 @@ adb devices
 
 - [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
 - [Использование физических устройств](https://developer.android.com/tools/device.html)
-- [Скачивания драйверов Samsung](http://www.samsung.com/us/support/downloads/)
+- [Скачивания драйверов Samsung](https://www.samsung.com/us/support/downloads/)
 - [USB-драйверы изготовителей оборудования](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
 - [USB-драйвер Google](https://developer.android.com/sdk/win-usb.html)
-- [XDA Developers: Windows 8 - ADB/fastboot driver problem solved](http://forum.xda-developers.com/showthread.php?t=1583801) (Windows 8 — решена проблема драйвера ADB/fastboot)
+- [XDA Developers: Windows 8 - ADB/fastboot driver problem solved](https://forum.xda-developers.com/showthread.php?t=1583801) (Windows 8 — решена проблема драйвера ADB/fastboot)

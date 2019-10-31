@@ -4,15 +4,15 @@ description: В этом документе описываются методы,
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/29/2016
-ms.openlocfilehash: b41916a65e091fb7d5198a6f06a5e91aa9d6bb81
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bfa8c2cdcdcd6305618c0cd8e9cb69bde59b4f0b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292341"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030206"
 ---
 # <a name="xamarinios-performance"></a>Производительность Xamarin.iOS
 
@@ -211,11 +211,11 @@ class MyChild : UIView
 ```
 
 Дополнительные сведения об освобождении строгих ссылок см. в разделе [Освобождение ресурсов IDisposable](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
-Полезную информацию можно также найти в следующей записи блога: [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, сборщик мусора и мои наблюдения).
+Полезную информацию можно также найти в следующей записи блога: [Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, сборщик мусора и мои наблюдения).
 
 ### <a name="more-information"></a>Дополнительные сведения
 
-Дополнительные сведения см. в записи [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Правила по избежанию сохраняемых циклов) в блоге Cocoa With Love, на странице [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (Является ли это ошибкой в сборщике мусора MonoTouch) на сайте StackOverflow и на странице [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Почему сборщик мусора MonoTouch не может уничтожать управляемые объекты с refcount > 1?) на сайте StackOverflow.
+Дополнительные сведения см. в записи [Rules to Avoid Retain Cycles](https://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Правила по избежанию сохраняемых циклов) в блоге Cocoa With Love, на странице [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (Является ли это ошибкой в сборщике мусора MonoTouch) на сайте StackOverflow и на странице [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Почему сборщик мусора MonoTouch не может уничтожать управляемые объекты с refcount > 1?) на сайте StackOverflow.
 
 ## <a name="optimize-table-views"></a>Оптимизация табличных представлений
 

@@ -3,15 +3,15 @@ title: Производительность и безопасность
 description: Этот документ содержит ссылки на различные руководства, описывающие способы повышения производительности в приложениях, Xamarin.iOS, Xamarin.Android и Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2017
-ms.openlocfilehash: 6c226095c43a389f491dd2af9a158ceb4420b637
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c07032d63032eb59cc67712bc2419f74319ea107
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780588"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016514"
 ---
 # <a name="performance-and-security"></a>Производительность и безопасность
 

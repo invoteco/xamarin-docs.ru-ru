@@ -3,15 +3,15 @@ title: Требования к системе
 description: Этот документ перечисляет требования к системе для создания приложений с помощью Xamarin на компьютерах Windows и Mac. Он также содержит ссылки на инструкции по установке.
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: ebfe139d614db95c7dd1af0c76926d934144d74f
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: 093369010d9327cd2b19fdac09f77697532bfb75
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584339"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016430"
 ---
 # <a name="system-requirements"></a>Требования к системе
 

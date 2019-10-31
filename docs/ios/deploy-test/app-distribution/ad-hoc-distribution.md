@@ -4,15 +4,15 @@ description: В этом документе приводится обзор ме
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ca524e9ff3c1d3c938905093f55a6482ea085963
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 74e258eeca78260fbfe3811e1dc6d8051e68e5f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763207"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030258"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Прямое распространение для приложений Xamarin.iOS
 
@@ -47,7 +47,7 @@ _В этом документе описаны методы прямого ра�
 
 1. Перейдите к разделу *Certificates, Identifiers & Profiles* (Сертификаты, профили и идентификаторы) в Центре разработчиков Apple.
 2. В разделе *Certificates* (Сертификаты) выберите **Production** (Производство).
-3. Нажмите кнопку **+**, чтобы создать новый сертификат.
+3. Нажмите кнопку **+** , чтобы создать новый сертификат.
 4. В разделе *Production* (Производство) установите флажок **In-House and Ad Hoc** (Внутри компании и прямое) или **App Store and Ad Hoc** (В App Store и прямое) в зависимости от уровня участия в программе:
 
    [![Выбор вариантов "Внутри компании и прямое" или "App Store и прямое"](ad-hoc-distribution-images/cert-first-small.png)](ad-hoc-distribution-images/cert-first-large.png#lightbox)

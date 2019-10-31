@@ -4,15 +4,15 @@ description: В этом документе объясняется, как с п
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 0c3bb547a21457a1666db5fe84560e10e3bb8eb1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754275"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028135"
 ---
 # <a name="building-abi-specific-apks"></a>Создание пакетов APK для конкретного ABI
 
@@ -35,7 +35,7 @@ _В этом документе объясняется, как с помощью
 1. Сборка приложения с помощью **AndroidManifest.XML**, созданного на предыдущем шаге.
 1. Подготовка APK к выпуску, включая подписывание и оптимизацию для архива.
 
-В конце этой статьи представлено пошаговое руководство по выполнению всех этих шагов в сценарии [Rake](http://martinfowler.com/articles/rake.html).
+В конце этой статьи представлено пошаговое руководство по выполнению всех этих шагов в сценарии [Rake](https://martinfowler.com/articles/rake.html).
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Создание кода версии для APK
 
@@ -157,7 +157,7 @@ $ rake build
 [![Расположение папок для каждой платформы с файлами xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> Процесс сборки, описанный в этом руководстве, можно реализовать во многих системах сборки. Например, такой режим точно поддерживают [PowerShell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) и [Fake](http://fsharp.github.io/FAKE/), но мы пока не можем предложить для них готовых примеров.
+> Процесс сборки, описанный в этом руководстве, можно реализовать во многих системах сборки. Например, такой режим точно поддерживают [PowerShell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) и [Fake](https://fsharp.github.io/FAKE/), но мы пока не можем предложить для них готовых примеров.
 
 ## <a name="summary"></a>Сводка
 

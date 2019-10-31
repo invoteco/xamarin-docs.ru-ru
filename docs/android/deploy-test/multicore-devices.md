@@ -4,15 +4,15 @@ description: ОС Android может работать в разных компь
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753945"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028014"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Многоядерные устройства и Xamarin.Android
 
@@ -140,7 +140,7 @@ lib/armeabi-v7a/libtwo.so
 $APP/lib/libtwo.so # from the armeabi-v7a directory in the apk
 ```
 
-Другими словами, `libone.so` не устанавливается. Это приведет к проблемам, так как `libone.so` отсутствует и приложение не сможет загрузить его во время выполнения. Такое поведение нелогично, но заявка о включении его в список ошибок была классифицирована как "[работает ожидаемым образом](http://code.google.com/p/android/issues/detail?id=9089)".
+Другими словами, `libone.so` не устанавливается. Это приведет к проблемам, так как `libone.so` отсутствует и приложение не сможет загрузить его во время выполнения. Такое поведение нелогично, но заявка о включении его в список ошибок была классифицирована как "[работает ожидаемым образом](https://code.google.com/p/android/issues/detail?id=9089)".
 
 Это означает, что в приложениях для Android версий старше 4.0 необходимо предоставлять *все* собственные библиотеки для *каждого* поддерживаемого интерфейса ABI, то есть каталог `.apk` должен содержать следующее:
 
@@ -174,7 +174,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-К сожалению, такое поведение зависит от порядка, как описано в следующем документе: [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321) (Проблема 24321. Устройство Galaxy Nexus 4.0.2 использует машинный код armeabi, когда armeabi и armeabi-v7a одновременно включены в APK).
+К сожалению, такое поведение зависит от порядка, как описано в следующем документе: [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](https://code.google.com/p/android/issues/detail?id=25321) (Проблема 24321. Устройство Galaxy Nexus 4.0.2 использует машинный код armeabi, когда armeabi и armeabi-v7a одновременно включены в APK).
 
 Собственные библиотеки обрабатываются "по порядку" (который определяется программой распаковки) и применяется *первое соответствие*. Так как `.apk` содержит одновременно версии `armeabi` и `armeabi-v7a` для файла `libtwo.so`, при этом `armeabi` указан первым, то используется именно версия `armeabi`, но *не* правильная версия `armeabi-v7a`:
 
@@ -184,7 +184,7 @@ $APP/lib/libtwo.so # armeabi, NOT armeabi-v7a!
 ```
 
 Более того, даже если указаны оба ABI (`armeabi` и `armeabi-v7a`), как описано ниже в разделе *Объявление поддерживаемых ABI*, Xamarin.Android создаст следующий элемент в .
-`csproj`:
+`csproj`.
 
 ```xml
 <AndroidSupportedAbis>armeabi,armeabi-v7a</AndroidSupportedAbis>
@@ -255,5 +255,5 @@ Xamarin.Android сейчас не поддерживает `mips`.
 
 - [Интерфейс ABI для архитектуры ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
-- [(Проблема 9089: на устройстве Nexus One не загружается ни одна собственная библиотека для armeabi, если есть хотя бы одна библиотека для armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089)
-- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321) (Проблема 24321. Устройство Galaxy Nexus 4.0.2 использует машинный код armeabi, когда armeabi и armeabi-v7a одновременно включены в APK)
+- [(Проблема 9089: на устройстве Nexus One не загружается ни одна собственная библиотека для armeabi, если есть хотя бы одна библиотека для armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089)
+- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](https://code.google.com/p/android/issues/detail?id=25321) (Проблема 24321. Устройство Galaxy Nexus 4.0.2 использует машинный код armeabi, когда armeabi и armeabi-v7a одновременно включены в APK)

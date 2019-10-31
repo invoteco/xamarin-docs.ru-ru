@@ -3,15 +3,15 @@ title: Публикация приложения
 ms.prod: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fe1422aa55e5c1518134e6d0fbbf40047b577767
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753808"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021379"
 ---
 # <a name="publishing-an-application"></a>Публикация приложения
 
@@ -33,7 +33,7 @@ ms.locfileid: "70753808"
 
 - **Через веб-сайт.** Приложение Xamarin.Android можно сделать доступным для скачивания на веб-сайте, с которого пользователи могут затем установить приложение, щелкнув ссылку.
 - **По электронной почте.** Пользователи могут установить приложение Xamarin.Android из сообщения электронной почты. Приложение будет установлено при открытии вложения на устройстве на платформе Android.
-- **Через магазин.** Есть несколько магазинов для распространения приложений, например [Google Play](http://play.google.com/) или [Amazon App Store для Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
+- **Через магазин.** Есть несколько магазинов для распространения приложений, например [Google Play](https://play.google.com/) или [Amazon App Store для Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 Использование хорошо известного магазина является наиболее распространенным способом публикации приложения, так как он обеспечивает широкий охват рынка и максимальный контроль над распространением. Однако для публикации приложения через магазин требуются дополнительные усилия.
 

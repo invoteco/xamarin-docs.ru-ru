@@ -3,15 +3,15 @@ title: Отправка пакета APK вручную
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b5b7a416cf67c217862987e7fa29bfb6a9692642
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756069"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021255"
 ---
 # <a name="manually-uploading-the-apk"></a>Отправка пакета APK вручную
 
@@ -88,7 +88,7 @@ ms.locfileid: "70756069"
 
 [![Раздел "Оценка содержимого"](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
-Все приложения в Google Play должны пройти оценку согласно системе оценок Google Play. Помимо оценки содержимого все приложения должны соответствовать требованиям [политики содержимого для разработчиков](http://www.android.com/us/developer-content-policy.html) Google.
+Все приложения в Google Play должны пройти оценку согласно системе оценок Google Play. Помимо оценки содержимого все приложения должны соответствовать требованиям [политики содержимого для разработчиков](https://www.android.com/us/developer-content-policy.html) Google.
 
 Ниже приведены четыре уровня в системе оценок Google Play, а также даны некоторые рекомендации по определению уровня оценки содержимого: 
 
@@ -131,7 +131,7 @@ Google Play не разрешит изменить бесплатное прил
 ### <a name="consent"></a>Согласие
 
 В нижней части страницы **Цены и распространение** находится раздел **Согласие**.
-Это обязательный раздел, который используется для объявления того, что приложение соответствует [требованиям, предъявляемым к содержимому Android](http://www.android.com/market/terms/developer-content-policy.html#hl=us), а также для подтверждения, что экспорт приложения регулируется законами США:
+Это обязательный раздел, который используется для объявления того, что приложение соответствует [требованиям, предъявляемым к содержимому Android](https://www.android.com/market/terms/developer-content-policy.html#hl=us), а также для подтверждения, что экспорт приложения регулируется законами США:
 
 [![Раздел "Согласие"](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 

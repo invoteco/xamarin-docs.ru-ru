@@ -4,21 +4,21 @@ description: Этот документ описывает различные п�
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/18/2017
-ms.openlocfilehash: e927d15e34107c19d9b4033db591742a513a963f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d94a647583539ac6af603a9074e1966c1c41d587
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762571"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028465"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Справочник по Info.plist для Xamarin.iOS
 
 Дополнительные сведения о работе с ключами Info.Plist см. в руководстве по [работе с безопасностью и конфиденциальностью](~/ios/app-fundamentals/security-privacy.md). 
 
-## <a name="location"></a>Расположение 
+## <a name="location"></a>Местоположение 
 
 Доступ к расположению пользователя требует изменений в файле Info.plist. Необходимо задать следующие ключи, связанные с данными о расположении: 
 

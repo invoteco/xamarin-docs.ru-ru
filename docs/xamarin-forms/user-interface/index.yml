@@ -120,7 +120,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: map/index.md
-            title: Карты
+            title: Карта
           - href: menuitem.md
             html: 'Узнайте, как использовать класс MenuItem для добавления элементов в контекстное меню ячеек ListView.'
             image:

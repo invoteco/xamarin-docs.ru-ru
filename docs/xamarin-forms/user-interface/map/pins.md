@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
-ms.openlocfilehash: a2fb0ba2036dfe34e85c7bebab6ecb55cd868ad5
-ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
+ms.openlocfilehash: 930d2dcc701f88e2a350ec1011405bb18b86de6e
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72810511"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425569"
 ---
 # <a name="xamarinforms-map-pins"></a>ПИН-коды карт Xamarin. Forms
 
@@ -44,10 +44,7 @@ ms.locfileid: "72810511"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
      <maps:Map x:Name="map"
                IsShowingUser="True"
-               MoveToLastRegionOnLayoutChange="False"
-               HeightRequest="100"                  
-               WidthRequest="960"
-               VerticalOptions="FillAndExpand">
+               MoveToLastRegionOnLayoutChange="False">
          <x:Arguments>
              <maps:MapSpan>
                  <x:Arguments>
@@ -80,10 +77,7 @@ ms.locfileid: "72810511"
 </ContentPage>
 ```
 
-Этот код XAML создает объект [`Map`](xref:Xamarin.Forms.Maps.Map) , который показывает область, указанную объектом [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) . Объект `MapSpan` выравнивается по центру широты и долготы, представленные объектом [`Position`](xref:Xamarin.Forms.Maps.Position) , который расширяет 0,01 широты и долготы. Объект [`Pin`](xref:Xamarin.Forms.Maps.Pin) добавляется в коллекцию [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) и нарисовывается на `Map` в расположении, указанном свойством [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) . Сведения о передаче аргументов в XAML в объекты, у которых отсутствуют конструкторы по умолчанию, см. [в разделе Передача аргументов в XAML](~/xamarin-forms/xaml/passing-arguments.md).
-
-> [!NOTE]
-> Структура [`Position`](xref:Xamarin.Forms.Maps.Position) определяет свойства [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude) и [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude) только для чтения и для типов `double`. При создании объекта `Position` через его конструктор, значение широты будет относиться между-90,0 и 90,0, а значение долготы будет относиться между-180,0 и 180,0.
+Этот код XAML создает объект [`Map`](xref:Xamarin.Forms.Maps.Map) , который показывает область, указанную объектом [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) . Объект `MapSpan` выравнивается по центру широты и долготы, представленные объектом [`Position`](xref:Xamarin.Forms.Maps.Position) , который расширяет 0,01 широты и долготы. Объект [`Pin`](xref:Xamarin.Forms.Maps.Pin) добавляется в коллекцию [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) и нарисовывается на `Map` в расположении, указанном свойством [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) . Сведения о структуре [`Position`](xref:Xamarin.Forms.Maps.Position) см. в разделе [Map Disposition and Distance](position-distance.md). Сведения о передаче аргументов в XAML в объекты, у которых отсутствуют конструкторы по умолчанию, см. [в разделе Передача аргументов в XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 Эквивалентный код на C# выглядит так:
 
@@ -119,7 +113,7 @@ map.Pins.Add(pin);
 
 Если коснуться на карте, окно сведений закрывается.
 
-Класс [`Pin`](xref:Xamarin.Forms.Maps.Pin) определяет событие `MarkerClicked`, которое срабатывает при касании `Pin`. Нет необходимости в обработке этого события для вывода информационного окна. Вместо этого это событие должно быть обработано только в том случае, если есть необходимость уведомления о том, что указанный ПИН-код был нажат.
+Класс [`Pin`](xref:Xamarin.Forms.Maps.Pin) определяет событие `MarkerClicked`, которое срабатывает при касании `Pin`. Нет необходимости в обработке этого события для вывода информационного окна. Вместо этого это событие должно быть обработано при наличии требования, чтобы получать уведомления о касании определенного ПИН-кода.
 
 Класс [`Pin`](xref:Xamarin.Forms.Maps.Pin) также определяет событие `InfoWindowClicked`, которое возникает при касании информационного окна. Это событие должно быть обработано при наличии требования, чтобы получать уведомления о касании конкретного информационного окна.
 
@@ -190,7 +184,6 @@ wharfPin.InfoWindowClicked += async (s, args) =>
     <Grid>
         ...
         <maps:Map x:Name="map"
-                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>
@@ -211,7 +204,7 @@ wharfPin.InfoWindowClicked += async (s, args) =>
 
 На следующих снимках экрана показан [`Map`](xref:Xamarin.Forms.Maps.Map) , отображающий коллекцию [`Pin`](xref:Xamarin.Forms.Maps.Pin) с помощью привязки данных:
 
-[![Снимок экрана с привязками к данным в iOS и Android](map-images/pins-itemssource.png "Сопоставьте с закрепленными данными")](map-images/pins-itemssource-large.png#lightbox "Сопоставьте с закрепленными данными")
+[![Снимок экрана с привязками к данным в iOS и Android](pins-images/pins-itemsource.png "Сопоставьте с закрепленными данными")](pins-images/pins-itemsource-large.png#lightbox "Сопоставьте с закрепленными данными")
 
 ### <a name="choose-item-appearance-at-runtime"></a>Выбор внешнего вида элемента во время выполнения
 

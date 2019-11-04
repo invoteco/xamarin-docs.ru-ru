@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028719"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425502"
 ---
 # <a name="splash-screen"></a>Заставка
 
@@ -67,7 +67,7 @@ _Запуск приложения Android занимает некоторое �
 </layer-list>
 ```
 
-Этот `layer-list` центрирует изображение-заставку на фоне цвета фона, заданного ресурсом `@color/splash_background`. Пример приложения определяет этот цвет в файле **ресурсов/значений/Color. XML** :
+Этот `layer-list` центрирует изображение-заставку на фоне цвета фона, заданного ресурсом `@color/splash_background`. Пример приложения определяет этот цвет в файле **ресурсов/значений/Colors. XML** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

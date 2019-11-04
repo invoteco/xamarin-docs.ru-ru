@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/22/2019
-ms.openlocfilehash: ce1f6751c0381ed41058784fbea3ebedefbdac6d
-ms.sourcegitcommit: e4c23187874488ff55794d0e81a9bba30d2c2cd6
+ms.openlocfilehash: 9a20618fea0091979c2ea862f417dccec565b218
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778796"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425606"
 ---
 # <a name="xamarinforms-map-geocoding"></a>Геокодирование карт Xamarin. Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-Xamarin. Forms. Maps предоставляет класс [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) , который выполняет преобразование между строковыми адресами и координатами широты и долготы, хранящимися в [`Position`](xref:Xamarin.Forms.Maps.Position) объектах.
+Пространство имен [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) предоставляет класс [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) , который выполняет преобразование между строковыми адресами и координатами широты и долготы, хранящимися в [`Position`](xref:Xamarin.Forms.Maps.Position) объектах. Дополнительные сведения о структуре [`Position`](xref:Xamarin.Forms.Maps.Position) см. в разделе [Map Disposition and Distance](position-distance.md).
 
 ## <a name="geocode-an-address"></a>Геокодирование адреса
 
@@ -55,4 +55,5 @@ string address = possibleAddresses.FirstOrDefault();
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пример Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Расположение и расстояние карт Xamarin. Forms](position-distance.md)
 - [API-интерфейс геокодирования](xref:Xamarin.Forms.Maps.Geocoder)

@@ -4,15 +4,15 @@ description: Этот документ описывает сборку и тес
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 45c7c3a90fa0dedfed8f5f325a96b4c7aa7a5a9e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ae32588d75ec3152a1b8b8558d40abbe2e76d1b4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292037"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022477"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Введение в Xamarin.iOS для Visual Studio
 
@@ -32,7 +32,7 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Доступно несколько конфигураций, из которых вы можете выбрать наиболее подходящую под ваши потребности. Эти конфигурации перечислены ниже:
 
-- Компьютер Mac используется в качестве главного компьютера разработки, а среда Visual Studio установлена на виртуальной машине Windows. Мы рекомендуем использовать для создания виртуальной машины такое программное обеспечение, как [Parallels](http://www.parallels.com/products/desktop/) или [VMWare](http://www.vmware.com/products/fusion/).
+- Компьютер Mac используется в качестве главного компьютера разработки, а среда Visual Studio установлена на виртуальной машине Windows. Мы рекомендуем использовать для создания виртуальной машины такое программное обеспечение, как [Parallels](https://www.parallels.com/products/desktop/) или [VMWare](https://www.vmware.com/products/fusion/).
 - Компьютер Mac используется только в качестве узла сборки. В этом сценарии он подключается к той же сети, в которой находится компьютер Windows с установленными [необходимыми](~/get-started/installation/windows.md#installation) средствами.
 
 В любом случае необходимо выполнить указанные ниже действия:
@@ -53,7 +53,7 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Элементы управления, имеющие отношение к разработке приложений iOS с помощью Xamarin, обведены красным:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Элементы управления, имеющие отношение к разработке приложений с помощью Xamarin iOS, обведены красным")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Элементы управления, имеющие отношение к разработке приложений с помощью Xamarin iOS, обведены красным")
+[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
 
 - **Запуск** — запускает отладку или выполнение приложения на выбранной платформе. Должен быть подключен компьютер Mac (см. индикатор состояния на панели инструментов iOS).
 - **Конфигурации решения** — позволяет выбрать нужную конфигурацию (например, отладка или выпуск).
@@ -63,7 +63,7 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Панель инструментов iOS выглядит антологичным образом во всех версиях Visual Studio. Она показана ниже:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "Панель инструментов iOS")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS Toolbar")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 Далее описывается каждый ее элемент:
 
@@ -79,31 +79,31 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 На снимке экрана ниже показаны доступные окна вывода, которые могут отличаться в зависимости от типа проекта:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "Доступные окна вывода")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "The available output windows")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin** — содержит сведения, относящиеся исключительно к Xamarin, например о подключении к компьютеру Mac и состоянии активации.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Сведения, относящиеся исключительно к Xamarin, например о подключении к компьютеру Mac и состоянии активации")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Диагностика Xamarin** — содержит более подробные сведения о проекте Xamarin, например о взаимодействии с Android.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Подробные сведения о проекте Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Другие области вывода Visual Studio, такие как "Отладка" и "Сборка", также доступны в представлении "Вывод" и служат для отображения выходных данных отладки и MSBuild:
 
 - **Отладка**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Выходные данные отладки")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Сборка** & **Порядок сборки**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Выходные данные MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## <a name="ios-project-properties"></a>Свойства проекта iOS
 
 Чтобы получить доступ к свойствам проекта Visual Studio, можно щелкнуть его имя правой кнопкой мыши и выбрать в контекстном меню пункт *Свойства*. Это позволит настроить приложение iOS, как показано на снимке экрана ниже:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Настройка приложения iOS")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
 
 - *Подписывание пакета iOS* — подключение к компьютеру Mac для заполнения удостоверений подписывания кода и профилей подготовки:
 
@@ -133,11 +133,11 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 Чтобы приступить к созданию или редактированию раскадровки, дважды щелкните файл `Main.storyboard`. Он откроется в iOS Designer:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "Файл Main.storyboard в конструкторе iOS")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "The Main.storyboard in the iOS Designer")
 
 Чтобы добавить объекты в представление, перетащите их из области **Панель элементов** в область конструктора. Если панель элементов еще не добавлена, это можно сделать, выбрав пункт меню **Вид > Панель элементов**. С помощью области **Свойства** можно изменять свойства объектов, настраивать их макеты и создавать события, как показано ниже:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "Область свойств")
+![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "The Properties pane")
 
  Дополнительные сведения об использовании конструктора iOS см. в посвященных [конструктору](~/ios/user-interface/designer/index.md) руководствах.
 
@@ -163,7 +163,7 @@ Xamarin для Windows позволяет разрабатывать и тест
 
 В любых местах приложения можно установить точки останова, которые предписывают отладчику временно остановить выполнение программы. Чтобы задать точку останова в Visual Studio, щелкните область поля редактора рядом с номером строки кода, где требуется прервать выполнение:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "Задание точки отладки")
+![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "Setting a debug point")
 
 Начните отладку и перейдите к точке останова в приложении в симуляторе или на устройстве. При достижении точки останова строка выделяется и становятся доступны стандартные возможности отладки Visual Studio: вы можете выполнять код пошагово с заходом, обходом или выходом, просматривать локальные переменные или пользоваться окном "Интерпретация".
 

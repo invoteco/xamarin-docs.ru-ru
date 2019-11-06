@@ -4,15 +4,15 @@ description: Этот документ содержит краткий обзо�
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763067"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026550"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Внутреннее распространение для приложений Xamarin.iOS
 
@@ -56,15 +56,15 @@ _Этот документ содержит краткий обзор распр
 3. Нажмите кнопку **+** , чтобы создать новый сертификат.
 4. В разделе *Production* (Производство) установите флажок **In-House and Ad Hoc** (Собственный и прямой):
 
-   [![](in-house-distribution-images/createcertmanually01.png "Выбор элемента \"Собственный и прямой\"")](in-house-distribution-images/createcertmanually01.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Нажмите кнопку "Continue" (Продолжить) и следуйте инструкциям, чтобы создать запрос подписи сертификата через доступ к цепочке ключей:
 
-   [![](in-house-distribution-images/createcertmanually02.png "Создание запроса подписи сертификата через доступ к цепочке ключей")](in-house-distribution-images/createcertmanually02.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. После создания запроса согласно инструкции нажмите кнопку "Continue" (Продолжить) и отправьте его в центр участников:
 
-   [![](in-house-distribution-images/createcertmanually03.png "Отправка запроса подписи сертификата в центр участников")](in-house-distribution-images/createcertmanually03.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Нажмите "Generate" (Создать), чтобы создать сертификат.
 8. Скачайте готовый сертификат и дважды щелкните файл, чтобы установить его.
@@ -74,15 +74,15 @@ _Этот документ содержит краткий обзор распр
 
 1. Выберите свою команду и щелкните *View Details* (Показать подробности):
 
-   [![](in-house-distribution-images/selectteam.png "Выбор своей команды")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Затем нажмите кнопку **Create** (Создать) рядом с полем **iOS Distribution Certificate** (Сертификат распространения iOS):
 
-   [![](in-house-distribution-images/selectcert.png "Создание сертификата распространения iOS")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
 
 3. Далее щелкните **знак "плюс" (+)** и выберите пункт **iOS App Store**:
 
-   [![](in-house-distribution-images/selectcert.png "Выбор пункта \"iOS App Store\"")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -104,23 +104,23 @@ _Этот документ содержит краткий обзор распр
 
 1. Вернитесь на портал подготовки Apple и выберите **Provisioning** > **Distribution** (Подготовка > Распространение):
 
-   [![](in-house-distribution-images/distribute01.png "Выбор элемента \"Provisioning\" (Подготовка) > \"Distribution\" (Распространение)")](in-house-distribution-images/distribute01.png#lightbox)
+   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Нажмите кнопку **+** и выберите тип профиля распространения, который нужно создать для **внутреннего распространения**:
 
-   [![](in-house-distribution-images/distribute02.png "Создание профиля внутреннего распространения")](in-house-distribution-images/distribute02.png#lightbox)
+   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Нажмите кнопку **Continue** (Продолжить) и выберите из раскрывающегося списка ИД приложения, для которого необходимо создать профиль распространения:
 
-   [![](in-house-distribution-images/distribute03.png "Выбор идентификатора приложения в раскрывающемся списке")](in-house-distribution-images/distribute03.png#lightbox)
+   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Нажмите кнопку **Continue** (Продолжить) и выберите сертификат распространения, необходимый для подписи приложения:
 
-   [![](in-house-distribution-images/distribute04.png "Выбор сертификата распространения, необходимого для подписи приложения")](in-house-distribution-images/distribute04.png#lightbox)
+   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
 
 5. Нажмите кнопку **Continue** (Продолжить) и введите **имя** нового профиля распространения:
 
-   [![](in-house-distribution-images/distribute06.png "Ввод имени нового профиля распространения")](in-house-distribution-images/distribute06.png#lightbox)
+   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
 
 6. Нажмите кнопку **Generate** (Создать), чтобы создать профиль и завершить процесс.
 
@@ -138,7 +138,7 @@ _Этот документ содержит краткий обзор распр
 
 ## <a name="distributing-your-app-in-house"></a>Распространение приложения внутри организации
 
-В рамках программы Apple Developer Enterprise Program лицензиатом является лицо, ответственное за распространение приложения, а также за соблюдение [рекомендаций](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf) компании Apple.
+В рамках программы Apple Developer Enterprise Program лицензиатом является лицо, ответственное за распространение приложения, а также за соблюдение [рекомендаций](https://developer.apple.com/programs/enterprise/) компании Apple.
 
 Ваше приложение можно безопасно распространять самыми разными способами, например:
 

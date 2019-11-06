@@ -4,15 +4,15 @@ description: Статья описывает файл iTunesMetadata.plist, ко
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 47b2428ddca47f554fea675a9d2e70374679688f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cdaa0855538c35c82cb96bde58ad2258b1fb56e5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281158"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026503"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Файл iTunesMetadata.plist в приложениях Xamarin.iOS
 
@@ -124,7 +124,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="artistname-and-playlistartistname"></a>artistName и playlistArtistName
 
-В ключах `artistName` и `playlistArtistName` указывается название компании, создавшей приложение. Название будет отображаться в iTunes. Пример
+В ключах `artistName` и `playlistArtistName` указывается название компании, создавшей приложение. Название будет отображаться в iTunes. Пример.
 
 ```xml
 <key>artistName</key>
@@ -136,7 +136,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="bundledisplayname-itemname-and-playlistname"></a>bundleDisplayName, itemName и playlistName
 
-В ключах `bundleDisplayName`, `itemName` и `playlistName` указывается имя приложения iOS, которое будет отображаться в iTunes. Пример
+В ключах `bundleDisplayName`, `itemName` и `playlistName` указывается имя приложения iOS, которое будет отображаться в iTunes. Пример.
 
 ```xml
 <key>bundleDisplayName</key>
@@ -151,7 +151,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="bundleshortversionstring-and-bundleversion"></a>bundleShortVersionString и bundleVersion
 
-В ключах `bundleShortVersionString` и `bundleVersion` указывается номер версии приложения iOS, который отображается в iTunes. Пример
+В ключах `bundleShortVersionString` и `bundleVersion` указывается номер версии приложения iOS, который отображается в iTunes. Пример.
 
 ```xml
 <key>bundleShortVersionString</key>
@@ -162,7 +162,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="softwareversionbundleid"></a>softwareVersionBundleId
 
-В ключе `softwareVersionBundleId` указывается идентификатор пакета приложения. Пример
+В ключе `softwareVersionBundleId` указывается идентификатор пакета приложения. Пример.
 
 ```xml
 <key>softwareVersionBundleId</key>
@@ -171,7 +171,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="copyright"></a>авторские права
 
-В ключе `copyright`указывается уведомление об авторских правах, которое отображается в iTunes. Пример
+В ключе `copyright`указывается уведомление об авторских правах, которое отображается в iTunes. Пример.
 
 ```xml
 <key>copyright</key>
@@ -180,7 +180,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="releasedate"></a>releaseDate
 
-В ключе `releaseDate` указывается дата выпуска приложения iOS. Дата выпуска отображается в iTunes. Пример
+В ключе `releaseDate` указывается дата выпуска приложения iOS. Дата выпуска отображается в iTunes. Пример.
 
 ```xml
 <key>releaseDate</key>
@@ -189,7 +189,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="softwareiconneedsshine"></a>softwareIconNeedsShine
 
-В ключе `softwareIconNeedsShine` указывается, требуется ли _подсветка_ значка приложения в iOS 6 (и ранее). Пример
+В ключе `softwareIconNeedsShine` указывается, требуется ли _подсветка_ значка приложения в iOS 6 (и ранее). Пример.
 
 ```xml
 <key>softwareIconNeedsShine</key>
@@ -198,7 +198,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="gamecenterenabled-and-gamecentereverenabled"></a>gameCenterEnabled и gameCenterEverEnabled
 
-Ключи `gameCenterEnabled` и `gameCenterEverEnabled` сообщают iTunes, поддерживает ли это приложение Apple Game Center. Пример
+Ключи `gameCenterEnabled` и `gameCenterEverEnabled` сообщают iTunes, поддерживает ли это приложение Apple Game Center. Пример.
 
 ```xml
 <key>gameCenterEnabled</key>
@@ -209,7 +209,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 
 ### <a name="genre-genreid-and-subgenres"></a>genre, genreId и subgenres
 
-Ключи `genre` и `genreId` сообщают iTunes, к какому жанру относится приложение. Пример
+Ключи `genre` и `genreId` сообщают iTunes, к какому жанру относится приложение. Пример.
 
 ```xml
 <key>genre</key>
@@ -218,7 +218,7 @@ _В статье описывается файл iTunesMetadata.plist, кото�
 <integer>6014</integer>
 ```
 
-Дополнительно можно использовать ключ `subgenres` для определения до двух поджанров приложения iOS. Пример
+Дополнительно можно использовать ключ `subgenres` для определения до двух поджанров приложения iOS. Пример.
 
 ```xml
 <key>subgenres</key>
@@ -242,11 +242,11 @@ Apple определяет следующие жанры и идентифика
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-Дополнительную информацию см. в разделе [Приложение: идентификаторы жанров](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) документации корпорации Apple.
+Дополнительную информацию см. в разделе [Приложение: идентификаторы жанров](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) документации корпорации Apple.
 
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
-Ключ `softwareSupportedDeviceIds` сообщает iTunes, какие устройства с iOS поддерживает это приложение. Пример
+Ключ `softwareSupportedDeviceIds` сообщает iTunes, какие устройства с iOS поддерживает это приложение. Пример.
 
 ```xml
 <key>softwareSupportedDeviceIds</key>
@@ -302,26 +302,26 @@ Apple определяет следующие жанры и идентифика
 1. В **Обозревателе решений** щелкните правой кнопкой на файле проекта Xamarin.iOS и выберите **Добавить** > **Новый файл...**
 2. В диалоговом окне создания файла выберите **iOS** > **Список свойств**:
 
-    ![](itunesmetadata-images/image01.png "Выберите список свойств iOS")
+    ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Введите в поле **Имя** значение `iTunesMetadata` и нажмите кнопку **Новый**.
 4. Для редактирования файла дважды щелкните на файле `iTunesMetadata.plist` в **Обозревателе решений**:
 
-    ![](itunesmetadata-images/image02.png "Редактор файла iTunesMetadata.plist")
+    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
 5. Нажмите зеленый **+** для создания новой записи и введите `UIRequiredDeviceCapabilities` в качестве имени ключа:
 
-    ![](itunesmetadata-images/image03.png "Создайте новую запись и введите UIRequiredDeviceCapabilities в качестве имени ключа")
+    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Нажмите на тип значение **Строка** и выберите **Словарь** в раскрывающемся списке:
 
-    ![](itunesmetadata-images/image04.png "Выберите \"Словарь\" в раскрывающемся списке")
+    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
 7. Нажмите стрелку вниз слева от имени свойства, чтобы показать элементы словаря:
 
-    ![](itunesmetadata-images/image05.png "Раскройте элементы словаря")
+    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
 8. Нажмите на надпись **Добавить запись**, затем нажмите зеленый **+** для добавления записи в словарь:
 
-    ![](itunesmetadata-images/image06.png "Добавьте запись в словарь")
+    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
 9. Введите `armv7` в качестве имени ключа, выберите тип **Логическое** и введите **Да** в качестве значения:
 
-    ![](itunesmetadata-images/image07.png "Введите armv7 в качестве имени ключа, выберите тип \"Логическое\" и введите \"Да\" в качестве значения")
+    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
 10. Повторяйте эти шаги, пока не заполните все необходимые пары ключ/значение в файле `iTunesMetadata.plist` (подробные сведения см. в разделе [Содержимое файла iTunesMetadata.plist](#iTunesMetadata_contents)).
 
 11. Сохраните изменения в файле plist.

@@ -4,15 +4,15 @@ description: Этот документ описывает развертыван
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 84a35389276fed031f6bea116c1e4f37a63469a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60f51be5ffad67d839edd42b7826b0c57c46eb8a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769872"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029997"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Публикация приложений Xamarin.Mac в Mac App Store
 
@@ -29,7 +29,7 @@ ms.locfileid: "70769872"
 
 При присоединении к [программе разработчиков Mac](https://developer.apple.com/devcenter/mac/) разработчику будет предложено принять участие в качестве отдельного лица или компании, как показано на снимке экрана ниже:
 
-[![Портал для разработчиков Apple](images/image1.png "The Apple Developer Portal")](images/image1-large.png#lightbox)
+[![Портал для разработчиков Apple](images/image1.png "Портал для разработчиков Apple")](images/image1-large.png#lightbox)
 
 Выберите подходящий тип регистрации.
 

@@ -4,15 +4,15 @@ description: В этом руководстве описано, как план�
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 58bf8325a0fab17411dd7a4f857fdad8bdc6b016
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756261"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026367"
 ---
 # <a name="ios-build-mechanics"></a>Механизм сборки iOS
 
@@ -32,7 +32,7 @@ _В этом руководстве описано, как планироват�
 
 1. Щелкните **Visual Studio для Mac > Параметры...**
 2. В представлении дерева слева выберите **Проекты > Сборка**
-3. На панели справа откройте раскрывающийся список детализации журнала и выберите вариант **Диагностика**:  [![](ios-build-mechanics-images/image2.png "Настройка детализации журнала")](ios-build-mechanics-images/image2.png#lightbox)
+3. На панели справа откройте раскрывающийся список детализации журнала и выберите вариант **Диагностика**: [![](ios-build-mechanics-images/image2.png "Настройка детализации журнала")](ios-build-mechanics-images/image2.png#lightbox)
 4. Нажмите кнопку **ОК**.
 5. Перезапустите Visual Studio для Mac.
 6. Выполните очистку и перестройку пакета.
@@ -97,7 +97,7 @@ Total time: 1554 ms
 
 На снимке экрана ниже показано, как задавать эти параметры симулятора в параметрах iOS.
 
-[![](ios-build-mechanics-images/image3.png "Настройка параметров")](ios-build-mechanics-images/image3.png#lightbox)
+[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Рекомендации для устройства
 
@@ -148,7 +148,7 @@ Total time: 1554 ms
 
 На снимке экрана ниже показано, как задавать эти параметры симулятора в параметрах iOS.
 
-[![](ios-build-mechanics-images/image4.png "Настройка параметров")](ios-build-mechanics-images/image4.png#lightbox)
+[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Использование компоновщика
 

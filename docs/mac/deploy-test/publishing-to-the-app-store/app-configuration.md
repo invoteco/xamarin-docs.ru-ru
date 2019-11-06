@@ -4,15 +4,15 @@ description: Этот документ описывает настройку п�
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 6134cbfabb342750ec68b676dd06388f4fb8f035
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 545c1cef26d3bbf85b490492347f4f63b42269a9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283028"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021698"
 ---
 # <a name="mac-app-configuration"></a>Настройка приложений Mac
 
@@ -24,11 +24,11 @@ ms.locfileid: "70283028"
 
 Чтобы изменить параметры приложения в приложении Xamarin.Mac, дважды щелкните файл **Info.plist** на **Панели решения**:
 
-![Выбор файла info.plist](app-configuration-images/config04.png "Selecting the Info.plist file")
+![ Выбор файла Info.plist](app-configuration-images/config04.png "Выбор файла Info.plist")
 
 Появятся доступные для приложения параметры:
 
- [![Редактирование файла info.plist](app-configuration-images/config01.png "Editing the Info.plist file")](app-configuration-images/config01-large.png#lightbox)
+ [![Редактирование файла Info.plist](app-configuration-images/config01.png "Редактирование файла Info.plist")](app-configuration-images/config01-large.png#lightbox)
 
 Для запуска приложений Mac, созданных с помощью Xamarin.Mac, необходимо выполнить следующие системные требования:
 
@@ -38,7 +38,7 @@ ms.locfileid: "70283028"
 
 В разделе **Подписывание Mac** в диалоговом окне **Параметры проекта** можно подписать приложение Xamarin.Mac для тестирования, самостоятельного выпуска или выпуска через магазин Apple App Store:
 
-[![Редактор подписывания Mac](app-configuration-images/config02.png "The Mac Signing window")](app-configuration-images/config02-large.png#lightbox)
+[![Редактор подписывания Mac](app-configuration-images/config02.png "Окно подписывания Mac")](app-configuration-images/config02-large.png#lightbox)
 
 Здесь выбираются значения для удостоверения, профиля подготовки и любых настраиваемых назначений, используемые для подписывания приложения после компиляции. При необходимости можно подписать установщик, используемый для установки приложения на других компьютерах Mac.
 
@@ -46,7 +46,7 @@ ms.locfileid: "70283028"
 
 В разделе **Сборка Mac** диалогового окна **Параметры проекта** можно выбирать архитектуру для приложения Xamarin.Mac, администрировать версии, поддерживаемые приложением macOS, и при необходимости создавать пакеты установки после успешной компиляции приложения.
 
- [![Изменение параметров сборки](app-configuration-images/config03.png "Editing the build options")](app-configuration-images/config03-large.png#lightbox)
+ [![Изменение параметров сборки](app-configuration-images/config03.png "Изменение параметров сборки")](app-configuration-images/config03-large.png#lightbox)
 
 ## <a name="related-links"></a>Связанные ссылки
 

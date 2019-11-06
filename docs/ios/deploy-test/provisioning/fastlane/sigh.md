@@ -4,15 +4,15 @@ description: Этот документ описывает команду sigh с
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c9b6f6c29b86ee40c2d7b04dbe6fa4ce24a745ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9506d80ab10ce70938f95371a52bf28bda33d42d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762634"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028499"
 ---
 # <a name="fastlane-for-ios-sigh"></a>fastlane для iOS — sigh
 
@@ -64,7 +64,7 @@ fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
 
 Здесь `com.company.appname` — это идентификатор пакета приложения, который находится в файле Info.plist вашего приложения Xamarin.iOS, как показано ниже:
 
-[![](sigh-images/fastlane-image5.png "Файл Info.plist приложения Xamarin.iOS")](sigh-images/fastlane-image5.png#lightbox)
+[![](sigh-images/fastlane-image5.png "The Info.plist file of the Xamarin.iOS application")](sigh-images/fastlane-image5.png#lightbox)
 
 Уникальный идентификатор приложения должен представлять собой строку в стиле обратного запроса DNS. Сохраните созданный идентификатор в удобной форме, чтобы использовать его в дальнейшем при работе с sigh в рамках этого руководства.
 
@@ -111,7 +111,7 @@ fastlane sigh --development
 
 Если ваш Apple ID подключен к нескольким группам, они будут отображаться здесь. Выберите номер команды, которую вы хотите использовать:
 
-[![](sigh-images/fastlane-image2.png "Выбор используемой команды")](sigh-images/fastlane-image2.png#lightbox)
+[![](sigh-images/fastlane-image2.png "Select the team that you wish to use")](sigh-images/fastlane-image2.png#lightbox)
 
 Идентификатор команды также можно передать в интерфейс командной строки следующим образом:
 
@@ -127,7 +127,7 @@ fastlane sigh -l 2TU993NY9J
 
 Новый профиль подготовки будет виден при просмотре центра разработчиков, как показано на рисунке ниже:
 
-[![](sigh-images/fastlane-image10.png "Просмотр нового профиля подготовки")](sigh-images/fastlane-image10.png#lightbox)
+[![](sigh-images/fastlane-image10.png "View the newly created provisioning profile")](sigh-images/fastlane-image10.png#lightbox)
 
 По умолчанию sigh сохраняет профили подготовки в текущей папке. Чтобы изменить каталог вывода, задайте новое значение `output_path` или выполните следующие действия:
 

@@ -4,15 +4,15 @@ description: Эта статья описывает создание файла 
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: b9982f9102166aa6892be0819615f329a65fffbb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756430"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030428"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Поддержка IPA в Xamarin.iOS
 
@@ -60,7 +60,7 @@ _В этой статье описано, как создать файл IPA, к
 
 Прежде чем создавать IPA для кроссплатформенного решения, выберите проект iOS в качестве запускаемого:
 
-![](ipa-support-images/setasstartup.png "Проект iOS, выбранный в качестве запускаемого")
+![](ipa-support-images/setasstartup.png "Selected the iOS project as the startup project")
 
 ### <a name="build-your-archive"></a>Построение архива
 
@@ -68,15 +68,15 @@ _В этой статье описано, как создать файл IPA, к
 
 1. Выберите конфигурацию **Выпуск | Устройство** в Visual Studio для Mac: !
 
-    ![](ipa-support-images/buildxs01new.png "Выбор конфигурации \"Выпуск | Устройство\"")
+    ![](ipa-support-images/buildxs01new.png "Select the Release | Device configuration")
 
 1. В меню **Сборка** выберите **Архивировать для публикации**:
 
-    ![](ipa-support-images/buildxs02new.png "Выбор элемента \"Архивировать для публикации\"")
+    ![](ipa-support-images/buildxs02new.png "Select Archive for Publishing")
 
 1. После создания архива появится представление **Архивы**:
 
-    ![](ipa-support-images/buildxs03new.png "Отображается представление \"Архивы\"")
+    ![](ipa-support-images/buildxs03new.png "The Archives view will be displayed")
 
 ### <a name="sign-and-distribute-your-app"></a>Подписывание и распространение приложения
 
@@ -90,23 +90,23 @@ _В этой статье описано, как создать файл IPA, к
 
 1. Нажмите кнопку **Подписать и распространить...** , как показано ниже:
 
-    ![](ipa-support-images/buildxs04new.png "Выбор команды \"Подписать и распространить\"")
+    ![](ipa-support-images/buildxs04new.png "Select Sign and Distribute...")
 
 1. Откроется мастер публикации. Выберите канал распространения **Специальный** или **Корпоративный** (Внутренний), чтобы создать пакет:
 
-    ![](ipa-support-images/distribute01.png "Выбор канала распространения \"Специальный\" или \"Корпоративный\" (Внутренний)")
+    ![](ipa-support-images/distribute01.png "Select the Ad-Hoc or Enterprise In-House distribution")
 
 1. На экране профиля подготовки выберите удостоверение для подписывания и соответствующий профиль подготовки или подпишите повторно другим удостоверением:
 
-    ![](ipa-support-images/distribute02.png "Выбор удостоверения для подписи и соответствующего профиля подготовки")
+    ![](ipa-support-images/distribute02.png "Select the signing identity and corresponding provisioning profile")
 
 1. Проверьте сведения о пакете и затем нажмите кнопку **Опубликовать**:
 
-    ![](ipa-support-images/distribute03.png "Проверка сведений о пакете")
+    ![](ipa-support-images/distribute03.png "Verify the package details")
 
 1. Наконец, сохраните свой IPA на компьютере:
 
-    ![](ipa-support-images/distribute04.png "Сохранение IPA на компьютере")
+    ![](ipa-support-images/distribute04.png "Save the IPA to the computer")
 
 ### <a name="building-via-the-command-line-on-mac"></a>Сборка из командной строки (на Mac)
 
@@ -114,7 +114,7 @@ _В этой статье описано, как создать файл IPA, к
 
 1. Убедитесь, что выбраны параметры **Параметры проекта > Параметры IPA iOS > Включить изображения iTunesArtwork** и **Выполнить сборку произвольного или корпоративного пакета (IPA)** :
 
-    ![](ipa-support-images/imagexs04.png "Параметры \"Включить изображения iTunesArtwork\" и \"Выполнить сборку произвольного или корпоративного пакета (IPA)\" выбраны")
+    ![](ipa-support-images/imagexs04.png "Include iTunesArtwork images and Build ad-hoc/enterprise package IPA is checked")
 
     При необходимости вместо этого можно изменить файл **CSPROJ** в текстовом редакторе и вручную добавить два соответствующих свойства в `PropertyGroup` для конфигурации, которая будет использоваться для сборки приложения:
 
@@ -125,7 +125,7 @@ _В этой статье описано, как создать файл IPA, к
 
 1. Если вы включаете необязательный файл **iTunesMetadata.plist**, нажмите кнопку **...** , выберите его в списке и нажмите кнопку **ОК**:
 
-     ![](ipa-support-images/imagexs03.png "Выбор файла iTunesMetadata.plist в списке")
+     ![](ipa-support-images/imagexs03.png "Select iTunesMetadata.plist from the list")
 
 1. Вызовите **msbuild** напрямую и передайте это свойство в командной строке.
 
@@ -139,29 +139,29 @@ _В этой статье описано, как создать файл IPA, к
 
 1. В **обозревателе решений** щелкните имя проекта Xamarin.iOS правой кнопкой мыши и выберите **Свойства**, чтобы открыть его для редактирования:
 
-    ![](ipa-support-images/imagevs01.png "Выбор пункта \"Свойства\"")
+    ![](ipa-support-images/imagevs01.png "Select Properties")
 
 2. Выберите **Параметры IPA iOS** и затем пункт **Специальный** в раскрывающемся списке **Конфигурация**:
 
-    ![](ipa-support-images/imagevs02.png "Выбор пункта \"Специальный\" в раскрывающемся списке \"Конфигурация\"")
+    ![](ipa-support-images/imagevs02.png "Select Ad-Hoc from the Configuration dropdown list")
 
     > [!NOTE]
     > Конфигурация "Специальный" может быть недоступна для более новых проектов Xamarin.iOS. Если она недоступна, выберите конфигурацию **Выпуск**.
 
 3. Если вы включаете необязательный файл **iTunesMetadata.plist**, нажмите кнопку **...** , выберите его в списке и нажмите кнопку **Открыть**:
 
-    ![](ipa-support-images/imagevs03.png "Выбор файла iTunesMetadata.plist в списке")
+    ![](ipa-support-images/imagevs03.png "Select iTunesMetadata.plist from the list")
 
 4. При необходимости заполните поле **Имя пакета** для IPA-файла, иначе оно будет совпадать с именем проекта Xamarin.iOS.
 5. Сохраните изменения в свойствах проекта.
 6. Выберите пункт **Специальный** в раскрывающемся списке **Конфигурация сборки**, если он доступен. В противном случае выберите **Выпуск**:
 
-    ![](ipa-support-images/imagevs05.png "Выбор пункта \"Специальный\" в раскрывающемся списке \"Конфигурация сборки\"")
+    ![](ipa-support-images/imagevs05.png "Select Ad Hoc from the Build Configuration dropdown")
 
 7. Выполните сборку проекта для создания пакета IPA.
 8. Пакет IPA будет создан в папке **Bin > iOS Device > Ad Hoc (или Release)** :
 
-    ![](ipa-support-images/imagevs06.png "IPA-файл в проводнике")
+    ![](ipa-support-images/imagevs06.png "The IPA in the file explorer")
 
 -----
 
@@ -231,11 +231,11 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
- ![](ipa-support-images/installxs01.png "Новое приложение iOS в разделе \"Мои приложения\"")
+ ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
- ![](ipa-support-images/installvs01.png "Новое приложение iOS в разделе \"Мои приложения\"")
+ ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
 
 -----
 

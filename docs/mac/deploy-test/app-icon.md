@@ -4,15 +4,15 @@ description: В этой статье описано, как создавать 
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770142"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021707"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Значок приложения для приложений Xamarin.Mac
 
@@ -24,7 +24,7 @@ _В этой статье описано, как создавать изобра
 
 Первоклассный значок должен передавать основное назначение приложения Xamarin.Mac и давать представление об ожидаемых действиях при использовании приложения. В этой статье рассматриваются все шаги по созданию необходимых для значка ресурсов изображений, упаковке этих ресурсов в файл `AppIcon.appiconset` и использовании этого файла в приложении Xamarin.Mac.
 
-![Редактор AppIcons.appiconset](app-icon-images/intro01.png "The AppIcon.appiconset editor")
+![Редактор AppIcon.appiconset](app-icon-images/intro01.png "Редактор AppIcon.appiconset")
 
 ## <a name="application-icon"></a>Значок приложения
 
@@ -50,10 +50,10 @@ _В этой статье описано, как создавать изобра
 
 Как и для любого другого ресурса изображения, который разработчик будет использовать в приложении Xamarin.Mac, для значка приложения необходимы версии стандартного разрешения и разрешения Retina. И опять же, как и для любого другого изображения, при именовании файлов значков следует использовать формат `@2x`:
 
-- **Стандартное разрешение**  - _имя_изображения_**.**_расширение_имени_файла_ (например, **icon_512x512.png**).
-- **Высокое разрешение**  - _имя_изображения_**@2x.**_расширение_имени_файла_ (например, **icon_512x512@2x.png**).
+- **Стандартное разрешение**  - _имя_изображения_ **.** _расширение_имени_файла_ (например, **icon_512x512.png**).
+- **Высокое разрешение**  - _имя_изображения_ **@2x.** _расширение_имени_файла_ (например, **icon_512x512@2x.png** ).
 
-Например, чтобы указать версию значка приложения 512 x 512, именем файла будет **icon_512x512.png** и **icon_512x512@2x.png**.
+Например, чтобы указать версию значка приложения 512 x 512, именем файла будет **icon_512x512.png** и **icon_512x512@2x.png** .
 
 Чтобы значок отлично смотрелся во всех местах, где его видят пользователи, необходимо предоставить ресурсы в приведенных ниже размерах:
 
@@ -80,10 +80,10 @@ _В этой статье описано, как создавать изобра
 
 1. На **Панели решения** откройте **Assets.xcassets** > **AppIcons.appiconset**: 
 
-    ![Редактирование AppIcon.appiconset](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
+    ![Редактирование AppIcon.appiconset](app-icon-images/intro01.png "Редактирование AppIcon.appiconset")
 2. Для каждого необходимого размера значка щелкните значок и выберите соответствующий файл изображения, созданный выше: 
 
-    [![Выбор изображения значка](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
+    [![Выбор изображения значка](app-icon-images/intro02.png "Выбор изображения значка")](app-icon-images/intro02-large.png#lightbox)
 3. Сохраните изменения.
 
 ## <a name="using-the-icon"></a>Использование значка
@@ -95,12 +95,12 @@ _В этой статье описано, как создавать изобра
 1. Дважды щелкните **Info.plist** на **Панели решения**, чтобы открыть окно **Параметры проекта**.
 2. В разделе **Целевая платформа приложения Mac OS X** щелкните **Значки приложений**, чтобы выбрать файл `AppIcon.appiconset`: 
 
-    [![Настройка набора значков](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
+    [![Установка набора значков](app-icon-images/icon01.png "Установка набора значков")](app-icon-images/icon01-large.png#lightbox)
 3. Сохраните изменения.
 
 При запуске приложения на панели Dock появится новый значок:
 
-![Пример значка приложения на панели Dock в macOS](app-icon-images/icon04.png "An example of an app icon in the macOS dock")
+![Пример значка приложения на панели Dock в macOS](app-icon-images/icon04.png "Пример значка приложения на панели Dock в macOS")
 
 ## <a name="summary"></a>Сводка
 

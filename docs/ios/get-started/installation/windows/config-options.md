@@ -4,15 +4,15 @@ description: Эта статья описывает, как настроить V
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: b3910bd096f2a8dd301a9ba6e200028d3121c8df
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279227"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022539"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Настройка Visual Studio при разработке приложений для iOS
 
@@ -42,7 +42,7 @@ _В этой статье описываются различные параме
 
 Если эта панель инструментов не отображается, откройте меню **Вид** в Visual Studio 2019 или Visual Studio 2017 и выберите **Панели инструментов > iOS**.
 
-![Включение панели инструментов для iOS](config-options-images/ios-toolbar-enable.png "Включение панели инструментов для iOS")
+![Включение панели инструментов iOS](config-options-images/ios-toolbar-enable.png "Включение панели инструментов iOS")
 
 ## <a name="solution-platforms-drop-down-menu"></a>Раскрывающееся меню "Платформы решения"
 
@@ -54,8 +54,8 @@ _В этой статье описываются различные параме
 - Выберите пункт **Добавить или удалить кнопки** 
 - Убедитесь, что флажок **Платформы решения** установлен:
 
-![Включение раскрывающегося меню "Платформы решения"](config-options-images/solution-platforms-enable.png "Включение раскрывающегося меню \"Платформы решения\"")
+![Включение раскрывающегося меню "Платформы решения"](config-options-images/solution-platforms-enable.png "Включение раскрывающегося меню "Платформы решения"")
 
 При открытии проекта iOS панели инструментов **Стандартная** и **iOS** должны выглядеть как на следующем снимке экрана:
 
-![Панели инструментов "Стандартная" и iOS](config-options-images/toolbars.png "Панели инструментов \"Стандартная\" и iOS")
+![Панели инструментов "Стандартная" и iOS](config-options-images/toolbars.png "Панели инструментов "Стандартная" и iOS")

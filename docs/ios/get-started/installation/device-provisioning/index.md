@@ -4,15 +4,15 @@ description: Этот документ описывает подготовку �
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 7ee3d7d9b2ce074174b676225ec934279ceb5a86
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292629"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022698"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Подготовка устройства для Xamarin.iOS
 
@@ -20,7 +20,7 @@ ms.locfileid: "70292629"
 
 Выделенные разделы на приведенном ниже рисунке содержат шаги, необходимые для подготовки iOS к тестированию:
 
-[![](images/provisioningdiagram.png "Выделенные разделы на этом рисунке содержат шаги, необходимые для подготовки iOS к тестированию")](images/provisioningdiagram.png#lightbox)
+[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
 
 Следующим шагом после этого является распространение приложения. Дополнительные сведения о развертывании см. в руководствах [Распространение приложений](~/ios/deploy-test/app-distribution/index.md).
 

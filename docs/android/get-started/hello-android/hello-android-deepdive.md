@@ -6,15 +6,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756717"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028010"
 ---
 # <a name="hello-android-deep-dive"></a>Знакомство с Android. Глубокое погружение
 
@@ -161,7 +161,7 @@ Visual Studio для Mac — это бесплатная интегрирова
 
 **activity_main.axml** — это файл макета пользовательского интерфейса для первого экрана приложения. Расширение AXML указывает на то, что это файл конструктора Android (AXML означает *Android XML*). Имя *Main* является произвольным в Android &ndash; файл макета мог бы иметь любое другое имя. При открытии файла **activity_main.axml** в интегрированной среде разработки запускается визуальный редактор файлов макетов Android, который называется *Android Designer*:
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Конструктор Android")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 В приложении **Phoneword** идентификатор кнопки **TranslateButton** имеет значение `@+id/TranslateButton`:
 
@@ -376,26 +376,26 @@ translateButton.Click += (sender, e) =>
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; веб-средство на основе браузера для создания любых значков Android со ссылками на другие полезные средства, предоставляемые сообществом. Лучше всего работает в Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; веб-средство на основе браузера для создания любых значков Android со ссылками на другие полезные средства, предоставляемые сообществом. Лучше всего работает в Google Chrome.
 
 - Visual Studio &ndash; создать простой набор значков для приложения можно непосредственно в интегрированной среде разработки.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; готовые наборы значков высокого качества, которые можно скачать бесплатно или приобрести.
+- [Glyphish](https://www.glyphish.com/) &ndash; готовые наборы значков высокого качества, которые можно скачать бесплатно или приобрести.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; воспользуйтесь услугами одного из дизайнеров по созданию набора значков по цене от 5 USD. Результат может быть разным, однако это хороший ресурс, если вам нужно создать значки максимально быстро.
+- [Fiverr](https://www.fiverr.com/) &ndash; воспользуйтесь услугами одного из дизайнеров по созданию набора значков по цене от 5 USD. Результат может быть разным, однако это хороший ресурс, если вам нужно создать значки максимально быстро.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; веб-средство на основе браузера для создания любых значков Android со ссылками на другие полезные средства, предоставляемые сообществом. Лучше всего работает в Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; веб-средство на основе браузера для создания любых значков Android со ссылками на другие полезные средства, предоставляемые сообществом. Лучше всего работает в Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; приложение для Mac, предназначенное для разработки пользовательского интерфейса, значков и других компонентов. С помощью этого приложения создавались значки приложений и изображения при запуске для Xamarin. Приложение Sketch 3 доступно в магазине App Store и стоит приблизительно 80 USD. Вы также можете попробовать бесплатное [средство Sketch](http://bohemiancoding.com/sketch/tool/).
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; приложение для Mac, предназначенное для разработки пользовательского интерфейса, значков и других компонентов. С помощью этого приложения создавались значки приложений и изображения при запуске для Xamarin. Приложение Sketch 3 доступно в магазине App Store и стоит приблизительно 80 USD. Вы также можете попробовать бесплатное [средство Sketch](https://bohemiancoding.com/sketch/tool/).
 
-- [Pixelmator](http://www.pixelmator.com/) &ndash; универсальный редактор изображений для Mac, который стоит приблизительно 30 USD.
+- [Pixelmator](https://www.pixelmator.com/) &ndash; универсальный редактор изображений для Mac, который стоит приблизительно 30 USD.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; готовые наборы значков высокого качества, которые можно скачать бесплатно или приобрести.
+- [Glyphish](https://www.glyphish.com/) &ndash; готовые наборы значков высокого качества, которые можно скачать бесплатно или приобрести.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; воспользуйтесь услугами одного из дизайнеров по созданию набора значков по цене от 5 USD. Результат может быть разным, однако это хороший ресурс, если вам нужно создать значки максимально быстро.
+- [Fiverr](https://www.fiverr.com/) &ndash; воспользуйтесь услугами одного из дизайнеров по созданию набора значков по цене от 5 USD. Результат может быть разным, однако это хороший ресурс, если вам нужно создать значки максимально быстро.
 
 ::: zone-end
 

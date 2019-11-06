@@ -4,15 +4,15 @@ description: 'Этот документ описывает fastlane — сред
 ms.prod: xamarin
 ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8e98a8e0314d8cb5ace4d17fdc62eb2ec75ca336
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ba0348ff0cf6dc394f67b3c5779fd49eb852673f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292464"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028522"
 ---
 # <a name="fastlane-for-ios--cert"></a>Fastlane для iOS — cert
 
@@ -65,7 +65,7 @@ fastlane cert --development
 
 При появлении запроса cert введите свой Apple ID и пароль:
 
-[![](cert-images/fastlane-image1.png "cert попросит вас ввести идентификатор Apple ID и пароль")](cert-images/fastlane-image1.png#lightbox)
+[![](cert-images/fastlane-image1.png "cert will prompt for your Apple ID and password")](cert-images/fastlane-image1.png#lightbox)
 
 > [!IMPORTANT]
 > Когда вы впервые вводите свой пароль, он сохраняется в локальной связке ключей macOS. Вы также можете сохранить имя пользователя и пароль в переменных среды либо использовать `export fastlane_DONT_STORE_PASSWORD=1`, если вы не хотите хранить пароль в связке ключей. Дополнительные сведения об управлении учетными данными с помощью Fastlane см. в [руководстве по диспетчеру учетных данных](https://github.com/fastlane/fastlane/blob/master/credentials_manager/README.md) Fastlane.
@@ -78,7 +78,7 @@ fastlane cert -u myemailadress@domain.com
 
 Если ваш Apple ID подключен к множеству команд, они будут отображаться здесь. Выберите номер команды, которую вы хотите использовать:
 
-[![](cert-images/fastlane-image2.png "Выбор используемой команды")](cert-images/fastlane-image2.png#lightbox)
+[![](cert-images/fastlane-image2.png "Select the team that you wish to use")](cert-images/fastlane-image2.png#lightbox)
 
 Идентификатор команды можно также передать с помощью следующего флага:
 

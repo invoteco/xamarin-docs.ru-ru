@@ -4,15 +4,15 @@ description: Этот документ описывает отладку иск�
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769885"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021671"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Отладка сбоя в машинном коде в приложении Xamarin.Mac
 
@@ -183,7 +183,7 @@ new System.Threading.Thread (() =>
 
 Теперь нам следует передать эту проблему в Xamarin, чтобы привязка была исправлена в будущих версиях. Если у вас есть корпоративная лицензия, создайте запрос в службу поддержки на странице 
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 В противном случае начните с поиска существующей проблемы.
 

@@ -4,15 +4,15 @@ description: Этот документ описывает команду match �
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8991ddc55069fad8c5f023f35ece0926f0f7e5b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08fdcafe33e4b9b2aa6b5595c732718878be33f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285731"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028513"
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane для iOS - match
 
@@ -59,15 +59,15 @@ fastlane match init
 
 Когда будет предложено, введите URL-адрес репозитория git:
 
- [![](match-images/fastlane-image7.png "Введите URL-адрес репозитория git")](match-images/fastlane-image7.png#lightbox)
+ [![](match-images/fastlane-image7.png "Enter the URL of the git repo")](match-images/fastlane-image7.png#lightbox)
 
 URL-адрес можно найти и скопировать, нажав кнопку **Clone or Download** (Клонировать или скачать) на сайте github.com, как показано ниже:
 
-[![](match-images/fastlane-image6.png "URL-адрес под кнопкой \"Клонировать или скачать\" на сайте github.com")](match-images/fastlane-image6.png#lightbox)
+[![](match-images/fastlane-image6.png "The URL under the Clone or Download button on github.com")](match-images/fastlane-image6.png#lightbox)
 
 После инициализации проекта создается matchfile — текстовый файл, в который можно внести изменения, чтобы передать инструменту match переменные среды. Пример matchfile показан ниже:
 
-[![](match-images/fastlane-image8.png "Пример matchfile")](match-images/fastlane-image8.png#lightbox)
+[![](match-images/fastlane-image8.png "A matchfile example")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -93,7 +93,7 @@ fastlane match development
 - Файл readme с основными инструкциями
 - Версия match
 
-[![](match-images/fastlane-image9.png "Структура проекта в репозитории git")](match-images/fastlane-image9.png#lightbox)
+[![](match-images/fastlane-image9.png "The project structure in the git repo")](match-images/fastlane-image9.png#lightbox)
 
 Профили подготовки устанавливаются в `~/Library/MobileDevice/Provisioning Profiles`. Сертификаты и закрытые ключи устанавливаются непосредственно в цепочку ключей.
 

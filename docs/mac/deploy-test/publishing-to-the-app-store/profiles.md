@@ -4,21 +4,21 @@ description: В этом руководстве описывается созд�
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 8b2d9d49e37b195dadf3aa89fefb0911e4215d14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b361cd00121d16752d5eebc971653c8ea185c641
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769917"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73018111"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Профили подготовки для приложений Xamarin.Mac
 
 С помощью профилей подготовки разработчик может добавлять в свои приложения Xamarin.Mac несколько определенных возможностей macOS (прежнее название — Mac OS X), таких как iCloud и push-уведомления. Разработчик должен создать, скачать и установить профиль подготовки Mac для каждого создаваемого приложения, в котором используются указанные функции.
 
-[![](profiles-images/certif13.png "Портал подготовки Apple")](profiles-images/certif13.png#lightbox)
+[![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
 
 <a name="Development_Provisioning_Profile" />
 
@@ -33,31 +33,31 @@ ms.locfileid: "70769917"
 
 1. Выберите тип создаваемого профиля подготовки и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif14.png "Выбор типа профиля")](profiles-images/certif14.png#lightbox)
+    [![](profiles-images/certif14.png "Selecting the profile type")](profiles-images/certif14.png#lightbox)
 2. Выберите идентификатор приложения, для которого создается профиль, и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif15.png "Выбор идентификатора приложения")](profiles-images/certif15.png#lightbox)
+    [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
 3. Выберите идентификатор разработчика, используемый для подписывания профиля, и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif16.png "Выбор идентификатора разработчика")](profiles-images/certif16.png#lightbox)
+    [![](profiles-images/certif16.png "Selecting the developer ID")](profiles-images/certif16.png#lightbox)
 4. Выберите компьютеры, на которых можно использовать этот профиль, и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif17.png "Выбор разрешенных компьютеров")](profiles-images/certif17.png#lightbox)
+    [![](profiles-images/certif17.png "Selecting the allowed computers")](profiles-images/certif17.png#lightbox)
 5. Введите значение в поле **Имя профиля** и нажмите кнопку **Создать**: 
 
-    [![](profiles-images/certif18.png "Создание профиля")](profiles-images/certif18.png#lightbox)
+    [![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png#lightbox)
 6. Нажмите кнопку **Скачать**, чтобы скачать новый профиль: 
 
-    [![](profiles-images/certif19.png "Скачивание профиля")](profiles-images/certif19.png#lightbox)
+    [![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png#lightbox)
 7. Профили подготовки для разработки устанавливаются в области "Параметры профилей" в **системных настройках** приложения Mac: 
 
-    [![](profiles-images/certif20.png "Установка профиля")](profiles-images/certif20.png#lightbox)
+    [![](profiles-images/certif20.png "Installing the profile")](profiles-images/certif20.png#lightbox)
 8. Все установленные профили будут отображены в области "Параметры профилей": 
 
-    [![](profiles-images/image47.png "Отображение всех установленных профилей")](profiles-images/image47.png#lightbox)
+    [![](profiles-images/image47.png "Showing all installed profiles")](profiles-images/image47.png#lightbox)
 9. Если профиль необходимо скачать повторно, он также появится в **служебной программе для сертификата разработчика**: 
 
-    [![](profiles-images/image48.png "Служебная программа для сертификата разработчика")](profiles-images/image48.png#lightbox)
+    [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
 Профиль подготовки для разработки требуется создавать для каждого нового приложения или при добавлении нового компьютера для тестирования.
 
@@ -71,25 +71,25 @@ ms.locfileid: "70769917"
 
 1. Выберите тип создаваемого профиля и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif21.png "Выбор типа профиля")](profiles-images/certif21.png#lightbox)
+    [![](profiles-images/certif21.png "Selecting the type of profile")](profiles-images/certif21.png#lightbox)
 2. Выберите идентификатор приложения, для которого создается профиль, и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif15.png "Выбор идентификатора приложения")](profiles-images/certif15.png#lightbox)
+    [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
 3. Выберите идентификатор компании, используемый для подписывания профиля, и нажмите кнопку **Продолжить**: 
 
-    [![](profiles-images/certif23.png "Выбор идентификатора компании")](profiles-images/certif23.png#lightbox)
+    [![](profiles-images/certif23.png "Selecting the company ID")](profiles-images/certif23.png#lightbox)
 4. Введите значение в поле **Имя профиля** и нажмите кнопку **Создать**: 
 
-    [![](profiles-images/certif24.png "Создание профиля")](profiles-images/certif24.png#lightbox)
+    [![](profiles-images/certif24.png "Generating the profile")](profiles-images/certif24.png#lightbox)
 5. Нажмите кнопку **Скачать**, чтобы получить файл профиля подготовки (расширение `.provisionprofile`): 
 
-    [![](profiles-images/certif25.png "Скачивание профиля")](profiles-images/certif25.png#lightbox)
+    [![](profiles-images/certif25.png "Downloading the profile")](profiles-images/certif25.png#lightbox)
 6. Перетащите его в **организатор Xcode** или дважды щелкните его, чтобы установить. Затем профиль появится в организаторе Xcode: 
 
-    [![](profiles-images/image51.png "Установка профиля")](profiles-images/image51.png#lightbox)
+    [![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png#lightbox)
 7. Профиль подготовки также появится в списке: 
 
-    [![](profiles-images/certif26.png "Отображение установленных профилей")](profiles-images/certif26.png#lightbox)
+    [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
 
 В случае изменения функций, используемых идентификатором приложения (например, включение iCloud или push-уведомлений), следует повторно создать профили подготовки для этого идентификатора приложения.
 

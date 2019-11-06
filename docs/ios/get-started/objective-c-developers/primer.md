@@ -4,15 +4,15 @@ description: Этот документ описывает C# для разраб
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: a55d1d9848d3f1378ccbc4a24e1748eb146a6a35
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b84d959ce7976fc51cbdfee99cbceec560e8e8e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291989"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022428"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Начальное руководство по C# для разработчиков Objective-C
 
@@ -58,7 +58,7 @@ public static class UITextViewExtensions
 
 Теперь, когда в коде создан экземпляр `UITextView`, этот метод будет доступен в списке автозаполнения, как показано ниже:
 
- ![](primer-images/01-extensionmethodintellisense.png "Метод, доступный в списке автозаполнения")
+ ![](primer-images/01-extensionmethodintellisense.png "The method available in the autocomplete")
 
 При вызове метода расширения экземпляр передается в качестве аргумента, как, например, `textView` в этом примере.
 

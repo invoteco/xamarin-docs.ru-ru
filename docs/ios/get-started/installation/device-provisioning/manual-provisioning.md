@@ -4,15 +4,15 @@ description: После успешной установки Xamarin.iOS след
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/15/2017
-ms.openlocfilehash: c190e92c8366644c00e0f03c314d535f43f8046b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 50ba4a46e9d9f7cbf5337844025790ab51e309dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768629"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022679"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Ручная подготовка для Xamarin.iOS
 
@@ -37,39 +37,39 @@ _Установив Xamarin.iOS для разработки приложений
 
 Чтобы создать удостоверение подписывания, выполните указанные ниже действия:
 
-1. Войдите в [раздел Certificates, Identifiers and Profiles (Сертификаты, идентификаторы и профили) на портале разработчика](https://developer.apple.com/account/overview.action) и выберите в столбце **iOS Apps** (Приложения iOS) раздел **Certificates** (Сертификаты). Чтобы создать сертификат, нажмите кнопку **+**:
+1. Войдите в [раздел Certificates, Identifiers and Profiles (Сертификаты, идентификаторы и профили) на портале разработчика](https://developer.apple.com/account/overview.action) и выберите в столбце **iOS Apps** (Приложения iOS) раздел **Certificates** (Сертификаты). Чтобы создать сертификат, нажмите кнопку **+** :
 
-    [![](manual-provisioning-images/cert-plus.png "Нажмите кнопку \"+\", чтобы создать сертификат")](manual-provisioning-images/cert-plus.png#lightbox)
+    [![](manual-provisioning-images/cert-plus.png "Click the + to create a new certificate")](manual-provisioning-images/cert-plus.png#lightbox)
 
 2. В качестве типа сертификата выберите **iOS App Development** (Разработка приложений для iOS), после чего нажмите кнопку **Continue** (Продолжить). В зависимости от прав вашей учетной записи этот экран может выглядеть иначе:
 
-    [![](manual-provisioning-images/cert-first.png "Выбор типа сертификата \"Разработка приложений для iOS\"")](manual-provisioning-images/cert-first.png#lightbox)
+    [![](manual-provisioning-images/cert-first.png "Select the iOS App Development option for the certificate type")](manual-provisioning-images/cert-first.png#lightbox)
 
 3. Отправьте запрос на подписание сертификата, который необходим для создания сертификата вручную. Для этого запустите на компьютере Mac программу **Keychain Access** (Доступ к связке ключей). В главном меню выберите пункт **Certificate Assistant** (Помощник по сертификатам), а затем пункт **Request a Certificate from a Certificate Authority...** (Запросить сертификат из центра сертификации...), как показано ниже:
 
-      [![](manual-provisioning-images/key-first.png "Запрос подписи сертификата")](manual-provisioning-images/key-first.png#lightbox)
+      [![](manual-provisioning-images/key-first.png "Request a Certificate Signing Request")](manual-provisioning-images/key-first.png#lightbox)
 
 4. Введите сведения о себе и выберите вариант **Save to disk** (Сохранить на диск):
 
-    [![](manual-provisioning-images/key-second.png "Заполнение сведений о себе")](manual-provisioning-images/key-second.png#lightbox)
+    [![](manual-provisioning-images/key-second.png "Fill in your information")](manual-provisioning-images/key-second.png#lightbox)
 
 5. Сохраните запрос подписи сертификата в месте, где его легко будет найти:
 
-    [![](manual-provisioning-images/cert-third.png "Сохранение запроса подписи сертификата")](manual-provisioning-images/cert-third.png#lightbox)
+    [![](manual-provisioning-images/cert-third.png "Save the CSR")](manual-provisioning-images/cert-third.png#lightbox)
 
 6. Вернитесь на портал подготовки, добавьте на него сертификат и отправьте его:
 
-    [![](manual-provisioning-images/cert-second.png "Добавление сертификата на портал")](manual-provisioning-images/cert-second.png#lightbox)
+    [![](manual-provisioning-images/cert-second.png "Upload the Certificate to the portal")](manual-provisioning-images/cert-second.png#lightbox)
 
     Если у вас нет прав администратора, сертификат должен быть утвержден администратором или агентом рабочей группы.
 
 7. После утверждения сертификата скачайте его с портала подготовки:
 
-    [![](manual-provisioning-images/status-dev.png "Скачивание сертификата с портала подготовки")](manual-provisioning-images/status-dev.png#lightbox)
+    [![](manual-provisioning-images/status-dev.png "Download the Certificate from the Provisioning Portal")](manual-provisioning-images/status-dev.png#lightbox)
 
 8. Дважды щелкните скачанный сертификат, чтобы запустить программу Keychain Access, и откройте панель **My Certificates** (Мои сертификаты), в которой показан новый сертификат и связанный закрытый ключ:
 
-    [![](manual-provisioning-images/keychain.png "Сертификат в программе Keychain Access")](manual-provisioning-images/keychain.png#lightbox)
+    [![](manual-provisioning-images/keychain.png "The Certificate in Keychain Access")](manual-provisioning-images/keychain.png#lightbox)
 
 ### <a name="understanding-certificate-key-pairs"></a>Основные сведения о парах ключей сертификатов
 
@@ -102,34 +102,34 @@ _Установив Xamarin.iOS для разработки приложений
 2. Подключите подготавливаемое устройство к компьютеру Mac с помощью USB-кабеля из комплекта поставки.
 3. В меню **Window** (Окно) выберите пункт **Devices** (Устройства):
 
-   [![](manual-provisioning-images/add01.png "В меню \"Окно\" выберите \"Устройства\"")](manual-provisioning-images/add01.png#lightbox)
+   [![](manual-provisioning-images/add01.png "From the Windows menu select Devices")](manual-provisioning-images/add01.png#lightbox)
 
 4. В списке **DEVICES** (Устройства) в левой части окна Devices выберите нужно устройство iOS.
 5. Выделите строку в поле **Identifier** (Идентификатор) и скопируйте ее в буфер обмена:
 
-   [![](manual-provisioning-images/add02.png "Выделение строки идентификатора")](manual-provisioning-images/add02.png#lightbox)
+   [![](manual-provisioning-images/add02.png "Highlight the Identifier string")](manual-provisioning-images/add02.png#lightbox)
 
 6. В браузере Safari перейдите в [Apple Developer Center](https://developer.apple.com/membercenter/index.action) и выполните вход.
 7. Щелкните ссылку **Certificates, Identifiers & Profiles** (Сертификаты, идентификаторы и профили):
 
-   [![](manual-provisioning-images/add03.png "Щелкните ссылку \"Сертификаты, идентификаторы и профили\"")](manual-provisioning-images/add03.png#lightbox)
+   [![](manual-provisioning-images/add03.png "Click the Certificates, Identifiers  Profiles link")](manual-provisioning-images/add03.png#lightbox)
 
 8. Щелкните ссылку **Devices** (Устройства):
 
-   [![](manual-provisioning-images/add04.png "Щелкните ссылку \"Устройства\"")](manual-provisioning-images/add04.png#lightbox)
+   [![](manual-provisioning-images/add04.png "Click on the Devices link")](manual-provisioning-images/add04.png#lightbox)
 
-9. Нажмите кнопку **+**:
+9. Нажмите кнопку **+** :
 
-   [![](manual-provisioning-images/add05.png "Нажмите кнопку \"+\"")](manual-provisioning-images/add05.png#lightbox)
+   [![](manual-provisioning-images/add05.png "Click the + button")](manual-provisioning-images/add05.png#lightbox)
 
 10. Укажите имя нового устройства и вставьте **идентификатор** устройства, скопированный ранее, в поле **UUID**:
 
-    [![](manual-provisioning-images/add06.png "Укажите имя нового устройства и его идентификатор")](manual-provisioning-images/add06.png#lightbox)
+    [![](manual-provisioning-images/add06.png "Provide a name for the new device and the device Identifier")](manual-provisioning-images/add06.png#lightbox)
 
 11. Нажмите кнопку **Continue** (Продолжить).
 12. Наконец, проверьте сведения и нажмите кнопку **Register** (Зарегистрировать):
 
-    [![](manual-provisioning-images/add07.png "Проверка сведений")](manual-provisioning-images/add07.png#lightbox)
+    [![](manual-provisioning-images/add07.png "Review the information")](manual-provisioning-images/add07.png#lightbox)
 
 Повторите описанные выше действия для всех устройств iOS, которые будут использоваться для тестирования или отладки приложения Xamarin.iOS.
 
@@ -148,10 +148,10 @@ _Установив Xamarin.iOS для разработки приложений
 1. На [портале разработчика](https://developer.apple.com/account/overview.action) перейдите в раздел *Certificates, Identifiers and Profiles* (Сертификаты, идентификаторы и профили) в Apple Developer Center. В разделе **Identifiers** (Идентификаторы) выберите элемент **App IDs** (ИД приложений).
 2. Нажмите кнопку **+** и укажите **имя**:
 
-    [![](manual-provisioning-images/appid05a.png "Укажите имя")](manual-provisioning-images/appid05a.png#lightbox)
+    [![](manual-provisioning-images/appid05a.png "Provide a Name")](manual-provisioning-images/appid05a.png#lightbox)
 3. Префикс приложения должен быть предварительно задан. Выберите вариант **Wildcard App ID** (Шаблон ИД приложения) в качестве суффикса приложения. Введите идентификатор пакета в формате `com.[DomainName].*`:
 
-   [![](manual-provisioning-images/appid05b.png "Введите идентификатор пакета")](manual-provisioning-images/appid05b.png#lightbox)
+   [![](manual-provisioning-images/appid05b.png "Enter a Bundle ID")](manual-provisioning-images/appid05b.png#lightbox)
 
 4. Нажмите кнопку **Continue** (Продолжить) и следуйте инструкциям на экране, чтобы создать идентификатор приложения.
 
@@ -162,28 +162,28 @@ _Установив Xamarin.iOS для разработки приложений
 Чтобы вручную создать профиль подготовки для разработки, выполните указанные ниже действия:
 
 1. В браузере Safari перейдите в [Apple Developers Member Center](https://developer.apple.com/membercenter/index.action) и в разделе *Certificates, Identifiers & Profiles* (Сертификаты, идентификаторы и профили) выберите элемент Provisioning Profiles (Профили подготовки).
-2. Чтобы создать профиль, в правом верхнем углу нажмите кнопку **+**.
+2. Чтобы создать профиль, в правом верхнем углу нажмите кнопку **+** .
 3. В разделе **Development** (Разработка) установите переключатель в положение **iOS App Development** (Разработка приложений для iOS) и нажмите кнопку **Continue** (Продолжить).
 
-    [![](manual-provisioning-images/provisioning-profile01.png "Выберите тип создаваемого профиля")](manual-provisioning-images/provisioning-profile01.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile01.png "Select the type of profile to create")](manual-provisioning-images/provisioning-profile01.png#lightbox)
 4. В раскрывающемся меню выберите нужный идентификатор приложения.
 
-    [![](manual-provisioning-images/provisioning-profile02.png "Выберите нужный идентификатор приложения")](manual-provisioning-images/provisioning-profile02.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile02.png "Select the App ID that to use")](manual-provisioning-images/provisioning-profile02.png#lightbox)
 5. Выберите сертификаты, которые нужно включить в профиль подготовки, и нажмите кнопку **Continue** (Продолжить):
 
-    [![](manual-provisioning-images/provisioning-profile03.png "Выберите сертификаты, которые нужно включить в профиль подготовки")](manual-provisioning-images/provisioning-profile03.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile03.png "Select the Certificates to include in the provisioning profile")](manual-provisioning-images/provisioning-profile03.png#lightbox)
 6. Выберите все устройства, на которых будет устанавливаться приложение.
 
-    [![](manual-provisioning-images/provisioning-profile04.png "Выберите все устройства, на которых будет устанавливаться приложение")](manual-provisioning-images/provisioning-profile04.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile04.png "Select all the devices that the app will be installed on")](manual-provisioning-images/provisioning-profile04.png#lightbox)
 7. Укажите имя, по которому можно определить профиль подготовки, и нажмите кнопку **Continue** (Продолжить), чтобы создать профиль:
 
-    [![](manual-provisioning-images/provisioning-profile05.png "Укажите имя, по которому можно определить профиль подготовки")](manual-provisioning-images/provisioning-profile05.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile05.png "Provide the Provisioning Profile with an identifiable a name")](manual-provisioning-images/provisioning-profile05.png#lightbox)
 8. Чтобы скачать профиль подготовки на компьютер Mac, нажмите кнопку **Download** (Скачать):
 
-    [![](manual-provisioning-images/provisioning-profile06.png "Скачивание профиля подготовки")](manual-provisioning-images/provisioning-profile06.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile06.png "Download the provisioning profile")](manual-provisioning-images/provisioning-profile06.png#lightbox)
 9. Дважды щелкните файл, чтобы установить профиль подготовки в Xcode. Имейте в виду, что в Xcode может не быть никаких визуальных указаний на то, что профиль установился. Проверить это можно путем перехода в раздел **Xcode > Preferences > Accounts** (Xcode > Настройки > Учетные записи). Выберите свой идентификатор Apple и щелкните **View Details...** (Показать подробности...). Новый профиль подготовки должен присутствовать в списке, как показано ниже:
 
-      [![](manual-provisioning-images/provisioning-profile07.png "Просмотр профиля в Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
+      [![](manual-provisioning-images/provisioning-profile07.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 После успешного создания профиля подготовки может потребоваться обновить Xcode, чтобы все сертификаты разработки стали доступны для Visual Studio для Mac и Visual Studio.
 
@@ -197,7 +197,7 @@ _Установив Xamarin.iOS для разработки приложений
 2. Запустите Xcode.
 3. Выберите **Xcode Menu > Preferences...** (Меню Xcode > Предпочтения...).
 4. Перейдите на вкладку **Accounts** (Учетные записи).
-5. Выберите команду и нажмите кнопку **Download Manual Profiles** (Скачать профили, созданные вручную):  [![](manual-provisioning-images/selectteam1.png "Скачивание профилей, созданных вручную")](manual-provisioning-images/selectteam1.png#lightbox)
+5. Выберите команду и нажмите кнопку **Download Manual Profiles** (Скачать профили, созданные вручную): [![](manual-provisioning-images/selectteam1.png "Скачивание профилей, созданных вручную")](manual-provisioning-images/selectteam1.png#lightbox)
 
 6. Выйдите из Xcode.
 7. Запустите Visual Studio для Mac или Visual Studio.
@@ -238,11 +238,11 @@ Apple предоставляет ряд специальных служб при
 1. Подключите устройство к компьютеру Mac.
 2. В файле **Info.plist** проекта проверьте, соответствует ли идентификатор пакета идентификатору приложения (если только не используется шаблон идентификатора приложения):
 
-   ![](manual-provisioning-images/deploydevice01xs.png "Ввод идентификатора")
+   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
 
 3. Щелкните проект правой кнопкой мыши, откройте диалоговое окно "Параметры проекта" и перейдите на страницу **Сборка > Подписывание пакета iOS**. В раскрывающихся списках **Удостоверение подписывания** и **Профиль подготовки** убедитесь в том, что в Visual Studio для Mac доступны соответствующие профили, а затем выберите определенное удостоверение и профиль:
 
-   ![](manual-provisioning-images/deploydevice02xs.png "Выбор удостоверения и профиля")
+   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
 
    Если выбрано значение **Автоматически**, среда Visual Studio для Mac выберет удостоверение и профиль в соответствии с идентификатором пакета, заданным в шаге 2.
 
@@ -252,12 +252,12 @@ Apple предоставляет ряд специальных служб при
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
-> Для начала выберите схему **Подготовка вручную** в разделе **Проект > Свойства подготовки…**.
+> Для начала выберите схему **Подготовка вручную** в разделе **Проект > Свойства подготовки…** .
 
 1. Подключите устройство к узлу сборки Mac.
 2. В файле **Info.plist** проекта проверьте, соответствует ли идентификатор пакета идентификатору приложения:
 
-   ![](manual-provisioning-images/servicevs01.png "Ввод идентификатора")
+   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
 
 3. Щелкните проект правой кнопкой мыши, откройте диалоговое окно "Параметры проекта" и перейдите на страницу **Сборка > Подписывание пакета iOS**. В раскрывающихся списках **Удостоверение подписывания** и **Профиль подготовки** убедитесь в том, что в Visual Studio доступны соответствующие профили, а затем выберите определенное удостоверение и профиль.
 

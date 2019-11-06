@@ -4,15 +4,15 @@ description: Этот документ описывает использован
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 866ebd2a66557cda5372c5bc3d7a909e18c762d7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 66d832f624bdd942f53c5f6d890457958969b1b7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756094"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028419"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Профилирование приложений Xamarin.iOS с помощью Instruments
 
@@ -35,13 +35,13 @@ Xcode Instruments работает только на компьютерах Ma
 
 Instruments откроется со следующим диалоговым окном:
 
- [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Выбор шаблона профилирования")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
+ [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Щелкните шаблон **Allocations** (Распределения). Вы можете использовать и другие шаблоны, однако в этой статье рассматривается только шаблон профиля **Allocations**.
 
 Теперь выберите устройство и приложение в меню в верхней части окна:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Выбор устройства и приложения")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Select the device and application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 Выберите устройство iOS в меню в верхней части окна приложения, а рядом с ним — приложение, для которого требуется профилирование (на снимке экрана выше это **MemoryDemo**).
 
@@ -49,13 +49,13 @@ Instruments откроется со следующим диалоговым ок
 
 Нажмите кнопку **Choose** (Выбрать). Откроется следующий экран:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Интерфейс профилирования")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "The profiling interface")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Чтобы начать профилирование, нажмите кнопку записи (красный кружок в левом верхнем углу).
 
 На следующем снимке экрана показан пример профилирования с помощью **Instruments**:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Пример профилирования с помощью Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "An example of profiling using Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Сводка
 
@@ -64,4 +64,4 @@ Instruments откроется со следующим диалоговым ок
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Пошаговое руководство по работе с Instruments](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Сборка мусора Xamarin.iOS (запись блога)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Сборка мусора Xamarin.iOS (запись блога)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

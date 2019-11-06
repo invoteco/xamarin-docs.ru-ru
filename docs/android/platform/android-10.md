@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: df9fa43d2071d273104edafbe6b880a97afb3f96
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
+ms.sourcegitcommit: b11dc46a9ba23483195e923de88cbef173730087
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273140"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73612267"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 с Xamarin
 
@@ -53,7 +53,7 @@ Xamarin. Android 10,0 обеспечивает поддержку Android 10. Д
 
 Visual Studio 2019 рекомендуется использовать для создания приложений Android 10 с помощью Xamarin.
 
-Если вы используете Visual Studio 2019, обновите Visual Studio 2019 до версии 16,3 или более поздней (инструкции см. в статье [обновление до последней версии Visual studio 2019](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). В macOS обновление до Visual Studio 2019 для Mac 8,3 или более поздней версии (инструкции см. в статье [обновление Visual studio 2019 для Mac до последней версии](https://docs.microsoft.com/en-us/visualstudio/mac/update)).
+Если вы используете Visual Studio 2019, обновите Visual Studio 2019 до версии 16,3 или более поздней (инструкции см. в статье [обновление до последней версии Visual studio 2019](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). В macOS обновление до Visual Studio 2019 для Mac 8,3 или более поздней версии (инструкции см. в статье [обновление Visual studio 2019 для Mac до последней версии](https://docs.microsoft.com/visualstudio/mac/update)).
 
 ### <a name="install-the-android-sdk"></a>Установка пакет SDK для Android
 
@@ -64,23 +64,23 @@ Visual Studio 2019 рекомендуется использовать для с
 
     ![Выбор репозитория пакет SDK для Android Manager](~/android/platform/android-10-images/sdkrepository.png)
 
-3. Установите пакеты **платформы SDK для Android 10** , которые указаны как **пакет SDK для Android Platform 29** на вкладке **платформы** (Дополнительные сведения об использовании диспетчера пакетов SDK см. в разделе [пакет SDK для Android Setup](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk)):
+3. Установите пакеты **платформы SDK для Android 10** , которые указаны как **пакет SDK для Android Platform 29** на вкладке **платформы** (Дополнительные сведения об использовании диспетчера пакетов SDK см. в разделе [пакет SDK для Android Setup](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk)):
 
     ![Вкладка "платформа" пакет SDK для Android Manager](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### <a name="create-a-xamarinandroid-project"></a>Создание проекта Xamarin. Android
 
-Создайте новый проект Xamarin. Android. Если вы не знакомы с разработкой Android с помощью Xamarin, ознакомьтесь со статьей [Hello, Android,](https://docs.microsoft.com/en-us/xamarin/android/get-started/hello-android/index) чтобы узнать о создании проектов Xamarin. Android.
+Создайте новый проект Xamarin. Android. Если вы не знакомы с разработкой Android с помощью Xamarin, ознакомьтесь со статьей [Hello, Android,](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index) чтобы узнать о создании проектов Xamarin. Android.
 
-При создании проекта Android необходимо настроить параметры версии для целевого устройства Android 10,0 или более поздней версии. Например, чтобы нацелить проект на версию Android 10, необходимо настроить уровень API Android для своего проекта на **android 10,0 (API 29)** . Сюда входит **Целевая версия .NET Framework** и **целевая версия пакет SDK для Android** в API 29 или более поздней версии. Дополнительные сведения о настройке уровней API Android см. в разделе Общие сведения об [уровнях API Android.](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/android-api-levels)
+При создании проекта Android необходимо настроить параметры версии для целевого устройства Android 10,0 или более поздней версии. Например, чтобы нацелить проект на версию Android 10, необходимо настроить уровень API Android для своего проекта на **android 10,0 (API 29)** . Сюда входит **Целевая версия .NET Framework** и **целевая версия пакет SDK для Android** в API 29 или более поздней версии. Дополнительные сведения о настройке уровней API Android см. в разделе Общие сведения об [уровнях API Android.](https://docs.microsoft.com/xamarin/android/app-fundamentals/android-api-levels)
 
 ![Целевая платформа Xamarin. Android](~/android/platform/android-10-images/targetframework.png)
 
 ### <a name="configure-a-device-or-emulator"></a>Настройка устройства или эмулятора
 
-Если используется физическое устройство, например пиксель, можно скачать обновление для Android 10, перейдя в `System` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 в параметрах телефона. Если вы предпочитаете вспышку устройства, ознакомьтесь с инструкциями по миганию [образа фабрики](https://developers.google.com/android/images) или оборудования [OTA](https://developers.google.com/android/ota) на устройстве.
+Если используется физическое устройство, например пиксель, можно загрузить обновление для Android 10, перейдя к `System` > `System update` > `Check for update` в параметрах телефона. Если вы предпочитаете вспышку устройства, ознакомьтесь с инструкциями по миганию [образа фабрики](https://developers.google.com/android/images) или оборудования [OTA](https://developers.google.com/android/ota) на устройстве.
 
-Если вы используете эмулятор, создайте виртуальное устройство для API уровня 29 и выберите образ на основе x86. Сведения об использовании Android Device Manager для создания виртуальных устройств и управления ими см. в статье [Управление виртуальными устройствами с помощью Android Device Manager.](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/device-manager) Сведения об использовании Android Emulator для тестирования и отладки см. в разделе [Отладка в Android Emulator.](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-emulator)
+Если вы используете эмулятор, создайте виртуальное устройство для API уровня 29 и выберите образ на основе x86. Сведения об использовании Android Device Manager для создания виртуальных устройств и управления ими см. в статье [Управление виртуальными устройствами с помощью Android Device Manager.](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager) Сведения об использовании Android Emulator для тестирования и отладки см. в разделе [Отладка в Android Emulator.](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
 ## <a name="new-features"></a>Новые функции
 
@@ -88,29 +88,29 @@ Visual Studio 2019 рекомендуется использовать для с
 
 ## <a name="enhance-your-app-with-android-10-features-and-apis"></a>Расширьте возможности приложения с помощью функций и API-интерфейсов Android 10
 
-Далее, когда вы будете готовы, Познакомьтесь с Android 10 и Узнайте о [новых функциях и API-интерфейсах](https://developer.android.com/preview/api-overview.html), которые можно использовать @no__t 1. Ниже приведены некоторые из основных возможностей, с которыми можно начать работу.
+Затем, когда будете готовы, Познакомьтесь с Android 10 и Узнайте о [новых функциях и API-интерфейсах](https://developer.android.com/preview/api-overview.html) , которые можно использовать. Ниже приведены некоторые из основных возможностей, с которыми можно начать работу.
 
 Эти функции рекомендуются для каждого приложения:
 
-- **Темная тема:** @no__t — 1Ensureная работа для пользователей, которые включают в себя темную тему на уровне всей системы, добавляя [темную тему](https://developer.android.com/preview/features/darktheme) Or, включив функцию [Force темного цвета](https://developer.android.com/preview/features/darktheme#force_dark).
+- **Темная тема.**  обеспечить единообразную работу пользователей, которые включают в себя темную тему на уровне всей системы, добавив [темную тему](https://developer.android.com/preview/features/darktheme) или включив функцию [Force темного цвета](https://developer.android.com/preview/features/darktheme#force_dark).
 
 ![Темная тема](~/android/platform/android-10-images/darktheme.png)
 
-- **Поддержка [жестурал навигации](https://developer.android.com/preview/features/gesturalnav)** @no__t — 2in приложение, перейдем к пограничным, и убедитесь, что пользовательские жесты дополняются с помощью жестов навигации системы.
+- **Поддержка  [навигации жестурал](https://developer.android.com/preview/features/gesturalnav)**  в приложении путем перехода между краями и обеспечением того, что пользовательские жесты дополняются жестами навигации системы.
 
 ![Навигация по жестам](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Оптимизация для фолдаблес:**  Deliver — простое, пограничные возможности на современных инновационных устройствах путем [оптимизации для фолдаблес](https://developer.android.com/preview/features/foldables).
+- **Оптимизировать для фолдаблес:**  обеспечить бесперебойную работу на современных инновационных устройствах, [оптимизируя фолдаблес](https://developer.android.com/preview/features/foldables).
 
 ![Свертываемые](~/android/platform/android-10-images/foldable.png)
 
 Эти функции рекомендуются, если это уместно для вашего приложения:
 
-- **Более интерактивные уведомления:** @no__t — 1If ваши уведомления включают сообщения, позволяют [предлагать ответы и действия в уведомлениях](https://developer.android.com/preview/features#smart-suggestions) to привлекать пользователей и позволить им мгновенно принимать меры.
-- **Улучшенная Биометрия:** @no__t — 1If вы используете биометрическую проверку подлинности, переходите на [биометрикпромпт](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), чтобы обеспечить поддержку проверки подлинности отпечатков пальцев на современных устройствах.
-- Расширенная **запись:**  To поддерживает субтитры или записи игрового процесса, включите [запись воспроизведения звука](https://developer.android.com/preview/features/playback-capture). Это отличный способ получить доступ к большему кругу пользователей и сделать приложение более доступным.
-- **Улучшенные кодеки:** @no__tные мультимедийные приложения. попробуйте [AV1](https://en.wikipedia.org/wiki/AV1) for Video Streaming и [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) for High динамический диапазон видео. Для потоковой передачи речи и музыки можно использовать кодировку [опус](http://opus-codec.org/) , а для «musicians» — [собственный API MIDI](https://developer.android.com/preview/features/midi) is.
-- **Улучшенные сетевые интерфейсы API:** @no__t — 1If ваше приложение управляет устройствами Интернета вещей через Wi-Fi, попробуйте использовать новые [api сетевого подключения](https://developer.android.com/preview/features#peer2peer) for такие функции, как Настройка, скачивание или печать.
+- **Более интерактивные уведомления:**  если уведомления включают сообщения, включите [предлагаемые ответы и действия в уведомлениях](https://developer.android.com/preview/features#smart-suggestions) , чтобы привлечь пользователей и позволить им принимать меры мгновенно.
+- **Улучшенные биометрические показатели.**  если вы используете биометрическую проверку подлинности, перейдите на [биометрикпромпт](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), чтобы обеспечить поддержку проверки подлинности отпечатков пальцев на современных устройствах.
+- Расширенная **запись:**  для поддержки записи субтитров или игрового процесса, включите [запись воспроизведения звука](https://developer.android.com/preview/features/playback-capture). Это отличный способ получить доступ к большему кругу пользователей и сделать приложение более доступным.
+- **Улучшенные кодеки:**  для мультимедийных приложений, попробуйте использовать [AV1](https://en.wikipedia.org/wiki/AV1) для потоковой передачи видео и [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) для динамического диапазона видео. Для потоковой передачи речи и музыки можно использовать кодировку [опус](http://opus-codec.org/) , а для «musicians» — [собственный API MIDI](https://developer.android.com/preview/features/midi) доступен.
+- **Улучшенные сетевые интерфейсы API.**  если ваше приложение управляет устройствами IOT через Wi-Fi, попробуйте использовать новые [интерфейсы api сетевого подключения](https://developer.android.com/preview/features#peer2peer) для таких функций, как Настройка, скачивание или печать.
 
 Это лишь некоторые из многих новых функций и API-интерфейсов в Android 10. Чтобы увидеть их все, посетите [сайт Android 10 для разработчиков](https://developer.android.com/about/versions/10/highlights).
 

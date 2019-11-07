@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 274a2a99445a77a2b8c1f68e823c753bc16b673a
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 871d7cad6c57cd34757ae992ce14d5f686935584
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696674"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662314"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Введение в Xamarin. Forms CollectionView
 
@@ -37,6 +37,7 @@ ms.locfileid: "72696674"
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) автоматически использует виртуализацию, предоставляемую базовыми элементами управления.
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) сокращает поверхность API [`ListView`](xref:Xamarin.Forms.ListView). Многие свойства и события из [`ListView`](xref:Xamarin.Forms.ListView) отсутствуют в `CollectionView`.
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) не включает встроенные разделители.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView) выдаст исключение, если его [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) обновляется из потока пользовательского интерфейса.
 
 ## <a name="move-from-listview-to-collectionview"></a>Переход из ListView в CollectionView
 
@@ -44,7 +45,7 @@ ms.locfileid: "72696674"
 
 | Понятие | API ListView | CollectionView |
 |---|---|---|
-| Data | `ItemsSource` | [@No__t_1](xref:Xamarin.Forms.CollectionView) заполняется данными путем установки его свойства `ItemsSource`. Дополнительные сведения см. [в разделе Заполнение CollectionView данными](populate-data.md#populate-a-collectionview-with-data). |
+| Data | `ItemsSource` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) заполняется данными путем установки его свойства `ItemsSource`. Дополнительные сведения см. [в разделе Заполнение CollectionView данными](populate-data.md#populate-a-collectionview-with-data). |
 | Внешний вид элемента | `ItemTemplate` | Внешний вид каждого элемента в [`CollectionView`](xref:Xamarin.Forms.CollectionView) можно определить, присвоив свойству `ItemTemplate` значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Дополнительные сведения см. в разделе [Определение внешнего вида элемента](populate-data.md#define-item-appearance). |
 | Ячейки | `TextCell`значение `ImageCell`значение `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) не имеет концепции ячеек. Вместо этого шаблон данных используется для определения внешнего вида каждого элемента данных в списке. |
 | Разделители строк | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) не включает встроенные разделители. При необходимости они могут быть предоставлены в шаблоне элемента. |

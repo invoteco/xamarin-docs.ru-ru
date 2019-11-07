@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: b53c58a5e859bf7752855c3954666a062261599d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: e38987006025dad1c2ff49c3ea8916e2075d61d7
+ms.sourcegitcommit: d1d4700b3b1b417a9d7b7da85ab5d28f8e8e599d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697743"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649296"
 ---
 # <a name="xamarinforms-refreshview"></a>Рефрешвиев Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
-@No__t_0 — это контейнерный элемент управления, предоставляющий функции обновления для прокручиваемого содержимого. Таким образом, дочерний элемент `RefreshView` должен быть прокручиваемым элементом управления, таким как [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)или [`ListView`](xref:Xamarin.Forms.ListView).
+`RefreshView` — это контейнерный элемент управления, предоставляющий функции обновления для прокручиваемого содержимого. Таким образом, дочерний элемент `RefreshView` должен быть прокручиваемым элементом управления, таким как [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)или [`ListView`](xref:Xamarin.Forms.ListView).
 
 `RefreshView` определяет следующие свойства:
 
@@ -50,7 +50,7 @@ ms.locfileid: "72697743"
 </RefreshView>
 ```
 
-@No__t_0 также можно создать в коде:
+`RefreshView` также можно создать в коде:
 
 ```csharp
 RefreshView refreshView = new RefreshView();
@@ -68,7 +68,7 @@ scrollView.Content = flexLayout;
 refreshView.Content = scrollView;
 ```
 
-В этом примере `RefreshView` предоставляет функции обновления для [`ScrollView`](xref:Xamarin.Forms.ScrollView) , дочерним элементом которого является [`FlexLayout`](xref:Xamarin.Forms.FlexLayout). @No__t_0 использует связываемый макет для создания его содержимого путем привязки к коллекции элементов и задает внешний вид каждого элемента с [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Дополнительные сведения о макетах с возможностью привязки см. [в разделе макеты с возможностью привязки в Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
+В этом примере `RefreshView` предоставляет функции обновления для [`ScrollView`](xref:Xamarin.Forms.ScrollView) , дочерним элементом которого является [`FlexLayout`](xref:Xamarin.Forms.FlexLayout). `FlexLayout` использует связываемый макет для создания его содержимого путем привязки к коллекции элементов и задает внешний вид каждого элемента с [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Дополнительные сведения о макетах с возможностью привязки см. [в разделе макеты с возможностью привязки в Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
 
 Значение свойства `RefreshView.IsRefreshing` указывает текущее состояние `RefreshView`. При активации обновления пользователем это свойство автоматически переходит в `true`. После завершения обновления следует сбросить свойство на `false`.
 
@@ -105,6 +105,6 @@ refreshView.Content = scrollView;
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Рефрешвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+- [Рефрешвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 - [Связываемые макеты в Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [Рефрешвиев направление извлечения для конкретной платформы](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

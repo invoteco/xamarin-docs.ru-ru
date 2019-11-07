@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 5afdaa9afa4c5ced39498a1cb45de07fe4bf4195
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696710"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662331"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Данные CollectionView в Xamarin. Forms
 
@@ -32,7 +32,7 @@ ms.locfileid: "72696710"
 
 ## <a name="populate-a-collectionview-with-data"></a>Заполнение CollectionView данными
 
-[@No__t_1](xref:Xamarin.Forms.CollectionView) заполняется данными путем присвоения свойству [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) любой коллекции, реализующей `IEnumerable`. Элементы можно добавить в XAML, инициализируя свойство `ItemsSource` из массива строк:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) заполняется данными путем присвоения свойству [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) любой коллекции, реализующей `IEnumerable`. Элементы можно добавить в XAML, инициализируя свойство `ItemsSource` из массива строк:
 
 ```xaml
 <CollectionView>
@@ -69,12 +69,15 @@ collectionView.ItemsSource = new string[]
 };
 ```
 
-> [!IMPORTANT]
-> Если [`CollectionView`](xref:Xamarin.Forms.CollectionView) требуется обновлять при добавлении, удалении или изменении элементов в базовой коллекции, базовая коллекция должна быть коллекцией `IEnumerable`, которая отправляет уведомления об изменении свойств, например `ObservableCollection`.
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) выдаст исключение, если его [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) обновляется из потока пользовательского интерфейса.
 
 По умолчанию [`CollectionView`](xref:Xamarin.Forms.CollectionView) отображает элементы в вертикальном списке, как показано на следующих снимках экрана:
 
 [![Снимок экрана CollectionView, содержащий текстовые элементы, в iOS и Android](populate-data-images/text.png "Текстовые элементы в CollectionView")](populate-data-images/text-large.png#lightbox "Текстовые элементы в CollectionView")
+
+> [!IMPORTANT]
+> Если [`CollectionView`](xref:Xamarin.Forms.CollectionView) требуется обновлять при добавлении, удалении или изменении элементов в базовой коллекции, базовая коллекция должна быть коллекцией `IEnumerable`, которая отправляет уведомления об изменении свойств, например `ObservableCollection`.
 
 Сведения о том, как изменить макет [`CollectionView`](xref:Xamarin.Forms.CollectionView) , см. в разделе [CollectionViewing The Xamarin. Forms](layout.md). Сведения о том, как определить внешний вид каждого элемента в `CollectionView`, см. в разделе [Определение внешнего вида элемента](#define-item-appearance).
 
@@ -170,7 +173,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 });
 ```
 
-Элементы, указанные в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , определяют внешний вид каждого элемента в списке. В этом примере макет в `DataTemplate` управляется [`Grid`](xref:Xamarin.Forms.Grid). @No__t_0 содержит объект [`Image`](xref:Xamarin.Forms.Image) и два [`Label`](xref:Xamarin.Forms.Label) объектов, которые привязываются к свойствам класса `Monkey`:
+Элементы, указанные в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , определяют внешний вид каждого элемента в списке. В этом примере макет в `DataTemplate` управляется [`Grid`](xref:Xamarin.Forms.Grid). `Grid` содержит объект [`Image`](xref:Xamarin.Forms.Image) и два [`Label`](xref:Xamarin.Forms.Label) объектов, которые привязываются к свойствам класса `Monkey`:
 
 ```csharp
 public class Monkey
@@ -250,7 +253,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 ## <a name="pull-to-refresh"></a>Извлечь для обновления
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) поддерживает функцию Pull для обновления с помощью `RefreshView`, что позволяет обновлять отображаемые данные путем вывода списка элементов. @No__t_0 — это контейнерный элемент управления, предоставляющий функции обновления для своего дочернего элемента, при условии, что дочерний объект поддерживает прокручиваемое содержимое. Таким образом, запрос на обновление реализуется для `CollectionView`, настроив его как дочерний элемент `RefreshView`.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) поддерживает функцию Pull для обновления с помощью `RefreshView`, что позволяет обновлять отображаемые данные путем вывода списка элементов. `RefreshView` — это контейнерный элемент управления, предоставляющий функции обновления для своего дочернего элемента, при условии, что дочерний объект поддерживает прокручиваемое содержимое. Таким образом, запрос на обновление реализуется для `CollectionView`, настроив его как дочерний элемент `RefreshView`.
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"

@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/31/2019
-ms.openlocfilehash: dd451ae1acd233c1d3de675357bb172f25716f59
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.date: 11/06/2019
+ms.openlocfilehash: 038ff27907573c1fe15516f6f4caf26d0892ab9f
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426291"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662341"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Инициализация и Настройка карт Xamarin. Forms
 
@@ -43,6 +43,8 @@ Xamarin.FormsMaps.Init(this, savedInstanceState);
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 ```
+
+Дополнительные сведения о маркере проверки подлинности, требуемом для UWP, см. в разделе [универсальная платформа Windows](#universal-windows-platform).
 
 После добавления пакета NuGet и метода инициализации, вызываемого внутри каждого приложения, `Xamarin.Forms.Maps` API можно использовать в проекте с общим кодом.
 
@@ -244,6 +246,20 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
       <DeviceCapability Name="location"/>
     </Capabilities>
     ```
+
+#### <a name="release-builds"></a>Сборки выпуска
+
+Сборки выпуска UWP используют компиляцию .NET Native для компиляции приложения непосредственно в машинный код. Однако результатом этого является то, что модуль подготовки отчетов для элемента управления [`Map`](xref:Xamarin.Forms.Maps.Map) в UWP может быть связан с исполняемым файлом. Это можно исправить с помощью перегрузки метода `Forms.Init`, зависящего от UWP, в **app.XAML.CS**:
+
+```csharp
+var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };
+Xamarin.Forms.Forms.Init(e, assembliesToInclude);
+```
+
+Этот код передает сборку, в которой находится класс `Xamarin.Forms.Maps.UWP.MapRenderer`, в метод `Forms.Init`. Это гарантирует, что сборка не будет связана с исполняемым процессом компиляции .NET Native.
+
+> [!IMPORTANT]
+> Невыполнение этого действия приведет к тому, что элемент управления [`Map`](xref:Xamarin.Forms.Maps.Map) не будет отображаться при запуске сборки выпуска.
 
 ## <a name="related-links"></a>Связанные ссылки
 

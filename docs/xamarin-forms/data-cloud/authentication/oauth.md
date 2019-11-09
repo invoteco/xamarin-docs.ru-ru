@@ -6,13 +6,13 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
-ms.openlocfilehash: 3c167b025b41bd4fc7c8c93bdb2f825c9daa540c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/07/2019
+ms.openlocfilehash: 83fbad8a9bbb9afef5ee80705fe9e86e51284e7d
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032851"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842986"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Проверка подлинности пользователей с помощью поставщика удостоверений
 
@@ -259,6 +259,16 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ```
 
 Метод `FindAccountsForService` Возвращает коллекцию `IEnumerable` объектов `Account`, в которой первый элемент коллекции задается как соответствующая учетная запись.
+
+## <a name="troubleshooting"></a>Устранение неполадок
+
+- В Android, если при закрытии браузера после проверки подлинности вы получаете всплывающее уведомление и хотите закрыть всплывающее уведомление, добавьте следующий код в проект Android после инициализации Xamarin. auth:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- В Android, если браузер не закрывается автоматически, временное решение заключается в понижении уровня пакета Xamarin. auth до версии 1.5.0.3. Затем добавьте в проект Android 2.0.147 с помощью [PCL Crypto v](https://www.nuget.org/packages/PCLCrypto/2.0.147) .
 
 ## <a name="summary"></a>Сводка
 

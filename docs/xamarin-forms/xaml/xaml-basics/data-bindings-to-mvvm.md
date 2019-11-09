@@ -1,43 +1,44 @@
 ---
-title: Часть 5. От привязки данных до MVVM
-description: Шаблон MVVM обеспечивает разделение уровней программного обеспечения и три — пользовательский интерфейс XAML, именем представления. базовые данные, называется моделью; а посредником между представлением и моделью, называются ViewModel.
+title: Часть 5. От привязки данных до MVVM
+description: Шаблон MVVM обеспечивает разделение между тремя уровнями программного обеспечения — пользовательским интерфейсом XAML, называемым представлением; базовые данные, называемые моделью; и посредник между представлением и моделью, называемой ViewModel.
 ms.prod: xamarin
+ms.custom: video
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 116225165b8ee27b896d3de8598f8fbf39400f52
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 80386780d52f9a28d421d2a83981085956d06ea5
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767531"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842942"
 ---
-# <a name="part-5-from-data-bindings-to-mvvm"></a>Часть 5. От привязки данных до MVVM
+# <a name="part-5-from-data-bindings-to-mvvm"></a>Часть 5. От привязки данных до MVVM
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
-_Шаблон архитектуры Model-View-ViewModel (MVVM) была изобретена с XAML в виду. Шаблон обеспечивает разделение уровней программного обеспечения и три — пользовательский интерфейс XAML, именем представления. базовые данные, называется моделью; а посредником между представлением и моделью, называются ViewModel. View и ViewModel часто соединены через привязки данных, определенные в файле XAML. BindingContext для представления обычно является экземпляром ViewModel._
+_Шаблон архитектуры Model-View-ViewModel (MVVM) был создан с учетом XAML. Шаблон обеспечивает разделение между тремя уровнями программного обеспечения — пользовательским интерфейсом XAML, называемым представлением; базовые данные, называемые моделью; и посредник между представлением и моделью, называемой ViewModel. Представления и ViewModel часто соединяются с помощью привязок данных, определенных в файле XAML. BindingContext для представления обычно является экземпляром ViewModel._
 
-## <a name="a-simple-viewmodel"></a>Простой модели представления
+## <a name="a-simple-viewmodel"></a>Простой ViewModel
 
-Введение в классы ViewModel давайте сначала посмотрим программы без него.
-Ранее вы узнали, как определить новое объявление пространства имен XML, чтобы разрешить файл XAML для ссылочных классов в других сборках. Вот это программа, которая определяет объявление пространства имен XML для `System` пространство имен:
+В качестве введения в ViewModels Давайте сначала рассмотрим программу без участия пользователя.
+Ранее было показано, как определить новое объявление пространства имен XML, чтобы файл XAML можно было ссылаться на классы в других сборках. Вот программа, которая определяет объявление пространства имен XML для пространства имен `System`:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-Программа может использовать `x:Static` получить текущую дату и время из статического `DateTime.Now` свойство и задайте их `DateTime` значение `BindingContext` на `StackLayout`:
+Программа может использовать `x:Static`, чтобы получить текущие дату и время из статического свойства `DateTime.Now` и установить значение `DateTime` `BindingContext` в `StackLayout`:
 
 ```xaml
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext`— очень специальное свойство: При задании `BindingContext` для элемента он наследуется всеми дочерними элементами этого элемента. Это означает, что все дочерние `StackLayout` этот же `BindingContext`, и они могут содержать простые привязки к свойствам этого объекта.
+`BindingContext` является специальным свойством: при задании `BindingContext` для элемента он наследуется всеми дочерними элементами этого элемента. Это означает, что все дочерние элементы `StackLayout` имеют одинаковый `BindingContext`и могут содержать простые привязки к свойствам этого объекта.
 
-В **One-Shot DateTime** программы, два дочерних содержат привязки к свойствам, `DateTime` значение, а два других дочерних элементов содержат привязок, которые отсутствуют пути привязки. Это означает, что `DateTime` само значение используется для `StringFormat`:
+В программе **DateTime с одним снимком** два дочерних элемента содержат привязки к свойствам этого `DateTime` значения, но два других дочерних элемента содержат привязки, для которых кажется, что отсутствует путь привязки. Это означает, что для `StringFormat`используется само значение `DateTime`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -59,17 +60,17 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-Конечно большая проблема состоит в дату и время, набор после сначала при построении страницы и никогда не изменяются:
+Проблема заключается в том, что дата и время задаются один раз при первой сборке страницы и никогда не изменяются.
 
-[![](data-bindings-to-mvvm-images/oneshotdatetime.png "Представление, содержащее дату и время")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "представления, отображающее даты и времени")
+[![](data-bindings-to-mvvm-images/oneshotdatetime.png "View Displaying Date and Time")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time")
 
-Файл XAML можно отобразить, всегда показывает текущее время часов, но его необходимо написать код, чтобы оказать помощь. Когда мыслить категориями MVVM, модель и модель представления являются классами, написанных полностью на код. Это представление часто является файл XAML, который ссылается на свойства, определенные в модели представления через привязки данных.
+XAML-файл может отображать часы, в которых всегда отображается текущее время, но для облегчения требуется некоторый код. При обдумывании с точки зрения MVVM модель и ViewModel являются классами, написанными полностью в коде. Представление часто представляет собой XAML-файл, который ссылается на свойства, определенные в ViewModel с помощью привязок данных.
 
-Правильной модели неведении относительно того, ViewModel и правильный ViewModel неведении представления. Тем не менее очень часто программист применяет типы данных, предоставляемые ViewModel в типы данных, связанный с конкретной пользовательских интерфейсов. Например если модель обращается к базе данных, содержащий строки 8-битовых символов ASCII, ViewModel потребуется преобразование этих строк для строк Юникода в соответствии с их эксклюзивное использование Юникода в пользовательском интерфейсе.
+Надлежащей моделью является игнорирующих в ViewModel, а правильное значение ViewModel — игнорирующих представления. Однако зачастую программисты, которые представляют типы данных, предоставляемые ViewModel, с типами данных, связанными с определенными пользовательскими интерфейсами. Например, если модель обращается к базе данных, содержащей 8-разрядные символьные строки ASCII, ViewModel пришлось бы преобразовать эти строки в строки Юникода, чтобы обеспечить эксклюзивное использование Юникода в пользовательском интерфейсе.
 
-В простые примеры MVVM (например, показано ниже) часто не существует модели и шаблон включает в себя только просматривать и ViewModel соединенные привязки данных.
+В простых примерах MVVM (например, показанных здесь) часто не существует модели, и шаблон включает только представление и ViewModel, связанные с привязками данных.
 
-Вот ViewModel для часы, с использованием только к одному свойству с именем `DateTime`, но обновлений, которые `DateTime` свойство каждую секунду:
+Ниже приведено значение ViewModel для часов с единственным свойством с именем `DateTime`, которое обновляет `DateTime` свойство каждую секунду:
 
 ```csharp
 using System;
@@ -118,9 +119,9 @@ namespace XamlSamples
 }
 ```
 
-Обычно реализуют классы ViewModel `INotifyPropertyChanged` интерфейс, который означает, что класс запускает `PropertyChanged` событие при изменении одного из его свойств. Механизм привязки данных в Xamarin.Forms присоединяет обработчик к этому `PropertyChanged` событий, поэтому он может получать уведомления об изменении свойства и сохранить целевой объект обновляется новое значение.
+В целом, ViewModels реализует интерфейс `INotifyPropertyChanged`, что означает, что класс запускает `PropertyChanged` событие при каждом изменении одного из его свойств. Механизм привязки данных в Xamarin. Forms прикрепляет обработчик к этому `PropertyChanged`у событию, поэтому он может получать уведомления при изменении свойства и поддерживать обновление целевого объекта новым значением.
 
-Часы, в зависимости от этого ViewModel может быть сложнее, чем это:
+Часы на основе этого ViewModel могут быть простыми:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,13 +141,13 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-Обратите внимание, что как `ClockViewModel` присваивается `BindingContext` из `Label` с помощью тегов элементов свойства. Кроме того, можно создать экземпляр `ClockViewModel` в `Resources` коллекции и присвойте ему значение `BindingContext` через `StaticResource` расширение разметки. Кроме того, файл с выделенным кодом можно создавать экземпляры ViewModel.
+Обратите внимание на то, как `ClockViewModel` задается `BindingContext` `Label` с помощью тегов элемента свойства. Кроме того, можно создать экземпляр `ClockViewModel` в коллекции `Resources` и задать его `BindingContext` с помощью расширения разметки `StaticResource`. Или же файл кода программной части может создать экземпляр ViewModel.
 
-`Binding` Расширение разметки на `Text` свойство `Label` форматы `DateTime` свойство. Здесь отображается по:
+Расширение разметки `Binding` для свойства `Text` `Label` форматирует свойство `DateTime`. Вот как выглядит этот экран:
 
-[![](data-bindings-to-mvvm-images/clock.png "Представление, содержащее дату и время с помощью ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "представления, отображающее даты и времени с помощью модели представления")
+[![](data-bindings-to-mvvm-images/clock.png "View Displaying Date and Time via ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel")
 
-Также возможен доступ к отдельным свойствам `DateTime` свойство ViewModel, разделив их свойства с периодами:
+Также можно получить доступ к отдельным свойствам `DateTime` свойства ViewModel, разделяя свойства точками.
 
 ```xaml
 <Label Text="{Binding DateTime.Second, StringFormat='{0}'}" … >
@@ -154,9 +155,9 @@ namespace XamlSamples
 
 ## <a name="interactive-mvvm"></a>Интерактивный MVVM
 
-MVVM довольно часто используется с помощью двухсторонней привязки для это интерактивное представление на основе базовой модели данных.
+MVVM часто используется с двусторонними привязками данных для интерактивного представления на основе базовой модели данных.
 
-Вот класс с именем `HslViewModel` , преобразующий `Color` значение в `Hue`, `Saturation`, и `Luminosity` значения и наоборот:
+Ниже приведен класс с именем `HslViewModel`, который преобразует `Color` значение в значения `Hue`, `Saturation`и `Luminosity`, и наоборот:
 
 ```csharp
 using System;
@@ -256,9 +257,9 @@ namespace XamlSamples
 }
 ```
 
-Изменения в `Hue`, `Saturation`, и `Luminosity` причина свойства `Color` изменение свойства, а также изменения `Color` вызывает три свойства для изменения. Это может показаться бесконечный цикл, за исключением того, что класс не вызвать `PropertyChanged` событие, если только свойство действительно были изменены. Это означает прекращение цикла в противном случае неконтролируемых обратной связи.
+Изменения свойств `Hue`, `Saturation`и `Luminosity` приводят к изменению свойства `Color`, а изменения в `Color` приводят к изменению других трех свойств. Это может показаться бесконечным циклом, за исключением того, что класс не вызывает событие `PropertyChanged`, если только свойство не изменилось. Это помещает в цикл обратной связи в противном случае неконтролируемых.
 
-Следующий XAML-файл содержит `BoxView` которого `Color` свойство привязано к `Color` свойство ViewModel, а остальные три `Slider` и три `Label` представления привязан к `Hue`, `Saturation`и `Luminosity` свойства:
+Следующий XAML-файл содержит `BoxView`, свойство `Color` которого привязано к свойству `Color` класса ViewModel, а также три `Slider` и три `Label` представления, привязанные к свойствам `Hue`, `Saturation`и `Luminosity`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -292,46 +293,46 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-Привязка на каждом `Label` используется по умолчанию `OneWay`. Его достаточно для отображения значения. Однако привязки на каждом `Slider` является `TwoWay`. Это позволяет `Slider` инициализированную из ViewModel. Обратите внимание, что `Color` свойству `Aqua` при создании экземпляра модели представления. Но изменение `Slider` также необходимо задать новое значение для свойства в ViewModel, который затем вычисляет новый цвет.
+Привязка для каждого `Label` является `OneWay`по умолчанию. Оно должно отображать только значение. Однако привязка для каждой `Slider` `TwoWay`. Это позволяет инициализировать `Slider` из ViewModel. Обратите внимание, что для свойства `Color` задано значение `Aqua` при создании экземпляра ViewModel. Но изменение в `Slider` также должно задать новое значение для свойства в ViewModel, которое затем вычисляет новый цвет.
 
-[![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM, с помощью двусторонней привязки данных")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM, с помощью двусторонней привязки данных")
+[![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
 
-## <a name="commanding-with-viewmodels"></a>Выполнение команд с помощью модели ViewModel
+## <a name="commanding-with-viewmodels"></a>Командная команда с ViewModels
 
-Во многих случаях шаблон MVVM ограничен манипуляцией элементов данных: Объекты интерфейса пользователя в объектах представления Parallel Data в ViewModel.
+Во многих случаях шаблон MVVM ограничивается обработкой элементов данных: объектами интерфейса пользователя в представлении Parallel Data Objects в ViewModel.
 
-Тем не менее иногда представления должен содержать кнопки, вызова различных действий в ViewModel. Но не может содержать ViewModel `Clicked` обработчики для кнопок, так как, будет привязана ViewModel парадигме конкретного пользовательского интерфейса.
+Однако иногда представление должно содержать кнопки, которые запускают различные действия в ViewModel. Но ViewModel не должен содержать обработчики `Clicked` для кнопок, так как он будет привязывать ViewModel к определенной парадигме пользовательского интерфейса.
 
-Чтобы разрешить ViewModel, чтобы быть более независимой от объектов определенного пользовательского интерфейса, но по-прежнему допускает методов, вызываемых в ViewModel, *команда* интерфейс существует. Этот интерфейс командной поддерживает следующие элементы в Xamarin.Forms.
+Чтобы разрешить ViewModel более независимым от конкретных объектов пользовательского интерфейса, но по-прежнему разрешать вызов методов в ViewModel, существует интерфейс *команды* . Этот интерфейс команды поддерживается следующими элементами в Xamarin. Forms:
 
 - `Button`
 - `MenuItem`
 - `ToolbarItem`
 - `SearchBar`
-- `TextCell` (и, следовательно также `ImageCell`)
+- `TextCell` (и, следовательно, `ImageCell`)
 - `ListView`
 - `TapGestureRecognizer`
 
-За исключением элемента `SearchBar` и `ListView` элемента, эти элементы определяют два свойства:
+За исключением элемента `SearchBar` и `ListView`, эти элементы определяют два свойства:
 
-- `Command` типа  `System.Windows.Input.ICommand`
-- `CommandParameter` типа  `Object`
+- `Command` типа `System.Windows.Input.ICommand`
+- `CommandParameter` типа `Object`
 
-`SearchBar` Определяет `SearchCommand` и `SearchCommandParameter` свойства, хотя `ListView` определяет `RefreshCommand` свойство типа `ICommand`.
+`SearchBar` определяет свойства `SearchCommand` и `SearchCommandParameter`, а `ListView` определяет `RefreshCommand` свойства типа `ICommand`.
 
-`ICommand` Интерфейс определяет два метода и одно событие:
+Интерфейс `ICommand` определяет два метода и одно событие:
 
 - `void Execute(object arg)`
 - `bool CanExecute(object arg)`
 - `event EventHandler CanExecuteChanged`
 
-ViewModel можно определить свойства типа `ICommand`. Теперь можно привязать эти свойства, чтобы `Command` свойства каждого `Button` или другой элемент, или возможно пользовательские представления, которое реализует этот интерфейс. При необходимости можно задать `CommandParameter` свойство для идентификации отдельных `Button` объектов (или другие элементы), привязанные к этому свойству модели представления. На внутреннем уровне `Button` вызовы `Execute` метод всякий раз, когда пользователь касается `Button`, передав для `Execute` метод его `CommandParameter`.
+ViewModel может определять свойства типа `ICommand`. Затем можно привязать эти свойства к свойству `Command` каждого `Button` или другого элемента или, возможно, к пользовательскому представлению, реализующему этот интерфейс. При необходимости можно задать свойство `CommandParameter`, чтобы определить отдельные объекты `Button` (или другие элементы), привязанные к этому свойству ViewModel. На внутреннем уровне `Button` вызывает метод `Execute` каждый раз, когда пользователь отменяет `Button`, передавая методу `Execute` его `CommandParameter`.
 
-`CanExecute` Метод и `CanExecuteChanged` событий используются для случаев, где `Button` tap может быть недопустимых в данный момент, в этом случае `Button` следует отключить сам. `Button` Вызовы `CanExecute` при `Command` сначала задано и в любое время `CanExecuteChanged` события. Если `CanExecute` возвращает `false`, `Button` отключается и не генерирует `Execute` вызовов.
+Метод `CanExecute` и событие `CanExecuteChanged` используются в случаях, когда касание `Button` может быть недопустимым, в этом случае `Button` должен отключить себя. `Button` вызывает `CanExecute` при первом задании свойства `Command` и при каждом срабатывании события `CanExecuteChanged`. Если `CanExecute` возвращает `false`, `Button` отключается и не создает вызовы `Execute`.
 
-Для справки при добавлении команды для своих ViewModel Xamarin.Forms определяет два класса, которые реализуют `ICommand`: `Command` и `Command<T>` где `T` — это тип аргументов `Execute` и `CanExecute`. Эти классы определяют несколько конструкторов, а также `ChangeCanExecute` метод, который можно вызвать ViewModel, чтобы принудительно `Command` объект, подлежащий `CanExecuteChanged` событий.
+Чтобы получить справку по добавлению команд в ViewModels, Xamarin. Forms определяет два класса, реализующих `ICommand`: `Command` и `Command<T>`, где `T` — это тип аргументов для `Execute` и `CanExecute`. Эти два класса определяют несколько конструкторов и метод `ChangeCanExecute`, который ViewModel может вызвать, чтобы заставить объект `Command` вызывать событие `CanExecuteChanged`.
 
-Вот ViewModel для простой клавиатуре, который предназначен для ввода номера телефона. Обратите внимание, что `Execute` и `CanExecute` метод определяются как лямбда-выражение прямо в конструкторе:
+Ниже приведено значение ViewModel для простой клавиатуры, предназначенной для ввода телефонных номеров. Обратите внимание, что методы `Execute` и `CanExecute` определены как лямбда-функции прямо в конструкторе:
 
 ```csharp
 using System;
@@ -439,11 +440,11 @@ namespace XamlSamples
 }
 ```
 
-Предполагается, что этого ViewModel `AddCharCommand` свойство привязано к `Command` свойство несколько кнопок (или все, что содержит интерфейс команды), каждый из которых идентифицируется по `CommandParameter`. Эти кнопки позволяют добавлять символы для `InputString` свойство, которое затем форматируется как номер телефона для `DisplayText` свойство.
+В этом ViewModel предполагается, что свойство `AddCharCommand` привязано к свойству `Command` нескольких кнопок (или любому другому, имеющему интерфейс команды), каждый из которых определяется `CommandParameter`. Эти кнопки добавляют символы в свойство `InputString`, которое затем форматируется как номер телефона для свойства `DisplayText`.
 
-Имеется также свойство типа `ICommand` с именем `DeleteCharCommand`. Привязывается к кнопке назад пробелов, но кнопки следует отключить, если нет символов для удаления.
+Существует также второе свойство типа `ICommand` с именем `DeleteCharCommand`. Это связано с кнопкой обратного расстояния, но кнопка должна быть отключена, если нет знаков для удаления.
 
-Следующие клавиатуре не является сложных как визуально, как хотелось бы. Вместо этого разметка разбивается на как минимум для демонстрации более четко использование интерфейса командной:
+Следующая клавиша не так сложнее, как может быть. Вместо этого разметка уменьшилась до минимума, чтобы продемонстрировать более четкое использование интерфейса команды:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -553,19 +554,19 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-`Command` Свойства первого `Button` , отображаемый в этом разметки привязан к `DeleteCharCommand`; остальные привязаны к `AddCharCommand` с `CommandParameter` то есть так же, как символ, который отображается на `Button` лиц. Вот программа в действии:
+Свойство `Command` первого `Button`, которое отображается в этой разметке, привязано к `DeleteCharCommand`у; остальные привязываются к `AddCharCommand` с `CommandParameter`, который совпадает с символом, отображаемым на `Button` лицевой стороне. Вот эта программа в действии:
 
-[![](data-bindings-to-mvvm-images/keypad.png "Калькулятор, используя MVVM и команды")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "калькулятора, с помощью команды и MVVM")
+[![](data-bindings-to-mvvm-images/keypad.png "Calculator using MVVM and Commands")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands")
 
 ### <a name="invoking-asynchronous-methods"></a>Вызов асинхронных методов
 
-Команды также можно вызывать асинхронные методы. Это достигается с помощью `async` и `await` ключевые слова, при указании `Execute` метод:
+Команды также могут вызывать асинхронные методы. Это достигается с помощью ключевых слов `async` и `await` при указании метода `Execute`:
 
 ```csharp
 DownloadCommand = new Command (async () => await DownloadAsync ());
 ```
 
-Это означает, что `DownloadAsync` метод `Task` и следует ожидать:
+Это означает, что метод `DownloadAsync` является `Task` и должен быть ожидаемым:
 
 ```csharp
 async Task DownloadAsync ()
@@ -581,7 +582,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>Реализация меню навигации
 
-[XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) программа, которая содержит весь исходный код в этой серии статей использует модель представления для его домашней страницы. Этого ViewModel — это определение класса с коротким три свойства с именем `Type`, `Title`, и `Description` , содержащие тип каждого из образцов страниц, название и краткое описание. Кроме того, ViewModel определяет статическое свойство с именем `All` , являющийся коллекцией всех страниц в программе:
+Программа [ксамлсамплес](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) , содержащая весь исходный код в этой серии статей, использует ViewModel для своей домашней страницы. Этот ViewModel является определением короткого класса с тремя свойствами с именами `Type`, `Title`и `Description`, которые содержат тип каждого из образцов страниц, заголовок и краткое описание. Кроме того, ViewModel определяет статическое свойство с именем `All`, которое является коллекцией всех страниц в программе:
 
 ```csharp
 public class PageDataViewModel
@@ -656,7 +657,7 @@ public class PageDataViewModel
 }
 ```
 
-Файл XAML для `MainPage` определяет `ListBox` которого `ItemsSource` свойству, `All` свойство и который содержит `TextCell` для отображения `Title` и `Description` свойства каждой страницы:
+XAML-файл для `MainPage` определяет `ListBox`, свойству `ItemsSource` которого присвоено это свойство `All`, которое содержит `TextCell` для отображения свойств `Title` и `Description` каждой страницы:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -678,11 +679,11 @@ public class PageDataViewModel
 </ContentPage>
 ```
 
-Страницы отображаются в прокручиваемый список:
+Страницы отображаются в прокручиваемом списке:
 
-[![](data-bindings-to-mvvm-images/mainpage.png "Прокручиваемый список страниц")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "прокручиваемый список страниц")
+[![](data-bindings-to-mvvm-images/mainpage.png "Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
 
-Обработчик в файле кода активируется в том случае, когда пользователь выбирает элемент. Задает обработчик `SelectedItem` свойство `ListBox` обратно `null` и затем создает экземпляр выбранной страницы и переходу на нее:
+Обработчик в файле кода программной части активируется, когда пользователь выбирает элемент. Обработчик задает для свойства `SelectedItem` `ListBox` обратно `null`, а затем создает экземпляр выбранной страницы и переходит к ней:
 
 ```csharp
 private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -702,16 +703,24 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Xamarin развивается 2016: MVVM стало простым с помощью Xamarin. Forms и Prism**
+**Xamarin развивается 2016: MVVM стало простым благодаря Xamarin. Forms и Prism**
 
 ## <a name="summary"></a>Сводка
 
-XAML — это мощное средство для определения пользовательских интерфейсов приложений Xamarin.Forms, особенно если привязки данных и используются MVVM. Результат — это чистая, элегантные и потенциально оснащен инструментами, представление пользовательского интерфейса с поддержкой всех фона в коде.
+XAML — это мощный инструмент для определения пользовательских интерфейсов в приложениях Xamarin. Forms, особенно при использовании привязки данных и MVVM. Результатом является четкое, элегантное и потенциально доступное для инструментария представление пользовательского интерфейса со всей фоновой поддержкой в коде.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
-- [Часть 1. Начало работы с XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [Часть 2. Основной синтаксис XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [ксамлсамплес](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [Часть 1. начало работы с XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [Часть 2. Важный синтаксис XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Часть 3. Расширения разметки XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Часть 4. Основы привязки данных](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+
+## <a name="related-videos"></a>Связанные видео
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/XamarinForms-MVVM-with-XAML-6-of-11/player]
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/XamarinForms-Navigation-with-XAML-7-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

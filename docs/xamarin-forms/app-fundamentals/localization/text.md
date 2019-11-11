@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: b17a1177abafe4e605263664038842863302ac3b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 96c775ba8e29597a8420b1c42d53e33357c7324c
+ms.sourcegitcommit: 18b446a0032f3a7a064e5a6470e9d20b1ec2fbed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249690"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73426464"
 ---
 # <a name="localization"></a>Локализация
 
@@ -60,7 +60,7 @@ _Приложения Xamarin.Forms можно локализовать с по�
 
 Выберите понятное имя, например **AppResources**, и нажмите **ОК**.
 
-[![Добавить файл ресурсов](text-images/resx-new-file-sml.png "Диалоговое окно \"Новый файл\"")](text-images/resx-new-file.png#lightbox "Диалоговое окно "Новый файл"")
+[![Добавление файла ресурсов](text-images/resx-new-file-sml.png "Диалоговое окно "Новый файл"")](text-images/resx-new-file.png#lightbox "Диалоговое окно "Новый файл"")
 
 В проект будут добавлены два файла:
 
@@ -69,7 +69,7 @@ _Приложения Xamarin.Forms можно локализовать с по�
 
 Дерево решений будет показывать файлы как связанные. RESX-файл *следует* отредактировать, чтобы добавить новые переводимые строки; файл **. designer.cs** *не* нужно редактировать.
 
-![](text-images/appresources-tree.png "Файл AppResources.resx")
+![](text-images/appresources-tree.png "AppResources.resx File")
 
 ##### <a name="string-visibility"></a>Видимость строк
 
@@ -81,11 +81,11 @@ _Приложения Xamarin.Forms можно локализовать с по�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-internal-sml.png "Окно свойств для AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
+[![](text-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "Панель свойств для AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
 -----
 
@@ -93,13 +93,13 @@ _Приложения Xamarin.Forms можно локализовать с по�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-public-sml.png "Окно свойств для AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
+[![](text-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "Панель свойств для AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
-[![](text-images/xs-resx-public-sml.png "Панель свойств для AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
+[![](text-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
 -----
 
@@ -157,7 +157,7 @@ _Приложения Xamarin.Forms можно локализовать с по�
 
 Эти файлы языковых ресурсов *не* требуют разделяемый класс **. designer.cs**, поэтому их можно добавлять как обычные XML-файлы с конфигурацией **Build Action (Действие при сборке): EmbeddedResource**. На этом снимке экрана показано решение с файлами языковых ресурсов.
 
-![](text-images/appresources-langs.png "Файлы языковых ресурсов")
+![](text-images/appresources-langs.png "Language-Specific Resource Files")
 
 После разработки приложения и добавления текста в базовый RESX-файл вы должны отправить его переводчикам, которые переведут каждый элемент `data` и вернут файл языкового ресурса (используя соглашение об именовании), который вы включите в приложение. Ниже приведены некоторые примеры с машинным переводом.
 
@@ -208,7 +208,7 @@ myButton.Text = AppResources.AddButton;
 
 Пользовательский интерфейс в iOS, Android и на универсальной платформе Windows (UWP) преобразуется для просмотра так, как ожидалось, только теперь можно перевести приложение на несколько языков, так как текст загружается из ресурса, а не закодирован жестко. Ниже приведен снимок экрана пользовательского интерфейса на каждой платформе до перевода.
 
-![](text-images/simple-example-english.png "Кроссплатформенные пользовательские интерфейсы до перевода")
+![](text-images/simple-example-english.png "Cross-Platform UIs Prior to Translation")
 
 ### <a name="troubleshooting"></a>Устранение неполадок
 
@@ -398,7 +398,7 @@ namespace UsingResxLocalization.iOS
                 case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "Schwiizerdüütsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                 // add more application-specific cases here (if required)
@@ -506,7 +506,7 @@ namespace UsingResxLocalization.Android
                 }
                 catch (CultureNotFoundException e2)
                 {
-                    // iOS language not valid .NET culture, falling back to English
+                    // Android language not valid .NET culture, falling back to English
                     ci = new System.Globalization.CultureInfo("en");
                 }
             }
@@ -526,7 +526,7 @@ namespace UsingResxLocalization.Android
                 case "in-ID":  // "Indonesian (Indonesia)" has different code in  .NET
                     netLanguage = "id-ID"; // correct code for .NET
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "Schwiizerdüütsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                     // add more application-specific cases here (if required)
@@ -583,7 +583,7 @@ namespace UsingResxLocalization.Android
 
 После обновления проектов для конкретной платформы, как показано выше, и перекомпиляции приложения с переведенными RESX-файлами обновленные переводы будут доступны в каждом приложении. Ниже приведен снимок экрана из примера кода, переведенный на упрощенный китайский язык.
 
-![](text-images/simple-example-hans.png "Кроссплатформенные элементы пользовательского интерфейса, переведенные на упрощенный китайский язык")
+![](text-images/simple-example-hans.png "Cross-Platform UIs Translated to Simplified Chinese")
 
 Дополнительные сведения о локализации на универсальной платформе Windows см. в разделе [Локализация на универсальной платформе Windows](/windows/uwp/design/globalizing/globalizing-portal/).
 
@@ -732,7 +732,7 @@ iOS использует стандарт именования "Проекты �
 
 На этом снимке экрана показан пример приложения iOS с языковыми каталогами **.lproj**. Испанский каталог **es.lproj** содержит локализованные версии изображения по умолчанию, а также **flag.png**.
 
-![](text-images/ios-resources.png "Каталоги проекта локализации iOS")
+![](text-images/ios-resources.png "iOS Localization Project Directories")
 
 Каждый каталог языка содержит копию файла **flag.png**, локализованного для этого языка. Если изображение не предоставляется, операционная система по умолчанию выберет изображение в каталоге языка по умолчанию. Для полной поддержки Retina необходимо предоставить копии **@2x** и **@3x** каждого изображения.
 
@@ -746,7 +746,7 @@ iOS использует стандарт именования "Проекты �
 
 При запуске приложения имя приложения и изображение локализуются:
 
-![](text-images/ios-imageicon.png "Локализация изображения и текста в примере приложения iOS")
+![](text-images/ios-imageicon.png "iOS Sample App Text and Image Localization")
 
 ### <a name="android-application-project"></a>Проект приложения Android
 
@@ -756,7 +756,7 @@ iOS использует стандарт именования "Проекты �
 
 На этом снимке экрана показан пример Android с локализованными строками и прорисовываемыми ресурсами.
 
-![](text-images/android-resources.png "Каталоги локализованных прорисовываемых ресурсов и строк в Android")
+![](text-images/android-resources.png "Android Localized Drawables and String Directories")
 
 Android не использует коды zh-Hans и zh-Hant для упрощенного и традиционного китайского, а поддерживает только коды страны zh-CN и zh-TW.
 
@@ -782,7 +782,7 @@ Android не использует коды zh-Hans и zh-Hant для упрощ�
 
 Приложение теперь локализует имя приложения и изображение. Ниже приведен снимок экрана результата (на испанском языке).
 
-![](text-images/android-imageicon.png "Локализация изображения и текста в примере приложения Android")
+![](text-images/android-imageicon.png "Android Sample App Text and Image Localization")
 
 ### <a name="universal-windows-platform-application-projects"></a>Проекты приложений универсальной платформы Windows
 
@@ -792,7 +792,7 @@ Android не использует коды zh-Hans и zh-Hant для упрощ�
 
 Чтобы локализовать изображения, можно поместить их в папку для ресурса, как показано на следующем снимке экрана.
 
-![](text-images/uwp-image-folder-structure.png "Структура папок локализации изображений на универсальной платформе Windows")
+![](text-images/uwp-image-folder-structure.png "UWP Image Localization Folder Structure")
 
 Во время выполнения инфраструктура ресурсов Windows выберет подходящее изображение на основе языкового стандарта пользователя.
 

@@ -75,5 +75,5 @@ protected override void OnCreate (Bundle bundle)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [ассетманажер](xref:Android.Content.Res.AssetManager)
-- [Локального](xref:Android.Content.Context)
+- [AssetManager](xref:Android.Content.Res.AssetManager)
+- [Context](xref:Android.Content.Context)

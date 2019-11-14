@@ -4,15 +4,16 @@ description: В этой статье описаны функции класса
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
+ms.custom: video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971219"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842968"
 ---
 # <a name="xamarinforms-app-class"></a>Класс App Xamarin.Forms
 
@@ -221,3 +222,9 @@ public sealed partial class MainPage
 Обратите внимание, что `Forms.Init()` в проекте UWP следует вызывать из **App.xaml.cs**.
 
 Дополнительные сведения см. в разделе [Настройка проектов Windows](~/xamarin-forms/platform/windows/installation/index.md), в котором указаны шаги для добавления проекта UWP в существующее решение Xamarin.Forms, которое не предназначено для UWP.
+
+## <a name="related-video"></a>Связанные видео
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

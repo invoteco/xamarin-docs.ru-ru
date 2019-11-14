@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
+ms.sourcegitcommit: ecb81266e59c9e1773a06582e138bf4eed713dfe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004151"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74062923"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -37,9 +37,9 @@ ms.locfileid: "71004151"
     > [!IMPORTANT]
     > Событие [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) происходит только в том случае, когда новый элемент выбран в [`ListView`](xref:Xamarin.Forms.ListView). Таким образом, при касании того же элемента дважды, будут срабатывать два события [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped), но только событие `ItemSelected` будет запущено.
 
-1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана ListView, который реагирует на выбор элементов и нажатие кнопок в iOS и Android](../images/item-selection.png "Выбор элемента ListView")](../images/item-selection-large.png#lightbox "Выбор элемента ListView")
+    [![Снимок экрана с элементом ListView, который соответствует выбранным элементам и нажатым кнопкам в iOS и Android](../images/item-selection.png "Выбор элемента ListView")](../images/item-selection-large.png#lightbox "Выбор элемента ListView")
 
     Установите точки останова в двух обработчиках событий и нажмите на элементы в [`ListView`](xref:Xamarin.Forms.ListView). Обратите внимание, что событие [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) срабатывает только в том случае, когда элемент выбран в [`ListView`](xref:Xamarin.Forms.ListView), тогда как событие[`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) срабатывает при каждом касании элемента.
 
@@ -78,8 +78,8 @@ ms.locfileid: "71004151"
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана ListView, который реагирует на выбор элементов и нажатие кнопок в iOS и Android](../images/item-selection.png "Выбор элемента ListView")](../images/item-selection-large.png#lightbox "Выбор элемента ListView")
+    [![Снимок экрана с элементом ListView, который соответствует выбранным элементам и нажатым кнопкам в iOS и Android](../images/item-selection.png "Выбор элемента ListView")](../images/item-selection-large.png#lightbox "Выбор элемента ListView")
 
     Установите точки останова в двух обработчиках событий и нажмите на элементы в [`ListView`](xref:Xamarin.Forms.ListView). Обратите внимание, что событие [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) срабатывает только в том случае, когда элемент выбран в [`ListView`](xref:Xamarin.Forms.ListView), тогда как событие[`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) срабатывает при каждом касании элемента.
 
-    Дополнительные сведения о выборе элементов и о касаниях см. в разделе [Выделение и касания](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
+    Дополнительные сведения о выборе элементов и нажатии кнопок, см. в разделе [Выделение и касания](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps).

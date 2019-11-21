@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
-ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
+ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
+ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72526816"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74135283"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Подключение к локальным веб-службам из iOS Simulator и Android Emulator
 
@@ -37,13 +37,13 @@ ms.locfileid: "72526816"
 
 При установке пакета SDK для .NET Core в локальное хранилище сертификатов пользователя устанавливается сертификат разработки HTTPS ASP.NET Core. Но устанавливаемый сертификат не является доверенным. Чтобы сделать его доверенным, выполните следующее однократное действие для запуска средства .NET `dev-certs`.
 
-```console
+```dotnetcli
 dotnet dev-certs https --trust
 ```
 
 Следующая команда вызывает справку по средству `dev-certs`.
 
-```console
+```dotnetcli
 dotnet dev-certs https --help
 ```
 

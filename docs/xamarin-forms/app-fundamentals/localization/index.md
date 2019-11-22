@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2018
-ms.openlocfilehash: 71033e935a2d3a4be88dbcc5d975938771484640
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: b580c6e41aa689ff8fcea698c40d7aaf5f2ca050
+ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285577"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74135264"
 ---
 # <a name="xamarinforms-localization"></a>Локализация Xamarin.Forms
 
 _Встроенную платформу локализации .NET можно использовать в кроссплатформенных многоязыковых приложениях в Xamarin.Forms._
 
-## <a name="string-and-image-localizationtextmd"></a>[Локализация строк и изображений](text.md)
+## <a name="xamarinforms-string-and-image-localizationtextmd"></a>[Локализация строк и изображений в Xamarin.Forms](text.md)
 
 Встроенный механизм для локализации приложений использует [RESX-файлы](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps#resources-in-resx-files) и классы в пространствах имен `System.Resources` и `System.Globalization`. RESX-файлы, содержащие переведенные строки, внедряются в сборку Xamarin.Forms вместе с создаваемым компилятором классом, который обеспечивает строго типизированный доступ к переводам. Затем переведенный текст можно извлечь в коде.
 

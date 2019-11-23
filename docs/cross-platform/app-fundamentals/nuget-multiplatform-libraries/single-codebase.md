@@ -73,7 +73,7 @@ ms.locfileid: "73016706"
 [![](single-codebase-images/add-later-platforms-sml.png "Add platform options such as iOS, Android, and Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
 После преобразования в общий проект перейдите в раздел **Параметры проекта > пакет NuGet > ссылочные сборки**
-[разделе](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) и убедитесь, что выбраны все необходимые профили (чтобы NuGet продолжала быть совместимой с проектами, ранее использовался в).
+[разделе](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) и убедитесь, что выбраны все необходимые профили (чтобы NuGet продолжала быть совместимыми с проектами, которые ранее использовались в).
 
 ## <a name="related-links"></a>Связанные ссылки
 

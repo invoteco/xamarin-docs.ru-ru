@@ -28,7 +28,7 @@ Xamarin. Forms инициализируется на каждой платфор
 
 ## <a name="xamarinforms-android-splash-screen"></a>Экран-заставка Xamarin. Forms Android
 
-Создание экрана-заставки в Android требует создания заставки `Activity` в качестве @no__t – 1 с особой темой. Как только заставка `Activity` запускается, она запускает основной `Activity` с нормальной темой приложения.
+Создание экрана-заставки в Android требует создания заставки `Activity` как `MainLauncher` с особой темой. Как только заставка запустится `Activity`, она запускает основной `Activity` с нормальной темой приложения.
 
 Дополнительные сведения о экранах-заставках на Xamarin. Android см. на [экране-заставке Xamarin. Android](~/android/user-interface/splash-screen.md).
 
@@ -42,7 +42,7 @@ Xamarin. Forms инициализируется на каждой платфор
 
 В UWP **пакет. appxmanifest** содержит вкладку " **визуальные ресурсы** " с подменю " **экран-заставка** ". В этом меню можно указать изображение экрана-заставки:
 
-[экран-заставка @no__t 1Setting в UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
+[экран-заставка ![параметра в UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
 
 ## <a name="related-links"></a>Связанные ссылки
 

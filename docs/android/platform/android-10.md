@@ -29,7 +29,7 @@ Xamarin. Android 10,0 обеспечивает поддержку Android 10. Д
 Следующий список необходим для использования функций Android 10 в приложениях на основе Xamarin:
 
 - **Visual Studio** — рекомендуется visual Studio 2019. В Windows Update до Visual Studio 2019 версии 16,3 или более поздней. В macOS обновите Visual Studio 2019 для Mac версии 8,3 или более поздней.
-- **Xamarin. Android** — Xamarin. Android 10,0 или более поздней версии должен быть установлен вместе с Visual Studio (Xamarin. Android автоматически устанавливается в составе рабочей нагрузки **.NET для разработки мобильных приложений на платформе** Windows и устанавливается как часть **Visual Studio для установщика Mac**)
+- **Xamarin. Android** — Xamarin. Android 10,0 или более поздней версии должен быть установлен вместе с Visual Studio (Xamarin. Android автоматически устанавливается в составе рабочей нагрузки **.NET для разработки мобильных приложений** в Windows и устанавливается как часть **установщика Visual Studio для Mac**).
 - **Пакет Java Developer Kit** — для разработки Xamarin. Android 10,0 требуется JDK 8. Дистрибутив OpenJDK Майкрософт автоматически устанавливается в составе Visual Studio.
 - **Пакет SDK для Android** -пакет SDK для Android API 29 должен быть установлен с помощью диспетчера пакет SDK для Android.
 

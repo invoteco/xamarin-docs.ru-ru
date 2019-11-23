@@ -92,8 +92,8 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Этот элемент инициализирует член [`WebView`](xref:Android.Webkit.WebView) с помощью макета [`Activity`](xref:Android.App.Activity) и включает JavaScript для [`WebView`](xref:Android.Webkit.WebView) с [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled)
-`= true` (см. [вызов\# из набора JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) для сведения о вызове функций C\# из JavaScript). Наконец, загружается начальная веб-страница с [`LoadUrl(String)`](xref:Android.Webkit.WebView).
+Это Инициализирует элемент [`WebView`](xref:Android.Webkit.WebView) с помощью [`Activity`](xref:Android.App.Activity) макета и включает JavaScript для [`WebView`](xref:Android.Webkit.WebView) с [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled)
+`= true` (Дополнительные сведения о вызове\# функций c из javascript см. в описании [вызова c\# из набора JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) ). Наконец, загружается начальная веб-страница с [`LoadUrl(String)`](xref:Android.Webkit.WebView).
 
 Выполните сборку и запуск приложения. Вы увидите простое приложение просмотра веб-страниц, как показано на следующем снимке экрана:
 
@@ -133,4 +133,4 @@ Creative Commons Attribution 2,5*](https://creativecommons.org/licenses/by/2.5/)
 
 - [Вызов C# из JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
 - [Android. WebKit. WebView](xref:Android.Webkit.WebView)
-- [кэйевент](xref:Android.Webkit.WebView)
+- [KeyEvent](xref:Android.Webkit.WebView)

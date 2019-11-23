@@ -16,7 +16,7 @@ ms.locfileid: "69529288"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Их применение в приложении Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Приложения Xamarin. Forms могут динамически реагировать на изменения стиля во время выполнения с помощью расширения разметки `DynamicResource`. Это расширение разметки аналогично расширению разметки `StaticResource`, в котором оба используют ключ словаря для выборки значения из [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). Однако, хотя расширение разметки `StaticResource` выполняет поиск по одному словарю, расширение разметки `DynamicResource` сохраняет ссылку на ключ словаря. Таким образом, если значение, связанное с ключом, заменяется, это изменение применяется к [`VisualElement`](xref:Xamarin.Forms.VisualElement). Это позволяет реализовать среду выполнения в приложениях Xamarin. Forms.
 
@@ -29,8 +29,8 @@ ms.locfileid: "69529288"
 
 На следующих снимках экрана показаны страницы с темами и приложение iOS с использованием светлой темы и приложения Android с использованием темной темы:
 
-[![Снимок экрана: Главная страница приложения с темой, на снимке экрана iOS и android](theming-images/main-page-both-themes.png "Главная страница приложения с темой")](theming-images/main-page-both-themes-large.png#lightbox "Главная страница приложения с темой") 
- на[![странице сведений в приложении с темой, в iOS и Android](theming-images/detail-page-both-themes.png "Страница сведений о приложении с темой")](theming-images/detail-page-both-themes-large.png#lightbox "Страница сведений о приложении с темой")
+[![Снимок экрана: Главная страница приложения с темой, на снимке экрана iOS и android](theming-images/main-page-both-themes.png "Главная страница приложения с темой")](theming-images/main-page-both-themes-large.png#lightbox "Главная страница приложения с темой")
+на [ ![странице сведений в приложении с темой, в iOS и Android](theming-images/detail-page-both-themes.png "Страница сведений о приложении с темой")](theming-images/detail-page-both-themes-large.png#lightbox "Страница сведений о приложении с темой")
 
 ## <a name="define-themes"></a>Определение тем
 
@@ -70,10 +70,10 @@ ms.locfileid: "69529288"
 </ResourceDictionary>
 ```
 
-Каждый [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) содержит ресурсы [`Color`](xref:Xamarin.Forms.Color) , которые определяют их соответствующие темы, при этом каждый `ResourceDictionary` использует идентичные значения ключа. Дополнительные сведения о словарях ресурсов см. в разделе [словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md).
+Каждый [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) содержит ресурсы [`Color`](xref:Xamarin.Forms.Color) , которые определяют их соответствующие темы, при этом каждый `ResourceDictionary` использует идентичные значения ключа. Дополнительные сведения о словарях ресурсов, см. в разделе [словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 > [!IMPORTANT]
-> Для каждого `ResourceDictionary` требуется файл кода программной части, который вызывает метод `InitializeComponent`. Это необходимо, чтобы объект CLR, представляющий выбранную тему, можно было создать во время выполнения.
+> Для каждого `ResourceDictionary`требуется файл кода программной части, который вызывает метод `InitializeComponent`. Это необходимо, чтобы объект CLR, представляющий выбранную тему, можно было создать во время выполнения.
 
 ## <a name="set-a-default-theme"></a>Задать тему по умолчанию
 
@@ -183,7 +183,7 @@ ms.locfileid: "69529288"
 При выборе темы во время выполнения приложение должно:
 
 1. Удалить текущую тему из приложения. Это достигается путем очистки свойства [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)уровня приложения.
-2. Загрузить выбранную тему. Это достигается путем добавления экземпляра выбранной темы к свойству `MergedDictionaries` `ResourceDictionary` уровня приложения.
+2. Загрузить выбранную тему. Это достигается путем добавления экземпляра выбранной темы к свойству `MergedDictionaries` `ResourceDictionary`уровня приложения.
 
 Все [`VisualElement`](xref:Xamarin.Forms.VisualElement) объекты, которые задают свойства с расширением разметки `DynamicResource`, будут применять новые значения темы. Это происходит потому, что расширение разметки `DynamicResource` поддерживает ссылку на ключи словаря. Поэтому при замене значений, связанных с ключами, изменения применяются к `VisualElement`ным объектам.
 

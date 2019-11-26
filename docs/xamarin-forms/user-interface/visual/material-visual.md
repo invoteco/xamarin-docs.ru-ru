@@ -1,40 +1,40 @@
 ---
-title: Визуальный элемент материалов Xamarin. Forms
-description: Визуальный элемент "материалы Xamarin. Forms" можно использовать для создания приложений Xamarin. Forms, которые выглядят примерно так же, как в iOS и Android.
+title: Xamarin.Forms Material Visual
+description: Xamarin.Forms Material Visual can be used to create Xamarin.Forms applications that look largely identical on iOS and Android.
 ms.prod: xamarin
 ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/18/2019
-ms.openlocfilehash: b447bd255270eb87f6139ddacadb9d31348ab7d7
-ms.sourcegitcommit: db2cf1b54125499d5320636927484707810c8e27
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/25/2019
+ms.openlocfilehash: 4a960075ebea0fae4cde8d79bdc38641a0b1dc8a
+ms.sourcegitcommit: 1fdc6215f00863735bf0d2bf0afcaa45b714b453
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72850497"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465518"
 ---
-# <a name="xamarinforms-material-visual"></a>Визуальный элемент материалов Xamarin. Forms
+# <a name="xamarinforms-material-visual"></a>Xamarin.Forms Material Visual
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-[Проектирование материалов](https://material.io) — это упрямого система разработки, созданная Google, которая предписывает размер, цвет, расстояния и другие аспекты того, как должны выглядеть и работать представления и макеты.
+[Material Design](https://material.io) is an opinionated design system created by Google, that prescribes the size, color, spacing, and other aspects of how views and layouts should look and behave.
 
-Визуальный элемент "материалы по Xamarin. Forms" можно использовать для применения правил проектирования материалов к приложениям Xamarin. Forms, создавая приложения, которые выглядят примерно одинаково в iOS и Android. Если визуальный элемент "материалы" включен, Поддерживаемые представления применяют один и тот же проект кросс-платформенный режим, создавая единообразный внешний вид.
+Xamarin.Forms Material Visual can be used to apply Material Design rules to Xamarin.Forms applications, creating applications that look largely identical on iOS and Android. When Material Visual is enabled, supported views adopt the same design cross-platform, creating a unified look and feel.
 
-[Визуальные снимки экрана![материалов](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
+[![Material Visual screenshots](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
-Процесс включения визуального элемента "материалы" в Xamarin. Forms в приложении:
+The process for enabling Xamarin.Forms Material Visual in your application is:
 
-1. Добавьте пакет NuGet [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) в проекты iOS и Android Platform. Этот пакет NuGet предоставляет оптимизированные для разработки материалов модули подготовки отчетов в iOS и Android. В iOS пакет предоставляет транзитивное зависимость для [Xamarin. iOS. материалкомпонентс](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), которая является C# привязкой к [компонентам материалов Google для iOS](https://material.io/develop/ios/). В Android пакет предоставляет целевые объекты сборки, чтобы обеспечить правильную настройку TargetFramework.
-1. Инициализация визуального элемента "материалы" в каждом проекте платформы. Дополнительные сведения см. в разделе [Инициализация визуального элемента Material](#initialize-material-visual).
-1. Создайте визуальные элементы управления "материал", задав для свойства [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) значение `Material` на всех страницах, которые должны применять правила дизайна материалов. Дополнительные сведения см. в разделе Использование модулей подготовки отчетов к [просмотру](#apply-material-visual).
-1. используемых Настройка элементов управления материалами. Дополнительные сведения см. в разделе [Настройка элементов управления материалами](#customize-material-visual).
+1. Add the [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet package to your iOS and Android platform projects. This NuGet package delivers optimized Material Design renderers on iOS and Android. On iOS, the package provides the transitive dependency to [Xamarin.iOS.MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), which is a C# binding to Google's [Material Components for iOS](https://material.io/develop/ios/). On Android, the package provides build targets to ensure that your TargetFramework is correctly set up.
+1. Initialize Material Visual in each platform project. For more information, see [Initialize Material Visual](#initialize-material-visual).
+1. Create Material Visual controls by setting the [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) property to `Material` on any pages that should adopt the Material Design rules. For more information, see [Consume Material renderers](#apply-material-visual).
+1. [optional] Customize Material controls. For more information, see [Customize Material controls](#customize-material-visual).
 
 > [!IMPORTANT]
-> В Android визуальный элемент "материал" требует минимальную версию 5,0 (API 21) или более TargetFramework, а также версию 9,0 (API 28). Кроме того, проект платформы требует наличия библиотек поддержки Android 28.0.0 или более поздней версии, и его тема должна наследовать от темы "компоненты материала" или продолжить наследовать от темы AppCompat. Дополнительные сведения см. в статье [Начало работы с материальными компонентами для Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
+> On Android, Material Visual requires a minimum version of 5.0 (API 21) or greater, and a TargetFramework of version 9.0 (API 28). In addition, your platform project requires Android support libraries 28.0.0 or greater, and its theme needs to inherit from a Material Components theme or continue to inherit from an AppCompat theme. For more information, see [Getting started with Material Components for Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
 
-Визуальный элемент "материалы" в настоящее время поддерживает следующие элементы управления:
+Material Visual currently supports the following controls:
 
 - [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)
 - [`Button`](xref:Xamarin.Forms.Button)
@@ -49,29 +49,29 @@ ms.locfileid: "72850497"
 - [`Stepper`](xref:Xamarin.Forms.Stepper)
 - [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 
-Элементы управления материалами реализуются модулями подготовки материалов, которые применяют правила проектирования материалов. Функционально, модули подготовки материалов не отличаются от модулей подготовки отчетов по умолчанию. Дополнительные сведения см. в разделе [Настройка визуального элемента Material](#customize-material-visual).
+Material controls are realized by Material renderers, which apply the Material Design rules. Functionally, Material renderers are no different to the default renderers. For more information, see [Customize Material Visual](#customize-material-visual).
 
-## <a name="initialize-material-visual"></a>Инициализация визуального элемента материалов
+## <a name="initialize-material-visual"></a>Initialize Material Visual
 
-После установки пакета NuGet для [Xamarin. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) модули подготовки материалов должны быть инициализированы в каждом проекте платформы.
+After installing the [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet package, the Material renderers must be initialized in each platform project.
 
-В iOS это должно произойти в **AppDelegate.CS** путем вызова метода `Xamarin.Forms.FormsMaterial.Init` *после* метода `Xamarin.Forms.Forms.Init`:
+On iOS, this should occur in **AppDelegate.cs** by invoking the `Xamarin.Forms.FormsMaterial.Init` method *after* the `Xamarin.Forms.Forms.Init` method:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
 global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-В Android это должно произойти в **MainActivity.CS** путем вызова метода `Xamarin.Forms.FormsMaterial.Init` *после* метода `Xamarin.Forms.Forms.Init`:
+On Android, this should occur in **MainActivity.cs** by invoking the `Xamarin.Forms.FormsMaterial.Init` method *after* the `Xamarin.Forms.Forms.Init` method:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
-## <a name="apply-material-visual"></a>Применение визуального элемента "материалы"
+## <a name="apply-material-visual"></a>Apply Material Visual
 
-Приложения могут включить визуальный элемент "материалы", задав для свойства [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) на странице, макете или представлении `Material`:
+Applications can enable Material Visual by setting the [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) property on a page, layout, or view, to `Material`:
 
 ```xaml
 <ContentPage Visual="Material"
@@ -87,35 +87,35 @@ ContentPage contentPage = new ContentPage();
 contentPage.Visual = VisualMarker.Material;
 ```
 
-Если задать для свойства `VisualElement.Visual` значение `Material`, приложение будет использовать визуальные модули подготовки материалов вместо модулей подготовки отчетов по умолчанию. Свойству [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) можно присвоить любой тип, реализующий `IVisual`, с классом [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) , который предоставляет следующие свойства `IVisual`:
+Setting the `VisualElement.Visual` property to `Material` directs your application to use the Material Visual renderers instead of the default renderers. The [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) property can be set to any type that implements `IVisual`, with the [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) class providing the following `IVisual` properties:
 
-- `Default` — указывает, что представление должно отображаться с помощью модуля подготовки отчетов по умолчанию.
-- `MatchParent` — указывает, что представление должно использовать тот же модуль подготовки отчетов, что и его непосредственного родителя.
-- `Material` — указывает, что представление должно отображаться с помощью модуля подготовки материалов.
+- `Default` – indicates that the view should render using the default renderer.
+- `MatchParent` – indicates that the view should use the same renderer as its direct parent.
+- `Material` – indicates that the view should render using a Material renderer.
 
 > [!IMPORTANT]
-> Свойство [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) определено в классе [`VisualElement`](xref:Xamarin.Forms.VisualElement) , в котором представления наследуют значение свойства `Visual` от своих родителей. Поэтому установка свойства `Visual` в [`ContentPage`](xref:Xamarin.Forms.ContentPage) гарантирует, что все поддерживаемые представления на странице будут использовать этот визуальный элемент. Кроме того, свойство `Visual` может быть переопределено в представлении.
+> The [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) property is defined in the [`VisualElement`](xref:Xamarin.Forms.VisualElement) class, with views inheriting the `Visual` property value from their parents. Therefore, setting the `Visual` property on a [`ContentPage`](xref:Xamarin.Forms.ContentPage) ensures that any supported views in the page will use that Visual. In addition, the `Visual` property can be overridden on a view.
 
-На следующих снимках экрана показан пользовательский интерфейс, отображаемый с помощью модулей подготовки отчетов по умолчанию:
+The following screenshots show a user interface rendered using the default renderers:
 
-[![Снимок экрана модулей подготовки отчетов по умолчанию в iOS и Android](material-visual-images/default-renderers.png "Представления, использующие модули подготовки отчетов по умолчанию")](material-visual-images/default-renderers-large.png#lightbox)
+[![Screenshot of default renderers, on iOS and Android](material-visual-images/default-renderers.png "Views using default renderers")](material-visual-images/default-renderers-large.png#lightbox)
 
-На следующих снимках экрана показан один и тот же пользовательский интерфейс, отображаемый с помощью модулей подготовки материалов:
+The following screenshots show the same user interface rendered using the Material renderers:
 
-[![Снимок экрана модулей подготовки материалов в iOS и Android](material-visual-images/material-renderers.png "Представления, использующие модули подготовки материалов")](material-visual-images/material-renderers-large.png#lightbox)
+[![Screenshot of Material renderers, on iOS and Android](material-visual-images/material-renderers.png "Views using Material renderers")](material-visual-images/material-renderers-large.png#lightbox)
 
-Основные видимые различия между модулями подготовки отчетов по умолчанию и модулями подготовки материалов, показанными здесь, означают, что модули подготовки материалов записывают [`Button`](xref:Xamarin.Forms.Button) текста и округляют углы [`Frame`](xref:Xamarin.Forms.Frame) границ. Однако модули подготовки материалов используют собственные элементы управления, поэтому для таких областей, как шрифты, тени, цвета и повышения прав, могут существовать различия в пользовательском интерфейсе.
+The main visible differences between the default renderers and Material renderers, shown here, are that the Material renderers capitalize [`Button`](xref:Xamarin.Forms.Button) text, and round the corners of [`Frame`](xref:Xamarin.Forms.Frame) borders. However, Material renderers use native controls, and therefore there may still be user interface differences between platforms for areas such as fonts, shadows, colors, and elevation.
 
 > [!NOTE]
-> Компоненты проектирования материалов тесно соответствуют рекомендациям Google. В результате визуализаторы дизайна материалов перемещаются в сторону изменения размера и поведения. Если требуется больший контроль над стилями или поведением, можно по-прежнему создать собственный [результат](~/xamarin-forms/app-fundamentals/effects/index.md), [поведение](~/xamarin-forms/app-fundamentals/behaviors/index.md)или [пользовательский модуль подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) отчетов для получения необходимых сведений.
+> Material Design components adhere closely to Google's guidelines. As a result, Material Design renderers are biased towards that sizing and behavior. When you require greater control of styles or behavior, you can still create your own [Effect](~/xamarin-forms/app-fundamentals/effects/index.md), [Behavior](~/xamarin-forms/app-fundamentals/behaviors/index.md), or [Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) to achieve the detail you require.
 
-## <a name="customize-material-visual"></a>Настройка визуального элемента "материалы"
+## <a name="customize-material-visual"></a>Customize Material Visual
 
-Пакет для визуального элемента NuGet — это коллекция модулей подготовки отчетов, которые реализуют элементы управления Xamarin. Forms. Настройка визуальных элементов управления "материал" идентична настройке элементов управления по умолчанию.
+The Material Visual NuGet package is a collection of renderers that realize the Xamarin.Forms controls. Customizing Material Visual controls is identical to customizing default controls.
 
-Эффекты являются рекомендуемым методом, когда целью является Настройка существующего элемента управления. Если существует визуальный модуль подготовки материалов, то для настройки элемента управления с применением этого средства будет меньше работы, чем подкласс модуля подготовки отчетов. Дополнительные сведения о влиянии см. в статье [эффекты Xamarin. Forms](~/xamarin-forms/app-fundamentals/effects/index.md).
+Effects are the recommended technique when the goal is to customize an existing control. If a Material Visual renderer exists, it is less work to customize the control with an effect than it is to subclass the renderer. For more information about effects see [Xamarin.Forms effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
-Пользовательские модули подготовки отчетов являются рекомендуемым методом, если модуль подготовки материалов не существует. В визуальный элемент Material включены следующие классы модуля подготовки отчетов:
+Custom renderers are the recommended technique when a Material renderer does not exist. The following renderer classes are included with Material Visual:
 
 - `MaterialButtonRenderer`
 - `MaterialCheckBoxRenderer`
@@ -130,7 +130,7 @@ contentPage.Visual = VisualMarker.Material;
 - `MaterialSliderRenderer`
 - `MaterialStepperRenderer`
 
-Подкласс модуля подготовки материалов практически идентичен модулям визуализации, не связанным с материалами. Однако при экспорте модуля подготовки отчетов, подклассов модуля подготовки отчетов, необходимо предоставить третий аргумент для атрибута `ExportRenderer`, который указывает тип `VisualMarker.MaterialVisual`:
+Subclassing a Material renderer is almost identical to non-Material renderers. However, when exporting a renderer that subclasses a Material renderer, you must provide a third argument to the `ExportRenderer` attribute that specifies the `VisualMarker.MaterialVisual` type:
 
 ```csharp
 using Xamarin.Forms.Material.Android;
@@ -145,16 +145,16 @@ namespace MyApp.Android
 }
 ```
 
-В этом примере `ExportRendererAttribute` указывает, что класс `CustomMaterialProgressBarRenderer` будет использоваться для отрисовки представления [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) с типом `IVisual`, зарегистрированным в качестве третьего аргумента.
+In this example, the `ExportRendererAttribute` specifies that the `CustomMaterialProgressBarRenderer` class will be used to render the [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) view, with the `IVisual` type registered as the third argument.
 
 > [!NOTE]
-> Модуль подготовки отчетов, указывающий тип `IVisual`, в составе его `ExportRendererAttribute`, будет использоваться для отрисовки включенных в представления, а не для модуля подготовки по умолчанию. Во время выбора модуля визуализации свойство `Visual` представления проверяется и включается в процесс выбора модуля подготовки отчетов.
+> A renderer that specifies an `IVisual` type, as part of its `ExportRendererAttribute`, will be used to render opted in views, rather than the default renderer. At renderer selection time, the `Visual` property of the view is inspected and included in the renderer selection process.
 
-Дополнительные сведения о пользовательских модулях подготовки отчетов см. в разделе [пользовательские модули подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов.
+For more information about custom renderers, see [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Визуальный элемент "материал" (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
-- [Создание визуального модуля подготовки Xamarin. Forms](create.md)
-- [Эффекты Xamarin. Forms](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Material Visual (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Create a Xamarin.Forms Visual Renderer](create.md)
+- [Xamarin.Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Пользовательские отрисовщики](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

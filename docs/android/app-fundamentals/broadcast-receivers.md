@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f490bec121481d9f3f661913d8aefcef999bb4a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c9a0eee2779aa392cb2049b5518b6f30b7f05abc
+ms.sourcegitcommit: 58a08133496df53a639a82a7f672724220c57fd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016968"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540395"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Широковещательные приемники в Xamarin. Android
 
@@ -29,7 +29,7 @@ Android определяет два типа широковещательных 
 
 Широковещательный приемник является подклассом типа `BroadcastReceiver` и должен переопределять метод [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) . Android будет выполнять `OnReceive` в основном потоке, поэтому этот метод должен быть спроектирован для быстрого выполнения. Будьте осторожны при порождении потоков в `OnReceive`, так как Android может завершить процесс после завершения метода. Если широковещательный получатель должен выполнить длительную работу, рекомендуется запланировать _Задание_ с помощью `JobScheduler` или _диспетчера заданий Firebase_. Планирование работы с заданием будет обсуждаться в отдельном руководством.
 
-_Фильтр с намерением_ используется для регистрации широковещательного приемника, чтобы Android мог правильно маршрутизировать сообщения. Фильтр намерения можно указать во время выполнения (иногда это называется _приемником контекста_ или _динамической регистрацией_) или его можно статически определить в манифесте Android ( _получатель, зарегистрированный манифестом_). Xamarin. Android предоставляет C# атрибут,`IntentFilterAttribute`, который будет статически регистрировать фильтр намерения (это будет обсуждаться более подробно далее в этом разделе). Начиная с Android 8,0, приложение не может статически регистрироваться для неявной трансляции.
+_Фильтр с намерением_ используется для регистрации широковещательного приемника, чтобы Android мог правильно маршрутизировать сообщения. Фильтр намерения можно указать во время выполнения (иногда это называется _приемником контекста_ или _динамической регистрацией_) или его можно статически определить в манифесте Android ( _получатель, зарегистрированный манифестом_). Xamarin. Android предоставляет C# атрибут, `IntentFilterAttribute`, который будет статически регистрировать фильтр намерения (это будет обсуждаться более подробно далее в этом разделе). Начиная с Android 8,0, приложение не может статически регистрироваться для неявной трансляции.
 
 Основное различие между зарегистрированным манифестом и приемником, зарегистрированным в контексте, заключается в том, что зарегистрированный в контексте получатель будет отвечать только за широковещательные передачи во время выполнения приложения, а получатель, зарегистрированный манифестом, может отвечать на вещания, даже если приложение не работает.  
 
@@ -112,19 +112,19 @@ public class MainActivity: Activity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        receiver = new MySampleBroadcastReceiver()
+        receiver = new MySampleBroadcastReceiver();
 
         // Code omitted for clarity
     }
 
-    protected override OnResume() 
+    protected override void OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override OnPause() 
+    protected override void OnPause() 
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/28/2019
-ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
-ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
+ms.openlocfilehash: d47146c90635084a4974cfa0c7dcb142ac918788
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980878"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556183"
 ---
 # <a name="xamarinforms-label"></a>Метка Xamarin. Forms
 
@@ -112,9 +112,9 @@ public partial class LabelPage : ContentPage
 
 Дополнительные сведения о цветах см. в разделе [цвета](~/xamarin-forms/user-interface/colors.md).
 
-## <a name="fonts"></a>Шрифты
+## <a name="fonts"></a>Fonts
 
-Дополнительные сведения об указании шрифтов в `Label` см. в разделе [шрифты](~/xamarin-forms/user-interface/text/fonts.md).
+Дополнительные сведения об указании шрифтов в `Label`см. в разделе [шрифты](~/xamarin-forms/user-interface/text/fonts.md).
 
 <a name="Truncation_and_Wrapping" />
 
@@ -133,8 +133,9 @@ public partial class LabelPage : ContentPage
 
 Число строк, отображаемых [`Label`](xref:Xamarin.Forms.Label) , можно указать, задав для свойства `Label.MaxLines` значение `int`.
 
-- Если `MaxLines` равен 0, `Label` учитывает значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) , чтобы отображалась только одна строка, возможно усечение или все строки со всем текстом.
-- Если `MaxLines` равен 1, то результат будет совпадать с установкой свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в значение [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)или [0](xref:Xamarin.Forms.LineBreakMode). Однако `Label` будет учитывать значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в отношении размещения многоточия (если применимо).
+- Если `MaxLines` равно-1, то есть значение по умолчанию, `Label` учитывает значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) , чтобы отображалась только одна строка, возможно, обрезанная или все строки со всем текстом.
+- Если значение `MaxLines` равно 0, `Label` не отображается.
+- Если `MaxLines` равен 1, то результат будет совпадать с установкой свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в значение [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)или [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). Однако `Label` будет учитывать значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в отношении размещения многоточия (если применимо).
 - Если `MaxLines` больше 1, `Label` отображает указанное число строк и учитывает значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в отношении размещения многоточия (если применимо). Однако если для свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) задано значение [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), то установка свойства `MaxLines` равным значению больше 1 не имеет смысла.
 
 В следующем примере XAML показано задание свойства `MaxLines` в [`Label`](xref:Xamarin.Forms.Label):
@@ -215,7 +216,7 @@ Label label = new Label
 Свойство `FormattedText` имеет тип [`FormattedString`](xref:Xamarin.Forms.FormattedString), который состоит из одного или нескольких экземпляров [`Span`](xref:Xamarin.Forms.Span) , задается через свойство [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) . Для настройки внешнего вида можно использовать следующие свойства `Span`.
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) — цвет фона диапазона.
-- `CharacterSpacing` типа `double` — интервал между символами `Span`ого текста.
+- `CharacterSpacing` с типом `double` представляет собой интервал между знаками текста `Span`.
 - [`Font`](xref:Xamarin.Forms.Span.Font) — шрифт текста в диапазоне.
 - [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) — атрибуты шрифта для текста в диапазоне.
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) — семейство шрифтов, которому принадлежит шрифт текста в диапазоне.
@@ -405,13 +406,12 @@ Label label = new Label
 
 Дополнительные сведения о заполнении см. в разделе [поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-
 ## <a name="hyperlinks"></a>Гиперссылки
 
 Текст, отображаемый [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) экземпляры, можно преобразовать в гиперссылки с помощью следующего подхода:
 
 1. Задайте свойства `TextColor` и `TextDecoration` [`Label`](xref:Xamarin.Forms.Label) или [`Span`](xref:Xamarin.Forms.Span).
-1. Добавьте [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) в коллекцию [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) [`Label`](xref:Xamarin.Forms.Label) или [`Span`](xref:Xamarin.Forms.Span), свойство [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) которой привязано к 0, а свойство [2](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) содержит открываемый URL-адрес.
+1. Добавьте [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) в коллекцию [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) [`Label`](xref:Xamarin.Forms.Label) или [`Span`](xref:Xamarin.Forms.Span), свойство [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) которой привязано к `ICommand`, а свойство [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) содержит открываемый URL-адрес.
 1. Определите `ICommand`, которые будут выполняться [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
 1. Напишите код, который будет выполнен `ICommand`.
 

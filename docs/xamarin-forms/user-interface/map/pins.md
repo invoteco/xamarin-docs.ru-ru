@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
-ms.openlocfilehash: 930d2dcc701f88e2a350ec1011405bb18b86de6e
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425569"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556164"
 ---
 # <a name="xamarinforms-map-pins"></a>ПИН-коды карт Xamarin. Forms
 
@@ -198,7 +198,7 @@ wharfPin.InfoWindowClicked += async (s, args) =>
 </ContentPage>
 ```
 
-Данные свойства [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) привязываются к свойству `Locations` подключенного ViewModel, который возвращает `ObservableCollection` объектов `Location`, которые являются пользовательским типом. Каждый объект `Location` определяет свойства `Address` и `Description`, тип `string` и свойство `Position` типа [`Position`](xref:Xamarin.Forms.Maps.Position).
+Данные свойства [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) привязываются к свойству `Locations` подключенного ViewModel, который возвращает `ObservableCollection` объектов `Location`, которые являются пользовательским типом. Каждый объект `Location` определяет свойства `Address` и `Description`, тип `string`и свойство `Position` типа [`Position`](xref:Xamarin.Forms.Maps.Position).
 
 Внешний вид каждого элемента в коллекции `IEnumerable` определяется путем присвоения свойству [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) значения [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , содержащего объект [`Pin`](xref:Xamarin.Forms.Maps.Pin) , который привязывает данные к соответствующим свойствам.
 
@@ -225,6 +225,7 @@ wharfPin.InfoWindowClicked += async (s, args) =>
             </local:MapItemTemplateSelector.DefaultTemplate>
             <local:MapItemTemplateSelector.XamarinTemplate>
                 <DataTemplate>
+                    <!-- Change the property values, or the properties that are bound to. -->
                     <maps:Pin Position="{Binding Position}"
                               Address="{Binding Address}"
                               Label="Xamarin!" />
@@ -259,6 +260,9 @@ public class MapItemTemplateSelector : DataTemplateSelector
 ```
 
 Класс `MapItemTemplateSelector` определяет `DefaultTemplate` и `XamarinTemplate` свойства [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , для которых заданы разные шаблоны данных. Метод `OnSelectTemplate` возвращает `XamarinTemplate`, который отображает Xamarin в качестве метки при касании `Pin`, если элемент имеет адрес, содержащий "Сан-Франциско". Если у элемента нет адреса, содержащего "Сан Франциско", метод `OnSelectTemplate` возвращает `DefaultTemplate`.
+
+> [!NOTE]
+> Вариант использования для этой функции — это Привязка свойств вложенных классов [`Pin`](xref:Xamarin.Forms.Maps.Pin) объектов к различным свойствам на основе подтипа `Pin`.
 
 Дополнительные сведения о селекторах шаблонов данных см. [в разделе Создание DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 

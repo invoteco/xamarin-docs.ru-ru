@@ -8,14 +8,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: f6d255e9af64d316ac76eab92a73cc1c90b82956
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 659545431a490f50224de3e7728b4d4d0c111d64
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019556"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681331"
 ---
-# <a name="troubleshooting"></a>Устранение неполадок
+# <a name="troubleshooting"></a>Диагностика
 
 _Документы в этом разделе охватывают функции, относящиеся к устранению неполадок в Android._
 
@@ -35,6 +35,6 @@ _Документы в этом разделе охватывают функци
 
 Начиная с 26.0.1 Android SDK Tools Google удалил существующие менеджеры AVD и пакетов SDK в фаваур новых средств командной строки.
 
-## <a name="xamarinandroid-errors-referenceandroidtroubleshootingerrorsmd"></a>[Руководство по ошибкам Xamarin.Android](~/android/troubleshooting/errors.md)
+## <a name="xamarinandroid-errors-referencexamarinandroiderrors-and-warnings"></a>[Руководство по ошибкам Xamarin.Android](/xamarin/android/errors-and-warnings/)
 
-Справочное руководство по ошибкам, в котором показаны наиболее распространенные ошибки, которые могут возникнуть при использовании Xamarin. Android в Xamarin Studio
+Справочное руководство по ошибкам, в котором показаны наиболее распространенные ошибки, которые могут возникнуть при использовании Xamarin. Android в Visual Studio

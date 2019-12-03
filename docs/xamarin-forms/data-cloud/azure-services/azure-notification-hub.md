@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: eafa5c8af8d93138ec6e2b9e2f25549d7ed006b0
-ms.sourcegitcommit: bfe4327ef2e89dab095641860256eadb349ca62c
+ms.openlocfilehash: 28abc7f4fa608091cfc7f4c64d4fcabfd9755c2b
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73849835"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681357"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Отправка и получение push-уведомлений в центрах уведомлений Azure и Xamarin. Forms
 
@@ -132,8 +132,7 @@ public static class AppConstants
     1. Xamarin. Azure. NotificationHubs. Android.
 1. Скопируйте `google-services.json` файл, скачанный во время установки FCM, в проект и задайте для действия сборки значение `GoogleServicesJson`.
 1. [Настройте AndroidManifest. XML для взаимодействия с Firebase](#configure-android-manifest).
-1. [Зарегистрируйте приложение в Firebase и центре уведомлений Azure с помощью `FirebaseInstanceIdService`](#register-using-a-custom-firebaseinstanceidservice).
-1. [Обработка сообщений с помощью `FirebaseMessagingService`](#process-messages-with-a-firebasemessagingservice).
+1. [Переопределите фиребасемессагингсервице, чтобы обрабатывались сообщения](#override-firebasemessagingservice-to-handle-messages).
 1. [Добавление входящих уведомлений в пользовательский интерфейс Xamarin. Forms](#add-incoming-notifications-to-the-xamarinforms-ui).
 
 > [!NOTE]
@@ -163,116 +162,105 @@ public static class AppConstants
 </manifest>
 ```
 
-### <a name="register-using-a-custom-firebaseinstanceidservice"></a>Регистрация с помощью пользовательского Фиребасеинстанцеидсервице
+### <a name="override-firebasemessagingservice-to-handle-messages"></a>Переопределение Фиребасемессагингсервице для работы с сообщениями
 
-Firebase выдает маркеры, которые однозначно идентифицируют устройство в PNS. Токены имеют длительный срок существования, но иногда обновляются. При выдаче или обновлении маркера приложению необходимо зарегистрировать его новый маркер в центре уведомлений Azure. Регистрация обрабатывается экземпляром класса, производного от `FirebaseInstanceIdService`.
-
-В примере приложения `FirebaseRegistrationService` класс наследует от `FirebaseInstanceIdService`. Этот класс содержит `IntentFilter`, который включает `com.google.firebase.INSTANCE_ID_EVENT`, что позволяет ОС Android автоматически вызывать `OnTokenRefresh` при выдаче маркера Firebase.
-
-В следующем коде показан пользовательский `FirebaseInstanceIdService` из примера приложения:
-
-```csharp
-[Service]
-[IntentFilter(new [] { "com.google.firebase.INSTANCE_ID_EVENT"})]
-public class FirebaseRegistrationService : FirebaseInstanceIdService
-{
-    public override void OnTokenRefresh()
-    {
-        string token = FirebaseInstanceId.Instance.Token;
-
-        // NOTE: logging the token is not recommended in production but during
-        // development it is useful to test messages directly from Firebase
-        Log.Info(AppConstants.DebugTag, $"Token received: {token}");
-
-        SendRegistrationToServer(token);
-    }
-
-    void SendRegistrationToServer(string token)
-    {
-        try
-        {
-            NotificationHub hub = new NotificationHub(AppConstants.NotificationHubName, AppConstants.ListenConnectionString, this);
-
-            // register device with Azure Notification Hub using the token from FCM
-            Registration reg = hub.Register(token, AppConstants.SubscriptionTags);
-
-            // subscribe to the SubscriptionTags list with a simple template.
-            string pnsHandle = reg.PNSHandle;
-            var cats = string.Join(", ", reg.Tags);
-            var temp = hub.RegisterTemplate(pnsHandle, "defaultTemplate", AppConstants.FCMTemplateBody, AppConstants.SubscriptionTags);
-        }
-        catch (Exception e)
-        {
-            Log.Error(AppConstants.DebugTag, $"Error registering device: {e.Message}");
-        }
-    }
-}
-```
-
-Метод `SendRegistrationToServer` в `FirebaseRegistrationClass` регистрирует устройство в центре уведомлений Azure и подписывается на теги с помощью шаблона. Пример приложения определяет один тег с именем `default` и шаблон с одним параметром, который называется `messageParam` в файле **AppConstants.CS** . Дополнительные сведения о регистрации, тегах и шаблонах см. [в статье регистрация шаблонов и тегов в центре уведомлений Azure](#register-templates-and-tags-with-the-azure-notification-hub) .
-
-### <a name="process-messages-with-a-firebasemessagingservice"></a>Обработка сообщений с помощью Фиребасемессагингсервице
-
-Входящие сообщения направляются на экземпляр `FirebaseMessagingService`, где их можно преобразовать в локальное уведомление. Проект Android в примере приложения содержит класс с именем `FirebaseService`, наследуемый от `FirebaseMessagingService`. Этот класс содержит `IntentFilter`, который включает `com.google.firebase.MESSAGING_EVENT`, что позволяет ОС Android автоматически вызывать `OnMessageReceived` при получении сообщения push-уведомления.
-
-В следующем примере показаны `FirebaseService` из примера приложения:
+Для регистрации в Firebase и обработке сообщений подклассировать класс `FirebaseMessagingService`. Пример приложения определяет класс `FirebaseService`, который подклассировать `FirebaseMessagingService`. Этот класс помечен атрибутом `IntentFilter`, который включает фильтр `com.google.firebase.MESSAGING_EVENT`. Этот фильтр позволяет Android передавать входящие сообщения этому классу для обработки:
 
 ```csharp
 [Service]
 [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
 public class FirebaseService : FirebaseMessagingService
 {
-    public override void OnMessageReceived(RemoteMessage message)
+    // ...
+}
+
+```
+
+При запуске приложения пакет SDK Firebase будет автоматически запрашивать уникальный идентификатор маркера с сервера Firebase. После успешного запроса метод `OnNewToken` будет вызываться для класса `FirebaseService`. Пример проекта переопределяет этот метод и регистрирует маркер в центрах уведомлений Azure:
+
+```csharp
+public override void OnNewToken(string token)
+{
+    // NOTE: save token instance locally, or log if desired
+
+    SendRegistrationToServer(token);
+}
+
+void SendRegistrationToServer(string token)
+{
+    try
     {
-        base.OnMessageReceived(message);
-        string messageBody = string.Empty;
+        NotificationHub hub = new NotificationHub(AppConstants.NotificationHubName, AppConstants.ListenConnectionString, this);
 
-        if (message.GetNotification() != null)
-        {
-            messageBody = message.GetNotification().Body;
-        }
+        // register device with Azure Notification Hub using the token from FCM
+        Registration registration = hub.Register(token, AppConstants.SubscriptionTags);
 
-        // NOTE: test messages sent via the Azure portal will be received here
-        else
-        {
-            messageBody = message.Data.Values.First();
-        }
+        // subscribe to the SubscriptionTags list with a simple template.
+        string pnsHandle = registration.PNSHandle;
+        TemplateRegistration templateReg = hub.RegisterTemplate(pnsHandle, "defaultTemplate", AppConstants.FCMTemplateBody, AppConstants.SubscriptionTags);
+    }
+    catch (Exception e)
+    {
+        Log.Error(AppConstants.DebugTag, $"Error registering device: {e.Message}");
+    }
+}
+```
 
-        // convert the incoming message to a local notification
-        SendLocalNotification(messageBody);
+Метод `SendRegistrationToServer` регистрирует устройство в центре уведомлений Azure и подписывается на теги с помощью шаблона. Пример приложения определяет один тег с именем `default` и шаблон с одним параметром, который называется `messageParam` в файле **AppConstants.CS** . Дополнительные сведения о регистрации, тегах и шаблонах см. [в статье регистрация шаблонов и тегов в центре уведомлений Azure](#register-templates-and-tags-with-the-azure-notification-hub).
 
-        // send the incoming message directly to the MainPage
-        SendMessageToMainPage(messageBody);
+При получении сообщения метод `OnMessageReceived` будет вызываться для класса `FirebaseService`:
+
+```csharp
+public override void OnMessageReceived(RemoteMessage message)
+{
+    base.OnMessageReceived(message);
+    string messageBody = string.Empty;
+
+    if (message.GetNotification() != null)
+    {
+        messageBody = message.GetNotification().Body;
     }
 
-    void SendLocalNotification(string body)
+    // NOTE: test messages sent via the Azure portal will be received here
+    else
     {
-        var intent = new Intent(this, typeof(MainActivity));
-        intent.AddFlags(ActivityFlags.ClearTop);
-        intent.PutExtra("message", body);
-        var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
-
-        var notificationBuilder = new NotificationCompat.Builder(this)
-            .SetContentTitle("XamarinNotify Message")
-            .SetSmallIcon(Resource.Drawable.ic_launcher)
-            .SetContentText(body)
-            .SetAutoCancel(true)
-            .SetShowWhen(false)
-            .SetContentIntent(pendingIntent);
-
-        if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
-        {
-            notificationBuilder.SetChannelId(AppConstants.NotificationChannelName);
-        }
-
-        var notificationManager = NotificationManager.FromContext(this);
-        notificationManager.Notify(0, notificationBuilder.Build());
+        messageBody = message.Data.Values.First();
     }
 
-    void SendMessageToMainPage(string body)
+    // convert the incoming message to a local notification
+    SendLocalNotification(messageBody);
+
+    // send the incoming message directly to the MainPage
+    SendMessageToMainPage(messageBody);
+}
+
+void SendLocalNotification(string body)
+{
+    var intent = new Intent(this, typeof(MainActivity));
+    intent.AddFlags(ActivityFlags.ClearTop);
+    intent.PutExtra("message", body);
+    var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
+
+    var notificationBuilder = new NotificationCompat.Builder(this)
+        .SetContentTitle("XamarinNotify Message")
+        .SetSmallIcon(Resource.Drawable.ic_launcher)
+        .SetContentText(body)
+        .SetAutoCancel(true)
+        .SetShowWhen(false)
+        .SetContentIntent(pendingIntent);
+
+    if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
     {
-        (App.Current.MainPage as MainPage)?.AddMessage(body);
+        notificationBuilder.SetChannelId(AppConstants.NotificationChannelName);
     }
+
+    var notificationManager = NotificationManager.FromContext(this);
+    notificationManager.Notify(0, notificationBuilder.Build());
+}
+
+void SendMessageToMainPage(string body)
+{
+    (App.Current.MainPage as MainPage)?.AddMessage(body);
 }
 ```
 
@@ -440,7 +428,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
     Hub = new SBNotificationHub(AppConstants.ListenConnectionString, AppConstants.NotificationHubName);
 
     // update registration with Azure Notification Hub
-    Hub.UnregisterAllAsync(deviceToken, (error) =>
+    Hub.UnregisterAll(deviceToken, (error) =>
     {
         if (error != null)
         {
@@ -449,7 +437,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
         }
 
         var tags = new NSSet(AppConstants.SubscriptionTags.ToArray());
-        Hub.RegisterNativeAsync(deviceToken, tags, (errorCallback) =>
+        Hub.RegisterNative(deviceToken, tags, (errorCallback) =>
         {
             if (errorCallback != null)
             {
@@ -458,7 +446,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
         });
 
         var templateExpiration = DateTime.Now.AddDays(120).ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-        Hub.RegisterTemplateAsync(deviceToken, "defaultTemplate", AppConstants.APNTemplateBody, templateExpiration, tags, (errorCallback) =>
+        Hub.RegisterTemplate(deviceToken, "defaultTemplate", AppConstants.APNTemplateBody, templateExpiration, tags, (errorCallback) =>
         {
             if (errorCallback != null)
             {

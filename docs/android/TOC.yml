@@ -333,7 +333,7 @@
         - name: Карты и расположение
           href: platform/maps-and-location/index.md
           items:
-            - name: Расположение
+            - name: Местоположение
               href: platform/maps-and-location/location.md
             - name: Карты
               href: platform/maps-and-location/maps/index.md
@@ -619,8 +619,8 @@
           href: troubleshooting/resolving-library-installation-errors.md
         - name: Изменения в Android SDK Tools
           href: troubleshooting/sdk-cli-tooling-changes.md
-        - name: Руководство по ошибкам Xamarin.Android
-          href: troubleshooting/errors.md
+        - name: Руководство по ошибкам и предупреждениям Xamarin.Android
+          href: /xamarin/android/errors-and-warnings/
     - name: Wear
       href: wear/index.md
       items:

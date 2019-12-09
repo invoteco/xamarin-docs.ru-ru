@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
+ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889208"
+ms.lasthandoff: 11/24/2019
+ms.locfileid: "74451804"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Всплывающее меню оболочки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Всплывающее меню выполняет роль главного меню для приложения оболочки. Его можно вызвать специальным значком или жестом пальцем от края экрана. Всплывающее меню состоит из необязательного заголовка, вложенных элементов всплывающего меню и необязательных пунктов меню.
 
-![Снимок экрана со всплывающим меню и заметками в оболочке](flyout-images/flyout-annotated.png "Всплывающее меню с заметками")
+![Снимок экрана со всплывающим меню и заметками в оболочке](flyout-images/flyout-annotated.png "Всплывающий элемент с заметками")
 
 При необходимости вы можете задать для фона всплывающего меню цвет [`Color`](xref:Xamarin.Forms.Color), используя привязываемое свойство `Shell.FlyoutBackgroundColor`. Это свойство также можно задать из каскадной таблицы стилей (CSS). Подробные сведения см. в статье [об особых свойствах оболочки Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
@@ -223,7 +223,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 Класс `FlyoutItem` включает следующие свойства, которые определяют внешний вид и поведение всплывающего меню:
 
-- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. По умолчанию используется значение `AsSingleItem`.
+- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. Значение по умолчанию — `AsSingleItem`.
 - `CurrentItem` с типом `Tab` обозначает выбранный элемент.
 - `Items` с типом `IList<Tab>` определяет все вкладки в `FlyoutItem`.
 - `FlyoutIcon` с типом `ImageSource` — значок, который используется для элемента. Если это свойство не установлено, по умолчанию ему присваивается значение свойства `Icon`.
@@ -331,10 +331,73 @@ Shell.Current.FlyoutIsPresented = false;
 
 Этот пример отображает заголовок каждого объекта `FlyoutItem` курсивом:
 
-[![Снимок экрана шаблонных объектов FlyoutItem для iOS и Android](flyout-images/flyoutitem-templated.png "Шаблонные объекты FlyoutItem в оболочке")](flyout-images/flyoutitem-templated-large.png#lightbox "Шаблонные объекты FlyoutItem в оболочке")
+[![Снимок экрана шаблонных объектов FlyoutItem для iOS и Android](flyout-images/flyoutitem-templated.png "Шаблонные объекты FlyoutItem оболочки")](flyout-images/flyoutitem-templated-large.png#lightbox "Шаблонные объекты FlyoutItem оболочки")
+
+
+Так как `Shell.ItemTemplate` является присоединенным свойством, для отдельных объектов `FlyoutItem` можно задавать разные шаблоны.
 
 > [!NOTE]
 > Оболочка предоставляет свойства `Title` и `FlyoutIcon` для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `ItemTemplate`.
+
+
+### <a name="default-template-for-flyoutitems-and-menuitems"></a>Шаблон по умолчанию для элементов FlyoutItem и MenuItem
+Внутри оболочки используется приведенный ниже шаблон для реализации по умолчанию. Это отличная отправная точка, если все, что вам требуется, — внести небольшие изменения в существующие макеты. Он также демонстрирует возможности диспетчера визуальных состояний для всплывающих элементов. Этот же шаблон можно использовать для элементов MenuItem.
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## <a name="flyoutitem-tab-order"></a>Последовательность табуляции для FlyoutItem
 
@@ -446,10 +509,10 @@ Shell.Current.CurrentItem = aboutItem;
 
 В этом примере `MenuItemTemplate` на уровне оболочки задается для каждого объекта `MenuItem`, чтобы заголовок каждого объекта `MenuItem` отображался курсивом:
 
-[![Снимок экрана шаблонных объектов в MenuItem для iOS и Android](flyout-images/menuitem-templated.png "Шаблонные объекты MenuItem в оболочке")](flyout-images/menuitem-templated-large.png#lightbox "Шаблонные объекты MenuItem в оболочке")
+[![Снимок экрана шаблонных объектов MenuItem для iOS и Android](flyout-images/menuitem-templated.png "Шаблонные объекты MenuItem оболочки")](flyout-images/menuitem-templated-large.png#lightbox "Шаблонные объекты MenuItem оболочки")
 
 > [!NOTE]
-> Оболочка предоставляет свойства [`Text`](xref:Xamarin.Forms.MenuItem.Text) и [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `MenuItemTemplate`.
+> Оболочка предоставляет свойства [`Text`](xref:Xamarin.Forms.MenuItem.Text) и [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) для [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) в `MenuItemTemplate`. Можно также использовать `Title` вместо `Text` и `Icon` вместо `IconImageSource`, что позволяет повторно использовать один и тот же шаблон для пунктов меню и пунктов всплывающего элемента.
 
 Так как `Shell.MenuItemTemplate` является присоединенным свойством, для отдельных объектов `MenuItem` можно задавать разные шаблоны:
 
@@ -488,6 +551,10 @@ Shell.Current.CurrentItem = aboutItem;
     </MenuItem>
 </Shell>
 ```
+
+
+> [!NOTE]
+> Шаблон, применяемый для [пунктов всплывающего элемента](#default-template-for-flyoutitems-and-menuitems), можно использовать и для пунктов меню.
 
 В этом примере `MenuItemTemplate` на уровне оболочки задается для первого объекта `MenuItem`, а для второго объекта `MenuItem` задается встроенный шаблон `MenuItemTemplate`.
 

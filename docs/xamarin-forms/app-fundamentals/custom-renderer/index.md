@@ -6,13 +6,13 @@ ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.date: 12/03/2019
+ms.openlocfilehash: b87e713f89951d03408fa559bcf6e02cdae65e28
+ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978128"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74824241"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Пользовательские отрисовщики Xamarin.Forms
 
@@ -46,18 +46,14 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) — это предст
 
 Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell) — это ячейка, которую можно добавить к [`ListView`](xref:Xamarin.Forms.ListView) или [`TableView`](xref:Xamarin.Forms.TableView) и которая содержит представления, определяемые разработчиком. В этой статье показано, как создать пользовательский отрисовщик для `ViewCell`, размещенного в элементе управления Xamarin.Forms `ListView`. Это предотвратит постоянные вызовы вычисления макета Xamarin.Forms во время прокрутки `ListView`.
 
+## <a name="customizing-a-webviewhybridwebviewmd"></a>[Настройка WebView](hybridwebview.md)
+
+Xamarin.Forms [`WebView`](xref:Xamarin.Forms.WebView) — это представление, позволяющее отображать веб-содержимое и содержимое HTML в приложении. В этой статье рассказывается, как создать пользовательский отрисовщик, расширяющий возможности `WebView` и позволяющий вызывать код C# из JavaScript.
+
 ## <a name="implementing-a-viewviewmd"></a>[Реализация представления](view.md)
 
 Настраиваемые элементы управления пользовательского интерфейса Xamarin.Forms должны быть производными от класса [`View`](xref:Xamarin.Forms.View), который используется для размещения макетов и элементов управления на экране. В этой статье показано, как создать пользовательский отрисовщик для пользовательского элемента управления Xamarin.Forms, который используется для отображения видеопотока для предварительного просмотра с камеры устройства.
 
-## <a name="implementing-a-hybridwebviewhybridwebviewmd"></a>[Реализация HybridWebView](hybridwebview.md)
-
-В этой статье показано, как создать пользовательский отрисовщик для пользовательского элемента управления `HybridWebView`, который показывает, как улучшить зависящие от платформы веб-элементы управления, чтобы разрешить вызов кода C# из JavaScript.
-
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Реализация видеопроигрывателя](video-player/index.md)
 
 В этой статье показано, как написать отрисовщики, чтобы реализовать пользовательский элемент управления `VideoPlayer`, который может воспроизводить видео из Интернета, видео, внедренные в качестве ресурсов приложения, или видео, хранящиеся в библиотеке видео на устройстве пользователя. Демонстрируется несколько методов, включая реализации методов и привязываемые свойства только для чтения.
-
-## <a name="related-links"></a>Связанные ссылки
-
-- [Эффекты](~/xamarin-forms/app-fundamentals/effects/index.md)

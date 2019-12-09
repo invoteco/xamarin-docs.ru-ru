@@ -6,13 +6,13 @@ ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2019
-ms.openlocfilehash: 0841cb0cbe97644f3bb53105887f3adadf9bf6c5
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.date: 11/27/2019
+ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820943"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681344"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Повышение производительности приложений Xamarin.Forms
 
@@ -43,7 +43,7 @@ XAMLC по умолчанию включен в новых решениях Xama
 
 ## <a name="reduce-unnecessary-bindings"></a>Сокращение количества ненужных привязок
 
-Не используйте привязки для содержимого, которое можно легко задать статически. В привязке данных, которые не должны быть привязаны, нет никакой выгоды, так как привязки нерентабельны с точки зрения затрат. Например, установка `Button.Text = "Accept"` связана с меньшими издержками, чем привязка [`Button.Text`](xref:Xamarin.Forms.Button.Text) к свойству `string` компонента ViewModel со значением "Accept".
+Не используйте привязки для содержимого, которое можно легко задать статически. В привязке данных, которые не должны быть привязаны, нет никакой выгоды, так как привязки нерентабельны с точки зрения затрат. Например, установка `Button.Text = "Accept"` связана с меньшими издержками, чем привязка [`Button.Text`](xref:Xamarin.Forms.Button.Text) к свойству `string` компонента ViewModel со значением Accept.
 
 ## <a name="use-fast-renderers"></a>Использование быстрых отрисовщиков
 
@@ -157,6 +157,41 @@ XAMLC по умолчанию включен в новых решениях Xama
 - Не обновляйте экземпляры [`Label`](xref:Xamarin.Forms.Label) чаще, чем требуется, так как изменение размера метки может привести к пересчету всего макета экрана.
 - Не задавайте свойство [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment), если это не требуется.
 - По возможности задайте свойству [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) любых экземпляров [`Label`](xref:Xamarin.Forms.Label) значение [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap).
+
+## <a name="use-asynchronous-programming"></a>Использование асинхронного программирования
+
+С помощью асинхронного программирования можно увеличить общую скорость реагирования приложения и избежать появления узких мест производительности. В .NET [асинхронная модель на основе задач](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) является рекомендуемым конструктивным шаблоном для реализации асинхронных операций. Однако неправильное использование этой модели может привести к созданию приложений с низкой производительностью. Поэтому при применении асинхронной модели на основе задач следует соблюдать приведенные ниже рекомендации.
+
+### <a name="fundamentals"></a>Основы
+
+- Разберитесь в жизненном цикле задачи, представленном перечислением `TaskStatus`. Дополнительные сведения см. в разделах [Значение TaskStatus](https://devblogs.microsoft.com/pfxteam/the-meaning-of-taskstatus/) и [Состояние задачи](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap#task-status).
+- Используйте метод `Task.WhenAll` для асинхронного ожидания завершения нескольких асинхронных операций вместо ожидания каждой из ряда асинхронных операций по-отдельности с помощью `await`. Дополнительные сведения см. в разделе [Task.WhenAll](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Используйте метод `Task.WhenAny` для асинхронного ожидания завершения одной из нескольких асинхронных операций. Дополнительные сведения см. в разделе [Task.WhenAny](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Используйте метод `Task.Delay` для создания объекта `Task`, который завершается после определенного времени. Это полезно в различных ситуациях, включая опрос данных и задержку обработки введенных пользователем данных на заданный период времени. Дополнительные сведения см. в разделе [Task.Delay](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskdelay).
+- Выполняйте синхронные операции, интенсивно использующие ЦП, в пуле потоков с помощью метода `Task.Run`. Это ускоренный вариант метода `TaskFactory.StartNew` с оптимальным набором аргументов. Дополнительные сведения см. в разделе [Task.Run](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskrun).
+- Старайтесь не создавать асинхронные конструкторы. Вместо этого используйте события жизненного цикла или отдельную логику инициализации для правильного ожидания (`await`) любой инициализации. Дополнительные сведения см. в записи блога [Async Constructors](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) (Асинхронные конструкторы) на сайте blog.stephencleary.com.
+- Используйте шаблон отложенной задачи, чтобы избежать ожидания завершения асинхронных операций во время запуска приложения. Дополнительные сведения см. в разделе [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
+- Создайте оболочку задачи для существующих асинхронных операций, которые не используют асинхронную модель на основе задач, путем создания объектов `TaskCompletionSource<T>`. Эти объекты обеспечивают возможности программирования `Task` и позволяют контролировать время существования и завершение связанной задачи `Task`. Дополнительные сведения см. в записи блога [The Nature of TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/) (Суть типа TaskCompletionSource).
+asynchronous-mvvm-applications-commands
+- Когда нет необходимости обрабатывать результат асинхронной операции, следует возвращать объект `Task` вместо ожидаемого объекта `Task`. Это более производительный подход, так как переключать контекст приходится реже.
+- Используйте библиотеку потоков данных "Библиотека параллельных задач" (TPL) в ситуациях, когда, например, необходимо обрабатывать данные по мере того, как они становятся доступными, или когда несколько операций должны взаимодействовать друг с другом асинхронно. Дополнительные сведения см. в статье [Поток данных (библиотека параллельных задач)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
+
+### <a name="ui"></a>ИП
+
+- Вызывайте асинхронную версию API, если она доступна. Это позволит избежать блокирования потока пользовательского интерфейса, что повысит удобство работы пользователя с приложением.
+- Обновляйте элементы пользовательского интерфейса данными из асинхронных операций в потоке пользовательского интерфейса, чтобы избежать возникновения исключений. Однако изменения свойства `ListView.ItemsSource` будут автоматически маршалироваться в поток пользовательского интерфейса. Сведения о том, как определить, выполняется ли код в потоке пользовательского интерфейса, см. в разделе [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+
+    > [!IMPORTANT]
+    > Все свойства элементов управления, которые изменяются посредством привязки данных, будут автоматически маршалироваться в поток пользовательского интерфейса.
+
+### <a name="error-handling"></a>Обработка ошибок
+
+- Ознакомьтесь с асинхронной обработкой исключений. Необработанные исключения, создаваемые асинхронно выполняемым кодом, распространяются обратно в вызывающий поток, за исключением отдельных сценариев. Дополнительные сведения см. в статье [Обработка исключений (библиотека параллельных задач)](/dotnet/standard/parallel-programming/exception-handling-task-parallel-library).
+- Избегайте создания методов `async void`. Вместо этого создавайте методы `async Task`. Это упрощает обработку ошибок, компоновку и тестирование. Исключением из этого правила являются асинхронные обработчики событий, которые должны возвращать `void`. Дополнительные сведения см. в разделе [Избегайте async void](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#avoid-async-void).
+- Не смешивайте блокирующий и асинхронный код путем вызова методов `Task.Wait`, `Task.Result` или `GetAwaiter().GetResult`, так как это может привести к возникновению взаимоблокировки. Однако если это правило необходимо нарушить, предпочтительным подходом является вызов метода `GetAwaiter().GetResult`, так как он сохраняет исключения задачи. Дополнительные сведения см. в разделах [Соблюдайте асинхронность от начала до конца](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#async-all-the-way) и [Обработка исключений задач в .NET 4.5](https://devblogs.microsoft.com/pfxteam/task-exception-handling-in-net-4-5/).
+- По возможности используйте метод `ConfigureAwait` для создания кода, не зависящего от контекста. Код, не зависящий от контекста, имеет более высокую производительность в мобильных приложениях и позволяет предотвращать взаимоблокировки при работе с частично асинхронной базой кода. Дополнительные сведения см. в разделе [Конфигурируйте контекст](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#configure-context).
+- Используйте *задачи продолжения* для таких функций, как обработка исключений, созданных предыдущей асинхронной операцией, и отмена продолжения перед его запуском либо во время его выполнения. Дополнительные сведения см. в статье [Создание цепочки задач с помощью задач продолжения](/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks).
+- Используйте асинхронную реализацию `ICommand`, когда асинхронные операции вызываются из `ICommand`. Это позволит обрабатывать все исключения в логике асинхронных команд. Дополнительные сведения см. в статье [Асинхронное программирование. Шаблоны для асинхронных MVVM-приложений: команды](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands).
 
 ## <a name="choose-a-dependency-injection-container-carefully"></a>Тщательный выбор контейнера внедрения зависимостей
 

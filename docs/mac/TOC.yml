@@ -27,7 +27,7 @@
           href: app-fundamentals/xib.md
         - name: Проектирование пользовательского интерфейса .storyboard/.xib-less
           href: app-fundamentals/xibless-ui.md
-        - name: Изображения
+        - name: Образы
           href: app-fundamentals/image.md
         - name: "Привязка данных и кодирование типа \"ключ\_— значение\""
           href: app-fundamentals/databinding.md
@@ -224,4 +224,4 @@
     - name: Заметки о выпуске
       href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
     - name: Примеры
-      href: samples/index.yml
+      href: samples/index.md

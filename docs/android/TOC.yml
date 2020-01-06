@@ -660,4 +660,4 @@
     - name: Заметки о выпуске
       href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
     - name: Примеры
-      href: samples/index.yml
+      href: samples/index.md

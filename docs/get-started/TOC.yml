@@ -26,7 +26,7 @@
     - name: Первое приложение
       href: first-app/index.md
     - name: Краткие руководства
-      href: quickstarts/index.yml
+      href: quickstarts/index.md
       expanded: true
       items:
         - name: Файл > Создать
@@ -70,11 +70,7 @@
     - name: Дополнительные сведения о Xamarin
       expanded: true
       items:
-        - name: Приложения в машинном коде
-          href: ~/cross-platform/get-started/introduction-to-mobile-development.md
         - name: 'Разработчики, использующие .NET'
-          href: ~/cross-platform/desktop/index.md
-        - name: 'Разработчики, использующие ASP.NET'
           href: ~/cross-platform/desktop/index.md
         - name: 'Разработчики, использующие Java'
           href: ~/android/get-started/java-developers.md

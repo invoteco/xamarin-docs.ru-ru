@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/07/2019
+  ms.date: 12/11/2019
 abstract:
   description: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
 sections:
@@ -103,11 +103,17 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: imagebutton.md
             title: ImageButton
-          - href: layouts/index.md
+          - href: indicatorview.md
+            html: 'Сведения о том, как использовать элемент управления IndicatorView для отображения индикаторов, представляющих количество элементов и текущую позицию в элементе CarouselView.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: indicatorview.md
+            title: IndicatorView
+          - href: layouts/index.yml
             html: Сведения об организации содержимого с помощью элементов управления и компонентов макета в Xamarin.Forms.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: layouts/index.md
+              href: layouts/index.yml
             title: Макеты
           - href: listview/index.md
             html: Сведения об использовании элемента управления ListView для вывода списков данных.
@@ -175,6 +181,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: styles/index.md
             title: Стили
+          - href: swipeview.md
+            html: 'Сведения о том, как использовать элемент SwipeView для предоставления пунктов контекстного меню, открывающихся с помощью жеста прокрутки.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: swipeview.md
+            title: SwipeView
           - href: switch.md
             html: Сведения о задании логических значений с помощью Switch.
             image:

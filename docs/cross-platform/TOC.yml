@@ -1,4 +1,4 @@
-- name: Кроссплатформенные приложения
+- name: Кроссплатформенный
   href: index.yml
   expanded: true
   items:
@@ -37,7 +37,7 @@
           href: app-fundamentals/code-sharing.md
         - name: .NET Standard
           href: app-fundamentals/net-standard.md
-        - name: Общие проекты
+        - name: общие проекты;
           href: app-fundamentals/shared-projects.md
         - name: Переносимые библиотеки классов (PCL)
           href: app-fundamentals/pcl.md
@@ -62,7 +62,7 @@
       items:
         - name: 'C#'
           items:
-            - name: Обзор поддержки асинхронного выполнения
+            - name: Общие сведения о поддержке асинхронного выполнения
               href: platform/async.md
             - name: "6\_возможностей языка C#"
               href: platform/csharp-six.md
@@ -88,6 +88,8 @@
         - name: Производительность
           href: deploy-test/memory-perf-best-practices.md
           items:
+            - name: Производительность Xamarin.Forms
+              href: ~/xamarin-forms/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Производительность для Android
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Производительность для iOS
@@ -111,7 +113,7 @@
         - name: Отладка нескольких процессов
           href: deploy-test/multi-process-debugging.md
     - name: Разработчики классических приложений
-      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP developers'
       href: desktop/index.md
       items:
         - name: Сравнение жизненного цикла приложений
@@ -171,4 +173,4 @@
         - name: Обновление ссылок на компоненты в NuGet
           href: troubleshooting/component-nuget.md
     - name: Примеры
-      href: samples/index.yml
+      href: samples/index.md

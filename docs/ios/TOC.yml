@@ -226,7 +226,7 @@
             - name: Текстовый ввод
               href: user-interface/controls/text-input.md
             - name: Веб-представления
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: Программные ограничения макета
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: Трехмерные сенсорные технологии
           href: platform/3d-touch.md
-        - name: Технология Touch ID
-          href: platform/touchid.md
+        - name: Touch ID и Face ID
+          href: platform/touch-id-face-id.md
         - name: Платформа уведомлений пользователя
           items:
             - name: Обзор
@@ -1112,4 +1112,4 @@
     - name: Заметки о выпуске
       href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
     - name: Примеры
-      href: samples/index.yml
+      href: samples/index.md

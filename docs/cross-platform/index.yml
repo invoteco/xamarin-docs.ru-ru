@@ -1,89 +1,83 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Руководство по созданию кроссплатформенных приложений
+summary: Xamarin предоставляет решение для кроссплатформенной разработки мобильных и классических приложений, а также приложений для планшетов. В этом разделе содержатся сведения, которые применяются независимо от целевой платформы.
 metadata:
-  description: Руководство по созданию кроссплатформенных приложений для разработчиков мобильных приложений.
+  title: Руководство по созданию кроссплатформенных приложений
+  description: Xamarin предоставляет решение для кроссплатформенной разработки мобильных и классических приложений, а также приложений для планшетов. В этом разделе содержатся сведения, которые применяются независимо от целевой платформы.
   author: davidortinau
   ms.author: daortin
-  ms.date: 04/25/2018
+  ms.date: 12/23/2019
   ms.topic: landing-page
-abstract:
-  description: 'Xamarin предоставляет решение для кроссплатформенной разработки мобильных и классических приложений, а также приложений для планшетов. В этом разделе содержатся сведения, которые применяются независимо платформы.'
-  menu:
-    items:
-      - href: ~/cross-platform/samples/index.yml
-        text: Образцы Xamarin
-      - href: /visualstudio/
-        text: Visual Studio
-      - href: /visualstudio/mac/
-        text: Visual Studio для Mac
-sections:
-  - title: Приступая к работе
-    items:
-      - type: paragraph
-        text: 'Сведения о создании приложений с помощью Xamarin и C# для Android, iOS, macOS, UWP и т. д.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Требования
-            href: ~/cross-platform/get-started/requirements.md
-          - image:
-              src: ~/media/icons/i_desktop-phone.svg
-            text: Xamarin.Forms
-            href: ~/get-started/quickstarts/index.yml
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: Android
-            href: ~/android/get-started/hello-android/hello-android-quickstart
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-            text: iOS
-            href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-            text: Mac
-            href: ~/mac/get-started/hello-mac.md
-  - title: Направляющие
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: ~/cross-platform/get-started/index.md
-            html: Введение в разработку приложений с помощью Xamarin.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-              href: ~/cross-platform/get-started/index.md
-            title: Создание мобильных приложений
-          - href: ~/cross-platform/platform/index.md
-            html: 'Xamarin поддерживает C#, F# и подсистему шаблонов Razor.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: ~/cross-platform/platform/index.md
-            title: Языковая поддержка
-          - href: ~/cross-platform/app-fundamentals/index.md
-            html: Необходимые сведения для создания приложений.
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: ~/cross-platform/app-fundamentals/index.md
-            title: Общий доступ к коду
-          - href: ~/cross-platform/deploy-test/performance.md
-            html: Рекомендации по обеспечению безопасности и повышению производительности приложения.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
-              href: ~/cross-platform/deploy-test/performance.md
-            title: Производительность и безопасность
-          - href: ~/cross-platform/deploy-test/index.md
-            html: Советы по отладке и развертыванию.
-            image:
-              src: ~/media/icons/i_deploy-test.svg
-              href: ~/cross-platform/deploy-test/index.md
-            title: Развертывание и отладка
-          - href: ~/cross-platform/desktop/index.md
-            html: 'Рекомендации для разработчиков классических приложений .NET, заинтересованных в создании мобильных приложений.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: ~/cross-platform/desktop/index.md
-            title: Разработчики классических приложений
+  ms.openlocfilehash: 244eb52cd22e04518da8d69b6e74dd0e1b68bf0a
+  ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75488560"
+landingContent:
+- title: Создание кроссплатформенных приложений
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Требования
+      url: ~/cross-platform/get-started/requirements.md
+    - text: Xamarin.Forms
+      url: ~/get-started/quickstarts/index.yml
+    - text: .NET Standard
+      url: ~/cross-platform/app-fundamentals/net-standard.md
+  - linkListType: how-to-guide
+    links:
+    - text: Жизненный цикл разработки приложения
+      url: ~/cross-platform/get-started/introduction-to-mobile-sdlc.md
+    - text: Пошаговое руководство
+      url: ~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md
+- title: Языковая поддержка
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Обзор
+      url: ~/cross-platform/platform/index.md
+    - text: C#
+      url: ~/cross-platform/platform/csharp-six.md
+    - text: F#
+      url: ~/cross-platform/platform/fsharp/index.md
+    - text: Visual Basic
+      url: ~/cross-platform/platform/visual-basic/index.md
+    - text: Шаблоны HTML Razor
+      url: ~/cross-platform/platform/razor-html-templates/index.md
+- title: Производительность и безопасность
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Производительность Xamarin.Forms
+      url: /xamarin/xamarin-forms/deploy-test/performance?context=xamarin/cross-platform
+    - text: Производительность для Android
+      url: /xamarin/android/deploy-test/performance?context=xamarin/cross-platform
+    - text: Производительность для iOS
+      url: /xamarin/ios/deploy-test/performance?context=xamarin/cross-platform
+    - text: Производительность для Mac
+      url: /xamarin/mac/deploy-test/performance?context=xamarin/cross-platform
+    - text: Протокол TLS версии 1.2
+      url: ~/cross-platform/app-fundamentals/transport-layer-security.md
+- title: Развертывание и отладка
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Пользовательская конфигурация компоновщика
+      url: ~/cross-platform/deploy-test/linker.md
+  - linkListType: how-to-guide
+    links:
+    - text: Подключение к локальным веб-службам
+      url: ~/cross-platform/deploy-test/connect-to-local-web-services.md
+    - text: Отладка нескольких процессов
+      url: ~/cross-platform/deploy-test/multi-process-debugging.md
+- title: Разработчики классических приложений
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Сравнение жизненного цикла приложений
+      url: ~/cross-platform/desktop/lifecycle.md
+    - text: Сравнение элементов управления пользовательского интерфейса
+      url: ~/cross-platform/desktop/controls/index.md
+    - text: Руководство по переносу
+      url: ~/cross-platform/desktop/porting.md

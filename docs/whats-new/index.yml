@@ -1,135 +1,71 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Обновления в документации по Xamarin
+summary: Приглашаем вас узнать новости о документации по Xamarin.
 metadata:
   title: Обновления в документации по Xamarin
-  description: 'Узнайте, что нового в документации по Xamarin.'
+  description: Узнайте, что нового в документации по Xamarin.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
   author: davidbritch
   ms.author: dabritch
-  ms.date: 09/10/2019
-abstract:
-  description: Приглашаем вас узнать новости о документации по Xamarin.
-sections:
-  - title: Новые возможности
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: 2019-10.md
-            html: "Новое в документации по Xamarin на октябрь\_2019\_г.: выпуск Xamarin.Forms\_4.3 и другие обновления."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-10.md
-            title: "Октябрь 2019\_г."
-          - href: 2019-08.md
-            html: "Новое в документации по Xamarin на август 2019\_г.: выпуск Xamarin.Forms\_4.2, обновления пользовательского интерфейса и другие обновления."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-08.md
-            title: "Август 2019\_г."
-          - href: 2019-07.md
-            html: "Новое в документации по Xamarin на июль 2019\_г.: выпуск Xamarin.Forms\_4.1, обновления в разделе \"Данные и облачные службы\" и другие обновления."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-07.md
-            title: "Июль 2019\_г."
-          - href: 2019-06.md
-            html: "Новое в документации по Xamarin на июнь 2019\_г.: на портале docs.microsoft.com появились сведения о выпуске Xamarin.Forms\_4.0, обновления в разделе \"Данные и облачные службы\", а также документация по\_API."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-06.md
-            title: "Июнь 2019\_г."
-          - href: 2019-03.md
-            html: "Новое в документации по Xamarin на март 2019\_г.: новый пример по началу работы и 12\_новых учебников, а также сведения о Xamarin.Forms\_3.6 и\_3.5."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-03.md
-            title: "Март 2019\_г."
-  - title: Участие в создании документации
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: 'https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md'
-            html: 'Если вы хотите внести свой вклад в документацию по Xamarin, сначала ознакомьтесь с руководством для соавторов.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_library.svg'
-              href: 'https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md'
-            title: Руководство для соавторов
-          - href: 'https://github.com/MicrosoftDocs/xamarin-docs'
-            html: "Если у вас есть идеи и предложения по содержимому документации, откройте запрос в ее репозитории на\_GitHub."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_feedback.svg'
-              href: 'https://github.com/MicrosoftDocs/xamarin-docs'
-            title: Репозиторий документации по Xamarin в GitHub
-          - href: 'https://github.com/xamarin/Xamarin.Forms-api-docs'
-            html: 'Если вы хотите внести свой вклад в документацию по API Xamarin.Forms, воспользуйтесь для этого соответствующим репозиторием.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/xamarin/Xamarin.Forms-api-docs'
-            title: Репозиторий документации по API Xamarin.Forms в GitHub
-          - href: 'https://github.com/xamarin/apple-api-docs'
-            html: 'Если вы хотите внести свой вклад в документацию по API Xamarin.iOS или Xamarin.Mac, воспользуйтесь для этого соответствующим репозиторием.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/xamarin/apple-api-docs'
-            title: Репозиторий документации по API Xamarin.iOS и Mac в GitHub
-          - href: 'https://github.com/xamarin/android-api-docs'
-            html: 'Если вы хотите внести свой вклад в документацию по API Xamarin.Android, воспользуйтесь для этого соответствующим репозиторием.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/xamarin/android-api-docs'
-            title: Репозиторий документации по API Xamarin.Android в GitHub
-          - href: 'https://github.com/mono/skiasharp-api-docs'
-            html: 'Если вы хотите внести свой вклад в документацию по API SkiaSharp, воспользуйтесь для этого соответствующим репозиторием.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/mono/skiasharp-api-docs'
-            title: Репозиторий документации по API SkiaSharp в GitHub
-  - title: Заметки о выпуске продуктов
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-            html: Заметки о выпусках Xamarin.Forms.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
-              href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-            title: Xamarin.Forms
-          - href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
-            html: Заметки о выпусках Xamarin.Essentials.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
-              href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
-            title: Xamarin.Essentials
-          - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
-            html: Заметки о выпусках Xamarin.iOS.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
-            title: Xamarin.iOS
-          - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
-            html: Заметки о выпусках Xamarin.Android.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
-              href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
-            title: Xamarin.Android
-          - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-            html: Заметки о выпусках Xamarin.Mac.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-            title: Xamarin.Mac
-          - href: 'https://docs.microsoft.com/xamarin/tools/'
-            html: "Заметки о выпусках инструментов Xamarin, включая <a href=\"https://docs.microsoft.com/xamarin/tools/dotnet-embedding/release-notes/\">Внедрение\_.NET</a>, <a href=\"https://docs.microsoft.com/xamarin/tools/inspector/release-notes/\">Inspector и Workbooks</a>, <a href=\"https://docs.microsoft.com/xamarin/tools/ios-simulator/release-notes/\">Удаленный симулятор iOS для Windows</a> и <a href=\"https://docs.microsoft.com/xamarin/tools/profiler/release-notes/\">Profiler</a>."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
-              href: 'https://docs.microsoft.com/xamarin/tools/'
-            title: Инструменты
+  ms.date: 12/20/2019
+  ms.openlocfilehash: 262cf0019c7395c695853adb42268e8a397dbb5c
+  ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75489054"
+landingContent:
+- title: Новые возможности
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Декабрь 2019 г.
+      url: 2019-12.md
+    - text: Октябрь 2019 г.
+      url: 2019-10.md
+    - text: Август 2019 г.
+      url: 2019-08.md
+    - text: Июль 2019 г.
+      url: 2019-07.md
+    - text: Июнь 2019 г.
+      url: 2019-06.md
+    - text: Март 2019 г.
+      url: 2019-03.md
+- title: Участие в создании документации
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Репозиторий документации Xamarin
+      url: https://github.com/MicrosoftDocs/xamarin-docs
+    - text: Руководство для соавторов
+      url: https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md
+  - linkListType: reference
+    links:
+    - text: Репозиторий документации по API Xamarin.Forms
+      url: https://github.com/xamarin/Xamarin.Forms-api-docs
+    - text: Репозиторий документации по API Xamarin.iOS и Mac
+      url: https://github.com/xamarin/apple-api-docs
+    - text: Репозиторий документации по API Xamarin.Android
+      url: https://github.com/xamarin/android-api-docs
+    - text: Репозиторий документации по API SkiaSharp
+      url: https://github.com/mono/skiasharp-api-docs
+- title: Связанные страницы
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Обновления документации по .NET
+      url: https://docs.microsoft.com/dotnet/whats-new/
+    - text: Заметки о выпуске Xamarin.Forms
+      url: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+    - text: Заметки о выпуске Xamarin.Essentials
+      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+    - text: Заметки о выпуске Xamarin.iOS
+      url: https://docs.microsoft.com/xamarin/ios/release-notes/
+    - text: Заметки о выпуске Xamarin.Android
+      url: https://docs.microsoft.com/xamarin/android/release-notes/
+    - text: Заметки о выпуске Xamarin.Mac
+      url: https://docs.microsoft.com/xamarin/mac/release-notes/
+    - text: Заметки о выпуске средств Xamarin
+      url: https://docs.microsoft.com/xamarin/tools/

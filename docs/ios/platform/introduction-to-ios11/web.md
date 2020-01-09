@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/12/2017
-ms.openlocfilehash: ef9577aad756ae67ac9fed685d7e40faea33c316
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c52ac3c0f06d58ab5fff8228ca3bdf722056b5b6
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032054"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663451"
 ---
 # <a name="webkit-and-safari-changes-in-ios-11"></a>Изменения WebKit и Safari в iOS 11
 
@@ -20,7 +20,7 @@ ms.locfileid: "73032054"
 
 ## <a name="safariservices"></a>сафарисервицес
 
-`SFSafariViewController` была введена в iOS 9 в качестве варианта отображения веб-содержимого или проверки подлинности пользователей в приложении. Дополнительные сведения о его возможностях см. в разделе "Обзор [веб-представлений](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) ".
+`SFSafariViewController` была введена в iOS 9 в качестве варианта отображения веб-содержимого или проверки подлинности пользователей в приложении. Дополнительные сведения о его возможностях см. в разделе "Обзор [веб-представлений](~/ios/user-interface/controls/webview.md#sfsafariviewcontroller) ".
 
 в iOS 11 появились обновления стиля для контроллера представления Safari, что позволяет пользователям более эффективно работать между приложением и Интернетом. Например, удаление адресной строки теперь дает контроллеру представления Safari поведение обозревателя в приложении, а не мини-браузер. Можно также настроить цветовую схему так, чтобы она соответствовала цветовой схеме приложения, задав свойства `preferredBarTintColor` и `PreferredControlTintColor`.
 
@@ -66,7 +66,7 @@ var sfViewController = new SFSafariViewController(url, config);
 
 - Возможность управления файлами cookie
 - Фильтрация содержимого
-- Пользовательская загрузка ресурсов. 
+- Загрузка настраиваемых ресурсов
 
 Управление файлами cookie осуществляется с помощью нового класса [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) , который позволяет добавлять и удалять файлы cookie, получать все файлы cookie, хранящиеся в вквебвиев, и отслеживать изменения в хранилище файлов cookie.
 

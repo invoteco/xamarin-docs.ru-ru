@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: fbf847ef49be83494f593291fbb0a00934bc3ced
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a4bf0b89a9ab336bf47ddcd104760211d912f423
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022049"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663438"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Элементы управления пользовательского интерфейса в Xamarin. iOS
 
@@ -80,9 +80,9 @@ iOS предоставляет два основных способа указа
 
 приложения iOS, использующие пользовательский интерфейс навигации по вкладкам, создаются с помощью класса Уитаббарконтроллер. В этой статье мы рассмотрим, как настроить приложение с вкладками, которое содержит несколько контроллеров и представлений. Затем мы изучим, как загрузить Уитаббарконтроллер, если он не является корневым контроллером, например после экрана входа в систему.
 
-## <a name="web-viewsuiwebviewmd"></a>[Веб-представления](uiwebview.md)
+## <a name="web-viewswebviewmd"></a>[Веб-представления](webview.md)
 
-В этой статье рассматриваются все три веб-представления, предоставляемые Apple: `UIWebView`, `WKWebview`и `SFSafariViewController`, их сходства и различия, а также способы их использования.
+В этой статье мы рассмотрим веб-представления, предоставляемые компанией Apple —`WKWebview` и `SFSafariViewController`— их сходства и различия, а также способы их использования.
 
 ## <a name="related-links"></a>Связанные ссылки
 

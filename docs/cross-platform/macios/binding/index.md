@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: davidortinau
 ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7764d63991ec636043982509319e7097ef2091b
+ms.sourcegitcommit: d8af612b6b3218fea396d2f180e92071c4d4bf92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016283"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663261"
 ---
 # <a name="binding-objective-c"></a>Привязка Objective-C
 
@@ -48,7 +48,9 @@ ms.locfileid: "73016283"
 
 ## <a name="mac"></a>Mac
 
-Историческая [Привязка Mac](~/mac/platform/binding.md) выполняется в ручном режиме. Сейчас доступна [Предварительная](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) версия поддержки проекта привязки Mac для будущего выпуска Visual Studio для Mac.
+Чтобы привязать библиотеки macOS, следуйте инструкциям по [привязке Mac](~/mac/platform/binding.md) . Новую **библиотеку привязок Mac** можно создать в окне " **Новый проект** ":
+
+[диалоговое окно "![файл" создать проект привязок Mac "](images/new-bindings-library-sml.png)](images/new-bindings-library.png#lightbox)
 
 ## <a name="related-links"></a>Связанные ссылки
 

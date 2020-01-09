@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 78df4a7f4c90cd6459216f1f65dd09e0daae19f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026703"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607936"
 ---
 # <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -85,7 +85,7 @@ ms.locfileid: "73026703"
 3. Префикс приложения уже должен быть задан в качестве идентификатора вашей команды. Изменить его невозможно. Выберите "Explicit" (Явный) или "Wildcard App ID" (Шаблон ИД приложения), а затем введите идентификатор пакета (имя DNS в обратном порядке):
     - **Explicit**: com.[доменное_имя].[имя_приложения]
     - **Wildcard**:com.[доменное_имя].*
-4. Выберите любые [службы приложений](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices), которые требуются приложению.
+4. Выберите любые [службы приложений](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services), которые требуются приложению.
 5. Нажмите кнопку **Continue** (Продолжить) и следуйте инструкциям на экране, чтобы создать идентификатор приложения.
 
 ### <a name="creating-a-provisioning-profile"></a>Создание профиля подготовки

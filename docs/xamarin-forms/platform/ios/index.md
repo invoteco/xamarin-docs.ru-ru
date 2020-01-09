@@ -6,13 +6,13 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
-ms.openlocfilehash: c90cfc297914b585403ae84e7dbac11fd6e02836
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.date: 12/11/2019
+ms.openlocfilehash: 5d0e289ddeb7eabef6d96c8882c772c704c54b34
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170941"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489730"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>функции платформы iOS в Xamarin. Forms
 
@@ -30,14 +30,15 @@ ms.locfileid: "72170941"
 
 Для представлений Xamarin. Forms в iOS предусмотрены следующие функции, зависящие от платформы.
 
-- Установка цвета фона [`Cell`](xref:Xamarin.Forms.Cell) . Дополнительные сведения см. [в разделе цвет фона ячейки в iOS](cell-background-color.md).
+- Задание цвета фона [`Cell`](xref:Xamarin.Forms.Cell) . Дополнительные сведения см. [в разделе цвет фона ячейки в iOS](cell-background-color.md).
 - Обеспечение, введена текст встраивается в [ `Entry` ](xref:Xamarin.Forms.Entry) , корректируя размер шрифта. Дополнительные сведения см. [в разделе Размер шрифта записи в iOS](entry-font-size.md).
 - Задание цвета курсора [ `Entry` ](xref:Xamarin.Forms.Entry). Дополнительные сведения см. [в разделе Ввод цвета курсора в iOS](entry-cursor-color.md).
-- Управление перемещением ячеек заголовка [`ListView`](xref:Xamarin.Forms.ListView) во время прокрутки. Дополнительные сведения см. [в разделе стиль заголовка группы ListView в iOS](listview-group-header-style.md).
-- Управление тем, будет ли отключена анимация строк при обновлении коллекции элементов [`ListView`](xref:Xamarin.Forms.ListView) . Дополнительные сведения см. [в статье анимация строк ListView в iOS](listview-row-animations.md).
+- Управление тем, [`ListView`](xref:Xamarin.Forms.ListView) ли ячейки заголовка перемещаться во время прокрутки. Дополнительные сведения см. [в разделе стиль заголовка группы ListView в iOS](listview-group-header-style.md).
+- Управление тем, будет ли отключена анимация строк при обновлении коллекции [`ListView`](xref:Xamarin.Forms.ListView) Items. Дополнительные сведения см. [в статье анимация строк ListView в iOS](listview-row-animations.md).
 - Установка стиль разделителя [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. [в разделе стиль разделителя ListView в iOS](listview-separator-style.md).
 - Управление, когда происходит выбор элементов в [ `Picker` ](xref:Xamarin.Forms.Picker). Дополнительные сведения см. [в разделе Выбор элементов средства выбора в iOS](picker-selection.md).
 - Включение [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) свойство для задания можно просмотреть, выбрав для положения на [ `Slider` ](xref:Xamarin.Forms.Slider) панели, а не по необходимости перетащите `Slider` бегунка. Дополнительные сведения см. [в разделе ползунок бегунка в iOS](slider-thumb.md).
+- Управление переходом, используемым при открытии `SwipeView`. Дополнительные сведения см. в разделе [Свипевиев считывание режима перехода](swipeview-swipetransitionmode.md).
 
 Для страниц Xamarin. Forms в iOS предусмотрены следующие функции, зависящие от платформы.
 
@@ -54,7 +55,7 @@ ms.locfileid: "72170941"
 
 - Управление ли [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) жест касания обрабатывает или передает его на его содержимое. Дополнительные сведения см. [в разделе Скроллвиев Content соприкасается on IOS](scrollview-content-touches.md).
 
-Для работы с классом Xamarin. Forms [`Application`](xref:Xamarin.Forms.Application) в iOS предусмотрены следующие специальные функции платформы:
+Для класса [`Application`](xref:Xamarin.Forms.Application) Xamarin. Forms в iOS предоставляются следующие зависящие от платформы функции.
 
 - Отключение масштабирования специальных возможностей для именованных размеров шрифтов. Дополнительные сведения см. [в разделе масштабирование специальных возможностей для именованных размеров шрифтов в iOS](named-font-size-scaling.md).
 - Включение структурой элементов управления и Подготовка к просмотру обновлений, выполняемых в основном потоке. Дополнительные сведения см. [в разделе Основные обновления управления потоком в iOS](main-thread-updates-ui.md).
@@ -64,9 +65,9 @@ ms.locfileid: "72170941"
 
 Xamarin. Forms позволяет устанавливать стили и цвета пользовательского интерфейса на разных платформах, но существуют и другие варианты настройки темы для iOS с помощью API платформы в проекте iOS.
 
-[Узнайте больше](formatting.md) о форматировании пользовательского интерфейса с помощью интерфейсов API для iOS, таких как конфигурация **info. plist** и API `UIAppearance`.
+[Узнайте больше](formatting.md) о форматировании пользовательского интерфейса с помощью интерфейсов API для iOS, таких как конфигурация **info. plist** и `UIAppearance` API.
 
-![](images/status-white-sml.png "данные для iOS")
+![](images/status-white-sml.png "iOS Theming")
 
 ## <a name="other-ios-features"></a>Другие функции iOS
 

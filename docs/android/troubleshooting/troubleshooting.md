@@ -7,19 +7,19 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: ec5c6e4c4c47995e78c1819007a8fa5660873bd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026595"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488937"
 ---
 # <a name="troubleshooting-tips"></a>Советы по устранению неполадок
 
 ## <a name="getting-diagnostic-information"></a>Получение диагностических сведений
 
 В Xamarin. Android есть несколько мест, которые следует рассмотреть при отслеживании различных ошибок.
-К ним относятся следующие методы.
+Сюда входит следующее.
 
 1. Выходные данные диагностики MSBuild.
 2. Журналы развертывания устройств.
@@ -36,7 +36,7 @@ ms.locfileid: "73026595"
 1. Щелкните **сервис > параметры...**
 2. В представлении дерева слева выберите **проекты и решения > сборка и запуск** .
 3. На правой панели задайте для раскрывающегося списка детализации выходных данных сборки MSBuild значение диагностика.
-4. Нажмите кнопку **ОК**
+4. Нажмите кнопку **ОК**.
 5. Выполните очистку и перестройку пакета.
 6. Диагностические данные отображаются на панели вывода.
 
@@ -45,7 +45,7 @@ ms.locfileid: "73026595"
 1. Щелкните **Visual Studio для Mac > предпочтения...**
 2. В представлении дерева слева выберите **проекты > сборка** .
 3. На правой панели задайте для раскрывающегося списка подробный журнал значение диагностика.
-4. Нажмите кнопку **ОК**
+4. Нажмите кнопку **ОК**.
 5. Перезапустите Visual Studio для Mac.
 6. Выполните очистку и перестройку пакета.
 7. Диагностические данные отображаются на панели ошибок (**просмотрите > pad > ошибки** ), нажав кнопку выходные данные построения.
@@ -89,7 +89,7 @@ Xamarin. Android поддерживает следующие системные 
   > [!NOTE]
   > Длина значений системных свойств Android не может превышать 92 символов.
 
-  Пример.
+  Пример:
 
   ```
   adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
@@ -662,7 +662,7 @@ E/dalvikvm( 123): VM aborting
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-Это известная проблема, о которой сообщается в [56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). Обходной путь заключается в отключении LLVM.
+Это известная проблема — решение заключается в отключении LLVM.

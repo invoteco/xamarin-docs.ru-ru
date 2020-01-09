@@ -7,16 +7,16 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
-ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+ms.openlocfilehash: a0ab6a965c2507c01f5b7ebdc3670e6661ca481e
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72032581"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545641"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Рисование простого кружка в SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Познакомьтесь с основами SkiaSharp документе, включая полотна и рисования объектов_
 
@@ -24,7 +24,7 @@ _Познакомьтесь с основами SkiaSharp документе, в
 
 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программа содержит все примеры кода для этой серии статей SkiaSharp. На первой странице размещен право **простого кружка** и вызывает класс страницы [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Этот код показывает, как нарисовать круг в центре страницы с радиусом 100 пикселей. Имеет красный цвет контура круга и внутренней окружности — синий.
 
-![](circle-images/circleexample.png "Синий круг, выделены красным")
+![](circle-images/circleexample.png "A blue circle outlined in red")
 
 [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) Страницы класс является производным от `ContentPage` и содержит два `using` директивы для SkiaSharp пространств имен:
 
@@ -60,8 +60,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [ `SKPaintSurfaceEventArgs` ](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs) Объект события имеет два свойства:
 
-- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info) типа [`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
-- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface) типа [`SKSurface`](xref:SkiaSharp.SKSurface)
+- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info) типа [`SKImageInfo`](xref:SkiaSharp.SKImageInfo).
+- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface) типа [`SKSurface`](xref:SkiaSharp.SKSurface).
 
 `SKImageInfo` Структура содержит сведения об области рисования, самое главное, ее ширину и высоту в пикселях. `SKSurface` Представляет самой поверхности рисования. В этой программе поверхности рисования является дисплея, но в других программах `SKSurface` объект также может представлять точечный рисунок, который используется для рисования в SkiaSharp.
 
@@ -106,7 +106,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - [`Stroke`](xref:SkiaSharp.SKPaintStyle.Stroke)
 - [`StrokeAndFill`](xref:SkiaSharp.SKPaintStyle.StrokeAndFill)
 
-Значение по умолчанию — `Fill`. Третий параметр для обводки линии и цвет заливки.
+Значение по умолчанию — `Fill`. Третий параметр для обводки линии и цвет заливки.
 
 Задайте [ `Color` ](xref:SkiaSharp.SKPaint.Color) свойства со значением типа [ `SKColor` ](xref:SkiaSharp.SKColor). Один из способов получения `SKColor` значение — преобразование Xamarin.Forms `Color` значение `SKColor` значение с помощью метода расширения [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) В класс `SkiaSharp.Views.Forms` пространство имен включает в себя другие методы, которые преобразуют между Xamarin.Forms и SkiaSharp значениями.
 
@@ -141,9 +141,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 На этот раз `DrawCircle` вызов заполняет элемент управления circle, с помощью нового свойства `SKPaint` объекта.
 
-Ниже приведен программу на iOS, Android и универсальной платформы Windows.
+Вот программа, выполняемая в iOS и Android:
 
-[![](circle-images/simplecircle-small.png "Тройной снимок экрана простой круговой страницы")](circle-images/simplecircle-large.png#lightbox "Тройной снимок экрана простой круговой страницы")
+[![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
 
 При запуске программы самостоятельно, вы можете включить телефон или симулятор сторону, чтобы увидеть, как перерисовке рисунок. Каждый раз, когда должна быть перерисована, рисунок `PaintSurface` обработчик событий вызывается снова.
 
@@ -154,7 +154,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 > [!NOTE]
 > `SKPaint` Класс определяет [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) Чтобы включить сглаживание при подготовке к просмотру рисунков. Сглаживание обычно приводит к визуально более гладкие грани, поэтому возможно, нужно присвоить этому свойству `true` в большинстве вашей `SKPaint` объектов. Для простоты данное свойство содержит _не_ в большинство образцов страниц.
 
-Хотя Ширина контура окружности задается как 25 пикселов &mdash; или 1 четверть радиуса круга &mdash; кажется более тоньше, и есть веская причина этого: Половина ширины линии скрыта синим кругом. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
+Несмотря на то, что ширина контура круга указывается как 25 пикселей &mdash; или части радиус круга &mdash; кажется более тонкие и имеется убедительная причина для этого: Половинная ширина линии замещается синий круг. Аргументы для `DrawCircle` метод определяет абстрактный геометрические координаты круга. Синий внутренней подбирается к такому измерению к ближайшей точки, но 25 пикселей всей структуры служит связующим звеном геометрические круг &mdash; половина на внутри, а другая половина — снаружи.
 
 В приведенном ниже примере [интеграция с Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) статья демонстрирует это визуально.
 

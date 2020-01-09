@@ -6,26 +6,26 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/12/2019
-ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 11/04/2019
+ms.openlocfilehash: 8888f1615f250a908930cec9058a54bd6e7fedc2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696422"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490081"
 ---
 # <a name="xamarinforms-searchbar"></a>Сеарчбар Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-[@No__t_1](xref:Xamarin.Forms.SearchBar) Xamarin. Forms — это пользовательский элемент управления вводом, используемый для запуска поиска. Элемент управления `SearchBar` поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана показан `SearchBar` запрос с результатами, отображаемыми в `ListView`:
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) Xamarin. Forms — это пользовательский элемент управления вводом, используемый для запуска поиска. Элемент управления `SearchBar` поддерживает текст заполнителя, ввод запроса, выполнение поиска и отмену. На следующем снимке экрана показан `SearchBar` запрос с результатами, отображаемыми в `ListView`:
 
 [![Снимок экрана Сеарчбар в iOS и Android](searchbar-images/device-searchbars-cropped.png "Сеарчбар в iOS и Android")](searchbar-images/device-searchbars.png#lightbox "Сеарчбар в iOS и Android")
 
 Класс `SearchBar` определяет следующие свойства:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) — это `Color`, определяющая цвет кнопки отмены.
-* `CharacterSpacing` типа `double` — интервал между символами `SearchBar`ого текста.
+* `CharacterSpacing` с типом `double` представляет собой интервал между знаками текста `SearchBar`.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) — это `FontAttributes` перечислимое значение, определяющее, является ли шрифт `SearchBar` полужирным, курсивом или ни одной.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) — это `string`, который определяет семейство шрифтов, используемое `SearchBar`.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) может быть `NamedSize` значением перечисления или `double` значением, представляющим определенные размеры шрифтов на разных платформах.
@@ -48,7 +48,7 @@ ms.locfileid: "72696422"
 <SearchBar Placeholder="Search items..." />
 ```
 
-@No__t_0 также можно создать в коде:
+`SearchBar` также можно создать в коде:
 
 ```csharp
 SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
@@ -85,6 +85,9 @@ SearchBar searchBar = new SearchBar
 На следующем снимке экрана показан результирующий элемент управления `SearchBar`:
 
 [![Снимок экрана настраиваемого Сеарчбар в iOS и Android](searchbar-images/device-searchbars-styled-cropped.png "Настраиваемые Сеарчбар в iOS и Android")](searchbar-images/device-searchbars-styled.png#lightbox "Настраиваемые Сеарчбар в iOS и Android")
+
+> [!NOTE]
+> В iOS класс `SearchBarRenderer` содержит переопределяемый метод `UpdateCancelButton`. Этот метод управляет тем, когда появляется кнопка Отмена, и может быть переопределена в пользовательском модуле подготовки отчетов. Дополнительные сведения о пользовательских модулях подготовки отчетов см. в разделе [пользовательские модули подготовки Xamarin. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="perform-a-search-with-event-handlers"></a>Выполнение поиска с помощью обработчиков событий
 

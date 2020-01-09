@@ -6,18 +6,18 @@ ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a8b63638861e8d44deb4ea72959d7461190f7713
+ms.sourcegitcommit: 6266ef043ae0289f174e901f204f2a280a53c071
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029747"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545810"
 ---
 # <a name="net-embedding-limitations"></a>Ограничения внедрения .NET
 
 В этом документе объясняются ограничения, связанные с внедрением .NET, и, когда это возможно, предоставляет обходные пути для них.
 
-## <a name="general"></a>Общее
+## <a name="general"></a>Общие
 
 ### <a name="use-more-than-one-embedded-library-in-a-project"></a>Использование в проекте более одной внедренной библиотеки
 
@@ -39,7 +39,7 @@ ms.locfileid: "73029747"
 
 ## <a name="objective-c-generated-code"></a>Сформированный код цели-C
 
-### <a name="nullability"></a>Допустимость значений NULL
+### <a name="nullability"></a>Допускает значения NULL
 
 В .NET нет метаданных, указывающих, является ли пустая ссылка приемлемой или нет для API. Большинство API-интерфейсов вызовут `ArgumentNullException`, если они не могут справиться с `null`ным аргументом. Это проблематично, так как обработка исключений с заданием на языке C — это что-то лучше избегать.
 
@@ -48,5 +48,11 @@ ms.locfileid: "73029747"
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 
 В настоящее время внедрение .NET не поддерживает bitcode в iOS, которые включены для некоторых шаблонов проектов Xcode. Для успешной связи с созданными платформами необходимо отключить.
+
+* Для iOS bitcode не является обязательным для отправки приложений в AppStore Apple. Xamarin. iOS не поддерживает его для iOS, так как созданный bitcode — "inline Assembly". Это не дает никаких преимуществ на платформе iOS, так как не может быть оптимизировано на стороне сервера, но значительно увеличивает время создания двоичных файлов.
+
+* Для tvOS и watchOS bitcode требуется для отправки приложений в AppStore Apple. Xamarin. iOS поддерживает bitcode для tvOS (как "Встраиваемая сборка") и watchOS (как "LLVM/IR") для выполнения этого требования.
+
+* Для macOS поддержка bitcode в настоящее время не является обязательной и не поддерживается Xamarin. Mac.
 
 ![Bitcode, параметр](images/ios-bitcode-option.png)

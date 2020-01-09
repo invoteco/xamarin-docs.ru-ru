@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ef0bcba7a59984c6bad7091431fe00b1f1b7eee3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031794"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489093"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Дополнительные изменения платформ iOS 9
 
@@ -62,7 +62,7 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 - [CloudKit быстрое начало](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) — введение Apple в CloudKit.
 - [Справочник по CLOUDKIT JS](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) — документация по Apple CloudKit JS.
 - [Справочник по веб-службам CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) — Справочник по Apple, описывающий интерфейс HTTP для CloudKit.
-- [каталог CloudKit: Введение в CloudKit (Cocoa and JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599)-пример приложения Apple с использованием CloudKit и CloudKit JS.
+- [Каталог CloudKit. Введение в CloudKit (Cocoa и JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) — пример приложения Apple с использованием CloudKit и CloudKit JS.
 
 > [!IMPORTANT]
 > Компания Apple [предоставляет инструменты](https://developer.apple.com/support/allowing-users-to-manage-data/), которые помогают разработчикам надлежащим образом соблюдать Общий регламент по защите данных Европейского союза (GDPR).
@@ -131,7 +131,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 - Возможность использования _контекста проверки подлинности_ в вызовах цепочки ключей и поддержки для оценки списков управления доступом к цепочке ключей.
 - Возможность отмены запроса пользователя из кода.
 
-Дополнительные сведения о работе с Touch ID в Xamarin. iOS см. в статье Введение в документацию по [сенсорному идентификатору](~/ios/platform/touchid.md) .
+Дополнительные сведения см. [в статье идентификатор Touch и идентификатор лица с Xamarin. iOS](~/ios/platform/touch-id-face-id.md).
 
 ### <a name="lacontext-changes"></a>Лаконтекст изменения
 

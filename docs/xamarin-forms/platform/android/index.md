@@ -6,13 +6,13 @@ ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2019
-ms.openlocfilehash: 73e838b3a63132230cf594a3461c9d7ee6f302b8
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/11/2019
+ms.openlocfilehash: 94523bb019e366738de65ce0b05c70264fce738b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696952"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489769"
 ---
 # <a name="android-platform-features"></a>Возможности на платформе Android
 
@@ -24,16 +24,17 @@ ms.locfileid: "72696952"
 
 Для представлений, страниц и макетов Xamarin. Forms в Android доступны следующие функции для конкретной платформы:
 
-- Управление Z-порядком визуальных элементов для определения порядка рисования. Дополнительные сведения см. [в статье повышение прав висуалелемент на Android](visualelement-elevation.md).
-- Отключение устаревшего цветового режима на поддерживаемом [`VisualElement`](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе режим Висуалелемент прежних цветов в Android](legacy-color-mode.md).
+- Управление Z-порядком визуальных элементов, чтобы определить порядок отображения. Дополнительные сведения см. [в статье повышение прав висуалелемент на Android](visualelement-elevation.md).
+- Отключение режима устаревших цвет в поддерживаемой [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе режим Висуалелемент прежних цветов в Android](legacy-color-mode.md).
 
 Для представлений Xamarin. Forms на Android доступны следующие функции конкретной платформы:
 
-- Использование заполнения по умолчанию и значений тени для кнопок Android. Дополнительные сведения см. [в разделе Заполнение и тени кнопок на устройствах Android](button-padding-shadow.md).
-- Настройка параметров редактора метода ввода для [`Entry`](xref:Xamarin.Forms.Entry). Дополнительные сведения см. [в разделе Параметры редактора метода ввода для Android](entry-ime-options.md).
-- Включение тени на `ImageButton`. Дополнительные сведения см. [в статье Drop Shadows on Android](imagebutton-drop-shadow.md).
+- Используя Отбивка по умолчанию и значений тени Android кнопок. Дополнительные сведения см. [в разделе Заполнение и тени кнопок на устройствах Android](button-padding-shadow.md).
+- Настройка данный метод ввода параметров редактора для программируемой клавиатуры для [ `Entry` ](xref:Xamarin.Forms.Entry). Дополнительные сведения см. [в разделе Параметры редактора метода ввода для Android](entry-ime-options.md).
+- Включение тени `ImageButton`. Дополнительные сведения см. [в статье Drop Shadows on Android](imagebutton-drop-shadow.md).
 - Включение быстрой прокрутки в [`ListView`](xref:Xamarin.Forms.ListView) дополнительные сведения см. в статье [Быстрая прокрутка ListView в Android](listview-fast-scrolling.md).
-- Управление тем, может ли [`WebView`](xref:Xamarin.Forms.WebView) отображать смешанное содержимое. Дополнительные сведения см. [в статье WebView Mixed Content in Android](webview-mixed-content.md).
+- Управление переходом, используемым при открытии `SwipeView`. Дополнительные сведения см. в разделе [Свипевиев считывание режима перехода](swipeview-swipetransitionmode.md).
+- Управление ли [ `WebView` ](xref:Xamarin.Forms.WebView) можно отобразить смешанное содержимое. Дополнительные сведения см. [в статье WebView Mixed Content in Android](webview-mixed-content.md).
 - Включение масштабирования [`WebView`](xref:Xamarin.Forms.WebView). Дополнительные сведения см. [в разделе WebView Zoom on Android](webview-zoom-controls.md).
 
 Для ячеек Xamarin. Forms в Android предусмотрены следующие функции для конкретных платформ:
@@ -42,15 +43,15 @@ ms.locfileid: "72696952"
 
 Для страниц Xamarin. Forms в Android предусмотрены следующие функции для конкретных платформ:
 
-- Задание высоты панели навигации на [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Дополнительные сведения см. [в разделе высота Навигатионпаже Bar на устройстве Android](navigationpage-bar-height.md).
-- Отключение анимации переходов при переходе по страницам в [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). Дополнительные сведения см. [в разделе Анимация перехода на страницу таббедпаже в Android](tabbedpage-transition-animations.md).
-- Включение прокрутки между страницами в [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). Дополнительные сведения см. [в разделе Таббедпаже Page прокрутка на Android](tabbedpage-page-swiping.md).
-- Задание расположения и цвета панели инструментов на [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). Дополнительные сведения см. [в статье размещение и цвет панели инструментов таббедпаже в Android](tabbedpage-toolbar-placement-color.md).
+- Значение высоты элемента на панели навигации на [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Дополнительные сведения см. [в разделе высота Навигатионпаже Bar на устройстве Android](navigationpage-bar-height.md).
+- Отключение анимации перехода, при переходе по страницам в [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Дополнительные сведения см. [в разделе Анимация перехода на страницу таббедпаже в Android](tabbedpage-transition-animations.md).
+- Включение считывания между страницами в [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Дополнительные сведения см. [в разделе Таббедпаже Page прокрутка на Android](tabbedpage-page-swiping.md).
+- Установка инструментов расположение и цвет для [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Дополнительные сведения см. [в статье размещение и цвет панели инструментов таббедпаже в Android](tabbedpage-toolbar-placement-color.md).
 
 Для класса [`Application`](xref:Xamarin.Forms.Application) Xamarin. Forms в Android предусмотрены следующие специальные функции платформы:
 
-- Установка режима работы экранной клавиатуры. Дополнительные сведения см. [в разделе режим ввода с клавиатуры](soft-keyboard-input-mode.md).
-- Отключение [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) и [`Appearing`](xref:Xamarin.Forms.Page.Appearing) событий жизненного цикла страницы при приостановке и возобновлении соответственно для приложений, использующих AppCompat. Дополнительные сведения см. [в разделе события жизненного цикла страницы в Android](page-lifecycle-events.md).
+- Настройка режима работы экранной клавиатуры. Дополнительные сведения см. [в разделе режим ввода с клавиатуры](soft-keyboard-input-mode.md).
+- Отключение [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) и [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) странице события жизненного цикла на приостановить и возобновить соответственно, для приложений, использующих AppCompat. Дополнительные сведения см. [в разделе события жизненного цикла страницы в Android](page-lifecycle-events.md).
 
 ## <a name="platform-support"></a>Поддержка платформ
 
@@ -62,7 +63,7 @@ ms.locfileid: "72696952"
 
 Чтобы добавить темы дизайна материалов в проект Xamarin. Forms для Android, следуйте [инструкциям по установке для поддержки AppCompat](appcompat-material-design.md) .
 
-Ниже приведен пример **TODO** с `FormsApplicationActivity` по умолчанию:
+Ниже приведен пример **TODO** с `FormsApplicationActivity`по умолчанию:
 
 [![](images/before-appcompat-sml.png "Todo Sample Application Without AppCompat")](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
 
@@ -71,7 +72,7 @@ ms.locfileid: "72696952"
 [![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
 
 > [!NOTE]
-> При использовании `FormsAppCompatActivity` [базовые классы для некоторых настраиваемых модулей подготовки Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) будут отличаться.
+> При использовании `FormsAppCompatActivity`[базовые классы для некоторых настраиваемых модулей подготовки Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) будут отличаться.
 
 ## <a name="related-links"></a>Связанные ссылки
 

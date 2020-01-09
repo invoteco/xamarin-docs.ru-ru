@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031782"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488950"
 ---
 # <a name="introduction-to-ios-9"></a>Введение в iOS 9
 
@@ -141,7 +141,7 @@ _В этой статье представлены все новые и изме
 - Энтропия списка управления доступом (с помощью параметра пароль приложения) для шифрования элементов цепочки ключей, предоставленных приложением.
 - Поддержка создания и использования ключей в безопасном анклава (с помощью атрибута `kSecAttrTokenIDSecureEnclave`).
 
-Дополнительные сведения см. в статье Введение в документацию по [сенсорному идентификатору](~/ios/platform/touchid.md) .
+Дополнительные сведения см. в статье [идентификатор Touch и идентификатор лица в Xamarin. iOS](~/ios/platform/touch-id-face-id.md).
 
 ## <a name="right-to-left-language-support"></a>Поддержка языков с письмом справа налево
 

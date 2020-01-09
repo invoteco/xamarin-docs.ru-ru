@@ -6,17 +6,17 @@ ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2019
-ms.openlocfilehash: c1df3adfa67a363609b397731ed298155d7531be
-ms.sourcegitcommit: 483e0ab0e9f30382219084c0345519f1025169b2
+ms.date: 12/04/2019
+ms.openlocfilehash: 946cf65f7d83722fd388bed555b9d3f35c487708
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74809027"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489821"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Проверка подлинности пользователей с помощью Azure Active Directory B2C
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _Azure Active Directory B2C обеспечивает управление удостоверениями в облаке для мобильных и веб-приложений. В этой статье показано, как использовать Azure Active Directory B2C для интеграции управления удостоверениями в мобильное приложение с помощью библиотеки проверки подлинности Майкрософт._
 
@@ -26,15 +26,17 @@ Azure Active Directory B2C (ADB2C) — это служба управления 
 
 Процесс для интеграции службы управления удостоверениям Azure Active Directory B2C в мобильные приложения выглядит следующим образом:
 
-1. Создание клиента Azure Active Directory B2C
-1. Регистрация мобильного приложения в клиенте Azure Active Directory B2C
-1. Создание политик для регистрации и входа в систему и забытого потока паролей пользователя
+1. Создание клиента Azure Active Directory B2C.
+1. Регистрации вашего мобильного приложения в клиенте Azure Active Directory B2C.
+1. Создание политик для регистрации и входа и забытых пользовательских потоков паролей.
 1. Используйте библиотеку проверки подлинности Майкрософт (MSAL), чтобы запустить рабочий процесс проверки подлинности с помощью клиента Azure Active Directory B2C.
 
 > [!NOTE]
-> Azure Active Directory B2C поддерживает несколько поставщиков удостоверений, включая Microsoft, GitHub, Facebook, Twitter и т. д. Дополнительные сведения о Azure Active Directory B2C возможностях см. в [документации по Azure Active Directory B2C](/azure/active-directory-b2c/).
->
-> Библиотека проверки подлинности Майкрософт поддерживает несколько архитектур приложений и платформ. Дополнительные сведения о возможностях MSAL см. в разделе [Библиотека проверки подлинности Майкрософт](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) на GitHub.
+> Если у вас еще нет [подписки Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), создайте [бесплатную учетную запись Azure](https://aka.ms/azfree-docs-mobileapps), прежде чем начать работу.
+
+Azure Active Directory B2C поддерживает несколько поставщиков удостоверений, включая Microsoft, GitHub, Facebook, Twitter и т. д. Дополнительные сведения о Azure Active Directory B2C возможностях см. в [документации по Azure Active Directory B2C](/azure/active-directory-b2c/).
+
+Библиотека проверки подлинности Майкрософт поддерживает несколько архитектур приложений и платформ. Дополнительные сведения о возможностях MSAL см. в разделе [Библиотека проверки подлинности Майкрософт](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) на GitHub.
 
 ## <a name="configure-an-azure-active-directory-b2c-tenant"></a>Настройка клиента Azure Active Directory B2C
 
@@ -181,7 +183,7 @@ public partial class LoginPage : ContentPage
                 .WithPrompt(Prompt.SelectAccount)
                 .WithParentActivityOrWindow(App.UIParent)
                 .ExecuteAsync();
-    
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)

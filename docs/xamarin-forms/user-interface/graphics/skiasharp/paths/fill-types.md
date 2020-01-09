@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 924b66b3bdb66c2197b708d87e20eeb6f3ed9f46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770512"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545573"
 ---
 # <a name="the-path-fill-types"></a>Типы заполнения пути
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Обнаружение различных эффектов, поддерживаемых в средстве типы заполнения пути SkiaSharp_
 
 Возможно перекрытие двух контуров в пути и строки, которые составляют единый профиль могут перекрывать друг друга. Любой замкнутой области потенциально может быть заполнен, но может не потребоваться заполнить все замкнутые области. Ниже приведен пример:
 
-![](fill-types-images/filltypeexample.png "Указывает пяти звездочек частично filles")
+![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
 Вы располагаете полным контролем над это. Алгоритм заполнение регулируется [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) свойство `SKPath`, необходимо присвоить значение является членом [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) перечисления:
 
@@ -170,9 +170,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Как правило, должна влиять на тип заливки путь только заливки "и" не штрихов, однако два `Inverse` влияет на режимы, заливки и обводки. Для заливки, два `Inverse` типов заполнения области противоположно, чтобы заполнить область за пределами типа "звезда". Для штрихов, два `Inverse` типы цвета всем, кроме штриха. Использование этих типов обратный заполнения может привести некоторые нечетное эффекты, как показано на снимке экрана iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Тройной снимок экрана страницы Five-Pointed типа \"звезда\"")](fill-types-images/fivepointedstar-large.png#lightbox "тройной снимок экрана страницы Five-Pointed типа \"звезда\"")
+[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
-На снимках экрана Android и UWP демонстрируют типичный эффект четный и поворота, но порядок штриха и заливки также влияет на результаты.
+На снимке экрана Android показаны типичные эффекты «четный-нечетный» и «обмотка», но порядок штрихов и заливки также влияет на результаты.
 
 Алгоритм поворота зависит от направления, что линии. Обычно при создании пути, вы можете управлять этом направлении, как указано, что линии из одной точки в другую. Тем не менее `SKPath` класс также определяет методы, такие как `AddRect` и `AddCircle` , рисовать всю контуров. Чтобы контролировать, как рисуются эти объекты, методы включают параметр типа [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), который имеет два члена:
 
@@ -223,7 +223,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Это интересный образ создается с минимальным объемом кода:
 
-[![](fill-types-images/overlappingcircles-small.png "Тройной снимок экрана страницы перекрывающихся окружностей")](fill-types-images/overlappingcircles-large.png#lightbox "тройной снимок экрана страницы перекрывающихся окружностей")
+[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
 ## <a name="related-links"></a>Связанные ссылки
 

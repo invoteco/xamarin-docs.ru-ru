@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: dc72dc7549a697c7231045601851ba4108f29e1b
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697851"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489756"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Прокрутка Xamarin. Forms Карауселвиев
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет следующие свойства, связанные с прокруткой:
 
@@ -32,7 +32,7 @@ ms.locfileid: "72697851"
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) также определяет два метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , которые просматривают элементы в представлении. Одна из перегрузок прокручивается элемент по указанному индексу в представление, а другой Прокручивает указанный элемент в представление. Обе перегрузки имеют дополнительные аргументы, которые можно указать, чтобы указать точную позицию элемента после завершения прокрутки и следует ли анимировать прокрутку.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет событие [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) , которое возникает при вызове одного из методов [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Объект [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) , сопровождающий событие `ScrollToRequested`, имеет множество свойств, включая `IsAnimated`, `Index`, `Item` и `ScrollToPosition`. Эти свойства задаются из аргументов, указанных в вызовах метода `ScrollTo`.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет событие [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) , которое возникает при вызове одного из методов [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Объект [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) , сопровождающий событие `ScrollToRequested`, имеет множество свойств, включая `IsAnimated`, `Index`, `Item`и `ScrollToPosition`. Эти свойства задаются из аргументов, указанных в вызовах метода `ScrollTo`.
 
 Кроме того, [`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет событие `Scrolled`, которое срабатывает для указания на то, что прокрутка выполнена. Объект `ItemsViewScrolledEventArgs`, сопровождающий событие `Scrolled`, имеет много свойств. Дополнительные сведения см. в разделе [Определение прокрутки](#detect-scrolling).
 
@@ -83,7 +83,7 @@ void OnCarouselViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Прокрутка элемента по индексу в представлении
 
-Первая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) прокручивает элемент по указанному индексу в представлении. При наличии объекта [`CarouselView`](xref:Xamarin.Forms.CarouselView) с именем `carouselView` в следующем примере показано, как прокручивать элемент с индексом 6 в представление:
+Первая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) прокручивает элемент по указанному индексу в представлении. При наличии объекта [`CarouselView`](xref:Xamarin.Forms.CarouselView) с именем `carouselView`в следующем примере показано, как прокручивать элемент с индексом 6 в представление:
 
 ```csharp
 carouselView.ScrollTo(6);
@@ -94,7 +94,7 @@ carouselView.ScrollTo(6);
 
 ## <a name="scroll-an-item-into-view"></a>Прокрутить элемент на представление
 
-Вторая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) Прокручивает указанный элемент на представление. При наличии объекта [`CarouselView`](xref:Xamarin.Forms.CarouselView) с именем `carouselView` в следующем примере показано, как прокручивать элемент пробосЦис обезьяны в представление:
+Вторая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) Прокручивает указанный элемент на представление. При наличии объекта [`CarouselView`](xref:Xamarin.Forms.CarouselView) с именем `carouselView`в следующем примере показано, как прокручивать элемент пробосЦис обезьяны в представление:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -132,7 +132,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 > [!NOTE]
 > Элемент [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) используется по умолчанию, если аргумент `position` не указан при вызове метода `ScrollTo`.
 
-### <a name="start"></a>Запуск
+### <a name="start"></a>Начало
 
 Элемент [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться до начала представления:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Этот пример кода приводит к переходу элемента в центр представления.
 
-### <a name="end"></a>Конец
+### <a name="end"></a>End
 
 Элемент [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться до конца представления:
 
@@ -195,7 +195,7 @@ CarouselView carouselView = new CarouselView
 - [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) указывает, что полосы прокрутки будут видимы, даже если содержимое умещается в представлении.
 - [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) указывает, что полосы прокрутки не будут видны, даже если содержимое не умещается в представлении.
 
-## <a name="snap-points"></a>Точки привязки
+## <a name="snap-points"></a>Точки прикрепления
 
 Когда пользователь начинает прокручивать, можно управлять конечной позицией прокрутки, чтобы элементы отображались полностью. Эта функция называется привязкой, так как элементы привязываются к позиции при остановке прокрутки и контролируются следующими свойствами класса [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) :
 
@@ -219,18 +219,18 @@ CarouselView carouselView = new CarouselView
 
 ### <a name="snap-points-alignment"></a>Выравнивание точек привязки
 
-Перечисление [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) определяет члены `Start`, `Center` и `End`.
+Перечисление [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) определяет члены `Start`, `Center`и `End`.
 
 > [!IMPORTANT]
-> Значение свойства [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) учитывается только в том случае, если свойство [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) имеет значение `Mandatory` или `MandatorySingle`.
+> Значение свойства [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) учитывается только в том случае, если свойство [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) имеет значение `Mandatory`или `MandatorySingle`.
 
-#### <a name="start"></a>Запуск
+#### <a name="start"></a>Начало
 
 Элемент `SnapPointsAlignment.Start` указывает, что точки привязки выравниваться с ведущим ребром элементов. В следующем примере XAML показано, как задать этот элемент перечисления:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"
@@ -264,7 +264,7 @@ CarouselView carouselView = new CarouselView
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"
@@ -290,13 +290,13 @@ CarouselView carouselView = new CarouselView
 
 Когда пользователь настраивается для инициации прокрутки в [`CarouselView`](xref:Xamarin.Forms.CarouselView)горизонтальной прокрутки, центрированный элемент будет выровнен по центру представления.
 
-#### <a name="end"></a>Конец
+#### <a name="end"></a>End
 
 Элемент `SnapPointsAlignment.End` указывает, что точки привязки согласованы с конечным ребром элементов. В следующем примере XAML показано, как задать этот элемент перечисления:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"

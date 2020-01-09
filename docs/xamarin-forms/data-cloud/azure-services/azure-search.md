@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: ea2c733a9c85662b9286f8e8631b601248dc11de
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cd5aaac0f41ee6e4afd79397a77635e66abad219
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770840"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489795"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Поиск данных с помощью службы поиска Azure и Xamarin. Forms
 
 [![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
-_Поиск Azure — облачная служба, которая предоставляет возможности для отправляемых данных запросов и индексирования. Это устраняет требования к инфраструктуре сложности алгоритма поиска, традиционно ассоциирующиеся с реализацией функции поиска в приложении. В этой статье показано, как использовать библиотеку поиска Microsoft Azure для интеграции службы поиска Azure в приложения Xamarin.Forms._
+_Поиск Azure — это облачная служба, которая предоставляет возможности индексирования и запросов для отправленных данных. При этом удаляются требования к инфраструктуре и сложные алгоритмы поиска, которые традиционно связаны с реализацией функции поиска в приложении. В этой статье показано, как использовать библиотеку поиска Microsoft Azure для интеграции поиска Azure в приложение Xamarin. Forms._
 
 ## <a name="overview"></a>Обзор
 
@@ -37,6 +37,9 @@ _Поиск Azure — облачная служба, которая предос
 Поисковые запросы и запросы фильтра можно использовать отдельно или совместно. При совместном использовании фильтра запроса сначала применяется ко всему индексу, а затем выполняется запрос поиска по результатам запроса фильтра.
 
 Поиск Azure также поддерживает получение предложений, на основе входных данных для поиска. Дополнительные сведения см. в разделе [предложений запросов](#suggestions).
+
+> [!NOTE]
+> Если у вас еще нет [подписки Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), создайте [бесплатную учетную запись Azure](https://aka.ms/azfree-docs-mobileapps), прежде чем начать работу.
 
 ## <a name="setup"></a>Установка
 
@@ -216,7 +219,7 @@ var searchResults = await indexClient.Documents.SearchAsync<Monkey>(text, parame
 
 `SearchAsync` Возвращает метод `DocumentSearchResult` , содержащий результаты запроса. Этот объект перечисляется, с каждым `Document` создаваемого в качестве объекта `Monkey` объекта и добавляемый `Monkeys` `ObservableCollection` для отображения. В следующем снимки экрана Показать результаты поиска возвращаются из службы поиска Azure:
 
-![](azure-search-images/search.png "Результаты поиска")
+![](azure-search-images/search.png "Search Results")
 
 Дополнительные сведения о поиске и фильтрации см. в разделе [Отправка запросов в индекс поиска Azure с помощью пакета SDK для .NET](/azure/search/search-query-dotnet/).
 
@@ -268,7 +271,7 @@ async Task AzureSuggestions(string text)
 
 `SuggestAsync` Возвращает метод `DocumentSuggestResult` , содержащий результаты запроса. Этот объект перечисляется, с каждым `Document` создаваемого в качестве объекта `Monkey` объекта и добавляемый `Monkeys` `ObservableCollection` для отображения. На следующих снимках экрана показано предложение результатов, возвращаемых из поиска Azure:
 
-![](azure-search-images/suggest.png "Результаты предложения")
+![](azure-search-images/suggest.png "Suggestion Results")
 
 Обратите внимание, что в приложении-примере `SuggestAsync` метод вызывается только в том случае, когда пользователь заканчивает, введя условие поиска. Тем не менее он может также использоваться для поддержки автозаполнения поисковых запросов, выполнив на каждой keypress.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: b2b7c2cc87b37ae0e7397988e37df6b9b1e3aa10
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f64b57e73b69b3111087ca1352f5fb9536f855e5
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029386"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488963"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Актионбар для Xamarin. Android
 
@@ -85,11 +85,11 @@ this.ActionBar.AddTab (tab);
 
 Например, ниже приведен снимок экрана панели действий с пунктом меню для совместного использования изображения (взято из примера [шареактионпровидер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) ). Когда пользователь отменяет пункт меню на панели действий, Шареактионпровидер загружает приложение для решения намерений, связанных с `ShareActionProvider`. В этом примере приложение для обмена сообщениями использовалось ранее, поэтому оно отображается на панели действий.
 
-[Снимок экрана значка приложения обмена сообщениями на панели действий![](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
+[Снимок экрана значка приложения обмена сообщениями на панели действий ![](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 Когда пользователь щелкает элемент на панели действий, запускается приложение для обмена сообщениями, содержащее общий образ, как показано ниже:
 
-[Снимок экрана приложения для обмена сообщениями с изображением обезьяны![](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[Снимок экрана приложения для обмена сообщениями с изображением обезьяны ![](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
 ### <a name="specifying-the-action-provider-class"></a>Указание класса поставщика действий
 
@@ -142,5 +142,3 @@ Intent CreateIntent ()
 
 - [Общий доступ к вкладкам Hello (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
 - [Демонстрация Шареактионпровидер (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
-- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

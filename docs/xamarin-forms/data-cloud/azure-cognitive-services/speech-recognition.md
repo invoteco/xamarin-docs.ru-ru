@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eca079972f4e46c0cf60c4749658ff9a7fe1791b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655460"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489808"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Распознавание речи, используя API распознавания речи Microsoft
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Microsoft Speech API — это API на основе облака, который алгоритмы обработки устной. В этой статье объясняется, как с помощью REST API распознавания речи Microsoft преобразуйте звуковые данные в текст в приложении Xamarin.Forms._
+_Microsoft Speech API — это облачный API, предоставляющий алгоритмы для обработки речевого языка. В этой статье объясняется, как использовать REST API распознавания речи Майкрософт для преобразования звука в текст в приложении Xamarin. Forms._
 
 ## <a name="overview"></a>Обзор
 
@@ -28,6 +28,9 @@ Microsoft Speech API состоит из двух компонентов:
 - Преобразование текста в речь API для преобразования текста в речь. Преобразование текста в речь выполняется через REST API.
 
 Эта статья посвящена выполняет распознавание речи с помощью REST API. Хотя библиотеки клиента и службы поддерживают, возвращая частичные результаты, REST API может возвращать только результат распознавания единый, не все частичные результаты.
+
+> [!NOTE]
+> Если у вас еще нет [подписки Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), создайте [бесплатную учетную запись Azure](https://aka.ms/azfree-docs-mobileapps), прежде чем начать работу.
 
 Необходимо получить ключ API для использования в API распознавания речи Microsoft. Это может быть получен из Azure [портала](https://portal.azure.com/). Дополнительные сведения см. в разделе [создать учетную запись Cognitive Services на портале Azure](/azure/cognitive-services/cognitive-services-apis-create-account).
 
@@ -161,7 +164,7 @@ async Task<string> SendRequestAsync(Stream fileStream, string url, string bearer
 
 В примере приложения, ответ JSON десериализуются в `SpeechResult` экземпляра, в результате возвращается в вызывающий метод для отображения, как показано на следующем снимке экрана:
 
-![](speech-recognition-images/speech-recognition.png "Распознавание речи")
+![](speech-recognition-images/speech-recognition.png "Speech Recognition")
 
 ## <a name="summary"></a>Сводка
 

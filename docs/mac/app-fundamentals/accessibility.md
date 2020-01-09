@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 3f3b9c84fad0bce8939187fcd0c91d18314ce8ab
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2162fba1275b66167965e90aeade721e08ea9130
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032639"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489327"
 ---
 # <a name="accessibility-on-macos"></a>Специальные возможности в macOS
 
@@ -23,7 +23,7 @@ ms.locfileid: "73032639"
 
 ## <a name="describing-ui-elements"></a>Описание элементов пользовательского интерфейса
 
-AppKit использует протокол `NSAccessibility` для предоставления интерфейсов API, которые помогают сделать пользовательский интерфейс доступным. Сюда входит поведение по умолчанию, которое пытается задать осмысленные значения для свойств специальных возможностей, таких как установка `AccessibilityLabel` кнопки. Обычно метка является одним словом или короткой фразой, описывающей элемент управления или представление.
+AppKit использует протокол `NSAccessibility` для предоставления интерфейсов API, которые помогают сделать пользовательский интерфейс доступным. Сюда входит поведение по умолчанию, которое пытается задать осмысленные значения для свойств специальных возможностей, таких как установка `AccessibilityLabel`кнопки. Обычно метка является одним словом или короткой фразой, описывающей элемент управления или представление.
 
 ### <a name="storyboard-files"></a>Файлы раскадровки
 
@@ -37,14 +37,14 @@ Xamarin. Mac использует Interface Builder Xcode для изменен�
 В настоящее время Xamarin. Mac не предоставляется как метод задания `AccessibilityLabel`.  Добавьте следующий вспомогательный метод, чтобы задать метку доступности:
 
 ```csharp
-public static class AccessibilityHelper
+public static class AccessibilityHelper
 {
-    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
-    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
+    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
+    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
 
-    static public void SetAccessibilityLabel (this NSView view, string value)
+    static public void SetAccessibilityLabel (this NSView view, string value)
     {
-        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
+        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
     }
 }
 ```

@@ -1,92 +1,45 @@
 ---
-title: Работа с родительским приложением watchOS в Xamarin
-description: В этом документе описывается работа с родительским приложением watchOS в Xamarin. В нем обсуждаются расширения приложений WatchKit, приложения iOS, общее хранилище и многое другое.
+title: Работа с watchOS родительское приложение в Xamarin
+description: В этом документе описывается, как работать с watchOS родительского приложения в Xamarin. В нем обсуждаются расширения приложений watchOS, приложения iOS, общее хранилище и многое другое.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 08637fe13b28565e7c6ab1c89b291c6db3b81025
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001475"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487767"
 ---
-# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Работа с родительским приложением watchOS в Xamarin
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Работа с watchOS родительское приложение в Xamarin
 
-> [!IMPORTANT]
-> Доступ к родительскому приложению с использованием приведенных ниже примеров работает только в приложениях watchOS 1 Watch.
+Для обмена данными между приложении для Apple watch и приложение iOS, которое объединяется с разными способами:
 
-Существует несколько способов обмена данными между приложением Watch и приложением iOS, с которым оно объединяется.
+- Смотреть приложения могут [запускать код](#run-code) в родительском приложении на iPhone.
 
-- Расширения Watch могут [вызывать метод](#code) для родительского приложения, которое выполняется в фоновом режиме на iPhone.
+- Контрольные значения расширений может [совместно используют хранилище, доступном](#shared-storage) с приложением iPhone родительского.
 
-- Расширения Watch могут [совместно использовать расположение хранилища](#storage) с родительским приложением iPhone.
+- Используйте пересылку, чтобы передать данные из уведомления в приложение наблюдения, отправив пользователю конкретный контроллер интерфейса в приложении.
 
-- Использование функции Pass для передачи данных с одного взгляда или уведомления в приложение Watch, отправляя пользователя на конкретный контроллер интерфейса в приложении.
+Родительское приложение, также иногда называется приложения-контейнера.
 
-Кроме того, родительское приложение иногда называют приложением-контейнером.
+## <a name="run-code"></a>Выполните код
 
-<a name="code" />
+В этих двух примерах показано, как использовать `WCSession` для выполнения кода и отправки сообщений между приложением Watch и парным iPhone.
 
-## <a name="run-code"></a>Выполнение кода
-
-Взаимодействие между расширением Watch и родительским приложением iPhone показано в [примере гпсватч](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gpswatch).
-Расширение "Контрольное значение" может запрашивать от своего имени родительское приложение iOS, использующее метод `OpenParentApplication`.
-
-Это особенно полезно для длительно выполняемых задач (включая сетевые запросы) — только родительское приложение iOS может использовать преимущества фоновой обработки для выполнения этих задач и сохранения извлеченных данных в расположении, доступном для расширения Watch.
-
-### <a name="watch-kit-app-extension"></a>Просмотр расширения приложения для комплекта
-
-Вызовите `WKInterfaceController.OpenParentApplication` в расширении приложения Watch. Он возвращает `bool`, который указывает, успешно ли отправлен запрос метода. Проверьте параметр `error` в `Action` отклика, чтобы определить, произошли ли какие либо ошибки во время выполнения метода в приложении iPhone.
-
-```csharp
-WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, error) => {
-    if(error != null) {
-        Console.WriteLine (error);
-        return;
-    }
-    Console.WriteLine ("parent app responded");
-    // do something with replyInfo[] dictionary
-});
-```
-
-### <a name="ios-app"></a>Приложение iOS
-
-Все вызовы из расширения приложения для наблюдения направляются через метод `HandleWatchKitExtensionRequest` приложения iPhone.
-При выполнении различных запросов в приложении Watch этот метод должен запросить словарь `userInfo`, чтобы определить, как обрабатывать запрос.
-
-```csharp
-[Register ("AppDelegate")]
-public partial class AppDelegate : UIApplicationDelegate
-{
-    // ... other AppDelegate methods
-    public override void HandleWatchKitExtensionRequest
-        (UIApplication application, NSDictionary userInfo, Action<NSDictionary> reply)
-    {
-        var status = 2;
-        // do something in the background, and respond
-        reply (new NSDictionary (
-            "count", NSNumber.FromInt32 ((int)status),
-            "value2", new NSString("some-info")
-            ));
-    }
-}
-```
-
-<a name="storage" />
+- [Просмотр подключения](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
+- [симплеватчконнективити](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
 
 ## <a name="shared-storage"></a>Общее хранилище
 
-Если вы настраиваете [группу приложений](~/ios/watchos/app-fundamentals/app-groups.md) , расширения iOS 8 (включая расширения контрольных значений) могут обмениваться данными с родительским приложением.
+Если вы настраиваете [групп приложений](~/ios/watchos/app-fundamentals/app-groups.md) то расширения iOS 8 (включая расширения watch) могут обмениваться данными в родительское приложение.
 
-<a name="nsuserdefaults" />
+### <a name="nsuserdefaults"></a>Параметры NSUserDefaults
 
-### <a name="nsuserdefaults"></a>нсусердефаултс
-
-Следующий код можно записать как в расширении приложения Watch, так и в родительском приложении iPhone, чтобы они могли ссылаться на общий набор `NSUserDefaults`:
+Следующий код могут быть написаны на расширение приложения watch и iPhone в родительское приложение таким образом, они могут ссылаться на общий набор `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -106,7 +59,7 @@ var count = shared.IntForKey ("count");
 
 ### <a name="files"></a>Файлы
 
-Приложение iOS и расширение Watch могут также использовать общие пути к файлам.
+Расширение приложения "и" Контрольные значения операций ввода-вывода также могут совместно использовать файлы, используя общий путь к файлу.
 
 ```csharp
 var FileManager = new NSFileManager ();
@@ -117,28 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Примечание. Если путь `null`, проверьте [конфигурацию группы приложений](~/ios/watchos/app-fundamentals/app-groups.md) , чтобы убедиться, что профили подготовки настроены правильно и были загружены или установлены на компьютере разработчика.
+Примечание: Если путь является `null` проверьте [конфигурации группы приложений](~/ios/watchos/app-fundamentals/app-groups.md) для обеспечения профили подготовки были настроены правильно и были загружены или не установлены на компьютере разработчика.
 
-Дополнительные сведения см. в документации по [возможностям группы приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
-
-## <a name="wormholesharp"></a>вормхолешарп
-
-Популярный механизм с открытым исходным кодом для watchOS 1 (на основе [ммвормхоле](https://github.com/mutualmobile/MMWormhole)) для передачи данных или команд между родительским приложением и приложением Watch.
-
-Вы можете настроить норку с помощью группы приложений, подобной этой, в приложении iOS и просмотреть расширение:
-
-```csharp
-// AppDelegate (iOS) or InterfaceController (watch extension)
-Wormhole wormHole;
-// ...
-wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
-```
-
-Скачайте C# версию [вормхолешарп](https://github.com/Clancey/WormHoleSharp).
+Дополнительные сведения см. в разделе [возможностей групп приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) документации.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Гпсватч (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Вормхолешарп (пример)](https://github.com/Clancey/WormHoleSharp)
-- [Справочник по Вкинтерфацеконтроллер Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
-- [Совместное использование данных Apple с содержащим приложением](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Справочник по WKInterfaceController Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
+- [Apple обмена данными с содержащего приложение](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

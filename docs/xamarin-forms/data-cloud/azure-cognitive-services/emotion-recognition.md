@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 4dedcb0869c1e965679812239b1de09f07efa875
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869398"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487624"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Воспринимаемое распознавание распознавания эмоций с помощью API распознавания лиц
 
@@ -20,11 +20,16 @@ ms.locfileid: "68869398"
 
 API распознавания лиц может выполнять обнаружение распознавания эмоций для обнаружения гнев, неприятия, отвращение, аномалии, счастье, нейтрального, грусть и удивительного в выражении лица, основанного на воспринимаемых заметках человеческими программистами. Важно отметить, однако, что только выражения лица могут необязательно представлять внутренние состояния людей.
 
-Помимо возврата результата распознавания эмоций для выражения лица, API распознавания лиц может также возвращать ограничивающий прямоугольник для обнаруженных сторон. Обратите внимание, что необходимо получить ключ API для использования API распознавания лиц. Его можно получить в [попробуйте Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Помимо возврата результата распознавания эмоций для выражения лица, API распознавания лиц может также возвращать ограничивающий прямоугольник для обнаруженных сторон.
 
 Распознавание эмоций лица могут выполняться через клиентскую библиотеку, а также через REST API. Эта статья посвящена распознавания эмоций с помощью REST API. Дополнительные сведения о REST API, см. в разделе [REST API распознавания лиц](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
 API распознавания лиц могут также использоваться для распознавания выражений лиц людей на видео и может возвращать сводка об их эмоциях. Дополнительные сведения см. в разделе [как анализ видео в реальном времени](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/).
+
+> [!NOTE]
+> Если у вас еще нет [подписки Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), создайте [бесплатную учетную запись Azure](https://aka.ms/azfree-docs-mobileapps), прежде чем начать работу.
+
+Чтобы использовать API распознавания лиц, необходимо получить ключ API. Его можно получить в [попробуйте Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Дополнительные сведения о API распознавания лиц, см. в разделе [API распознавания лиц](/azure/cognitive-services/face/overview/).
 
@@ -79,7 +84,7 @@ public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, boo
 > [!NOTE]
 > В вызовах API распознавания лиц как можно использовать для получения ключи подписки, необходимо использовать тот же регион. Например, если вы приобрели ключи подписки из `westus` регион, конечная точка обнаружения лиц будут `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
-### <a name="send-the-request"></a>Отправить запрос
+### <a name="send-the-request"></a>Отправка запроса
 
 `SendRequestAsync` Метод выполняет запрос POST для API распознавания лиц и возвращает результат в виде `Face` массива:
 
@@ -170,7 +175,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 На следующем рисунке показан результат распознавания эмоций в приложении-примере:
 
-![](emotion-recognition-images/emotion-recognition.png "Распознавание эмоций")
+![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
 
 ## <a name="related-links"></a>Связанные ссылки
 

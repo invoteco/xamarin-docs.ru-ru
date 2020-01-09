@@ -6,17 +6,17 @@ ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
-ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 12/04/2019
+ms.openlocfilehash: 7c6647a0299b5ece3caaaa1d322ec1a0efac3557
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657176"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490094"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _ImageButton отображает изображение и реагирует на касание или щелчок, который направляет приложению выполнения определенной задачи._
 
@@ -53,9 +53,12 @@ _ImageButton отображает изображение и реагирует �
 
 `Source` Свойство задает изображение, отображаемое в `ImageButton`. В этом примере задается в локальный файл, которые будут загружены из каждого проекта платформы, что на следующих снимках экрана:
 
-[![Основные ImageButton](imagebutton-images/BasicImageButton.png "основные ImageButton")](imagebutton-images/BasicImageButton-Large.png#lightbox "основные ImageButton")
+[![Базовая ImageButton](imagebutton-images/BasicImageButton.png "Базовая ImageButton")](imagebutton-images/BasicImageButton-Large.png#lightbox "Базовая ImageButton")
 
 По умолчанию `ImageButton` представляет собой прямоугольник, но можно дать углы округленное ИТ с помощью `CornerRadius` свойство. Дополнительные сведения о `ImageButton` внешний вид, см. в разделе [внешний вид ImageButton](#imagebutton-appearance).
+
+> [!NOTE]
+> Хотя `ImageButton` может загрузить анимированный GIF-файл, он будет отображать только первый кадр GIF-файла.
 
 В следующем примере показано, как создать страницу, которая является функциональным эквивалентом предыдущего примера XAML, но полностью в C#:
 
@@ -144,7 +147,7 @@ public partial class ImageButtonDemoPage : ContentPage
 
 Данный конкретный `Clicked` обработчик увеличивает значение счетчика и выводит значение счетчика в [ `Label` ](xref:Xamarin.Forms.Label):
 
-[![Основные щелчок ImageButton](imagebutton-images/ImageButton.png "основные щелчок ImageButton")](imagebutton-images/ImageButton-Large.png#lightbox "основные щелчок ImageButton")
+[![Базовая кнопка ImageButton Click](imagebutton-images/ImageButton.png "Базовая кнопка ImageButton Click")](imagebutton-images/ImageButton-Large.png#lightbox "Базовая кнопка ImageButton Click")
 
 В следующем примере показано, как создать страницу, которая является функциональным эквивалентом предыдущего примера XAML, но полностью в C#:
 
@@ -238,7 +241,7 @@ public class ImageButtonDemoPage : ContentPage
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -горизонтальные рамки изображение (при необходимости), чтобы все изображение встраивается в `ImageButton`, с помощью пустого пространства, добавляемого в верх или низ или сторон в зависимости от того, является ли изображение шириной или высотой. Это значение по умолчанию [ `Aspect` ](xref:Xamarin.Forms.Aspect) перечисления.
 
 > [!NOTE]
-> `ImageButton` Класс также имеет [ `Margin` ](xref:Xamarin.Forms.View.Margin) и `Padding` свойства, которые управляют поведением макета `ImageButton`. Дополнительные сведения см. в разделе [поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+> `ImageButton` Класс также имеет [ `Margin` ](xref:Xamarin.Forms.View.Margin) и `Padding` свойства, которые управляют поведением макета `ImageButton`. Дополнительные сведения см. в статье [Поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## <a name="imagebutton-visual-states"></a>Визуальные состояния ImageButton
 

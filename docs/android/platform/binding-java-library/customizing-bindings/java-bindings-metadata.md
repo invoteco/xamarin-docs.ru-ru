@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 1f06601b2b419141b4bd44677826df4e64a831fc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 25a5d79084f7caa78eec4011c047bd19a63ef748
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020571"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487793"
 ---
 # <a name="java-bindings-metadata"></a>Метаданные привязок Java
 
@@ -56,9 +56,9 @@ _C#код в Xamarin. Android вызывает библиотеки Java с по
 
 - &ndash; **Metadata. XML** позволяет вносить изменения в окончательный API, например изменять пространство имен созданной привязки. 
 
-- **EnumFields. xml** &ndash; содержит сопоставление между константами Java `int` и C#`enums`. 
+- **EnumFields. xml** &ndash; содержит сопоставление между константами Java `int` и C# `enums`. 
 
-- **Enummethods-. xml** &ndash; позволяет изменять параметры и возвращаемые типы методов из `int` константы C# Java для`enums`. 
+- **Enummethods-. xml** &ndash; позволяет изменять параметры и возвращаемые типы методов из `int` константы C# Java для `enums`. 
 
 Файл **Metadata. XML** — это самый последний импорт этих файлов, так как он позволяет вносить изменения общего назначения в привязку, например:
 
@@ -162,7 +162,7 @@ public class NewName : Java.Lang.Object { ... }
 
 #### <a name="renaming-eventarg-wrapper-classes"></a>Переименование `EventArg` классов-оболочек
 
-Когда генератор привязки Xamarin. Android определяет метод задания `onXXX` для _типа прослушивателя_, создается C# событие и`EventArgs`подкласс для поддержки API-интерфейса .NET флавауред для шаблона прослушивателя на основе Java. В качестве примера рассмотрим следующий класс и метод Java:
+Когда генератор привязки Xamarin. Android определяет метод задания `onXXX` для _типа прослушивателя_, создается C# событие и `EventArgs` подкласс для поддержки API-интерфейса .NET флавауред для шаблона прослушивателя на основе Java. В качестве примера рассмотрим следующий класс и метод Java:
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
@@ -174,7 +174,7 @@ Xamarin. Android удалит префикс `on` из метода задани
 NavigationManager.2DSignNextManueverEventArgs
 ```
 
-Это имя C# класса не является допустимым. Чтобы устранить эту проблему, автор привязки должен использовать атрибут `argsType` и предоставить допустимое C# имя для подкласса`EventArgs`:
+Это имя C# класса не является допустимым. Чтобы устранить эту проблему, автор привязки должен использовать атрибут `argsType` и предоставить допустимое C# имя для подкласса `EventArgs`:
 
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
@@ -216,7 +216,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 `managedType` используется для изменения типа возвращаемого значения метода. В некоторых ситуациях генератор привязок неправильно определяет возвращаемый тип метода Java, что приведет к ошибке времени компиляции. Одним из возможных решений в этой ситуации является изменение типа возвращаемого значения метода.
 
-Например, генератор привязок считает, что метод Java `de.neom.neoreadersdk.resolution.compareTo()` должен возвращать `int`, что приводит к ошибке сообщения об ошибке **CS0535: ' de. Неом. Неореадерсдк. resolution не реализует член интерфейса "Java. lang. IComparable. CompareTo (Java. lang. Object)"** . В следующем фрагменте кода показано, как изменить тип параметра созданного C# метода с`DE.Neom.Neoreadersdk.Resolution`на `Java.Lang.Object`: 
+Например, генератор привязок считает, что метод Java `de.neom.neoreadersdk.resolution.compareTo()` должен возвращать `int` и принимать `Object` в качестве параметров, что приводит к ошибке «сообщение об ошибке **CS0535: ' de. Неом. Неореадерсдк. resolution не реализует член интерфейса "Java. lang. IComparable. CompareTo (Java. lang. Object)"** . В следующем фрагменте кода показано, как изменить тип первого параметра созданного C# метода с `DE.Neom.Neoreadersdk.Resolution` на `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -269,9 +269,9 @@ NavigationManager.2DSignNextManueverEventArgs
 
 Обратите внимание, что методы Setter и Getter по-прежнему будут создаваться генератором привязок.
 
-### <a name="sender"></a>отправитель
+### <a name="sender"></a>Отправитель
 
-Указывает, какой параметр метода должен быть параметром `sender`, если метод сопоставлен с событием. Значение может быть `true` или `false`. Пример:
+Указывает, какой параметр метода должен быть параметром `sender`, если метод сопоставлен с событием. Значение может быть `true` или `false`. Например:
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -283,7 +283,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="visibility"></a>видимость
 
-Этот атрибут используется для изменения видимости класса, метода или свойства. Например, может потребоваться повысить уровень `protected` метода Java таким образом, чтобы его C# оболочка была`public`:
+Этот атрибут используется для изменения видимости класса, метода или свойства. Например, может потребоваться повысить уровень `protected` метода Java таким образом, чтобы его C# оболочка была `public`:
 
 ```xml
 <!-- Change the visibility of a class -->
@@ -299,7 +299,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="defining-an-enum-using-enumfieldsxml"></a>Определение перечисления с помощью EnumFields. XML
 
-Файл **EnumFields. XML** содержит сопоставление между константами Java `int` и C#`enums`. Давайте рассмотрим следующий пример C# перечисления, создаваемого для набора констант`int`: 
+Файл **EnumFields. XML** содержит сопоставление между константами Java `int` и C# `enums`. Давайте рассмотрим следующий пример C# перечисления, создаваемого для набора констант `int`: 
 
 ```xml 
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
@@ -309,11 +309,11 @@ NavigationManager.2DSignNextManueverEventArgs
 </mapping>
 ```
 
-Здесь мы воспользовались классом Java `SKRealReachSettings` и определили C# перечисление с именем`SKMeasurementUnit`в`Skobbler.Ngx.Map.RealReach`пространства имен. Записи `field` определяют имя константы Java (пример `UNIT_SECOND`), имя записи перечисления (пример `Second`) и целочисленное значение, представленное обеими сущностями (например, `0`). 
+Здесь мы воспользовались классом Java `SKRealReachSettings` и определили C# перечисление с именем `SKMeasurementUnit` в `Skobbler.Ngx.Map.RealReach`пространства имен. Записи `field` определяют имя константы Java (пример `UNIT_SECOND`), имя записи перечисления (пример `Second`) и целочисленное значение, представленное обеими сущностями (например, `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Определение методов Get/Setter с помощью Enummethods-. XML
 
-Файл **enummethods-. XML** позволяет изменять параметры метода и возвращаемые типы из `int` константы Java C# для`enums`. Иными словами, он сопоставляет чтение и запись C# перечислений (определенных в файле **EnumFields. XML** ) с Java `int`константным`get`и методами`set`.
+Файл **enummethods-. XML** позволяет изменять параметры метода и возвращаемые типы из `int` константы Java C# для `enums`. Иными словами, он сопоставляет чтение и запись C# перечислений (определенных в файле **EnumFields. XML** ) с Java `int` константным `get` и методами `set`.
 
 Учитывая приведенное выше перечисление `SKRealReachSettings`, в следующем файле **enummethods-. XML** определяется метод получения или задания для этого перечисления:
 

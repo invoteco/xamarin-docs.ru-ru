@@ -6,17 +6,17 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.date: 12/11/2019
+ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662331"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488181"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Данные CollectionView в Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) содержит следующие свойства, которые определяют отображаемые данные и его внешний вид:
 
@@ -251,7 +251,86 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 > [!IMPORTANT]
 > При использовании [`CollectionView`](xref:Xamarin.Forms.CollectionView)никогда не устанавливайте в качестве корневого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) объектов `ViewCell`. Это приведет к возникновению исключения, поскольку `CollectionView` не имеет концепции ячеек.
 
-## <a name="pull-to-refresh"></a>Извлечь для обновления
+## <a name="context-menus"></a>Контекстные меню
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) поддерживает контекстные меню для элементов данных с помощью `SwipeView`, который открывает контекстное меню с помощью жеста прокрутки. `SwipeView` — это контейнерный элемент управления, который служит оболочкой для элемента содержимого и предоставляет элементы контекстного меню для этого элемента содержимого. Таким образом, контекстные меню реализуются для `CollectionView` путем создания `SwipeView`, определяющего содержимое, вокруг которого помещается `SwipeView`, и элементов контекстного меню, которые отображаются с помощью жеста прокрутки. Это достигается путем установки `SwipeView` в качестве корневого представления в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , определяющего внешний вид каждого элемента данных в `CollectionView`:
+
+```xaml
+<CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Favorite"
+                                   IconImageSource="favorite.png"
+                                   BackgroundColor="LightGreen"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.FavoriteCommand}"
+                                   CommandParameter="{Binding}" />
+                        <SwipeItem Text="Delete"
+                                   IconImageSource="delete.png"
+                                   BackgroundColor="LightPink"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.DeleteCommand}"
+                                   CommandParameter="{Binding}" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <Grid BackgroundColor="White"
+                      Padding="10">
+                    <!-- Define item appearance -->
+                </Grid>
+            </SwipeView>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+```
+
+Эквивалентный код на C# выглядит так:
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+
+collectionView.ItemTemplate = new DataTemplate(() =>
+{
+    // Define item appearance
+    Grid grid = new Grid { Padding = 10, BackgroundColor = Color.White };
+    // ...
+
+    SwipeView swipeView = new SwipeView();
+    SwipeItem favoriteSwipeItem = new SwipeItem
+    {
+        Text = "Favorite",
+        IconImageSource = "favorite.png",
+        BackgroundColor = Color.LightGreen
+    };
+    favoriteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.FavoriteCommand", source: collectionView));
+    favoriteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    SwipeItem deleteSwipeItem = new SwipeItem
+    {
+        Text = "Delete",
+        IconImageSource = "delete.png",
+        BackgroundColor = Color.LightPink
+    };
+    deleteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.DeleteCommand", source: collectionView));
+    deleteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    swipeView.LeftItems = new SwipeItems { favoriteSwipeItem, deleteSwipeItem };
+    swipeView.Content = grid;    
+    return swipeView;
+});
+```
+
+В этом примере содержимое `SwipeView` является [`Grid`](xref:Xamarin.Forms.Grid) , определяющим внешний вид каждого элемента в [`CollectionView`](xref:Xamarin.Forms.CollectionView). Элементы считывания используются для выполнения действий с `SwipeView` содержимым и отображаются при считывании элемента управления с левой стороны:
+
+[![Снимок экрана: пункты контекстного меню CollectionView в iOS и Android](populate-data-images/swipeview.png "CollectionView с элементами контекстного меню Свипевиев")](populate-data-images/swipeview-large.png#lightbox "CollectionView с элементами контекстного меню Свипевиев")
+
+`SwipeView` поддерживает четыре разных направления прокрутки с направлением считывания, определяемым направленной `SwipeItems`ной коллекцией, к которой добавляются объекты `SwipeItems`. По умолчанию элемент прокрутки выполняется при касании пользователем. Кроме того, после выполнения элемента считывания элементы прокрутки скрываются, а содержимое `SwipeView` снова отображается. Однако эти поведения можно изменить.
+
+Дополнительные сведения об элементе управления `SwipeView` см. в разделе [Xamarin. Forms свипевиев](~/xamarin-forms/user-interface/swipeview.md).
+
+## <a name="pull-to-refresh"></a>Обновление путем оттягивания
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) поддерживает функцию Pull для обновления с помощью `RefreshView`, что позволяет обновлять отображаемые данные путем вывода списка элементов. `RefreshView` — это контейнерный элемент управления, предоставляющий функции обновления для своего дочернего элемента, при условии, что дочерний объект поддерживает прокручиваемое содержимое. Таким образом, запрос на обновление реализуется для `CollectionView`, настроив его как дочерний элемент `RefreshView`.
 
@@ -288,7 +367,7 @@ refreshView.Content = collectionView;
 
 Значение свойства `RefreshView.IsRefreshing` указывает текущее состояние `RefreshView`. При активации обновления пользователем это свойство автоматически переходит в `true`. После завершения обновления следует сбросить свойство на `false`.
 
-Дополнительные сведения о `RefreshView` см. в разделе [Xamarin. Forms рефрешвиев](~/xamarin-forms/user-interface/refreshview.md).
+Дополнительные сведения о `RefreshView`см. в разделе [Xamarin. Forms рефрешвиев](~/xamarin-forms/user-interface/refreshview.md).
 
 ## <a name="load-data-incrementally"></a>Добавочная загрузка данных
 
@@ -296,7 +375,7 @@ refreshView.Content = collectionView;
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства для управления добавочной загрузкой данных:
 
-- `RemainingItemsThreshold` типа `int` пороговое значение элементов, которые еще не отображаются в списке, в котором будет запущено событие `RemainingItemsThresholdReached`.
+- `RemainingItemsThreshold`типа `int`пороговое значение элементов, которые еще не отображаются в списке, в котором будет запущено событие `RemainingItemsThresholdReached`.
 - `RemainingItemsThresholdReachedCommand`, типа `ICommand`, который выполняется при достижении `RemainingItemsThreshold`.
 - `RemainingItemsThresholdReachedCommandParameter` с типом `object`, который передается как параметр в `RemainingItemsThresholdReachedCommand`.
 
@@ -344,6 +423,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 - [CollectionView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Рефрешвиев Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
+- [Свипевиев Xamarin. Forms](~/xamarin-forms/user-interface/swipeview.md)
 - [Привязка данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Шаблоны данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Создание DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

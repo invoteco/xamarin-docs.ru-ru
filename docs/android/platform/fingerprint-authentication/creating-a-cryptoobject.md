@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 609ee17b6f2fd392c612277de8bbf59f8780f7d9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 871058d1c128b37a0f2e77b43587139efb433de1
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020391"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487780"
 ---
 # <a name="creating-a-cryptoobject"></a>Создание Криптубжект
 
@@ -57,7 +57,7 @@ public class CryptoObjectHelper
         Cipher cipher = Cipher.GetInstance(TRANSFORMATION);
         try
         {
-            cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+            cipher.Init(CipherMode.EncryptMode, key);
         } catch(KeyPermanentlyInvalidatedException e)
         {
             _keystore.DeleteEntry(KEY_NAME);
@@ -132,7 +132,7 @@ public class CryptoObjectHelper
 
 ## <a name="using-the-cryptoobjecthelper"></a>Использование Криптубжекселпер
 
-Теперь, когда пример кода содержит большую часть логики для создания `CryptoWrapper` в `CryptoObjectHelper` классе, давайте перейдем к коду в начале этого руководств и используем `CryptoObjectHelper` для создания шифра и запуска сканера отпечатков пальцев. : 
+Теперь, когда пример кода содержит большую часть логики для создания `CryptoWrapper` в `CryptoObjectHelper` классе, давайте перейдем к коду в начале этого учебника и используем `CryptoObjectHelper` для создания шифра и запуска сканера отпечатков пальцев: 
 
 ```csharp
 protected void FingerPrintAuthenticationExample()

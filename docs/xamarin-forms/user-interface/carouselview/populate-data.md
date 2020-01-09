@@ -6,19 +6,19 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/02/2019
-ms.openlocfilehash: 0ad31bc6f84ae633a9a18592a00670703db19df9
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/17/2019
+ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697875"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488232"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Данные Карауселвиев в Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) содержит следующие свойства, которые определяют отображаемые данные и его внешний вид:
 
@@ -34,7 +34,7 @@ ms.locfileid: "72697875"
 
 ## <a name="populate-a-carouselview-with-data"></a>Заполнение Карауселвиев данными
 
-[@No__t_1](xref:Xamarin.Forms.CarouselView) заполняется данными путем присвоения свойству [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) любой коллекции, реализующей `IEnumerable`. Элементы можно добавить в XAML, инициализируя свойство `ItemsSource` из массива строк:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) заполняется данными путем присвоения свойству [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) любой коллекции, реализующей `IEnumerable`. Элементы можно добавить в XAML, инициализируя свойство `ItemsSource` из массива строк:
 
 ```xaml
 <CarouselView>
@@ -258,9 +258,37 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 > [!IMPORTANT]
 > При использовании [`CarouselView`](xref:Xamarin.Forms.CarouselView)никогда не устанавливайте в качестве корневого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) объектов `ViewCell`. Это приведет к возникновению исключения, поскольку `CarouselView` не имеет концепции ячеек.
 
-## <a name="pull-to-refresh"></a>Извлечь для обновления
+## <a name="display-indicators"></a>Отображение индикаторов
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) поддерживает функцию Pull для обновления с помощью `RefreshView`, что позволяет обновлять отображаемые данные путем извлечения элементов. @No__t_0 — это контейнерный элемент управления, предоставляющий функции обновления для своего дочернего элемента, при условии, что дочерний объект поддерживает прокручиваемое содержимое. Таким образом, запрос на обновление реализуется для `CarouselView`, настроив его как дочерний элемент `RefreshView`.
+Индикаторы, представляющие количество элементов и текущую позиции в `CarouselView`, могут отображаться рядом с `CarouselView`. Это можно сделать с помощью элемента управления `IndicatorView`:
+
+```xaml
+<StackLayout>
+    <CarouselView x:Name="carouselView"
+                  ItemsSource="{Binding Monkeys}">
+        <CarouselView.ItemTemplate>
+            <!-- DataTemplate that defines item appearance -->
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+    <IndicatorView ItemsSourceBy="carouselView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+</StackLayout>
+```
+
+В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки свойства `ItemsSourceBy` в объект `CarouselView`. Каждый индикатор представляет собой светло-серый круг, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый:
+
+[![Снимок экрана Карауселвиев и Индикаторвиев на iOS и Android](populate-data-images/indicators.png "Индикаторвиев круги")](populate-data-images/indicators-large.png#lightbox "Индикаторвиев круги")
+
+> [!IMPORTANT]
+> Установка свойства `ItemsSourceBy` приводит к привязке свойства `IndicatorView.Position` к свойству `CarouselView.Position`, а также к привязке свойства `IndicatorView.ItemsSource` к свойству `CarouselView.ItemsSource`.
+
+Дополнительные сведения о индикаторах см. в разделе [Xamarin. Forms индикаторвиев](~/xamarin-forms/user-interface/indicatorview.md).
+
+## <a name="pull-to-refresh"></a>Обновление путем оттягивания
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) поддерживает функцию Pull для обновления с помощью `RefreshView`, что позволяет обновлять отображаемые данные путем извлечения элементов. `RefreshView` — это контейнерный элемент управления, предоставляющий функции обновления для своего дочернего элемента, при условии, что дочерний объект поддерживает прокручиваемое содержимое. Таким образом, запрос на обновление реализуется для `CarouselView`, настроив его как дочерний элемент `RefreshView`.
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -295,7 +323,7 @@ refreshView.Content = carouselView;
 
 Значение свойства `RefreshView.IsRefreshing` указывает текущее состояние `RefreshView`. При активации обновления пользователем это свойство автоматически переходит в `true`. После завершения обновления следует сбросить свойство на `false`.
 
-Дополнительные сведения о `RefreshView` см. в разделе [Xamarin. Forms рефрешвиев](~/xamarin-forms/user-interface/refreshview.md).
+Дополнительные сведения о `RefreshView`см. в разделе [Xamarin. Forms рефрешвиев](~/xamarin-forms/user-interface/refreshview.md).
 
 ## <a name="load-data-incrementally"></a>Добавочная загрузка данных
 
@@ -303,7 +331,7 @@ refreshView.Content = carouselView;
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет следующие свойства для управления добавочной загрузкой данных:
 
-- `RemainingItemsThreshold` типа `int` пороговое значение элементов, которые еще не отображаются в списке, в котором будет запущено событие `RemainingItemsThresholdReached`.
+- `RemainingItemsThreshold`типа `int`пороговое значение элементов, которые еще не отображаются в списке, в котором будет запущено событие `RemainingItemsThresholdReached`.
 - `RemainingItemsThresholdReachedCommand`, типа `ICommand`, который выполняется при достижении `RemainingItemsThreshold`.
 - `RemainingItemsThresholdReachedCommandParameter` с типом `object`, который передается как параметр в `RemainingItemsThresholdReachedCommand`.
 
@@ -351,6 +379,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Карауселвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Индикаторвиев Xamarin. Forms](~/xamarin-forms/user-interface/indicatorview.md)
 - [Рефрешвиев Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
 - [Привязка данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Шаблоны данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

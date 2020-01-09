@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 625826e729a6b4153396286361730d6a2b878dca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b357a6e1531c8f587c8fc0f86e2b56d6fecc2923
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010469"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488326"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Пошаговое руководство. фоновое расположение в Xamarin. iOS
 
@@ -80,7 +80,7 @@ ms.locfileid: "73010469"
     > [!IMPORTANT]
     > в iOS 8 (и более поздних версиях) также требуется запись в файле **info. plist** , чтобы отобразить пользователя как часть запроса на авторизацию.
 
-1. Добавьте ключ `NSLocationAlwaysUsageDescription` или `NSLocationWhenInUseUsageDescription` со строкой, которая будет отображаться пользователю в предупреждении, которое запрашивает доступ к данным о расположении.
+1. Добавьте ключи **info. plist** для типов разрешений, которые требуются приложению: `NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`и/или `NSLocationAlwaysAndWhenInUseUsageDescription` — со строкой, которая будет отображаться для пользователя в предупреждении, которое запрашивает доступ к данным о расположении.
 
 1. iOS 9 требует, чтобы при использовании `AllowsBackgroundLocationUpdates` параметр **info. plist** содержит ключ `UIBackgroundModes` со значением `location`. Если вы выполнили шаг 2 этого пошагового руководства, он уже должен находиться в файле info. plist.
 

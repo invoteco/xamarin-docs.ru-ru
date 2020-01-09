@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e0035414cb8a24e5571b2972ec638eec550c593c
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025539"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545560"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Уведомления в Xamarin. Android
 
@@ -29,7 +29,7 @@ ms.locfileid: "73025539"
 
 [Облачная система обмена сообщениями](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud MESSAGING (FCM) — это служба, которая упрощает обмен сообщениями между мобильными приложениями и серверами приложений. Firebase Cloud Messaging можно использовать для реализации удаленных уведомлений (также называемых Push-уведомлениями) в приложениях Xamarin. Android.
 
-[Уведомления](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; этом разделе разработчика Android — это полное справочное по для уведомлений Android. Он содержит раздел "рекомендации по проектированию", который помогает разрабатывать уведомления таким образом, чтобы они соответствовали правилам интерфейса пользователя Android. Он предоставляет дополнительные сведения о пресервиинг навигации при запуске действия, а также объясняет, как отображать ход выполнения в уведомлении и управлять воспроизведением мультимедиа на экране блокировки.
+[Уведомления](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; этом разделе разработчика Android — это полное справочное по для уведомлений Android. Он содержит раздел "рекомендации по проектированию", который помогает разрабатывать уведомления таким образом, чтобы они соответствовали правилам интерфейса пользователя Android. Он содержит более фундаментальные сведения о сохранении навигации при запуске действия, а также объясняет, как отображать ход выполнения в уведомлении и управлять воспроизведением мультимедиа на экране блокировки.
 
 [Нотификатионлистенерсервице](xref:Android.Service.Notification.NotificationListenerService) &ndash; этой службе Android позволяет вашему приложению прослушивать и взаимодействовать с) все уведомления, размещенные на устройстве Android, а не только уведомления, зарегистрированные в приложении для получения.
 Обратите внимание, что пользователь должен явно предоставить приложению разрешение на прослушивание уведомлений на устройстве.
@@ -37,4 +37,3 @@ ms.locfileid: "73025539"
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Локальные уведомления (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
-- [Удаленные уведомления (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)

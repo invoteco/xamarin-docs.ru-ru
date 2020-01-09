@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027749"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487832"
 ---
 # <a name="app-linking-in-android"></a>Связывание приложений в Android
 
@@ -177,7 +177,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     - **`Domain`** &ndash; домены (разделенные пробелами), веб-ссылки которых будут обрабатываться приложением.
     - **`Status`** &ndash; это текущее состояние обработки ссылок для приложения. Значение **всегда** означает, что приложение `android:autoVerify=true` объявлено и прошло проверку системы. За ним следует шестнадцатеричное число, представляющее запись о настройках системы Android.
 
-    Пример:
+    Например:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -195,7 +195,6 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Поиск подписи MD5 или SHA1 для хранилища ключей](~/android/deploy-test/signing/keystore-signature.md)
-- [Действия и удержания](https://university.xamarin.com/classes#4)
 - [апплинкс](https://developers.facebook.com/docs/applinks)
 - [Ссылки на цифровые активы Google](https://developers.google.com/digital-asset-links/)
 - [Генератор списка инструкций и тестер](https://developers.google.com/digital-asset-links/tools/generator)

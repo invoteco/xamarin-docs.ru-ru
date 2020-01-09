@@ -6,13 +6,13 @@ ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 05/23/2019
-ms.openlocfilehash: 28abc7f4fa608091cfc7f4c64d4fcabfd9755c2b
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.date: 11/27/2019
+ms.openlocfilehash: 0152a61dabe4068892cb6b5aa5b535ab88d2ff95
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681357"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487455"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Отправка и получение push-уведомлений в центрах уведомлений Azure и Xamarin. Forms
 
@@ -29,6 +29,9 @@ Push-уведомления доставляют данные из сервер�
 1. [Настройка собственного проекта iOS для push-уведомлений](#configure-ios-for-notifications).
 1. [Тестовые уведомления с помощью центра уведомлений Azure](#test-notifications-in-the-azure-portal).
 1. [Создайте серверное приложение для отправки уведомлений](#create-a-notification-dispatcher).
+
+> [!NOTE]
+> Если у вас еще нет [подписки Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), создайте [бесплатную учетную запись Azure](https://aka.ms/azfree-docs-mobileapps), прежде чем начать работу.
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Настройка Push-Notification Services и центра уведомлений Azure
 

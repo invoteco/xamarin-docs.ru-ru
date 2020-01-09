@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: ed6992f946512cd88b4b2b8cfcf4c826bdd6b837
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 924f5403f12250fcfc5f026438d08ed618fb373f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645347"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487611"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Проверка орфографии с помощью API проверки орфографии Bing
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_API проверки орфографии выполняет контекстную орфографии для текста, предоставление встроенного по слова с ошибками. В этой статье объясняется, как с помощью API проверки орфографии REST исправлять орфографические ошибки в приложении Xamarin.Forms._
+_Проверка орфографии Bing выполняет контекстную проверку орфографии для текста, предоставляя встроенные предложения по написанию слов с ошибками. В этой статье объясняется, как использовать REST API Проверка орфографии Bing для исправления орфографических ошибок в приложении Xamarin. Forms._
 
 ## <a name="overview"></a>Обзор
 
@@ -26,6 +26,9 @@ API проверки орфографии REST имеет два режима р
 
 - `Spell` исправляет краткий текст (до 9 слова) без необходимости изменения регистра.
 - `Proof` исправляет длинный текст, предоставляет регистр исправлений и базовую пунктуацию и подавляет агрессивной исправления.
+
+> [!NOTE]
+> Если у вас еще нет [подписки Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), создайте [бесплатную учетную запись Azure](https://aka.ms/azfree-docs-mobileapps), прежде чем начать работу.
 
 Необходимо получить ключ API для использования API проверки орфографии Bing. Его можно получить в [попробуйте Cognitive Services](https://azure.microsoft.com/try/cognitive-services/)
 
@@ -151,12 +154,12 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 Этот код выполняет итерацию `FlaggedTokens` коллекции и заменяет все с ошибкой или грамматически некорректный слова в тексте исходного кода с помощью первого предложения. На следующих снимках экрана показано, до и после проверки орфографии:
 
-![](spell-check-images/before-spell-check.png "Прежде чем проверки орфографии")
+![](spell-check-images/before-spell-check.png "Before Spell Check")
 
-![](spell-check-images/after-spell-check.png "После проверки орфографии")
+![](spell-check-images/after-spell-check.png "After Spell Check")
 
 > [!NOTE]
-> Приведенный выше пример `Replace` использует для простоты, но в большом объеме текста он может заменить неверный маркер. API предоставляет `offset` значение, которое должно использоваться в рабочих приложениях для определения правильного расположения в исходном тексте для выполнения обновления.
+> В приведенном выше примере для простоты используется `Replace`, но в большом объеме текста он может заменить неверный маркер. API предоставляет значение `offset`, которое следует использовать в рабочих приложениях для определения правильного расположения в исходном тексте для выполнения обновления.
 
 ## <a name="summary"></a>Сводка
 

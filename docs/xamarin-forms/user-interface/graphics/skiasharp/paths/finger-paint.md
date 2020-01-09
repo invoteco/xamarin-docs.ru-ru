@@ -7,22 +7,22 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: 571ddae0757691cd7fee301076f0b1310749531d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 98809dca503d03d3d592161608fa9a6fa0e5d394
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657461"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488352"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Рисование пальцами в SkiaSharp
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Используйте пальцы для рисования на холсте._
 
 `SKPath` Постоянно обновляться и отображения объекта. Эта функция позволяет путь используется для интерактивного рисунком, таких как в программе красочное.
 
-![](finger-paint-images/fingerpaintsample.png "Получить с помощью Рисование пальцами")
+![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
 
 Поддержка сенсорного ввода в Xamarin.Forms не позволяет отслеживания отдельных пальцев на экране, чтобы эффект Xamarin.Forms touch отслеживания был разработан для обеспечения поддержки дополнительных сенсорного ввода. В этой статье описан этот эффект [ **вызов события из эффекты**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Пример программы [ **демонстрации эффекта Touch отслеживания** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) включает в себя две страницы, использующие SkiaSharp, включая красочное программу.
 
@@ -53,7 +53,7 @@ _Используйте пальцы для рисования на холсте
 
 Присоединение `TouchEffect` непосредственно к `SKCanvasView` не работает в группе всех платформ.
 
-[ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) файл с выделенным кодом определяет две коллекции для хранения `SKPath` объектов, а также `SKPaint` объектов для подготовки к просмотру эти пути:
+[ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) файл с выделенным кодом определяет две коллекции для хранения `SKPath` объектов, а также `SKPaint` объектов для подготовки к просмотру эти пути:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -165,7 +165,7 @@ public partial class FingerPaintPage : ContentPage
 
 Ваш картин палец ограничиваются только свои таланты:
 
-[![](finger-paint-images/fingerpaint-small.png "Тройной снимок экрана страницы Рисование пальцами")](finger-paint-images/fingerpaint-large.png#lightbox "тройной снимок экрана страницы Рисование пальцами")
+[![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
 Теперь вы узнали, как для рисования линий и кривых, с помощью параметрические уравнения определения. На одном из следующих разделов [ **пути и кривые SkiaSharp** ](../curves/index.md) рассматриваются различные типы кривых, `SKPath` поддерживает. Но полезные необходимым условием является подробное описание [ **преобразует SkiaSharp**](../transforms/index.md).
 

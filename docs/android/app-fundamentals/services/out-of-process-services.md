@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fda5ed3b2a26166e23d4a796219758853d0aace7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f546a1403aa0af07fc69187c4cfbec8982ed7a2a
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024540"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556513"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Запуск служб Android в удаленных процессах
 
@@ -129,7 +129,7 @@ _Как правило, все компоненты приложения Android
 
 ### <a name="implementing-a-handler"></a>Реализация обработчика
 
-Для обработки клиентских запросов служба должна реализовать `Handler` и переопределить `HandleMessage` Месодсис — метод принимает экземпляр `Message`, который инкапсулирует вызов метода от клиента и преобразует вызов в какое-либо действие или задачу, которые будет выполнять служба. полнит. Объект `Message` предоставляет свойство с именем `What`, которое является целочисленным значением, значение которого является общим для клиента и службы и относится к некоторой задаче, которую служба должна выполнить для клиента.
+Для обработки клиентских запросов служба должна реализовать `Handler` и переопределить метод `HandleMessage`. Этот метод принимает экземпляр `Message`, который инкапсулирует вызов метода от клиента и преобразует этот вызов в какое-либо действие или задачу, которую будет выполнять служба. Объект `Message` предоставляет свойство с именем `What`, которое является целочисленным значением, значение которого является общим для клиента и службы и относится к некоторой задаче, которую служба должна выполнить для клиента.
 
 В следующем фрагменте кода из примера приложения показан один из примеров `HandleMessage`. В этом примере клиент может запросить службу с помощью двух действий:
 
@@ -149,7 +149,7 @@ public class TimestampRequestHandler : Android.OS.Handler
         switch (messageType)
         {
             case Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE:
-                // The client as sent a simple Hello, say in the Android Log.
+                // The client has sent a simple Hello, say in the Android Log.
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
@@ -164,7 +164,7 @@ public class TimestampRequestHandler : Android.OS.Handler
 }
 ```
 
-Также можно упаковать параметры для службы в `Message`. Это будет рассмотрено далее в этом пошаговом окне. В следующем разделе рассматривается создание объекта `Messenger` для обработки входящего `Message`s.
+Также можно упаковать параметры для службы в `Message`. Это будет рассмотрено далее в этом пошаговом окне. В следующем разделе рассматривается создание объекта `Messenger` для обработки входящих `Message`s.
 
 ### <a name="instantiating-the-messenger"></a>Создание экземпляра программы Messenger
 
@@ -242,7 +242,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
     {
         Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-        IsConnected = service != null
+        IsConnected = service != null;
         Messenger = new Messenger(service);
 
         if (IsConnected)
@@ -270,8 +270,8 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 После создания подключения службы и намерений клиент может вызвать `BindService` и инициировать процесс привязки:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
-BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
+var serviceConnection = new TimestampServiceConnection(this);
+BindService(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
 После того как клиент успешно привязан к службе и `Messenger` доступен, клиент может отправить `Messages` в службу.
@@ -300,7 +300,7 @@ catch (RemoteException ex)
 
 ### <a name="passing-additional-values-to-the-service"></a>Передача дополнительных значений в службу
 
-В службу можно передать более сложные данные с помощью `Bundle`. В этом случае дополнительные значения можно поместить в `Bundle` и отправить вместе с `Message`, установив свойство [свойства `.Data`](xref:Android.OS.Message.Data) перед отправкой.
+В службу можно передать более сложные данные с помощью `Bundle`. В этом случае дополнительные значения можно поместить в `Bundle` и отправить вместе с `Message`, установив свойство [свойства`.Data`](xref:Android.OS.Message.Data) перед отправкой.
 
 ```csharp
 Bundle serviceParameters = new Bundle();
@@ -414,7 +414,7 @@ Android предоставляет четыре различных уровня 
 
 Чтобы использовать пользовательское разрешение, оно объявляется службой, а клиент явным образом запрашивает это разрешение.
 
-Чтобы создать разрешение в службе APK, элемент `permission` добавляется в элемент `manifest` в **AndroidManifest. XML**. Это разрешение должно иметь набор атрибутов `name`, `protectionLevel` и `label`. Атрибуту `name` должно быть присвоено строковое значение, однозначно идентифицирующее разрешение. Имя будет отображаться в представлении **сведений о приложении** в **параметрах Android** (как показано в следующем разделе).
+Чтобы создать разрешение в службе APK, элемент `permission` добавляется в элемент `manifest` в **AndroidManifest. XML**. Это разрешение должно иметь набор атрибутов `name`, `protectionLevel`и `label`. Атрибуту `name` должно быть присвоено строковое значение, однозначно идентифицирующее разрешение. Имя будет отображаться в представлении **сведений о приложении** в **параметрах Android** (как показано в следующем разделе).
 
 Атрибуту `protectionLevel` должно быть присвоено одно из четырех строковых значений, описанных выше.  `label` и `description` должны ссылаться на строковые ресурсы и использоваться для предоставления пользователю понятного имени и описания.
 

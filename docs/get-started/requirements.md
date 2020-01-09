@@ -1,28 +1,35 @@
 ---
-title: Требования к Xamarin.Forms
-description: Требования к платформе и системные требования к разработке Xamarin.Forms.
+title: Xamarin. Требования к формам
+description: Требования к платформе и системе разработки для Xamarin. Формах.
 ms.prod: xamarin
 ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: 46a72534fba7a45323a82ad121e5844410472812
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+no-loc:
+- Xamarin
+- Xamarin.Forms
+- Xamarin.Android
+- Xamarin.Essentials
+- Xamarin.iOS
+- Xamarin.Mac
+ms.openlocfilehash: d12daa358917399fc5fd1febf02d4f96a647f360
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584350"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607858"
 ---
-# <a name="xamarinforms-requirements"></a>Требования к Xamarin.Forms
+# <a name="opno-locxamarinforms-requirements"></a>Xamarin. Требования к формам
 
-_Требования к платформе и системные требования к разработке Xamarin.Forms._
+_Требования к платформе и системе разработки для Xamarin. Формах._
 
 Обзор рекомендаций по установке и настройке, действующих для различных платформ, см. в статье [Установка](installation/index.md).
 
 ## <a name="target-platforms"></a>Целевые платформы
 
-Приложения Xamarin.Forms могут быть написаны для следующих операционных систем:
+Xamarin. Приложения форм могут быть написаны для следующих операционных систем:
 
 - iOS 9 или более поздней версии
 - Android 4.4 (API 19) или более поздние версии ([подробнее](#android));
@@ -34,7 +41,7 @@ _Требования к платформе и системные требова
 
 ### <a name="additional-platform-support"></a>Поддержка дополнительных платформ
 
-Сведения о состоянии этих платформ можно найти на странице [Xamarin.Forms в GitHub](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support):
+Состояние этих платформ можно найти на [Xamarin. Формы GitHub](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support):
 
 - Samsung Tizen;
 - macOS
@@ -67,18 +74,18 @@ _Требования к платформе и системные требова
 
 ## <a name="development-system-requirements"></a>Требования к системе для разработки
 
-Приложения Xamarin.Forms можно разрабатывать в ОС в macOS и Windows. Однако для создания Windows-версий приложения требуются Windows и Visual Studio.
+Xamarin. Приложения форм можно разрабатывать на macOS и Windows. Однако для создания Windows-версий приложения требуются Windows и Visual Studio.
 
 ## <a name="mac-system-requirements"></a>Требования к системе Mac
 
-Visual Studio для Mac можно использовать для разработки приложений Xamarin. Forms в macOS High Сьерра (10,13) или более поздней версии. Для разработки приложений iOS рекомендуется использовать последнюю версию Xcode, iOS и macOS. Требования к конкретной версии см. в последних [заметках о выпуске Xamarin. iOS](/xamarin/ios/release-notes/).
+Для разработки Xamarinможно использовать Visual Studio для Mac. Приложения форм на macOS High Сьерра (10,13) или более поздней версии. Для разработки приложений iOS рекомендуется использовать последнюю версию Xcode, iOS и macOS. Требования к конкретной версии см. в [заметках о выпускеXamarin. iOS](/xamarin/ios/release-notes/).
 
 > [!NOTE]
 > Приложения Windows нельзя разрабатывать в macOS.
 
 ## <a name="windows-system-requirements"></a>Требования к системе Windows
 
-Приложения Xamarin.Forms для iOS и Android можно создавать в любой установке Windows, которая поддерживает возможности разработки Xamarin. Для полной поддержки функций текущей платформы используйте последнюю версию Visual Studio. 
+Xamarin. Приложения форм для iOS и Android могут быть построены в любой установке Windows, поддерживающей Xamarinную разработку. Для полной поддержки функций текущей платформы используйте последнюю версию Visual Studio. 
 
 Для разработки iOS требуется сетевой компьютер Mac, использующий последнюю версию Xcode и минимальную версию macOS, указанную Apple.
 
@@ -86,7 +93,7 @@ Visual Studio для Mac можно использовать для разраб
 
 ### <a name="universal-windows-platform-uwp"></a>Универсальная платформа Windows (UWP)
 
-Для разработки приложений Xamarin.Forms для UWP требуются следующие компоненты:
+Разработка Xamarin. Для приложений форм для UWP требуется:
 
 - Windows 10 (рекомендуется самая последняя версия, не менее создателей обновлений)
 
@@ -94,11 +101,11 @@ Visual Studio для Mac можно использовать для разраб
 
 - [Пакет средств разработки Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
-[Приложение универсальной платформы Windows (UWP) можно добавить](~/xamarin-forms/platform/windows/installation/index.md) в существующее решение Xamarin.Forms в любое время.
+[Приложение универсальная платформа Windows (UWP) можно добавить](~/xamarin-forms/platform/windows/installation/index.md) в существующую Xamarin. Решение "формы" в любое время.
 
 ## <a name="deprecated-platforms"></a>Устаревшие платформы
 
-Эти платформы не поддерживаются при использовании Xamarin. Forms 3,0 или более поздней версии:
+Эти платформы не поддерживаются при использовании Xamarin. Формы 3,0 или более поздней версии:
 
 - *Windows 8.1 или Windows Phone 8.1 WinRT;*
 - *Windows Phone 8 Silverlight.*

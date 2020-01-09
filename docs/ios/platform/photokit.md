@@ -7,16 +7,27 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 82cff753e7569c2642c467db692c2d2d84347df0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: def34efd1fd48cc0e7dd802a6d3e843be1e156a4
+ms.sourcegitcommit: 5ddb107b0a56bef8a16fce5bc6846f9673b3b22e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031615"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558811"
 ---
 # <a name="photokit-in-xamarinios"></a>Фотокит в Xamarin. iOS
 
-Фотокит — это новая платформа, позволяющая приложениям запрашивать библиотеку образов системы и создавать настраиваемые пользовательские интерфейсы для просмотра и изменения содержимого. Он включает несколько классов, представляющих изображения и видеоматериалы, а также коллекции ресурсов, таких как альбомы и папки.
+[![загрузить пример](~/media/shared/download.png) скачать пример кода](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp/)
+
+Фотокит — это платформа, позволяющая приложениям запрашивать библиотеку образов системы и создавать настраиваемые пользовательские интерфейсы для просмотра и изменения содержимого. Он включает несколько классов, представляющих изображения и видеоматериалы, а также коллекции ресурсов, таких как альбомы и папки.
+
+## <a name="permissions"></a>Разрешения
+
+Прежде чем приложение сможет получить доступ к библиотеке фотографий, пользователю будет предоставлено диалоговое окно с разрешениями. Необходимо указать пояснительный текст в файле **info. plist** , чтобы объяснить, как приложение использует библиотеку фотографий, например:
+
+```xml
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Applies filters to photos and updates the original image</string>
+```
 
 ## <a name="model-objects"></a>Объекты модели
 
@@ -55,7 +66,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 ## <a name="saving-changes-to-the-photo-library"></a>Сохранение изменений в библиотеке фотографий
 
-Это способ управления запросами и считыванием данных. Можно также записать изменения обратно в библиотеку. Так как несколько заинтересованных приложений могут взаимодействовать с фотобиблиотекой системы, можно зарегистрировать наблюдатель, чтобы получать уведомления об изменениях с помощью Фотолибрарйобсервер. Затем, когда поступают изменения, приложение может обновиться соответствующим образом. Например, вот простая реализация для перезагрузки представления коллекций выше:
+Это способ управления запросами и считыванием данных. Можно также записать изменения обратно в библиотеку. Поскольку несколько заинтересованных приложений могут взаимодействовать с фотобиблиотекой системы, можно зарегистрировать наблюдатель, чтобы получать уведомления об изменениях с помощью `PhotoLibraryObserver`. Затем, когда поступают изменения, приложение может обновиться соответствующим образом. Например, вот простая реализация для перезагрузки представления коллекций выше:
 
 ```csharp
 class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
@@ -70,26 +81,25 @@ class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
     public override void PhotoLibraryDidChange (PHChange changeInstance)
     {
         DispatchQueue.MainQueue.DispatchAsync (() => {
-        var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
-        controller.fetchResults = changes.FetchResultAfterChanges;
-        controller.CollectionView.ReloadData ();
+            var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
+            controller.fetchResults = changes.FetchResultAfterChanges;
+            controller.CollectionView.ReloadData ();
         });
     }
 }
 ```
 
-Для фактической записи изменений из приложения необходимо создать запрос на изменение. Каждый из классов модели имеет связанный класс запроса на изменение. Например, чтобы изменить Фассет, создайте Фассетчанжерекуест. Действия по выполнению изменений, которые записываются обратно в библиотеку фотографий и отправляются наблюдателям, как показано выше:
+Для фактической записи изменений из приложения необходимо создать запрос на изменение. Каждый из классов модели имеет связанный класс запроса на изменение. Например, чтобы изменить `PHAsset`, создайте `PHAssetChangeRequest`. Действия по выполнению изменений, которые записываются обратно в библиотеку фотографий и отправляются наблюдателям, как показано выше:
 
-- Выполните операцию редактирования.
-- Сохраните отфильтрованные данные изображения в экземпляре Фконтентедитингаутпут.
-- Выполните запрос на изменение, чтобы опубликовать изменения, образуя выходные данные редактирования.
+1. Выполните операцию редактирования.
+2. Сохраните отфильтрованные данные изображения в экземпляре `PHContentEditingOutput`.
+3. Выполните запрос на изменение, чтобы опубликовать изменения из выходных данных редактирования.
 
 Ниже приведен пример, который записывает изменения в образ, который применяет основной фильтр ноир Image:
 
 ```csharp
 void ApplyNoirFilter (object sender, EventArgs e)
 {
-
     Asset.RequestContentEditingInput (new PHContentEditingInputRequestOptions (), (input, options) => {
 
         // perform the editing operation, which applies a noir filter in this case
@@ -123,8 +133,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 Когда пользователь нажимает кнопку, применяется фильтр:
 
-![](photokit-images/image5.png "An example of the filter being applied")
+![Два примера, показывающие фотографию до и после применения фильтра](photokit-images/image5.png)
 
-И спасибо за Ффотолибраричанжеобсервер, это изменение отражается в представлении коллекции, когда пользователь переходит назад:
+И благодаря `PHPhotoLibraryChangeObserver`изменения отражаются в представлении коллекции, когда пользователь переходит назад:
 
-![](photokit-images/image6.png "The change is reflected in the collection view when the user navigates back")
+![Представление коллекции фотографий, показывающее измененную фотографию](photokit-images/image6.png)

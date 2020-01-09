@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 658bb65c9f9dea2c68b782736de02d95df368dd3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 97c582ada0951f530885359112c3c7adfacc3502
+ms.sourcegitcommit: bdb8ad7337931adf2ea45b10c2af81ecc4aad26a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024852"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500238"
 ---
 # <a name="creating-a-service"></a>Создание службы
 
@@ -83,7 +83,7 @@ public class DemoService : Service
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
-- **Неявная цель** &ndash; этот тип намерения слабо определяет действие, которое пользователь хочет выполнить, но точная служба для выполнения этого действия неизвестна. Неявная цель может рассматриваться как буква, с которой оно может быть связано...».
+- **Неявная цель** &ndash; этот тип намерения слабо определяет тип действия, которое пользователь хочет выполнить, но точная служба для выполнения этого действия неизвестна. Неявная цель может рассматриваться как буква, с которой оно может быть связано...».
     Android проверит содержимое намерения и определит, существует ли уже существующая служба, которая соответствует намерениям.
 
     _Фильтр с намерением_ используется для обеспечения соответствия неявной цели зарегистрированной службе. Фильтр с намерением — это XML-элемент, который добавляется в **AndroidManifest. XML** , который содержит необходимые метаданные, чтобы помочь сопоставить службу с неявным намерением.
@@ -131,6 +131,6 @@ public class DemoService : Service
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Android. app. Service](xref:Android.App.Service)
-- [Android. app. Сервицеаттрибуте](xref:Android.App.ServiceAttribute)
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute)
 - [Android. app. намерение](xref:Android.Content.Intent)
-- [Android. app. Интентфилтераттрибуте](xref:Android.App.IntentFilterAttribute)
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)

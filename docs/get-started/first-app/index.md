@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 2c50ffb37f0fd1d7b0d9fad063c4d6195d6b1f08
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
+ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199769"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502804"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Создание первого приложения Xamarin.Forms
 
@@ -32,15 +32,15 @@ _Просмотрите это видео и следуйте инструкци
 
 1. Выберите **файл > создать > проект...** или нажмите кнопку **создать новый проект..** .:
 
-    [![Создание нового проекта](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [![создать новый проект](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
 2. Выполните поиск по фразе Xamarin или выберите **Mobile** в меню **тип проекта** . Выберите тип проекта " **мобильное приложение (Xamarin. Forms)** ":
 
-    [![Фильтр для проектов Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [Фильтр ![для проектов Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
-3. Выберите имя &ndash; проекта. в примере используется "авесомеапп":
+3. Выберите имя проекта &ndash; в примере используется "Авесомеапп":
 
-    [![Выберите имя проекта](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![выбрать имя проекта](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
 4. Щелкните **пустой** тип проекта и убедитесь, что выбраны **Android** и **iOS** .
 
@@ -48,13 +48,13 @@ _Просмотрите это видео и следуйте инструкци
 
 5. Подождите, пока восстанавливаются пакеты NuGet (в строке состояния появится сообщение "Восстановление завершено").
 
-6. В новых установках Visual Studio 2019 не будет настроен эмулятор Android. Щелкните стрелку раскрывающегося списка на кнопке Отладка и выберите **создать Android Emulator** , чтобы запустить экран создания эмулятора:
+6. В новых установках Visual Studio 2019 не будет настроен эмулятор Android. Щелкните стрелку раскрывающегося списка на кнопке **Отладка** и выберите **создать Android Emulator** , чтобы запустить экран создания эмулятора:
 
     ![Раскрывающийся список создания Android Emulator](images/win-2019/debug-dropdown.png)
 
 7. На экране создания эмулятора используйте параметры по умолчанию и нажмите кнопку **создать** :
 
-    [![Экран создания эмулятора Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+    [экран создания эмулятора ![Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
 
 8. Создание эмулятора вернет вас в окно Device Manager. Нажмите кнопку " **Пуск** ", чтобы запустить новый эмулятор:
 
@@ -64,7 +64,7 @@ _Просмотрите это видео и следуйте инструкци
 
     ![Имя эмулятора Android на кнопке "Отладка"](images/win-2019/debug-emulator-name.png)
 
-10. Нажмите кнопку "Отладка", чтобы создать и развернуть приложение в эмуляторе Android:
+10. Нажмите кнопку " **Отладка** ", чтобы создать и развернуть приложение в эмуляторе Android:
 
     ![Эмулятор Android, отображающий приложение](images/win-2019/android-emulator.png)
 
@@ -209,8 +209,8 @@ _Просмотрите это видео и следуйте инструкци
 
 Загрузите полный код из [коллекции примеров](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) или просмотрите его на [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- [Краткое руководство по отдельным страницам](~/get-started/quickstarts/single-page.md) &ndash; Создайте более функциональное приложение.
-- [Примеры Xamarin.Forms](~/xamarin-forms/samples/index.yml) &ndash; загрузка и запуск примеров кода и примеров приложений.
-- [Электронная книга "Создание мобильных приложений"](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; подробное описание разработки в Xamarin.Forms в виде PDF с сотнями дополнительных примеров.
+- [Краткое руководство по отдельным страницам](~/get-started/quickstarts/single-page.md) &ndash; создания более функционального приложения.
+- [Примеры Xamarin. forms](~/xamarin-forms/samples/index.md) &ndash; Скачайте и запустите примеры кода и примеры приложений.
+- [Создание электронной документации по мобильным приложениям](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; подробные главы, посвященные разработке Xamarin. Forms, доступной в формате PDF и включающей сотни дополнительных примеров.

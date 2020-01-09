@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
-ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
+ms.openlocfilehash: d94f18d00ebf6eeec5f33343b5c0f985ba2a6ea8
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884128"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655411"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Горячая перезагрузка XAML для Xamarin. Forms (Предварительная версия)
 
@@ -20,6 +20,8 @@ ms.locfileid: "74884128"
 
 > [!NOTE]
 > Если вы создаете приложение WPF или UWP, см. статью [Горячая перезагрузка XAML для UWP и WPF](/visualstudio/debugger/xaml-hot-reload).
+>
+> Горячая перезагрузка XAML для Xamarin. Forms в настоящее время _не_ работает для проектов UWP Xamarin. Forms.
 
 ## <a name="system-requirements"></a>Требования к системе
 
@@ -49,6 +51,7 @@ Xamarin.Forms | 4,1 или выше
 - Все ссылки, созданные путем назначения элемента управления другому полю или свойству с помощью его `x:Name` значения, не будут перезагружены.
 - Обновление визуальной иерархии приложения оболочки в **аппшелл. XAML** может вызвать проблемы, связанные с сохранением состояния приложения. Перестройте приложение, чтобы продолжить перезагрузку.
 - Горячая перезагрузка XAML не может перезагрузить C# код, включая обработчики событий, пользовательские элементы управления, код программной части страницы и дополнительные классы.
+- _Не_ работает на других платформах, поддерживаемых Xamarin. Forms (например, Mac OS или UWP).
 
 ## <a name="migrate-from-the-private-preview"></a>Миграция из закрытой предварительной версии
 

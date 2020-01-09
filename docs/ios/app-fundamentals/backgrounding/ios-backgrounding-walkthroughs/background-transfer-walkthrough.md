@@ -6,21 +6,19 @@ ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 03/18/2017
-ms.openlocfilehash: 6004598b215c85b70b057ff156c3a905a0879138
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 01/02/2020
+ms.openlocfilehash: 90d5034f332b311ee83ac2654bcbbc2cde2b11c0
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010715"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607832"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Фоновая перенаправление и NSURLSession в Xamarin. iOS
 
 Фоновая передача инициируется путем настройки фонового `NSURLSession` и постановкуных задач отправки или загрузки. Если задачи выполняются во время фонового, приостановленного или завершенного работы приложения, iOS уведомляет приложение, вызывая обработчик завершения в *AppDelegateе*приложения. Следующая схема демонстрирует это в действии:
 
- [![](background-transfer-walkthrough-images/transfer.png "A background transfer is initiated by configuring a background NSURLSession and enqueuing upload or download tasks")](background-transfer-walkthrough-images/transfer.png#lightbox)
-
-Давайте посмотрим, как это выглядит в коде.
+ [![фоновая передача инициируется путем настройки фоновых NSURLSession и постановкуных задач отправки или загрузки.](background-transfer-walkthrough-images/transfer.png)](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 ## <a name="configuring-a-background-session"></a>Настройка фонового сеанса
 
@@ -38,7 +36,7 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
   NSUrlSessionConfiguration configuration =
       NSUrlSessionConfiguration.CreateBackgroundSessionConfiguration ("com.SimpleBackgroundTransfer.BackgroundSession");
   session = NSUrlSession.FromConfiguration
-      (configuration, (NSUrlSessionDelegate) new MySessionDelegate(), new NSOperationQueue());
+      (configuration, new MySessionDelegate(), new NSOperationQueue());
 
 }
 ```
@@ -58,13 +56,13 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
 
 Для фоновых сеансов требуются более специализированные делегаты в зависимости от типов выполняемых задач. Фоновые сеансы ограничены двумя типами задач:
 
-- *Отправка задач* . задачи типа `NSUrlSessionUploadTask` используют `NSUrlSessionTaskDelegate`, который наследуется от `NSUrlSessionDelegate`. Этот делегат предоставляет дополнительные методы отслеживания хода передачи, обработки перенаправления HTTP и т. д.
-- *Задачи скачивания* — задачи типа `NSUrlSessionDownloadTask` используют `NSUrlSessionDownloadDelegate`, который наследуется от `NSUrlSessionTaskDelegate`. Этот делегат предоставляет все методы для отправки задач, а также методы, связанные с загрузкой, для отслеживания хода загрузки и определения момента возобновления или завершения задачи загрузки.
+- *Отправка задач* — задачи типа `NSUrlSessionUploadTask` используют интерфейс `INSUrlSessionTaskDelegate`, который реализует `INSUrlSessionDelegate`. Это предоставляет дополнительные методы отслеживания хода передачи, обработки перенаправления HTTP и т. д.
+- *Задачи скачивания* — задачи типа `NSUrlSessionDownloadTask` используют интерфейс `INSUrlSessionDownloadDelegate`, который реализует `INSUrlSessionDelegate` и `INSUrlSessionTaskDelegate`. Это предоставляет все методы для отправки задач, а также методы, связанные с загрузкой, для отслеживания хода загрузки и определения момента возобновления или завершения задачи загрузки.
 
-В следующем коде определяется задача, которую можно использовать для загрузки изображения из URL-адреса. Мы начнем задачу, вызвав `CreateDownloadTask` в нашем фоновом сеансе и передав запрос URL-адреса:
+В следующем коде определяется задача, которую можно использовать для загрузки изображения из URL-адреса. Задача запускается путем вызова `CreateDownloadTask` в фоновом сеансе и передачи запроса URL-адреса:
 
 ```csharp
-const string DownloadURLString = "http://cdn1.xamarin.com/webimages/images/xamarin.png";
+const string DownloadURLString = "http://xamarin.com/images/xamarin.png"; // or other hosted file
 public NSUrlSessionDownloadTask downloadTask;
 
 NSUrl downloadURL = NSUrl.FromString (DownloadURLString);
@@ -72,12 +70,12 @@ NSUrlRequest request = NSUrlRequest.FromUrl (downloadURL);
 downloadTask = session.CreateDownloadTask (request);
 ```
 
-Далее мы создадим новый делегат для скачивания сеанса, чтобы контролировать все задачи скачивания в этом сеансе:
+Затем создайте новый делегат для скачивания сеанса, чтобы контролировать все задачи скачивания в этом сеансе. Класс делегата должен наследовать от `NSObject` и реализовывать требуемый интерфейс:
 
 ```csharp
-public class MySessionDelegate : NSUrlSessionDownloadDelegate
+public class MySessionDelegate : NSObject, INSUrlSessionDownloadDelegate
 {
-  public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+  public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
   {
     Console.WriteLine (string.Format ("DownloadTask: {0}  progress: {1}", downloadTask, progress));
     InvokeOnMainThread( () => {
@@ -88,7 +86,7 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 }
 ```
 
-Если нам нужно узнать о ходе выполнения задачи загрузки, можно переопределить метод `DidWriteData` для отслеживания хода выполнения и даже обновить пользовательский интерфейс. Обновления пользовательского интерфейса будут отображаться немедленно, если приложение находится на переднем плане, или будет ожидать, когда пользователь в следующий раз откроет приложение.
+Чтобы узнать ход выполнения задачи загрузки, переопределите метод `DidWriteData`, чтобы отслеживать ход выполнения, и даже обновить пользовательский интерфейс. Обновления пользовательского интерфейса будут отображаться немедленно, если приложение находится на переднем плане, или будет ожидать, когда пользователь в следующий раз откроет приложение.
 
 API делегата сеанса предоставляет широкий набор средств для взаимодействия с задачами. Полный список методов делегата сеанса см. в документации по API `NSUrlSessionDelegate`.
 
@@ -99,31 +97,31 @@ API делегата сеанса предоставляет широкий на
 
 Заключительным этапом является предоставление приложению сведений о завершении всех связанных с сеансом задач и обработке нового содержимого.
 
-В *AppDelegate*Подпишитесь на событие `HandleEventsForBackgroundUrl`. Когда приложение переходит в фоновый режим и выполняется сеанс передачи, этот метод вызывается, и система передает нам обработчик завершения:
+В `AppDelegate`Подпишитесь на событие `HandleEventsForBackgroundUrl`. Когда приложение переходит в фоновый режим и выполняется сеанс передачи, этот метод вызывается, и система передает нам обработчик завершения:
 
 ```csharp
 public System.Action backgroundSessionCompletionHandler;
 
-public override void HandleEventsForBackgroundUrl (UIApplication application, string sessionIdentifier, System.Action completionHandler)
+public void HandleEventsForBackgroundUrl (UIApplication application, string sessionIdentifier, System.Action completionHandler)
 {
   this.backgroundSessionCompletionHandler = completionHandler;
 }
 ```
 
-Мы будем использовать обработчик завершения, чтобы сообщить iOS о завершении обработки приложения.
+Используйте обработчик завершения, чтобы сообщить iOS о завершении обработки приложения.
 
 Вспомним, что сеанс может порождать несколько задач для обработки перемещения. По завершении выполнения последней задачи приостановленное или завершенное приложение повторно запускается в фоновом режиме. Затем приложение повторно подключается к `NSURLSession` с помощью уникального идентификатора сеанса и вызывает `DidFinishEventsForBackgroundSession` в делегате сеанса. Этот метод является возможностью приложения для работы с новым содержимым, включая обновление пользовательского интерфейса в соответствии с результатами перемещения:
 
 ```csharp
-public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {
+public void DidFinishEventsForBackgroundSession (NSUrlSession session) {
   // Handle new information, update UI, etc.
 }
 ```
 
-После завершения обработки нового содержимого мы вызываем обработчик завершения, чтобы система знала, что можно получить моментальный снимок приложения и вернуться в спящий режим:
+После завершения обработки нового содержимого вызовите обработчик завершения, чтобы система знала, что можно получить моментальный снимок приложения и вернуться в спящий режим:
 
 ```csharp
-public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {
+public void DidFinishEventsForBackgroundSession (NSUrlSession session) {
   var appDelegate = UIApplication.SharedApplication.Delegate as AppDelegate;
 
   // Handle new information, update UI, etc.
@@ -137,7 +135,7 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 }
 ```
 
-В этом пошаговом руководстве мы рассмотрели основные шаги для реализации службы фоновой пересылки в iOS 7.
+В этом пошаговом руководстве были рассмотрены основные шаги для реализации службы фоновой пересылки в iOS 7 и более поздних версиях.
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -1,5 +1,5 @@
 ---
-title: Аутентификация и авторизация
+title: Проверка подлинности и авторизация
 description: В этой главе объясняется, как мобильное приложение eShopOnContainers выполняет проверку подлинности и авторизацию для контейнерных микрослужб.
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 667de4d579f43558d9a811c386e355433f526077
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7ced28a5ed379b761ffcc9841f5d0e923ec747e7
+ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760463"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75667056"
 ---
-# <a name="authentication-and-authorization"></a>Аутентификация и авторизация
+# <a name="authentication-and-authorization"></a>Проверка подлинности и авторизация
 
 Проверка подлинности — это процесс получения учетных данных для идентификации, таких как имя и пароль пользователя, и проверки этих учетных данных в центре сертификации. Если учетные данные действительны, сущность, которая отправила учетные данные, считается аутентифицированным удостоверением. После проверки подлинности удостоверения процесс авторизации определяет, имеет ли это удостоверение доступ к данному ресурсу.
 
@@ -39,7 +39,7 @@ OpenID Connect Connect — это уровень проверки подлинн
 
 В приложениях, использующих прямое взаимодействие клиента с микрослужбой, например Справочное приложение eShopOnContainers, выделенная микрослужба проверки подлинности, действующая как служба маркеров безопасности (STS), может использоваться для проверки подлинности пользователей, как показано на рисунке. 9-1. Дополнительные сведения о прямой связи клиента с микрослужбой см. в разделе [взаимодействие между клиентом и микрослужбами](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices).
 
-![](authentication-and-authorization-images/authentication.png "Проверка подлинности с помощью выделенной микрослужбы проверки подлинности")
+![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
 
 **Рис. 9-1.** Проверка подлинности с помощью выделенной микрослужбы проверки подлинности
 
@@ -55,7 +55,7 @@ OpenID Connect Connect — это уровень проверки подлинн
 
 Чтобы ASP.NET Core веб-приложение использовало IdentityServer 4, его необходимо добавить в решение Visual Studio веб-приложения. Дополнительные сведения см. в разделе [Обзор](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) в документации по IdentityServer.
 
-После включения IdentityServer в решение Visual Studio веб-приложения оно должно быть добавлено к конвейеру обработки HTTP-запросов в Интернете, чтобы он мог обслуживать запросы к конечным точкам OpenID Connect Connect и OAuth 2,0. Это достигается в `Configure` методе в `Startup` классе веб-приложения, как показано в следующем примере кода:
+После включения IdentityServer в решение Visual Studio веб-приложения оно должно быть добавлено к конвейеру обработки HTTP-запросов в Интернете, чтобы он мог обслуживать запросы к конечным точкам OpenID Connect Connect и OAuth 2,0. Это достигается методом `Configure` в классе `Startup` веб-приложения, как показано в следующем примере кода:
 
 ```csharp
 public void Configure(  
@@ -71,7 +71,7 @@ public void Configure(
 
 ### <a name="configuring-identityserver"></a>Настройка IdentityServer
 
-IdentityServer должен быть настроен в `ConfigureServices` методе в `Startup` классе веб-приложения путем вызова `services.AddIdentityServer` метода, как показано в следующем примере кода из эталонного приложения eShopOnContainers:
+IdentityServer должен быть настроен в методе `ConfigureServices` в классе `Startup` веб-приложения путем вызова метода `services.AddIdentityServer`, как показано в следующем примере кода из приложения-образца eShopOnContainers:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)  
@@ -90,7 +90,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-После вызова `services.AddIdentityServer` метода вызываются дополнительные API-интерфейсы Fluent для настройки следующих параметров:
+После вызова метода `services.AddIdentityServer` вызываются дополнительные интерфейсы API Fluent для настройки следующих параметров:
 
 - Учетные данные, используемые для подписывания.
 - Ресурсы API и удостоверений, к которым пользователи могут запрашивать доступ.
@@ -104,7 +104,7 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="configuring-api-resources"></a>Настройка ресурсов API
 
-При настройке ресурсов `AddInMemoryApiResources` API метод принимает `IEnumerable<ApiResource>` коллекцию. В следующем примере кода показан `GetApis` метод, который предоставляет эту коллекцию в эталонном приложении eShopOnContainers:
+При настройке ресурсов API метод `AddInMemoryApiResources` принимает `IEnumerable<ApiResource>` коллекцию. В следующем примере кода показан метод `GetApis`, который предоставляет эту коллекцию в эталонном приложении eShopOnContainers:
 
 ```csharp
 public static IEnumerable<ApiResource> GetApis()  
@@ -117,11 +117,11 @@ public static IEnumerable<ApiResource> GetApis()
 }
 ```
 
-Этот метод указывает, что IdentityServer должен защищать API заказов и корзины. Поэтому при вызове этих API-интерфейсов будут требоваться IdentityServer управляемые маркеры доступа. Дополнительные сведения о `ApiResource` типе см. в разделе [ресурс API](https://identityserver4.readthedocs.io/en/latest/reference/api_resource.html) в документации по IdentityServer 4.
+Этот метод указывает, что IdentityServer должен защищать API заказов и корзины. Поэтому при вызове этих API-интерфейсов будут требоваться IdentityServer управляемые маркеры доступа. Дополнительные сведения о типе `ApiResource` см. в разделе [ресурс API](https://identityserver4.readthedocs.io/en/latest/reference/api_resource.html) в документации по IdentityServer 4.
 
 #### <a name="configuring-identity-resources"></a>Настройка ресурсов удостоверений
 
-При настройке ресурсов `AddInMemoryIdentityResources` удостоверений метод принимает `IEnumerable<IdentityResource>` коллекцию. Ресурсы удостоверений — это такие данные, как идентификатор пользователя, имя или адрес электронной почты. Каждый ресурс удостоверения имеет уникальное имя, и к нему могут быть назначены произвольные типы утверждений, которые затем будут включаться в маркер идентификации для пользователя. В следующем примере кода показан `GetResources` метод, который предоставляет эту коллекцию в эталонном приложении eShopOnContainers:
+При настройке ресурсов удостоверений метод `AddInMemoryIdentityResources` принимает `IEnumerable<IdentityResource>` коллекцию. Ресурсы удостоверений — это такие данные, как идентификатор пользователя, имя или адрес электронной почты. Каждый ресурс удостоверения имеет уникальное имя, и к нему могут быть назначены произвольные типы утверждений, которые затем будут включаться в маркер идентификации для пользователя. В следующем примере кода показан метод `GetResources`, который предоставляет эту коллекцию в эталонном приложении eShopOnContainers:
 
 ```csharp
 public static IEnumerable<IdentityResource> GetResources()  
@@ -134,12 +134,12 @@ public static IEnumerable<IdentityResource> GetResources()
 }
 ```
 
-В спецификации OpenID Connect Connect указаны некоторые [стандартные ресурсы удостоверений](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims). Минимальное требование заключается в том, что предоставляется поддержка для создания уникального идентификатора для пользователей. Это достигается за счет предоставления `IdentityResources.OpenId` ресурса удостоверения.
+В спецификации OpenID Connect Connect указаны некоторые [стандартные ресурсы удостоверений](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims). Минимальное требование заключается в том, что предоставляется поддержка для создания уникального идентификатора для пользователей. Это достигается за счет предоставления ресурса удостоверения `IdentityResources.OpenId`.
 
 > [!NOTE]
-> `IdentityResources` Класс поддерживает все области, определенные в спецификации OpenID Connect Connect (OpenID Connect, адрес электронной почты, профиль, Телефон и адрес).
+> Класс `IdentityResources` поддерживает все области, определенные в спецификации подключения OpenID Connect (OpenID Connect, адрес электронной почты, профиль, Телефон и адрес).
 
-IdentityServer также поддерживает определение пользовательских ресурсов удостоверений. Дополнительные сведения см. в разделе [Определение пользовательских ресурсов удостоверений](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) в документации по IdentityServer. Дополнительные сведения о `IdentityResource` типе см. в разделе [ресурс идентификации](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) в документации по IdentityServer 4.
+IdentityServer также поддерживает определение пользовательских ресурсов удостоверений. Дополнительные сведения см. в разделе [Определение пользовательских ресурсов удостоверений](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) в документации по IdentityServer. Дополнительные сведения о типе `IdentityResource` см. в разделе [ресурс удостоверений](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) в документации по IdentityServer 4.
 
 #### <a name="configuring-clients"></a>Настройка клиентов
 
@@ -150,7 +150,7 @@ IdentityServer также поддерживает определение пол
 - Расположение, куда отправляются маркеры удостоверений и доступа (называемые URI перенаправления).
 - Список ресурсов, к которым разрешен доступ клиенту (называемые областями).
 
-При настройке клиентов `AddInMemoryClients` метод принимает `IEnumerable<Client>` коллекцию. В следующем примере кода показана конфигурация мобильного приложения eShopOnContainers в `GetClients` методе, который предоставляет эту коллекцию в эталонном приложении eShopOnContainers:
+При настройке клиентов метод `AddInMemoryClients` принимает `IEnumerable<Client>` коллекцию. В следующем примере кода показана конфигурация мобильного приложения eShopOnContainers в методе `GetClients`, который предоставляет эту коллекцию в эталонном приложении eShopOnContainers:
 
 ```csharp
 public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUrl)
@@ -190,23 +190,23 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 Эта конфигурация задает данные для следующих свойств:
 
-- `ClientId`: Уникальный идентификатор клиента.
-- `ClientName`: Отображаемое имя клиента, которое используется для ведения журнала и экрана согласия.
-- `AllowedGrantTypes`: Указывает, как клиент хочет взаимодействовать с IdentityServer. Дополнительные сведения см. [в разделе Настройка потока проверки подлинности](#configuring_the_authentication_flow).
-- `ClientSecrets`: Указывает секретные учетные данные клиента, которые используются при запросе токенов из конечной точки токена.
+- `ClientId`— уникальный идентификатор клиента.
+- `ClientName`: отображаемое имя клиента, используемое для ведения журнала, и экран согласия.
+- `AllowedGrantTypes`: указывает, как клиент хочет взаимодействовать с IdentityServer. Дополнительные сведения см. [в разделе Настройка потока проверки подлинности](#configuring_the_authentication_flow).
+- `ClientSecrets`: указывает секретные учетные данные клиента, которые используются при запросе токенов из конечной точки токена.
 - `RedirectUris`: Указывает допустимые URI, к которым возвращаются маркеры или коды авторизации.
-- `RequireConsent`: Указывает, требуется ли экран согласия.
-- `RequirePkce`: Указывает, должны ли клиенты, использующие код авторизации, отправить ключ подтверждения.
-- `PostLogoutRedirectUris`: Указывает разрешенные URI для перенаправления после выхода из системы.
-- `AllowedCorsOrigins`: Указывает источник клиента, чтобы IdentityServer мог разрешить вызовы между источниками из источника.
+- `RequireConsent`: указывает, требуется ли экран согласия.
+- `RequirePkce`: указывает, должны ли клиенты, использующие код авторизации, отправить ключ подтверждения.
+- `PostLogoutRedirectUris`: Указывает разрешенные URI для перенаправления после выхода.
+- `AllowedCorsOrigins`: указывает источник клиента, чтобы IdentityServer мог разрешить вызовы между источниками из источника.
 - `AllowedScopes`: Указывает ресурсы, к которым у клиента есть доступ. По умолчанию клиент не имеет доступа к ресурсам.
-- `AllowOfflineAccess`: Указывает, может ли клиент запрашивать маркеры обновления.
+- `AllowOfflineAccess`: указывает, может ли клиент запрашивать маркеры обновления.
 
 <a name="configuring_the_authentication_flow" />
 
 #### <a name="configuring-the-authentication-flow"></a>Настройка потока проверки подлинности
 
-Поток проверки подлинности между клиентом и IdentityServer можно настроить, указав типы предоставления в `Client.AllowedGrantTypes` свойстве. Спецификации OpenID Connect Connect и OAuth 2,0 определяют ряд потоков проверки подлинности, в том числе:
+Поток проверки подлинности между клиентом и IdentityServer можно настроить, указав типы предоставления в свойстве `Client.AllowedGrantTypes`. Спецификации OpenID Connect Connect и OAuth 2,0 определяют ряд потоков проверки подлинности, в том числе:
 
 - Полностью. Этот поток оптимизирован для приложений на основе браузера и должен использоваться только для проверки подлинности пользователя или для запросов маркеров доступа и проверки подлинности. Все маркеры передаются через браузер, поэтому такие дополнительные функции, как маркеры обновления, не разрешены.
 - Код авторизации. Этот поток предоставляет возможность извлечения токенов в обратном канале, в отличие от интерфейсного канала браузера, а также поддерживает проверку подлинности клиента.
@@ -223,23 +223,23 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 Мобильное приложение eShopOnContainers проходит проверку подлинности с помощью IdentityServer с гибридным потоком проверки подлинности, как показано на рис. 9-2.
 
-![](authentication-and-authorization-images/sign-in.png "Высокоуровневый обзор процесса входа")
+![](authentication-and-authorization-images/sign-in.png "High-level overview of the sign-in process")
 
 **Рис. 9-2.** Высокоуровневый обзор процесса входа
 
-Выполняется запрос на вход в `<base endpoint>:5105/connect/authorize`. После успешной проверки подлинности IdentityServer возвращает ответ на проверку подлинности, содержащий код авторизации и маркер удостоверения. Затем код авторизации отправляется в `<base endpoint>:5105/connect/token`, который реагирует на маркеры доступа, удостоверений и обновления.
+Запрос на вход выполняется в `<base endpoint>:5105/connect/authorize`. После успешной проверки подлинности IdentityServer возвращает ответ на проверку подлинности, содержащий код авторизации и маркер удостоверения. Затем код авторизации отправляется в `<base endpoint>:5105/connect/token`, который реагирует на маркеры доступа, удостоверений и обновления.
 
-Мобильное приложение eShopOnContainers выходит из IdentityServer, отправляя запрос в `<base endpoint>:5105/connect/endsession`, с дополнительными параметрами. После выхода из системы IdentityServer отвечает, отправляя в мобильное приложение URI перенаправления обратного выхода. Этот процесс показан на рис. 9-3.
+Мобильное приложение eShopOnContainers выходит из IdentityServer, отправляя запрос `<base endpoint>:5105/connect/endsession`с дополнительными параметрами. После выхода из системы IdentityServer отвечает, отправляя в мобильное приложение URI перенаправления обратного выхода. Этот процесс показан на рис. 9-3.
 
-![](authentication-and-authorization-images/sign-out.png "Высокоуровневый обзор процесса выхода")
+![](authentication-and-authorization-images/sign-out.png "High-level overview of the sign-out process")
 
 **Рис. 9-3.** Высокоуровневый обзор процесса выхода
 
-В мобильном приложении eShopOnContainers взаимодействие с IdentityServer выполняется `IdentityService` классом, который `IIdentityService` реализует интерфейс. Этот интерфейс указывает, что реализующий класс должен `CreateAuthorizationRequest`предоставлять `CreateLogoutRequest`методы, `GetTokenAsync` и.
+В мобильном приложении eShopOnContainers взаимодействие с IdentityServer выполняется классом `IdentityService`, который реализует интерфейс `IIdentityService`. Этот интерфейс указывает, что реализующий класс должен предоставлять методы `CreateAuthorizationRequest`, `CreateLogoutRequest`и `GetTokenAsync`.
 
 #### <a name="signing-in"></a>Вход в систему
 
-Когда пользователь нажмет кнопку `LoginView`входа в `LoginViewModel` , `SignInCommand` выполняется в `SignInAsync` классе, который, в свою очередь, выполняет метод. Этот метод показан в следующем примере кода:
+Когда пользователь нажмет кнопку **входа** на `LoginView`, выполняется `SignInCommand` в классе `LoginViewModel`, который, в свою очередь, выполняет метод `SignInAsync`. Этот метод показан в следующем примере кода:
 
 ```csharp
 private async Task SignInAsync()  
@@ -251,7 +251,7 @@ private async Task SignInAsync()
 }
 ```
 
-Этот метод вызывает `CreateAuthorizationRequest` метод `IdentityService` в классе, который показан в следующем примере кода:
+Этот метод вызывает метод `CreateAuthorizationRequest` в классе `IdentityService`, который показан в следующем примере кода:
 
 ```csharp
 public string CreateAuthorizationRequest()
@@ -265,7 +265,7 @@ public string CreateAuthorizationRequest()
     dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
     dic.Add("response_type", "code id_token");
     dic.Add("scope", "openid profile basket orders locations marketing offline_access");
-    dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
+    dic.Add("redirect_uri", GlobalSetting.Instance.Callback);
     dic.Add("nonce", Guid.NewGuid().ToString("N"));
     dic.Add("code_challenge", CreateCodeChallenge());
     dic.Add("code_challenge_method", "S256");
@@ -280,18 +280,18 @@ public string CreateAuthorizationRequest()
 
 ```
 
-Этот метод создает универсальный код ресурса (URI) для [конечной точки авторизации](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)IdentityServer с необходимыми параметрами. Конечная точка авторизации находится `/connect/authorize` на порту 5105 базовой конечной точки, предоставляемой в качестве параметра пользователя. Дополнительные сведения о параметрах пользователей см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Этот метод создает универсальный код ресурса (URI) для [конечной точки авторизации](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)IdentityServer с необходимыми параметрами. Конечная точка авторизации находится на `/connect/authorize` порта 5105 базовой конечной точки, предоставляемой в качестве параметра пользователя. Дополнительные сведения о параметрах пользователей см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > Поверхность атаки мобильного приложения eShopOnContainers уменьшается путем внедрения расширения ключа подтверждения для обмена кодом (PKCE) в OAuth. PKCE защищает код авторизации от использования в случае его перехвата. Это достигается тем, что клиент создает средство проверки секрета, хэш, который передается в запросе авторизации и представляется нехэшированным при активации кода авторизации. Дополнительные сведения о PKCE см. в статье [ключ подтверждения для обмена кодом на общедоступных клиентах OAuth](https://tools.ietf.org/html/rfc7636) на веб-сайте Task Engineering Web site.
 
-Возвращенный URI хранится в `LoginUrl` свойстве `LoginViewModel` класса. Когда свойство примет `true`значение, элемент [`WebView`](xref:Xamarin.Forms.WebView) в `LoginView` станет видимым. `IsLogin` [`Source`](xref:Xamarin.Forms.WebView.Source) `LoginUrl` Данные привязывают свое свойство `LoginUrl` к свойству классаиделаютзапроснавходвIdentityServer,еслисвойствоимеетзначениеконечнойточкиавторизацииIdentityServer.`LoginViewModel` `WebView` Когда IdentityServer получает этот запрос и пользователь не прошел проверку подлинности `WebView` , он будет перенаправлен на настроенную страницу входа, которая показана на рис. 9-4.
+Возвращенный URI хранится в свойстве `LoginUrl` класса `LoginViewModel`. Когда свойство `IsLogin` преобразуется в `true`, [`WebView`](xref:Xamarin.Forms.WebView) в `LoginView` становятся видимыми. `WebView` данные привязывают свойство [`Source`](xref:Xamarin.Forms.WebView.Source) к свойству `LoginUrl` класса `LoginViewModel`, и поэтому выполняет запрос на вход в IdentityServer, когда свойство `LoginUrl` имеет значение конечной точки авторизации IdentityServer. Когда IdentityServer получает этот запрос и пользователь не прошел проверку подлинности, `WebView` будет перенаправлен на настроенную страницу входа, которая показана на рис. 9-4.
 
-![](authentication-and-authorization-images/login.png "Страница входа, отображаемая WebView")
+![](authentication-and-authorization-images/login.png "Login page displayed by the WebView")
 
 **Рис. 9-4.** Страница входа, отображаемая WebView
 
-После завершения входа объект [`WebView`](xref:Xamarin.Forms.WebView) будет перенаправлен на URI возврата. Эта `WebView` Навигация приведет `NavigateAsync` к выполнению метода в `LoginViewModel` классе, который показан в следующем примере кода:
+После завершения входа [`WebView`](xref:Xamarin.Forms.WebView) будет перенаправлен на универсальный код ресурса (URI) возврата. Эта `WebView` навигации приведет к выполнению метода `NavigateAsync` в классе `LoginViewModel`, который показан в следующем примере кода:
 
 ```csharp
 private async Task NavigateAsync(string url)  
@@ -316,23 +316,23 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-Этот метод анализирует ответ проверки подлинности, содержащийся в URI возврата, и при условии, что присутствует допустимый код авторизации, он выполняет запрос к [конечной точке маркера](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)IdentityServer, передавая код авторизации, средство проверки СЕКРЕТа PKCE. и другие обязательные параметры. Конечная точка токена `/connect/token` находится на порту 5105 базовой конечной точки, предоставляемой в качестве параметра пользователя. Дополнительные сведения о параметрах пользователей см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Этот метод анализирует ответ проверки подлинности, содержащийся в URI возврата, и при условии, что присутствует допустимый код авторизации, он выполняет запрос к [конечной точке маркера](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)IdentityServer, передает код авторизации, средство проверки секрета PKCE и другие необходимые параметры. Конечная точка маркера находится на `/connect/token` порта 5105 базовой конечной точки, предоставляемой в качестве параметра пользователя. Дополнительные сведения о параметрах пользователей см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!TIP]
 > Проверка возвращенных URI. Несмотря на то, что мобильное приложение eShopOnContainers не проверяет URI возврата, рекомендуется проверить, что возвращаемый URI ссылается на известное расположение, чтобы предотвратить атаки с открытым перенаправлением.
 
-Если конечная точка маркера получает допустимый код авторизации и PKCE Secret Verifier, она реагирует на маркер доступа, маркер идентификации и маркер обновления. Маркер доступа (который разрешает доступ к ресурсам API) и маркер удостоверения сохраняются как параметры приложения, а также выполняется Навигация по страницам. Таким образом, общий результат в мобильном приложении eShopOnContainers: при условии, что пользователи могут успешно пройти проверку подлинности в IdentityServer, они переходят `MainView` на страницу, которая отображает `CatalogView` [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) в качестве выбранной вкладки.
+Если конечная точка маркера получает допустимый код авторизации и PKCE Secret Verifier, она реагирует на маркер доступа, маркер идентификации и маркер обновления. Маркер доступа (который разрешает доступ к ресурсам API) и маркер удостоверения сохраняются как параметры приложения, а также выполняется Навигация по страницам. Таким образом, общий результат в мобильном приложении eShopOnContainers: при условии, что пользователи могут успешно пройти проверку подлинности с помощью IdentityServer, они переходят на страницу `MainView`, которая представляет собой [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , отображающую `CatalogView` в качестве выбранной вкладки.
 
-Дополнительные сведения о навигации по страницам см. в разделе [Навигация](~/xamarin-forms/enterprise-application-patterns/navigation.md). Сведения о том, [`WebView`](xref:Xamarin.Forms.WebView) как переход вызывает выполнение метода модели представления, см. в разделе [вызов навигации с использованием поведений](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Сведения о параметрах приложения см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Дополнительные сведения о навигации по страницам см. в разделе [Навигация](~/xamarin-forms/enterprise-application-patterns/navigation.md). Сведения о том, как [`WebView`ная](xref:Xamarin.Forms.WebView) Навигация вызывает выполнение метода модели представления, см. в разделе [вызов навигации с использованием поведений](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Сведения о параметрах приложения см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
-> EShopOnContainers также позволяет использовать фиктивный вход, когда приложение настроено для использования служб макетирования в `SettingsView`. В этом режиме приложение не взаимодействует с IdentityServer, а позволяет пользователю войти в систему, используя любые учетные данные.
+> EShopOnContainers также позволяет использовать фиктивный вход, когда приложение настроено на использование служб макетирования в `SettingsView`. В этом режиме приложение не взаимодействует с IdentityServer, а позволяет пользователю войти в систему, используя любые учетные данные.
 
 #### <a name="signing-out"></a>Выход
 
-Когда пользователь нажмет кнопку **выхода** в `ProfileView` `ProfileViewModel` , `LogoutCommand` выполняется в `LogoutAsync` классе, который, в свою очередь, выполняет метод. Этот метод выполняет навигацию `LoginView` по страницам, `LogoutParameter` передавая экземпляр, заданный в `true` качестве параметра. Дополнительные сведения о передаче параметров при навигации по страницам см. в разделе [Передача параметров во время навигации](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation).
+Когда пользователь нажмет кнопку **выхода** в `ProfileView`, выполняется `LogoutCommand` в классе `ProfileViewModel`, который, в свою очередь, выполняет метод `LogoutAsync`. Этот метод выполняет навигацию по страницам на `LoginView` странице, передавая `LogoutParameter` экземпляру значение `true` в качестве параметра. Дополнительные сведения о передаче параметров при навигации по страницам см. в разделе [Передача параметров во время навигации](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation).
 
-При создании представления и переходе к `InitializeAsync` ему выполняется метод связанной с представлением модели представления, который затем выполняет `Logout` метод `LoginViewModel` класса, который показан в следующем примере кода:
+Когда представление создается и переходит к, выполняется метод `InitializeAsync` связанной модели представления представления, который затем выполняет метод `Logout` класса `LoginViewModel`, который показан в следующем примере кода:
 
 ```csharp
 private void Logout()  
@@ -349,7 +349,7 @@ private void Logout()
 }
 ```
 
-Этот метод вызывает `CreateLogoutRequest` метод `IdentityService` в классе, передавая маркер удостоверения, полученный из параметров приложения, в качестве параметра. Дополнительные сведения о параметрах приложений см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md). Метод `CreateLogoutRequest` показан в следующем примере кода:
+Этот метод вызывает метод `CreateLogoutRequest` в классе `IdentityService`, передавая маркер удостоверения, полученный из параметров приложения, в качестве параметра. Дополнительные сведения о параметрах приложений см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md). Метод `CreateLogoutRequest` показан в следующем примере кода:
 
 ```csharp
 public string CreateLogoutRequest(string token)  
@@ -362,11 +362,11 @@ public string CreateLogoutRequest(string token)
 }
 ```
 
-Этот метод создает универсальный код ресурса (URI) [конечной точки конечного сеанса](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession)IdentityServer с необходимыми параметрами. Конечная точка конечного сеанса находится `/connect/endsession` на порту 5105 базовой конечной точки, предоставленной в качестве параметра пользователя. Дополнительные сведения о параметрах пользователей см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Этот метод создает универсальный код ресурса (URI) [конечной точки конечного сеанса](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession)IdentityServer с необходимыми параметрами. Конечная точка конечного сеанса находится в `/connect/endsession` порта 5105 базовой конечной точки, предоставляемой в качестве параметра пользователя. Дополнительные сведения о параметрах пользователей см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
-Возвращенный URI хранится в `LoginUrl` свойстве `LoginViewModel` класса. `IsLogin` [Свойство`WebView`](xref:Xamarin.Forms.WebView) в являетсявидимым`LoginView` . `true` [`Source`](xref:Xamarin.Forms.WebView.Source) `LoginUrl` Данные привязывают свое свойство `LoginUrl` к свойству класса,ипоэтомуделаютзапроснавыходвIdentityServer,еслисвойствоимеетзначениеконечнойточкиконечногосеансаIdentityServer.`LoginViewModel` `WebView` Когда IdentityServer получает этот запрос при условии, что пользователь вошел в систему, выполняется выход. Проверка подлинности осуществляется с помощью файла cookie, управляемого по промежуточного слоя проверки подлинности файлов cookie, от ASP.NET Core. Таким образом, выход из IdentityServer удаляет файл cookie для проверки подлинности и отправляет клиенту URI перенаправления обратного выхода.
+Возвращенный URI хранится в свойстве `LoginUrl` класса `LoginViewModel`. В то время как свойство `IsLogin` `true`, отображается [`WebView`](xref:Xamarin.Forms.WebView) в `LoginView`. `WebView` данные привязывают свойство [`Source`](xref:Xamarin.Forms.WebView.Source) к свойству `LoginUrl` класса `LoginViewModel`, и поэтому создает запрос на выход в IdentityServer, если свойство `LoginUrl` имеет значение конечной точки конечного сеанса IdentityServer. Когда IdentityServer получает этот запрос при условии, что пользователь вошел в систему, выполняется выход. Проверка подлинности осуществляется с помощью файла cookie, управляемого по промежуточного слоя проверки подлинности файлов cookie, от ASP.NET Core. Таким образом, выход из IdentityServer удаляет файл cookie для проверки подлинности и отправляет клиенту URI перенаправления обратного выхода.
 
-В мобильном приложении [`WebView`](xref:Xamarin.Forms.WebView) будет перенаправлен на URI перенаправления выхода из системы. Эта `WebView` Навигация приведет `NavigateAsync` к выполнению метода в `LoginViewModel` классе, который показан в следующем примере кода:
+В мобильном приложении [`WebView`](xref:Xamarin.Forms.WebView) будет перенаправляться в URI перенаправления выхода из системы. Эта `WebView` навигации приведет к выполнению метода `NavigateAsync` в классе `LoginViewModel`, который показан в следующем примере кода:
 
 ```csharp
 private async Task NavigateAsync(string url)  
@@ -380,16 +380,16 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-Этот метод очищает маркер удостоверения и маркер доступа из параметров `IsLogin` приложения и устанавливает свойство в `false`значение, `LoginView` которое приводит к тому, что [`WebView`](xref:Xamarin.Forms.WebView) на странице становится невидимой. Наконец, `LoginUrl` свойству присваивается универсальный код ресурса (URI) [конечной точки авторизации](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)IdentityServer с необходимыми параметрами в процессе подготовки к следующему моменту, когда пользователь инициирует вход.
+Этот метод очищает маркер удостоверения и маркер доступа из параметров приложения и устанавливает для свойства `IsLogin` значение `false`, что приводит к тому, что [`WebView`](xref:Xamarin.Forms.WebView) на странице `LoginView` становится невидимой. Наконец, для свойства `LoginUrl` задается универсальный код ресурса (URI) [конечной точки авторизации](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)IdentityServer с необходимыми параметрами в процессе подготовки к следующему моменту, когда пользователь инициирует вход.
 
-Дополнительные сведения о навигации по страницам см. в разделе [Навигация](~/xamarin-forms/enterprise-application-patterns/navigation.md). Сведения о том, [`WebView`](xref:Xamarin.Forms.WebView) как переход вызывает выполнение метода модели представления, см. в разделе [вызов навигации с использованием поведений](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Сведения о параметрах приложения см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Дополнительные сведения о навигации по страницам см. в разделе [Навигация](~/xamarin-forms/enterprise-application-patterns/navigation.md). Сведения о том, как [`WebView`ная](xref:Xamarin.Forms.WebView) Навигация вызывает выполнение метода модели представления, см. в разделе [вызов навигации с использованием поведений](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Сведения о параметрах приложения см. в разделе [Управление конфигурацией](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > EShopOnContainers также позволяет макетировать выход, когда приложение настроено для использования служб макетирования в Сеттингсвиев. В этом режиме приложение не взаимодействует с IdentityServer, а удаляет все сохраненные токены из параметров приложения.
 
 <a name="authorization" />
 
-## <a name="authorization"></a>Authorization
+## <a name="authorization"></a>Авторизация
 
 После проверки подлинности ASP.NET Core веб-API часто требуется авторизовать доступ, что позволяет службе сделать интерфейсы API доступными для некоторых пользователей, прошедших проверку подлинности, но не для всех.
 
@@ -403,14 +403,14 @@ public class BasketController : Controller
 }
 ```
 
-Если неавторизованный пользователь пытается получить доступ к контроллеру или действию, помеченному `Authorize` атрибутом, платформа MVC возвращает код состояния HTTP 401 (несанкционированный).
+Если неавторизованный пользователь пытается получить доступ к контроллеру или действию, помеченному атрибутом `Authorize`, платформа MVC возвращает код состояния HTTP 401 (несанкционированный).
 
 > [!NOTE]
-> Параметры можно указать в `Authorize` атрибуте, чтобы ограничить API определенными пользователями. Дополнительные сведения см. в разделе [авторизация](/aspnet/core/security/authorization/introduction/).
+> Параметры можно указать в атрибуте `Authorize`, чтобы ограничить API определенными пользователями. Дополнительные сведения см. в разделе [Авторизация](/aspnet/core/security/authorization/introduction/).
 
 IdentityServer можно интегрировать в рабочий процесс авторизации, чтобы получить маркеры доступа, обеспечивающие управление авторизацией. Этот подход показан на рис. 9-5.
 
-![](authentication-and-authorization-images/authorization.png "Авторизация по маркеру доступа")
+![](authentication-and-authorization-images/authorization.png "Authorization by access token")
 
 **Рис. 9-5.** Авторизация по маркеру доступа
 
@@ -418,7 +418,7 @@ IdentityServer можно интегрировать в рабочий проц�
 
 ### <a name="configuring-identityserver-to-perform-authorization"></a>Настройка IdentityServer для выполнения авторизации
 
-Для выполнения авторизации с помощью IdentityServer по промежуточного слоя авторизации должно быть добавлено в конвейер запросов HTTP веб-приложения. По промежуточного слоя добавляется `ConfigureAuth` в метод в `Startup` классе веб-приложения, который вызывается из `Configure` метода и демонстрируется в следующем примере кода из эталонного приложения eShopOnContainers:
+Для выполнения авторизации с помощью IdentityServer по промежуточного слоя авторизации должно быть добавлено в конвейер запросов HTTP веб-приложения. По промежуточного слоя добавляется в метод `ConfigureAuth` в классе `Startup` веб-приложения, который вызывается из метода `Configure` и демонстрируется в следующем примере кода из приложения-образца eShopOnContainers:
 
 ```csharp
 protected virtual void ConfigureAuth(IApplicationBuilder app)  
@@ -436,7 +436,7 @@ protected virtual void ConfigureAuth(IApplicationBuilder app)
 Этот метод гарантирует, что доступ к API может осуществляться только с помощью действительного маркера доступа. По промежуточного слоя проверяет входящий токен, чтобы убедиться, что он отправляется от доверенного издателя, и проверяет, что токен является допустимым для использования с API, который его получает. Поэтому при переходе к контроллеру упорядочивания или Подборка будет возвращен код состояния HTTP 401 (несанкционированный), указывающий на необходимость использования маркера доступа.
 
 > [!NOTE]
-> По промежуточного слоя авторизации IdentityServer необходимо добавить в конвейер запросов HTTP веб-приложения перед добавлением MVC `app.UseMvc()` с `app.UseMvcWithDefaultRoute()`или.
+> Перед добавлением MVC с `app.UseMvc()` или `app.UseMvcWithDefaultRoute()`необходимо добавить по промежуточного слоя авторизации IdentityServer в конвейер запросов HTTP веб-приложения.
 
 ### <a name="making-access-requests-to-apis"></a>Предоставление запросов на доступ к API-интерфейсам
 
@@ -447,7 +447,7 @@ var authToken = Settings.AuthAccessToken;
 Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), authToken);
 ```
 
-Маркер доступа хранится как параметр приложения и извлекается из хранилища, зависящего от платформы, и включается в вызов `GetOrderAsync` метода `OrderService` в классе.
+Маркер доступа хранится как параметр приложения и извлекается из хранилища, зависящего от платформы, и включается в вызов метода `GetOrderAsync` в классе `OrderService`.
 
 Аналогичным образом маркер доступа должен быть включен при отправке данных в защищенный API IdentityServer, как показано в следующем примере кода:
 
@@ -460,15 +460,15 @@ await _basketService.UpdateBasketAsync(new CustomerBasket
 }, authToken);
 ```
 
-Маркер доступа извлекается из хранилища, зависящего от платформы, и включается в вызов `UpdateBasketAsync` метода `BasketService` в классе.
+Маркер доступа извлекается из хранилища, зависящего от платформы, и включается в вызов метода `UpdateBasketAsync` в классе `BasketService`.
 
-Класс в мобильном приложении eShopOnContainers `HttpClient` использует класс для выполнения запросов к интерфейсам API RESTful, предоставляемым эталонным приложением eShopOnContainers. `RequestProvider` При выполнении запросов к интерфейсам API упорядочивания и корзины, для которых требуется авторизация, в запрос должен быть включен допустимый маркер доступа. Это достигается путем добавления маркера доступа к заголовкам `HttpClient` экземпляра, как показано в следующем примере кода:
+Класс `RequestProvider` в мобильном приложении eShopOnContainers использует класс `HttpClient` для выполнения запросов к интерфейсам API RESTFUL, предоставляемым эталонным приложением eShopOnContainers. При выполнении запросов к интерфейсам API упорядочивания и корзины, для которых требуется авторизация, в запрос должен быть включен допустимый маркер доступа. Это достигается путем добавления маркера доступа к заголовкам экземпляра `HttpClient`, как показано в следующем примере кода:
 
 ```csharp
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 ```
 
-Свойство класса предоставляет заголовки, которые отправляются с каждым запросом, а `Authorization` маркер доступа добавляется в заголовок с префиксом String `Bearer`. `DefaultRequestHeaders` `HttpClient` Когда запрос отправляется в API RESTful, значение `Authorization` заголовка извлекается и проверяется, чтобы убедиться, что оно отправлено от доверенного издателя, и используется для определения того, имеет ли пользователь разрешение на вызов API, который его получает.
+Свойство `DefaultRequestHeaders` класса `HttpClient` предоставляет заголовки, которые отправляются с каждым запросом, а маркер доступа добавляется в заголовок `Authorization` с префиксом строки `Bearer`. Когда запрос отправляется в API RESTFUL, значение заголовка `Authorization` извлекается и проверяется, чтобы убедиться, что он отправлен от доверенного издателя, и используется для определения того, имеет ли пользователь разрешение на вызов API, который его получает.
 
 Дополнительные сведения о том, как мобильное приложение eShopOnContainers выполняет веб-запросы, см. в разделе [доступ к удаленным данным](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
 

@@ -1,171 +1,81 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Данные и облачные службы Azure
+summary: Узнайте, как хранить данные и создавать подключаемые приложения Xamarin.Forms с облачными службами Azure.
 metadata:
   title: Данные и облачные службы Azure
-  description: 'Узнайте, как хранить данные и создавать подключаемые приложения Xamarin.Forms с облачными службами Azure.'
+  description: Узнайте, как хранить данные и создавать подключаемые приложения Xamarin.Forms с облачными службами Azure.
   ms.topic: landing-page
   ms.prod: xamarin
-  ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
+  ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4
   author: davidbritch
   ms.author: dabritch
-  ms.date: 06/28/2019
-abstract:
-  description: 'Узнайте, как хранить данные и создавать подключаемые приложения Xamarin.Forms с облачными службами Azure.'
-sections:
-  - title: Локальное хранилище данных
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: data/files.md
-            html: Сведения об обработке файла из общего кода в приложении Xamarin.Forms.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-              href: data/files.md
-            title: Обработка файлов
-          - href: data/databases.md
-            html: 'Узнайте, как приложения Xamarin.Forms считывают данные из локальной базы данных SQLite и записывают данные в нее с помощью SQLite.Net.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_common-data-service.svg'
-              href: data/databases.md
-            title: Локальные базы данных
-  - title: Службы Azure
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: azure-services/azure-cosmosdb.md
-            html: "Узнайте, как хранить данные в базе данных документов Azure\_Cosmos\_DB и как получать доступ к этим данным из приложения Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-              href: azure-services/azure-cosmosdb.md
-            title: "База данных документов по Azure\_Cosmos\_DB"
-          - href: azure-services/azure-notification-hub.md
-            html: 'Узнайте, как использовать Центры уведомлений Azure для управления отправкой push-уведомлений в приложение Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_push-notification.svg'
-              href: azure-services/azure-notification-hub.md
-            title: Концентраторы уведомлений Azure
-          - href: azure-services/azure-storage.md
-            html: 'Узнайте, как хранить текст и двоичные данные в службе хранилища Azure и получать доступ к этим данным из приложения Xamarin.Forms.'
-            image:
-              src: ~/media/icons/i_data-cloud.svg
-              href: azure-services/azure-storage.md
-            title: Хранилище Azure
-          - href: azure-services/azure-search.md
-            html: 'Узнайте, как интегрировать Поиск Azure в приложение Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_search.svg'
-              href: azure-services/azure-search.md
-            title: Поиск Azure
-          - href: azure-services/azure-functions.md
-            html: 'Узнайте, как создать функцию Azure, которая взаимодействует с приложением Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_method.svg'
-              href: azure-services/azure-functions.md
-            title: Проверка
-          - href: azure-services/azure-signalr.md
-            html: "Узнайте, как объединить службу Azure\_SignalR и функции Azure с помощью Xamarin.Forms для доставки сообщений в режиме реального времени для подключенных клиентов."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
-              href: azure-services/azure-signalr.md
-            title: Служба Azure SignalR
-  - title: Azure Cognitive Services
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: azure-cognitive-services/introduction.md
-            html: "Узнайте о примере приложения Xamarin.Forms, который показывает, как вызвать API\_Azure\_Cognitive\_Service."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-apps.svg'
-              href: azure-cognitive-services/index.md
-            title: Вступление
-          - href: azure-cognitive-services/speech-recognition.md
-            html: "Узнайте, как с помощью REST\_API распознавания речи Microsoft преобразовывать звуковые данные в текст в приложении Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
-              href: azure-cognitive-services/speech-recognition.md
-            title: Распознавание речи
-          - href: azure-cognitive-services/spell-check.md
-            html: "Узнайте, как с помощью REST\_API проверки орфографии Bing исправлять орфографические ошибки в приложении Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: azure-cognitive-services/spell-check.md
-            title: Проверка орфографии
-          - href: azure-cognitive-services/text-translation.md
-            html: 'Узнайте, как использовать API перевода текстов Microsoft для перевода текста с одного языка на другой в приложении Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
-              href: azure-cognitive-services/text-translation.md
-            title: Преобразование текста
-          - href: azure-cognitive-services/emotion-recognition.md
-            html: 'Узнайте, как использовать API распознавания лиц для распознавания эмоций в приложении Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
-              href: azure-cognitive-services/emotion-recognition.md
-            title: Распознавание эмоций
-  - title: Веб-службы
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: web-services/introduction.md
-            html: 'Узнайте о примере приложения Xamarin.Forms, который показывает, как взаимодействовать с разными веб-службами.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-apps.svg'
-              href: web-services/introduction.md
-            title: Вступление
-          - href: web-services/asmx.md
-            html: "Узнайте, как использовать службу ASMX\_SOAP из приложения Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
-              href: web-services/asmx.md
-            title: ASMX
-          - href: web-services/wcf.md
-            html: "Узнайте, как использовать службу WCF\_SOAP из приложения Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
-              href: web-services/wcf.md
-            title: WCF
-          - href: web-services/rest.md
-            html: 'Узнайте, как использовать службу REST из приложения Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
-              href: web-services/rest.md
-            title: REST
-  - title: Проверка подлинности
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: authentication/rest.md
-            html: 'Узнайте, как использовать обычную проверку подлинности для защиты доступа к ресурсам на основе REST.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_network-protection.svg'
-              href: authentication/rest.md
-            title: REST
-          - href: authentication/oauth.md
-            html: 'Узнайте, как использовать Xamarin.Auth для проверки подлинности с помощью поставщика удостоверений в приложении Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_identity-protection.svg'
-              href: authentication/oauth.md
-            title: Поставщик удостоверений
-          - href: authentication/azure-ad-b2c.md
-            html: "Узнайте, как использовать Azure\_Active\_Directory\_B2C для интеграции управления удостоверениями в приложение Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_security-management.svg'
-              href: authentication/azure-ad-b2c.md
-            title: Azure Active Directory B2C
-          - href: authentication/azure-cosmosdb-auth.md
-            html: "Узнайте, как ограничить доступ пользователей к определенным данным документа Cosmos\_DB в приложении Xamarin.Forms."
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_information-protection.svg'
-              href: authentication/azure-cosmosdb-auth.md
-            title: "Проверка подлинности в базе данных документов по Azure\_Cosmos\_DB"
+  ms.date: 12/27/2019
+  ms.openlocfilehash: 5eb567466b13b8baaa731bc1b37197336fac99bd
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75680267"
+landingContent:
+- title: Локальное хранилище данных
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Файлы
+      url: data/files.md
+    - text: Локальные базы данных
+      url: data/databases.md
+- title: Службы Azure
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: База данных документов Azure Cosmos DB
+      url: azure-services/azure-cosmosdb.md
+    - text: Центры уведомлений Azure
+      url: azure-services/azure-notification-hub.md
+    - text: Служба хранилища Azure
+      url: azure-services/azure-storage.md
+    - text: Поиск Azure
+      url: azure-services/azure-search.md
+    - text: Функции Azure
+      url: azure-services/azure-functions.md
+    - text: Служба Azure SignalR
+      url: azure-services/azure-signalr.md
+- title: Azure Cognitive Services
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Вступление
+      url: azure-cognitive-services/index.md
+    - text: Распознавание речи
+      url: azure-cognitive-services/speech-recognition.md
+    - text: Проверка орфографии
+      url: azure-cognitive-services/spell-check.md
+    - text: Перевод текстов
+      url: azure-cognitive-services/text-translation.md
+    - text: Распознавание эмоций
+      url: azure-cognitive-services/emotion-recognition.md
+- title: Веб-службы
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Вступление
+      url: web-services/introduction.md
+    - text: ASMX
+      url: web-services/asmx.md
+    - text: WCF
+      url: web-services/wcf.md
+    - text: REST
+      url: web-services/rest.md
+- title: Проверка подлинности
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: REST
+      url: authentication/rest.md
+    - text: Поставщик удостоверений
+      url: authentication/oauth.md
+    - text: Azure Active Directory B2C
+      url: authentication/azure-ad-b2c.md
+    - text: Проверка подлинности в базе данных документов Azure Cosmos DB
+      url: authentication/azure-cosmosdb-auth.md

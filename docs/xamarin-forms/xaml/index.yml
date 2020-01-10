@@ -1,135 +1,67 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Язык XAML
+summary: Узнайте, как использовать XAML для определения пользовательских интерфейсов Xamarin.Forms.
 metadata:
   title: Язык XAML
-  description: 'Узнайте, как использовать XAML для определения пользовательских интерфейсов Xamarin.Forms.'
+  description: Узнайте, как использовать XAML для определения пользовательских интерфейсов Xamarin.Forms.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
-abstract:
-  description: 'Узнайте, как использовать XAML для определения пользовательских интерфейсов Xamarin.Forms.'
-sections:
-  - title: Приступая к работе
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: xaml-basics/index.md
-            html: 'Узнайте, как начать разрабатывать пользовательские интерфейсы Xamarin.Forms с помощью XAML.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-              href: xaml-basics/index.md
-            title: Основные сведения
-          - href: xaml-controls.md
-            html: 'Узнайте о представлениях Xamarin.Forms, на которые можно ссылаться из файлов XAML.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_form.svg'
-              href: xaml-controls.md
-            title: Элементы управления
-          - href: xamlc.md
-            html: 'Узнайте, как компилировать XAML непосредственно в промежуточный язык с помощью компилятора XAML.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-              href: xamlc.md
-            title: Компиляция
-          - href: markup-extensions/index.md
-            html: 'Узнайте о расширениях разметки XAML, которые позволяют задавать атрибуты элементов из источников, отличных от строковых литералов.'
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: markup-extensions/index.md
-            title: Расширения разметки
-  - title: Инструментарий
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: hot-reload.md
-            html: 'Узнайте, как использовать горячую перезагрузку XAML для быстрой проверки изменений пользовательского интерфейса.'
-            image:
-              src: ~/media/icons/i_quickstart-3.svg
-              href: hot-reload.md
-            title: Горячая перезагрузка
-          - href: toolbox.md
-            html: Узнайте об использовании панели элементов XAML для перетаскивания элементов управления и макетов Xamarin.Forms в редактор XAML.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
-              href: toolbox.md
-            title: Панель элементов
-          - href: xaml-previewer/index.md
-            html: Узнайте об использовании средства предварительного просмотра XAML для просмотра интерактивной предварительной версии страницы параллельно с разметкой XAML.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_responsive.svg'
-              href: xaml-previewer/index.md
-            title: Средство предварительного просмотра
-  - title: Пространства имен
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: namespaces.md
-            html: Узнайте о синтаксисе пространства имен XAML и об объявлении пространства имен XAML для доступа к типу.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_namespace.svg'
-              href: namespaces.md
-            title: Пространства имен
-          - href: custom-namespace-schemas.md
-            html: 'Узнайте, как создавать пользовательские схемы пространства имен XAML, которые определяют сопоставление между пользовательским URL-адресом и одним или несколькими пространствами имен CLR.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
-              href: custom-namespace-schemas.md
-            title: Схемы настраиваемых пространств имен
-          - href: custom-prefix.md
-            html: 'Узнайте, как указать рекомендуемый префикс для сопоставления с пространством имен XAML для использования с XAML.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-automate.svg'
-              href: custom-prefix.md
-            title: Рекомендуемые префиксы пространств имен
-  - title: Дополнительные возможности
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: bindable-properties.md
-            html: 'Узнайте, как создавать привязываемые свойства и как использовать их из XAML.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-              href: bindable-properties.md
-            title: Привязываемые свойства
-          - href: attached-properties.md
-            html: 'Узнайте, как создавать связанные свойства и как использовать их из XAML.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-              href: attached-properties.md
-            title: Вложенные свойства
-          - href: resource-dictionaries.md
-            html: 'Узнайте, как создавать ресурсы XAML и повторно использовать их в приложении Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
-              href: resource-dictionaries.md
-            title: Словари ресурсов
-          - href: passing-arguments.md
-            html: 'Узнайте, как использовать XAML для передачи аргументов в конструкторы, вызова фабричных методов и указания типа универсального аргумента.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
-              href: passing-arguments.md
-            title: Передача аргументов
-          - href: field-modifiers.md
-            html: 'Узнайте о модификаторах полей XAML, которые определяют уровень доступа для созданных полей для именованных элементов XAML.'
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: field-modifiers.md
-            title: Модификаторы полей
-          - href: runtime-load.md
-            html: 'Узнайте, как загружать и анализировать XAML во время выполнения.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-              href: runtime-load.md
-            title: Загрузка XAML во время выполнения
+  ms.date: 12/27/2019
+  ms.openlocfilehash: 5f01b3ecf914d6c7c5c36378511c0fd7e30c952c
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679692"
+landingContent:
+- title: Начало работы
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Основные сведения
+      url: xaml-basics/index.md
+    - text: Элементы управления
+      url: xaml-controls.md
+    - text: Компиляция
+      url: xamlc.md
+    - text: Расширения разметки
+      url: markup-extensions/index.md
+- title: Инструментарий
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Горячая перезагрузка
+      url: hot-reload.md
+    - text: Панель элементов
+      url: toolbox.md
+    - text: Средство предварительного просмотра
+      url: xaml-previewer/index.md
+- title: Пространства имен
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Пространства имен
+      url: namespaces.md
+    - text: Схемы настраиваемых пространств имен
+      url: custom-namespace-schemas.md
+    - text: Рекомендуемые префиксы пространств имен
+      url: custom-prefix.md
+- title: Дополнительные возможности
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Привязываемые свойства
+      url: bindable-properties.md
+    - text: Вложенные свойства
+      url: attached-properties.md
+    - text: Словари ресурсов
+      url: resource-dictionaries.md
+    - text: Передача аргументов
+      url: passing-arguments.md
+    - text: Модификаторы полей
+      url: field-modifiers.md
+    - text: Загрузка XAML во время выполнения
+      url: runtime-load.md

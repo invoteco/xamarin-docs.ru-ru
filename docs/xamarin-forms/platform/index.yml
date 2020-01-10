@@ -1,75 +1,75 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Функции платформы Xamarin.Forms
+summary: Узнайте, как использовать преимущества функций платформы в Xamarin.Forms, применяя разнообразные методы.
 metadata:
   title: Функции платформы Xamarin.Forms
-  description: 'Узнайте, как использовать преимущества функций платформы в Xamarin.Forms, используя разнообразные методы.'
+  description: Узнайте, как использовать преимущества функций платформы в Xamarin.Forms, применяя разнообразные методы.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/23/2019
-abstract:
-  description: 'Узнайте, как использовать преимущества функций платформы в Xamarin.Forms, используя разнообразные методы.'
-sections:
-  - title: Особенности платформы
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: android/index.md
-            html: 'Узнайте, как использовать особенности платформы Android, предоставляемые Xamarin.Forms, и как обновить существующие приложения для Android в Xamarin.Forms для использования дизайна материалов.'
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
-              href: android/index.md
-            title: Android
-          - href: ios/index.md
-            html: 'Узнайте, как использовать особенности платформы iOS, предоставляемые Xamarin.Forms, и дополнительные стили iOS.'
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: ios/index.md
-            title: iOS
-          - href: windows/index.md
-            html: 'Узнайте, как использовать особенности платформы UWP, предоставляемые Xamarin.Forms, и как добавить проект UWP в существующее решение Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Windows.svg'
-              href: windows/index.md
-            title: Windows
-          - href: platform-specifics/index.md
-            html: 'Узнайте о конкретных платформах и о том, как поставщики могут создавать особенности платформы с помощью эффектов.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: platform-specifics/index.md
-            title: Создание особенностей платформы
-  - title: Функции платформы
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: device.md
-            html: 'Узнайте, как использовать класс Device, чтобы обеспечить детальный контроль над функциональными возможностями и макетами на уровне платформы.'
-            image:
-              src: ~/media/icons/i_desktop-phone.svg
-              href: device.md
-            title: Класс устройства
-          - href: native-forms.md
-            html: 'Узнайте, как страницы Xamarin.Forms на основе ContentPage могут использоваться в собственных проектах Xamarin.iOS, Xamarin.Android и UWP.'
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: native-forms.md
-            title: Собственные формы
-          - href: native-views/index.md
-            html: 'Узнайте, как в приложениях Xamarin.Forms можно напрямую ссылаться на собственные представления из Android, iOS и универсальной платформы Windows.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_form.svg'
-              href: native-views/index.md
-            title: Собственные представления
-          - href: sign-in-with-apple/index.md
-            html: 'Узнайте, как использовать возможность входа с помощью Apple на платформах Android и iOS для обеспечения более высокого уровня конфиденциальности пользователей.'
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: sign-in-with-apple/index.md
-            title: Вход с помощью Apple
+  ms.date: 12/30/2019
+  ms.openlocfilehash: c95416d35a54dfd5954318ea068a4c70622dc1a1
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679653"
+landingContent:
+- title: Android
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Быстрая прокрутка ListView
+      url: android/listview-fast-scrolling.md
+    - text: Прокрутка страницы TabbedPage
+      url: android/tabbedpage-page-swiping.md
+    - text: Материальный дизайн
+      url: android/appcompat-material-design.md
+    - text: Поднятие VisualElement выше по оси
+      url: android/visualelement-elevation.md
+    - text: Подробнее >
+      url: android/index.md
+- title: iOS
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Цвет курсора в поле ввода
+      url: ios/entry-cursor-color.md
+    - text: Крупные заголовки страниц
+      url: ios/page-large-title.md
+    - text: Видимость индикатора домашней страницы
+      url: ios/page-home-indicator.md
+    - text: Касание ползунка
+      url: ios/slider-thumb.md
+    - text: Подробнее >
+      url: ios/index.md
+- title: Windows
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Режим выбора элемента в ListView
+      url: windows/listview-selectionmode.md
+    - text: Направление движения RefreshView
+      url: windows/refreshview-pulldirection.md
+    - text: Проверка орфографии в SearchBar
+      url: windows/searchbar-spell-check.md
+    - text: Значки вкладок для TabbedPage
+      url: windows/tabbedpage-icons.md
+    - text: Подробнее >
+      url: windows/index.md
+- title: Функции платформы
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Создания специальных функций для платформы
+      url: platform-specifics/index.md
+    - text: Класс устройства
+      url: device.md
+    - text: Собственные формы
+      url: native-forms.md
+    - text: Собственные представления
+      url: native-views/index.md
+    - text: Вход с помощью Apple
+      url: sign-in-with-apple/index.md

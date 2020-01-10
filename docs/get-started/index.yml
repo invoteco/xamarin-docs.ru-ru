@@ -1,169 +1,93 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Начало работы с Xamarin
+summary: Xamarin.Forms — это кроссплатформенный набор средств пользовательского интерфейса, позволяющий разработчикам эффективно создавать собственные макеты пользовательских интерфейсов для совместного использования в приложениях iOS, Android и универсальной платформы Windows.
 metadata:
   title: Начало работы с Xamarin
-  description: 'Статьи, краткие руководства и учебные материалы по разработке приложений Xamarin с помощью Visual Studio и Visual Studio для Mac.'
+  description: Статьи, краткие руководства и учебные материалы по разработке приложений Xamarin с помощью Visual Studio и Visual Studio для Mac.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 0F440777-74A2-4AE5-AD1E-5B51EB8BD228
-  ms.technology: xamarin-forms
   author: davidbritch
   ms.author: dabritch
-  ms.date: 02/15/2018
-abstract:
-  description: "Xamarin.Forms\_— это кроссплатформенный набор средств пользовательского интерфейса, позволяющий разработчикам эффективно создавать собственные макеты пользовательских интерфейсов для совместного использования в приложениях iOS, Android и универсальной платформы Windows. Полную документацию по Xamarin.Forms см. в разделе <a href=\"/xamarin/xamarin-forms/\">Документация по Xamarin.Forms</a>."
-sections:
-  - title: Приступая к работе
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: requirements.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tasks.svg'
-            title: Требования
-          - href: installation/index.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Установка
-          - href: first-app/index.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: Создание первого приложения
-  - title: Краткие руководства
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: quickstarts/single-page.md
-            html: <p></p>
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-            title: Создание одностраничного приложения Xamarin.Forms
-          - href: quickstarts/multi-page.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_class.svg'
-            title: Навигация в многостраничном приложении Xamarin.Forms
-          - href: quickstarts/database.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-            title: Хранение данных в локальной базе данных SQLite.NET
-          - href: quickstarts/styling.md
-            html: <p></p>
-            image:
-              src: ~/media/icons/i_user-interface.svg
-            title: Стилизация кроссплатформенного приложения Xamarin.Forms
-          - href: quickstarts/deepdive.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-            title: Подробное изучение кратких руководств
-  - title: Учебники
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: tutorials/stacklayout/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-            title: StackLayout
-          - href: tutorials/label/
-            html: <p></p>
-            image:
-              src: ~/media/icons/i_form-label.svg
-            title: Метка
-          - href: tutorials/button/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_button.svg'
-            title: Кнопка
-          - href: tutorials/entry/
-            html: <p></p>
-            image:
-              src: ~/media/icons/i_form-entry.svg
-            title: Ввод
-          - href: tutorials/editor/
-            html: <p></p>
-            image:
-              src: ~/media/icons/i_form-editor.svg
-            title: Редактор
-          - href: tutorials/image/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
-            title: Изображение
-          - href: tutorials/grid/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_table.svg'
-            title: Grid
-          - href: tutorials/listview/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_sharepoint-list.svg'
-            title: ListView
-          - href: tutorials/pop-ups/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_alert.svg'
-            title: Всплывающие окна
-          - href: tutorials/app-lifecycle/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
-            title: Жизненный цикл приложения
-          - href: tutorials/local-database/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-            title: Локальная база данных
-          - href: tutorials/web-service/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_server.svg'
-            title: Веб-службы
-  - title: Дополнительные сведения о Xamarin
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ~/cross-platform/get-started/introduction-to-mobile-development.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
-            title: Приложения в машинном коде
-          - href: ~/cross-platform/desktop/index.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_NET.svg'
-            title: 'Разработчики, использующие .NET'
-          - href: ~/android/get-started/java-developers.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_java.svg'
-            title: 'Разработчики, использующие Java'
-          - href: ~/ios/get-started/objective-c-developers/index.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xcode.svg'
-            title: 'Разработчики, использующие Objective-C'
-          - href: ~/xamarin-forms/data-cloud/index.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
-            title: Azure
+  ms.date: 12/23/2019
+  ms.openlocfilehash: 980fced1b47ff1fa51e6f39840dc2cafce9a239e
+  ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/07/2020
+  ms.locfileid: "75718731"
+landingContent:
+- title: Начало работы
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое Xamarin?
+      url: ~/get-started/what-is-xamarin.md
+    - text: Требования
+      url: requirements.md
+  - linkListType: how-to-guide
+    links:
+    - text: Установка
+      url: installation/index.md
+    - text: Создание первого приложения
+      url: first-app/index.md
+- title: Краткие руководства
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Создание одностраничного приложения Xamarin.Forms
+      url: quickstarts/single-page.md
+    - text: Навигация в многостраничном приложении Xamarin.Forms
+      url: quickstarts/multi-page.md
+    - text: Хранение данных в локальной базе данных SQLite.NET
+      url: quickstarts/database.md
+    - text: Стилизация кроссплатформенного приложения Xamarin.Forms
+      url: quickstarts/styling.md
+  - linkListType: concept
+    links:
+    - text: Подробное изучение кратких руководств
+      url: quickstarts/deepdive.md
+- title: Руководства по пользовательскому интерфейсу
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: StackLayout
+      url: tutorials/stacklayout/index.yml
+    - text: Метка
+      url: tutorials/label/index.yml
+    - text: Кнопка
+      url: tutorials/button/index.yml
+    - text: Ввод
+      url: tutorials/entry/index.yml
+    - text: Редактор
+      url: tutorials/editor/index.yml
+    - text: Изображение
+      url: tutorials/image/index.yml
+    - text: Grid
+      url: tutorials/grid/index.yml
+    - text: ListView
+      url: tutorials/listview/index.yml
+    - text: Всплывающие окна
+      url: tutorials/pop-ups/index.yml
+- title: Руководства по принципам работы приложения
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Жизненный цикл приложения
+      url: tutorials/app-lifecycle/index.yml
+    - text: Локальная база данных
+      url: tutorials/local-database/index.yml
+    - text: Веб-службы
+      url: tutorials/web-service/index.yml
+- title: Дополнительные сведения о Xamarin
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Разработчики, использующие .NET
+      url: ~/cross-platform/desktop/index.md
+    - text: Разработчики, использующие Java
+      url: ~/android/get-started/java-developers.md
+    - text: Разработчики, использующие Objective-C
+      url: ~/ios/get-started/objective-c-developers/index.md
+    - text: Azure
+      url: ~/xamarin-forms/data-cloud/index.yml

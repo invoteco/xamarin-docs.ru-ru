@@ -1,117 +1,63 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Макеты Xamarin.Forms
+summary: Сведения о классах макетов и основные понятия о макетах в Xamarin.Forms.
 metadata:
   title: Макеты Xamarin.Forms
-  description: Сведения о классах и функциях макетов в Xamarin.Forms.
+  description: Сведения о классах макетов и основные понятия о макетах в Xamarin.Forms.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: CF6BD41F-CD4B-4576-841D-B8A49A4EC754
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/14/2019
-abstract:
-  description: Сведения о классах и функциях макетов в Xamarin.Forms.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: choose-layout.md
-            html: 'Сведения о том, как основные классы макета в Xamarin.Forms размещают и масштабируют дочерние элементы.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: choose-layout.md
-            title: Выбор макета
-          - href: stack-layout.md
-            html: 'Узнайте, как упорядочивать представления в виде распределения (горизонтально или вертикально) на основе одномерного массива.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: stack-layout.md
-            title: StackLayout
-          - href: grid.md
-            html: 'Узнайте, как упорядочивать представления в строки и столбцы, которые могут иметь пропорциональные или абсолютные размеры.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: grid.md
-            title: Grid
-          - href: flex-layout.md
-            html: 'Узнайте, как упорядочивать представления по горизонтали или вертикали с переносом.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: flex-layout.md
-            title: FlexLayout
-          - href: relative-layout.md
-            html: 'Узнайте о том, как упорядочивать представления путем установки ограничений относительно свойств макета или одноуровневых представлений.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: RelativeLayout
-          - href: absolute-layout.md
-            html: 'Узнайте, как упорядочивать представления, задавая значения координат и размера, которые могут быть пропорциональными или абсолютными.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
-          - href: scroll-view.md
-            html: 'Узнайте, как обеспечить прокрутку, если представление не умещается в границах экрана.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: scroll-view.md
-            title: ScrollView
-          - href: contentview.md
-            html: 'Узнайте, как использовать ContentView для создания пользовательского элемента управления.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: contentview.md
-            title: ContentView
-          - href: frame.md
-            html: 'Узнайте, как создать оболочку для представления, используя фрейм, который можно настроить с помощью цвета, тени и других параметров.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: frame.md
-            title: Frame
-          - href: layout-options.md
-            html: 'Узнайте, как определить выравнивание представления в родительском макете.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: layout-options.md
-            title: LayoutOptions
-          - href: margin-and-padding.md
-            html: 'Узнайте, как управлять расстоянием между элементом и его соседними элементами, а также его дочерними элементами.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: margin-and-padding.md
-            title: Поля и заполнение
-          - href: device-orientation.md
-            html: 'Узнайте, как настроить изменения ориентации устройства и реагировать на них.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: device-orientation.md
-            title: Ориентация устройства
-          - href: tablet.md
-            html: 'Узнайте, как оптимизировать макет для планшетных и классических приложений.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: tablet.md
-            title: Макет планшета и рабочего стола
-          - href: bindable-layouts.md
-            html: 'Узнайте, как включить классы макета для создания содержимого и задать его внешний вид путем привязки к коллекции элементов.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: bindable-layouts.md
-            title: Привязываемые макеты
-          - href: layout-compression.md
-            html: 'Узнайте, как удалить указанные объекта макета из визуального дерева в целях повышения скорости отрисовки страниц.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: layout-compression.md
-            title: Сжатие макета
-          - href: custom.md
-            html: 'Узнайте, как создать пользовательский класс макета с учетом ориентации.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: custom.md
-            title: Пользовательский макет
+  ms.date: 01/03/2020
+  ms.openlocfilehash: e8d3e6d57bab88c85f0058ee2c974d932bd07b37
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679744"
+landingContent:
+- title: Основные макеты
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Выбор макета
+      url: choose-layout.md
+    - text: AbsoluteLayout
+      url: absolute-layout.md
+    - text: FlexLayout
+      url: flex-layout.md
+    - text: Grid
+      url: grid.md
+    - text: RelativeLayout
+      url: relative-layout.md
+    - text: StackLayout
+      url: stack-layout.md
+- title: Дополнительные макеты
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ContentView
+      url: contentview.md
+    - text: Frame
+      url: frame.md
+    - text: ScrollView
+      url: scroll-view.md
+- title: Основные понятия о макете
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Привязываемые макеты
+      url: bindable-layouts.md
+    - text: Пользовательские макеты
+      url: custom.md
+    - text: Ориентация экрана устройства
+      url: device-orientation.md
+    - text: LayoutOptions
+      url: layout-options.md
+    - text: Сжатие макета
+      url: layout-compression.md
+    - text: Поля и заполнение
+      url: margin-and-padding.md
+    - text: Макеты планшета и рабочего стола
+      url: tablet.md

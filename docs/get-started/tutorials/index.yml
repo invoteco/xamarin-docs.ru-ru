@@ -1,106 +1,55 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Руководства по Xamarin.Forms
+summary: Изучите основы создания приложений для мобильных устройств с помощью Xamarin.Forms.
 metadata:
   title: Руководства по Xamarin.Forms
-  description: Руководства по разработке приложений Xamarin.Forms с помощью Visual Studio и Visual Studio для Mac.
+  description: Руководства по основам разработки приложений Xamarin.Forms с помощью Visual Studio и Visual Studio для Mac.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 8E3D88AE-923E-4B7C-ABAC-058A25A48BBF
-  ms.technology: xamarin-forms
   author: davidbritch
   ms.author: dabritch
-  ms.date: 02/14/2018
-abstract:
-  description: На это странице содержатся ссылки на руководства с общими сведениями о создании мобильных приложений с помощью Xamarin.Forms. Полную документацию по Xamarin.Forms см. в разделе <a href="/xamarin/xamarin-forms/">Документация по Xamarin.Forms</a>.
-sections:
-  - title: Макеты
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: stacklayout/
-            html: 'Узнайте, как упорядочивать представления в виде распределения (горизонтально или вертикально) на основе одномерного массива.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: stacklayout/
-            title: StackLayout
-          - href: grid/
-            html: 'Узнайте, как упорядочивать представления в строки и столбцы, которые могут иметь пропорциональные или абсолютные размеры.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_table.svg'
-              href: grid/
-            title: Grid
-  - title: Представления
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: label/
-            html: 'Узнайте, как настроить отображение текста в одной или нескольких строках.'
-            image:
-              src: ~/media/icons/i_form-label.svg
-              href: label/
-            title: Метка
-          - href: button/
-            html: 'Узнайте, как реагировать на касание или нажатие кнопки, которое приводит к выполнению определенной задачи в приложении.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_button.svg'
-              href: button/
-            title: Кнопка
-          - href: entry/
-            html: 'Узнайте, как принимать однострочные текстовые входные данные.'
-            image:
-              src: ~/media/icons/i_form-entry.svg
-              href: entry/
-            title: Ввод
-          - href: editor/
-            html: 'Узнайте, как принимать многострочные текстовые входные данные.'
-            image:
-              src: ~/media/icons/i_form-editor.svg
-              href: editor/
-            title: Редактор
-          - href: image/
-            html: 'Узнайте, как настроить отображение изображений на странице.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
-              href: image/
-            title: Изображение
-          - href: listview/
-            html: 'Узнайте, как представлять списки данных.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_sharepoint-list.svg'
-              href: listview/
-            title: ListView
-  - title: Принципы работы приложения
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: pop-ups/
-            html: 'Узнайте, как настроить отображение предупреждений и таблиц действий с помощью Xamarin.Forms, отвечать на простые вопросы пользователей и помочь пользователям в выполнении задач.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_alert.svg'
-              href: pop-ups/
-            title: Всплывающие окна
-          - href: app-lifecycle/
-            html: Сведения о жизненном цикле приложений Xamarin.Forms и сохранении данных при изменениях состояния жизненного цикла.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
-              href: app-lifecycle/
-            title: Жизненный цикл приложения
-          - href: local-database/
-            html: 'Узнайте, как с помощью пакета NuGet для SQLite.NET внедрить операции из локальной базой данных в приложение.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-              href: local-database/
-            title: Локальная база данных
-          - href: web-service/
-            html: 'Узнайте, как использовать веб-службы на основе REST из Xamarin.Forms.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_server.svg'
-              href: web-service/
-            title: Веб-службы
+  ms.date: 12/23/2019
+  ms.openlocfilehash: fa5fb1d6747650520864371ceacf665a50dc0973
+  ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/07/2020
+  ms.locfileid: "75718744"
+landingContent:
+- title: Макеты
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: StackLayout
+      url: stacklayout/index.yml
+    - text: Grid
+      url: grid/index.yml
+- title: Элементы управления
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Метка
+      url: label/index.yml
+    - text: Кнопка
+      url: button/index.yml
+    - text: Ввод
+      url: entry/index.yml
+    - text: Редактор
+      url: editor/index.yml
+    - text: Изображение
+      url: image/index.yml
+    - text: ListView
+      url: listview/index.yml
+    - text: Всплывающие окна
+      url: pop-ups/index.yml
+- title: Принципы работы приложения
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Жизненный цикл приложения
+      url: app-lifecycle/index.yml
+    - text: Локальная база данных
+      url: local-database/index.yml
+    - text: Веб-службы
+      url: web-service/index.yml

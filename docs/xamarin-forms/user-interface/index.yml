@@ -1,6 +1,6 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Пользовательский интерфейс Xamarin.Forms
+summary: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
 metadata:
   title: Пользовательский интерфейс Xamarin.Forms
   description: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
@@ -9,235 +9,177 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/11/2019
-abstract:
-  description: Сведения о создании пользовательских интерфейсов с помощью Xamarin.Forms.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: activityindicator.md
-            html: 'Сведения об использовании ActivityIndicator для сообщения пользователям о том, что приложение выполняет длительное действие, не отображая ход выполнения.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: activityindicator.md
-            title: ActivityIndicator
-          - href: animation/index.md
-            html: Сведения о создании анимации в Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: animation/index.md
-            title: Анимация
-          - href: boxview.md
-            html: Сведения об использовании BoxView для создания цветных прямоугольников.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: boxview.md
-            title: BoxView
-          - href: button.md
-            html: Сведения об использовании Button для создания в приложении кнопки под определенную задачу.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: button.md
-            title: Кнопка
-          - href: carouselview/index.md
-            html: Сведения о представлении данных в макете линейной карусели с помощью CarouselView.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: collectionview/index.md
-            title: CarouselView
-          - href: checkbox.md
-            html: Сведения о задании логического значения с помощью CheckBox.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: checkbox.md
-            title: CheckBox
-          - href: collectionview/index.md
-            html: Сведения о представлении списков данных с различными спецификациями макета при помощи CollectionView.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: collectionview/index.md
-            title: CollectionView
-          - href: colors.md
-            html: Сведения об использовании класса Color для определения и применения цветов на различных платформах.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: colors.md
-            title: Цвета
-          - href: controls/index.md
-            html: 'Сведения о страницах, макетах, представлениях и ячейках, доступных в Xamarin.Forms.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: controls/index.md
-            title: Справочник по элементам управления
-          - href: datepicker.md
-            html: 'Сведения о том, как разрешить выбор даты в определенном диапазоне с помощью DatePicker.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: datepicker.md
-            title: DatePicker
-          - href: pop-ups.md
-            html: 'Сведения о том, как отображать диалоговые окна, задающие пользователям простые вопросы, помогающие им выполнять определенные задачи и выводящие запросы.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: pop-ups.md
-            title: Отображение всплывающих элементов
-          - href: graphics/skiasharp/index.md
-            html: 'Сведения о том, как включить графику в приложения Xamarin.Forms с использованием SkiaSharp.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: graphics/skiasharp/index.md
-            title: Графика SkiaSharp
-          - href: images.md
-            html: Сведения об использовании элемента управления Image для вывода изображения.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: images.md
-            title: Образы
-          - href: imagebutton.md
-            html: Сведения об использовании элемента управления ImageButton для вывода изображения и выполнения приложением определенной задачи при касании элемента.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: imagebutton.md
-            title: ImageButton
-          - href: indicatorview.md
-            html: 'Сведения о том, как использовать элемент управления IndicatorView для отображения индикаторов, представляющих количество элементов и текущую позицию в элементе CarouselView.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: indicatorview.md
-            title: IndicatorView
-          - href: layouts/index.yml
-            html: Сведения об организации содержимого с помощью элементов управления и компонентов макета в Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: layouts/index.yml
-            title: Макеты
-          - href: listview/index.md
-            html: Сведения об использовании элемента управления ListView для вывода списков данных.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: listview/index.md
-            title: ListView
-          - href: map/index.md
-            html: 'Сведения об использовании элемента управления Map, включая настройку платформы и заполнение карты отметками.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: map/index.md
-            title: Карта
-          - href: menuitem.md
-            html: 'Узнайте, как использовать класс MenuItem для добавления элементов в контекстное меню ячеек ListView.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: menuitem.md
-            title: MenuItem
-          - href: picker/index.md
-            html: Сведения об использовании элемента управления Picker для выбора текстового элемента из списка данных.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: picker/index.md
-            title: Средство выбора
-          - href: progressbar.md
-            html: 'Сведения об использовании элемента ProgressBar, указывающего, что приложение выполняет длительное действие.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: progressbar.md
-            title: ProgressBar
-          - href: refreshview.md
-            html: 'Сведения об использовании RefreshView, предоставляющего функцию "Потяните, чтобы обновить" для прокручиваемого содержимого.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: refreshview.md
-            title: RefreshView
-          - href: searchbar.md
-            html: Сведения о поиске с помощью элемента управления SearchBar.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: searchbar.md
-            title: Панель поиска
-          - href: slider.md
-            html: 'Сведения об элементе управления Slider, позволяющем пользователю выбрать числовое значение из непрерывного диапазона.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: slider.md
-            title: Slider
-          - href: splashscreen.md
-            html: 'Узнайте, как создать экраны-заставки для приложений Xamarin.Forms.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: splashscreen.md
-            title: Заставка
-          - href: stepper.md
-            html: 'Сведения об элементе управления Stepper, позволяющем пользователю выбрать числовое значение из определенных вариантов.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: stepper.md
-            title: Шаговый переключатель
-          - href: styles/index.md
-            html: "Сведения о применении стилей\_XAML и каскадных таблиц стилей\_(CSS) в пользовательском интерфейсе."
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: styles/index.md
-            title: Стили
-          - href: swipeview.md
-            html: 'Сведения о том, как использовать элемент SwipeView для предоставления пунктов контекстного меню, открывающихся с помощью жеста прокрутки.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: swipeview.md
-            title: SwipeView
-          - href: switch.md
-            html: Сведения о задании логических значений с помощью Switch.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: switch.md
-            title: Параметр
-          - href: tableview.md
-            html: 'Сведения об использовании TableView для отображения прокручиваемых списков данных или вариантов выбора, в которых строки имеют разный шаблон.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: tableview.md
-            title: TableView
-          - href: text/index.md
-            html: Сведения об элементах управления Xamarin.Forms для получения и представления текста.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: text/index.md
-            title: Text
-          - href: theming.md
-            html: 'Узнайте, как создавать темы для приложений Xamarin.Forms и изменять тему во время выполнения.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: theming.md
-            title: Темы
-          - href: timepicker.md
-            html: Сведения об использовании TimePicker для выбора времени.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: timepicker.md
-            title: TimePicker
-          - href: toolbaritem.md
-            html: 'Узнайте, как использовать ToolbarItem для добавления кнопок на панель навигации.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: toolbaritem.md
-            title: ToolbarItem
-          - href: visual/index.md
-            html: Сведения об использовании визуального элемента Material из Xamarin.Forms для создания приложений с идентичным или практически идентичным внешним видом на iOS и Android.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: visual/index.md
-            title: Визуальный элемент
-          - href: visual-state-manager.md
-            html: 'Сведения о классе VisualStateManager, позволяющем определять и активировать визуальные состояния для пользовательского интерфейса.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: visual-state-manager.md
-            title: Диспетчер визуальных состояний
-          - href: webview.md
-            html: Сведения об отображении HTML- и веб-содержимого в приложении Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: webview.md
-            title: WebView
+  ms.date: 12/30/2019
+  ms.openlocfilehash: 2a62ff0c3d94d47870b9b112b86091c534ed6ff8
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679614"
+landingContent:
+- title: Справочник по элементам управления
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Обзор
+      url: controls/index.md
+    - text: Pages
+      url: controls/pages.md
+    - text: Макеты
+      url: controls/layouts.md
+    - text: Представления
+      url: controls/views.md
+    - text: Ячейки
+      url: controls/cells.md
+    - text: Общие свойства, методы и события
+      url: controls/common-properties.md
+    - text: Сторонние элементы управления
+      url: controls/thirdparty.md
+- title: Визуальные элементы для представления данных
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: BoxView
+      url: boxview.md
+    - text: Изображение
+      url: images.md
+    - text: Метка
+      url: text/label.md
+    - text: Карта
+      url: map/index.md
+    - text: WebView
+      url: webview.md
+- title: Визуальные элементы, инициирующие команды
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Кнопка
+      url: button.md
+    - text: ImageButton
+      url: imagebutton.md
+    - text: RefreshView
+      url: refreshview.md
+    - text: Панель поиска
+      url: searchbar.md
+    - text: SwipeView
+      url: swipeview.md
+- title: Визуальные элементы для установки значений
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: CheckBox
+      url: checkbox.md
+    - text: DatePicker
+      url: datepicker.md
+    - text: Slider
+      url: slider.md
+    - text: Шаговый переключатель
+      url: stepper.md
+    - text: Параметр
+      url: switch.md
+    - text: TimePicker
+      url: timepicker.md
+- title: Визуальные элементы для редактирования текста
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Редактор
+      url: text/editor.md
+    - text: Ввод
+      url: text/entry.md
+- title: Визуальные элементы для обозначения действий
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ActivityIndicator
+      url: activityindicator.md
+    - text: ProgressBar
+      url: progressbar.md
+- title: Визуальные элементы для отображения коллекций
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: CarouselView
+      url: carouselview/index.md
+    - text: CollectionView
+      url: collectionview/index.md
+    - text: IndicatorView
+      url: indicatorview.md
+    - text: ListView
+      url: listview/index.md
+    - text: Средство выбора
+      url: picker/index.md
+    - text: TableView
+      url: tableview.md
+- title: Дополнительные элементы управления
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: MenuItem
+      url: menuitem.md
+    - text: ToolbarItem
+      url: toolbaritem.md
+- title: Основные понятия о пользовательском интерфейсе
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Анимация
+      url: animation/index.md
+    - text: Цвета
+      url: colors.md
+    - text: Отображение всплывающих элементов
+      url: pop-ups.md
+    - text: Шрифты
+      url: text/fonts.md
+    - text: Графика SkiaSharp
+      url: graphics/skiasharp/index.md
+    - text: Экран-заставка
+      url: splashscreen.md
+    - text: Стили
+      url: styles/index.md
+    - text: Темы
+      url: theming.md
+    - text: Визуальный элемент
+      url: visual/index.md
+    - text: Диспетчер визуальных состояний
+      url: visual-state-manager.md
+- title: Макеты
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Выбор макета
+      url: layouts/choose-layout.md
+    - text: AbsoluteLayout
+      url: layouts/absolute-layout.md
+    - text: ContentView
+      url: layouts/contentview.md
+    - text: FlexLayout
+      url: layouts/flex-layout.md
+    - text: Frame
+      url: layouts/frame.md
+    - text: Grid
+      url: layouts/grid.md
+    - text: RelativeLayout
+      url: layouts/relative-layout.md
+    - text: ScrollView
+      url: layouts/scroll-view.md
+    - text: StackLayout
+      url: layouts/stack-layout.md
+- title: Основные понятия о макете
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Привязываемые макеты
+      url: layouts/bindable-layouts.md
+    - text: Пользовательский макет
+      url: layouts/custom.md
+    - text: Ориентация экрана устройства
+      url: layouts/device-orientation.md
+    - text: LayoutOptions
+      url: layouts/layout-options.md
+    - text: Сжатие макета
+      url: layouts/layout-compression.md
+    - text: Поля и заполнение
+      url: layouts/margin-and-padding.md
+    - text: Макет планшета и рабочего стола
+      url: layouts/tablet.md

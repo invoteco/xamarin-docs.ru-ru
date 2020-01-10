@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014342"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728256"
 ---
 # <a name="updating-component-references-to-nuget"></a>Обновление ссылок на компоненты в NuGet
 
@@ -37,11 +37,11 @@ ms.locfileid: "73014342"
 
 Чтобы удалить компонент из проекта, выполните следующие действия.
 
-1. Откройте файл **. csproj** . Для этого щелкните правой кнопкой мыши имя проекта и выберите команду **Выгрузить проект**. 
+1. Откройте **CSPROJ**-файл. Для этого щелкните правой кнопкой мыши имя проекта и выберите команду **Выгрузить проект**. 
 
 2. Щелкните правой кнопкой мыши выгруженный проект и выберите **Изменить {имя_проекта-Project-Name}. csproj**.
 
-3. Найдите в файле все ссылки для `XamarinComponentReference`. Он должен выглядеть следующим образом:
+3. Найдите в файле все ссылки для `XamarinComponentReference`. Она должна выглядеть следующим образом:
 
     ```xml
     <ItemGroup>
@@ -76,7 +76,7 @@ ms.locfileid: "73014342"
 
 1. Откройте файл. csproj. Для этого щелкните правой кнопкой мыши имя проекта и выберите **сервис > изменить файл**.
 
-2. Найдите в файле все ссылки для `XamarinComponentReference`. Он должен выглядеть следующим образом:
+2. Найдите в файле все ссылки для `XamarinComponentReference`. Она должна выглядеть следующим образом:
 
     ```xml
     <ItemGroup>

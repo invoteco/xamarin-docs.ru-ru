@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
-ms.openlocfilehash: 7045bd4d3343d0c11c6cd52fa02cdc005175b8a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60c647a9a09ebffa5a9d50c799c09cf0dbf2e4ac
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772937"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728017"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Использование UrhoSharp в Xamarin.Forms
 
@@ -25,21 +25,21 @@ ms.locfileid: "70772937"
 UrhoSharp можно использовать для отображения графики в приложениях Xamarin.Forms.
 Это [пример](https://github.com/xamarin/urho-samples/tree/master/FormsSample) показано, как UrhoSharp может использоваться для создания интерактивной трехмерной диаграммы:
 
-![](urhosharp-images/ios-animation.gif "Трехмерной диаграмме интерактивные UrhoSharp в iOS")
-![](urhosharp-images/android-animation.gif "трехмерной диаграмме интерактивные UrhoSharp в Android")
+![](urhosharp-images/ios-animation.gif "UrhoSharp 3D Interactive Chart on iOS")
+![](urhosharp-images/android-animation.gif "UrhoSharp 3D Interactive Chart on Android")
 
-## <a name="adding-the-urhosharp-nuget-packages"></a>Добавление пакетов UrhoSharp Nuget
+## <a name="adding-the-urhosharp-nuget-packages"></a>Добавление пакетов NuGet UrhoSharp
 
-Прежде чем использовать UrhoSharp, разработчики должны добавить пакет UrhoSharp Nuget в свое решение. В этом руководстве предполагается, что проект Xamarin.Forms с помощью iOS, Android и .NET Standard проект библиотеки. Весь код будет записываться в проекте библиотеки .NET Standard; но UrhoSharp Nuget необходимо добавить проекты iOS и Android слишком.
+Перед использованием UrhoSharp разработчикам необходимо добавить в свое решение пакет NuGet UrhoSharp. В этом руководстве предполагается, что проект Xamarin.Forms с помощью iOS, Android и .NET Standard проект библиотеки. Весь код будет записан в проект библиотеки .NET Standard; но UrhoSharp NuGet также необходимо добавить в проекты iOS и Android.
 
-Пакет UrhoSharp.Forms Nuget содержит все объекты, необходимые для создания объектов UrhoSharp. Пакет nuget UrhoSharp.Forms включает `UrhoSurface` класс, который используется для размещения UrhoSharp в Xamarin.Forms.
+Пакет NuGet UrhoSharp. Forms содержит все объекты, необходимые для создания объектов UrhoSharp. Пакет NuGet UrhoSharp. Forms включает класс `UrhoSurface`, который используется для размещения UrhoSharp в Xamarin. Forms.
 Чтобы начать, щелкните правой кнопкой мыши папку **packages** в проекте библиотеки .NET Standard и выберите пункт **Добавить пакеты...** . Введите условие поиска **UrhoSharp. Forms**, выберите **UrhoSharp для Xamarin. Forms**, а затем нажмите кнопку **Добавить пакет**.
 
-[![](urhosharp-images/add-package-sml.png "Пакеты диалоговое окно добавления")](urhosharp-images/add-package.png#lightbox "пакетов диалоговое окно добавления")
+[![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
 
 Пакет UrhoSharp.Forms NuGet будет добавлен в проект:
 
-![](urhosharp-images/packages.png "Папка пакетов")
+![](urhosharp-images/packages.png "Packages Folder")
 
 Повторите описанные выше действия для проектов для конкретной платформы (например, iOS и Android).
 

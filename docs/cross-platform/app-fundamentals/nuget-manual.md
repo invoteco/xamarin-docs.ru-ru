@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016766"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728230"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Создание пакетов NuGet для Xamarin вручную
 
@@ -53,7 +53,7 @@ _На этой странице содержатся некоторые сове
 
 В приведенном выше "MonoAndroid10" означает "Android 1,0". Это означает, что [Целевая платформа](~/android/app-fundamentals/android-api-levels.md) проекта должна иметь версию Android 1,0 или более позднюю. Версия указывается в элементе `<TargetFrameworkVersion>` в файле проекта.
 
-Для уточнения:
+Пояснение:
 
 - **MonoAndroid403** соответствует Android 4.0.3 и более поздней версии (уровень API IE 15)
 - **Xamarin. iOS10** соответствует Xamarin. iOS 1,0 и более поздним версиям

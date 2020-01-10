@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759682"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75727944"
 ---
 # <a name="xamarinforms-datapages"></a>Страницы на странице Xamarin. Forms
 
-![](~/media/shared/preview.png "Этот API доступна в предварительной версии")
+![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
 > Для подготовки страниц к просмотру требуется ссылка на тему Xamarin. Forms. Это включает в себя установку пакета NuGet [Xamarin. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) в проект, за которым следуют пакеты NuGet [Xamarin. Forms. Theme. light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) или [Xamarin. Forms. Theme. темно](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
@@ -27,23 +27,23 @@ DataPages предоставляют API, чтобы быстро и легко 
 
 Чтобы узнать, как работает демонстрационный выступление, ознакомьтесь с [руководством по началу работы](get-started.md).
 
-[![](images/demo-sml.png "Пример DataPages приложения")](images/demo.png#lightbox "DataPages примера приложения")
+[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
 
-## <a name="introduction"></a>Вступление
+## <a name="introduction"></a>Введение
 
 Источники данных и связанные страницы данных позволяют разработчикам быстро и просто использовать поддерживаемый источник данных и подготавливать его к просмотру с помощью встроенного формирования шаблонов пользовательского интерфейса, которое можно настроить с помощью тем.
 
 Страницы в приложение Xamarin. Forms добавляются, включая пакет NuGet **Xamarin. Forms. Pages** .
 
-### <a name="data-sources"></a>обозревателе решений
+### <a name="data-sources"></a>Data Sources
 
 Предварительная версия содержит некоторые готовые источники данных для использования:
 
 * **JsonDataSource**
-* **Азуредатасаурце** (разделите NuGet)
-* **Азуриаситабледатасаурце** (разделите NuGet)
+* **Азуредатасаурце** (разделение NuGet)
+* **Азуриаситабледатасаурце** (разделение NuGet)
 
-См `JsonDataSource`. [руководство по началу работы](get-started.md) с примером с помощью.
+Пример использования `JsonDataSource`см. в разделе [руководство по началу работы](get-started.md) .
 
 ### <a name="pages--controls"></a>Страницы & элементы управления
 
@@ -59,15 +59,15 @@ DataPages предоставляют API, чтобы быстро и легко 
 
 Примеры см. в [справочнике по элементам управления "страницы](controls.md) ".
 
-### <a name="under-the-hood"></a>Внутри
+### <a name="under-the-hood"></a>За кулисами
 
-Источник данных Xamarin. Forms соответствует `IDataSource` интерфейсу.
+Источник данных Xamarin. Forms соответствует интерфейсу `IDataSource`.
 
 Инфраструктура Xamarin. Forms взаимодействует с источником данных с помощью следующих свойств:
 
-* `Data`— список элементов данных, которые могут быть отображены, доступны только для чтения.
-* `IsLoading`— Логическое значение, указывающее, загружаются ли данные и доступны для подготовки к просмотру.
-* `[key]`— индексатор для извлечения элементов.
+* `Data` — список элементов данных, которые могут быть отображены только для чтения.
+* `IsLoading` — логическое значение, указывающее, загружены ли данные и доступны для подготовки к просмотру.
+* `[key]` — индексатор для получения элементов.
 
-Существует два метода `MaskKey` `UnmaskKey` , которые можно использовать для скрытия (или отображения) свойств элементов данных (IE). запрет на отрисовку.
+Существует два метода `MaskKey` и `UnmaskKey`, которые можно использовать для скрытия (или отображения) свойств элементов данных (IE). запрет на отрисовку.
 Ключ соответствует именованному свойству объекта элемента данных.

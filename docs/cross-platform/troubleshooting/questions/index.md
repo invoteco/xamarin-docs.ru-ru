@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 30827292e59c70395fce17bb520f48b2f19c7d1e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013993"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728180"
 ---
 # <a name="general-frequently-asked-questions"></a>Общие часто задаваемые вопросы
 
@@ -42,7 +42,7 @@ Visual Studio для Mac & Visual Studio имеют функции для выб
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[Где на компьютере хранятся компоненты](component-storage.md)
 При установке компонента Xamarin в проект приложения он помещается в два расположения, перечисленные в этом разделе.
 
-## <a name="troubleshooting"></a>Устранение неполадок
+## <a name="troubleshooting"></a>Диагностика
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Где я могу найти информацию о версии и журналы](version-logs.md)
 В этом разделе содержатся сведения о поиске большинства диагностических сведений, которые можно использовать для устранения проблем с Xamarin.
 

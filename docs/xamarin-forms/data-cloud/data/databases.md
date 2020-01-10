@@ -4,123 +4,289 @@ description: Xamarin.Forms поддерживает приложения на о
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/21/2018
-ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 12/05/2019
+ms.openlocfilehash: 190aeb83456fa7c7ba8a9415b02ab56f3f8779da
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739175"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728282"
 ---
 # <a name="xamarinforms-local-databases"></a>Локальные базы данных Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-_Xamarin. Forms поддерживает приложения, управляемые базой данных, с помощью обработчика базы данных SQLite, что дает возможность загружать и сохранять объекты в общем коде. В этой статье описывается, как приложения Xamarin. Forms могут считывать и записывать данные в локальную базу данных SQLite с помощью SQLite.Net._
+Обработчик базы данных SQLite позволяет приложениям Xamarin. Forms загружать и сохранять объекты данных в общем коде. Пример приложения использует таблицу базы данных SQLite для хранения элементов Todo. В этой статье описывается, как использовать SQLite.Net в общем коде для хранения и извлечения информации в локальной базе данных.
 
-## <a name="overview"></a>Обзор
+[![снимков экрана приложения ToDoList в iOS и Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "Приложение ToDoList в iOS и Android")
 
-Приложения Xamarin.Forms могут использовать пакет [NuGet SQLite.NET PCL](https://www.nuget.org/packages/sqlite-net-pcl/) для включения операций с базой данных в общий код путем обращения к классам `SQLite`, которые входят в состав NuGet. Операции с базой данных можно определить в проекте библиотеки .NET Standard решения Xamarin.Forms.
+Интегрируйте SQLite.NET в мобильные приложения, выполнив следующие действия.
 
-В качестве [примера](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) предлагается простое приложение для ведения списка задач. На следующих снимках экрана показано, как оно выглядит на каждой платформе.
+1. [Установите пакет NuGet](#install-the-sqlite-nuget-package).
+1. [Настройка констант](#configure-app-constants).
+1. [Создание класса доступа к базе данных](#create-a-database-access-class).
+1. [Доступ к данным в Xamarin. Forms](#access-data-in-xamarinforms).
+1. [Расширенная конфигурация](#advanced-configuration).
 
-Снимки экрана примера базы данных Xamarin [![. Forms](databases-images/todo-list-sml.png "Снимки экрана первой страницы TodoList")](databases-images/todo-list.png#lightbox "Снимки экрана первой страницы TodoList") [ ![](databases-images/todo-list-sml.png "Снимки экрана первой страницы TodoList")](databases-images/todo-list.png#lightbox "Снимки экрана первой страницы TodoList")
+## <a name="install-the-sqlite-nuget-package"></a>Установка пакета NuGet для SQLite
 
-<a name="Using_SQLite_with_PCL" />
+Используйте диспетчер пакетов NuGet для поиска **SQLite-NET-PCL** и добавления последней версии в проект общего кода.
 
-## <a name="using-sqlite"></a>Использование SQLite
-
-Чтобы добавить поддержку SQLite в библиотеку .NET Standard для Xamarin.Forms, выполните поиск в NuGet по запросу **sqlite-net-pcl** и установите последнюю версию пакета:
-
-![Добавление пакета PCL SQLite.NET для NuGet](databases-images/vs2017-sqlite-pcl-nuget.png "Добавление пакета PCL SQLite.NET для NuGet")
-
-Есть несколько пакетов NuGet с похожими именами. Нужный пакет имеет следующие атрибуты:
+Существует ряд пакетов NuGet с похожими названиями. Правильный пакет имеет следующие атрибуты:
 
 - **Автор:** Фрэнк А. Крюгер (Frank A. Krueger)
-- **Идентификатор:** sqlite-net-pcl
-- **Ссылка в NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **ID:** SQLite-NET-PCL
+- **Ссылка NuGet:** [SQLite-NET-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
 > Пакет NuGet **sqlite-net-pcl** следует использовать даже в проектах .NET Standard.
 
-После добавления ссылки добавьте в класс `App` свойство, возвращающее путь к локальному файлу для хранения базы данных:
+## <a name="configure-app-constants"></a>Настройка констант приложения
+
+Пример проекта включает файл **Constants.CS** , который предоставляет общие данные конфигурации:
 
 ```csharp
-static TodoItemDatabase database;
+public static class Constants
+{
+    public const string DatabaseFilename = "TodoSQLite.db3";
 
+    public const SQLite.SQLiteOpenFlags Flags =
+        // open the database in read/write mode
+        SQLite.SQLiteOpenFlags.ReadWrite |
+        // create the database if it doesn't exist
+        SQLite.SQLiteOpenFlags.Create |
+        // enable multi-threaded database access
+        SQLite.SQLiteOpenFlags.SharedCache;
+
+    public static string DatabasePath
+    {
+        get
+        {
+            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            return Path.Combine(basePath, DatabaseFilename);
+        }
+    }
+}
+```
+
+В файле констант указано значение по умолчанию `SQLiteOpenFlag` перечислимые значения, используемые для инициализации подключения к базе данных. Перечисление `SQLiteOpenFlag` поддерживает следующие значения:
+
+- `Create`: подключение автоматически создаст файл базы данных, если он не существует.
+- `FullMutex`: соединение открыто в режиме сериализованного потока.
+- `NoMutex`: соединение открывается в режиме многопоточной обработки.
+- `PrivateCache`: соединение не будет участвовать в общем кэше, даже если оно включено.
+- `ReadWrite`: подключение может считывать и записывать данные.
+- `SharedCache`: подключение будет участвовать в общем кэше, если он включен.
+- `ProtectionComplete`: файл зашифрован и недоступен, пока устройство заблокировано.
+- `ProtectionCompleteUnlessOpen`: файл шифруется до его открытия, но затем становится доступным, даже если пользователь блокирует устройство.
+- `ProtectionCompleteUntilFirstUserAuthentication`: файл шифруется до тех пор, пока пользователь не загрузится и не разблокирует устройство.
+- `ProtectionNone`: файл базы данных не зашифрован.
+
+Может потребоваться указать различные флаги в зависимости от того, как будет использоваться база данных. Дополнительные сведения о `SQLiteOpenFlags`см. в разделе [Открытие нового подключения к базе данных](https://www.sqlite.org/c3ref/open.html) в SQLite.org.
+
+## <a name="create-a-database-access-class"></a>Создание класса доступа к базе данных
+
+Класс-оболочка базы данных абстрагирует уровень доступа к данным от остальной части приложения. Этот класс централизует логику запросов и упрощает управление инициализацией базы данных, что упрощает рефакторинг или расширение операций с данными по мере роста приложения. Приложение Todo определяет для этой цели класс `TodoItemDatabase`.
+
+### <a name="lazy-initialization"></a>Отложенная инициализация
+
+`TodoItemDatabase` использует класс .NET `Lazy` для задержки инициализации базы данных до первого обращения к ней. Использование отложенной инициализации предотвращает задержку запуска приложения в процессе загрузки базы данных. Дополнительные сведения см. в разделе [Lazy&lt;t&gt; Class](https://docs.microsoft.com/dotnet/api/system.lazy-1).
+
+```csharp
+public class TodoItemDatabase
+{
+    static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
+    {
+        return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
+    });
+
+    static SQLiteAsyncConnection Database => lazyInitializer.Value;
+    static bool initialized = false;
+
+    public TodoItemDatabase()
+    {
+        InitializeAsync().SafeFireAndForget(false);
+    }
+
+    async Task InitializeAsync()
+    {
+        if (!initialized)
+        {
+            if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
+            {
+                await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
+                initialized = true;
+            }
+        }
+    }
+
+    //...
+}
+```
+
+Соединение с базой данных — это статическое поле, которое обеспечивает использование одного подключения к базе данных в течение всего жизненного цикла приложения. Постоянное статическое подключение обеспечивает лучшую производительность, чем несколько раз открывать и закрывать соединения в течение одного сеанса приложения.
+
+Метод `InitializeAsync` отвечает за проверку наличия таблицы для хранения объектов `TodoItem`. Этот метод автоматически создает таблицу, если она не существует.
+
+### <a name="the-safefireandforget-extension-method"></a>Метод расширения Сафефиреандфоржет
+
+При создании экземпляра класса `TodoItemDatabase` необходимо инициализировать подключение к базе данных, которое является асинхронным процессом. Однако:
+
+- Конструкторы классов не могут быть асинхронными.
+- Асинхронный метод, который не ожидается, не будет вызывать исключения.
+- Использование метода `Wait` блокирует потоки _и_ исключения поглощает.
+
+Чтобы запустить асинхронную инициализацию, не блокируя выполнение и иметь возможность перехватывать исключения, в примере приложения используется метод расширения, именуемый `SafeFireAndForget`. Метод расширения `SafeFireAndForget` предоставляет дополнительные функциональные возможности для класса `Task`.
+
+```csharp
+public static class TaskExtensions
+{
+    // NOTE: Async void is intentional here. This provides a way
+    // to call an async method from the constructor while
+    // communicating intent to fire and forget, and allow
+    // handling of exceptions
+    public static async void SafeFireAndForget(this Task task,
+        bool returnToCallingContext,
+        Action<Exception> onException = null)
+    {
+        try
+        {
+            await task.ConfigureAwait(returnToCallingContext);
+        }
+
+        // if the provided action is not null, catch and
+        // pass the thrown exception
+        catch (Exception ex) when (onException != null)
+        {
+            onException(ex);
+        }
+    }
+}
+```
+
+Метод `SafeFireAndForget` ожидает асинхронное выполнение предоставленного объекта `Task` и позволяет присоединить `Action`, который вызывается при возникновении исключения.
+
+Дополнительные сведения см. в разделе [асинхронная модель на основе задач (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+
+### <a name="data-manipulation-methods"></a>Методы обработки данных
+
+Класс `TodoItemDatabase` содержит методы для обработки данных четырех типов: создание, чтение, изменение и удаление. Библиотека SQLite.NET предоставляет простую объектную реляционную карту (ORM), позволяющую хранить и извлекать объекты без написания инструкций SQL.
+
+```csharp
+public static class TodoItemDatabase {
+
+    // ...
+
+    public Task<List<TodoItem>> GetItemsAsync()
+    {
+        return Database.Table<TodoItem>().ToListAsync();
+    }
+
+    public Task<List<TodoItem>> GetItemsNotDoneAsync()
+    {
+        // SQL queries are also possible
+        return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+    }
+
+    public Task<TodoItem> GetItemAsync(int id)
+    {
+        return Database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+    }
+
+    public Task<int> SaveItemAsync(TodoItem item)
+    {
+        if (item.ID != 0)
+        {
+            return Database.UpdateAsync(item);
+        }
+        else
+        {
+            return Database.InsertAsync(item);
+        }
+    }
+
+    public Task<int> DeleteItemAsync(TodoItem item)
+    {
+        return Database.DeleteAsync(item);
+    }
+}
+```
+
+## <a name="access-data-in-xamarinforms"></a>Доступ к данным в Xamarin. Forms
+
+Класс `App` Xamarin. Forms предоставляет экземпляр класса `TodoItemDatabase`:
+
+```csharp
 public static TodoItemDatabase Database
 {
-  get
-  {
-    if (database == null)
+    get
     {
-      database = new TodoItemDatabase(
-        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
+        if (database == null)
+        {
+            database = new TodoItemDatabase();
+        }
+        return database;
     }
-    return database;
-  }
 }
 ```
 
-Конструктор `TodoItemDatabase`, принимающий путь к файлу базы данных в качестве аргумента, выглядит так:
+Это свойство позволяет компонентам Xamarin. Forms вызывать методы получения и обработки данных в экземпляре `Database` в ответ на взаимодействие с пользователем. Например:
 
 ```csharp
-public TodoItemDatabase(string dbPath)
+var saveButton = new Button { Text = "Save" };
+saveButton.Clicked += async (sender, e) =>
 {
-  database = new SQLiteAsyncConnection(dbPath);
-  database.CreateTableAsync<TodoItem>().Wait();
-}
+    var todoItem = (TodoItem)BindingContext;
+    await App.Database.SaveItemAsync(todoItem);
+    await Navigation.PopAsync();
+};
 ```
 
-Преимущество использования отдельной базы данных в том, что создается отдельное подключение к базе данных, которое остается открытым, пока работает приложение. Это позволяет избежать затрат, связанных с открытием и закрытием файла базы данных каждый раз, когда выполняется операция с ней.
+## <a name="advanced-configuration"></a>Расширенная настройка
 
-Остальная часть класса `TodoItemDatabase` представляет собой кроссплатформенные запросы SQLite. Ниже представлен пример кода запроса (дополнительные сведения о синтаксисе см. в статье [Использование SQLite.NET с Xamarin.iOS](~/ios/data-cloud/data/using-sqlite-orm.md).
+SQLite предоставляет надежный API с дополнительными функциями, чем описано в этой статье и примере приложения. В следующих разделах описываются функции, важные для масштабируемости.
+
+Дополнительные сведения см. в [документации по SQLite](https://www.sqlite.org/docs.html) в SQLite.org.
+
+### <a name="write-ahead-logging"></a>Ведение журнала с упреждающей записью
+
+По умолчанию SQLite использует традиционный журнал отката. Копия неизмененного содержимого базы данных записывается в отдельный файл отката, после чего изменения записываются непосредственно в файл базы данных. ФИКСАЦИя происходит при удалении журнала отката.
+
+Ведение журнала с упреждающей записью (WAL) сначала записывает изменения в отдельный файл WAL. В режиме WAL ФИКСАЦИя — это специальная запись, которая добавляется в файл WAL, что позволяет нескольким транзакциям выполняться в одном файле WAL. Файл WAL объединяется в файл базы данных в специальной операции, называемой _контрольной точкой_.
+
+WAL может быть быстрее для локальных баз данных, так как модули чтения и записи не блокируют друг друга, что позволяет выполнять операции чтения и записи одновременно. Однако режим WAL не допускает изменения _размера страницы_, добавляет к базе данных дополнительные ассоциации файлов и добавляет операцию дополнительной _контрольной точки_ .
+
+Чтобы включить WAL в SQLite.NET, вызовите метод `EnableWriteAheadLoggingAsync` в экземпляре `SQLiteAsyncConnection`:
 
 ```csharp
-public Task<List<TodoItem>> GetItemsAsync()
-{
-  return database.Table<TodoItem>().ToListAsync();
-}
-
-public Task<List<TodoItem>> GetItemsNotDoneAsync()
-{
-  return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-}
-
-public Task<TodoItem> GetItemAsync(int id)
-{
-  return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
-}
-
-public Task<int> SaveItemAsync(TodoItem item)
-{
-  if (item.ID != 0)
-  {
-    return database.UpdateAsync(item);
-  }
-  else {
-    return database.InsertAsync(item);
-  }
-}
-
-public Task<int> DeleteItemAsync(TodoItem item)
-{
-  return database.DeleteAsync(item);
-}
+await Database.EnableWriteAheadLoggingAsync();
 ```
 
-> [!NOTE]
-> Преимущество использования асинхронного интерфейса API SQLite.Net в том, что операции с базой данных переносятся в фоновые потоки. Кроме того, нет необходимости писать дополнительный код для обеспечения параллелизма, так как интерфейс API отвечает за это.
+Дополнительные сведения см. в разделе [SQLite Write-упреждающее ведение журнала](https://www.sqlite.org/wal.html) на SQLite.org.
 
-## <a name="summary"></a>Сводка
+### <a name="copying-a-database"></a>Копирование базы данных
 
-Xamarin.Forms поддерживает приложения на основе базы данных с использованием ядра СУБД SQLite, которое позволяет загружать и сохранять объекты в общем коде.
+Существует несколько случаев, когда может потребоваться скопировать базу данных SQLite:
 
-В этой статье рассматривался **доступ** к базе данных SQLite с помощью Xamarin.Forms. Дополнительные сведения о работе с SQLite.Net см. в документации по [использованию SQLite.NET в Android](~/android/data-cloud/data-access/using-sqlite-orm.md) или [iOS](~/ios/data-cloud/data/using-sqlite-orm.md).
+- База данных поставляется с приложением, но ее необходимо скопировать или переместить в хранилище, доступное для записи на мобильном устройстве.
+- Необходимо создать резервную копию или копию базы данных.
+- Необходимо выполнить версию, переместить или переименовать файл базы данных.
+
+В общем случае перемещение, переименование или копирование файла базы данных выполняется так же, как и для любого другого типа файлов, с помощью нескольких дополнительных соображений.
+
+- Прежде чем пытаться переместить файл базы данных, необходимо закрыть все подключения к базе данных.
+- Если вы используете [ведение журнала с упреждающей записью](#write-ahead-logging), SQLite создаст файл с доступом к общей памяти (. SHM) и файл (с расширением WAL). Убедитесь, что вы также применяете все изменения к этим файлам.
+
+Дополнительные сведения см. [в разделе Обработка файлов в Xamarin. Forms](~/xamarin-forms/data-cloud/data/files.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример списка задач](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
-- [Примеры Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Пример приложения Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Пакет NuGet SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [Документация по SQLite](https://www.sqlite.org/docs.html)
+- [Использование SQLite с Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
+- [Использование SQLite с iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
+- [Асинхронная модель на основе задач (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Класс Lazy<T>](https://docs.microsoft.com//api/system.lazy-1)

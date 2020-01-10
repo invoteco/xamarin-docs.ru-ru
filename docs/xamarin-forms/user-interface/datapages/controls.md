@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e92669d9938b9fe48a1a589e0465acd03f129716
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 359a9f27e9a9e7bc04d5a1ab938391fe5c2cd2ee
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759885"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728035"
 ---
 # <a name="datapages-controls-reference"></a>Справочник по элементам управления "страницы на странице"
 
-![](~/media/shared/preview.png "Этот API доступна в предварительной версии")
+![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
 > Для подготовки страниц к просмотру требуется ссылка на тему Xamarin. Forms. Это включает в себя установку пакета NuGet [Xamarin. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) в проект, за которым следуют пакеты NuGet [Xamarin. Forms. Theme. light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) или [Xamarin. Forms. Theme. темно](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
 В число страниц данных Xamarin. Forms NuGet входит ряд элементов управления, которые могут использовать преимущества привязки к источнику.
 
-Чтобы использовать эти элементы управления в XAML, убедитесь, что пространство имен включено, например, см `xmlns:pages` . описание ниже:
+Чтобы использовать эти элементы управления в XAML, убедитесь, что пространство имен включено, например, см. объявление `xmlns:pages` ниже:
 
 ```xaml
 <ContentPage
@@ -33,7 +33,7 @@ ms.locfileid: "70759885"
     x:Class="DataPagesDemo.Detail">
 ```
 
-В приведенных ниже `DynamicResource` примерах содержатся ссылки, которые должны существовать в словаре ресурсов проекта для работы. Также есть пример создания [пользовательского элемента управления](#custom)
+Примеры ниже включают `DynamicResource` ссылки, которые должны существовать в словаре ресурсов проекта для работы. Также есть пример создания [пользовательского элемента управления](#custom)
 
 ## <a name="built-in-controls"></a>Встроенные элементы управления
 
@@ -42,14 +42,14 @@ ms.locfileid: "70759885"
 
 <a name="heroimage" />
 
-### <a name="heroimage"></a>хероимаже
+### <a name="heroimage"></a>HeroImage
 
-`HeroImage` Элемент управления имеет четыре свойства:
+Элемент управления `HeroImage` имеет четыре свойства:
 
 * Текст
-* Подробно
+* Detail
 * ImageSource
-* Сторона
+* Аспект
 
 ```xaml
 <pages:HeroImage
@@ -61,25 +61,25 @@ ms.locfileid: "70759885"
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "Элемент управления имиджевое изображение на Android") ![](controls-images/heroimage-dark-android.png "имиджевое изображение элемента управления на устройстве Android")
+![](controls-images/heroimage-light-android.png "Элемент управления Хероимаже в Android") ![](controls-images/heroimage-dark-android.png "Элемент управления Хероимаже в Android")
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "Имиджевое изображение элемента управления в iOS") ![](controls-images/heroimage-dark-ios.png "имиджевое изображение элемента управления в iOS")
+![](controls-images/heroimage-light-ios.png "Элемент управления Хероимаже в iOS") ![](controls-images/heroimage-dark-ios.png "Элемент управления Хероимаже в iOS")
 
 <a name="listitem" />
 
 ### <a name="listitem"></a>ListItem
 
-Макет `ListItem` элемента управления похож на собственный список строк в формате iOS и Android или строки таблицы, однако его также можно использовать в качестве обычного представления. В приведенном ниже примере кода он показан `StackLayout`в, но его также можно использовать в элементах управления "список сколлинг с привязкой к данным".
+Макет элемента управления `ListItem` похож на собственный список строк в формате iOS и Android или строки таблицы, однако его также можно использовать в качестве обычного представления. В приведенном ниже примере кода он показан в `StackLayout`, но его также можно использовать в элементах управления списка сколлинг с привязкой к данным.
 
 Существует пять свойств:
 
 * Заголовок
-* Подробно
+* Detail
 * ImageSource
 * плацехолдимажесаурце
-* Сторона
+* Аспект
 
 ```xaml
 <StackLayout Spacing="0">
@@ -91,27 +91,27 @@ ms.locfileid: "70759885"
     />
 ```
 
-`ListItem` На этих снимках экрана показаны платформы iOS и Android с использованием светлых и темных тем:
+На этих снимках экрана показаны `ListItem` на платформах iOS и Android с использованием светлых и темных тем:
 
 **Android**
 
-![](controls-images/listitem-light-android.png "Элемента управления ListItem в Android") ![](controls-images/listitem-dark-android.png "элемента управления ListItem в Android")
+![](controls-images/listitem-light-android.png "Элемент управления ListItem в Android") ![](controls-images/listitem-dark-android.png "Элемент управления ListItem в Android")
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "Элемента управления ListItem в iOS") ![](controls-images/listitem-dark-ios.png "элемента управления ListItem в iOS")
+![](controls-images/listitem-light-ios.png "Элемент управления ListItem в iOS") ![](controls-images/listitem-dark-ios.png "Элемент управления ListItem в iOS")
 
 ## <a name="custom-control-example"></a>Пример пользовательского элемента управления
 
-Цель этого пользовательского `CardView` элемента управления — это похоже на собственный кардвиев Android.
+Цель этого пользовательского элемента управления `CardView` — это наподобие собственного Кардвиев Android.
 
 Он будет содержать три свойства:
 
 * Текст
-* Подробно
+* Detail
 * ImageSource
 
-Целью является пользовательский элемент управления, который будет выглядеть, как в приведенном ниже коде (Обратите внимание, что требуется пользовательское `xmlns:local` значение, которое ссылается на текущую сборку):
+Целью является пользовательский элемент управления, который будет выглядеть, как в приведенном ниже коде (Обратите внимание, что требуется пользовательский `xmlns:local`, ссылающийся на текущую сборку):
 
 ```xaml
 <local:CardView
@@ -125,11 +125,11 @@ ms.locfileid: "70759885"
 
 **Android**
 
-![](controls-images/cardview-light-android.png "CardView пользовательский элемент управления на устройстве Android") ![](controls-images/cardview-dark-android.png "CardView пользовательский элемент управления на устройстве Android")
+![](controls-images/cardview-light-android.png "Пользовательский элемент управления Кардвиев в Android") ![](controls-images/cardview-dark-android.png "Пользовательский элемент управления Кардвиев в Android")
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "CardView пользовательский элемент управления в iOS") ![](controls-images/cardview-dark-ios.png "CardView пользовательский элемент управления в iOS")
+![](controls-images/cardview-light-ios.png "Пользовательский элемент управления Кардвиев в iOS") ![](controls-images/cardview-dark-ios.png "Пользовательский элемент управления Кардвиев в iOS")
 
 <a name="custom" />
 
@@ -145,9 +145,9 @@ ms.locfileid: "70759885"
 
 <a name="1" />
 
-#### <a name="1-dataview-subclass"></a>1. Подкласс DataView
+#### <a name="1-dataview-subclass"></a>1. класс DataView
 
-C# Подкласс`DataView` определяет связываемые свойства для элемента управления.
+C# Подкласс `DataView` определяет связываемые свойства для элемента управления.
 
 ```csharp
 public class CardView : DataView
@@ -189,9 +189,9 @@ public class CardView : DataView
 
 #### <a name="2-define-font-layout-and-margins"></a>2. Определение шрифта, макета и полей
 
-Конструктор элементов управления будет вычислить эти значения как часть структуры пользовательского интерфейса для пользовательского элемента управления. Когда требуются спецификации для конкретной платформы, `OnPlatform` используется элемент.
+Конструктор элементов управления будет вычислить эти значения как часть структуры пользовательского интерфейса для пользовательского элемента управления. Когда требуются спецификации для конкретной платформы, используется элемент `OnPlatform`.
 
-Обратите внимание, что некоторые `StaticResource`значения ссылаются на s — они будут определены на [шаге 5](#5).
+Обратите внимание, что некоторые значения относятся к `StaticResource`s — они будут определены на [шаге 5](#5).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -353,9 +353,9 @@ public class CardView : DataView
 
 <a name="6" />
 
-#### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. Установка ControlTemplate для класса Кардвиев
+#### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. Задание ControlTemplate для класса Кардвиев
 
-Наконец, убедитесь, C# что класс, созданный на [шаге 1](#1) , использует шаблон элемента управления, определенный на `Style` `Setter` [шаге 4](#4) , с помощью элемента.
+Наконец, убедитесь, C# что класс, созданный на [шаге 1](#1) , использует шаблон элемента управления, определенный на [шаге 4](#4) , используя элемент `Style` `Setter`
 
 ```xml
 <Style TargetType="local:CardView">
@@ -369,7 +369,7 @@ public class CardView : DataView
 
 #### <a name="7-add-the-control-to-a-page"></a>7. Добавление элемента управления на страницу
 
-Теперь `CardView` элемент управления можно добавить на страницу. В примере ниже показано, `StackLayout`что он размещен в:
+Теперь элемент управления `CardView` может быть добавлен на страницу. В примере ниже показано, что он размещен в `StackLayout`:
 
 ```xaml
 <StackLayout Spacing="0">

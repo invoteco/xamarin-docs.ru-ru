@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fdc9fd6eac8c7b0c9ec91eb66b5d6723cda71006
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016840"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728243"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Часть 5. Практические стратегии совместного использования кода
 
@@ -155,7 +155,7 @@ string filePath = Path.Combine (
         Environment.GetFolderPath (Environment.SpecialFolder.Personal),
         "MyFile.txt");
 System.IO.File.WriteAllText (filePath, "Contents of text file");
-Console.WriteLine (System.IO.ReadAllText (filePath));
+Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
 Ссылаться на Xamarin.iOS [работа с файловой системой](~/ios/app-fundamentals/file-system.md) документа, Дополнительные сведения о функции конкретных операций ввода-вывода файловой системы. При написании кода доступа кросс платформенных файл, помните, что некоторые файловые системы чувствительны к регистру и разделителей другой каталог. Рекомендуется всегда использовать тот же регистр для имен файлов и `Path.Combine()` метод при создании пути к файлу или каталогу.
@@ -190,7 +190,7 @@ API изолированного хранилища не доступны в [п
 
 ### <a name="cross-platform-file-access-in-pcls"></a>Доступ к файлам между различными платформами в PCL
 
-Имеется также совместимые с PCL Nuget — [PCLStorage](https://www.nuget.org/packages/PCLStorage/) —, доступ к файлам кросс платформенные средства, для Xamarin поддерживаемые платформы и новейшим интерфейсам API Windows.
+Кроме того, существует совместимая с PCL NuGet — [пклстораже](https://www.nuget.org/packages/PCLStorage/) , которая поддерживает доступ к файлам на разных платформах для платформ, поддерживаемых Xamarin, и последних API-интерфейсов Windows.
 
 ## <a name="network-operations"></a>Сетевые операции
 
@@ -205,7 +205,7 @@ API изолированного хранилища не доступны в [п
 
 ### <a name="httpclient"></a>HttpClient
 
-`HttpClient` В класс `System.Net.Http` пространство имен доступно в Xamarin.iOS, Xamarin.Android и большинство платформ Windows. Существует [Nuget клиентской библиотеки Microsoft HTTP](https://www.nuget.org/packages/Microsoft.Net.Http/) , можно использовать для переноса этого API в переносимой библиотеки классов (и Windows Phone 8 Silverlight).
+`HttpClient` В класс `System.Net.Http` пространство имен доступно в Xamarin.iOS, Xamarin.Android и большинство платформ Windows. Существует [Клиентская библиотека Microsoft HTTP NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/) , которую можно использовать для переноса этого API в переносимые библиотеки классов (и Windows Phone 8 Silverlight).
 
 ```csharp
 var client = new HttpClient();

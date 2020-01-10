@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 65a613f229f04a4ab01ca73a9c53c026add49f84
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029049"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728152"
 ---
 # <a name="viewpager-with-views"></a>ViewPager с представлениями
 
@@ -91,7 +91,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Этот код выполняет следующие действия:
+Этот код выполняет указанные ниже функции.
 
 1. Задает представление из ресурса макета **Main. axml** .
 
@@ -207,7 +207,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Этот код выполняет следующие действия:
+Этот код выполняет указанные ниже функции.
 
 1. Создает новый `ImageView` для вывода изображения дерева в указанной позиции. `MainActivity` приложения — это контекст, который будет передан конструктору `ImageView`.
 
@@ -234,17 +234,17 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Этот код выполняет следующие действия:
+Этот код выполняет указанные ниже функции.
 
 1. Приводит переданный `View` контейнера в ссылку на `ViewPager`.
 
-2. Приводит переданный объект Java (`view`) в C#`View`(`view as View`);
+2. Приводит переданный объект Java (`view`) в C# `View` (`view as View`);
 
 3. Удаляет представление из `ViewPager`. 
 
 ### <a name="implement-isviewfromobject"></a>Реализация Исвиевфромобжект
 
-По мере того как пользователь просматривает слайды влево и вправо по страницам содержимого, `ViewPager` вызывает `IsViewFromObject`, чтобы убедиться, что дочерний `View` в заданной позиции связан с объектом адаптера для той же позиции (следовательно, объект адаптера называется *ключом объекта* ). Для относительно простых приложений Ассоциация является одним из идентификаторов, &ndash; ключ объекта адаптера на этом экземпляре — это представление, которое ранее возвращалось в `ViewPager` с помощью `InstantiateItem`. Однако для других приложений ключ объекта может быть другим экземпляром класса адаптера, связанным с (но не аналогичным) дочерним представлением, которое `ViewPager` отображается в этой позиции. Только адаптер знает, связаны ли переданные представления и ключ объекта. 
+По мере того как пользователь просматривает слайды слева и справа через страницы содержимого, `ViewPager` вызывает `IsViewFromObject`, чтобы убедиться, что дочерний `View` в заданной позиции связан с объектом адаптера для той же позиции (следовательно, объект адаптера называется *ключом объекта*). Для относительно простых приложений Ассоциация является одним из идентификаторов, &ndash; ключ объекта адаптера на этом экземпляре — это представление, которое ранее возвращалось в `ViewPager` с помощью `InstantiateItem`. Однако для других приложений ключ объекта может быть другим экземпляром класса адаптера, связанным с (но не аналогичным) дочерним представлением, которое `ViewPager` отображается в этой позиции. Только адаптер знает, связаны ли переданные представления и ключ объекта. 
 
 для правильной работы `PagerAdapter` необходимо реализовать `IsViewFromObject`. Если `IsViewFromObject` возвращает `false` для заданной позиции, `ViewPager` не будет отображать представление в этой позиции. В приложении `TreePager` ключ объекта, возвращаемый `InstantiateItem`, *является* страницей `View` дерева, поэтому код должен проверять только удостоверение (т. е. ключ объекта и представление являются одним и тем же). Замените `IsViewFromObject` следующим кодом: 
 
@@ -296,7 +296,7 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 `ViewPager` и `PagerTabStrip` предназначены для совместной работы. При объявлении `PagerTabStrip` в макете `ViewPager` `ViewPager` автоматически найдет `PagerTabStrip` и подключится к адаптеру. При сборке и запуске приложения в верхней части каждого экрана должно отобразиться пустое `PagerTabStrip`: 
 
-[снимок экрана![крупный план пустого Пажертабстрип](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
+[снимок экрана ![крупный план пустого Пажертабстрип](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 ### <a name="display-a-title"></a>Отображение заголовка
 

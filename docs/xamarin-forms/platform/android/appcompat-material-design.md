@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005450"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728334"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Добавление AppCompat и дизайна материалов
 
@@ -39,7 +39,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 Создайте следующие три файла в проекте Android и вставьте содержимое ниже. Google предоставляет [рекомендации по стилю](https://www.google.com/design/spec/style/color.html#color-color-palette) и [генератор цветовой палитры](https://www.materialpalette.com/) , которые помогают выбрать альтернативную цветовую схему для указанной.
 
-**Resources/Values/Colors. XML**
+**Resources/values/colors.xml**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 </resources>
 ```
 
-**Resources/Values/Style. XML**
+**Resources/values/style.xml**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 Дополнительный стиль должен быть включен в папку **Values-V21** для применения конкретных свойств при запуске в комплекте программного интерфейса Android и более поздних версиях.
 
-**Resources/Values-V21/Style. XML**
+**Resources/values-v21/style.xml**
 
 ```xml
 <resources>

@@ -7,18 +7,18 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
+ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032195"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75753014"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Ядро NFC в Xamarin. iOS
 
 _Чтение тегов NFC с помощью iOS 11_
 
-Коренфк — это новая платформа в iOS 11, которая предоставляет доступ к радиоприемнику _Ближнего_ действия (NFC) для чтения тегов в приложениях. Он работает на устройствах iPhone 7, 7 плюс, 8, 8 Plus и X.
+Коренфк — это новая платформа в iOS 11, которая предоставляет доступ к радиоприемнику _Ближнего_ действия (NFC) для чтения тегов в приложениях. Коренфк работает на устройствах iPhone 7, iPhone 7 плюс, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS и iPhone 11 (в то время как iPhone 6 и iPhone 6 Plus имеют функции оплаты NFC, они не поддерживают Коренфк).
 
 Средство чтения тегов NFC на устройствах iOS поддерживает все типы NFC-тегов от 1 до 5, содержащие сведения о _формате обмена данными NFC_ (ндеф).
 
@@ -31,7 +31,7 @@ _Чтение тегов NFC с помощью iOS 11_
 
 На этой странице описывается конфигурация, необходимая для использования Коренфк, и демонстрируется использование API с помощью [примера кода "нфктагреадер"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Параметр Configuration
+## <a name="configuration"></a>Конфигурация
 
 Чтобы включить Коренфк, необходимо настроить три элемента в проекте:
 
@@ -63,7 +63,7 @@ _Чтение тегов NFC с помощью iOS 11_
 
 Создайте новый **идентификатор приложения** и убедитесь, что служба **чтения тегов NFC** имеет импульсные показания:
 
-[страница идентификатора нового приложения на портале разработчика![с выбранным чтением NFC-тегов](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[страница идентификатора нового приложения на портале разработчика ![с выбранным чтением NFC-тегов](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 Затем необходимо создать новый профиль подготовки для этого идентификатора приложения, а затем скачать и установить его на компьютере Mac для разработки.
 

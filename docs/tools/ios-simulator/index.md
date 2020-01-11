@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 8313af47882b1c8c47f1e82f62f0a43e4e9c704c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029718"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886597"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Удаленный симулятор iOS для Windows
 
@@ -34,7 +34,7 @@ ms.locfileid: "73029718"
 
 - **Главная** — имитирует кнопку Главная на устройстве iOS.
 - **Блокировка** — блокирует симулятор (Проведите пальцем, чтобы разблокировать).
-- **Снимок экрана** — сохранение снимка экрана симулятора (хранящегося в **симуляторе пиктурес\ксамарин\иос \\** ).
+- **Снимок экрана** — сохранение снимка экрана симулятора (хранящегося в **симуляторе пиктурес\ксамарин\иос\\** ).
 - [**Параметры**](#settings) — отображает клавиатуру, расположение и другие параметры.
 - [**Другие параметры**](#other-options) — предоставляет различные варианты симулятора, такие как вращение, жесты встряхните и сенсорный идентификатор.
 
@@ -72,3 +72,12 @@ ms.locfileid: "73029718"
 [![флажок для использования симулятора](images/options-sml.png "флажок для использования симулятора")](images/options.png#lightbox)
 
 Если этот параметр отключен, при отладке открывается симулятор iOS на подключенном узле сборки Mac.
+
+## <a name="troubleshooting"></a>Диагностика
+
+При возникновении проблем с удаленным симулятором iOS можно просмотреть журналы в следующих расположениях:
+
+- **Mac** — `~/Library/Logs/Xamarin/Simulator.Server`
+- **Windows** — `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+
+Если вы [сообщаете о проблеме в Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), может оказаться полезным присоединить эти журналы (существуют параметры для сохранения отправок закрытых).

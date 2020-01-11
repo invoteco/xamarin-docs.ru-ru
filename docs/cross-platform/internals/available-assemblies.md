@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: 238011b4762f2d394629e75fbde476e618219df2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 31066d09b1e753dd054a6a908b626ca3edee008e
+ms.sourcegitcommit: 04929b5ff4384ca807727bec7c0467111a7eb283
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016353"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75867597"
 ---
 # <a name="available-assemblies"></a>Доступные сборки
 
@@ -36,47 +36,47 @@ ms.locfileid: "73016353"
 > [!div class="mx-tdCol2BreakAll"]
 > |Assembly|Совместимость API|Xamarin iOS|Xamarin Android|Xamarin Mac|
 > |--------|-----------------|-----------|---------------|-----------|
-> |FSharp.Core.dll| |✓|✓|✓|
-> |l18N. dll|Включает ККЯ, Ближний Восток, другие, редкие, Западная|✓|✓|✓|
-> |Microsoft.CSharp.dll| |✓|✓|✓|
-> |Mono.CSharp.dll| |✓|✓|✓|
-> |Mono.Data.Sqlite.dll|Поставщик ADO.NET для SQLite; см. раздел ограничения.|✓|✓|✓|
-> |Mono.Data.Tds.dll|Поддержка протокола TDS; используется для поддержки [System. Data. SqlClient](xref:System.Data.SqlClient) в [System. Data](xref:System.Data).|✓|✓|✓|
-> |Моно. Dynamic. &#8203;Интерпретатор. dll| |✓| | |
-> |Mono.Security.dll|Криптографические API.|✓|✓|✓|
-> |monotouch.dll|Эта сборка содержит C# привязку к API кокоатауч. Она доступна только в классических проектах iOS.|✓| | |
-> |MonoTouch. &#8203;Dialog-1. dll| |✓| | |
-> |MonoTouch. &#8203;NUnitLite. dll| |✓| | |
-> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |OpenTK-1.0.dll|API-интерфейсы OpenGL/Open Object, расширенные для обеспечения поддержки устройств iPhone.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен:<br />System.Collections.Specialized<br />Системой. &#8203;ComponentModel<br />System. ComponentModel. Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System. IO. Compression. FileSystem<br />System.Net<br />System .NET. Cache<br />Система .NET. mail<br />System .NET. MIME<br />System.Net. &#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System. Runtime. &#8203;InteropServices<br />System.Runtime.Versioning<br />System. Security. &#8203;AccessControl<br />System.Security.Authentication<br />System. Security. &#8203;Шифрование<br />System. Security. Permissions<br />System.Threading<br />Системные. Timers|✓|✓|✓|
-> |Системой. &#8203;ComponentModel. &#8203;Композиция. dll| |✓|✓|✓|
-> |Системой. &#8203;ComponentModel. &#8203;Аннотации. dll| |✓|✓|✓|
-> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx) с [удаленными функциями](~/ios/data-cloud/system.data.md).|✓|✓|✓|
-> |System. Data. &#8203;Службы. &#8203;Client. dll|Полный клиент oData.|✓|✓|✓|
-> |System.IO. &#8203;Сжатие данных| |✓|✓|✓|
-> |System.IO. &#8203;Сжатие. &#8203;Файловая система| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Net. &#8203;HTTP. dll| |✓|✓|✓|
-> |Системой. &#8203;Numerics. dll| |✓|✓|✓|
-> |System. Runtime. &#8203;Библиотека сериализации. dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |Системой. &#8203;ServiceModel. dll|Стек WCF, имеющийся в [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |Системой. &#8203;ServiceModel. &#8203;Внутренняя библиотека. dll| |✓|✓|✓|
-> |Системой. &#8203;ServiceModel. &#8203;Web. dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <br />Система<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |Системой. &#8203;Transactions. dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); часть поддержки [System. Data](~/ios/data-cloud/system.data.md) .|✓|✓|✓|
-> |System. Web. &#8203;Services. dll|Основные веб-службы из профиля .NET 3,5 с удаленными компонентами сервера.|✓|✓|✓|
-> |Системой. &#8203;Windows. dll| |✓|✓|✓|
-> |Системой. &#8203;XML. dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System. XML. &#8203;LINQ. dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.Serialization.dll| |✓|✓|✓|
-> |Xamarin.iOS.dll|Эта сборка содержит C# привязку к API кокоатауч. Это используется только в Объединенных проектах iOS.|✓| | |
-> |Java.Interop.dll| | |✓| |
-> |Mono.Android.dll| | |✓| |
-> |Моно. Android. &#8203;Export. dll| | |✓| |
-> |Mono.Posix.dll| | |✓| |
-> |Системой. &#8203;EnterpriseServices. dll| | |✓| |
-> |Xamarin. Android. &#8203;NUnitLite. dll| | |✓| |
-> |Моно. CompilerServices. &#8203;Симболвритер. dll|Для модулей записи компилятора.| | |✓|
-> |Xamarin.Mac.dll| | | |✓|
-> |Системой. &#8203;Drawing. dll|System. Drawing не поддерживается в Unified API для платформ Xamarin. Mac, .NET 4,5 или Mobile. Поддержку System. Drawing можно добавить в iOS и macOS с помощью библиотеки [сисдравинг-кореграфикс](https://github.com/mono/sysdrawing-coregraphics) .|✓| |✓|
+> |FSharp.Core.dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |l18N. dll|Включает ККЯ, Ближний Восток, другие, редкие, Западная|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Microsoft.CSharp.dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Mono.CSharp.dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Mono.Data.Sqlite.dll|Поставщик ADO.NET для SQLite; см. раздел ограничения.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Mono.Data.Tds.dll|Поддержка протокола TDS; используется для поддержки [System. Data. SqlClient](xref:System.Data.SqlClient) в [System. Data](xref:System.Data).|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Моно. Dynamic. &#8203;Интерпретатор. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")| | |
+> |Mono.Security.dll|Криптографические API.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |monotouch.dll|Эта сборка содержит C# привязку к API кокоатауч. Она доступна только в классических проектах iOS.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")| | |
+> |MonoTouch. &#8203;Dialog-1. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")| | |
+> |MonoTouch.&#8203;NUnitLite.dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")| | |
+> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |OpenTK-1.0.dll|API-интерфейсы OpenGL/Open Object, расширенные для обеспечения поддержки устройств iPhone.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен:<br />System.Collections.Specialized<br />Системой. &#8203;ComponentModel<br />System. ComponentModel. Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System. IO. Compression. FileSystem<br />System.Net<br />System .NET. Cache<br />System.Net.Mail<br />System .NET. MIME<br />System.Net. &#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System. Runtime. &#8203;InteropServices<br />System.Runtime.Versioning<br />System. Security. &#8203;AccessControl<br />System.Security.Authentication<br />System. Security. &#8203;Шифрование<br />System. Security. Permissions<br />System.Threading<br />Системные. Timers|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;ComponentModel. &#8203;Композиция. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;ComponentModel. &#8203;Аннотации. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.Data.dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx) с [удаленными функциями](~/ios/data-cloud/system.data.md).|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System. Data. &#8203;Службы. &#8203;Client. dll|Полный клиент oData.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.IO. &#8203;Сжатие данных| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.IO. &#8203;Сжатие. &#8203;Файловая система| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.Net. &#8203;HTTP. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;Numerics. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System. Runtime. &#8203;Библиотека сериализации. dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;ServiceModel. dll|Стек WCF, имеющийся в [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;ServiceModel. &#8203;Внутренняя библиотека. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;ServiceModel. &#8203;Web. dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), а также типы из следующих пространств имен: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;Transactions. dll|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); часть поддержки [System. Data](~/ios/data-cloud/system.data.md) .|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System. Web. &#8203;Services. dll|Основные веб-службы из профиля .NET 3,5 с удаленными компонентами сервера.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;Windows. dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |System.Xml.Serialization.dll| |![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")|![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")|![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Xamarin.iOS.dll|Эта сборка содержит C# привязку к API кокоатауч. Это используется только в Объединенных проектах iOS.|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")| | |
+> |Java.Interop.dll| | |![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")| |
+> |Mono.Android.dll| | |![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")| |
+> |Моно. Android. &#8203;Export. dll| | |![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")| |
+> |Mono.Posix.dll| | |![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")| |
+> |System.&#8203;EnterpriseServices.dll| | |![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")| |
+> |Xamarin. Android. &#8203;NUnitLite. dll| | |![Поддерживается Xamarin. Android](~/media/shared/yes.png "Поддерживается Xamarin. Android")| |
+> |Моно. CompilerServices. &#8203;Симболвритер. dll|Для модулей записи компилятора.| | |![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Xamarin.Mac.dll| | | |![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|
+> |Системой. &#8203;Drawing. dll|System. Drawing не поддерживается в Unified API для платформ Xamarin. Mac, .NET 4,5 или Mobile. Поддержку System. Drawing можно добавить в iOS и macOS с помощью библиотеки [сисдравинг-кореграфикс](https://github.com/mono/sysdrawing-coregraphics) .|![Поддержка Xamarin. iOS](~/media/shared/yes.png "Поддержка Xamarin. iOS")| |![Поддержка Xamarin. Mac](~/media/shared/yes.png "Поддержка Xamarin. Mac")|

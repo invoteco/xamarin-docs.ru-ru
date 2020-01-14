@@ -613,8 +613,9 @@
         - name: Обзор
           href: deploy-test/index.md
         - name: Распространение приложений
-          href: deploy-test/app-distribution/index.md
           items:
+            - name: Обзор
+              href: deploy-test/app-distribution/index.md
             - name: Распространение через App Store
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items:

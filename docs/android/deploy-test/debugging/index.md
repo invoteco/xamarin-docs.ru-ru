@@ -1,5 +1,5 @@
 ---
-title: Отладка Xamarin.Android на устройствах и эмуляторах
+title: Отладка приложений Xamarin.Android на устройствах и эмуляторах
 description: Тестирование и отладка приложения Xamarin.Android
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 0f873f69de7f85a77bdd0ca7aafa33bff1d9b961
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3b3fa14ec81bd4f06322197b7140654f9086ce73
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021516"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556487"
 ---
-# <a name="debugging"></a>Отладка
+# <a name="debug-xamarinandroid-apps"></a>Отладка приложений Xamarin.Android
 
 В этом разделе описываются принципы отладки приложения Xamarin.Android на устройствах или эмуляторах.
 
@@ -28,11 +28,8 @@ ms.locfileid: "73021516"
 
 ### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[Отладка на устройстве](~/android/deploy-test/debugging/debug-on-device.md)
 
-В этой статье содержатся сведения о настройке физического устройства Android для развертывания на нем приложения Xamarin.Android непосредственно из Visual Studio или Visual Studio для Mac.
+В этой статье показано, как настроить физическое устройство Android для развертывания на нем приложения Xamarin.Android непосредственно в Visual Studio или Visual Studio для Mac.
 
 ### <a name="android-debug-logandroiddeploy-testdebuggingandroid-debug-logmd"></a>[Журнал отладки Android](~/android/deploy-test/debugging/android-debug-log.md)
 
 Очень часто разработчики для отладки своих приложений используют `Console.WriteLine`. Однако на мобильной платформе, такой как Android, консоль отсутствует. На устройствах Android доступен журнал, который, скорее всего, потребуется вам при создании приложения. Иногда его называют **logcat** из-за команды, вводимой для его получения. Из этой статьи вы узнаете, как использовать **logcat**.
-
-> [!WARNING]
-> Обратите внимание, что **Xamarin Android Player** применять не рекомендуется. Дополнительные сведения см. в [объявлении в этой записи блога](https://blog.xamarin.com/live-from-dotnetconf-cycle-7-xamarin-studio-6-and-more/). Кроме того, начиная с Visual Studio 2017 **Visual Studio Android Emulator** использовать не рекомендуется.

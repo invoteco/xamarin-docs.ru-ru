@@ -5,28 +5,55 @@ ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 02/05/2018
-ms.openlocfilehash: 55de652363cb761e730d2d92f66a14a941899ca2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 12/13/2019
+ms.openlocfilehash: 6e54dba0c832596818c5163dc4e14ad1e659e040
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028114"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487975"
 ---
 # <a name="debuggable-attribute"></a>Атрибут Debuggable
 
 Для отладки Android поддерживает протокол JDWP (Java Debug Wire Protocol). Эта технология позволяет некоторым средствам, например ADB, взаимодействовать с виртуальной машиной Java. Протокол JDWP очень важен на этапе разработки, но не забывайте отключить его перед публикацией приложения.
 
-JDWP можно задать значением атрибута `android:debuggable` в приложении Android. Xamarin.Android предоставляет следующие методы для установки этого атрибута.
+JDWP можно настроить с помощью значения атрибута `android:debuggable` в приложении Android. Выберите _один_ из трех приведенных ниже способов установки этого атрибута в Xamarin.Android.
 
-1. Создайте файл `AndroidManifext.xml` и задайте в нем атрибут `android:debuggable`.
-2. Включите `ApplicationAttribute` в файл `.CS`, например так: `[assembly: Application(Debuggable=false)]` .
+## <a name="androidmanifestxml"></a>AndroidManifest.XML
+
+Создайте или откройте файл `AndroidManifext.xml` и задайте в нем атрибут `android:debuggable`. Будьте осторожны: не отправляйте сборку выпуска с включенной отладкой.
+
+## <a name="add-an-application-class-attribute"></a>Добавление атрибута класса Application
+
+Если в приложении Xamarin.Android есть класс с атрибутом `[Application]`, обновите атрибут до `[Application(Debuggable = true)]`. Задайте для него значение `false`, чтобы отключить его.
+
+## <a name="add-an-assembly-attribute"></a>Добавление атрибута assembly
+
+Если в приложении Xamarin.Android еще НЕТ атрибута класса `[Application]`, добавьте атрибут уровня сборки `[assembly: Application(Debuggable=true)]` в файл C#. Задайте для него значение `false`, чтобы отключить его.
+
+## <a name="summary"></a>Сводка
 
 Если присутствуют одновременно `AndroidManifest.xml` и `ApplicationAttribute`, содержимое `AndroidManifest.xml` имеет более высокий приоритет, чем `ApplicationAttribute`.
 
-Если не указано ни `AndroidManifest.xml`, ни `ApplicationAttribute`, то значение по умолчанию для атрибута `android:debuggable` зависит от того, создаются ли отладочные символы. Если символы отладки присутствуют, Xamarin.Android устанавливает для атрибута `android:debuggable` значение `true`.
+Если вы добавите атрибут класса _и_ атрибут сборки, возникнет ошибка компилятора:
 
-Обратите внимание, что значение атрибута `android:debuggable` НЕ ВСЕГДА зависит от конфигурации сборки. Может случиться так, что для сборки выпуска атрибут `android:debuggable` имеет значение true.
+```error
+"Error The "GenerateJavaStubs" task failed unexpectedly.
+System.InvalidOperationException: Application cannot have both a type with an [Application] attribute and an [assembly:Application] attribute."
+```
+
+По умолчанию если не указано ни `AndroidManifest.xml`, ни `ApplicationAttribute`, то значение для атрибута `android:debuggable` зависит от того, создаются ли отладочные символы. Если отладочные символы присутствуют, Xamarin.Android устанавливает для атрибута `android:debuggable` значение `true`.
+
+> [!WARNING]
+> Значение атрибута `android:debuggable` НЕ всегда зависит от конфигурации сборки. Может случиться так, что для сборки выпуска атрибут `android:debuggable` имеет значение true. Если вы используете атрибут для установки этого значения, вы можете создать оболочку для атрибута в директиве компилятора:
+> 
+> ```csharp
+> #if DEBUG
+> [Application(Debuggable = true)]
+> #else
+> [Application(Debuggable = false)]
+> #endif
+> ```
 
 ## <a name="related-links"></a>Связанные ссылки
 

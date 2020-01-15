@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fede666071aad8702eda17a94a06c7de49c7397e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e2b25468255ff84a3fe79ed4fea913e04bf88687
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029477"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489376"
 ---
 # <a name="upload-to-mac-app-store"></a>Отправка в Mac App Store
 
 _В этом руководстве описано, как отправить приложение Xamarin.Mac для публикации в Mac App Store._
 
-Приложения отправляются на утверждение команде Mac App Store через [iTunes Connect](https://itunesconnect.apple.com/).
+Приложения отправляются на утверждение команде Mac App Store через [iTunes Connect](https://itunesconnect.apple.com/). Кроме того, вам понадобится средство [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) из App Store.
 
 1. Выберите **приложение macOS**, которое требуется создать: 
 
@@ -70,37 +70,22 @@ _В этом руководстве описано, как отправить п
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
-9. Запустите загрузчик приложений и выполните вход с помощью идентификатора Apple ID.
-Чтобы продолжить, нажмите кнопку **Deliver Your App** (Доставить приложение): 
+9. Запустите **Transporter** и войдите с помощью идентификатора Apple ID, а затем выберите **ADD APP** (Добавить приложение):
 
-    [![](uploading-images/image77.png "The Application Loader interface")](uploading-images/image77.png#lightbox)
+    [![](uploading-images/transporter01-sml.png "The Application Loader interface")](uploading-images/transporter01.png#lightbox)
 
-10. Выберите приложение в списке приложений со статусом **Ready to Upload Binary** (Готово для отправки двоичного файла) и нажмите кнопку **Далее**: 
+    Следуйте инструкциям, чтобы отправить пакет приложения в iTunes Connect.
 
-    [![](uploading-images/image78.png "Selecting the app to load")](uploading-images/image78.png#lightbox)
-
-11. Проверьте метаданные приложения и нажмите кнопку **Выбрать**, чтобы найти файл пакета: 
-
-    [![](uploading-images/image79.png "Reviewing the app metadata")](uploading-images/image79.png#lightbox)
-
-12. Найдите файл пакета, который был создан в Visual Studio для Mac с помощью конфигурации сборки Магазина приложений: 
-
-    [![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png#lightbox)
-
-13. Нажмите кнопку **Отправить**: 
-
-    [![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png#lightbox)
-
-14. Пакет будет проверен, после чего будут зафиксированы обнаруженные ошибки. Исправьте эти ошибки и повторно отправьте пакет. Отправленное приложение будет автоматически передано на проверку команде App Store: 
-
-    [![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png#lightbox)
+    > [!NOTE]
+    > [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) заменяет средство **Загрузчик приложений**, которое использовалось с Xcode 10 или более ранними версиями.
+    > Загрузчик приложений больше недоступен в Xcode 11 или более поздней версии.
 
 После утверждения приложение будет доступно для скачивания или приобретения в Mac App Store.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Установка](~//mac/get-started/installation.md)
-- [Пример кода приложения "Привет, Mac"](~//mac/get-started/hello-mac.md)
+- [Пример кода приложения "Привет, Mac"](~/mac/get-started/hello-mac.md)
 - [Распространение приложений в Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Руководство по работе с инструментами. Подписывание кода приложения](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [Идентификатор разработчика и привратник](https://developer.apple.com/resources/developer-id/)

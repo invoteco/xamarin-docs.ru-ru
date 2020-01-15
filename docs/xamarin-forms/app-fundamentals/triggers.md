@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997150"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489899"
 ---
 # <a name="xamarinforms-triggers"></a>Триггеры Xamarin.Forms
 
@@ -43,8 +43,9 @@ ms.locfileid: "71997150"
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -74,6 +75,7 @@ ms.locfileid: "71997150"
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -106,6 +108,7 @@ ms.locfileid: "71997150"
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -188,8 +191,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
@@ -270,7 +272,7 @@ XAML приведен ниже. Обратите внимание на указ�
 На этих снимках экрана показаны различия между двумя приведенными выше примерами мультитриггеров. В верхней части экранов достаточно ввести текст только в один элемент управления `Entry`, чтобы включить кнопку **Сохранить**.
 В нижней части экранов кнопка **Вход** остается неактивной до тех пор, пока не будут заполнены оба поля.
 
-![](triggers-images/multi-requireall.png "Примеры мультитриггеров")
+![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 
 <a name="enterexit" />
 
@@ -283,7 +285,7 @@ XAML приведен ниже. Обратите внимание на указ�
 > [!NOTE]
 > Объекты [`TriggerAction`](xref:Xamarin.Forms.TriggerAction), определенные в коллекциях `EnterActions` и `ExitActions`, игнорируются классом [`EventTrigger`](xref:Xamarin.Forms.EventTrigger).    
 
-В триггер можно добавить *обе* коллекции `EnterActions` и `ExitActions`, а также `Setter`, но следует помнить, что `Setter` вызываются мгновенно (они не ожидают завершения `EnterAction` или `ExitAction`). Кроме того, можно выполнить все действия в коде и вообще не использовать `Setter`.
+В триггер можно добавить *обе* коллекции `EnterActions` и `ExitActions`, а также `Setter`, но учтите, что `Setter` вызываются мгновенно (они не ожидают завершения `EnterAction` или `ExitAction`). Кроме того, можно выполнить все действия в коде и вообще не использовать `Setter`.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -316,19 +318,18 @@ XAML приведен ниже. Обратите внимание на указ�
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
 {
-    public FadeTriggerAction() {}
-
     public int StartsFrom { set; get; }
 
-    protected override void Invoke (VisualElement visual)
+    protected override void Invoke(VisualElement sender)
     {
-            visual.Animate("", new Animation( (d)=>{
-                var val = StartsFrom==1 ? d : 1-d;
-                visual.BackgroundColor = Color.FromRgb(1, val, 1);
-
-            }),
-            length:1000, // milliseconds
-            easing: Easing.Linear);
+        sender.Animate("FadeTriggerAction", new Animation((d) =>
+        {
+            var val = StartsFrom == 1 ? d : 1 - d;
+            // so i was aiming for a different color, but then i liked the pink :)
+            sender.BackgroundColor = Color.FromRgb(1, val, 1);
+        }),
+        length: 1000, // milliseconds
+        easing: Easing.Linear);
     }
 }
 ```

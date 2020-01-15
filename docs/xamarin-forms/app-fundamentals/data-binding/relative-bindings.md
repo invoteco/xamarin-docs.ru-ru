@@ -6,13 +6,13 @@ ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/30/2019
-ms.openlocfilehash: 08026cd3f3ef7503a92f6c78f1e3e27ad3642d09
-ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.date: 12/04/2019
+ms.openlocfilehash: e115014728cce9252a92740b6db5beab582f61ed
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959139"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489879"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Относительные привязки Xamarin.Forms
 
@@ -23,7 +23,7 @@ ms.locfileid: "72959139"
 Расширение разметки `RelativeSource` поддерживается классом `RelativeSourceExtension`, определяющим следующие свойства:
 
 - `Mode` с типом `RelativeBindingSourceMode` описывает расположение источника привязки относительно положения целевого объекта привязки.
-- `AncestorLevel` с типом `int` является необязательным уровнем предка для поиска, когда свойство `Mode` имеет значение `FindAncestor`.
+- `AncestorLevel` с типом `int` является необязательным уровнем предка для поиска, когда свойство `Mode` имеет значение `FindAncestor`. `AncestorLevel` `n` пропускает `n-1` экземпляры `AncestorType`.
 - `AncestorType` с типом `Type` является типом предка для поиска, когда свойство `Mode` имеет значение `FindAncestor`.
 
 > [!NOTE]
@@ -81,6 +81,9 @@ ms.locfileid: "72959139"
 > При использовании режимов относительной привязки `FindAncestor` и `FindAncestorBindingContext` необходимо задать `Type` для свойства `AncestorType`, в противном случае возникает исключение `XamlParseException`.
 
 Если свойство `Mode` не задано явным образом, задание для свойства `AncestorType` типа, производного от [`Element`](xref:Xamarin.Forms.Element), неявно назначит свойству `Mode` значение `FindAncestor`. Аналогичным образом, задание для свойства `AncestorType` типа, не являющегося производным от `Element`, неявно назначит свойству `Mode` значение `FindAncestorBindingContext`.
+
+> [!NOTE]
+> Относительные привязки, использующие режим `FindAncestorBindingContext`, будут повторно применены при изменении `BindingContext` любых предков.
 
 В следующем коде XAML показан пример, где для свойства `Mode` будет неявно задано значение `FindAncestorBindingContext`:
 

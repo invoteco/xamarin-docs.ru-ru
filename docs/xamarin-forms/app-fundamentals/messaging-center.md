@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019
-ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.openlocfilehash: 0e5fd88678becd7becfcb1c43e14b1e33aad72de
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170967"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489886"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Класс MessagingCenter в Xamarin.Forms
 
@@ -26,7 +26,7 @@ ms.locfileid: "72170967"
 
 Класс [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) предоставляет функцию многоадресной публикации и подписки. Это означает, что может существовать несколько издателей, которые публикуют одно сообщение, и может быть несколько подписчиков, прослушивающих одно и то же сообщение:
 
-![](messaging-center-images/messaging-center.png "Функция многоадресной публикации и подписки")
+![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
 
 Издатели отправляют сообщения с помощью метода [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), а подписчики прослушивают сообщения с помощью метода [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). Кроме того, подписчики могут также отменять подписку на сообщения, если это необходимо, с помощью метода [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
@@ -82,6 +82,9 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 ```
 
 В этом примере метод [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) подписывается на сообщения `Hi`, отправляемые типом `MainPage`, полезные данные которого — `string`. В ответ на получение такого сообщения выполняется делегат обратного вызова, который отображает полезные данные в оповещении.
+
+> [!IMPORTANT]
+> Делегат, который выполняется методом `Subscribe`, будет выполняться в том же потоке, который публикует сообщение с помощью метода `Send`.
 
 ## <a name="unsubscribe-from-a-message"></a>Отмена подписки на сообщение
 

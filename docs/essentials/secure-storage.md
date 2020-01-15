@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 1e4cb52772a60489f887116cbcfd4e6a8930fa3a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756797"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488495"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Защищенное хранилище
 
@@ -155,13 +155,13 @@ SecureStorage.RemoveAll();
 
 Зашифрованные значения хранятся в `ApplicationData.Current.LocalSettings` внутри контейнера с именем **[идентификатор_приложения].xamarinessentials**.
 
-**SecureStorage** использует API-интерфейс [предпочтений](preferences.md) и применяет правила сохраняемости данных, которые описаны в документации по классу [Preferences](preferences.md#persistence).
+**SecureStorage** использует API-интерфейс [предпочтений](preferences.md) и применяет правила сохраняемости данных, которые описаны в документации по классу [Preferences](preferences.md#persistence). При этом также используется `LocalSettings` со следующим ограничением: длина имени каждого параметра не может превышать 255 символов. Каждый параметр может иметь размер до 8 КБ, а каждый составной параметр — до 64 КБ.
 
 -----
 
 ## <a name="limitations"></a>Ограничения
 
-Этот API предназначен для хранения небольших объемов текста.  Производительность может быть низкой, если сохранять большие объемы текста.
+Этот API предназначен для хранения небольших объемов текста.  Производительность может быть низкой, если сохранять большие объемы текста. 
 
 ## <a name="api"></a>API
 

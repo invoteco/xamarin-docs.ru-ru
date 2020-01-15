@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/15/2017
-ms.openlocfilehash: 50ba4a46e9d9f7cbf5337844025790ab51e309dd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 945a42485486dbfddfd023a72e88d9127651c71f
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022679"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607959"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Ручная подготовка для Xamarin.iOS
 
@@ -181,9 +181,10 @@ _Установив Xamarin.iOS для разработки приложений
 8. Чтобы скачать профиль подготовки на компьютер Mac, нажмите кнопку **Download** (Скачать):
 
     [![](manual-provisioning-images/provisioning-profile06.png "Download the provisioning profile")](manual-provisioning-images/provisioning-profile06.png#lightbox)
-9. Дважды щелкните файл, чтобы установить профиль подготовки в Xcode. Имейте в виду, что в Xcode может не быть никаких визуальных указаний на то, что профиль установился. Проверить это можно путем перехода в раздел **Xcode > Preferences > Accounts** (Xcode > Настройки > Учетные записи). Выберите свой идентификатор Apple и щелкните **View Details...** (Показать подробности...). Новый профиль подготовки должен присутствовать в списке, как показано ниже:
 
-      [![](manual-provisioning-images/provisioning-profile07.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
+9. Дважды щелкните файл, чтобы установить профиль подготовки в Xcode. Имейте в виду, что в Xcode может не быть никаких визуальных указаний на то, что профиль установился. Проверить это можно, перейдя в раздел **Xcode > Window > Devices and Simulators** (Устройства > Окно > Устройства и эмуляторы). Щелкните устройство правой кнопкой мыши и выберите **Показать профили подготовки**.
+
+      [![](manual-provisioning-images/provisioning-profile07-sml.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 После успешного создания профиля подготовки может потребоваться обновить Xcode, чтобы все сертификаты разработки стали доступны для Visual Studio для Mac и Visual Studio.
 
@@ -197,7 +198,9 @@ _Установив Xamarin.iOS для разработки приложений
 2. Запустите Xcode.
 3. Выберите **Xcode Menu > Preferences...** (Меню Xcode > Предпочтения...).
 4. Перейдите на вкладку **Accounts** (Учетные записи).
-5. Выберите команду и нажмите кнопку **Download Manual Profiles** (Скачать профили, созданные вручную): [![](manual-provisioning-images/selectteam1.png "Скачивание профилей, созданных вручную")](manual-provisioning-images/selectteam1.png#lightbox)
+5. Выберите команду и нажмите кнопку **Download Manual Profiles** (Скачать профили, созданные вручную):
+
+    [![Скачивание профилей, созданных вручную](manual-provisioning-images/selectteam1.png)](manual-provisioning-images/selectteam1.png#lightbox)
 
 6. Выйдите из Xcode.
 7. Запустите Visual Studio для Mac или Visual Studio.
@@ -215,8 +218,6 @@ _Установив Xamarin.iOS для разработки приложений
 > Чтобы сертификаты или профили, созданные или измененные в Xcode, стали доступны в среде Visual Studio, ее нужно закрыть и перезапустить.
 
 -----
-
-<a name="appservices" />
 
 ## <a name="provisioning-for-application-services"></a>Подготовка служб приложений
 
@@ -238,11 +239,11 @@ Apple предоставляет ряд специальных служб при
 1. Подключите устройство к компьютеру Mac.
 2. В файле **Info.plist** проекта проверьте, соответствует ли идентификатор пакета идентификатору приложения (если только не используется шаблон идентификатора приложения):
 
-   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
+   ![Ввод идентификатора](manual-provisioning-images/deploydevice01xs.png)
 
 3. Щелкните проект правой кнопкой мыши, откройте диалоговое окно "Параметры проекта" и перейдите на страницу **Сборка > Подписывание пакета iOS**. В раскрывающихся списках **Удостоверение подписывания** и **Профиль подготовки** убедитесь в том, что в Visual Studio для Mac доступны соответствующие профили, а затем выберите определенное удостоверение и профиль:
 
-   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
+   ![Выбор удостоверения и профиля](manual-provisioning-images/deploydevice02xs.png)
 
    Если выбрано значение **Автоматически**, среда Visual Studio для Mac выберет удостоверение и профиль в соответствии с идентификатором пакета, заданным в шаге 2.
 
@@ -257,7 +258,7 @@ Apple предоставляет ряд специальных служб при
 1. Подключите устройство к узлу сборки Mac.
 2. В файле **Info.plist** проекта проверьте, соответствует ли идентификатор пакета идентификатору приложения:
 
-   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
+   ![Ввод идентификатора](manual-provisioning-images/servicevs01.png)
 
 3. Щелкните проект правой кнопкой мыши, откройте диалоговое окно "Параметры проекта" и перейдите на страницу **Сборка > Подписывание пакета iOS**. В раскрывающихся списках **Удостоверение подписывания** и **Профиль подготовки** убедитесь в том, что в Visual Studio доступны соответствующие профили, а затем выберите определенное удостоверение и профиль.
 

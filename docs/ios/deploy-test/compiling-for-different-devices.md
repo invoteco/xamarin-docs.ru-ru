@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 30415bd2df14cdc13f94a020475acf471b25c6ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1f71179ccafc2daf65e792c4538bf47ea2df1e7d
+ms.sourcegitcommit: 0177e06169da621ed9d5fa0f6118a628e8c92bd2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030374"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663734"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Компиляция для разных устройств в Xamarin.iOS
 
@@ -30,27 +30,23 @@ ms.locfileid: "73030374"
 
 Помимо параметров конфигурации, доступных в пользовательском интерфейсе, вы можете создать собственный набор параметров командной строки и передать его в [средство сборки Xamarin.iOS (mtouch)](~/ios/deploy-test/mtouch.md).
 
-Доступен полезный ресурс [http://iossupportmatrix.com/](http://iossupportmatrix.com/), где вы можете проверить охват всех требуемых устройств, архитектур и версий iOS.
-
- <a name="SDK_Options" />
-
 ## <a name="sdk-options"></a>Параметры пакета SDK
 
 Visual Studio для Mac позволяет настроить для пакета SDK два важных свойства: версию пакета SDK для iOS, которая используется при сборке программы, и цель развертывания (которая обозначает минимально необходимую версию iOS).
 
-**Версия пакета SDK** для IOS позволяет указать разные версии опубликованных Apple пакетов SDK. Эти сведения сообщат Xamarin.iOS, какие компиляторы, компоновщики и библиотеки нужно использовать при сборке. 
+**Версия пакета SDK** для IOS позволяет указать разные версии опубликованных Apple пакетов SDK. Эти сведения сообщат Xamarin.iOS, какие компиляторы, компоновщики и библиотеки нужно использовать при сборке. Щелкните проект правой кнопкой мыши и выберите **Параметры**, а затем **Сборка iOS** в окне "Параметры":
 
-Параметр **Цель развертывания** определяет минимальную необходимую версию операционной системы, на которой может выполняться приложение. Этот параметр задается в файле проекта Info.plist. В качестве минимально необходимой выбирайте такую версию, которая содержит все нужные API-интерфейсы для запуска приложения.
+[![Выбор версии пакета SDK в окне "Параметры"](compiling-for-different-devices-images/sdk-version-sml.png)](compiling-for-different-devices-images/sdk-version.png#lightbox)
+
+Параметр **Цель развертывания** определяет минимальную необходимую версию операционной системы, на которой может выполняться приложение. Этот параметр задается в файле **Info.plist** проекта. В качестве минимально необходимой выбирайте такую версию, которая содержит все нужные API-интерфейсы для запуска приложения.
+
+[![Установка целевого объекта развертывания в файле Info.plist](compiling-for-different-devices-images/deployment-target-sml.png)](compiling-for-different-devices-images/deployment-target.png#lightbox)
 
 Как правило, API-интерфейс Xamarin.iOS предоставляет все методы, доступные в последней версии пакета SDK, и мы при необходимости предоставляем удобные методы, позволяющие определить доступность определенных функциональных возможностей во время выполнения (например, `UIDevice.UserInterfaceIdiom` и `UIDevice.IsMultitaskingSupported` работают на Xamarin.iOS всегда и не требуют от вас никаких действий).
-
- <a name="Linking" />
 
 ## <a name="linking"></a>Компоновка
 
 Страница с информацией о [компоновщике](~/ios/deploy-test/linker.md) позволит узнать, как компоновщик помогает уменьшить размер исполняемых файлов, и как его наиболее эффективно использовать.
-
- <a name="Code_Generation_Engine" />
 
 ## <a name="code-generation-engine"></a>Модуль создания кода
 
@@ -66,11 +62,7 @@ Visual Studio для Mac позволяет настроить для пакет
 
 [![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
- <a name="ARMV7_and_ARMV7s_support" />
-
 ## <a name="architecture-support"></a>Поддержка архитектур
-
-<a name="armv6-discontinued" />
 
 ### <a name="armv6-xamarinios-discontinued-support-for-armv6-with-v810"></a>ARMv6 (Xamarin.iOS прекратил поддержку ARMv6 с версии 8.10)
 
@@ -107,13 +99,9 @@ Visual Studio для Mac позволяет настроить для пакет
 
 Обратите внимание, что переданные в App Store сборки должны поддерживать 64-разрядные системы. Это обязательное требование [Apple](https://developer.apple.com/news/?id=12172014b). Кроме того, iOS 11 поддерживает только 64-разрядные приложения.
 
- <a name="ARM_Thumb_Support" />
-
 ### <a name="arm-thumb-2-support"></a>Поддержка ARM Thumb-2
 
 Thumb — это более компактный набор инструкций, используемый процессорами ARM. Включив поддержку Thumb, вы сможете уменьшить размер исполняемого файла, но в ущерб времени его выполнения. Thumb поддерживается на ARMv7 и ARMv7s.
-
- <a name="Conditional_framwork_useage" />
 
 ## <a name="conditional-framework-usage"></a>Использование условной структуры
 
@@ -131,4 +119,3 @@ Thumb — это более компактный набор инструкций
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Компоновщик](~/ios/deploy-test/linker.md)
-- [Внешние — Матрица поддержки iOS](http://iossupportmatrix.com/)

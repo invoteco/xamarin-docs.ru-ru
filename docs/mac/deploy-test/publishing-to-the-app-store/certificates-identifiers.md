@@ -6,210 +6,192 @@ ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
-ms.date: 03/14/2017
-ms.openlocfilehash: 59c3372350caf3939a4e40ba2999ffb490d4a1f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 12/17/2019
+ms.openlocfilehash: 2ea3516c1fb89c8c9b9cc3694d7c95ccd87e9d41
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030085"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489703"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Сертификаты и идентификаторы в Xamarin.Mac
 
 _В этом руководстве описывается создание необходимых сертификатов и идентификаторов, которые потребуются для публикации приложения Xamarin.Mac._
 
-## <a name="certificates-and-identifiers"></a>Сертификаты и идентификаторы
+## <a name="setup"></a>Установка
 
-Чтобы настроить компьютер Mac для разработки, посетите [Apple Developer Member Center](https://developer.apple.com). Главное меню показано ниже:
+Чтобы настроить компьютер Mac для разработки, посетите [Apple Developer Member Center](https://developer.apple.com). Щелкните ссылку на **учетную запись** и выполните вход. Главное меню показано ниже:
 
-[![Apple Developer Member Center](certificates-identifiers-images/devcenter01.png "Apple Developer Member Center")](certificates-identifiers-images/devcenter01-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Центр разработчиков Apple](certificates-identifiers-images/devcenter01.png)](certificates-identifiers-images/devcenter01-large.png#lightbox)
 
-Щелкните ссылку **Certificates, Identifiers & Profiles** (Сертификаты, идентификаторы и профили):
+Нажмите кнопку **Certificates, Identifiers & Profiles** (Сертификаты, идентификаторы и профили) или кнопку "плюс" возле заголовка **Certificates** (Сертификаты):
 
-[![Переход по ссылке Certificates, Identifiers & Profiles (Сертификаты, идентификаторы и профили)](certificates-identifiers-images/devcenter02.png "Переход по ссылке Certificates, Identifiers & Profiles (Сертификаты, идентификаторы и профили)")](certificates-identifiers-images/devcenter02-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Выбор параметра Certificates, Identifiers & Profiles (Сертификаты, идентификаторы и профили)](certificates-identifiers-images/devcenter02.png)](certificates-identifiers-images/devcenter02-large.png#lightbox)
 
-Далее в разделе **Mac Apps** (Приложения Mac) щелкните ссылку **Certificates** (Сертификаты):
+Выберите тип сертификата и щелкните **Continue** (Продолжить):
 
-[![Переход по ссылке Certificates (Сертификаты)](certificates-identifiers-images/devcenter03.png "Переход по ссылке Certificates (Сертификаты)")](certificates-identifiers-images/devcenter03-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Переход по ссылке Certificates (Сертификаты)](certificates-identifiers-images/devcenter03.png)](certificates-identifiers-images/devcenter03-large.png#lightbox)
 
-Щелкните ссылку **All** (Все) и нажмите кнопку **+** :
+В открывшемся окне можно при необходимости скачать **промежуточные сертификаты** (центры сертификации Worldwide Developer Relations и Developer ID) (последний элемент внизу страницы). Однако эти сертификаты должны быть автоматически настроены средой Xcode.
 
-[![Переход по ссылке All (Все) и добавление нового элемента](certificates-identifiers-images/certif01.png "Переход по ссылке All (Все) и добавление нового элемента")](certificates-identifiers-images/certif01-large.png#lightbox)
-
-В открывшемся окне при необходимости скачайте **промежуточные сертификаты** (центры сертификации Worldwide Developer Relations и Developer ID). Однако эти сертификаты должны быть автоматически настроены средой Xcode.
-
-Далее в этом разделе подробно описываются действия, которые необходимо выполнить в каждом из четырех разделов, чтобы завершить настройку учетной записи разработчика Mac.
+Далее в этом разделе подробно описаны действия, необходимые для разработчиков приложений Mac:
 
 - **Register Mac App ID** (Регистрация идентификатора приложения Mac) — разработчику необходимо выполнить эти действия для каждого создаваемого приложения.
 - **Register macOS Systems** (Регистрация систем macOS) — требуется только при добавлении компьютеров для тестирования.
-- **Create Certificates** (Создание сертификатов) — требуется выполнить при настройке сертификатов и выполнять в дальнейшем при их продлении.
+- **Создание сертификатов** требуется выполнить при настройке сертификатов и выполнять в дальнейшем при их продлении.
 - **Create Provisioning Profile** (Создание профиля подготовки) — разработчику необходимо выполнять эти действия для каждого создаваемого приложения, а также при добавлении новых систем.
 
-Чтобы вернуться в это меню в любой момент, щелкните ссылку **Overview** (Обзор) в левом верхнем углу страницы.
+## <a name="register-mac-app-id"></a>Регистрация идентификатора приложения Mac
 
-### <a name="register-mac-app-id"></a>Регистрация идентификатора приложения Mac
+Для каждого приложения необходимо регистрировать идентификатор. Чтобы создать запись, выполните указанные ниже действия:
 
-Разработчику необходимо регистрировать идентификатор приложения для каждого создаваемого приложения. Чтобы создать запись для простейшего образца приложения MacWriter, выполните указанные ниже действия.
+1. Выберите знак "плюс" (+) или **Register an App ID** (Регистрация идентификатора приложения):
 
-1. Введите **описание идентификатора приложения** и выберите любые **службы приложений**, которые потребуются приложению:
+    > [!div class="mx-imgBorder"]
+    > [![Начало работы с идентификаторами приложения](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
 
-    [![Ввод описания и выбор служб приложений](certificates-identifiers-images/devcenter04.png "Ввод описания и выбор служб приложений")](certificates-identifiers-images/devcenter04-large.png#lightbox)
-2. Введите **идентификатор пакета** для приложения и нажмите кнопку **Continue** (Продолжить):
+1. Выберите **App IDs** (Идентификаторы приложения).
 
-    [![Ввод идентификатора пакета](certificates-identifiers-images/devcenter05.png "Ввод идентификатора пакета")](certificates-identifiers-images/devcenter05-large.png#lightbox)
-3. Проверьте сведения и нажмите кнопку **Submit** (Отправить):
+    > [!div class="mx-imgBorder"]
+    > [![Начало работы с идентификаторами приложения](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
 
-    [![Проверка сведений](certificates-identifiers-images/devcenter06.png "Проверка сведений")](certificates-identifiers-images/devcenter06-large.png#lightbox)
+1. Введите **описание** и выберите любые **службы приложений**, которые потребуются приложению. Необходимо использовать платформу **macOS**. Выберите **описание** (используемое только на этом портале). Введите **идентификатор пакета**, который должен соответствовать файлу **Info.plist**. Выберите необходимые для приложения возможности.
+
+    > [!div class="mx-imgBorder"]
+    > [![Ввод описания и выбор служб приложений](certificates-identifiers-images/appid03.png)](certificates-identifiers-images/appid03-large.png#lightbox)
+
+    Нажмите кнопку **Continue** (Продолжить), чтобы просмотреть выбранные параметры.
+
+1. Если все правильно, нажмите кнопку **Register** (Зарегистрировать), чтобы завершить установку:
+
+    > [!div class="mx-imgBorder"]
+    > [![Проверка введенных данных](certificates-identifiers-images/appid04.png)](certificates-identifiers-images/appid04-large.png#lightbox)
+
+1. Проверьте сведения и нажмите кнопку **Submit** (Отправить):
+
+    > [!div class="mx-imgBorder"]
+    > ![Проверка сведений](certificates-identifiers-images/appid05.png)
 
 Некоторые **службы приложений** могут требовать дальнейшей настройки (например, iCloud). В этом случае выберите только что созданный идентификатор приложения и нажмите кнопку **Edit** (Изменить):
 
-[![Изменение нового идентификатора приложения](certificates-identifiers-images/devcenter07.png "Изменение нового идентификатора приложения")](certificates-identifiers-images/devcenter07-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Изменение нового идентификатора приложения](certificates-identifiers-images/appid06.png)](certificates-identifiers-images/appid06-large.png#lightbox)
 
-Чтобы настроить службы iCloud, нажмите кнопку **Edit** (Изменить):
+Чтобы настроить службы iCloud, например, нажмите кнопку **Edit** (Изменить):
 
-[![Настройка служб iCloud](certificates-identifiers-images/devcenter08.png "Настройка служб iCloud")](certificates-identifiers-images/devcenter08-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Настройка служб iCloud](certificates-identifiers-images/appid07.png)](certificates-identifiers-images/appid07-large.png#lightbox)
 
-В этом окне разработчик может настроить базы данных, которые будут использоваться:
+## <a name="register-macos-devices"></a>Регистрация устройств macOS
 
-[![Настройка баз данных](certificates-identifiers-images/devcenter09.png "Настройка баз данных")](certificates-identifiers-images/devcenter09-large.png#lightbox)
+Чтобы создать профиль подготовки для тестирования, разработчику необходимо зарегистрировать свои компьютеры Mac. Для проверки можно зарегистрировать не более 100 компьютеров.
 
-### <a name="register-macos-systems"></a>Регистрация систем macOS
+1. В центре разработчика Mac щелкните ссылку **All** (Все) в разделе **Devices** (Устройства) и нажмите кнопку **+** :
 
-Чтобы создать профиль подготовки для тестирования, разработчику необходимо зарегистрировать свои компьютеры Mac. Для тестирования приложений Mac он может зарегистрировать до 100 компьютеров.
+    > [!div class="mx-imgBorder"]
+    > [![Добавление нового компьютера](certificates-identifiers-images/device01.png)](certificates-identifiers-images/device01-large.png#lightbox)
 
-В центре разработчика Mac щелкните ссылку **All** (Все) в разделе **Devices** (Устройства) и нажмите кнопку **+** :
+1. Введите **имя** и идентификатор **UUID** добавляемого компьютера, а затем нажмите кнопку **Continue** (Продолжить). Проверьте сведения и нажмите кнопку **Register** (Зарегистрировать):
 
-[![Добавление нового компьютера](certificates-identifiers-images/devcenter10.png "Добавление нового компьютера")](certificates-identifiers-images/devcenter10-large.png#lightbox)
+    > [!div class="mx-imgBorder"]
+    > [![Ввод сведений о новом компьютере](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
 
-Введите **имя** и идентификатор **UUID** добавляемого компьютера, а затем нажмите кнопку **Continue** (Продолжить). Проверьте сведения и нажмите кнопку **Register** (Зарегистрировать):
+1. Проверьте и подтвердите введенные данные:
 
-[![Ввод сведений о новом компьютере](certificates-identifiers-images/devcenter11.png "Ввод сведений о новом компьютере")](certificates-identifiers-images/devcenter11-large.png#lightbox)
+    > [!div class="mx-imgBorder"]
+    > [![Ввод сведений о новом компьютере](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
 
-### <a name="create-certificates"></a>Создание сертификатов
+## <a name="create-certificates"></a>Создание сертификатов
 
 В разделе Certificates (Сертификаты) можно создать несколько разных типов сертификатов, которые будут использоваться для подписывания приложений Mac:
 
-[![Создание сертификата](certificates-identifiers-images/certif01.png "Создание нового сертификата")](certificates-identifiers-images/certif01-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Создание сертификата](certificates-identifiers-images/devcenter04.png)](certificates-identifiers-images/devcenter04-large.png#lightbox)
 
-Имеются три основных типа сертификатов:
+Существует 5 основных типов сертификатов, соответствующих потребностям разработчиков macOS:
 
 - **Сертификат разработки Mac** — необязателен в общем случае, но требуется, если разработчик планирует использовать такие функции, как iCloud или push-уведомления. Сертификат разработки необходим для создания профилей подготовки, которые предоставляют доступ к этим функциям.
-- **Mac App Store** — разработчику потребуется один такой сертификат для приложения и еще один — для установщика.
-- **Идентификатор разработчика** — требуются сертификаты для приложения и установщика в случае распространения не через Mac App Store.
+- **Сертификат распространения приложений Mac** — разработчику потребуется один такой сертификат для приложения и еще один — для установщика.
+- **Сертификат распространения установщика Mac** — разработчику потребуется один такой сертификат для приложения и еще один — для установщика.
+- **Сертификат идентификатора разработчика для установщика** — сертификаты установщика для распространения за пределами Mac App Store.
+- **Сертификат идентификатора разработчика приложения** — сертификаты приложения для распространения за пределами Mac App Store.
 
-В следующих разделах приводятся примеры создания сертификатов каждого из перечисленных выше типов.
+В следующих разделах приводятся примеры создания этих типов сертификатов.
 
-#### <a name="mac-development-certificate"></a>Сертификат разработки Mac
+### <a name="mac-development-certificate"></a>Сертификат разработки Mac
 
-Как было сказано ранее, сертификат разработки приложения Mac требуется только в том случае, если используются такие функции macOS, как iCloud или push-уведомления.
+Как было сказано ранее, сертификат разработки Mac требуется, только если используются такие функции macOS, как iCloud или push-уведомления.
 
 Чтобы создать сертификат разработки, выполните указанные ниже действия:
 
 1. Установите переключатель в положение **Mac Development** (Разработка Mac) и нажмите кнопку **Continue** (Продолжить):
 
-     [![Добавление сертификата разработки](certificates-identifiers-images/certif02.png "Добавление сертификата разработки")](certificates-identifiers-images/certif02-large.png#lightbox)
-2. На следующем экране описывается, как с помощью функции доступа к связке ключей создать файл запроса на подписывание сертификата для отправки:
+    > [!div class="mx-imgBorder"]
+    > [![Добавление сертификата разработки](certificates-identifiers-images/certif02.png)](certificates-identifiers-images/certif02-large.png#lightbox)
 
-    [![Экран отправки с помощью доступа к цепочке ключей](certificates-identifiers-images/certif03.png "Экран отправки с помощью доступа к цепочке ключей")](certificates-identifiers-images/certif03-large.png#lightbox)
-3. Выберите осмысленное общее имя для сертификата, по которому его легко можно будет определить после создания. Запомните место сохранения файла, чтобы его можно было найти в следующем шаге:
+1. Отправьте _запрос подписания сертификата_. Файл запроса сертификата (с расширением `.certSigningRequest`) будет сохранен на локальном компьютере Mac. Щелкните **Choose file** (Выбрать файл), чтобы выбрать запрос сертификата, а затем — **Continue** (Продолжить).
 
-    ![Экспорт сертификата](certificates-identifiers-images/image12.png "Экспорт сертификата")
-4. Файл запроса сертификата (с расширением `.certSigningRequest`) будет сохранен на локальном компьютере Mac. Запомните место его сохранения (по умолчанию это рабочий стол), так как его потребуется выбрать в следующем шаге:
+    > [!div class="mx-imgBorder"]
+    > [![Отправка файла запроса сертификата](certificates-identifiers-images/certif03.png)](certificates-identifiers-images/certif03-large.png#lightbox)
 
-    [![Отправка файла сертификата](certificates-identifiers-images/image13.png "Передача файла сертификата")](certificates-identifiers-images/image13-large.png#lightbox)
-5. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**:
+    Сведения об использовании программы [Keychain Access](https://help.apple.com/developer-account/#/devbfa00fef7) для создания файла запроса сертификата см. по **этой ссылке**.
 
-    [![Скачивание сертификата разработки](certificates-identifiers-images/image15.png "Скачивание сертификата разработки")](certificates-identifiers-images/image15-large.png#lightbox)
-6. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**. В **служебной программе для сертификата разработчика** сертификаты отображаются следующим образом:
+1. Выберите **Download** (Скачать), чтобы получить файл сертификата, и дважды щелкните его, чтобы установить:
 
-    [![Служебная программа для сертификата разработчика](certificates-identifiers-images/image16.png "Служебная программа для сертификата разработчика")](certificates-identifiers-images/image16-large.png#lightbox)
-7. Он также отображается в **связке ключей** следующим образом:
-
-    ![Сертификат в программе Keychain Access](certificates-identifiers-images/image17.png "Сертификат в программе Keychain Access")
+    > [!div class="mx-imgBorder"]
+    > [![Скачивание файла сертификата](certificates-identifiers-images/certif04.png)](certificates-identifiers-images/certif04-large.png#lightbox)
 
 Как упоминалось ранее, сертификат разработчика требуется не всегда, а только если разработчик внедряет такие функции macOS, как iCloud и push-уведомления. Он также необходим для создания **профиля подготовки к разработке**, который требуется для тестирования приложений Mac App Store.
 
-#### <a name="mac-app-store-certificates"></a>Сертификаты Mac App Store
+### <a name="mac-app-store-certificates"></a>Сертификаты Mac App Store
 
-Для выпуска приложения в App Store необходимо создать сертификат **Mac App Store**, с помощью которого будут подписываться приложение и пакет установщика Mac.
+Для выпуска приложения в App Store необходимо два сертификата:
 
-1. В качестве типа сертификата выберите **Mac App Store** и нажмите кнопку **Continue** (Продолжить):
+- сертификат **распространения приложений Mac**, используемый для подписывания приложения; 
+- сертификат **распространения установщика Mac**, чтобы подписать установщик.
 
-    [![Создание сертификата App Store](certificates-identifiers-images/certif04.png "Создание сертификата App Store")](certificates-identifiers-images/certif04-large.png#lightbox)
-2. Выберите тип создаваемого сертификата (для выпуска в App Store потребуется по одному сертификату каждого типа):
+> [!TIP]
+> При присвоении имен запросам сертификатов используйте описательные имена, содержащие текст `Application` и `Installer`, чтобы их можно было определить позднее.
 
-    [![Выбор типа сертификата](certificates-identifiers-images/certif05.png "Выбор типа сертификата")](certificates-identifiers-images/certif05-large.png#lightbox)
-3. На следующей странице объясняется, как использовать **доступ к связке ключей** для создания файла запроса сертификата. Следуйте инструкциям:
+Сначала создайте сертификат установщика:
 
-    [![Создание запроса цепочки ключей](certificates-identifiers-images/certif06.png "Создание запроса цепочки ключей")](certificates-identifiers-images/certif06-large.png#lightbox)
-4. Выберите описательное **общее имя**, например, используйте в имени текст "Приложение App Store".
+1. Выберите тип сертификата **распространения установщика Mac** и нажмите кнопку **Continue** (Продолжить):
 
-    ![Ввод описательного имени](certificates-identifiers-images/image20.png "Ввод описательного имени")
-5. Файл запроса сертификата (с расширением `.certSigningRequest`) будет сохранен на локальном компьютере Mac. Запомните место его сохранения (по умолчанию это рабочий стол):
+    > [!div class="mx-imgBorder"]
+    > [![Создание сертификата App Store](certificates-identifiers-images/certif05.png)](certificates-identifiers-images/certif05-large.png#lightbox)
 
-    [![Сохранение сертификата](certificates-identifiers-images/image21.png "Сохранение сертификата")](certificates-identifiers-images/image21-large.png#lightbox)
-6. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**:
+1. На следующей странице объясняется, как использовать **доступ к связке ключей** для создания файла запроса сертификата. Следуйте инструкциям:
 
-    [![Скачивание сертификата App Store](certificates-identifiers-images/image23.png "Скачивание сертификата App Store")](certificates-identifiers-images/image23-large.png#lightbox)
-7. Нажмите кнопку **Continue** (Продолжить) и выполните те же самые действия, чтобы скачать еще один сертификат, на этот раз для *установщика*:
+    > [!div class="mx-imgBorder"]
+    > [![Отправка запроса сертификата](certificates-identifiers-images/certif06.png)](certificates-identifiers-images/certif06-large.png#lightbox)
 
-    [![Выбор установщика](certificates-identifiers-images/image24.png "Выбор установщика")](certificates-identifiers-images/image24-large.png#lightbox)
-8. Выберите описательное **общее имя**, например, используйте в имени текст "Установщик App Store":
+    Сведения об использовании программы [Keychain Access](https://help.apple.com/developer-account/#/devbfa00fef7) для создания файла запроса сертификата см. по **этой ссылке**. Не забудьте выбрать имя сертификата, соответствующее его _типу_ (приложение или установщик).
 
-    ![Указание имени сертификата](certificates-identifiers-images/image25.png "Указание имени сертификата")
-9. Файл запроса сертификата (с расширением `.certSigningRequest`) будет сохранен на локальном компьютере Mac. Запомните место его сохранения (по умолчанию это рабочий стол):
+1. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**:
 
-    [![Отправка сертификата](certificates-identifiers-images/image26.png "Отправка сертификата")](certificates-identifiers-images/image26-large.png#lightbox)
+    > [!div class="mx-imgBorder"]
+    > [![Скачивание сертификата App Store](certificates-identifiers-images/certif07.png)](certificates-identifiers-images/certif07-large.png#lightbox)
 
-    [![Скачивание сертификата распространения](certificates-identifiers-images/image28.png "Скачивание сертификата распространения")](certificates-identifiers-images/image28-large.png#lightbox)
-10. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**. В служебной программе для сертификата разработчика сертификаты отображаются следующим образом:
+**Выполните те же действия для сертификата распространения приложений Mac.**
 
-    [![Служебная программа для сертификата разработчика](certificates-identifiers-images/image29.png "Служебная программа для сертификата разработчика")](certificates-identifiers-images/image29-large.png#lightbox)
-11. В **связке ключей** теперь будут отображаться два новых сертификата:
+![Сертификат распространения приложений Mac](certificates-identifiers-images/certif08.png)
 
-    [![Сертификат в программе Keychain Access](certificates-identifiers-images/image30.png "Сертификат в программе Keychain Access")](certificates-identifiers-images/image30-large.png#lightbox)
+### <a name="developer-id-certificates"></a>Сертификаты идентификации разработчиков
 
-#### <a name="developer-id-certificates"></a>Сертификаты идентификации разработчиков
+Для самостоятельного выпуска приложения Xamarin.Mac (не через Apple App Store) вам потребуется два сертификата:
 
-Для самостоятельного выпуска приложения Xamarin.Mac (не через Apple App Store) разработчику потребуется сертификат идентификатора разработчика, с помощью которого приложение будет подписываться для выпуска и установки.
+- сертификат **идентификатора разработчика для установщика**, используемый для подписывания приложения; 
+- сертификат **идентификатора разработчика приложения**, чтобы подписать установщик.
 
-Выполните следующие действия:
+> [!TIP]
+> При присвоении имен запросам сертификатов используйте описательные имена, содержащие текст `Application` и `Installer`, чтобы их можно было определить позднее.
 
-1. В разделе **Certificates** (Сертификаты) сначала нажмите кнопку **+** , а затем установите переключатель в положение **Developer ID** (Идентификатор разработчика):
+После создания, скачивания и установки сертификатов они будут отображаться в программе**Keychain Access**:
 
-    [![Добавление идентификатора разработчика](certificates-identifiers-images/certif07.png "Добавление идентификатора разработчика")](certificates-identifiers-images/certif07-large.png#lightbox)
-2. Нажмите кнопку **Continue** (Продолжить) и выберите тип создаваемого идентификатора разработчика:
-
-    [![Выбор типа идентификатора разработчика](certificates-identifiers-images/certif08.png "Выбор типа идентификатора разработчика")](certificates-identifiers-images/certif08-large.png#lightbox)
-3. Потребуются два сертификата: один для подписывания самого приложения, а другой для подписывания его установщика. При присвоении имен запросам сертификатов используйте описательные имена, содержащие текст `Application` и `Installer`, чтобы их можно было определить позднее.
-4. На следующем экране приводятся подробные указания по созданию сертификата. Нажмите кнопку **Continue** (Продолжить).
-
-    [![Как создать сертификат](certificates-identifiers-images/certif09.png "Как создать сертификат")](certificates-identifiers-images/certif09-large.png#lightbox)
-5. Выберите описательное **общее имя**. Например, используйте в имени текст "Идентификатор разработчика приложения":
-
-    ![Ввод имени сертификата](certificates-identifiers-images/image33.png "Ввод имени сертификата")
-6. Файл запроса сертификата (с расширением `.certSigningRequest`) будет сохранен на локальном компьютере Mac. Запомните место его сохранения (по умолчанию это рабочий стол):
-
-    [![Отправка сертификата](certificates-identifiers-images/certif10.png "Отправка сертификата")](certificates-identifiers-images/certif10-large.png#lightbox)
-
-    [![Скачивание идентификатора разработчика](certificates-identifiers-images/certif11.png "Скачивание идентификатора разработчика")](certificates-identifiers-images/certif11-large.png#lightbox)
-7. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**.
-8. Нажмите кнопку **Continue** (Продолжить) и выполните те же самые действия, чтобы скачать еще один сертификат, на этот раз для *установщика*.
-9. Выберите описательное **общее имя**. Например, используйте в имени текст "Идентификатор разработчика для установщика":
-
-    ![Ввод общего имени](certificates-identifiers-images/image38.png "Ввод общего имени")
-10. Файл запроса сертификата (с расширением `.certSigningRequest`) будет сохранен на локальном компьютере Mac. Запомните место его сохранения (по умолчанию это рабочий стол):
-
-    [![Отправка сертификата](certificates-identifiers-images/certif10.png "Отправка сертификата")](certificates-identifiers-images/certif10-large.png#lightbox)
-11. Сертификат станет доступен для скачивания. Нажмите кнопку **Download** (Скачать), прежде чем нажимать кнопку **Done** (Готово):
-
-    [![Скачивание сертификата](certificates-identifiers-images/certif11.png "Скачивание сертификата")](certificates-identifiers-images/certif11-large.png#lightbox)
-12. Нажмите кнопку **Download** (Скачать), чтобы получить сертификат, и дважды щелкните его, чтобы установить его в **связке ключей**. В **служебной программе для сертификата разработчика** сертификаты отображаются следующим образом:
-
-    [![Служебная программа для сертификата разработчика](certificates-identifiers-images/certif12.png "Служебная программа для сертификата разработчика")](certificates-identifiers-images/certif12-large.png#lightbox)
-13. В **связке ключей** будут видны следующие элементы:
-
-    [![Сертификат в программе Keychain Access](certificates-identifiers-images/image43.png "Сертификат в программе Keychain Access")](certificates-identifiers-images/image43-large.png#lightbox)
+[Список сертификатов в программе Keychain Access](certificates-identifiers-images/certif09.png)
 
 ## <a name="related-links"></a>Связанные ссылки
 

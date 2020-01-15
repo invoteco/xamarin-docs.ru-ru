@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/18/2019
+ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695933"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490068"
 ---
 # <a name="xamarinforms-shell-search"></a>Поиск в оболочке Xamarin.Forms
 
@@ -181,8 +181,11 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 Когда в верхней части страницы добавляется `SearchHandler`, поле поиска по умолчанию является видимым и полностью развернутым. Тем не менее, это поведение можно изменить, задав в свойстве `SearchHandler.SearchBoxVisibility` один из членов перечисления `SearchBoxVisibility`:
 
 - `Hidden` — поле поиска не отображается и недоступно;
-- `Collapsible` — поле поиска является скрытым, пока пользователь не выполнит действие, открывающее его;
-- `Expanded` — поле поиска является видимым и полностью развернутым.
+- `Collapsible` — поле поиска является скрытым, пока пользователь не выполнит действие, открывающее его; Для отображения поля поиска в iOS нужно инициировать "подпрыгивание" содержимого страницы в вертикальном направлении, а в Android — коснуться значка вопросительного знака.
+- `Expanded` — поле поиска является видимым и полностью развернутым. Это значение по умолчанию для свойства `SearchHandler.SearchBoxVisibility`.
+
+> [!IMPORTANT]
+> В iOS для свертываемого поля поиска требуется iOS 11 или более поздней версии.
 
 В следующем примере показано, как скрыть поле поиска:
 
@@ -190,7 +193,7 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 <ContentPage ...
              xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler SearchBoxVisibility="Hidden"
+        <controls:AnimalSearchHandler SearchBoxVisibility="Hidden"
                                       ... />
     </Shell.SearchHandler>
     ...

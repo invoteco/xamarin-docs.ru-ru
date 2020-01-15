@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 7d442d14589b35632bce2b6caec09235138ec585
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771627"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545625"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Командный интерфейс Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 В архитектуре "модель — представление — модель представления" (MVVM) привязки данных определяются между свойствами в модели представления, которое обычно является классом, производным от `INotifyPropertyChanged`, и свойствами в представлении, которое обычно является файлом XAML. Иногда приложение имеет потребности, которые не удовлетворяются этими привязками свойств, и требует, чтобы пользователь запускал команды, влияющие на элементы модели представления. Эти команды обычно обозначаются путем нажатия кнопки или касания пальцем и традиционно обрабатываются в файле с выделенным кодом в обработчике для события `Clicked` объекта `Button` или события `Tapped` объекта `TapGestureRecognizer`.
 
@@ -279,7 +279,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 Вот как это работает. Первый пользователь нажимает кнопку **Создать**. Это включает форму ввода, но отключает кнопку **Создать**. Пользователь вводит имя, возраст и навыки. В любое время во время редактирования пользователь может нажать кнопку **Отмена**, чтобы начать заново. Кнопка **Отправить** будет доступна только после того, как пользователь введет допустимое имя и возраст. При нажатии на кнопку **Отправить** пользователь переходит в коллекцию, отображаемую объектом `ListView`. После нажатия кнопки **Отмена** или **Отправить** форма ввода очищается и снова включается кнопка **Создать**.
 
-На экране iOS слева показан макет до ввода допустимого возраста. На экранах Android и UWP кнопка **Отправить** включается после указания возраста:
+На экране iOS слева показан макет до ввода допустимого возраста. На экранах Android кнопка **Отправить** включается после указания возраста:
 
 [![Запись пользователя](commanding-images/personentry-small.png "Запись пользователя")](commanding-images/personentry-large.png#lightbox "Запись пользователя")
 
@@ -335,7 +335,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 Помимо реализации интерфейса `ICommand`, класс `Command` определяет метод с именем `ChangeCanExecute`. Ваша модель представления должна вызывать `ChangeCanExecute` для свойства `ICommand` всякий раз, когда происходит то, что может изменить возвращаемое значение метода `CanExecute`. Вызов `ChangeCanExecute` заставляет класс `Command` активировать метод `CanExecuteChanged`. Объект `Button` присоединяет обработчик для этого события и реагирует повторным вызовом `CanExecute`, а затем включается в зависимости от возвращаемого значения этого метода.
 
-Когда метод `execute` `NewCommand` вызывает `RefreshCanExecutes`, свойство `NewCommand` получает вызов `ChangeCanExecute`, а `Button` вызывает метод `canExecute`, который теперь возвращает `false`, поскольку свойство `IsEditing` теперь имеет значение `true`.
+Когда метод `execute``NewCommand` вызывает `RefreshCanExecutes`, свойство `NewCommand` получает вызов `ChangeCanExecute`, а `Button` вызывает метод `canExecute`, который теперь возвращает `false`, поскольку свойство `IsEditing` теперь имеет значение `true`.
 
 Обработчик `PropertyChanged` для нового объекта `PersonViewModel` вызывает метод `ChangeCanExecute` объекта `SubmitCommand`. Вот как реализуется свойство Command:
 
@@ -758,7 +758,7 @@ public partial class MainPage : ContentPage
 
 Конструктор также задает `BindingContext` страницы на себя, чтобы привязки ссылались на `NavigateCommand` в этом классе.
 
-Порядок кода в этом конструкторе имеет значение: вызов `InitializeComponent` приводит к анализу XAML, но в этот момент привязка к свойству с именем `NavigateCommand` не может быть разрешена, так как для `BindingContext` установлено `null`. Если `BindingContext` задается в конструкторе *перед* тем, как задается `NavigateCommand`, то привязка может быть разрешена, когда задается `BindingContext`, но в этот момент `NavigateCommand` по-прежнему имеет значение `null`. Если задать `NavigateCommand` после `BindingContext`, это не повлияет на привязку, так как изменение `NavigateCommand` не вызывает событие `PropertyChanged` и привязка не знает, что `NavigateCommand` теперь считается допустимым.
+Порядок кода в этом конструкторе имеет значение: вызов `InitializeComponent` приводит к анализу XAML, но в этот момент привязка к свойству с именем `NavigateCommand` не может быть разрешена, так как для `BindingContext` установлено `null`. Если `BindingContext` задается в конструкторе *перед* тем, как задается `NavigateCommand`, привязка может быть разрешена, когда задается `BindingContext`, но в этот момент `NavigateCommand` по-прежнему имеет значение `null`. Если задать `NavigateCommand` после `BindingContext`, это не повлияет на привязку, так как изменение `NavigateCommand` не вызывает событие `PropertyChanged` и привязка не знает, что `NavigateCommand` теперь считается допустимым.
 
 Если задать `NavigateCommand` и `BindingContext` (в любом порядке) до вызова `InitializeComponent`, это сработает, так как оба компонента привязки задаются, когда средство синтаксического анализа XAML обнаруживает определение привязки.
 

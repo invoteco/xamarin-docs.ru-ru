@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
-ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
-ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.date: 11/05/2019
+ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2019
-ms.locfileid: "74451804"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489964"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Всплывающее меню оболочки Xamarin.Forms
 
@@ -246,6 +246,23 @@ Shell.Current.FlyoutIsPresented = false;
 - `OnTabStopPropertyChanged` вызывается при изменении свойства `IsTabStop`;
 - `TabIndexDefaultValueCreator` возвращает `int` и позволяет задать значение по умолчанию для свойства `TabIndex`;
 - `TabStopDefaultValueCreator` возвращает `bool` и позволяет задать значение по умолчанию для свойства `TabStop`.
+
+## <a name="flyout-vertical-scroll"></a>Вертикальная прокрутка всплывающего меню
+
+По умолчанию всплывающее меню можно прокручивать по вертикали, если элементы не помещаются в нем. Это поведение можно изменить, задав в привязываемом свойстве `Shell.FlyoutVerticalScrollMode` один из элементов перечисления `ScrollMode`:
+
+- `Disabled` — указывает, что вертикальная прокрутка будет отключена.
+- `Enabled` — указывает, что вертикальная прокрутка будет включена.
+- `Auto` — указывает, что вертикальная прокрутка будет включена, если элементы не помещаются во всплывающем меню. Это значение по умолчанию для свойства `Shell.FlyoutVerticalScrollMode`.
+
+В следующем примере показано, как отключить вертикальную прокрутку.
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
 
 ## <a name="flyout-display-options"></a>Параметры отображения всплывающего меню
 

@@ -6,17 +6,17 @@ ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 11/06/2019
+ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888983"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489844"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Вкладки оболочки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Когда шаблон навигации для приложения предусматривает всплывающее меню, следующим уровнем навигации в приложении будет нижняя панель вкладок. Кроме того, когда всплывающее меню закрыто, верхним уровнем навигации в приложении будет нижняя панель вкладок.
 
@@ -50,7 +50,7 @@ ms.locfileid: "69888983"
 
 Этот код создаст такую структуру одностраничного приложения:
 
-[![Снимок экрана с одностраничным приложением оболочки для iOS и Android](tabs-images/single-page-app.png "Одностраничное приложение оболочки")](tabs-images/single-page-app-large.png#lightbox "Одностраничное приложение оболочки")
+[![Снимок экрана одностраничного приложения оболочки для iOS и Android](tabs-images/single-page-app.png "Одностраничное приложение оболочки")](tabs-images/single-page-app-large.png#lightbox "Одностраничное приложение оболочки")
 
 > [!NOTE]
 > При необходимости панель навигации можно спрятать, присвоив присоединенному свойству `Shell.NavBarIsVisible` в объекте [`ContentPage`](xref:Xamarin.Forms.ContentPage) значение `false`.
@@ -102,6 +102,10 @@ ms.locfileid: "69888983"
 
 [![Снимок экрана двухстраничного приложения оболочки с нижними вкладками для iOS и Android](tabs-images/two-page-app-bottom-tabs.png "Двухстраничное приложение оболочки с нижними вкладками")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Двухстраничное приложение оболочки с нижними вкладками")
 
+При наличии более пяти вкладок появляется вкладка **Дополнительно**, используемая для доступа к дополнительным вкладкам.
+
+[![Снимок экрана: приложение оболочки со вкладкой "Дополнительно" для iOS и Android](tabs-images/more-tabs.png "Приложение оболочки со вкладкой "Дополнительно"")](tabs-images/more-tabs-large.png#lightbox "Приложение оболочки со вкладками "Дополнительно"")
+
 Вы также можете использовать операторы неявного преобразования оболочки для удаления объектов `ShellContent` и `Tab` из предыдущего примера:
 
 ```xaml
@@ -126,7 +130,7 @@ ms.locfileid: "69888983"
 Класс `Tab` включает следующие свойства, которые определяют внешний вид и поведение вкладки:
 
 - `CurrentItem` с типом `ShellContent` обозначает выбранный элемент.
-- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. По умолчанию используется значение `AsSingleItem`.
+- `FlyoutDisplayOptions` с типом `FlyoutDisplayOptions` определяет, как этот элемент и его дочерние элементы отображаются во всплывающем меню. Значение по умолчанию — `AsSingleItem`.
 - `FlyoutIcon` с типом `ImageSource` определяет значок, который отображается во всплывающем элементе.
 - `Icon` с типом `ImageSource` определяет значок, который отображается в частях хрома, не являющихся всплывающими элементами.
 - `IsChecked` с типом `boolean` определяет, выделен ли этот элемент во всплывающем элементе в настоящий момент.

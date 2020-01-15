@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d981307ae96f75c67442d3898255c8bed62f1cf7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771718"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545674"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Базовые привязки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Привязка данных Xamarin.Forms связывает пару свойств между двумя объектами, по крайней мере один из которых обычно является объектом пользовательского интерфейса. Эти два объекта называются *целевым объектом* и *источником*:
 
@@ -197,7 +197,7 @@ public partial class AlternativeCodeBindingPage : ContentPage
 
 На экране iOS слева показано, как выглядит экран, когда страница открывается в первый раз. Где объект `Label`?
 
-Проблема в том, что `Slider` имеет начальное значение 0. В результате свойство `Scale` объекта `Label` также имеет значение 0 и его значение по умолчанию 1 переопределяется. Поэтому объект `Label` поначалу не видно. Как показано на снимках экрана Android и универсальной платформы Windows (UWP), вы можете управлять объектом `Slider`, чтобы объект `Label` снова появился, но его первоначальное исчезновение сбивает с толку.
+Проблема в том, что `Slider` имеет начальное значение 0. В результате свойство `Scale` объекта `Label` также имеет значение 0 и его значение по умолчанию 1 переопределяется. Поэтому объект `Label` поначалу не видно. Как показано на снимках экрана Android, вы можете управлять объектом `Slider`, чтобы объект `Label` снова появился, но его первоначальное исчезновение сбивает с толку.
 
 Из [следующей статьи](binding-mode.md) вы узнаете, как избежать этой проблемы с помощью инициализации объекта `Slider` из значения по умолчанию свойства `Scale`.
 

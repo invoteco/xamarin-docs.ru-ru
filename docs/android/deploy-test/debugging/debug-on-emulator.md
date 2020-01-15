@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028080"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556526"
 ---
-# <a name="debugging-on-the-android-emulator"></a>Отладка приложений в Android Emulator
+# <a name="debug-on-the-android-emulator"></a>Отладка приложений в Android Emulator
 
 _Это руководство описывает, как запустить виртуальное устройство в Android Emulator для отладки и тестирования вашего приложения._
-
-## <a name="overview"></a>Обзор
 
 Для имитации разнообразных устройств с Android эмулятор Android Emulator (устанавливаемый с рабочей нагрузкой **Разработка мобильных приложений на .NET**) можно запускать в различных конфигурациях. Каждая из этих конфигураций создается в виде _виртуального устройства_. В этом руководстве вы узнаете, как открыть эмулятор из Visual Studio и запустить приложение на виртуальном устройстве. Информацию о настройке Android Emulator и создании виртуальных устройств см. в статье [Настройка Android Emulator](~/android/get-started/installation/android-emulator/index.md).
 

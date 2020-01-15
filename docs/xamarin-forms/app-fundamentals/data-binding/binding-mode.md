@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1991be6961cbc296501a1df92fe3c89dda01d190
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: acfa7bc953906654567d361b93ec1ccff22c1f1b
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771694"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545651"
 ---
 # <a name="xamarinforms-binding-mode"></a>Режим привязки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 В [предыдущей статье](basic-bindings.md), в разделах **Альтернативная привязка кода** и **Альтернативная привязка XAML**, объект `Label` со свойством `Scale` привязывался к свойству `Value` объекта `Slider`. Так как начальное значение `Slider` равно 0, свойство `Scale` объекта `Label` также было равно 0, а не 1, поэтому объект `Label` исчезал.
 
@@ -49,7 +49,7 @@ ms.locfileid: "70771694"
 
 [![Обратная привязка](binding-mode-images/reversebinding-small.png "Обратная привязка")](binding-mode-images/reversebinding-large.png#lightbox "Обратная привязка")
 
-Вы удивитесь, но объект `Slider` продолжает работать, как показано на снимках экрана Android и UWP. Кажется, что привязка данных работает лучше, когда `Slider` является целевым объектом привязки вместо `Label`, так как инициализация работает, как и ожидалось.
+Вы удивитесь, но объект `Slider` продолжает работать, как показано на снимках экрана Android. Кажется, что привязка данных работает лучше, когда `Slider` является целевым объектом привязки вместо `Label`, так как инициализация работает, как и ожидалось.
 
 Разница между примером **обратной привязки** и более ранними примерами заключается в *режиме привязки*.
 
@@ -58,10 +58,10 @@ ms.locfileid: "70771694"
 Режим привязки указывается с помощью члена перечисления [`BindingMode`](xref:Xamarin.Forms.BindingMode):
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; данные передаются в обе стороны между целевым объектом и источником.
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; данные передаются от источника к целевому объекту.
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; данные передаются от целевого объекта к источнику.
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; данные передаются от источника к целевому объекту, но только если `BindingContext` меняется (новая возможность в Xamarin.Forms 3.0).
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) — данные передаются в обе стороны между целевым объектом и источником.
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) — данные передаются от источника к целевому объекту.
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) — данные передаются от целевого объекта к источнику.
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) — данные передаются от источника к целевому объекту, но только если `BindingContext` меняется (новая возможность в Xamarin.Forms 3.0).
 
 Каждое привязываемое свойство имеет режим привязки по умолчанию, который задается при создании привязываемого свойства и доступен из свойства [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) объекта `BindableProperty`. Этот режим привязки по умолчанию указывает режим, действующий, когда свойство является целевым объектом привязки данных.
 
@@ -83,7 +83,7 @@ ms.locfileid: "70771694"
 - свойство `Value` объектов `Slider` и `Stepper`;
 - свойство `IsToggled` объекта `Switch`;
 - свойство `On` объекта `SwitchCell`;
-- свойство `Time` объекта `TimePicker`.
+- свойство `Time` объекта `TimePicker`;
 
 Эти конкретные свойства определяются как `TwoWay` не просто так.
 
@@ -209,7 +209,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 
 Если модель представления задана как источник привязки, инфраструктура привязки присоединяет обработчик к событию `PropertyChanged`. Таким образом, привязка получает уведомления об изменениях свойств и может задать целевые свойства на основе измененных значений.
 
-Тем не менее, если целевое свойство (или определение `Binding` для целевого свойства) имеет режим привязки `BindingMode` `OneTime`, инфраструктура привязки может не привязывать обработчик для события `PropertyChanged`. Целевое свойство обновляется только тогда, когда `BindingContext` меняется, а не когда меняется само свойство источника.
+Тем не менее, если целевое свойство (или определение `Binding` для целевого свойства) имеет режим привязки `BindingMode``OneTime`, инфраструктура привязки может не привязывать обработчик для события `PropertyChanged`. Целевое свойство обновляется только тогда, когда `BindingContext` меняется, а не когда меняется само свойство источника.
 
 Файл XAML **Простой селектор цвета** создает экземпляр `HslColorViewModel` в словаре ресурсов страницы и инициализирует свойство `Color`. Свойство `BindingContext` объекта `Grid` устанавливается в расширение привязки `StaticResource` для ссылки на этот ресурс:
 
@@ -261,9 +261,9 @@ public class HslColorViewModel : INotifyPropertyChanged
 
 При первом запуске программы `BoxView`, `Label` и три элемента `Slider` получают значения из модели представления в зависимости от первоначального свойства `Color`, заданного при создании экземпляра модели представления. Это показано на снимке экрана iOS слева.
 
-[![Простой селектор цвета](binding-mode-images/simplecolorselector-small.png "Простой селектор цвета")](binding-mode-images/simplecolorselector-large.png#lightbox "Простой селектор цвета")
+[![Простое средство выбора цвета](binding-mode-images/simplecolorselector-small.png "Простое средство выбора цвета")](binding-mode-images/simplecolorselector-large.png#lightbox "Простое средство выбора цвета")
 
-Когда вы перемещаете ползунки, объекты `BoxView` и `Label` обновляются соответствующим образом, как показано на снимках экрана Android и UWP.
+Когда вы перемещаете ползунки, объекты `BoxView` и `Label` обновляются соответствующим образом, как показано на снимках экрана Android.
 
 Создание экземпляров модели представления в словаре ресурсов является распространенным подходом. Можно также создать экземпляр модели представления в тегах элемента свойства для свойства `BindingContext`. В файле XAML **Простой селектор цвета** попробуйте удалить `HslColorViewModel` из словаря ресурсов и задать его свойством `BindingContext` объекта `Grid` следующим образом.
 

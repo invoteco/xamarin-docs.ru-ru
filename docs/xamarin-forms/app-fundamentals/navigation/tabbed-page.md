@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
-ms.openlocfilehash: 22c5b5b6479ce65c2e6b69f6ad5a98fd11ae47d7
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
+ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842867"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490003"
 ---
 # <a name="xamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
@@ -27,7 +27,7 @@ Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) состоит из 
 > [!TIP]
 > Для `TabbedRenderer` в iOS есть переопределяемый метод `GetIcon`, который можно использовать для загрузки значков вкладок из указанного источника. Это переопределение позволяет использовать изображения SVG в виде значков в `TabbedPage`. Кроме того, можно предоставить варианты значка в выбранном и невыбранном состоянии.
 
-В Android список вкладок отображается в верхней части экрана, а также в области данных ниже. У каждой вкладки есть заголовок и значок, который должен быть PNG-файлом с альфа-каналом. Но эти вкладки можно переместить в нижнюю часть экрана в зависимости от конкретной платформы. Дополнительные сведения о требованиях к значкам см. в разделах о [вкладках](https://material.io/components/tabs/#) на сайте material.io и [поддержке разных значений плотности пикселей](https://developer.android.com/training/multiscreen/screendensities) на сайте developer.android.com. Дополнительные сведения о перемещении вкладок в нижнюю часть экрана см. в статье [TabbedPage Toolbar Placement and Color on Android](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md) (Цвет и размещение значков на панели TabbedPage в Android).
+В Android список вкладок отображается в верхней части экрана, а также в области данных ниже. У каждой вкладки есть заголовок и значок, который должен быть PNG-файлом с альфа-каналом. Но эти вкладки можно переместить в нижнюю часть экрана в зависимости от конкретной платформы. При наличии более пяти вкладок, список которых отображается внизу экрана, появляется вкладка *Дополнительно*, которую можно использовать для доступа к дополнительным вкладкам. Дополнительные сведения о требованиях к значкам см. в разделах о [вкладках](https://material.io/components/tabs/#) на сайте material.io и [поддержке разных значений плотности пикселей](https://developer.android.com/training/multiscreen/screendensities) на сайте developer.android.com. Дополнительные сведения о перемещении вкладок в нижнюю часть экрана см. в статье [TabbedPage Toolbar Placement and Color on Android](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md) (Цвет и размещение значков на панели TabbedPage в Android).
 
 > [!TIP]
 > Кроме того, у `TabbedPageRenderer` для Android AppCompat есть переопределяемый метод `GetIconDrawable`, который может использоваться для загрузки значков вкладок из настраиваемого объекта `Drawable`. Это переопределение позволяет использовать изображения SVG в виде значков в `TabbedPage` и работает как для верхних, так и для нижних панелей вкладок. Кроме того, можно использовать переопределяемый метод `SetTabIcon` для загрузки значков вкладок из настраиваемого `Drawable` для верхних панелей вкладок.
@@ -77,7 +77,7 @@ Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) состоит из 
 ```
 
 > [!NOTE]
-> Свойство [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) класса [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1), из которого происходит [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), – это свойство `ContentProperty` `MultiPage<T>`. Таким образом, в XAML нет необходимости явно назначать объекты [`Page`](xref:Xamarin.Forms.Page) свойству `Children`.
+> Свойство [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) класса [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1), из которого происходит [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), – это свойство `ContentProperty``MultiPage<T>`. Таким образом, в XAML нет необходимости явно назначать объекты [`Page`](xref:Xamarin.Forms.Page) свойству `Children`.
 
 Эквивалентный код на C# выглядит так:
 

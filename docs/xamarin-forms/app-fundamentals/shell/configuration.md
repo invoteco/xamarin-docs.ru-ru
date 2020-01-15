@@ -6,17 +6,17 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 022aa9f1aeb2961d98b52747441e875bd89a584a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 12/05/2019
+ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739318"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489912"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Настройка страницы оболочки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Класс `Shell` определяет присоединенные свойства, с помощью которых можно настраивать внешний вид страниц в приложениях оболочки Xamarin.Forms. Сюда относится настройка цветов страницы, отключение панели навигации, отключение панели вкладок и отображение представлений на панели навигации.
 
@@ -85,6 +85,21 @@ ms.locfileid: "68739318"
 ```
 
 Дополнительные сведения о стилях XAML см. в руководстве по [оформлению приложений Xamarin.Forms с использованием стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
+
+## <a name="enable-navigation-bar-shadow"></a>Включение тени панели навигации
+
+Класс `Shell` определяет присоединенное свойство `NavBarHasShadow` с типом `bool`, которое определяет, будет ли панель навигации иметь тень. По умолчанию этому свойству задано значение `false`.
+
+Хотя это свойство можно задать в производном объекте `Shell`, оно обычно устанавливается на любой странице, на которой нужно включить тень панели навигации. Так, в следующем примере XAML показано, как включить тень панели навигации из [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+Это приведет к включению тени панели навигации.
 
 ## <a name="disable-the-navigation-bar"></a>Отключение панели навигации
 

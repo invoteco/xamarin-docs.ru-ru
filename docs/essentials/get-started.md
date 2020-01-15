@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
-ms.openlocfilehash: c73144f797447832d795c1379f12a52494c1fbca
-ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
+ms.openlocfilehash: e388df2b4c7201cad01789de1676f79bec8d351e
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74536523"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488547"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Начало работы с Xamarin.Essentials
 
@@ -19,7 +19,7 @@ Xamarin.Essentials обеспечивает единый кроссплатфо�
 
 ## <a name="installation"></a>Установка
 
-Xamarin.Essentials предоставляется в виде пакета NuGet, который с помощью Visual Studio можно добавить в любой существующий или новый проект.
+Xamarin.Essentials предоставляется в виде пакета NuGet и включается в каждый новый проект в Visual Studio. Его можно добавить в любой существующий пакет с помощью Visual Studio, выполнив следующие действия.
 
 1. Скачайте и установите [Visual Studio](https://visualstudio.microsoft.com/) с помощью [средств Visual Studio для Xamarin](~/get-started/installation/index.md).
 

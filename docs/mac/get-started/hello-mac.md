@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: cb5eb783109f4758fcbc997c4f2bf4a93aaa262b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b56275ef903aa7def239a2e19980f52d83e6194f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018130"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489743"
 ---
 # <a name="hello-mac-walkthrough"></a>Знакомство с Mac. Пошаговое руководство
 
@@ -38,7 +38,7 @@ Xamarin.Mac позволяет разрабатывать полностью н�
 Для разработки приложений с помощью Xamarin.Mac вам потребуются:
 
 - компьютер Mac под управлением macOS High Sierra (10.13) или более поздней версии;
-- [Xcode 9 или более поздней версии](https://itunes.apple.com/us/app/xcode/id497799835?mt=12);
+- [Xcode 10 или более поздней версии](https://itunes.apple.com/us/app/xcode/id497799835?mt=12);
 - последняя версия [Xamarin.Mac и Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 Чтобы запустить приложение, созданное с помощью Xamarin.Mac, вам потребуется:

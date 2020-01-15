@@ -7,20 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: b361cd00121d16752d5eebc971653c8ea185c641
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018111"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489392"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Профили подготовки для приложений Xamarin.Mac
 
 С помощью профилей подготовки разработчик может добавлять в свои приложения Xamarin.Mac несколько определенных возможностей macOS (прежнее название — Mac OS X), таких как iCloud и push-уведомления. Разработчик должен создать, скачать и установить профиль подготовки Mac для каждого создаваемого приложения, в котором используются указанные функции.
 
 [![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
-
-<a name="Development_Provisioning_Profile" />
 
 ## <a name="development-provisioning-profile"></a>Профиль подготовки для разработки
 
@@ -60,8 +58,6 @@ ms.locfileid: "73018111"
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
 Профиль подготовки для разработки требуется создавать для каждого нового приложения или при добавлении нового компьютера для тестирования.
-
-<a name="Production_Provisioning_Profile" />
 
 ## <a name="production-provisioning-profile"></a>Профиль подготовки для производства
 

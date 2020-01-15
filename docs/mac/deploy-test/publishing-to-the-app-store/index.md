@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 60f51be5ffad67d839edd42b7826b0c57c46eb8a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2b6dcd53a9761ec3f030f3f5bf81894e9faa8b1f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029997"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487026"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Публикация приложений Xamarin.Mac в Mac App Store
 
@@ -44,7 +44,7 @@ ms.locfileid: "73029997"
 
 В этом руководстве описывается создание необходимых профилей подготовки, которые потребуются для публикации приложения Xamarin.Mac.
 
-### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Настройка приложения Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
+### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Настройка приложений Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
 
 В этом руководстве описывается настройка приложения Xamarin.Mac для публикации.
 

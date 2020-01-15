@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
-ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
+ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317886"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488508"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Параметры
 
@@ -83,7 +83,9 @@ Preferences.Clear();
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) используется для хранения значений на устройстве. Если свойство `sharedName` не указано, используется `LocalSettings`. В противном случае используется имя для создания контейнера в `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) используется для хранения значений на устройстве. Если свойство `sharedName` не указано, используется `LocalSettings`. В противном случае используется имя для создания контейнера в `LocalSettings`. 
+
+`LocalSettings` также имеет следующее ограничение: длина имени каждого параметра не может превышать 255 символов. Каждый параметр может иметь размер до 8 КБ, а каждый составной параметр — до 64 КБ.
 
 --------------
 

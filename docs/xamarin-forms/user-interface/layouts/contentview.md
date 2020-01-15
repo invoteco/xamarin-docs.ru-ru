@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 69f3311834fd438af97b3d2fa527572f02d2b0cb
-ms.sourcegitcommit: fa2898d95b35fcee05503f3829351ba5a7d4a44d
+ms.openlocfilehash: 712aa43fb4959b766786c8fd0969ef2c2c8f00ef
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955083"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955736"
 ---
 # <a name="xamarinforms-contentview"></a>ContentView Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 Класс [`ContentView`](xref:Xamarin.Forms.ContentView) Xamarin. Forms — это тип `Layout`, который содержит один дочерний элемент и обычно используется для создания настраиваемых, многократно используемых элементов управления. Класс `ContentView` наследует от [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). В этой статье и связанном примере объясняется, как создать пользовательский элемент управления `CardView` на основе класса `ContentView`.
 
@@ -204,11 +204,11 @@ CardView card = new CardView
 
 [снимок экрана Кардвиев ControlTemplate ![](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
-Дополнительные сведения о шаблонах элементов управления см. в разделе [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Дополнительные сведения о шаблонах элементов управления см. в разделе [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
 * [Пример приложения ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Привязка данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Привязываемые свойства](~/xamarin-forms/xaml/bindable-properties.md).
-* [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+* [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: 736627edc8628f229e6e1a1e079fca24b8ff97db
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 47fd6d34a1ef286fa8e1a307ea6033c9c6a9feea
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490120"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955760"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Использование расширений разметки XAML
 
@@ -35,7 +35,7 @@ ms.locfileid: "75490120"
 - `StaticResource`-ссылки на объекты из словаря ресурсов, как описано в статье [**словари ресурсов**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` — реагирование на изменения объектов в словаре ресурсов, как описано в статье [**динамические стили**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` — установите связь между свойствами двух объектов, как описано в статье [**Привязка данных**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` — выполняет привязку данных из шаблона элемента управления, как описано в статье [**Привязка к шаблону элемента управления**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `TemplateBinding` — выполняет привязку данных из шаблона элемента управления, как описано в статье [**шаблоны элементов управления Xamarin. Forms**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 - `RelativeSource` — задает источник привязки относительно положения целевого объекта привязки, как описано в статье [относительные привязки](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) Макета используется пользовательское расширение разметки [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). В этой статье описан данного расширения разметки [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).

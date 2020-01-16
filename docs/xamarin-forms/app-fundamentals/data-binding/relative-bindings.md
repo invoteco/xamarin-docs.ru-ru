@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: e115014728cce9252a92740b6db5beab582f61ed
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 63ce27fc871da12eabb1baad568af167c860926f
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489879"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955815"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Относительные привязки Xamarin.Forms
 
@@ -179,10 +179,10 @@ ms.locfileid: "75489879"
 
 [![Снимок экрана: режим относительной привязки TemplatedParent в iOS и Android](relative-bindings-images/templatedparent-relative-binding.png "Режим относительной привязки TemplatedParent")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "Режим относительной привязки TemplatedParent")
 
-Дополнительные сведения о шаблонах элементов управления см. в разделе [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Дополнительные сведения о шаблонах элементов управления см. в разделе [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Демоверсии привязок данных (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Расширения разметки XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+- [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

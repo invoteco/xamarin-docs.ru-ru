@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ae3a2af436a4ad8860ab27df550a1d74d5084a6
-ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+ms.openlocfilehash: 933edb1c0681f3fc9cbb8d81aa3091a65c4346e3
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75718770"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031358"
 ---
 # <a name="web-views-in-xamarinios"></a>Веб-представления в Xamarin. iOS
 
@@ -95,6 +95,9 @@ UIApplication.SharedApplication.OpenUrl(url);
 > `UIWebView` не рекомендуется к использованию. Приложения, использующие этот элемент управления, [не будут приниматься в магазине приложений по состоянию на апрель 2020, а существующие приложения должны удалить его с декабря 2020](https://developer.apple.com/news/?id=12232019b).
 > 
 > [Документация по `UIWebView` Apple](https://developer.apple.com/documentation/uikit/uiwebview) предлагает приложениям использовать вместо них [`WKWebView`](#wkwebview) .
+
+> [!IMPORTANT]
+> Если вы ищете ресурсы в отношении `UIWebView` предупреждения об устаревании (ИТМС-90809) при использовании Xamarin. Forms, обратитесь к документации по [Xamarin. Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 `UIWebView` является устаревшим способом Apple для предоставления веб-содержимого в приложении. Она была выпущена в iOS 2,0 и является устаревшей по отношению к 8,0.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: c9f934ad690bffa2418a7221445a473d9a90fdb9
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490211"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031379"
 ---
 # <a name="xamarinforms-webview"></a>Веб-представления Xamarin.Forms
 
@@ -518,6 +518,50 @@ function factorial(num) {
 </body>
 </html>
 ```
+
+## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>Уивебвиев устаревания и отклонение магазина приложений (ИТМС-90809)
+
+Начиная с 2020 апреля [компания Apple будет отклонять приложения](https://developer.apple.com/news/?id=12232019b) , которые по-прежнему используют устаревшие API `UIWebView`. Хотя Xamarin. Forms переключен на `WKWebView` по умолчанию, по-прежнему существует ссылка на старый пакет SDK в двоичных файлах Xamarin. Forms. Текущее поведение [компоновщика iOS](~/ios/deploy-test/linker.md) не удаляет это, и в результате нерекомендуемый API `UIWebView` по-прежнему будет отображаться в приложении при отправке в App Store.
+
+Для устранения этой проблемы доступна предварительная версия компоновщика. Чтобы включить предварительную версию, необходимо указать дополнительный аргумент, `--optimize=experimental-xforms-product-type` компоновщику. 
+
+Ниже перечислены необходимые условия для работы.
+
+- Можно использовать **Xamarin. forms 4,5 или более поздней** версии &ndash; предварительных версий Xamarin. forms 4,5.
+- **Xamarin. iOS 13.10.0.17 или более поздней** версии &ndash; проверить версию Xamarin. iOS [в Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Эта версия Xamarin. iOS входит в состав Visual Studio для Mac 8.4.1 и Visual Studio 16.4.3.
+- **Удалите ссылки на `UIWebView`** &ndash; код не должен содержать ссылки на `UIWebView` или классы, использующие `UIWebView`.
+
+### <a name="configure-the-linker-preview"></a>Настройка предварительного просмотра компоновщика
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+Выполните следующие действия, чтобы компоновщик удалил ссылки `UIWebView`:
+
+1. **Откройте свойства проекта ios** &ndash; щелкните правой кнопкой мыши проект iOS и выберите пункт **свойства**.
+1. **Перейдите к разделу Build ios** &ndash; выберите раздел **Build для iOS** .
+1. **Обновите дополнительные аргументы mtouch** &ndash; в **дополнительных аргументах mtouch** добавьте этот флаг `--optimize=experimental-xforms-product-type` (в дополнение к любому значению, которое уже возможно в нем). 
+1. **Обновите все конфигурации сборки** &ndash; используйте списки **Конфигурация** и **платформа** в верхней части окна для обновления всех конфигураций сборки. Наиболее важной конфигурацией для обновления является конфигурация **Release/iPhone** , так как она обычно используется для создания сборок для отправки в App Store.
+
+Можно увидеть окно с новым флагом на этом снимке экрана:
+
+[![установки флага в разделе сборки iOS](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+
+Выполните следующие действия, чтобы компоновщик удалил ссылки `UIWebView`
+
+1. **Откройте параметры проекта ios** &ndash; щелкните правой кнопкой мыши проект iOS и выберите **Параметры**.
+1. **Перейдите к разделу Build ios** &ndash; выберите раздел **Build для iOS** .
+1. **Обновите дополнительные аргументы _mtouch_**  &ndash; ИИН **Дополнительные аргументы _mtouch_**  добавьте этот флаг `--optimize=experimental-xforms-product-type` (в дополнение к любому значению, которое уже возможно в нем).
+1. **Обновите все конфигурации сборки** &ndash; используйте списки **Конфигурация** и **платформа** в верхней части окна для обновления всех конфигураций сборки. Наиболее важной конфигурацией для обновления является конфигурация **Release/iPhone** , так как она обычно используется для создания сборок для отправки в App Store.
+
+Можно увидеть окно с новым флагом на этом снимке экрана:
+
+[![установки флага в разделе сборки iOS](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+
+-----
+
+Теперь при создании новой сборки (выпуска) и ее отправке в App Store не должно быть предупреждений об устаревшем API.
 
 ## <a name="related-links"></a>Связанные ссылки
 

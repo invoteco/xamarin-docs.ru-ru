@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: db26de8deed9945c6fff2d49f7d12de03fbe38df
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ed16c651d0b373e33d58bb73591977d3484d6e0
+ms.sourcegitcommit: be8ce3449afab22673e48b546d857431c071d66f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008239"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162940"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Использование ADO.NET с Xamarin. iOS
 
@@ -209,6 +209,17 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 Тип возвращаемого значения метода `ExecuteScalar` `object` — необходимо привести результат в зависимости от запроса к базе данных. Результатом может быть целое число в запросе на ВЫБОРку из запроса или строки из одного столбца. Обратите внимание, что это отличается для других методов Execute, возвращающих объект Reader или количество затронутых строк.
+
+## <a name="microsoftdatasqlite"></a>Microsoft.Data.Sqlite
+
+Существует другая `Microsoft.Data.Sqlite`библиотеки, которую можно [установить из NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite), которая функционально эквивалентна `Mono.Data.Sqlite` и позволяет использовать те же типы запросов.
+
+[Между двумя библиотеками](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) и некоторыми [сведениями о Xamarin](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin)есть сравнение. Самое важное для приложений Xamarin. iOS. необходимо включить вызов инициализации:
+
+```csharp
+// required for Xamarin.iOS
+SQLitePCL.Batteries_V2.Init();
+```
 
 ## <a name="related-links"></a>Связанные ссылки
 

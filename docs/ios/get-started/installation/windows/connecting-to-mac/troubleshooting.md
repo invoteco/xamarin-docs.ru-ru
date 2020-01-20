@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 4abe0da2b75b6859c6547f0dc1c4cf8708491afb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022466"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886571"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Устранение неполадок подключения для узла сборки Xamarin.iOS
 
@@ -20,8 +20,8 @@ _В этом руководстве приводятся инструкции п
 
 ## <a name="log-file-location"></a>Расположение файлов журнала
 
-- **Mac**: ~/Library/Logs/Xamarin-[ОСНОВНОЙ НОМЕР ВЕРСИИ.ДОПОЛНИТЕЛЬНЫЙ НОМЕР ВЕРСИИ]
-- **Windows**: %LOCALAPPDATA%\Xamarin\Logs
+- **Mac** — `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Windows** — `%LOCALAPPDATA%\Xamarin\Logs`
 
 Файлы журнала можно найти, последовательно выбрав в Visual Studio пункты **Справка &gt; Xamarin &gt; Запаковать журналы**.
 

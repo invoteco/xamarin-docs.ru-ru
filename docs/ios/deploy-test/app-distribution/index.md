@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: e8d4be4b06c051386afa0358856a6df49abb6653
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 20126849027f735e9ecd3599c290b4e7a57f837e
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026470"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886584"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Общие сведения о распространении приложений Xamarin.iOS
 
@@ -20,17 +20,16 @@ _В этом документе содержатся общие сведения
 
 После разработки приложения Xamarin.iOS наступает следующий этап жизненного цикла разработки ПО — распространение приложения пользователям (см. выделенную часть на схеме ниже):
 
-[![](images/publishingdiagram.png "After the iOS app has been developed, the next step is to distribute the app to users, as shown in the highlighted section of this diagram")](images/publishingdiagram.png#lightbox)
+[![После разработки приложения iOS наступает следующий этап — распространение приложения пользователям, как показано на выделенной части схемы](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
-Компания Apple предоставляет следующие способы распространения приложения iOS, поддерживаемые в Xamarin.iOS:
+Компания Apple предоставляет следующие способы распространения приложений iOS:
 
-1. [**Магазин приложений**](#App_Store_Distribution)
-2. [**Внутреннее (корпоративное) распространение**](#In-House_Distribution)
-3. [**Прямое распространение**](#Ad_Hoc_Distribution)
+- [**App Store**](#app-store-distribution);
+- [**внутреннее (корпоративное) распространение**](#in-house-distribution);
+- [**прямое распространение**](#ad-hoc-distribution);
+- [**пользовательские приложения для бизнеса**](#custom-apps-for-business).
 
 Для реализации всех этих сценариев требуется подготовить приложения с помощью соответствующего *профиля подготовки*. Профили подготовки — это файлы, содержащие сведения о подписывании кода, а также идентификатор приложения и подходящий механизм распространения. Для распространения не через Магазин приложений они также содержат сведения о том, на каких устройствах можно развертывать приложения.
-
-<a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -46,15 +45,11 @@ _В этом документе содержатся общие сведения
 
 Дополнительные сведения см. в руководстве [Распространение через Магазин приложений](~/ios/deploy-test/app-distribution/app-store-distribution/index.md).
 
-<a name="In-House_Distribution"/>
-
 ## <a name="in-house-distribution"></a>Внутреннее распространение
 
 В рамках внутреннего распространения (иногда называемого *корпоративным распространением*) участники **корпоративной программы для разработчиков Apple** могут распространять приложения другим участникам в той же организации. Преимуществами внутреннего распространения являются отсутствие проверки в Магазине приложений и отсутствие ограничений на количество устройств для установки приложения. Однако важно отметить, что участники **корпоративной программы для разработчиков Apple** **не** имеют доступ к iTunes Connect, поэтому за распространение приложения отвечает держатель лицензии.
 
 Дополнительные сведения о настройке и внутреннем распространении приложений см. в [руководстве по внутреннему распространению](~/ios/deploy-test/app-distribution/in-house-distribution.md).
-
-<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Прямое распространение
 
@@ -62,14 +57,14 @@ _В этом документе содержатся общие сведения
 
 Дополнительные сведения о настройке и внутреннем распространении приложений см. в [руководстве по прямому распространению](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md).
 
-## <a name="summary"></a>Сводка
+## <a name="custom-apps-for-business"></a>Пользовательские приложения для бизнеса
 
-В этой статье давался краткий обзор механизмов распространения, доступных для приложений Xamarin.iOS. Были представлены такие варианты распространения, как iTunes App Store, прямое и внутреннее, и приводились ссылки на более подробные сведения.
+Apple позволяет [распространять пользовательские](https://developer.apple.com/business/custom-apps/) приложения для предприятий и образовательных учреждений. Дополнительные сведения см. в руководстве по [использованию Apple Business Manager](https://support.apple.com/guide/apple-business-manager/welcome/web).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Распространение через Магазин приложений](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
-- [Настройка приложения в iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
+- [Распространение через App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
+- [Настройка приложения в iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Публикация в App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Внутреннее распространение](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Прямое распространение](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)

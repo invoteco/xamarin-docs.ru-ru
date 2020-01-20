@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607936"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031421"
 ---
 # <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -21,6 +21,9 @@ ms.locfileid: "75607936"
 > [!IMPORTANT]
 > Корпорация Apple [объявила](https://developer.apple.com/ios/submit/), что начиная с марта 2019 г. все публикуемые в App Store приложения и обновления должны быть собраны с использованием пакета SDK для iOS 12.1 или более поздних версий, входящего в Xcode версии 10.1 и выше.
 > Кроме того, приложения должны поддерживать размеры экранов iPhone XS и iPad Pro с диагональю 12,9 дюйма.
+
+> [!IMPORTANT]
+> Если при использовании Xamarin.Forms вы ищете ресурсы касательно предупреждения об устаревании `UIWebView`UIWebView (ITMS-90809), ознакомьтесь с документацией по [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809).
 
 Распространение приложения, как и его разработка, требует подготовки приложений с помощью соответствующего *профиля*. Профили подготовки — это файлы, содержащие сведения о подписывании кода, а также идентификатор приложения и подходящий механизм распространения. Для распространения не через App Store они также содержат сведения о том, на каких устройствах можно развертывать приложения.
 

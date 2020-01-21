@@ -77,7 +77,7 @@ public partial class BasicButtonClickPage : ContentPage
 
 Данный конкретный `Clicked` обработчик вызывает функцию, анимации, который вращается `Label` 360 градусов в 1000 миллисекунд. Вот ее запуск на устройствах iOS и Android и как приложение универсальной платформы Windows (UWP) на рабочем столе Windows 10.
 
-[![Нажатие кнопки "базовый"](button-images/BasicButtonClick.png "Нажатие кнопки "базовый"")](button-images/BasicButtonClick-Large.png#lightbox "Нажатие кнопки "базовый"")
+[![Нажатие кнопки базовый](button-images/BasicButtonClick.png "Нажатие кнопки "базовый"")](button-images/BasicButtonClick-Large.png#lightbox "Нажатие кнопки "базовый"")
 
 Обратите внимание, что `OnButtonClicked` метод включает `async` модификатор поскольку `await` используется в обработчике событий. Объект `Clicked` обработчика событий требует `async` модификатор только в том случае, если в теле обработчика используется `await`.
 
@@ -228,7 +228,7 @@ class CommandDemoViewModel : INotifyPropertyChanged
 
 Как два `Button` нажатые элементов, выполняются команды, и номер изменяет значение:
 
-[![Команда "основные"](button-images/BasicButtonCommand.png "Команда "основные"")](button-images/BasicButtonCommand-Large.png#lightbox)
+[![Команда основные](button-images/BasicButtonCommand.png "Команда "основные"")](button-images/BasicButtonCommand-Large.png#lightbox)
 
 Преимущество такого подхода `Clicked` обработчиков заключается в том, что вся логика, включающая в себя функциональность этой страницы, расположена в ViewModel, а не в файле кода программной части, что обеспечивает более эффективное разделение пользовательского интерфейса от бизнес-логики.
 
@@ -264,7 +264,7 @@ class CommandDemoViewModel : INotifyPropertyChanged
 
 Вызовы `ChangeCanExecute` метод `Command` необходимы, чтобы `Command` можно вызвать метод `canExecute` метод и определить ли `Button` должен быть включен или отключен. Благодаря этому изменению кода как номер достигает предельного размера, `Button` отключен:
 
-[![Команда "основные" — изменено](button-images/BasicButtonCommandModified.png "Команда "основные" — изменено")](button-images/BasicButtonCommandModified-Large.png#lightbox)
+[![Команда основные — изменено](button-images/BasicButtonCommandModified.png "Команда "основные" — изменено")](button-images/BasicButtonCommandModified-Large.png#lightbox)
 
 Это возможно в двух или более `Button` элементы для привязки к тому же `ICommand` свойство. `Button` Можно различать элементы с помощью [ `CommandParameter` ](xref:Xamarin.Forms.Button.CommandParameter) свойство `Button`. В этом случае необходимо использовать универсальный [ `Command<T>` ](xref:Xamarin.Forms.Command`1) класса. `CommandParameter` Объект затем передается как аргумент `execute` и `canExecute` методы. Эта методика показана подробно [ **основные команды** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) раздел [ **интерфейс командной** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) статьи.
 
@@ -407,7 +407,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
 В результате `Label` поворачивает при находится контакты с `Button`и останавливается при выпуске пальца:
 
-[![Нажатие кнопки "Пуск"](button-images/PressAndReleaseButton.png "Нажатие кнопки "Пуск"")](button-images/PressAndReleaseButton-Large.png)
+[![Нажатие кнопки Пуск](button-images/PressAndReleaseButton.png "Нажатие кнопки "Пуск"")](button-images/PressAndReleaseButton-Large.png)
 
 Этот тип поведения имеет приложения для игр: палец, находящегося на `Button`, может сделать объект на экране в определенном направлении.
 

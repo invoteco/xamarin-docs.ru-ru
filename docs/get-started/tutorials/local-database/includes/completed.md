@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: a0f2e909d4c7003ba1314b848fd01e604d190a1b
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107336"
 ---
-Поздравляем с завершением этого учебника, где вы научились:
+Поздравляем с завершением этого руководства, в котором вы научились:
 
 > [!div class="checklist"]
 >

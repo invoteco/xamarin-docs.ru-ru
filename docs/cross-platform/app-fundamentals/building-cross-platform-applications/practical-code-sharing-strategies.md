@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 0e37e138607fb0e00fbdc463ac7c53facf81395d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728243"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723634"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Часть 5. Практические стратегии совместного использования кода
 
@@ -272,8 +272,6 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 - Если подключение установлено 3G, приложения могут вести себя иначе (например, Apple не поддерживает приложения больше 20 МБ для загрузки более 3G). Приложения могут использовать эти сведения, чтобы предупредить пользователя о чрезмерной загрузки время ожидания при получении больших файлов.
 - Даже если сеть доступна, рекомендуется проверить соединение с целевым сервером перед запуском других запросов. Это многократно предотвращения сетевых операций приложения, по истечении времени ожидания и также позволит более информативное сообщение об ошибке для отображения пользователю.
 
-Существует [пример Xamarin.iOS](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) доступных (основанная на Apple [достижимость пример кода](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) помогут Определение доступности сети.
-
 ## <a name="webservices"></a>Веб-службы
 
 См. в статье на [работа с веб-службами](~/cross-platform/data-cloud/web-services/index.md), где приведены все доступ к REST, конечные точки SOAP и WCF, с помощью Xamarin.iOS. Его можно самостоятельное запросов веб-службы и обработки ответов, тем не менее есть библиотеки сделать это гораздо проще, включая Azure, RestSharp и ServiceStack. Даже основные операции WCF может осуществляться в приложениях Xamarin.
@@ -300,8 +298,6 @@ RestSharp примеры Xamarin.iOS и Xamarin.Android [github](https://github.
 В отличие от RestSharp ServiceStack — это обоих серверного решения для размещения веб-службы, а также клиентской библиотеки, который может быть реализован в мобильных приложениях для доступа к этим службам.
 
 [ServiceStack веб-сайт](http://servicestack.net/) объясняющее назначение этого проекта и ссылки на документ и примеры кода. Примеры включают полная реализация на стороне сервера веб-службы, а также различные клиентские приложения, доступ к нему.
-
-Существует [пример Xamarin.iOS](http://www.servicestack.net/monotouch/remote-info/) на веб-сайт ServiceStack и фрагмент кода в нашей [документации веб-служб](~/cross-platform/data-cloud/web-services/index.md).
 
 ### <a name="wcf"></a>WCF
 
@@ -352,7 +348,7 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 - **iOS** — `owner.BeginInvokeOnMainThread(new NSAction(action))`
 - **Android** — `owner.RunOnUiThread(action)`
 - **Xamarin.Forms** — `Device.BeginInvokeOnMainThread(action)`
-- **Windows** — `Deployment.Current.Dispatcher.BeginInvoke(action)`
+- **Windows** — `Deployment.Current.Dispatcher.BeginInvoke(action)`
 
 IOS и Android синтаксис требует класса «context» доступен в том, что означает, что код должен передать этот объект в методы, которые требуется обратный вызов в потоке пользовательского интерфейса.
 

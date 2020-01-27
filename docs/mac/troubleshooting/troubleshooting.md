@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8714297c4948dbb65c521d6a32bac3e437b40733
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001612"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725444"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Советы по устранению неполадок Xamarin. Mac
 
@@ -68,7 +68,7 @@ ms.locfileid: "73001612"
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>Не удалось подключиться к отладчику в изолированных приложениях
 
-Отладчик подключается к приложениям Xamarin. Mac по протоколу TCP. Это означает, что по умолчанию при включении "песочницы" не удается подключиться к приложению, поэтому при попытке запустить приложение без соответствующих разрешений вы получите сообщение об ошибке *"не удается подключиться к отладчику".* .
+Отладчик подключается к приложениям Xamarin. Mac по протоколу TCP. Это означает, что по умолчанию при включении "песочницы" не удается подключиться к приложению, поэтому при попытке запустить приложение без соответствующих разрешений вы получите сообщение об ошибке *"не удается подключиться к отладчику"* .
 
 [![Изменение прав](troubleshooting-images/debug01.png "Изменение прав")](troubleshooting-images/debug01-large.png#lightbox)
 
@@ -112,13 +112,13 @@ ms.locfileid: "73001612"
 
 ## <a name="community-support-on-the-forums"></a>Поддержка сообщества на форумах
 
-Сообщество разработчиков, использующих продукты Xamarin, очень просто и многие посещает наши [форумы Xamarin. Mac](https://forums.xamarin.com/categories/mac) , чтобы поделиться опытом и опытом. Кроме того, специалисты по Xamarin периодически посещает форум, чтобы помочь.
+Сообщество разработчиков, использующих продукты Xamarin, очень просто и многие посещает наши [форумы Xamarin. Mac](https://forums.xamarin.com/categories/xamarin-mac) , чтобы поделиться опытом и опытом. Кроме того, специалисты по Xamarin периодически посещает форум, чтобы помочь.
 
 <a name="filing-a-bug"/>
 
 ## <a name="filing-a-bug"></a>Хранение ошибки
 
-Ваши отзывы важны для нас. При обнаружении проблем с Xamarin. Mac:
+Нам важны ваши отклики и пожелания. При обнаружении проблем с Xamarin. Mac:
 
 - Проверьте [репозиторий проблем](https://github.com/xamarin/xamarin-macios/issues).
 - До перехода на GitHub проблемы Xamarin отслеживались в [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Попробуйте найти там похожие проблемы.

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 4f73ea249d29075b0e9e115e86afc971632b7b61
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 841b1d4abab5e4c09249174b221da20794771a86
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487507"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725572"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Перевод текста с помощью Translator API
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _API Microsoft Translator можно использовать для перевода речи и текста с помощью REST API. В этой статье объясняется, как использовать API перевода текстов Майкрософт для перевода текста с одного языка на другой в приложении Xamarin. Forms._
 
@@ -67,7 +67,7 @@ async Task<string> FetchTokenAsync(string fetchUri)
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 ```
 
-Дополнительные сведения о службе маркеров cognitive services, см. в разделе [API маркеров проверки подлинности](https://docs.microsofttranslator.com/oauth-token.html).
+Дополнительные сведения о службе маркеров для переприятных служб см. в разделе [Проверка подлинности](/azure/cognitive-services/translator/reference/v3-0-reference#authentication).
 
 ## <a name="performing-text-translation"></a>Выполняет перевод текста
 
@@ -87,7 +87,7 @@ public async Task<string> TranslateTextAsync(string text)
 
 `TranslateTextAsync` Метод создает URI запроса и получает маркер доступа от службы маркеров. Затем отправляется запрос перевода текста `translate` API, который возвращает XML-ответ, содержащий результат. Ответ в формате XML анализируется, и результат перевода возвращается в вызывающий метод для отображения.
 
-Дополнительные сведения об API-интерфейсы REST для преобразования текста, см. в разделе [Microsoft Translator Text API](https://docs.microsofttranslator.com/text-translate.html).
+Дополнительные сведения о интерфейсах API для преобразования текста см. в разделе [API перевода текстов](/azure/cognitive-services/translator/reference/v3-0-reference).
 
 ### <a name="configuring-text-translation"></a>Настройка преобразования текста
 
@@ -128,7 +128,7 @@ async Task<string> SendRequestAsync(string url, string bearerToken)
 
 Этот метод создает запрос GET, добавляя токен доступа для `Authorization` заголовка с префиксом строкой `Bearer`. Затем отправляется запрос GET `translate` API, с помощью URL-АДРЕСЕ запроса указание текст для перевода, а также язык перевода текста. Ответ считывается и возвращается вызывающему методу.
 
-`translate` API отправит код состояния HTTP 200 (ОК) в ответе, при условии, что запрос является допустимым, который указывает, что запрос успешно выполнен, и что запрашиваемые данные находятся в ответе. Список возможные сообщения об ошибках, см. в разделе сообщений-ответов в [получить перевод](https://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate).
+`translate` API отправит код состояния HTTP 200 (ОК) в ответе, при условии, что запрос является допустимым, который указывает, что запрос успешно выполнен, и что запрашиваемые данные находятся в ответе. Список возможные сообщения об ошибках, см. в разделе сообщений-ответов в [получить перевод](/azure/cognitive-services/translator/reference/v3-0-translate).
 
 ### <a name="processing-the-response"></a>Обработка ответа
 
@@ -148,7 +148,7 @@ async Task<string> SendRequestAsync(string url, string bearerToken)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Translator Text API документации](/azure/cognitive-services/translator/).
+- [Документация по API перевода текстов](/azure/cognitive-services/translator/)
 - [Использование веб-службы RESTFUL](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Cognitive Services TODO (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
-- [Microsoft Translator Text API](https://docs.microsofttranslator.com/text-translate.html).
+- [API перевода текстов](/azure/cognitive-services/translator/reference/v3-0-reference)

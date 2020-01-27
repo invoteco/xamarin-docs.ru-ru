@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: fd9bced0d2185fd9bd0d18932921c101b2ed207c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489093"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725180"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Дополнительные изменения платформ iOS 9
 
@@ -61,7 +61,6 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 - [Введение в CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) . наши общие сведения об использовании CloudKit в приложении Xamarin. iOS.
 - [CloudKit быстрое начало](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) — введение Apple в CloudKit.
 - [Справочник по CLOUDKIT JS](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) — документация по Apple CloudKit JS.
-- [Справочник по веб-службам CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) — Справочник по Apple, описывающий интерфейс HTTP для CloudKit.
 - [Каталог CloudKit. Введение в CloudKit (Cocoa и JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) — пример приложения Apple с использованием CloudKit и CloudKit JS.
 
 > [!IMPORTANT]
@@ -117,7 +116,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 Компания Apple включила следующие изменения в платформу [HealthKit](xref:HealthKit) в iOS 9:
 
 - Поддержка полного удаления и отслеживания удаления записей в базе данных HealthKit. Дополнительные сведения см. в [справочнике по классам](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) [хкделетедобжект](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [хканчоредобжекткуери](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) и хкхеалссторе Apple.
-- Новые категории и характеристики отслеживания были добавлены в класс `HKQuantityTypeIdentifier` (например, `UVExposure`) и в класс `HKCategoryTypeIdentifier` (например, `OvulationTestResult`). Дополнительные сведения см. в [справочнике по константам Apple HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) .
+- Новые категории и характеристики отслеживания были добавлены в класс `HKQuantityTypeIdentifier` (например, `UVExposure`) и в класс `HKCategoryTypeIdentifier` (например, `OvulationTestResult`). 
 
 Дополнительные сведения о работе с HealthKit в Xamarin. iOS см. в статье [Введение в](~/ios/platform/healthkit.md) документацию по HealthKit.
 

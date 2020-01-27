@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: e79fca8c59ae49d27cd335106ca57945be106031
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 186164d9f2239bc577470cc4b1a999f4c516dedb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031091"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725399"
 ---
 # <a name="ios-frequently-asked-questions"></a>Часто задаваемые вопросы о iOS
 
@@ -77,7 +77,7 @@ ms.locfileid: "73031091"
 ### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[Ошибка компиляции: не удается закодировать смещение X в результирующем расположении с рассеиванием](error-encode-offset-scattered-relocation.md)
 Эта проблема возникает при сборке для 32-разрядных архитектур, например ARMv7, когда конечный двоичный файл слишком велик для собственного цепочки инструментов.
 
-## <a name="deprecated"></a>Нерекомендуемые
+## <a name="deprecated"></a>Устарело
 
 > [!IMPORTANT]
 > Приведенные ниже статьи относятся к проблемам, которые были решены в последних версиях Xamarin. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.
@@ -86,7 +86,7 @@ ms.locfileid: "73031091"
 В предыдущих версиях Xamarin существовали некоторые известные проблемы, которые могут привести к тому, что файл IPA в Windows будет иметь значение 0 байт.
 
 ### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Ошибка IBTool: не удалось завершить операцию.](error-ibtool.md)
-Компания Apple [устранила](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) эту `ibtool` ошибку в Xcode 6.1.1, поэтому обновление до Xcode 6.1.1 или более поздней версии является самым простым решением.
+Компания Apple устранила эту `ibtool` ошибку в Xcode 6.1.1, поэтому обновление до Xcode 6.1.1 или более поздней версии является самым простым решением.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Ошибка MT1009: не удалось скопировать сборку](error-mt1009.md)
 Это влияет на пользователей, использующих Xamarin. iOS 7.2.6. Эта проблема вызвана тем, что при установке Xamarin. iOS с другой учетной записью пользователя, которая является основной учетной записью разработчика, требуются более высокие права доступа к файлам.

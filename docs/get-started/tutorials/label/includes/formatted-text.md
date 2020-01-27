@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "60896722"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -32,7 +32,7 @@ ms.locfileid: "60896722"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Обратите внимание, что внешний вид [`Label`](xref:Xamarin.Forms.Label) изменился:
 
-    [![Снимок экрана: метка с форматированным текстом в iOS и Android](../images/label-formatted-text.png "Метка с форматированным текстом")](../images/label-formatted-text-large.png#lightbox "Метка с форматированным текстом")
+    [![Снимок экрана: метка, отображающая форматированный текст, в iOS и Android](../images/label-formatted-text.png "Метка с форматированным текстом")](../images/label-formatted-text-large.png#lightbox "Метка с форматированным текстом")
 
     Дополнительные сведения о внешнем виде параметра [`Span`](xref:Xamarin.Forms.Span) см. в разделе [Форматированный текст](~/xamarin-forms/user-interface/text/label.md#formatted-text) в руководстве по [меткам в Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
@@ -62,6 +62,6 @@ ms.locfileid: "60896722"
 
 1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Обратите внимание, что внешний вид [`Label`](xref:Xamarin.Forms.Label) изменился:
 
-    [![Снимок экрана: метка с форматированным текстом в iOS и Android](../images/label-formatted-text.png "Метка с форматированным текстом")](../images/label-formatted-text-large.png#lightbox "Метка с форматированным текстом")
+    [![Снимок экрана: метка, отображающая форматированный текст, в iOS и Android](../images/label-formatted-text.png "Метка с форматированным текстом")](../images/label-formatted-text-large.png#lightbox "Метка с форматированным текстом")
 
     Дополнительные сведения о внешнем виде параметра [`Span`](xref:Xamarin.Forms.Span) см. в разделе [Форматированный текст](~/xamarin-forms/user-interface/text/label.md#formatted-text) в руководстве по [меткам в Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).

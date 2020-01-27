@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032730"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725318"
 ---
 # <a name="watchos-troubleshooting"></a>Устранение неполадок watchOS
 
@@ -23,22 +23,22 @@ ms.locfileid: "73032730"
 
 - [Удаление альфа-канала из изображений значков](#noalpha)
 
-- [Добавление файлов контроллера интерфейса](#add) для Interface Builder Xcode вручную.
+- [Ручное добавление файлов контроллера интерфейса](#add) для Xcode Interface Builder.
 
-- [Запуск ватчапп из командной строки](#command_line).
+- [Запуск WatchApp из командной строки](#command_line)
 
 <a name="knownissues" />
 
 ## <a name="known-issues"></a>Известные проблемы
 
-### <a name="general"></a>Общее
+### <a name="general"></a>Общие
 
 <a name="deploy" />
 
 - Более ранние выпуски Visual Studio для Mac неправильно отображают один из значков **апплекомпанионсеттингс** как 88x88 пикселов; Это приводит к **ошибке отсутствующего значка** при попытке отправить в App Store.
-    Этот значок должен быть 87x87 пикселями (29 единиц для **@3x** Retina экранов). Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** (в соответствии с [этим образцом](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Этот значок должен быть 87x87 пикселями (29 единиц для **@3x** Retina экранов). Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** .
 
-- Если **идентификатор пакета WKApp "info. > plist** " проекта расширения контрольных значений [неправильно установлен](~/ios/watchos/get-started/project-references.md) в соответствии с **идентификатором пакета**приложения Watch, отладчику не удастся подключиться, и Visual Studio для Mac будет ожидать сообщение *"ожидание завершения работы отладчика Connect "* .
+- Если **идентификатор пакета WKApp "info. > plist** " проекта расширения контрольных значений [неправильно установлен](~/ios/watchos/get-started/project-references.md) в соответствии с **идентификатором пакета**приложения Watch, отладчику не удастся подключиться, и Visual Studio для Mac будет ожидать сообщение *"Ожидание подключения отладчика"* .
 
 - Отладка поддерживается в режиме **уведомлений** , но может быть ненадежной. Повторная попытка иногда будет работать. Убедитесь, что параметр Watch App **plist** `WKCompanionAppBundleIdentifier` установлен в соответствие идентификатору пакета для родительского приложения iOS/контейнера (IE). это приложение, которое выполняется на устройстве iPhone.
 
@@ -76,7 +76,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
 
-3. Снимите флажок **альфа-канала** и **Сохраните** файл в нужном месте.
+3. *Untick* **альфа-канал** флажок и **Сохранить** файл в нужном месте.
 
 4. Теперь изображение значка должно передавать проверки Apple.
 
@@ -87,7 +87,7 @@ with an alpha channel. Icons should not have an alpha channel.
 > [!IMPORTANT]
 > Поддержка WatchKit в Xamarin включает проектирование раскадровок просмотра в конструкторе iOS (как в Visual Studio для Mac, так и в Visual Studio), что не требует действий, описанных ниже. Просто присвойте контроллеру интерфейса имя класса на панели свойств Visual Studio для Mac, и файлы C# кода будут созданы автоматически.
 
-*Если* вы используете Xcode Interface Builder, выполните следующие действия, чтобы создать новые контроллеры интерфейсов для приложения для просмотра контрольных данных и включить синхронизацию с Xcode, чтобы обеспечить доступность C#розеток и действий в.
+*Если* использовании построителя интерфейс Xcode, выполните следующие действия для создания новых контроллеров интерфейс для наблюдения за приложения и включите синхронизацию с Xcode, выходов и действия, доступные в C#:
 
 1. Откройте интерфейс Watch приложения **. раскадровка** в **Xcode Interface Builder**.
 
@@ -166,7 +166,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Выберите новый контроллер интерфейса и присвойте ему значение className, указанное выше, например. `MyInterfaceController`
+8. Выберите новый контроллер интерфейса и присвойте ему значение className, указанное выше, например. `MyInterfaceController`.
     Если все работало правильно, оно должно появиться автоматически в раскрывающемся списке **класс:** , и его можно выбрать из этого списка.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -233,7 +233,7 @@ with an alpha channel. Icons should not have an alpha channel.
 > [!NOTE]
 > Путь, который необходимо предоставить, предназначен для *файла приложения iPhone. app*, т. е. который будет развернут в симуляторе iOS и содержит как расширение, так и контрольное приложение.
 
-Пример
+Пример:
 
 ```bash
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
@@ -257,9 +257,9 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ### <a name="--sdkroot"></a>--sdkroot добавлен
 
-Обязательный. Указывает путь к Xcode (6,2 или более поздней версии).
+Обязательное Указывает путь к Xcode (6,2 или более поздней версии).
 
-Пример
+Пример:
 
 ```bash
  --sdkroot /Applications/Xcode.app/Contents/Developer/
@@ -277,15 +277,15 @@ with an alpha channel. Icons should not have an alpha channel.
 
 **UDID**
 
-Пример
+Пример:
 
 ```bash
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
 ```
 
-**Среда выполнения и тип устройства**
+**Время выполнения и тип устройства**
 
-Пример
+Пример:
 
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
@@ -293,5 +293,5 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Ватчкиткаталог (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Ватчтаблес (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

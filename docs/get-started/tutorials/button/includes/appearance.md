@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372971"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -26,7 +26,7 @@ ms.locfileid: "61372971"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Обратите внимание, что внешний вид [`Button`](xref:Xamarin.Forms.Button) изменился:
 
-    [![Снимок экрана: кнопка с измененным внешним видом в iOS и Android](../images/change-button-appearance.png "Кнопка с измененным внешним видом")](../images/change-button-appearance-large.png#lightbox "Кнопка с измененным внешним видом")
+    [![Снимок экрана: кнопка с измененным внешним видом в iOS и Android](../images/change-button-appearance.png "Кнопка с измененным видом")](../images/change-button-appearance-large.png#lightbox "Кнопка с измененным видом")
 
     Дополнительные сведения о настройке внешнего вида [`Button`](xref:Xamarin.Forms.Button) см. в разделе [Внешний вид кнопки](~/xamarin-forms/user-interface/button.md#button-appearance) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
@@ -50,6 +50,6 @@ ms.locfileid: "61372971"
 
 1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Обратите внимание, что внешний вид [`Button`](xref:Xamarin.Forms.Button) изменился:
 
-    [![Снимок экрана: кнопка с измененным внешним видом в iOS и Android](../images/change-button-appearance.png "Кнопка с измененным внешним видом")](../images/change-button-appearance-large.png#lightbox "Кнопка с измененным внешним видом")
+    [![Снимок экрана: кнопка с измененным внешним видом в iOS и Android](../images/change-button-appearance.png "Кнопка с измененным видом")](../images/change-button-appearance-large.png#lightbox "Кнопка с измененным видом")
 
     Дополнительные сведения о настройке внешнего вида [`Button`](xref:Xamarin.Forms.Button) см. в разделе [Внешний вид кнопки](~/xamarin-forms/user-interface/button.md#button-appearance) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).

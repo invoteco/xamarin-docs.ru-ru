@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277412"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -15,7 +15,7 @@ ms.locfileid: "67277412"
     > [!IMPORTANT]
     > Фрагменты кода на C# и XAML из этого руководства предполагают, что решение называется **EntryTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms: глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
 1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **EntryTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
@@ -34,7 +34,7 @@ ms.locfileid: "67277412"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана: запись в iOS и Android](../images/create-entry.png "Запись, содержащая замещающий текст")](../images/create-entry-large.png#lightbox "Запись, содержащая замещающий текст")
+    [![Снимок экрана: запись в iOS и Android](../images/create-entry.png "Запись, содержащая текст заполнителя")](../images/create-entry-large.png#lightbox "Запись, содержащая текст заполнителя")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67277412"
     > [!IMPORTANT]
     > Фрагменты кода на C# и XAML из этого руководства предполагают, что решение называется **EntryTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms: глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
 1. На **панели решения** дважды щелкните файл **MainPage.xaml** в проекте **EntryTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
@@ -62,6 +62,6 @@ ms.locfileid: "67277412"
 
     Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) определяет текст заполнителя, который отображается при первом появлении `Entry`.
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана: запись в iOS и Android](../images/create-entry.png "Запись, содержащая замещающий текст")](../images/create-entry-large.png#lightbox "Запись, содержащая замещающий текст")
+    [![Снимок экрана: запись в iOS и Android](../images/create-entry.png "Запись, содержащая текст заполнителя")](../images/create-entry-large.png#lightbox "Запись, содержащая текст заполнителя")

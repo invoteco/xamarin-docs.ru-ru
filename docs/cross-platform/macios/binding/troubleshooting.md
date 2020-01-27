@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: fe4b9ade9e6e462c3472a8bb3bb8750ed6cac326
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8194c369aa0e4f8bb17a1a162354b4f72c6aaa41
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015889"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725336"
 ---
 # <a name="binding-troubleshooting"></a>Устранение неполадок привязки
 
@@ -42,17 +42,17 @@ ms.locfileid: "73015889"
 
 ## <a name="reporting-bugs"></a>Сообщения об ошибках
 
-Ваши отзывы важны для нас. При обнаружении проблем с Xamarin. Mac:
+Нам важны ваши отклики и пожелания. При обнаружении проблем с Xamarin. Mac:
 
-- Проверьте [форумы Xamarin.Mac](https://forums.xamarin.com/categories/mac).
-- Проверьте [репозиторий проблем](https://github.com/xamarin/xamarin-macios/issues). 
+- Проверьте [форумы Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac).
+- Проверьте [репозиторий проблем](https://github.com/xamarin/xamarin-macios/issues).
 - До перехода на GitHub проблемы Xamarin отслеживались в [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Попробуйте найти там похожие проблемы.
 - Если вы не можете найти проблему, с которой столкнулись, поместите ее описание в [репозиторий проблем GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Все проблемы GitHub находятся в открытом доступе. Здесь нет возможности скрыть комментарии или вложения. 
+Все проблемы GitHub находятся в открытом доступе. Здесь нет возможности скрыть комментарии или вложения.
 
 Предоставьте следующие сведения с максимально возможными подробностями.
 
-- Простой пример, воспроизводящий проблему, если это возможно. Такая помощь будет **бесценной**. 
+- Простой пример, воспроизводящий проблему, если это возможно. Такая помощь будет **бесценной**.
 - Полная трассировка стека после сбоя.
 - Код C#, относящийся к проявлению сбоя.

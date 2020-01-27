@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277421"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -17,7 +17,7 @@ ms.locfileid: "67277421"
 
     Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
-1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **EditorTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
+1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **EditorTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -33,9 +33,9 @@ ms.locfileid: "67277421"
 
     Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) определяет текст заполнителя который отображается, при первом появлении `Editor`. Кроме того, свойство [`HeightRequest`](xref:Xamarin.Forms.VisualElement) указывает высоту `Editor` в аппаратно-независимых единицах.
 
-1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана редактора в iOS и Android](../images/create-editor.png "Редактор содержащий замещающий текст")](../images/create-editor-large.png#lightbox "Редактор содержащий замещающий текст")
+    [![Снимок экрана: редактор в iOS и Android](../images/create-editor.png "Редактор, содержащий текст заполнителя")](../images/create-editor-large.png#lightbox "Редактор, содержащий текст заполнителя")
 
     > [!NOTE]
     > В то время, как в Android существует функция, которая указывает высоту [`Editor`](xref:Xamarin.Forms.Editor), в iOS такая функция отсутствует.
@@ -51,7 +51,7 @@ ms.locfileid: "67277421"
 
     Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
-1. На **Панели решения** дважды щелкните файл **MainPage.xaml** в проекте **EditorTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
+1. На **Панели решения** дважды щелкните файл **MainPage.xaml** в проекте **EditorTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -69,7 +69,7 @@ ms.locfileid: "67277421"
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана редактора в iOS и Android](../images/create-editor.png "Редактор содержащий замещающий текст")](../images/create-editor-large.png#lightbox "Редактор содержащий замещающий текст")
+    [![Снимок экрана: редактор в iOS и Android](../images/create-editor.png "Редактор, содержащий текст заполнителя")](../images/create-editor-large.png#lightbox "Редактор, содержащий текст заполнителя")
 
     > [!NOTE]
     > В то время, как в Android существует функция, которая указывает высоту [`Editor`](xref:Xamarin.Forms.Editor), в iOS такая функция отсутствует.

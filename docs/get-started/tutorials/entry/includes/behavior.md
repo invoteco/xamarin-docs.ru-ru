@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 48af50d31013f696879174a5cf108ab9fde92d0b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61343460"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -25,7 +25,7 @@ ms.locfileid: "61343460"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Введите текст в [`Entry`](xref:Xamarin.Forms.Entry) и обратите внимание, что каждый символ заменяется символом маски пароля и можно ввести не более 15 символов:
 
-    [![Снимок экрана: запись с текстом, замаскированным символами пароля, в iOS и Android](../images/customize-behavior.png "Запись с замаскированными символами пароля")](../images/customize-behavior-large.png#lightbox "Запись с замаскированными символами пароля")
+    [![Снимок экрана: запись с текстом, маскированным символами пароля, в iOS и Android](../images/customize-behavior.png "Запись с маскированными символами пароля")](../images/customize-behavior-large.png#lightbox "Запись с маскированными символами пароля")
 
     Дополнительные сведения о настройке поведения [`Entry`](xref:Xamarin.Forms.Entry) см. в руководстве [Запись Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
 
@@ -48,6 +48,6 @@ ms.locfileid: "61343460"
 
 1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Введите текст в [`Entry`](xref:Xamarin.Forms.Entry) и обратите внимание, что каждый символ заменяется символом маски пароля и можно ввести не более 15 символов:
 
-    [![Снимок экрана: запись с текстом, замаскированным символами пароля, в iOS и Android](../images/customize-behavior.png "Запись с замаскированными символами пароля")](../images/customize-behavior-large.png#lightbox "Запись с замаскированными символами пароля")
+    [![Снимок экрана: запись с текстом, маскированным символами пароля, в iOS и Android](../images/customize-behavior.png "Запись с маскированными символами пароля")](../images/customize-behavior-large.png#lightbox "Запись с маскированными символами пароля")
 
     Дополнительные сведения о настройке поведения [`Entry`](xref:Xamarin.Forms.Entry) см. в руководстве [Запись Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).

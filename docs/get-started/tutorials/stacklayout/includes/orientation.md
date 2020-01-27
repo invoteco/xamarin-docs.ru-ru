@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560019"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -23,7 +23,7 @@ ms.locfileid: "67560019"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана горизонтальных дочерних представлений StackLayout в iOS и Android](../images/orientation.png "StackLayout с горизонтальным расположением экземпляров меток")](../images/orientation-large.png#lightbox "StackLayout с горизонтальным расположением экземпляров меток")
+    [![Снимок экрана: дочерние представления с горизонтальной ориентацией в StackLayout в iOS и Android](../images/orientation.png "StackLayout, содержащий горизонтально ориентированные экземпляры меток")](../images/orientation-large.png#lightbox "StackLayout, содержащий горизонтально ориентированные экземпляры меток")
 
     Обратите внимание, что экземпляры [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout) теперь выровнены по горизонтали, а не по вертикали.
 
@@ -42,9 +42,9 @@ ms.locfileid: "67560019"
 
     В этом коде свойству [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) присваивается значение [`Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана горизонтальных дочерних представлений StackLayout в iOS и Android](../images/orientation.png "StackLayout с горизонтальным расположением экземпляров меток")](../images/orientation-large.png#lightbox "StackLayout с горизонтальным расположением экземпляров меток")
+    [![Снимок экрана: дочерние представления с горизонтальной ориентацией в StackLayout в iOS и Android](../images/orientation.png "StackLayout, содержащий горизонтально ориентированные экземпляры меток")](../images/orientation-large.png#lightbox "StackLayout, содержащий горизонтально ориентированные экземпляры меток")
 
     Обратите внимание, что экземпляры [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout) теперь выровнены по горизонтали, а не по вертикали.
 

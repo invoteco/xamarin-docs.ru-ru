@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d8b48892a5a1106b03778ac30eca4b18f049f4d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032764"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725327"
 ---
 # <a name="hello-watchos--walkthrough"></a>Привет, watchOS — пошаговое руководство
 
@@ -87,7 +87,7 @@ ms.locfileid: "73032764"
 
 ![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-После сохранения раскадровки **InterfaceController.Designer.CS** обновляется с именами и действиями элементов управления. Если открыть этот файл после его обновления, можно увидеть, как `RegisterAttribute` соответствует контроллеру и каким элементам управления пользовательского интерфейса соответствуют переменные C# экземпляра, помеченные`OutletAttribute`, и как действия сопоставляются с разделяемыми методами, помеченными с помощью`ActionAttribute`:
+После сохранения раскадровки **InterfaceController.Designer.CS** обновляется с именами и действиями элементов управления. Если открыть этот файл после его обновления, можно увидеть, как `RegisterAttribute` соответствует контроллеру и каким образом элементы управления ИП соответствуют переменным C# экземпляра, помеченным `OutletAttribute`, и как действия сопоставляются с разделяемыми методами, помеченными `ActionAttribute`:
 
 ```csharp
 // WARNING
@@ -155,6 +155,5 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Начало работы (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [Настройка и установка](~/ios/watchos/get-started/installation.md)
-- [Первое видео о приложении](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [Первое приложение просмотра видео](https://blog.xamarin.com/your-first-watch-kit-app/)

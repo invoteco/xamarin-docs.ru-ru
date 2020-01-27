@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: 11f1d38eb10421d4ecef3e2039688b2d9a6d9e6e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: aab121ed5f811baf38eed48cf891ccdf076eaf44
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027832"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723816"
 ---
 # <a name="android-beam"></a>Android Beam
 
 Устройства с Android — это технология NFC, появившаяся в Android 4,0, которая позволяет приложениям обмениваться информацией через NFC при близком близком расположении.
 
-[Диаграмма![, иллюстрирующая два устройства в окне сведений о близком доступе](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[Диаграмма ![, иллюстрирующая два устройства в окне сведений о близком доступе](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Технология Android поддерживает передачу сообщений через NFC, если два устройства находятся в радиусе действия. Устройства, связанные с 4cm, могут обмениваться данными с помощью устройств с Android. Действие на одном устройстве создает сообщение и указывает действие (или действия), которое может выполнять его принудительную отправку. Если указанное действие находится на переднем плане, а устройства находятся в диапазоне, устройство Android отправляет сообщение на второе. На принимающем устройстве вызывается намерение, содержащее данные сообщения.
 
@@ -79,5 +79,3 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Демонстрация для Android (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

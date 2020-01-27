@@ -85,11 +85,11 @@ this.ActionBar.AddTab (tab);
 
 Например, ниже приведен снимок экрана панели действий с пунктом меню для совместного использования изображения (взято из примера [шареактионпровидер](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) ). Когда пользователь отменяет пункт меню на панели действий, Шареактионпровидер загружает приложение для решения намерений, связанных с `ShareActionProvider`. В этом примере приложение для обмена сообщениями использовалось ранее, поэтому оно отображается на панели действий.
 
-[Снимок экрана значка приложения обмена сообщениями на панели действий ![](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
+[![Снимок экрана значка приложения обмена сообщениями на панели действий ](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 Когда пользователь щелкает элемент на панели действий, запускается приложение для обмена сообщениями, содержащее общий образ, как показано ниже:
 
-[Снимок экрана приложения для обмена сообщениями с изображением обезьяны ![](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[![Снимок экрана приложения для обмена сообщениями с изображением обезьяны ](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
 ### <a name="specifying-the-action-provider-class"></a>Указание класса поставщика действий
 

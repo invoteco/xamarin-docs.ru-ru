@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2018
-ms.openlocfilehash: 252a104118b0419f33abdf7f522ad8fc358e3f76
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 395f7c477f1f2bdb608aec918f877f6d320d75cc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028703"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724794"
 ---
 # <a name="user-profile"></a>Профиль пользователя
 
@@ -23,7 +23,7 @@ var uri = ContactsContract.Contacts.ContentUri;
 
 // Setup the "projection" (columns we want) for only the ID and display name:
 string[] projection = {
-    ContactsContract.Contacts.InterfaceConsts.Id, 
+    ContactsContract.Contacts.InterfaceConsts.Id,
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
 
 // Use a CursorLoader to retrieve the user's contacts data:
@@ -100,12 +100,10 @@ StartActivity (intent);
 
 При выполнении приведенного выше кода профиль пользователя отображается, как показано на следующем снимке экрана:
 
-[Снимок экрана![профиля, отображающего профиль пользователя Джон Петров](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[Снимок экрана ![профиля, отображающего профиль пользователя Джон Петров](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
 Работа с профилем пользователя аналогична взаимодействию с другими данными в Android и обеспечивает дополнительный уровень персонализации устройств.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Контактспровидердемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/contactsproviderdemo)
-- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

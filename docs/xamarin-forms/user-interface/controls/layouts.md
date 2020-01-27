@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: e247be8387ce984d6695431ec432119d01344b42
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 4747ce6555a6440c687dc3d239d75307f68683ca
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955770"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724486"
 ---
 # <a name="xamarinforms-layouts"></a>Макеты Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Макеты Xamarin.Forms используются для создания элементов управления пользовательского интерфейса в visual структуры._
 
@@ -36,7 +36,7 @@ _Макеты Xamarin.Forms используются для создания э�
 
 |     |     |
 | --- | --- |
-| [`ContentView`](xref:Xamarin.Forms.ContentView) содержит один дочерний элемент, в котором заданы [`Content`](xref:Xamarin.Forms.ContentView.Content) свойство. `Content` Свойство может устанавливаться к любому `View` производных продуктов, включая другие `Layout` производные от него. `ContentView` обычно используется как элемент структурного и служит в качестве базового класса для [`Frame`](#frame).<br /><br />[Документация по API](xref:Xamarin.Forms.ContentView) / [руководство](~/xamarin-forms/user-interface/layouts/contentview.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/) | [![Пример ContentView](layouts-images/ContentView.png "Пример ContentView")](layouts-images/ContentView-Large.png#lightbox "Пример ContentView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+| [`ContentView`](xref:Xamarin.Forms.ContentView) содержит один дочерний элемент, в котором заданы [`Content`](xref:Xamarin.Forms.ContentView.Content) свойство. `Content` Свойство может устанавливаться к любому `View` производных продуктов, включая другие `Layout` производные от него. `ContentView` обычно используется как элемент структурного и служит в качестве базового класса для [`Frame`](#frame).<br /><br />[Документация по API](xref:Xamarin.Forms.ContentView) / [руководство](~/xamarin-forms/user-interface/layouts/contentview.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/) | [![Пример ContentView](layouts-images/ContentView.png "Пример ContentView")](layouts-images/ContentView-Large.png#lightbox "Пример ContentView")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
 <a named="frame" />
@@ -97,7 +97,7 @@ _Макеты Xamarin.Forms используются для создания э�
 
 |     |     |
 | --- | --- |
-| [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) размещает дочерние элементы в определенные расположения относительно его родительского элемента. Положение дочернего элемента указывается с помощью [присоединенных свойств](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) и [ `LayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty). `AbsoluteLayout` Удобно для анимации положения представления.<br /><br />[Документация по API](xref:Xamarin.Forms.AbsoluteLayout) / [руководство](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![Пример Абсолутелайаут](layouts-images/AbsoluteLayout.png "Пример Абсолутелайаут")](layouts-images/AbsoluteLayout-Large.png#lightbox "Пример Абсолутелайаут")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutdDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml.cs) |
+| [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) размещает дочерние элементы в определенные расположения относительно его родительского элемента. Положение дочернего элемента указывается с помощью [присоединенных свойств](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) и [ `LayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty). `AbsoluteLayout` Удобно для анимации положения представления.<br /><br />[Документация по API](xref:Xamarin.Forms.AbsoluteLayout) / [руководство](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![Пример Абсолутелайаут](layouts-images/AbsoluteLayout.png "Пример Абсолутелайаут")](layouts-images/AbsoluteLayout-Large.png#lightbox "Пример Абсолутелайаут")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="relativelayout"></a>RelativeLayout

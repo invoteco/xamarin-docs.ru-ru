@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 854212951844d2443c5d1b332d94b533673640c4
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277420"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -15,7 +15,7 @@ ms.locfileid: "67277420"
     > [!IMPORTANT]
     > Фрагменты кода на C# и XAML из этого руководства предполагают, что решение называется **ButtonTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms: глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
 1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **ButtonTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
@@ -34,7 +34,7 @@ ms.locfileid: "67277420"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана: кнопка на iOS и Android](../images/create-button.png "Кнопка, содержащая текст")](../images/create-button-large.png#lightbox "Кнопка, содержащая текст")
+    [![Снимок экрана: кнопка в iOS и Android](../images/create-button.png "Кнопка с текстом")](../images/create-button-large.png#lightbox "Кнопка с текстом")
 
     Обратите внимание, что по умолчанию [`Button`](xref:Xamarin.Forms.Button) обычно занимает все выделенное для него пространство — в этом случае полную ширину своего родительского элемента ([`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
@@ -47,7 +47,7 @@ ms.locfileid: "67277420"
     > [!IMPORTANT]
     > Фрагменты кода на C# и XAML из этого руководства предполагают, что решение называется **ButtonTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms: глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
 1. На **панели решений** дважды щелкните файл **MainPage.xaml** в проекте **ButtonTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
@@ -64,8 +64,8 @@ ms.locfileid: "67277420"
 
     Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Button`](xref:Xamarin.Forms.Button) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Button.Text`](xref:Xamarin.Forms.Button.Text) указывает текст, отображаемый в `Button`.
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана: кнопка на iOS и Android](../images/create-button.png "Кнопка, содержащая текст")](../images/create-button-large.png#lightbox "Кнопка, содержащая текст")
+    [![Снимок экрана: кнопка в iOS и Android](../images/create-button.png "Кнопка с текстом")](../images/create-button-large.png#lightbox "Кнопка с текстом")
 
     Обратите внимание, что по умолчанию [`Button`](xref:Xamarin.Forms.Button) обычно занимает все выделенное для него пространство — в этом случае полную ширину своего родительского элемента ([`StackLayout`](xref:Xamarin.Forms.StackLayout)).

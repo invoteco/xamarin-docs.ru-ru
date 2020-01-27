@@ -6,12 +6,12 @@ ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: d081795ecfcc5d0aa2559b866fcc57076fe8248b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f0e2128bca5d2965395647353cd5a95a4030439f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007026"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725282"
 ---
 # <a name="getting-started-with-macos"></a>Начало работы с macOS
 
@@ -40,7 +40,7 @@ public class MyNSView : NSTextView
 }
 ```
 
-Выполните построение проекта. Полученная сборка будет сохранена как **~/прожектс/Хелло-Фром-кшарп/Хелло-Фром-кшарп/бин/дебуг/Хелло-Фром-кшарп.длл**.
+Постройте проект. Полученная сборка будет сохранена как **~/прожектс/Хелло-Фром-кшарп/Хелло-Фром-кшарп/бин/дебуг/Хелло-Фром-кшарп.длл**.
 
 ### <a name="bind-the-managed-assembly"></a>Привязка управляемой сборки
 
@@ -82,7 +82,7 @@ objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csha
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     MyNSView *view = [[MyNSView alloc] init];
     view.frame = CGRectMake(0, 200, 200, 200);
     [self.view addSubview: view];
@@ -94,5 +94,3 @@ objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csha
 Наконец, запустите проект Xcode, и примерно так же будет видно следующее:
 
 ![Приветствие C# из примера, выполняемого в симуляторе](macos-images/hello-from-csharp-mac.png)
-
-Более полный и более подходящий пример [доступен здесь](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

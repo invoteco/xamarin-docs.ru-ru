@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/01/2017
-ms.openlocfilehash: f28b9f19e901d75c432dfecbfec8a63588df3d70
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 99d0303dc1560796cb372d0b8af2fafd16c6097f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029231"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725144"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Панель навигации Xamarin. Android
 
@@ -22,9 +22,9 @@ ms.locfileid: "73029231"
 
 Доступно несколько новых флагов, контролирующих видимость панели навигации и ее элементов управления, а также видимость системной панели, представленной в Android 3. Флаги определяются в классе `Android.View.View` и перечислены ниже.
 
-- `SystemUiFlagVisible` &ndash; делает панель навигации видимой. 
-- `SystemUiFlagLowProfile` &ndash; затемнение элементов управления на панели навигации. 
-- `SystemUiFlagHideNavigation` &ndash; скрывает панель навигации. 
+- `SystemUiFlagVisible` &ndash; делает панель навигации видимой.
+- `SystemUiFlagLowProfile` &ndash; затемнение элементов управления на панели навигации.
+- `SystemUiFlagHideNavigation` &ndash; скрывает панель навигации.
 
 Эти флаги можно применить к любому представлению в иерархии представлений, задав свойство `SystemUiVisibility`. Если для нескольких представлений задано это свойство, система объединяет их с операцией или и применяет их до тех пор, пока в окне, в котором установлены флаги, остается фокус. При удалении представления все установленные флаги также будут удалены.
 
@@ -39,17 +39,17 @@ var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
 var lowProfileButton = FindViewById<Button>(Resource.Id.lowProfileButton);
 var hideNavButton = FindViewById<Button> (Resource.Id.hideNavigation);
 var visibleButton = FindViewById<Button> (Resource.Id.visibleButton);
-           
+
 lowProfileButton.Click += delegate {
     tv.SystemUiVisibility =
         (StatusBarVisibility)View.SystemUiFlagLowProfile;
 };
-           
+
 hideNavButton.Click += delegate {
     tv.SystemUiVisibility =
        (StatusBarVisibility)View.SystemUiFlagHideNavigation;        
 };
-           
+
 visibleButton.Click += delegate {
     tv.SystemUiVisibility = (StatusBarVisibility)View.SystemUiFlagVisible;
 }
@@ -67,5 +67,3 @@ tv.SystemUiVisibilityChange +=
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Системуивисибилитидемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
-- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

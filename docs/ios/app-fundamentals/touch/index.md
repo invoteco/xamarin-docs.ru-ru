@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: 7aac9a3e2a86f5cdcfa2d6ab27961dd83998bb0f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: edf5f1c82857930a2647f306195a4c82f4338db6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009364"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724633"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Обработка сенсорного ввода в приложениях Xamarin. iOS
 
@@ -39,6 +39,5 @@ iOS инкапсулирует данные касания в классе `UITo
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Сенсорное начало iOS (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 - [Последняя версия iOS Touch (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
 - [Финжерпаинт (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

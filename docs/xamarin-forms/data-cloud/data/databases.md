@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: 190aeb83456fa7c7ba8a9415b02ab56f3f8779da
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e86d69bb9dc751f70d03a556f65c11efd0b34d10
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728282"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725590"
 ---
 # <a name="xamarinforms-local-databases"></a>Локальные базы данных Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 Обработчик базы данных SQLite позволяет приложениям Xamarin. Forms загружать и сохранять объекты данных в общем коде. Пример приложения использует таблицу базы данных SQLite для хранения элементов Todo. В этой статье описывается, как использовать SQLite.Net в общем коде для хранения и извлечения информации в локальной базе данных.
 
@@ -92,7 +92,7 @@ public static class Constants
 
 ### <a name="lazy-initialization"></a>Отложенная инициализация
 
-`TodoItemDatabase` использует класс .NET `Lazy` для задержки инициализации базы данных до первого обращения к ней. Использование отложенной инициализации предотвращает задержку запуска приложения в процессе загрузки базы данных. Дополнительные сведения см. в разделе [Lazy&lt;t&gt; Class](https://docs.microsoft.com/dotnet/api/system.lazy-1).
+`TodoItemDatabase` использует класс .NET `Lazy` для задержки инициализации базы данных до первого обращения к ней. Использование отложенной инициализации предотвращает задержку запуска приложения в процессе загрузки базы данных. Дополнительные сведения см. в разделе [Lazy&lt;t&gt; Class](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -289,4 +289,4 @@ await Database.EnableWriteAheadLoggingAsync();
 - [Использование SQLite с Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Использование SQLite с iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
 - [Асинхронная модель на основе задач (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Класс Lazy<T>](https://docs.microsoft.com//api/system.lazy-1)
+- [Класс "Lazy&lt;T&gt;"](xref:System.Lazy`1)

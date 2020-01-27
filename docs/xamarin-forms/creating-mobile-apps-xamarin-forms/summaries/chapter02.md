@@ -1,18 +1,18 @@
 ---
 title: Сводка Глава 2. Анатомия приложения
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 2. Анатомия приложения
+description: 'Создание мобильных приложений с помощью Xamarin.Forms: Сводка Глава 2. Анатомия приложения'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 95defd11a9e568d1089cb2f262cb323045b6c247
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f900cb1532ba4415127c95b07e777881e1d74994
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334435"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724998"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Сводка Глава 2. Анатомия приложения
 
@@ -38,14 +38,12 @@ ms.locfileid: "61334435"
 > [!NOTE]
 > Переносимые библиотеки классов были заменены библиотеки .NET Standard. Все примеры кода из книги будет преобразована использовать стандартные библиотеки .NET.
 
-В этом примере демонстрируется решение Xamarin.Forms, созданные в Visual Studio без изменений. Решение состоит из шести проектов:
+В этом примере демонстрируется решение Xamarin.Forms, созданные в Visual Studio без изменений. Решение состоит из четырех проектов:
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), переносимой библиотеки классов (PCL), общим для других проектов
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), проект приложения для Android
 - [**Hello.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.iOS), проект приложения для iOS
 - [**Hello.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.UWP), проект приложения для универсальной платформы Windows (Windows 10 и Windows 10 Mobile)
-- [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), проект приложения для Windows 8.1
-- [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), проект приложения для Windows Phone 8.1
 
 > [!NOTE]
 > Xamarin.Forms больше не поддерживает Windows 8.1, Windows Phone 8.1 или Windows 10 Mobile, но приложения Xamarin.Forms выполняются на рабочем столе Windows 10.
@@ -185,11 +183,11 @@ ms.locfileid: "61334435"
 - [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
 - [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
-`HorizontalOptions` и `VerticalOptions` приведены наиболее важные свойства в макете Xamarin.Forms и обсуждаются более подробно в [ **Глава 4. Раскрутка стека**](chapter04.md).
+`HorizontalOptions` и `VerticalOptions` являются наиболее важными свойствами в макете Xamarin. Forms и более подробно обсуждаются в [**главе 4. Прокрутка стека**](chapter04.md).
 
 Ниже приведен результат с `HorizontalOptions` и `VerticalOptions` свойства `Label` равными `LayoutOptions.Center`:
 
-[![Тройной снимок экрана приветствия программы](images/ch02fg05-small.png "горизонтально и вертикально по центру метки")](images/ch02fg05-large.png#lightbox "метки по горизонтали и вертикали по центру")
+[![Тройной снимок экрана программы поздравления](images/ch02fg05-small.png "Горизонтальная и вертикальная метка по центру")](images/ch02fg05-large.png#lightbox "Горизонтальная и вертикальная метка по центру")
 
 ## <a name="solution-5-center-the-text-within-the-label"></a>Решение 5. Центрирование текста в метке
 

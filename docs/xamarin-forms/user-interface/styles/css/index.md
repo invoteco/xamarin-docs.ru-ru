@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: 8425db35b64ec72ba0384f837e01acca49bd20f7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 726ebd55b38460ee966113e4ee487327cd42b03d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724197"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms поддерживает стили визуальных элементов с помощью каскадных таблиц стилей (CSS)._
 
@@ -456,7 +456,7 @@ Xamarin.Forms поддерживает следующие селекторы CSS
 
 Следующие `color` поддерживаются значения:
 
-- `X11` [цвета](https://en.wikipedia.org/wiki/X11_color_names/), который соответствует цветов CSS, предварительно определенные цвета UWP и Xamarin.Forms цвета. Обратите внимание на то, что эти значения цвета нечувствительны к регистру.
+- `X11` [цвета](https://en.wikipedia.org/wiki/X11_color_names), который соответствует цветов CSS, предварительно определенные цвета UWP и Xamarin.Forms цвета. Обратите внимание на то, что эти значения цвета нечувствительны к регистру.
 - шестнадцатеричный цвета: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
 - цвета RGB: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. Значения находятся в диапазоне от 0 до 255, или 0 – 100%.
 - RGBA цвета: `rgba(255, 0, 0, 0.8)`, `rgba(100%, 0%, 0%, 0.8)`. Значение непрозрачности находится в диапазоне от 0,0-1.0.

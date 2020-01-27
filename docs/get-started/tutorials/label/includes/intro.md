@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ff3a0477c6b8a2bf30693ff05a4a992ad053d2b9
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107334"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
@@ -21,4 +21,4 @@ ms.locfileid: "71107334"
 
 С помощью Visual Studio 2019 или Visual Studio для Mac вы создадите простое приложение, демонстрирующее, как отображать текст в [`Label`](xref:Xamarin.Forms.Label). На следующих снимках экрана показано готовое приложение.
 
-[![Снимок экрана: метка с форматированным текстом в iOS и Android](../images/label-formatted-text.png "Метка с форматированным текстом")](../images/label-formatted-text-large.png#lightbox "Метка с форматированным текстом")
+[![Снимок экрана: метка, отображающая форматированный текст, в iOS и Android](../images/label-formatted-text.png "Метка с форматированным текстом")](../images/label-formatted-text-large.png#lightbox "Метка с форматированным текстом")

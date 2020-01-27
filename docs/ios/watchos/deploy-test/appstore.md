@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028371"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725126"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Развертывание приложений watchOS в App Store
 
@@ -128,7 +128,7 @@ Xcode автоматически отображает архивы, создан
 
 Затем вы можете отправить приложение на утверждение на странице **версии** . Дополнительные сведения см. в статье [Обзор распространения приложений для iOS](~/ios/deploy-test/app-distribution/index.md) .
 
-## <a name="troubleshooting"></a>Устранение неполадок
+## <a name="troubleshooting"></a>Диагностика
 
 Ниже приведены некоторые ошибки, которые могут возникнуть при отправке в магазин приложений, и действия, которые можно предпринять для их устранения.
 
@@ -177,7 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 > [!IMPORTANT]
 > Обнаружена известная ошибка в Visual Studio для Mac поддержка значка просмотра: она ожидает изображение в виде 88x88 пикселя для изображения **29x29@3x** (которое должно быть 87x87 пикселей).
 
-Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** (в соответствии с [этим образцом](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+Вы не можете исправить это в Visual Studio для Mac. Измените ресурс изображения в Xcode или вручную измените файл **Content. JSON** .
 
 ### <a name="invalid-watchkit-support"></a>Недопустимая поддержка WatchKit
 

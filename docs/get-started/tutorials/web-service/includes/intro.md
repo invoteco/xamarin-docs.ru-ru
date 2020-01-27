@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107339"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
@@ -24,4 +24,4 @@ ms.locfileid: "71107339"
 
 С помощью Visual Studio 2019 или Visual Studio для Mac вы создадите простое приложение, демонстрирующее, как получать данные от веб-службы [OpenWeatherMap](https://openweathermap.org/). На следующих снимках экрана показано готовое приложение.
 
-[![Снимок экрана: данные о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде Сиэтл")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
+[![Снимок экрана с данными о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде в Сиэтле")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")

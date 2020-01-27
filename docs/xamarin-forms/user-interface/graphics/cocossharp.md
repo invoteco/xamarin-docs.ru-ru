@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: d13237f270fe01e2a91b69a60c3109843db713bf
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 8ba9e4b119384db401fc631f58c37a28cd2b8004
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728022"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724428"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Использование CocosSharp в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](h https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp может использоваться для добавления точное фигуры, изображения и отрисовку текста в приложение для расширенного представления_
 

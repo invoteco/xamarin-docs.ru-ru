@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
-ms.openlocfilehash: 25a09e27fb25e477c5176af0ee4a75a836751ccf
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 0fa433de7fd1acb6fb27741f1615a644315f373f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487637"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725563"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Проверка подлинности пользователей с помощью поставщика удостоверений
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
 _Xamarin. auth — это кросс-платформенный пакет SDK для проверки подлинности пользователей и хранения учетных записей. Он включает в себя средства проверки подлинности OAuth, обеспечивающие поддержку использования поставщиков удостоверений, таких как Google, Microsoft, Facebook и Twitter. В этой статье объясняется, как использовать Xamarin. auth для управления процессом проверки подлинности в приложении Xamarin. Forms._
 
@@ -90,7 +90,7 @@ var authenticator = new OAuth2Authenticator(
 
 - **Идентификатор клиента** — определяет клиент, который выполняет запрос и могут быть получены из проекта в [консоли Google API](https://console.developers.google.com).
 - **Секрет клиента** — это должен быть `null` или `string.Empty`.
-- **Область** — определяет доступ к API, запрашиваемый приложением, и значение сообщает экран согласия, который отображается для пользователя. Дополнительные сведения об областях см. в разделе [запроса авторизации API](https://developers.google.com/+/web/api/rest/oauth) на веб-сайте компании Google.
+- **Область** — определяет доступ к API, запрашиваемый приложением, и значение сообщает экран согласия, который отображается для пользователя. Дополнительные сведения об областях см. в статье [авторизация запросов](https://developers.google.com/docs/api/how-tos/authorizing) на веб-сайте Google.
 - **Авторизация URL-адрес** — данный параметр определяет, где будет получен код авторизации из URL-адрес.
 - **URL-адрес перенаправления** – это определяет URL-адрес, куда будут отправляться ответ. Значение этого параметра должен соответствовать одному из значений, отображающиеся в **учетные данные** вкладку для проекта в [Google Developers Console](https://console.developers.google.com/).
 - **URL-адрес AccessToken** – это определяет URL-адрес, используемый для запроса маркеров доступа, после получения кода авторизации.

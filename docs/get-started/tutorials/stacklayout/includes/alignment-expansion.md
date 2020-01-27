@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560020"
 ---
 Размер и положение дочерних представлений в [`StackLayout`](xref:Xamarin.Forms.StackLayout) зависят от значений свойств [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) и [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) дочерних представлений и значений свойств [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) и [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
@@ -53,7 +53,7 @@ ms.locfileid: "67560020"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана: дочерние представления в StackLayout с заданными параметрами выравнивания и расширения в iOS и Android](../images/alignment-expansion.png "StackLayout с экземплярами метки с заданным выравниванием и расширением")](../images/alignment-expansion-large.png#lightbox "StackLayout с экземплярами метки с заданным выравниванием и расширением")
+    [![Снимок экрана: дочерние представления в StackLayout с заданными параметрами выравнивания и расширения в iOS и Android](../images/alignment-expansion.png "StackLayout, содержащий экземпляры меток, с заданным выравниванием и расширением")](../images/alignment-expansion-large.png#lightbox "StackLayout, содержащий экземпляры меток, с заданным выравниванием и расширением")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout) учитывает только параметры выравнивания дочерних представлениях, которые находятся в направлении, противоположном ориентации `StackLayout`. Поэтому дочерние представления [`Label`](xref:Xamarin.Forms.Label) с `StackLayout` в вертикальной ориентации задают свои свойства [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) одному из полей выравнивания:
 
@@ -107,9 +107,9 @@ ms.locfileid: "67560020"
     > [!NOTE]
     > Значение по умолчанию свойств представления [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) и [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) — [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана: дочерние представления в StackLayout с заданными параметрами выравнивания и расширения в iOS и Android](../images/alignment-expansion.png "StackLayout с экземплярами метки с заданным выравниванием и расширением")](../images/alignment-expansion-large.png#lightbox "StackLayout с экземплярами метки с заданным выравниванием и расширением")
+    [![Снимок экрана: дочерние представления в StackLayout с заданными параметрами выравнивания и расширения в iOS и Android](../images/alignment-expansion.png "StackLayout, содержащий экземпляры меток, с заданным выравниванием и расширением")](../images/alignment-expansion-large.png#lightbox "StackLayout, содержащий экземпляры меток, с заданным выравниванием и расширением")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout) учитывает только параметры выравнивания дочерних представлениях, которые находятся в направлении, противоположном ориентации `StackLayout`. Поэтому дочерние представления [`Label`](xref:Xamarin.Forms.Label) с `StackLayout` в вертикальной ориентации задают свои свойства [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) одному из полей выравнивания:
 

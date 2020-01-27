@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 28b13951a0d681ffdb8e643667e496e0b3606628
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026969"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724006"
 ---
 # <a name="android-frequently-asked-questions"></a>Часто задаваемые вопросы о Android
 
@@ -51,7 +51,7 @@ ms.locfileid: "73026969"
 
 ### <a name="how-do-i-automate-an-android-nunit-test-projectautomate-android-nunit-testmd"></a>[Как автоматизировать тестовый проект Android NUnit?](automate-android-nunit-test.md)
 
-В этом руководстве описаны шаги по настройке проекта тестирования для Android NUnit, а _не_ проекта Xamarin. uitest. Руководства по Xamarin. UITest можно найти [здесь](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+В этом руководстве описаны шаги по настройке проекта тестирования для Android NUnit, а _не_ проекта Xamarin. uitest. Руководства по Xamarin. UITest можно найти [здесь](/appcenter/test-cloud/preparing-for-upload).
 
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Почему моя сборка выпуска Android не подключается к Интернету?](android-internet.md)
 
@@ -65,7 +65,7 @@ ms.locfileid: "73026969"
 
 В этой статье объясняется, как устранить ошибку **PathTooLongException** , которая может возникнуть при построении проекта Xamarin. Android.
 
-## <a name="deprecated"></a>Нерекомендуемые
+## <a name="deprecated"></a>Устарело
 
 > [!NOTE]
 > Приведенные ниже статьи относятся к проблемам, которые были решены в последних версиях Xamarin. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.

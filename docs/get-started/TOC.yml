@@ -4,8 +4,6 @@
   items:
     - name: Что такое Xamarin
       href: what-is-xamarin.md
-    - name: Требования
-      href: requirements.md
     - name: Установка
       href: installation/index.md
       items:
@@ -14,15 +12,19 @@
           items:
             - name: Установка предварительных версий Xamarin в Windows
               href: installation/windows-preview.md
+            - name: Удаление Xamarin из Visual Studio
+              href: installation/uninstalling-xamarin.md
         - name: Установка Visual Studio для Mac
           href: /visualstudio/mac/installation/
           items:
             - name: Установка предварительных версий Xamarin в Mac
               href: /visualstudio/mac/update/
+            - name: Удаление Visual Studio для Mac
+              href: /visualstudio/mac/uninstall
         - name: Инструкции по настройке брандмауэра Xamarin
           href: installation/firewall.md
-        - name: Удаление Xamarin
-          href: installation/uninstalling-xamarin.md
+    - name: Поддерживаемые платформы
+      href: supported-platforms.md
     - name: Первое приложение
       href: first-app/index.md
     - name: Краткие руководства

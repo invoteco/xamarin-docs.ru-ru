@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "69541529"
 ---
 Объект [`ListView`](xref:Xamarin.Forms.ListView) заполняется данными с помощью свойства [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), которое имеет тип `IEnumerable`. Предыдущий шаг заполняет `ListView` в XAML массивом строк. Тем не менее обычно `ListView` будет заполняться данными из коллекции, определенной в коде программной части, которая реализует `IEnumerable`.
@@ -187,7 +187,7 @@ ms.locfileid: "69541529"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана ListView, заполненного данными из коллекции, в iOS и Android](../images/populate-data.png "ListView, отображение данных из коллекции")](../images/populate-data-large.png#lightbox "ListView, отображение данных из коллекции")
+    [![Снимок экрана: ListView, заполненный данными из коллекции, в iOS и Android](../images/populate-data.png "ListView, отображающий данные из коллекции")](../images/populate-data-large.png#lightbox "ListView, отображающий данные из коллекции")
 
     [`ListView`](xref:Xamarin.Forms.ListView) отображает свойство `Name` для каждого `Monkey` в коллекции `Monkeys`. Это обусловлено тем, что по умолчанию `ListView` вызывает метод `ToString` при отображении объектов из коллекции (который был переопределен в классе `Monkey` для возвращения значения свойства `Name`).
 
@@ -366,8 +366,8 @@ ms.locfileid: "69541529"
 
     Этот код привязывает свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) к коллекции `Monkeys`. Во время выполнения [`ListView`](xref:Xamarin.Forms.ListView) найдет в своем [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) коллекцию `Monkeys` и будет заполняться данными из этой коллекции. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана ListView, заполненного данными из коллекции, в iOS и Android](../images/populate-data.png "ListView, отображение данных из коллекции")](../images/populate-data-large.png#lightbox "ListView, отображение данных из коллекции")
+    [![Снимок экрана: ListView, заполненный данными из коллекции, в iOS и Android](../images/populate-data.png "ListView, отображающий данные из коллекции")](../images/populate-data-large.png#lightbox "ListView, отображающий данные из коллекции")
 
     [`ListView`](xref:Xamarin.Forms.ListView) отображает свойство `Name` для каждого `Monkey` в коллекции `Monkeys`. Это обусловлено тем, что по умолчанию `ListView` вызывает метод `ToString` при отображении объектов из коллекции (который был переопределен в классе `Monkey` для возвращения значения свойства `Name`).

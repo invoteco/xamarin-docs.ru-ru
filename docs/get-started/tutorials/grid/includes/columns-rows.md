@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61376014"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -46,7 +46,7 @@ ms.locfileid: "61376014"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана сетки с содержимым, разделенным по столбцам и строкам, в iOS и Android](../images/columns-rows.png "Сетка с содержимым, разделенным по столбцам и строкам")](../images/columns-rows-large.png#lightbox "Сетка с содержимым, разделенным по столбцам и строкам")
+    [![Снимок экрана: сетка с содержимым, размещенным в столбцах и строках, в iOS и Android](../images/columns-rows.png "Сетка с содержимым в столбцах и строках")](../images/columns-rows-large.png#lightbox "Сетка с содержимым в столбцах и строках")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -86,6 +86,6 @@ ms.locfileid: "61376014"
     > [!NOTE]
     > Расстояние между столбцами и строками в [`Grid`](xref:Xamarin.Forms.Grid) можно задать с помощью свойств [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) и [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Дополнительные сведения см. в разделе [Интервалы](~/xamarin-forms/user-interface/layouts/grid.md#spacing) руководства [Сетка Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана сетки с содержимым, разделенным по столбцам и строкам, в iOS и Android](../images/columns-rows.png "Сетка с содержимым, разделенным по столбцам и строкам")](../images/columns-rows-large.png#lightbox "Сетка с содержимым, разделенным по столбцам и строкам")
+    [![Снимок экрана: сетка с содержимым, размещенным в столбцах и строках, в iOS и Android](../images/columns-rows.png "Сетка с содержимым в столбцах и строках")](../images/columns-rows-large.png#lightbox "Сетка с содержимым в столбцах и строках")

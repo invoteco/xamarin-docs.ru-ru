@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3130c20d39e0140695eed92ffa4941d6bafe796e
-ms.sourcegitcommit: b4c9c574b771ae0265171ca5e938aed1c5e35028
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67394549"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -42,7 +42,7 @@ ms.locfileid: "67394549"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана записи, содержащей текст, в iOS и Android](../images/text-changes.png "Запись с текстом")](../images/text-changes-large.png#lightbox "Запись с текстом")
+    [![Снимок экрана: запись, содержащая текст, в iOS и Android](../images/text-changes.png "Запись с текстом")](../images/text-changes-large.png#lightbox "Запись с текстом")
 
     Установите точки останова в двух обработчиках событий, введите текст в [`Entry`](xref:Xamarin.Forms.Entry) и просмотрите запуск событий [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) и [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
@@ -82,9 +82,9 @@ ms.locfileid: "67394549"
     > [!IMPORTANT]
     > Любой текст, введенный в [`Entry`](xref:Xamarin.Forms.Entry), хранится в свойстве [`Text`](xref:Xamarin.Forms.Entry.Text).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана записи, содержащей текст, в iOS и Android](../images/text-changes.png "Запись с текстом")](../images/text-changes-large.png#lightbox "Запись с текстом")
+    [![Снимок экрана: запись, содержащая текст, в iOS и Android](../images/text-changes.png "Запись с текстом")](../images/text-changes-large.png#lightbox "Запись с текстом")
 
     Установите точки останова в двух обработчиках событий, введите текст в [`Entry`](xref:Xamarin.Forms.Entry) и просмотрите запуск событий [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) и [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 

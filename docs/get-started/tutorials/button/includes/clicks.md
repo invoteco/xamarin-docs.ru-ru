@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d1f7d209eaaca62a55b768646f51024609057a63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372978"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -29,7 +29,7 @@ ms.locfileid: "61372978"
     При касании [`Button`](xref:Xamarin.Forms.Button) выполняется метод `OnButtonClicked`. Аргумент `sender` является объектом `Button`, ответственным за запуск события `Clicked`, и может использоваться для доступа к объекту `Button`. Этот обработчик обновляет текст, отображаемый элементом `Button`.
 
     > [!NOTE]
-    > Помимо события `Clicked` `Button` также определяет события [`Pressed`](xref:Xamarin.Forms.Button.Pressed) и [`Released`](xref:Xamarin.Forms.Button.Released). Дополнительные сведения см. в разделе [Нажатие и отпускание кнопки](~/xamarin-forms/user-interface/button.md#pressing-and-releasing-the-button) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
+    > Помимо события `Clicked``Button` также определяет события [`Pressed`](xref:Xamarin.Forms.Button.Pressed) и [`Released`](xref:Xamarin.Forms.Button.Released). Дополнительные сведения см. в разделе [Нажатие и отпускание кнопки](~/xamarin-forms/user-interface/button.md#pressing-and-releasing-the-button) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Нажмите кнопку [`Button`](xref:Xamarin.Forms.Button) и обратите внимание, что ее текст меняется:
 
@@ -60,7 +60,7 @@ ms.locfileid: "61372978"
     При касании [`Button`](xref:Xamarin.Forms.Button) выполняется метод `OnButtonClicked`. Аргумент `sender` является объектом `Button`, ответственным за запуск события `Clicked`, и может использоваться для доступа к объекту `Button`. Этот обработчик обновляет текст, отображаемый элементом `Button`.
 
     > [!NOTE]
-    > Помимо события `Clicked` `Button` также определяет события [`Pressed`](xref:Xamarin.Forms.Button.Pressed) и [`Released`](xref:Xamarin.Forms.Button.Released). Дополнительные сведения см. в разделе [Нажатие и отпускание кнопки](~/xamarin-forms/user-interface/button.md#pressing-and-releasing-the-button) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
+    > Помимо события `Clicked``Button` также определяет события [`Pressed`](xref:Xamarin.Forms.Button.Pressed) и [`Released`](xref:Xamarin.Forms.Button.Released). Дополнительные сведения см. в разделе [Нажатие и отпускание кнопки](~/xamarin-forms/user-interface/button.md#pressing-and-releasing-the-button) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
 1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Нажмите кнопку [`Button`](xref:Xamarin.Forms.Button) и обратите внимание, что ее текст меняется:
 

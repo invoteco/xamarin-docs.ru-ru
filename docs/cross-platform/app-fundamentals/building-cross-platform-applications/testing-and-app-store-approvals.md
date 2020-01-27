@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a9f84192a312f9aba98817b75c058229e6c721bb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016856"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723625"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Часть 6. Тестирование и утверждение магазина приложений
 
@@ -31,7 +31,7 @@ ms.locfileid: "73016856"
 
 Мобильный телефон и экосистема планшета постоянно растут, что делает невозможным тестирование на постоянно растущем количестве доступных устройств. Для решения этой проблемы несколько служб предлагают возможность удаленного управления множеством различных устройств, чтобы приложения можно было устанавливать и тестировать, не требуя непосредственного вложения в множество оборудования.
 
-[Тест App Center](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) предлагает простой способ тестирования приложений iOS и Android на сотнях разных устройств.
+Тест App Center предлагает простой способ тестирования приложений iOS и Android на сотнях разных устройств. Дополнительные сведения см. в статьях [Подготовка приложений Xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) и [Подготовка приложений Xamarin. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### <a name="test-management"></a>Управление тестированием
 

@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015872"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725345"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Общие сведения о привязках цели-C
 
@@ -19,7 +19,7 @@ _Сведения о принципах работы процесса привя
 
 Привязка библиотеки цели-C для использования с Xamarin выполняется из трех шагов:
 
-1. Напишите C# "определение API", чтобы описать, как собственный API предоставляется в .NET и как он сопоставляется с базовой целью — C. Это делается с помощью стандартных C# конструкций, таких как `interface`и различных **атрибутов** привязки (см. Этот [простой пример](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Напишите C# "определение API", чтобы описать, как собственный API предоставляется в .NET и как он сопоставляется с базовой целью — C. Это делается с помощью стандартных C# конструкций, таких как `interface` и различных **атрибутов** привязки (см. Этот [простой пример](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. После того как вы записали "определение API C#" в, вы компилируете его для создания сборки "Binding". Это можно сделать в [**командной строке**](#commandline) или с помощью [**проекта привязки**](#bindingproject) в Visual Studio для Mac или Visual Studio.
 
@@ -35,7 +35,7 @@ _Сведения о принципах работы процесса привя
 
 ## <a name="command-line-bindings"></a>Привязки командной строки
 
-Вы можете использовать `btouch-native` для Xamarin. iOS (или `bmac-native`, если вы используете Xamarin. Mac) для непосредственного создания привязок. Это работает путем передачи определений C# API, созданных вручную (или с помощью цели Шарпие), в средство командной строки (`btouch-native`для iOS или`bmac-native`для Mac).
+Вы можете использовать `btouch-native` для Xamarin. iOS (или `bmac-native`, если вы используете Xamarin. Mac) для непосредственного создания привязок. Это работает путем передачи определений C# API, созданных вручную (или с помощью цели Шарпие), в средство командной строки (`btouch-native` для iOS или `bmac-native` для Mac).
 
 Общий синтаксис для вызова этих средств:
 
@@ -73,7 +73,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 Можно использовать атрибут [[Register]](xref:Foundation.RegisterAttribute) , атрибут [[Export]](xref:Foundation.ExportAttribute) , а также [ручной вызов выборки на языке c](~/ios/internals/objective-c-selectors.md) , чтобы вручную привязать новые (ранее несвязанные) типы цели-c.
 
-Сначала найдите тип, который вы хотите привязать. В целях обсуждения (и простоты) мы будем привязывать тип [нсенумератор](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (который уже привязан в [Foundation. нсенумератор](xref:Foundation.NSEnumerator); приведенная ниже реализация представляет собой только для примера).
+Сначала найдите тип, который вы хотите привязать. В целях обсуждения (и простоты) мы будем привязывать тип [нсенумератор](https://developer.apple.com/documentation/foundation/nsenumerator) (который уже привязан в [Foundation. нсенумератор](xref:Foundation.NSEnumerator); приведенная ниже реализация представляет собой только для примера).
 
 Во вторых, нам нужно создать C# тип. Скорее всего, мы хотим поместить его в пространство имен. Поскольку цель-C не поддерживает пространства имен, необходимо использовать атрибут `[Register]`, чтобы изменить имя типа, которое Xamarin. iOS будет регистрировать в среде выполнения цели-C. C# Тип должен также наследовать от [Foundation. нсобжект](xref:Foundation.NSObject):
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cbf301b341f78ae8d8826580d30a13393716f56c
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71059784"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
@@ -20,4 +20,4 @@ ms.locfileid: "71059784"
 
 С помощью Visual Studio 2019 или Visual Studio для Mac вы создадите простое приложение, демонстрирующее, как расположить элементы управления в [`Grid`](xref:Xamarin.Forms.Grid). На следующих снимках экрана показано готовое приложение.
 
-[![Снимок экрана сетки с содержимым, разделенным по нескольким столбцам и строкам, в iOS и Android](../images/span-columns-rows.png "Сетка с содержимым, разделенным по нескольким столбцам и строкам")](../images/span-columns-rows-large.png#lightbox "Сетка с содержимым, разделенным по нескольким столбцам и строкам")
+[![Снимок экрана: сетка с содержимым, занимающим несколько столбцов и строк, в iOS и Android](../images/span-columns-rows.png "Сетка с содержимым, занимающим несколько столбцов и строк")](../images/span-columns-rows-large.png#lightbox "Сетка с содержимым, занимающим несколько столбцов и строк")

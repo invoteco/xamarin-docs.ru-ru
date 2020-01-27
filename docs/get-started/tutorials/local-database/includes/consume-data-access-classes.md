@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659892"
 ---
 В этом упражнении будет создан пользовательский интерфейс, который используется для работы с ранее созданными классами доступа к данным.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. В **обозревателе решений** в проекте **LocalDatabaseTutorial** дважды щелкните **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
+1. В **обозревателе решений** в проекте **LocalDatabaseTutorial** дважды щелкните **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -70,17 +70,17 @@ ms.locfileid: "67659892"
     > [!NOTE]
     > Переопределение метода `OnAppearing` выполняется после готовности [`ContentPage`](xref:Xamarin.Forms.ContentPage), но только прежде чем он станет видимым. Таким образом лучше всего задать содержимое представлений Xamarin.Forms.
 
-1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android.
 
     Введите несколько элементов данных нажав [`Button`](xref:Xamarin.Forms.Button) для каждого из них. Это действие позволит сохранить данные в базу данных и повторно заполнить [`ListView`](xref:Xamarin.Forms.ListView) всеми данными базы данных.
 
-    [![Снимок экрана сохраняемости данных SQLite.NET локальной базы данных на iOS и Android](../images/consume-data-access-classes.png "Сохраняемость данных локальной базы данных")](../images/consume-data-access-classes-large.png#lightbox "Сохраняемость данных локальной базы данных")
+    [![Снимок экрана: сохраняемость данных локальной базы данных SQLite.NET в iOS и Android](../images/consume-data-access-classes.png "Сохраняемость данных локальной базы данных")](../images/consume-data-access-classes-large.png#lightbox "Сохраняемость данных локальной базы данных")
 
     Дополнительные сведения о локальных базах данных в Xamarin.Forms см. в статье [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/data-cloud/data/databases.md)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
-1. На **Панели решения** в проекте **LocalDatabaseTutorial** дважды щелкните **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
+1. На **Панели решения** в проекте **LocalDatabaseTutorial** дважды щелкните **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -140,10 +140,10 @@ ms.locfileid: "67659892"
     > [!NOTE]
     > Переопределение метода `OnAppearing` выполняется после готовности [`ContentPage`](xref:Xamarin.Forms.ContentPage), но только прежде чем он станет видимым. Таким образом лучше всего задать содержимое представлений Xamarin.Forms.
 
-1. Чтобы запустить приложения в выбранном симуляторе iOS или эмуляторе Android, нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) на панели инструментов Visual Studio для Mac.
+1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
     Введите несколько элементов данных нажав [`Button`](xref:Xamarin.Forms.Button) для каждого из них. Это действие позволит сохранить данные в базу данных и повторно заполнить [`ListView`](xref:Xamarin.Forms.ListView) всеми данными базы данных.
 
-    [![Снимок экрана сохраняемости данных SQLite.NET локальной базы данных на iOS и Android](../images/consume-data-access-classes.png "Сохраняемость данных локальной базы данных")](../images/consume-data-access-classes-large.png#lightbox "Сохраняемость данных локальной базы данных")
+    [![Снимок экрана: сохраняемость данных локальной базы данных SQLite.NET в iOS и Android](../images/consume-data-access-classes.png "Сохраняемость данных локальной базы данных")](../images/consume-data-access-classes-large.png#lightbox "Сохраняемость данных локальной базы данных")
 
     Дополнительные сведения о локальных базах данных в Xamarin.Forms см. в статье [Локальные базы данных Xamarin.Forms (руководство)](~/xamarin-forms/data-cloud/data/databases.md)

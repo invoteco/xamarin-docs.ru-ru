@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61037631"
 ---
 Ранее мы заполнили [`ListView`](xref:Xamarin.Forms.ListView) данными с помощью привязки данных. Однако несмотря на привязку данных к коллекции, где каждый объект в коллекции определял несколько элементов данных, только один элемент данных отображался для каждого объекта (свойство `Name` объекта `Monkey`).
@@ -58,7 +58,7 @@ ms.locfileid: "61037631"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана: ListView с элементами по шаблону данных](../images/customize-cell-appearance.png "ListView с данными по шаблону")](../images/customize-cell-appearance-large.png#lightbox "ListView с данными по шаблону")
+    [![Снимок экрана: ListView, элементы которого воспроизводятся по шаблону с помощью шаблона данных](../images/customize-cell-appearance.png "ListView, отображающий шаблонные данные")](../images/customize-cell-appearance-large.png#lightbox "ListView, отображающий шаблонные данные")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
 
@@ -106,6 +106,6 @@ ms.locfileid: "61037631"
 
     Дополнительные сведения о внешнем виде ячеек [`ListView`](xref:Xamarin.Forms.ListView) см. в статье [Настройка внешнего вида ячеек ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md). Дополнительные сведения о шаблонах данных см. в разделе [Шаблоны данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
-1. На панели инструментов Visual Studio для Mac нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android:
+1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана: ListView с элементами по шаблону данных](../images/customize-cell-appearance.png "ListView с данными по шаблону")](../images/customize-cell-appearance-large.png#lightbox "ListView с данными по шаблону")
+    [![Снимок экрана: ListView, элементы которого воспроизводятся по шаблону с помощью шаблона данных](../images/customize-cell-appearance.png "ListView, отображающий шаблонные данные")](../images/customize-cell-appearance-large.png#lightbox "ListView, отображающий шаблонные данные")

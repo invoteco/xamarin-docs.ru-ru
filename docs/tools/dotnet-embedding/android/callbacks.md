@@ -5,12 +5,12 @@ ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: f23f155a02422a3d04a0b14b282929ea63d60765
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d1d5b8985d132e5a5839e3cd23aaec32fc3815a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007292"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725117"
 ---
 # <a name="callbacks-on-android"></a>Обратные вызовы на Android
 
@@ -97,7 +97,7 @@ public void abstractCallback() throws Throwable {
 System.NotSupportedException: Unable to find Invoker for type 'Android.AbstractClass'. Was it linked away?
 ```
 
-Здесь отсутствует тип `Invoker`. Это подкласс `AbstractClass`, который перенаправляет C# вызовы к Java. Если объект Java входит C# в мир, а эквивалентный C# тип является абстрактным, Xamarin. Android автоматически ищет C# тип с суффиксом`Invoker`для использования в C# коде.
+Здесь отсутствует тип `Invoker`. Это подкласс `AbstractClass`, который перенаправляет C# вызовы к Java. Если объект Java входит C# в мир, а эквивалентный C# тип является абстрактным, Xamarin. Android автоматически ищет C# тип с суффиксом `Invoker` для использования в C# коде.
 
 Xamarin. Android использует этот шаблон `Invoker` для проектов привязки Java, помимо прочего.
 
@@ -269,7 +269,7 @@ public class VirtualClass : Java.Lang.Object
 
 Если вы следовали приведенному выше примеру класса `abstract`, он будет работать, за исключением одного из сведений: _Xamarin. Android не будет искать `Invoker`_ .
 
-Чтобы устранить эту проблему, измените C# класс так, чтобы он`abstract`:
+Чтобы устранить эту проблему, измените C# класс так, чтобы он `abstract`:
 
 ```csharp
 public abstract class VirtualClass : Java.Lang.Object
@@ -296,5 +296,4 @@ public abstract class VirtualClass : Java.Lang.Object
 - [начало работы в Android](~/tools/dotnet-embedding/get-started/java/android.md)
 - [Предварительные исследования Android](~/tools/dotnet-embedding/android/index.md)
 - [Ограничения внедрения .NET](~/tools/dotnet-embedding/limitations.md)
-- [Вклад в проект с открытым исходным кодом](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 - [Коды ошибок и описания](~/tools/dotnet-embedding/errors.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1d49be1f4339b658e8202d4091b9a12b45d7b507
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7cf18934c70acf59213a697ab57b6c5e308e7b2a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031909"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725225"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Изменения в StoreKit в iOS 6
 
@@ -100,14 +100,14 @@ void Buy (int productId)
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
 }
 ```
 
-### <a name="errors"></a>Ошибки
+### <a name="errors"></a>Ошибки соединителя
 
 Если вы используете недопустимый идентификатор Apple ID, произойдет следующая ошибка. это может вызвать путаницу, так как она подразумевает проблему с сетью или проверкой подлинности.
 
@@ -131,7 +131,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 
 ### <a name="search-api"></a>API поиска
 
-Apple предоставляет динамический поисковый API для запроса всех продуктов в магазине приложений, iTunes и эротику. Сведения о том, как получить доступ к API поиска, можно найти в связанных [ресурсах Apple](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), хотя API предоставляется любому пользователю (не только зарегистрированным аффилированным лицам). Полученный JSON можно проанализировать, чтобы обнаружить `trackId`, который является идентификатором Apple ID для использования с `SKStoreProductViewController`.
+Apple предоставляет динамический поисковый API для запроса всех продуктов в магазине приложений, iTunes и эротику. Сведения о том, как получить доступ к API поиска, можно найти в связанных ресурсах Apple, хотя API предоставляется любому пользователю (не только зарегистрированным аффилированным лицам). Полученный JSON можно проанализировать, чтобы обнаружить `trackId`, который является идентификатором Apple ID для использования с `SKStoreProductViewController`.
 
 В результаты также будут включены другие метаданные, включая отображаемые сведения и URL-адреса иллюстраций, которые можно использовать для визуализации продукта в приложении.
 
@@ -142,7 +142,7 @@ Apple предоставляет динамический поисковый API
 
 ### <a name="enterprise-partner-feed"></a>Корпоративный Партнерский веб-канал
 
-Компания Apple предоставляет утвержденным партнерам полный дамп данных всех своих продуктов в виде загружаемых неструктурированных файлов, готовых для базы данных. Если вы предваряти доступ к [каналу корпоративного партнера](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), то идентификатор Apple ID для любого продукта можно найти в этом наборе данных.
+Компания Apple предоставляет утвержденным партнерам полный дамп данных всех своих продуктов в виде загружаемых неструктурированных файлов, готовых для базы данных. Если вы предваряти доступ к каналу корпоративного партнера, то идентификатор Apple ID для любого продукта можно найти в этом наборе данных.
 
 Многие пользователи информационного канала предприятия являются участниками [программы](https://www.apple.com/itunes/affiliates) -партнера, которая позволяет получать комиссионные продажи по продуктам. `SKStoreProductViewController` не поддерживает дочерние идентификаторы (на момент написания статьи).
 
@@ -170,8 +170,8 @@ http://itunes.apple.com/us/app/mwc-2012-unofficial/id496963922?mt=8
 Если покупка в приложении состоит из загружаемого содержимого (например, книг или других носителей, иллюстраций и настроек на уровне игры или других больших файлов), то эти файлы используются для размещения на веб-сервере, и приложениям пришлось бы внедрять код для безопасной загрузки после купок. Начиная с iOS 6, Apple будет размещать файлы на своих серверах, устраняя необходимость в отдельном сервере. Эта функция доступна только для невоспроизводимых продуктов (неиспользуемых или подписок). Преимущества использования службы хостинга Apple включают:
 
 - Сохранение расходов на размещение & пропускной способности.
-- Возможно, более масштабируемым по сравнению с любым узлом сервера, который сейчас используется. 
-- Меньше кода для написания, так как вам не нужно создавать обработку на стороне сервера. 
+- Возможно, более масштабируемым по сравнению с любым узлом сервера, который сейчас используется.
+- Меньше кода для написания, так как вам не нужно создавать обработку на стороне сервера.
 - Фоновая загрузка реализована.
 
 Примечание. Тестирование размещенного в приложении содержимого покупки в симуляторе iOS не поддерживается, поэтому необходимо проверить реальное устройство.
@@ -269,7 +269,8 @@ http://itunes.apple.com/us/app/mwc-2012-unofficial/id496963922?mt=8
 
 ![](changes-to-storekit-images/image13.png "Choose Archiven")
 
-Пакет содержимого будет отображаться в архиве, как показано ниже. Тип архива и значок показывают, что эта строка представляет собой **Архив содержимого для покупки в приложении**. Нажмите кнопку **проверить...** для проверки пакета содержимого на наличие ошибок без фактического выполнения отправки.
+Пакет содержимого будет отображаться в архиве, как показано ниже.
+Тип архива и значок показывают, что эта строка представляет собой **Архив содержимого для покупки в приложении**. Нажмите кнопку **проверить...** для проверки пакета содержимого на наличие ошибок без фактического выполнения отправки.
 
 [![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
 
@@ -469,7 +470,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);
@@ -524,7 +525,6 @@ public void SaveDownload (SKDownload download)
 - [Покупки из приложений](~/ios/platform/in-app-purchasing/index.md)
 - [Справочник по StoreKit Framework](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Справочник по классам Сксторепродуктвиевконтроллер](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [Справочник по API поиска iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [скдовнлоад](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [скпайменткуеуе](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [скпродукт](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)

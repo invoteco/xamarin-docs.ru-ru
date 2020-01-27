@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 98081ed1a9aef1260150671d4fd026dd64c20b62
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545573"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723643"
 ---
 # <a name="the-path-fill-types"></a>Типы заполнения пути
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Обнаружение различных эффектов, поддерживаемых в средстве типы заполнения пути SkiaSharp_
 
@@ -35,7 +35,7 @@ _Обнаружение различных эффектов, поддержив�
 
 С помощью многих стандартных путей поворота алгоритма часто заполняет все замкнутые области пути. Алгоритм четный обычно получаются более интересные результаты.
 
-Классический пример — указывает пяти типа "звезда", как показано в **Five-Pointed типа "звезда"** страницы. [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) файл создает два `Picker` представления, чтобы выделить контур заполнения типа и обводкой или заполнить путь или оба и в каком порядке:
+Классический пример — указывает пяти типа "звезда", как показано в **Five-Pointed типа "звезда"** страницы. [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) файл создает два `Picker` представления, чтобы выделить контур заполнения типа и обводкой или заполнить путь или оба и в каком порядке:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         // angle from vertical
         double angle = i * 4 * Math.PI / 5;
-        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle), 
+        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle),
                                         -radius * (float)Math.Cos(angle)));
     }
     path.Close();

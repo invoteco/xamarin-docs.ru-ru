@@ -6,12 +6,12 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8ffb62c8715ff60e9b0ea3b2bc536f3441fb8765
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978392"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724678"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Введение в разработку игр с помощью коигру
 
@@ -43,8 +43,6 @@ _В этом пошаговом руководстве показано, как 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Проект Валкинггаме (пример)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
-- [Шрифты XNB-iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [Шрифты XNB-для Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [Одноигровое устройство Android на NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [Одноигровой iOS в NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [Документация по API на коигру](http://www.monogame.net/documentation/?page=main)

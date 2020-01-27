@@ -7,12 +7,12 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 80de16a0cf9b601ac3795085b638b9d62812f4d9
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759751"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725554"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Простая анимация в SkiaSharp
 
@@ -22,7 +22,7 @@ _Узнайте, как анимация графики SkiaSharp_
 
 Можно анимировать графики SkiaSharp в Xamarin.Forms, вызывая `PaintSurface` метод периодически, вызываемый каждый раз, когда графики немного по-разному. Ниже приведен анимацию, описанных далее в этой статье с концентрических окружностей, казалось бы, разверните в центре.
 
-![](animation-images/animationexample.png "Несколько концентрических окружностей, казалось бы, развернув в центре")
+![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
 
 **Pulsating эллипс** странице в [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программы анимирует осей эллипса, таким образом, он должен быть pulsating и даже управления частота этой pulsation. [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) файл экземпляр Xamarin.Forms `Slider` и `Label` для отображения текущее значение ползунка. Это распространенный способ интегрируйте `SKCanvasView` с другими представлениями Xamarin.Forms:
 
@@ -141,7 +141,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Метод вычисляет максимальное radius, в зависимости от размера области отображения и минимальный радиус, в зависимости от максимального радиуса. `scale` Значение анимируется от 0 до 1 и значение 0, поэтому данный метод использует, чтобы вычислить `xRadius` и `yRadius` , варьируется в диапазоне от `minRadius` и `maxRadius`. Эти значения используются для рисования и заливка эллипса:
 
-[![](animation-images/pulsatingellipse-small.png "Тройной снимок экрана страницы пульсирующего эллипс")](animation-images/pulsatingellipse-large.png#lightbox "тройной снимок экрана страницы пульсирующего эллипс")
+[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
 
 Обратите внимание, что `SKPaint` объект создается в `using` блока. Как и многие классы SkiaSharp `SKPaint` является производным от `SKObject`, который является производным от `SKNativeObject`, который реализует [ `IDisposable` ](xref:System.IDisposable) интерфейс. `SKPaint` переопределяет `Dispose` метод для освобождения неуправляемых ресурсов.
 
@@ -149,7 +149,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
  В данном случае лучшим решением является создание двух `SKPaint` объектов один раз и сохраните их как поля.
 
-Вот что **круги, развернув** анимации. [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) Класс начинается, определив несколько полей, включая `SKPaint` объекта:
+Вот что **круги, развернув** анимации. [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) Класс начинается, определив несколько полей, включая `SKPaint` объекта:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -244,7 +244,7 @@ public class ExpandingCirclesPage : ContentPage
 
 Результатом является то, что образ, выглядит так же when `t` равен 0, как и при `t` равно 1, и круги, по-видимому, поочередно раскройте остальные навсегда:
 
-[![](animation-images/expandingcircles-small.png "Тройной снимок экрана страницы круги, развернув")](animation-images/expandingcircles-large.png#lightbox "тройной снимок экрана страницы кругов развертывания")
+[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
 
 ## <a name="related-links"></a>Связанные ссылки
 

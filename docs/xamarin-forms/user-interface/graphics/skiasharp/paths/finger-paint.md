@@ -7,16 +7,16 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: 98809dca503d03d3d592161608fa9a6fa0e5d394
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: d5cf0927c64732d6d0a44204db9509fae77f0d1d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488352"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724077"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Рисование пальцами в SkiaSharp
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Используйте пальцы для рисования на холсте._
 
@@ -30,7 +30,7 @@ _Используйте пальцы для рисования на холсте
 
 **Рисование пальцами** странице в **SkiaSharpFormsDemos** представляет собой упрощенную реализацию Рисование пальцем. Не разрешить выбор цвет и ширина штриха, он никак не может очистить холст и Конечно не удается сохранить иллюстрации.
 
-[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) файл помещает `SKCanvasView` в одной ячейке `Grid` и присоединяет `TouchEffect` , `Grid`:
+[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml) файл помещает `SKCanvasView` в одной ячейке `Grid` и присоединяет `TouchEffect` , `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

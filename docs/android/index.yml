@@ -12,7 +12,7 @@ abstract:
   description: 'Xamarin.Android предоставляет полный пакет SDK для Android для разработчиков .NET. Создавайте собственные приложения Android с помощью C# и F# в Visual Studio.'
   menu:
     items:
-      - href: ~/android/samples/
+      - href: ~/android/samples/index.md
         text: Примеры Android
       - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
         text: Заметки о выпуске

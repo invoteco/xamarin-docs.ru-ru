@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 62859e19c533d7b200833996b44a65cb275805c6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6180896002d19c51bce47bf53aaecdc11b0cae6e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029254"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725153"
 ---
 # <a name="xamarinandroid-edit-text"></a>Изменение текста Xamarin. Android
 
@@ -44,7 +44,7 @@ ms.locfileid: "73029254"
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
 edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
     e.Handled = false;
-    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) 
+    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
     {
         Toast.MakeText(this, edittext.Text, ToastLength.Short).Show();
         e.Handled = true;
@@ -58,13 +58,13 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 using Android.Views;
 ```
 
-В этом примере кода реализуется элемент [EditText](xref:Android.Widget.EditText) из макета и добавляется обработчик [нажатия клавиши](xref:Android.Views.View.KeyPress) , определяющий действие, которое должно быть выполнено при нажатии клавиши, когда мини-приложение находится в фокусе. В этом случае метод определяется для прослушивания клавиши **Ввод** (при касании) и [появления](xref:Android.Widget.Toast) всплывающего сообщения с введенным текстом. Обратите внимание, что [обрабатываемое](xref:Android.Views.View.KeyEventArgs.Handled) свойство всегда должно быть `true`, если событие было обработано. Это необходимо, чтобы предотвратить восходящую маршрутизацию события (что привело бы к возврату каретки в текстовое поле).
+В этом примере кода реализуется элемент [EditText](xref:Android.Widget.EditText) из макета и добавляется обработчик [нажатия клавиши](xref:Android.Views.View.KeyPress) , определяющий действие, которое должно быть выполнено при нажатии клавиши, когда мини-приложение находится в фокусе. В этом случае метод определяется для прослушивания клавиши **Ввод** (при касании) и [появления](xref:Android.Widget.Toast) всплывающего сообщения с введенным текстом. Обратите внимание, что обрабатываемое свойство [Handled](xref:Android.Views.View.KeyEventArgs.Handled) всегда должно быть `true`, если событие было обработано. Это необходимо, чтобы предотвратить восходящую маршрутизацию события (что привело бы к возврату каретки в текстовое поле).
 
 Запустите приложение и введите в текстовое поле некоторый текст. При нажатии клавиши **Ввод** всплывающее уведомление будет отображаться, как показано справа:
 
 [![примеры ввода текста в EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Части этой страницы являются изменениями на основе работы, созданной и* [*совместно используемой проектом Android с открытым кодом*](https://code.google.com/policies.html) , *и используются в соответствии с терминами, описанными в* [*лицензии Creative Commons Attribution 2,5*](https://creativecommons.org/licenses/by/2.5/) *. Этот учебник основан на* [*руководстве по формам Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Части этой страницы являются изменениями на основе работы, созданной и совместно используемой проектом Android с открытым кодом, и используются в соответствии с терминами, описанными в* [*лицензии Creative Commons Attribution 2,5*](https://creativecommons.org/licenses/by/2.5/) *. Этот учебник основан на* [*руководстве по формам Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## <a name="related-links"></a>Связанные ссылки
 

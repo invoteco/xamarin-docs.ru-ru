@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1efb8df4bac307d0e73da6bcbf645077cb63c839
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5aabaadfb1781f9f1622abf5687252b16b327d34
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032354"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725426"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Покупка в приложении в Xamarin. iOS
 
@@ -32,7 +32,7 @@ ms.locfileid: "73032354"
 
 Для поддержки покупок в приложении необходимо использовать Xamarin. iOS 5,0 или более поздней версии с Xcode 7 и более поздних версий.
 
-## <a name="contents"></a>Описание
+## <a name="contents"></a>Содержание
 
 - [Основные сведения о покупке из приложения и ее конфигурация](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
@@ -65,7 +65,6 @@ ms.locfileid: "73032354"
 - [Идентификаторы продуктов для покупки в приложении Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Техническое примечание о приобретении в приложении](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [Ваши первые отправки магазина приложений](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [Центр ресурсов App Store](https://developer.apple.com/appstore/index.html)
 - [Советы по отправке в App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Руководство по оценке приложений App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Управление приложениями](https://developer.apple.com/appstore/resources/managing/index.html)

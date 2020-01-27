@@ -7,12 +7,12 @@ manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd1a728dfe14ff9243402bedae74db7be93bf466
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007451"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725135"
 ---
 # <a name="devops-with-xamarin"></a>DevOps с Xamarin
 
@@ -26,11 +26,11 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="agile-tools"></a>Средства Agile
 
-Ссылка: **[Сведения о средствах Agile и гибком управлении проектами (Agile)](/azure/devops/boards/backlogs/overview?view=vsts)**
+Ссылка: **[Сведения о средствах Agile и гибком управлении проектами (Agile)](/azure/devops/boards/backlogs/backlogs-overview?view=azure-devops)**
 
 Общий комментарий: все возможности планирования и отслеживания не зависят от типа проекта и языков программирования.
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |Управление невыполненной работой и спринтами|Да||
 |Отслеживание трудозатрат|Да||
@@ -44,7 +44,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 Функции разработки не зависят от языка программирования или работы с языками .NET, такими как C#. Аспекты, связанные с кодом, описаны в разделе [Роли архитектуры и схем моделирования в разработке программного обеспечения](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools).
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |Схемы последовательностей|Да||
 |Графы зависимости|Да||
@@ -57,7 +57,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="code"></a>Код
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |[Использование системы управления версиями Team Foundation (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts) или Azure Repos|Да||
 |[Приступая к работе с Git в Azure Repos](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio)|Да||
@@ -69,7 +69,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 Ссылка для справки: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |Локальный сервер TFS|Да|На компьютерах для сборки должна быть установлена платформа Xamarin; кроме того, они могут быть связаны с компьютером OSX для сборки приложений для iOS. См. раздел [Использование TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
 |Локальные серверы сборки, связанные с Azure Pipelines|Да|Инструкции см. в разделе [Агенты сборки и выпуска](/azure/devops/pipelines/agents/agents?view=vsts).|
@@ -79,7 +79,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 ## <a name="test"></a>Проверка
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |Планирование тестов, создание тестовых случаев и организация наборов тестов|Да||
 |Тестирование вручную|Да||
@@ -92,7 +92,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 Ссылка: **[Улучшите качество кода](/visualstudio/test/improve-code-quality)**
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |[Анализ качества управляемого кода](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|Да||
 |[Поиск повторяющегося кода с помощью обнаружения клонов кода](https://msdn.microsoft.com/library/hh205279.aspx)|Да||
@@ -104,7 +104,7 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 Ссылка для справки: **[Сборка и выпуск в Azure Pipelines и TFS](/azure/devops/pipelines/overview?view=vsts)**
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |Управление процессами выпуска|Да||
 |Развертывание на серверах для загрузки неопубликованных приложений через сценарии|Да||
@@ -114,6 +114,6 @@ Visual Studio (совместно с Azure DevOps Services и Team Foundation Se
 
 Ссылка: **[Мониторинг с HockeyApp](https://www.hockeyapp.net/features/)**
 
-|Возможность|Поддерживается в Xamarin|Дополнительные комментарии|
+|Функция|Поддерживается в Xamarin|Дополнительные комментарии|
 |-------------|----------------------------|-------------------------|
 |Анализ сбоев, телеметрия и бета-распределение|Да||

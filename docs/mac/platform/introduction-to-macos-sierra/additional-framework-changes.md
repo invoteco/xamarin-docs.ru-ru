@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 3db7e456d4321aa7eba415813f8c374b030da4ca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 44468d3f2d323065161c290f2df8e6f0e89d3def
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029869"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724991"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Дополнительные изменения платформы macOS Sierra
 
@@ -76,7 +76,7 @@ ms.locfileid: "73029869"
 
 В основную платформу образов для macOS Sierra были внесены следующие улучшения.
 
-- Метод `ImageWithExtent` класса [Цифилтер](https://developer.apple.com/reference/coreimage/cifilter) можно использовать для вставки пользовательской обработки в операцию фильтрации. Основное изображение будет вызывать заданный обратный вызов между фильтрами при обработке изображения для вывода или показа.
+- Метод `ImageWithExtent` класса [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) можно использовать для вставки пользовательской обработки в операцию фильтрации. Основное изображение будет вызывать заданный обратный вызов между фильтрами при обработке изображения для вывода или показа.
 - Теперь приложение может обрабатывать изображения в цветовом пространстве за пределами рабочего пространства контекста образа путем преобразования в цветовое пространство и из него до и после обработки.
 - Ядро образа ядра теперь может запрашивать конкретный выходной формат пикселей.
 - Добавлены следующие новые фильтры изображений: `CINinePartTitled`, `CINinePartStretched`, `CIHueSaturationValueGradient`, `CIEdgePreserveUpsampleFilter` и `CIClamp`.
@@ -101,7 +101,7 @@ ms.locfileid: "73029869"
 
 В платформу GameKit для macOS Sierra были внесены следующие улучшения.
 
-- **Game Centerное приложение** устарело и удалено из macOS. Если приложение использует GameKit, оно _должно_ предоставлять собственный интерфейс для отображения таких gamekit функций, как списки лидеров и т. д. 
+- **Game Centerное приложение** устарело и удалено из macOS. Если приложение использует GameKit, оно _должно_ предоставлять собственный интерфейс для отображения таких gamekit функций, как списки лидеров и т. д.
 - Новый тип учетной записи только iCloud реализован классом [гкклаудплайер](https://developer.apple.com/reference/gamekit/gkcloudplayer) .
 - Новый класс [гкгамесессион](https://developer.apple.com/reference/gamekit/gkgamesession) предоставляет обобщенное решение для управления хранилищем постоянных данных на Game Center. `GKGameSession` поддерживает список игроков, и приложение является ответственным за реализацию того, как и когда дата участника сохраняется, извлекается или обменивается между игроками. Во многих случаях игровые сеансы могут заменять существующие соответствия, основанные на включении, совпадения в режиме реального времени или постоянные способы сохранения игр.
 
@@ -169,7 +169,7 @@ ms.locfileid: "73029869"
 - SceneKit интерпретирует значения цветовых компонентов в линейном цветовом пространстве RGB для всех типов шейдера.
 - Так как SceneKit считывает и корректирует сведения о цветовых профилях в образах текстур, используйте каталоги активов для всех изображений, чтобы обеспечить их использование.
 - Как линейное, так и расширенное отображение цветового пространства можно отключить, указав `SCNDisableLinearSpaceRendering` и `SCNDisableWideGamut` ключи в `Info.plist`е приложения.
-- Создайте произвольный многоугольник приматов (загружается из файлов или создается программно), чтобы указать геометрию с новым классом [скнжеометрипримитиветипеполигон](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
+- Создайте произвольный многоугольник приматов (загружается из файлов или создается программно), чтобы указать геометрию с новым классом [скнжеометрипримитиветипеполигон](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon?language=objc) .
 
 <a name="Security-Framework-Enhancements" />
 

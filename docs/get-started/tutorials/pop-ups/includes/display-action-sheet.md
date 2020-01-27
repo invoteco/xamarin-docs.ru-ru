@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "66193822"
 ---
 
@@ -37,7 +37,7 @@ ms.locfileid: "66193822"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Затем коснитесь пункта [`Button`](xref:Xamarin.Forms.Button), добавленного в [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Снимок экрана с таблицей действий в iOS и Android](../images/actionsheet.png "Таблица действий, которая помогает пользователям пройти задачу")](../images/actionsheet-large.png#lightbox "Таблица действий, которая помогает пользователям пройти задачу")
+    [![Снимок экрана: лист действий в iOS и Android](../images/actionsheet.png "Лист действий с инструкциями по задаче для пользователя")](../images/actionsheet-large.png#lightbox "Лист действий с инструкциями по задаче для пользователя")
 
     Обратите внимание, что после выбора альтернативы в диалоговом окне таблицы действий выбор выводится в окне **вывода** Visual Studio.
 
@@ -71,7 +71,7 @@ ms.locfileid: "66193822"
 
 1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Затем коснитесь пункта [`Button`](xref:Xamarin.Forms.Button), добавленного в [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Снимок экрана с таблицей действий в iOS и Android](../images/actionsheet.png "Таблица действий, которая помогает пользователям пройти задачу")](../images/actionsheet-large.png#lightbox "Таблица действий, которая помогает пользователям пройти задачу")
+    [![Снимок экрана: лист действий в iOS и Android](../images/actionsheet.png "Лист действий с инструкциями по задаче для пользователя")](../images/actionsheet-large.png#lightbox "Лист действий с инструкциями по задаче для пользователя")
 
     Обратите внимание, что после выбора альтернативы в диалоговом окне таблицы действий выбор выводится в окне **вывода** Visual Studio для Mac.
 

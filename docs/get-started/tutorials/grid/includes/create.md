@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
-ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "72678735"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -15,7 +15,7 @@ ms.locfileid: "72678735"
     > [!IMPORTANT]
     > Фрагменты кода на C# и XAML из этого руководства предполагают, что решение называется **GridTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms: глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
 1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **GridTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
@@ -37,7 +37,7 @@ ms.locfileid: "72678735"
 
 1. На панели инструментов Visual Studio нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана: метка в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая меткуs")
+    [![Снимок экрана: метка в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая метки")
 
     Дополнительные сведения о [`Grid`](xref:Xamarin.Forms.Grid) см. в статье [Сетка Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -50,7 +50,7 @@ ms.locfileid: "72678735"
     > [!IMPORTANT]
     > Фрагменты кода на C# и XAML из этого руководства предполагают, что решение называется **GridTutorial**. Выбор другого имени приведет к ошибкам сборки при копировании кода из этого руководства в решение.
 
-    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms: глубокое погружение в обработку](~/get-started/first-app/index.md).
+    Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
 1. На **Панели решения** дважды щелкните файл **MainPage.xaml** в проекте **GridTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
@@ -72,6 +72,6 @@ ms.locfileid: "72678735"
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана: метка в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая меткуs")
+    [![Снимок экрана: метка в сетке в iOS и Android](../images/create-grid.png "Сетка, содержащая метку")](../images/create-grid-large.png#lightbox "Сетка, содержащая метки")
 
     Дополнительные сведения о [`Grid`](xref:Xamarin.Forms.Grid) см. в статье [Сетка Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 724a79e618321f97257718bf56dd1fdd18f73563
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 9aaecb8c63ff28111097dce81954f523b4c7731b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545619"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725216"
 ---
 # <a name="lines-and-stroke-caps"></a>Линии и концы штрихов
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Узнайте, как рисование линий с концы штрихов в другой с помощью SkiaSharp_
 
@@ -38,7 +38,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 - `Square`
 - `Round`
 
-Лучше всего они показаны с помощью примера программы. **Строки и пути SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программа начинает с страницы под названием **концы штрихов** на основе [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) класса. Эта страница определяет `PaintSurface` обработчик событий, который проходит по трем членам `SKStrokeCap` перечисления, отображение имени члена перечисления и Рисование линии с помощью этого наконечник штриха:
+Лучше всего они показаны с помощью примера программы. **Строки и пути SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программа начинает с страницы под названием **концы штрихов** на основе [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) класса. Эта страница определяет `PaintSurface` обработчик событий, который проходит по трем членам `SKStrokeCap` перечисления, отображение имени члена перечисления и Рисование линии с помощью этого наконечник штриха:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -110,7 +110,7 @@ DrawPoints (SKPointMode mode, points, paint)
 - `Lines` для каждой парой точек подключения
 - `Polygon` для всех последовательных точек подключения
 
-**Несколько строк** страница демонстрирует этот метод. [ **MultipleLinesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) файл создает два `Picker` представления, которые позволяют выбрать членом `SKPointMode` перечисления и членом `SKStrokeCap` перечисления:
+**Несколько строк** страница демонстрирует этот метод. [ **MultipleLinesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) файл создает два `Picker` представления, которые позволяют выбрать членом `SKPointMode` перечисления и членом `SKStrokeCap` перечисления:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

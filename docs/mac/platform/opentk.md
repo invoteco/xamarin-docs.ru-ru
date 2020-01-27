@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0e283c9d9d1143f7cf4b0d2da0616e94d6ce5bce
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029880"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725016"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Общие сведения о Опентк в Xamarin. Mac
 
@@ -20,9 +20,9 @@ ms.locfileid: "73029880"
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
-В этой статье рассматриваются основы Опентк в приложении Xamarin. Mac. Мы настоятельно рекомендуем сначала ознакомиться со статьей [Hello, Mac](~/mac/get-started/hello-mac.md) , в частности [Знакомство с Xcode и Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) , а также с разделом "возможности [и действия](~/mac/get-started/hello-mac.md#outlets-and-actions) ", так как в нем рассматриваются основные понятия и методы, которые мы будем использовать в Эта статья.
+В этой статье рассматриваются основы Опентк в приложении Xamarin. Mac. Мы настоятельно рекомендуем сначала ознакомиться со статьей [Hello, Mac](~/mac/get-started/hello-mac.md) , в частности [Знакомство с Xcode и Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) , а также с разделом "возможности [и действия](~/mac/get-started/hello-mac.md#outlets-and-actions) ", так как в нем рассматриваются основные понятия и методы, которые мы будем использовать в этой статье.
 
-Возможно, вы захотите ознакомиться с разделом [ C# классы и методы для цели-C](~/mac/internals/how-it-works.md) в документе о внутренних компонентах [Xamarin. Mac](~/mac/internals/how-it-works.md) , а также объясняются`Register`и`Export`команды, используемые для подключения C# классов к цели-C. объекты и элементы пользовательского интерфейса.
+Возможно, вы захотите ознакомиться с [ C# представлением классов и методов для цели-C](~/mac/internals/how-it-works.md) в документе о внутренних компонентах [Xamarin. Mac](~/mac/internals/how-it-works.md) , а также поясняются `Register` и `Export` команды, используемые для подключения C# классов к объектам и элементам пользовательского интерфейса на языке c.
 
 <a name="About_OpenTK" />
 
@@ -40,7 +40,7 @@ ms.locfileid: "73029880"
 
 Опентк можно использовать для игр, научных приложений или других проектов, требующих трехмерной графики, аудио или вычислительной функциональности.
 
-Дополнительные сведения см. на веб-сайте [Open Toolkit](http://www.opentk.com) .
+Дополнительные сведения см. на веб-сайте [Open Toolkit](https://opentk.net) .
 
 <a name="OpenTK_Quickstart" />
 
@@ -329,6 +329,6 @@ Game.Run(60.0);
 - [Мономакгамевиев (пример)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Привет, Mac](~/mac/get-started/hello-mac.md)
 - [Работа с Windows](~/mac/user-interface/window.md)
-- [Открытый набор средств](http://www.opentk.com)
+- [Открытый набор средств](https://opentk.net)
 - [Рекомендации по работе с человеческим интерфейсом OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Введение в Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

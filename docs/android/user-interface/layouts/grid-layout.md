@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 13271b50353d95ecd2db40e25d549788111530f7
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029011"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725007"
 ---
 # <a name="xamarinandroid-gridlayout"></a>Xamarin. Android GridLayout
 
@@ -53,7 +53,7 @@ ms.locfileid: "73029011"
 
 При запуске в приложении происходит следующий пользовательский интерфейс:
 
- [Снимок экрана:![приложения Гридлайаутдемо, отображающего четыре ячейки](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [Снимок экрана: ![приложения Гридлайаутдемо, отображающего четыре ячейки](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## <a name="specifying-orientation"></a>Указание ориентации
 
@@ -71,11 +71,11 @@ ms.locfileid: "73029011"
 
 Теперь `GridLayout` будет располагать ячейки сверху вниз в каждом столбце, а не слева направо, как показано ниже:
 
- [Диаграмма![, иллюстрирующая расположение ячеек в вертикальной ориентации](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [Диаграмма ![, иллюстрирующая расположение ячеек в вертикальной ориентации](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 Это приводит к следующему пользовательскому интерфейсу во время выполнения:
 
- [Снимок экрана Гридлайаутдемо с ячейками, расположенными в вертикальной ориентации![](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [Снимок экрана Гридлайаутдемо с ячейками, расположенными в вертикальной ориентации ![](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### <a name="specifying-explicit-position"></a>Указание явной позицией
 
@@ -165,7 +165,7 @@ ms.locfileid: "73029011"
 
 Этот XML-код создает пространство в `GridLayout`, как показано ниже:
 
- [Снимок экрана Гридлайаутдемо, иллюстрирующий большие ячейки с отступами![](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [Снимок экрана Гридлайаутдемо, иллюстрирующий большие ячейки с отступами ![](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 Преимуществом использования нового `Space` представления является то, что оно позволяет использовать интервалы и не требует от нас задавать атрибуты для каждого дочернего представления.
 
@@ -231,10 +231,8 @@ ms.locfileid: "73029011"
 
 Это приведет к разметке `TextViews`, похожей на макет, который мы ранее делали, с кнопкой, добавленной в нижнюю часть `GridLayout`, как показано ниже:
 
- [Снимок экрана Гридлайаутдемо с кнопкой, охватывающей оба столбца![](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [Снимок экрана Гридлайаутдемо с кнопкой, охватывающей оба столбца ![](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Гридлайаутдемо (пример)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Знакомство со Южным Сандвичевым](https://www.android.com/about/ice-cream-sandwich/)
-- [Платформа Android 4,0](https://developer.android.com/sdk/android-4.0.html)

@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/12/2017
-ms.openlocfilehash: 79f226c137c3ab6b1dd2de9f92cb868056aa9d59
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2a4d255500f68497fe7cb0cc439c5f9c0504b0f2
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022291"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725189"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Селекторы цели-C в Xamarin. iOS
 
 Язык цели-C основан на *селекторах*. Селектор — это сообщение, которое может быть отправлено объекту или *классу*. [Xamarin. iOS](~/ios/internals/api-design/index.md) сопоставляет селекторы экземпляров с методами экземпляра, а селекторы классов — со статическими методами.
 
 В отличие от обычных функций C (и C++ аналогичных функций-членов) нельзя напрямую вызывать селектор с помощью [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) , методы выбора отправляются в класс или экземпляр класса цели-C с помощью [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-функций.
+Функция .
 
 Дополнительные сведения о сообщениях в цели-C см. в разделе " [Работа с объектами](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) " в Apple.
 
@@ -45,10 +45,10 @@ ms.locfileid: "73022291"
 
 ```csharp
 CGSize objc_msgSend(
-    IntPtr target, 
-    IntPtr selector, 
-    IntPtr font, 
-    nfloat width, 
+    IntPtr target,
+    IntPtr selector,
+    IntPtr font,
+    nfloat width,
     UILineBreakMode mode
 );
 ```
@@ -58,7 +58,7 @@ CGSize objc_msgSend(
 ```csharp
 [DllImport (Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend")]
 static extern CGSize cgsize_objc_msgSend_IntPtr_float_int (
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -76,7 +76,7 @@ nfloat width = ...
 UILineBreakMode mode = ...
 
 CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
-    target.Handle, 
+    target.Handle,
     selector.Handle,
     font == null ? IntPtr.Zero : font.Handle,
     width,
@@ -90,7 +90,7 @@ CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
 [DllImport (MonoTouch.Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend_stret")]
 static extern void cgsize_objc_msgSend_stret_IntPtr_float_int (
     out CGSize retval,
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -111,7 +111,7 @@ CGSize size;
 
 if (Runtime.Arch == Arch.SIMULATOR)
     size = cgsize_objc_msgSend_IntPtr_float_int(
-        target.Handle, 
+        target.Handle,
         selector.Handle,
         font == null ? IntPtr.Zero : font.Handle,
         width,
@@ -154,8 +154,8 @@ else
 
 Существует более одной функции `objc_msgSend`:
 
-- Используйте [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) для селекторов, возвращающих структуру. В ARM сюда входят все типы возвращаемых значений, не являющиеся перечислениями, или любые встроенные типы C (`char`, `short`, `int`, `long`, `float`, `double`). В архитектуре x86 (симулятор) Этот метод необходимо использовать для всех структур, размер которых превышает 8 байт (`CGSize` составляет 8 байт и не использует `objc_msgSend_stret` в симуляторе). 
-- Используйте [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) для селекторов, возвращающих значение с плавающей запятой только на платформе x86. Эту функцию не нужно использовать в ARM; Вместо этого используйте `objc_msgSend`. 
+- Используйте [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) для селекторов, возвращающих структуру. В ARM сюда входят все типы возвращаемых значений, не являющиеся перечислениями, или любые встроенные типы C (`char`, `short`, `int`, `long`, `float`, `double`). В архитектуре x86 (симулятор) Этот метод необходимо использовать для всех структур, размер которых превышает 8 байт (`CGSize` составляет 8 байт и не использует `objc_msgSend_stret` в симуляторе).
+- Используйте [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) для селекторов, возвращающих значение с плавающей запятой только на платформе x86. Эту функцию не нужно использовать в ARM; Вместо этого используйте `objc_msgSend`.
 - Функция Main [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) используется для всех остальных селекторов.
 
 После того как вы решили, какие `objc_msgSend` функции нужно вызвать (симулятор и устройство могут требовать другого метода), можно использовать стандартный метод [`[DllImport]`](xref:System.Runtime.InteropServices.DllImportAttribute) , чтобы объявить функцию для последующего вызова.
@@ -183,7 +183,7 @@ if (Runtime.Arch == Arch.DEVICE)
     PointF ret;
     Messaging.PointF_objc_msgSend_stret_PointF_IntPtr (out ret, myHandle, selector.Handle);
     return ret;
-} 
+}
 else
 {
     return Messaging.PointF_objc_msgSend_PointF_IntPtr (myHandle, selector.Handle);
@@ -201,7 +201,3 @@ else
 ### <a name="creating-your-own-signatures"></a>Создание собственных подписей
 
 Для создания собственных подписей, если это необходимо, можно [использовать следующее.](https://gist.github.com/rolfbjarne/981b778a99425a6e630c)
-
-## <a name="related-links"></a>Связанные ссылки
-
-- Образец [селекторов "цель-C](https://developer.xamarin.com/samples/mac-ios/Objective-C/) "

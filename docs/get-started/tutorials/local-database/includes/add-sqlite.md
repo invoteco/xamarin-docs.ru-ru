@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8ad5ca60a074cbdc6ff91134cc9c1276ed653b91
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277423"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -17,19 +17,19 @@ ms.locfileid: "67277423"
 
     Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
-1. В **обозревателе решений** выберите проект **LocalDatabaseTutorial**, щелкните правой кнопкой мыши и выберите **Управление пакетами NuGet...** .
+1. В **обозревателе решений** выберите проект **LocalDatabaseTutorial**, щелкните правой кнопкой мыши и выберите **Управление пакетами NuGet...**.
 
-    ![Снимок экрана пункта меню "Управление пакетами NuGet"](../images/vs/add-nuget-packages.png "пункт меню \"Добавить пакеты NuGet\"")
+    ![Снимок экрана: выбранный пункт меню "Управление пакетами NuGet"](../images/vs/add-nuget-packages.png "Элемент меню "Добавление пакетов NuGet"")
 
 1. В разделе **Диспетчер пакетов NuGet** выберите вкладку **Обзор**, выполните поиск пакета NuGet **sqlite-net-pcl**, выберите его и нажмите кнопку **Установить**, чтобы добавить его в проект.
 
-    ![Снимок экрана пакета NuGet для SQLite.NET в диспетчере пакетов NuGet](../images/vs/add-package.png "пакет NuGet для SQLite.NET")
+    ![Снимок экрана: пакет NuGet для SQLite.NET в диспетчере пакетов NuGet](../images/vs/add-package.png "Пакет NuGet для SQLite.NET")
 
     > [!NOTE]
     > Существует ряд пакетов NuGet с похожими названиями. Правильный пакет имеет следующие атрибуты:
-    > - **Автор(ы)** : Фрэнк А. Крюгер (Frank A. Krueger)
+    > - **Автор(ы)**: Фрэнк А. Крюгер (Frank A. Krueger)
     > - **Идентификатор:** sqlite-net-pcl
-    > - **Ссылка в NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
+    > - **Ссылка NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > Несмотря на название, этот пакет NuGet можно использовать в проектах .NET Standard.
 
@@ -48,19 +48,19 @@ ms.locfileid: "67277423"
 
     Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
-1. На **Панели решения** выберите проект **LocalDatabaseTutorial**, щелкните правой кнопкой мыши и выберите **Добавить > Добавить пакеты NuGet...** .
+1. На **Панели решения** выберите проект **LocalDatabaseTutorial**, щелкните правой кнопкой мыши и выберите **Добавить > Добавить пакеты NuGet...**.
 
-    ![Снимок экрана пункта меню "Добавить пакеты NuGet"](../images/vsmac/add-nuget-packages.png "пункт меню \"Добавить пакеты NuGet\"")
+    ![Снимок экрана: выбранный пункт меню "Добавить пакеты NuGet"](../images/vsmac/add-nuget-packages.png "Элемент меню "Добавление пакетов NuGet"")
 
 1. В окне **Добавление пакетов** выполните поиск пакета NuGet **sqlite-net-pcl**, выберите его и нажмите кнопку **Добавить пакет**, чтобы добавить его в проект.
 
-    ![Снимок экрана пакета NuGet для SQLite.NET в диспетчере пакетов NuGet](../images/vsmac/add-package.png "пакет NuGet для SQLite.NET")
+    ![Снимок экрана: пакет NuGet для SQLite.NET в диспетчере пакетов NuGet](../images/vsmac/add-package.png "Пакет NuGet для SQLite.NET")
 
     > [!NOTE]
     > Существует ряд пакетов NuGet с похожими названиями. Правильный пакет имеет следующие атрибуты:
     > - **Автор**: Фрэнк А. Крюгер (Frank A. Krueger)
     > - **Идентификатор:** sqlite-net-pcl
-    > - **Ссылка в NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
+    > - **Ссылка NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > Несмотря на название, этот пакет NuGet можно использовать в проектах .NET Standard.
 

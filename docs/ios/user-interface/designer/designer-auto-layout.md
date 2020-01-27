@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021812"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725475"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Автоматический макет с Xamarin Designer для iOS
 
@@ -69,7 +69,7 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
 Чтобы изменить ограничения в выбранном представлении, нажмите кнопку с многоточием, чтобы отобразить контекстном меню Action: ![ограничения Edit контекстном меню Action](designer-auto-layout-images/constraints-popup.png)
 
-При открытии ограничений контекстном меню Action отображает все предопределенные ограничения в представлении. Мы можем задать все ограничения по расстоянию, выбрав **все стороны** в поле со списком в правом верхнем углу, а затем выбрав **Очистить все** , чтобы удалить их. 
+При открытии ограничений контекстном меню Action отображает все предопределенные ограничения в представлении. Мы можем задать все ограничения по расстоянию, выбрав **все стороны** в поле со списком в правом верхнем углу, а затем выбрав **Очистить все** , чтобы удалить их.
 
 Для **W** будут заданы значения Width и **H** , заданные ограничения высоты. При **проверке пропорций высота**и ширина представлений будут контролироваться на различных размерах экрана, ширина представления будет использоваться в качестве числителя для ъявлению, а высота — как знаменатель.
 
@@ -201,7 +201,7 @@ ViewInfoHeight.Constant = 0;
 
 Вместо мгновенного обновления присоединенного представления в ответ на изменения ограничений обработчик автоматических макетов планирует _проход отложенного макета_ в ближайшем будущем. Во время этого отложенного прохода не только обновленное ограничение данного представления, но и все ограничения для каждого представления в иерархии пересчитываются и обновляются для изменения в новом макете.
 
-В любой момент можно запланировать собственный проход отложенного макета, вызвав метод `SetNeedsLayout` или `SetNeedsUpdateConstraints` родительского представления. 
+В любой момент можно запланировать собственный проход отложенного макета, вызвав метод `SetNeedsLayout` или `SetNeedsUpdateConstraints` родительского представления.
 
 Отложенный проход макета состоит из двух уникальных проходов через иерархию представлений:
 
@@ -210,7 +210,7 @@ ViewInfoHeight.Constant = 0;
 
 ### <a name="animating-constraint-changes"></a>Анимация изменений ограничений
 
-В дополнение к изменению свойств ограничений можно использовать основную анимацию для анимации изменений в ограничениях представления. Пример:
+В дополнение к изменению свойств ограничений можно использовать основную анимацию для анимации изменений в ограничениях представления. Например:
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -234,4 +234,3 @@ UIView.CommitAnimations();
 - [Пошаговое руководство по разработке элементов управления для iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Обзор Android Designer](~/android/user-interface/android-designer/index.md)
 - [Программные ограничения](~/ios/user-interface/programmatic-layout-constraints.md)
-- [Автоматическое создание макета Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010853-CH13-SW1)

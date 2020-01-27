@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/06/2019
-ms.openlocfilehash: 038ff27907573c1fe15516f6f4caf26d0892ab9f
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.openlocfilehash: 9213e893d222e26168940e09a93e158d1e74d8dc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662341"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725581"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Инициализация и Настройка карт Xamarin. Forms
 
@@ -58,14 +58,14 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 - iOS 11 и более поздние версии
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) — для использования служб определения местоположения при использовании приложения
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) — для использования служб определения местоположения в любое время
-- iOS 10 и более ранние версии
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) — для использования службы определения местоположения все время
+- iOS 10 и более ранних версий
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) — для использования служб определения местоположения при использовании приложения
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) — для использования служб определения местоположения в любое время    
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) — для использования службы определения местоположения все время    
 
-Для поддержки iOS 11 и более ранних версий можно включить все три ключа: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription` и `NSLocationAlwaysUsageDescription`.
+Для поддержки iOS 11 и более ранних версий, можно включить все три ключа: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, и `NSLocationAlwaysUsageDescription`.
 
-Ниже приведено представление XML для этих разделов в **info. plist** . Необходимо обновить значения `string`, чтобы отразить, как ваше приложение использует сведения о расположении:
+XML-представление для этих ключей в **Info.plist** показан ниже. Необходимо обновить `string` значения в том, как приложение использует сведения о расположении:
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
@@ -76,7 +76,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 <string>Can we use your location at all times?</string>
 ```
 
-Записи **info. plist** также можно добавить в представление **исходного кода** при редактировании файла **info. plist** :
+**Info.plist** записи также может быть добавлено в **источника** представления во время редактирования **Info.plist** файла:
 
 ![Info. plist для iOS 8](setup-images/ios8-map-permissions.png "Обязательные записи info. plist для iOS 8")
 
@@ -112,7 +112,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 При этом ключ API внедряется в манифест. Без допустимого ключа API элемент управления [`Map`](xref:Xamarin.Forms.Maps.Map) будет отображать пустую сетку.
 
 > [!NOTE]
-> Обратите внимание, что для APK доступа к Google Maps необходимо включить отпечатки SHA-1 и имена пакетов для каждого хранилища ключей (Отладка и выпуск), которое используется для подписания APK. Например, если вы используете один компьютер для отладки и другой компьютер для создания APK выпуска, следует включить отпечаток сертификата SHA-1 из хранилища ключей отладки первого компьютера и отпечаток сертификата SHA-1 из хранилища ключей выпуска второй компьютер. Также не забудьте изменить ключевые учетные данные при изменении **имени пакета** приложения. См. [раздел Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+> Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Также не забудьте изменить учетные данные ключа, если приложения **имя пакета** изменения. См. [раздел Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 #### <a name="specify-the-google-play-services-version-number"></a>Укажите номер версии служб Google Play Services
 
@@ -134,7 +134,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 Это указывает приложению использовать клиентскую библиотеку Apache HTTP, которая была удалена из `bootclasspath` в Android 9.
 
-#### <a name="specify-the-write_external_storage-permission"></a>Указание разрешения WRITE_EXTERNAL_STORAGE
+#### <a name="specify-the-write_external_storage-permission"></a>Укажите разрешение WRITE_EXTERNAL_STORAGE
 
 Если приложение предназначено для API 22 или ниже, может потребоваться добавить разрешение `WRITE_EXTERNAL_STORAGE` в манифест, как дочерний элемент `<manifest>`.
 
@@ -266,4 +266,4 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 - [Пример Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Контакты Xamarin. Forms. Maps](~/xamarin-forms/user-interface/map/pins.md).
 - [API карт](xref:Xamarin.Forms.Maps)
-- [Преобразование пользовательского модуля подготовки отчетов](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Пользовательское средство отрисовки карты](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)

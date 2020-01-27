@@ -6,8 +6,6 @@
       items:
         - name: Что такое Xamarin.Forms?
           href: ~/get-started/what-is-xamarin-forms.md
-        - name: Требования
-          href: ~/get-started/requirements.md
         - name: Установка
           href: ~/get-started/installation/index.md
           items:
@@ -16,15 +14,19 @@
               items:
                 - name: Установка предварительных версий Xamarin в Windows
                   href: ~/get-started/installation/windows-preview.md
+                - name: Удаление Xamarin из Visual Studio
+                  href: ~/get-started/installation/uninstalling-xamarin.md
             - name: Установка Visual Studio для Mac
               href: /visualstudio/mac/installation/
               items:
                 - name: Установка предварительных версий Xamarin в Mac
                   href: /visualstudio/mac/update/
+                - name: Удаление Visual Studio для Mac
+                  href: /visualstudio/mac/uninstall
             - name: Инструкции по настройке брандмауэра Xamarin
               href: ~/get-started/installation/firewall.md
-            - name: Удаление Xamarin
-              href: ~/get-started/installation/uninstalling-xamarin.md
+        - name: Поддерживаемые платформы
+          href: ~/get-started/supported-platforms.md
         - name: Первое приложение
           href: ~/get-started/first-app/index.md
         - name: Краткие руководства
@@ -898,6 +900,8 @@
           href: deploy-test/index.yml
         - name: Повышение производительности
           href: deploy-test/performance.md
+        - name: Горячий перезапуск
+          href: deploy-test/hot-restart.md
         - name: "Автоматизация тестирования в Центре приложений Visual\_Studio"
           href: /appcenter/test-cloud/uitest/get-started-xamarin-forms
         - name: Публикация приложений iOS

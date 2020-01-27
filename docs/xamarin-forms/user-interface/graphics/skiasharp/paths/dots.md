@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 2d02e79ff51468572250d1a7ce7c6d3da103c03a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 229f60cbb96058454a1c634e53a7bb00ec725bcf
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770530"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723758"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Точки и тире в SkiaSharp
 
@@ -22,17 +22,17 @@ _Освойте тонкости механизмов рисования в Skia
 
 SkiaSharp позволяет рисовать линии, которые не сплошной, но вместо этого состоят из точки и тире.
 
-![](dots-images/dottedlinesample.png "Пунктирная линия")
+![](dots-images/dottedlinesample.png "Dotted line")
 
 Это сделать с помощью *эффект пути*, который является экземпляром [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) класс, который задается для [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) свойство `SKPaint`. Можно создать путь эффект (или эффекты объединения пути), с помощью одного из статических создания методов, определенных `SKPathEffect`. (`SKPathEffect` один из шести эффектов поддерживается SkiaSharp; остальные описаны в разделе [ **эффект SkiaSharp**](../effects/index.md).)
 
-Для рисования точечных или пунктирных линий, следует использовать [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) статический метод. Существует два аргумента: Сначала это массив `float` значений, указывающий длины точек и тире, а также длину пробелов между ними. Этот массив должен иметь четное число элементов и должно быть по крайней мере два элемента. (Может быть ноль элементов в массиве, но этот приводит сплошная линия.) При наличии двух элементов, первый представляет собой длину точка или тире и второй — длина пробела перед Далее точка или тире. Если имеется более двух элементов, то они находятся в следующем порядке: тире длины, длина временного промежутка, тире, длина временного промежутка и т. д.
+Для рисования точечных или пунктирных линий, следует использовать [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) статический метод. Существует два аргумента: это массив `float` значений, обозначающих длину точек и тире и длину пробелов между ними. Этот массив должен иметь четное число элементов и должно быть по крайней мере два элемента. (В массиве могут быть нулевые элементы, но это приводит к сплошной линии.) Если имеется два элемента, первый — это длина точки или тире, а вторая — длину разрыва перед следующей точкой или тире. Если имеется более двух элементов, то они находятся в следующем порядке: тире длины, длина временного промежутка, тире, длина временного промежутка и т. д.
 
 Как правило нужно будет сделать длинами тире и свойство gap кратно ширина штриха. Если ширина мазков 10 точек, например, массив {10, 10} будет нарисуйте пунктирной линией, точек и пробелов которых же длины, толщина штриха.
 
 Тем не менее `StrokeCap` параметр `SKPaint` объекта также влияет на эти точки и тире. Как вы вскоре увидите, что оказывает влияние на элементы исходного массива.
 
-Разделенные точками и демонстрируются пунктирные линии на **точек и тире** страницы. [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) файл создает два `Picker` просматривает, один для возможности выбирать наконечник штриха, а второй для выбора массив dash:
+Разделенные точками и демонстрируются пунктирные линии на **точек и тире** страницы. [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml) файл создает два `Picker` просматривает, один для возможности выбирать наконечник штриха, а второй для выбора массив dash:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -100,7 +100,7 @@ SkiaSharp позволяет рисовать линии, которые не с
 
  Первые три элемента в `dashArrayPicker` предполагается, что ширина мазков 10 точек. {10, 10} массив предназначен для пунктирной линией {30, 10} — пунктирная линия и {10, 10, 30, 10} для точки и штриховой линией. (Другие будут рассмотрены чуть позже.)
 
-[ `DotsAndDashesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) Содержит файл с выделенным кодом `PaintSurface` обработчик события, а также ряд вспомогательные процедуры для доступа к `Picker` представления:
+[ `DotsAndDashesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml.cs) Содержит файл с выделенным кодом `PaintSurface` обработчик события, а также ряд вспомогательные процедуры для доступа к `Picker` представления:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     path.LineTo(0.2f * info.Width, 0.8f * info.Height);
     path.LineTo(0.8f * info.Width, 0.2f * info.Height);
 
-    canvas.DrawPath(path, paint); 
+    canvas.DrawPath(path, paint);
 }
 
 float[] GetPickerArray(Picker picker)
@@ -150,9 +150,9 @@ float[] GetPickerArray(Picker picker)
 
 На следующих снимках экрана на экране iOS слева показано пунктирной линией.
 
-[![](dots-images/dotsanddashes-small.png "Тройной снимок экрана страницы точки и тире")](dots-images/dotsanddashes-large.png#lightbox "тройной снимок экрана страницы точки и тире")
+[![](dots-images/dotsanddashes-small.png "Triple screenshot of the Dots and Dashes page")](dots-images/dotsanddashes-large.png#lightbox "Triple screenshot of the Dots and Dashes page")
 
-Тем не менее экран Android также должна показать пунктирной линией, с помощью массива {10, 10}, но вместо этого строки является сплошная заливка. Что произошло? Проблема в том, что экран Android также имеет значение caps stroke `Square`. При этом расширяется все дефисы на половину толщины штриха, они заполняют пробелы.
+Тем не менее экран Android также должна показать пунктирной линией, с помощью массива {10, 10}, но вместо этого строки является сплошная заливка. В чем дело? Проблема в том, что экран Android также имеет значение caps stroke `Square`. При этом расширяется все дефисы на половину толщины штриха, они заполняют пробелы.
 
 Чтобы обойти эту проблему, при использовании наконечник штриха из `Square` или `Round`, необходимо уменьшить dash длины массива длиной stroke (иногда приводит к dash длиной 0) и увеличения длины промежуток, длина штриха. Это как окончательный три тире массивов в `Picker` рассчитаны в файле XAML:
 
@@ -211,7 +211,7 @@ public class AnimatedSpiralPage : ContentPage
 
 Конечно вам придется фактически работающих с программой для анимации см. в разделе:
 
-[![](dots-images/animatedspiral-small.png "Тройной снимок экрана страницы анимировано спирали")](dots-images/animatedspiral-large.png#lightbox "тройной снимок экрана страницы анимировано спирали")
+[![](dots-images/animatedspiral-small.png "Triple screenshot of the Animated Spiral page")](dots-images/animatedspiral-large.png#lightbox "Triple screenshot of the Animated Spiral page")
 
 ## <a name="related-links"></a>Связанные ссылки
 

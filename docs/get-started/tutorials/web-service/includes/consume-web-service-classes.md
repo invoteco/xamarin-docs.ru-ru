@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659894"
 ---
 В этом упражнении вы создадите пользовательский интерфейс для использования класса `RestService`, который, в свою очередь, получает данные из веб-API [OpenWeatherMap](https://openweathermap.org/).
@@ -123,7 +123,7 @@ ms.locfileid: "67659894"
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Коснитесь [`Button`](xref:Xamarin.Forms.Button) для получения текущих данных о погоде для Сиэтла:
 
-    [![Снимок экрана: данные о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде Сиэтл")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
+    [![Снимок экрана с данными о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде в Сиэтле")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
 
     > [!IMPORTANT]
     > Ваш личный ключ API OpenWeatherMap должен быть задан как значение константы `OpenWeatherMapAPIKey` в классе `Constants`.
@@ -245,7 +245,7 @@ ms.locfileid: "67659894"
 
 1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Коснитесь [`Button`](xref:Xamarin.Forms.Button) для получения текущих данных о погоде для Сиэтла:
 
-    [![Снимок экрана: данные о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде Сиэтл")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
+    [![Снимок экрана с данными о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде в Сиэтле")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
 
     > [!IMPORTANT]
     > Ваш личный ключ API OpenWeatherMap должен быть задан как значение константы `OpenWeatherMapAPIKey` в классе `Constants`.

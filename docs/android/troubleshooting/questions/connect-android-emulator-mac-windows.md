@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018
-ms.openlocfilehash: 2c1f571efb9ec3fb726912eb1e30496bc51fe26e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 49d1eea60f766f4cb61484a6e441506cf8f046ff
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026988"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725082"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Можно ли подключиться с виртуальной машины Windows к эмуляторам Android под управлением Mac?
 
@@ -37,8 +37,7 @@ ms.locfileid: "73026988"
 
     Порт с нечетным номером используется для подключения к `adb`. См. также [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4. _Вариант 1_. Использование [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
-    чтобы пересылать входящие пакеты TCP, полученные извне через порт 5555 (или любой другой порт), на порт с нечетным номером в интерфейсе замыкания на себя (**127.0.0.1 5555** в этом примере) и пересылать исходящие пакеты другим способом:
+4. _Вариант 1_. Используйте `nc`, чтобы пересылать входящие TCP-пакеты, полученные извне через порт 5555 (или любой другой порт), на порт с нечетным номером в интерфейсе замыкания на себя (**127.0.0.1 5555** в этом примере) и пересылать исходящие пакеты другим способом.
 
     ```bash
     cd /tmp
@@ -48,10 +47,9 @@ ms.locfileid: "73026988"
 
     При условии, что команды `nc` остаются в окне терминала, пакеты будут перенаправлены должным образом. Вы можете ввести в окне терминала элемент управления-C, чтобы выйти из `nc` команд после завершения работы с эмулятором.
 
-    (Вариант 1 обычно проще, чем вариант 2, особенно если **Системные настройки > безопасность & конфиденциальность > брандмауэр** включен.) 
+    (Вариант 1 обычно проще, чем вариант 2, особенно если **Системные настройки > безопасность & конфиденциальность > брандмауэр** включен.)
 
-    _Вариант 2_. Использование [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
-    чтобы перенаправить пакеты TCP с порта `5555` (или любого другого порта, который вам нравится) на [общем сетевом](https://kb.parallels.com/en/4948) интерфейсе для неограниченного порта в интерфейсе замыкания на себя (`127.0.0.1:5555` в этом примере):
+    _Вариант 2_. Используйте `pfctl` для перенаправления пакетов TCP с порта `5555` (или любого другого порта, который вам нравится) на [общем сетевом](https://kb.parallels.com/en/4948) интерфейсе на порт с нечетным номером в интерфейсе замыкания на себя (`127.0.0.1:5555` в этом примере):
 
     ```bash
     sed '/rdr-anchor/a rdr pass on vmnet8 inet proto tcp from any to any port 5555 -> 127.0.0.1 port 5555' /etc/pf.conf | sudo pfctl -ef -
@@ -77,7 +75,7 @@ ms.locfileid: "73026988"
 
 3. Запустите `ssh` в Windows, чтобы настроить двустороннюю переадресацию портов между локальным портом в Windows (`localhost:15555` в этом примере) и портом нестандартного эмулятора на интерфейсе замыкания на себя Mac (`127.0.0.1:5555` в этом примере):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 

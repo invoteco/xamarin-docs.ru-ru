@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ad4682e9a3d4de2565bee54ffa159fd739572e24
-ms.sourcegitcommit: d8af612b6b3218fea396d2f180e92071c4d4bf92
+ms.openlocfilehash: 25d8563288cce614bc2823b0146e5121688c6f02
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75663356"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725484"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Панели вкладок и контроллеры панели вкладок в Xamarin. iOS
 
@@ -27,7 +27,7 @@ ms.locfileid: "75663356"
 `UITabBarController` Поддерживает с вкладками разработки приложений, следующие:
 
 - Разрешение нескольких контроллеров для добавления к нему.
-- Предоставление с вкладками пользовательского интерфейса, с помощью `UITabBar` класса, чтобы разрешить пользователю переключаться между контроллерами и их представления. 
+- Предоставление с вкладками пользовательского интерфейса, с помощью `UITabBar` класса, чтобы разрешить пользователю переключаться между контроллерами и их представления.
 
 Контроллеры добавляются к `UITabBarController` через его `ViewControllers` свойство, являющееся `UIViewController` массива. `UITabBarController` Сам обрабатывает загрузке правильной контроллера и представляющим его представление, в зависимости от выбранной вкладки.
 
@@ -63,9 +63,9 @@ ms.locfileid: "75663356"
 
 Для реализации `UITabBarController` нам нужно сделать следующее:
 
-1. Задать базовый класс `TabController` для `UITabBarController` . 
-1. Создание `UIViewController` экземпляры, чтобы добавить `TabController` . 
-1. Добавить `UIViewController` экземпляров в массив, назначенный `ViewControllers` свойство `TabController` . 
+1. Задать базовый класс `TabController` для `UITabBarController` .
+1. Создание `UIViewController` экземпляры, чтобы добавить `TabController` .
+1. Добавить `UIViewController` экземпляров в массив, назначенный `ViewControllers` свойство `TabController` .
 
 Добавьте следующий код, чтобы `TabController` класс для достижения следующие действия:
 
@@ -118,16 +118,16 @@ public partial class AppDelegate : UIApplicationDelegate
 {
     UIWindow window;
     TabController tabController;
-    
+
     public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     {
         window = new UIWindow (UIScreen.MainScreen.Bounds);
-        
+
         tabController = new TabController ();
         window.RootViewController = tabController;
-        
+
         window.MakeKeyAndVisible ();
-        
+
         return true;
     }
 }
@@ -217,7 +217,7 @@ tab3.TabBarItem.BadgeValue = null;
 
 - В открывшемся диалоговом окне создания файла, перейдите к **iOS > Пустая раскадровка iPhone**.
 
-Давайте назовем этот новая раскадровка **MainStoryboard** , как показано ниже: 
+Давайте назовем этот новая раскадровка **MainStoryboard** , как показано ниже:
 
 [![](creating-tabbed-applications-images/new-file-dialog.png "Add a MainStoryboard file to the project")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
@@ -295,7 +295,7 @@ partial void InitialActionCompleted (UIButton sender)
 
 В нашем раскадровке мы используем Segues обрабатывать переходы между TabBarController и наши контроллеров представлений. После взаимодействия с исходное представление, мы хотим загрузить их в TabBarController, представленные пользователю. Давайте настроим это в конструкторе.
 
-**CTRL + щелчок** и **перетащите** с помощью кнопки для TabBarController. На доступ к мыши появится контекстное меню. Мы хотим использовать модального перехода. 
+**CTRL + щелчок** и **перетащите** с помощью кнопки для TabBarController. На доступ к мыши появится контекстное меню. Мы хотим использовать модального перехода.
 
 Для настройки каждой из наших вкладок **Ctrl + щелчок** из TabBarController для каждого из наших контроллеров представлений в порядке от одного до трех, а затем выберите связь **вкладке** в контекстном меню, как показано ниже:
 
@@ -309,7 +309,7 @@ partial void InitialActionCompleted (UIButton sender)
 
 [![](creating-tabbed-applications-images/properties-panel.png "Setting the tab options in the Properties Explorer")](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
-Мы можем использовать его для изменения определенных атрибутов, такие как эмблема, заголовок и iOS [идентификатор](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), среди прочего
+Это можно использовать для изменения определенных атрибутов, таких как эмблема, заголовок и идентификатор iOS, а также других.
 
 Если сохранить и запустить приложение сейчас, очень скоро найдется что кнопки появится снова при загрузке экземпляра ViewController1 в TabBarController. Исправим это путем проверки на наличие родительского контроллера представления для текущего представления. Если Да, мы знаем, мы внутри TabBarController, и поэтому должны быть скрыты кнопки. Давайте добавим приведенный ниже код к классу ViewController1:
 

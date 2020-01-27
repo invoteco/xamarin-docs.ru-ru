@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: dcba15d049e5bab09142f0aeba237b2a790a5950
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 7d53623ef1fb1eeb917cbf4cd6d65d461e525982
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728191"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724244"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Представления Xamarin.Forms являются стандартными блоками кроссплатформенных мобильных пользовательских интерфейсов._
 
 Представления являются объектами пользовательского интерфейса, такие как метки, кнопки и ползунки, которые обычно называются *элементов управления* или *мини-приложения* в других графических сред программирования. Представления, поддерживаемых Xamarin.Forms являются производными от класса [ `View` ](xref:Xamarin.Forms.View) класса. Их можно разделить на несколько категорий:
 
-## <a name="views-for-presentation"></a>Представления для презентации
+## <a name="views-for-presentation"></a>Визуальные элементы для представления данных
 
 ### <a name="label"></a>Метка
 
@@ -66,7 +66,7 @@ _Представления Xamarin.Forms являются стандартны�
 | [`Map`](xref:Xamarin.Forms.Maps.Map) Отображает карты. Необходимо установить пакет NuGet для **Xamarin. Forms. Maps** . Android и универсальной платформы Windows требуется ключ авторизации карты.<br /><br />[Документация по API](xref:Xamarin.Forms.Maps.Map) / [руководство](~/xamarin-forms/user-interface/map/index.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Пример Map](views-images/Map.png "Пример Map")](views-images/Map-Large.png#lightbox "Пример Map")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
 |     |     |
 
-## <a name="views-that-initiate-commands"></a>Представления, которые запускают команды
+## <a name="views-that-initiate-commands"></a>Визуальные элементы, инициирующие команды
 
 ### <a name="button"></a>Кнопка
 
@@ -103,13 +103,13 @@ _Представления Xamarin.Forms являются стандартны�
 | `SwipeView` — это контейнерный элемент управления, который обходит элемент содержимого и предоставляет элементы контекстного меню, которые выводятся с помощью жеста прокрутки. Каждый элемент меню представлен `SwipeItem`, у которого есть свойство `Command`, которое выполняет `ICommand` при касании элемента.<br /><br /> [Руководство по](~/xamarin-forms/user-interface/swipeview.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![Пример Свипевиев](views-images/SwipeView.png "Пример Свипевиев")](views-images/SwipeView-Large.png#lightbox "Пример Свипевиев")<br /> [Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>Представления для задания значений
+## <a name="views-for-setting-values"></a>Визуальные элементы для установки значений
 
 ### <a name="checkbox"></a>CheckBox
 
 |     |     |
 | --- | --- |
-| `CheckBox` позволяет пользователю выбрать логическое значение с помощью типа кнопки, которая может быть либо установлена, либо пустой. Свойство `IsChecked` — это состояние `CheckBox`, а событие `CheckedChanged` срабатывает при изменении состояния.<br /><br />Документация или [руководство](~/xamarin-forms/user-interface/checkbox.md) по API / [Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![Пример флажка](views-images/CheckBox.png "Пример флажка")](views-images/CheckBox-Large.png#lightbox "Пример флажка")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+| `CheckBox` позволяет пользователю выбрать логическое значение с помощью типа кнопки, которая может быть либо установлена, либо пустой. Свойство `IsChecked` — это состояние `CheckBox`, а событие `CheckedChanged` срабатывает при изменении состояния.<br /><br />Документация или [руководство](~/xamarin-forms/user-interface/checkbox.md) по API / [Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![Пример флажка](views-images/CheckBox.png "Пример флажка")](views-images/CheckBox-Large.png#lightbox "Пример флажка")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
 |     |     |
 
 ### <a name="slider"></a>Slider
@@ -147,7 +147,7 @@ _Представления Xamarin.Forms являются стандартны�
 | [`TimePicker`](xref:Xamarin.Forms.TimePicker) позволяет пользователю выбрать время с средство выбора времени платформы. [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) Свойство имеет установленный период времени. Приложения можно выполнять мониторинг изменений `Time` свойства, установив обработчик для [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) событий.<br /><br />[Документация по API](xref:Xamarin.Forms.TimePicker) / [руководство](~/xamarin-forms/user-interface/timepicker.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) | [![Пример TimePicker](views-images/TimePicker.png "Пример TimePicker")](views-images/TimePicker-Large.png#lightbox "Пример TimePicker")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
 |     |     |
 
-## <a name="views-for-editing-text"></a>Для редактирования текста
+## <a name="views-for-editing-text"></a>Визуальные элементы для редактирования текста
 
 Эти классы являются производными от [ `InputView` ](xref:Xamarin.Forms.InputView) класс, определяющий [ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard) свойство.
 
@@ -165,7 +165,7 @@ _Представления Xamarin.Forms являются стандартны�
 | [`Editor`](xref:Xamarin.Forms.Editor) позволяет пользователю вводить и редактировать несколько строк текста. Этот текст будет доступен как [ `Text` ](xref:Xamarin.Forms.Editor.Text) свойство и [ `TextChanged` ](xref:Xamarin.Forms.Editor.TextChanged) и [ `Completed` ](xref:Xamarin.Forms.Editor.Completed) события запускаются, когда изменения текста или пользователь Уведомляет о завершении.<br /><br />Используйте [ `Entry` ](#entry) представление для ввода и изменения одной строки текста.<br /><br />[Документация по API](xref:Xamarin.Forms.Editor) / [руководство](~/xamarin-forms/user-interface/text/editor.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Пример записи](views-images/Editor.png "Пример редактора")](views-images/Editor-Large.png#lightbox "Пример редактора")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) |
 |     |     |
 
-## <a name="views-to-indicate-activity"></a>Представления, чтобы указать действие
+## <a name="views-to-indicate-activity"></a>Визуальные элементы для обозначения действий
 
 ### <a name="activityindicator"></a>ActivityIndicator
 
@@ -181,7 +181,7 @@ _Представления Xamarin.Forms являются стандартны�
 | [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) использует анимацию, чтобы показать, что приложение выполняется через длительных действий. Задайте [ `Progress` ](xref:Xamarin.Forms.ProgressBar.Progress) свойство значения между 0 и 1 для указания хода выполнения.<br /><br />Если выполняется действие неизвестен, используйте [ `ActivityIndicator` ](#activityindicator) вместо этого.<br /><br />[Документация по API](xref:Xamarin.Forms.ProgressBar) / [руководство](~/xamarin-forms/user-interface/progressbar.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/) | [![Пример для ProgressBar](views-images/ProgressBar.png "Пример для ProgressBar")](views-images/ProgressBar-Large.png#lightbox "Пример для ProgressBar")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ProgressBarDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml) с [кода](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml.cs) |
 |     |     |
 
-## <a name="views-that-display-collections"></a>Представления, отображаемые в коллекции
+## <a name="views-that-display-collections"></a>Визуальные элементы для отображения коллекций
 
 ### <a name="carouselview"></a>CarouselView
 
@@ -222,7 +222,7 @@ _Представления Xamarin.Forms являются стандартны�
 
 |     |     |
 | --- | --- |
-| [`TableView`](xref:Xamarin.Forms.TableView) Отображает список строк типа [ `Cell` ](xref:Xamarin.Forms.Cell) необязательные заголовки и подзаголовки. Задайте [ `Root` ](xref:Xamarin.Forms.TableView.Root) свойство для объекта типа [ `TableRoot` ](xref:Xamarin.Forms.TableRoot)и добавьте [ `TableSection` ](xref:Xamarin.Forms.TableSection) объектов, `TableRoot`. Каждый `TableSection` — это коллекция `Cell` объектов.<br /><br />[Документация по API](xref:Xamarin.Forms.TableView) / [руководство](~/xamarin-forms/user-interface/tableview.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview) | [![Пример Таблевиев](views-images/TableView.png "Пример Таблевиев")](views-images/TableView-Large.png#lightbox "Пример Таблевиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TableViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TableViewDemoPage.xaml) |
+| [`TableView`](xref:Xamarin.Forms.TableView) Отображает список строк типа [ `Cell` ](xref:Xamarin.Forms.Cell) необязательные заголовки и подзаголовки. Задайте [ `Root` ](xref:Xamarin.Forms.TableView.Root) свойство для объекта типа [ `TableRoot` ](xref:Xamarin.Forms.TableRoot)и добавьте [ `TableSection` ](xref:Xamarin.Forms.TableSection) объектов, `TableRoot`. Каждый `TableSection` — это коллекция `Cell` объектов.<br /><br />[Документация по API](xref:Xamarin.Forms.TableView) / [руководство](~/xamarin-forms/user-interface/tableview.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview) | [![Пример Таблевиев](views-images/TableView.png "Пример Таблевиев")](views-images/TableView-Large.png#lightbox "Пример Таблевиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TableViewFormDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TableViewFormDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>Связанные ссылки

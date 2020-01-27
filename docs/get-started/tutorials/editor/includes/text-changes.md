@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 19afeed47f1c06c89c58dfd996d360698b19fc9c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61373411"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -41,9 +41,9 @@ ms.locfileid: "61373411"
     > [!IMPORTANT]
     > Любой текст, введенный в [`Editor`](xref:Xamarin.Forms.Editor), хранится в свойстве [`Text`](xref:Xamarin.Forms.Editor.Text).
 
-1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
-    [![Снимок экрана редактора, содержащего текст в iOS и Android](../images/text-changes.png "Редактор с текстом")](../images/text-changes-large.png#lightbox "Редактор с текстом")
+    [![Снимок экрана: редактор, содержащий текст, в iOS и Android](../images/text-changes.png "Редактор с текстом")](../images/text-changes-large.png#lightbox "Редактор с текстом")
 
     Установите точки останова в два обработчика событий, введите текст в [`Editor`](xref:Xamarin.Forms.Editor) и просмотрите запуск событий [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Расфокусируйте `Editor`, чтобы просмотреть запуск событий [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
@@ -86,7 +86,7 @@ ms.locfileid: "61373411"
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 
-    [![Снимок экрана редактора, содержащего текст в iOS и Android](../images/text-changes.png "Редактор с текстом")](../images/text-changes-large.png#lightbox "Редактор с текстом")
+    [![Снимок экрана: редактор, содержащий текст, в iOS и Android](../images/text-changes.png "Редактор с текстом")](../images/text-changes-large.png#lightbox "Редактор с текстом")
 
     Установите точки останова в два обработчика событий, введите текст в [`Editor`](xref:Xamarin.Forms.Editor) и просмотрите запуск событий [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Расфокусируйте `Editor`, чтобы просмотреть запуск событий [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 

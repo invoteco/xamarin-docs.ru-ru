@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ad54c97da9ebc9f1c705e99a4a390571d229520a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16e35d67f8fce33c8a0b21ddcd07df14fedf179b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009416"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725207"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Пошаговое руководство. Использование сенсорного ввода в Xamarin. iOS
 
@@ -23,9 +23,6 @@ ms.locfileid: "73009416"
 - [Пример пользовательского распознавателя жестов](#Custom_Gesture_Recognizer) — Создание распознавателя пользовательских жестов.
 
 В каждом разделе содержатся инструкции по написанию кода с нуля.
-[Начальный пример кода](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) уже включает в себя полную раскадровку и экран меню:
-
- [![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 Следуйте приведенным ниже инструкциям, чтобы добавить код в раскадровку и узнать о различных типах событий касания, доступных в iOS. Также можно открыть [готовый пример](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) , чтобы увидеть все работу.
 
@@ -41,7 +38,7 @@ ms.locfileid: "73009416"
 
 1. Измените файл **TouchViewController.CS** и добавьте следующие две переменные экземпляра в класс `TouchViewController`:
 
-    ```csharp 
+    ```csharp
     #region Private Variables
     private bool imageHighlighted = false;
     private bool touchStartedInside;
@@ -50,14 +47,14 @@ ms.locfileid: "73009416"
 
 1. Реализуйте метод `TouchesBegan`, как показано в следующем коде:
 
-    ```csharp 
+    ```csharp
     public override void TouchesBegan(NSSet touches, UIEvent evt)
     {
         base.TouchesBegan(touches, evt);
-    
+
         // If Multitouch is enabled, report the number of fingers down
         TouchStatus.Text = string.Format ("Number of fingers {0}", touches.Count);
-    
+
         // Get the current touch
         UITouch touch = touches.AnyObject as UITouch;
         if (touch != null)
@@ -90,7 +87,7 @@ ms.locfileid: "73009416"
         }
     }
     ```
-    
+
     Этот метод работает путем проверки объекта `UITouch` и, если он существует, выполняет некоторые действия в зависимости от того, где произошло касание:
 
     - _Внутри таучимаже_ — отображение текста `Touches Began` в метке и изменение изображения.
@@ -99,7 +96,7 @@ ms.locfileid: "73009416"
 
     Приведенный выше код работает только с отдельными касаниями, но по-прежнему не имеет поведения, если пользователь перемещает палец на экран. Чтобы ответить на перемещение, реализуйте `TouchesMoved`, как показано в следующем коде:
 
-    ```csharp 
+    ```csharp
     public override void TouchesMoved(NSSet touches, UIEvent evt)
     {
         base.TouchesMoved(touches, evt);
@@ -126,7 +123,7 @@ ms.locfileid: "73009416"
     }
     ```
 
-    Этот метод получает объект `UITouch`, а затем проверяет, где произошло касание. Если в `TouchImage`возникло касание, то на экране отобразится текст «касания». 
+    Этот метод получает объект `UITouch`, а затем проверяет, где произошло касание. Если в `TouchImage`возникло касание, то на экране отобразится текст «касания».
 
     Если `touchStartedInside` имеет значение true, то мы понимаем, что пользователь имеет палец на `DragImage` и перемещает его. Код будет перемещаться `DragImage` по мере того, как пользователь перемещает палец вокруг экрана.
 
@@ -136,13 +133,13 @@ ms.locfileid: "73009416"
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
     {
         base.TouchesCancelled(touches, evt);
-    
+
         // reset our tracking flags
         touchStartedInside = false;
         TouchImage.Image = UIImage.FromBundle("TouchMe.png");
         TouchStatus.Text = "";
     }
-    
+
     public override void TouchesEnded(NSSet touches, UIEvent evt)
     {
         base.TouchesEnded(touches, evt);
@@ -167,7 +164,7 @@ ms.locfileid: "73009416"
 1. На этом этапе экран сенсорных примеров завершен. Обратите внимание, что экран изменяется при взаимодействии с каждым из изображений, как показано на следующем снимке экрана:
 
     [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
-    
+
     [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples" />
@@ -179,10 +176,6 @@ ms.locfileid: "73009416"
 
 - `UIPanGestureRecognizer` для перетаскивания изображения вокруг экрана.
 - `UITapGestureRecognizer` для реагирования на двойные касания на экране.
-
-Если запустить [начальный пример кода](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) и нажать кнопку **распознавания жестов** , появится следующий экран:
-
- [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Чтобы реализовать распознаватели жестов, выполните следующие действия.
 
@@ -205,10 +198,10 @@ ms.locfileid: "73009416"
     {
         // Create a new tap gesture
         UIPanGestureRecognizer gesture = new UIPanGestureRecognizer();
-    
+
         // Wire up the event handler (have to use a selector)
         gesture.AddTarget(() => HandleDrag(gesture));  // to be defined
-    
+
         // Add the gesture recognizer to the view
         DragImage.AddGestureRecognizer(gesture);
     }
@@ -227,7 +220,7 @@ ms.locfileid: "73009416"
         {
             originalImageFrame = DragImage.Frame;
         }
-    
+
         // Move the image if the gesture is valid
         if (recognizer.State != (UIGestureRecognizerState.Cancelled | UIGestureRecognizerState.Failed
             | UIGestureRecognizerState.Possible))
@@ -250,11 +243,11 @@ ms.locfileid: "73009416"
     {
         // Create a new tap gesture
         UITapGestureRecognizer tapGesture = null;
-    
+
         // Report touch
         Action action = () => {
             TouchStatus.Text = string.Format("Image touched at: {0}",tapGesture.LocationOfTouch(0, DoubleTouchImage));
-    
+
             // Toggle the image
             if (imageHighlighted)
             {
@@ -266,18 +259,18 @@ ms.locfileid: "73009416"
             }
             imageHighlighted = !imageHighlighted;
         };
-    
+
         tapGesture = new UITapGestureRecognizer(action);
-    
+
         // Configure it
         tapGesture.NumberOfTapsRequired = 2;
-    
+
         // Add the gesture recognizer to the view
         DoubleTouchImage.AddGestureRecognizer(tapGesture);
     }
     ```
 
-    Этот код очень похож на код `UIPanGestureRecognizer` но вместо использования делегата для целевого объекта мы используем `Action`. 
+    Этот код очень похож на код `UIPanGestureRecognizer` но вместо использования делегата для целевого объекта мы используем `Action`.
 
 1. Наконец, нам нужно изменить `ViewDidLoad` так, чтобы он вызывал только что добавленные методы. Измените ViewDidLoad, чтобы он соответствовал следующему коду:
 
@@ -285,12 +278,12 @@ ms.locfileid: "73009416"
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
-    
+
         Title = "Gesture Recognizers";
-    
+
         // Save initial state
         originalImageFrame = DragImage.Frame;
-    
+
         WireUpTapGestureRecognizer();
         WireUpDragGestureRecognizer();
     }
@@ -300,7 +293,7 @@ ms.locfileid: "73009416"
 
 1. Запустите приложение и взаимодействуйте с двумя образами.
 На следующем снимке экрана приведен один из примеров этих взаимодействий:
-    
+
     [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"/>
@@ -320,7 +313,7 @@ ms.locfileid: "73009416"
     using CoreGraphics;
     using Foundation;
     using UIKit;
-    
+
     namespace Touch
     {
         public class CheckmarkGestureRecognizer : UIGestureRecognizer
@@ -329,7 +322,7 @@ ms.locfileid: "73009416"
             private CGPoint midpoint = CGPoint.Empty;
             private bool strokeUp = false;
             #endregion
-    
+
             #region Override Methods
             /// <summary>
             ///   Called when the touches end or the recognizer state fails
@@ -337,27 +330,27 @@ ms.locfileid: "73009416"
             public override void Reset()
             {
                 base.Reset();
-    
+
                 strokeUp = false;
                 midpoint = CGPoint.Empty;
             }
-    
+
             /// <summary>
             ///   Is called when the fingers touch the screen.
             /// </summary>
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
-    
+
                 // we want one and only one finger
                 if (touches.Count != 1)
                 {
                     base.State = UIGestureRecognizerState.Failed;
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
-    
+
             /// <summary>
             ///   Called when the touches are cancelled due to a phone call, etc.
             /// </summary>
@@ -368,7 +361,7 @@ ms.locfileid: "73009416"
                 // if the application comes back into view
                 base.State = UIGestureRecognizerState.Failed;
             }
-    
+
             /// <summary>
             ///   Called when the fingers lift off the screen
             /// </summary>
@@ -380,24 +373,24 @@ ms.locfileid: "73009416"
                 {
                     base.State = UIGestureRecognizerState.Recognized;
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
-    
+
             /// <summary>
             ///   Called when the fingers move
             /// </summary>
             public override void TouchesMoved(NSSet touches, UIEvent evt)
             {
                 base.TouchesMoved(touches, evt);
-    
+
                 // if we haven't already failed
                 if (base.State != UIGestureRecognizerState.Failed)
                 {
                     // get the current and previous touch point
                     CGPoint newPoint = (touches.AnyObject as UITouch).LocationInView(View);
                     CGPoint previousPoint = (touches.AnyObject as UITouch).PreviousLocationInView(View);
-    
+
                     // if we're not already on the upstroke
                     if (!strokeUp)
                     {
@@ -420,7 +413,7 @@ ms.locfileid: "73009416"
                         }
                     }
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
             #endregion
@@ -447,7 +440,7 @@ ms.locfileid: "73009416"
     {
         // Create the recognizer
         checkmarkGesture = new CheckmarkGestureRecognizer();
-    
+
         // Wire up the event handler
         checkmarkGesture.AddTarget(() => {
             if (checkmarkGesture.State == (UIGestureRecognizerState.Recognized | UIGestureRecognizerState.Ended))
@@ -463,7 +456,7 @@ ms.locfileid: "73009416"
                 isChecked = !isChecked;
             }
         });
-    
+
         // Add the gesture recognizer to the view
         View.AddGestureRecognizer(checkmarkGesture);
     }
@@ -475,21 +468,20 @@ ms.locfileid: "73009416"
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
-    
+
         // Wire up the gesture recognizer
         WireUpCheckmarkGestureRecognizer();
     }
     ```
 
 1. Запустите приложение и попробуйте вырисовать "V" на экране. Вы увидите, что отображаемое изображение изменилось, как показано на следующих снимках экрана:
-    
+
     [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
-    
+
     [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 В приведенных выше трех разделах демонстрируются различные способы реагирования на события касания в iOS: использование событий касания, встроенные средства распознавания жестов или пользовательский распознаватель жестов.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Сенсорное начало iOS (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 - [Последняя версия iOS Touch (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

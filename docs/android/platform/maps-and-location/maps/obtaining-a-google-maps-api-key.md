@@ -111,7 +111,7 @@ Certificate fingerprints:
 
 1. В браузере перейдите на [панель мониторинга & служб API консоли Google Developers](https://console.developers.google.com/apis/dashboard/) и щелкните **выбрать проект**. Щелкните имя проекта или создайте новое, щелкнув **создать проект**:
 
-   [Кнопка "создать проект" для ![консоли разработчика Google](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
+   [![Кнопка "создать проект" для консоли разработчика Google](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
 2. Если вы создали новый проект, введите имя проекта в появившемся диалоговом окне **Новый проект** . В этом диалоговом окне будет изготовлен уникальный идентификатор проекта, основанный на имени проекта. Затем нажмите кнопку **создать** , как показано в следующем примере:
 
@@ -133,7 +133,7 @@ Certificate fingerprints:
 
 1. На отображаемой странице **SDK Maps для Android** (после нажатия кнопки **включить** на предыдущем шаге) перейдите на вкладку **учетные данные** и нажмите кнопку **CREATE CREDENTIAL (создать учетные данные** ).
 
-   [сообщение для учетных данных пакета SDK для ![Maps](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![сообщение для учетных данных пакета SDK для Maps](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Щелкните **ключ API**:
 
@@ -153,7 +153,7 @@ Certificate fingerprints:
 
 6. Введите имя пакета приложения и введите отпечаток сертификата SHA-1 (полученный с помощью `keytool`, как описано выше в этом разделе). В следующем примере указывается имя пакета для `XamarinMapsDemo`, за которым следует отпечаток сертификата SHA-1, полученный из **Debug. хранилище**.
 
-   [указанное имя пакета ![— com. Xamarin. документацию. Android. Map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
+   [![указанное имя пакета — com. Xamarin. документацию. Android. Map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
 7. Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Щелкните **+ Добавить имя пакета и отпечаток** , чтобы добавить еще один отпечаток и имя пакета, как показано в следующем примере:
 

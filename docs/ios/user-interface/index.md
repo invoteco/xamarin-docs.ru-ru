@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 8e52dbce6abd30633ffffa22e24d471fef0500ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a749324c2963290c45b0e003af1518d1d517b30d
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73003550"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794675"
 ---
 # <a name="building-user-interfaces-with-xamarinios"></a>Создание пользовательских интерфейсов с помощью Xamarin. iOS
-
-## <a name="ios-designeriosuser-interfacedesignerindexmd"></a>[Конструктор iOS](~/ios/user-interface/designer/index.md)
-
-Мы создали конструктор для формата раскадровки iOS, который полностью интегрирован в Visual Studio для Mac. Конструктор iOS поддерживает полную совместимость с форматом раскадровки, чтобы файлы можно было изменять либо в Xcode, либо в Visual Studio для Mac. Кроме того, редактор поддерживает дополнительные функции, такие как пользовательские элементы управления, отображаемые во время разработки в редакторе.
 
 ## <a name="introduction-to-storyboardsiosuser-interfacestoryboardsindexmd"></a>[Введение в раскадровку](~/ios/user-interface/storyboards/index.md)
 
 Раскадровка — это визуальное представление внешнего вида и потока приложения. В Xamarin появился конструктор, позволяющий приложениям Xamarin. iOS использовать преимущества раскадровки, что позволяет визуально проектировать экран приложения и получать доступ к представлениям, контроллерам и переходов C# с помощью для получения большего контроля. Вы также можете обратиться к [этому руководству](~/ios/user-interface/designer/introduction.md) , чтобы получить объяснение и пошаговое руководство по Xamarin Designer для iOS
+
+## <a name="ios-designeriosuser-interfacedesignerindexmd"></a>[Конструктор iOS](~/ios/user-interface/designer/index.md)
+
+Мы создали конструктор для формата раскадровки iOS, который полностью интегрирован в Visual Studio для Mac. Конструктор iOS поддерживает полную совместимость с форматом раскадровки, чтобы файлы можно было изменять либо в Xcode, либо в Visual Studio для Mac. Кроме того, редактор поддерживает дополнительные функции, такие как пользовательские элементы управления, отображаемые во время разработки в редакторе.
 
 ## <a name="user-interface-in-iosiosuser-interfaceios-uiindexmd"></a>[Пользовательский интерфейс в iOS](~/ios/user-interface/ios-ui/index.md)
 

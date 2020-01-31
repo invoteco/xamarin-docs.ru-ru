@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 494ac624ac4a77c592f358b68aec4429551a49a8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b0cd3e7c851aed6f178069497665b88c1338b36b
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73002429"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794746"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Общие сведения о раскадровках в Xamarin. iOS
 
@@ -24,7 +24,7 @@ ms.locfileid: "73002429"
 
 ## <a name="requirements"></a>Требования
 
-Раскадровки можно использовать с конструктором iOS в Visual Studio для Mac или с Visual Studio 2017 с установленными рабочими нагрузками Xamarin.
+Раскадровки можно использовать с Xcode, конструктором iOS в Visual Studio для Mac и Visual Studio 2019 с установленными рабочими нагрузками Xamarin.
 
 ## <a name="what-is-a-storyboard"></a>Что такое раскадровка?
 
@@ -34,7 +34,8 @@ ms.locfileid: "73002429"
 
 Как видно, раскадровка будет размещаться в каждом из сцен с уже подготовленным содержимым и показывает соединения между ними.  На этом этапе стоит отметить, что при разговоре о сценах на iPhone можно считать, что одна *сцена* на раскадровке равна одному *экрану* содержимого на устройстве. Однако на iPad может отображаться несколько сцен, например с помощью контроллера представления контекстном меню Action.
 
-Использование раскадровки дает множество преимуществ для создания пользовательского интерфейса приложения, особенно при использовании Xamarin. Во-первых, это визуальное представление пользовательского интерфейса, так как все объекты, включая [пользовательские элементы управления](~/ios/user-interface/designer/ios-designable-controls-overview.md) , подготавливаются во время разработки. Это означает, что перед сборкой или развертыванием приложения можно визуализировать его внешний вид и последовательность. Возьмем приведенный выше образ, например. В области конструктора можно узнать, сколько сцен есть, макет каждого представления и как все связано. Это делает раскадровки настолько мощными.
+Использование раскадровки дает множество преимуществ для создания пользовательского интерфейса приложения, особенно при использовании Xamarin. Во-первых, это визуальное представление пользовательского интерфейса, так как все объекты, включая [пользовательские элементы управления](~/ios/user-interface/designer/ios-designable-controls-overview.md) , подготавливаются во время разработки.
+Это означает, что перед сборкой или развертыванием приложения можно визуализировать его внешний вид и последовательность. Возьмем приведенный выше образ, например. В области конструктора можно узнать, сколько сцен есть, макет каждого представления и как все связано. Это делает раскадровки настолько мощными.
 
 События более управляемы с помощью раскадровок, особенно при использовании конструктора iOS. Большинство элементов управления пользовательского интерфейса будут иметь список возможных событий в Панель свойств. Обработчик событий можно добавить сюда и выполнить в разделяемом методе класса View Controllers.
 
@@ -46,21 +47,21 @@ ms.locfileid: "73002429"
 
  [![](images/createsegue.png "A blue connector appears, indicating where the segue will lead as demonstrated in this image")](images/createsegue.png#lightbox)
 
-При наведении указателя мыши появится меню, позволяющее выбрать действие для нашего перехода. Он может выглядеть примерно так: 
+При наведении указателя мыши появится меню, позволяющее выбрать действие для нашего перехода. Он может выглядеть примерно так:
 
-**Классы до iOS 8 и size**:
+**Pre-iOS 8 и классы размера**
 
 [![](images/segue1.png "The Action Segue dropdown without Size Classes")](images/segue1.png#lightbox)
 
-**При использовании классов размера и адаптивного переходов**:
+**При использовании классов размера и адаптивных сегментов**
 
 [![](images/16new.png "The Action Segue dropdown with Size Classes")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Если вы используете VMWare для виртуальной машины Windows, при нажатии _кнопки мыши по умолчанию отображается_ нажатие клавиши CTRL. Чтобы создать перехода, измените настройки клавиатуры, используя **настройки**  > **клавиатуры & мыши**  > **клавишами мыши** и повторного сопоставления **дополнительной кнопки** , как показано ниже:
-> 
+> Если вы используете VMWare для виртуальной машины Windows, при нажатии _кнопки мыши по умолчанию отображается_ нажатие клавиши CTRL. Чтобы создать перехода, измените настройки клавиатуры, используя **настройки** > **клавиатуры & мыши** > **клавишами мыши** и повторного сопоставления **дополнительной кнопки** , как показано ниже:
+>
 > [![](images/image22.png "Keyboard and Mouse preference settings")](images/image22.png#lightbox)
-> 
+>
 > Теперь вы можете добавить перехода между контроллерами представления как обычно.
 
 Существуют различные типы переходов, каждый из которых обеспечивает контроль над представлением нового контроллера представления пользователю и тем, как он взаимодействует с другими контроллерами представления в раскадровке. Они описаны ниже. Также можно создать подкласс для объекта перехода, чтобы реализовать пользовательский переход:
@@ -75,9 +76,9 @@ ms.locfileid: "73002429"
 
 ### <a name="adaptive-segue-types"></a>Адаптивные типы перехода
 
- в iOS 8 появились [классы размера](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , позволяющие файлу раскадровки iOS работать со всеми доступными размерами экрана, что позволяет разработчикам создавать один пользовательский интерфейс для всех устройств iOS. По умолчанию все новые приложения Xamarin. iOS будут использовать классы размера. Чтобы использовать классы размеров из более старых проектов, ознакомьтесь с руководством [Введение в унифицированные раскадровки](~/ios/user-interface/storyboards/unified-storyboards.md) . 
+ в iOS 8 появились [классы размера](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , позволяющие файлу раскадровки iOS работать со всеми доступными размерами экрана, что позволяет разработчикам создавать один пользовательский интерфейс для всех устройств iOS. По умолчанию все новые приложения Xamarin. iOS будут использовать классы размера. Чтобы использовать классы размеров из более старых проектов, ознакомьтесь с руководством [Введение в унифицированные раскадровки](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
-В любом приложении, использующем классы размера, также будет использоваться новое [*Адаптивное переходов*](~/ios/user-interface/storyboards/unified-storyboards.md). При использовании классов размера Помните, что мы не указываем Весер напрямую, мы используем iPhone или iPad. Другими словами, мы создаем один пользовательский интерфейс, который всегда будет выглядеть одинаково, независимо от того, насколько реально он должен работать. Адаптивное переходов работает, судя среду и определяя, как лучше представлять содержимое. Ниже приведены адаптивные переходов. 
+В любом приложении, использующем классы размера, также будет использоваться новое [*Адаптивное переходов*](~/ios/user-interface/storyboards/unified-storyboards.md). При использовании классов размера Помните, что мы не указываем Весер напрямую, мы используем iPhone или iPad. Другими словами, мы создаем один пользовательский интерфейс, который всегда будет выглядеть одинаково, независимо от того, насколько реально он должен работать. Адаптивное переходов работает, судя среду и определяя, как лучше представлять содержимое. Ниже приведены адаптивные переходов.
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
@@ -90,15 +91,15 @@ ms.locfileid: "73002429"
 
 ### <a name="transferring-data-with-segues"></a>Передача данных с помощью переходов
 
-Преимущества перехода не заканчиваются переходами. Они также могут использоваться для управления переносом данных между контроллерами представления. Это достигается путем переопределения метода `PrepareForSegue` на начальном контроллере представления и обработки самих данных. При активации перехода (например, при нажатии кнопки) приложение вызывает этот метод, предоставляя возможность подготовить новый контроллер представления *перед* переходом. В коде, приведенном ниже, из примера [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) демонстрируется следующее: 
+Преимущества перехода не заканчиваются переходами. Они также могут использоваться для управления переносом данных между контроллерами представления. Это достигается путем переопределения метода `PrepareForSegue` на начальном контроллере представления и обработки самих данных. При активации перехода (например, при нажатии кнопки) приложение вызывает этот метод, предоставляя возможность подготовить новый контроллер представления *перед* переходом. В коде, приведенном ниже, из примера [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) демонстрируется следующее:
 
 ```csharp
-public override void PrepareForSegue (UIStoryboardSegue segue, 
+public override void PrepareForSegue (UIStoryboardSegue segue,
 NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryController = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController
                                   as CallHistoryController;
 
     if (callHistoryController != null) {
@@ -129,17 +130,17 @@ if (callHistoryController != null) {
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
 
-1. Создайте файл раскадровки, перейдя в **файл > новый файл > iOS > Storyboard**, как показано ниже: 
-    
+1. Создайте файл раскадровки, перейдя в **файл > новый файл > iOS > Storyboard**, как показано ниже:
+
     [![](images/new-storyboard-xs.png "The new file dialog")](images/new-storyboard-xs.png#lightbox)
 
 2. Добавьте имя раскадровки в раздел **Main интерфейса** файла **info. plist**, как показано ниже.
-    
-    [![](images/infoplist.png "The Info.plist editor")](images/infoplist.png#lightbox)
-    
-    Это эквивалентно созданию экземпляра исходного контроллера представления в методе `FinishedLaunching` в делегате приложения. Если этот параметр установлен, приложение создает экземпляр окна (см. ниже), загружает основную раскадровку и назначает экземпляр исходного контроллера представления раскадровки (рядом с перехода без источника) в качестве свойства `RootViewController` окна, а затем делает окно отображается на экране.
 
-3. В `AppDelegate` Переопределите метод `Window` по умолчанию, дополнив следующий код, чтобы реализовать свойство Window:
+    [![](images/infoplist.png "The Info.plist editor")](images/infoplist.png#lightbox)
+
+    Это эквивалентно созданию экземпляра исходного контроллера представления в методе `FinishedLaunching` в делегате приложения. Если этот параметр установлен, приложение создает экземпляр окна (см. ниже), загружает основную раскадровку и назначает экземпляр исходного контроллера представления раскадровки (рядом с перехода без источника) в качестве свойства `RootViewController` окна, а затем делает окно видимым на экране.
+
+3. В `AppDelegate`Переопределите метод `Window` по умолчанию, дополнив следующий код, чтобы реализовать свойство Window:
 
     ```csharp
     public override UIWindow Window {
@@ -150,17 +151,17 @@ if (callHistoryController != null) {
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Создайте файл раскадровки, щелкнув правой кнопкой мыши проект, чтобы **добавить > новый файл > iOS > пустую раскадровку**, как показано ниже: 
-    
+1. Создайте файл раскадровки, щелкнув правой кнопкой мыши проект, чтобы **добавить > новый файл > iOS > пустую раскадровку**, как показано ниже:
+
     [![](images/new-storyboard-vs.png "The new item dialog")](images/new-storyboard-vs.png#lightbox)
 
 2. Добавьте имя раскадровки в раздел **главного интерфейса** приложения iOS, как показано ниже.
-    
-    [![](images/ios-app.png "The Info.plist editor")](images/ios-app.png#lightbox)
-    
-    Это эквивалентно созданию экземпляра исходного контроллера представления в методе `FinishedLaunching` в делегате приложения. Если этот параметр установлен, приложение создает экземпляр окна (см. ниже), загружает основную раскадровку и назначает экземпляр исходного контроллера представления раскадровки (рядом с перехода без источника) в качестве свойства `RootViewController` окна, а затем делает окно отображается на экране.
 
-3. В `AppDelegate` Переопределите метод `Window` по умолчанию, дополнив следующий код, чтобы реализовать свойство Window:
+    [![](images/ios-app.png "The Info.plist editor")](images/ios-app.png#lightbox)
+
+    Это эквивалентно созданию экземпляра исходного контроллера представления в методе `FinishedLaunching` в делегате приложения. Если этот параметр установлен, приложение создает экземпляр окна (см. ниже), загружает основную раскадровку и назначает экземпляр исходного контроллера представления раскадровки (рядом с перехода без источника) в качестве свойства `RootViewController` окна, а затем делает окно видимым на экране.
+
+3. В `AppDelegate`Переопределите метод `Window` по умолчанию, дополнив следующий код, чтобы реализовать свойство Window:
 
     ```csharp
     public override UIWindow Window {
@@ -171,13 +172,9 @@ if (callHistoryController != null) {
 
 -----
 
-## <a name="creating-a-storyboard-with-the-ios-designer"></a>Создание раскадровки с помощью конструктора iOS
+## <a name="creating-a-storyboard-with-xcode"></a>Создание раскадровки с помощью Xcode
 
-Раскадровку можно создать с помощью Xamarin Designer для iOS, которая легко интегрируется с Visual Studio для Mac и Visual Studio.
-
-Чтобы приступить к работе с конструктором iOS для создания раскадровок, следуйте инструкциям в [многоэкранной программе Hello, iOS](~/ios/get-started/hello-ios-multiscreen/index.md) . В этом пошаговом руководстве рассматривается Просмотр переходов между контроллерами представления с помощью переходов и управление событиями в элементах управления.
-
-## <a name="instantiate-storyboards-manually"></a>Создание экземпляров раскадровки вручную
+Раскадровку можно создать и изменить с помощью Xcode для использования в приложениях iOS, разработанных с помощью Visual Studio для Mac.
 
 Раскадровки полностью заменяют отдельные файлы XIB в проекте, однако отдельные контроллеры представлений в раскадровке можно по-прежнему создавать с помощью `Storyboard.InstantiateViewController`.
 
@@ -185,59 +182,57 @@ if (callHistoryController != null) {
 
 На снимке экрана ниже показаны два контроллера представления в области конструктора без перехода между ними. В следующем разделе будет рассмотрено, как можно настроить этот переход в коде.
 
- [![](images/viewcontrollerspink.png "This screenshot shows two view controllers on the design surface with no segue between them")](images/viewcontrollerspink.png#lightbox)
-
 1. Добавить _пустую раскадровку iPhone_ в существующий проект проекта:
-    
-    [![](images/add-storyboard1.png "Adding storyboard")](images/add-storyboard1.png#lightbox)
 
-2. Дважды щелкните только что созданную раскадровку, чтобы открыть ее, и добавьте новый **контроллер навигации** в область конструктора. Так как контроллер навигации не является интерфейсом пользователя, по умолчанию он будет иметь корневой контроллер представления, как показано ниже:
+    [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
 
-    [![](images/uinavigationcontroller.png "View Controllers with Segues")](images/uinavigationcontroller.png#lightbox)
+2. Щелкните файл раскадровки правой кнопкой мыши и выберите пункт **Открыть с помощью > Xcode Interface Builder** , чтобы открыть его в Xcode.
 
-3. Выберите _контроллер представления_ , щелкнув черную полосу внизу. На **панели свойств**конструктора в разделе **удостоверение** можно указать пользовательский класс, а также уникальный идентификатор для контроллера представления. Задайте для **имени класса** и **идентификатора раскадровки** значение `MainViewController`.
+3. В Xcode Откройте библиотеку (с помощью **представления > Показать библиотеку** или *Shift + Command + L*), чтобы отобразить список объектов, которые можно добавить в раскадровку. Добавьте `Navigation Controller` в раскадровку, перетащив объект из списка на раскадровку. По умолчанию `Navigation Controller` предоставит два экрана; экран справа является `TableViewController`, который мы будем заменять более простым представлением, поэтому его можно удалить, щелкнув представление и нажав клавишу DELETE.
 
-    [![](images/identitypanelnew.png "Specify custom class")](images/identitypanelnew.png#lightbox)
+    [![](images/add-navigation-controller.png "Adding a NavigationController from the Library")](images/add-navigation-controller.png#lightbox)
 
-4. Позже нам нужно будет создать экземпляр наших контроллеров представления из раскадровки и использовать идентификатор раскадровки для ссылки на них в нашем коде. Установка идентификатора восстановления в соответствии с ИДЕНТИФИКАТОРом раскадровки гарантирует, что контроллер представления будет правильно создан, если необходимо восстановить состояние.
+4. Этот контроллер представления будет иметь собственный пользовательский класс, а также должен иметь собственный идентификатор раскадровки. Если щелкнуть поле над только что добавленным представлением, появится три значка, крайний левый из которых представляет контроллер представления для представления. Выбрав этот значок, можно задать значения класса и идентификатора на вкладке удостоверение на правой панели. Задайте для этих значений значение `MainViewController` и убедитесь, что `Use Storyboard ID`.
 
-5. Сейчас у нас только один контроллер представления. Перетащите другой контроллер представления в область конструктора. На панели **свойств**в разделе удостоверение задайте для класса и идентификатора раскадровки значение `PinkViewController`, как показано ниже:
+    [![](images/identity-panel.png "Setting the MainViewController in the identity panel")](images/identity-panel.png#lightbox)
 
-    [![](images/pinkvcnew.png "The Property Pad")](images/pinkvcnew.png#lightbox)
-    
-    Интегрированная среда разработки создаст эти пользовательские классы для контроллеров представления. Их можно просмотреть в **панель решения**, как показано на снимке экрана ниже:
-    
-    [![](images/solution-pad.png "Solution Pad")](images/solution-pad.png#lightbox)
+5. Снова с помощью библиотеки перетащите контроллер представления на экран. Он будет установлен в качестве контроллера корневого представления. Нажимая клавишу Control, щелкните и перетащите значок из контроллера навигации слева к добавленному контроллеру представления справа и выберите в меню пункт *контроллер корневого представления* .
 
-6. В `PinkViewController` выберите представление, щелкнув центр фрейма контроллера. В Панель свойств в разделе представление измените **фон** на пурпурный:
-    
-    [![](images/pinkcontroller.png "Set Background color")](images/pinkcontroller.png#lightbox)
+    [![](images/add-view-controller.png "Adding a NavigationController from the Library and setting the MainViewController as a Root View Controller")](images/add-view-controller.png#lightbox)
 
-7. Наконец, перетащите кнопку из **панели элементов** на `MainViewController`. В Панель свойств присвойте ему имя `PinkButton` и заголовок Готопинк, как показано ниже:
+6. Это приложение будет переходить к другому представлению, поэтому добавьте еще одно представление в раскадровку, как и раньше. Мы вызываем этот `PinkViewController`, и эти значения можно задать так же, как и в `MainViewController`.
 
-    [![](images/pinkbutton.png "Set Button Name")](images/pinkbutton.png#lightbox)
+    [![](images/add-additional-view-controller.png "Adding an additional View Controller")](images/add-additional-view-controller.png#lightbox)
+
+7. Так как контроллер представления будет иметь розовый фон, это свойство можно задать на панели Атрибуты, используя раскрывающийся список рядом с `Background`.
+
+    [![](images/set-pink-background.png "Adding an additional View Controller")](images/set-pink-background.png#lightbox)
+
+8. Так как нам требуется, чтобы `MainViewController` переходить к `PinkViewController`, для первого из них потребуется кнопка для взаимодействия с. С помощью библиотеки мы можем добавить кнопку в `MainViewController`.
+
+    [![](images/add-button.png "Adding a Button to the MainViewController")](images/add-button.png#lightbox)
 
 Раскадровка завершена, но если развернуть проект сейчас, будет выведен пустой экран. Это связано с тем, что нам по-прежнему нужно сообщить интегрированной среде разработки использовать нашу раскадровку и настроить корневой контроллер представления, который будет служить первым представлением. Обычно это можно сделать с помощью наших параметров проекта, как показано выше. Однако в этом примере мы добавим тот же результат в коде, добавив следующий код в **AppDelegate**:
 
 ```csharp
 public partial class AppDelegate : UIApplicationDelegate
+{
+    UIWindow window;
+    public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard", null);
+    public static UIViewController initialViewController;
+
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     {
-        UIWindow window;
-        public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard", null);
-        public static UIViewController initialViewController;
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-        {
-            window = new UIWindow (UIScreen.MainScreen.Bounds);
+        initialViewController = Storyboard.InstantiateInitialViewController () as UIViewController;
 
-            initialViewController = Storyboard.InstantiateInitialViewController () as UIViewController;
-
-            window.RootViewController = initialViewController;
-            window.MakeKeyAndVisible ();
-            return true;
-        }
-
+        window.RootViewController = initialViewController;
+        window.AddSubview(initialViewController.View);
+        window.MakeKeyAndVisible ();
+        return true;
     }
+}
 ```
 
 Это большой объем кода, но незнакомо всего несколько строк. Сначала мы регистрируем нашу раскадровку с помощью **AppDelegate** , передав имя раскадровки **файл mainstoryboard**. Далее мы говорим приложению создать экземпляр исходного контроллера представления из раскадровки, вызвав `InstantiateInitialViewController` в раскадровке, и мы установили этот контроллер представления в качестве корневого контроллера представления приложения. Этот метод определяет первый экран, который видит пользователь, и создает новый экземпляр этого контроллера представления.
@@ -245,24 +240,21 @@ public partial class AppDelegate : UIApplicationDelegate
 Обратите внимание, что в области решения в интегрированной среде разработки был создан `MainViewcontroller.cs` класс, и его `corresponding designer.cs` при добавлении имени класса в Панель свойств на шаге 4. Этот класс можно увидеть, создав специальный конструктор, включающий базовый класс:
 
 ```csharp
-public MainViewController (IntPtr handle) : base (handle) 
+public MainViewController (IntPtr handle) : base (handle)
 {
 }
 ```
 
-При создании раскадровки с помощью конструктора интегрированная среда разработки автоматически добавляет атрибут [[Register]](xref:Foundation.RegisterAttribute) в начало класса `designer.cs` и передает строковый идентификатор, ИДЕНТИЧный идентификатору раскадровки, указанному на предыдущем шаге. Будет выполнена привязка C# к соответствующей сцене в раскадровке.
-
-В некоторый момент может потребоваться добавить существующий класс, который **не** был создан в конструкторе. В этом случае вы зарегистрируете этот класс как обычно:
+При создании раскадровки с помощью Xcode интегрированная среда разработки автоматически добавляет атрибут [[Register]](xref:Foundation.RegisterAttribute) в начало класса `designer.cs` и передает строковый идентификатор, ИДЕНТИЧный идентификатору раскадровки, указанному на предыдущем шаге. Будет выполнена привязка C# к соответствующей сцене в раскадровке.
 
 ```csharp
 [Register ("MainViewController")]
 public partial class MainViewController : UIViewController
 {
-public MainViewController (IntPtr handle) : base (handle) 
-{
-}
-
-...
+    public MainViewController (IntPtr handle) : base (handle)
+    {
+    }
+    //...
 }
 ```
 
@@ -277,32 +269,30 @@ public partial class MainViewController : UIViewController
 
     public MainViewController (IntPtr handle) : base (handle)
     {
-
     }
 
     public override void AwakeFromNib ()
     {
-    // Called when loaded from xib or storyboard.
-
-    this.Initialize ();
+        // Called when loaded from xib or storyboard.
+        this.Initialize ();
     }
 
-    public void Initialize(){
-
-    //Instantiating View Controller with Storyboard ID 'PinkViewController'
-    pinkViewController = Storyboard.InstantiateViewController ("PinkViewController") as PinkViewController;
+    public void Initialize()
+    {
+        //Instantiating View Controller with Storyboard ID 'PinkViewController'
+        pinkViewController = Storyboard.InstantiateViewController ("PinkViewController") as PinkViewController;
     }
 
     public override void ViewDidLoad ()
     {
-    base.ViewDidLoad ();
+        base.ViewDidLoad ();
 
-    //When we push the button, we will push the pinkViewController onto our current Navigation Stack
-    PinkButton.TouchUpInside += (o, e) =&gt; {
-        this.NavigationController.PushViewController (pinkViewController, true);
-    };
+        //When we push the button, we will push the pinkViewController onto our current Navigation Stack
+        PinkButton.TouchUpInside += (o, e) =&gt;
+        {
+            this.NavigationController.PushViewController (pinkViewController, true);
+        };
     }
-
 }
 ```
 
@@ -329,10 +319,10 @@ public partial class MainViewController : UIViewController
         - Выравнивание: по центру
         - Строки: 2
         - Флажок "Hidden" установлен    
-        
+
     [![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
-    
-2. Создайте перехода между кнопкой "перейти к розовый" и контроллером представления, удерживая нажатой клавишу CTRL, перетащив *пинкбуттон* в *пинквиевконтроллер*, и выбрав пункт **Push-уведомления** при помощи мыши. 
+
+2. Создайте перехода между кнопкой "перейти к розовый" и контроллером представления, удерживая нажатой клавишу CTRL, перетащив *пинкбуттон* в *пинквиевконтроллер*, и выбрав пункт **Push-уведомления** при помощи мыши.
 
 3. Щелкните перехода и присвойте ему *идентификатор* `SegueToPink`:
 
@@ -343,7 +333,7 @@ public partial class MainViewController : UIViewController
     ```csharp
     public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
     {
-        
+
         if(segueIdentifier == "SegueToPink"){
             if (PasswordTextField.Text == "password") {
                 PasswordTextField.ResignFirstResponder ();
@@ -378,32 +368,32 @@ public partial class MainViewController : UIViewController
 
 Чтобы добавить ссылку на внешнюю раскадровку, выполните следующие действия.
 
-1. В **Обозреватель решений**щелкните правой кнопкой мыши имя проекта и выберите **Добавить**  > **новый файл...**  > **iOS**  > **Storyboard**. Введите **имя** новой раскадровки и нажмите кнопку " **создать** ":
-    
+1. В **Обозреватель решений**щелкните правой кнопкой мыши имя проекта и выберите **Добавить** > **новый файл...**  > **iOS** > **Storyboard**. Введите **имя** новой раскадровки и нажмите кнопку " **создать** ":
+
     [![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
-    
-2. Разработайте макет новых сцен раскадровки, как обычно и сохраняйте изменения: 
-    
+
+2. Разработайте макет новых сцен раскадровки, как обычно и сохраняйте изменения:
+
     [![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
-    
+
 3. Откройте раскадровку, в которой вы будете добавлять ссылку в конструкторе iOS.
 
-4. Перетащите **ссылку раскадровки** из **панели элементов** на область конструктора: 
-    
+4. Перетащите **ссылку раскадровки** из **панели элементов** на область конструктора:
+
     [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-    
-5. На вкладке **мини** -приложение **обозревателя свойств**выберите имя **раскадровки** , созданной ранее: 
+
+5. На вкладке **мини** -приложение **обозревателя свойств**выберите имя **раскадровки** , созданной ранее:
 
     [![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
-    
-6. Щелкните мини-приложение пользовательского интерфейса (например, кнопка) в существующей сцене и создайте новый перехода для только что созданной **Ссылки раскадровки** : 
 
-    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox) 
-    
-7. В контекстном меню выберите команду " **отобразить** ", чтобы завершить перехода: 
+6. Щелкните мини-приложение пользовательского интерфейса (например, кнопка) в существующей сцене и создайте новый перехода для только что созданной **Ссылки раскадровки** :
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-    
+    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox)
+
+7. В контекстном меню выберите команду " **отобразить** ", чтобы завершить перехода:
+
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+
 8. Сохраните изменения в раскадровке.
 
 При запуске приложения и выборе элемента пользовательского интерфейса, созданного с помощью перехода, будет отображен первоначальный контроллер представления из внешней раскадровки, указанной в ссылке раскадровки.
@@ -416,32 +406,32 @@ public partial class MainViewController : UIViewController
 
 1. В **Обозреватель решений**дважды щелкните внешнюю раскадровку, чтобы открыть ее для редактирования.
 
-2. Добавьте новую сцену и разработайте ее макет, как обычно: 
+2. Добавьте новую сцену и разработайте ее макет, как обычно:
 
     [![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
-    
-3. На вкладке **мини** -приложение **ОБОЗРЕВАТЕЛЯ свойств**введите **идентификатор раскадровки** для контроллера представления новой сцены: 
+
+3. На вкладке **мини** -приложение **ОБОЗРЕВАТЕЛЯ свойств**введите **идентификатор раскадровки** для контроллера представления новой сцены:
 
     [![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
-    
+
 4. Откройте раскадровку, в которой вы будете добавлять ссылку в конструкторе iOS.
 
-5. Перетащите **ссылку раскадровки** из **панели элементов** на область конструктора: 
+5. Перетащите **ссылку раскадровки** из **панели элементов** на область конструктора:
 
     [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-    
-6. На вкладке **мини** -приложение **обозревателя свойств**выберите имя **раскадровки** и **идентификатор ссылки** (идентификатор раскадровки) созданной ранее сцены: 
+
+6. На вкладке **мини** -приложение **обозревателя свойств**выберите имя **раскадровки** и **идентификатор ссылки** (идентификатор раскадровки) созданной ранее сцены:
 
     [![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
-    
-7. Щелкните мини-приложение пользовательского интерфейса (например, кнопка) в существующей сцене и создайте новый перехода для только что созданной **Ссылки раскадровки** : 
 
-    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox) 
-    
-8. В контекстном меню выберите команду " **отобразить** ", чтобы завершить перехода: 
+7. Щелкните мини-приложение пользовательского интерфейса (например, кнопка) в существующей сцене и создайте новый перехода для только что созданной **Ссылки раскадровки** :
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-    
+    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox)
+
+8. В контекстном меню выберите команду " **отобразить** ", чтобы завершить перехода:
+
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+
 9. Сохраните изменения в раскадровке.
 
 При запуске приложения и выборе элемента пользовательского интерфейса, созданного перехода из, отображается сцена с заданным **идентификатором раскадровки** из внешней раскадровки, указанной в ссылке раскадровки.
@@ -454,30 +444,30 @@ public partial class MainViewController : UIViewController
 
 1. В **Обозреватель решений**дважды щелкните раскадровку, чтобы открыть ее для редактирования.
 
-2. Добавьте новую сцену и разработайте ее макет, как обычно: 
+2. Добавьте новую сцену и разработайте ее макет, как обычно:
 
     [![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
 
-3. На вкладке **мини** -приложение **ОБОЗРЕВАТЕЛЯ свойств**введите **идентификатор раскадровки** для контроллера представления новой сцены: 
+3. На вкладке **мини** -приложение **ОБОЗРЕВАТЕЛЯ свойств**введите **идентификатор раскадровки** для контроллера представления новой сцены:
 
     [![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
-    
-4. Перетащите **ссылку раскадровки** из **панели элементов** на область конструктора: 
+
+4. Перетащите **ссылку раскадровки** из **панели элементов** на область конструктора:
 
    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-    
-5. На вкладке **мини** -приложение **ОБОЗРЕВАТЕЛЯ свойств**выберите **идентификатор ссылки** (идентификатор раскадровки) для сцены, созданной ранее. 
+
+5. На вкладке **мини** -приложение **ОБОЗРЕВАТЕЛЯ свойств**выберите **идентификатор ссылки** (идентификатор раскадровки) для сцены, созданной ранее.
 
     [![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
-    
-6. Щелкните мини-приложение пользовательского интерфейса (например, кнопка) в существующей сцене и создайте новый перехода для только что созданной **Ссылки раскадровки** : 
 
-    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox) 
-    
-7. В контекстном меню выберите команду " **отобразить** ", чтобы завершить перехода: 
+6. Щелкните мини-приложение пользовательского интерфейса (например, кнопка) в существующей сцене и создайте новый перехода для только что созданной **Ссылки раскадровки** :
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-    
+    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox)
+
+7. В контекстном меню выберите команду " **отобразить** ", чтобы завершить перехода:
+
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+
 8. Сохраните изменения в раскадровке.
 
 При запуске приложения и выборе элемента пользовательского интерфейса, созданного перехода из, отображается сцена с заданным **идентификатором** раскадровки в той же раскадровке, которая указана в ссылке раскадровки.
@@ -488,7 +478,7 @@ public partial class MainViewController : UIViewController
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Ручная Раскадровка (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
-- [Общие сведения о конструкторе iOS](~/ios/user-interface/designer/introduction.md)
+- [Ручная раскадровка (образец)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
+- [Введение в iOS Designer](~/ios/user-interface/designer/introduction.md)
 - [Преобразование в раскадровки](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
-- [Справочник по классам Уисторибоард](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)
+- [Справочник по классу UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

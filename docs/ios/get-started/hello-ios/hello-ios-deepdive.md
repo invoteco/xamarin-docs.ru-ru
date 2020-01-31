@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 0fa6c05b3aa90f1d1875b9169350b197d882d863
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023263"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724776"
 ---
 # <a name="hello-ios--deep-dive"></a>Подробный обзор примера приложения "Привет, iOS"
 
@@ -355,7 +355,7 @@ public override void ViewDidLoad ()
 
 В приложении Phoneword представлено несколько понятий, не охваченных этим руководством. В их число входят следующие:
 
-- **Изменение текста кнопки** — приложение Phoneword продемонстрировало, как изменить текст элемента **Button**, вызвав `SetTitle` для **Button** и передав новый текст и _состояние элемента управления_ **Button**. Например, следующий код позволяет изменить текст CallButton на "Call" (Вызов):
+- **Изменение текста кнопки** — приложение Phoneword продемонстрировало, как изменить текст элемента **Button**, вызвав `SetTitle` для **Button** и передав новый текст и _состояние элемента управления_**Button**. Например, следующий код позволяет изменить текст CallButton на "Call" (Вызов):
 
     ```csharp
     CallButton.SetTitle ("Call", UIControlState.Normal);
@@ -439,16 +439,13 @@ public override void ViewDidLoad ()
 
 ::: zone pivot="macos"
 
-- [**Sketch**](https://www.sketchapp.com") — приложение для Mac, предназначенное для разработки пользовательского интерфейса, значков и других компонентов. С помощью этого приложения создавались значки приложений и изображения при запуске для Xamarin. Приложение Sketch 3 доступно в магазине App Store. Вы также можете попробовать бесплатное [средство Sketch](https://bohemiancoding.com/sketch/tool/).
 - [**Pixelmator**](https://www.pixelmator.com/) — универсальный редактор изображений для Mac, который стоит приблизительно 30 USD.
-- [**Glyphish**](https://www.glyphish.com/) — готовые наборы значков высокого качества, которые можно скачать бесплатно или приобрести.
 - [**Fiverr**](https://www.fiverr.com/) — воспользуйтесь услугами одного из дизайнеров по созданию набора значков по цене от 5 USD. Результат может быть разным, однако это хороший ресурс, если вам нужно создать значки максимально быстро.
 
 ::: zone-end
 ::: zone pivot="windows"
 
 - Visual Studio — создать простой набор значков для приложения можно непосредственно в интегрированной среде разработки.
-- [**Glyphish**](https://www.glyphish.com/) — готовые наборы значков высокого качества, которые можно скачать бесплатно или приобрести.
 - [**Fiverr**](https://www.fiverr.com/) — воспользуйтесь услугами одного из дизайнеров по созданию набора значков по цене от 5 USD. Результат может быть разным, однако это хороший ресурс, если вам нужно создать значки максимально быстро.
 
 ::: zone-end

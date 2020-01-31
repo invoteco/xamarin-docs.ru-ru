@@ -296,7 +296,7 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 `ViewPager` и `PagerTabStrip` предназначены для совместной работы. При объявлении `PagerTabStrip` в макете `ViewPager` `ViewPager` автоматически найдет `PagerTabStrip` и подключится к адаптеру. При сборке и запуске приложения в верхней части каждого экрана должно отобразиться пустое `PagerTabStrip`: 
 
-[снимок экрана ![крупный план пустого Пажертабстрип](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
+[![снимок экрана крупный план пустого Пажертабстрип](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 ### <a name="display-a-title"></a>Отображение заголовка
 

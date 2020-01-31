@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/17/2019
-ms.openlocfilehash: 2ea3516c1fb89c8c9b9cc3694d7c95ccd87e9d41
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 2b2bfe9925a99c2ba7f1366ea28d5c72e2e1da88
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489703"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725545"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Сертификаты и идентификаторы в Xamarin.Mac
 
@@ -150,7 +150,7 @@ _В этом руководстве описывается создание не
 
 Для выпуска приложения в App Store необходимо два сертификата:
 
-- сертификат **распространения приложений Mac**, используемый для подписывания приложения; 
+- сертификат **распространения приложений Mac**, используемый для подписывания приложения;
 - сертификат **распространения установщика Mac**, чтобы подписать установщик.
 
 > [!TIP]
@@ -183,7 +183,7 @@ _В этом руководстве описывается создание не
 
 Для самостоятельного выпуска приложения Xamarin.Mac (не через Apple App Store) вам потребуется два сертификата:
 
-- сертификат **идентификатора разработчика для установщика**, используемый для подписывания приложения; 
+- сертификат **идентификатора разработчика для установщика**, используемый для подписывания приложения;
 - сертификат **идентификатора разработчика приложения**, чтобы подписать установщик.
 
 > [!TIP]
@@ -198,4 +198,4 @@ _В этом руководстве описывается создание не
 - [Установка](/visualstudio/mac/installation/)
 - [Пример кода приложения "Привет, Mac"](~/mac/get-started/hello-mac.md)
 - [Распространение приложений в Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Идентификатор разработчика и привратник](https://developer.apple.com/resources/developer-id/)
+- [Идентификатор разработчика и привратник](https://developer.apple.com/developer-id/)

@@ -17,7 +17,7 @@ ms.locfileid: "75503005"
 
 :::row:::
     :::column:::
-[Симулятор iOS для Windows ![](~/media/index/xamarin-tools-windows-simulator.svg?branch=master)](~/tools/ios-simulator/index.md)
+[![Симулятор iOS для Windows](~/media/index/xamarin-tools-windows-simulator.svg?branch=master)](~/tools/ios-simulator/index.md)
 
 ### <a name="ios-simulator-for-windowstoolsios-simulatorindexmd"></a>[Симулятор iOS для Windows](~/tools/ios-simulator/index.md)
 

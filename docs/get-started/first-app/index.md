@@ -10,10 +10,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
 ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
-ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
-ms.translationtype: MT
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "75502804"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Создание первого приложения Xamarin.Forms
@@ -26,51 +26,51 @@ _Просмотрите это видео и следуйте инструкци
 
 ## <a name="step-by-step-instructions-for-windows"></a>Пошаговые инструкции для Windows
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Выполните следующие действия, как показано в видео.
 
-1. Выберите **файл > создать > проект...** или нажмите кнопку **создать новый проект..** .:
+1. Выберите **Файл > Создать > Проект...** или нажмите кнопку **Создать проект...** :
 
-    [![создать новый проект](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [![Создание проекта](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
-2. Выполните поиск по фразе Xamarin или выберите **Mobile** в меню **тип проекта** . Выберите тип проекта " **мобильное приложение (Xamarin. Forms)** ":
+2. Выполните поиск по слову "Xamarin" или выберите **Мобильный** в меню **Тип проекта**. Выберите тип проекта **Мобильное приложение (Xamarin.Forms)** :
 
-    [Фильтр ![для проектов Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [![Фильтр для проектов Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
-3. Выберите имя проекта &ndash; в примере используется "Авесомеапп":
+3. Выберите имя проекта &ndash; в примере используется "AwesomeApp":
 
-    [![выбрать имя проекта](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![Выбор имени проекта](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
-4. Щелкните **пустой** тип проекта и убедитесь, что выбраны **Android** и **iOS** .
+4. Щелкните тип проекта **Пустой** и убедитесь, что выбраны параметры **Android** и **iOS**:
 
     [![Android и iOS с .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
 5. Подождите, пока восстанавливаются пакеты NuGet (в строке состояния появится сообщение "Восстановление завершено").
 
-6. В новых установках Visual Studio 2019 не будет настроен эмулятор Android. Щелкните стрелку раскрывающегося списка на кнопке **Отладка** и выберите **создать Android Emulator** , чтобы запустить экран создания эмулятора:
+6. Новые установки Visual Studio 2019 не содержат настроенный эмулятор Android. Щелкните стрелку раскрывающегося списка на кнопке **Отладка** и выберите **Создать Android Emulator**, чтобы открыть экран создания эмулятора:
 
-    ![Раскрывающийся список создания Android Emulator](images/win-2019/debug-dropdown.png)
+    ![Раскрывающийся список "Создать Android Emulator"](images/win-2019/debug-dropdown.png)
 
-7. На экране создания эмулятора используйте параметры по умолчанию и нажмите кнопку **создать** :
+7. На экране создания эмулятора используйте параметры по умолчанию и нажмите кнопку **Создать**:
 
-    [экран создания эмулятора ![Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+    [![Экран создания эмулятора Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
 
-8. Создание эмулятора вернет вас в окно Device Manager. Нажмите кнопку " **Пуск** ", чтобы запустить новый эмулятор:
+8. После создания снова открывается окно диспетчера устройств. Нажмите кнопку **Запустить**, чтобы запустить новый эмулятор:
 
-    ![Эмулятор Android в Device Manager](images/win-2019/start-emulator.png)
+    ![Эмулятор Android в диспетчере устройств](images/win-2019/start-emulator.png)
 
-9. Visual Studio 2019 теперь должен показывать имя нового эмулятора на кнопке " **Отладка** ":
+9. Теперь система Visual Studio 2019 должна выводить имя нового эмулятора на кнопке **Отладка**:
 
     ![Имя эмулятора Android на кнопке "Отладка"](images/win-2019/debug-emulator-name.png)
 
-10. Нажмите кнопку " **Отладка** ", чтобы создать и развернуть приложение в эмуляторе Android:
+10. Нажмите кнопку **Отладка**, чтобы создать и развернуть приложение в эмуляторе Android:
 
     ![Эмулятор Android, отображающий приложение](images/win-2019/android-emulator.png)
 
 ## <a name="customize-the-application"></a>Настройка приложения
 
-Приложение можно настроить для добавления интерактивных функций. Чтобы добавить взаимодействие с пользователем в приложение, выполните следующие действия.
+Приложение можно настроить для добавления интерактивных функций. Чтобы добавить взаимодействие с пользователем в приложение, выполните следующие действия:
 
 1. Измените **MainPage.xaml**, добавив этот XAML до конца `</StackLayout>`:
 
@@ -94,13 +94,13 @@ _Просмотрите это видео и следуйте инструкци
     ![Приложение Android](images/win/07-sml.png)
 
 > [!NOTE]
-> Пример приложения включает дополнительные интерактивные функции, которые не рассматриваются в видео.
+> Пример приложения включает дополнительные интерактивные функции, которые не рассматриваются в этом видео.
 
 ## <a name="build-an-ios-app-in-visual-studio-2019"></a>Создание приложения iOS в Visual Studio 2019
 
-Можно создать и отладить приложение iOS из Visual Studio с помощью сетевого компьютера Mac. Дополнительные сведения см. в [инструкциях по установке](~/ios/get-started/installation/windows/index.md).
+Можно создавать и отлаживать приложения iOS из Visual Studio с помощью компьютера Mac, подключенного к сети. Дополнительные сведения см. в [инструкциях по установке](~/ios/get-started/installation/windows/index.md).
 
-В этом видеоролике рассматривается процесс создания и тестирования приложения iOS с помощью Visual Studio 2019 в Windows.
+В этом видео рассматривается процесс сборки и тестирования приложения iOS с помощью Visual Studio 2019 в Windows:
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
 
@@ -111,7 +111,7 @@ _Просмотрите это видео и следуйте инструкци
 
 ## <a name="step-by-step-instructions-for-windows"></a>Пошаговые инструкции для Windows
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Выполните следующие действия, как показано в видео.
 
@@ -158,7 +158,7 @@ _Просмотрите это видео и следуйте инструкци
 
 ## <a name="step-by-step-instructions-for-mac"></a>Пошаговые инструкции для Mac
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Выполните следующие действия, как показано в видео.
 
@@ -209,8 +209,8 @@ _Просмотрите это видео и следуйте инструкци
 
 Загрузите полный код из [коллекции примеров](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) или просмотрите его на [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
-- [Краткое руководство по отдельным страницам](~/get-started/quickstarts/single-page.md) &ndash; создания более функционального приложения.
-- [Примеры Xamarin. forms](~/xamarin-forms/samples/index.md) &ndash; Скачайте и запустите примеры кода и примеры приложений.
-- [Создание электронной документации по мобильным приложениям](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; подробные главы, посвященные разработке Xamarin. Forms, доступной в формате PDF и включающей сотни дополнительных примеров.
+- [Краткое руководство по одностраничным приложениям](~/get-started/quickstarts/single-page.md) &ndash; создание более функционального приложения.
+- [Примеры Xamarin.Forms](~/xamarin-forms/samples/index.md) &ndash; скачивание и запуск примеров кода и примеров приложений.
+- [Электронная книга "Создание мобильных приложений"](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; подробное описание разработки в Xamarin.Forms в формате PDF с сотнями дополнительных примеров.

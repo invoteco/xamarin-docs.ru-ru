@@ -140,6 +140,11 @@
       items:
         - name: Обзор
           href: user-interface/index.md
+        - name: Элементы Storyboard
+          href: user-interface/storyboards/index.md
+          items:
+            - name: Унифицированные раскадровки
+              href: user-interface/storyboards/unified-storyboards.md
         - name: Конструктор iOS
           href: user-interface/designer/index.md
           items:
@@ -151,11 +156,6 @@
               href: user-interface/designer/ios-designable-controls-walkthrough.md
             - name: Автоматический макет в конструкторе iOS
               href: user-interface/designer/designer-auto-layout.md
-        - name: Раскадровки
-          href: user-interface/storyboards/index.md
-          items:
-            - name: Унифицированные раскадровки
-              href: user-interface/storyboards/unified-storyboards.md
         - name: Пользовательские интерфейсы в iOS
           href: user-interface/ios-ui/index.md
           items:

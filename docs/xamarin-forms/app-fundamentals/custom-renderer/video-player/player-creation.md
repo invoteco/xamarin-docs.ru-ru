@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 007c027772701e424aad5995c0ec025c3589171c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771785"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725095"
 ---
 # <a name="creating-the-platform-video-players"></a>Создание видеопроигрывателей платформы
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Решение [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) содержит весь необходимый код для внедрения видеопроигрывателя для Xamarin.Forms. Оно также включает ряд страниц, где демонстрируется использование видеопроигрывателя в приложении. Весь код `VideoPlayer` и отрисовщики платформ находятся в папках проекта с именем `FormsVideoLibrary` и используют пространство имен `FormsVideoLibrary`. Благодаря этому вы сможете легко копировать файлы в собственное приложение и ссылаться на классы.
 
 ## <a name="the-video-player"></a>Видеопроигрыватель
 
-Класс [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) входит в библиотеку .NET Standard **VideoPlayerDemos**, которая является общей для платформ. Он является производным от `View`.
+Класс [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/FormsVideoLibrary/VideoPlayer.cs) входит в библиотеку .NET Standard **VideoPlayerDemos**, которая является общей для платформ. Он является производным от `View`.
 
 ```csharp
 using System;
@@ -45,7 +45,7 @@ namespace FormsVideoLibrary
 
 При реализации видеопроигрывателя в iOS используется несколько классов. Сначала приложение создает класс [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController), а затем в качестве значения свойства [`Player`](xref:AVKit.AVPlayerViewController.Player*) задает объекта типа [`AVPlayer`](xref:AVFoundation.AVPlayer). При назначении видеопроигрывателю источника видео требуются дополнительные классы.
 
-Как все отрисовщики, класс [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) в iOS содержит атрибут `ExportRenderer`, определяющий представление `VideoPlayer` с помощью отрисовщика.
+Как все отрисовщики, класс [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/FormsVideoLibrary/VideoPlayerRenderer.csVideoPlayerRenderer.cs) в iOS содержит атрибут `ExportRenderer`, определяющий представление `VideoPlayer` с помощью отрисовщика.
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-video-view"></a>Представление видео в Android
 
-Отрисовщик Android для `VideoPlayer` основан на классе [`VideoView`](xrtef:Android.Widget.VideoView) в Android. Однако при отдельном использовании класса `VideoView` для воспроизведения видео в приложении Xamarin.Forms видео заполняет область, отведенную для класса `VideoPlayer`, без сохранения правильных пропорций. Поэтому (как вы вскоре увидите) класс `VideoView` стал дочерним по отношению к классу `RelativeLayout` в Android. Производная `using` определяет `ARelativeLayout`, чтобы отличать его от класса `RelativeLayout` Xamarin.Forms, и он представляет собой второй универсальный аргумент в классе `ViewRenderer`.
+Отрисовщик Android для `VideoPlayer` основан на классе [`VideoView`](xref:Android.Widget.VideoView) в Android. Однако при отдельном использовании класса `VideoView` для воспроизведения видео в приложении Xamarin.Forms видео заполняет область, отведенную для класса `VideoPlayer`, без сохранения правильных пропорций. Поэтому (как вы вскоре увидите) класс `VideoView` стал дочерним по отношению к классу `RelativeLayout` в Android. Производная `using` определяет `ARelativeLayout`, чтобы отличать его от класса `RelativeLayout` Xamarin.Forms, и он представляет собой второй универсальный аргумент в классе `ViewRenderer`.
 
 ```csharp
 using System;

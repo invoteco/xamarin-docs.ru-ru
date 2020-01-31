@@ -36,7 +36,7 @@ ms.locfileid: "75502999"
 Это знакомая всем игра с некоторыми изменениями. Десять ошибок, скрытые в сетке плиток (9 x 9). Чтобы выиграть, необходимо найти и пометить все ошибки.
     :::column-end:::
     :::column:::
-[Калькулятор ![РПН](images/rpncalc.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
+[![Калькулятор РПН](images/rpncalc.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
 
 ### <a name="rpn-calculatorhttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesrpncalculator"></a>[Калькулятор РПН](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
 

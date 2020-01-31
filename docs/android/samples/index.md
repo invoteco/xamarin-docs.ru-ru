@@ -22,7 +22,7 @@ ms.locfileid: "75502509"
 
 :::row:::
     :::column:::
-[Проектирование ![материалов](images/material-design.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/)
+[![Проектирование материалов](images/material-design.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/)
 
 ### <a name="material-designhttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesandroid50-googleio2014master"></a>[Проектирование материалов](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/)
 
@@ -70,7 +70,7 @@ ms.locfileid: "75502509"
 
 :::row:::
     :::column:::
-[Панель инструментов ![](images/toolbar.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
+[![Панель инструментов](images/toolbar.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 ### <a name="toolbarhttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesandroid50-toolbar"></a>[ToolBar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
 

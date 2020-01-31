@@ -24,7 +24,7 @@ ms.locfileid: "75502778"
 
 :::row:::
     :::column:::
-[Пример ![TODO](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
+[![Пример TODO](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 
 ### <a name="todohttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplestodo"></a>[Столбце](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 

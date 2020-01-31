@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: de858049ef899134d61596cabfcf81fca973e8b0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489353"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725466"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Подписывание приложений Xamarin.Mac с помощью идентификатора разработчика
 
 Если приложение планируется распространять напрямую пользователям macOS, компания Apple рекомендует подписать его код с помощью идентификатора разработчика, чтобы устанавливать в системах macOS с включенным **привратником**. Если приложение не было подписано, **привратник** запретит его устанавливать, выводя предупреждение (пользователи могут обойти это ограничение, удерживая нажатой клавишу CTRL при запуске).
 
-Дополнительные сведения об [идентификаторе разработчика и привратнике](https://developer.apple.com/resources/developer-id/) и [распространении за пределами Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) см. на веб-сайте Apple.
+Дополнительные сведения об [идентификаторе разработчика и привратнике](https://developer.apple.com/developer-id/) и [распространении за пределами Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) см. на веб-сайте Apple.
 
 ## <a name="code-signing-options"></a>Параметры подписывания кода
 
@@ -48,4 +48,4 @@ ms.locfileid: "75489353"
 - [Пример кода приложения "Привет, Mac"](~//mac/get-started/hello-mac.md)
 - [Распространение приложений в Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Руководство по работе с инструментами. Подписывание кода приложения](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [Идентификатор разработчика и привратник](https://developer.apple.com/resources/developer-id/)
+- [Идентификатор разработчика и привратник](https://developer.apple.com/developer-id/)

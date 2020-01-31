@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 00d7610bda3d1b7c9f954df64bb6e3af982b1d06
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489392"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725523"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Профили подготовки для приложений Xamarin.Mac
 
@@ -29,31 +29,31 @@ ms.locfileid: "75489392"
 
 Выполните следующие действия:
 
-1. Выберите тип создаваемого профиля подготовки и нажмите кнопку **Продолжить**: 
+1. Выберите тип создаваемого профиля подготовки и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif14.png "Selecting the profile type")](profiles-images/certif14.png#lightbox)
-2. Выберите идентификатор приложения, для которого создается профиль, и нажмите кнопку **Продолжить**: 
+2. Выберите идентификатор приложения, для которого создается профиль, и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. Выберите идентификатор разработчика, используемый для подписывания профиля, и нажмите кнопку **Продолжить**: 
+3. Выберите идентификатор разработчика, используемый для подписывания профиля, и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif16.png "Selecting the developer ID")](profiles-images/certif16.png#lightbox)
-4. Выберите компьютеры, на которых можно использовать этот профиль, и нажмите кнопку **Продолжить**: 
+4. Выберите компьютеры, на которых можно использовать этот профиль, и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif17.png "Selecting the allowed computers")](profiles-images/certif17.png#lightbox)
-5. Введите значение в поле **Имя профиля** и нажмите кнопку **Создать**: 
+5. Введите значение в поле **Имя профиля** и нажмите кнопку **Создать**:
 
     [![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png#lightbox)
-6. Нажмите кнопку **Скачать**, чтобы скачать новый профиль: 
+6. Нажмите кнопку **Скачать**, чтобы скачать новый профиль:
 
     [![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png#lightbox)
-7. Профили подготовки для разработки устанавливаются в области "Параметры профилей" в **системных настройках** приложения Mac: 
+7. Профили подготовки для разработки устанавливаются в области "Параметры профилей" в **системных настройках** приложения Mac:
 
     [![](profiles-images/certif20.png "Installing the profile")](profiles-images/certif20.png#lightbox)
-8. Все установленные профили будут отображены в области "Параметры профилей": 
+8. Все установленные профили будут отображены в области "Параметры профилей":
 
     [![](profiles-images/image47.png "Showing all installed profiles")](profiles-images/image47.png#lightbox)
-9. Если профиль необходимо скачать повторно, он также появится в **служебной программе для сертификата разработчика**: 
+9. Если профиль необходимо скачать повторно, он также появится в **служебной программе для сертификата разработчика**:
 
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
@@ -65,25 +65,25 @@ ms.locfileid: "75489392"
 
 Выполните следующие действия:
 
-1. Выберите тип создаваемого профиля и нажмите кнопку **Продолжить**: 
+1. Выберите тип создаваемого профиля и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif21.png "Selecting the type of profile")](profiles-images/certif21.png#lightbox)
-2. Выберите идентификатор приложения, для которого создается профиль, и нажмите кнопку **Продолжить**: 
+2. Выберите идентификатор приложения, для которого создается профиль, и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. Выберите идентификатор компании, используемый для подписывания профиля, и нажмите кнопку **Продолжить**: 
+3. Выберите идентификатор компании, используемый для подписывания профиля, и нажмите кнопку **Продолжить**:
 
     [![](profiles-images/certif23.png "Selecting the company ID")](profiles-images/certif23.png#lightbox)
-4. Введите значение в поле **Имя профиля** и нажмите кнопку **Создать**: 
+4. Введите значение в поле **Имя профиля** и нажмите кнопку **Создать**:
 
     [![](profiles-images/certif24.png "Generating the profile")](profiles-images/certif24.png#lightbox)
-5. Нажмите кнопку **Скачать**, чтобы получить файл профиля подготовки (расширение `.provisionprofile`): 
+5. Нажмите кнопку **Скачать**, чтобы получить файл профиля подготовки (расширение `.provisionprofile`):
 
     [![](profiles-images/certif25.png "Downloading the profile")](profiles-images/certif25.png#lightbox)
-6. Перетащите его в **организатор Xcode** или дважды щелкните его, чтобы установить. Затем профиль появится в организаторе Xcode: 
+6. Перетащите его в **организатор Xcode** или дважды щелкните его, чтобы установить. Затем профиль появится в организаторе Xcode:
 
     [![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png#lightbox)
-7. Профиль подготовки также появится в списке: 
+7. Профиль подготовки также появится в списке:
 
     [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
 
@@ -95,4 +95,4 @@ ms.locfileid: "75489392"
 - [Пример кода приложения "Привет, Mac"](~//mac/get-started/hello-mac.md)
 - [Распространение приложений в Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Руководство по работе с инструментами. Подписывание кода приложения](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [Идентификатор разработчика и привратник](https://developer.apple.com/resources/developer-id/)
+- [Идентификатор разработчика и привратник](https://developer.apple.com/developer-id/)

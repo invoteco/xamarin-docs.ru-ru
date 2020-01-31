@@ -22,7 +22,7 @@ ms.locfileid: "75955736"
 
 На следующем снимке экрана показан элемент управления `CardView`, производный от класса `ContentView`:
 
-[снимок экрана примера приложения ![Кардвиев](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
+[![снимок экрана примера приложения Кардвиев](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
 
 Класс `ContentView` определяет одно свойство:
 
@@ -202,7 +202,7 @@ CardView card = new CardView
 
 На следующих снимках экрана показан стандартный экземпляр `CardView` и `CardView`, чьи `ControlTemplate` были переопределены:
 
-[снимок экрана Кардвиев ControlTemplate ![](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
+[![снимок экрана Кардвиев ControlTemplate ](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
 Дополнительные сведения о шаблонах элементов управления см. в разделе [Шаблоны элементов управления Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

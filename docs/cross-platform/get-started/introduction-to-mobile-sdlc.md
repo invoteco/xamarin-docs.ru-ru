@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: b08293727a585ff68c4bac8a25b26d249505b1aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016397"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724838"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Жизненный цикл разработки мобильного ПО
 
@@ -80,7 +80,7 @@ ms.locfileid: "73016397"
 1. **Android** — [рекомендации по разработке](https://developer.android.com/design/index.html)
 1. **UWP** — [основы проектирования UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
-Например, в каждом приложении реализуется концепция переключения между различными разделами приложения. В iOS для этого используется панель вкладок в нижней части экрана, в Android — панель вкладок вверху экрана, а в UWP — [элемент управления Pivot или вкладка](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
+Например, в каждом приложении реализуется концепция переключения между различными разделами приложения. В iOS для этого используется панель вкладок в нижней части экрана, в Android — панель вкладок вверху экрана, а в UWP — [элемент управления Pivot или вкладка](/windows/uwp/design/controls-and-patterns/pivot).
 
 Кроме того, реализация механизма взаимодействия с пользователем во многом зависит от особенностей оборудования. Например, на устройствах iOS отсутствует физическая кнопка *возврата* и в связи с этим используется концепция контроллера навигации:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/14/2018
-ms.openlocfilehash: ac96363378e91c60956d28352535733c7e954e6a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 43dbafe16d7cbabdb3b7902dd3d46d845f213fcd
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021994"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940944"
 ---
 # <a name="picker-control-in-xamarinios"></a>Элемент управления средства выбора в Xamarin. iOS
 
@@ -168,9 +168,9 @@ var calendar = new NSCalendar(NSCalendarType.Gregorian);
 var currentDate = NSDate.Now;
 var components = new NSDateComponents();
 components.Year = -60;
-NSDate minDate = calendar.DateByAddingComponents(components, NSDate.Now, NSCalendarOptions.None);
+NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
 datePickerView.MinimumDate = minDate;
-datePickerView.MaximumDate = NSDate.Now;
+datePickerView.MaximumDate = currentDate;
 ```
 
 > [!TIP]
@@ -234,7 +234,7 @@ datePickerView.Mode = UIDatePickerMode.DateAndTime;
 Как и в случае с [`UIDatePickerMode.Date`](#uidatepickermodedate), порядок селекторов и использование 12 или 24 часового времени зависят от языкового стандарта выбора даты.
 
 > [!TIP]
-> Используйте свойство `Date` для записи значения элемента выбора даты в режиме `UIDatePickerMode.Time`, `UIDatePickerMode.Date` или `UIDatePickerMode.DateAndTime`. Это значение хранится в виде `NSDate`.
+> Используйте свойство `Date` для записи значения элемента выбора даты в режиме `UIDatePickerMode.Time`, `UIDatePickerMode.Date`или `UIDatePickerMode.DateAndTime`. Это значение хранится в виде `NSDate`.
 
 ##### <a name="uidatepickermodecountdowntimer"></a>Уидатепиккермоде. Каунтдовнтимер
 
@@ -260,7 +260,7 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 Чтобы отформатировать `NSDate`, используйте [`NSDateFormatter`](xref:Foundation.NSDateFormatter).
 
-Чтобы использовать `NSDateFormatter`, вызовите его метод [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) . Пример:
+Чтобы использовать `NSDateFormatter`, вызовите его метод [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) . Например:
 
 ```csharp
 var date = NSDate.Now;
@@ -291,10 +291,10 @@ timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 
 Различные значения `NSDateFormatterStyle` отображают время следующим образом:
 
-- `NSDateFormatterStyle.Full`:7:46:00 часов США (лето)
-- `NSDateFormatterStyle.Long`:7:47:00 в EDT
-- `NSDateFormatterStyle.Medium`:7:47:00 PM
-- `NSDateFormatterSytle.Short`:7:47 PM
+- `NSDateFormatterStyle.Full`: 7:46:00 часов США (лето)
+- `NSDateFormatterStyle.Long`: 7:47:00 в EDT
+- `NSDateFormatterStyle.Medium`: 7:47:00 PM
+- `NSDateFormatterSytle.Short`: 7:47 PM
 
 ##### <a name="datestyle"></a>датестиле
 
@@ -308,12 +308,12 @@ dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 Различные значения `NSDateFormatterStyle` отображают даты следующим образом:
 
 - `NSDateFormatterStyle.Full`: среда, 2 августа 2017 в 7:48 PM
-- `NSDateFormatterStyle.Long`:2 августа 2017 at 7:49 PM
-- `NSDateFormatterStyle.Medium`:2 августа 2017 г., 7:49 PM
-- `NSDateFormatterStyle.Short`:8/2/17, 7:50 PM
+- `NSDateFormatterStyle.Long`: 2 августа 2017 at 7:49 PM
+- `NSDateFormatterStyle.Medium`: 2 августа 2017 г., 7:49 PM
+- `NSDateFormatterStyle.Short`: 8/2/17, 7:50 PM
 
 > [!NOTE]
-> `DateFormat` и `DateStyle` / `TimeStyle` предоставляют различные способы указания форматирования даты и времени. Последние свойства Set определяют выходные данные модуля форматирования даты.
+> `DateFormat` и `DateStyle`/`TimeStyle` предоставляют различные способы указания форматирования даты и времени. Последние свойства Set определяют выходные данные модуля форматирования даты.
 
 ## <a name="related-links"></a>Связанные ссылки
 

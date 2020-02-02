@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 600a94a0ee9eb5bcf06dc19d95cf9e77132a2e81
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029053"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940855"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -24,7 +24,7 @@ _ViewPager — это Диспетчер макетов, позволяющий 
 
 [![снимков экрана приложения Трипажер с примером горизонтального прокрутки](images/01-intro-sml.png)](images/01-intro.png#lightbox)
 
-Обычно `ViewPager` используется в сочетании с [фрагментами](~/android/platform/fragments/index.md). Однако в некоторых ситуациях может потребоваться использовать `ViewPager` без дополнительной сложности `Fragment`s.
+Обычно `ViewPager` используется вместе с [фрагментами](~/android/platform/fragments/index.md), однако в некоторых ситуациях может потребоваться использовать `ViewPager` без дополнительной сложности `Fragment`.
 
 `ViewPager` использует шаблон адаптера, чтобы предоставить его отображаемым представлениям. Используемый здесь адаптер концептуально похож на тот, который используется в [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) &ndash; вы предоставляете реализацию `PagerAdapter`, чтобы создать страницы, отображаемые `ViewPager` пользователю. Страницы, отображаемые `ViewPager`, могут быть `View`s или `Fragment`s. При отображении `View`s Этот адаптер подклассов `PagerAdapter` базовом классе для Android. При отображении `Fragment`s подкласс адаптера для `FragmentPagerAdapter`Android. Кроме того, в библиотеку поддержки Android входит `FragmentPagerAdapter` (подкласс `PagerAdapter`) для получения сведений о подключении `Fragment`s к данным. 
 
@@ -59,7 +59,7 @@ _ViewPager — это Диспетчер макетов, позволяющий 
 
 `ViewPager` извлекает свои данные из *адаптера*. Задание адаптера заключается в создании `View`s, отображаемых `ViewPager`, предоставляя их по мере необходимости. На приведенной ниже схеме показана эта концепция &ndash; адаптер создает и заполняет `View`s и предоставляет их `ViewPager`. По мере того, как `ViewPager` обнаруживает жесты прокрутки пользователя, он предлагает адаптеру предоставить соответствующие `View` для показа: 
 
-[Схема![, иллюстрирующая подключение адаптера к изображениям и именам к ViewPager](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
+[Схема ![, иллюстрирующая подключение адаптера к изображениям и именам к ViewPager](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
 
 В этом конкретном примере каждый `View` создается из образа дерева и имени дерева перед передачей в `ViewPager`. 
 

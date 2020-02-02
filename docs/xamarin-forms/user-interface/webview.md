@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
+ms.openlocfilehash: 65b6eb0ab75344ef112bc09aa1165f86e125872b
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031379"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940353"
 ---
 # <a name="xamarinforms-webview"></a>Веб-представления Xamarin.Forms
 
@@ -107,7 +107,7 @@ browser.Source = htmlSource;
 
 ![WebView отображение HTML-строки](webview-images/html-string.png)
 
-В приведенном выше коде `@` используется для пометки HTML как строка литерала, то есть все обычные escape-символы учитываются.
+В приведенном выше коде `@` используется для пометки HTML как [буквального строкового литерала](/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals), что означает, что большинство escape-символов не учитываются.
 
 > [!NOTE]
 > Может потребоваться установить свойства `WidthRequest` и `HeightRequest` [`WebView`](xref:Xamarin.Forms.WebView) для просмотра содержимого HTML в зависимости от макета, который `WebView` является дочерним элементом. Например, это необходимо в [`StackLayout`](xref:Xamarin.Forms.StackLayout).
@@ -122,7 +122,7 @@ browser.Source = htmlSource;
     <title>Xamarin Forms</title>
   </head>
   <body>
-    <h1>Xamrin.Forms</h1>
+    <h1>Xamarin.Forms</h1>
     <p>This is an iOS web page.</p>
     <img src="XamarinLogo.png" />
   </body>

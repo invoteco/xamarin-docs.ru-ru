@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 542ae6696bae8fccfa6d5ed9842bce126760da37
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021856"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940989"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Работа с действиями строк в Xamarin. iOS
 
@@ -33,7 +33,7 @@ _В этом руководстве показано, как создавать 
 
 1. Переопределите `GetLeadingSwipeActionsConfiguration` методы и (или) `GetTrailingSwipeActionsConfiguration`. Эти методы возвращают `UISwipeActionsConfiguration`.
 2. Создайте экземпляр возвращаемого `UISwipeActionsConfiguration`. Этот класс принимает массив `UIContextualAction`.
-3. Создайте таблицу `UIContextualAction`.
+3. Создайте `UIContextualAction`.
 
 Они более подробно описаны в следующих разделах.
 
@@ -117,7 +117,7 @@ public UIContextualAction ContextualFlagAction(int row)
 
 ## <a name="uitableviewrowaction"></a>уитаблевиевровактион
 
-Чтобы определить одно или несколько действий пользовательской строки для `UITableView`, необходимо создать экземпляр класса `UITableViewDelegate` и переопределить метод `EditActionsForRow`. Пример:
+Чтобы определить одно или несколько действий пользовательской строки для `UITableView`, необходимо создать экземпляр класса `UITableViewDelegate` и переопределить метод `EditActionsForRow`. Например:
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-Статический метод `UITableViewRowAction.Create` используется для создания новой `UITableViewRowAction`, которая будет отображать кнопку **Hi** при горизонтальном прокрутке строки в таблице. Позже создается новый экземпляр `TableDelegate` и прикрепляется к `UITableView`. Пример:
+Статический метод `UITableViewRowAction.Create` используется для создания новой `UITableViewRowAction`, которая будет отображать кнопку **Hi** при горизонтальном прокрутке строки в таблице. Позже создается новый экземпляр `TableDelegate` и прикрепляется к `UITableView`. Например:
 
 ```csharp
 TableDelegate tableDelegate;

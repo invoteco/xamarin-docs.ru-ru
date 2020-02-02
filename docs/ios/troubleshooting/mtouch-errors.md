@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: d8bb526f8e53ab2005e2e59556597c351d33f87a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031202"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940963"
 ---
 # <a name="xamarinios-errors"></a>Ошибки Xamarin. iOS
 
@@ -36,7 +36,7 @@ ms.locfileid: "73031202"
 - Минимальный тестовый случай, воспроизводящий ошибку; перетаскивани
 - Все сведения о версиях
 
-Самый простой способ получить точную информацию о версии — использовать меню « **Visual Studio для Mac** », « **Visual Studio для Mac** элемент», « **Показывать подробности** » и скопировать/вставить сведения о версии (можно использовать кнопку « **Копировать информацию** »). .
+Самый простой способ получить точную информацию о версии — использовать меню « **Visual Studio для Mac** », « **Visual Studio для Mac** элемент», « **отобразить сведения** » и скопировать/вставить сведения о версии (можно использовать кнопку « **Копировать информацию** »).
 
 <a name="MT0001" />
 
@@ -583,7 +583,7 @@ Xamarin. iOS не поддерживает задание минимальной
 
 Сборки, указанные в сообщении об ошибке, имеют конфликтующие целевые объекты сборки.
 
-Пример:
+Например:
 
 ```
   --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
@@ -597,7 +597,7 @@ Xamarin. iOS не поддерживает задание минимальной
 
 Сборки, упомянутые в сообщении об ошибке, компилируются в один статический объект. Это не допускается, каждая сборка должна быть скомпилирована в другой статический объект.
 
-Пример:
+Например:
 
 ```
 --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
@@ -1789,7 +1789,7 @@ Parameter name: instruction
 
 <a name="MT4102" />
 
-### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: регистратор обнаружил недопустимый тип `*` в сигнатуре для метода `*`. Взамен рекомендуется использовать `*`.
+### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: регистратор обнаружил недопустимый тип `*` в сигнатуре для метода `*`. Взамен рекомендуется использовать `*` .
 
 В настоящее время это происходит только с одним типом: System. DateTime. Вместо этого используйте эквивалент цели-C (Нсдате).
 
@@ -1855,7 +1855,7 @@ Parameter name: instruction
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: регистратор обнаружил недопустимый тип `*`. Регистрация универсальных типов с помощью цели-C не поддерживается и может привести к случайному поведению и (или) сбоям (для обеспечения обратной совместимости с более старыми версиями Xamarin. iOS эту ошибку можно пропустить, передав `--unsupported--enable-generics-in-registrar` как дополнительный аргумент mtouch в Страница параметров сборки iOS проекта. Дополнительные сведения см. в разделе [Developer.Xamarin.com/Guides/iOS/advanced_topics/Registrar](~/ios/internals/registrar.md) .
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: регистратор обнаружил недопустимый тип `*`. Регистрация универсальных типов с помощью цели-C не поддерживается и может привести к случайному поведению и (или) сбоям (для обеспечения обратной совместимости с более старыми версиями Xamarin. iOS эту ошибку можно пропустить, передав `--unsupported--enable-generics-in-registrar` как дополнительный аргумент mtouch на странице параметров сборки iOS проекта. Дополнительные сведения см. в разделе [Developer.Xamarin.com/Guides/iOS/advanced_topics/Registrar](~/ios/internals/registrar.md) .
 
 <a name="MT4113" />
 
@@ -2239,7 +2239,7 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 
 Это происходит, когда машинному компоновщику не удается найти символ, на который имеется ссылка. Это может произойти по нескольким причинам.
 
-- Для привязки к третьей стороне требуется платформа, но привязка не указывает ее в атрибуте `[LinkWith]`. Решения
+- Для привязки к третьей стороне требуется платформа, но привязка не указывает ее в атрибуте `[LinkWith]`. Решения:
   - Если вы являетесь автором привязки стороннего разработчика или имеете доступ к ее источнику, измените атрибут `[LinkWith]` привязки, чтобы включить требуемую платформу.
 
     ```csharp
@@ -2251,7 +2251,7 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 - Управляемая привязка относится к собственным символам, которые не существуют в собственной библиотеке.
     Обычно это происходит, когда привязка существовала некоторое время, а машинный код был изменен в течение этого времени, чтобы определенный собственный класс был либо удален, либо переименован, пока привязка не была обновлена.
 - P/Invoke ссылается на несуществующий машинный символ. Начиная с Xamarin. iOS 7,4 в этом случае будет выводиться сообщение об ошибке <a href="#MT5214">MT5214</a> (Дополнительные сведения см. в разделе MT5214).
-- Привязка или библиотека стороннего разработчика построена с помощью C++, но привязка не указывает это в атрибуте`[LinkWith]`. Обычно это довольно легко понять, поскольку символы являются искаженными C++ символами (один из распространенных примеров —`__ZNKSt9exception4whatEv`).
+- Привязка или библиотека стороннего разработчика построена с помощью C++, но привязка не указывает это в атрибуте `[LinkWith]`. Обычно это довольно легко понять, поскольку символы являются искаженными C++ символами (один из распространенных примеров — `__ZNKSt9exception4whatEv`).
   - Если вы являетесь автором привязки стороннего разработчика или имеете доступ к ее источнику, измените атрибут `[LinkWith]` привязки, чтобы установить флаг `IsCxx`.
 
     ```csharp
@@ -2266,7 +2266,7 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 
 Это происходит, когда машинному компоновщику не удается найти класс цели-C, на который есть ссылка в другом месте. Это может произойти по нескольким причинам: для [MT5210](#MT5210) и в дополнение:
 
-- Привязка третьей стороны привязана к протоколу цели-C, но не помечена атрибутом `[Protocol]` в его определении API. Решения
+- Привязка третьей стороны привязана к протоколу цели-C, но не помечена атрибутом `[Protocol]` в его определении API. Решения:
   - Добавьте атрибут Missing `[Protocol]`:
 
     ```csharp
@@ -2286,7 +2286,7 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 - Одна и та же собственная библиотека включена дважды.
 - Для определения одних и тех же символов выполняются две различные собственные библиотеки.
 - Собственная библиотека неверно построена и содержит один и тот же символ более одного раза.
-  Это можно проверить с помощью следующего набора команд из терминала (замените i386 на x86_64/ARMv7/armv7s/arm64 в соответствии с архитектурой, для которой вы собираетесь):
+  Это можно проверить с помощью следующего набора команд в терминале (замените i386 на x86_64/ARMv7/armv7s/arm64 в соответствии с архитектурой, для которой вы собираетесь создать):
 
   ```
   # Native libraries are usually fat libraries, containing binary code for
@@ -2350,7 +2350,7 @@ Xamarin. iOS не удалось создать функцию-оболочку 
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: не удалось выполнить собственную компоновку, неопределенный символ: *. На этот символ был ссылка на управляемый член *. Убедитесь, что имеются ссылки на все необходимые платформы и что они связаны с собственными библиотеками.
 
-Эта ошибка возникает, когда управляемый код содержит P/Invoke для собственного метода, который не существует. Пример:
+Эта ошибка возникает, когда управляемый код содержит P/Invoke для собственного метода, который не существует. Например:
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -2776,13 +2776,13 @@ class MyImports {
 Где * может быть:
 
 - string
-- array
+- Массив .
 - словарь
 - bool
 - действительные
 - целочисленный
 - date
-- Данные
+- Данные  типа
 
 <a name="MT7046" />
 

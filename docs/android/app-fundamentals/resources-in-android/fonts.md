@@ -1,25 +1,25 @@
 ---
-title: Шрифты
+title: Fonts
 ms.prod: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/09/2018
-ms.openlocfilehash: 8f732e05565c420ef28da38c0da0e61ecd595313
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3bfa3bbde68fab95d729cc8a558d4eb3baf7b4fa
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025026"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940658"
 ---
-# <a name="fonts"></a>Шрифты
+# <a name="fonts"></a>Fonts
 
 ## <a name="overview"></a>Обзор
 
 Начиная с API уровня 26, пакет SDK для Android позволяет обрабатывать шрифты как ресурсы, как и макеты или драваблес. [Библиотека поддержки Android 26](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) отправит новый API шрифта в приложения, предназначенные для API уровня 14 или выше.
 
-После предназначенных API 26 или установки библиотеки поддержки Android V26 существует два способа использования шрифтов в приложении Android:
+После нацеливания API 26 или установки V26 библиотеки поддержки Android существует два способа использования шрифтов в приложении Android:
 
 1. **Упаковка шрифта в качестве ресурса Android** &ndash; это гарантирует, что шрифт всегда будет доступен для приложения, но увеличит размер apk.
 2. **Скачивание шрифтов** &ndash; Android также поддерживает загрузку шрифта из _поставщика шрифтов_. Поставщик шрифтов проверяет, установлен ли на устройстве этот шрифт. При необходимости шрифт будет скачан и кэширован на устройстве. Этот шрифт может совместно использоваться несколькими приложениями.
@@ -345,10 +345,10 @@ fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Семейство](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily)
-- [фонтконфиг](https://developer.android.com/reference/android/text/FontConfig.html)
+- [FontConfig](https://developer.android.com/reference/android/text/FontConfig.html)
 - [фонтрекуест](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html)
 - [фонтсконтракткомпат](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html)
-- [Шрифты Resources.](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
+- [Resources.GetFont](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
 - [Начертан](https://developer.android.com/reference/android/graphics/Typeface.html)
 - [Библиотека поддержки Android 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/)
 - [Использование шрифтов в Android](https://www.youtube.com/watch?v=TfB-TsLFJdM)

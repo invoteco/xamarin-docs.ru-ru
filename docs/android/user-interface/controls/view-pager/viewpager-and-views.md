@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 7413fbe3f08988cfdb7c7b4e5237539aca250772
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728152"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940850"
 ---
 # <a name="viewpager-with-views"></a>ViewPager с представлениями
 
@@ -62,18 +62,13 @@ int imageId = treeCatalog[2].imageId;
     android:layout_height="match_parent" >
 
 </android.support.v4.view.ViewPager>
+```
 
-```csharp
-This XML defines a `ViewPager` that occupies the entire screen. Note that
-you must use the fully-qualified name **android.support.v4.view.ViewPager**
-because `ViewPager` is packaged in a support library. `ViewPager` is
-available only from 
-[Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
-it is not available in the Android SDK. 
+Этот XML-код определяет `ViewPager`, который занимает весь экран. Обратите внимание, что необходимо использовать полное имя **Android. support. v4. View. ViewPager** , так как `ViewPager` упаковывается в библиотеку поддержки. `ViewPager` доступен только в [библиотеке поддержки Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/); он недоступен в пакет SDK для Android. 
 
-## Set up ViewPager
+## <a name="set-up-viewpager"></a>Настройка ViewPager
 
-Edit **MainActivity.cs** and add the following `using` statement:
+Измените **MainActivity.CS** и добавьте следующую инструкцию `using`:
 
 ```csharp
 using Android.Support.V4.View;

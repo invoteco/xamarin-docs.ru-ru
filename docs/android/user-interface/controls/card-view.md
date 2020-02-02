@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 053847426d770408826297d9a80b6e38d7f6bc44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 37afc9ef7773bbfefe442216055c0501af2ab966
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029284"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940880"
 ---
 # <a name="xamarinandroid-cardview"></a>Xamarin. Android Кардвиев
 
@@ -36,7 +36,7 @@ _Мини-приложение Кардвиев — это компонент п
 
 - **Пакет SDK для Android** &ndash; Android 5,0 (API 21) или более поздней версии необходимо установить с помощью диспетчера пакет SDK для Android.
 
-- **Java JDK 1,8** &ndash; JDK 1,7 можно использовать, если вы явно предназначенных API уровня 23 и более ранних версий. JDK 1,8 доступен в [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- **Java JDK 1,8** &ndash; JDK 1,7 можно использовать, если вы специально нацелены на API уровня 23 и более ранних версий. JDK 1,8 доступен в [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Приложение должно также включать пакет `Xamarin.Android.Support.v7.CardView`. Чтобы добавить пакет `Xamarin.Android.Support.v7.CardView` в Visual Studio для Mac, выполните следующие действия.
 

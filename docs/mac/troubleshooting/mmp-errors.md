@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: 1dc53b863e0408e27351aabfa625a08baae3d5a1
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: b1125ab554bd9c73917c106c7486b742f16e628a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725453"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940360"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Сообщения об ошибках Xamarin. Mac (MMP)
 
@@ -270,7 +270,7 @@ Xamarin. Mac не поддерживает установку версии ми�
 
 <a name="MM1406" />
 
-#### <a name="mm1406-target-framework-0-is-invalid-when-targetting-xamarinmac-45-net-framwork"></a>MM1406: Целевая платформа "{0}" недопустима при предназначенных Xamarin. Mac 4,5 .NET фрамворк.
+#### <a name="mm1406-target-framework-0-is-invalid-when-targeting-xamarinmac-45-net-framwork"></a>MM1406: Целевая платформа "{0}" недопустима при нацеливании на платформу .NET фрамворк для Xamarin. Mac 4,5.
 
 <a name="MM1407" />
 

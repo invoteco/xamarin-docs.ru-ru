@@ -58,14 +58,14 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 - iOS 11 и более поздние версии
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) — для использования служб определения местоположения при использовании приложения
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) — для использования службы определения местоположения все время
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) — для использования служб определения местоположения в любое время
 - iOS 10 и более ранних версий
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) — для использования служб определения местоположения при использовании приложения
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) — для использования службы определения местоположения все время    
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) — для использования служб определения местоположения в любое время    
 
-Для поддержки iOS 11 и более ранних версий, можно включить все три ключа: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, и `NSLocationAlwaysUsageDescription`.
+Для поддержки iOS 11 и более ранних версий можно включить все три ключа: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`и `NSLocationAlwaysUsageDescription`.
 
-XML-представление для этих ключей в **Info.plist** показан ниже. Необходимо обновить `string` значения в том, как приложение использует сведения о расположении:
+Ниже приведено представление XML для этих разделов в **info. plist** . Необходимо обновить значения `string`, чтобы отразить, как ваше приложение использует сведения о расположении:
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
@@ -76,7 +76,7 @@ XML-представление для этих ключей в **Info.plist** п
 <string>Can we use your location at all times?</string>
 ```
 
-**Info.plist** записи также может быть добавлено в **источника** представления во время редактирования **Info.plist** файла:
+Записи **info. plist** также можно добавить в представление **исходного кода** при редактировании файла **info. plist** :
 
 ![Info. plist для iOS 8](setup-images/ios8-map-permissions.png "Обязательные записи info. plist для iOS 8")
 
@@ -112,7 +112,7 @@ XML-представление для этих ключей в **Info.plist** п
 При этом ключ API внедряется в манифест. Без допустимого ключа API элемент управления [`Map`](xref:Xamarin.Forms.Maps.Map) будет отображать пустую сетку.
 
 > [!NOTE]
-> Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Также не забудьте изменить учетные данные ключа, если приложения **имя пакета** изменения. См. [раздел Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+> Обратите внимание, что, чтобы пакет APK для доступа к Google карты, необходимо включить отпечатки пальцев SHA-1 и упаковать имена для каждого хранилища ключей (отладочную и окончательную), которые используются для входа пакет APK. Например если вы используете один компьютер для отладки и другой компьютер для создания выпуска APK, должно содержать отпечаток SHA-1 сертификата из хранилища ключей отладки первого компьютера и отпечаток SHA-1 сертификата из хранилища ключей выпуска из второй компьютер. Также не забудьте изменить ключевые учетные данные при изменении **имени пакета** приложения. См. [раздел Получение ключа API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 #### <a name="specify-the-google-play-services-version-number"></a>Укажите номер версии служб Google Play Services
 
@@ -266,4 +266,4 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 - [Пример Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Контакты Xamarin. Forms. Maps](~/xamarin-forms/user-interface/map/pins.md).
 - [API карт](xref:Xamarin.Forms.Maps)
-- [Пользовательское средство отрисовки карты](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Преобразование пользовательского модуля подготовки отчетов](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)

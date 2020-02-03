@@ -83,7 +83,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     - [android\_m2repository\_R24. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r24.zip) &ndash; 8E3C9EC713781EDFE1EFBC5974136BEA
 
-    - [android\_m2repository\_r23.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r23.zip) &ndash; D5BB66B3640FD9B9C6362C9DB5AB0FE7
+    - [android\_m2repository\_R23. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r23.zip) &ndash; D5BB66B3640FD9B9C6362C9DB5AB0FE7
 
     - [android\_m2repository\_R22. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r22.zip) &ndash; 96659D653BDE0FAEDB818170891F2BB0
 
@@ -99,7 +99,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     - [android\_m2repository\_R16. zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Если архив **m2repository** не показан в этой таблице, можно создать URL-адрес скачивания, добавив в `https://dl-ssl.google.com/android/repository/` имя **m2repository** для скачивания. Например, используйте **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** для загрузки **android\_ m2repository\_ R10. zip**.
+    Если архив **m2repository** не показан в этой таблице, можно создать URL-адрес скачивания, добавив в `https://dl-ssl.google.com/android/repository/` имя **m2repository** для скачивания. Например, используйте **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** для загрузки **android\_m2repository\_R10. zip**.
 
 2. Переименуйте файл в соответствующий хэш MD5 URL-адреса скачивания, как показано в приведенной выше таблице. Например, если вы скачали **android\_m2repository\_R25. zip**, переименуйте его в **0B3F1796C97C707339FB13AE8507AF50. zip**. Если хэш MD5 для URL-адреса скачивания скачанного файла не показан в таблице, можно использовать [Генератор MD5 в Интернете](http://www.webconfs.com/online-md5-generator.php) для преобразования URL-адреса в хэш-строку MD5.
 

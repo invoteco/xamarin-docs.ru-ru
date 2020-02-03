@@ -19,7 +19,7 @@ ms.locfileid: "76725117"
 Мы расскажем о трех вариантах обратного вызова, которые лучше всего подходят для Java:
 
 - Абстрактные классы
-- интерфейсов,
+- Интерфейсы
 - Виртуальные методы
 
 ## <a name="abstract-classes"></a>Абстрактные классы
@@ -158,7 +158,7 @@ class AbstractClassInvoker : AbstractClass
 
 Дополнительные сведения о Java Interop см. в [документации по Xamarin. Android](~/android/platform/java-integration/working-with-jni.md) для этой темы.
 
-## <a name="interfaces"></a>интерфейсов,
+## <a name="interfaces"></a>Интерфейсы
 
 Интерфейсы во многом идентичны абстрактным классам, за исключением одного подробного: Xamarin. Android не создает Java для них. Это обусловлено тем, что до внедрения .NET не существует многих сценариев, в C# которых Java будет реализовывать интерфейс.
 
@@ -281,7 +281,7 @@ public abstract class VirtualClass : Java.Lang.Object
 
 Существует несколько вещей, которые можно было бы улучшить в следующих сценариях:
 
-1. `throws Throwable` в C# этих запросах для конструкторов [PR](https://github.com/xamarin/java.interop/pull/170)исправлена.
+1. `throws Throwable` для C# конструкторов Исправлена [в этом запросе](https://github.com/xamarin/java.interop/pull/170)на вытягивание.
 1. Сделайте генератор Java в интерфейсах поддержки Xamarin. Android.
     - Это устраняет необходимость в добавлении исходного файла Java с действием сборки `AndroidJavaSource`.
 1. Сделайте так, чтобы Xamarin. Android загружал `Invoker` для виртуальных классов.
@@ -291,7 +291,7 @@ public abstract class VirtualClass : Java.Lang.Object
 
 Здесь можно выполнить множество действий, но эти улучшения внедрены в .NET.
 
-## <a name="further-reading"></a>Дополнительные сведения
+## <a name="further-reading"></a>Дополнительные материалы
 
 - [начало работы в Android](~/tools/dotnet-embedding/get-started/java/android.md)
 - [Предварительные исследования Android](~/tools/dotnet-embedding/android/index.md)

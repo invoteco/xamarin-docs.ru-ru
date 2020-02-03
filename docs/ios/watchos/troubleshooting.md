@@ -23,15 +23,15 @@ ms.locfileid: "76725318"
 
 - [Удаление альфа-канала из изображений значков](#noalpha)
 
-- [Ручное добавление файлов контроллера интерфейса](#add) для Xcode Interface Builder.
+- [Добавление файлов контроллера интерфейса](#add) для Interface Builder Xcode вручную.
 
-- [Запуск WatchApp из командной строки](#command_line)
+- [Запуск ватчапп из командной строки](#command_line).
 
 <a name="knownissues" />
 
 ## <a name="known-issues"></a>Известные проблемы
 
-### <a name="general"></a>Общие
+### <a name="general"></a>Общие сведения
 
 <a name="deploy" />
 
@@ -76,7 +76,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
 
-3. *Untick* **альфа-канал** флажок и **Сохранить** файл в нужном месте.
+3. Снимите флажок **альфа-канала** и **Сохраните** файл в нужном месте.
 
 4. Теперь изображение значка должно передавать проверки Apple.
 
@@ -87,7 +87,7 @@ with an alpha channel. Icons should not have an alpha channel.
 > [!IMPORTANT]
 > Поддержка WatchKit в Xamarin включает проектирование раскадровок просмотра в конструкторе iOS (как в Visual Studio для Mac, так и в Visual Studio), что не требует действий, описанных ниже. Просто присвойте контроллеру интерфейса имя класса на панели свойств Visual Studio для Mac, и файлы C# кода будут созданы автоматически.
 
-*Если* использовании построителя интерфейс Xcode, выполните следующие действия для создания новых контроллеров интерфейс для наблюдения за приложения и включите синхронизацию с Xcode, выходов и действия, доступные в C#:
+*Если* вы используете Xcode Interface Builder, выполните следующие действия, чтобы создать новые контроллеры интерфейсов для приложения для просмотра контрольных данных и включить синхронизацию с Xcode, чтобы обеспечить доступность C#розеток и действий в.
 
 1. Откройте интерфейс Watch приложения **. раскадровка** в **Xcode Interface Builder**.
 
@@ -233,7 +233,7 @@ with an alpha channel. Icons should not have an alpha channel.
 > [!NOTE]
 > Путь, который необходимо предоставить, предназначен для *файла приложения iPhone. app*, т. е. который будет развернут в симуляторе iOS и содержит как расширение, так и контрольное приложение.
 
-Пример:
+Пример
 
 ```bash
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
@@ -257,9 +257,9 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ### <a name="--sdkroot"></a>--sdkroot добавлен
 
-Обязательное Указывает путь к Xcode (6,2 или более поздней версии).
+Обязательный элемент. Указывает путь к Xcode (6,2 или более поздней версии).
 
-Пример:
+Пример
 
 ```bash
  --sdkroot /Applications/Xcode.app/Contents/Developer/
@@ -277,15 +277,15 @@ with an alpha channel. Icons should not have an alpha channel.
 
 **UDID**
 
-Пример:
+Пример
 
 ```bash
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
 ```
 
-**Время выполнения и тип устройства**
+**Среда выполнения и тип устройства**
 
-Пример:
+Пример
 
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
@@ -293,5 +293,5 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [WatchKitCatalog (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [Ватчкиткаталог (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Ватчтаблес (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

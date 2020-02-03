@@ -32,7 +32,7 @@ ms.locfileid: "76725426"
 
 Для поддержки покупок в приложении необходимо использовать Xamarin. iOS 5,0 или более поздней версии с Xcode 7 и более поздних версий.
 
-## <a name="contents"></a>Содержание
+## <a name="contents"></a>Содержимое
 
 - [Основные сведения о покупке из приложения и ее конфигурация](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 

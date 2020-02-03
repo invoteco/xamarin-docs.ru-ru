@@ -20,17 +20,17 @@ ms.locfileid: "76724077"
 
 _Используйте пальцы для рисования на холсте._
 
-`SKPath` Постоянно обновляться и отображения объекта. Эта функция позволяет путь используется для интерактивного рисунком, таких как в программе красочное.
+Объект `SKPath` может быть постоянно обновлен и отображен. Эта функция позволяет путь используется для интерактивного рисунком, таких как в программе красочное.
 
 ![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
 
-Поддержка сенсорного ввода в Xamarin.Forms не позволяет отслеживания отдельных пальцев на экране, чтобы эффект Xamarin.Forms touch отслеживания был разработан для обеспечения поддержки дополнительных сенсорного ввода. В этой статье описан этот эффект [ **вызов события из эффекты**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Пример программы [ **демонстрации эффекта Touch отслеживания** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) включает в себя две страницы, использующие SkiaSharp, включая красочное программу.
+Поддержка сенсорного ввода в Xamarin.Forms не позволяет отслеживания отдельных пальцев на экране, чтобы эффект Xamarin.Forms touch отслеживания был разработан для обеспечения поддержки дополнительных сенсорного ввода. Этот эффект описан в статье [**вызов событий из эффектов**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Демонстрационные видеоролики программы с примерами с [**поддержкой сенсорного экрана**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) включают две страницы, использующие SkiaSharp, в том числе программу рисования пальца.
 
-[ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) решение включает в себя это событие отслеживания сенсорного ввода. Включает в себя проект библиотеки .NET Standard `TouchEffect` класс, `TouchActionType` перечисления, `TouchActionEventHandler` делегата и `TouchActionEventArgs` класса. Каждый из проектов платформы включает в себя `TouchEffect` класса для данной платформы; проект iOS также содержит `TouchRecognizer` класса.
+Решение [**скиашарпформсдемос**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) включает в себя это событие отслеживания касаний. Проект библиотеки .NET Standard включает класс `TouchEffect`, перечисление `TouchActionType`, делегат `TouchActionEventHandler` и класс `TouchActionEventArgs`. Каждый проект платформы включает класс `TouchEffect` для этой платформы; проект iOS также содержит класс `TouchRecognizer`.
 
-**Рисование пальцами** странице в **SkiaSharpFormsDemos** представляет собой упрощенную реализацию Рисование пальцем. Не разрешить выбор цвет и ширина штриха, он никак не может очистить холст и Конечно не удается сохранить иллюстрации.
+Страница **прорисовки пальца** в **скиашарпформсдемос** — это упрощенная реализация рисования пальца. Не разрешить выбор цвет и ширина штриха, он никак не может очистить холст и Конечно не удается сохранить иллюстрации.
 
-[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml) файл помещает `SKCanvasView` в одной ячейке `Grid` и присоединяет `TouchEffect` , `Grid`:
+Файл [**финжерпаинтпаже. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml) помещает `SKCanvasView` в `Grid` одной ячейки и присоединяет `TouchEffect` к этому `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -51,9 +51,9 @@ _Используйте пальцы для рисования на холсте
 </ContentPage>
 ```
 
-Присоединение `TouchEffect` непосредственно к `SKCanvasView` не работает в группе всех платформ.
+Присоединение `TouchEffect` непосредственно к `SKCanvasView` не работает на всех платформах.
 
-[ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) файл с выделенным кодом определяет две коллекции для хранения `SKPath` объектов, а также `SKPaint` объектов для подготовки к просмотру эти пути:
+Файл кода программной части [**FingerPaintPage.XAML.CS**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) определяет две коллекции для хранения `SKPath` объектов, а также объект `SKPaint` для отрисовки этих путей:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -78,9 +78,9 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-Как и предполагает имя, `inProgressPaths` словарь хранит путей, которые в настоящее время рисуются с одним или несколькими пальцами. Ключ словаря — идентификатор сенсорного ввода, прилагаемый к события касания. `completedPaths` Поле — это коллекция путей, которые были завершается, когда палец, который рисования контура снято с экрана.
+Как видно из названия, в словаре `inProgressPaths` хранятся пути, которые в данный момент рисуются одним или несколькими пальцами. Ключ словаря — идентификатор сенсорного ввода, прилагаемый к события касания. Поле `completedPaths` представляет собой коллекцию путей, которые были завершены, когда палец, рисующий контур, ликвидируется с экрана.
 
-`TouchAction` Обработчик управляет этих двух коллекций. При первом касании пальцем экрана, новый `SKPath` добавляется `inProgressPaths`. При перемещении пальца, дополнительные точки добавляются к пути. При выпуске пальца передается путь `completedPaths` коллекции. Можно рисовать с помощью нескольких пальцев одновременно. После каждого изменения к одному из путей или коллекций `SKCanvasView` становится недействительным:
+Обработчик `TouchAction` управляет этими двумя коллекциями. Когда палец впервые касается экрана, в `inProgressPaths`добавляется новый `SKPath`. При перемещении пальца, дополнительные точки добавляются к пути. При отпускании пальца путь передается в коллекцию `completedPaths`. Можно рисовать с помощью нескольких пальцев одновременно. После каждого изменения в одном из путей или коллекций `SKCanvasView` становится недействительным.
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -136,9 +136,9 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-Точки, сопровождающие события отслеживания сенсорного ввода являются координаты Xamarin.Forms; они должны преобразовываться в SkiaSharp координаты, которые являются пиксели. Это назначение `ConvertToPixel` метод.
+Точки, сопровождающие события отслеживания сенсорного ввода являются координаты Xamarin.Forms; они должны преобразовываться в SkiaSharp координаты, которые являются пиксели. Это назначение метода `ConvertToPixel`.
 
-`PaintSurface` Обработчик просто выводит обе коллекции путей. Ранее завершенного пути отображаются под путей в ход выполнения:
+Затем обработчик `PaintSurface` просто визуализирует обе коллекции путей. Ранее завершенного пути отображаются под путей в ход выполнения:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -167,11 +167,11 @@ public partial class FingerPaintPage : ContentPage
 
 [![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
-Теперь вы узнали, как для рисования линий и кривых, с помощью параметрические уравнения определения. На одном из следующих разделов [ **пути и кривые SkiaSharp** ](../curves/index.md) рассматриваются различные типы кривых, `SKPath` поддерживает. Но полезные необходимым условием является подробное описание [ **преобразует SkiaSharp**](../transforms/index.md).
+Теперь вы узнали, как для рисования линий и кривых, с помощью параметрические уравнения определения. В следующем разделе [**SkiaSharp кривых и paths**](../curves/index.md) рассматриваются различные типы кривых, которые `SKPath` поддерживаются. Но полезным условием является исследование [**преобразований SkiaSharp**](../transforms/index.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [Демонстрации эффекта отслеживания сенсорного ввода (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+- [Скиашарпформсдемос (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Демонстрации эффектов для отслеживания касаний (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 - [Вызов событий из эффектов](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

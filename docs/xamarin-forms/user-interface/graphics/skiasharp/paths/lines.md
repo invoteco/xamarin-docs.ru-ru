@@ -18,27 +18,27 @@ ms.locfileid: "76725216"
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Узнайте, как рисование линий с концы штрихов в другой с помощью SkiaSharp_
+_Сведения об использовании SkiaSharp для рисования линий с различными наконечниками штриха_
 
-В SkiaSharp Подготовка к просмотру на одной строке существенно отличается от отрисовки ряд соединенных прямых линий. Даже в том случае, если рисования отдельных строк, тем не менее, часто бывает необходимо предоставить определенной Толщина линий. Как эти строки становятся шире, внешний вид концы строк также становится важным. Внешний вид конец строки вызывается *наконечник*:
+В SkiaSharp Подготовка к просмотру на одной строке существенно отличается от отрисовки ряд соединенных прямых линий. Даже в том случае, если рисования отдельных строк, тем не менее, часто бывает необходимо предоставить определенной Толщина линий. Как эти строки становятся шире, внешний вид концы строк также становится важным. Внешний вид конца линии называется *наконечником обводки*.
 
 ![](lines-images/strokecapsexample.png "The three stroke caps options")
 
-Для рисования отдельных строк `SKCanvas` обеспечивает простую [ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) метода, аргументы которых указывать начальные и конечные координаты линии с `SKPaint` объекта:
+Для рисования отдельных строк `SKCanvas` определяет простой метод [`DrawLine`](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) , аргументы которого указывают начальную и конечную координаты линии с объектом `SKPaint`:
 
 ```csharp
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-По умолчанию [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) свойство вновь созданным экземпляром `SKPaint` объекта равно 0, который имеет тот же эффект, что значение 1 при отрисовке строки на один пиксель в толщины. Это выглядит очень тонкий на устройствах с высоким разрешением, таких как телефоны, поэтому, возможно, вы захотите присвоить `StrokeWidth` для него большее значение. Но как только вы начнете Рисование линий расширяемой толщины, вызывающего событие еще одна проблема: как должны начала и окончания этих толстых строк отображаться?
+По умолчанию свойство [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) недавно созданного объекта `SKPaint` имеет значение 0, что аналогично значению 1 в отрисовке линии размером один пиксель в толщину. Это выглядит очень тонко на устройствах с высоким разрешением, например на телефонах, поэтому вы, вероятно, захотите задать для `StrokeWidth` большее значение. Но как только вы начнете Рисование линий расширяемой толщины, вызывающего событие еще одна проблема: как должны начала и окончания этих толстых строк отображаться?
 
-Внешний вид начала и окончания строк называется *завершение отрезка* или в Skia, *наконечник*. Слово «политики авторизации подключений» в этом контексте ссылается на тип hat &mdash; то, что находится в конце строки. Можно задать [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) свойство `SKPaint` одному из следующих членов [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) перечисления:
+Внешний вид линий начала и конца линии называется *концом строки* или, в СКИА, *наконечником обводки*. Слово «Cap» в этом контексте относится к разновидности Hat &mdash; что-то, что находится в конце строки. Свойству [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap) объекта `SKPaint` задается один из следующих членов перечисления [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) :
 
 - `Butt` (по умолчанию)
 - `Square`
 - `Round`
 
-Лучше всего они показаны с помощью примера программы. **Строки и пути SkiaSharp** раздел [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) программа начинает с страницы под названием **концы штрихов** на основе [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) класса. Эта страница определяет `PaintSurface` обработчик событий, который проходит по трем членам `SKStrokeCap` перечисления, отображение имени члена перечисления и Рисование линии с помощью этого наконечник штриха:
+Лучше всего они показаны с помощью примера программы. Раздел **SkiaSharp Lines and paths** программы [**скиашарпформсдемос**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) начинается со страницы, Наименованной с **прописными буквами** , на основе класса [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) . На этой странице определяется обработчик событий `PaintSurface`, который циклически проходит по трем элементам перечисления `SKStrokeCap`, отображая как имя члена перечисления, так и рисование линии с помощью этого конца штриха:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -92,25 +92,25 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Для каждого члена `SKStrokeCap` перечисления, обработчик выводит две строки, одна с толщина штриха 50 пикселей и еще одну строку, расположенный в верхней части с толщина штриха двух точек. Это вторая строка предназначен для демонстрации геометрические начало и конец строки, независимо от толщины линии и наконечник штриха:
+Для каждого члена перечисления `SKStrokeCap` обработчик рисует две строки: одну с толщиной штриха 50 пикселей, а другую — с толщиной обводки, равной двум пикселям. Это вторая строка предназначен для демонстрации геометрические начало и конец строки, независимо от толщины линии и наконечник штриха:
 
 [![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
 
-Как вы видите, `Square` и `Round` концы штрихов эффективно расширить длину строки, размером в половину ширины штриха в начале строки и снова в конце. Это расширение важно в тех случаях, когда это необходимо для определения измерений, готовый для просмотра графического объекта.
+Как видите, `Square` и `Round`ные концы обводки эффективно дополняют длину линии на половину толщины штриха в начале строки и снова в конце. Это расширение важно в тех случаях, когда это необходимо для определения измерений, готовый для просмотра графического объекта.
 
-`SKCanvas` Класс также содержит другой метод для отображения нескольких линий, несколько специфических:
+Класс `SKCanvas` также содержит еще один метод для рисования нескольких строк, которые несколько довольно необычная:
 
 ```csharp
 DrawPoints (SKPointMode mode, points, paint)
 ```
 
-`points` Параметр представляет собой массив `SKPoint` значения и `mode` является членом [ `SKPointMode` ](xref:SkiaSharp.SKPointMode) перечисления, который имеет три члена:
+Параметр `points` является массивом `SKPoint` значений и `mode` является членом перечисления [`SKPointMode`](xref:SkiaSharp.SKPointMode) , который имеет три члена:
 
 - `Points` для отображения отдельных точек
-- `Lines` для каждой парой точек подключения
-- `Polygon` для всех последовательных точек подключения
+- `Lines` для соединения каждой пары точек
+- `Polygon` для подключения всех последовательных точек
 
-**Несколько строк** страница демонстрирует этот метод. [ **MultipleLinesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) файл создает два `Picker` представления, которые позволяют выбрать членом `SKPointMode` перечисления и членом `SKStrokeCap` перечисления:
+Этот метод показан на странице с **несколькими строками** . В файле [**мултиплелинеспаже. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) создаются два представления `Picker`, которые позволяют выбрать член перечисления `SKPointMode` и член перечисления `SKStrokeCap`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -173,7 +173,7 @@ DrawPoints (SKPointMode mode, points, paint)
 </ContentPage>
 ```
 
-Обратите внимание на то, что объявления пространств имен SkiaSharp являются немного разный, так как `SkiaSharp` требуется ссылаться на члены пространства имен `SKPointMode` и `SKStrokeCap` перечисления. `SelectedIndexChanged` Обработчик для обоих `Picker` представления просто делает недействительным `SKCanvasView` объекта:
+Обратите внимание, что объявления пространства имен SkiaSharp немного отличаются, так как пространство имен `SkiaSharp` требуется для ссылки на элементы перечислений `SKPointMode` и `SKStrokeCap`. Обработчик `SelectedIndexChanged` для `Picker` представлений просто делает недействительным объект `SKCanvasView`:
 
 ```csharp
 void OnPickerSelectedIndexChanged(object sender, EventArgs args)
@@ -185,9 +185,9 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs args)
 }
 ```
 
-Этот обработчик должен проверять существование `SKCanvasView` объект так, как первый обработчик событий вызывается, когда `SelectedIndex` свойство `Picker` имеет значение 0 в файле XAML, и, наступает раньше `SKCanvasView` был создан экземпляр.
+Этот обработчик должен проверить наличие объекта `SKCanvasView`, так как обработчик событий сначала вызывается, когда свойство `SelectedIndex` `Picker` имеет значение 0 в файле XAML и происходит до создания экземпляра `SKCanvasView`.
 
-`PaintSurface` Обработчик получает два значения перечисления из `Picker` представления:
+Обработчик `PaintSurface` получает два значения перечисления из представлений `Picker`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -226,19 +226,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-На снимках экрана показано разнообразные `Picker` выбранные параметры:
+На снимках экрана показаны различные `Picker` выборки:
 
 [![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
 
-IPhone в левой показана как `SKPointMode.Points` вызывает член перечисления `DrawPoints` для подготовки к просмотру каждой из точек в `SKPoint` массив как квадрат, если завершение отрезка — `Butt` или `Square`. Круги подготавливаются к просмотру, если завершение отрезка `Round`.
+В левой части устройства iPhone показано, как элемент перечисления `SKPointMode.Points` приводит `DrawPoints` к отображению каждой точки в `SKPoint` массиве в виде квадрата, если конец строки `Butt` или `Square`. Круги подготавливаются к просмотру, если конец строки `Round`.
 
 На снимке экрана Android показан результат `SKPointMode.Lines`. Метод `DrawPoints` рисует линию между каждой парой значений `SKPoint`, используя заданное окончание строки, в данном случае `Round`.
 
-Если вместо этого используется `SKPointMode.Polygon`, линия рисуется между последовательными точками в массиве, но если смотреть очень близко, вы увидите, что эти строки не подключены. Каждая из этих отдельных строк начинается и заканчивается указанного отрезка. При выборе `Round` caps, могут отображаться строки должен быть подключен, но они действительно не подключены.
+Если вместо этого используется `SKPointMode.Polygon`, линия рисуется между последовательными точками в массиве, но если смотреть очень близко, вы увидите, что эти строки не подключены. Каждая из этих отдельных строк начинается и заканчивается указанного отрезка. Если выбрать `Round` с прописными буквами, строки могут быть подключены, но на самом деле они не подключены.
 
 Являются ли строки, подключен или не подключен является важным аспектом работа с контурами графики.
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [API-интерфейсы SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Скиашарпформсдемос (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

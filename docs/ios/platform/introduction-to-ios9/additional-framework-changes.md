@@ -100,7 +100,7 @@ NSProcessInfo.ProcessInfo.EndActivity(activity);
 
 ### <a name="reacting-to-low-power-mode"></a>Реагирование на режим низкого энергопотребления
 
-Используйте свойство `LowPowerModeEnabled` класса [NSProcessInfo](xref:Foundation.NSProcessInfo), чтобы определить, включен ли режим низкого энергопотребления на устройстве iOS, на котором запущено приложение. Например:
+Используйте свойство `LowPowerModeEnabled` класса [нспроцессинфо](xref:Foundation.NSProcessInfo) , чтобы определить, включен ли режим низкого энергопотребления на устройстве iOS, на котором запущено приложение. Пример:
 
 ```csharp
 // Is the device in low power mode?
@@ -124,7 +124,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 
 Компания Apple включила следующие изменения в [локальную инфраструктуру проверки подлинности](xref:LocalAuthentication) в iOS 9:
 
-- С помощью методов `EvaluateAccessControl` и `EvaluatePolicy` класса [LAContext](xref:LocalAuthentication.LAContext) теперь можно повторно использовать идентификаторы сенсорного экрана, соответствующие предыдущим успешным попыткам разблокировки .
+- С помощью методов `EvaluateAccessControl` и `EvaluatePolicy` класса [лаконтекст](xref:LocalAuthentication.LAContext) теперь можно повторно использовать идентификаторы сенсорного экрана для предыдущих успешных разблокированных попыток.
 - Возможность получить список зарегистрированных пальцев.
 - Поддержка отслеживания при добавлении или удалении пальца из проверки подлинности.
 - Возможность использования _контекста проверки подлинности_ в вызовах цепочки ключей и поддержки для оценки списков управления доступом к цепочке ключей.
@@ -155,7 +155,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 - Результаты поиска, возвращаемые функцией Мапкит и классом [клжеокодер](xref:CoreLocation.CLGeocoder) , также могут предоставлять часовой пояс результата.
 - Теперь можно полностью настроить заметки к карте, представленные приложением iOS, с помощью свойства `DetailCalloutAccessoryView` класса [мканнотатионвиев](xref:MapKit.MKAnnotationView) .
 
-Дополнительные сведения о работе с картами и заметками в документации по Xamarin.iOS и [CLGeocoder Reference](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) от Apple см. в статьях о [картах iOS](~/ios/user-interface/controls/ios-maps/index.md) и [пошаговом руководстве по MapKit](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md).
+Дополнительные сведения о работе с картами и заметками в [документации по Xamarin](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) . iOS и Apple см. в статье о [картах iOS](~/ios/user-interface/controls/ios-maps/index.md) и [пошаговом руководстве по мапкит](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) .
 
 ## <a name="passkit-framework-additions"></a>Дополнения PassKit Framework
 
@@ -220,7 +220,7 @@ PresentViewController(controller, true, null);
 
 Новые классы привязки `NSLayoutAnchor` и `NSLayoutDimension` работают с новыми свойствами привязки класса [UIView](xref:UIKit.UIView) (например, `LeadingAnchor` и `WidthAnchor`), чтобы упростить создание макета в iOS 9.
 
-Дополнительные сведения о [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) работе с классами AutoLayout и размера в приложении Xamarin.iOS и Справочнике по [NSLayoutAnchor Reference](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor), [NSLayoutDimension Reference](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) и [UIView Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) от Apple.
+Дополнительные сведения о работе с классами автомакета и размера в приложении Xamarin. iOS и Справочнике по [нслайаутанчор](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor), [Нслайаутдименсион](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) Reference и [UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) см. в статье [Введение в унифицированные раскадровки](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ### <a name="new-readable-content-margins"></a>Новые доступные для чтения поля содержимого
 
@@ -232,7 +232,7 @@ PresentViewController(controller, true, null);
 
 ### <a name="uiapplicationdelegate-changes"></a>Уиаппликатионделегате изменения
 
-Хотя компания Apple не является устаревшей, она предлагает заменить все вызовы метода `FinishedLaunching (UIApplication application)` класса [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) методами `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` или `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)`.
+Хотя компания Apple не является устаревшей, она предлагает заменить все вызовы метода `FinishedLaunching (UIApplication application)` класса [уиаппликатионделегате](xref:UIKit.UIApplicationDelegate) методами `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` или `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)`.
 
 Дополнительные сведения см. в [справочнике по Уиаппликатионделегате](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) Apple.
 
@@ -252,7 +252,7 @@ PresentViewController(controller, true, null);
 
 В iOS 9 автоматическое изменение размера больше не происходит, и элементы управления будут подготавливаться к просмотру по ширине в 320 точек на всех устройствах iOS независимо от размера и ориентации экрана.
 
-Чтобы исправить эту ситуацию, используйте классы с автоматической разметкой и размером, чтобы закрепить ширину элемента управления по краям родительского контейнера (представления) и указать требуемую высоту. Дополнительные сведения о [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) работе с классами автоматического макета и размера в приложении Xamarin.iOS см. в документации по унифицированным раскадровкам.
+Чтобы исправить эту ситуацию, используйте классы с автоматической разметкой и размером, чтобы закрепить ширину элемента управления по краям родительского контейнера (представления) и указать требуемую высоту. Дополнительные сведения о работе с классами автоматического макета и размера в приложении Xamarin. iOS см. в документации по [унифицированным раскадровкам](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ### <a name="new-uitextinputassistantitem-class"></a>Новый класс Уитекстинпутассистантитем
 

@@ -37,7 +37,7 @@ ms.locfileid: "76725599"
 
 ## <a name="2-add-theme-reference"></a>2. Добавление ссылки на тему
 
-В **App.xaml** добавьте пользовательский `xmlns:mytheme` для темы, причем темы объединяется в словаре ресурсов приложения:
+В файле **app. XAML** добавьте пользовательский `xmlns:mytheme` для темы и убедитесь, что тема объединена в словарь ресурсов приложения:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -55,9 +55,9 @@ ms.locfileid: "76725599"
 
 ## <a name="3-add-a-xaml-page"></a>3. Добавление страницы XAML
 
-Добавьте новую страницу XAML в приложение Xamarin.Forms и *измените базовый класс* из `ContentPage` для `Xamarin.Forms.Pages.ListDataPage`. Это должно осуществляться в C# и XAML:
+Добавьте новую страницу XAML в приложение Xamarin. Forms и *измените базовый класс* с `ContentPage` на `Xamarin.Forms.Pages.ListDataPage`. Это должно осуществляться в C# и XAML:
 
-**Файл C#**
+**C#File**
 
 ```csharp
 public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was ContentPage
@@ -71,7 +71,7 @@ public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was C
 
 **Файл XAML**
 
-Помимо изменения корневого элемента, чтобы `<p:ListDataPage>` пользовательского пространства имен для `xmlns:p` также должен быть добавлен:
+Помимо изменения корневого элемента на `<p:ListDataPage>` пользовательское пространство имен для `xmlns:p` также должно быть Добавлено:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,7 +87,7 @@ public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was C
 
 **Подкласс приложения**
 
-Изменение `App` конструктор класса, чтобы `MainPage` присваивается `NavigationPage` содержащий нового `SessionDataPage`. На странице навигации по *необходимо* использоваться.
+Измените конструктор класса `App` таким образом, чтобы `MainPage` был задан `NavigationPage`, содержащий новый `SessionDataPage`. *Необходимо* использовать страницу навигации.
 
 ```csharp
 MainPage = new NavigationPage (new SessionDataPage ());
@@ -95,10 +95,10 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 ## <a name="3-add-the-datasource"></a>3. Добавление источника данных
 
-Удалить `Content` элемента и замените ее строкой `p:ListDataPage.DataSource` для заполнения страницы с данными. В примере ниже Json удаленного файла данных загружается из URL-адрес.
+Удалите элемент `Content` и замените его `p:ListDataPage.DataSource`, чтобы заполнить страницу данными. В примере ниже Json удаленного файла данных загружается из URL-адрес.
 
 > [!NOTE]
-> Для предварительной версии *требуется* атрибут `StyleClass`, чтобы предоставить указания по отрисовке для источника данных. `StyleClass="Events"` Ссылается на макет, который является стандартным в предварительной версии и содержит стили *жестко* для сопоставления используемого источника данных JSON.
+> Для предварительной версии *требуется* атрибут `StyleClass`, чтобы предоставить указания по отрисовке для источника данных. `StyleClass="Events"` ссылается на макет, предопределенный в предварительной версии, и содержит стили с *жестко* заданными в соответствии с используемым источником данных JSON.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -141,7 +141,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 Это работает потому, что предварительно построенный стиль **"события"** существует в пакете NuGet светлой темы и имеет определенные стили, соответствующие источнику данных (например, «title», «образ», «презентатором»).
 
-«События» `StyleClass` созданный для отображения `ListDataPage` управления с пользовательским `CardView` элемента управления, определенный в Xamarin.Forms.Pages. `CardView` Элемент управления имеет три свойства: `ImageSource`, `Text`, и `Detail`. Темы запрограммирован для привязки три поля источника данных (из файла JSON) для этих свойств для отображения.
+`StyleClass` "Events" создается для вывода элемента управления `ListDataPage` с настраиваемым элементом управления `CardView`, определенным в Xamarin. Forms. Pages. Элемент управления `CardView` имеет три свойства: `ImageSource`, `Text`и `Detail`. Темы запрограммирован для привязки три поля источника данных (из файла JSON) для этих свойств для отображения.
 
 ## <a name="5-customize"></a>5. Настройка
 
@@ -164,11 +164,11 @@ MainPage = new NavigationPage (new SessionDataPage ());
 </p:ListDataPage.DefaultItemTemplate>
 ```
 
-Предоставляя `DataTemplate` этот код переопределяет `StyleClass` и вместо этого использует стандартный макет для `ListItemControl`.
+Предоставляя `DataTemplate` этот код переопределяет `StyleClass` и вместо этого использует макет по умолчанию для `ListItemControl`.
 
 [![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
 
-Разработчики, которые предпочитают C# и XAML можно создать данные источника привязки слишком (не забудьте включить `using Xamarin.Forms.Pages;` инструкции):
+Разработчики, предпочитающие C# XAML, могут также создавать привязки к источникам данных (не забывайте включать инструкцию `using Xamarin.Forms.Pages;`):
 
 ```csharp
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
@@ -176,7 +176,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 
 Создавать темы с нуля немного сложнее, но будущие выпуски предварительной версии сделают это проще.
 
-## <a name="troubleshooting"></a>Диагностика
+## <a name="troubleshooting"></a>Устранение неполадок
 
 <a name="loadtheme" />
 
@@ -186,7 +186,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 
 **iOS**
 
-В **AppDelegate.cs** добавьте следующие строки после `LoadApplication`
+В **AppDelegate.CS** добавьте следующие строки после `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
@@ -196,7 +196,7 @@ x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 
 **Android**
 
-В **MainActivity.cs** добавьте следующие строки после `LoadApplication`
+В **MainActivity.CS** добавьте следующие строки после `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
@@ -206,4 +206,4 @@ x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Пример DataPagesDemo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
+- [Пример Датапажесдемо](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)

@@ -19,7 +19,7 @@ ms.locfileid: "76725189"
 Язык цели-C основан на *селекторах*. Селектор — это сообщение, которое может быть отправлено объекту или *классу*. [Xamarin. iOS](~/ios/internals/api-design/index.md) сопоставляет селекторы экземпляров с методами экземпляра, а селекторы классов — со статическими методами.
 
 В отличие от обычных функций C (и C++ аналогичных функций-членов) нельзя напрямую вызывать селектор с помощью [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) , методы выбора отправляются в класс или экземпляр класса цели-C с помощью [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-Функция .
+.
 
 Дополнительные сведения о сообщениях в цели-C см. в разделе " [Работа с объектами](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) " в Apple.
 

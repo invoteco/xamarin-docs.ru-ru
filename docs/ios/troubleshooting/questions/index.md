@@ -77,7 +77,7 @@ ms.locfileid: "76725399"
 ### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[Ошибка компиляции: не удается закодировать смещение X в результирующем расположении с рассеиванием](error-encode-offset-scattered-relocation.md)
 Эта проблема возникает при сборке для 32-разрядных архитектур, например ARMv7, когда конечный двоичный файл слишком велик для собственного цепочки инструментов.
 
-## <a name="deprecated"></a>Устарело
+## <a name="deprecated"></a>Не рекомендуется
 
 > [!IMPORTANT]
 > Приведенные ниже статьи относятся к проблемам, которые были решены в последних версиях Xamarin. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.

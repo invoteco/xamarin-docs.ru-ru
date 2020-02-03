@@ -118,7 +118,7 @@ ms.locfileid: "76725444"
 
 ## <a name="filing-a-bug"></a>Хранение ошибки
 
-Нам важны ваши отклики и пожелания. При обнаружении проблем с Xamarin. Mac:
+Ваши отзывы очень важны для нас. При обнаружении проблем с Xamarin. Mac:
 
 - Проверьте [репозиторий проблем](https://github.com/xamarin/xamarin-macios/issues).
 - До перехода на GitHub проблемы Xamarin отслеживались в [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Попробуйте найти там похожие проблемы.

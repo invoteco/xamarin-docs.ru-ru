@@ -107,7 +107,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 }
 ```
 
-### <a name="errors"></a>Ошибки соединителя
+### <a name="errors"></a>ошибки
 
 Если вы используете недопустимый идентификатор Apple ID, произойдет следующая ошибка. это может вызвать путаницу, так как она подразумевает проблему с сетью или проверкой подлинности.
 
@@ -135,10 +135,10 @@ Apple предоставляет динамический поисковый API
 
 В результаты также будут включены другие метаданные, включая отображаемые сведения и URL-адреса иллюстраций, которые можно использовать для визуализации продукта в приложении.
 
-Далее приводятся некоторые примеры.
+Ниже приведены некоторые примеры:
 
-- **приложение iBooks** — [https://itunes.apple.com/search?term=ibooks&amp ; entity = Software&amp; страна = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **DOT и Кангару iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; Entity = электронная книга&amp; Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **приложение iBooks** — [https://itunes.apple.com/search?term=ibooks&amp; entity = Software&amp;страна = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **DOT и Кангару iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; Entity = электронная книга&amp;Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>Корпоративный Партнерский веб-канал
 

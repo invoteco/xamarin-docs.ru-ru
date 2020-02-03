@@ -64,7 +64,7 @@ JNI, представленный в [пространстве имен Android.
 Иногда может потребоваться реализовать интерфейс Android (например, [Android. Content. икомпоненткаллбаккс](xref:Android.Content.IComponentCallbacks)).
 
 Все классы и интерфейсы Android расширяют интерфейс [Android. Runtime. ижаваобжект](xref:Android.Runtime.IJavaObject) ; Таким образом, все типы Android должны реализовывать `IJavaObject`.
-Xamarin. Android использует этот факт, &ndash; в нем используется `IJavaObject` для предоставления Android с прокси-сервером Java (вызываемая оболочка Android) для данного управляемого типа. Поскольку **monodroid. exe** ищет только `Java.Lang.Object` подклассах (которые должны реализовывать `IJavaObject`), подкласс `Java.Lang.Object` предоставляет нам способ реализации интерфейсов в управляемом коде. Например:
+Xamarin. Android использует этот факт, &ndash; в нем используется `IJavaObject` для предоставления Android с прокси-сервером Java (вызываемая оболочка Android) для данного управляемого типа. Поскольку **monodroid. exe** ищет только `Java.Lang.Object` подклассах (которые должны реализовывать `IJavaObject`), подкласс `Java.Lang.Object` предоставляет нам способ реализации интерфейсов в управляемом коде. Пример:
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -393,7 +393,7 @@ public Integer (int value)
 }
 ```
 
-Методы [жниенв. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) являются вспомогательными методами для выполнения `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`и `JNIEnv.DeleteGlobalReference` значения, возвращаемого из `JNIEnv.FindClass`. См. подробные сведения в следующем подразделе.
+Методы [жниенв. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) являются вспомогательными методами для выполнения `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`и `JNIEnv.DeleteGlobalReference` значения, возвращаемого из `JNIEnv.FindClass`. подробности приведены в следующем разделе.
 
 <a name="_Supporting_Inheritance,_Interfaces_1" />
 
@@ -665,7 +665,7 @@ public class Adder : Java.Lang.Object {
 
 1. Имеет `[Register]` настраиваемый атрибут
 
-1. `RegisterAttribute.DoNotGenerateAcw` равно `true`
+1. `RegisterAttribute.DoNotGenerateAcw` имеет значение `true`.
 
 Затем для взаимодействия GC тип *не должен* иметь полей, которые могут ссылаться на `Java.Lang.Object` или `Java.Lang.Object` подкласс во время выполнения. Например, не допускаются поля типа `System.Object` и любого типа интерфейса. Разрешены типы, которые не могут ссылаться на экземпляры `Java.Lang.Object`, такие как `System.String` и `List<int>`. Это ограничение заключается в предотвращении преждевременной коллекции объектов сборщиком мусора.
 
@@ -1317,7 +1317,7 @@ long f(int n, String s, int[] array);
 - **встроенные**
 - **механизм**
 - **type**
-- **array**
+- **array**.
 
 ### <a name="built-in-type-references"></a>Ссылки на встроенные типы
 
@@ -1353,7 +1353,7 @@ long f(int n, String s, int[] array);
 Ссылки на типы используются с ссылками на типы массивов и с сигнатурами JNI.
 
 Чтобы получить ссылку на тип, можно прочитать выходные данные `'javap -s -classpath android.jar fully.qualified.Java.Name'`.
-В зависимости от применяемого типа можно использовать объявление конструктора или возвращаемый тип метода для определения имени JNI. Например:
+В зависимости от применяемого типа можно использовать объявление конструктора или возвращаемый тип метода для определения имени JNI. Пример:
 
 ```shell
 $ javap -classpath android.jar -s java.lang.Thread.State

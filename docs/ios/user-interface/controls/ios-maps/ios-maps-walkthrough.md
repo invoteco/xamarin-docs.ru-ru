@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7e9010eb579f28e62b5f7ab72ac061e9898e7ecf
+ms.sourcegitcommit: a9b180651863cb7da31d3af14182fe3ad44796f7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022003"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971532"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Заметки и наложенные наложения в Xamarin. iOS
 
@@ -80,7 +80,7 @@ ms.locfileid: "73022003"
 
     ```
 
-1. Создайте новый экземпляр `MapDelegate` и назначьте его `Delegate` `MKMapView`. Опять же, мы имплкодинт `MapDelegate` чуть ниже.
+1. Создайте новый экземпляр `MapDelegate` и назначьте его `Delegate` `MKMapView`. Опять же, мы будем реализовывать `MapDelegate` чуть позже:
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -107,7 +107,7 @@ ms.locfileid: "73022003"
 
     и строка:
 
-    `Maps Walkthrough Docs Sample`
+    `Maps Walkthrough Docs Sample`.
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs — класс для пользовательских заметок
 
@@ -245,7 +245,7 @@ ms.locfileid: "73022003"
     }
     ```
 
-1. Чтобы скрыть изображение, когда пользователь отменит выделение заметки, коснувшись в любом другом месте на карте, реализуйте метод `DidSelectAnnotationView` следующим образом:
+1. Чтобы скрыть изображение, когда пользователь отменит выделение заметки, коснувшись в любом другом месте на карте, реализуйте метод `DidDeselectAnnotationView` следующим образом:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)

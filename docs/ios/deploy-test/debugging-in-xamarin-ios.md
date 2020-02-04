@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026512"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724700"
 ---
 # <a name="debugging-xamarinios-apps"></a>Отладка приложений Xamarin.iOS
 
@@ -198,7 +198,7 @@ Xamarin.iOS использует новый "мягкий" отладчик Mon
 
 Журналы аварийного завершения и выходные данные класса консоли будут отправляться в консоль iPhone. Для получения доступа к этой консоли используйте Organizer (Организатор) в Xcode, выбрав в нем нужное устройство.
 
-Если вы не хотите запускать Xcode, воспользуйтесь [утилитой конфигурации iPhone](https://www.apple.com/support/iphone/enterprise/), которая обеспечивает прямой доступ к консоли. Она также позволяет открывать журналы консоли с компьютера Windows, если вы выполняете отладку в полевых условиях.
+Если вы не хотите запускать Xcode, воспользуйтесь программой настройки iPhone Configuration Utility от Apple, обеспечивающей прямой доступ к консоли. Она также позволяет открывать журналы консоли с компьютера Windows, если вы выполняете отладку в полевых условиях.
 
 Для пользователей Visual Studio в окне вывода доступно несколько журналов, однако для получения более подробных журналов перейдите на компьютер Mac.
 

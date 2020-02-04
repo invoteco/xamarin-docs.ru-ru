@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e27e73ac2c5164fa3431c8892b21a71c32fcd8ef
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028014"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724019"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Многоядерные устройства и Xamarin.Android
 
@@ -38,7 +38,7 @@ _ОС Android может работать в разных компьютерны
 
 ### <a name="armeabi-and-thread-safety"></a>Архитектура armeabi и потокобезопасность
 
-Двоичный интерфейс приложений подробно описан ниже. Пока мы лишь напомним, что используемая Xamarin.Android среда выполнения `armeabi` *не является потокобезопасной*. Если приложение, поддерживающее `armeabi`, развертывается на устройстве `armeabi-v7a`, возникает множество странных и порой необъяснимых исключений.
+Двоичный интерфейс приложений подробно описан ниже. Пока мы лишь напомним, что используемая Xamarin.Android среда выполнения `armeabi`*не является потокобезопасной*. Если приложение, поддерживающее `armeabi`, развертывается на устройстве `armeabi-v7a`, возникает множество странных и порой необъяснимых исключений.
 
 Из-за ошибки, существующей в Android версий 4.0.0, 4.0.1, 4.0.2 и 4.0.3, собственные библиотеки всегда извлекаются из каталога `armeabi`, даже если присутствует каталог `armeabi-v7a` и устройство имеет архитектуру `armeabi-v7a`.
 
@@ -226,7 +226,7 @@ Xamarin.Android поддерживает следующие варианты 32-
 - `x86`
 
 > [!NOTE]
-> **^** Начиная с версии [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture) `armeabi` больше не поддерживается.
+> **^** Начиная с версии [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture)`armeabi` больше не поддерживается.
 
 Xamarin.Android сейчас не поддерживает `mips`.
 
@@ -253,7 +253,6 @@ Xamarin.Android сейчас не поддерживает `mips`.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Интерфейс ABI для архитектуры ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
 - [(Проблема 9089: на устройстве Nexus One не загружается ни одна собственная библиотека для armeabi, если есть хотя бы одна библиотека для armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089)
 - [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](https://code.google.com/p/android/issues/detail?id=25321) (Проблема 24321. Устройство Galaxy Nexus 4.0.2 использует машинный код armeabi, когда armeabi и armeabi-v7a одновременно включены в APK)

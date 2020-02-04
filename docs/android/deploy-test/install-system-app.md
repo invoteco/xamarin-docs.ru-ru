@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 5eff10d58ac094f3493bd60bdb621df1bcb30477
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 72cddde86708b5573dc578165354d137c4dc35b6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028060"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723904"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Установка Xamarin.Android в качестве системного приложения
 
@@ -44,7 +44,7 @@ _В этом руководстве обсуждаются различия ме
 
 1. **Создайте пакет выпуска APK для приложения Xamarin.Android** &ndash; этот процесс подробнее описан в руководстве [по публикации приложения](~/android/deploy-test/publishing/index.md).
 
-2. **Извлеките из APK общие библиотеки**  &ndash; с помощью любой служебной программы, работающей с архивами ZIP, откройте файл APK и изучите содержимое папки **/lib/** . В этой папке есть подкаталог для каждого _двоичного интерфейса приложения_ (ABI), который поддерживается приложением. Здесь будут располагаться все общие библиотеки этого интерфейса ABI, необходимые для этого конкретного приложения:
+2. **Извлеките из APK общие библиотеки** &ndash; с помощью любой служебной программы, работающей с архивами ZIP, откройте файл APK и изучите содержимое папки **/lib/** . В этой папке есть подкаталог для каждого _двоичного интерфейса приложения_ (ABI), который поддерживается приложением. Здесь будут располагаться все общие библиотеки этого интерфейса ABI, необходимые для этого конкретного приложения:
 
     ![Снимок экрана со списком SO-файлов в папке armeabi-v7a файла образа taskypro.zip](install-system-app-images/install-system-app-01.png)
 
@@ -63,4 +63,4 @@ _В этом руководстве обсуждаются различия ме
 - [Публикация приложения](~/android/deploy-test/publishing/index.md)
 - [Архитектуры процессоров](~/android/app-fundamentals/cpu-architectures.md)
 - [BLUETOOTH_PRIVILEGED](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)
-- [Управление API](https://developer.android.com/ndk~/abis.html)
+- [Управление API](https://developer.android.com/ndk/guides/abis)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fda0b78a80a25d122fbc58ef61fbeab22a547a0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cf5a97bca7c827101db951a440863839539c7e48
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771345"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725264"
 ---
 # <a name="invoking-events-from-effects"></a>Вызов событий из эффекта
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _Эффект может определять вызов события, сигнализирующего об изменениях в базовом собственном представлении. В этой статье описываются реализация низкоуровневого отслеживания мультисенсорного ввода, а также создание событий, сигнализирующих о прикосновениях._
 
@@ -361,9 +361,9 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 Программа [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) содержит пять страниц, на которых можно протестировать применение эффекта отслеживания сенсорного ввода при выполнении стандартных задач.
 
-На странице **перетаскивания элементов BoxView** вы можете добавить элементы `BoxView` в объект `AbsoluteLayout` и затем перетаскивать их по экрану. В [файле XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) создаются экземпляры двух представлений `Button` для добавления элементов `BoxView` в объект `AbsoluteLayout` и очистки объекта `AbsoluteLayout`.
+На странице **перетаскивания элементов BoxView** вы можете добавить элементы `BoxView` в объект `AbsoluteLayout` и затем перетаскивать их по экрану. В [файле XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml) создаются экземпляры двух представлений `Button` для добавления элементов `BoxView` в объект `AbsoluteLayout` и очистки объекта `AbsoluteLayout`.
 
-Метод в [файле кода программной части](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs), который добавляет новый элемент `BoxView` в объект `AbsoluteLayout`, также добавляет объект `TouchEffect` в элемент `BoxView` и присоединяет к эффекту обработчик событий:
+Метод в [файле кода программной части](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml.cs), который добавляет новый элемент `BoxView` в объект `AbsoluteLayout`, также добавляет объект `TouchEffect` в элемент `BoxView` и присоединяет к эффекту обработчик событий:
 
 ```csharp
 void AddBoxViewToLayout()
@@ -453,11 +453,11 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 Вы можете одновременно перетаскивать несколько элементов `BoxView` разными пальцами.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Снимок экрана с тремя изображениями страницы перетаскивания элементов BoxView")](touch-tracking-images/boxviewdragging-large.png#lightbox "Снимок экрана с тремя изображениями страницы перетаскивания элементов BoxView")
+[![](touch-tracking-images/boxviewdragging-small.png "Triple screenshot of the BoxView Dragging page")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
 
 ### <a name="subclassing-the-view"></a>Создание подкласса представления
 
-Для элемента Xamarin.Forms зачастую проще обрабатывать собственные события прикосновения. Страница **перетаскивания перетаскиваемых элементов BoxView** функционирует аналогично странице **перетаскивания элементов BoxView**, однако на ней перетаскиваемые пользователем элементы являются экземплярами класса [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs), производного от `BoxView`:
+Для элемента Xamarin.Forms зачастую проще обрабатывать собственные события прикосновения. Страница **перетаскивания перетаскиваемых элементов BoxView** функционирует аналогично странице **перетаскивания элементов BoxView**, однако на ней перетаскиваемые пользователем элементы являются экземплярами класса [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs), производного от `BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView
@@ -516,11 +516,11 @@ class DraggableBoxView : BoxView
 
 На странице **рисования эллипса** вы можете нарисовать эллипс, проводя пальцами по экрану. В зависимости от характера движения пальцев, вы можете нарисовать эллипс из верхнего левого угла в нижний правый либо из любого другого угла в противоположный. Цвет и степень непрозрачности эллипса задаются случайным образом.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Снимок экрана с тремя изображениями страницы рисования эллипса")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Снимок экрана с тремя изображениями страницы рисования эллипса")
+[![](touch-tracking-images/ellipsedrawing-small.png "Triple screenshot of the Ellipse Drawing page")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
 
 При необходимости вы можете коснуться любого нарисованного эллипса и перетащить его в новое место. Для этого применяется метод проверки на попадание, в рамках которого осуществляется поиск графического объекта в конкретной точке. Эллипсы SkiaSharp не являются элементами Xamarin.Forms и не имеют собственной логики обработки объекта `TouchEffect`. Эффект `TouchEffect` должен применяться ко всему объекту `SKCanvasView`.
 
-Файл [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml) создает экземпляр `SKCanvasView` в объекте `Grid` из одной ячейки. Объект `TouchEffect` присоединяется к этому объекту `Grid`:
+Файл [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/EllipseDrawingPage.xaml) создает экземпляр `SKCanvasView` в объекте `Grid` из одной ячейки. Объект `TouchEffect` присоединяется к этому объекту `Grid`:
 
 ```xaml
 <Grid x:Name="canvasViewGrid"
@@ -592,7 +592,7 @@ class EllipseDrawingFigure
 
 Свойства `StartPoint` и `EndPoint` используются, когда программа обрабатывает сенсорный ввод. Свойство `Rectangle` используется при рисовании эллипса. Свойство `LastFingerLocation` задействуется при перетаскивании эллипса, а метод `IsInEllipse` используется при проверке на попадание. Этот метод возвращает значение `true`, если точка находится внутри эллипса.
 
-В [файле кода программной части](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs) содержатся три коллекции:
+В [файле кода программной части](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/EllipseDrawingPage.xaml.cs) содержатся три коллекции:
 
 ```csharp
 Dictionary<long, EllipseDrawingFigure> inProgressFigures = new Dictionary<long, EllipseDrawingFigure>();
@@ -688,7 +688,7 @@ case TouchActionType.Pressed:
 
 Еще один пример использования SkiaSharp содержит страницу **рисования пальцами**. Вы можете выбрать цвет и ширину кисти в двух представлениях `Picker`, а затем начать рисование одним или несколькими пальцами:
 
-[![](touch-tracking-images/fingerpaint-small.png "Снимок экрана с тремя изображениями страницы рисования пальцами")](touch-tracking-images/fingerpaint-large.png#lightbox "Снимок экрана с тремя изображениями страницы рисования пальцами")
+[![](touch-tracking-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
 В этом примере также используется отдельный класс, который представляет каждую рисуемую на экране линию:
 
@@ -708,7 +708,7 @@ class FingerPaintPolyline
 }
 ```
 
-Для отрисовывания каждой линии используется объект `SKPath`. В файле [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs) хранятся две коллекции таких объектов, в одной из которой содержатся рисуемые в данный момент, а в другой завершенные ломаные линии:
+Для отрисовывания каждой линии используется объект `SKPath`. В файле [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/FingerPaintPage.xaml.cs) хранятся две коллекции таких объектов, в одной из которой содержатся рисуемые в данный момент, а в другой завершенные ломаные линии:
 
 ```csharp
 Dictionary<long, FingerPaintPolyline> inProgressPolylines = new Dictionary<long, FingerPaintPolyline>();
@@ -748,11 +748,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ### <a name="tracking-view-to-view-touch"></a>Отслеживание сенсорного ввода между представлениями
 
-Во всех предыдущих примерах свойству `Capture` объекта `TouchEffect` присваивалось значение `true` либо при создании объекта `TouchEffect`, либо при вызове события `Pressed`. В таком случае один элемент будет принимать все события, связанные с пальцем, который первым коснулся представления. В заключительном примере этой статьи свойству `Capture` *не присваивается* значение `true`. В этом случае поведение при перемещении пальца, касающегося экрана, от одного элемента к другому реализуется иначе. Элемент, из которого перемещается палец, получает событие, для которого свойству `Type` присваивается значение `TouchActionType.Exited`. Второй элемент получает событие, свойству `Type` которого присвоено значение `TouchActionType.Entered`.
+Во всех предыдущих примерах свойству `Capture` объекта `TouchEffect` присваивалось значение `true` либо при создании объекта `TouchEffect`, либо при вызове события `Pressed`. В таком случае один элемент будет принимать все события, связанные с пальцем, который первым коснулся представления. В заключительном примере этой статьи свойству `Capture`*не присваивается* значение `true`. В этом случае поведение при перемещении пальца, касающегося экрана, от одного элемента к другому реализуется иначе. Элемент, из которого перемещается палец, получает событие, для которого свойству `Type` присваивается значение `TouchActionType.Exited`. Второй элемент получает событие, свойству `Type` которого присвоено значение `TouchActionType.Entered`.
 
 Такой подход к обработке прикосновений эффективен в приложении, имитирующем клавиатуру музыкального приложения. Каждая клавиша должна обнаруживать собственное событие нажатия, а также событие перемещения пальца с одной клавиши на другую.
 
-На странице **беззвучной клавиатуры** определяются небольшие классы [`WhiteKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs) и [`BlackKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs), производные от класса [`Key`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs), который, в свою очередь, является производным от `BoxView`.
+На странице **беззвучной клавиатуры** определяются небольшие классы [`WhiteKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/WhiteKey.cs) и [`BlackKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BlackKey.cs), производные от класса [`Key`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/Key.cs), который, в свою очередь, является производным от `BoxView`.
 
 Класс `Key` уже готов для использования в реальной музыкальной программе. В нем определены открытые свойства `IsPressed` и `KeyNumber`, которому будут присваиваться коды клавиш, устанавливаемые стандартом MIDI. Класс `Key` также определяет событие `StatusChanged`, которое вызывается при изменении свойства `IsPressed`.
 
@@ -794,9 +794,9 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 Методы `AddToList` и `RemoveFromList` проверяют, был ли объект `List` изменен с пустого на заполненный, и в соответствующем случае вызывают событие `StatusChanged`.
 
-Различные элементы `WhiteKey` и `BlackKey` упорядочиваются в [файле XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml) страницы, который удобнее просматривать в альбомном режиме:
+Различные элементы `WhiteKey` и `BlackKey` упорядочиваются в [файле XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/SilentKeyboardPage.xaml) страницы, который удобнее просматривать в альбомном режиме:
 
-[![](touch-tracking-images/silentkeyboard-small.png "Снимок экрана с тремя изображениями страницы беззвучной клавиатуры")](touch-tracking-images/silentkeyboard-large.png#lightbox "Снимок экрана с тремя изображениями страницы беззвучной клавиатуры")
+[![](touch-tracking-images/silentkeyboard-small.png "Triple screenshot of the Silent Keyboard page")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
 
 Если вы проведете пальцами по клавишам, вы увидите небольшое изменение цвета, свидетельствующее о передаче событий прикосновения от одной клавиши другой.
 

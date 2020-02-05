@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 23ca9c3fe36a65aefb17f10fd3e680937c36acc0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
+ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016255"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980431"
 ---
 # <a name="advanced-manual-real-world-example"></a>Расширенный (ручной) пример реального мира
 
@@ -19,7 +19,7 @@ ms.locfileid: "73016255"
 
 В этом разделе рассматривается более сложный подход к привязке, где мы будем использовать `xcodebuild`ное средство Apple, чтобы сначала построить проект POP, а затем вручную вывести входные данные для цели Шарпие. По сути, это посвящено цели, Шарпие в предыдущем разделе.
 
-```
+```bash
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 Так как библиотека POP содержит проект Xcode (`pop.xcodeproj`), для сборки POP можно просто использовать `xcodebuild`. Этот процесс, в свою очередь, может создавать файлы заголовков, для которых может потребоваться выполнить анализ Шарпие. Именно поэтому сборка перед привязкой важна. При построении с помощью `xcodebuild` убедитесь, что вы передали тот же идентификатор и архитектуру SDK, которые вы планируете передать в целевую Шарпие (и помните, что цель Шарпие 3,0 может сделать это за вас):
 
-```
+```bash
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 
 Теперь все готово для привязки POP. Мы понимаем, что мы хотим создать пакет SDK `iphoneos8.1` с архитектурой `arm64`, а файлы заголовков, которые нам интересуют, находятся в `build/Headers` в разделе Извлечение Git. Если взглянуть на каталог `build/Headers`, мы увидим несколько файлов заголовков:
 
-```
+```bash
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 Если взглянуть на `POP.h`, можно увидеть, что это основной файл верхнего уровня библиотеки, который `#import`другие файлы. По этой причине нам нужно только передать `POP.h` цели Шарпие, и Clang будет выполнять оставшиеся действия в фоновом режиме:
 
-```
+```bash
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64
@@ -122,7 +122,7 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-Обратите внимание, что мы передали аргумент `-scope build/Headers` для цели Шарпие. Так как библиотеки C и цели-C должны `#import` или `#include` другие файлы заголовков, которые представляют собой сведения о реализации библиотеки, а не API, который требуется привязать, аргумент `-scope` указывает цели Шарпие игнорировать любой API, который не определен в файле где-либо. в каталоге `-scope`.
+Обратите внимание, что мы передали аргумент `-scope build/Headers` для цели Шарпие. Так как библиотеки C и цели-C должны `#import` или `#include` другие файлы заголовков, которые являются подробными сведениями о реализации библиотеки, а не API, который требуется привязать, аргумент `-scope` указывает цели Шарпие игнорировать любой API, который не определен в файле где-либо в каталоге `-scope`.
 
 Аргумент `-scope` часто является необязательным для чистых библиотек, но нет ничего негативного предоставления.
 

@@ -6,17 +6,17 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 9213e893d222e26168940e09a93e158d1e74d8dc
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.date: 02/07/2020
+ms.openlocfilehash: eff7dff15fb75859d43923f71696bccf1b0e2cc5
+ms.sourcegitcommit: 87b818373d83fd3a6856c4b5a702b013a731b5ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725581"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77069653"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Инициализация и Настройка карт Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 Элемент управления [`Map`](xref:Xamarin.Forms.Maps.Map) использует собственный элемент управления картой на каждой платформе. Это обеспечивает быстрый, знакомый интерфейс карт для пользователей, но означает, что некоторые действия по настройке необходимы для соблюдения требований к API для каждой платформы.
 
@@ -234,6 +234,9 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 ### <a name="universal-windows-platform"></a>Универсальная платформа Windows
 
 В UWP приложение должно пройти проверку подлинности, прежде чем оно сможет отобразить карту и использовать службы Map Services. Для проверки подлинности приложения необходимо указать ключ проверки подлинности карты. Дополнительные сведения см. [в разделе запрос на сопоставление ключа проверки подлинности](/windows/uwp/maps-and-location/authentication-key). После этого маркер проверки подлинности должен быть указан в вызове метода `FormsMaps.Init("AUTHORIZATION_TOKEN")` для проверки подлинности приложения с помощью карт Bing.
+
+> [!NOTE]
+> В UWP для использования служб Map, таких как геокодирование, необходимо также присвоить свойству `MapService.ServiceToken` значение ключа проверки подлинности. Это можно сделать с помощью следующей строки кода: `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 Кроме того, если приложению требуется доступ к расположению пользователя, необходимо включить возможность расположения в манифесте пакета. Это можно обеспечить, выполнив следующие действия.
 

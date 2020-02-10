@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771646"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940343"
 ---
 # <a name="xamarinforms-binding-path"></a>Путь привязки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Во всех предыдущих примерах привязки данных в свойстве [`Path`](xref:Xamarin.Forms.Binding.Path) класса `Binding` (или свойстве [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) расширения разметки `Binding`) указывалось одно свойство. В действительности `Path` может указывать на *вложенное свойство* (свойство свойства) или элемент коллекции.
 
@@ -40,7 +40,7 @@ ms.locfileid: "70771646"
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:globe="clr-namespace:System.Globalization;assembly=mscorlib"
+             xmlns:globe="clr-namespace:System.Globalization;assembly=netstandard"
              x:Class="DataBindingDemos.PathVariationsPage"
              Title="Path Variations"
              x:Name="page">
@@ -138,7 +138,7 @@ ms.locfileid: "70771646"
 
 Вот работающая программа:
 
-[![Варианты пути](binding-path-images/pathvariations-small.png "Варианты пути")](binding-path-images/pathvariations-large.png#lightbox "Варианты пути")
+[![Варианты путей](binding-path-images/pathvariations-small.png "Варианты путей")](binding-path-images/pathvariations-large.png#lightbox "Варианты путей")
 
 ## <a name="debugging-complex-paths"></a>Отладка сложных путей
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771567"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940384"
 ---
 # <a name="xamarinforms-string-formatting"></a>Форматирование строк Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Иногда привязки данных удобно использовать для отображения строкового представления объекта или значения. Например, может потребоваться использовать `Label` для отображения текущего значения `Slider`. В этой привязке данных `Slider` является источником, а целевым объектом является свойство `Text` объекта `Label`.
 
@@ -44,7 +44,7 @@ ms.locfileid: "70771567"
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="DataBindingDemos.StringFormattingPage"
              Title="String Formatting">
 
@@ -123,7 +123,7 @@ ms.locfileid: "70771567"
 
 Вот работающая программа:
 
-[![Форматирование строк](string-formatting-images/stringformatting-small.png "Форматирование строк")](string-formatting-images/stringformatting-large.png#lightbox "Форматирование строк")
+[![Форматирование строк](string-formatting-images/stringformatting-small.png "Форматирование строки")](string-formatting-images/stringformatting-large.png#lightbox "Форматирование строки")
 
 ## <a name="viewmodels-and-string-formatting"></a>Модели представления и форматирование строк
 
@@ -176,7 +176,7 @@ ms.locfileid: "70771567"
 
 Теперь существует три пары элементов `Slider` и `Label`, привязанных к одному исходному свойству в объекте `HslColorViewModel`. Единственное отличие заключается в том, что `Label` имеет свойство `StringFormat` для отображения каждого значения `Slider`.
 
-[![Улучшенный выбор цвета](string-formatting-images/bettercolorselector-small.png "Улучшенный выбор цвета")](string-formatting-images/bettercolorselector-large.png#lightbox "Улучшенный выбор цвета")
+[![Улучшенное средство выбора цвета](string-formatting-images/bettercolorselector-small.png "Улучшенное средство выбора цвета")](string-formatting-images/bettercolorselector-large.png#lightbox "Улучшенное средство выбора цвета")
 
 Вы можете спросить, как отобразить значения RGB (красный, зеленый, синий) в традиционном двухзначном шестнадцатеричном формате. Эти целочисленные значения недоступны непосредственно из структуры `Color`. Одно решение заключается в вычислении целочисленных значений компонентов цветов в модели представления и предоставлении их в качестве свойств. Затем их можно отформатировать с помощью спецификации форматирования `X2`.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 9d8b3e68aa626890fdce5c004928541ece263703
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6e80daf2be1b672dc7d0de3e303dfb9261c10472
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020802"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940917"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Настройка пакета SDK для Android для Xamarin.Android
 
@@ -56,7 +56,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 [![Элемент меню с расположением диспетчера пакетов SDK Android](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
-Диспетчер пакетов SDK для Android открывается на экране **Пакеты SDK и инструменты для Android**. Этот экран содержит две вкладки &ndash; **Платформы** и **Сервис**:
+Диспетчер пакетов SDK для Android открывается на экране **Пакеты SDK и инструменты для Android**. Этот экран содержит две вкладки &ndash; **Платформы** и **Сервис**:
 
 [![Снимок экрана с диспетчером пакетов SDK Android, открытым на вкладке "Платформы"](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 

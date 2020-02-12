@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/04/2019
-ms.openlocfilehash: 8888f1615f250a908930cec9058a54bd6e7fedc2
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: a48a91b886cadcbe9dfa73a524b7bfa9fb2cf5fb
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490081"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77130972"
 ---
 # <a name="xamarinforms-searchbar"></a>Сеарчбар Xamarin. Forms
 
@@ -31,12 +31,12 @@ ms.locfileid: "75490081"
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) может быть `NamedSize` значением перечисления или `double` значением, представляющим определенные размеры шрифтов на разных платформах.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) — это `TextAlignment` перечислимое значение, определяющее выравнивание текста запроса по горизонтали.
 * `VerticalTextAlignment` — это `TextAlignment` перечислимое значение, определяющее вертикальное выравнивание текста запроса.
-* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) — это `string`, который определяет текст заполнителя, например "Поиск...".
-* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) — это `Color`, определяющая цвет текста заполнителя.
+* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) — это `string`, который определяет текст заполнителя, например "Поиск...".
+* [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) — это `Color`, определяющая цвет текста заполнителя.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) — это `ICommand`, который позволяет привязать действия пользователя, такие как касания пальца или щелчки, к командам, определенным в ViewModel.
 * [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) — это `object`, указывающий параметр, который должен быть передан `SearchCommand`.
-* [`Text`](xref:Xamarin.Forms.SearchBar.Text) — это `string`, содержащий текст запроса в `SearchBar`.
-* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor) — это `Color`, определяющая цвет текста запроса.
+* [`Text`](xref:Xamarin.Forms.InputView.Text) — это `string`, содержащий текст запроса в `SearchBar`.
+* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) — это `Color`, определяющая цвет текста запроса.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что `SearchBar` может быть настроена и быть целью привязок данных. Указание свойств шрифта в `SearchBar` согласуется с настройкой текста в других [элементах управления "текст" Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md). Дополнительные сведения см. [в статье шрифты в Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md).
 
@@ -94,7 +94,7 @@ SearchBar searchBar = new SearchBar
 Поиск можно выполнить с помощью элемента управления `SearchBar`, присоединив обработчик событий к одному из следующих событий:
 
 * [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) вызывается, когда пользователь либо нажимает кнопку поиска, либо нажимает клавишу ВВОД.
-* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged) вызывается всякий раз, когда изменяется текст в поле запроса.
+* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) вызывается всякий раз, когда изменяется текст в поле запроса.
 
 В следующем примере показан обработчик событий, присоединенный к событию `TextChanged` в XAML и использующий `ListView` для отображения результатов поиска:
 

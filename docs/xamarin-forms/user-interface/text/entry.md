@@ -1,32 +1,32 @@
 ---
-title: Запись Xamarin. Forms
-description: В этой статье объясняется, как использовать класс ввода Xamarin. Forms для приема ввода текста или пароля в приложении.
+title: Запись Xamarin.Forms
+description: В этой статье описываются способы использования класса входа Xamarin.Forms для принятия однострочный текст или пароля, вводимого в приложении.
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019
-ms.openlocfilehash: 106d22cd7f20f8368bc728aa45c4d7f19d09c44c
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: c7daad8898d3048f10c9489ee4e2c78f147c6e52
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697058"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131145"
 ---
-# <a name="xamarinforms-entry"></a>Запись Xamarin. Forms
+# <a name="xamarinforms-entry"></a>Запись Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Ввод текста или пароля в одной строке_
 
-[@No__t_1](xref:Xamarin.Forms.Entry) Xamarin. Forms используется для однострочного ввода текста. @No__t_0, как и представление [`Editor`](xref:Xamarin.Forms.Editor) , поддерживает несколько типов клавиатуры. Кроме того, `Entry` можно использовать в качестве поля пароля.
+[`Entry`](xref:Xamarin.Forms.Entry) Xamarin. Forms используется для однострочного ввода текста. `Entry`, как и представление [`Editor`](xref:Xamarin.Forms.Editor) , поддерживает несколько типов клавиатуры. Кроме того, `Entry` можно использовать в качестве поля пароля.
 
-## <a name="display-customization"></a>Отображение настроек
+## <a name="display-customization"></a>Настройки отображения
 
 ### <a name="setting-and-reading-text"></a>Установка и чтение текста
 
-@No__t_0, как и другие представления для текста, предоставляет свойство [`Text`](xref:Xamarin.Forms.Entry.Text) . Это свойство можно использовать для установки и чтения текста, представленного `Entry`. В следующем примере показано задание свойства `Text` в XAML:
+`Entry`, как и другие представления для текста, предоставляет свойство [`Text`](xref:Xamarin.Forms.InputView.Text) . Это свойство можно использовать для установки и чтения текста, представленного `Entry`. В следующем примере показано задание свойства `Text` в XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -44,9 +44,9 @@ var MyEntry = new Entry { Text = "I am an Entry" };
 var text = MyEntry.Text;
 ```
 
-### <a name="setting-placeholder-text"></a>Задание текста заполнителя
+### <a name="setting-placeholder-text"></a>Параметр замещающий текст
 
-[@No__t_1](xref:Xamarin.Forms.Entry) можно задать для отображения текста заполнителя, если он не хранит данные, вводимые пользователем. Это достигается путем присвоения свойству [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) `string` и часто используется для указания типа содержимого, подходящего для `Entry`. Кроме того, цвет текста заполнителя можно контролировать, присвоив свойству [`PlaceholderColor`](xref:Xamarin.Forms.Entry.PlaceholderColor) [`Color`](xref:Xamarin.Forms.Color):
+[`Entry`](xref:Xamarin.Forms.Entry) можно задать для отображения текста заполнителя, если он не хранит данные, вводимые пользователем. Это достигается путем присвоения свойству [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) `string`и часто используется для указания типа содержимого, подходящего для `Entry`. Кроме того, цвет текста заполнителя можно контролировать, присвоив свойству [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Entry Placeholder="Username" PlaceholderColor="Olive" />
@@ -75,9 +75,9 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 > [!NOTE]
 > Свойство `IsReadonly` не изменяет внешний вид [`Entry`](xref:Xamarin.Forms.Entry), в отличие от свойства `IsEnabled`, которое также изменяет внешний вид `Entry` на серый.
 
-### <a name="limiting-input-length"></a>Ограничение длины входных данных
+### <a name="limiting-input-length"></a>Ограничение длины входных
 
-Свойство [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) можно использовать для ограничения длины ввода, разрешенной для [`Entry`](xref:Xamarin.Forms.Entry). Для этого свойства необходимо задать положительное целое число:
+Свойство [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) можно использовать для ограничения длины ввода, разрешенной для [`Entry`](xref:Xamarin.Forms.Entry). Это свойство должно быть присвоено положительное целое число:
 
 ```xaml
 <Entry ... MaxLength="10" />
@@ -143,9 +143,9 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ![Пример ввода пароля и заполнителя](entry-images/passwordplaceholder.png)
 
-### <a name="setting-the-cursor-position-and-text-selection-length"></a>Установка положения курсора и длины выделения текста
+### <a name="setting-the-cursor-position-and-text-selection-length"></a>Задание позиции курсора и длину выделения текста
 
-Свойство [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) можно использовать для возвращения или установки позиции, в которую следующий символ будет вставлен в строку, хранящуюся в свойстве [`Text`](xref:Xamarin.Forms.Entry.Text) :
+Свойство [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) можно использовать для возвращения или установки позиции, в которую следующий символ будет вставлен в строку, хранящуюся в свойстве [`Text`](xref:Xamarin.Forms.InputView.Text) :
 
 ```xaml
 <Entry Text="Cursor position set" CursorPosition="5" />
@@ -252,7 +252,7 @@ var entry = new Entry { Placeholder = "Enter text here" };
 entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-#### <a name="customizing-the-return-key"></a>Настройка ключа возврата
+#### <a name="customizing-the-return-key"></a>Настройка клавиша Return
 
 Внешний вид ключа возврата на экранной клавиатуре, который отображается, когда [`Entry`](xref:Xamarin.Forms.Entry) имеет фокус, может быть настроен путем присвоения свойству [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) значения перечисления [`ReturnType`](xref:Xamarin.Forms.ReturnType) :
 
@@ -263,7 +263,7 @@ entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.Capit
 - [`Search`](xref:Xamarin.Forms.ReturnType.Search) — указывает ключ возврата поиска.
 - [`Send`](xref:Xamarin.Forms.ReturnType.Send) — указывает ключ возврата "Send".
 
-В следующем примере XAML показано, как задать ключ возврата:
+В следующем примере XAML показано, как задать возвращаемое ключ:
 
 ```xaml
 <Entry ReturnType="Send" />
@@ -276,13 +276,13 @@ var entry = new Entry { ReturnType = ReturnType.Send };
 ```
 
 > [!NOTE]
-> Точный вид ключа возврата зависит от платформы. В iOS ключ возврата — это текстовая кнопка. Однако на платформах Android и универсальных ОС Windows ключ возврата является кнопкой на основе значков.
+> Клавиша return точный вид зависит от платформы. В iOS клавиша return — это кнопка, основанные на тексте. Тем не менее Android и универсальной платформы Windows, клавиша return находится кнопка значки.
 
 При нажатии клавиши Return вызывается событие [`Completed`](xref:Xamarin.Forms.Entry.Completed) и выполняется любое `ICommand`, заданное свойством [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) . Кроме того, все `object`, заданные свойством [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) , передаются в `ICommand` в качестве параметра. Дополнительные сведения о командах см. в разделе [Командный интерфейс](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
-### <a name="enabling-and-disabling-spell-checking"></a>Включение и отключение проверки орфографии
+### <a name="enabling-and-disabling-spell-checking"></a>Включение и отключение проверка орфографии
 
-Свойство [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) определяет, включена ли проверка орфографии. По умолчанию свойство имеет значение `true`. При вводе пользователем текста указывается опечатка.
+Свойство [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) определяет, включена ли проверка орфографии. По умолчанию свойство имеет значение `true`. Как пользователь вводит текст, заданный опечаток.
 
 Однако для некоторых сценариев ввода текста, таких как ввод имени пользователя, проверка орфографии обеспечивает негативную работу и должна быть отключена путем присвоения свойству [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) значения `false`.
 
@@ -299,7 +299,7 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 
 ### <a name="enabling-and-disabling-text-prediction"></a>Включение и отключение прогнозирования текста
 
-Свойство [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) определяет, включено ли прогнозирование текста и автоматическое исправление текста. По умолчанию свойство имеет значение `true`. При вводе пользователем текста отображаются прогнозы Word.
+Свойство [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) определяет, включено ли прогнозирование текста и автоматическое исправление текста. По умолчанию свойство имеет значение `true`. Как пользователь вводит текст, представляется word прогнозов.
 
 Однако для некоторых сценариев ввода текста, таких как ввод имени пользователя, прогнозирование текста и автоматическое исправление текста обеспечивают негативную работу и должны быть отключены путем присвоения свойству [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) значения `false`.
 
@@ -316,12 +316,12 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 
 ### <a name="colors"></a>Цвета
 
-Запись может быть настроена для использования пользовательского фона и цвета текста с помощью следующих связываемых свойств:
+Использовать настраиваемый фон и цвета текста с помощью следующих привязываемые свойства можно задать запись.
 
 - **TextColor** &ndash; задает цвет текста.
 - **BackgroundColor** &ndash; задает цвет, отображаемый за текстом.
 
-Чтобы обеспечить возможность использования цветов на каждой платформе, необходимо особое внимание. Так как каждая платформа имеет разные значения по умолчанию для цветов текста и фона, часто приходится устанавливать и то, и другое, если задать их.
+Особое внимание необходимо, чтобы гарантировать, что цвета будет доступна для использования на каждой платформе. Так как каждая платформа имеет различные значения по умолчанию для цветов текста и фона, часто необходимо задать оба, если задается один.
 
 Чтобы задать цвет текста записи, используйте следующий код:
 
@@ -340,9 +340,9 @@ entry.TextColor = Color.Green;
 
 ![Пример записи TextColor](entry-images/textcolor.png)
 
-Обратите внимание, что указанный `TextColor` не влияет на заполнитель.
+Обратите внимание, что указанный `TextColor`не влияет на заполнитель.
 
-Чтобы задать цвет фона в XAML, сделайте следующее:
+Чтобы задать цвет фона в XAML:
 
 ```xaml
 <Entry BackgroundColor="#2c3e50" />
@@ -357,13 +357,13 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 ![Пример записи BackgroundColor](entry-images/textbackgroundcolor.png)
 
-Будьте внимательны, чтобы цвет фона и текста, который вы выбрали, можно было использовать на каждой платформе, и не скрывать текст заполнителя.
+Следите за тем, чтобы убедиться в том, что цвета фона и текста, которые вы выбрали могут использоваться на каждой платформе и не закрывают любой текст заполнителя.
 
 ## <a name="events-and-interactivity"></a>События и интерактивность
 
 Запись предоставляет два события:
 
-- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; возникает при изменении текста в записи. Предоставляет текст до и после изменения.
+- [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) &ndash; возникает при изменении текста в записи. Содержит текст до и после изменения.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; возникает, когда пользователь завершает ввод, нажав клавишу Return на клавиатуре.
 
 > [!NOTE]
@@ -380,7 +380,7 @@ void Entry_Completed (object sender, EventArgs e)
 }
 ```
 
-На языке XAML можно подписываться на событие Completed:
+Завершенное событие можно подписаться в XAML:
 
 ```xaml
 <Entry Completed="Entry_Completed" />

@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2019
-ms.openlocfilehash: 55944b422495c9c3a7c93c6a2eab90a2db790780
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 8359e5f5008205237d602d7d364ebea376b57cf0
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697845"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131078"
 ---
 # <a name="xamarinforms-carouselview-emptyview"></a>Карауселвиев Емптивиев Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет следующие свойства, которые можно использовать для предоставления отзывов пользователей, когда нет данных для показа:
 
-- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), тип `object`, строка, привязка или представление, которые будут отображаться, когда свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `null`, или если коллекция, указанная свойством `ItemsSource`, является `null` или пуста. Значение по умолчанию — `null`.
-- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), тип [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), шаблон, используемый для форматирования указанного `EmptyView`. Значение по умолчанию — `null`.
+- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), тип `object`, строка, привязка или представление, которые будут отображаться, когда свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `null`, или если коллекция, указанная свойством `ItemsSource`, является `null` или пуста. Значение по умолчанию — `null`.
+- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), тип [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), шаблон, используемый для форматирования указанного `EmptyView`. Значение по умолчанию — `null`.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами. Это означает, что свойства могут быть целевыми объектами привязок данных.
 
@@ -36,7 +36,7 @@ ms.locfileid: "72697845"
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>Отображать строку, если данные недоступны
 
-Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) может быть присвоена строка, которая будет отображаться, если свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `null` или если коллекция, указанная свойством `ItemsSource`, имеет значение `null` или пусто. В следующем коде XAML показан пример этого сценария:
+Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) может быть присвоена строка, которая будет отображаться, если свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `null`или если коллекция, указанная свойством `ItemsSource`, имеет значение `null` или пусто. В следующем коде XAML показан пример этого сценария:
 
 ```xaml
 <CarouselView ItemsSource="{Binding EmptyMonkeys}"
@@ -57,7 +57,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 
 ## <a name="display-views-when-data-is-unavailable"></a>Отображать представления, если данные недоступны
 
-Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) может быть присвоено представление, которое будет отображаться, если свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `null` или если коллекция, указанная свойством `ItemsSource`, имеет значение `null` или пусто. Это может быть одно представление или представление, содержащее несколько дочерних представлений. В следующем примере XAML показано свойство `EmptyView`, для которого задано представление, содержащее несколько дочерних представлений:
+Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) может быть присвоено представление, которое будет отображаться, если свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `null`или если коллекция, указанная свойством `ItemsSource`, имеет значение `null` или пусто. Это может быть одно представление или представление, содержащее несколько дочерних представлений. В следующем примере XAML показано свойство `EmptyView`, для которого задано представление, содержащее несколько дочерних представлений:
 
 ```xaml
 <StackLayout Margin="20">
@@ -105,11 +105,11 @@ CarouselView carouselView = new CarouselView
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Если операция фильтрации не дает никаких данных, [`StackLayout`](xref:Xamarin.Forms.StackLayout) задается как значение свойства [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) .
+Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Если операция фильтрации не дает никаких данных, [`StackLayout`](xref:Xamarin.Forms.StackLayout) задается как значение свойства [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) .
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Отображать шаблонный пользовательский тип, если данные недоступны
 
-Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) может быть присвоено настраиваемый тип, шаблон которого отображается, если свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) имеет значение `null` или если коллекция, указанная свойством `ItemsSource`, имеет значение `null` или пусто. Свойству [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) может быть присвоено значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , определяющее внешний вид `EmptyView`. В следующем коде XAML показан пример этого сценария:
+Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) может быть присвоено настраиваемый тип, шаблон которого отображается, если свойство [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) имеет значение `null`или если коллекция, указанная свойством `ItemsSource`, имеет значение `null` или пусто. Свойству [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) может быть присвоено значение [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , определяющее внешний вид `EmptyView`. В следующем коде XAML показан пример этого сценария:
 
 ```xaml
 <StackLayout Margin="20">
@@ -167,14 +167,14 @@ public class FilterData : BindableObject
 }
 ```
 
-Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) присвоено `FilterData` объект, а данные свойства `Filter` привязываются к свойству [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве `Filter`. Если операция фильтрации не дает никаких данных, то отображается [`Label`](xref:Xamarin.Forms.Label) , определенная в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), которая задается как значение свойства [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) .
+Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) присвоено `FilterData` объект, а данные свойства `Filter` привязываются к свойству [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве `Filter`. Если операция фильтрации не дает никаких данных, то отображается [`Label`](xref:Xamarin.Forms.Label) , определенная в [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), которая задается как значение свойства [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) .
 
 > [!NOTE]
 > При отображении пользовательского типа с шаблоном, когда данные недоступны, свойству [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) может быть присвоено представление, содержащее несколько дочерних представлений.
 
 ## <a name="choose-an-emptyview-at-runtime"></a>Выбор Емптивиев во время выполнения
 
-Представления, которые будут отображаться в виде [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) при недоступности данных, могут быть определены как [`ContentView`](xref:Xamarin.Forms.ContentView) объекты в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). В качестве значения свойства `EmptyView` можно задать определенный `ContentView` в зависимости от конкретной бизнес-логики во время выполнения. В следующем примере XAML показан пример этого сценария:
+Представления, которые будут отображаться в виде [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) при недоступности данных, могут быть определены как [`ContentView`](xref:Xamarin.Forms.ContentView) объекты в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). В качестве значения свойства `EmptyView` можно задать определенный `ContentView`в зависимости от конкретной бизнес-логики во время выполнения. В следующем примере XAML показан пример этого сценария:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -239,7 +239,7 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-Метод `ToggleEmptyView` задает для свойства [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) объекта `carouselView` один из двух объектов [`ContentView`](xref:Xamarin.Forms.ContentView) , хранящихся в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), в зависимости от значения свойства [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) . Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Если операция фильтрации не дает никаких данных, то будет отображен `ContentView` объект, заданный как свойство `EmptyView`.
+Метод `ToggleEmptyView` задает для свойства [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) объекта `carouselView` один из двух объектов [`ContentView`](xref:Xamarin.Forms.ContentView) , хранящихся в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), в зависимости от значения свойства [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) . Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Если операция фильтрации не дает никаких данных, то будет отображен `ContentView` объект, заданный как свойство `EmptyView`.
 
 Дополнительные сведения о словарях ресурсов см. в статье [словари ресурсов Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
@@ -292,9 +292,9 @@ CarouselView carouselView = new CarouselView()
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) присвоено свойство [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) , а свойству [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) — объект `SearchTermDataTemplateSelector`.
+Свойству [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) присвоено свойство [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) , а свойству [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) — объект `SearchTermDataTemplateSelector`.
 
-Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Если операция фильтрации не дает никаких данных, [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , выбранная объектом `SearchTermDataTemplateSelector`, задается как свойство [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) и отображается.
+Когда [`SearchBar`](xref:Xamarin.Forms.SearchBar) выполняет `FilterCommand`, коллекция, отображаемая [`CarouselView`](xref:Xamarin.Forms.CarouselView) , фильтруется для условия поиска, хранящегося в свойстве [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Если операция фильтрации не дает никаких данных, [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , выбранная объектом `SearchTermDataTemplateSelector`, задается как свойство [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) и отображается.
 
 В следующем примере показан класс `SearchTermDataTemplateSelector`:
 
@@ -320,5 +320,5 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 - [Карауселвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Шаблоны данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Словари ресурсов Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Словари ресурсов Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Создание DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

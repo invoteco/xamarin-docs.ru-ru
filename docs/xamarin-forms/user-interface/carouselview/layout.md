@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: 0149a66fedd98a94f1c9d96bf8e7e57715d1b90b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 38c891a095b2b3d41d906e747585b961516f9256
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488261"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77130858"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Макет Карауселвиев Xamarin. Forms
 
@@ -45,9 +45,9 @@ ms.locfileid: "75488261"
 > [!NOTE]
 > для выполнения макета [`CarouselView`](xref:Xamarin.Forms.CarouselView) использует собственные обработчики макетов.
 
-## <a name="horizontal-layout"></a>Горизонтальное расположение
+## <a name="horizontal-layout"></a>Горизонтальный макет
 
-По умолчанию [`CarouselView`](xref:Xamarin.Forms.CarouselView) будет отображать элементы по горизонтали. Поэтому нет необходимости устанавливать свойство [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) для использования этого макета:
+По умолчанию [`CarouselView`](xref:Xamarin.Forms.CarouselView) будет отображать элементы по горизонтали. Поэтому нет необходимости устанавливать свойство [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) для использования этого макета:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -87,7 +87,7 @@ ms.locfileid: "75488261"
 </CarouselView>
 ```
 
-Кроме того, этот макет можно также выполнить, задав для свойства [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) `LinearItemsLayout` объект, указав в качестве значения свойства `Orientation` элемент перечисления `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) .
+Кроме того, этот макет можно также выполнить, задав для свойства [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) `LinearItemsLayout` объект, указав в качестве значения свойства `Orientation` элемент перечисления `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) .
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -110,9 +110,9 @@ CarouselView carouselView = new CarouselView
 
 Это приводит к увеличению макета по горизонтали по мере добавления новых элементов.
 
-## <a name="vertical-layout"></a>Вертикальное расположение
+## <a name="vertical-layout"></a>Вертикальный макет
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) могут отображать свои элементы по вертикали, присвоив свойству [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) значение `LinearItemsLayout` объекта, указав в качестве значения свойства`ItemsLayoutOrientation`элемент перечисления `Vertical` [`Orientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) :
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) могут отображать свои элементы по вертикали, присвоив свойству [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) значение `LinearItemsLayout` объекта, указав в качестве значения свойства`ItemsLayoutOrientation`элемент перечисления `Vertical` [`Orientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) :
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -194,7 +194,7 @@ CarouselView carouselView = new CarouselView
 
 По умолчанию каждый элемент в [`CarouselView`](xref:Xamarin.Forms.CarouselView) не имеет пустого пространства вокруг него. Это поведение можно изменить, задав свойства в макете элементов, который используется `CarouselView`.
 
-Когда [`CarouselView`](xref:Xamarin.Forms.CarouselView) задает для свойства [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) объект `LinearItemsLayout`, свойству `LinearItemsLayout.ItemSpacing` может быть присвоено значение `double`, представляющее пустое пространство вокруг каждого элемента:
+Когда [`CarouselView`](xref:Xamarin.Forms.CarouselView) задает для свойства [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) объект `LinearItemsLayout`, свойству `LinearItemsLayout.ItemSpacing` может быть присвоено значение `double`, представляющее пустое пространство вокруг каждого элемента:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">

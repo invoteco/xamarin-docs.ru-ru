@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d8c50b1dfb2a2669f7611a6bc6da882c54b877aa
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277412"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135025"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -30,7 +30,7 @@ ms.locfileid: "67277412"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) определяет текст заполнителя, который отображается при первом появлении `Entry`.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) определяет текст заполнителя, который отображается при первом появлении `Entry`.
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
@@ -60,7 +60,7 @@ ms.locfileid: "67277412"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) определяет текст заполнителя, который отображается при первом появлении `Entry`.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) определяет текст заполнителя, который отображается при первом появлении `Entry`.
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 

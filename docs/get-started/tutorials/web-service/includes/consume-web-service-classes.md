@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 90f3f9ff5ed29a1ae2c93e355fc15bc6550d78dd
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659894"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135068"
 ---
 В этом упражнении вы создадите пользовательский интерфейс для использования класса `RestService`, который, в свою очередь, получает данные из веб-API [OpenWeatherMap](https://openweathermap.org/).
 
@@ -67,7 +67,7 @@ ms.locfileid: "67659894"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.Entry.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий с именем `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий с именем `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Кроме того, [`Entry`](xref:Xamarin.Forms.Entry) имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту с помощью назначенного имени.
 
@@ -187,7 +187,7 @@ ms.locfileid: "67659894"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.Entry.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий с именем `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий с именем `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Кроме того, [`Entry`](xref:Xamarin.Forms.Entry) имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту с помощью назначенного имени.
 

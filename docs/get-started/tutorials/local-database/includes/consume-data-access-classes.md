@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: caee3eeda90a560f032c17657072ae5ba5023a69
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659892"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135017"
 ---
 В этом упражнении будет создан пользовательский интерфейс, который используется для работы с ранее созданными классами доступа к данным.
 
@@ -36,7 +36,7 @@ ms.locfileid: "67659892"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из двух экземпляров [`Entry`](xref:Xamarin.Forms.Entry) ([`Button`](xref:Xamarin.Forms.Button) и [`ListView`](xref:Xamarin.Forms.ListView)) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Каждый экземпляр `Entry` обладает собственным набором свойств [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder), которые указывают замещающий текст, который отображается перед вводом данных пользователем. `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий `OnButtonClicked`, который будет создан на следующем шаге. `ListView` устанавливает свойство [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) для [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), которое использует [`TextCell`](xref:Xamarin.Forms.TextCell) для определения внешнего вида каждой строки в [`ListView`](xref:Xamarin.Forms.ListView). Данные `TextCell` привязывают свойства [`Text`](xref:Xamarin.Forms.TextCell.Text) и [`Detail`](xref:Xamarin.Forms.TextCell.Detail) к свойствам `Name` и `Age` каждого из объектов `Person` соответственно.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из двух экземпляров [`Entry`](xref:Xamarin.Forms.Entry) ([`Button`](xref:Xamarin.Forms.Button) и [`ListView`](xref:Xamarin.Forms.ListView)) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Каждый экземпляр `Entry` обладает собственным набором свойств [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder), которые указывают замещающий текст, который отображается перед вводом данных пользователем. `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий `OnButtonClicked`, который будет создан на следующем шаге. `ListView` устанавливает свойство [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) для [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), которое использует [`TextCell`](xref:Xamarin.Forms.TextCell) для определения внешнего вида каждой строки в [`ListView`](xref:Xamarin.Forms.ListView). Данные `TextCell` привязывают свойства [`Text`](xref:Xamarin.Forms.TextCell.Text) и [`Detail`](xref:Xamarin.Forms.TextCell.Detail) к свойствам `Name` и `Age` каждого из объектов `Person` соответственно.
 
     Кроме этого экземпляры [`Entry`](xref:Xamarin.Forms.Entry) и [`ListView`](xref:Xamarin.Forms.ListView) обладают именами, указанными в атрибуте `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к этим объектам с помощью назначенных имен.
 
@@ -106,7 +106,7 @@ ms.locfileid: "67659892"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из двух экземпляров [`Entry`](xref:Xamarin.Forms.Entry) ([`Button`](xref:Xamarin.Forms.Button) и [`ListView`](xref:Xamarin.Forms.ListView)) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Каждый экземпляр `Entry` обладает собственным набором свойств [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder), которые указывают замещающий текст, который отображается перед вводом данных пользователем. `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий `OnButtonClicked`, который будет создан на следующем шаге. `ListView` устанавливает свойство [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) для [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), которое использует [`TextCell`](xref:Xamarin.Forms.TextCell) для определения внешнего вида каждой строки в [`ListView`](xref:Xamarin.Forms.ListView). Данные `TextCell` привязывают свойства [`Text`](xref:Xamarin.Forms.TextCell.Text) и [`Detail`](xref:Xamarin.Forms.TextCell.Detail) к свойствам `Name` и `Age` каждого из объектов `Person` соответственно.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из двух экземпляров [`Entry`](xref:Xamarin.Forms.Entry) ([`Button`](xref:Xamarin.Forms.Button) и [`ListView`](xref:Xamarin.Forms.ListView)) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Каждый экземпляр `Entry` обладает собственным набором свойств [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder), которые указывают замещающий текст, который отображается перед вводом данных пользователем. `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий `OnButtonClicked`, который будет создан на следующем шаге. `ListView` устанавливает свойство [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) для [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), которое использует [`TextCell`](xref:Xamarin.Forms.TextCell) для определения внешнего вида каждой строки в [`ListView`](xref:Xamarin.Forms.ListView). Данные `TextCell` привязывают свойства [`Text`](xref:Xamarin.Forms.TextCell.Text) и [`Detail`](xref:Xamarin.Forms.TextCell.Detail) к свойствам `Name` и `Age` каждого из объектов `Person` соответственно.
 
     Кроме этого экземпляры [`Entry`](xref:Xamarin.Forms.Entry) и [`ListView`](xref:Xamarin.Forms.ListView) обладают именами, указанными в атрибуте `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к этим объектам с помощью назначенных имен.
 

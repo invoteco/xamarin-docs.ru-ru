@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: fe7e11f37f303c2ec1f5bc58e98953449694191c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277421"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135091"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67277421"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) определяет текст заполнителя который отображается, при первом появлении `Editor`. Кроме того, свойство [`HeightRequest`](xref:Xamarin.Forms.VisualElement) указывает высоту `Editor` в аппаратно-независимых единицах.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) определяет текст заполнителя который отображается, при первом появлении `Editor`. Кроме того, свойство [`HeightRequest`](xref:Xamarin.Forms.VisualElement) указывает высоту `Editor` в аппаратно-независимых единицах.
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
@@ -65,7 +65,7 @@ ms.locfileid: "67277421"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) определяет текст заполнителя который отображается, при первом появлении `Editor`. Кроме того, свойство [`HeightRequest`](xref:Xamarin.Forms.VisualElement) указывает высоту `Editor` в аппаратно-независимых единицах.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Editor`](xref:Xamarin.Forms.Editor) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) определяет текст заполнителя который отображается, при первом появлении `Editor`. Кроме того, свойство [`HeightRequest`](xref:Xamarin.Forms.VisualElement) указывает высоту `Editor` в аппаратно-независимых единицах.
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 

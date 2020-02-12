@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67841448"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135105"
 ---
 Подкласс [`Application`](xref:Xamarin.Forms.Application) имеет статический словарь [`Properties`](xref:Xamarin.Forms.Application.Properties), который можно использовать для хранения данных в изменениях состояния жизненного цикла. Словарь использует ключ `string` и хранит значение `object`. Словарь сохраняется на устройстве автоматически и будет заполнен повторно при перезапуске приложения.
 
@@ -82,7 +82,7 @@ ms.locfileid: "67841448"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) определяет текст заполнителя, который отображается, когда первым отображается `Entry`, а обработчик событий `OnEntryCompleted` зарегистрирован с помощью события [`Completed`](xref:Xamarin.Forms.Entry.Completed). Кроме того, `Entry` имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту `Entry` с помощью назначенного имени.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) определяет текст заполнителя, который отображается, когда первым отображается `Entry`, а обработчик событий `OnEntryCompleted` зарегистрирован с помощью события [`Completed`](xref:Xamarin.Forms.Entry.Completed). Кроме того, `Entry` имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту `Entry` с помощью назначенного имени.
 
 1. В **обозревателе решений** в проекте **AppLifecycleTutorial** разверните узел **MainPage.xaml** и дважды щелкните **MainPage.xaml.cs**, чтобы открыть его. Затем в **MainPage.xaml.cs** добавьте к классу переопределение для метода `OnAppearing` и обработчика событий `OnEntryCompleted`.
 
@@ -100,7 +100,7 @@ ms.locfileid: "67841448"
     }
     ```
 
-    Метод `OnAppearing` возвращает значение свойства `App.DisplayText` и задает его как значение свойства [`Text`](xref:Xamarin.Forms.Entry.Text)[`Entry`](xref:Xamarin.Forms.Entry).
+    Метод `OnAppearing` возвращает значение свойства `App.DisplayText` и задает его как значение свойства [`Text`](xref:Xamarin.Forms.InputView.Text)[`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > Переопределение метода `OnAppearing` выполняется после готовности [`ContentPage`](xref:Xamarin.Forms.ContentPage), но только прежде чем он станет видимым. Таким образом лучше всего задать содержимое представлений Xamarin.Forms.
@@ -186,7 +186,7 @@ ms.locfileid: "67841448"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) определяет текст заполнителя, который отображается, когда первым отображается `Entry`, а обработчик событий `OnEntryCompleted` зарегистрирован с помощью события [`Completed`](xref:Xamarin.Forms.Entry.Completed). Кроме того, `Entry` имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту `Entry` с помощью назначенного имени.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) определяет текст заполнителя, который отображается, когда первым отображается `Entry`, а обработчик событий `OnEntryCompleted` зарегистрирован с помощью события [`Completed`](xref:Xamarin.Forms.Entry.Completed). Кроме того, `Entry` имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту `Entry` с помощью назначенного имени.
 
 1. На **Панели решения** в проекте **AppLifecycleTutorial** разверните узел **MainPage.xaml** и дважды щелкните **MainPage.xaml.cs**, чтобы открыть его. Затем в **MainPage.xaml.cs** добавьте к классу переопределение для метода `OnAppearing` и обработчика событий `OnEntryCompleted`.
 
@@ -204,7 +204,7 @@ ms.locfileid: "67841448"
     }
     ```
 
-    Метод `OnAppearing` возвращает значение свойства `App.DisplayText` и задает его как значение свойства [`Text`](xref:Xamarin.Forms.Entry.Text)[`Entry`](xref:Xamarin.Forms.Entry).
+    Метод `OnAppearing` возвращает значение свойства `App.DisplayText` и задает его как значение свойства [`Text`](xref:Xamarin.Forms.InputView.Text)[`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > Переопределение метода `OnAppearing` выполняется после готовности [`ContentPage`](xref:Xamarin.Forms.ContentPage), но только прежде чем он станет видимым. Таким образом лучше всего задать содержимое представлений Xamarin.Forms.

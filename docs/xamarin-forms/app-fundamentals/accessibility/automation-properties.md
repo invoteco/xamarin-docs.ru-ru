@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 92e2ceeea901e2acea70118e75d936f3b3ac94db
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199992"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131129"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Свойства автоматизации в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms позволяет задавать значения специальных возможностей в элементах пользовательского интерфейса с помощью присоединенных свойств из класса AutomationProperties, которые, в свою очередь, задают собственные значения специальных возможностей. Эта статья поясняет, как использовать класс AutomationProperties, чтобы средство чтения с экрана могло озвучивать элементы на странице._
 
@@ -113,7 +113,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 > [!NOTE]
 > Обратите внимание, что метод [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) также можно использовать для задания присоединенного свойства `AutomationProperties.HelpText` — `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-На некоторых платформах для редактирования элементов управления, таких как [`Entry`](xref:Xamarin.Forms.Entry), свойство `HelpText` иногда можно опустить и заменить текстом заполнителя. Например, элемент "Введите здесь свое имя" является хорошим кандидатом для использования в свойстве [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder), которое помещает текст в элемент управления до фактического ввода данных пользователем.
+На некоторых платформах для редактирования элементов управления, таких как [`Entry`](xref:Xamarin.Forms.Entry), свойство `HelpText` иногда можно опустить и заменить текстом заполнителя. Например, элемент "Введите здесь свое имя" является хорошим кандидатом для использования в свойстве [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder), которое помещает текст в элемент управления до фактического ввода данных пользователем.
 
 <a name="labeledby" />
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: ab39c79c59855c9f78184614176b1658ee0e29b2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d16eef4fe5422fb5cf3c039c66d1b0f113727fd
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772116"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131116"
 ---
 # <a name="attached-behaviors"></a>Присоединенные реакции на события
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
 
 _Присоединенные реакции на события — это статические классы с одним или несколькими присоединенными свойствами. В этой статье содержатся сведения о создании и использовании присоединенных реакций на события._
 
@@ -80,7 +80,7 @@ public static class NumericValidationBehavior
 }
 ```
 
-Класс `NumericValidationBehavior` содержит присоединенное свойство `AttachBehavior` с методами задания и получения `static`, управляющее добавлением и удалением реакции на событие в элементе управления, к которому она будет присоединена. Это присоединенное свойство регистрирует метод `OnAttachBehaviorChanged`, который будет выполняться при изменении значения свойства. В зависимости от значения присоединенного свойства `AttachBehavior` этот метод регистрирует обработчик событий [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) или отменяет его регистрацию. Базовая функциональность реакции на событие обеспечивается методом `OnEntryTextChanged`, который анализирует значение, введенное пользователем в элементе управления [`Entry`](xref:Xamarin.Forms.Entry), и присваивает свойству `TextColor` значение red (красный), если введенное значение не имеет тип `double`.
+Класс `NumericValidationBehavior` содержит присоединенное свойство `AttachBehavior` с методами задания и получения `static`, управляющее добавлением и удалением реакции на событие в элементе управления, к которому она будет присоединена. Это присоединенное свойство регистрирует метод `OnAttachBehaviorChanged`, который будет выполняться при изменении значения свойства. В зависимости от значения присоединенного свойства `AttachBehavior` этот метод регистрирует обработчик событий [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) или отменяет его регистрацию. Базовая функциональность реакции на событие обеспечивается методом `OnEntryTextChanged`, который анализирует значение, введенное пользователем в элементе управления [`Entry`](xref:Xamarin.Forms.Entry), и присваивает свойству `TextColor` значение red (красный), если введенное значение не имеет тип `double`.
 
 ## <a name="consuming-an-attached-behavior"></a>Использование присоединенной реакции на событие
 
@@ -103,7 +103,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 Во время выполнения реакция на событие будет реагировать на взаимодействие с элементом управления в соответствии с ее реализацией. На следующих снимках экрана показана присоединенная реакция на событие ввода недопустимого значения:
 
-[![](attached-images/screenshots-sml.png "Пример приложения с присоединенной реакцией на событие")](attached-images/screenshots.png#lightbox "Пример приложения с присоединенной реакцией на событие")
+[![](attached-images/screenshots-sml.png "Sample Application with Attached Behavior")](attached-images/screenshots.png#lightbox "Sample Application with Attached Behavior")
 
 > [!NOTE]
 > Присоединенная реакция на событие создается для элементов управления определенного типа (или суперкласса, включающего множество разных элементов управления) и должна добавляться только к совместимым элементам управления. Попытка присоединить реакцию на событие к несовместимому элементу управления может привести к неожиданному результату, который зависит от реализации реакции на событие.
@@ -123,7 +123,7 @@ var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-Во время выполнения метод `OnAttachBehaviorChanged` выполняется, когда присоединенному свойству `AttachBehavior` присваивается значение `false`. Метод `OnAttachBehaviorChanged` отменяет регистрацию обработчика событий [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), чтобы реакция на событие не выполнялась, когда пользователь взаимодействует с элементом управления.
+Во время выполнения метод `OnAttachBehaviorChanged` выполняется, когда присоединенному свойству `AttachBehavior` присваивается значение `false`. Метод `OnAttachBehaviorChanged` отменяет регистрацию обработчика событий [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), чтобы реакция на событие не выполнялась, когда пользователь взаимодействует с элементом управления.
 
 ## <a name="summary"></a>Сводка
 

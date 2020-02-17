@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: a3b9653651e3000b954cb6d16154cddc8d5d363a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 42ad56a7ae34bcef638ed25bea267dcabd21e20c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772104"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131093"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Создание реакций на события Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 _Режимы Xamarin.Forms являются производными от класса Behavior или Behavior&lt;T&gt;. В этой статье содержатся сведения о создании и использовании реакций на события Xamarin.Forms._
 
@@ -84,7 +84,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior` является производным от класса [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), где `T` — это [`Entry`](xref:Xamarin.Forms.Entry). Метод [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) регистрирует обработчик событий для события [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), при этом метод [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) отменяет регистрацию события `TextChanged` во избежание утечек памяти. Базовая функциональность реакции на событие обеспечивается методом `OnEntryTextChanged`, который анализирует значение, введенное пользователем в `Entry`, и присваивает свойству [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) значение red (красный), если введенное значение не имеет тип `double`.
+`NumericValidationBehavior` является производным от класса [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), где `T` — это [`Entry`](xref:Xamarin.Forms.Entry). Метод [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) регистрирует обработчик событий для события [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), при этом метод [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) отменяет регистрацию события `TextChanged` во избежание утечек памяти. Базовая функциональность реакции на событие обеспечивается методом `OnEntryTextChanged`, который анализирует значение, введенное пользователем в `Entry`, и присваивает свойству [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) значение red (красный), если введенное значение не имеет тип `double`.
 
 > [!NOTE]
 > Xamarin.Forms не задает `BindingContext` для реакции на событие, так как реакции на событие можно использовать совместно и применять к нескольким элементам управления через стили.
@@ -110,7 +110,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 Во время выполнения реакция на событие будет реагировать на взаимодействие с элементом управления в соответствии с ее реализацией. На следующих снимках экрана показана реакция на событие ввода недопустимого значения:
 
-[![](creating-images/screenshots-sml.png "Пример приложения с реакцией на событие Xamarin.Forms")](creating-images/screenshots.png#lightbox "Пример приложения с реакцией на событие Xamarin.Forms")
+[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
 > Реакция на событие создается для элементов управления определенного типа (или суперкласса, включающего множество разных элементов управления) и должна добавляться только к совместимым элементам управления. Попытка присоединить реакцию на событие к несовместимому элементу управления может привести к возникновению исключения.

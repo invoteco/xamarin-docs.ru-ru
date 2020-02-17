@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: d046962bf08b85069b1a698324db76a4ac3286d9
+ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489899"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144654"
 ---
 # <a name="xamarinforms-triggers"></a>Триггеры Xamarin.Forms
 
@@ -22,7 +22,7 @@ ms.locfileid: "75489899"
 
 Триггер можно напрямую назначить элементу управления или добавить его в словарь ресурсов уровня страницы или приложения для применения к нескольким элементам управления.
 
-Существует четыре типа триггеров.
+Существует несколько типов триггеров:
 
 - [Триггер свойства](#property) — срабатывает, если свойству элемента управления задается определенное значение.
 
@@ -31,6 +31,20 @@ ms.locfileid: "75489899"
 - [Триггер события](#event) — срабатывает при возникновении события в элементе управления.
 
 - [Мультитриггер](#multi) — позволяет задавать несколько условий, которые должны выполняться перед возникновением действия.
+
+- [Адаптивный триггер](#adaptive) (предварительная версия) — реагирует на изменения ширины и высоты окна приложения.
+
+- [Триггер сравнения](#compare) (предварительная версия) — срабатывает при сравнении двух значений.
+
+- [Триггер устройства](#device) (предварительная версия) — срабатывает при запуске на указанном устройстве. 
+
+- [Триггер ориентации](#orientation) (предварительная версия) — срабатывает при изменении ориентации устройства.
+
+Чтобы использовать предварительные версии триггеров, их следует включить с помощью флага функций в `App.xaml.cs`:
+
+```csharp
+Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
+```
 
 <a name="property" />
 
@@ -333,6 +347,141 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
+
+<a name="adaptive" />
+
+## <a name="adaptive-trigger-preview"></a>Адаптивный триггер (предварительная версия)
+
+`AdaptiveTrigger` срабатывает автоматически, когда окно имеет заданную высоту или ширину. `AdaptiveTrigger` принимает два возможных свойства:
+
+- **MinWindowHeight**
+- **MinWindowWidth**
+
+<a name="compare"/>
+
+## <a name="compare-trigger-preview"></a>Триггер сравнения (предварительная версия)
+
+`CompareStateTrigger` является очень многофункциональным `StateTrigger`, который срабатывает, если **Value** (значение) равно **Property** (свойству).
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="Checked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="True" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Green" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="UnChecked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="False" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>     
+    </VisualStateManager.VisualStateGroups>  
+    <Frame
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        BackgroundColor="White"
+        Margin="24">
+        <StackLayout
+            Orientation="Horizontal">
+            <CheckBox 
+                x:Name="CheckBox"
+                VerticalOptions="Center"/>
+            <Label
+                Text="Checked/Uncheck the CheckBox to modify the Grid BackgroundColor"
+                VerticalOptions="Center"/>
+        </StackLayout>
+    </Frame>
+</Grid>
+```
+
+В этом примере показано, как изменить свойство **BackgroundColor** элемента **Grid** в зависимости от состояния свойства**CheckBox** **IsChecked**. **StateTrigger** поддерживает привязки, которые предоставляют целый ряд возможностей для сравнения не только значений элементов пользовательского интерфейса, но и значений из **BindingContext**.
+
+<a name="device" />
+
+## <a name="device-trigger-preview"></a>Триггер устройства (предварительная версия)
+
+`DeviceTrigger` позволяет управлять применением состояния при запуске на устройствах определенной платформы, аналогично использованию `OnPlatform`.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Android">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="Android" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="iOS">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="iOS" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>  
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This page changes the color based on the device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+В приведенном выше примере цвет фона будет синим на устройстве с Android и красным на устройстве с iOS.
+
+<a name="orientation" />
+
+## <a name="orientation-trigger-preview"></a>Триггер ориентации (предварительная версия)
+
+`OrientationTrigger` поддерживает изменение состояния просмотра при изменении ориентации устройства с альбомной на книжную и наоборот.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Landscape">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Landscape" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="Portrait">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Portrait" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This Grid changes the color based on the orientation device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+В приведенном выше примере цвет фона будет синим, когда устройство расположено горизонтально, и красным — когда вертикально.
 
 ## <a name="related-links"></a>Связанные ссылки
 

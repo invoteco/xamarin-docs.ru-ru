@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: a8dfd267fe9f5f838927fc216d53c2475398ed16
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0619488199c202e1877e4cfa60d622ef247e2b3f
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022112"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77374123"
 ---
 # <a name="buttons-in-xamarinios"></a>Кнопки в Xamarin. iOS
 
@@ -69,7 +69,7 @@ ms.locfileid: "73022112"
 Чтобы ответить на касание кнопки, укажите обработчик для события `TouchUpInside` кнопки:
 
 ```csharp
-button.TouchUpInside += (sender, e) => {
+myButton.TouchUpInside += (sender, e) => {
     DoSomething();
 };
 ```
@@ -91,13 +91,13 @@ button.TouchUpInside += (sender, e) => {
 
 > [!NOTE]
 > Полный список всех `UIControlState` значений см. в [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
-> по.
+> документации.
 
 Например, чтобы задать цвет заголовка и цвет тени для `UIControlState.Normal`:
 
 ```csharp
-button.SetTitleColor(UIColor.White, UIControlState.Normal);
-button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
+myButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+myButton.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
 Следующий код задает в качестве заголовка кнопки строку с атрибутом (стилизованную) для `UIControlState.Normal` и `UIControlState.Highlighted`:
@@ -115,9 +115,9 @@ myButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlight
 Кнопки с `UIButtonType` `Custom` не имеют стилей по умолчанию. Однако можно настроить внешний вид кнопки, задав для нее изображение в различных состояниях.
 
 ```csharp
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
 В зависимости от того, касается ли пользователь кнопки, она будет отображаться как одно из следующих изображений (`UIControlState.Normal`, `UIControlState.Highlighted` и `UIControlState.Selected` состояния соответственно):

@@ -6,12 +6,12 @@ ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: 78c489518833705432610e83453c3c04bf1cca53
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0733e2b406f5032a2e2717df66c96dcb28301f09
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016094"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77374132"
 ---
 # <a name="binding-native-frameworks"></a>Привязка собственных платформ
 
@@ -21,13 +21,13 @@ ms.locfileid: "73016094"
 
 ```
 $ sharpie bind \
-    -framework AdobeCreativeSDKFoundation.framework \
+    -framework ./AdobeCreativeSDKFoundation.framework \
     -sdk iphoneos8.1
 ```
 
 В некоторых случаях платформа будет указывать **info. plist** , указывающий, в каком пакете SDK должна быть скомпилирована платформа. Если эта информация существует и ни один параметр `-sdk` не передан, Целевая Шарпие будет вычислять его из **info. plist** (ключ `DTSDKName` или сочетание `DTPlatformName` и `DTPlatformVersion`ных ключей).
 
-Параметр `-framework` не допускает передачи явных файлов заголовков. Файл заголовка "тег" выбирается по соглашению на основе имени платформы. Если не удается найти заголовок управляющего объекта, Целевая Шарпие не будет пытаться привязать платформу, и необходимо вручную выполнить привязку, предоставив правильные файлы заголовков (-ов) для синтаксического анализа, а также аргументы платформы для Clang (например, `-F` Параметр пути поиска платформы).
+Параметр `-framework` не допускает передачи явных файлов заголовков. Файл заголовка "тег" выбирается по соглашению на основе имени платформы. Если не удается найти заголовок управляющего объекта, Целевая Шарпие не будет пытаться привязать платформу, и необходимо вручную выполнить привязку, предоставив правильные файлы заголовков (-ов) для синтаксического анализа, а также аргументы платформы для Clang (например, параметр пути поиска `-F` Framework).
 
 В этом случае указание `-framework` является просто ярлыком. Следующие аргументы привязки идентичны `-framework` краткости.
 Особая важность — это `-F .` путь поиска платформы, предоставленный Clang (Обратите внимание на пробел и период, которые требуются как часть команды).
@@ -35,7 +35,7 @@ $ sharpie bind \
 ```
 $ sharpie bind \
     -sdk iphoneos8.1 \
-    AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
+    ./AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
     -scope AdobeCreativeSDKFoundation.framework/Headers \
     -c -F .
 ```

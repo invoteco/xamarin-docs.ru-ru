@@ -445,7 +445,7 @@
               items:
                 - name: Вступление
                   href: user-interface/carouselview/introduction.md
-                - name: Data
+                - name: Данные
                   href: user-interface/carouselview/populate-data.md
                 - name: Макет
                   href: user-interface/carouselview/layout.md
@@ -460,7 +460,7 @@
               items:
                 - name: Вступление
                   href: user-interface/collectionview/introduction.md
-                - name: Data
+                - name: Данные
                   href: user-interface/collectionview/populate-data.md
                 - name: Макет
                   href: user-interface/collectionview/layout.md
@@ -555,7 +555,12 @@
                 - name: Задание стиля приложений Xamarin.Forms с помощью каскадных таблиц стилей (CSS)
                   href: user-interface/styles/css/index.md
             - name: Темы
-              href: user-interface/theming.md
+              href: user-interface/theming/index.md
+              items:
+                - name: Создание темы для приложения
+                  href: user-interface/theming/theming.md
+                - name: Обнаружение темного режима
+                  href: user-interface/theming/dark-mode.md
             - name: Визуальный элемент
               href: user-interface/visual/index.md
               items:

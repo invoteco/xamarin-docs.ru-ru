@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/17/2019
-ms.openlocfilehash: 6b7845011470d83d8f2187e0227950c23e46d52d
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: a5a9daa39dcc94bbf77d9c91ea651bda6ec5747b
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490520"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480554"
 ---
 # <a name="xamarinforms-indicatorview"></a>Индикаторвиев Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
 `IndicatorView` — это элемент управления, отображающий индикаторы, представляющие количество элементов и текущую позиции в `CarouselView`:
 
@@ -33,16 +33,16 @@ Forms.SetFlags("IndicatorView_Experimental");
 `IndicatorView` определяет следующие свойства:
 
 - `Count`, типа `int`, количество индикаторов.
-- `HideSingle`типа `bool`указывает, должен ли индикатор быть скрытым, если существует только один. Значение по умолчанию — `true`.
+- `HideSingle`типа `bool`указывает, должен ли индикатор быть скрытым, если существует только один. Значение по умолчанию — `true`.
 - `IndicatorColor`, тип `Color`, Цвет индикаторов.
 - `IndicatorSize`, тип `double`, размер индикаторов. Значение по умолчанию — 6,0.
 - `IndicatorLayout`типа `Layout<View>`определяет класс макета, используемый для визуализации `IndicatorView`. Это свойство задается Xamarin. Forms и обычно не должно устанавливаться разработчиками.
 - `IndicatorTemplate`, тип `DataTemplate`, шаблон, определяющий внешний вид каждого индикатора.
 - `IndicatorsShape`, тип `IndicatorShape`, форма каждого индикатора.
-- `ItemsSource`, тип `IEnumerable`, коллекция, для которой будут отображаться индикаторы. Это свойство будет автоматически установлено при установке свойства `ItemsSourceBy`.
-- `ItemsSourceBy`, типа `VisualElement`, объекта `CarouselView`, для которого отображаются индикаторы.
-- `MaximumVisible`, типа `int`, максимальное количество видимых индикаторов. Значение по умолчанию — `int.MaxValue`.
-- `Position`, типа `int`, выбранного в данный момент индекса индикатора. Это свойство использует привязку `TwoWay`. Это свойство будет автоматически установлено при установке свойства `ItemsSourceBy`.
+- `ItemsSource`, тип `IEnumerable`, коллекция, для которой будут отображаться индикаторы. Это свойство будет автоматически задано при установке присоединенного свойства `ItemsSourceBy`.
+- `ItemsSourceBy`, типа `VisualElement`, объекта `CarouselView`, для которого отображаются индикаторы. Это вложенное свойство зависимостей.
+- `MaximumVisible`, типа `int`, максимальное количество видимых индикаторов. Значение по умолчанию — `int.MaxValue`.
+- `Position`, типа `int`, выбранного в данный момент индекса индикатора. Это свойство использует привязку `TwoWay`. Это свойство будет автоматически задано при установке присоединенного свойства `ItemsSourceBy`.
 - `SelectedIndicatorColor`, типа `Color`, цвет индикатора, представляющий текущий элемент в `CarouselView`.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что они могут быть целевыми объектами привязки данных и стилями.
@@ -59,17 +59,17 @@ Forms.SetFlags("IndicatorView_Experimental");
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки свойства `ItemsSourceBy` в объект `CarouselView`. Каждый индикатор является светло-серым кругом, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый.
+В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки присоединенного свойства `ItemsSourceBy` к объекту `CarouselView`. Каждый индикатор является светло-серым кругом, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый.
 
 > [!IMPORTANT]
-> Установка свойства `ItemsSourceBy` приводит к привязке свойства `Position` к свойству `CarouselView.Position`, а также к привязке свойства `ItemsSource` к свойству `CarouselView.ItemsSource`.
+> Установка `ItemsSourceBy` присоединенного свойства приводит к привязке свойства `Position` к свойству `CarouselView.Position`, а также к привязке свойства `ItemsSource` к свойству `CarouselView.ItemsSource`.
 
 ## <a name="change-indicator-shape"></a>Изменить форму индикатора
 
@@ -82,7 +82,7 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ```xaml
 <IndicatorView IndicatorsShape="Square"
-               ItemsSourceBy="carouselView"
+               IndicatorView.ItemsSourceBy="carouselView"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
 ```
@@ -99,7 +99,7 @@ Forms.SetFlags("IndicatorView_Experimental");
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="Black"
                    HorizontalOptions="Center">
@@ -123,4 +123,4 @@ Forms.SetFlags("IndicatorView_Experimental");
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Индикаторвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
-- [Расширение разметки Фонтимаже](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)
+- [Расширение разметки FontImage](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)

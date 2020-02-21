@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 78f8c8d1340c6bb1063e59ad03485d8b9b807c58
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: bcf293b29d6ddca10ab60ae061491b60f1e30520
+ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489002"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77495641"
 ---
 # <a name="ios-platform-features-overview"></a>Общие сведения о функциях платформы iOS
 
@@ -31,120 +31,124 @@ ms.locfileid: "75489002"
 | [Введение в iOS 7](~/ios/platform/introduction-to-ios7/index.md)   | Основные новые API, появившиеся в iOS 7, в том числе переходы на контроллеры представлений, усовершенствования анимации UIView, UIKit Dynamics и Text Kit. |
 | [Введение в iOS 6](~/ios/platform/introduction-to-ios6/index.md)   | Пояснения к функциям iOS 6, в том числе к представлениям коллекций, Pass Kit, пакету событий и социальной инфраструктуре. |
 
-## <a name="apple-payiosplatformapple-paymd"></a>[Apple Pay](~/ios/platform/apple-pay.md)
+## <a name="apple-pay"></a>[Apple Pay](~/ios/platform/apple-pay.md)
 
 Apple Pay была введена вместе с iOS 8, позволяя пользователям платить за физические товары, такие как еда, развлечения и членство через свои устройства iOS. Он доступен на iPhone 6 и iPhone 6 Plus и может также составлять пару с Apple Watch для покупок в магазине. При использовании на iPhone он использует сенсорный идентификатор как способ подтверждения и авторизации транзакций на кредитную или дебетовую карту пользователя.
 
-## <a name="callkitiosplatformcallkitmd"></a>[CallKit](~/ios/platform/callkit.md)
+## <a name="callkit"></a>[CallKit](~/ios/platform/callkit.md)
 
 Новый API Каллкит в iOS 10 обеспечивает интеграцию приложений VOIP с пользовательским ИНТЕРФЕЙСом iPhone и предоставляет привычный интерфейс и возможности для конечного пользователя. Благодаря этому пользователи API могут просматривать вызовы VOIP и взаимодействовать с ними с экрана блокировки устройства iOS, а также управлять контактами с помощью представлений **"Избранное" и "** **недавние** " приложения "Телефон".
 
-## <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Контакты и ContactsUI](~/ios/platform/contacts.md)
+## <a name="contacts-and-contactsui"></a>[Контакты и ContactsUI](~/ios/platform/contacts.md)
 
 С появлением iOS 9 Компания Apple выпустила две новые платформы, `Contacts` и `ContactsUI`, которые заменяют существующие адресные книги и платформы, используемые в ОС iOS 8 и более ранних версий.
 
-## <a name="document-pickeriosplatformdocument-pickermd"></a>[Средство выбора документа](~/ios/platform/document-picker.md)
+## <a name="document-picker"></a>[Средство выбора документа](~/ios/platform/document-picker.md)
 
 Средство выбора документов позволяет совместно использовать документы в разных приложениях. Эти документы могут храниться в iCloud или в каталоге другого приложения. Документы совместно используются через набор [расширений поставщика документов](~/ios/platform/extensions.md) , установленных пользователем на устройстве.
 
-## <a name="eventkitiosplatformeventkitmd"></a>[EventKit](~/ios/platform/eventkit.md)
+## <a name="eventkit"></a>[EventKit](~/ios/platform/eventkit.md)
 
 в iOS есть два встроенных в календарь приложения: приложение календаря и приложение напоминаний. Достаточно просто понять, как приложение календаря управляет данными календаря, но приложение напоминаний менее очевидно. Даты, связанные с напоминаниями, могут быть связаны с ними в тех случаях, когда они заполняются, по завершении и т. д. Таким образом, iOS хранит все данные календаря, будь то события календаря или напоминания в одном месте, которое называется *базой данных календаря*.
 
-## <a name="ios-extensionsiosplatformextensionsmd"></a>[расширения iOS](~/ios/platform/extensions.md)
+## <a name="ios-extensions"></a>[расширения iOS](~/ios/platform/extensions.md)
 
 Расширения, представленные в iOS 8, являются специализированными `UIViewControllers`, представленные iOS внутри стандартных контекстов, таких как в **центре уведомлений**, как пользовательские типы клавиатуры, запрошенные пользователем, для выполнения специализированных входных или других контекстов, таких как изменение фотографии, в которой расширение может предоставлять специальные фильтры эффектов.
 
-## <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[Графика и анимация в iOS](~/ios/platform/graphics-animation-ios/index.md)
+## <a name="graphics-and-animation-in-ios"></a>[Графика и анимация в iOS](~/ios/platform/graphics-animation-ios/index.md)
 
 Графика и анимация в iOS охватывают основные понятия графики в iOS, такие как Кореимаже, основные графические и основные анимации.
 
-## <a name="handoffiosplatformhandoffmd"></a>[Handoff](~/ios/platform/handoff.md)
+## <a name="handoff"></a>[Handoff](~/ios/platform/handoff.md)
 
 Компания Apple представила передачу данных в iOS 8 и OS X Yosemite (10,10), чтобы предоставить пользователю общий механизм передачи действий, запущенных на одном из устройств, на другое устройство, которое поддерживает то же самое приложение, или другое приложение, поддерживающее то же действие.
 
-## <a name="healthkitiosplatformhealthkitmd"></a>[HealthKit](~/ios/platform/healthkit.md)
+## <a name="healthkit"></a>[HealthKit](~/ios/platform/healthkit.md)
 
 Пакет Health Kit предоставляет безопасное хранилище данных для сведений, связанных с работоспособностью пользователя. Приложения пакета работоспособности могут с явно указанными разрешениями пользователя читать и записывать данные в это хранилище данных и получать уведомления при добавлении соответствующих данных. Приложения могут представлять данные, или пользователь может использовать предоставленное вами приложение работоспособности Apple для просмотра панели мониторинга всех своих данных.
 
-## <a name="homekitiosplatformhomekitmd"></a>[HomeKit](~/ios/platform/homekit.md)
+## <a name="homekit"></a>[HomeKit](~/ios/platform/homekit.md)
 
 Компания Apple представила HomeKit в iOS 8 для предоставления общей инфраструктуры для обнаружения и взаимодействия с устройствами домашней службы автоматизации в домашней среде пользователя. HomeKit предоставляет общую платформу для настройки устройств и настройки действий для управления ими.
 
-## <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Покупка в приложении](~/ios/platform/in-app-purchasing/index.md)
+## <a name="in-app-purchasing"></a>[Покупка в приложении](~/ios/platform/in-app-purchasing/index.md)
 
 приложения iOS могут продавать цифровые продукты или службы с помощью StoreKit — набор API-интерфейсов, предоставляемых iOS, которые взаимодействуют с серверами Apple для проведения финансовых транзакций с пользователем по идентификатору Apple ID. API-интерфейсы StoreKit в основном связаны с получением сведений о продукте и проведении транзакций — нет компонента пользовательского интерфейса. Приложения, реализующие приобретение в приложении, должны создавать собственный пользовательский интерфейс и отслеживанию приобретенных элементов с помощью пользовательского кода, чтобы предоставить пользователю необходимые продукты или услуги.
 
-## <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[Игровые API iOS](~/ios/platform/gaming/index.md)
+## <a name="ios-gaming-apis"></a>[Игровые API iOS](~/ios/platform/gaming/index.md)
 
 Компания Apple внесла несколько усовершенствований в игровые API в iOS 9, которые упрощают внедрение игр и аудио в приложение Xamarin. iOS. Они включают в себя простоту разработки через высокоуровневые платформы и использование возможностей GPU устройства iOS для повышения скорости и возможностей работы с графикой.
 
-## <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Интеграция приложений с сообщениями](~/ios/platform/message-app-integration/index.md)
+## <a name="message-app-integration"></a>[Интеграция приложений с сообщениями](~/ios/platform/message-app-integration/index.md)
 
 Новое в iOS 10, расширение приложения для обмена сообщениями интегрируется с приложением **сообщений** и предоставляет пользователю новые функциональные возможности. Расширение может передавать текст, наклейки, файлы мультимедиа и интерактивные сообщения.
 
-## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[Многозадачность для iPad](~/ios/platform/multitasking.md)
+## <a name="multitasking-for-ipad"></a>[Многозадачность для iPad](~/ios/platform/multitasking.md)
 
 iOS 9 добавляет поддержку многозадачности для одновременного выполнения двух приложений на конкретном оборудовании iPad. Многозадачность для iPad поддерживается с помощью следующих функций: скольжение в представлении с разделением & рисунке на рисунке.
 
-## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
+## <a name="passkit"></a>[PassKit](~/ios/platform/passkit.md)
 
 Расчетной книжки — это приложение для iPhone и iPod соприкасается с iOS 6. Он хранит и отображает штрихкоды и другие сведения, чтобы связать транзакции клиента с их телефоном в реальном мире. Передачи создаются продавцами и отправляются клиенту по электронной почте, URL-адресам или в собственном приложении iOS. Расчетной книжки сохраняет и упорядочивает все проходы по телефону и отображает в зависимости от даты и времени или расположения устройства напоминания о прохождении на экране блокировки.
 
 В этом документе представлено описание расчетной книжки с использованием API Pass Kit с Xamarin. iOS и обсуждаются способы реализации передачи на сервере.
 
-## <a name="photokitiosplatformphotokitmd"></a>[PhotoKit](~/ios/platform/photokit.md)
+## <a name="photokit"></a>[PhotoKit](~/ios/platform/photokit.md)
 
 Photo Kit — это новая платформа, которая позволяет приложениям запрашивать библиотеку образов системы и создавать настраиваемые пользовательские интерфейсы для просмотра и изменения содержимого. Он включает несколько классов, представляющих изображения и видеоматериалы, а также коллекции ресурсов, таких как альбомы и папки.
 
-## <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Запрос проверки приложения](~/ios/platform/request-app-review.md)
+## <a name="request-app-review"></a>[Запрос проверки приложения](~/ios/platform/request-app-review.md)
 
 В iOS 10,3 метод `RequestReview()` позволяет приложению iOS запрашивать у пользователя возможность оценить или проверить его. При вызове этого метода в приложении-отгрузке, которое пользователь установил из магазина приложений, iOS 10 будет обрабатывать всю оценку и процесс проверки для разработчика. Так как этот процесс регулируется политикой магазина приложений, предупреждение может быть или не отображаться.
 
-## <a name="search-apisiosplatformsearchindexmd"></a>[API поиска](~/ios/platform/search/index.md)
+## <a name="search-apis"></a>[API поиска](~/ios/platform/search/index.md)
 
 Поиск был расширен в iOS 9, чтобы предоставить отличные новые способы доступа к информации и функциям в приложении Xamarin. iOS. С помощью новых API-интерфейсов поиска приложений содержимое приложения становится доступно для поиска с помощью Spotlight и результатов поиска Safari, а также Siri напоминаний и предложений. Это позволяет пользователям быстро получать доступ к действиям и информации, размещенным в приложении.
 
-## <a name="sirikitiosplatformsirikitindexmd"></a>[SiriKit](~/ios/platform/sirikit/index.md)
+## <a name="sirikit"></a>[SiriKit](~/ios/platform/sirikit/index.md)
 
 В iOS 10 SiriKit позволяет приложению iOS предоставлять службы, доступные пользователю, с помощью Siri и приложения Maps на устройстве iOS с помощью расширений приложений и новых платформ **пользовательского интерфейса** для **целей** и целей.
 
-## <a name="social-frameworkiosplatformsocial-frameworkmd"></a>[Социальная инфраструктура](~/ios/platform/social-framework.md)
+## <a name="social-framework"></a>[Социальная инфраструктура](~/ios/platform/social-framework.md)
 
 Социальные платформы предоставляют унифицированный API для взаимодействия с социальными сетями, включая _Twitter_ и _Facebook_, а также _синавеибо_ для пользователей в Китае.
 
-## <a name="speech-recognitioniosplatformspeechmd"></a>[Распознавание речи](~/ios/platform/speech.md)
+## <a name="speech-recognition"></a>[Распознавание речи](~/ios/platform/speech.md)
 
 в iOS 10 входит новый API распознавания речи, позволяющий приложению поддерживать непрерывное распознавание речи и транскрипция речи (из активных или записанных звуковых потоков) в текст.
 
-## <a name="textkitiosplatformtextkitmd"></a>[TextKit](~/ios/platform/textkit.md)
+## <a name="textkit"></a>[TextKit](~/ios/platform/textkit.md)
 
 Набор текстов — это новый интерфейс API, предлагающий мощные функции верстки и отрисовки текста. Она построена на основе основной платформы текста нижнего уровня, но гораздо проще в использовании, чем основной текст.
 
-## <a name="3d-touchiosplatform3d-touchmd"></a>[Трехмерные сенсорные технологии](~/ios/platform/3d-touch.md)
+## <a name="3d-touch"></a>[Трехмерные сенсорные технологии](~/ios/platform/3d-touch.md)
 
 В этой статье приводятся общие сведения об использовании новых API трехмерного касания для добавления жестов с учетом нажима в приложения Xamarin. iOS, которые выполняются на новых устройствах iPhone 6S и iPhone 6S Plus.
 
-## <a name="touch-id-and-face-id-with-xamariniosiosplatformtouch-id-face-idmd"></a>[Идентификатор Touch и идентификатор лица с Xamarin. iOS](~/ios/platform/touch-id-face-id.md)
+## <a name="touch-id-and-face-id-with-xamarinios"></a>[Идентификатор Touch и идентификатор лица с Xamarin. iOS](~/ios/platform/touch-id-face-id.md)
 
 Сенсорный идентификатор и идентификатор лица — это системы биометрической проверки подлинности, доступные с iOS 8. В этой статье и примере описывается использование Touch ID и идентификатора лица с Xamarin. iOS.
 
-## <a name="user-notificationsiosplatformuser-notificationsindexmd"></a>[Уведомления пользователей](~/ios/platform/user-notifications/index.md)
+## <a name="user-notifications"></a>[Уведомления пользователей](~/ios/platform/user-notifications/index.md)
 
 В iOS 10 платформа уведомлений пользователя обеспечивает доставку и обработку локальных и удаленных уведомлений. С помощью этой платформы расширение приложения или приложения может запланировать доставку локальных уведомлений, указав набор условий, например расположение или время суток.
 
-## <a name="wide-coloriosplatformwide-colormd"></a>[Широкая цветовая палитра](~/ios/platform/wide-color.md)
+## <a name="wide-color"></a>[Широкая цветовая палитра](~/ios/platform/wide-color.md)
 
 iOS 10 и macOS Sierra расширяют поддержку для форматов пикселей расширенного диапазона и цветовых пространств с широкими палитрами во всей системе, включая такие платформы, как основные графические объекты, основные образы, металлы и Авфаундатион. Поддержка устройств с широкими цветами больше облегчило, предоставляя такое поведение во всем стеке графики.
 
-## <a name="binding-objective-cbinding-objective-cindexmd"></a>[Привязка Objective-C](binding-objective-c/index.md)
+## <a name="binding-objective-c"></a>[Привязка Objective-C](binding-objective-c/index.md)
 
 При работе с iOS можно столкнуться с ситуациями, когда требуется использовать сторонние библиотеки цели-C. В таких ситуациях можно использовать проекты привязки с поддержкой однокасания для создания C# привязки к собственным библиотекам с определенной целью. В проекте используются те же средства, которые используются для переноса интерфейсов API iOS C#. В этом документе описывается, как привязать API цели-C.
 
-## <a name="referencing-native-librariesnative-interopmd"></a>[Ссылки на собственные библиотеки](native-interop.md)
+## <a name="bind-ios-swift-libraries"></a>[Привязка библиотек SWIFT для iOS](binding-swift/index.md)
+
+В этом документе описывается создание C# привязок к коду SWIFT, что позволяет использовать собственные библиотеки и CocoaPods в приложении Xamarin. iOS.
+
+## <a name="referencing-native-libraries"></a>[Ссылки на собственные библиотеки](native-interop.md)
 
 Xamarin. iOS поддерживает связывание с собственными библиотеками C и библиотеками цели-C. В этом документе описывается, как связать собственные библиотеки C с проектом Xamarin. iOS.
 
-## <a name="embedded-frameworksembedded-frameworksmd"></a>[Внедренные платформы](embedded-frameworks.md)
+## <a name="embedded-frameworks"></a>[Внедренные платформы](embedded-frameworks.md)
 
 Объясняется, как внедрять пользовательские платформы цели-C в приложения Xamarin. iOS.

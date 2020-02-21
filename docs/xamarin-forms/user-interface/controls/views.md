@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: 286950104e9a85b6ec89f0c0f3f891f29dada4ec
-ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
+ms.openlocfilehash: 06b802a90ef350dcbd0b056f801109609dcd7a35
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144659"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480632"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Представления Xamarin. Forms — это стандартные блоки межплатформенных мобильных пользовательских интерфейсов._
 
@@ -208,7 +208,7 @@ _Представления Xamarin. Forms — это стандартные б�
 
 |     |     |
 | --- | --- |
-| `IndicatorView` отображает индикаторы, представляющие количество элементов в `CarouselView`. Присвойте свойству `ItemsSourceBy` `CarouselView` объект, для которого отображаются индикаторы. <br /><br />[Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) / [Guide](~/xamarin-forms/user-interface/indicatorview.md) | [![Пример Индикаторвиев](views-images/IndicatorView.png "Пример Индикаторвиев")](views-images/IndicatorView-Large.png#lightbox "Пример Индикаторвиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
+| `IndicatorView` отображает индикаторы, представляющие количество элементов в `CarouselView`. Присвойте `IndicatorView.ItemsSourceBy` присоединенному свойству объект `CarouselView`, для которого отображаются индикаторы. <br /><br />[Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) / [Guide](~/xamarin-forms/user-interface/indicatorview.md) | [![Пример Индикаторвиев](views-images/IndicatorView.png "Пример Индикаторвиев")](views-images/IndicatorView-Large.png#lightbox "Пример Индикаторвиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="listview"></a>ListView

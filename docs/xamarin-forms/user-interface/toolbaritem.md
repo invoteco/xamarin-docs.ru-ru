@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: 0812347e85b0ccb6aa0bbb16649a89bb4d961c9b
-ms.sourcegitcommit: a14edebf00f3e0f8944e59042ca7aa5c42173e30
+ms.openlocfilehash: afdf9029f836ac8e55b2bb338b31f669af946c12
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72780354"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567084"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Тулбаритем Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 Класс [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Xamarin. Forms — это специальный тип кнопки, который можно добавить в коллекцию `ToolbarItems` объекта `Page`. Каждый объект `ToolbarItem` будет отображаться в виде кнопки на панели навигации приложения. Экземпляр `ToolbarItem` может иметь значок и отображаться как первичный или вторичный элемент меню. Класс `ToolbarItem` наследует от [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
@@ -54,7 +54,7 @@ ms.locfileid: "72780354"
 </ContentPage.ToolbarItems>
 ```
 
-В этом примере создается объект `ToolbarItem`, который содержит текст, значок и отображается первым в области основной панели навигации. @No__t_0 также можно создать в коде и добавить в коллекцию `ToolbarItems`:
+В этом примере создается объект `ToolbarItem`, который содержит текст, значок и отображается первым в области основной панели навигации. `ToolbarItem` также можно создать в коде и добавить в коллекцию `ToolbarItems`:
 
 ```csharp
 ToolbarItem item = new ToolbarItem
@@ -72,7 +72,7 @@ this.ToolbarItems.Add(item);
 Файл, представленный `string`, предоставленный в качестве свойства `IconImageSource`, должен существовать в каждом проекте платформы.
 
 > [!NOTE]
-> Ресурсы изображений обрабатываются по-разному на каждой платформе. @No__t_0 может поступать из источников, включая локальный файл или внедренный ресурс, универсальный код ресурса (URI) или поток. Дополнительные сведения о настройке свойства `IconImageSource` и изображений в Xamarin. Forms см. в разделе [изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md).
+> Ресурсы изображений обрабатываются по-разному на каждой платформе. `ImageSource` может поступать из источников, включая локальный файл или внедренный ресурс, универсальный код ресурса (URI) или поток. Дополнительные сведения о настройке свойства `IconImageSource` и изображений в Xamarin. Forms см. в разделе [изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md).
 
 ## <a name="define-button-behavior"></a>Определение поведения кнопки
 
@@ -102,9 +102,15 @@ void OnItemClicked(object sender, EventArgs e)
 
 `ToolbarItem` объекты также могут использовать свойства `Command` и `CommandParameter`, чтобы реагировать на ввод пользователя без обработчиков событий. Дополнительные сведения о `ICommand` интерфейсе и привязке данных MVVM см. в разделе [поведение MVVM в элементе меню Xamarin. Forms](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
+## <a name="enable-or-disable-a-toolbaritem-at-runtime"></a>Включение или отключение Тулбаритем во время выполнения
+
+Чтобы включить отключение `ToolbarItem` во время выполнения, привяжите его свойство `Command` к реализации `ICommand` и убедитесь, что делегат `canExecute` включает и отключает `ICommand` соответствующим образом.
+
+Дополнительные сведения см. в разделе [Включение или отключение элемента MenuItem во время выполнения](menuitem.md#enable-or-disable-a-menuitem-at-runtime).
+
 ## <a name="primary-and-secondary-menus"></a>Главное и дополнительное меню
 
-Перечисление `ToolbarItemOrder` имеет значения `Default`, `Primary` и `Secondary`.
+Перечисление `ToolbarItemOrder` имеет значения `Default`, `Primary`и `Secondary`.
 
 Если свойство `Order` имеет значение `Primary`, то объект `ToolbarItem` будет отображаться на главной панели навигации на всех платформах. `ToolbarItem` объекты имеют приоритет над заголовком страницы, который будет обрезан, чтобы освободить место для элементов. На следующих снимках экрана показаны `ToolbarItem` объекты в основном меню iOS и Android:
 
@@ -121,4 +127,4 @@ void OnItemClicked(object sender, EventArgs e)
 
 * [Демонстрации Тулбаритем](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Изображения в Xamarin. Forms](~/xamarin-forms/user-interface/images.md)
-* [Меню Xamarin. Forms](~/xamarin-forms/user-interface/menuitem.md)
+* [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

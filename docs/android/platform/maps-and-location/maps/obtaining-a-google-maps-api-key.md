@@ -31,7 +31,7 @@ ms.locfileid: "75488976"
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 По умолчанию хранилище ключей, используемое для подписания отладочных версий приложения Xamarin. Android, можно найти по следующему адресу:
 
@@ -41,7 +41,7 @@ ms.locfileid: "75488976"
 
 **В.\\программные файлы\\Android\\JDK\\microsoft_dist_openjdk_ [VERSION]\\bin\\keytool. exe**
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 По умолчанию хранилище ключей, используемое для подписания отладочных версий приложения Xamarin. Android, можно найти по следующему адресу:
 
@@ -63,13 +63,13 @@ keytool -list -v -keystore [STORE FILENAME] -alias [KEY NAME] -storepass [STORE 
 
 Для ключа отладки по умолчанию (который автоматически создается для отладки) используйте следующую команду:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ```cmd
 keytool.exe -list -v -keystore "C:\Users\[USERNAME]\AppData\Local\Xamarin\Mono for Android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ```bash
 keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ Android/debug.keystore -alias androiddebugkey -storepass android -keypass android
@@ -125,7 +125,7 @@ Certificate fingerprints:
 
    [![нажатии кнопки "включить" в разделе "панель мониторинга"](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-На этом этапе проект API создан и в него добавлен интерфейс Google Maps Android API версии 2. Однако этот API нельзя использовать в проекте, пока вы не создадите для него учетные данные. В следующем разделе объясняется, как создать ключ API и белый список приложения Xamarin. Android, чтобы ему было разрешено использовать этот ключ.
+На этом этапе проект API создан и в него добавлен интерфейс Google Maps Android API версии 2. Однако этот API нельзя использовать в проекте, пока вы не создадите для него учетные данные. В следующем разделе объясняется, как создать ключ API и список разрешений приложения Xamarin. Android, чтобы ему было разрешено использовать этот ключ.
 
 ## <a name="obtaining-the-api-key"></a>Получение ключа API
 

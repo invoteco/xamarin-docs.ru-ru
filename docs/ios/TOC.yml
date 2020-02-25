@@ -322,6 +322,11 @@
           items:
             - name: Пошаговое руководство. Привязка библиотеки Objective-C в iOS
               href: platform/binding-objective-c/walkthrough.md
+        - name: Привязка библиотек Swift для iOS
+          href: platform/binding-swift/index.md
+          items:
+            - name: Пошаговое руководство
+              href: platform/binding-swift/walkthrough.md
         - name: CallKit
           href: platform/callkit.md
         - name: Контакты и ContactsUI

@@ -778,6 +778,8 @@
           href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
         - name: Сведения о приложении
           href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
+        - name: Тема приложения
+          href: ~/essentials/app-theme.md?context=xamarin/xamarin-forms
         - name: Барометр
           href: ~/essentials/barometer.md?context=xamarin/xamarin-forms
         - name: Батарея
@@ -820,6 +822,8 @@
           href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
         - name: Датчик ориентации
           href: ~/essentials/orientation-sensor.md?context=xamarin/xamarin-forms
+        - name: Разрешения
+          href: ~/essentials/permissions.md?context=xamarin/xamarin-forms
         - name: Телефон
           href: ~/essentials/phone-dialer.md?context=xamarin/xamarin-forms
         - name: 'Расширения платформы (размер, прямоугольник, точка)'

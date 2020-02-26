@@ -508,6 +508,8 @@
           href: ~/essentials/accelerometer.md?context=xamarin/ios
         - name: Сведения о приложении
           href: ~/essentials/app-information.md?context=xamarin/ios
+        - name: Тема приложения
+          href: ~/essentials/app-theme.md?context=xamarin/ios
         - name: Барометр
           href: ~/essentials/barometer.md?context=xamarin/ios
         - name: Батарея
@@ -550,6 +552,8 @@
           href: ~/essentials/open-browser.md?context=xamarin/ios
         - name: Датчик ориентации
           href: ~/essentials/orientation-sensor.md?context=xamarin/ios
+        - name: Разрешения
+          href: ~/essentials/permissions.md?context=xamarin/ios
         - name: Телефон
           href: ~/essentials/phone-dialer.md?context=xamarin/ios
         - name: 'Расширения платформы (размер, прямоугольник, точка)'
@@ -942,6 +946,8 @@
               href: ~/essentials/accelerometer.md?context=xamarin/watchos
             - name: Сведения о приложении
               href: ~/essentials/app-information.md?context=xamarin/watchos
+            - name: Тема приложения
+              href: ~/essentials/app-theme.md?context=xamarin/watchos
             - name: Барометр
               href: ~/essentials/barometer.md?context=xamarin/watchos
             - name: Батарея
@@ -968,6 +974,8 @@
               href: ~/essentials/maps.md?context=xamarin/watchos
             - name: Датчик ориентации
               href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
+            - name: Разрешения
+              href: ~/essentials/permissions.md?context=xamarin/watchos
             - name: 'Расширения платформы (размер, прямоугольник, точка)'
               href: ~/essentials/platform-extensions.md?context=xamarin/watchos
             - name: Параметры
@@ -1043,6 +1051,8 @@
               href: ~/essentials/platform-feature-support.md?context=xamarin/tvos
             - name: Сведения о приложении
               href: ~/essentials/app-information.md?context=xamarin/tvos
+            - name: Тема приложения
+              href: ~/essentials/app-theme.md?context=xamarin/tvos
             - name: Преобразователи цвета
               href: ~/essentials/color-converters.md?context=xamarin/tvos
             - name: Подключение
@@ -1055,6 +1065,8 @@
               href: ~/essentials/geocoding.md?context=xamarin/tvos
             - name: Главный поток
               href: ~/essentials/main-thread.md?context=xamarin/tvos
+            - name: Разрешения
+              href: ~/essentials/permissions.md?context=xamarin/tvos
             - name: 'Расширения платформы (размер, прямоугольник, точка)'
               href: ~/essentials/platform-extensions.md?context=xamarin/tvos
             - name: Параметры

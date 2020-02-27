@@ -7,13 +7,13 @@ ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2019
-ms.openlocfilehash: d6f5b3022f930dc1345e230d3d6ea4e5fb8be55c
-ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
+ms.date: 02/14/2020
+ms.openlocfilehash: c4d2c6bdab09e87bcfc4a191c64425316fe133f9
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567095"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635856"
 ---
 # <a name="xaml-controls"></a>Элементы управления XAML
 
@@ -31,6 +31,7 @@ ms.locfileid: "77567095"
 | <h3>Изображение</h3>Отображает точечный рисунок.<p align="center">![Снимок экрана изображения](xaml-controls-images/Image.png "Изображение")</p>[Инструкции по](~/xamarin-forms/user-interface/images.md) / [API](xref:Xamarin.Forms.Image) | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
 | <h3>Метка</h3>Отображает одну или несколько строк текста.<p align="center">![Снимок экрана метки](xaml-controls-images/Label.png "Метка")</p>[Инструкции по](~/xamarin-forms/user-interface/text/label.md) / [API](xref:Xamarin.Forms.Label) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
 | <h3>Схема</h3>Отображает карту.<p align="center">![Снимок экрана с картой](xaml-controls-images/Map.png "Схема")</p>[Инструкции по](~/xamarin-forms/user-interface/map/index.md) / [API](xref:Xamarin.Forms.Maps.Map) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
+| <h3>MediaElement</h3>Воспроизведение видео или аудио.<p align="center">![Снимок экрана элемента MediaElement](xaml-controls-images/MediaElement.png "MediaELement")</p>[Инструкции по](~/xamarin-forms/user-interface/mediaelement.md) / [API](xref:Xamarin.Forms.MediaElement) | <p valign="center"><pre>&lt;MediaElement Source="https://sec.ch9.ms/ch9/XamarinShow_mid.mp4"<br />              AutoPlay="True"<br />              ShowsPlaybackControls="True" /&gt;</pre></p> |
 | <h3>Веб-представление</h3>Отображает веб-страницы или содержимое HTML.<p align="center">![Снимок экрана WebView](xaml-controls-images/WebView.png "Веб-представление")</p>[Инструкции по](~/xamarin-forms/user-interface/webview.md) / [API](xref:Xamarin.Forms.WebView) | <p valign="center"><pre>&lt;WebView Source="https://docs.microsoft.com/xamarin/"<br/>         VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
 

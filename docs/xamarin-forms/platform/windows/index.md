@@ -6,13 +6,13 @@ ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: 550ad9b068e71e53a98329663d2ee9b55be1864e
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+ms.date: 01/16/2020
+ms.openlocfilehash: 694ec24697937b114036eceab1cafd5aae3617d8
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76549980"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635553"
 ---
 # <a name="windows-platform-features"></a>Возможности платформы Windows
 
@@ -26,24 +26,28 @@ ms.locfileid: "76549980"
 
 Для представлений, страниц и макетов Xamarin. Forms на универсальная платформа Windows (UWP) предоставляются следующие специальные функции платформы.
 
-- Установка ключа доступа для [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе ключи доступа висуалелемент в Windows](visualelement-access-keys.md).
-- Отключение режима устаревших цвет в поддерживаемой [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе режим Висуалелемент прежних цветов в Windows](legacy-color-mode.md).
+- Установка ключа доступа для [`VisualElement`](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе ключи доступа висуалелемент в Windows](visualelement-access-keys.md).
+- Отключение устаревшего цветового режима на поддерживаемом [`VisualElement`](xref:Xamarin.Forms.VisualElement). Дополнительные сведения см. [в разделе режим Висуалелемент прежних цветов в Windows](legacy-color-mode.md).
 
 Для представлений Xamarin. Forms в UWP предусмотрены следующие функции для конкретных платформ:
 
-- Обнаружение, порядок чтения из текстового содержимого в [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), и [ `Label` ](xref:Xamarin.Forms.Label) экземпляров. Дополнительные сведения см. [в разделе Инпутвиев Read Order on Windows](inputview-reading-order.md).
-- Включение поддержки жест касания в [ `ListView` ](xref:Xamarin.Forms.ListView). Дополнительные сведения см. [в разделе ListView SelectionMode в Windows](listview-selectionmode.md).
+- Обнаружение порядка чтения из текстового содержимого в [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor)и экземплярах [`Label`](xref:Xamarin.Forms.Label) . Дополнительные сведения см. [в разделе Инпутвиев Read Order on Windows](inputview-reading-order.md).
+- Включение поддержки жестов касания в [`ListView`](xref:Xamarin.Forms.ListView). Дополнительные сведения см. [в разделе ListView SelectionMode в Windows](listview-selectionmode.md).
 - Включение изменения направления извлечения `RefreshView`. Дополнительные сведения см. [в статье направление извлечения рефрешвиев в Windows](refreshview-pulldirection.md).
-- Включение [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) для взаимодействия с подсистемой проверки орфографии. Дополнительные сведения см. [в разделе сеарчбар проверка орфографии on Windows](searchbar-spell-check.md).
-- Включение [ `WebView` ](xref:Xamarin.Forms.WebView) на отображение оповещений JavaScript в диалоговом окне сообщения универсальной платформы Windows. Дополнительные сведения см. [в статье WebView JavaScript Alerts on Windows](webview-javascript-alert.md).
+- Включение [`SearchBar`](xref:Xamarin.Forms.SearchBar) для взаимодействия с модулем проверки орфографии. Дополнительные сведения см. [в разделе сеарчбар проверка орфографии on Windows](searchbar-spell-check.md).
+- Включение [`WebView`](xref:Xamarin.Forms.WebView) для вывода оповещений JavaScript в диалоговом окне сообщения UWP. Дополнительные сведения см. [в статье WebView JavaScript Alerts on Windows](webview-javascript-alert.md).
 
 Для страниц Xamarin. Forms в UWP предусмотрены следующие функции для конкретной платформы:
 
-- Свертывание [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) панели навигации. Дополнительные сведения см. [в разделе Мастердетаилпаже навигационная Bar on Windows](masterdetailpage-navigation-bar.md).
+- Свертывание панели навигации [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) . Дополнительные сведения см. [в разделе Мастердетаилпаже навигационная Bar on Windows](masterdetailpage-navigation-bar.md).
 - Настройка параметров размещения панели инструментов. Дополнительные сведения см. [в разделе расположение панели инструментов страницы в Windows](page-toolbar-placement.md).
-- Включение значков страниц, отображаемых на [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) панели инструментов. Дополнительные сведения см. в статье о [значках TabbedPage в Windows](tabbedpage-icons.md).
+- Включение отображения значков страниц на панели инструментов [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . Дополнительные сведения см. в статье о [значках TabbedPage в Windows](tabbedpage-icons.md).
 
-## <a name="platform-support"></a>Поддержка платформ
+Для класса [`Application`](xref:Xamarin.Forms.Application) Xamarin. Forms в UWP предусмотрены следующие специальные функции платформы:
+
+- Указание каталога в проекте, из которого будут загружаться ресурсы изображений. Дополнительные сведения см. [в разделе Каталог образов по умолчанию в Windows](default-image-directory.md).
+
+## <a name="platform-support"></a>Поддержка платформы
 
 Шаблоны Xamarin. Forms, доступные в Visual Studio, содержат проект универсальная платформа Windows (UWP).
 
@@ -56,7 +60,7 @@ ms.locfileid: "76549980"
 
 Старые решения Xamarin. Forms, созданные на macOS, не будут содержать все перечисленные выше проекты Windows (но их необходимо добавить вручную). Если нужная платформа Windows еще не находится в решении, ознакомьтесь с [инструкциями по установке](installation/index.md) , чтобы добавить нужный тип проекта Windows/с.
 
-## <a name="samples"></a>Образцы
+## <a name="samples"></a>Примеры
 
 [Все примеры](https://github.com/xamarin/xamarin-forms-book-preview-2) для книги Чарльз Петцольд, [*создающей мобильные приложения с помощью Xamarin. Forms, включают в*](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) себя универсальная платформа Windows проектов (для Windows 10).
 

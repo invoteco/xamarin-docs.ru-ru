@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 1858d98b37df7d98f725b377280a971b3034ef0d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: a4cc237ef738edeccf66f1a91a010e4831c1c72f
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696364"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635629"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Выбор CollectionView Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет следующие свойства, управляющие выбором элементов:
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), тип [`SelectionMode`](xref:Xamarin.Forms.SelectionMode), режим выбора.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), тип `object`, выбранный элемент в списке. Это свойство имеет режим привязки по умолчанию `TwoWay` и имеет `null` значение, если ни один элемент не выбран.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), тип `IList<object>`, выбранные элементы в списке. Это свойство имеет режим привязки по умолчанию `OneWay` и имеет `null` значение, если ни один элемент не выбран.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), тип `object`, выбранный элемент в списке. Это свойство имеет режим привязки по умолчанию `TwoWay`и имеет `null` значение, если ни один элемент не выбран.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), тип `IList<object>`, выбранные элементы в списке. Это свойство имеет режим привязки по умолчанию `OneWay`и имеет `null` значение, если ни один элемент не выбран.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand), типа `ICommand`, который выполняется при изменении выбранного элемента.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter), типа `object`, который является параметром, который передается в `SelectionChangedCommand`.
 
@@ -30,7 +30,7 @@ ms.locfileid: "72696364"
 
 По умолчанию [`CollectionView`](xref:Xamarin.Forms.CollectionView) выбор отключен. Однако это поведение можно изменить, задав для свойства [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) значение одного из членов перечисления [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) .
 
-- `None` — указывает, что элементы не могут быть выбраны. Это значение используется по умолчанию.
+- `None` — указывает, что элементы не могут быть выбраны. Это значение по умолчанию.
 - `Single` — указывает, что можно выбрать один элемент, при этом выделенный элемент выделяется.
 - `Multiple` — указывает, что можно выбрать несколько элементов с выделенными элементами.
 
@@ -38,6 +38,8 @@ ms.locfileid: "72696364"
 
 - `PreviousSelection` — список элементов, которые были выбраны до изменения выбора.
 - `CurrentSelection` — список выбранных элементов после изменения выбора.
+
+Кроме того, [`CollectionView`](xref:Xamarin.Forms.CollectionView) имеет метод `UpdateSelectedItems`, который обновляет свойство [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) списком выбранных элементов, в то время как обрабатывалось только одно уведомление об изменении.
 
 ## <a name="single-selection"></a>Один выбор
 
@@ -299,9 +301,9 @@ namespace CollectionViewDemos.ViewModels
 ```
 
 > [!IMPORTANT]
-> [@No__t_1](xref:Xamarin.Forms.Style) , содержащий `Selected` `VisualState`, должно иметь значение свойства [`TargetType`](xref:Xamarin.Forms.Style.TargetType) , которое является типом корневого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), который задан как значение свойства `ItemTemplate`.
+> [`Style`](xref:Xamarin.Forms.Style) , содержащий `Selected` `VisualState`, должно иметь значение свойства [`TargetType`](xref:Xamarin.Forms.Style.TargetType) , которое является типом корневого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), который задан как значение свойства `ItemTemplate`.
 
-В этом примере свойству [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) присвоено значение `Grid`, так как корневой элемент [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) является [`Grid`](xref:Xamarin.Forms.Grid). @No__t_0 [`VisualState`](xref:Xamarin.Forms.VisualState) указывает, что при выборе элемента в [`CollectionView`](xref:Xamarin.Forms.CollectionView) для [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) элемента будет установлено значение `LightSkyBlue`.
+В этом примере свойству [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) присвоено значение `Grid`, так как корневой элемент [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) является [`Grid`](xref:Xamarin.Forms.Grid). `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) указывает, что при выборе элемента в [`CollectionView`](xref:Xamarin.Forms.CollectionView) для [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) элемента будет установлено значение `LightSkyBlue`.
 
 [![Снимок экрана CollectionViewого вертикального списка с пользовательским цветом одного выделения в iOS и Android](selection-images/single-selection-color.png "Вертикальный список CollectionView с пользовательским одним цветом выделения")](selection-images/single-selection-color-large.png#lightbox "Вертикальный список CollectionView с пользовательским одним цветом выделения")
 
@@ -329,7 +331,7 @@ CollectionView collectionView = new CollectionView
 Если свойство [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) имеет значение `None`, то элементы в [`CollectionView`](xref:Xamarin.Forms.CollectionView) не могут быть выбраны, свойство [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) остается `null`, а событие [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) не будет запущено.
 
 > [!NOTE]
-> При выборе элемента и изменении свойства [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) с `Single` на `None` свойству [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) будет присвоено значение `null`, а событие [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) будет запущено с пустым свойством `CurrentSelection`.
+> При выборе элемента и изменении свойства [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) с `Single` на `None`свойству [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) будет присвоено значение `null`, а событие [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) будет запущено с пустым свойством `CurrentSelection`.
 
 ## <a name="related-links"></a>Связанные ссылки
 

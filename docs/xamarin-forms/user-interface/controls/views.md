@@ -6,17 +6,17 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2019
-ms.openlocfilehash: 06b802a90ef350dcbd0b056f801109609dcd7a35
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 02/14/2020
+ms.openlocfilehash: 1e8b6f5e1ea090abc8ebd6084095bf6b34663a42
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480632"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635874"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Представления Xamarin. Forms — это стандартные блоки межплатформенных мобильных пользовательских интерфейсов._
 
@@ -31,7 +31,7 @@ _Представления Xamarin. Forms — это стандартные б�
 | [`Label`](xref:Xamarin.Forms.Label) отображает однострочные текстовые строки или многострочные блоки текста с постоянным форматированием или переменной. Задайте для свойства [`Text`](xref:Xamarin.Forms.Label.Text) строку для форматирования константы или задайте для свойства [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) значение [`FormattedString`](xref:Xamarin.Forms.FormattedString) объекта для форматирования переменной.<br /><br />[Документация по API](xref:Xamarin.Forms.Label) / [руководство](~/xamarin-forms/user-interface/text/label.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Пример метки](views-images/Label.png "Пример метки")](views-images/Label-Large.png#lightbox "Пример метки")<br /> [Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) |
 |     |     |
 
-### <a name="image"></a>Образ —
+### <a name="image"></a>Изображение
 
 |     |     |
 | --- | --- |
@@ -70,7 +70,7 @@ _Представления Xamarin. Forms — это стандартные б�
 
 |     |     |
 | --- | --- |
-| `MediaElement` отображает видео или воспроизводит звук. Мультимедиа можно загрузить через Интернет или внедрить как ресурсы в проекты платформы.<br /><br />[Пример](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement) / [Guide](~/xamarin-forms/user-interface/mediaelement.md) | |
+| [`MediaElement`](xref:Xamarin.Forms.MediaElement) воспроизводит видео или аудио. Мультимедиа можно воспроизводить с URL-адреса или из локального файла в зависимости от того, задано ли для свойства [`Source`](xref:Xamarin.Forms.MediaElement.Source) [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource) или [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource).<br /><br />[Документация по API](xref:Xamarin.Forms.MediaElement) / [руководство](~/xamarin-forms/user-interface/mediaelement.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos) | [![Пример MediaElement](views-images/MediaElement.png "Пример MediaElement")](views-images/MediaElement-Large.png#lightbox "Пример MediaElement")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MediaElementDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MediaElementDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-that-initiate-commands"></a>Визуальные элементы, инициирующие команды
@@ -158,7 +158,7 @@ _Представления Xamarin. Forms — это стандартные б�
 
 Эти два класса являются производными от класса [`InputView`](xref:Xamarin.Forms.InputView) , который определяет свойство [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) .
 
-### <a name="entry"></a>Запись
+### <a name="entry"></a>Элемент
 
 |     |     |
 | --- | --- |

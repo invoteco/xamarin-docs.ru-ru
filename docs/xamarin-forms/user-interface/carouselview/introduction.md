@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019
-ms.openlocfilehash: 2fe4d984f36880493a9a04d99b63876551366477
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 2c3e15ce68ad1507318a1d8155f9ab03095ea409
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696973"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635584"
 ---
 # <a name="xamarinforms-carouselview-introduction"></a>Введение в Xamarin. Forms Карауселвиев
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) представляет собой представление для представления данных в прокручиваемом макете, где пользователи могут перемещаться для перемещения по коллекции элементов. По умолчанию `CarouselView` отображает элементы по горизонтали. На экране будет отображаться один элемент с жестами прокрутки, приводящими к пересылке и обратной навигации по коллекции элементов.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) представляет собой представление для представления данных в прокручиваемом макете, где пользователи могут перемещаться для перемещения по коллекции элементов. По умолчанию `CarouselView` отображает элементы по горизонтали. На экране будет отображаться один элемент с жестами прокрутки, приводящими к пересылке и обратной навигации по коллекции элементов. Кроме того, можно отображать индикаторы, представляющие каждый элемент в `CarouselView`:
+
+[![Снимок экрана Карауселвиев и Индикаторвиев на iOS и Android](populate-data-images/indicators.png "Индикаторвиев круги")](populate-data-images/indicators-large.png#lightbox "Индикаторвиев круги")
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) доступен в Xamarin. forms 4,3. Однако в настоящее время это экспериментальное и может использоваться только путем добавления следующей строки кода в класс `AppDelegate` в iOS или в класс `MainActivity` в Android перед вызовом `Forms.Init`:
 

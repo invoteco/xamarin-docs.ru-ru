@@ -6,17 +6,17 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
-ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
+ms.date: 01/17/2020
+ms.openlocfilehash: c71153cdaa94a7983b89968abc828011a648f2b1
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72971249"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636106"
 ---
 # <a name="display-pop-ups"></a>Отображать всплывающие окна
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
 Отображение предупреждения, предоставление пользователю возможности выбора или отображение запроса — это обычная задача пользовательского интерфейса. Xamarin. Forms содержит три метода [`Page`](xref:Xamarin.Forms.Page) класса для взаимодействия с пользователем через всплывающее окно: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)и `DisplayPromptAsync`. Эти элементы визуализируются на каждой платформе с помощью соответствующих собственных элементов управления.
 
@@ -48,7 +48,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) — это стандартный элемент пользовательского интерфейса в iOS. Метод Xamarin.Forms [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) позволяет включать этот элемент управления в кроссплатформенные приложения. При этом в Android и UWP будут отрисовываться собственные аналоги.
 
-Чтобы отобразить лист действий, используйте метод [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) с оператором `await` на любой странице [`Page`](xref:Xamarin.Forms.Page), передав сообщение и надписи кнопок в виде строк. Этот метод возвращает надпись кнопки, нажатой пользователем. Вот простой пример.
+Чтобы отобразить лист действий, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) в любом [`Page`](xref:Xamarin.Forms.Page), передав метки сообщения и кнопки в виде строк. Этот метод возвращает надпись кнопки, нажатой пользователем. Вот простой пример.
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -88,21 +88,22 @@ string result = await DisplayPromptAsync("Question 1", "What's your name?");
 
 Полный список аргументов для метода `DisplayPromptAsync`:
 
-- `title` типа `string` — это заголовок, отображаемый в командной строке.
-- `message` типа `string` — это сообщение, отображаемое в командной строке.
-- `accept` типа `string` — это текст кнопки Accept. Это необязательный аргумент, значение по умолчанию которого — ОК.
-- `cancel` типа `string` — это текст кнопки Отмена. Это необязательный аргумент, значение по умолчанию которого — Cancel.
-- `placeholder` типа `string` — это текст заполнителя, отображаемый в командной строке. Это необязательный аргумент, значение по умолчанию которого — `null`.
-- `maxLength` типа `int` — это максимальная длина ответа пользователя. Это необязательный аргумент, значение по умолчанию которого равно-1.
-- `keyboard` типа `Keyboard` — это тип клавиатуры, используемый для ответа пользователя. Это необязательный аргумент, значение по умолчанию которого — `Keyboard.Default`.
+- `title`типа `string`— это заголовок, отображаемый в командной строке.
+- `message`типа `string`— это сообщение, отображаемое в командной строке.
+- `accept`типа `string`— это текст кнопки Accept. Это необязательный аргумент, значение по умолчанию которого — ОК.
+- `cancel`типа `string`— это текст кнопки Отмена. Это необязательный аргумент, значение по умолчанию которого — Cancel.
+- `placeholder`типа `string`— это текст заполнителя, отображаемый в командной строке. Это необязательный аргумент, значение по умолчанию которого — `null`.
+- `maxLength`типа `int`— это максимальная длина ответа пользователя. Это необязательный аргумент, значение по умолчанию которого равно-1.
+- `keyboard`типа `Keyboard`— это тип клавиатуры, используемый для ответа пользователя. Это необязательный аргумент, значение по умолчанию которого — `Keyboard.Default`.
+- `initialValue`типа `string`— это предварительно определенный ответ, который будет отображаться и который можно изменить. Это необязательный аргумент, значение по умолчанию которого — пустая `string`.
 
 В следующем примере показано задание некоторых необязательных аргументов:
 
 ```csharp
-string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
 ```
 
-Этот код ограничивает число символов, которое может быть введено равным 2, и отображает числовую клавиатуру для ввода данных пользователем:
+Этот код отображает предопределенный ответ 10, ограничивает число символов, которое может быть введено равным 2, и отображает цифровую клавиатуру для ввода данных пользователем:
 
 [![Снимок экрана: модальная строка в iOS и Android](pop-ups-images/keyboard-prompt.png "Модальная строка")](pop-ups-images/keyboard-prompt-large.png#lightbox "Модальная строка")
 

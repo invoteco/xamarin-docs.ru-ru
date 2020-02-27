@@ -6,13 +6,13 @@ ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: 38c891a095b2b3d41d906e747585b961516f9256
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.date: 01/28/2020
+ms.openlocfilehash: 2e3d3ccd42907ef3678ccfb634c036930800a145
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130858"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636142"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Макет Карауселвиев Xamarin. Forms
 
@@ -108,7 +108,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Это приводит к увеличению макета по горизонтали по мере добавления новых элементов.
+Это приводит к увеличению макета по горизонтали по мере добавления новых элементов:
+
+[![Снимок экрана Карауселвиев горизонтального макета на iOS и Android](layout-images/horizontal.png "Горизонтальный макет Карауселвиев")](layout-images/horizontal-large.png#lightbox "Горизонтальный макет Карауселвиев")
 
 ## <a name="vertical-layout"></a>Вертикальный макет
 
@@ -165,7 +167,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Это приводит к увеличению макета по вертикали по мере добавления новых элементов.
+Это приводит к увеличению макета по вертикали по мере добавления новых элементов:
+
+[![Снимок экрана с вертикальным макетом Карауселвиев на iOS и Android](layout-images/vertical.png "Вертикальный макет Карауселвиев")](layout-images/vertical-large.png#lightbox "Вертикальный макет Карауселвиев")
 
 ## <a name="partially-visible-adjacent-items"></a>Частично видимые смежные элементы
 
@@ -188,7 +192,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-В результате смежные элементы будут частично видны на экране.
+В результате смежные элементы частично открываются на экране:
+
+[![Снимок экрана CollectionView с частично видимыми смежными элементами в iOS и Android](layout-images/peek-items.png "Карауселвиев область просмотра инсетс")](layout-images/peek-items-large.png#lightbox "Карауселвиев Пиковая область инсетс")
 
 ## <a name="item-spacing"></a>Промежуток между элементами
 
@@ -238,7 +244,9 @@ void OnImageTapped(object sender, EventArgs e)
 }
 ```
 
-Обработчик событий `OnImageTapped` выполняется в ответ на касание объекта [`Image`](xref:Xamarin.Forms.Image) и изменяет размеры изображения (и его родительского фрейма), чтобы его было проще просмотреть.
+Обработчик событий `OnImageTapped` выполняется в ответ на касание объекта [`Image`](xref:Xamarin.Forms.Image) и изменяет размеры изображения (и его родительский `Frame`), чтобы упростить его просмотр:
+
+[![Снимок экрана Карауселвиев с динамическим изменением размера элемента в iOS и Android](layout-images/runtime-resizing.png "Изменение размера динамического элемента Карауселвиев")](layout-images/runtime-resizing-large.png#lightbox "Изменение размера динамического элемента Карауселвиев")
 
 ## <a name="right-to-left-layout"></a>Макет с письмом справа налево
 

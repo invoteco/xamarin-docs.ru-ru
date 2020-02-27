@@ -6,13 +6,13 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
-ms.openlocfilehash: 4119a650c431013bb0c8e680de600ed4e73d0c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 02/11/2020
+ms.openlocfilehash: 6131287b200846a033e0c476d7039dfd774cab68
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490508"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635593"
 ---
 # <a name="xamarinforms-swipeview"></a>Свипевиев Xamarin. Forms
 
@@ -84,6 +84,49 @@ Forms.SetFlags("SwipeView_Experimental");
 </SwipeView>
 ```
 
+Эквивалентный код на C# выглядит так:
+
+```csharp
+// SwipeItems
+SwipeItem favoriteSwipeItem = new SwipeItem
+{
+    Text = "Favorite",
+    IconImageSource = "favorite.png",
+    BackgroundColor = Color.LightGreen
+};
+favoriteSwipeItem.Invoked += OnFavoriteSwipeItemInvoked;
+
+SwipeItem deleteSwipeItem = new SwipeItem
+{
+    Text = "Delete",
+    IconImageSource = "delete.png",
+    BackgroundColor = Color.LightPink
+};
+deleteSwipeItem.Invoked += OnDeleteSwipeItemInvoked;
+
+List<SwipeItem> swipeItems = new List<SwipeItem>() { favoriteSwipeItem, deleteSwipeItem };
+
+// SwipeView content
+Grid grid = new Grid
+{
+    HeightRequest = 60,
+    WidthRequest = 300,
+    BackgroundColor = Color.LightGray
+};
+grid.Children.Add(new Label
+{
+    Text = "Swipe right",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+SwipeView swipeView = new SwipeView
+{
+    LeftItems = new SwipeItems(swipeItems),
+    Content = grid
+};
+```
+
 В этом примере содержимое `SwipeView` — это [`Grid`](xref:Xamarin.Forms.Grid) , содержащий [`Label`](xref:Xamarin.Forms.Label):
 
 [![Снимок экрана с содержимым Свипевиев в iOS и Android](swipeview-images/swipeview-content.png "Свипевиев содержимое")](swipeview-images/swipeview-content-large.png#lightbox "Свипевиев содержимое")
@@ -92,9 +135,9 @@ Forms.SetFlags("SwipeView_Experimental");
 
 [![Снимок экрана с Свипевиев считывания элементов в iOS и Android](swipeview-images/swipeview-swipeitems.png "Свипевиев считывание элементов")](swipeview-images/swipeview-swipeitems-large.png#lightbox "Свипевиев считывание элементов")
 
-По умолчанию элемент прокрутки выполняется при касании пользователем. Но такое поведение можно изменить. Дополнительные сведения см. в разделе [режим прокрутки](#swipe-mode).
+По умолчанию элемент прокрутки выполняется при касании пользователем. Хотя это можно изменить. Дополнительные сведения см. в разделе [режим прокрутки](#swipe-mode).
 
-После выполнения элемента считывания элементы прокрутки скрываются, а содержимое `SwipeView` снова отображается. Но такое поведение можно изменить. Дополнительные сведения см. в разделе [поведение при прокрутке](#swipe-behavior).
+После выполнения элемента считывания элементы прокрутки скрываются, а содержимое `SwipeView` снова отображается. Хотя это можно изменить. Дополнительные сведения см. в разделе [поведение при прокрутке](#swipe-behavior).
 
 > [!NOTE]
 > Прокрутка содержимого и считывание элементов можно разместить в строке или определить как ресурсы.
@@ -136,14 +179,16 @@ Forms.SetFlags("SwipeView_Experimental");
 </SwipeView>
 ```
 
-Внешний вид каждого `SwipeItem` определяется свойствами `Text`, `IconImageSource`и `BackgroundColor`:
+Внешний вид каждого `SwipeItem` определяется сочетанием свойств `Text`, `IconImageSource`и `BackgroundColor`:
 
 [![Снимок экрана с Свипевиев считывания элементов в iOS и Android](swipeview-images/swipeview-swipeitems.png "Свипевиев считывание элементов")](swipeview-images/swipeview-swipeitems-large.png#lightbox "Свипевиев считывание элементов")
 
 При касании `SwipeItem` срабатывает его `Invoked` событие, которое обрабатывается его зарегистрированным обработчиком событий. Кроме того, свойству `Command` можно присвоить `ICommand` реализацию, которая будет выполняться при вызове `SwipeItem`.
 
 > [!NOTE]
-> Помимо определения элементов считывания в качестве `SwipeItem` объектов, можно также определить пользовательские представления элементов прокрутки. Дополнительные сведения см. в разделе [настраиваемое считывание элементов](#custom-swipe-items).
+> Если внешний вид `SwipeItem` определяется только с помощью свойств `Text` или `IconImageSource`, содержимое всегда выравнивается по центру.
+
+Помимо определения элементов считывания в качестве `SwipeItem` объектов, можно также определить пользовательские представления элементов прокрутки. Дополнительные сведения см. в разделе [настраиваемое считывание элементов](#custom-swipe-items).
 
 ## <a name="swipe-direction"></a>Направление прокрутки
 
@@ -288,4 +333,4 @@ Forms.SetFlags("SwipeView_Experimental");
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Свипевиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [Меню Xamarin. Forms](~/xamarin-forms/user-interface/menuitem.md)
+- [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

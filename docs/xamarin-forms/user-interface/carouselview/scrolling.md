@@ -6,13 +6,13 @@ ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/28/2020
+ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489756"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635932"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Прокрутка Xamarin. Forms Карауселвиев
 
@@ -24,7 +24,7 @@ ms.locfileid: "75489756"
 
 - `HorizontalScrollBarVisibility`, типа `ScrollBarVisibility`, который указывает, когда отображается горизонтальная полоса прокрутки.
 - `IsDragging`, типа `bool`, который указывает, прокручивается ли `CarouselView`. Это свойство доступно только для чтения, для которого значение по умолчанию — `false`.
-- `IsScrollAnimated`, типа `bool`, который указывает, будет ли выполняться анимация при прокрутке `CarouselView`. Значение по умолчанию — `true`.
+- `IsScrollAnimated`, типа `bool`, который указывает, будет ли выполняться анимация при прокрутке `CarouselView`. Значение по умолчанию — `true`.
 - `ItemsUpdatingScrollMode`, типа `ItemsUpdatingScrollMode`, который представляет поведение прокрутки `CarouselView` при добавлении к нему новых элементов.
 - `VerticalScrollBarVisibility`, типа `ScrollBarVisibility`, который указывает, когда отображается вертикальная полоса прокрутки.
 
@@ -132,7 +132,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 > [!NOTE]
 > Элемент [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) используется по умолчанию, если аргумент `position` не указан при вызове метода `ScrollTo`.
 
-### <a name="start"></a>Начало
+### <a name="start"></a>Запуск
 
 Элемент [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться до начала представления:
 
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 В этом примере кода создается элемент, который прокручивается до начала представления.
 
-### <a name="center"></a>Центр
+### <a name="center"></a>Center
 
 Элемент [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться по центру представления:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Этот пример кода приводит к переходу элемента в центр представления.
 
-### <a name="end"></a>End
+### <a name="end"></a>Окончание
 
 Элемент [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться до конца представления:
 
@@ -195,7 +195,7 @@ CarouselView carouselView = new CarouselView
 - [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) указывает, что полосы прокрутки будут видимы, даже если содержимое умещается в представлении.
 - [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) указывает, что полосы прокрутки не будут видны, даже если содержимое не умещается в представлении.
 
-## <a name="snap-points"></a>Точки прикрепления
+## <a name="snap-points"></a>Точки привязки
 
 Когда пользователь начинает прокручивать, можно управлять конечной позицией прокрутки, чтобы элементы отображались полностью. Эта функция называется привязкой, так как элементы привязываются к позиции при остановке прокрутки и контролируются следующими свойствами класса [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) :
 
@@ -217,6 +217,10 @@ CarouselView carouselView = new CarouselView
 
 По умолчанию в [`CarouselView`](xref:Xamarin.Forms.CarouselView)свойству [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) присваивается значение `SnapPointsType.MandatorySingle`, что гарантирует прокрутку только по одному элементу за раз.
 
+На следующих снимках экрана показан [`CarouselView`](xref:Xamarin.Forms.CarouselView) с отключенной привязкой:
+
+[![Снимок экрана Карауселвиев без точек привязки в iOS и Android](scrolling-images/snappoints-none.png "Карауселвиев без точек привязки")](scrolling-images/snappoints-none-large.png#lightbox "Карауселвиев без точек привязки")
+
 ### <a name="snap-points-alignment"></a>Выравнивание точек привязки
 
 Перечисление [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) определяет члены `Start`, `Center`и `End`.
@@ -224,7 +228,7 @@ CarouselView carouselView = new CarouselView
 > [!IMPORTANT]
 > Значение свойства [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) учитывается только в том случае, если свойство [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) имеет значение `Mandatory`или `MandatorySingle`.
 
-#### <a name="start"></a>Начало
+#### <a name="start"></a>Запуск
 
 Элемент `SnapPointsAlignment.Start` указывает, что точки привязки выравниваться с ведущим ребром элементов. В следующем примере XAML показано, как задать этот элемент перечисления:
 
@@ -254,9 +258,11 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Когда пользователь настраивается для инициации прокрутки в [`CarouselView`](xref:Xamarin.Forms.CarouselView)горизонтальной прокрутки, левый элемент будет выставляться слева от представления.
+Когда пользователь настраивается для инициации прокрутки в [`CarouselView`](xref:Xamarin.Forms.CarouselView)горизонтальной прокрутки, левый элемент будет выставляться слева от представления:
 
-#### <a name="center"></a>Центр
+[![Снимок экрана Карауселвиев с начальной точкой привязки в iOS и Android](scrolling-images/snappoints-start.png "Карауселвиев с начальной точкой привязки")](scrolling-images/snappoints-start-large.png#lightbox "Карауселвиев с начальной точкой привязки")
+
+#### <a name="center"></a>Center
 
 Элемент `SnapPointsAlignment.Center` указывает, что точки привязки выровнены по центру элементов.
 
@@ -288,9 +294,11 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Когда пользователь настраивается для инициации прокрутки в [`CarouselView`](xref:Xamarin.Forms.CarouselView)горизонтальной прокрутки, центрированный элемент будет выровнен по центру представления.
+Когда пользователь настраивается для инициации прокрутки в [`CarouselView`](xref:Xamarin.Forms.CarouselView)горизонтальной прокрутки, центральный элемент будет выровнен по центру представления:
 
-#### <a name="end"></a>End
+[![Снимок экрана Карауселвиев с центральными точками привязки в iOS и Android](scrolling-images/snappoints-center.png "Карауселвиев с центральными точками привязки")](scrolling-images/snappoints-center-large.png#lightbox "Карауселвиев с центральными точками привязки")
+
+#### <a name="end"></a>Окончание
 
 Элемент `SnapPointsAlignment.End` указывает, что точки привязки согласованы с конечным ребром элементов. В следующем примере XAML показано, как задать этот элемент перечисления:
 
@@ -321,6 +329,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 Когда пользователь настраивается для инициации прокрутки в [`CarouselView`](xref:Xamarin.Forms.CarouselView)горизонтальной прокрутки, правый элемент будет выставляться справа от представления.
+
+[![Снимок экрана Карауселвиев с конечными точками привязки в iOS и Android](scrolling-images/snappoints-end.png "Карауселвиев с конечными точками привязки")](scrolling-images/snappoints-end-large.png#lightbox "Карауселвиев с конечными точками привязки")
 
 ## <a name="related-links"></a>Связанные ссылки
 

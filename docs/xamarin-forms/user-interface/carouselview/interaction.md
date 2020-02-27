@@ -6,28 +6,29 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: fd85876b38c21c7ff1ea85d7a61c1449395d56f5
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.date: 02/11/2020
+ms.openlocfilehash: 150c358346f90a513e1558dc847ad7eb6dd6e6e2
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749791"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635813"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Взаимодействие Карауселвиев Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет следующие свойства, управляющие взаимодействием с пользователем.
 
-- `CurrentItem`, тип `object`, текущий отображаемый элемент. Это свойство имеет режим привязки по умолчанию `TwoWay` и имеет `null` значение, если нет данных для вывода.
+- `CurrentItem`, тип `object`, текущий отображаемый элемент. Это свойство имеет режим привязки по умолчанию `TwoWay`и имеет `null` значение, если нет данных для вывода.
 - `CurrentItemChangedCommand`, типа `ICommand`, который выполняется при изменении текущего элемента.
 - `CurrentItemChangedCommandParameter` с типом `object`, который передается как параметр в `CurrentItemChangedCommand`.
-- `IsBounceEnabled`, тип `bool`, указывающий, будет ли `CarouselView` возникнет на границе содержимого. Значение по умолчанию — `true`.
-- `IsSwipeEnabled`, тип `bool`, определяющий, будет ли жест прокрутки изменять отображаемый элемент. Значение по умолчанию — `true`.
-- `Position`, типа `int`, индекс текущего элемента в базовой коллекции. Это свойство имеет режим привязки по умолчанию `TwoWay` и имеет значение 0, если нет данных для вывода.
+- `IsBounceEnabled`, тип `bool`, указывающий, будет ли `CarouselView` возникнет на границе содержимого. Значение по умолчанию — `true`.
+- `IsSwipeEnabled`, тип `bool`, определяющий, будет ли жест прокрутки изменять отображаемый элемент. Значение по умолчанию — `true`.
+- `Position`, типа `int`, индекс текущего элемента в базовой коллекции. Это свойство имеет режим привязки по умолчанию `TwoWay`и имеет значение 0, если нет данных для вывода.
 - `PositionChangedCommand`, типа `ICommand`, который выполняется при изменении расположения.
 - `PositionChangedCommandParameter` с типом `object`, который передается как параметр в `PositionChangedCommand`.
+- `VisibleViews`, типа `ObservableCollection<View>`, который является свойством только для чтения и содержит объекты для элементов, видимых в данный момент.
 
 Все эти свойства поддерживаются объектами [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), то есть их можно указывать в качестве целевых для привязки данных.
 
@@ -48,7 +49,7 @@ ms.locfileid: "72749791"
 > [!IMPORTANT]
 > Свойство `Position` меняется при изменении свойства `CurrentItem`. Это приведет к выполнению `PositionChangedCommand` и срабатыванию `PositionChanged` события.
 
-### <a name="event"></a>событие
+### <a name="event"></a>Событие
 
 В следующем примере XAML показан [`CarouselView`](xref:Xamarin.Forms.CarouselView) , использующий обработчик событий для реагирования на изменение текущего элемента:
 
@@ -67,7 +68,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.CurrentItemChanged += OnCurrentItemChanged;
 ```
 
-В этом примере обработчик событий `OnCurrentItemChanged` выполняется при срабатывании события `CurrentItemChanged` с обработчиком событий, который предоставляет предыдущий и текущий элементы:
+В этом примере обработчик событий `OnCurrentItemChanged` выполняется при срабатывании события `CurrentItemChanged`:
 
 ```csharp
 void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
@@ -76,6 +77,10 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
     Monkey currentItem = e.CurrentItem as Monkey;
 }
 ```
+
+В этом примере обработчик событий `OnCurrentItemChanged` предоставляет предыдущий и текущий элементы:
+
+[![Снимок экрана Карауселвиев с предыдущими и текущими элементами в iOS и Android](interaction-images/current-item-events.png "Карауселвиев с текущими и предыдущими элементами")](interaction-images/current-item-events-large.png#lightbox "Карауселвиев с текущими и предыдущими элементами")
 
 ### <a name="command"></a>Команда
 
@@ -117,7 +122,7 @@ public ICommand ItemChangedCommand => new Command<Monkey>((item) =>
 > [!NOTE]
 > Установка свойства `Position` в значение 0 приведет к отображению первого элемента в базовой коллекции.
 
-### <a name="event"></a>событие
+### <a name="event"></a>Событие
 
 В следующем примере XAML показан [`CarouselView`](xref:Xamarin.Forms.CarouselView) , использующий обработчик событий для реагирования на изменение свойства `Position`:
 
@@ -136,7 +141,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.PositionChanged += OnPositionChanged;
 ```
 
-В этом примере обработчик событий `OnPositionChanged` выполняется при срабатывании события `PositionChanged`, при этом обработчик событий предоставляет предыдущую и текущую позиции:
+В этом примере обработчик событий `OnPositionChanged` выполняется при срабатывании события `PositionChanged`:
 
 ```csharp
 void OnPositionChanged(object sender, PositionChangedEventArgs e)
@@ -145,6 +150,10 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
     int currentItemPosition = e.CurrentPosition;
 }
 ```
+
+В этом примере обработчик событий `OnCurrentItemChanged` предоставляет предыдущую и текущую позиции:
+
+[![Снимок экрана Карауселвиев с предыдущими и текущими позициями в iOS и Android](interaction-images/current-position-events.png "Карауселвиев с текущими и предыдущими позициями")](interaction-images/current-position-events-large.png#lightbox "Карауселвиев с текущими и предыдущими позициями")
 
 ### <a name="command"></a>Команда
 
@@ -201,7 +210,7 @@ carouselView.SetBinding(CarouselView.CurrentItemProperty, "CurrentItem");
 > [!NOTE]
 > Свойство `CurrentItem` имеет режим привязки по умолчанию `TwoWay`.
 
-Данные свойства `CarouselView.CurrentItem` привязываются к свойству `CurrentItem` подключенной модели представления, которая имеет тип `Monkey`. По умолчанию используется привязка `TwoWay` таким образом, что если пользователь изменяет текущий элемент, значение свойства `CurrentItem` будет установлено в текущий объект `Monkey`. Свойство `CurrentItem` определено в классе `MonkeysViewModel` и устанавливается в четвертый элемент в коллекции `Monkeys`:
+Данные свойства `CarouselView.CurrentItem` привязываются к свойству `CurrentItem` подключенной модели представления, которая имеет тип `Monkey`. По умолчанию используется привязка `TwoWay` таким образом, что если пользователь изменяет текущий элемент, значение свойства `CurrentItem` будет установлено в текущий объект `Monkey`. Свойство `CurrentItem` определено в классе `MonkeysViewModel`:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -219,6 +228,10 @@ public class MonkeysViewModel : INotifyPropertyChanged
     }
 }
 ```
+
+В этом примере свойству `CurrentItem` присвоено четвертый элемент в коллекции `Monkeys`:
+
+[![Снимок экрана Карауселвиев с элементом предустановки в iOS и Android](interaction-images/preset-item.png "Карауселвиев с предварительно заданным элементом")](interaction-images/preset-item-large.png#lightbox "Карауселвиев с предварительно заданным элементом")
 
 ## <a name="preset-the-position"></a>Предустановка расположения
 
@@ -242,7 +255,7 @@ carouselView.SetBinding(CarouselView.PositionProperty, "Position");
 > [!NOTE]
 > Свойство `Position` имеет режим привязки по умолчанию `TwoWay`.
 
-Данные свойства `CarouselView.Position` привязываются к свойству `Position` подключенной модели представления, которая имеет тип `int`. По умолчанию используется привязка `TwoWay`, так что если пользователь прокручивается по [`CarouselView`](xref:Xamarin.Forms.CarouselView), то значение свойства `Position` будет равно индексу отображаемого элемента. Свойство `Position` определено в классе `MonkeysViewModel` и устанавливается в четвертый элемент в коллекции `Monkeys`:
+Данные свойства `CarouselView.Position` привязываются к свойству `Position` подключенной модели представления, которая имеет тип `int`. По умолчанию используется привязка `TwoWay`, так что если пользователь прокручивается по [`CarouselView`](xref:Xamarin.Forms.CarouselView), то значение свойства `Position` будет равно индексу отображаемого элемента. Свойство `Position` определено в классе `MonkeysViewModel`:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -259,6 +272,79 @@ public class MonkeysViewModel : INotifyPropertyChanged
 }
 ```
 
+В этом примере свойству `Position` присвоено четвертый элемент в коллекции `Monkeys`:
+
+[![Снимок экрана Карауселвиев с заданной позицией в iOS и Android](interaction-images/preset-position.png "Карауселвиев с заданной позицией")](interaction-images/preset-position-large.png#lightbox "Карауселвиев с заданной позицией")
+
+## <a name="define-visual-states"></a>Определение визуальных состояний
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) определяет четыре визуальных состояния:
+
+- `CurrentItem` представляет визуальное состояние для отображаемого в данный момент элемента.
+- `PreviousItem` представляет визуальное состояние для ранее отображаемого элемента.
+- `NextItem` представляет визуальное состояние для следующего элемента.
+- `DefaultItem` представляет визуальное состояние для оставшейся части элементов.
+
+Эти визуальные состояния можно использовать для инициации визуальных изменений элементов, отображаемых [`CarouselView`](xref:Xamarin.Forms.CarouselView).
+
+В следующем примере XAML показано, как определить `CurrentItem`, `PreviousItem`, `NextItem`и `DefaultItem` визуальные состояния.
+
+```xaml
+<CarouselView ItemsSource="{Binding Monkeys}"
+              PeekAreaInsets="100">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="CurrentItem">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1.1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PreviousItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="NextItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="DefaultItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.25" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+
+                <!-- Item template content -->
+                <Frame HasShadow="true">
+                    ...
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+```
+
+В этом примере `CurrentItem` визуальное состояние указывает, что для текущего элемента, отображаемого [`CarouselView`](xref:Xamarin.Forms.CarouselView) , свойство [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) будет изменено со значения по умолчанию от 1 до 1,1. Визуальные состояния `PreviousItem` и `NextItem` указывают, что элементы, окружающие текущий элемент, будут отображаться с [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) значением 0,5. `DefaultItem` визуальное состояние указывает, что оставшаяся часть элементов, отображаемых `CarouselView`, будет отображаться с `Opacity` значением 0,25.
+
+> [!NOTE]
+> Кроме того, визуальные состояния можно определить в [`Style`](xref:Xamarin.Forms.Style) со значением свойства [`TargetType`](xref:Xamarin.Forms.Style.TargetType) , которое является типом корневого элемента [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), который задан как значение свойства `ItemTemplate`.
+
+На следующих снимках экрана показаны `CurrentItem`, `PreviousItem`и визуальные состояния `NextItem`.
+
+[![Снимок экрана Карауселвиев с использованием визуальных состояний в iOS и Android](interaction-images/visual-states.png "Визуальные состояния Карауселвиев")](interaction-images/visual-states-large.png#lightbox "Визуальные состояния Карауселвиев")
+
+Дополнительные сведения о визуальных состояниях см. в разделе [Диспетчер визуальных состояний Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
+
 ## <a name="clear-the-current-item"></a>Очистить текущий элемент
 
 Свойство `CurrentItem` можно очистить, задавая его или объект, к которому он привязан, для `null`.
@@ -274,3 +360,4 @@ public class MonkeysViewModel : INotifyPropertyChanged
 ## <a name="related-links"></a>Связанные ссылки
 
 - [Карауселвиев (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Диспетчер визуальных состояний Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
+ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249566"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553570"
 ---
 # <a name="metadata-and-markdown-template"></a>Шаблон метаданных и разметки Markdown
 
@@ -95,7 +95,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 
 ## <a name="text-styling"></a>Стиль текста
 
-*Курсив* — используйте для имен файлов, папок и путей (если из-за большой длины они выносятся в отдельные строки), новых терминов, URL-адресов (кроме случаев, когда они отображаются как ссылки, что является вариантом по умолчанию).
+_Курсив_ — используйте для имен файлов, папок и путей (если из-за большой длины они выносятся в отдельные строки), новых терминов, URL-адресов (кроме случаев, когда они отображаются как ссылки, что является вариантом по умолчанию).
 
 **Полужирный** — используйте для элементов пользовательского интерфейса.
 
@@ -147,7 +147,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 
 Если уникальный идентификатор содержит специальные символы \` или \#, они должны быть представлены в значении идентификатора в кодировке HTML как %60 и %23 соответственно, как в приведенных ниже примерах.
 
-- Пример: @System.Threading.Tasks.Task\`1 становится `@System.Threading.Tasks.Task%601`
+- Пример. @System.Threading.Tasks.Task\`1 становится `@System.Threading.Tasks.Task%601`
 - Пример: @System.Exception.\#ctor становится `@System.Exception.%23ctor`
 
 ## <a name="lists"></a>Списки

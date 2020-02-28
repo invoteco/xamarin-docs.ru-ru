@@ -398,6 +398,8 @@
                   href: user-interface/map/geocoder.md
                 - name: Запуск собственного приложения для работы с картой
                   href: user-interface/map/native-map-app.md
+            - name: MediaElement
+              href: user-interface/mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: Инициирование команд
@@ -620,6 +622,8 @@
           items:
             - name: Обзор
               href: platform/android/index.md
+            - name: Миграция AndroidX
+              href: platform/android/androidx-migration.md
             - name: AppCompat и материальное исполнение
               href: platform/android/appcompat-material-design.md
             - name: Заполнение и тени кнопки
@@ -662,6 +666,8 @@
               href: platform/ios/named-font-size-scaling.md
             - name: Цвет фона ячейки
               href: platform/ios/cell-background-color.md
+            - name: Выбор элемента DatePicker
+              href: platform/ios/datepicker-selection.md
             - name: Цвет курсора в поле ввода
               href: platform/ios/entry-cursor-color.md
             - name: Размер шрифта вводимого текста
@@ -702,16 +708,24 @@
               href: platform/ios/slider-thumb.md
             - name: Режим перехода для прокрутки SwipeView
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: Полупрозрачная панель вкладок TabbedPage
+              href: platform/ios/tabbedpage-translucent-tabbar.md
+            - name: Выбор элемента TimePicker
+              href: platform/ios/timepicker-selection.md
             - name: Размытие VisualElement
               href: platform/ios/visualelement-blur.md
             - name: Тени для VisualElement
               href: platform/ios/visualelement-drop-shadow.md
             - name: Устаревший цветовой режим VisualElement
               href: platform/ios/legacy-color-mode.md
+            - name: Оперативное отвечающее устройство VisualElement
+              href: platform/ios/visualelement-first-responder.md
         - name: Windows
           items:
             - name: Обзор
               href: platform/windows/index.md
+            - name: Каталог изображений по умолчанию
+              href: platform/windows/default-image-directory.md
             - name: Порядок чтения InputView
               href: platform/windows/inputview-reading-order.md
             - name: SelectionMode для ListView

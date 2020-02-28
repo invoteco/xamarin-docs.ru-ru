@@ -6,25 +6,25 @@ ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
-ms.openlocfilehash: a5a9daa39dcc94bbf77d9c91ea651bda6ec5747b
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 02/27/2020
+ms.openlocfilehash: e76cf6e766a95994fa2862deb9eb73928f4769a2
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480554"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674539"
 ---
 # <a name="xamarinforms-indicatorview"></a>Индикаторвиев Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
 `IndicatorView` — это элемент управления, отображающий индикаторы, представляющие количество элементов и текущую позиции в `CarouselView`:
 
 [![Снимок экрана Карауселвиев и Индикаторвиев на iOS и Android](indicatorview-images/circles.png "Индикаторвиев круги")](indicatorview-images/circles-large.png#lightbox "Индикаторвиев круги")
 
-`IndicatorView` доступен в Xamarin. Forms 4,4 на платформах iOS и Android. Однако в настоящее время это экспериментальное и может использоваться только путем добавления следующей строки кода в класс `AppDelegate` в iOS или в класс `MainActivity` в Android перед вызовом `Forms.Init`:
+`IndicatorView` доступен в Xamarin. Forms 4,4 на платформах iOS и Android, а также в 4,5 на универсальная платформа Windows. Однако в настоящее время это экспериментальное и может использоваться только путем добавления следующей строки кода в класс `AppDelegate` в iOS или в класс `MainActivity` в Android перед вызовом `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("IndicatorView_Experimental");
@@ -39,10 +39,9 @@ Forms.SetFlags("IndicatorView_Experimental");
 - `IndicatorLayout`типа `Layout<View>`определяет класс макета, используемый для визуализации `IndicatorView`. Это свойство задается Xamarin. Forms и обычно не должно устанавливаться разработчиками.
 - `IndicatorTemplate`, тип `DataTemplate`, шаблон, определяющий внешний вид каждого индикатора.
 - `IndicatorsShape`, тип `IndicatorShape`, форма каждого индикатора.
-- `ItemsSource`, тип `IEnumerable`, коллекция, для которой будут отображаться индикаторы. Это свойство будет автоматически задано при установке присоединенного свойства `ItemsSourceBy`.
-- `ItemsSourceBy`, типа `VisualElement`, объекта `CarouselView`, для которого отображаются индикаторы. Это вложенное свойство зависимостей.
+- `ItemsSource`, тип `IEnumerable`, коллекция, для которой будут отображаться индикаторы. Это свойство будет автоматически установлено при установке свойства `CarouselView.IndicatorView`.
 - `MaximumVisible`, типа `int`, максимальное количество видимых индикаторов. Значение по умолчанию — `int.MaxValue`.
-- `Position`, типа `int`, выбранного в данный момент индекса индикатора. Это свойство использует привязку `TwoWay`. Это свойство будет автоматически задано при установке присоединенного свойства `ItemsSourceBy`.
+- `Position`, типа `int`, выбранного в данный момент индекса индикатора. Это свойство использует привязку `TwoWay`. Это свойство будет автоматически установлено при установке свойства `CarouselView.IndicatorView`.
 - `SelectedIndicatorColor`, типа `Color`, цвет индикатора, представляющий текущий элемент в `CarouselView`.
 
 Эти свойства поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что они могут быть целевыми объектами привязки данных и стилями.
@@ -53,27 +52,27 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки присоединенного свойства `ItemsSourceBy` к объекту `CarouselView`. Каждый индикатор является светло-серым кругом, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый.
+В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки свойства `CarouselView.IndicatorView` в объект `IndicatorView`. Каждый индикатор является светло-серым кругом, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый.
 
 > [!IMPORTANT]
-> Установка `ItemsSourceBy` присоединенного свойства приводит к привязке свойства `Position` к свойству `CarouselView.Position`, а также к привязке свойства `ItemsSource` к свойству `CarouselView.ItemsSource`.
+> Установка свойства `CarouselView.IndicatorView` приводит к привязке свойства `IndicatorView.Position` к свойству `CarouselView.Position`, а также к привязке свойства `IndicatorView.ItemsSource` к свойству `CarouselView.ItemsSource`.
 
 ## <a name="change-indicator-shape"></a>Изменить форму индикатора
 
-Класс `IndicatorView` имеет свойство `IndicatorsShape`, которое указывает форму индикаторов. Этому свойству может быть присвоено одно из членов перечисления `IndicatorShape`:
+Класс `IndicatorView` имеет свойство `IndicatorsShape`, которое определяет форму индикаторов. Этому свойству может быть присвоено одно из членов перечисления `IndicatorShape`:
 
 - `Circle` указывает, что фигуры индикаторов будут циклическими. Это значение по умолчанию для свойства `IndicatorView.IndicatorsShape`.
 - `Square` указывает, что фигуры индикаторов будут квадратными.
@@ -81,10 +80,32 @@ Forms.SetFlags("IndicatorView_Experimental");
 В следующем примере показан `IndicatorView`, настроенный для использования квадратных индикаторов:
 
 ```xaml
-<IndicatorView IndicatorsShape="Square"
-               IndicatorView.ItemsSourceBy="carouselView"
+<IndicatorView x:Name="indicatorView"
+               IndicatorsShape="Square"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
+```
+
+## <a name="change-indicator-size"></a>Изменить размер индикатора
+
+Класс `IndicatorView` имеет свойство `IndicatorSize` типа `double`, которое определяет размер индикаторов в аппаратно-независимых единицах. Значение этого свойства по умолчанию равно 6,0.
+
+В следующем примере показан `IndicatorView`, настроенный для отображения более крупных индикаторов:
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               IndicatorSize="18" />
+```
+
+## <a name="limit-the-number-of-indicators-displayed"></a>Ограничение числа отображаемых индикаторов
+
+Класс `IndicatorView` имеет свойство `MaximumVisible` типа `int`, которое определяет максимальное количество видимых индикаторов.
+
+В следующем примере показан `IndicatorView`, настроенный для отображения не более шести индикаторов:
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               MaximumVisible="6" />
 ```
 
 ## <a name="define-indicator-appearance"></a>Определение внешнего вида индикатора
@@ -93,13 +114,13 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="Black"
                    HorizontalOptions="Center">

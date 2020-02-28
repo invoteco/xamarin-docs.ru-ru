@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e8b6f5e1ea090abc8ebd6084095bf6b34663a42
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 09bcb49db7f257a415518b259672ca8e776cdbc4
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635874"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674568"
 ---
 # <a name="xamarinforms-views"></a>Представления Xamarin.Forms
 
@@ -31,7 +31,7 @@ _Представления Xamarin. Forms — это стандартные б�
 | [`Label`](xref:Xamarin.Forms.Label) отображает однострочные текстовые строки или многострочные блоки текста с постоянным форматированием или переменной. Задайте для свойства [`Text`](xref:Xamarin.Forms.Label.Text) строку для форматирования константы или задайте для свойства [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) значение [`FormattedString`](xref:Xamarin.Forms.FormattedString) объекта для форматирования переменной.<br /><br />[Документация по API](xref:Xamarin.Forms.Label) / [руководство](~/xamarin-forms/user-interface/text/label.md) / [образца](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Пример метки](views-images/Label.png "Пример метки")](views-images/Label-Large.png#lightbox "Пример метки")<br /> [Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) |
 |     |     |
 
-### <a name="image"></a>Изображение
+### <a name="image"></a>Образ —
 
 |     |     |
 | --- | --- |
@@ -158,7 +158,7 @@ _Представления Xamarin. Forms — это стандартные б�
 
 Эти два класса являются производными от класса [`InputView`](xref:Xamarin.Forms.InputView) , который определяет свойство [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) .
 
-### <a name="entry"></a>Элемент
+### <a name="entry"></a>Запись
 
 |     |     |
 | --- | --- |
@@ -208,7 +208,7 @@ _Представления Xamarin. Forms — это стандартные б�
 
 |     |     |
 | --- | --- |
-| `IndicatorView` отображает индикаторы, представляющие количество элементов в `CarouselView`. Присвойте `IndicatorView.ItemsSourceBy` присоединенному свойству объект `CarouselView`, для которого отображаются индикаторы. <br /><br />[Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) / [Guide](~/xamarin-forms/user-interface/indicatorview.md) | [![Пример Индикаторвиев](views-images/IndicatorView.png "Пример Индикаторвиев")](views-images/IndicatorView-Large.png#lightbox "Пример Индикаторвиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
+| `IndicatorView` отображает индикаторы, представляющие количество элементов в `CarouselView`. Задайте для свойства `CarouselView.IndicatorView` объект `IndicatorView`, чтобы отобразить индикаторы для `CarouselView`. <br /><br />[Пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) / [Guide](~/xamarin-forms/user-interface/indicatorview.md) | [![Пример Индикаторвиев](views-images/IndicatorView.png "Пример Индикаторвиев")](views-images/IndicatorView-Large.png#lightbox "Пример Индикаторвиев")<br />[Код C# для этой страницы](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) / [страницы XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="listview"></a>ListView

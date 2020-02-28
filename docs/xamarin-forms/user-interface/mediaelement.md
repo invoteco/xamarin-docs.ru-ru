@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 945b0ffcff589da28c5e0ef2509a9d2ad7c388b5
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 601a2884cb9ca90ab6681e48afda4c9f1f467932
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635995"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674550"
 ---
 # <a name="xamarinforms-mediaelement"></a>Элемент для Xamarin. Forms MediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) — это представление для воспроизведения видео и аудио. Носители, поддерживаемые базовой платформой, можно воспроизводить из следующих источников:
 
@@ -537,7 +537,7 @@ public class PositionSlider : Slider
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Медиаелементдемос (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+- [Медиаелементдемос (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
 - [Схемы URI](/windows/uwp/app-resources/uri-schemes)
 - [Триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Ползунок Xamarin. Forms](~/xamarin-forms/user-interface/slider.md)

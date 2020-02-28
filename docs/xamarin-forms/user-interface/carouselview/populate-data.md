@@ -6,19 +6,19 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
-ms.openlocfilehash: 8ec66a8d39f373b624e3a597e62014e3b1c72f56
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 02/27/2019
+ms.openlocfilehash: 154d039e95ccc2de28e09a7162a32a19f8f84656
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480563"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674540"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Данные Карауселвиев в Xamarin. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) содержит следующие свойства, которые определяют отображаемые данные и его внешний вид:
 
@@ -264,25 +264,25 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки присоединенного свойства `ItemsSourceBy` к объекту `CarouselView`. Каждый индикатор представляет собой светло-серый круг, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый:
+В этом примере `IndicatorView` отображается под `CarouselView`, с индикатором для каждого элемента в `CarouselView`. `IndicatorView` заполняется данными путем установки свойства `CarouselView.IndicatorView` в объект `IndicatorView`. Каждый индикатор представляет собой светло-серый круг, а индикатор, представляющий текущий элемент в `CarouselView`, темно-серый:
 
 [![Снимок экрана Карауселвиев и Индикаторвиев на iOS и Android](populate-data-images/indicators.png "Индикаторвиев круги")](populate-data-images/indicators-large.png#lightbox "Индикаторвиев круги")
 
 > [!IMPORTANT]
-> Установка `IndicatorView.ItemsSourceBy` присоединенного свойства приводит к привязке свойства `IndicatorView.Position` к свойству `CarouselView.Position`, а также к привязке свойства `IndicatorView.ItemsSource` к свойству `CarouselView.ItemsSource`.
+> Установка свойства `CarouselView.IndicatorView` приводит к привязке свойства `IndicatorView.Position` к свойству `CarouselView.Position`, а также к привязке свойства `IndicatorView.ItemsSource` к свойству `CarouselView.ItemsSource`.
 
 Дополнительные сведения о индикаторах см. в разделе [Xamarin. Forms индикаторвиев](~/xamarin-forms/user-interface/indicatorview.md).
 

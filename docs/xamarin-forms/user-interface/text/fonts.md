@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/20/2020
-ms.openlocfilehash: 75cf5acdb862a15d722075269b2f736264be680f
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 3798e3612547d36905dd62e6314f158958782874
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636172"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160613"
 ---
 # <a name="fonts-in-xamarinforms"></a>Шрифты в Xamarin.Forms
 
@@ -121,7 +121,7 @@ label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
 
 Xamarin. Forms определяет поля в перечислении [`NamedSize`](xref:Xamarin.Forms.NamedSize) , представляющие конкретные размеры шрифтов. В следующей таблице показаны элементы `NamedSize` и их размеры по умолчанию для iOS, Android и универсальная платформа Windows (UWP).
 
-| Член | iOS | Android | UWP |
+| Участник | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15,667 |
@@ -148,6 +148,74 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 <a name="Using_a_Custom_Font" />
 
 ## <a name="use-a-custom-font"></a>Использовать пользовательский шрифт
+
+Использование шрифтов, отличных от встроенных гарнитур требует кодирования некоторые специфические для платформы. На этом снимке экрана показан пользовательский шрифт **Лобстер** из [шрифтов с открытым кодом Google](https://www.google.com/fonts) , отображаемых с помощью Xamarin. Forms.
+
+ [![Пользовательский шрифт в iOS и Android](fonts-images/custom-sml.png "Пример пользовательских шрифтов")](fonts-images/custom.png#lightbox "Пример пользовательских шрифтов")
+
+Ниже описаны шаги, необходимые для каждой платформы. При включении файлы пользовательских шрифтов с приложением, обязательно убедитесь, что лицензии шрифта разрешены для распространения.
+
+### <a name="ios"></a>iOS
+
+Можно отобразить пользовательский шрифт, сначала убедившись, что он загружен, а затем ссылаться на него по имени с помощью методов Xamarin. Forms `Font`.
+Следуйте инструкциям в [этой записи блога](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
+
+1. Добавьте файл шрифта с **действием сборки: BundleResource**и
+2. Обновите файл **info. plist** (**шрифты, предоставленные приложением**, или `UIAppFonts`, ключ), а затем
+3. Ссылаться на него по имени везде, где вы определяете шрифта в Xamarin.Forms!
+
+```csharp
+new Label
+{
+    Text = "Hello, Forms!",
+    FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" : null // set only for iOS
+}
+```
+
+### <a name="android"></a>Android
+
+Xamarin.Forms для Android может ссылаться на пользовательский шрифт, который был добавлен в проект, выполнив определенные стандарт именования. Сначала добавьте файл шрифта в папку **Assets** в проекте приложения и задайте *действие сборки: AndroidAsset*. Затем используйте полный путь и *имя шрифта* , разделенные хэшем (#) в качестве имени шрифта в Xamarin. Forms, как показано в следующем фрагменте кода:
+
+```csharp
+new Label
+{
+  Text = "Hello, Forms!",
+  FontFamily = Device.RuntimePlatform == Device.Android ? "Lobster-Regular.ttf#Lobster-Regular" : null // set only for Android
+}
+```
+
+### <a name="windows"></a>Windows
+
+Xamarin.Forms для платформ Windows можно ссылаться на пользовательский шрифт, который был добавлен в проект, выполнив определенные стандарт именования. Сначала добавьте файл шрифта в папку **/Ассетс/Фонтс/** в проекте приложения и задайте **действие Build: Content**. Затем используйте полный путь и имя файла шрифта, а затем хэш (#) и **имя шрифта**, как показано в следующем фрагменте кода:
+
+```csharp
+new Label
+{
+    Text = "Hello, Forms!",
+    FontFamily = Device.RuntimePlatform == Device.UWP ? "Assets/Fonts/Lobster-Regular.ttf#Lobster" : null // set only for UWP apps
+}
+```
+
+> [!NOTE]
+> Обратите внимание на то, что имя файла шрифта и имя шрифта могут различаться. Чтобы обнаружить имя шрифта в Windows, щелкните TTF-файл правой кнопкой мыши и выберите **Предварительный просмотр**. Имя шрифта можно определить, затем из окна предварительного просмотра.
+
+### <a name="xaml"></a>XAML
+
+Можно также использовать [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) в XAML для отображения пользовательского шрифта:
+
+```xaml
+<Label Text="Hello Forms with XAML">
+    <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Lobster-Regular" />
+                <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+        </OnPlatform>
+    </Label.FontFamily>
+</Label>
+```
+
+## <a name="use-a-custom-font-preview"></a>Использование пользовательского шрифта (Предварительная версия)
 
 Пользовательские шрифты можно добавить в общий проект Xamarin. Forms и использовать в проектах платформы без дополнительной работы. Чтобы этого добиться, выполните следующие действия.
 

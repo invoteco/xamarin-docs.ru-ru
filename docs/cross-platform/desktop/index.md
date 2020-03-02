@@ -16,22 +16,22 @@ ms.locfileid: "73016456"
 
 В этом разделе содержатся сведения, помогающие WPF и Windows Forms разработчикам изучать разработку мобильных приложений с помощью Xamarin, перекрестно ссылаясь на существующие знания и опыт работы с мобильными идиомами, а также предоставляя примеры переноса настольных приложений на мобильные устройства.
 
-## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Сравнение жизненного цикла приложения](lifecycle.md)
+## <a name="app-lifecycle-comparison"></a>[Сравнение жизненного цикла приложения](lifecycle.md)
 
 Основные сведения о различиях запуска и фонового состояния приложения WPF и Xamarin. Forms.
 
-## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Сравнение элементов управления ИП](controls/index.md)
+## <a name="ui-controls-comparison"></a>[Сравнение элементов управления ИП](controls/index.md)
 
 Краткий справочник по поиску эквивалентных элементов управления в Windows Forms, WPF и Xamarin. Forms, включая дополнительные рекомендации по различиям между WPF и Xamarin. Forms.
 
-## <a name="porting-guidanceportingmd"></a>[Руководство по переносу](porting.md)
+## <a name="porting-guidance"></a>[Руководство по переносу](porting.md)
 
 Использование анализатора переносимости для переноса кода настольного приложения (за исключением пользовательского интерфейса) в Xamarin. Forms.
 
-## <a name="samplessamplesmd"></a>[Примеры](samples.md)
+## <a name="samples"></a>[Примеры](samples.md)
 
 Эталонные примеры, демонстрирующие архитектуру корпоративных приложений и перенос кода из WPF в Xamarin. Forms.
 
 ## <a name="learn-more"></a>Дополнительные сведения
 
-[![создание электронной](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) документации по [![мобильных приложений шаблоны электронной](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md) документации
+[![создание электронной](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [![мобильных приложений шаблоны электронной](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)

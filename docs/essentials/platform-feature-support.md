@@ -5,12 +5,12 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 66cc9042b74cd29cc11194e8cfde91a6ebec6f8b
-ms.sourcegitcommit: 04929b5ff4384ca807727bec7c0467111a7eb283
+ms.openlocfilehash: a104b3828caa9e00e9307420ae5473d0fe7d7784
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75867630"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545193"
 ---
 # <a name="platform-support"></a>Поддержка платформ
 
@@ -43,7 +43,8 @@ Xamarin.Essentials всегда пытается обеспечить компо
 | Функция | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Акселерометр](accelerometer.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Поддерживается для watchOS](~/media/shared/yes.png "Поддерживается для watchOS") | ![Не поддерживается для tvOS](~/media/shared/no.png "Не поддерживается для tvOS") | ![Поддерживается для Tizen](~/media/shared/yes.png "Поддерживается для Tizen") | 
-| [Сведения о приложении](app-information.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Поддерживается для watchOS](~/media/shared/yes.png "Поддерживается для watchOS") | ![Поддерживается для tvOS](~/media/shared/yes.png "Поддерживается для tvOS") | ![Поддерживается для Tizen](~/media/shared/yes.png "Поддерживается для Tizen") | 
+| [Сведения о приложении](app-information.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Поддерживается для watchOS](~/media/shared/no.png "Не поддерживается для watchOS") | ![Поддерживается для tvOS](~/media/shared/yes.png "Поддерживается для tvOS") | ![Поддерживается для Tizen](~/media/shared/no.png "Не поддерживается для Tizen") | 
+| [Тема приложения](app-theme.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Поддерживается для watchOS](~/media/shared/yes.png "Поддерживается для watchOS") | ![Не поддерживается для tvOS](~/media/shared/no.png "Не поддерживается для tvOS") | ![Поддерживается для Tizen](~/media/shared/yes.png "Поддерживается для Tizen") | 
 | [Барометр](barometer.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Поддерживается для watchOS](~/media/shared/yes.png "Поддерживается для watchOS") | ![Не поддерживается для tvOS](~/media/shared/no.png "Не поддерживается для tvOS") | ![Поддерживается для Tizen](~/media/shared/yes.png "Поддерживается для Tizen") | 
 | [Батарея](battery.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Поддерживается для watchOS](~/media/shared/yes.png "Поддерживается для watchOS") | ![Ограниченная поддержка для tvOS](~/media/shared/warn.png "Ограниченная поддержка для tvOS") | ![Ограниченная поддержка для Tizen](~/media/shared/warn.png "Ограниченная поддержка для Tizen") | 
 | [Буфер обмена](clipboard.md?context=xamarin/xamarin-forms) | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Поддерживается для iOS](~/media/shared/yes.png "Поддерживается для iOS") | ![Поддерживается для UWP](~/media/shared/yes.png "Поддерживается для UWP") | ![Не поддерживается для watchOS](~/media/shared/no.png "Не поддерживается для watchOS") | ![Не поддерживается для tvOS](~/media/shared/no.png "Не поддерживается для tvOS") | ![Не поддерживается для Tizen](~/media/shared/no.png "Не поддерживается для Tizen") | 

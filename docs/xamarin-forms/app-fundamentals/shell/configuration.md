@@ -6,19 +6,19 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/05/2019
-ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/29/2020
+ms.openlocfilehash: dfa452addd7cfb838091afdfb350484998d0cc9d
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489912"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636091"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Настройка страницы оболочки Xamarin.Forms
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-Класс `Shell` определяет присоединенные свойства, с помощью которых можно настраивать внешний вид страниц в приложениях оболочки Xamarin.Forms. Сюда относится настройка цветов страницы, отключение панели навигации, отключение панели вкладок и отображение представлений на панели навигации.
+Класс `Shell` определяет присоединенные свойства, с помощью которых можно настраивать внешний вид страниц в приложениях оболочки Xamarin.Forms. Сюда относится настройка цветов страниц, установка режима презентации страницы, отключение панели навигации, отключение панели вкладок и отображение представлений на панели навигации.
 
 ## <a name="set-page-colors"></a>Настройка цветов страницы
 
@@ -85,6 +85,30 @@ ms.locfileid: "75489912"
 ```
 
 Дополнительные сведения о стилях XAML см. в руководстве по [оформлению приложений Xamarin.Forms с использованием стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
+
+## <a name="set-page-presentation-mode"></a>Установка режима презентации страницы
+
+По умолчанию происходит анимация навигации при переходе на страницу с помощью метода `GoToAsync`. Но вы можете изменить это поведение, задав в присоединенном свойстве `Shell.PresentationMode` для [`ContentPage`](xref:Xamarin.Forms.ContentPage) один из элементов перечисления `PresentationMode`:
+
+- `NotAnimated` указывает, что страница будет отображаться без анимации навигации.
+- `Animated` указывает, что страница будет отображаться с анимацией навигации. Это значение по умолчанию для присоединенного свойства `Shell.PresentationMode`.
+- `Modal` указывает, что страница будет отображаться в виде модальной страницы.
+- `ModalAnimated` указывает, что страница будет отображаться в виде модальной страницы с анимацией навигации.
+- `ModalNotAnimated` указывает, что страница будет отображаться в виде модальной страницы без анимации навигации.
+
+> [!IMPORTANT]
+> Тип `PresentationMode` является перечислением флагов. Это означает, что сочетание элементов перечисления может быть применено в коде. Но для простоты использования в XAML элемент `ModalAnimated` является сочетанием элементов `Animated` и `Modal`, а элемент `ModalNotAnimated` — сочетанием `NotAnimated` и `Modal`. Дополнительные сведения о перечислении флагов см. в [этом разделе](/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags).
+
+Следующий пример XAML задает присоединенное свойство `Shell.PresentationMode` для [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.PresentationMode="Modal">
+    ...             
+</ContentPage>
+```
+
+В этом примере [`ContentPage`](xref:Xamarin.Forms.ContentPage) задается как модальная страница при переходе на нее с помощью метода `GoToAsync`.
 
 ## <a name="enable-navigation-bar-shadow"></a>Включение тени панели навигации
 
@@ -162,6 +186,10 @@ ms.locfileid: "75489912"
 Представления не будут отображаться на панели навигации, если не указан размер представления с помощью свойств [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) и [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) или не указано расположение представления с помощью свойств [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) и [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
 
 Так как класс [`Layout`](xref:Xamarin.Forms.Layout) является производным от класса [`View`](xref:Xamarin.Forms.View), присоединенное свойство `TitleView` можно настроить для отображения класса макета, содержащего несколько представлений. Аналогичным образом, так как класс [`ContentView`](xref:Xamarin.Forms.ContentView) является итоговым производным от класса [`View`](xref:Xamarin.Forms.View), присоединенное свойство `TitleView` можно настроить для отображения `ContentView` с единым представлением.
+
+## <a name="page-visibility"></a>Видимость страницы
+
+Оболочка учитывает видимость страницы, которая задается с помощью свойства [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible). Поэтому, если у свойства `IsVisible` страницы значение `false`, она не будет отображаться в приложении оболочки и на нее невозможно будет перейти.
 
 ## <a name="related-links"></a>Связанные ссылки
 

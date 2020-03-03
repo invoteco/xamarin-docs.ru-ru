@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771830"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636020"
 ---
 # <a name="custom-video-transport-controls"></a>Пользовательские элементы управления транспортировкой видео
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 К элементам управления транспортировкой в видеопроигрывателе относятся кнопки, которые выполняют функции **воспроизведения**, **паузы** и **остановки**. Эти кнопки обычно определяются по знакомым значкам, а не тексту. Как правило, функции **Воспроизведение** и **Пауза** объединены в одну кнопку.
 
@@ -613,7 +613,7 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-Подробное описание триггеров данных см. в статье [Триггеры данных](~/xamarin-forms/app-fundamentals/triggers.md#data).
+Подробное описание триггеров данных см. в статье [Триггеры данных](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers).
 
 Файл кода программной части содержит обработчики для событий кнопки `Clicked`.
 
@@ -649,11 +649,11 @@ namespace VideoPlayerDemos
 
 Так как в файле **CustomTransport.xaml** атрибут `AutoPlay` имеет значение `false`, потребуется нажать активную кнопку **Воспроизведение**, чтобы начать воспроизведение. Кнопки определяются таким образом, чтобы символы Юникода, описанные выше, сопровождались своими текстовыми эквивалентами. Во время воспроизведения видео кнопки имеют согласованный внешний вид на каждой платформе.
 
-[![Воспроизведение пользовательской транспортировки](custom-transport-images/customtransportplaying-small.png "Воспроизведение пользовательской транспортировки")](custom-transport-images/customtransportplaying-large.png#lightbox "Воспроизведение пользовательской транспортировки")
+[![Воспроизведение пользовательского транспорта](custom-transport-images/customtransportplaying-small.png "Воспроизведение пользовательского транспорта")](custom-transport-images/customtransportplaying-large.png#lightbox "Воспроизведение пользовательского транспорта")
 
 Однако при приостановке видео кнопка **Воспроизведение** на платформах Android и UWP выглядит совершенно по-разному.
 
-[![Пользовательская транспортировка приостановлена](custom-transport-images/customtransportpaused-small.png "Пользовательская транспортировка приостановлена")](custom-transport-images/customtransportpaused-large.png#lightbox "Пользовательская транспортировка приостановлена")
+[![Приостановка пользовательского транспорта](custom-transport-images/customtransportpaused-small.png "Приостановка пользовательского транспорта")](custom-transport-images/customtransportpaused-large.png#lightbox "Приостановка пользовательского транспорта")
 
 Чтобы обеспечить визуальное единообразие в рабочем приложении, вы, возможно, захотите использовать собственные растровые изображения для кнопок.
 

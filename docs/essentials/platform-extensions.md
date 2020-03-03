@@ -5,12 +5,12 @@ ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 4a80c004dd55486db18a3149dcd889a4673d7438
-ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
+ms.openlocfilehash: 4e43159fb9cae6646be54d8efc24c334bc071477
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74536503"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545149"
 ---
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: расширения платформы
 
@@ -29,6 +29,82 @@ using Xamarin.Essentials;
 ```
 
 Все расширения платформы могут вызываться только из проектов iOS, Android или UWP.
+
+## <a name="android-extensions"></a>Расширения Android
+
+Доступ к этим расширениям можно получить только из проекта Android.
+
+### <a name="application-context--activity"></a>Действие и контекст приложения
+
+Используя расширения платформы в классе `Platform`, можно получить доступ к текущим `Context` или `Activity` для работающего приложения.
+
+```csharp
+
+var context = Platform.AppContext;
+
+// Current Activity or null if not initialized or not started.
+var activity = Platform.CurrentActivity;
+```
+
+Если возникает ситуация, когда требуется `Activity`, но приложение запущено не полностью, следует использовать метод `WaitForActivityAsync`.
+
+```csharp
+var activity = await Platform.WaitForActivityAsync();
+```
+
+### <a name="activity-lifecycle"></a>Жизненный цикл действия
+
+Кроме получения текущего действия, вы также можете зарегистрироваться для получения событий жизненного цикла.
+
+```csharp
+protected override void OnCreate(Bundle bundle)
+{
+    base.OnCreate(bundle);
+
+    Xamarin.Essentials.Platform.Init(this, bundle);
+
+    Xamarin.Essentials.Platform.ActivityStateChanged += Platform_ActivityStateChanged;
+}
+
+protected override void OnDestroy()
+{
+    base.OnDestroy();
+    Xamarin.Essentials.Platform.ActivityStateChanged -= Platform_ActivityStateChanged;
+}
+
+void Platform_ActivityStateChanged(object sender, Xamarin.Essentials.ActivityStateChangedEventArgs e) =>
+    Toast.MakeText(this, e.State.ToString(), ToastLength.Short).Show();
+```
+
+Ниже перечислены состояния действий:
+
+* Создано
+* Возобновление
+* Приостановлено
+* Уничтожаются
+* SaveInstanceState
+* Запуск
+* Остановлено
+
+См. документацию по [жизненному циклу действия](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/).
+
+## <a name="ios-extensions"></a>Расширения iOS
+
+Доступ к этим расширениям можно получить только из проекта iOS.
+
+### <a name="current-uiviewcontroller"></a>Current UIViewController
+
+Получите доступ к текущему представлению `UIViewController`:
+
+```csharp
+var vc = Platform.GetCurrentUIViewController();
+```
+
+Этот метод возвращает `null`, если не удается обнаружить `UIViewController`.
+
+## <a name="cross-platform-extensions"></a>Кроссплатформенные расширения
+
+Эти расширения существуют на каждой платформе.
 
 ### <a name="point"></a>Точка
 

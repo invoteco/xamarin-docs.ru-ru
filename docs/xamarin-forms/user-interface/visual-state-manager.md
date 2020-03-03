@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2020
-ms.openlocfilehash: 086adee4dc6b921abe92f6486186023a3125695c
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 0149806f3ab3772bc206cea9540a989d997c817b
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636070"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215004"
 ---
 # <a name="xamarinforms-visual-state-manager"></a>Диспетчер визуальных состояний Xamarin. Forms
 
@@ -405,15 +405,16 @@ _Используйте Диспетчер визуальных состояни
 
 В следующей таблице перечислены визуальные состояния, определенные в Xamarin. Forms:
 
-| Class | Состояния | Дополнительные сведения |
+| Класс | Состояния | Дополнительные сведения |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Визуальные состояния кнопки](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Визуальные состояния Карауселвиев](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
-| `CollectionView` | `Selected` | [Изменить цвет выбранного элемента](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [Визуальные состояния ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Распространенные состояния](#common-states) |
 
 Доступ к каждому из этих состояний можно получить с помощью группы визуального состояния с именем `CommonStates`.
+
+Кроме того, `CollectionView` реализует состояние `Selected`. Дополнительные сведения см. в разделе [изменение цвета выбранного элемента](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color).
 
 ## <a name="set-state-on-multiple-elements"></a>Задание состояния для нескольких элементов
 
@@ -480,7 +481,7 @@ _Используйте Диспетчер визуальных состояни
 
 ## <a name="define-your-own-visual-states"></a>Определение собственных визуальных состояний
 
-Каждый класс, производный от `VisualElement`, поддерживает три стандартных состояния: "обычный", "с сортировкой" и "отключен". На внутреннем уровне класс [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) обнаруживает, когда он становится включенным или отключенным, и вызывает статический метод [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) :
+Каждый класс, производный от `VisualElement`, поддерживает стандартные состояния "обычный", "с сортировкой" и "отключен". Кроме того, класс `CollectionView` поддерживает состояние "выбрано". На внутреннем уровне класс [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) обнаруживает, когда он становится включенным или отключенным, и вызывает статический метод [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) :
 
 ```csharp
 VisualStateManager.GoToState(this, "Focused");

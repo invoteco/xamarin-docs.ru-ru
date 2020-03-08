@@ -7,23 +7,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029697"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917601"
 ---
 # <a name="inspector-installation-and-requirements"></a>Установка и требования инспектора
 
 ## <a name="download-and-installation"></a>Загрузка и установка
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Скачайте и установите [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) и выберите рабочую нагрузку **Разработка мобильных приложений на .NET** .
 1. [Войдите](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) , чтобы включить корпоративную подписку.
 1. [Проверьте](~/tools/inspector/inspect.md) свое приложение!
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Скачайте и установите [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/).
 1. [Войдите](https://docs.microsoft.com/visualstudio/mac/activation) , чтобы включить корпоративную подписку.
@@ -33,7 +33,7 @@ ms.locfileid: "73029697"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
 - **Mac** -OS X 10,11 или более поздней версии
 - **Windows** 7 или более поздняя (с Internet Explorer 11 или более поздней версии и .NET 4.6.1 или более поздней версии)
@@ -49,7 +49,7 @@ ms.locfileid: "73029697"
 
 ### <a name="supported-app-platforms"></a>Поддерживаемые платформы приложений
 
-|Платформа приложения|Поддержка интегрированной среды разработки|Примечания|
+|Платформа приложений|Поддержка интегрированной среды разработки|Примечания|
 |--- |--- |--- |
 |Mac|Поддерживается только в Visual Studio для Mac|
 |iOS|Поддерживается в Visual Studio 2017 и Visual Studio для Mac| Для поведения компоновщика необходимо задать значение " **не связывать** " (в разделе Параметры проекта **сборки iOS** ) |
@@ -58,7 +58,7 @@ ms.locfileid: "73029697"
 
 <a name="reporting-bugs" />
 
-## <a name="reporting-bugs"></a>Сообщения об ошибках
+## <a name="reporting-bugs"></a>Сообщение об ошибках
 
 Ошибки следует сообщать непосредственно через Visual Studio:
 
@@ -80,7 +80,7 @@ Visual Studio
 - **Справка > о > скопировать сведения о программе Visual Studio**
 - Сообщите нам о версии операционной системы и о том, используете ли вы 32-разрядную или 64-разрядную версию Windows.
 
-### <a name="log-files"></a>Файлы журнала
+### <a name="log-files"></a>Файлы журналов
 
 Всегда Прикрепите файлы журнала клиента IDE и инспектора.
 

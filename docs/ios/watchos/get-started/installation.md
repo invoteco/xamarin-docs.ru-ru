@@ -1,6 +1,6 @@
 ---
 title: Установка и использование watchOS в Xamarin
-description: В этом документе описывается установка и использование watchOS с Xamarin. В нем обсуждается установка, структура проекта watchOS, использование конструктора iOS, интеграция Xcode и рекомендации по устранению неполадок.
+description: В этом документе описывается, как установить и использовать watchOS с помощью Xamarin. В нем описывается установка, watchOS проект структуры, как использовать конструктор iOS, интеграция Xcode и предоставляет советы по устранению неполадок.
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
@@ -8,26 +8,26 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
 ms.openlocfilehash: f986099011dbccb0eb43c62d253ee497d46ca08e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001686"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915497"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Установка и использование watchOS в Xamarin
 
-для watchOS 4 требуется macOS Sierra (10,12) с Xcode 9.
+watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
-watchOS 1 первоначально требовал OS X Yosemite (10,10) с Xcode 7.
+изначально watchOS 1 требуется OS X Yosemite (10.10) с Xcode 7.
 
 > [!WARNING]
-> [обновления watchOS 1 не будут приниматься после 1 апреля 2018](https://developer.apple.com/news/?id=11162017a). В будущих обновлениях должен использоваться пакет SDK для watchOS 2 или более поздней версии. рекомендуется сборка с помощью пакета SDK для watchOS 4.
+> [обновления watchOS 1 не будут приниматься после 1 апреля 2018](https://developer.apple.com/news/?id=11162017a). Будущие обновления необходимо использовать watchOS 2 пакета SDK или более поздней версии; построение с watchOS 4 SDK рекомендуется использовать.
 
 ## <a name="project-structure"></a>Структура проекта
 
-Приложение-наблюдатель состоит из трех проектов:
+Приложение просмотра состоит из трех проектов:
 
-- **Проект приложения Xamarin. iOS iPhone** — это стандартный проект iPhone, который может быть любым из шаблонов Xamarin. iOS. Приложение Watch и его расширение будут объединены в этот главный проект.
+- **Проект приложения Xamarin. iOS iPhone** — это стандартный проект iPhone, который может быть любым из шаблонов Xamarin. iOS. Приложение просмотра и его расширение будет объединяться внутри этого основного проекта.
 
 - **Просмотр проекта расширения** — содержит код (например, классы контроллеров) для приложения Watch.
 
@@ -35,11 +35,11 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
 Пример решения " [Контрольный образец каталога](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) " в Xamarin. Studio выглядит следующим образом:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ![](installation-images/catalog-solution.png "The solution in Visual Studio")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](installation-images/catalog-solution-vs.png "The solution in Visual Studio")
 
@@ -50,7 +50,7 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
 ## <a name="creating-a-new-project"></a>Создание нового проекта
 
-Невозможно создать новое "Контрольное решение"... Вместо этого можно добавить приложение Watch в существующее приложение iOS. Чтобы создать приложение наблюдения, выполните следующие действия.
+Не удается создать новое «Контрольные значения решение»... довольно приложение просмотра можно добавить в существующее приложение iOS. Выполните следующие действия, чтобы создать приложение просмотра.
 
 1. Если у вас нет проекта, сначала выберите **файл > создать решение** и создайте приложение iOS (например, **одно приложение для просмотра**):
 
@@ -60,29 +60,29 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
     [![](installation-images/cycle8-6-sml.png "Select watchOS > App > WatchKit App")](installation-images/cycle8-6.png#lightbox)
 
-3. На следующем экране вы можете выбрать проект приложения iOS, который должен содержать приложение Watch:
+3. Следующий экран позволяет выбрать, какой проект приложения iOS должны включать приложении для Apple watch:
 
     [![](installation-images/cycle8-7-sml.png "Choose which iOS app project should include the watch app")](installation-images/cycle8-7.png#lightbox)
 
-4. Наконец, выберите расположение для сохранения проекта (и при необходимости включения системы управления версиями):
+4. Наконец, выберите расположение для сохранения проекта (и при необходимости при включении системы управления версиями):
 
     [![](installation-images/cycle8-8-sml.png "Choose the location to save the project")](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio для Mac автоматически настраивает [ссылки на проект и параметры **info. plist** ](~/ios/watchos/get-started/project-references.md) .
 
-## <a name="creating-the-watch-user-interface"></a>Создание пользовательского интерфейса Watch
+## <a name="creating-the-watch-user-interface"></a>Создание пользовательского интерфейса контрольных значений
 
 <a name="designer" />
 
-### <a name="using-the-xamarin-ios-designer"></a>Использование Xamarin iOS Designer
+### <a name="using-the-xamarin-ios-designer"></a>Использовании конструктора iOS Xamarin
 
 Дважды щелкните интерфейс Watch приложения **. раскадровка** для редактирования с помощью конструктора iOS. Вы можете перетащить контроллеры интерфейса и элементы управления пользовательского интерфейса на раскадровку из **панели элементов** и настроить их с помощью панели **свойств** :
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![](installation-images/iosdesigner-sml.png "The storyboard in the Designer")](installation-images/iosdesigner.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![](installation-images/iosdesigner-sml-vs.png "The storyboard in the Designer")](installation-images/iosdesigner-vs.png#lightbox)
 
@@ -90,11 +90,11 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
 Каждый новый контроллер интерфейса следует назначить **классу** , выбрав его, а затем введя имя на панели **свойств** (это автоматически создаст необходимые C# файлы фонового кода):
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ![](installation-images/iosdesigner-classname.png "Give each new interface controller a Class")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](installation-images/iosdesigner-classname-vs.png "Give each new interface controller a Class")
 
@@ -102,15 +102,15 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
 Создайте переходов, нажав **CTRL + перетаскивание** из кнопки, таблицы или интерфейса на другой контроллер интерфейса.
 
-### <a name="using-xcode-on-the-mac"></a>Использование Xcode на компьютере Mac
+### <a name="using-xcode-on-the-mac"></a>С помощью Xcode на компьютере Mac
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Вы можете продолжить использовать Xcode для создания пользовательского интерфейса, щелкнув файл Interface. Storyboard правой кнопкой мыши и выбрав пункт **Открыть с помощью > Xcode Interface Builder**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Пользователи Visual Studio также могут использовать Xcode для создания пользовательского интерфейса путем переключения на узел сборки Mac напрямую.
+Пользователи Visual Studio также можно использовать конструктор, чтобы создавать собственный пользовательский интерфейс, выполнив переключение напрямую использовать узел сборки Mac.
 Откройте решение в Visual Studio для Mac, щелкните правой кнопкой мыши файл Interface. Storyboard и выберите **Открыть с помощью > Xcode Interface Builder**:
 
 -----
@@ -131,15 +131,15 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
 ## <a name="building"></a>Сборка
 
-Проект, включающий в себя приложение для просмотра контрольных значений, как и другие проекты iOS. Процесс сборки приведет к созданию приложения iPhone (. app), которое содержит расширение Watch (. аппекс), которое, в свою очередь, будет содержать приложение с контрольными числами без кода (. app).
+Как и другие проекты iOS построения проекта, содержащего приложение просмотра. Процесс построения приведет к приложение iPhone (App), который содержит расширение просмотра (.appex), который в свою очередь содержит контрольные значения меньше кода приложение (App).
 
-## <a name="launching"></a>Пустив
+## <a name="launching"></a>Запуск
 
-Вы можете запустить Просмотр приложений в симуляторе с помощью Visual Studio для Mac или Visual Studio (начинается на узле сборки Mac).
+Вы можете запустить приложения watch в симуляторе, с помощью Visual Studio для Mac или Visual Studio (запускается на узел сборки Mac).
 
-Существует два режима запуска приложения WatchKit:
+Существует два режима для запуска приложения WatchKit:
 
-- нормальный режим приложения (по умолчанию) и
+- Обычное приложение режиме (по умолчанию), и
 - [Уведомления](~/ios/watchos/platform/notifications.md) (для которых требуются полезные данные тестовых уведомлений в формате JSON).
 
 ### <a name="xcode-8-support"></a>Поддержка Xcode 8
@@ -149,9 +149,9 @@ watchOS 1 первоначально требовал OS X Yosemite (10,10) с X
 
 [![](installation-images/xs-xcode8-watchos3-sml.png "Selecting the Simulator type")](installation-images/xs-xcode8-watchos3.png#lightbox)
 
-При запуске отладки необходимо запустить *два* симулятора — симулятор iOS *и* симулятор Apple Watch. Используйте **команду + Shift + H** для перехода к меню Watch и циферблату часов; и используйте меню **оборудование** для установки **Force Touch давления**. Прокрутка трекпада или мыши имитируется с помощью Digital Crown.
+При запуске отладки необходимо запустить *два* симулятора — симулятор iOS *и* симулятор Apple Watch. Используйте **команду + Shift + H** для перехода к меню Watch и циферблату часов; и используйте меню **оборудование** для установки **Force Touch давления**. Прокрутки на мыши или сенсорной панели будет имитировать с помощью цифровых корона.
 
-#### <a name="troubleshooting"></a>Устранение неполадок
+#### <a name="troubleshooting"></a>Диагностика
 
 Следующая ошибка появится в **выходных данных приложения** при попытке запуска в симуляторе, для которого нет парных часов:
 
@@ -166,7 +166,7 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 ### <a name="xcode-6-and-watchos-1"></a>Xcode 6 и watchOS 1
 
-Перед запуском или отладкой приложения необходимо сделать *проект расширения контрольных значений* проектом **запуска** . Вы не можете «запустить» само приложение, а если выбрать приложение iOS, оно будет запускаться в симуляторе iOS обычным образом.
+Перед запуском или отладкой приложения необходимо сделать *проект расширения контрольных значений* проектом **запуска** . Не удается «запустить» самого приложения watch и при выборе приложения iOS запустится в обычном режиме, в симуляторе iOS.
 
 По умолчанию приложение наблюдения запускается в нормальном режиме **приложения** (не в режиме "без кратких сообщений" или "уведомления") от команд **запуска** или **отладки** Visual Studio для Mac.
 
@@ -178,7 +178,7 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 <a name="custommodes" />
 
-## <a name="launching-notification-mode"></a>Запуск режима уведомления
+## <a name="launching-notification-mode"></a>Запуск режим уведомлений
 
 Сведения об обработке уведомлений в коде см. на [странице уведомлений](~/ios/watchos/platform/notifications.md) .
 
@@ -194,15 +194,15 @@ Visual Studio для Mac можете запустить приложение Wa
 
 ## <a name="debugging"></a>Отладка
 
-Отладка поддерживается как в Visual Studio для Mac, так и в Visual Studio.
-При отладке в режиме уведомлений не забудьте указать JSON-файл уведомления. На этом снимке экрана показана точка останова отладки в приложении Watch:
+Отладка поддерживается в Visual Studio для Mac и Visual Studio.
+Не забудьте указать файл JSON уведомления при отладке в режиме уведомлений. На этом снимке экрана показана точка останова отладки попадании в приложение просмотра:
 
 ![](installation-images/debug-sml.png "This screenshot shows a debug breakpoint being hit in a watch app")
 
 После выполнения инструкций по запуску вы получите контрольное приложение, работающее в **симуляторе iOS (контрольные значения)** .
 Для режима уведомления можно выбрать **отладка > открыть системный журнал** (**cmd +/** ) и использовать в коде `Console.WriteLine`.
 
-### <a name="debugging-lifecycle-event-handlers"></a>Отладка обработчиков событий жизненного цикла
+### <a name="debugging-lifecycle-event-handlers"></a>Отладка обработчики событий жизненного цикла
 
 <!--
 To test the functionality in your  and 

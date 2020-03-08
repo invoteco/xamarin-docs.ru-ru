@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
 ms.openlocfilehash: 6b02a0f8476cf47ca6df279653095fe0845b36c9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73004575"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914715"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
 
@@ -38,13 +38,13 @@ Xamarin Designer для iOS является конструктором визу
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Контроллер представления в конструкторе iOS](introduction-images/1-storyboardwithviewcontroller-vsmac.png "Контроллер представления в конструкторе iOS")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
 [![Код для контроллера представления](introduction-images/2-viewcontrollercode-vsmac.png "Код для контроллера представления")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Контроллер представления в конструкторе iOS](introduction-images/1-storyboardwithviewcontroller-vs.png "Контроллер представления в конструкторе iOS")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
@@ -54,11 +54,11 @@ Xamarin Designer для iOS является конструктором визу
 
 В состоянии по умолчанию контроллер представления не предоставляет никаких функциональных возможностей. Он должен быть заполнен элементами управления. Эти элементы управления помещаются в представление контроллера представления — прямоугольную область, содержащую все содержимое экрана. Большинство контроллеров представления содержат общие элементы управления, такие как кнопки, метки и текстовые поля, как показано на следующем снимке экрана, на котором показан контроллер представления, содержащий кнопку: 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Контроллер представления, содержащий кнопку](introduction-images/3-viewcontrollerwithbutton-vsmac.png "Контроллер представления, содержащий кнопку")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Контроллер представления, содержащий кнопку](introduction-images/3-viewcontrollerwithbutton-vs.png "Контроллер представления, содержащий кнопку")](introduction-images/3-viewcontrollerwithbutton-vs-large.png#lightbox)
 
@@ -66,29 +66,29 @@ Xamarin Designer для iOS является конструктором визу
 
 Некоторые элементы управления, например метки, содержащие статический текст, можно добавить в контроллер представления и только слева. Однако чаще всего элементы управления должны быть настроены программно. Например, кнопка, добавленная выше, должна делать что-то при касании, поэтому обработчик событий должен быть добавлен в код.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Чтобы получить доступ к кнопке в коде и управлять ей, она должна иметь уникальный идентификатор. Укажите уникальный идентификатор, нажав кнопку, открыв **панель свойств**и задав в поле **имя** значение, например "SubmitButton":
 
 [![Задание имени кнопки в Панель свойств](introduction-images/4-settingbuttonname-vsmac.png "Задание имени кнопки в Панель свойств")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Чтобы получить доступ к кнопке в коде и управлять ей, она должна иметь уникальный идентификатор. Укажите уникальный идентификатор, нажав кнопку, открыв окно " **Свойства**" и задав в поле " **имя** " значение, например "SubmitButton":
 
-[![Задание имени кнопки в окне "Свойства"](introduction-images/4-settingbuttonname-vs.png "Задание имени кнопки в окне "Свойства"")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
+[![Задание имени кнопки в окне "Свойства"](introduction-images/4-settingbuttonname-vs.png "Задание имени кнопки в окне Свойства")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
 -----
 
 Теперь, когда у кнопки есть имя, доступ к ней можно получить в коде. Но как это работает?
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 В **панель решения**, перейдя к **ViewController.CS** и щелкнув индикатор раскрытия, можно увидеть, что определение класса `ViewController` контроллера представления охватывает два файла, каждый из которых содержит определение [разделяемого класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
 [![Два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "Два файла, составляющие класс ViewController: ViewController.cs и ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 В **Обозреватель решений**, перейдя к **ViewController.CS** и щелкнув индикатор раскрытия, можно увидеть, что определение класса `ViewController` контроллера представления охватывает два файла, каждый из которых содержит определение [разделяемого класса](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
@@ -125,11 +125,11 @@ namespace Designer
 
 На следующем снимке экрана показано, что IntelliSense теперь распознает ссылку на `SubmitButton` в **ViewController.CS**:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![IntelliSense, распознающий ссылку на SubmitButton](introduction-images/6-submitbuttonintellisense-vsmac.png "IntelliSense, распознающий ссылку на SubmitButton")](introduction-images/6-submitbuttonintellisense-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![IntelliSense, распознающий ссылку на SubmitButton](introduction-images/6-submitbuttonintellisense-vs.png "IntelliSense, распознающий ссылку на SubmitButton")](introduction-images/6-submitbuttonintellisense-vs-large.png#lightbox)
 
@@ -145,13 +145,13 @@ namespace Designer
 
 ### <a name="launching-the-ios-designer"></a>Запуск конструктора iOS
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Проекты Xamarin. iOS, созданные с помощью Visual Studio для Mac, включают раскадровку. Чтобы просмотреть содержимое раскадровки, дважды щелкните файл. Storyboard в **панель решения**:
 
 [![Открытие раскадровки в конструкторе iOS](introduction-images/7-storyboardopen-vsmac.png "Открытие раскадровки в конструкторе iOS")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Большинство проектов Xamarin. iOS, созданных с помощью Visual Studio, включают раскадровку. Чтобы просмотреть содержимое раскадровки, дважды щелкните файл. Storyboard в **Обозреватель решений**:
 
@@ -165,7 +165,7 @@ namespace Designer
 
 В конструкторе iOS есть шесть основных разделов:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Разделы конструктора iOS](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Разделы конструктора iOS")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
@@ -176,7 +176,7 @@ namespace Designer
 5. **Структура документа** — показывает дерево элементов управления, образующих макет для редактируемого интерфейса. Щелкнув элемент в дереве, вы выделяете его в конструкторе iOS и отображает его свойства в **панель свойств**. Это удобно для выбора определенного элемента управления в глубоко вложенном пользовательском интерфейсе.
 6. **Нижняя панель инструментов** — содержит параметры для изменения способа отображения файла. Storyboard или. XIB в конструкторе iOS, включая устройство, ориентацию и масштаб.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Разделы конструктора iOS](introduction-images/8-sixpartsofiosdesigner-vs.png "Разделы конструктора iOS")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
@@ -195,11 +195,11 @@ namespace Designer
 
 Чтобы добавить элемент управления в интерфейс, перетащите его с **панели элементов** и поместите в область конструктора. При добавлении или размещении элемента управления вертикальные и горизонтальные направляющие выделяют часто используемые положения макета, такие как Вертикальное центрирование, горизонтальное центрирование и поля:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ![В области конструктора направляющие выделяют часто используемые положения макета](introduction-images/9-layoutguides-vsmac.png "В области конструктора направляющие выделяют часто используемые положения макета")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![В области конструктора направляющие выделяют часто используемые положения макета](introduction-images/9-layoutguides-vs.png "В области конструктора направляющие выделяют часто используемые положения макета")
 
@@ -207,7 +207,7 @@ namespace Designer
 
 Синяя пунктирная линия в приведенном выше примере предоставляет горизонтальное руководство по выравниванию по центру, помогающее в размещении кнопок.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 #### <a name="context-menu-commands"></a>Команды контекстного меню
 
@@ -215,19 +215,19 @@ namespace Designer
 
 [![Контекстное меню в области конструктора](introduction-images/10-contextmenudesignsurface-vsmac.png "Контекстное меню в области конструктора")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 -----
 
 ### <a name="constraints-toolbar"></a>Панель инструментов "ограничения"
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
-[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов "ограничения"")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
+[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vsmac.png "Панель инструментов ограничения")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vs.png "Панель инструментов "ограничения"")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
+[![Панель инструментов очередностью](introduction-images/11-constraintstoolbar-vs.png "Панель инструментов ограничения")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -239,11 +239,11 @@ namespace Designer
 
 - Режим редактирования кадров:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Кнопка режима редактирования кадров](introduction-images/12a-frameeditingmode-vsmac.png "Кнопка режима редактирования кадров")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Кнопка режима редактирования кадров](introduction-images/12a-frameeditingmode-vs.png "Кнопка режима редактирования кадров")
 
@@ -251,11 +251,11 @@ namespace Designer
 
 - Режим редактирования ограничений:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Кнопка режима изменения ограничений](introduction-images/12b-constrainteditingmode-vsmac.png "Кнопка режима изменения ограничений")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Кнопка режима изменения ограничений](introduction-images/12b-constrainteditingmode-vs.png "Кнопка режима изменения ограничений")
 
@@ -272,11 +272,11 @@ namespace Designer
 
 Нижняя панель инструментов предоставляет способ выбора устройства, ориентации и масштаба, используемого для просмотра раскадровки или файла XIB в конструкторе iOS:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.](introduction-images/13-bottomtoolbar-vsmac.png "Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.](introduction-images/13-bottomtoolbar-vs.png "Нижняя панель инструментов, используемая для выбора устройства и ориентации для области конструктора.")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
@@ -286,11 +286,11 @@ namespace Designer
 
 При развертывании Нижняя панель инструментов отображает все устройства, ориентации и (или) адаптации, применимые к текущему документу. Щелкнув их, вы измените представление, отображаемое в области конструктора. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Нижняя панель инструментов, развернутая для отображения устройств и ориентаций](introduction-images/14-bottomtoolbarexpanded-vsmac.png "Нижняя панель инструментов, развернутая для отображения устройств и ориентаций")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Нижняя панель инструментов, развернутая для отображения устройств и ориентаций](introduction-images/14-bottomtoolbarexpanded-vs.png "Нижняя панель инструментов, развернутая для отображения устройств и ориентаций")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
@@ -298,16 +298,16 @@ namespace Designer
 
 Обратите внимание, что при выборе устройства и ориентации изменяется только то, как конструктор iOS предварительно просматривает проект. Независимо от текущего выбора, новые добавленные ограничения применяются ко всем устройствам и ориентациям, если только кнопка **изменить признаки** не использовалась для указания другого значения.
 
-Если [включены](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [классы размера](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , кнопка **изменить признаки** появится в развернутой нижней панели инструментов.  При нажатии кнопки " **изменить признаки** " отображаются параметры для создания варианта интерфейса на основе класса Size, представленного выбранным устройством и ориентацией. Рассмотрим следующие примеры:
+Если [включены](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [классы размера](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , кнопка **изменить признаки** появится в развернутой нижней панели инструментов.  При нажатии кнопки " **изменить признаки** " отображаются параметры для создания варианта интерфейса на основе класса Size, представленного выбранным устройством и ориентацией. Рассмотрим следующие примеры.
 
-- Если выбрано значение **iPhone SE**  / **Книжная**, контекстном меню Action предоставит параметры для создания варианта интерфейса для минимальной ширины, класса обычного размера высоты. 
-- Если установлен флажок **iPad Pro 9,7 "**  / **Альбомная**  /  во**весь экран** , контекстном меню Action предоставит параметры для создания варианта интерфейса для обычной ширины, класса обычного размера высоты.
+- Если выбрано значение **iPhone SE** / **Книжная**, контекстном меню Action предоставит параметры для создания варианта интерфейса для минимальной ширины, класса обычного размера высоты. 
+- Если установлен флажок **iPad Pro 9,7 "**  / **Альбомная** / во **весь экран** , контекстном меню Action предоставит параметры для создания варианта интерфейса для обычной ширины, класса обычного размера высоты.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Нижняя панель инструментов, используемая для изменения интерфейса по классу size](introduction-images/15-edittraitsbutton-vsmac.png "Нижняя панель инструментов, используемая для изменения интерфейса по классу size")](introduction-images/15-edittraitsbutton-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Нижняя панель инструментов, используемая для изменения интерфейса по классу size](introduction-images/15-edittraitsbutton-vs.png "Нижняя панель инструментов, используемая для изменения интерфейса по классу size")](introduction-images/15-edittraitsbutton-vs-large.png#lightbox)
 
@@ -317,11 +317,11 @@ namespace Designer
 
 Область конструктора поддерживает масштаб несколькими элементами управления:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ![Элементы управления масштабом на нижней панели инструментов](introduction-images/16-zoomcontrols-vsmac.png "Элементы управления масштабом на нижней панели инструментов")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Элементы управления масштабом на нижней панели инструментов](introduction-images/16-zoomcontrols-vs.png "Элементы управления масштабом на нижней панели инструментов")
 
@@ -330,13 +330,13 @@ namespace Designer
 К элементам управления относятся следующие.
 
 1. Масштаб по размеру
-2. Мельче
-3. Увеличить
+2. Уменьшить масштаб.
+3. Увеличить масштаб.
 4. Фактический размер (размер 1:1 пикселей)
 
 Эти элементы управления настраивают масштаб в области конструктора. Они не влияют на пользовательский интерфейс приложения во время выполнения.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ### <a name="properties-pad"></a>Панель свойств
 
@@ -347,13 +347,13 @@ namespace Designer
 
 **Панель свойств** содержит три раздела:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-### <a name="properties-window"></a>Окно \"Свойства\"
+### <a name="properties-window"></a>Окно «Свойства»
 
 Используйте **окно Свойства** для изменения идентификатора, визуальных стилей, специальных возможностей и поведения элемента управления. На следующем снимке экрана показаны параметры **окна свойств** для кнопки:
 
-[![Окно "Свойства" для кнопки](introduction-images/17-buttonpropertieswindow-vs.png "Окно "Свойства" для кнопки")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
+[![Окно "Свойства" для кнопки](introduction-images/17-buttonpropertieswindow-vs.png "Окно Свойства для кнопки")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
 
 #### <a name="properties-window-sections"></a>Разделы окна "Свойства"
 
@@ -365,7 +365,7 @@ namespace Designer
 2. **Макет** — свойства, которые отслеживают положение и размер элемента управления, включая ограничения и фреймы, перечислены здесь.
 3. **События** — события и обработчики событий указываются здесь. Полезно для обработки таких событий, как касание, касание, перетаскивание и т. д. События также могут обрабатываться непосредственно в коде.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 #### <a name="editing-properties-in-the-properties-pad"></a>Изменение свойств в Панель свойств
 
@@ -375,7 +375,7 @@ namespace Designer
 
 [![Просмотр свойств контроллера](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "Просмотр свойств контроллера")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 #### <a name="editing-properties-in-the-properties-window"></a>Изменение свойств в окне "Свойства"
 
@@ -392,11 +392,11 @@ namespace Designer
 
 #### <a name="default-values"></a>Значения по умолчанию
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Многие свойства в **панель свойств** не отображают значение или значение по умолчанию. Однако код приложения по-прежнему может изменять эти значения. В **панель свойств** не отображаются значения, заданные в коде.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Многие свойства в **окне Свойства** не отображают значение или значение по умолчанию. Однако код приложения по-прежнему может изменять эти значения. В **окне Свойства** не отображаются значения, заданные в коде.
 
@@ -404,13 +404,13 @@ namespace Designer
 
 #### <a name="event-handlers"></a>Обработчики событий
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Чтобы указать пользовательские обработчики событий для различных событий, используйте вкладку **события** **панель свойств**. Например, на приведенном ниже снимке экрана метод `HandleClick` обрабатывает **всплывающие** кнопки в событии.
 
 [![Панель свойств с набором обработчика событий для кнопки](introduction-images/19-buttonpropertiespadevents-vsmac.png "Панель свойств с набором обработчика событий для кнопки")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Чтобы указать пользовательские обработчики событий для различных событий, используйте вкладку **события** **окна свойства**. Например, на приведенном ниже снимке экрана метод `HandleClick` обрабатывает **всплывающие** кнопки в событии.
 
@@ -420,13 +420,13 @@ namespace Designer
 
 После указания обработчика событий необходимо добавить метод с таким же именем в соответствующий класс контроллера представления. В противном случае при нажатии кнопки возникнет исключение `unrecognized selector`:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Нераспознанное исключение селектора](introduction-images/20-unrecognizedselector-vsmac.png "Нераспознанное исключение селектора")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 Обратите внимание, что после указания обработчика событий в **панель свойств**конструктор iOS немедленно откроет соответствующий файл кода и предложит вставить объявление метода. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Нераспознанное исключение селектора](introduction-images/20-unrecognizedselector-vs.png "Нераспознанное исключение селектора")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
@@ -438,11 +438,11 @@ namespace Designer
 
 Конструктор iOS также может отображать иерархию интерфейса элементов управления в виде структуры. Чтобы получить доступ к структуре, перейдите на вкладку **Структура документа** , как показано ниже.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 [![Структура документа](introduction-images/21-buttonoutlineview-vsmac.png "Структура документа")](introduction-images/21-buttonoutlineview-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Структура документа](introduction-images/21-buttonoutlineview-vs.png "Структура документа")](introduction-images/21-buttonoutlineview-vs-large.png#lightbox)
 
@@ -450,7 +450,7 @@ namespace Designer
 
 Выбранный элемент управления в режиме структуры остается синхронизированным с выбранным элементом управления в области конструктора.  Эта функция полезна для выбора элемента из иерархии интерфейсов с глубиной вложенности.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ## <a name="revert-to-xcode"></a>Вернуться к Xcode
 
@@ -460,11 +460,11 @@ namespace Designer
 
 После внесения изменений в Xcode Interface Builder сохраните файл и вернитесь в Visual Studio для Mac. Изменения будут синхронизированы с проектом Xamarin. iOS.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="revert-to-xcode"></a>Вернуться к Xcode
 
-Можно использовать конструктор iOS и Xcode Interface Builder взаимозаменяемыми, однако Xcode Interface Builder доступны только на компьютерах Mac. Чтобы открыть файл Storyboard или XIB в Xcode Interface Builder на компьютере Mac, откройте решение, содержащее проект Xamarin. iOS в [Visual Studio для Mac](/visualstudio/mac/), щелкните правой кнопкой мыши файл и выберите **открыть с помощью > Xcode Interface Builder**, как показано на снимок экрана ниже:
+Можно использовать конструктор iOS и Xcode Interface Builder взаимозаменяемыми, однако Xcode Interface Builder доступны только на компьютерах Mac. Чтобы открыть файл Storyboard или XIB в Xcode Interface Builder на компьютере Mac, откройте решение, содержащее проект Xamarin. iOS в [Visual Studio для Mac](/visualstudio/mac/), щелкните правой кнопкой мыши файл и выберите **открыть с помощью > Xcode Interface Builder**, как показано на снимке экрана ниже:
 
 [![Открытие раскадровки в Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Открытие раскадровки в Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 

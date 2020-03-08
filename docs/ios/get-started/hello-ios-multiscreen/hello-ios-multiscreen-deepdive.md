@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023410"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918085"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Привет, iOS (несколько экранов): теперь подробнее
 
@@ -52,7 +52,7 @@ ms.locfileid: "73023410"
 > [!NOTE]
 > Иногда модельной частью шаблона MVC называют всю внутреннюю часть приложения, а не только данные, которые отображаются в пользовательском интерфейсе. В этом руководстве мы придерживались современной интерпретации понятия модель, но различия не очень значительные.
 
-### <a name="view"></a>Просмотр
+### <a name="view"></a>Представление
 
 Представление — это компонент, отвечающий за отображение пользовательского интерфейса. Практически во всех платформах, использующих шаблон MVC, пользовательский интерфейс представляет собой иерархию представлений. Можно считать, что представление в MVC является иерархией с одним представлением (называемым корневым представлением) на верхнем уровне иерархии и любым количеством дочерних представлений в нем (называемыми подчиненными представлениями). В iOS компонент экрана "иерархия представления содержимого" соответствует компоненту "представление" в MVC.
 
@@ -203,6 +203,6 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Привет, iOS (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Рекомендации по работе с человеческим интерфейсом iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Портал подготовки iOS](https://developer.apple.com/ios/manage/overview/index.action)

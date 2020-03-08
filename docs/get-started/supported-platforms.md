@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2020
 ms.openlocfilehash: 5751983bf4a818e8ee91af98b0c05658efaca8b2
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76550231"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915659"
 ---
 # <a name="xamarinforms-supported-platforms"></a>Поддерживаемые платформы Xamarin.Forms
 
@@ -46,13 +46,13 @@ ms.locfileid: "76550231"
 
 Кроме того, в целевой версии или версии компиляции для проектов Android **должен** быть выбран параметр *Использовать самую новую установленную платформу*. Однако минимальной версией может быть API 19, что позволяет поддерживать устройства, использующие Android 4.4 и более поздние версии. Эти значения задаются в разделе **Параметры проекта**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 **Параметры проекта > Приложение > Свойства приложения**
 
 ![Параметры сборки Android в Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 **Сборка > Общие**
 

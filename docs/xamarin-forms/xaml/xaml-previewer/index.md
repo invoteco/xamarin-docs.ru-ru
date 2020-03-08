@@ -9,11 +9,11 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68757274"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918005"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Предварительный просмотр XAML для Xamarin. Forms
 
@@ -27,7 +27,7 @@ _Просмотр макетов Xamarin. Forms, отображаемых при
 
 ::: zone pivot="windows"
 
-### <a name="visual-studio-2019"></a>Visual Studio 2019
+### <a name="visual-studio-2019"></a>Visual Studio 2019
 
 Вы можете открыть предварительный просмотр XAML, щелкнув стрелки на панели разделенное представление. Если необходимо изменить поведение представления с разделением по умолчанию, воспользуйтесь **инструментами > параметры > диалоговом окне предварительного просмотра Xamarin > Forms** . В этом диалоговом окне можно выбрать представление документа по умолчанию и ориентацию разбиения.
 
@@ -52,7 +52,7 @@ _Просмотр макетов Xamarin. Forms, отображаемых при
 
 Кнопка **Предварительный просмотр** отображается в редакторе при открытии страницы XAML. Показать или скрыть предварительный просмотр, нажав кнопки **предварительного просмотра** или **разбиения** в левом нижнем углу окна документа XAML:
 
-[Предварительный просмотр ![Xamarin. Forms включен с кнопкой "Просмотр" или "разделить"](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![предварительного просмотра Xamarin. Forms с кнопкой "предварительный просмотр" или "разделить"](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > В более ранних версиях Visual Studio для Mac кнопка **Предварительный просмотр** находится в правом верхнем углу окна.

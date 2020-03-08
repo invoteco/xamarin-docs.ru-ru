@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
 ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489210"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910825"
 ---
 # <a name="introduction-to-ios-8"></a>Введение в iOS 8
 
@@ -83,7 +83,7 @@ HealthKit — это платформа, появившаяся в iOS 8, кот
 
 Дополнительные сведения об использовании расширений приложений в Xamarin см. в руководстве [Введение в расширения приложений](~/ios/platform/extensions.md) .
 
-### <a name="touch-id"></a>Технология Touch ID
+### <a name="touch-id"></a>Идентификатор сенсорного экрана
 
 Touch ID появился в iOS 7 как средство проверки подлинности пользователя, как и секретный код. Однако было ограничено Разблокирование устройства с помощью магазина приложений, использование iTunes и проверка подлинности только для цепочки ключей iCloud. 
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020416"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914233"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Хранение файлов и доступ с помощью Xamarin. Android
 
@@ -64,7 +64,7 @@ ms.locfileid: "73020416"
 
 Чтобы максимально увеличить общий доступ к коду, приложения Xamarin. Android (или приложения Xamarin. Forms, предназначенные для Xamarin. Android) должны использовать метод [`System.Environment.GetFolderPath()`](xref:System.Environment.GetFolderPath*) . В Xamarin. Android этот метод возвращает строку для каталога, который находится в том же расположении, что и `Android.Content.Context.FilesDir`. Этот метод принимает перечисление, `System.Environment.SpecialFolder`, которое используется для определения набора перечислимых констант, представляющих пути специальных папок, используемых операционной системой. Не все значения `System.Environment.SpecialFolder` будут сопоставляться с допустимым каталогом в Xamarin. Android. В следующей таблице описано, какой путь может быть ожидаемым для заданного значения `System.Environment.SpecialFolder`:
 
-| System. Environment. SpecialFolder | Path  |
+| System.Environment.SpecialFolder | путь  |
 |----------------------|---|
 | `ApplicationData` | **/.Конфиг _хранилища внутренней\__** |
 | `Desktop` | **/Desktop _хранилища внутренней\__** |

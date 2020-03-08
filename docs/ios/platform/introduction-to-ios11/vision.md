@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
 ms.openlocfilehash: b58e7b1fffed3253d9765401d52f16b751db134d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032071"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910838"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Инфраструктура концепции в Xamarin. iOS
 
@@ -104,7 +104,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 <a name="faces" />
 
-## <a name="face-detection"></a>обнаружение лиц
+## <a name="face-detection"></a>Обнаружение лиц
 
 [Пример висионфацес](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) работает аналогично образцу **висионректанглес** , используя другой класс запроса концепции.
 

@@ -7,27 +7,27 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029632"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914373"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Установка и требования к книгам
 
 <a name="install" />
 
-## <a name="download-and-install"></a>Скачать и установить
+## <a name="download-and-install"></a>Скачивание и установка
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Ознакомьтесь с [требованиями](#requirements) ниже.
 2. Скачайте и установите [Xamarin Workbooks для Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 3. Начните [играть](~/tools/workbooks/workbook.md) с книгами.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Ознакомьтесь с [требованиями](#requirements) ниже.
 2. Скачайте и установите [Xamarin Workbooks для Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
@@ -37,14 +37,14 @@ ms.locfileid: "73029632"
 
 ## <a name="requirements"></a>Требования
 
-#### <a name="supported-operating-systems"></a>Supported Operating Systems
+#### <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
 - **Mac** -OS X 10,11 или более поздней версии
 - **Windows** 7 или более поздняя (с Internet Explorer 11 или более поздней версии и .NET 4.6.1 или более поздней версии)
 
 #### <a name="supported-app-platforms"></a>Поддерживаемые платформы приложений
 
-|Платформа приложения|Поддержка ОС|Примечания|
+|Платформа приложений|Поддержка ОС|Примечания|
 |--- |--- |--- |
 |Mac|Поддерживается только на компьютерах Mac|
 |iOS|Поддерживается в Mac и Windows|Xamarin. iOS 11,0 и Xcode 9,0 или более поздней версии должны быть установлены на компьютере Mac. Для выполнения книг iOS в Windows требуется узел сборки Mac, на котором выполняются все указанные выше компоненты, а также [Удаленный симулятор iOS](~/tools/ios-simulator/index.md) , установленный в Windows.|
@@ -53,11 +53,11 @@ ms.locfileid: "73029632"
 |Консоль (.NET Framework)|Поддерживается в Mac и Windows|
 |Консоль (.NET Core)|Поддерживается в Mac и Windows|
 
-## <a name="reporting-bugs"></a>Сообщения об ошибках
+## <a name="reporting-bugs"></a>Сообщение об ошибках
 
 Сообщите о [проблемах на GitHub][bugs]и включите в него все приведенные ниже сведения.
 
-### <a name="log-files"></a>Файлы журнала
+### <a name="log-files"></a>Файлы журналов
 
 Всегда прикреплять книги файлы журналов клиента:
 
@@ -112,7 +112,7 @@ Visual Studio
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>Удалить
+## <a name="uninstall"></a>Удаление
 
 ### <a name="windows"></a>Windows
 

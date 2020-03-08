@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70760167"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915244"
 ---
 # <a name="validation-in-enterprise-apps"></a>Проверка в корпоративных приложениях
 
@@ -148,7 +148,7 @@ private void AddValidations()
 
 ### <a name="triggering-validation-manually"></a>Активация проверки вручную
 
-Проверку можно запустить вручную для свойства модели представления. Например, это происходит в мобильном приложении eShopOnContainers, когда пользователь нажмет кнопку **входа** на `LoginView` при использовании служб макетирования. Делегат команды вызывает метод `MockSignInAsync` в `LoginViewModel`, который вызывает проверку, выполняя метод `Validate`, который показан в следующем примере кода:
+Проверку можно запустить вручную для свойства модели представления. Например, это происходит в мобильном приложении eShopOnContainers, когда пользователь нажмет кнопку **входа** на `LoginView`при использовании служб макетирования. Делегат команды вызывает метод `MockSignInAsync` в `LoginViewModel`, который вызывает проверку, выполняя метод `Validate`, который показан в следующем примере кода:
 
 ```csharp
 private bool Validate()  
@@ -204,7 +204,7 @@ public bool Validate()
 </Entry>
 ```
 
-[@No__t_1](xref:Xamarin.Forms.Entry) элемент управления привязывается к свойству `UserName.Value` экземпляра `ValidatableObject<T>`, а в коллекции `Behaviors` элемента управления добавляется экземпляр `EventToCommandBehavior`. Это поведение выполняет `ValidateUserNameCommand` в ответ на событие [`TextChanged`], возникающее на `Entry`, которое вызывается при изменении текста в `Entry`. В свою очередь, `ValidateUserNameCommand` делегат выполняет метод `ValidateUserName`, который выполняет метод `Validate` на экземпляре `ValidatableObject<T>`. Таким образом, каждый раз, когда пользователь вводит символ в элемент управления `Entry` для имени пользователя, выполняется проверка введенных данных.
+[`Entry`](xref:Xamarin.Forms.Entry) элемент управления привязывается к свойству `UserName.Value` экземпляра `ValidatableObject<T>`, а в коллекции `Behaviors` элемента управления добавляется экземпляр `EventToCommandBehavior`. Это поведение выполняет `ValidateUserNameCommand` в ответ на событие [`TextChanged`], возникающее на `Entry`, которое вызывается при изменении текста в `Entry`. В свою очередь, `ValidateUserNameCommand` делегат выполняет метод `ValidateUserName`, который выполняет метод `Validate` на экземпляре `ValidatableObject<T>`. Таким образом, каждый раз, когда пользователь вводит символ в элемент управления `Entry` для имени пользователя, выполняется проверка введенных данных.
 
 Дополнительные сведения о поведении см. в разделе [Реализация поведения](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
 
@@ -220,7 +220,7 @@ public bool Validate()
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>Выделение элемента управления, содержащего недопустимые данные
 
-@No__t_0 присоединенное поведение используется для выделения [`Entry`](xref:Xamarin.Forms.Entry) элементов управления, в которых произошли ошибки проверки. В следующем примере кода показано, как присоединенное к `LineColorBehavior`е поведение прикрепляется к элементу управления `Entry`.
+`LineColorBehavior` присоединенное поведение используется для выделения [`Entry`](xref:Xamarin.Forms.Entry) элементов управления, в которых произошли ошибки проверки. В следующем примере кода показано, как присоединенное к `LineColorBehavior`е поведение прикрепляется к элементу управления `Entry`.
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">
@@ -283,9 +283,9 @@ public static class LineColorBehavior
 }
 ```
 
-Параметры этого метода предоставляют экземпляр элемента управления, к которому присоединено поведение, а также старое и новое значения присоединенного свойства `ApplyLineColor`. @No__t_0 класс добавляется в коллекцию [`Effects`](xref:Xamarin.Forms.Element.Effects) элемента управления, если `ApplyLineColor` присоединенное свойство `true`, в противном случае оно удаляется из коллекции `Effects` элемента управления. Дополнительные сведения о поведении см. в разделе [Реализация поведения](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+Параметры этого метода предоставляют экземпляр элемента управления, к которому присоединено поведение, а также старое и новое значения присоединенного свойства `ApplyLineColor`. `EntryLineColorEffect` класс добавляется в коллекцию [`Effects`](xref:Xamarin.Forms.Element.Effects) элемента управления, если `ApplyLineColor` присоединенное свойство `true`, в противном случае оно удаляется из коллекции `Effects` элемента управления. Дополнительные сведения о поведении см. в разделе [Реализация поведения](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
 
-@No__t_0 подклассы класса [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) и показан в следующем примере кода:
+`EntryLineColorEffect` подклассы класса [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) и показан в следующем примере кода:
 
 ```csharp
 public class EntryLineColorEffect : RoutingEffect  
@@ -296,7 +296,7 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-Класс [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) представляет независимый от платформы результат, который заключает в оболочку внутренний результат, зависящий от платформы. Это упрощает процесс удаления эффекта, так как отсутствует доступ времени компиляции к сведениям о типе для определяемого платформой эффекта. @No__t_0 вызывает конструктор базового класса, передавая параметр, состоящий из объединения имени группы разрешения, и уникального идентификатора, указанного в каждом классе влияния для конкретной платформы.
+Класс [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) представляет независимый от платформы результат, который заключает в оболочку внутренний результат, зависящий от платформы. Это упрощает процесс удаления эффекта, так как отсутствует доступ времени компиляции к сведениям о типе для определяемого платформой эффекта. `EntryLineColorEffect` вызывает конструктор базового класса, передавая параметр, состоящий из объединения имени группы разрешения, и уникального идентификатора, указанного в каждом классе влияния для конкретной платформы.
 
 В следующем примере кода показана реализация `eShopOnContainers.EntryLineColorEffect` для iOS:
 
@@ -424,7 +424,7 @@ namespace eShopOnContainers.iOS.Effects
 
 Мобильное приложение eShopOnContainers выполняет синхронную проверку свойств модели View на стороне клиента и уведомляет пользователя о любых ошибках проверки, выделяя элемент управления, содержащий недопустимые данные, и отображая сообщения об ошибках, которые сообщают пользователю. Почему данные недопустимы.
 
-Просмотр свойств модели, требующих проверки, имеет тип `ValidatableObject<T>`, и каждый экземпляр `ValidatableObject<T>` имеет правила проверки, добавленные в свойство `Validations`. Проверка вызывается из модели представления путем вызова метода `Validate` экземпляра `ValidatableObject<T>`, который извлекает правила проверки и выполняет их для свойства `ValidatableObject<T>` `Value`. Все ошибки проверки помещаются в свойство `Errors` `ValidatableObject<T>`instance, а свойство `IsValid` экземпляра `ValidatableObject<T>` обновляется, чтобы указать, успешно ли выполнена проверка.
+Просмотр свойств модели, требующих проверки, имеет тип `ValidatableObject<T>`, и каждый экземпляр `ValidatableObject<T>` имеет правила проверки, добавленные в свойство `Validations`. Проверка вызывается из модели представления путем вызова метода `Validate` экземпляра `ValidatableObject<T>`, который извлекает правила проверки и выполняет их для свойства `ValidatableObject<T>` `Value`. Любые ошибки проверки помещаются в свойство `Errors` экземпляра `ValidatableObject<T>`, а свойство `IsValid` экземпляра `ValidatableObject<T>` обновляется, чтобы указать, успешно ли выполнена проверка.
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031863"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915728"
 ---
 # <a name="ios-7-user-interface-overview"></a>Обзор пользовательского интерфейса iOS 7
 
@@ -201,7 +201,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
  [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
-Обратите внимание, что хотя эффекты API `TopLayoutGuide/BottomLayoutGuide` и `EdgesForExtendedLayout` похожи, они предназначены для заполнения разных целей. Изменение параметра `EdgesForExtendedLayout` по умолчанию может привести к исправлению обрезанных представлений в приложениях, предназначенных для iOS 6, но хорошая разработка iOS 7 должна поддерживать полноэкранный Aesthetic и обеспечивать полноэкранный просмотр, полагаться на `TopLayoutGuide` и `BottomLayoutGuide` должным образом размещение содержимого, которое должно работать в удобном для пользователя месте.
+Обратите внимание, что хотя эффекты API `TopLayoutGuide/BottomLayoutGuide` и `EdgesForExtendedLayout` похожи, они предназначены для заполнения разных целей. Изменение параметра `EdgesForExtendedLayout` по умолчанию может привести к исправлению обрезанных представлений в приложениях, предназначенных для iOS 6, но хорошая разработка iOS 7 должна состоять из полноэкранного Aesthetic и обеспечить возможность полноэкранного просмотра, полагаться на то, что `TopLayoutGuide` и `BottomLayoutGuide` правильно позиционировать содержимое, которое должно работать в удобном месте для пользователя.
 
 См. [имажевиевер](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) для работы с примером.
 

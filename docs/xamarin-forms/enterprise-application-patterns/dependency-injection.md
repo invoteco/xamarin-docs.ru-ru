@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
-ms.sourcegitcommit: 9dd0b076ab4ecdbbd1b029d2e0d67d900e1c4494
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567899"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915310"
 ---
 # <a name="dependency-injection"></a>Внедрение зависимостей
 
@@ -117,7 +117,7 @@ _container.Register<ProfileViewModel>();
 
 <a name="resolution" />
 
-## <a name="resolution"></a>Разрешение
+## <a name="resolution"></a>Решение
 
 После регистрации типа его можно разрешить или внедрить как зависимость. Если тип разрешается и контейнеру необходимо создать новый экземпляр, он внедряет все зависимости в экземпляр.
 

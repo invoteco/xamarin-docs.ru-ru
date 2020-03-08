@@ -8,31 +8,31 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
 ms.openlocfilehash: f6190b9c0d29d57d6d509bdff25e2ce3572e3a3c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646839"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910551"
 ---
 # <a name="platform-specifics"></a>Особенности платформы
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _Особенности платформы позволяют использовать функциональные возможности, доступные только на определенной платформе, без реализации пользовательских модулей подготовки отчетов или эффектов._
 
 Процесс для использования платформы через XAML или через API текучего кода выглядит следующим образом:
 
-1. Добавить `xmlns` объявление или `using` директив для [ `Xamarin.Forms.PlatformConfiguration` ](xref:Xamarin.Forms.PlatformConfiguration) пространства имен.
-1. Добавить `xmlns` объявление или `using` директиву для пространства имен, которое содержит функциональные возможности платформы:
-    1. В iOS это [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) пространства имен.
-    1. В Android, это [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) пространства имен. Для Android AppCompat это [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) пространства имен.
-    1. На универсальной платформе Windows, это [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) пространства имен.
-1. Применить конкретной платформы из XAML или кода с помощью `On<T>` текучего API. Значение `T` может быть [ `iOS` ](xref:Xamarin.Forms.PlatformConfiguration.iOS), [ `Android` ](xref:Xamarin.Forms.PlatformConfiguration.Android), или [ `Windows` ](xref:Xamarin.Forms.PlatformConfiguration.Windows) типы из [ `Xamarin.Forms.PlatformConfiguration` ](xref:Xamarin.Forms.PlatformConfiguration) пространства имен.
+1. Добавьте объявление `xmlns` или директиву `using` для пространства имен [`Xamarin.Forms.PlatformConfiguration`](xref:Xamarin.Forms.PlatformConfiguration) .
+1. Добавьте `xmlns` объявление или директиву `using` для пространства имен, содержащего функциональные возможности платформы:
+    1. В iOS это пространство имен [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) .
+    1. В Android это пространство имен [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) . Для Android AppCompat это пространство имен [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) .
+    1. На универсальная платформа Windows это пространство имен [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) .
+1. Примените конкретную платформу на основе XAML или из кода с помощью API-интерфейса `On<T>` Fluent. Значением `T` может быть [`iOS`](xref:Xamarin.Forms.PlatformConfiguration.iOS), [`Android`](xref:Xamarin.Forms.PlatformConfiguration.Android)или [`Windows`](xref:Xamarin.Forms.PlatformConfiguration.Windows) типы из пространства имен [`Xamarin.Forms.PlatformConfiguration`](xref:Xamarin.Forms.PlatformConfiguration) .
 
 > [!NOTE]
 > Обратите внимание на то, что попытка использовать платформы на платформе, где он недоступен не приведет ошибку. Вместо этого код будет выполняться без применения конкретной платформы.
 
-Особенности платформы востребован `On<T>` текучего кода API из [ `IPlatformElementConfiguration` ](xref:Xamarin.Forms.IPlatformElementConfiguration`2) объектов. Благодаря этому несколько особенностей платформы должен быть вызван на один и тот же объект с каскадным метод.
+Зависящие от платформы функции, используемые с помощью API кода `On<T>` Fluent, возвращают [`IPlatformElementConfiguration`](xref:Xamarin.Forms.IPlatformElementConfiguration`2) объектов. Благодаря этому несколько особенностей платформы должен быть вызван на один и тот же объект с каскадным метод.
 
 Дополнительные сведения о конкретных платформах, предоставляемых Xamarin. Forms, см. в разделе [особенности платформы iOS](~/xamarin-forms/platform/ios/index.md), [особенности платформы Android](~/xamarin-forms/platform/android/index.md)и [особенности платформы Windows](~/xamarin-forms/platform/windows/index.md).
 
@@ -42,28 +42,28 @@ _Особенности платформы позволяют использов
 
 Процесс создания конкретной платформы выглядит следующим образом:
 
-1. Реализуйте определенные функции, как эффект. Дополнительные сведения см. в разделе [Создание эффекта](~/xamarin-forms/app-fundamentals/effects/creating.md).
-1. Создание класса платформы, который будет предоставить эффект. Дополнительные сведения см. в разделе [создание класса платформы](#creating-a-platform-specific-class).
+1. Реализуйте определенные функции, как эффект. Дополнительные сведения см. [в разделе Создание влияния](~/xamarin-forms/app-fundamentals/effects/creating.md).
+1. Создание класса платформы, который будет предоставить эффект. Дополнительные сведения см. [в разделе Создание класса, зависящего от платформы](#creating-a-platform-specific-class).
 1. В классе платформы реализации присоединенного свойства, чтобы разрешить конкретную платформу быть востребован XAML. Дополнительные сведения см. в разделе [Добавление присоединенного свойства](#adding-an-attached-property).
-1. В классе платформы реализации методов расширения, чтобы разрешить конкретную платформу для использования через API текучего кода. Дополнительные сведения см. в разделе [добавления методов расширения](#adding-extension-methods).
-1. Измените реализацию эффект, эффект применяется только в том случае, если был вызван с платформой на той же платформе, в результате. Дополнительные сведения см. в разделе [Создание силу](#creating-the-effect).
+1. В классе платформы реализации методов расширения, чтобы разрешить конкретную платформу для использования через API текучего кода. Дополнительные сведения см. в разделе [Добавление методов расширения](#adding-extension-methods).
+1. Измените реализацию эффект, эффект применяется только в том случае, если был вызван с платформой на той же платформе, в результате. Дополнительные сведения см. [в разделе Создание результата](#creating-the-effect).
 
 Предоставление эффект как от платформы образом, результат можно было более легко через XAML и текучего кода API.
 
 > [!NOTE]
 > Он является предусмотрено, что этот способ будет использоваться поставщиков для создания собственных особенностей платформы, для упрощения потребления пользователями. Хотя пользователи могут начать создавать свои собственные особенности платформы, следует отметить, что он требует больше кода, чем создание и использование эффекта.
 
-[Пример приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) демонстрирует `Shadow` конкретную платформу, которая добавляет тень к [`Label`](xref:Xamarin.Forms.Label) тексту, отображаемому элементом управления:
+[Пример приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) демонстрирует `Shadow` конкретной платформы, которая добавляет тень к тексту, отображаемому элементом управления [`Label`](xref:Xamarin.Forms.Label) :
 
-![](images/screenshots.png "Тени от платформы")
+![](images/screenshots.png "Shadow Platform-Specific")
 
-В [примере приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) для каждой `Shadow` платформы реализована конкретная платформа для простоты понимания. Тем не менее помимо Каждая реализация эффект платформой, реализация класса теневой копии мало чем отличается для каждой платформы. Таким образом это руководство посвящено реализации класса теневой копии и связанные влияет на единую платформу.
+[Пример приложения](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) реализует `Shadow`, зависящие от платформы, для простоты понимания. Тем не менее помимо Каждая реализация эффект платформой, реализация класса теневой копии мало чем отличается для каждой платформы. Таким образом это руководство посвящено реализации класса теневой копии и связанные влияет на единую платформу.
 
-Дополнительные сведения об эффектах см. в разделе [Настройка элементов управления с эффектами](~/xamarin-forms/app-fundamentals/effects/index.md).
+Дополнительные сведения о влиянии см. [в разделе Настройка элементов управления с помощью эффектов](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ### <a name="creating-a-platform-specific-class"></a>Создание класса, зависящего от платформы
 
-Конкретную платформу создается как `public static` класса:
+Конкретная платформа создается как класс `public static`:
 
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
@@ -75,11 +75,11 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-В следующих разделах рассматривается реализация `Shadow` эффект от платформы и связанные с ней.
+В следующих разделах обсуждается реализация `Shadow`ного и связанного с платформой действия.
 
 #### <a name="adding-an-attached-property"></a>Добавление присоединенного свойства
 
-Необходимо добавить вложенное свойство `Shadow` платформы — разрешить использование через XAML:
+Присоединенное свойство необходимо добавить в `Shadow`, зависящее от платформы, чтобы разрешить использование с помощью XAML:
 
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
@@ -152,16 +152,16 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-`IsShadowed` Присоединенное свойство используется для добавления `MyCompany.LabelShadowEffect` эффект и удалите его из элемента управления, `Shadow` класс присоединяется к. Это присоединенного свойства регистры `OnIsShadowedPropertyChanged` метод, который будет выполняться при изменении значения свойства. В свою очередь, вызывает этот метод `AttachEffect` или `DetachEffect` метод для добавления или удаления эффект на основе значения из `IsShadowed` вложенного свойства зависимостей. Эффект, добавлении или удалении из элемента управления путем изменения элемента управления [ `Effects` ](xref:Xamarin.Forms.Element.Effects) коллекции.
+Присоединенное свойство `IsShadowed` используется для добавления `MyCompany.LabelShadowEffect`ного результата к элементу управления, к которому присоединен класс `Shadow`, и удаления его из него. Это присоединенное свойство регистрирует метод `OnIsShadowedPropertyChanged`, который будет выполняться при изменении значения свойства. В свою очередь, этот метод вызывает метод `AttachEffect` или `DetachEffect`, чтобы добавить или удалить результат на основе значения присоединенного свойства `IsShadowed`. Этот результат добавляется в элемент управления или удаляется из него путем изменения коллекции [`Effects`](xref:Xamarin.Forms.Element.Effects) элемента управления.
 
 > [!NOTE]
-> Обратите внимание, что эффект разрешается, указав значение, которое представляет собой объединение имени группы разрешения и уникальный идентификатор, который указан в реализации эффект. Дополнительные сведения см. в разделе [Создание эффекта](~/xamarin-forms/app-fundamentals/effects/creating.md).
+> Обратите внимание, что эффект разрешается, указав значение, которое представляет собой объединение имени группы разрешения и уникальный идентификатор, который указан в реализации эффект. Дополнительные сведения см. [в разделе Создание влияния](~/xamarin-forms/app-fundamentals/effects/creating.md).
 
-Дополнительные сведения о вложенных свойствах см. в разделе [присоединенного свойства](~/xamarin-forms/xaml/attached-properties.md).
+Дополнительные сведения о присоединенных свойствах см. в разделе [Присоединенные свойства](~/xamarin-forms/xaml/attached-properties.md).
 
 #### <a name="adding-extension-methods"></a>Добавления методов расширения
 
-Методы расширения должны добавляться к `Shadow` платформы — разрешить использование через API текучего кода:
+Методы расширения необходимо добавить в `Shadow`, зависящие от платформы, чтобы разрешить использование через API кода Fluent:
 
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
@@ -189,11 +189,11 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-`IsShadowed` И `SetIsShadowed` методы расширения вызова get и set для `IsShadowed` вложенное свойство зависимостей, соответственно. Каждый метод расширения работает `IPlatformElementConfiguration<iOS, FormsElement>` тип, который указывает, что специфические для платформы может быть вызвана [ `Label` ](xref:Xamarin.Forms.Label) экземпляров из iOS.
+Методы расширения `IsShadowed` и `SetIsShadowed` вызывают метод доступа get и Set для `IsShadowed` присоединенного свойства соответственно. Каждый метод расширения работает с типом `IPlatformElementConfiguration<iOS, FormsElement>`, который указывает, что конкретная платформа может быть вызвана на экземплярах [`Label`](xref:Xamarin.Forms.Label) из iOS.
 
 #### <a name="creating-the-effect"></a>Создание результата
 
-`Shadow` Добавляет платформы `MyCompany.LabelShadowEffect` для [ `Label` ](xref:Xamarin.Forms.Label), а затем удаляет его. В следующем коде показано в примере `LabelShadowEffect` реализации для проекта iOS:
+`Shadow`, зависящая от платформы, добавляет `MyCompany.LabelShadowEffect` в [`Label`](xref:Xamarin.Forms.Label)и удаляет ее. В следующем примере кода показана реализация класса `LabelShadowEffect` для проекта на платформе iOS.
 
 ```csharp
 [assembly: ResolutionGroupName("MyCompany")]
@@ -246,15 +246,15 @@ namespace ShadowPlatformSpecific.iOS
 }
 ```
 
-`UpdateShadow` Метода задает `Control.Layer` свойства для создания тени, при условии, что `IsShadowed` присоединенное свойство имеет значение `true`и при условии, что `Shadow` платформы был вызван на одной платформе, Для реализации эффект. Эта проверка выполняется с помощью `OnThisPlatform` метод.
+Метод `UpdateShadow` задает `Control.Layer` свойства для создания тени, при условии, что присоединяемое свойство `IsShadowed` имеет значение `true`, и при условии, что на той же платформе была вызвана конкретная платформа `Shadow`, для которой реализуется эффект. Эта проверка выполняется с помощью метода `OnThisPlatform`.
 
-Если `Shadow.IsShadowed` присоединенного изменения значений свойств во время выполнения потребностей эффект реагировать, удалив тени. Таким образом, переопределения `OnElementPropertyChanged` метод используется в ответ на изменение может быть привязано, вызвав `UpdateShadow` метод.
+Если значение присоединенного свойства `Shadow.IsShadowed` изменяется во время выполнения, то эффект должен ответить, удалив тень. Таким образом, переопределенная версия метода `OnElementPropertyChanged` используется для реагирования на изменение свойства, доступного для привязки, путем вызова метода `UpdateShadow`.
 
-Дополнительные сведения о создании эффекта см. в разделе [Создание эффекта](~/xamarin-forms/app-fundamentals/effects/creating.md) и [передача параметров эффект как вложенные свойства](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md).
+Дополнительные сведения о создании эффектов см. в разделе [Создание эффектов](~/xamarin-forms/app-fundamentals/effects/creating.md) и [Передача параметров эффектов в качестве вложенных свойств](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md).
 
 ### <a name="consuming-the-platform-specific"></a>Использование конкретной платформы
 
-`Shadow` Платформы потребляется в XAML, задав `Shadow.IsShadowed` вложенное свойство, чтобы `boolean` значение:
+`Shadow`, зависящая от платформы, используется в XAML путем задания для присоединенного свойства `Shadow.IsShadowed` значения `boolean`.
 
 ```xaml
 <ContentPage xmlns:ios="clr-namespace:MyCompany.Forms.PlatformConfiguration.iOS" ...>
@@ -277,11 +277,11 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [PlatformSpecifics (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
-- [ShadowPlatformSpecific (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
+- [ПлатформспеЦификс (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ШадовплатформспеЦифик (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
 - [Особенности платформы iOS](~/xamarin-forms/platform/ios/index.md)
 - [Особенности платформы Android](~/xamarin-forms/platform/android/index.md)
 - [Особенности платформы Windows](~/xamarin-forms/platform/windows/index.md)
-- [Настройка элементов управления с эффектами](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Настройка элементов управления с помощью эффектов](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Вложенные свойства](~/xamarin-forms/xaml/attached-properties.md)
 - [API Платформконфигуратион](xref:Xamarin.Forms.PlatformConfiguration)

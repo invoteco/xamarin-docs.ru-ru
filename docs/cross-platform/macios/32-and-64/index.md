@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016330"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910788"
 ---
 # <a name="3264-bit-platform-considerations"></a>рекомендации по 32/64-разрядной платформе
 
@@ -36,7 +36,7 @@ Classic API Xamarin (`XamMac.dll` и `monotouch.dll`) поддерживали �
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 1. В **панель решения**дважды щелкните проект приложения, чтобы открыть окно **Параметры проекта** .
 2. Выберите **сборка iOS**.
@@ -51,7 +51,7 @@ Classic API Xamarin (`XamMac.dll` и `monotouch.dll`) поддерживали �
 5. Нажмите кнопку **ОК**.
 6. Выполните чистую сборку.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. В **Обозреватель решений**щелкните правой кнопкой мыши проект приложения и выберите пункт **свойства**.
 2. Выберите **сборка iOS**.

@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940719"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917560"
 ---
 # <a name="unified-api-overview"></a>Обзор Unified API
 
@@ -33,7 +33,7 @@ Unified API Xamarin позволяет обмениваться кодом ме�
 - [Обновление имеющихся приложений Xamarin.Forms](updating-xamarin-forms-apps.md)
 - [Миграция привязки в Unified API](update-binding.md)
 
-## <a name="tips-for-updating-code-to-the-unified-apiupdating-tipsmd"></a>[Советы по обновлению кода в Unified API](updating-tips.md)
+## <a name="tips-for-updating-code-to-the-unified-api"></a>[Советы по обновлению кода в Unified API](updating-tips.md)
 
 Независимо от того, какие приложения вы переносите, ознакомьтесь со [следующими советами](updating-tips.md) , которые помогут успешно выполнить обновление до Unified API.
 
@@ -134,7 +134,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>Массивы и System. Collections. Generic
 
-Поскольку C# индексаторы предполагают тип `int`, необходимо явно привести `nint` значения к `int` для доступа к элементам в коллекции или массиве. Например:
+Поскольку C# индексаторы предполагают тип `int`, необходимо явно привести `nint` значения к `int` для доступа к элементам в коллекции или массиве. Пример:
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -228,7 +228,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 ### <a name="custom-delegates-replaced-with-actiont"></a>Пользовательские делегаты, заменяющие действием\<T >
 
-В **унифицированных** простых (например, один параметр) делегаты .NET были заменены `Action<T>`. Например,
+В **унифицированных** простых (например, один параметр) делегаты .NET были заменены `Action<T>`. Пример:
 
 ```csharp
 public delegate void NSNotificationHandler (NSNotification notification);
@@ -246,7 +246,7 @@ public delegate void NSNotificationHandler (NSNotification notification);
 
 В некоторых случаях требуется изменить некоторые константы с `string` на `NSString`, например `UITableViewCell`
 
-**Классические**
+**Классический**
 
 ```csharp
 public virtual string ReuseIdentifier { get; }
@@ -268,7 +268,7 @@ public virtual NSString ReuseIdentifier { get; }
 
 Эти ограничения были удалены и очищены в единых интерфейсах API. Большинство изменений будут выглядеть следующим образом:
 
-**Классические**
+**Классический**
 
 ```csharp
 public virtual AVAssetResourceLoaderDelegate Delegate { get; }
@@ -284,7 +284,7 @@ public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
 Кроме того, было разрешено, что некоторые API были более точными и простыми в использовании, например:
 
-**Классические**
+**Классический**
 
 ```csharp
 public virtual void SelectionDidChange (NSObject uiTextInput);

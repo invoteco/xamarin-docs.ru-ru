@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: 6841e94ad13357c51e6ccf59e35c659dfb9954aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016290"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914672"
 ---
 # <a name="binding-objective-c-libraries"></a>Цель привязки-библиотеки C
 
@@ -34,14 +34,14 @@ ms.locfileid: "73016290"
 
 ## <a name="getting-started"></a>Начало работы
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Самый простой способ создать привязку — создать проект привязки Xamarin. iOS.
 Это можно сделать из Visual Studio для Mac, выбрав тип проекта, Библиотека **привязок > библиотеки iOS >** .
 
 [![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Самый простой способ создать привязку — создать проект привязки Xamarin. iOS.
 Это можно сделать в Visual Studio в Windows, выбрав тип проекта, **Visual C# > iOS > (IOS)** :
@@ -169,7 +169,7 @@ using ObjCRuntime;
 
 Простейший способ привязки — привязать метод. Просто объявите метод в интерфейсе с соглашениями об C# именовании и добавьте метод в [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
 . Атрибут [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) связывает ваше C# имя с именем цели-C в среде выполнения Xamarin. iOS. Параметр [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
-атрибут — это имя селектора цели-C. Ниже представлено несколько примеров.
+атрибут — это имя селектора цели-C. Некоторые примеры.
 
 ```csharp
 // A method, that takes no arguments
@@ -288,7 +288,7 @@ string Text { get; [NullAllowed] set; }
 Затем в изменяемом подклассе используется [`[Override]`](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute) 
 для свойства, чтобы убедиться, что свойство фактически переопределяет поведение родителя.
 
-Пример.
+Пример
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -479,7 +479,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>Цели привязки — списки аргументов C
 
-Цель-C поддерживает аргументы Variadic. Например:
+Цель-C поддерживает аргументы Variadic. Пример:
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -522,7 +522,7 @@ public void AppendWorkers(params Worker[] workers)
 
 Обычно эти поля содержат значения строк или целочисленных значений, на которые необходимо ссылаться. Они обычно используются в качестве строки, представляющей конкретное уведомление, и в качестве ключей в словарях.
 
-Чтобы привязать поле, добавьте свойство в файл определения интерфейса и добавим свойство к атрибуту [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) . Этот атрибут принимает один параметр: имя C символа для поиска. Например:
+Чтобы привязать поле, добавьте свойство в файл определения интерфейса и добавим свойство к атрибуту [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) . Этот атрибут принимает один параметр: имя C символа для поиска. Пример:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -580,7 +580,7 @@ interface LonelyClass {
 
 Можно добавить `enum` непосредственно в файлы привязки, чтобы упростить их использование в определениях API — без использования другого исходного файла (который должен быть скомпилирован как в привязке, так и в окончательном проекте).
 
-Пример.
+Пример
 
 ```csharp
 [Native] // needed for enums defined as NSInteger in ObjC
@@ -594,7 +594,7 @@ interface MyType {
 
 Также можно создать собственные перечисления для замены констант `NSString`. В этом случае генератор **автоматически** создает методы для преобразования значений enum и констант NSString.
 
-Пример.
+Пример
 
 ```csharp
 enum NSRunLoopMode {
@@ -632,7 +632,7 @@ interface MyType {
 Можно оформлять методы (в возвращаемом значении), параметры и свойства с помощью [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute). Единственное ограничение заключается в том, что член **не должен** находиться в [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
 или [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) интерфейс.
 
-Например:
+Пример:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -651,7 +651,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) также поддерживает массивы `NSNumber` `NSValue` и `NSString`(enums).
 
-Например:
+Пример:
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -682,7 +682,7 @@ CAScroll [] SupportedScrollModes { get; set; }
 
 Этот атрибут можно использовать без аргументов для уведомлений, которые не содержат полезных данных, или можно указать `System.Type`, ссылающийся на другой интерфейс в определении API, обычно с именем, которое заканчивается на EventArgs. Генератор преобразует интерфейс в класс, который подклассировать `EventArgs` и будет включать все свойства, перечисленные здесь. Атрибут [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) должен использоваться в классе EventArgs для перечисления имени ключа, используемого для поиска словаря цели-C для выборки значения.
 
-Например:
+Пример:
 
 ```csharp
 interface MyClass {
@@ -882,7 +882,7 @@ s.Enumerate ((obj, stop) => {
 Можно использовать [`[Async]`](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute) 
 атрибут в методах, возвращающий значение void и последний аргумент которого является обратным вызовом.  При применении этого метода к методу генератор привязок создаст версию этого метода с суффиксом `Async`.  Если обратный вызов не принимает параметров, возвращаемое значение будет `Task`, если обратный вызов принимает параметр, то результатом будет `Task<T>`.  Если обратный вызов принимает несколько параметров, следует задать `ResultType` или `ResultTypeName`, чтобы указать нужное имя созданного типа, который будет содержать все свойства.
 
-Пример.
+Пример
 
 ```csharp
 [Export ("loadfile:completed:")]
@@ -1152,7 +1152,7 @@ class DialogPrint : UIViewController {
 
 <a name="Strings" />
 
-### <a name="strings"></a>Строки
+### <a name="strings"></a>строк
 
 При привязке метода, который принимает `NSString`, можно заменить его C# строковым типом, как для возвращаемых типов, так и для параметров.
 
@@ -1197,8 +1197,8 @@ void SomeString (ref NSObject byref);
 
 В приведенном выше примере значение помечается как имеющее семантику "удержания". Семантика доступна:
 
-- Назначить
-- Копирование
+- Назначение
+- Копировать
 - Сохранять
 
 <a name="Style_Guidelines" />
@@ -1337,7 +1337,7 @@ c.Loaded += delegate (sender, args){
 В приведенном выше примере в окончательный исполняемый файл будет связан `libMyLibrary.a`, `libSystemLibrary.dylib` и библиотека `CFNetwork` Framework.
 
 Также можно воспользоваться преимуществами [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)на уровне сборки, которые можно внедрять в файлы контрактов (например, `AssemblyInfo.cs`).
-При использовании [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)вам потребуется доступ к собственной библиотеке во время создания привязки, так как в этом случае собственная библиотека будет внедрена в приложение. Например:
+При использовании [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)вам потребуется доступ к собственной библиотеке во время создания привязки, так как в этом случае собственная библиотека будет внедрена в приложение. Пример:
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

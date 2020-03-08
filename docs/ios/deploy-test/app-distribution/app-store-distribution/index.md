@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031421"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913579"
 ---
 # <a name="app-store-distribution"></a>Распространение через App Store
 
@@ -121,11 +121,11 @@ ms.locfileid: "76031421"
 
 7. Нажмите кнопку **Generate** (Создать), чтобы создать профиль и завершить процесс.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
  Может потребоваться выйти из программы Visual Studio для Mac, а также обновить список доступных удостоверений подписи и профилей подготовки в Xcode (в соответствии с инструкциями из раздела [Запрос удостоверений подписывания](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)), прежде чем новый профиль распространения станет доступен в Visual Studio для Mac.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  Может потребоваться выйти из программы Visual Studio, а также обновить список доступных удостоверений подписи и профилей подготовки в Xcode на Mac узла сборки (в соответствии с инструкциями из раздела [Запрос удостоверений подписывания](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)), прежде чем новый профиль распространения станет доступен в Visual Studio.
 
@@ -137,7 +137,7 @@ ms.locfileid: "76031421"
 
 Когда все готово к финальной сборке приложения Xamarin.iOS для продажи в iTunes App Store, выберите профиль распространения, который был создан выше.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
  В Visual Studio для Mac выполните следующие действия:
 
@@ -153,7 +153,7 @@ ms.locfileid: "76031421"
     ![](images/releasexs03.png "Select the Signing Identity and Distribution Profiles")
 5. Нажмите кнопку **ОК**, чтобы сохранить изменения.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  В Visual Studio выполните следующие действия:
 

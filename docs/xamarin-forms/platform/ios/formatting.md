@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
 ms.openlocfilehash: 24d86c54ea4b346e1c165b28c6b62f5a98390d64
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760137"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918273"
 ---
 # <a name="adding-ios-specific-formatting"></a>Добавление форматирования, относящегося к iOS
 
@@ -21,7 +21,7 @@ ms.locfileid: "70760137"
 Другие параметры для управления отображением внешнего вида приложения для iOS в Xamarin. Forms:
 
 - Настройка параметров вывода в [ **info. plist**](#info-plist)
-- Установка стилей элементов управления через [ `UIAppearance` API](#uiappearance)
+- Установка стилей элементов управления с помощью [API`UIAppearance`](#uiappearance)
 
 Эти альтернативы обсуждаются ниже.
 
@@ -41,11 +41,11 @@ nav.BarTextColor = Color.White;
 
 Результат показан в следующем фрагменте экрана. Обратите внимание, что элементы строки состояния являются черными (не могут быть заданы в Xamarin. Forms, так как это функция для конкретной платформы).
 
-![](theme-images/status-default-sml.png "данные для iOS")
+![](theme-images/status-default-sml.png "iOS Theming")
 
 В идеале строка состояния также будет содержать белый вид, что можно выполнить непосредственно в проекте iOS. Добавьте следующие записи в файле **info. plist** , чтобы строка состояния была белыми:
 
-![](theme-images/info-plist.png "Записи сведений iOS. plist")
+![](theme-images/info-plist.png "iOS Info.plist Entries")
 
 или измените соответствующий файл **info. plist** непосредственно для включения:
 
@@ -58,15 +58,15 @@ nav.BarTextColor = Color.White;
 
 Теперь при запуске приложения панель навигации отображается зеленым цветом, а ее текст — белым (из-за форматирования Xamarin. Forms) *, а* текст строки состояния также является белым благодаря конфигурации iOS:
 
-![](theme-images/status-white-sml.png "данные для iOS")
+![](theme-images/status-white-sml.png "iOS Theming")
 
 <a name="uiappearance"/>
 
 ## <a name="uiappearance-api"></a>API Уиаппеаранце
 
-API можно использовать для установки свойств визуального элемента во многих элементах управления iOS *без* необходимости создания [пользовательского модуля подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов. [ `UIAppearance` ](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md)
+[`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) можно использовать для установки свойств визуального элемента во многих элементах управления iOS *без* необходимости создания [пользовательского модуля подготовки](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)отчетов.
 
-Добавление одной строки кода в метод **AppDelegate.CS** `FinishedLaunching` может иметь стиль для всех элементов управления заданного типа, используя их `Appearance` свойство. Следующий код содержит два примера: глобально стилизацию строки табуляции и переключения управления.
+Добавление одной строки кода в метод **AppDelegate.cs** `FinishedLaunching` может иметь стиль для всех элементов управления заданного типа, используя их свойство `Appearance`. Следующий код содержит два примера: глобально стилизацию строки табуляции и переключения управления.
 
 **AppDelegate.CS** в проекте iOS
 
@@ -86,12 +86,12 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>уитаббар
 
-По умолчанию выбранный значок панели вкладок в элементе[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
+По умолчанию выбранный значок панели вкладок в [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 будет синим:
 
-![](theme-images/tabbar-default.png "Значок панели вкладок iOS по умолчанию в Таббедпаже")
+![](theme-images/tabbar-default.png "Default iOS Tab Bar Icon in TabbedPage")
 
-Чтобы изменить это поведение, задайте `UITabBar.Appearance` свойство:
+Чтобы изменить это поведение, задайте свойство `UITabBar.Appearance`.
 
 ```csharp
 UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
@@ -99,13 +99,13 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 В результате выбранная вкладка будет зеленым:
 
-![](theme-images/tabbar-custom.png "Зеленый значок панели вкладок iOS в Таббедпаже")
+![](theme-images/tabbar-custom.png "Green iOS Tab Bar Icon in TabbedPage")
 
-Использование этого API позволяет настраивать внешний вид Xamarin. Forms `TabbedPage` в iOS с небольшими объемами кода. Дополнительные сведения об использовании пользовательского модуля подготовки отчетов для установки определенного шрифта для вкладки см. в описании инструкции по [настройке вкладок](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) .
+Использование этого API позволяет настраивать внешний вид `TabbedPage` Xamarin. Forms в iOS с небольшими объемами кода. Дополнительные сведения об использовании пользовательского модуля подготовки отчетов для установки определенного шрифта для вкладки см. в описании инструкции по [настройке вкладок](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) .
 
 ### <a name="uiswitch"></a>UISwitch
 
-`Switch` Элемент управления — это еще один пример, который можно легко присвоить стилю:
+`Switch` элемент управления — еще один пример, который можно легко присвоить стилю:
 
 ```csharp
 UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
@@ -113,11 +113,11 @@ UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 
 Эти два снимка экрана показывают элемент управления `UISwitch` по умолчанию слева и настроенную версию (параметр `Appearance`) справа в [примере TODO](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
-![](theme-images/switch-default.png "По умолчанию цвет UISwitch") ![](theme-images/switch-custom.png "настроить цвет UISwitch")
+![](theme-images/switch-default.png "Цвет Уисвитч по умолчанию") ![](theme-images/switch-custom.png "Настроенный цвет Уисвитч")
 
 ### <a name="other-controls"></a>Другие элементы управления
 
-Многие элементы управления пользовательского интерфейса iOS могут иметь цвета по умолчанию и другие атрибуты, заданные с помощью [ `UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
+Многие элементы управления пользовательского интерфейса iOS могут иметь цвета по умолчанию и другие атрибуты, установленные с помощью [`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032229"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910878"
 ---
 # <a name="introduction-to-ios-10"></a>Введение в iOS 10
 
@@ -52,7 +52,7 @@ ms.locfileid: "73032229"
 - Новое свойство `DocumentInputMode` класса `UITextDocumentProxy` может определять язык ввода документа и позволяет использовать расширение клавиатуры для согласования с этим языком.
 - Новый метод `HandleInputModeList` позволяет расширению клавиатуры отображать меню выбора клавиатуры системы в ответ на нажатие клавиши земного шара.
 
-Дополнительные сведения см. в статьях [Введение в расширения](~/ios/platform/extensions.md), [Интеграция приложений с сообщениями](~/ios/platform/message-app-integration/index.md), [Введение в упреждающие предложения](~/ios/platform/search/proactive-suggestions.md), [Введение в SiriKit](~/ios/platform/sirikit/index.md), [Введение в уведомления пользователей](~/ios/platform/user-notifications/index.md) и Apple [ Инструкции по программированию расширения приложения](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Дополнительные сведения см. в статьях [Введение в расширения](~/ios/platform/extensions.md), [Интеграция приложений с сообщениями](~/ios/platform/message-app-integration/index.md), [Введение в упреждающие предложения](~/ios/platform/search/proactive-suggestions.md), [Введение в SiriKit](~/ios/platform/sirikit/index.md), [Введение в уведомления пользователей](~/ios/platform/user-notifications/index.md) и [программное](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)обеспечение для расширения приложения Apple.
 
 ## <a name="app-search-enhancements"></a>Улучшенные возможности поиска приложения
 
@@ -123,7 +123,7 @@ iOS 10 позволяет включить расширение приложен
 - Переключатель приложений
 - Экран блокировки
 - карплай
-- Карты
+- Maps
 - Взаимодействия Siri
 - Предложения Куикктипе
 
@@ -168,7 +168,7 @@ SiriKit поддерживает следующие домены служб:
 
 в iOS 10 входит новый API распознавания речи, позволяющий приложению поддерживать непрерывное распознавание речи и транскрипция речи (из активных или записанных звуковых потоков) в текст.
 
-Поскольку для распознавания речи требуется передача и временное хранение данных на серверах Apple, приложение _должно_ запросить разрешение пользователя на распознавание, включив ключ `NSSpeechRecognitionUsageDescription` в свой `Info.plist` файл и вызвав `SFSpeechRecognizer.RequestAutorization` Method.
+Поскольку для распознавания речи требуется передача и временное хранение данных на серверах Apple, приложение _должно_ запросить разрешение пользователя на распознавание, включив ключ `NSSpeechRecognitionUsageDescription` в свой `Info.plist` файл и вызвав метод `SFSpeechRecognizer.RequestAutorization`.
 
 Чтобы узнать больше, ознакомьтесь с руководством по [распознаванию речи](~/ios/platform/speech.md) .
 

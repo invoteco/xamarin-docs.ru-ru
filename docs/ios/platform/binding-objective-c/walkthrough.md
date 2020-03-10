@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 67b760a58628950caa33fe9009c5023c8696691c
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940925"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946336"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Пошаговое руководство. привязка библиотеки цели iOS-C
 
@@ -54,11 +54,11 @@ _В этой статье приводятся пошаговые инструк
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Установка программ командной строки Xcode
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Как упоминалось выше, в этом пошаговом руководстве мы будем использовать средства командной строки Xcode (в частности `make` и `lipo`). Команда `make` — это очень распространенная служебная программа UNIX, которая автоматизирует компиляцию исполняемых программ и библиотек с помощью _файла makefile_ , который указывает, как должна быть построена программа. Команда `lipo` является служебной программой командной строки OS X для создания файлов с несколькими архитектурами; Он объединяет несколько `.a` файлов в один файл, который может использоваться всеми аппаратными архитектурами.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Как упоминалось выше, мы будем использовать средства командной строки Xcode на **узле сборки Mac** (в частности `make` и `lipo`) в этом пошаговом руководстве. Команда `make` — это очень распространенная служебная программа для UNIX, которая автоматизирует компиляцию исполняемых программ и библиотек с помощью _файла makefile_ для указания способа построения программы. Команда `lipo` является служебной программой командной строки OS X для создания файлов с несколькими архитектурами; Он объединяет несколько `.a` файлов в один файл, который может использоваться всеми аппаратными архитектурами.
 
@@ -247,7 +247,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 Давайте выполним следующие действия.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Запустите Visual Studio для Mac.
 1. В меню **файл** выберите пункт **создать** > **решение...** :
@@ -258,7 +258,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
     ![](walkthrough-images/bind02.png "Select iOS Binding Project")
 
-1. Нажмите кнопку **Next (далее** ).
+1. Нажмите кнопку **Далее**.
 
 1. Введите "Инфколорпиккербиндинг" в качестве **имени проекта** и нажмите кнопку " **создать** ", чтобы создать решение:
 
@@ -268,9 +268,9 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 ![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Запустите Visual Studio.
+1. Запустите среду Visual Studio.
 
 1. В меню **файл** выберите пункт **создать** > **проект...** :
 
@@ -299,7 +299,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 Чтобы добавить библиотеку, выполните следующие действия.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Щелкните правой кнопкой мыши папку **машинные ссылки** в панель решения и выберите **Добавить машинные ссылки**:
 
@@ -312,7 +312,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
     ![](walkthrough-images/bind04.png "Including a file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Скопируйте `libInfColorPickerSDK.a` с **узла сборки Mac** и вставьте его в проект привязки.
 
@@ -346,11 +346,11 @@ using ObjCRuntime;
 
 ## <a name="using-objective-sharpie"></a>Использование цели Шарпие
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Цель Шарпие — это средство командной строки (предоставляемое Xamarin), которое может помочь в создании определений, необходимых для привязки сторонней библиотеки цели-C к C#. В этом разделе мы будем использовать цель Шарпие для создания начального **ApiDefinition.CS** для проекта инфколорпиккер.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Цель Шарпие — это средство командной строки (предоставляемое Xamarin), которое может помочь в создании определений, необходимых для привязки сторонней библиотеки цели-C к C#. В этом разделе мы будем использовать цель Шарпие на нашем **узле сборки Mac** , чтобы создать первоначальный **ApiDefinition.CS** для проекта инфколорпиккер.
 
@@ -420,10 +420,13 @@ sdk: watchos2.2      arch: armv7
 В приложении терминала введите следующую команду:
 
 ```bash
-sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
+sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Где `[full-path-to-project]` — это полный путь к каталогу, где находится файл проекта **инфколорпиккер** Xcode на нашем компьютере, а [iPhone-OS] — это пакет SDK для iOS, который мы установили, как указано в команде `sharpie xcode -sdks`. Обратите внимание, что в этом примере мы передали **\*. h** в качестве параметра, который включает в себя *все* файлы заголовков в этом каталоге. обычно это не следует делать, но внимательно прочтите файлы заголовков, чтобы найти **h** -файл верхнего уровня, который ссылается на все другие соответствующие файлы, и просто передать его в целевую Шарпие.
+Где `[full-path-to-project]` — это полный путь к каталогу, где находится файл проекта **инфколорпиккер** Xcode на нашем компьютере, а [iPhone-OS] — это пакет SDK для iOS, который мы установили, как указано в команде `sharpie xcode -sdks`. Обратите внимание, что в этом примере мы передали **\*. h** в качестве параметра, который включает в себя *все* файлы заголовков в этом каталоге. обычно это не следует делать, но внимательно прочтите файлы заголовков, чтобы найти **h** -файл верхнего уровня, который ссылается на все другие соответствующие файлы, и просто передать его в целевую Шарпие. 
+
+> [!TIP] 
+> Для аргумента `-scope` передайте папку с заголовками, которые необходимо привязать. Без аргумента `-scope` Целевая Шарпие попытается создать привязки для всех импортируемых заголовков пакета SDK iOS, например `#import <UIKit.h>`, что приводит к созданию огромного файла определений, который, скорее всего, приведет к ошибкам при компиляции проекта привязки. Если задан аргумент `-scope`, Целевая Шарпие не будет создавать привязки для всех заголовков за пределами папки с областью действия. 
 
 В терминале будут созданы следующие [выходные данные](walkthrough-images/os05.png) :
 
@@ -456,13 +459,13 @@ Europa:Resources kmullins$
 
 [![](walkthrough-images/os06.png "The InfColorPicker.enums.cs and InfColorPicker.cs files")](walkthrough-images/os06.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Откройте оба этих файла в проекте привязки, созданном ранее. Скопируйте содержимое файла **InfColorPicker.CS** и вставьте его в файл **ApiDefinition.CS** , заменив существующий блок кода `namespace ...` содержимым файла **InfColorPicker.CS** (не изменяя операторы `using`):
 
 ![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Откройте оба этих файла в проекте привязки, созданном ранее. Скопируйте содержимое файла **InfColorPicker.CS** (с **узла сборки Mac**) и вставьте его в файл **ApiDefinition.CS** , заменив существующий блок кода `namespace ...` на содержимое файла **InfColorPicker.CS** (без изменения инструкций `using`).
 
@@ -489,13 +492,13 @@ Europa:Resources kmullins$
 
 Кроме того, вы можете обнаружить, что цель Шарпие закомментировать привязку с помощью атрибутов `[Verify]`. Эти атрибуты указывают на то, что необходимо убедиться, что цель Шарпиеа правильно, сравнив привязку с исходным объявлением C/объектив-C (которое будет предоставлено в комментарии над объявлением привязки). После проверки привязок следует удалить атрибут Verify. Дополнительные сведения см. в руководстве по [проверке](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) .
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 На этом этапе наш проект привязки должен быть завершен и готов к сборке. Давайте создадим наш проект привязки и убедитесь, что мы завершили без ошибок:
 
 [Выполните сборку проекта привязки и убедитесь в отсутствии ошибок.](walkthrough-images/os12.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 На этом этапе наш проект привязки должен быть завершен и готов к сборке. Давайте создадим наш проект привязки и убедитесь, что мы завершились без ошибок.
 
@@ -507,7 +510,7 @@ Europa:Resources kmullins$
 
 Выполните следующие действия, чтобы создать пример приложения iPhone для использования созданной выше библиотеки привязки iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 1. **Создание проекта Xamarin. iOS** . Добавьте в решение новый проект Xamarin. iOS с именем **инфколорпиккерсампле** , как показано на следующих снимках экрана:
 
@@ -529,7 +532,7 @@ Europa:Resources kmullins$
 
 1. При появлении запроса скопируйте файл **XIB** в проект.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **Создание проекта Xamarin. iOS** . Добавление нового проекта Xamarin. iOS с именем **инфколорпиккерсампле** с помощью шаблона **приложения с одним представлением** :
 

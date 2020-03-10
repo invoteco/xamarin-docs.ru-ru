@@ -5,12 +5,12 @@ ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 29b67e4410a3549e4e2cd63121ffa2e2205e0941
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940802"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295421"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Сведения об устройстве
 
@@ -79,9 +79,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
-В iOS не предоставляется API для разработчиков, чтобы получить имя конкретного устройства iOS. Вместо этого возвращается идентификатор аппаратного обеспечения, например _iPhone10,6_, который относится к iPhone X. Сопоставление этих идентификаторов не обеспечивается в Apple, но их можно найти на сайте [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (Википедия iPhone) (неофициальный источник).
+iOS не предоставляет API, позволяющий разработчикам получить модель конкретного устройства iOS. Вместо этого возвращается идентификатор оборудования, например _iPhone10,6_, который относится к iPhone X. Сопоставление этих идентификаторов не предоставляется Apple, но их можно найти в неофициальных источниках [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (Википедия iPhone) и [Get iOS Model](https://github.com/dannycabrera/Get-iOS-Model) (Получение модели iOS).
 
 --------------
 

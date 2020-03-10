@@ -658,15 +658,6 @@
               href: deploy-test/provisioning/entitlements.md
             - name: Справочник по ключам и значениям в файле Info.plist
               href: deploy-test/provisioning/infoplist-reference.md
-            - name: Инструменты fastlane
-              href: deploy-test/provisioning/fastlane/index.md
-              items:
-                - name: cert
-                  href: deploy-test/provisioning/fastlane/cert.md
-                - name: sigh
-                  href: deploy-test/provisioning/fastlane/sigh.md
-                - name: match
-                  href: deploy-test/provisioning/fastlane/match.md
         - name: Компиляция для разных устройств
           href: deploy-test/compiling-for-different-devices.md
         - name: Среда

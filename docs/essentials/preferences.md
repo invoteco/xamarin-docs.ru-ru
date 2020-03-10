@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: c7d4e4f7ea27e150752b222e3ea4ce2c4256a43a
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488508"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295408"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Параметры
 
@@ -39,6 +39,12 @@ Preferences.Set("my_key", "my_value");
 
 ```csharp
 var myValue = Preferences.Get("my_key", "default_value");
+```
+
+Чтобы проверить, существует ли определенный _ключ_ в параметрах, используйте следующий код:
+
+```csharp
+bool hasKey = Preferences.HasKey("my_key");
 ```
 
 Чтобы удалить _ключ_ из параметров, используйте следующий код:
@@ -73,15 +79,15 @@ Preferences.Clear();
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Все данные хранятся в объекте [SharedPreferences](https://developer.android.com/training/data-storage/shared-preferences.html). Если свойство `sharedName` не указано, используются общие параметры по умолчанию, в противном случае используется имя для получения **частных** общих параметров с указанным именем.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 [NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) используются для хранения значений на устройствах iOS. Если свойство `sharedName` не указано, используется `StandardUserDefaults`. В противном случае используется имя для создания `NSUserDefaults` с определенным именем, используемым для `NSUserDefaultsType.SuiteName`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) используется для хранения значений на устройстве. Если свойство `sharedName` не указано, используется `LocalSettings`. В противном случае используется имя для создания контейнера в `LocalSettings`. 
 

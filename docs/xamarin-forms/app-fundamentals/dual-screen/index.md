@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: 41a7ef4e447bb71582264b4e73629566d3ffd4e7
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.openlocfilehash: 344b6293090ffa4281ea6351f7f176a5be37e5bd
+ms.sourcegitcommit: 0e35d3eafad833d3f19768b001bd804ddda8b69b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480511"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78165551"
 ---
 # <a name="xamarinforms-dual-screen"></a>Двухэкранный режим в Xamarin.Forms
 
@@ -20,18 +20,22 @@ ms.locfileid: "77480511"
 
 Теперь на устройствах Surface Duo (Android) и Surface Neo (Windows 10X) доступны новые шаблоны разработки для приложений с сенсорным управлением. Xamarin.Forms включает классы `TwoPaneView` и `DualScreenInfo`, позволяющие разрабатывать приложения для этих устройств.
 
-## <a name="dual-screen-patterns"></a>[Шаблоны для двух экранов](design-patterns.md)
+## <a name="dual-screen-design-patterns"></a>[Конструктивные шаблоны для двухэкранных устройств](design-patterns.md)
 
 Наше руководство по шаблонам поможет вам подобрать оптимальный вариант использования интерфейса приложения на устройстве с двумя экранами.
 
-## <a name="twopaneview"></a>[TwoPaneView](twopaneview.md)
+## <a name="dual-screen-layout"></a>[Макет для двух экранов](twopaneview.md)
 
 Класс `TwoPaneView` в Xamarin.Forms, созданный в стиле элемента управления UWP с таким же именем, представляет собой кроссплатформенный макет, оптимизированный для двухэкранных устройств.
 
-## <a name="dualscreeninfo"></a>[DualScreenInfo](dual-screen-info.md)
+## <a name="dual-screen-device-capabilities"></a>[Возможности устройства с двумя экранами](dual-screen-info.md)
 
 Класс `DualScreenInfo` позволяет определить, в какой области отображается ваше представление, сколько места оно занимает, в каком положении находится устройство, каков угол сгиба и т. д.
 
-## <a name="dualscreenhelper"></a>[DualScreenHelper](dual-screen-helper.md)
+## <a name="dual-screen-platform-helpers"></a>[Вспомогательные функции платформы для двух экранов](dual-screen-helper.md)
 
 Класс `DualScreenHelper` позволяет проверить, поддерживает ли платформа открытие нового окна в режиме "картинка в картинке". Если вы используете устройство Neo в режиме создания, окно откроется на панели WonderBar.
+
+## <a name="dual-screen-triggers"></a>[Триггеры для двух экранов](triggers.md)
+
+Пространство имен [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) включает два триггера состояния, которые активируют изменение [`VisualState`](xref:Xamarin.Forms.VisualState) при изменении режима просмотра в присоединенном макете или окне.

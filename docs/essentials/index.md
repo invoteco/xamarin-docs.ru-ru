@@ -4,13 +4,13 @@ description: Этот документ содержит ссылки на раз
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/27/2019
-ms.openlocfilehash: 2101d2e3948cb917e62725731c4895cc57282b3b
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.date: 02/26/2020
+ms.openlocfilehash: a0d1e397725ca0a60eb68fb0e6b989ee22c3f56a
+ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065128"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155264"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -18,7 +18,7 @@ Xamarin.Essentials предоставляет разработчикам кро�
 
 Android, iOS и универсальная платформа Windows предоставляют разные API-интерфейсы операционной системы и платформы, к которым разработчики могут обращаться из кода C# с помощью Xamarin. Xamarin.Essentials обеспечивает единый кроссплатформенных API-интерфейс, который предоставляет доступ из общего кода для любого приложения Xamarin.Forms, Android, iOS и универсальной платформы Windows независимо от используемого метода создания пользовательского интерфейса.
 
-## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Начало работы с Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
+## <a name="get-started-with-xamarinessentials"></a>[Начало работы с Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
 Выполните [инструкции по началу работы](get-started.md), чтобы установить пакет NuGet для **Xamarin.Essentials** в существующий или новый проект Xamarin.Forms, Android, iOS или универсальной платформы Windows.
 
@@ -49,6 +49,7 @@ Android, iOS и универсальная платформа Windows предо
 * [Карты](maps.md?content=xamarin/xamarin-forms) — запуск приложения карт для определенного расположения.
 * [Открыть браузер](open-browser.md?context=xamarin/xamarin-forms) — быстрый и простой метод открыть в браузере определенный веб-сайт.
 * [Датчик ориентации](orientation-sensor.md?context=xamarin/xamarin-forms) — получение сведений об ориентации устройства в трехмерном пространстве.
+* [Разрешения](permissions.md?context=xamarin/xamarin-forms) — проверка и запрос разрешений у пользователей.
 * [Набиратель номера](phone-dialer.md?context=xamarin/xamarin-forms) — открытие набирателя номера.
 * [Расширения платформы](platform-extensions.md?context=xamarin/xamarin-forms) — вспомогательные методы для преобразования Rect, Size и Point.
 * [Параметры](preferences.md?context=xamarin/xamarin-forms) — быстрый и удобный метод добавления сохраняемых параметров.
@@ -60,14 +61,14 @@ Android, iOS и универсальная платформа Windows предо
 * [Отслеживания версий](version-tracking.md?context=xamarin/xamarin-forms) — отслеживание версий и номеров сборки для приложений.
 * [Вибрация](vibrate.md?context=xamarin/xamarin-forms) — включение вибродвигателя на устройстве.
 
-## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Устранение неполадок](troubleshooting.md?context=xamarin/xamarin-forms)
+## <a name="troubleshooting"></a>[Устранение неполадок](troubleshooting.md?context=xamarin/xamarin-forms)
 
 Получение помощи при возникновении проблем.
 
-## <a name="release-noteshttpsdocsmicrosoftcomxamarinessentialsrelease-notes"></a>[Заметки о выпуске](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+## <a name="release-notes"></a>[Заметки о выпуске](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 
 Ознакомьтесь с полными заметками для каждого выпуска Xamarin.Essentials.
 
-## <a name="api-documentationxrefxamarinessentials"></a>[Документация по API](xref:Xamarin.Essentials)
+## <a name="api-documentation"></a>[Документация по API](xref:Xamarin.Essentials)
 
 Просмотрите документацию по API для любого компонента Xamarin.Essentials.

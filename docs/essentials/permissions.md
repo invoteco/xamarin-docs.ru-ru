@@ -5,12 +5,12 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 2b1413c6bce7fc4ce43a190cd25494c69dbadedb
-ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
+ms.openlocfilehash: 21f2079ace4adae6fd84d89426e5d66692af2a0a
+ms.sourcegitcommit: ddf0369573b738896efaa601fa6ef5dbc68d9cf1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77555692"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289796"
 ---
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Разрешения
 
@@ -90,7 +90,7 @@ Xamarin.Essentials пытается выполнять аннотацию для
 | StorageRead | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Не поддерживается для iOS](~/media/shared/no.png "Не поддерживается для iOS") | ![Не поддерживается для UWP](~/media/shared/no.png "Не поддерживается для UWP") | ![Не поддерживается для watchOS](~/media/shared/no.png "Не поддерживается для watchOS") | ![Не поддерживается для tvOS](~/media/shared/no.png "Не поддерживается для tvOS") | ![Не поддерживается для Tizen](~/media/shared/no.png "Не поддерживается для Tizen") |
 | StorageWrite | ![Поддерживается для Android](~/media/shared/yes.png "Поддерживается для Android") | ![Не поддерживается для iOS](~/media/shared/no.png "Не поддерживается для iOS") | ![Не поддерживается для UWP](~/media/shared/no.png "Не поддерживается для UWP") | ![Не поддерживается для watchOS](~/media/shared/no.png "Не поддерживается для watchOS") | ![Не поддерживается для tvOS](~/media/shared/no.png "Не поддерживается для tvOS") | ![Не поддерживается для Tizen](~/media/shared/no.png "Не поддерживается для Tizen") |
 
-Если разрешение помечено ❌, то оно всегда будет возвращать `Granted` при проверке или запросе.
+Если разрешение помечено ![не поддерживается](~/media/shared/no.png "не поддерживается"), то оно всегда будет возвращать `Granted` при проверке или запросе.
 
 ## <a name="general-usage"></a>Общие сведения об использовании
 Ниже приведен пример общих сведений об использовании для обработки разрешений.

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
 ms.openlocfilehash: cd427d13bb79fd31e1e814726aaaf61788ae10ec
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030075"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917567"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>API-интерфейсы macOS для разработчиков Xamarin. Mac
 
@@ -36,7 +36,7 @@ ms.locfileid: "73030075"
 - `(NSIndexSet *)rowIndexes` является первым параметром и имеет тип. Первый параметр имеет формат: `(Type) pararmName`
 - `atPoint:(NSPoint)mouseDownPoint` является вторым параметром и его типом. Каждый параметр после первого является форматом: `selectorPart:(Type) pararmName`
 - Полное имя этого селектора сообщений: `canDragRowsWithIndexes:atPoint:`. Обратите внимание на `:` в конце — важно.
-- Фактическая привязка Xamarin. C# Mac:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- Фактическая привязка Xamarin. C# Mac: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 Этот вызов селектора может быть прочитан таким же образом:
 
@@ -45,7 +45,7 @@ ms.locfileid: "73030075"
 ```
 
 - `v` экземпляра имеет свой селектор `canDragRowsWithIndexes:atPoint`, вызываемый с двумя параметрами: `set` и `point`, переданные в.
-- В C#метод вызов метода выглядит следующим образом:`x.CanDragRows (set, point);`
+- В C#метод вызов метода выглядит следующим образом: `x.CanDragRows (set, point);`
 
 <a name="finding_selector" />
 

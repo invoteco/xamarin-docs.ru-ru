@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
 ms.openlocfilehash: 6c2b3d8bad621db3110fe25041125c5694f21180
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130992"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917446"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Макет CollectionView Xamarin. Forms
 
@@ -114,7 +114,7 @@ ms.locfileid: "77130992"
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -178,7 +178,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -234,7 +234,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -290,7 +290,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -331,7 +331,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -372,7 +372,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -431,7 +431,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -473,7 +473,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 > [!NOTE]
 > Свойство `LinearItemsLayout.ItemSpacing` имеет набор обратного вызова проверки, который гарантирует, что значение свойства всегда больше или равно 0.
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -507,7 +507,7 @@ CollectionView collectionView = new CollectionView
 > [!NOTE]
 > Свойства `GridItemsLayout.VerticalItemSpacing` и `GridItemsLayout.HorizontalItemSpacing` имеют набор обратных вызовов проверки, которые гарантируют, что значения свойств всегда больше или равны 0.
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -544,7 +544,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-Эквивалентный код на C# выглядит так:
+Ниже приведен аналогичный код C#:
 
 ```csharp
 CollectionView collectionView = new CollectionView

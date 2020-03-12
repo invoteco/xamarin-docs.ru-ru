@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: e5a61af4cd8a09df3ffddb74658f646aa8edfa1f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032087"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088973"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Обновления визуальной разработки в iOS 11
 
@@ -72,13 +72,13 @@ View.LayoutMargins = UIEdgeInsets.Zero;
 
 ## <a name="full-screen-content"></a>Содержимое во весь экран
 
-В iOS 7 [появились](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` и `bottomLayoutGuide` способы ограничения представлений, чтобы они не были скрыты с помощью UIKit полос и находятся в видимой области экрана. Они не рекомендуются в iOS 11 в пользу максимальной _защищенной области_.
+в iOS 7 [появились](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` и `bottomLayoutGuide` как способ ограничения представлений, чтобы они не были скрыты UIKit полосами и находятся в видимой области экрана. Они не рекомендуются в iOS 11 в пользу максимальной _защищенной области_.
 
 Область безопасности — это новый способ подумать о видимом пространстве приложения и о том, как ограничения добавляются между представлениями и супер-представлением. Например, рассмотрим следующее изображение:
 
 [![область безопасности и верхняя и Нижняя структура макета](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-Ранее, если было добавлено представление и требовалось, чтобы оно отображалось в зеленой области выше, оно будет ограничено _нижней_ частью `TopLayoutGuide` и _верхней_ части `BottomLayoutGuide`. В iOS 11 его можно ограничить _максимальным_ и _нижним_ частями защищенной области. См. пример ниже:
+Ранее, если было добавлено представление и требовалось, чтобы оно отображалось в зеленой области выше, оно будет ограничено _нижней_ частью `TopLayoutGuide` и _верхней_ части `BottomLayoutGuide`. В iOS 11 его можно ограничить _максимальным_ и _нижним_ частями защищенной области. См. пример ниже.
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;

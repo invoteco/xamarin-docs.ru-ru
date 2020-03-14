@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/11/2020
 ms.openlocfilehash: 150c358346f90a513e1558dc847ad7eb6dd6e6e2
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635813"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305963"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Взаимодействие Карауселвиев Xamarin. Forms
 
@@ -82,7 +82,7 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
 
 [![Снимок экрана Карауселвиев с предыдущими и текущими элементами в iOS и Android](interaction-images/current-item-events.png "Карауселвиев с текущими и предыдущими элементами")](interaction-images/current-item-events-large.png#lightbox "Карауселвиев с текущими и предыдущими элементами")
 
-### <a name="command"></a>Команда
+### <a name="command"></a>Get-Help
 
 В следующем примере XAML показан [`CarouselView`](xref:Xamarin.Forms.CarouselView) , использующий команду для реагирования на изменение текущего элемента:
 
@@ -155,7 +155,7 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
 
 [![Снимок экрана Карауселвиев с предыдущими и текущими позициями в iOS и Android](interaction-images/current-position-events.png "Карауселвиев с текущими и предыдущими позициями")](interaction-images/current-position-events-large.png#lightbox "Карауселвиев с текущими и предыдущими позициями")
 
-### <a name="command"></a>Команда
+### <a name="command"></a>Get-Help
 
 В следующем примере XAML показан [`CarouselView`](xref:Xamarin.Forms.CarouselView) , использующий команду для реагирования на изменение свойства `Position`:
 

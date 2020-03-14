@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
 ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697221"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305753"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Прокрутка Xamarin. Forms CollectionView
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет два метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , которые просматривают элементы в представлении. Одна из перегрузок прокручивается элемент по указанному индексу в представление, а другой Прокручивает указанный элемент в представление. Обе перегрузки имеют дополнительные аргументы, которые могут указывать на группу, к которой принадлежит элемент, точное расположение элемента после завершения прокрутки, а также следует ли анимировать прокрутку.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет событие [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) , которое возникает при вызове одного из методов [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Объект [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) , сопровождающий событие `ScrollToRequested`, имеет множество свойств, включая `IsAnimated`, `Index`, `Item` и `ScrollToPosition`. Эти свойства задаются из аргументов, указанных в вызовах метода `ScrollTo`.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет событие [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) , которое возникает при вызове одного из методов [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Объект [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) , сопровождающий событие `ScrollToRequested`, имеет множество свойств, включая `IsAnimated`, `Index`, `Item`и `ScrollToPosition`. Эти свойства задаются из аргументов, указанных в вызовах метода `ScrollTo`.
 
 Кроме того, [`CollectionView`](xref:Xamarin.Forms.CollectionView) определяет событие `Scrolled`, которое срабатывает для указания на то, что прокрутка выполнена. Объект `ItemsViewScrolledEventArgs`, сопровождающий событие `Scrolled`, имеет много свойств. Дополнительные сведения см. в разделе [Определение прокрутки](#detect-scrolling).
 
@@ -69,7 +69,7 @@ void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Прокрутка элемента по индексу в представлении
 
-Первая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) прокручивает элемент по указанному индексу в представлении. При наличии объекта [`CollectionView`](xref:Xamarin.Forms.CollectionView) с именем `collectionView` в следующем примере показано, как прокручивать элемент с индексом 12 в представление:
+Первая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) прокручивает элемент по указанному индексу в представлении. При наличии объекта [`CollectionView`](xref:Xamarin.Forms.CollectionView) с именем `collectionView`в следующем примере показано, как прокручивать элемент с индексом 12 в представление:
 
 ```csharp
 collectionView.ScrollTo(12);
@@ -87,7 +87,7 @@ collectionView.ScrollTo(2, 1);
 
 ## <a name="scroll-an-item-into-view"></a>Прокрутить элемент на представление
 
-Вторая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) Прокручивает указанный элемент на представление. При наличии объекта [`CollectionView`](xref:Xamarin.Forms.CollectionView) с именем `collectionView` в следующем примере показано, как прокручивать элемент пробосЦис обезьяны в представление:
+Вторая перегрузка метода [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) Прокручивает указанный элемент на представление. При наличии объекта [`CollectionView`](xref:Xamarin.Forms.CollectionView) с именем `collectionView`в следующем примере показано, как прокручивать элемент пробосЦис обезьяны в представление:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -146,7 +146,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 [![Снимок экрана CollectionViewого вертикального списка с прокруткой элемента в представлении в iOS и Android](scrolling-images/scrolltoposition-start.png "Вертикальный список CollectionView с прокруткой элемента")](scrolling-images/scrolltoposition-start-large.png#lightbox "Вертикальный список CollectionView с прокруткой элемента")
 
-### <a name="center"></a>Центр
+### <a name="center"></a>Центр.
 
 Элемент [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться по центру представления:
 
@@ -229,10 +229,10 @@ CollectionView collectionView = new CollectionView
 
 ### <a name="snap-points-alignment"></a>Выравнивание точек привязки
 
-Перечисление [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) определяет члены `Start`, `Center` и `End`.
+Перечисление [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) определяет члены `Start`, `Center`и `End`.
 
 > [!IMPORTANT]
-> Значение свойства [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) учитывается только в том случае, если свойство [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) имеет значение `Mandatory` или `MandatorySingle`.
+> Значение свойства [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) учитывается только в том случае, если свойство [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) имеет значение `Mandatory`или `MandatorySingle`.
 
 #### <a name="start"></a>Запуск
 
@@ -269,7 +269,7 @@ CollectionView collectionView = new CollectionView
 
 [![Снимок экрана с CollectionView вертикальным списком с точками привязки для запуска в iOS и Android](scrolling-images/snappoints-start.png "Вертикальный список CollectionView с начальной точкой привязки")](scrolling-images/snappoints-start-large.png#lightbox "Вертикальный список CollectionView с начальной точкой привязки")
 
-#### <a name="center"></a>Центр
+#### <a name="center"></a>Центр.
 
 Элемент `SnapPointsAlignment.Center` указывает, что точки привязки выровнены по центру элементов. В следующем примере XAML показано, как задать этот элемент перечисления:
 

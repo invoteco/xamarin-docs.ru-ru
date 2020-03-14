@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019
 ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488181"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305933"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Данные CollectionView в Xamarin. Forms
 
@@ -330,7 +330,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 
 Дополнительные сведения об элементе управления `SwipeView` см. в разделе [Xamarin. Forms свипевиев](~/xamarin-forms/user-interface/swipeview.md).
 
-## <a name="pull-to-refresh"></a>Обновление путем оттягивания
+## <a name="pull-to-refresh"></a>Извлечь для обновления
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) поддерживает функцию Pull для обновления с помощью `RefreshView`, что позволяет обновлять отображаемые данные путем вывода списка элементов. `RefreshView` — это контейнерный элемент управления, предоставляющий функции обновления для своего дочернего элемента, при условии, что дочерний объект поддерживает прокручиваемое содержимое. Таким образом, запрос на обновление реализуется для `CollectionView`, настроив его как дочерний элемент `RefreshView`.
 
@@ -424,6 +424,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CollectionView (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Рефрешвиев Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
 - [Свипевиев Xamarin. Forms](~/xamarin-forms/user-interface/swipeview.md)
-- [Привязка данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Привязка данных Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Шаблоны данных Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Создание DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

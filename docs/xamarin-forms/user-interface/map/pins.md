@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
 ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
-ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74556164"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306569"
 ---
 # <a name="xamarinforms-map-pins"></a>ПИН-коды карт Xamarin. Forms
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 Элемент управления Xamarin. Forms [`Map`](xref:Xamarin.Forms.Maps.Map) позволяет помечать расположения объектами [`Pin`](xref:Xamarin.Forms.Maps.Pin) . `Pin` — это маркер Map, открывающий информационное окно при касании:
 

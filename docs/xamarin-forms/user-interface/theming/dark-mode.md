@@ -6,13 +6,13 @@ ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
 ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
-ms.date: 02/19/2020
-ms.openlocfilehash: 7136e3240a39321b2d67ca29c16a0758cf5c4cfb
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 03/13/2020
+ms.openlocfilehash: 104237155797ca90c52ad385e8349480f9666c4c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486292"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303506"
 ---
 # <a name="detect-dark-mode-in-xamarinforms-applications"></a>Обнаружение темного режима в приложениях Xamarin. Forms
 
@@ -41,13 +41,54 @@ ms.locfileid: "77486292"
 
 ## <a name="define-themes"></a>Определение тем
 
-Пошаговые инструкции по созданию темных и светлых тем см. [в этом разделе](theming.md) .
+Пошаговые инструкции по созданию темных и светлых тем см. [в этом разделе](theming.md) . 
+
+Новую тему для приложения можно легко настроить в соответствующем расположении кода платформы. Чтобы загрузить новую тему, просто замените текущий словарь ресурсов приложения на выбранный словарь ресурсов с темой.
+
+```csharp
+App.Current.Resources = new YourDarkTheme();
+```
+
+## <a name="detect-and-apply-theme"></a>Определение и применение темы
+
+Обнаружение текущей темы можно получить с помощью [`RequestedTheme`](~/essentials/app-theme.md) функции [Xamarin. Essentials](~/essentials/index.md) (версия 1.4.0 или более новая). Затем можно создать вспомогательный метод в новом классе или в классе `App`, чтобы настроить тему:
+
+```csharp
+public partial class App : Application
+{
+    public static void ApplyTheme()
+    {
+        if (AppInfo.RequestedTheme == AppTheme.Dark)
+        {
+            // change to light theme
+            // e.g. App.Current.Resources = new YourLightTheme();
+        }
+        else
+        {
+            // change to dark theme
+            // e.g. App.Current.Resources = new YourDarkTheme();
+        }
+    }
+}
+```
 
 ## <a name="react-to-appearance-mode-changes"></a>Реагирование на изменения режима отображения
 
 Режим отображения на устройстве может измениться по ряду причин, в зависимости от того, как пользователь настроил свои предпочтения, включая явное выбор режима, времени суток или таких факторов, как низкая-лампочка. Вам потребуется добавить код платформы, чтобы приложение может реагировать на эти изменения, а в следующих разделах это более подробно обсуждается.
 
 ### <a name="android"></a>Android
+
+Для поддержки темного режима в приложении необходимо обновить тему приложения, которую можно найти в `Resources/values/styles.xml`для наследования от `DayNight` темы:
+
+```xml
+<style name="MainTheme.Base" parent="Theme.AppCompat.DayNight">
+```
+
+Если вы выполнили обновление до [компонентов материалов](https://www.nuget.org/packages/Xamarin.Google.Android.Material/) андроидкс (1.1.0-RC2) или более поздней версии, вы можете использовать:
+
+```xml
+<style name="MainTheme.Base" parent="Theme.MaterialComponents.DayNight">
+```
 
 В файле **MainActivity.CS** приложения добавьте поле `ConfigChanges.UiMode` в свойство `ConfigurationChanges` в атрибуте `Activity`, чтобы ваше приложение получало уведомления об изменениях в режиме пользовательского интерфейса:
 
@@ -63,17 +104,7 @@ ms.locfileid: "77486292"
 public override void OnConfigurationChanged(Configuration newConfig)
 {
     base.OnConfigurationChanged(newConfig);
-
-    if ((newConfig.UiMode & UiMode.NightNo) != 0)
-    {
-        // change to light theme
-        // e.g. App.Current.Resources = new YourLightTheme();
-    }
-    else
-    {
-        // change to dark theme
-        // e.g. App.Current.Resources = new YourDarkTheme();
-    }
+    App.ApplyTheme();
 }
 ```
 
@@ -103,7 +134,7 @@ namespace YourApp.iOS.Renderers
 
             try
             {
-                SetAppTheme();
+                App.ApplyTheme();
             }
             catch (Exception ex)
             {
@@ -115,24 +146,7 @@ namespace YourApp.iOS.Renderers
         {
             base.TraitCollectionDidChange(previousTraitCollection);
 
-            if(this.TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
-            {
-                SetAppTheme();
-            }
-        }
-
-        void SetAppTheme()
-        {
-            if (this.TraitCollection.UserInterfaceStyle == UIUserInterfaceStyle.Dark)
-            {
-                // change to dark theme
-                // e.g. App.Current.Resources = new YourDarkTheme();
-            }
-            else
-            {
-                // change to light theme
-                // e.g. App.Current.Resources = new YourLightTheme();
-            }
+            App.ApplyTheme();
         }
     }
 }
@@ -147,7 +161,6 @@ namespace YourApp.iOS.Renderers
 ```csharp
 public sealed partial class MainPage
 {
-
     UISettings uiSettings;
 
     public MainPage()
@@ -162,34 +175,12 @@ public sealed partial class MainPage
 
     private void ColorValuesChanged(UISettings sender, object args)
     {
-        var backgroundColor = sender.GetColorValue(UIColorType.Background);
-        var isDarkMode = backgroundColor == Colors.Black;
-        if(isDarkMode)
+        Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
         {
-            Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
-            {
-                // change to dark theme
-                // e.g. App.Current.Resources = new YourDarkTheme();
-            });
-        }
-        else
-        {
-            Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
-            {
-                // change to light theme
-                // e.g. App.Current.Resources = new YourLightTheme();
-            });
-        }
+            App.ApplyTheme();
+        });
     }
 }
-```
-
-## <a name="set-dark-and-light-themes"></a>Установка темных и светлых тем
-
-После [выполнения этих рекомендаций можно](theming.md) легко настроить новую тему для приложения в соответствующем расположении кода платформы, приведенном выше. Чтобы загрузить новую тему, просто замените текущий словарь ресурсов приложения на выбранный словарь ресурсов с темой.
-
-```csharp
-App.Current.Resources = new YourDarkTheme();
 ```
 
 ## <a name="related-links"></a>Связанные ссылки

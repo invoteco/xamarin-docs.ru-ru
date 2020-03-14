@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/28/2020
 ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635932"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305687"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Прокрутка Xamarin. Forms Карауселвиев
 
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 В этом примере кода создается элемент, который прокручивается до начала представления.
 
-### <a name="center"></a>Center
+### <a name="center"></a>Центр.
 
 Элемент [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться по центру представления:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Этот пример кода приводит к переходу элемента в центр представления.
 
-### <a name="end"></a>Окончание
+### <a name="end"></a>Конец
 
 Элемент [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) указывает, что элемент должен быть прокручиваться до конца представления:
 
@@ -262,7 +262,7 @@ CarouselView carouselView = new CarouselView
 
 [![Снимок экрана Карауселвиев с начальной точкой привязки в iOS и Android](scrolling-images/snappoints-start.png "Карауселвиев с начальной точкой привязки")](scrolling-images/snappoints-start-large.png#lightbox "Карауселвиев с начальной точкой привязки")
 
-#### <a name="center"></a>Center
+#### <a name="center"></a>Центр.
 
 Элемент `SnapPointsAlignment.Center` указывает, что точки привязки выровнены по центру элементов.
 
@@ -298,7 +298,7 @@ CarouselView carouselView = new CarouselView
 
 [![Снимок экрана Карауселвиев с центральными точками привязки в iOS и Android](scrolling-images/snappoints-center.png "Карауселвиев с центральными точками привязки")](scrolling-images/snappoints-center-large.png#lightbox "Карауселвиев с центральными точками привязки")
 
-#### <a name="end"></a>Окончание
+#### <a name="end"></a>Конец
 
 Элемент `SnapPointsAlignment.End` указывает, что точки привязки согласованы с конечным ребром элементов. В следующем примере XAML показано, как задать этот элемент перечисления:
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
 ms.openlocfilehash: 6b02a0f8476cf47ca6df279653095fe0845b36c9
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914715"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306065"
 ---
 # <a name="ios-designer-basics"></a>основы конструктора iOS
 
@@ -330,8 +330,8 @@ namespace Designer
 К элементам управления относятся следующие.
 
 1. Масштаб по размеру
-2. Уменьшить масштаб.
-3. Увеличить масштаб.
+2. Мельче
+3. Увеличить
 4. Фактический размер (размер 1:1 пикселей)
 
 Эти элементы управления настраивают масштаб в области конструктора. Они не влияют на пользовательский интерфейс приложения во время выполнения.

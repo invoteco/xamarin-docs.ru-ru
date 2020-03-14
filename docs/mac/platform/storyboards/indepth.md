@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 06774d13cf053b661dd0b2d24b7df0c0b767b4db
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78919139"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306209"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Работа с раскадровками в Xamarin. Mac
 
@@ -82,7 +82,7 @@ controller.ShowWindow(this);
 
 <a name="Containment" />
 
-### <a name="containment"></a>Вложение
+### <a name="containment"></a>Containment
 
 В раскадровках контроллеры представлений (например, контроллер разделенного представления и контроллер представления вкладок) теперь могут реализовать _Включение_, чтобы они могли "содержать" другие контроллеры подпредставления:
 

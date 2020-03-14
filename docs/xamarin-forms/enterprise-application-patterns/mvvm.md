@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: d6c9b74c9abc1a2c493c31699b52969a7d129429
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915320"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306383"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Шаблон Model-View-ViewModel
 

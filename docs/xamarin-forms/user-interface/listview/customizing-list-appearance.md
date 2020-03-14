@@ -1,6 +1,6 @@
 ---
 title: Внешний вид ListView
-description: В этой статье объясняется, как настроить ListView в приложениях Xamarin. Forms с помощью заголовков, нижних колонтитулов, групп и ячеек переменной высоты.
+description: В этой статье объясняется, как настроить ListViews в приложениях Xamarin.Forms с помощью заголовки, нижние колонтитулы, групп и переменной высоты ячейки.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
@@ -8,33 +8,33 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
 ms.openlocfilehash: 90b0e0f3802ce766decb802c9406d72b5966360e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032806"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305651"
 ---
 # <a name="listview-appearance"></a>Внешний вид ListView
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
 [`ListView`](xref:Xamarin.Forms.ListView) Xamarin. Forms позволяет настроить представление списка в дополнение к экземплярам [`ViewCell`](xref:Xamarin.Forms.ViewCell) для каждой строки в списке.
 
 ## <a name="grouping"></a>Группирование
 
-Большие наборы данных могут стать неудобными, если они представлены в постоянном списке прокрутки. Включение группирования может улучшить взаимодействие с пользователем в этих случаях путем лучшего упорядочения содержимого и активации элементов управления для конкретных платформ, облегчающих навигацию по данным.
+Большие наборы данных могут стать неудобными, если они представлены в постоянном списке прокрутки. Включение группирования можно улучшить взаимодействие с пользователем в таких случаях лучше организации содержимого и активации элементов управления платформы, которые упрощают перемещения по данным.
 
 При активации группирования для `ListView`для каждой группы добавляется строка заголовка.
 
-Включение группирования:
+Чтобы включить группирования:
 
-- Создайте список списков (список групп, каждая из которых является списком элементов).
+- Создайте список списков (список групп, каждая группа, что список элементов).
 - Установите `ItemsSource` `ListView`в этот список.
-- Задайте для `IsGroupingEnabled` значение true.
+- `IsGroupingEnabled` — присвойте значение True.
 - Задайте [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) для привязки к свойству групп, которые используются в качестве заголовка группы.
-- Используемых Задайте [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) для привязки к свойству групп, которое используется в качестве краткого имени группы. Короткое имя используется для списков переходов (правый столбец в iOS).
+- Используемых Задайте [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) для привязки к свойству групп, которое используется в качестве краткого имени группы. Короткое имя используется для списки переходов (столбец справа в iOS).
 
-Начните с создания класса для групп.
+Начните с создания класса для групп:
 
 ```csharp
 public class PageTypeGroup : List<PageModel>
@@ -54,7 +54,7 @@ public class PageTypeGroup : List<PageModel>
 
 В приведенном выше коде `All` — это список, который будет передан в ListView в качестве источника привязки. `Title` и `ShortName` — это свойства, которые будут использоваться для заголовков групп.
 
-На этом этапе `All` является пустым списком. Добавьте статический конструктор, чтобы список был заполнен при запуске программы:
+На этом этапе `All` является пустым списком. Добавьте статический конструктор, таким образом, список будет заполнен при запуске программы:
 
 ```csharp
 static PageTypeGroup()
@@ -79,7 +79,7 @@ static PageTypeGroup()
 
 В приведенном выше коде можно также вызвать `Add` для элементов `Groups`, которые являются экземплярами типа `PageTypeGroup`. Этот метод возможен, так как `PageTypeGroup` наследует от `List<PageModel>`.
 
-Ниже приведен код XAML для отображения сгруппированного списка:
+Ниже приведен XAML для отображения Сгруппированный список.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,7 +115,7 @@ static PageTypeGroup()
 
 ### <a name="customizing-grouping"></a>Настройка группирования
 
-Если группирование включено в списке, можно также настроить заголовок группы.
+Если включено группирование в списке, можно настроить и заголовок группы.
 
 Аналогично тому, как `ListView` имеет `ItemTemplate` для определения способа отображения строк, `ListView` имеет `GroupHeaderTemplate`.
 
@@ -156,7 +156,7 @@ static PageTypeGroup()
 
 ## <a name="headers-and-footers"></a>Верхние и нижние колонтитулы
 
-ListView может представлять верхний и нижний колонтитулы, которые прокручивается с элементами списка. Верхний и нижний колонтитулы могут быть строками текста или более сложным макетом. Это поведение отделено от [групп разделов](#grouping).
+Существует возможность ListView для представления верхний и нижний колонтитул, которые можно прокручивать с элементами списка. Верхний и нижний колонтитул могут представлять собой строки текста или более сложный макет. Это поведение отделено от [групп разделов](#grouping).
 
 Можно задать для `Header` и (или) `Footer` значение `string` или можно задать более сложный макет. Существуют также `HeaderTemplate` и `FooterTemplate` свойства, позволяющие создавать более сложные макеты для верхнего и нижнего колонтитулов, поддерживающих привязку данных.
 
@@ -182,7 +182,7 @@ ListView HeaderList = new ListView()
 
 ![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
 
-Чтобы создать настраиваемый верхний и нижний колонтитулы, определите представления верхнего и нижнего колонтитулов.
+Чтобы создать настраиваемый верхний и нижний колонтитул, определите представлениях колонтитулы:
 
 ```xaml
 <ListView.Header>
@@ -226,7 +226,7 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 ```
 
-КОДА
+XAML:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
@@ -234,7 +234,7 @@ SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 
 ![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
 
-None
+Нет.
 
 C#:
 
@@ -242,7 +242,7 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
 ```
 
-КОДА
+XAML:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
@@ -258,7 +258,7 @@ C#:
 SeparatorDemoListView.SeparatorColor = Color.Green;
 ```
 
-КОДА
+XAML:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
@@ -271,9 +271,9 @@ SeparatorDemoListView.SeparatorColor = Color.Green;
 
 ## <a name="row-height"></a>Высота строки
 
-По умолчанию все строки в ListView имеют одинаковую высоту. ListView имеет два свойства, которые можно использовать для изменения этого поведения:
+По умолчанию все строки в ListView имеют одинаковую высоту. ListView имеет два свойства, которые могут использоваться для изменения этого поведения.
 
-- `HasUnevenRows` &ndash; `true`/`false`, строки имеют различные значения высоты, если задано значение `true`. По умолчанию — `false`.
+- `HasUnevenRows` &ndash; `true`/`false`, строки имеют различные значения высоты, если задано значение `true`. По умолчанию равен `false`.
 - `RowHeight` &ndash; задает высоту каждой строки, когда `HasUnevenRows` `false`.
 
 Можно задать высоту всех строк, задав свойство `RowHeight` на `ListView`.
@@ -286,7 +286,7 @@ C#:
 RowHeightDemoListView.RowHeight = 100;
 ```
 
-КОДА
+XAML:
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
@@ -304,7 +304,7 @@ C#:
 RowHeightDemoListView.HasUnevenRows = true;
 ```
 
-КОДА
+XAML:
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 13f5c594543934e14295615517e3de01a98a69a5
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3d9531bbaa38a0a0a9bb42d22c79a63fda75c449
+ms.sourcegitcommit: 926f9a44065b41c7d74794a94bee66b61e903bf2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76941000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79134022"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Общие сведения о раскадровках в Xamarin. iOS
 
@@ -49,11 +49,11 @@ ms.locfileid: "76941000"
 
 При наведении указателя мыши появится меню, позволяющее выбрать действие для нашего перехода. Он может выглядеть примерно так:
 
-**Pre-iOS 8 и классы размера**
+**Классы до iOS 8 и size**:
 
 [![](images/segue1.png "The Action Segue dropdown without Size Classes")](images/segue1.png#lightbox)
 
-**При использовании классов размера и адаптивных сегментов**
+**При использовании классов размера и адаптивного переходов**:
 
 [![](images/16new.png "The Action Segue dropdown with Size Classes")](images/16new.png#lightbox)
 
@@ -82,11 +82,11 @@ ms.locfileid: "76941000"
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
-|Перехода|Описание|
+|Перехода|Description|
 |--- |--- |
 |Показать|Это очень похоже на Push-перехода, но оно принимает содержимое экрана в учетную запись.|
 |Отобразить подробности|Если приложение отображает главное и подробное представление (например, в контроллере с разделением представлений на iPad), содержимое заменит подробное представление. Если приложение отображает только основные сведения или подробности, содержимое будет заменено верхней частью стека контроллера представления.|
-|Presentation|Это похоже на модальный перехода и позволяет выбирать стили представления и перехода.|
+|Уровень представления|Это похоже на модальный перехода и позволяет выбирать стили представления и перехода.|
 |Контекстном меню Action презентацию|Это содержимое представлено как контекстном меню Action|
 
 ### <a name="transferring-data-with-segues"></a>Передача данных с помощью переходов
@@ -128,7 +128,7 @@ if (callHistoryController != null) {
 
 Иногда может потребоваться добавить раскадровку в ранее не раскадровую файл. Сделав это в Visual Studio для Mac можно упростить, выполнив следующие действия:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Создайте файл раскадровки, перейдя в **файл > новый файл > iOS > Storyboard**, как показано ниже:
 
@@ -149,7 +149,7 @@ if (callHistoryController != null) {
     }
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Создайте файл раскадровки, щелкнув правой кнопкой мыши проект, чтобы **добавить > новый файл > iOS > пустую раскадровку**, как показано ниже:
 
@@ -187,6 +187,10 @@ if (callHistoryController != null) {
     [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
 
 2. Щелкните файл раскадровки правой кнопкой мыши и выберите пункт **Открыть с помощью > Xcode Interface Builder** , чтобы открыть его в Xcode.
+
+    *Если вы предпочитаете использовать построитель интерфейсов Xcode по умолчанию, его можно выбрать в параметрах Visual Studio для Mac в разделе **проекты > iOS**:*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
 
 3. В Xcode Откройте библиотеку (с помощью **представления > Показать библиотеку** или *Shift + Command + L*), чтобы отобразить список объектов, которые можно добавить в раскадровку. Добавьте `Navigation Controller` в раскадровку, перетащив объект из списка на раскадровку. По умолчанию `Navigation Controller` предоставит два экрана; экран справа является `TableViewController`, который мы будем заменять более простым представлением, поэтому его можно удалить, щелкнув представление и нажав клавишу DELETE.
 
@@ -478,7 +482,7 @@ public partial class MainViewController : UIViewController
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Ручная раскадровка (образец)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
-- [Введение в iOS Designer](~/ios/user-interface/designer/introduction.md)
+- [Ручная Раскадровка (пример)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
+- [Общие сведения о конструкторе iOS](~/ios/user-interface/designer/introduction.md)
 - [Преобразование в раскадровки](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
-- [Справочник по классу UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)
+- [Справочник по классам Уисторибоард](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

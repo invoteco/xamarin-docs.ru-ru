@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915772"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306083"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Работа с tvOS навигацией и фокусом в Xamarin
 
@@ -28,7 +28,7 @@ _В этой статье рассматривается понятие фоку
 
 <a name="Navigation" />
 
-## <a name="navigation"></a>Навигация
+## <a name="navigation"></a>Навигации
 
 Пользователи приложения Xamarin. tvOS не будут взаимодействовать с интерфейсом напрямую, как с iOS, где они наследуют образы на экране устройства, но косвенно из комнаты, использующей [Удаленный Siri](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote). Это необходимо учитывать при проектировании пользовательского интерфейса приложения, чтобы он обходился естественным образом, но не оставался в процессе работы с Apple TV.
 
@@ -80,7 +80,7 @@ _В этой статье рассматривается понятие фоку
 
 ### <a name="working-with-focus"></a>Работа с фокусом
 
-Иногда требуется создать настраиваемый элемент управления, который может стать элементом, получающим фокус. Если это так, переопределите `CanBecomeFocused` свойство и возвратите `true`, иначе возвратите `false`. Например:
+Иногда требуется создать настраиваемый элемент управления, который может стать элементом, получающим фокус. Если это так, переопределите `CanBecomeFocused` свойство и возвратите `true`, иначе возвратите `false`. Пример:
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-В любой момент можно использовать свойство `Focused` элемента управления `UIKit`, чтобы определить, является ли он текущим элементом. Если `true` элемент пользовательского интерфейса в данный момент находится в фокусе, в противном случае — нет. Например:
+В любой момент можно использовать свойство `Focused` элемента управления `UIKit`, чтобы определить, является ли он текущим элементом. Если `true` элемент пользовательского интерфейса в данный момент находится в фокусе, в противном случае — нет. Пример:
 
 ```csharp
 // Is my view in focus?
@@ -101,7 +101,7 @@ if (myView.Focused) {
 }
 ```
 
-Хотя вы не можете напрямую перемещать фокус на другой элемент пользовательского интерфейса с помощью кода, можно указать, какой элемент пользовательского интерфейса сначала получает фокус при загрузке экрана, присвоив свойству `PreferredFocusedView` значение `true`. Например:
+Хотя вы не можете напрямую перемещать фокус на другой элемент пользовательского интерфейса с помощью кода, можно указать, какой элемент пользовательского интерфейса сначала получает фокус при загрузке экрана, присвоив свойству `PreferredFocusedView` значение `true`. Пример:
 
 ```csharp
 // Make the play button the starting focus item
@@ -204,7 +204,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Во-первых, этот код получает `NextFocusedView` из переданного `UIFocusUpdateContext` (`context`). Если это представление `null`, то обработка не требуется и метод завершает работу.
 
-Далее вычисляется `nextFocusableItem`. Если он совпадает с кнопками " **больше информации** " или " **купить** ", фокус передается обратной кнопке с помощью свойства `PreferredFocusedView` в разделе "Фокус". Например:
+Далее вычисляется `nextFocusableItem`. Если он совпадает с кнопками " **больше информации** " или " **купить** ", фокус передается обратной кнопке с помощью свойства `PreferredFocusedView` в разделе "Фокус". Пример:
 
 ```csharp
 // Move from the More Info to Buy button
@@ -222,7 +222,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>Работа с фокусом в коллекциях
 
-При принятии решения о том, может ли отдельный элемент быть доступен в `UICollectionView` или `UITableView`, вы переопределяете методы `UICollectionViewDelegate` или `UITableViewDelegate` соответственно. Например:
+При принятии решения о том, может ли отдельный элемент быть доступен в `UICollectionView` или `UITableView`, вы переопределяете методы `UICollectionViewDelegate` или `UITableViewDelegate` соответственно. Пример:
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout

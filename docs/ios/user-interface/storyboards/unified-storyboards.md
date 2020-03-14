@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915173"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306257"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Унифицированные раскадровки в Xamarin. iOS
 
@@ -80,7 +80,7 @@ UIImage icon = UIImage.FromFile("MonkeyImage.png");
 
 В iOS 8 разработчик может создать один атомарный файл `.xib` в Xcode, использующий классы автоматического макета и размера для создания *динамического экрана запуска* , который будет работать для каждого устройства, разрешения и ориентации. Это не только сокращает объем работы, необходимой разработчику для создания и обслуживания всех необходимых ресурсов изображений, но уменьшает размер установленного пакета приложения.
 
-## <a name="traits"></a>Характеристики
+## <a name="traits"></a>Признаки
 
 Признаки — это свойства, которые можно использовать для определения способа изменения макета при изменении его среды. Они состоят из набора свойств (`HorizontalSizeClass` и `VerticalSizeClass` на основе `UIUserInterfaceSizeClass`), а также идиомы интерфейса (`UIUserInterfaceIdiom`) и шкалы экрана.
 

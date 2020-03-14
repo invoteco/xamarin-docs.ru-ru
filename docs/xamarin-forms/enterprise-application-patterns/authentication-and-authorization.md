@@ -1,5 +1,5 @@
 ---
-title: Аутентификация и авторизация
+title: Проверка подлинности и авторизация
 description: В этой главе объясняется, как мобильное приложение eShopOnContainers выполняет проверку подлинности и авторизацию для контейнерных микрослужб.
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
 ms.openlocfilehash: 528ccd66cc013f83752d93251cb9714115b29819
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915254"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306329"
 ---
-# <a name="authentication-and-authorization"></a>Аутентификация и авторизация
+# <a name="authentication-and-authorization"></a>Проверка подлинности и авторизация
 
 Проверка подлинности — это процесс получения учетных данных для идентификации, таких как имя и пароль пользователя, и проверки этих учетных данных в центре сертификации. Если учетные данные действительны, сущность, которая отправила учетные данные, считается аутентифицированным удостоверением. После проверки подлинности удостоверения процесс авторизации определяет, имеет ли это удостоверение доступ к данному ресурсу.
 

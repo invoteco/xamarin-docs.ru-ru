@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
 ms.openlocfilehash: f986099011dbccb0eb43c62d253ee497d46ca08e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915497"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306203"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Установка и использование watchOS в Xamarin
 
@@ -151,7 +151,7 @@ watchOS 4 требуется macOS Sierra (10.12) с Xcode 9.
 
 При запуске отладки необходимо запустить *два* симулятора — симулятор iOS *и* симулятор Apple Watch. Используйте **команду + Shift + H** для перехода к меню Watch и циферблату часов; и используйте меню **оборудование** для установки **Force Touch давления**. Прокрутки на мыши или сенсорной панели будет имитировать с помощью цифровых корона.
 
-#### <a name="troubleshooting"></a>Диагностика
+#### <a name="troubleshooting"></a>Устранение неполадок
 
 Следующая ошибка появится в **выходных данных приложения** при попытке запуска в симуляторе, для которого нет парных часов:
 

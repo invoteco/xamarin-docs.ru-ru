@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: e5a61af4cd8a09df3ffddb74658f646aa8edfa1f
-ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79088973"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306113"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Обновления визуальной разработки в iOS 11
 
@@ -30,7 +30,7 @@ ms.locfileid: "79088973"
 barItem.LargeContentSizeImage = UIImage.FromBundle("AccessibleImage");
 ```
 
-### <a name="navigation-bar"></a>Панель переходов
+### <a name="navigation-bar"></a>Панель навигации
 в iOS 11 появились новые функции для упрощения чтения названий панелей навигации. Приложения могут отображать эту крупную должность, присваивая свойству `PrefersLargeTitles` значение true:
 
 ```csharp

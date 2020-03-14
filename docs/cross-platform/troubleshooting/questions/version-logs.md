@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013175"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305825"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Где я могу найти информацию о версии и журналы
 
@@ -160,7 +160,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 **Просмотр выходных данных > > Отображение выходных данных: Отладка**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />журналов logcat [`adb`](https://developer.android.com/tools/help/adb.html) Android
+### <a name="a-idadb-logcat-nameadb-logcat-android-adb-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />журналов logcat [`adb`](https://developer.android.com/tools/help/adb.html) Android
 
 После выполнения команды `adb` присоедините файл **android_logcat. txt** к рабочему столу. В этих инструкциях предполагается, что подключено только одно устройство.
 
@@ -170,14 +170,14 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 1. **Средства > Android > запустить командную строку ADB для Android**
 2. Очистка журнала: `adb logcat -c`
-3. Воспроизведите ошибку.
+3. Воспроизведите проблему.
 4. Вывод журнала: `adb logcat -vtime -d > "%USERPROFILE%\Desktop\android_logcat.txt"`
 
 #### <a name="visual-studio-for-mac"></a>Visual Studio для Mac
 
 1. **Средства > открыть пакет SDK для Android командной строки**
 2. Очистка журнала: `adb logcat -c`
-3. Воспроизведите ошибку.
+3. Воспроизведите проблему.
 4. Вывод журнала: `adb logcat -vtime -d > ~/Desktop/android_logcat.txt`
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a>журналы <a id="ios-simulator-logs" name="ios-simulator-logs" />iOS симуляторов (на Mac)

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487767"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306251"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Работа с watchOS родительское приложение в Xamarin
 
@@ -20,7 +20,7 @@ ms.locfileid: "75487767"
 
 - Смотреть приложения могут [запускать код](#run-code) в родительском приложении на iPhone.
 
-- Контрольные значения расширений может [совместно используют хранилище, доступном](#shared-storage) с приложением iPhone родительского.
+- Расширения Watch могут [совместно использовать расположение хранилища](#shared-storage) с родительским приложением iPhone.
 
 - Используйте пересылку, чтобы передать данные из уведомления в приложение наблюдения, отправив пользователю конкретный контроллер интерфейса в приложении.
 
@@ -35,11 +35,11 @@ ms.locfileid: "75487767"
 
 ## <a name="shared-storage"></a>Общее хранилище
 
-Если вы настраиваете [групп приложений](~/ios/watchos/app-fundamentals/app-groups.md) то расширения iOS 8 (включая расширения watch) могут обмениваться данными в родительское приложение.
+Если вы настраиваете [группу приложений](~/ios/watchos/app-fundamentals/app-groups.md) , расширения iOS 8 (включая расширения контрольных значений) могут обмениваться данными с родительским приложением.
 
 ### <a name="nsuserdefaults"></a>Параметры NSUserDefaults
 
-Следующий код могут быть написаны на расширение приложения watch и iPhone в родительское приложение таким образом, они могут ссылаться на общий набор `NSUserDefaults`:
+Следующий код можно записать как в расширении приложения Watch, так и в родительском приложении iPhone, чтобы они могли ссылаться на общий набор `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -70,11 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Примечание: Если путь является `null` проверьте [конфигурации группы приложений](~/ios/watchos/app-fundamentals/app-groups.md) для обеспечения профили подготовки были настроены правильно и были загружены или не установлены на компьютере разработчика.
+Примечание. Если путь `null`, проверьте [конфигурацию группы приложений](~/ios/watchos/app-fundamentals/app-groups.md) , чтобы убедиться, что профили подготовки настроены правильно и были загружены или установлены на компьютере разработчика.
 
-Дополнительные сведения см. в разделе [возможностей групп приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) документации.
+Дополнительные сведения см. в документации по [возможностям группы приложений](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Справочник по WKInterfaceController Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
-- [Apple обмена данными с содержащего приложение](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Справочник по Вкинтерфацеконтроллер Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
+- [Совместное использование данных Apple с содержащим приложением](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 21. Transform
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 21. Transform'
+title: Сводная информация о Главе 21. Transform
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводная информация о Главе 21. Transform
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
@@ -8,27 +8,27 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70760579"
 ---
-# <a name="summary-of-chapter-21-transforms"></a>Сводка Глава 21. Transform
+# <a name="summary-of-chapter-21-transforms"></a>Сводная информация о Главе 21. Transform
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
-Xamarin.Forms отображается на экране в расположение и размер определяется своим родительским элементом, который обычно является `Layout` или `Layout<View>` производных продуктов. *Преобразования* — это функция Xamarin.Forms, можно изменить, расположение, размер или даже ориентации.
+Представление Xamarin.Forms появляется на экране в том месте и с тем размером, которые определяются его родительским элементом, обычно производном от `Layout` или `Layout<View>`. Возможность *преобразования* в Xamarin.Forms позволяет изменить расположение, размер и даже ориентацию элемента.
 
 Xamarin.Forms поддерживает три основных типа преобразований:
 
-- *Перевод* &mdash; сдвинуть элемент по горизонтали или по вертикали
-- *Масштаб* &mdash; изменить размер элемента
-- *Поворот* &mdash; включить элемент вокруг точки или оси
+- *перенос* &mdash; сдвиг объекта по горизонтали или по вертикали;
+- *масштабирование* &mdash; изменение размера элемента;
+- *вращение* &mdash; поворот элемента вокруг некоторой точки или оси.
 
-В Xamarin.Forms масштабирование мощности; Это влияет на ширину и высоту равномерно. Поворот поддерживается как на двухмерную поверхность, экрана и в трехмерном пространстве. Нет, преобразование не неравномерного распределения (или само) и не обобщенного матричное преобразование.
+В Xamarin.Forms масштабирование выполняется изотропно, то есть в равной мере применяется к высоте и ширине. Поддерживается вращение как в пределах двумерной плоскости экрана, так и в трехмерном пространстве. Преобразование со сдвигом (искажением) не поддерживается, также не предлагается обобщенного матричного преобразования.
 
-Преобразования поддерживаются с восемь свойств типа `double` определяется `VisualElement` класса:
+Преобразования поддерживаются для восьми свойств типа `double`, которые определены классом `VisualElement`:
 
 - [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)
 - [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
@@ -39,91 +39,91 @@ Xamarin.Forms поддерживает три основных типа прео
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-Все эти свойства обеспечиваются связываемые свойства. Они могли быть целями привязки данных и стили. [**В главе 22 книги. Анимация** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) показано, как эти свойства могут быть анимированы, но в некоторых примерах в этой главе показано, как можно анимировать их с помощью Xamarin.Forms [таймера](~/xamarin-forms/platform/device.md#devicestarttimer).
+Все эти свойства подкреплены привязываемыми свойствами. Их можно использовать для привязки данных и применения стилей. [**Глава 22. Анимация**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) покажет вам, как применять анимацию для этих свойств, но уже в этой главе вы найдете несколько примеров анимации с применением [таймера](~/xamarin-forms/platform/device.md#devicestarttimer) Xamarin.Forms.
 
-Преобразование свойства определяют, как только элемент отображается и выполните *не* влияют на способ, воспринимается ли элемент в макете.
+Свойства преобразования влияют только на отображение элемента, но *не влияют* на размещение элемента в макете.
 
-## <a name="the-translation-transform"></a>Преобразования перевода
+## <a name="the-translation-transform"></a>Преобразование переносом
 
-Ненулевые значения из [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) и [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) свойства сдвинуть элемент горизонтально или вертикально.
+Отличные от нуля значения свойств [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) и [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) приводят к сдвигу объекта по горизонтали или по вертикали.
 
-[ **TranslationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TranslationDemo) программа позволяет вам поэкспериментировать с этими свойствами с двумя `Slider` элементы, которые управляют `TranslationX` и `TranslationY` свойства `Frame`. Преобразование также влияет на все дочерние элементы, `Frame`.
+Программа [**TranslationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TranslationDemo) дает возможность поэкспериментировать с этими свойствами на примере двух элементов `Slider`, которые управляют свойствами `TranslationX` и `TranslationY` объекта `Frame`. Преобразование также затрагивает все дочерние элементы этого `Frame`.
 
-### <a name="text-effects"></a>Текстовые эффекты
+### <a name="text-effects"></a>Эффекты текста
 
-Один обычно свойств преобразования используется немного смещения отрисовку текста. Это показано в [ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) пример:
+Одно из самых распространенных применений для преобразования сдвигом — небольшое смещение отображаемого текста. Это показано в примере [**TextOffsets**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets).
 
-[![Тройной снимок смещает текст](images/ch21fg03-small.png "смещает текст")](images/ch21fg03-large.png#lightbox "смещает текст")
+[![Снимок экрана с тремя изображениями смещения текста](images/ch21fg03-small.png "Смещение текста")](images/ch21fg03-large.png#lightbox "Смещение текста")
 
-Другой эффект заключается в том, для подготовки к просмотру нескольких копий `Label` , чтобы он напоминал блок 3D, такие, как показано в [ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) образца.
+Еще один полезный эффект — создание нескольких копий `Label` для получения трехмерного блока, как показано в примере [**BlockText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText).
 
-### <a name="jumps-and-animations"></a>Переходы и анимации
+### <a name="jumps-and-animations"></a>Прыжки и анимации
 
-[ **ButtonJump** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonJump) образец использует преобразование для перемещения `Button` всякий раз, когда он шифрованию, но основной целью является показать, что `Button` получает входные данные пользователя в расположении где Кнопка визуализируется.
+Пример [**ButtonJump**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonJump) использует сдвиг для переноса `Button` в ту точку, на которую нажимает пользователь, но основное его назначение — продемонстрировать получение в `Button` пользовательского ввода в том месте, где отображается кнопка.
 
-[ **ButtonGlide** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonGlide) пример аналогичен, но используется таймер для анимации `Button` из одной точки в другую.
+Пример [**ButtonGlide**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonGlide) работает почти так же, но с таймером для анимации перемещения `Button` в другую точку.
 
-## <a name="the-scale-transform"></a>Преобразование масштаба
+## <a name="the-scale-transform"></a>Преобразование масштабированием
 
-[ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) Преобразования можно увеличить или уменьшить отображаемый размер элемента. Значение по умолчанию — 1. Значение 0 приводит к элемент быть скрытым. Отрицательные значения вызывают элемента могут быть Повернуть на 180 градусов. `Scale` Свойство не влияет на `Width` или `Height` свойств элемента. Эти значения не изменяются.
+Преобразование [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) может увеличивать или уменьшать отображаемый размер элемента. Значение по умолчанию — 1. Значение 0 приводит к тому, что элемент становится невидимым. При отрицательных значениях элемент отображается развернутым на 180 градусов. Свойство `Scale` не влияет на свойства `Width` и (или) `Height` элемента. Эти значения остаются неизменными.
 
-Вы можете поэкспериментировать с `Scale` свойства с помощью [ **SimpleScaleDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/SimpleScaleDemo) образца.
+Вы можете поэкспериментировать со свойством `Scale` в примере [**SimpleScaleDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/SimpleScaleDemo).
 
-[ **ButtonScaler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonScaler) в нем демонстрируется разница между анимации `Scale` свойство `Button` и анимации `FontSize` свойство. `FontSize` Свойство влияет на способ `Button` воспринимается в макете; `Scale` не поддерживает свойство.
+Пример [**ButtonScaler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonScaler) демонстрирует различия между анимированием свойства `Scale` в `Button` и анимированием свойства `FontSize`. Свойство `FontSize` влияет на то, как `Button` воспринимается в макете, а `Scale` — нет.
 
-[ **ScaleToSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ScaleToSize) пример вычисляет `Scale` свойство, которое применяется к `Label` элемент, чтобы сделать его как можно большего размера при по-прежнему подгонки в пределах страницы.
+Пример [**ScaleToSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ScaleToSize) вычислят свойство `Scale`, которое применяется к элементу `Label` для максимально возможного увеличения его размера без выхода за пределы страницы.
 
-### <a name="anchoring-the-scale"></a>Привязка шкалы
+### <a name="anchoring-the-scale"></a>Привязка масштаба
 
-Элементы масштабирования в предыдущих трех примерах все увеличилось или уменьшилось размер относительно центра элемента. Другими словами элемент увеличивается или уменьшается в размерах одинаковым во всех направлениях. Только точка в центре элемента остается в том же расположении во время масштабирования.
+Элемент, к которому мы применяли масштабирование в трех предыдущих примера, всегда увеличивался или уменьшался относительно центра этого элемента. Другими словами, он увеличивал и уменьшал размер равномерно во всех направлениях. Центральная точка элемента является единственной, которая сохраняет свое положение при масштабировании.
 
-Можно изменить центр масштабирования, задав [ `AnchorX` ](xref:Xamarin.Forms.VisualElement.AnchorX) и [ `AnchorY` ](xref:Xamarin.Forms.VisualElement.AnchorY) свойства. Эти свойства определяются относительно самого элемента. Для `AnchorX`, значение 0 означает левую сторону элемента, а в правую часть 1. Аналогичным образом для `AnchorY`, 0 находится в верхней и нижней является 1. Оба свойства имеют значения по умолчанию 0,5, которая является центром.
+Вы можете изменить центр масштабирования присвоив значения свойствам [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) и [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY). Эти свойства определяются относительно самого элемента. Например, значение 0 для параметра `AnchorX` означает левый край соответствующего элемента, а значение 1 — его правый край. Аналогично для `AnchorY`, 0 обозначает верхний край, а 1— нижний. Оба этих свойства имеют значение по умолчанию 0,5, что и обозначает центр элемента.
 
-[ **AnchoredScaleDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/AnchoredScaleDemo) пример позволяет экспериментировать с `AnchorX` и `AnchorY` свойства, а также `Scale` свойство.
+Пример [**AnchoredScaleDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/AnchoredScaleDemo) позволяет поэкспериментировать со свойствами `AnchorX` и `AnchorY`, а также со свойством `Scale`.
 
-В iOS, используя значения по умолчанию из `AnchorX` и `AnchorY` свойства обычно несовместим с изменение ориентации телефона.
+В iOS использование значений, отличных от значения по умолчанию, для свойств `AnchorX` и `AnchorY` обычно несовместимо с изменениями ориентации экрана.
 
-## <a name="the-rotation-transform"></a>Преобразование поворота
+## <a name="the-rotation-transform"></a>Преобразование поворотом
 
-[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) Свойства указываются в градусах и указывает поворот по часовой стрелке вокруг точки элементу, определенному в `AnchorX` и `AnchorY`. [ **PlaneRotationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) позволяет экспериментировать с эти три свойства.
+Свойство [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) указывается в градусах и обозначает поворот по часовой стрелке вокруг той точки элемента, которая определена значениями `AnchorX` и `AnchorY`. Пример [**PlaneRotationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) позволяет поэкспериментировать с этими тремя свойствами.
 
-### <a name="rotated-text-effects"></a>Эффектов повернутого текста
+### <a name="rotated-text-effects"></a>Эффекты текста с поворотом
 
-[ **BoxViewCircle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewCircle) в нем демонстрируется математики, необходимые для Рисование окружности с помощью 64 мало места (повернутый) `BoxView` элементов.
+Пример [**BoxViewCircle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewCircle) демонстрирует математическую основу, которая позволяет нарисовать круг и 64 элементов `BoxView` с поворотами на небольшие смещения.
 
-[ **RotatedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/RotatedText) пример отображает несколько `Label` элементов при помощи ту же текстовую строку (повернутый) как периферийных зон.
+Пример [**RotatedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/RotatedText) демонстрирует несколько элементов `Label` с одинаковой строкой текста, повернутых для создания эффекта "лучей".
 
-[ **CircularText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/CircularText) пример отображает строку текста, отображаемый для упаковки в кружке.
+Пример [**CircularText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/CircularText) демонстрирует строку текста, которая заворачивается по кругу.
 
-### <a name="an-analog-clock"></a>Аналогично часам со стрелками
+### <a name="an-analog-clock"></a>Аналоговые часы
 
-[ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотека содержит [ `AnalogClockViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnalogClockViewModel.cs) класс, который вычисляет углы для стрелки часов. Чтобы избежать зависимости платформы в ViewModel, а класс использует `Task.Delay` вместо таймера для поиска нового `DateTime` значение.
+Библиотека [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) содержит класс [`AnalogClockViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnalogClockViewModel.cs), который вычисляет углы для положения стрелок часов. Чтобы избежать зависимостей от платформы в ViewModel, этот класс использует `Task.Delay` вместо таймера для получения нового значения `DateTime`.
 
-Также включены в **Xamarin.FormsBook.Toolkit** — [ `SecondTickConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondTickConverter.cs) класс, реализующий `IValueConverter` и служит для округления второй угол до ближайшей секунды.
+Также в **Xamarin.FormsBook.Toolkit** включен класс [`SecondTickConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondTickConverter.cs) с реализацией `IValueConverter`, который округляет положение секундной стрелки до ближайшей секунды.
 
-[ **MinimalBoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/MinimalBoxViewClock) использует три Поворот `BoxView` элементы для рисования аналогично часам со стрелками.
+Пример [**MinimalBoxViewClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/MinimalBoxViewClock) использует три элемента `BoxView` и преобразование вращением для отрисовки аналоговых часов.
 
-[ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) использует `BoxView` для более сложных рисунков, включая делений помечает вокруг циферблата часов и передает то поворот мало расстоянием от своей:
+[**BoxViewClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) использует `BoxView` для более сложной графики, включая отметки на циферблате и вращение стрелок вокруг точки, немного отстоящей от их конца.
 
-[![Тройной снимок экрана часов BoxView](images/ch21fg17-small.png "аналоговый циферблата")](images/ch21fg17-large.png#lightbox "аналоговый циферблата")
+[![Снимок экрана с тремя изображениями часов BoxView](images/ch21fg17-small.png "Циферблат аналоговых часов")](images/ch21fg17-large.png#lightbox "Циферблат аналоговых часов")
 
-Кроме [ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) в класс **Xamarin.FormsBook.Toolkit** вызывает секундной стрелки будет немного смещают прежде чем продолжить, а затем переместить обратно в правильное положение.
+Кроме того, класс [`SecondBackEaseConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) из **Xamarin.FormsBook.Toolkit** отображает секундную стрелку так, что она немного сдвигается назад перед прыжком вперед, а затем опять смещается назад в нужное положение.
 
-### <a name="vertical-sliders"></a>Вертикальная ползунки?
+### <a name="vertical-sliders"></a>Вертикальные ползунки?
 
-[ **VerticalSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/VerticalSliders) образец демонстрирует, что `Slider` элементов может быть повернут на 90 градусов и по-прежнему работают. Тем не менее, трудно поместите эти повернут `Slider` элементы, так как в макете они по-прежнему отображаться горизонтальную.
+Пример [**VerticalSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/VerticalSliders) демонстрирует, что элементы `Slider` будут нормально функционировать, если их повернуть на 90 градусов. Но вам будет сложно правильно разместить такие элементы `Slider`, поскольку в макете они всегда остаются горизонтальными.
 
-## <a name="3d-ish-rotations"></a>Постараюсь трехмерных поворотов
+## <a name="3d-ish-rotations"></a>Вращения в трехмерном пространстве
 
-[ `RotationX` ](xref:Xamarin.Forms.VisualElement.RotationX) Свойство, по-видимому, поворот элемента вокруг трехмерного по оси x, чтобы в верхней и нижней части элемента показаться для перемещения к или от него. Аналогичным образом [ `RotationY` ](xref:Xamarin.Forms.VisualElement.RotationY) кажется поворот вокруг оси y, чтобы сделать левую и правую части элемента показаться для перемещения к или от него элемента.
+Свойство [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) действует так, как если бы элемент вращался в трехмерном пространстве вокруг своей горизонтальной оси, то есть верхняя и нижняя части элемента приближаются к зрителю или удаляются от него. Аналогичным образом, свойство [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) вращает элемент в трехмерном пространстве вокруг его вертикальной оси, то есть левая и правая части элемента приближаются к зрителю или удаляются от него.
 
-`AnchorX` Свойство влияет на `RotationY` , но не `RotationX`. `AnchorY` Свойство влияет на `RotationX` , но не `RotationY`. Вы можете поэкспериментировать с [ **ThreeDeeRotationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ThreeDeeRotationDemo) образец для изучения взаимодействия этих свойств.
+Свойство `AnchorX` влияет на `RotationY`, но не на `RotationX`. Свойство `AnchorY` влияет на `RotationX`, но не на `RotationY`. Вы можете поэкспериментировать с примером [**ThreeDeeRotationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ThreeDeeRotationDemo), чтобы изучить взаимодействие этих трех свойств.
 
-Трехмерная система координат содержится в разрешении Xamarin.Forms для левши. При наведении указательным пальцем левой руки по оси x, увеличение координирует (справа), и координирует пальца среднего в направлении возрастающий Y (вниз), затем все точки бегунок в направление увеличения координаты Z (выходит из экрана).
+Трехмерная координатная система в Xamarin.Forms является левосторонней. Если направить указательный палец левой руки в направлении увеличения координат X (вправо по экрану), а средний — в направлении увеличения координат Y (вниз), то большой палец будет направлен в сторону увеличения координат Z (из экрана к наблюдателю).
 
-Кроме того для любого из трех осей, при наведении на левом бегунок в направление увеличения значения, то кривая одним касанием указывает направление поворота положительные значения угла поворота.
+Кроме того, для всех трех осей действует такое правило: если вы направите большой палец в сторону увеличения координат, изгиб остальных пальцев демонстрирует направление вращения на положительный угол.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 21 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf)
-- [Глава 21-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
+- [Глава 21, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf)
+- [Примеры для Главы 21](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)

@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 6. Нажатие кнопки
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 6. Нажатие кнопки
+title: Сводка по главе 6. Нажатия кнопки
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка по главе 6. Нажатия кнопки
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 12c8cdc19f9e6765ca25ade97bcfdbffb7b60381
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334725"
 ---
-# <a name="summary-of-chapter-6-button-clicks"></a>Сводка Глава 6. Нажатие кнопки
+# <a name="summary-of-chapter-6-button-clicks"></a>Сводка по главе 6. Нажатия кнопки
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 
-[ `Button` ](xref:Xamarin.Forms.Button) — Это представление, которое позволяет пользователю запускать команду. Объект `Button` идентифицируется по тексту (и при необходимости изображением, как показано в [главе 13, точечные рисунки](chapter13.md)). Следовательно `Button` определяет многие из тех же свойств `Label`:
+[`Button`](xref:Xamarin.Forms.Button) — это представление, позволяющее пользователю инициировать команду. `Button` определяется текстом (и, при необходимости, изображением, как показано в [главе 13 "Растровые изображения"](chapter13.md)). Следовательно, `Button` определяет множество тех же свойств, что и `Label`:
 
 - [`Text`](xref:Xamarin.Forms.Button.Text)
 - [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily)
@@ -26,68 +26,68 @@ ms.locfileid: "61334725"
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)
 - [`TextColor`](xref:Xamarin.Forms.Button.TextColor)
 
-`Button` также определяет три свойства определяют внешний вид его границу, но эти свойства и их взаимной независимость поддерживается только конкретной платформе:
+`Button` также определяет три свойства, которые регулируют внешний вид его границы, но поддержка этих свойств и их взаимная независимость является платформенно-зависимой:
 
 - [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor) типа `Color`
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) типа `Double`
 - [`BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) типа `Double`
 
-`Button` также наследует все свойства `VisualElement` и `View`, в том числе `BackgroundColor`, `HorizontalOptions`, и `VerticalOptions`.
+`Button` также наследует все свойства `VisualElement` и `View`, включая `BackgroundColor`, `HorizontalOptions` и `VerticalOptions`.
 
 ## <a name="processing-the-click"></a>Обработка щелчка
 
-`Button` Класс определяет [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) событие, возникающее, когда пользователь касается `Button`. `Click` Обработчика имеет тип `EventHandler`. Первым аргументом является `Button` объект, генерирующий событие; второй аргумент — `EventArgs` объект, предоставляющий дополнительные сведения отсутствуют.
+Класс `Button` определяет событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked), которое запускается при нажатии пользователем кнопки `Button`. Обработчик `Click` имеет тип `EventHandler`. Первым аргументом является объект `Button`, создающий событие. Вторым аргументом является объект `EventArgs`, который не предоставляет дополнительных сведений.
 
-[ **ButtonLogger** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLogger) в нем демонстрируется простой `Clicked` обработки.
+В примере [**ButtonLogger**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLogger) демонстрируется простая обработка `Clicked`.
 
-## <a name="sharing-button-clicks"></a>Нажимает кнопку общего доступа к кнопке
+## <a name="sharing-button-clicks"></a>Нажатия кнопки общего доступа
 
-Несколько `Button` представления не могут иметь одинаковый `Clicked` обработчик, но обработчик обычно требуется определить, какие `Button` отвечает за определенное событие. Одним из подходов является для сохранения различных `Button` объектов в виде полей и проверьте, какой из них он генерирует события в обработчик.
+Несколько представлений `Button` могут совместно использовать один и тот же обработчик `Clicked`, но обычно обработчику необходимо определить, какой `Button` отвечает за определенное событие. Один из подходов состоит в том, чтобы хранить различные объекты `Button` в виде полей и проверять, какие из них обрабатывали событие в обработчике.
 
-[ **TwoButtons** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/TwoButtons) этот метод продемонстрирован в примере. Программа также демонстрирует, как задать [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) свойство `Button` для `false` при нажатии клавиши `Button` больше не является допустимым. Отключенный `Button` не создает `Clicked` событий.
+Этот метод демонстрируется в примере [**TwoButtons**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/TwoButtons). Программа также демонстрирует, как задать свойство [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) для `Button` в `false`, когда нажатие клавиши `Button` перестает быть действенным. Отключенный `Button` не создает событие `Clicked`.
 
-## <a name="anonymous-event-handlers"></a>Обработчики событий анонимный
+## <a name="anonymous-event-handlers"></a>Анонимные обработчики событий
 
-Это можно определить `Clicked` обработчиками в качестве анонимного лямбда-функции, как [ **ButtonLambdas** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLambdas) в нем демонстрируется. Тем не менее анонимные обработчики не может использоваться без кода запутанным отражения.
+Можно определить обработчики `Clicked` как анонимные лямбда-функции, как показывает пример [**ButtonLambdas**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLambdas). Однако анонимные обработчики не могут совместно использоваться без какого-либо кода с более запутанным отражением.
 
-## <a name="distinguishing-views-with-ids"></a>Отличительный признак представления с идентификаторами
+## <a name="distinguishing-views-with-ids"></a>Различение представлений с помощью идентификаторов
 
-Несколько `Button` объектов также различаются, задав [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) свойство или [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) свойства `string`. Это свойство определяется `Element` , но он не используется в Xamarin.Forms. Он предназначен для использования исключительно с приложениями.
+Несколько объектов `Button` также можно различить путем установки свойства [`StyleId`](xref:Xamarin.Forms.Element.StyleId) или [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) в `string`. Это свойство определяется `Element`, но не используется в Xamarin.Forms. Оно предназначено исключительно для использования программами приложений.
 
-[ **SimplestKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) образец использует тот же обработчик событий для всех 10 клавиш с цифрами на цифровой клавиатуре и различать их с помощью `StyleId` свойство:
+В примере [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) используется один и тот же обработчик событий для всех 10 числовых клавиш на цифровой клавиатуре, который различается с помощью свойства `StyleId`:
 
-[![Тройной снимок простейший клавиатуре](images/ch06fg04-small.png "калькулятор")](images/ch06fg04-large.png#lightbox "калькулятора")
+[![Тройной снимок экрана простейшей клавиатуры](images/ch06fg04-small.png "Calculator")](images/ch06fg04-large.png#lightbox "Calculator")
 
 ## <a name="saving-transient-data"></a>Сохранение временных данных
 
-Во многих приложениях необходимые для сохранения данных, когда программа будет завершена и перезагрузить этот данные после повторного запуска программы. [ `Application` ](xref:Xamarin.Forms.Application) Класс определяет несколько членов, которые позволить программе сохранять и восстанавливать временных данных:
+Многие приложения должны сохранять данные при завершении программы и перезагружать эти данные при повторном запуске программы. Класс [`Application`](xref:Xamarin.Forms.Application) определяет несколько элементов, которые помогают программе сохранять и восстанавливать временные данные.
 
-- [ `Properties` ](xref:Xamarin.Forms.Application.Properties) Свойство — это словарь с `string` ключи и `object` элементов. Содержимое словаря, автоматически сохраняются в локальном хранилище приложения перед завершением работы программы и загружаются в память при запуске программы.
-- `Application` Класс определяет три защищенных виртуальных методов, что программа стандартный `App` класса переопределения: [ `OnStart` ](xref:Xamarin.Forms.Application.OnStart), [ `OnSleep` ](xref:Xamarin.Forms.Application.OnSleep), и [ `OnResume` ](xref:Xamarin.Forms.Application.OnResume). Они относятся к *жизненного цикла приложения* события.
-- [ `SavePropertiesAsync` ](xref:Xamarin.Forms.Application.SavePropertiesAsync) Метод сохраняет содержимое словаря.
+- Свойство [`Properties`](xref:Xamarin.Forms.Application.Properties) — это словарь с ключами `string` и элементами `object`. Содержимое словаря автоматически сохраняется в локальном хранилище приложения перед завершением программы и перезагружается при запуске программы.
+- Класс `Application` определяет три защищенных виртуальных метода, переопределяемых стандартным классом `App` программы: [`OnStart`](xref:Xamarin.Forms.Application.OnStart), [`OnSleep`](xref:Xamarin.Forms.Application.OnSleep) и [`OnResume`](xref:Xamarin.Forms.Application.OnResume). Они относятся к событиям *жизненного цикла приложения*.
+- Метод [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) сохраняет содержимое словаря.
 
-Нет необходимости вызывать `SavePropertiesAsync`. Содержимое словаря, автоматически сохраняются перед завершением работы программы и происходит до запуска программы. Это полезно во время тестирования программы для сохранения данных в том случае, если программа завершает работу.
+Не нужно вызывать `SavePropertiesAsync`. Содержимое словаря автоматически сохраняется перед завершением программы и извлекается при ее запуске. Это полезно во время тестирования программы для сохранения данных в случае сбоя.
 
-Также полезен:
+Также полезно:
 
-- [`Application.Current`](xref:Xamarin.Forms.Application.Current), статическое свойство, которое возвращает текущий `Application` объект, который затем можно использовать для получения `Properties` словаря.
+- [`Application.Current`](xref:Xamarin.Forms.Application.Current) — статическое свойство, возвращающее текущий объект `Application`, который затем можно использовать для получения словаря `Properties`.
 
-Первый шаг — определить все переменные страницы, которые нужно сохранить при завершении работы программы. Если вы знаете все места, где изменение этих переменных, можно просто добавить их к `Properties` словаря в этот момент. В конструктор страницы, можно задать переменные из `Properties` словарь, если ключ существует.
+Первым шагом является указание всех переменных на странице, которые необходимо сохранить при завершении программы. Если вы знаете все места, в которых изменяются эти переменные, можете просто добавить их в словарь `Properties`. В конструкторе страницы можно задать переменные из словаря `Properties`, если ключ существует.
 
-Более крупной программы, возможно, потребуется иметь дело с событиями жизненного цикла приложения. Наиболее важным является `OnSleep` метод. Вызов этого метода указывает, что программа покинул переднего плана. Возможно, пользователь нажал **Главная** кнопку на устройстве, или отображаются все приложения или завершает работу по телефону. Вызов `OnSleep` только уведомление о том, что программа получит до его отключения. Программа должна воспользоваться данной возможностью, чтобы убедиться, что `Properties` словаря в актуальном состоянии.
+Более крупной программе, вероятно, придется иметь дело с событиями жизненного цикла приложения. Самым важным является метод `OnSleep`. Вызов этого метода означает, что программа ушла с переднего плана. Возможно, пользователь нажимает кнопку **Главная** на устройстве, отображает все приложения или завершает работу телефона. Вызов `OnSleep` является единственным уведомлением, которое программа получает перед завершением работы. Программа должна принять эту возможность, чтобы гарантировать актуальность словаря `Properties`.
 
-Вызов `OnResume` указывает, что программа не завершился после последнего вызова `OnSleep` , однако теперь выполняется на переднем плане еще раз. Программа может использовать эту возможность для обновления подключения к Интернету (к примеру).
+Вызов `OnResume` указывает на то, что программа не завершилась после последнего вызова `OnSleep`, а теперь снова выполняется на переднем плане. Эта возможность может использоваться программой для обновления подключений к Интернету (например).
 
-Вызов `OnStart` происходит во время запуска программы. Нет необходимости ждать, пока вызов этого метода доступа `Properties` словарь поскольку содержимое уже были восстановлены при `App` вызывается конструктор.
+Вызов `OnStart` происходит во время запуска программы. Поскольку содержимое уже было восстановлено при вызове конструктора `App`, не нужно ждать, пока этот вызов метода попытается получить доступ к словарю `Properties`.
 
-[ **PersistentKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) пример очень похожа на **SimplestKeypad** за исключением того, что программа использует `OnSleep` переопределение, чтобы сохранить текущую сущность клавиатуре, и Конструктор страниц для восстановления данных.
+Пример [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) очень похож на **SimplestKeypad**, за исключением того, что программа использует переопределение `OnSleep` для сохранения текущей записи клавиатуры, а конструктор страниц — для восстановления этих данных.
 
 > [!NOTE]
-> Другой подход к сохранению параметров программы предоставляется Xamarin.Essentials [предпочтения](~/essentials/preferences.md) класса.
+> Другой подход к сохранению параметров программы обеспечивается с помощью класса [предпочтений](~/essentials/preferences.md) Xamarin.Essentials.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 6 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
-- [Примеры Глава 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
-- [Глава 6 F# примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
-- [Кнопка Xamarin.Forms](~/xamarin-forms/user-interface/button.md)
+- [Полный текст главы 6 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
+- [Примеры для главы 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+- [Примеры F# для главы 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [Кнопка в Xamarin.Forms](~/xamarin-forms/user-interface/button.md)

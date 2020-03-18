@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 9. Вызовы API конкретных платформ
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 9. Вызовы API конкретных платформ
+title: Сводная информация о Главе 9. Вызовы API конкретных платформ
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводная информация о Главе 9. Вызовы API конкретных платформ
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
@@ -8,52 +8,52 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334569"
 ---
-# <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Сводка Глава 9. Вызовы API конкретных платформ
+# <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Сводная информация о Главе 9. Вызовы API конкретных платформ
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE] 
-> Заметки на этой странице указывать области, где различаются Xamarin.Forms материал, представленный в книге.
+> Примечания на этой странице указывают области, в которых Xamarin.Forms имеет расхождения с материалом, представленным в книге.
 
-Иногда бывает необходимо выполнять определенный код, которая зависит от платформы. В этой главе рассматриваются методы.
+Иногда требуется выполнить код, меняющийся в зависимости от платформы. В этой главе рассматриваются методы.
 
-## <a name="preprocessing-in-the-shared-asset-project"></a>Предварительная обработка в проект общего ресурса
+## <a name="preprocessing-in-the-shared-asset-project"></a>Предварительная обработка в проекте общих ресурсов
 
-Проект Xamarin.Forms общего ресурса можно выполнить разный код для каждой платформы, с помощью директивы препроцессора C# `#if`, `#elif`, и `endif`. Это показано в [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
+Проект общих ресурсов Xamarin.Forms может выполнять разные коды для каждой платформы с помощью директив препроцессора C# `#if`, `#elif`, и `endif`. Это продемонстрировано в [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![Тройной снимок экрана: переменная в формате абзаца](images/ch09fg01-small.png "модель устройства и операционной системы")](images/ch09fg01-large.png#lightbox "модель устройства и операционной системы")
+[![Тройной снимок экрана с переменным форматированием абзаца](images/ch09fg01-small.png "Модель устройства и операционная система")](images/ch09fg01-large.png#lightbox "Модель устройства и операционная система")
 
-Тем не менее результирующий код может быть некрасиво и трудно читать.
+Однако результирующий код может быть трудным для чтения.
 
-## <a name="parallel-classes-in-the-shared-asset-project"></a>Параллельные классы в проекте общего ресурса
+## <a name="parallel-classes-in-the-shared-asset-project"></a>Параллельные классы в проекте общих ресурсов
 
-Демонстрируется более структурированный подход к выполнению кода для конкретных платформ в SAP в [ **PlatInfoSap2** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap2) образца. Каждый из проектов платформа содержит класс с одинаковыми именами и методы, но реализован для данной конкретной платформы. SAP просто создает экземпляр класса и вызывает метод.
+Более структурированный подход к выполнению кода, зависящего от платформы, продемонстрирован в SAP в примере [**PlatInfoSap2**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap2). Каждый из проектов платформы содержит класс и методы с одинаковыми названиями, однако они реализованы для отдельной платформы. Затем SAP просто создает экземпляр класса и вызывает метод.
 
-## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService и переносимой библиотеки классов
+## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService и Переносимая библиотека классов
 
 > [!NOTE] 
-> Переносимые библиотеки классов были заменены библиотеки .NET Standard. Все примеры кода из книги будет преобразована использовать стандартные библиотеки .NET.
+> Переносимые библиотеки классов заменены библиотеками .NET Standard. Все примеры кода в этой книге преобразованы для использования библиотек .NET Standard.
 
-Библиотеки не может получить доступ к обычно классов в проекты приложений. Кажется, что это ограничение для предотвращения метод, описанный в **PlatInfoSap2** используется в библиотеке. Тем не менее, Xamarin.Forms содержит класс с именем [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) , использует отражение .NET для доступа к открытых классов в проекте приложения из библиотеки.
+Обычно библиотека не может получить доступ к классам в проектах приложений. По-видимому, это ограничение не позволяет использовать в библиотеке метод, показанный в **PlatInfoSap2**. Однако Xamarin.Forms содержит класс с именем [`DependencyService`](xref:Xamarin.Forms.DependencyService), который использует отражение .NET для доступа к открытым классам в проекте приложения из библиотеки.
 
-Необходимо определить библиотеку `interface` с элементами, которые нужны для работы каждой из платформ. Затем в каждой из платформ содержит реализацию этого интерфейса. Класс, реализующий интерфейс должен быть идентифицирован по [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) на уровне сборки.
+Библиотека должна определять `interface` с элементами, которые она должна использовать на каждой платформе. Затем каждая из платформ содержит реализацию этого интерфейса. Класс, реализующий интерфейс, должен быть идентифицирован на уровне сборки с помощью [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute).
 
-Затем используется универсальный [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) метод `DependencyService` для получения экземпляра класса платформы, который реализует интерфейс.
+Затем, чтобы получить экземпляр класса платформы, реализующего интерфейс, библиотека использует универсальный метод [`Get`](xref:Xamarin.Forms.DependencyService.Get*) из `DependencyService`.
 
-Это показано в [ **DisplayPlatformInfo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) образца.
+Это показано в примере [**DisplayPlatformInfo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo).
 
-## <a name="platform-specific-sound-generation"></a>Генерация звука платформы
+## <a name="platform-specific-sound-generation"></a>Создание звука для конкретной платформы
 
-[ **MonkeyTapWithSound** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) пример добавляет звуковых сигналов для **MonkeyTap** программы, обратившись к звуковому средства каждой из платформ.
+Пример [**MonkeyTapWithSound**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) добавляет звуковые сигналы в программу **MonkeyTap**, осуществляя доступ к средствам создания звука на каждой платформе.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 9 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
-- [Глава 9-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
+- [Глава 9, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
+- [Примеры для Главы 9](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 - [Служба зависимостей](~/xamarin-forms/app-fundamentals/dependency-service/index.md)

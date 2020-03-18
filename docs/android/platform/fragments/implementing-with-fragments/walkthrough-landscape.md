@@ -8,47 +8,47 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
 ms.openlocfilehash: 4d9ef88f39914f8fa5e578577ee9f6977c2bc88e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020269"
 ---
-# <a name="fragments-walkthrough-ndash-landscape"></a>Фрагменты пошаговое руководство &ndash; альбомная ориентация
+# <a name="fragments-walkthrough-ndash-landscape"></a>Фрагменты Пошаговое руководство &ndash; альбомная ориентация
 
-В [пошаговом руководстве &ndash; части 1](./walkthrough.md) показано, как создавать и использовать фрагменты в приложении Android, предназначенном для небольших экранов на телефоне. Следующим шагом в этом пошаговом руководстве является изменение приложения для использования преимуществ дополнительного горизонтального пространства на планшетном &ndash; будет одно действие, которое всегда будет списком воспроизведений (`TitlesFragment`) и `PlayQuoteFragment` будет динамически добавляться к действию в r еспонсе выбор, сделанный пользователем:
+В [фрагментах пошагового руководства &ndash;, части 1](./walkthrough.md), показано, как создавать и использовать фрагменты в приложении Android, предназначенном для телефонов с небольшими экранами. Следующим шагом в этом пошаговом руководстве является изменение приложения для использования преимуществ в виде дополнительного горизонтального пространства на планшете &ndash;, на котором будет одно действие, которое всегда будет списком воспроизведения (`TitlesFragment`), а `PlayQuoteFragment` будет динамически добавляться к действию в ответ на выбор, сделанный пользователем:
 
-[Приложение![, работающее на планшетном компьютере](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
+[![Приложение, работающее на планшете](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
 
 На телефонах, работающих в альбомном режиме, также будет выгодно это улучшение:
 
-[![приложение, работающее на телефоне Android в альбомном режиме](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![Приложение, работающее на телефоне Android в альбомной ориентации](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-## <a name="updating-the-app-to-handle-landscape-orientation"></a>Идет обновление приложения для работы с альбомной ориентацией
+## <a name="updating-the-app-to-handle-landscape-orientation"></a>Обновление приложения для работы в альбомной ориентации
 
-Следующие изменения будут созданы на основе работы, выполненной в [пошаговом руководстве по телефону](./walkthrough.md) .
+Следующие изменения будут основываться на работе, которая была проделана в статье [Фрагменты Пошаговое руководство — телефон](./walkthrough.md).
 
-1. Создайте альтернативный макет для вывода `TitlesFragment` и `PlayQuoteFragment`.
-1. Обновите `TitlesFragment`, чтобы определить, одновременно ли на устройстве отображаются оба фрагмента, и измените поведение соответствующим образом.
-1. Обновите `PlayQuoteActivity`, чтобы закрыть устройство в альбомном режиме.
+1. Создайте альтернативный макет для отображения как `TitlesFragment`, так и `PlayQuoteFragment`.
+1. Обновите `TitlesFragment`, чтобы определить, отображает ли устройство одновременно оба фрагмента и соответственно изменить поведение.
+1. Обновите `PlayQuoteActivity`, чтобы закрыть устройство, если оно в альбомной ориентации.
 
 ## <a name="1-create-an-alternate-layout"></a>1. Создание альтернативного макета
 
-Когда основное действие создается на устройстве Android, Android выбирает макет для загрузки в зависимости от ориентации устройства. По умолчанию Android предоставит файл макета **Resources/Layout/activity_main. axml** . Для устройств, загружаемых в альбомном режиме Android, будет предоставлен файл макета **Resources/лайаут-Ланд/activity_main. axml** . Руководство по [ресурсам Android](/xamarin/android/app-fundamentals/resources-in-android) содержит дополнительные сведения о том, как Android решает, какие файлы ресурсов загружать для приложения.
+Когда основное действие создается на устройстве Android, Android выбирает макет для загрузки в зависимости от ориентации устройства. По умолчанию Android предоставит файл макета **Resources/layout/activity_main.axml**. Для устройств, загружаемых в альбомной ориентации, Android предоставит файл макета **Resources/layout-land/activity_main.axml**. Руководство по [ресурсах Android](/xamarin/android/app-fundamentals/resources-in-android) содержит более подробную информацию о способе принятия Android решений о том, какие файлы ресурсов загружать для приложения.
 
-Создайте альтернативный макет, ориентированный на **альбомную** ориентацию, выполнив действия, описанные в разделе [Альтернативное руководство по разметке](/xamarin/android/user-interface/android-designer/alternative-layout-views) . При этом необходимо добавить новый файл ресурсов макета в проект, **Resources/Layout/activity_main. axml**:
+Создайте альтернативный макет, предназначенный для **альбомной** ориентации, выполнив действия, описанные в руководстве [Альтернативные представления макета](/xamarin/android/user-interface/android-designer/alternative-layout-views). При этом в проект необходимо добавить новый файл ресурсов макета, **Resources/layout/activity_main.axml**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![альтернативный макет в обозреватель решений](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
+[![Альтернативный макет в обозревателе решений](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
-[![альтернативный макет в Панель решения](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
+[![Альтернативный макет в Панели решения](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
 
 -----
 
-После создания альтернативного макета измените источник файла **Resources/лайаут-Ланд/activity_main. axml** , чтобы он совпадал с этим XML-кодом:
+После создания альтернативного макета измените источник файла **Resources/layout-land/activity_main.axml** так, чтобы он соответствовал этому XML-документу:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -74,13 +74,13 @@ ms.locfileid: "73020269"
 </LinearLayout>
 ```
 
-Корневое представление действия получает идентификатор ресурса `two_fragments_layout` и имеет два подпредставления, `fragment` и `FrameLayout`. При статической загрузке `fragment` `FrameLayout` выступает в качестве заполнителя, который будет заменен `PlayQuoteFragment`ом во время выполнения. Каждый раз, когда в `TitlesFragment`выбрано новое воспроизведение, `playquote_container` будет обновлен с новым экземпляром `PlayQuoteFragment`.
+Корневое представление действия получает идентификатор ресурса `two_fragments_layout` и имеет два подпредставления, `fragment` и `FrameLayout`. При статической загрузке `fragment`, `FrameLayout` выступает в качестве заполнителя,который во время выполнения будет заменен на `PlayQuoteFragment`. Каждый раз, когда в `TitlesFragment`выбрано новое воспроизведение, `playquote_container` будет обновлен новым экземпляром `PlayQuoteFragment`.
 
-Каждое из подчиненных представлений будет занимать полную высоту их родителя. Ширина каждого подпредставления определяется `android:layout_weight` и `android:layout_width` атрибутами. В этом примере каждое Подпредставление будет занимать 50% ширины, предоставляемой родителем. Дополнительные сведения о _весе макета_см. [в документе Google на элемент LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear.html) .
+Каждое из подпредставлений будет занимать полную высоту их родительского элемента. Ширина каждого подпредставления определяется атрибутами `android:layout_weight` и `android:layout_width`. В этом примере каждое подпредставление будет занимать 50 % ширины, предоставляемой родительским элементом. Дополнительные сведения о _весе макета_ см. в статье [LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear.html).
 
-## <a name="2-changes-to-titlesfragment"></a>2. изменения в Титлесфрагмент
+## <a name="2-changes-to-titlesfragment"></a>2. Изменения в TitlesFragment
 
-После создания альтернативного макета необходимо обновить `TitlesFragment`. Когда приложение отображает два фрагмента одного действия, `TitlesFragment` должны загружать `PlayQuoteFragment` в родительском действии. В противном случае `TitlesFragment` должен запустить `PlayQuoteActivity`, на котором размещается `PlayQuoteFragment`. Логический флаг поможет `TitlesFragment` определить, какое поведение следует использовать. Этот флаг будет инициализирован в методе `OnActivityCreated`.
+После создания альтернативного макета необходимо обновить `TitlesFragment`. Когда приложение отображает два фрагмента одного действия, `TitlesFragment` должен загружать `PlayQuoteFragment` в Действии родительского элемента. В противном случае `TitlesFragment` должен запустить `PlayQuoteActivity`, на котором размещается `PlayQuoteFragment`. Логический флаг поможет `TitlesFragment` определить, какое поведение следует использовать. Этот флаг будет инициализирован в методе `OnActivityCreated`.
 
 Сначала добавьте переменную экземпляра в начало класса `TitlesFragment`:
 
@@ -101,7 +101,7 @@ if (showingTwoFragments)
 }
 ```
 
-Если устройство работает в альбомном режиме, `FrameLayout` с ИДЕНТИФИКАТОРом ресурса `playquote_container` будет отображаться на экране, поэтому `showingTwoFragments` будет инициализирована `true`. Если устройство работает в книжной ориентации, `playquote_container` не будет отображаться на экране, поэтому `showingTwoFragments` будет `false`.
+Если устройство работает в альбомной ориентации, на экране будет отображаться `FrameLayout` с идентификатором ресурса `playquote_container`, поэтому `showingTwoFragments` будет инициализирован в `true`. Если устройство работает в портретном режиме, `playquote_container` не будет отображаться на экране, поэтому `showingTwoFragments` будет `false`.
 
 Методу `ShowPlayQuote` потребуется изменить способ отображения цитаты &ndash; либо в фрагменте, либо при запуске нового действия.  Обновите метод `ShowPlayQuote`, чтобы загрузить фрагмент при отображении двух фрагментов, в противном случае он должен запустить действие:
 
@@ -134,9 +134,9 @@ void ShowPlayQuote(int playId)
 }
 ```
 
-Если пользователь выбрал воспроизведение, отличающееся от того, который в данный момент отображается в `PlayQuoteFragment`, создается новая `PlayQuoteFragment`, которая заменит содержимое `playquote_container` в контексте `FragmentTransaction`.
+Если пользователь выбрал воспроизведение, отличающееся от отображаемого в данный момент в `PlayQuoteFragment`, создается новый `PlayQuoteFragment`, который заменит содержимое `playquote_container` в контексте `FragmentTransaction`.
 
-### <a name="complete-code-for-titlesfragment"></a>Полный код для Титлесфрагмент
+### <a name="complete-code-for-titlesfragment"></a>Полный код для TitlesFragment
 
 После завершения всех предыдущих изменений в `TitlesFragment`полный класс должен соответствовать этому коду:
 
@@ -208,9 +208,9 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-## <a name="3-changes-to-playquoteactivity"></a>3. изменения в Плайкуотеактивити
+## <a name="3-changes-to-playquoteactivity"></a>3. Изменения в PlayQuoteActivity
 
-Есть одна последняя информация: `PlayQuoteActivity` не требуется, если устройство находится в альбомном режиме. Если устройство находится в альбомном режиме, `PlayQuoteActivity` не должно быть видимым. Обновите метод `OnCreate` `PlayQuoteActivity` так, чтобы он закрылся. Этот код является окончательной версией `PlayQuoteActivity.OnCreate`:
+Есть одна последняя деталь, о которой нужно позаботиться: `PlayQuoteActivity` не требуется, если устройство находится в альбомной ориентации. Если устройство находится в альбомном режиме, `PlayQuoteActivity` не должно быть видимым. Обновите метод `OnCreate` из `PlayQuoteActivity` так, чтобы он закрылся. Этот код является окончательной версией `PlayQuoteActivity.OnCreate`:
 
 ```csharp
 protected override void OnCreate(Bundle savedInstanceState)
@@ -230,12 +230,12 @@ protected override void OnCreate(Bundle savedInstanceState)
 }
 ```
 
-Это изменение добавляет проверку ориентации устройства. Если он находится в альбомном режиме, `PlayQuoteActivity` закроется.
+Это изменение добавляет проверку ориентации устройства. Если он находится в альбомной ориентации, `PlayQuoteActivity` закроется.
 
 ## <a name="4-run-the-application"></a>4. Запуск приложения
 
 После завершения этих изменений запустите приложение, переворачивайте устройство в альбомный режим (при необходимости), а затем выберите воспроизведение. Цитата должна отображаться на том же экране, что и список воспроизведения:
 
-[![приложение, работающее на телефоне Android в альбомном режиме](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![Приложение, работающее на телефоне Android в альбомной ориентации](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-[![приложение, работающее на планшете Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
+[![Приложение, работающее на планшете Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)

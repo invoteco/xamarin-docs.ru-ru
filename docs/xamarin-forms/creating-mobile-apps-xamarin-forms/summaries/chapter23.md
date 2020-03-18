@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 23. Триггеры и поведения
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 23. Триггеры и поведения'
+title: Сводка по главе 23. Триггеры и реакции на событие
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка по главе 23. Триггеры и реакции на событие
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
@@ -8,92 +8,92 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 8a1274a8447f49ce39f9c92703bbaec9e875b9e9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70760593"
 ---
-# <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Сводка Глава 23. Триггеры и поведения
+# <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Сводка по главе 23. Триггеры и реакции на событие
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 
-Триггеры и расширения функциональности похожи, в том, что оба они предназначены для использования в файлах XAML для упрощения взаимодействия элемент в дополнение к использование привязок данных и для расширения функциональности элементов XAML. С объектами пользовательского интерфейса visual почти всегда используются триггеры и поведения.
+Триггеры и реакции на событие похожи тем, что используются в файлах XAML для упрощения взаимодействий элементов за пределами использования привязок данных и расширения функциональных возможностей элементов XAML. Как триггеры, так и реакции на событие почти всегда сочетаются с визуальными объектами пользовательского интерфейса.
 
-Для поддержки триггеры и поведений, оба `VisualElement` и `Style` поддерживают два свойства-коллекции:
+Для использования триггеров и реакций на событие `VisualElement` и `Style` поддерживают два свойства коллекции:
 
-- [`VisualElement.Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) и [ `Style.Triggers` ](xref:Xamarin.Forms.Style.Triggers) типа `IList<TriggerBase>`
-- [`VisualElement.Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) и [ `Style.Behaviors` ](xref:Xamarin.Forms.Style.Behaviors) типа `IList<Behavior>`
+- [`VisualElement.Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) и [`Style.Triggers`](xref:Xamarin.Forms.Style.Triggers) с типом `IList<TriggerBase>`;
+- [`VisualElement.Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) и [`Style.Behaviors`](xref:Xamarin.Forms.Style.Behaviors) с типом `IList<Behavior>`.
 
 ## <a name="triggers"></a>Триггеры
 
-Триггер — это условие (изменение свойства или порождение события), приведет к появлению ответа (другой изменение свойства или выполнением кода). `Triggers` Свойство `VisualElement` и `Style` имеет тип `IList<TriggersBase>`. [`TriggerBase`](xref:Xamarin.Forms.TriggerBase) является абстрактным классом, порождающим четыре запечатанных классов:
+Триггером называется условие (изменение свойства или срабатывание события), которое приводит к некоторому отклику (изменение другого свойства или выполнение некоторого кода). Свойство `Triggers` для `VisualElement` и `Style` имеет тип `IList<TriggersBase>`. [`TriggerBase`](xref:Xamarin.Forms.TriggerBase) является абстрактным классом, от которого наследуются четыре запечатанных класса:
 
-- [`Trigger`](xref:Xamarin.Forms.Trigger) для ответов на основе изменений свойств
-- [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) для ответов, в зависимости от обработки событий
-- [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) для ответов, в зависимости от привязки данных
-- [`MultiTrigger`](xref:Xamarin.Forms.MultiTrigger) для ответов на основе нескольких триггеров
+- [`Trigger`](xref:Xamarin.Forms.Trigger) для ответов на основе изменений свойств;
+- [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) для ответов на основе выполнения событий;
+- [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) для ответов на основе привязки данных;
+- [`MultiTrigger`](xref:Xamarin.Forms.MultiTrigger) для ответов на основе нескольких триггеров.
 
-Триггер всегда имеет значение для элемента, свойство которого изменяется с помощью триггера.
+Триггер всегда задается для элемента, свойство которого изменяется этим триггером.
 
-### <a name="the-simplest-trigger"></a>Самый простой триггер
+### <a name="the-simplest-trigger"></a>Простейший триггер
 
-[ `Trigger` ](xref:Xamarin.Forms.Trigger) Класс используется для проверки изменения значения свойства и отвечает, устанавливая другому свойству этого же элемента.
+Класс [`Trigger`](xref:Xamarin.Forms.Trigger) проверяет изменение значения свойства и отвечает, устанавливая другое свойство того же элемента.
 
 `Trigger` определяет три свойства:
 
 - [`Property`](xref:Xamarin.Forms.Trigger.Property) типа `BindableProperty`
 - [`Value`](xref:Xamarin.Forms.Trigger.Value) типа `Object`
-- [`Setters`](xref:Xamarin.Forms.Trigger.Setters) типа `IList<SetterBase>`, свойство содержимого `Trigger`
+- [`Setters`](xref:Xamarin.Forms.Trigger.Setters) с типом `IList<SetterBase>` — это свойство содержимого `Trigger`.
 
-Кроме того `Trigger` требует, что следующее свойство наследуется от `TriggerBase` задать:
+Кроме того, `Trigger` требует установить следующее свойство, наследуемое от `TriggerBase`:
 
-- [`TargetType`](xref:Xamarin.Forms.TriggerBase.TargetType) для указания типа элемента, на котором `Trigger` подключен
+- [`TargetType`](xref:Xamarin.Forms.TriggerBase.TargetType), чтобы указывать тип элемента, к которому присоединен `Trigger`
 
-`Property` И `Value` составляют условие и `Setters` коллекции представляет собой ответ. Если указанный `Property` имеет значением, полученным путем `Value`, то `Setter` объекты в `Setters` коллекции применяются. Когда `Property` имеет другое значение, методы задания будут удалены. `Setter` Определяет два свойства, так же, как первые два свойства `Trigger`:
+Здесь `Property` и `Value` составляют условие, а коллекция `Setters` определяет ответ. Если `Property` имеет значение, указанное в `Value`, применяются объекты `Setter` из коллекции `Setters`. Если `Property` имеет другое значение, методы задания удаляются. `Setter` определяет два свойства, которые совпадают с двумя первыми свойствами `Trigger`:
 
 - [`Property`](xref:Xamarin.Forms.Setter.Property) типа `BindableProperty`
 - [`Value`](xref:Xamarin.Forms.Setter.Value) типа `Object`
 
-[ **EntryPop** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntryPop) образце показано, как `Trigger` применяется к `Entry` можно увеличить размер `Entry` через `Scale` свойство при `IsFocused`свойство `Entry` является `true`.
+В примере [**EntryPop**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntryPop) показано, как применение `Trigger` к `Entry` позволяет увеличивать размер `Entry` с помощью свойства `Scale`, когда свойство `IsFocused` объекта `Entry` имеет значение `true`.
 
-Несмотря на то, что он не является типичным, `Trigger` можно задать в коде, как [ **EntryPopCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntryPopCode) в нем демонстрируется.
+Обычно так не делают, но `Trigger` можно задавать в коде, как показано в примере [**EntryPopCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntryPopCode).
 
-[ **StyledTriggers** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/StyledTriggers) образце показано, как `Trigger` можно задать в `Style` для применения к нескольким `Entry` элементов.
+Пример [**StyledTriggers**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/StyledTriggers) демонстрирует, как задать `Trigger` из `Style` для применения к нескольким элементам `Entry`.
 
 ### <a name="trigger-actions-and-animations"></a>Действия триггера и анимации
 
-Это также можно выполнить немного кода, в зависимости от триггера. Этот код может быть анимацию, которая обращается свойству. Один из способов является использование [ `EventTrigger` ](xref:Xamarin.Forms.EventTrigger), который определяет два свойства:
+Вы также можете выполнять при активации триггера небольшой фрагмент кода. Этот код может быть анимацией, которая использует определенное свойство. Один из распространенных приемов — использовать [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) с определением двух свойств:
 
-- [`Event`](xref:Xamarin.Forms.EventTrigger.Event) типа `string`, имя события
-- [`Actions`](xref:Xamarin.Forms.EventTrigger.Actions) типа `IList<TriggerAction>`, список действий, которое запускается в ответ.
+- [`Event`](xref:Xamarin.Forms.EventTrigger.Event) с типом `string`, где содержится имя события;
+- [`Actions`](xref:Xamarin.Forms.EventTrigger.Actions) с типом `IList<TriggerAction>`, где определен список выполняемых в ответ действий.
 
-Для этого необходимо написать класс, производный от [ `TriggerAction<T>` ](xref:Xamarin.Forms.TriggerAction`1), обычно `TriggerAction<VisualElement>`. В этом классе можно определить свойства. Ниже приведены обычные свойства CLR, а не свойства связывания, так как `TriggerAction` не является производным от `BindableObject`. Необходимо переопределить [ `Invoke` ](xref:Xamarin.Forms.TriggerAction`1.Invoke*) метод, вызываемый при вызове действия. Аргумент является целевой элемент.
+Чтобы использовать его, нужно написать производный от [`TriggerAction<T>`](xref:Xamarin.Forms.TriggerAction`1) класс, обычно это `TriggerAction<VisualElement>`. Определите свойства в этом классе. Это простые свойства CLR, а не привязываемые свойства, так как `TriggerAction` не наследует от `BindableObject`. Необходимо переопределить метод [`Invoke`](xref:Xamarin.Forms.TriggerAction`1.Invoke*), который вызывается при активации действия. В качестве аргумента он принимает целевой элемент.
 
-[ `ScaleAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки является примером. Он вызывает `ScaleTo` анимируемое свойство `Scale` свойства элемента. Так как одна из его свойств типа `Easing`, [ `EasingConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) класс позволяет использовать стандартные `Easing` статических полей в XAML.
+Примером служит класс [`ScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). Он вызывает свойство `ScaleTo` для анимации свойства `Scale` указанного элемента. Так как одно из его свойств имеет тип `Easing`, класс [`EasingConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) позволяет использовать в XAML стандартные статические поля `Easing`.
 
-[ **EntrySwell** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntrySwell) образец демонстрирует способ вызова `ScaleAction` из `EventTrigger` объектов, которое ведет наблюдение за `Focused` и `Unfocused` события.
+В примере [**EntrySwell**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntrySwell) показано, как вызывать `ScaleAction` из `EventTrigger` объектов, отслеживающих события `Focused` и `Unfocused`.
 
-[ **CustomEasingSwell** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/CustomEasingSwell) примере показано, как определить пользовательскую функцию плавности для `ScaleAction` в файл с выделенным кодом.
+В примере [**CustomEasingSwell**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/CustomEasingSwell) показано, как определить пользовательскую функцию для реалистичной анимации для `ScaleAction` в файле кода программной части.
 
-Вы также можете вызвать действия с помощью `Trigger` (distinguished из `EventTrigger`). Это требует, что вам известно, `TriggerBase` определяет две коллекции:
+Действия также можно вызывать с помощью `Trigger` (в отличие от `EventTrigger`). Для этого необходимо знать, что `TriggerBase` определяет две коллекции:
 
 - [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) типа `IList<TriggerAction>`
 - [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) типа `IList<TriggerAction>`
 
-[ **EnterExitSwell** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EnterExitSwell) образце показано, как использовать эти коллекции.
+Пример [**EnterExitSwell**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EnterExitSwell) демонстрирует способ использования этих коллекций.
 
-### <a name="more-event-triggers"></a>Другие триггеры событий
+### <a name="more-event-triggers"></a>Дополнительные триггеры событий
 
-[ `ScaleUpAndDownAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleUpAndDownAction.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) вызовы библиотеки `ScaleTo` дважды, чтобы увеличивать и уменьшать масштаб. [ **ButtonGrowth** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonGrowth) образец использует этот элемент в `EventTrigger` для предоставления визуальной обратной связи при `Button` нажата. Эта анимация типа double можно также с помощью двух действий в коллекции с типом [`DelayedScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DelayedScaleAction.cs)
+Класс [`ScaleUpAndDownAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleUpAndDownAction.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) дважды вызывает `ScaleTo` для увеличения и уменьшения размера. Пример [**ButtonGrowth**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonGrowth) использует этот прием в `EventTrigger` с примененным стилем, чтобы обеспечить визуальное подтверждение нажатия `Button`. Эта двойная анимация также поддерживается двумя действиями в коллекции типа [`DelayedScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DelayedScaleAction.cs).
 
-[ `ShiverAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ShiverAction.cs) В класс **Xamarin.FormsBook.Toolkit** библиотека определяет настраиваемые shiver действие. [ **ShiverButtonDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ShiverButtonDemo) в нем демонстрируется его.
+Класс [`ShiverAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ShiverAction.cs) из библиотеки **Xamarin.FormsBook.Toolkit** определяет действие дрожания с возможностью настройки. Эта техника демонстрируется в примере [**ShiverButtonDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ShiverButtonDemo).
 
-[ `NumericValidationAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationAction.cs) В класс **Xamarin.FormsBook.Toolkit** библиотеки будет ограничен `Entry` элементы и наборы `TextColor` свойство красным, если `Text` свойство не является `double`. [ **TriggerEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TriggerEntryValidation) в нем демонстрируется его.
+Класс [`NumericValidationAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationAction.cs) в библиотеке **Xamarin.FormsBook.Toolkit** действует только для элементов `Entry` и присваивает свойству `TextColor` значение red, если свойство `Text` не является `double`. Этот подход демонстрируется в примере [**TriggerEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TriggerEntryValidation).
 
 ### <a name="data-triggers"></a>Триггеры данных
 
-[ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) Аналогичен `Trigger` за исключением того, что вместо мониторинг свойство для изменения значения, которые она отслеживает привязку данных. Это позволит свойства в один элемент для воздействия на свойство в другом элементе.
+[`DataTrigger`](xref:Xamarin.Forms.DataTrigger) похож на `Trigger`, за исключением того, что он отслеживает привязку данных, а не ожидает изменений значения свойства. Это позволяет свойству одного элемента влиять на свойство в другом элементе.
 
 `DataTrigger` определяет три свойства:
 
@@ -101,92 +101,92 @@ ms.locfileid: "70760593"
 - [`Value`](xref:Xamarin.Forms.DataTrigger.Value) типа `Object`
 - [`Setters`](xref:Xamarin.Forms.DataTrigger.Setters) типа `IList<SetterBase>`
 
-[ **GenderColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors) образец требует [ **SchoolOfFineArt** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) библиотеки и наборы цветов имена учащихся на синий или на основе розовый `Sex` свойство:
+Для примера [**GenderColors**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors) требуется библиотека [**SchoolOfFineArt**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt). Он задает цвета для имен учащихся: синий или розовый в зависимости от свойства `Sex`:
 
-[![Тройной снимок цвета Пол](images/ch23fg04-small.png "цвета Пол")](images/ch23fg04-large.png#lightbox "Пол цвета")
+[![Снимок экрана с тремя изображениями цветов в зависимости от пола](images/ch23fg04-small.png "Цвета на основе пола")](images/ch23fg04-large.png#lightbox "Цвета на основе пола")
 
-[ **ButtonEnabler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonEnabler) пример наборов `IsEnabled` свойство `Entry` для `False` Если `Length` свойство `Text` свойство `Entry`равен 0. Обратите внимание, что `Text` свойство инициализируется пустой строкой; по умолчанию это `null`и `DataTrigger` не будут работать правильно.
+В примере [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonEnabler) для свойства `IsEnabled` элемента `Entry` устанавливается значение `False`, если свойство `Length` свойства `Text` элемента `Entry` равно 0. Обратите внимание, что свойство `Text` инициализируется пустой строкой. По умолчанию оно имеет значение `null`, при котором `DataTrigger` не будет работать правильно.
 
 ### <a name="combining-conditions-in-the-multitrigger"></a>Объединение условий в MultiTrigger
 
-[ `MultiTrigger` ](xref:Xamarin.Forms.MultiTrigger) — Это набор условий. Когда они находятся все `true`, а затем применяются методы задания. Класс определяет два свойства:
+[`MultiTrigger`](xref:Xamarin.Forms.MultiTrigger) представляет собой коллекцию условий. Когда они все получают значение `true`, применяются методы задания. Этот класс определяет два свойства:
 
 - [`Conditions`](xref:Xamarin.Forms.MultiTrigger.Conditions) типа `IList<Condition>`
 - [`Setters`](xref:Xamarin.Forms.MultiTrigger.Setters) типа `IList<Setter>`
 
-[`Condition`](xref:Xamarin.Forms.Condition) является абстрактным и имеет два дочерних класса:
+[`Condition`](xref:Xamarin.Forms.Condition) является абстрактным классом и имеет два дочерних класса:
 
-- [`PropertyCondition`](xref:Xamarin.Forms.Condition), который имеет [ `Property` ](xref:Xamarin.Forms.PropertyCondition.Property) и [ `Value` ](xref:Xamarin.Forms.PropertyCondition.Value) свойства, такие как `Trigger`
-- [`BindingCondition`](xref:Xamarin.Forms.BindingCondition), который имеет [ `Binding` ](xref:Xamarin.Forms.BindingCondition.Binding) и [ `Value` ](xref:Xamarin.Forms.BindingCondition.Value) свойства, такие как `DataTrigger`
+- [`PropertyCondition`](xref:Xamarin.Forms.Condition), который имеет свойства [`Property`](xref:Xamarin.Forms.PropertyCondition.Property) и [`Value`](xref:Xamarin.Forms.PropertyCondition.Value), как `Trigger`
+- [`BindingCondition`](xref:Xamarin.Forms.BindingCondition), который имеет свойства [`Binding`](xref:Xamarin.Forms.BindingCondition.Binding) и [`Value`](xref:Xamarin.Forms.BindingCondition.Value), как `DataTrigger`
 
-В [ **AndConditions** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/AndConditions) образец, `BoxView` окрашивается только в том случае, если четыре `Switch` элементы включены.
+В примере [**AndConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/AndConditions) элемент `BoxView` выделяется, только если включены все четыре элемента `Switch`.
 
-[ **OrConditions** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/OrConditions) образце показано, как сделать `BoxView` цвет при *любой* из четырех `Switch` элементы включены. Для этого приложения De Morgan законодательства и обращение всю логику.
+В примере [**OrConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/OrConditions) показано, как можно изменять цвет `BoxView` при включении *любого* из четырех элементов `Switch`. Это требует применения закона де Моргана и обращения всей логики.
 
-Объединение и и или логику, не так просто и обычно требует невидимым `Switch` элементы для промежуточных результатов. [ **XorConditions** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/XorConditions) образце показано, как `Button` можно включить в том случае, если один из двух `Entry` элементы имеют некоторые текста, введенного в, но не в том случае, если оба они имеют некоторые при вводе текста на.
+Сочетание логики И и ИЛИ реализовать сложнее, и обычно для этого нужны невидимые элементы `Switch` для промежуточных результатов. В примере [**XorConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/XorConditions) показано, как включать `Button`, если один и только один из двух элементов `Entry` содержит введенный текст.
 
 ## <a name="behaviors"></a>поведения
 
-Что-то можно сделать с помощью триггера, также можно сделать с поведением, но поведения всегда требуется класс, производный от [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) и переопределяет следующие два метода:
+Все, что можно сделать с помощью триггера, можно реализовать и с помощью реакции на событие, но для этого всегда требуется производный от [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) класс с переопределением следующих двух методов:
 
 - [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo*)
 - [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom*)
 
-Аргумент является элементом, который применяется поведение. Как правило `OnAttachedTo` метод прикрепляет некоторые обработчики событий и `OnDetachingFrom` отсоединяет их. Так как такой класс обычно сохраняет некоторые состояния, он обычно не может использоваться в `Style`.
+В качестве аргумента принимается элемент, к которому присоединяется реакция на событие. Как правило, метод `OnAttachedTo` присоединяет некоторые обработчики событий, а `OnDetachingFrom` отсоединяет их. Так как этот класс обычно сохраняет некоторые сведения о состоянии, его нельзя использовать совместно в `Style`.
 
-[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) пример аналогичен **TriggerEntryValidation** за исключением того, что она использует поведение &mdash; [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки.
+Пример [**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) похож на **TriggerEntryValidation** с той разницей, что он использует реакцию на событие &mdash; в классе [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
-### <a name="behaviors-with-properties"></a>Поведение с помощью свойства
+### <a name="behaviors-with-properties"></a>Реакция на событие с поддержкой свойств
 
-`Behavior<T>` является производным от `Behavior`, который является производным от `BindableObject`, поэтому привязываемые свойства могут быть определены для поведения. Эти свойства могут быть активны в привязки данных.
+`Behavior<T>` наследует от `Behavior`, который наследует от `BindableObject`, а значит для реакции на событие можно определить привязываемые свойства. Эти свойства можно активно использовать в привязке данных.
 
-Это показано в [ **EmailValidationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationDemo) программа, которая делает использование [ `ValidEmailBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ValidEmailBehavior.cs) в класс [  **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки. `ValidEmailBehavior` имеет только для чтения свойство, используемое и служит в качестве источника привязки.
+Этот подход демонстрируется в программе [**EmailValidationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationDemo) на основе класса [`ValidEmailBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ValidEmailBehavior.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). `ValidEmailBehavior` имеет привязываемое свойство только для чтения и служит источником в привязках данных.
 
-[ **EmailValidationConv** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationConv) примере используется такое же поведение для отображения другого типа индикатора, чтобы сообщить, что адрес электронной почты является допустимым.
+В примере [**EmailValidationConv**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationConv) эта же реакция на событие используется для отображения индикатора другого типа, который информирует о допустимом формате адреса электронной почты.
 
-[ **EmailValidationTrigger** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationTrigger) пример представлен вариант предыдущего примера. Использует ButtonGlide `DataTrigger` в сочетании с этого поведения.
+Пример [**EmailValidationTrigger**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationTrigger) является модификацией предыдущего примера. ButtonGlide использует `DataTrigger` в сочетании с той же реакцией на событие.
 
 ### <a name="toggles-and-check-boxes"></a>Переключатели и флажки
 
-Можно инкапсулировать поведение кнопку-переключатель в классе, такие как [ `ToggleBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBehavior.cs) в [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки, а затем определите все визуальные элементы для переключателя полностью в XAML.
+Поведение выключателя можно инкапсулировать в классе, например [`ToggleBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBehavior.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit), а затем определить все визуальные элементы для переключателя полностью в XAML.
 
-[ **ToggleLabel** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ToggleLabel) примере используется `ToggleBehavior` с `DataTrigger` использовать `Label` с две текстовые строки для переключателя.
+В примере [**ToggleLabel**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ToggleLabel) используется `ToggleBehavior` с `DataTrigger`, чтобы применить `Label` с двумя текстовыми строками для переключения.
 
-[ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) образец расширяет эту концепцию, переключение между двумя `FormattedString` объектов.
+Пример [**FormattedTextToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) расширяет эту схему, переключаясь между двумя объектами `FormattedString`.
 
-[ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) В класс **Xamarin.FormsBook.Toolkit** библиотеки является производным от `ContentView`, определяет `IsToggled` свойство и включает в себя `ToggleBehavior` переключателя логика. Это упрощает определение кнопки-переключателя в XAML, как показано [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) образца.
+Класс [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) в библиотеке **Xamarin.FormsBook.Toolkit** является производным от `ContentView`, определяет свойство `IsToggled` и содержит `ToggleBehavior` для логики переключения. Это упрощает определение выключателя в XAML, как показано в примере [**TraditionalCheckBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox).
 
-[ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) включает в себя [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) класс, производный от `ToggleBase` и использует [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)для формирования выключатель, который похож на Xamarin.Forms `Switch`.
+Пример [**SwitchCloneDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) содержит класс [`SwitchClone`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs), производный от `ToggleBase`, и использует класс [`TranslateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs) для создания переключателя, похожего на стандартный `Switch` Xamarin.Forms.
 
-Объект [ `RotateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RotateAction.cs) в **Xamarin.FormsBook.Toolkit** предоставляет анимации используется для создания анимированных бегунка в [ **LeverToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/LeverToggle)образец.
+Класс [`RotateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RotateAction.cs) в **Xamarin.FormsBook.Toolkit** предоставляет анимацию, на которой основан анимированный рычаг в примере [**LeverToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/LeverToggle).
 
 ### <a name="responding-to-taps"></a>Реагирование на касания
 
-Одним из недостатков `EventTrigger` является, что вы не можете подключить его к `TapGestureRecognizer` реагировать на касания. Обойти эту проблему заключается цель [ `TapBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TapBehavior.cs) в [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)
+Недостаток `EventTrigger` заключается в том, что вы не можете присоединить его к `TapGestureRecognizer`, чтобы реагировать на касания. Чтобы обойти эту проблему, в библиотеку [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) включен [`TapBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TapBehavior.cs).
 
-[ **BoxViewTapShiver** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BoxViewTapShiver) примере используется `TapBehavior` для использования более ранней `ShiverAction` для касание `BoxView` элементов.
+В примере [**BoxViewTapShiver**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BoxViewTapShiver) используется `TapBehavior`, чтобы применить описанный выше `ShiverAction` для нажатых элементов `BoxView`.
 
-[ **ShiverViews** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ShiverViews) примере показано, как начать работу в разметке, инкапсулируя `ShiverView` класса.
+В примере [**ShiverViews**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ShiverViews) показано, как сократить объем разметки с помощью инкапсуляции класса `ShiverView`.
 
 ### <a name="radio-buttons"></a>Переключатели
 
-[ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотека также имеет [ `RadioBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioBehavior.cs) класс для создания переключателей, по которому группируются `string` имя группы.
+Библиотека [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) также имеет класс [`RadioBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioBehavior.cs) для создания переключателей, сгруппированных по имени группы `string`.
 
-[ **RadioLabels** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) программа использует текстовые строки для его переключателя. [ **RadioStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) примере используется `Style` разницу во внешнем виде между checked и unchecked кнопками. [ **RadioImages** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) образец использует упакованный изображения для его переключателей:
+Программа [**RadioLabels**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) использует текстовые строки в качестве переключателя. В примере [**RadioStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) используется `Style`, чтобы различать нажатые и не нажатые кнопки. Пример [**RadioImages**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) использует текстовые строки в качестве переключателей.
 
-[![Тройной снимок изображения переключателя](images/ch23fg17-small.png "изображения кнопки Radio")](images/ch23fg17-large.png#lightbox "Radio изображения кнопки")
+[![Снимок экрана с тремя изображениями переключателей](images/ch23fg17-small.png "Изображения переключателей")](images/ch23fg17-large.png#lightbox "Изображения переключателей")
 
-[ **TraditionalRadios** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalRadios) образец рисует традиционных отображения объектов переключателей с точкой внутри окружности.
+В примере [**TraditionalRadios**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalRadios) отображаются переключатели традиционного вида с точкой внутри окружности.
 
-### <a name="fades-and-orientation"></a>Затухание и ориентации
+### <a name="fades-and-orientation"></a>Исчезновение и ориентация
 
-Последнему примеру и [ **MultiColorSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) позволяет переключаться между представлениями разных выделения цветом, с помощью переключателей. Эффект затухания трех представлений в нее с помощью [ `FadeEnableAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) в [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки.
+В последнем примере [**MultiColorSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) вы с помощью переключателей можете выбирать любое из трех разных представлений для выбора цвета. Эти три представления плавно появляются и исчезают с использованием [`FadeEnableAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
-Программа также реагирует на изменения в ориентации между книжной и альбомной ориентации, используя [ `GridOrientationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) в **Xamarin.FormsBook.Toolkit** библиотеки.
+Эта программа также реагирует на изменения ориентации (книжная или альбомная) с помощью [`GridOrientationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) из библиотеки **Xamarin.FormsBook.Toolkit**.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 23 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf)
-- [Глава 23-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
+- [Глава 23 — полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf)
+- [Глава 23 — примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 - [Работа с триггерами](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Реакции на событие Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md)

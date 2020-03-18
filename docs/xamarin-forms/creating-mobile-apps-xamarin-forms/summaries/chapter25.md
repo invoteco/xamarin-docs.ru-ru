@@ -1,6 +1,6 @@
 ---
-title: Сводка главе 25. Создание страницы
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка главе 25. Создание страницы'
+title: Сводка по главе 25. Виды страниц
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка по главе 25. Виды страниц
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
@@ -8,33 +8,33 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: b86f2d7216a6344b14fc4d8c538ea68871eda5ae
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70760534"
 ---
-# <a name="summary-of-chapter-25-page-varieties"></a>Сводка главе 25. Создание страницы
+# <a name="summary-of-chapter-25-page-varieties"></a>Сводка по главе 25. Виды страниц
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
 
-Теперь вы знаете двух классов, производных от `Page`: `ContentPage` и `NavigationPage`. Эта глава представляет два других:
+До сих пор вы видели два класса, производных от `Page`: `ContentPage` и `NavigationPage`. В этой главе представлены два других:
 
-- [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) Управляет две страницы, главной и сведений
-- [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) Управляет несколько дочерних страниц через вкладки
+- [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) управляет двумя страницами — Главная и Детали
+- [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) управляет несколькими дочерними страницами, доступными через вкладки
 
-Эти типы страницы обеспечивают более сложные параметры навигации, чем `NavagationPage` подробно [Глава 24. Странице навигации](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter24.md).
+Эти типы страниц предоставляют более сложные параметры навигации, чем `NavagationPage`, обсуждаемые в [Главе 24. Переход по страницам](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter24.md).
 
-## <a name="master-and-detail"></a>Основные и подробные
+## <a name="master-and-detail"></a>Главная и Детали
 
-[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) Определяет два свойства типа `Page`: [ `Master` ](xref:Xamarin.Forms.MasterDetailPage.Master) и [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail). Обычно каждое из этих свойств, чтобы задать `ContentPage`. `MasterDetailPage` Отображает и переключается между этим двум страницам.
+[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) определяет два свойства типа `Page`: [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) и [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail). Обычно каждому из этих свойств присваивается `ContentPage`. `MasterDetailPage` отображает эти две страницы и переключается между ними.
 
-Существуют два основных способа для переключения между этими двумя страницами:
+Существует два фундаментальных способа переключения между этими двумя страницами:
 
-- *разделить* где основные и подробные находятся рядом друг с другом
-- *контекстном* где на страницу сведений о охватывает или частично рассматриваются главной странице
+- *разбиение*, где главные и детальные данные находятся рядом друг с другом
+- *всплывающее окно* — страница сведений частично перекрывает главную страницу.
 
-Существует несколько вариантов *контекстном* подход (*слайд*, *перекрываются*, и *замены*), но они обычно платформы зависимые. Можно задать [ `MasterDetailBehavior` ](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) свойство `MasterDetailPage` члену [ `MasterBehavior` ](xref:Xamarin.Forms.MasterBehavior) перечисления:
+Существует несколько разновидностей подхода для *всплывающих окон* (*слайд*, *перекрывающее* и *переключающее*), но обычно они зависят от платформы. Свойству [`MasterDetailBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) объекта `MasterDetailPage` можно присвоить значение одного из элементов перечисления [`MasterBehavior`](xref:Xamarin.Forms.MasterBehavior):
 
 - [`Default`](xref:Xamarin.Forms.MasterBehavior.Default)
 - [`Split`](xref:Xamarin.Forms.MasterBehavior.Split)
@@ -42,79 +42,79 @@ ms.locfileid: "70760534"
 - [`SplitOnPortrait`](xref:Xamarin.Forms.MasterBehavior.SplitOnPortrait)
 - [`Popover`](xref:Xamarin.Forms.MasterBehavior.Popover)
 
-Тем не менее это свойство не влияет на телефонах. Телефоны всегда имеют контекстном поведение. Только для планшетных и настольных систем windows может иметь поведение разбиения.
+Однако это свойство не влияет на телефоны. Телефоны всегда имеют режимы работы с всплывающим окном. Режим работы с разделением имеют только планшеты и компьютеры (Windows).
 
-### <a name="exploring-the-behaviors"></a>Изучая поведение
+### <a name="exploring-the-behaviors"></a>Изучение этих режимов работы
 
-[ **MasterDetailBehaviors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MasterDetailBehaviors) пример позволяет экспериментировать с поведением по умолчанию на разных устройствах. Программа содержит два отдельных `ContentPage` производные для основные и подробные (с `Title` задать для свойства), а другой класс, производный от `MasterDetailPage` , объединяет их. На страницу сведений о заключается в `NavigationPage` так, как программа UWP не будут работать без него.
+Образец [**MasterDetailBehaviors**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MasterDetailBehaviors) позволяет экспериментировать с режимом по умолчанию на различных устройствах. Программа содержит две отдельные производные `ContentPage`, которые являются производными для основных и детальных данных (со свойством `Title`, установленным в обоих), и другим классом, который является производной от `MasterDetailPage`, объединяющего их. Страница деталей заключена в `NavigationPage`, так как программа UWP не будет работать без нее.
 
-На платформах Windows 8.1 и Windows Phone 8.1 требуют, что точечный рисунок присвоить `Icon` свойство главной страницы.
+Для платформ Windows 8.1 и Windows Phone 8.1 требуется, чтобы растровое изображение было установлено в свойство `Icon` главной страницы.
 
-### <a name="back-to-school"></a>Снова в школу
+### <a name="back-to-school"></a>Снова за учебу
 
-[ **SchoolAndDetail** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/SchoolAndDetail) пример занимает немного другой подход к построению программы для отображения учащихся из [ **SchoolOfFineArt** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) библиотеки.
+Пример [**SchoolAndDetail**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/SchoolAndDetail) использует несколько другой подход к созданию программы для показа учащихся из библиотеки [**SchoolOfFineArt**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt).
 
-`Master` И `Detail` свойства определяются с помощью визуальных деревьев в [SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml) файл, который является производным от `MasterDetailPage`. Такой подход позволяет задать между основными и подробными страницами привязки данных.
+Свойства `Master` и `Detail` определяются с помощью визуальных деревьев в файле [SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml), который является производным от `MasterDetailPage`. Это расположение позволяет устанавливать привязки данных между главной страницей и страницами деталей.
 
-Также устанавливает файл XAML [ `IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented) свойство `MasterDetailPage` для `True`. Это приводит к главной страницы для отображения при запуске; по умолчанию отображается страница сведений. [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) файле задает `IsPresented` для `false` при выборе элемента из `ListView` на главной странице. Затем открывается страница сведений:
+Этот файл XAML также задает для свойства [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) из `MasterDetailPage` значение `True`. В результате главная страница будет отображаться при запуске; по умолчанию отображается страница деталей. Файл [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) задает значение `IsPresented` для `false` при выборе элемента из `ListView` на главной странице. Затем отобразится страница деталей:
 
-[![Тройной снимок деталей и School](images/ch25fg09-small.png "страницу сведений из MasterDetailPage")](images/ch25fg09-large.png#lightbox "страницу сведений из MasterDetailPage")
+[![Тройной снимок экрана школы и деталей](images/ch25fg09-small.png "Страница сведений из MasterDetailPage")](images/ch25fg09-large.png#lightbox "Страница сведений из MasterDetailPage")
 
-### <a name="your-own-user-interface"></a>Собственного пользовательского интерфейса
+### <a name="your-own-user-interface"></a>Собственный пользовательский интерфейс
 
-Несмотря на то, что Xamarin.Forms предоставляет пользовательский интерфейс для переключения между представлениями основные и подробные, вы можете предоставить свои собственные. Для этого сделайте следующее:
+Несмотря на то, что Xamarin.Forms предоставляет пользовательский интерфейс для переключения между представлениями "Главная" и "Детали", вы можете указать собственное представление. Для этого сделайте следующее:
 
-- Задайте [ `IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) свойства `false` отключение проведение пальцем по экрану
-- Переопределить [ `ShouldShowToolbarButton` ](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) метода и верните `false` для скрытия кнопки панели инструментов в Windows 8.1 и Windows Phone 8.1.
+- Задайте для свойства [`IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) значение `false`, чтобы отключить прокрутку.
+- Переопределите метод [`ShouldShowToolbarButton`](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) и возвратите `false`, чтобы скрыть кнопки на панели инструментов в Windows 8.1 и Windows Phone 8.1.
 
-Затем необходимо предоставить средства для переключения между основными и подробными страницами, таким образом, как показано [ **ColorsDetail** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails) образца.
+Затем необходимо предоставить средства для переключения между главной страницей и страницами деталей, например с помощью примера [**ColorsDetail**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails).
 
-[ **MasterDetailTaps** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MasterDetailTaps) образце показано использование другой подход `TapGestureRecognizer` на страницах основными и подробными.
+В примере [**MasterDetailTaps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MasterDetailTaps) демонстрируется другой подход, использующий `TapGestureRecognizer` на главной странице и на страницах деталей.
 
 ## <a name="tabbedpage"></a>TabbedPage
 
-[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) — Это коллекция страниц, которые можно переключать с помощью вкладок. Он является производным от `MultiPage<Page>` и определяет не открытые свойства или методы свои собственные. [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1), тем не менее, определить свойство:
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) — это коллекция страниц, которые можно переключать с помощью вкладок. Она является производной от `MultiPage<Page>` и не определяет открытые свойства или методы самостоятельно. [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1), однако, определяет свойство:
 
-- [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) свойство типа `IList<T>`
+- свойство [`Children`](xref:Xamarin.Forms.MultiPage`1.Children)с типом `IList<T>`.
 
-Заполните эту `Children` коллекции с объектами страницы.
+Эту коллекцию нужно заполнять `Children` объектами страницы.
 
-Другой подход позволяет определять `TabbedPage` дочерние элементы во многом аналогично `ListView` с помощью этих двух свойств, которые автоматически создают страницам с вкладками:
+Другой подход позволяет определять дочерние элементы `TabbedPage` так же, как и `ListView`, используя эти два свойства, которые автоматически создают страницы с вкладками:
 
 - [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) типа `IEnumerable`
 - [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) типа `DataTemplate`
 
-Тем не менее этот подход не работает на iOS, если коллекция содержит несколько элементов.
+Однако этот подход плохо работает в iOS, когда коллекция содержит более нескольких элементов.
 
-`MultiPage<T>` Определяет два дополнительные свойства, которые позволяют хранить список какая страница просматривается в настоящее время:
+`MultiPage<T>` определяет два дополнительные свойства, которые позволяют отслеживать текущую просматриваемую страницу:
 
-- [`CurrentPage`](xref:Xamarin.Forms.MultiPage`1.CurrentPage) типа `T`, ссылающегося на страницу
-- [`SelectedItem`](xref:Xamarin.Forms.MultiPage`1.SelectedItem) типа `Object`, ссылающегося на объект в `ItemsSource` коллекции
+- [`CurrentPage`](xref:Xamarin.Forms.MultiPage`1.CurrentPage) типа `T`, который ссылается на страницу
+- [`SelectedItem`](xref:Xamarin.Forms.MultiPage`1.SelectedItem) типа `Object`, который ссылается на объект в коллекции `ItemsSource`
 
 `MultiPage<T>` также определяет два события:
 
-- [`PagesChanged`](xref:Xamarin.Forms.MultiPage`1.PagesChanged) Когда `ItemsSource` изменения коллекции
-- [`CurrentPageChanged`](xref:Xamarin.Forms.MultiPage`1.CurrentPageChanged) При изменении просматриваемой страницы
+- [`PagesChanged`](xref:Xamarin.Forms.MultiPage`1.PagesChanged) при изменении коллекции `ItemsSource`
+- [`CurrentPageChanged`](xref:Xamarin.Forms.MultiPage`1.CurrentPageChanged) при изменении просматриваемой страницы
 
-### <a name="discrete-tab-pages"></a>Дискретные вкладок
+### <a name="discrete-tab-pages"></a>Дискретные страницы вкладок
 
-[ **DiscreteTabbedColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/DiscreteTabbedColors) Образец состоит из трех страниц с вкладками, которые отображают цвета тремя разными способами. Каждая вкладка предназначена `ContentPage` производный от него и затем `TabbedPage` производных [DiscreteTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/DiscreteTabbedColors/DiscreteTabbedColors/DiscreteTabbedColors/DiscreteTabbedColorsPage.xaml) объединяет три страницы.
+Пример [**DiscreteTabbedColors**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/DiscreteTabbedColors) состоит из трех страниц с вкладками, отображающие цвета тремя разными способами. Каждая вкладка является производной `ContentPage`, а затем производная `TabbedPage` [DiscreteTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/DiscreteTabbedColors/DiscreteTabbedColors/DiscreteTabbedColors/DiscreteTabbedColorsPage.xaml) объединяет три страницы.
 
-Для каждой страницы, отображаемой во `TabbedPage`, `Title` свойство необходимо указать текст на вкладке и Apple Store требует также использования значок поэтому `Icon` задано для iOS:
+Для каждой страницы, отображаемой в `TabbedPage`, свойство `Title` является обязательным для указания текста на вкладке, а в Apple Store требуется также использовать значок, поэтому для iOS установлено свойство `Icon`:
 
-[![Тройной снимок дискретных цветов с вкладками](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png#lightbox "TabbedPage")
+[![Тройной снимок экрана дискретных вкладок с разными цветами](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png#lightbox "TabbedPage")
 
-[ **StudentNotes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/StudentNotes) пример содержит домашнюю страницу, которая перечисляет всех учащихся. Учащийся шифрованию, вы перейдете в `TabbedPage` производный от него [ `StudentNotesDataPage` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/StudentNotes/StudentNotes/StudentNotes/StudentNotesDataPage.xaml), который включает в себя три `ContentPage` объектов в визуальном дереве, один из которых позволяет ввести несколько заметок для этого учащегося.
+В примере [**StudentNotes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/StudentNotes) есть домашняя страница со списком всех учащихся. При касании учащийся переходит на производную `TabbedPage`, [`StudentNotesDataPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/StudentNotes/StudentNotes/StudentNotes/StudentNotesDataPage.xaml), которая включает три объекта `ContentPage` в своем визуальном дереве, один из которых позволяет вводить некоторые примечания для этого учащегося.
 
-### <a name="using-an-itemtemplate"></a>С помощью ItemTemplate
+### <a name="using-an-itemtemplate"></a>Использование ItemTemplate
 
-[ **MultiTabbedColor** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MultiTabbedColors) примере используется [ `NamedColor` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки. [MultiTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/MultiTabbedColors/MultiTabbedColors/MultiTabbedColors/MultiTabbedColorsPage.xaml) файле задает `DataTemplate` свойство `TabbedPage` в визуальном дереве, начиная с `ContentPage` , содержащая привязки к свойствам `NamedColor` (включая привязку к `Title` свойство).
+В примере [**MultiTabbedColor**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MultiTabbedColors) в библиотеке [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) используется класс [`NamedColor`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs). Файл [MultiTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/MultiTabbedColors/MultiTabbedColors/MultiTabbedColors/MultiTabbedColorsPage.xaml) устанавливает свойство `DataTemplate` от `TabbedPage` в визуальное дерево, начинающееся с `ContentPage`, которое содержит привязки к свойствам `NamedColor` (включая привязку к свойству `Title`).
 
-Однако это является проблемой для операций ввода-вывода. Можно отобразить только некоторые элементы, и нет нет хорошего способа предоставить им значки.
+Однако это проблематично для iOS. С помощью этого метода можно отобразить только несколько элементов, к тому же в нем отсутствует правильный способ для присвоения значков.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Полный текст главе 25 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
-- [Примеры в главе 25](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
-- [Страница «основной-подробности»](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md)
+- [Глава 25, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
+- [Примеры для Главы 25](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
+- [Страница "Основной вид и подробности" Xamarin.Forms](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md)
 - [Страница с вкладками](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)

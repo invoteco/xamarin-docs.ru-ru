@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 5. Работа с размерами
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 5. Работа с размерами'
+title: Сводка по главе 5. Работа с размерами
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка по главе 5. Работа с размерами
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -8,88 +8,88 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: c082bdb10732e42b37511cf050e50f46990a5b5b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70771143"
 ---
-# <a name="summary-of-chapter-5-dealing-with-sizes"></a>Сводка Глава 5. Работа с размерами
+# <a name="summary-of-chapter-5-dealing-with-sizes"></a>Сводка по главе 5. Работа с размерами
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
 
 > [!NOTE]
-> Заметки на этой странице указывать области, где различаются Xamarin.Forms материал, представленный в книге.
+> Примечания на этой странице указывают области, в которых Xamarin.Forms имеет расхождения с материалом, представленным в книге.
 
-Несколько размеров в Xamarin.Forms обнаружены в данный момент:
+На данный момент в Xamarin. Forms используются следующие размеры:
 
-- Высота строки состояния iOS — 20
-- `BoxView` Имеет стандартную ширину и высоту 40
-- Значение по умолчанию `Padding` в `Frame` — 20
-- Значение по умолчанию `Spacing` на `StackLayout` 6
-- `Device.GetNamedSize` Метод возвращает числовой размер
+- Высота строки состояния iOS равна 20.
+- Ширина и высота `BoxView` по умолчанию — 40.
+- Значение `Padding` в `Frame` по умолчанию — 20.
+- Значение `Spacing` в `StackLayout` по умолчанию — 6.
+- Метод `Device.GetNamedSize` возвращает размер шрифта в виде числа.
 
-Эти размеры не пикселей. Вместо этого они аппаратно независимых единицах, независимо друг от друга распознаются каждой платформы.
+Это не размеры в пикселях. Это аппаратно-независимые единицы, которые распознаются на любой платформе.
 
-## <a name="pixels-points-dps-dips-and-dius"></a>Пиксели, точки, dps, частные интерфейсы и DIUs
+## <a name="pixels-points-dps-dips-and-dius"></a>Пиксели, точки, единицы dps, DIP и DIU
 
-На раннем этапе историю, Apple Mac и Microsoft Windows программисты работал в единицах точек. Тем не менее появлением отображает более высоким разрешением требуется более виртуализированных и абстрактный подход в экранные координаты. В мире Mac, программисты работал в единицах *точки*, традиционно 1/72 дюйма при Windows разработчики использовали *аппаратно независимых единицах* (DIUs) на основании 1/96 дюйма.
+В начале истории Apple Mac и Microsoft Windows программисты использовали в качестве единиц пиксели. Однако с появлением дисплеев с более высоким разрешением возникла необходимость в более виртуализированном и абстрактном подходе к экранным координатам. Программисты, работающие с Mac, использовали в качестве единиц *точки*, традиционно равные 1/72 дюйма, а разработчики Windows — *аппаратно-независимые единицы* (DIU), которые были равны 1/96 дюйма.
 
-Мобильные устройства, тем не менее, обычно хранятся намного ближе к поверхности и имеют более высокое разрешение, чем desktop экраны, которые подразумевает, что можно скорректировать большей плотности пикселей.
+Однако мобильные устройства, как правило, располагаются гораздо ближе к лицу и имеют более высокое разрешение, чем экраны настольных компьютеров, а это означает, что допускается более высокая плотность пикселей.
 
-Программисты, предназначенных для устройств Apple iPhone и iPad по-прежнему работать в единицах *точек*, но есть 160 точек на дюйм. В зависимости от устройства может быть 1, 2 или 3 пикселя в точку.
+Программисты, разрабатывающие решения для устройств Apple iPhone и iPad, продолжают использовать в качестве единиц *точки*, но теперь количество таких точек на дюйм равно 160. В зависимости от устройства точка может содержать 1, 2 или 3 пикселя.
 
-Аналогично Android. Программисты работают в единицах *density независимых пикселях* (dps), и связь между dps и пикселей основан на 160 dps в дюйме.
+Ситуация с Android аналогична. Программисты используют в качестве единиц *независимые от плотности пиксели* (dps), а соотношение между dps и пикселями основано на количестве 160 dps на дюйм.
 
-Телефоны Windows и мобильными устройствами также разработали коэффициенты масштабирования, которые подразумевают, что-то наподобие 160 аппаратно независимых единиц в дюйме.
+На телефонах и мобильных устройствах с Windows также установлены коэффициенты масштабирования, которые примерно равны 160 аппаратно-независимым единицам на дюйм.
 
 > [!NOTE]
-> Xamarin.Forms больше не поддерживает любого phone на основе Windows или мобильного устройства.
+> В Xamarin.Forms больше не поддерживаются телефоны и мобильные устройства под управлением Windows.
 
-Таким образом Xamarin.Forms программиста, нацеленного на телефонах и планшетах можно предположить, что все единицы измерения основаны на следующий критерий:
+В общем, программист, разрабатывающий с помощью Xamarin.Forms решения для телефонов и планшетов, может предполагать, что все единицы измерения основаны на следующем условии:
 
-- 160 единиц в дюйме, эквивалентно
-- 64 единиц сантиметр
+- 160 единиц на дюйм, что эквивалентно
+- 64 единицам на сантиметр.
 
-Только для чтения [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) и [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) свойства, определенные `VisualElement` «макет» значения по умолчанию &ndash;1. Только в том случае, если элемент был размера и размещено в макет будут эти свойства отражают фактический размер элемента в аппаратно независимых единицах. Этот размер включает какой-либо `Padding` задавать в элементе, но не `Margin`.
+Свойства [`Width`](xref:Xamarin.Forms.VisualElement.Width) и [`Height`](xref:Xamarin.Forms.VisualElement.Height) только для чтения, определяемые с помощью `VisualElement`, по умолчанию имеют фиктивное значение &ndash;1. Эти свойства будут отражать фактический размер элемента в аппаратно-независимых единицах, только если размер элемента изменен в соответствии с макетом. Этот размер включает любое значение `Padding`, установленное для элемента, но не `Margin`.
 
-Визуальный элемент срабатывает [ `SizeChanged` ](xref:Xamarin.Forms.VisualElement.SizeChanged) событий при его `Width` или `Height` был изменен. [ **WhatSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) образец использует это событие для отображения размера экрана программы.
+Визуальный элемент вызывает событие [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged) при изменении `Width` или `Height`. В примере [**WhatSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) это событие используется для отображения размера экрана программы.
 
-## <a name="metrical-sizes"></a>Metrical размеров
+## <a name="metrical-sizes"></a>Размеры в метрических единицах
 
-[ **MetricalBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/MetricalBoxView) использует [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) и [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) для отображения `BoxView` один дюйм высоту, а второй Расширенный сантиметры.
+В [**MetricalBoxView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/MetricalBoxView) [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) и [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) используются для отображения `BoxView` высотой в один дюйм и шириной в один сантиметр.
 
-## <a name="estimated-font-sizes"></a>Размеры шрифтов, оценка
+## <a name="estimated-font-sizes"></a>Приблизительные размеры шрифта
 
-[ **Размеры шрифта** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FontSizes) примере показано, как использовать 160-единицы дюймов правила для укажите размер шрифта в единицах точек. Визуальная целостность между платформами, при использовании этого метода лучше, чем `Device.GetNamedSize`.
+В примере [**FontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FontSizes) показано, как использовать правило "160 единиц на дюйм" для указания размеров шрифта в точках. Визуальная согласованность между платформами, использующими этот прием, лучше, чем у `Device.GetNamedSize`.
 
-## <a name="fitting-text-to-available-size"></a>Изменение размера текста по доступный размер
+## <a name="fitting-text-to-available-size"></a>Подгонка текста к размеру экрана
 
-Это возможно в соответствии с путем вычисления блок текста в прямоугольнике, определенного `FontSize` из `Label` используйте следующие критерии:
+Блок текста можно вписать в определенный прямоугольник, вычислив `FontSize` для `Label` с помощью следующих условий:
 
-- Междустрочный интервал — 120% от размера шрифта (130% на платформах Windows).
-- Средняя ширина символа — 50% от размера шрифта.
+- междустрочный интервал равен 120 % от размера шрифта (на платформах Windows — 130 %);
+- средняя ширина символа составляет 50 % от размера шрифта.
 
-[ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) этот метод продемонстрирован в примере. Эта программа написан до появления [ `Margin` ](xref:Xamarin.Forms.View.Margin) свойство было доступно, поэтому используется [ `ContentView` ](xref:Xamarin.Forms.ContentView) с [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) параметр, чтобы имитировать поле.
+Этот метод демонстрируется в примере [**EstimatedFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize). Эта программа была написана до того, как стало доступно свойство [`Margin`](xref:Xamarin.Forms.View.Margin), поэтому в ней для имитации поля используется [`ContentView`](xref:Xamarin.Forms.ContentView) с параметром [`Padding`](xref:Xamarin.Forms.Layout.Padding).
 
-[![Тройной снимок предполагаемый размер](images/ch05fg07-small.png "текста по размеру доступный размер")](images/ch05fg07-large.png#lightbox "доступный размер по размеру текста")
+[![Тройной снимок экрана с приблизительным размером шрифта](images/ch05fg07-small.png "Текст, подогнанный к размеру экрана")](images/ch05fg07-large.png#lightbox "Текст, подогнанный к размеру экрана")
 
-## <a name="a-fit-to-size-clock"></a>Часы по размеру размер
+## <a name="a-fit-to-size-clock"></a>Подбор размера шрифта при оповещении об обновлении часов
 
-[ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) образце показано использование [ `Device.StartTimer` ](xref:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})) запустить таймер, периодически уведомляет приложение, когда придет время обновить часы. Размер шрифта будет присвоено Шестая часть ширины страницы, чтобы сделать изображение как можно большего размера.
+В примере [**FitToSizeClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) демонстрируется использование [`Device.StartTimer`](xref:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})) для запуска таймера, который периодически оповещает приложение о том, что пора обновить часы. Размер шрифта устанавливается равным одной шестой ширины страницы, чтобы размер оповещения был максимально большим.
 
 ## <a name="accessibility-issues"></a>Проблемы со специальными возможностями
 
-Программа **естиматедфонтсизе** и программа **фиттосизеклокк** содержат слабый недостаток: Если пользователь изменяет параметры специальных возможностей телефона на устройствах Android или Windows 10 Mobile, программа больше не может оценить размер отображаемого текста в зависимости от размера шрифта. [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) образец демонстрирует эту проблему.
+Программы **EstimatedFontSize** и **FitToSizeClock** содержат небольшой недостаток. Если пользователь изменяет параметры специальных возможностей телефона на устройствах Android или Windows 10 Mobile, программа больше не может оценить размер отображаемого текста в зависимости от размера шрифта. Эта проблема продемонстрирована в примере [**AccessibilityTest**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest).
 
-## <a name="empirically-fitting-text"></a>Эмпирически помещении текста
+## <a name="empirically-fitting-text"></a>Эмпирическая подгонка текста
 
-Другим способом для соответствия размеру текста в прямоугольник является эмпирически вычислить размер отображаемого текста и настроить его вверх или вниз. Программа в вызовах книги [ `GetSizeRequest` ](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) на визуальный элемент, чтобы получить желаемый размер этого элемента. Метод является устаревшим, что вместо этого необходимо вызвать программы [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
+Еще один способ вписать текст в прямоугольник — эмпирически вычислить размер отображаемого текста и скорректировать (уменьшить или увеличить) его размер. Программа, описанная в книге, вызывает [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) в визуальном элементе, чтобы получить нужный размер элемента. Этот метод не рекомендуется к использованию. Вместо этого программы должны вызывать [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
-Для `Label`, первый аргумент должен быть Ширина контейнера (чтобы упаковки), а для второго аргумента должно быть установлено для `Double.PositiveInfinity` чтобы высота без ограничений. [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) этот метод продемонстрирован в примере.
+Для `Label` первым аргументом должна быть ширина контейнера (чтобы разрешить перенос), а для второго аргумента необходимо задать значение `Double.PositiveInfinity`, чтобы высота не была ограничена. Этот метод демонстрируется в примере [**EmpiricalFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 5 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)
-- [Примеры Глава 5](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
-- [Глава 5 F# примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FS)
+- [Глава 5, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)
+- [Примеры для главы 5](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
+- [Примеры F# для главы 5](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FS)

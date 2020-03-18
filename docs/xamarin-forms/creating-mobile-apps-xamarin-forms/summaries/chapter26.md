@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 26. Пользовательские макеты
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 26. Пользовательские макеты'
+title: Сводка по главе 26. Пользовательские макеты
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка по главе 26. Пользовательские макеты
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
@@ -8,38 +8,38 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 1eb5153f8ab295696e373f4fdb65a4f8820a05bc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70770944"
 ---
-# <a name="summary-of-chapter-26-custom-layouts"></a>Сводка Глава 26. Пользовательские макеты
+# <a name="summary-of-chapter-26-custom-layouts"></a>Сводка по главе 26. Пользовательские макеты
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
 
-Платформа Xamarin.Forms включает несколько классов, производных от [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1):
+Xamarin.Forms включает несколько классов, производных от [`Layout<View>`](xref:Xamarin.Forms.Layout`1):
 
 - `StackLayout`,
 - `Grid`,
 - `AbsoluteLayout` и
 - `RelativeLayout`.
 
-В этой главе описывается создание собственных классов, производных от `Layout<View>`.
+В этой главе описано, как создавать собственные классы, производные от `Layout<View>`.
 
-## <a name="an-overview-of-layout"></a>Общие сведения о макете
+## <a name="an-overview-of-layout"></a>Общие сведения о макете.
 
-Нет не централизованной системе обработки макета Xamarin.Forms. Каждый элемент является ответственность за определение того, какой должна быть свой собственный размер и визуализироваться в определенном регионе.
+Не существует централизованной системы для обработки макета Xamarin.Forms. Каждый элемент самостоятельно определяет свой размер и способ отображения в определенной области.
 
-### <a name="parents-and-children"></a>Родительские и дочерние элементы
+### <a name="parents-and-children"></a>Родительские и дочерние объекты
 
-Каждый элемент, имеющий дочерние элементы отвечает за размещение этих дочерних действий самих себя. Это родителя, который определяет, что размер его дочерние элементы должны быть основаны на размер имеет доступные и размер дочернего хочет иметь.
+Каждый элемент, имеющий дочерние элементы, отвечает за размещение этих дочерних элементов внутри себя. Именно родительский элемент в конечном итоге определяет размер дочернего элемента, исходя из доступного пространства и желаемого размера дочернего элемента.
 
-### <a name="sizing-and-positioning"></a>Изменения размеров и положения
+### <a name="sizing-and-positioning"></a>Размер и размещение
 
-Макет начинается в верхней части визуального дерева со страницей, а затем выполняется через все ветви. Является наиболее важным открытый метод в макете [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) определяется `VisualElement`. Каждый элемент, который является родительским для других вызовов элементов `Layout` для каждого из его дочерних элементов, чтобы предоставить дочерним, размер и положение относительно самого себя в виде [ `Rectangle` ](xref:Xamarin.Forms.Rectangle) значение. Эти `Layout` вызовы распространить по визуальному дереву.
+Построение макета начинается с верхнего уровня визуального дерева, где располагается узел страницы, и распространяется на все его ветви. Самым важным открытым методом в макете является [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)), определяемый в `VisualElement`. Каждый элемент, являющийся родительским для других элементов, вызывает `Layout` для каждого дочернего элемента, чтобы предоставить размер и расположение относительно себя в формате значения [`Rectangle`](xref:Xamarin.Forms.Rectangle). Эти вызовы `Layout` распространяются по всему визуальному дереву.
 
-Вызов `Layout` является обязательным для элемента, на экране и вызывает следующие свойства только для чтения, устанавливаемое значение. Согласованность с `Rectangle` передается в метод:
+Вызов `Layout` требуется для того, чтобы элемент отображался на экране. Он устанавливает следующие свойства только для чтения. Они должны соответствовать `Rectangle`, который был передан в этот метод:
 
 - [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) типа `Rectangle`
 - [`X`](xref:Xamarin.Forms.VisualElement.X) типа `double`
@@ -47,151 +47,151 @@ ms.locfileid: "70770944"
 - [`Width`](xref:Xamarin.Forms.VisualElement.Width) типа `double`
 - [`Height`](xref:Xamarin.Forms.VisualElement.Height) типа `double`
 
-До версии `Layout` вызвать, `Height` и `Width` имеют макетов значения &ndash;1.
+Перед вызовом `Layout` параметры `Height` и `Width` имеют фиктивные значения &ndash;1.
 
-Вызов `Layout` также активирует следующие защищенных методов:
+Вызов `Layout` также вызывает следующие защищенные методы:
 
 - [`SizeAllocated`](xref:Xamarin.Forms.VisualElement.SizeAllocated(System.Double,System.Double)), который вызывает
-- [`OnSizeAllocated`](xref:Xamarin.Forms.VisualElement.OnSizeAllocated(System.Double,System.Double)), который можно переопределять.
+- [`OnSizeAllocated`](xref:Xamarin.Forms.VisualElement.OnSizeAllocated(System.Double,System.Double)), который может быть переопределен.
 
-Наконец запускается следующее событие:
+Наконец, срабатывает следующее событие:
 
 - [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged)
 
-`OnSizeAllocated` Метод переопределяется `Page` и `Layout`, которые являются только двух классов в Xamarin.Forms, которое может иметь дочерние элементы. Вызывает переопределенный метод
+Метод `OnSizeAllocated` переопределяется классами `Page` и `Layout`. Это единственные два класса Xamarin.Forms, которые могут иметь дочерние элементы. Переопределенный метод вызывает следующее:
 
-- [`UpdateChildrenLayout`](xref:Xamarin.Forms.Page.UpdateChildrenLayout) для `Page` производные и [ `UpdateChildrenLayout` ](xref:Xamarin.Forms.Layout.UpdateChildrenLayout) для `Layout` производных материалов, которые вызывает
-- [`LayoutChildren`](xref:Xamarin.Forms.Page.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) для `Page` производные и [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) для `Layout` производных.
+- [`UpdateChildrenLayout`](xref:Xamarin.Forms.Page.UpdateChildrenLayout) для производных от `Page` и [`UpdateChildrenLayout`](xref:Xamarin.Forms.Layout.UpdateChildrenLayout) для производных от `Layout`, которые вызывают
+- [`LayoutChildren`](xref:Xamarin.Forms.Page.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) для производных от `Page` и [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) для производных от `Layout`.
 
-`LayoutChildren` затем вызывает `Layout` для каждого из его дочерних элементов. Если хотя бы один дочерний элемент добавлен новый `Bounds` параметр, то возникает следующее событие:
+Затем `LayoutChildren` вызывает `Layout` для каждого из дочерних элементов этого элемента. Если хотя бы один дочерний элемент имеет новое значение `Bounds`, возникает следующее событие:
 
-- [`LayoutChanged`](xref:Xamarin.Forms.Page.LayoutChanged) для `Page` производные и [ `LayoutChanged` ](xref:Xamarin.Forms.Layout.LayoutChanged) для `Layout` производные
+- [`LayoutChanged`](xref:Xamarin.Forms.Page.LayoutChanged) для производных от `Page` и [`LayoutChanged`](xref:Xamarin.Forms.Layout.LayoutChanged) для производных от `Layout`.
 
-### <a name="constraints-and-size-requests"></a>Ограничения и размер запросов
+### <a name="constraints-and-size-requests"></a>Запросы ограничений и размера
 
-Для `LayoutChildren` интеллектуально вызывать `Layout` на все его дочерние элементы, необходимо знать *предпочтительный* или *требуемой* размер для дочерних элементов. Поэтому вызовы `Layout` для каждого из дочерних элементов как правило, предшествует вызовы
+Чтобы элемент `LayoutChildren` правильно вызывал `Layout` для всех дочерних элементов, он должен знать *предпочтительный* или *желаемый* размер этих дочерних элементов. Поэтому перед вызовами `Layout` для каждого из дочерних элементов обычно выполняются вызовы
 
 - [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double))
 
-После публикации книги, `GetSizeRequest` метод был устарели и заменены
+После публикации книги метод `GetSizeRequest` был объявлен нерекомендуемым и заменен на
 
 - [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags))
 
-`Measure` Метод [ `Margin` ](xref:Xamarin.Forms.View.Margin) свойство и включает аргумент типа [ `MeasureFlag` ](xref:Xamarin.Forms.MeasureFlags), который имеет два члена:
+Метод `Measure` поддерживает свойство [`Margin`](xref:Xamarin.Forms.View.Margin) и содержит аргумент типа [`MeasureFlag`](xref:Xamarin.Forms.MeasureFlags), который имеет два элемента:
 
 - [`IncludeMargins`](xref:Xamarin.Forms.MeasureFlags.IncludeMargins)
-- [`None`](xref:Xamarin.Forms.MeasureFlags.None) Чтобы не включать поля
+- [`None`](xref:Xamarin.Forms.MeasureFlags.None) без учета полей
 
-Для многих элементов `GetSizeRequest` или `Measure` получает собственный размер элемента из его модуль подготовки отчетов. Оба метода имеют параметры ширины и высоты *ограничения*. Например `Label` будет использовать ограничение ширины, чтобы определить создание программы-оболочки несколько строк текста.
+Для многих элементов `GetSizeRequest` или `Measure` получает собственный размер элемента от его отрисовщика. Оба метода имеют параметры для *ограничения* ширины и высоты. Например, `Label` на основе ограничения ширины определяет, как переносить несколько строк текста.
 
-Оба `GetSizeRequest`и `Measure` возвращают значение типа [ `SizeRequest` ](xref:Xamarin.Forms.SizeRequest), который имеет два свойства:
+`GetSizeRequest` и `Measure` возвращают значение типа [`SizeRequest`](xref:Xamarin.Forms.SizeRequest), которое имеет два свойства:
 
 - [`Request`](xref:Xamarin.Forms.SizeRequest.Request) типа `Size`
 - [`Minimum`](xref:Xamarin.Forms.SizeRequest.Minimum) типа `Size`
 
-Очень часто эти два значения совпадают и `Minimum` значение обычно можно игнорировать.
+Очень часто эти два значения совпадают, а значение `Minimum` обычно можно игнорировать.
 
-`VisualElement` также определяет защищенный метод, аналогичную `GetSizeRequest` , вызываемый из `GetSizeRequest`:
+Также `VisualElement` определяет защищенный метод, аналогичный `GetSizeRequest`, который вызывается из `GetSizeRequest`:
 
-- [`OnSizeRequest`](xref:Xamarin.Forms.VisualElement.OnSizeRequest(System.Double,System.Double)) Возвращает `SizeRequest` значение
+- [`OnSizeRequest`](xref:Xamarin.Forms.VisualElement.OnSizeRequest(System.Double,System.Double)) возвращает значение `SizeRequest`.
 
-Этот метод является теперь устарели и заменены:
+Этот метод теперь считается устаревшим и заменен этим методом:
 
 - [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))
 
-Каждый класс, производный от `Layout` или `Layout<T>` необходимо переопределить `OnSizeRequest` или `OnMeasure`. Это где класс макета определяет свой собственный размер, который зависит от размера его дочерних элементов, которые он получает путем вызова `GetSizeRequest` или `Measure` в дочерних элементах. До и после вызова метода `OnSizeRequest` или `OnMeasure`, `GetSizeRequest` или `Measure` при одновременном нажатии, исходя из следующих свойств:
+Каждый класс, производный от `Layout` или `Layout<T>`, должен переопределять `OnSizeRequest` или `OnMeasure`. Именно здесь класс макета определяет свой собственный размер, который обычно основывается на размерах его дочерних элементов, полученных путем вызова `GetSizeRequest` или `Measure` для дочерних элементов. До и после вызова `OnSizeRequest` или `OnMeasure` `GetSizeRequest` или `Measure` вносит корректировки с учетом следующих свойств:
 
-- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest)типа `double`, влияет на `Request` свойство `SizeRequest`
-- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) типа `double`, влияет на `Request` свойство `SizeRequest`
-- [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest) типа `double`, влияет на `Minimum` свойство `SizeRequest`
-- [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest) типа `double`, влияет на `Minimum` свойство `SizeRequest`
+- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) с типом `double` влияет на свойство `Request` объекта `SizeRequest`;
+- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) с типом `double` влияет на свойство `Request` объекта `SizeRequest`;
+- [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest) с типом `double` влияет на свойство `Minimum` объекта `SizeRequest`;
+- [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest) с типом `double` влияет на свойство `Minimum` объекта `SizeRequest`.
 
-### <a name="infinite-constraints"></a>Бесконечный ограничения
+### <a name="infinite-constraints"></a>Бесконечные ограничения
 
-Ограничение аргументы, передаваемые `GetSizeRequest` (или `Measure`) и `OnSizeRequest` (или `OnMeasure`) может быть бесконечной (т. е. значения `Double.PositiveInfinity`). Тем не менее `SizeRequest` возвращаемые из этих методов не может содержать бесконечное измерений.
+Аргументы ограничения, передаваемые в `GetSizeRequest` (или `Measure`) и `OnSizeRequest` (или `OnMeasure`), могут быть бесконечными значениями (т. е. значения `Double.PositiveInfinity`). Но значения `SizeRequest`, возвращаемые этими методами, не могут содержать бесконечные измерения.
 
-Бесконечный ограничения указывают, что запрошенный размер должно отражать естественному размеру элемента. Вертикальный `StackLayout` вызовы `GetSizeRequest` (или `Measure`) на его дочерние элементы с ограничением бесконечный высоты. Макет горизонтальный стек вызовов `GetSizeRequest` (или `Measure`) на его дочерние элементы с ограничением неограниченной ширины. `AbsoluteLayout` Вызовы `GetSizeRequest` (или `Measure`) на своей дочерней страницы с бесконечной ограничения ширины и высоты.
+Бесконечные ограничения означают, что запрошенный размер должен отражать естественный размер элемента. Вертикальный `StackLayout` вызывает `GetSizeRequest` (или `Measure`) для своих дочерних элементов, указывая бесконечное ограничение высоты. Горизонтальный макет стека вызывает `GetSizeRequest` (или `Measure`) для своих дочерних элементов, указывая бесконечное ограничение ширины. Объект `AbsoluteLayout` вызывает `GetSizeRequest` (или `Measure`) для своих дочерних элементов, указывая бесконечные ограничения ширины и высоты.
 
-### <a name="peeking-inside-the-process"></a>Просмотр внутри процесса
+### <a name="peeking-inside-the-process"></a>Внутренний механизм процесса
 
-[ **ExploreChildSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) отображает ограничение и размер запроса информации для простой макет.
+Пример [**ExploreChildSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) отображает сведения о запросе ограничений и размера для простого макета.
 
-## <a name="deriving-from-layoutview"></a>Наследование из представления\<макета >
+## <a name="deriving-from-layoutview"></a>Наследование от Layout\<View>
 
-Класс пользовательского макета является производным от `Layout<View>`. Он отвечает за две задачи:
+Пользовательский класс макета является производным от класса `Layout<View>`. Он выполняет две задачи:
 
-- Переопределить `OnMeasure` для вызова `Measure` для дочерних элементов макета. Вернуть запрошенный размер для макета, сам
-- Переопределить `LayoutChildren` для вызова `Layout` на дочерние элементы макета
+- Переопределяет `OnMeasure` для вызова `Measure` для всех дочерних элементов макета. Возвращает запрошенный размера для самого макета.
+- Переопределяет `LayoutChildren` для вызова `Layout` для всех дочерних элементов макета.
 
-`for` Или `foreach` цикл в этих переопределениях следует пропустить любой дочерний которого `IsVisible` свойству `false`.
+Цикл `for` или `foreach` в этих переопределениях должен пропустить все дочерние элементы, у которых свойство `IsVisible` имеет значение `false`.
 
-Вызов `OnMeasure` не гарантируется. `OnMeasure` не будет вызываться, если родительского макета, управляющие размер макета (например, макет, который заполняет страницу). По этой причине `LayoutChildren` нельзя полагаться на размеры дочерних, полученные во время `OnMeasure` вызова. Очень часто `LayoutChildren` должен сам вызвать `Measure` для расположения дочерних элементов, или же можно применить определенный размер, кэширование логики (об этом будет рассказано позже).
+Вызов `OnMeasure` не гарантируется. `OnMeasure` не будет вызываться, если родительский элемент макета самостоятельно управляет размером макета (например, если макет заполняет всю страницу). По этой причине `LayoutChildren` не может полагаться на размеры дочерних элементов, полученные во время вызова `OnMeasure`. Очень часто приходится прямо из `LayoutChildren` вызывать `Measure` для дочерних элементов макета или создавать некоторую логику кэширования размеров (которая будет обсуждаться далее).
 
 ### <a name="an-easy-example"></a>Простой пример
 
-[ **VerticalStackDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/VerticalStackDemo) образец содержит упрощенную [ `VerticalStack` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter26/VerticalStackDemo/VerticalStackDemo/VerticalStackDemo/VerticalStack.cs) класс и демонстрации его использования.
+Пример [**VerticalStackDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/VerticalStackDemo) содержит упрощенный класс [`VerticalStack`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter26/VerticalStackDemo/VerticalStackDemo/VerticalStackDemo/VerticalStack.cs) и демонстрацию его использования.
 
-### <a name="vertical-and-horizontal-positioning-simplified"></a>Вертикальное и горизонтальное расположение упрощенное
+### <a name="vertical-and-horizontal-positioning-simplified"></a>Упрощение вертикального и горизонтального размещения
 
-Одно из заданий, `VerticalStack` необходимо выполнить в ходе `LayoutChildren` переопределить. Данный метод использует ребенка `HorizontalOptions` свойство для определения способа изменить расположение дочерних в его ячейку в `VerticalStack`. Вместо этого можно вызвать статический метод [ `Layout.LayoutChildIntoBoundingRect` ](xref:Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle)). Этот метод вызывает метод `Measure` на дочерней и использует его `HorizontalOptions` и `VerticalOptions` свойства для размещения дочерние в пределах заданного прямоугольника.
+Одна из задач `VerticalStack` выполняется при переопределении `LayoutChildren`. Этот метод использует свойство `HorizontalOptions` дочернего элемента, чтобы определить положение этого дочернего элемента в слоте в пределах `VerticalStack`. Вместо него вы можете вызвать статический метод [`Layout.LayoutChildIntoBoundingRect`](xref:Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle)). Этот метод вызывает `Measure` для дочернего элемента и применяет его свойства `HorizontalOptions` и `VerticalOptions` для размещения этого дочернего элемента в пределах указанного прямоугольника.
 
 ### <a name="invalidation"></a>Недействительность
 
-Изменение свойства элемента влияет на отображение этого элемента в макете. Представление должно быть не прошедшего проверку, чтобы активировать новый макет.
+Зачастую изменение свойства элемента влияет на отображение этого элемента в макете. Макет в этом случае нужно объявить недействительным, чтобы активировать новый расчет макета.
 
-`VisualElement` Определяет защищенный метод [ `InvalidateMeasure` ](xref:Xamarin.Forms.VisualElement.InvalidateMeasure), который обычно вызывается обработчиком property-changed любого привязываемые свойства которого был изменен, влияет на размер элемента. `InvalidateMeasure` Вызывается метод [ `MeasureInvalidated` ](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) событий.
+`VisualElement` определяет защищенный метод [`InvalidateMeasure`](xref:Xamarin.Forms.VisualElement.InvalidateMeasure), который обычно вызывается обработчиком изменения любого привязываемого свойства, изменение которого влияет на размер элемента. Метод `InvalidateMeasure` вызывает событие [`MeasureInvalidated`](xref:Xamarin.Forms.VisualElement.MeasureInvalidated).
 
-`Layout` Класс определяет аналогичный защищенный метод с именем [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout), который `Layout` производных следует вызвать для любого изменения, влияет на способ помещает и изменяет размер его дочерних элементов.
+Класс `Layout` определяет аналогичный защищенный метод с именем [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout), который должен вызываться производным от `Layout` при любых изменениях, которое влияют на положение и размеры его дочерних элементов.
 
-### <a name="some-rules-for-coding-layouts"></a>Некоторые правила кодирования макеты
+### <a name="some-rules-for-coding-layouts"></a>Некоторые правила для программирования макетов
 
-1. Свойства, определенные `Layout<T>` производные должен поддерживаться привязываемые свойства, а должен вызывать обработчики property-changed `InvalidateLayout`.
+1. Свойства, определенные для производных от `Layout<T>`, должны поддерживаться привязываемыми свойствами, а обработчики изменений свойств должны вызывать `InvalidateLayout`.
 
-2. Объект `Layout<T>` производных, который определяет присоединенное привязываемые свойства должны переопределять [ `OnAdded` ](xref:Xamarin.Forms.Layout`1.OnAdded*) Добавление обработчика изменения свойств с его дочерними элементами и [ `OnRemoved` ](xref:Xamarin.Forms.Layout`1.OnRemoved*) для удаления, обработчик. Проверьте изменения в этих присоединенных привязываемые свойства и реагировать на угрозы путем вызова обработчика `InvalidateLayout`.
+2. Производный от `Layout<T>` элемент, который определяет присоединенные привязываемые свойства, должен переопределять [`OnAdded`](xref:Xamarin.Forms.Layout`1.OnAdded*), чтобы добавлять обработчик изменения свойств для своих дочерних элементов, и [`OnRemoved`](xref:Xamarin.Forms.Layout`1.OnRemoved*), чтобы удалять этот обработчик. Этот обработчик должен проверять наличие изменений в этих присоединенных привязываемых свойствах и реагировать на них вызовом `InvalidateLayout`.
 
-3. Объект `Layout<T>` производных, реализующий кэш размеров дочерних должны переопределять `InvalidateLayout` и [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) и очистить кэш, при вызове этих методов.
+3. Производный от `Layout<T>` элемент, который реализует кэш размеров дочерних элементов, должен переопределять `InvalidateLayout` и [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated), чтобы очищать кэш при вызове этих методов.
 
-### <a name="a-layout-with-properties"></a>Макет со свойствами
+### <a name="a-layout-with-properties"></a>Макет с поддержкой свойств
 
-[ `WrapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/WrapLayout.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) предполагается, что все его дочерние узлы размеры и была перенесена дочерние элементы из одной строки (или столбца) Далее. Он определяет `Orientation` свойством, таким как `StackLayout`, и `ColumnSpacing` и `RowSpacing` свойства, такие как `Grid`, и он кэширует размеры дочерних.
+Класс [`WrapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/WrapLayout.cs) в [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) предполагает, что все его дочерние элементы имеют одинаковый размер и переносит дочерние элементы из одной строки (или столбца) в следующую. Он определяет свойство `Orientation` как `StackLayout`, свойства `ColumnSpacing` и `RowSpacing` как `Grid`, а также кэширует размеры дочерних элементов.
 
-[ **PhotoWrap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoWrap) пример помещает `WrapLayout` в `ScrollView` для отображения фотографий.
+Пример [**PhotoWrap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoWrap) размещает `WrapLayout` в `ScrollView` для отображения фотографий из коллекции.
 
-### <a name="no-unconstrained-dimensions-allowed"></a>Не допускается неограниченное аналитики!
+### <a name="no-unconstrained-dimensions-allowed"></a>Неограниченные измерения не допускаются!
 
-[ `UniformGridLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/UniformGridLayout.cs) В [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотека предназначена для отображения всех его дочерних узлов самих себя. Таким образом он не может работать с неограниченного измерений и вызывает исключение, если обнаруживается одно.
+Класс [`UniformGridLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/UniformGridLayout.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) предназначен для отображения всех своих дочерних элементов внутри себя. Поэтому он не поддерживает неограниченные измерения и в соответствующих случаях вызывает исключение.
 
-[ **PhotoGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) в нем демонстрируется `UniformGridLayout`:
+Пример [**PhotoGrid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) демонстрирует применение `UniformGridLayout`.
 
-[![Тройной снимок фотографии в табличном](images/ch26fg08-small.png "единого макета сетки")](images/ch26fg08-large.png#lightbox "единого макета сетки")
+[![Три снимка экрана с элементом PhotoGrid](images/ch26fg08-small.png "Макет однородной сетки")](images/ch26fg08-large.png#lightbox "Макет однородной сетки")
 
 ### <a name="overlapping-children"></a>Перекрывающиеся дочерние элементы
 
-Объект `Layout<T>` производных могут перекрывать друг друга его дочерних элементов. Тем не менее, дочерние элементы отображаются в порядке их в `Children` коллекции, а не порядок, в котором их `Layout` методы вызываются.
+Производный от `Layout<T>` элемент допускает перекрытие для дочерних элементов. Но при этом дочерние элементы отображаются том порядке, в котором они включены в коллекцию `Children`, а не в порядке вызова методов `Layout`.
 
-`Layout` Класс определяет два метода, которые дают возможность переместить дочерний в коллекции:
+Класс `Layout` определяет два метода, которые позволяют перемещать дочерний объект в пределах коллекции:
 
-- [`LowerChild`](xref:Xamarin.Forms.Layout.LowerChild(Xamarin.Forms.View)) Чтобы переместить дочерний элемент в начало коллекции
-- [`RaiseChild`](xref:Xamarin.Forms.Layout.RaiseChild(Xamarin.Forms.View)) Чтобы переместить дочерний элемент в конец коллекции
+- [`LowerChild`](xref:Xamarin.Forms.Layout.LowerChild(Xamarin.Forms.View)) для переноса дочернего элемента в начало коллекции;
+- [`RaiseChild`](xref:Xamarin.Forms.Layout.RaiseChild(Xamarin.Forms.View)) для переноса дочернего элемента в конец коллекции.
 
-Для перекрывающихся дочерних элементов дочерние элементы в конец коллекции визуально выводились поверх дочерних элементов в начале коллекции.
+Если применяется перекрытие дочерних элементов, элементы в конце коллекции визуально отображаются поверх элементов в начале коллекции.
 
-[ `OverlapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотека определяет вложенное свойство для указания порядка отрисовки, что один из его дочерние элементы, отображаемый поверх остальных. [ **StudentCardFile** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) демонстрирует это:
+Класс [`OverlapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) определяет присоединенное свойство для указания порядка отрисовки, позволяя отображать один из дочерних элементов поверх остальных. Пример [**StudentCardFile**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) демонстрирует такой сценарий.
 
-[![Тройной снимок файловой сетке карту учащегося](images/ch26fg10-small.png "перекрывающиеся дочерние элементы макета")](images/ch26fg10-large.png#lightbox "перекрывающиеся дочерние элементы макета")
+[![Снимок экрана с тремя изображениями сетки карточек учащихся](images/ch26fg10-small.png "Перекрывающиеся дочерние элементы в макете")](images/ch26fg10-large.png#lightbox "Перекрывающиеся дочерние элементы в макете")
 
-### <a name="more-attached-bindable-properties"></a>Подключенная привязываемые свойства
+### <a name="more-attached-bindable-properties"></a>Дополнительные присоединенные привязываемые свойства
 
-[ `CartesianLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CartesianLayout.cs) В класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотека определяет присоединенное привязываемые свойства для указания двух `Point` значений и значение толщины и управляет `BoxView` элементы, чтобы он напоминал строки.
+Класс [`CartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CartesianLayout.cs) из [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) определяет присоединенные привязываемые свойства для указания двух значений `Point` и значения толщины, а также размещает элементы `BoxView` в виде линий.
 
-[ **UnitCube** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/UnitCube) образец использует эти данные для рисования трехмерный куб.
+Пример [**UnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/UnitCube) использует эту возможность для отрисовки трехмерного куба.
 
 ### <a name="layout-and-layoutto"></a>Макет и LayoutTo
 
-Объект `Layout<T>` можно вызвать в производная `LayoutTo` вместо `Layout` для анимации макета. [ `AnimatedCartesianLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnimatedCartesianLayout.cs) Делает это и [ **AnimatedUnitCube** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/AnimatedUnitCube) в нем демонстрируется его.
+Производный от `Layout<T>` элемент может вызывать `LayoutTo` вместо `Layout` для анимации макета. Например, класс [`AnimatedCartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnimatedCartesianLayout.cs) может так делать, и это представлено в примере [**AnimatedUnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/AnimatedUnitCube).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 26 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf)
-- [Глава 26-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
+- [Глава 26 — полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf)
+- [Глава 26 — примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
 - [Создание пользовательских макетов](~/xamarin-forms/user-interface/layouts/custom.md)

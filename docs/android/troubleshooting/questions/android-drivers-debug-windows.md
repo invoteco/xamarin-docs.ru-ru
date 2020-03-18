@@ -8,25 +8,25 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 21fd8eff64d374e52e64194524a8c096cdf4d90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027043"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Какие драйверы USB нужны для отладки Android в Windows?
 
-## <a name="finding-usb-drivers"></a>Поиск драйверов USB
+## <a name="finding-usb-drivers"></a>Как найти USB-драйверы
 
-Отладка на устройстве Android при разработке в Windows; необходимо установить совместимый драйвер USB. Диспетчер пакет SDK для Android по умолчанию включает в себя "драйвер Google USB", который добавляет поддержку для устройств хранилища, как описано здесь: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
+Для отладки на устройстве Android при разработке в Windows необходимо установить совместимый драйвер USB. Диспетчер SDK Android по умолчанию включает USB-драйвер Google, который обеспечивает дополнительную поддержку для устройств Nexus, как описано здесь: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html).
 
-Для других устройств требуются драйверы USB, специально опубликованные производителем устройства. В этом руководство включены некоторые ссылки на наиболее распространенных изготовителей: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
+Для других устройств требуются драйверы USB, специально опубликованные производителем устройства. В этом руководстве содержатся некоторые ссылки на наиболее распространенных производителей: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html).
 
-## <a name="alternatives"></a>Методы
+## <a name="alternatives"></a>Альтернативные варианты
 
-В зависимости от манфактурер может быть трудно найти необходимый драйвер USB. Некоторые альтернативы для тестирования приложений Android, разработанных в Windows, включая использование эмулятора Android или внешних служб тестирования. Некоторые из них указаны ниже:
+Иногда может быть трудно найти необходимый драйвер USB. Это зависит от производителя. Есть несколько альтернатив для тестирования приложений Android, разработанных в Windows, включая использование эмулятора Android или внешних служб тестирования. Некоторые из них указаны ниже:
 
-- [Тест центра приложений](https://docs.microsoft.com/appcenter/test-cloud/) — облачные службы тестирования работают на сотнях реальных устройств Android.
+- [Тестирование в Центре приложений](https://docs.microsoft.com/appcenter/test-cloud/) — облачные службы тестирования работают на сотнях реальных устройств Android.
 
 - [Эмулятор Visual Studio для Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 

@@ -1,5 +1,5 @@
 ---
-title: Часто задаваемые вопросы о Xamarin. Android
+title: Часто задаваемые вопросы о Xamarin.Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
@@ -8,80 +8,80 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018
 ms.openlocfilehash: 28b13951a0d681ffdb8e643667e496e0b3606628
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "76724006"
 ---
-# <a name="android-frequently-asked-questions"></a>Часто задаваемые вопросы о Android
+# <a name="android-frequently-asked-questions"></a>Вопросы и ответы по Android
 
-## <a name="installation--setup"></a>Установка & установки
+## <a name="installation--setup"></a>Установка и настройка
 
-### <a name="which-android-sdk-packages-should-i-installinstall-android-sdk-packagesmd"></a>[Какие пакеты SDK Android следует установить?](install-android-sdk-packages.md)
+### <a name="which-android-sdk-packages-should-i-install"></a>[Какие пакеты SDK Android следует установить?](install-android-sdk-packages.md)
 
-При установке пакет SDK для Android не будет автоматически включаться все необходимые пакеты для разработки. Хотя отдельные потребности разработчика различаются, в этом руководством обсуждаются пакеты, которые обычно необходимы для разработки с помощью Xamarin. Android.
+Установка пакета SDK для Android не предусматривает автоматическую установку всех минимально необходимых для разработки пакетов. Хотя потребности отдельных разработчиков отличаются, в данном руководстве обсуждаются пакеты, которые, как правило, необходимы для разработки с Xamarin.Android.
 
-### <a name="where-can-i-set-my-android-sdk-locationsandroid-sdk-locationmd"></a>[Где можно задать свои расположения пакета SDK для Android?](android-sdk-location.md)
+### <a name="where-can-i-set-my-android-sdk-locations"></a>[Где можно задать свои расположения пакета SDK для Android?](android-sdk-location.md)
 
-В этом разделе описываются параметры по умолчанию пакет SDK для Android, которые должны работать для большинства установок. и как изменить эти значения по умолчанию в Visual Studio для Mac или Visual Studio, если это необходимо.
+В этом разделе описываются параметры по умолчанию пакета SDK для Android, которые должны работать для большинства установок, а также способы изменения этих значений по умолчанию в Visual Studio для Mac или Visual Studio, если это необходимо.
 
-### <a name="how-do-i-update-the-java-development-kit-jdk-versionupdate-jdkmd"></a>[Как обновить версию Java Development Kit (JDK)?](update-jdk.md)
+### <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>[Как обновить версию Java Development Kit (JDK)?](update-jdk.md)
 
 В этой статье показано, как обновить версию пакета Java Development Kit (JDK) в Windows и Mac.
 
-### <a name="can-i-use-java-development-kit-jdk-version-9-or-laterjdk9-errorsmd"></a>[Можно ли использовать Java Development Kit (JDK) версии 9 или более поздней?](jdk9-errors.md)
+### <a name="can-i-use-java-development-kit-jdk-version-9-or-later"></a>[Можно ли использовать Java Development Kit (JDK) версии 9 или более поздней?](jdk9-errors.md)
 
-Для Xamarin. Android требуется JDK 8 или Microsoft Mobile OpenJDK. В этой статье перечислены некоторые распространенные сообщения об ошибках, которые могут появиться при установке JDK 9 или более поздней версии, а также инструкции по проверке версий JDK.
+Для Xamarin.Android требуется JDK 8 или Microsoft Mobile OpenJDK. В этой статье перечислены некоторые распространенные сообщения об ошибках, которые могут появиться при установке JDK 9 или более поздней версии, а также инструкции по проверке версий JDK.
 
-### <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packagesinstall-android-support-librarymd"></a>[Как вручную установить вспомогательные библиотеки Android, необходимые для пакетов Xamarin.Android.Support?](install-android-support-library.md)
+### <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>[Как вручную установить вспомогательные библиотеки Android, необходимые для пакетов Xamarin.Android.Support?](install-android-support-library.md)
 
-В этом руководстве приведены примеры действий по установке библиотеки поддержки `Xamarin.Android.Support.v4` в Windows & Mac.
+В этом руководстве приведены примеры действий по установке библиотеки поддержки `Xamarin.Android.Support.v4` для Windows и Mac.
 
-### <a name="what-usb-drivers-do-i-need-to-debug-android-on-windowsandroid-drivers-debug-windowsmd"></a>[Какие драйверы USB нужны для отладки Android в Windows?](android-drivers-debug-windows.md)
+### <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>[Какие драйверы USB нужны для отладки Android в Windows?](android-drivers-debug-windows.md)
 
-Отладка на устройстве Android при разработке в Windows; необходимо установить совместимый драйвер USB. Диспетчер пакет SDK для Android по умолчанию включает в себя "драйвер Google USB", который добавляет поддержку для устройств хранилища.
+Для отладки на устройстве Android при разработке в Windows необходимо установить совместимый драйвер USB. Диспетчер SDK Android по умолчанию включает в себя Google USB-драйвер, который добавляет поддержку для устройств Nexus.
 Для других устройств требуются драйверы USB, опубликованные производителем устройства. В этом разделе содержатся сведения о поиске этих драйверов, а также о других методах тестирования.
 
-### <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vmconnect-android-emulator-mac-windowsmd"></a>[Можно ли подключиться с виртуальной машины Windows к эмуляторам Android под управлением Mac?](connect-android-emulator-mac-windows.md)
+### <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>[Можно ли подключиться с виртуальной машины Windows к эмуляторам Android под управлением Mac?](connect-android-emulator-mac-windows.md)
 
 В этом руководстве рассматриваются методы использования эмулятора Android.
 
 ## <a name="general-questions"></a>Общие вопросы
 
-### <a name="how-do-i-automate-an-android-nunit-test-projectautomate-android-nunit-testmd"></a>[Как автоматизировать тестовый проект Android NUnit?](automate-android-nunit-test.md)
+### <a name="how-do-i-automate-an-android-nunit-test-project"></a>[Как автоматизировать тестовый проект Android NUnit?](automate-android-nunit-test.md)
 
-В этом руководстве описаны шаги по настройке проекта тестирования для Android NUnit, а _не_ проекта Xamarin. uitest. Руководства по Xamarin. UITest можно найти [здесь](/appcenter/test-cloud/preparing-for-upload).
+В этом руководстве описаны действия по настройке тестового проекта Android NUnit, а _не_ проекта Xamarin.UITest. Руководства по Xamarin.UITest можно найти [здесь](/appcenter/test-cloud/preparing-for-upload).
 
-### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Почему моя сборка выпуска Android не подключается к Интернету?](android-internet.md)
+### <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>[Почему моя сборка выпуска Android не подключается к Интернету?](android-internet.md)
 
-Наиболее распространенной причиной этой проблемы является то, что **Интернет** -разрешение автоматически включается в отладочную сборку, но его необходимо задать вручную для сборки выпуска. В этом руководство описано, как включить разрешение для сборок выпуска.
+Чаще всего эта проблема возникает из-за автоматического включения разрешения **INTERNET** в отладочную сборку, когда для сборки выпуска его необходимо задать вручную. В этом руководстве описано, как включить разрешение для сборок выпуска.
 
-### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[Оптимизированные пакеты NuGet поддержки Android v4 и v13 в Xamarin](android-support-v4v13-libraries.md)
+### <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>[Оптимизированные пакеты NuGet поддержки Android v4 и v13 в Xamarin](android-support-v4v13-libraries.md)
 
-`Support-v4` и `Support-v13` нельзя использовать вместе в одном приложении, то есть они являются взаимоисключающими. Это связано с тем, что `Support-v13` фактически содержит все типы и реализацию `Support-v4`. Если вы попробуете и ссылаетесь на оба проекта в одном проекте, возникнут ошибки с повторяющимися типами.
+`Support-v4` и `Support-v13` нельзя использовать в одном приложении, то есть они являются взаимоисключающими. Это связано с тем, что `Support-v13` фактически содержит все типы и реализацию `Support-v4`. Если вы попробуете сослаться на обе версии в одном и том же проекте, то столкнетесь с ошибками повторяющегося типа.
 
-### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[Разделы справки устранить ошибку PathTooLongException?](path-too-long-exception.md)
+### <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>[Как устранить ошибку PathTooLongException?](path-too-long-exception.md)
 
-В этой статье объясняется, как устранить ошибку **PathTooLongException** , которая может возникнуть при построении проекта Xamarin. Android.
+В этой статье объясняется, как разрешить ошибки **PathTooLongException**, которые могут возникнуть при создании проекта Xamarin.Android.
 
-## <a name="deprecated"></a>Не рекомендуется
+## <a name="deprecated"></a>Нерекомендуемые
 
 > [!NOTE]
-> Приведенные ниже статьи относятся к проблемам, которые были решены в последних версиях Xamarin. Однако если проблема возникает в последней версии программного обеспечения, запишите [новую ошибку](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версии и полным выходным файлом журнала сборки.
+> Приведенные ниже статьи относятся к проблемам, которые были решены в последних версиях Xamarin. Тем не менее, если проблема возникает в последней версии программного обеспечения, создайте файл [новой ошибки](~/cross-platform/troubleshooting/questions/howto-file-bug.md) с полными сведениями о версиях и полным выводом журнала сборки.
 
-### <a name="what-version-of-xamarinandroid-added-lollipop-supportxa-lollipopmd"></a>[В какой версии Xamarin.Android добавлена поддержка Lollipop?](xa-lollipop.md)
+### <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>[В какой версии Xamarin.Android добавлена поддержка Lollipop?](xa-lollipop.md)
 
-Это руководством изначально было написано для предварительной версии Android L. В Xamarin. Android 4,17 добавлена поддержка Android L Preview & в Xamarin. Android 4,20 добавлена поддержка интерфейса поддержки Android.
+Это руководство изначально написано для предварительной версии Android L. Xamarin.Android 4.17. В Xamarin.Android 4.17 добавлена поддержка предварительного просмотра на Android L, а в Xamarin.Android 4.20 — поддержка Android Lollipop.
 
-### <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawablemissing-action-mode-share-drawablemd"></a>[Android.Support.v7.AppCompat — не удалось найти ресурс, который соответствует указанному имени: attr 'android:actionModeShareDrawable'](missing-action-mode-share-drawable.md)
+### <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>[Android.Support.v7.AppCompat — не удалось найти ресурс, который соответствует указанному имени: attr 'android:actionModeShareDrawable'](missing-action-mode-share-drawable.md)
 
-Эта ошибка может возникать в более ранних версиях Xamarin, если отсутствуют некоторые из необходимых пакет SDK для Android пакетов.
+Эта ошибка может возникать в более ранних версиях Xamarin, если отсутствуют некоторые из необходимых пакетов SDK для Android.
 
-### <a name="adjusting-java-memory-parameters-for-the-android-designerandroid-designer-java-memorymd"></a>[Настройка параметров памяти Java для конструктора Android](android-designer-java-memory.md)
+### <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>[Настройка параметров памяти Java для конструктора Android](android-designer-java-memory.md)
 
-Параметры памяти по умолчанию, используемые при запуске `java` процесса для конструктора Android, могут быть несовместимы с некоторыми конфигурациями системы. Начиная с Xamarin Studio 5.7.2.7 и Xamarin для Visual Studio 3.9.344 эти параметры можно настраивать отдельно для каждого проекта.
+Параметры памяти по умолчанию, используемые при запуске процесса `java`для конструктора Android, могут быть несовместимы с некоторыми конфигурациями системы. Начиная с Xamarin Studio 5.7.2.7 и Xamarin для Visual Studio 3.9.344 эти параметры можно настраивать отдельно для каждого проекта.
 
-### <a name="my-android-resourcedesignercs-file-will-not-updateresource-designer-wont-updatemd"></a>[Не обновляется файл Resource.designer.cs Android](resource-designer-wont-update.md)
+### <a name="my-android-resourcedesignercs-file-will-not-update"></a>[Не обновляется файл Resource.designer.cs Android](resource-designer-wont-update.md)
 
-Ошибка в Xamarin. Studio 5,1 ранее повредила CSPROJ-файлы, частично или полностью удаляя код XML в файле. csproj. Это приведет к сбою важных частей системы сборки Android (например, при обновлении Android Resource.designer.cs). По состоянию на 5.1.4 стабильной версии 15 июля эта ошибка была исправлена. но во многих случаях файл проекта необходимо исправить вручную, как описано в этом разделе.
+Ошибка в Xamarin.Studio 5.1 ранее повреждала CSPROJ-файлы путем частичного или полного удаления XML-кода в CSPROJ-файле. Это приводило к тому, что важные части системы сборки Android (такие как обновление Android Resource.design.cs) выходили из строя. Начиная со стабильной версии 5.1.4, вышедшей 15 июля, эту ошибку исправлено; однако во многих случаях файл проекта приходится восстанавливать вручную, как описано в этом руководстве.

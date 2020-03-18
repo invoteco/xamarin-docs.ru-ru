@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 12. Стили
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 12. Стили
+title: Сводная информация о главе 12. Стили
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводная информация о главе 12. Стили
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
@@ -8,75 +8,75 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 408f171a3c7c690b700f7be21a3dcaff503467d9
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "65926906"
 ---
-# <a name="summary-of-chapter-12-styles"></a>Сводка Глава 12. Стили
+# <a name="summary-of-chapter-12-styles"></a>Сводная информация о главе 12. Стили
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 
-В Xamarin.Forms стили позволяют несколько представлений для совместно используют одну коллекцию параметров свойств. Это уменьшает разметки и обеспечивает обслуживание согласованных визуальные темы.
+В Xamarin.Forms стили позволяют нескольким представлениям совместно использовать коллекцию параметров свойств. Это сокращает разметку и позволяет поддерживать единообразные визуальные темы.
 
-Стили почти всегда определяются и используются в разметке. Объект типа [ `Style` ](xref:Xamarin.Forms.Style) создается в словаре ресурсов и укажите значение [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) свойства элемента визуального элемента с использованием `StaticResource` или `DynamicResource` разметки расширение.
+Стили почти всегда определяются и используются в разметке. Объект типа [`Style`](xref:Xamarin.Forms.Style) создается в словаре ресурсов, а затем устанавливается в свойство визуального элемента [`Style`](xref:Xamarin.Forms.NavigableElement.Style) с помощью расширения разметки `StaticResource` или `DynamicResource`.
 
-## <a name="the-basic-style"></a>Основной стиль
+## <a name="the-basic-style"></a>Базовый стиль
 
-Объект `Style` требует его [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) присвоить тип визуального объекта, он применяется к. Когда `Style` создается в словаре ресурсов (что характерно) также требуется `x:Key` атрибута.
+Для `Style` требуется, чтобы для [`TargetType`](xref:Xamarin.Forms.Style.TargetType) был задан тип визуального объекта, к которому он применяется. При создании экземпляра `Style` в словаре ресурсов (как и обычно) для него также требуется атрибут `x:Key`.
 
-`Style` Имеет свойство content от типа [ `Setters` ](xref:Xamarin.Forms.Style.Setters), который является коллекцией [ `Setter` ](xref:Xamarin.Forms.Setter) объектов. Каждый `Setter` связывает [ `Property` ](xref:Xamarin.Forms.Setter.Property) с [ `Value` ](xref:Xamarin.Forms.Setter.Value).
+`Style` имеет свойство содержимого типа [`Setters`](xref:Xamarin.Forms.Style.Setters), которое представляет собой коллекцию объектов [`Setter`](xref:Xamarin.Forms.Setter). Каждый `Setter` связывает [`Property`](xref:Xamarin.Forms.Setter.Property) с [`Value`](xref:Xamarin.Forms.Setter.Value).
 
-В XAML `Property` задано имя свойства CLR (такие как `Text` свойство `Button`), но может быть привязано свойство оформленного должно использовать. Кроме того, свойство должно быть определено в классе, обозначается `TargetType` параметр или наследуемые этим классом.
+В XAML параметр `Property` — это имя свойства CLR (например, свойство `Text` объекта `Button`), однако свойство со стилем должно быть включено в свойство, доступное для привязки. Кроме того, свойство должно быть определено в классе, указанном параметром `TargetType`, или унаследовано этим классом.
 
-Можно указать `Value` Настройка с помощью элемента свойства `<Setter.Value>`. Это позволяет задать `Value` на объект, не могут быть выражены в текстовую строку или `OnPlatform` объекта, или на объект создан с помощью `x:Arguments` или `x:FactoryMethod`. `Value` Свойство также может устанавливаться с `StaticResource` выражения в другой элемент в словаре.
+Параметр `Value` можно указать с помощью элемента свойства `<Setter.Value>`. Это позволяет задать `Value` для объекта, который не может быть выражен в текстовой строке, в объекте `OnPlatform` или в объекте, созданном с помощью `x:Arguments` или `x:FactoryMethod`. Свойство `Value` для другого элемента в словаре также можно задать выражением `StaticResource`.
 
-[ **BasicStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) программы показан основной синтаксис и показано, как ссылаться на `Style` с `StaticResource` расширение разметки:
+Программа [**BasicStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) демонстрирует базовый синтаксис и показывает, как ссылаться на `Style` с помощью расширения разметки `StaticResource`:
 
-[![Тройной снимок экрана: основной стиль](images/ch12fg01-small.png "основные стили")](images/ch12fg01-large.png#lightbox "основные стили")
+[![Тройной снимок экрана базового стиля](images/ch12fg01-small.png "Базовые стили")](images/ch12fg01-large.png#lightbox "Базовые стили")
 
-`Style` Объекта и любой объект, созданный в `Style` объекта в виде `Value` параметр являются общими для всех представлений, ссылаясь на него `Style`. `Style` Не может содержать те же элементы, который нельзя использовать совместно, такие как `View` производных продуктов.
+Объект `Style` и любой объект, созданный в объекте `Style` в качестве параметра `Value`, являются общими для всех представлений, ссылающихся на этот `Style`. `Style` не может содержать все, что нельзя использовать совместно, например производный `View`.
 
-Обработчики событий не может задаваться в `Style`. `GestureRecognizers` Свойство не может быть установлено в `Style` , так как он не поддерживается, может быть привязано.
+Обработчики событий не могут быть заданы в `Style`. Свойство `GestureRecognizers` нельзя задать в `Style`, поскольку оно не поддерживается привязываемым свойством.
 
 ## <a name="styles-in-code"></a>Стили в коде
 
-Несмотря на то, что не часто, можно создать и инициализировать `Style` объектов в коде. Это демонстрируется путем [ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) образца.
+Хотя это и не является распространенным, объекты `Style` можно создавать и инициализировать в коде. Это продемонстрировано в примере [**BasicStyleCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode).
 
 ## <a name="style-inheritance"></a>Наследование стилей
 
-`Style` имеет [ `BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) свойство, которое можно задать `StaticResource` расширение разметки, ссылающиеся на другой стиль. Это позволяет стили, чтобы наследовать от предыдущего стили при добавлении или удалении параметров свойств. [ **StyleInheritance** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleInheritance) в нем демонстрируется это.
+`Style` имеет свойство [`BasedOn`](xref:Xamarin.Forms.Style.BasedOn), которое можно задать для расширения разметки `StaticResource`, ссылающейся на другой стиль. Это позволяет стилям наследовать предыдущие стили, а также добавлять или заменять параметры свойств. Это показано в примере [**StyleInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleInheritance).
 
-Если `Style2` основан на `Style1`, `TargetType` из `Style2` должен быть таким же, как `Style1` или производный от `Style1`. Словарь ресурсов, в котором `Style1` хранится должен быть один словарь ресурсов как `Style2` или более поздней версии в визуальном дереве словаря ресурсов.
+Если `Style2` основан на `Style1`, то `TargetType` из `Style2` должен быть таким же, как `Style1`, или производным от `Style1`. Словарь ресурсов, в котором хранится `Style1`, должен иметь тот же словарь ресурсов, что и `Style2`, или словарь ресурсов, находящийся выше в визуальном дереве.
 
 ## <a name="implicit-styles"></a>Неявные стили
 
-Если `Style` в ресурсе словаря имеет `x:Key` атрибута, ключ словаря оно назначается автоматически и `Style` объект становится *неявный стиль*. Представление без `Style` параметр, тип которых соответствует `TargetType` точно найдет этот стиль как [ **ImplicitStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/ImplicitStyle) в нем демонстрируется.
+Если `Style` в словаре ресурсов не содержит атрибут `x:Key`, ему автоматически присваивается ключ словаря, а объект `Style` становится *неявным стилем*. Представление без параметра `Style`, тип которого соответствует `TargetType`, точно будет находить этот стиль, как показывает пример [**ImplicitStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/ImplicitStyle).
 
-Неявный стиль может быть производным от `Style` с `x:Key` параметр, но не наоборот. Неявный стиль нельзя сослаться явно.
+Неявный стиль может быть производным от `Style` с параметром `x:Key`, но не наоборот. Нельзя явно ссылаться на неявный стиль.
 
-Можно реализовать три вида иерархии с использованием стилей и `BasedOn`:
+Вы можете реализовать три типа иерархии со стилями и `BasedOn`:
 
-- Из стили, определенные на `Application` и `Page` вниз, чтобы стили, определенные на макетах более низкого уровня в визуальном дереве.
-- Из стили, определенные для базовых классов, таких как `VisualElement` и `View` для стили, определенные для специализированных классов.
-- Из стилей с помощью явных словарь ключей для неявных стилей.
+- Из стилей, определенных в `Application` и `Page`, к стилям, определенным в макетах ниже в визуальном дереве.
+- Из стилей, определенных для базовых классов, таких как `VisualElement` и `View`, к стилям, определенным для конкретных классов.
+- Из стилей с явными ключами словаря к неявным стилям.
 
-Демонстрируются эти иерархии в [ **StyleHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleHierarchy) образца.
+Эти иерархии демонстрируются в примере [**StyleHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleHierarchy).
 
 ## <a name="dynamic-styles"></a>Динамические стили
 
-Позволяет ссылаться на стиль в словаре ресурсов `DynamicResource` вместо `StaticResource`. В результате стиль *динамического стиля*. Если этот стиль заменяется в словаре ресурсов другой стиль с тем же ключом, представления, ссылающиеся на этот стиль с `DynamicResource` автоматического изменения. Кроме того, приведет к отсутствие записи с указанным ключом в словаре `StaticResource` для вызова исключения, но не `DynamicResource`.
+На стиль в ресурсном словаре можно ссылаться не на `StaticResource`, а на `DynamicResource`. Это делает стиль *динамическим стилем*. Если этот стиль заменяется в словаре ресурсов другим стилем с тем же ключом, представления, ссылающиеся на этот стиль `DynamicResource`, автоматически меняются. Кроме того, отсутствие записи словаря с указанным ключом приведет к тому, что `StaticResource` вызовет исключение, но не `DynamicResource`.
 
-Этот метод можно использовать для динамического изменения стиля или тем, как [ **DynamicStyles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynamicStyles) в нем демонстрируется.
+Эту методику можно использовать для динамического изменения стилей или тем, как показывает пример [**DynamicStyles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynamicStyles).
 
-Тем не менее, нельзя задать `BasedOn` свойства `DynamicResource` состав расширения поскольку `BasedOn` не поддерживается, может быть привязано. Для наследования стиля динамически, не устанавливайте `BasedOn`. Вместо этого задайте [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) значение ключа словаря требуется являются производными от стиля. [ **DynamicStylesInheritance** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynaStylesInh) этот метод продемонстрирован в примере.
+Однако для свойства `BasedOn` нельзя задать расширение составных частей `DynamicResource`, поскольку `BasedOn` не поддерживается связываемыми свойствами. Чтобы сделать стиль динамически производным, не устанавливайте `BasedOn`. Вместо этого присвойте свойству [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) ключ словаря стиля, от которого требуется выполнить наследование. Этот метод демонстрируется в примере [**DynamicStylesInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynaStylesInh).
 
 ## <a name="device-styles"></a>Стили устройства
 
-[ `Device.Styles` ](xref:Xamarin.Forms.Device.Styles) Вложенный класс определяет двенадцать статические поля только для чтения для шести стилей с `TargetType` из `Label` , можно использовать для распространенных типов использования текста.
+Вложенный класс [`Device.Styles`](xref:Xamarin.Forms.Device.Styles) определяет двенадцать статических полей, предназначенных только для чтения, для шести стилей с `TargetType` из `Label`, которые можно использовать для общих типов использования текста.
 
-Шесть из этих полей относятся к типу `Style` , можно задать непосредственно в `Style` свойства в коде:
+Шесть из этих полей имеют тип `Style`, который можно задать непосредственно для свойства `Style` в коде:
 
 - [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle)
 - [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
@@ -85,19 +85,19 @@ ms.locfileid: "65926906"
 - [`ListItemTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyle)
 - [`ListItemDetailTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyle)
 
-Остальные шесть поля имеют тип `string` и может использоваться в качестве ключей словаря для динамические стили:
+Другие шесть полей относятся к типу `string` и могут использоваться в качестве ключей словаря для динамических стилей:
 
-- [`BodyStyleKey`](xref:Xamarin.Forms.Device.Styles.BodyStyleKey) равным «BodyStyle»
-- [`TitleStyleKey`](xref:Xamarin.Forms.Device.Styles.TitleStyleKey) равным «TitleStyle»
-- [`SubtitleStyleKey`](xref:Xamarin.Forms.Device.Styles.SubtitleStyleKey) равным «SubtitleStyle»
-- [`CaptionStyleKey`](xref:Xamarin.Forms.Device.Styles.CaptionStyleKey) равным «CaptionStyle»
-- [`ListItemTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyleKey) равным «ListItemTextStyle»
-- [`ListItemDetailTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyleKey) равным «ListItemDetailTextStyle»
+- [`BodyStyleKey`](xref:Xamarin.Forms.Device.Styles.BodyStyleKey) равно "BodyStyle"
+- [`TitleStyleKey`](xref:Xamarin.Forms.Device.Styles.TitleStyleKey) равно "TitleStyle"
+- [`SubtitleStyleKey`](xref:Xamarin.Forms.Device.Styles.SubtitleStyleKey) равно "SubtitleStyle"
+- [`CaptionStyleKey`](xref:Xamarin.Forms.Device.Styles.CaptionStyleKey) равно "CaptionStyle"
+- [`ListItemTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyleKey) равно "ListItemTextStyle"
+- [`ListItemDetailTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyleKey) равно "ListItemDetailTextStyle"
 
-Показаны эти стили [ **DeviceStylesList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DeviceStylesList) образца.
+Эти стили иллюстрируются в примере [**DeviceStylesList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DeviceStylesList).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 12 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf)
-- [Глава 12 выборок](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
+- [Полный текст главы 12 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf)
+- [Примеры для главы 12](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 - [Стили](~/xamarin-forms/user-interface/styles/index.md)

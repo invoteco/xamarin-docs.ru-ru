@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 11. Инфраструктура связывания
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 11. Инфраструктура связывания
+title: Сводная информация о Главе 11. Инфраструктура c возможностью привязки
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводная информация о Главе 11. Инфраструктура c возможностью привязки
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -8,91 +8,91 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334373"
 ---
-# <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Сводка Глава 11. Инфраструктура связывания
+# <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Сводная информация о Главе 11. Инфраструктура c возможностью привязки
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
-Все программисты на C# знакомы с C# *свойства*. Свойства содержат *задать* метода доступа и/или *получить* метода доступа. Они часто называются *свойства CLR* для среды CLR.
+Каждый программист, работавший с C#, знает концепцию *свойств*. Свойства в C# содержат методы доступа для *присвоения* и (или) *получения* значения. Они часто называются *свойствами среды CLR* (общеязыковой среды выполнения).
 
-Xamarin.Forms определяет определение расширенные свойства с именем *свойство, используемое* инкапсулируется [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) класса и поддерживается [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)класса. Эти классы являются родственная, но довольно различные: `BindableProperty` Используется для определения свойства. `BindableObject` аналогичен `object` тем, что он является базовым классом для классов, которые определяют связываемые свойства.
+Xamarin.Forms использует расширенное определение свойства, именуемое *привязываемым свойством*, которое инкапсулировано классом [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) и поддерживается классом [`BindableObject`](xref:Xamarin.Forms.BindableObject). Эти классы связаны, но во многом отличаются. `BindableProperty` используется для определения самого свойства, а `BindableObject` похож на `object`, так как является базовым классом для классов, определяющих привязываемые свойства.
 
-## <a name="the-xamarinforms-class-hierarchy"></a>Иерархия классов Xamarin.Forms
+## <a name="the-xamarinforms-class-hierarchy"></a>Иерархия классов в Xamarin.Forms
 
-[ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) образец использует отражение для отображения иерархии класс Xamarin.Forms и демонстрации важную роль, играемая `BindableObject` в этой иерархии. `BindableObject` является производным от `Object` и является родительским классом для [ `Element` ](xref:Xamarin.Forms.Element) откуда [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) является производным. Это является родительским классом для [ `Page` ](xref:Xamarin.Forms.Page) и [ `View` ](xref:Xamarin.Forms.View), который является родительским классом для [ `Layout` ](xref:Xamarin.Forms.Layout):
+В примере [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) с помощью отражения демонстрируются иерархия классов Xamarin.Forms и решающая роль, которую в этой иерархии играет `BindableObject`. `BindableObject` является производным от `Object` и родительским классом для [`Element`](xref:Xamarin.Forms.Element), от которого, в свою очередь, наследуется [`VisualElement`](xref:Xamarin.Forms.VisualElement). Это родительский класс для [`Page`](xref:Xamarin.Forms.Page) и [`View`](xref:Xamarin.Forms.View), который является родительским классом для [`Layout`](xref:Xamarin.Forms.Layout):
 
-[![Тройной снимок экрана общего доступа к иерархии классов](images/ch11fg01-small.png "общий доступ к иерархии класс")](images/ch11fg01-large.png#lightbox "общий доступ к иерархии классов")
+[![Три снимка экрана с описанием иерархии классов](images/ch11fg01-small.png "Совместная иерархия классов")](images/ch11fg01-large.png#lightbox "Совместная иерархия классов")
 
-## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>Считывания в BindableObject и BindableProperty
+## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>Коротко о BindableObject и BindableProperty
 
-В классах, производных от `BindableObject` многие свойства CLR, называются «поддерживаться» связываемые свойства. Например [ `Text` ](xref:Xamarin.Forms.Label.Text) свойство `Label` класс является свойством CLR, но `Label` класс также определяет открытое статическое доступное только для чтения поле с именем [ `TextProperty` ](xref:Xamarin.Forms.Label.TextProperty) из Тип `BindableProperty`.
+В классах, производных от `BindableObject`, многие свойства CLR "подкрепляются" аналогичными привязываемыми свойствами. Например, свойство [`Text`](xref:Xamarin.Forms.Label.Text) класса `Label` является свойством CLR, но класс `Label` определяет также открытое статическое поле только для чтения с именем [`TextProperty`](xref:Xamarin.Forms.Label.TextProperty) и типом `BindableProperty`.
 
-Приложение может задать или получить `Text` свойство `Label` как правило, или приложение может задать `Text` путем вызова [ `SetValue` ](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) метода, определенного `BindableObject` с `Label.TextProperty` аргумент. Аналогичным образом, приложение может получить значение `Text` свойства путем вызова [ `GetValue` ](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) метод, с использованием `Label.TextProperty` аргумент. Это демонстрируется путем [ **PropertySettings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PropertySettings) образца.
+Приложение может задать или получить свойство `Text` из `Label` обычным образом или задать `Text` вызовом метода [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)), который определен в `BindableObject` с аргументом `Label.TextProperty`. Аналогичным образом, приложение может получить значение свойства `Text` вызовом метода [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) с аргументом `Label.TextProperty`. Это демонстрируется в примере [**PropertySettings**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PropertySettings).
 
-Действительно `Text` полностью свойство CLR реализуется с помощью `SetValue` и `GetValue` методы, определенные `BindableObject` в сочетании с `Label.TextProperty` статическое свойство.
+Действительно, свойство CLR `Text` полностью реализуется с помощью методов `SetValue` и `GetValue`, определенных `BindableObject` в сочетании со статическим свойством `Label.TextProperty`.
 
-`BindableObject` и `BindableProperty` обеспечивают поддержку:
+`BindableObject` и `BindableProperty` предоставляют поддержку следующих возможностей.
 
-- Присвоив значения свойства по умолчанию
-- Хранение их текущие значения
-- Предоставляет механизмы для проверки значений свойств
-- Поддержание согласованности между связанные свойства в одном классе
-- Реагирование на изменения свойств
-- Активация уведомления, когда изменения или изменением свойства
-- Поддержка привязки данных
-- Поддержка стилей
-- Динамические ресурсы поддержки
+- Присвоение свойствам значений по умолчанию.
+- Сохранение текущих значений.
+- Предоставление механизмов для проверки значений свойств.
+- Поддержание согласованности между связанными свойствами в одном классе.
+- Реагирование на изменения свойств.
+- Активация уведомлений перед изменением или после изменения свойства.
+- Поддержка привязки данных.
+- Поддержка стилей.
+- Поддержка динамических ресурсов.
 
-При изменении свойства, поддерживаемый изменении привязываемые свойства `BindableObject` активируется [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) событий, определяющий свойство, которая была изменена. Это событие не возникает, когда свойство имеет значение то же значение.
+При изменении свойства, которое подкреплено привязываемым свойством, `BindableObject` запускает событие [`PropertyChanged`](xref:Xamarin.Forms.BindableObject.PropertyChanged), идентифицирующее измененное свойство. Если свойству присваивается такое же значение, как и прежнее, это событие не запускается.
 
-Некоторые свойства не поддерживаются некоторые классы Xamarin.Forms и связываемые свойства &mdash; например `Span` &mdash; не являются производными от `BindableObject`. Только класс, производный от `BindableObject` поддерживает свойства связывания, так как `BindableObject` определяет `SetValue` и `GetValue` методы.
+Некоторые свойства не подкрепляются привязываемыми свойствами, а некоторые классы &mdash; в Xamarin.Forms, например `Span` &mdash;, не являются производными от `BindableObject`. Привязываемые свойства может поддерживать только класс, производный от `BindableObject`, так как методы `SetValue` и `GetValue` определяются в `BindableObject`.
 
-Так как `Span` является производным от `BindableObject`, ни одно из его свойств &mdash; например `Text` &mdash; обеспечиваются может быть привязано. Вот почему `DynamicResource` на `Text` свойство `Span` приводит к появлению исключения в [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) в предыдущей главе. [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) образце показано, как задать динамические ресурсы в коде с помощью [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)) метода, определенного `Element`. Первым аргументом является объект типа `BindableProperty`.
+Так как `Span` не является производным от `BindableObject`, ни одно из его свойств &mdash;, например `Text` &mdash;, не подкрепляется привязываемым свойством. Именно поэтому параметр `DynamicResource` в свойстве `Text` класса `Span` вызывает исключение в примере [**DynamicVsStatic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) из предыдущей главы. Пример [**DynamicVsStaticCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) демонстрирует, как задать динамические ресурсы в коде с помощью метода [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)), который определен в `Element`. Первый аргумент является объектом типа `BindableProperty`.
 
-Аналогичным образом [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) метода, определенного `BindableObject` имеет тип первого аргумента `BindableProperty`.
+Аналогичным образом, у определенного в `BindableObject` метода [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) первый аргумент имеет тип `BindableProperty`.
 
-## <a name="defining-bindable-properties"></a>Определение привязываемые свойства
+## <a name="defining-bindable-properties"></a>Определение привязываемых свойств
 
-Можно определить собственные связываемые свойства, с помощью статического [ `BindableProperty.Create` ](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) метод для создания статического поля только для чтения типа `BindableProperty`.
+Чтобы определить собственные привязываемые свойства, вызовите статический метод [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) для создания статического поля только для чтения с типом `BindableProperty`.
 
-Это показано в [ `AltLabel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) в класс [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) библиотеки. Класс является производным от `Label` и позволяет указать размер шрифта в пунктах. Рассматривается в [ **PointSizedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) образца.
+Это действие демонстрируется в классе [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) из библиотеки [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). Класс является производным от `Label` и позволяет указать размер шрифта в пунктах. Применение этого класса демонстрируется в примере [**FramedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText).
 
-Четыре аргументы `BindableProperty.Create` метод требуются:
+Для метода `BindableProperty.Create` обязательными являются четыре аргумента:
 
-- `propertyName`: текстовое имя свойства (то же как имя свойства CLR)
-- `returnType`: тип свойства CLR
-- `declaringType`: тип класса, объявляющего свойство
-- `defaultValue`: значение свойства по умолчанию
+- `propertyName`: текстовое имя свойства (то же, что имя свойства CLR);
+- `returnType`: тип свойства CLR;
+- `declaringType`: тип класса, в котором объявлено свойство;
+- `defaultValue`: значение свойства по умолчанию.
 
-Так как `defaultValue` имеет тип `object`, компилятор должен иметь возможность определить тип значения по умолчанию. Например если `returnType` — `double`, `defaultValue` должно быть присвоено примерно 0,0, а не только 0 или несоответствие типов будет вызвано исключение во время выполнения.
+Поскольку `defaultValue` имеет тип `object`, компилятор должен уметь определять тип значения по умолчанию. Например, если `returnType` является `double`, для `defaultValue` нужно задать значение 0,0, а не просто 0, иначе во время выполнения будет вызвано исключение несоответствия типа.
 
-Также очень характерно для связывания свойства для включения:
+Также достаточно часто привязываемое свойство включает следующее:
 
-- `propertyChanged`: статический метод вызывается при изменении значения свойства. Первый аргумент является экземпляром класса, свойство которого было изменено.
+- `propertyChanged`: статический метод, который вызывается при изменении значения свойства. Первым аргументом здесь является экземпляр класса, у которого изменилось свойство.
 
-Другие аргументы `BindableProperty.Create` не встречаются:
+Другие аргументы `BindableProperty.Create` менее широко распространены:
 
-- `defaultBindingMode`: используется при привязке данных (как описано в [ **Глава 16. Привязка данных**](chapter16.md))
-- `validateValue`: обратный вызов для проверки допустимое значение
-- `propertyChanging`: обратный вызов для указания того, если это свойство имеет изменением
-- `coerceValue`: обратный вызов для присвоения значения набора с другим значением
-- `defaultValueCreate`: обратный вызов для создания значения по умолчанию, не могут совместно использоваться экземплярами класса (например, коллекции)
+- `defaultBindingMode`: используется в сочетании с привязкой данных (как описано в Главе 16 [ **Привязка данных**](chapter16.md));
+- `validateValue`: обратный вызов для проверки допустимого значения;
+- `propertyChanging`: обратный вызов, который обозначает, что свойство должно быть изменено;
+- `coerceValue`: обратный вызов, который изменяет заданное значение на другое значение;
+- `defaultValueCreate`: обратный вызов для создания значения по умолчанию, которое нельзя использовать совместно для нескольких экземпляров класса (например, в коллекции).
 
-### <a name="the-read-only-bindable-property"></a>Только для чтения свойство, используемое
+### <a name="the-read-only-bindable-property"></a>Привязываемое свойство только для чтения
 
-Может быть привязано может быть только для чтения. Создание только для чтения свойство, используемое требует вызова статического метода [ `BindableProperty.CreateReadOnly` ](xref:Xamarin.Forms.BindableProperty.CreateReadOnly(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) Определение частного статического поля только для чтения типа [ `BindablePropertyKey` ](xref:Xamarin.Forms.BindablePropertyKey).
+Привязываемое свойство может быть доступно только для чтения. Чтобы создать привязываемое свойство только для чтения, вызовите статический метод [`BindableProperty.CreateReadOnly`](xref:Xamarin.Forms.BindableProperty.CreateReadOnly(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) для определения частного статического поля только для чтения с типом [`BindablePropertyKey`](xref:Xamarin.Forms.BindablePropertyKey).
 
-Затем определите свойство CLR `set` accesor как `private` для вызова [ `SetValue` ](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey,System.Object)) перегрузка с `BindablePropertyKey` объекта. Этому свойство значение за пределами класса.
+Затем определите метод доступа `set` для свойства CLR как `private` для вызова перегрузки [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey,System.Object)) с объектом `BindablePropertyKey`. Это не позволит задавать значение свойства за пределами самого класса.
 
-Это показано в [ `CountedLabel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) класс, используемый в [ **BaskervillesCount** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) образца.
+Пример такого подхода демонстрируется в классе [`CountedLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs), который используется в примере [**BaskervillesCount**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 11 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
-- [Примеры Глава 11](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+- [Глава 11, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
+- [Примеры для Главы 11](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 - [Привязываемые свойства](~/xamarin-forms/xaml/bindable-properties.md)

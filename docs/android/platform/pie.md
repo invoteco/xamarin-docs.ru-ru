@@ -1,6 +1,6 @@
 ---
 title: Android 9 Pie
-description: Как приступить к разработке приложений для секторов Android 9 с помощью Xamarin. Android.
+description: Начните разрабатывать приложения для Android 9 Pie, используя Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
 ms.technology: xamarin-android
@@ -8,150 +8,150 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019875"
 ---
-# <a name="android-pie-features"></a>Возможности для круговой диаграммы Android
+# <a name="android-pie-features"></a>Возможности Android Pie
 
-_Как приступить к разработке приложений для секторов Android 9 с помощью Xamarin. Android._
+_Начните разрабатывать приложения для Android 9 Pie, используя Xamarin.Android._
 
-[Сектор Android 9](https://developer.android.com/about/versions/pie/) теперь доступен в Google. В этом выпуске предоставляется ряд новых функций и API, и многие из них необходимы для использования новых возможностей оборудования на последних устройствах Android.
+[Android 9 Pie](https://developer.android.com/about/versions/pie/) теперь доступен в Google. В этом выпуске предоставляется ряд новых возможностей и API. Многие из них необходимы, чтобы использовать новые преимущества последних устройств Android.
 
-![Hero изображение для круговой диаграммы Android](pie-images/01-android-p-logo.png)
+![Изображение главного имиджевого баннера Android Pie](pie-images/01-android-p-logo.png)
 
-Эта статья содержит сведения, которые помогут вам приступить к разработке приложений Xamarin. Android на круговой диаграмме Android. В нем объясняется, как установить необходимые обновления, настроить пакет SDK и подготовить эмулятор или устройство для тестирования. Кроме того, здесь приводится описание новых функций на круговой диаграмме Android, а также пример исходного кода, демонстрирующий использование некоторых ключевых функций Android.
+Эта статья содержит сведения, которые помогут вам приступить к разработке приложений Xamarin.Android для Android Pie. В ней объясняется, как установить необходимые обновления, настроить пакет SDK и подготовить эмулятор или устройство для тестирования. Кроме того, здесь приводится описание новых возможностей Android Pie, а также пример исходного кода, демонстрирующий использование некоторых ключевых функций Android Pie.
 
-Xamarin. Android 9,0 обеспечивает поддержку для круговой диаграммы Android. Дополнительные сведения о поддержке Xamarin. Android для круговой диаграммы Android см. в заметках о выпуске [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) .
+Xamarin.Android 9.0 обеспечивает поддержку Android Pie. Дополнительные сведения о поддержке Xamarin.Android для Android Pie см. в [заметках о выпуске Xamarin.Android 9.0](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1).
 
 ## <a name="requirements"></a>Требования
 
-Следующий список необходим для использования функций круговой диаграммы Android в приложениях на основе Xamarin:
+Компоненты из следующего списка необходимы для использования возможностей Android Pie в приложениях на основе Xamarin:
 
-- Рекомендуется **Visual studio** &ndash; visual Studio 2019.
-    Если вы используете Visual Studio 2017, в Windows Update до Visual Studio 2017 версии 15,8 или более поздней. В macOS обновите Visual Studio 2017 для Mac версии 7,6 или более поздней.
+- **Visual Studio** — рекомендуется использовать Visual Studio 2019.
+    Если вы используете Visual Studio 2017 в Windows, выполните обновление до Visual Studio 2017 версии 15.8 или более поздней. В macOS выполните обновление до Visual Studio 2017 для Mac версии 7.6 или более поздней.
 
-- **Xamarin. android** &ndash; Xamarin. Android 9.0.0.17 или более поздней версии должен быть установлен вместе с Visual Studio (Xamarin. Android автоматически устанавливается в рамках рабочей нагрузки **для разработки мобильных приложений на .NET** ).
+- **Xamarin.Android** — Xamarin.Android 9.0.0.17 или более поздней версии нужно устанавливать вместе с Visual Studio (Xamarin.Android автоматически устанавливается как часть рабочей нагрузки **Разработка мобильных приложений на .NET**).
 
-- Для **Java Developer Kit** &ndash; разработке Xamarin Android 9,0 требуется [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (или вы можете попробовать предварительную версию дистрибутива корпорации Майкрософт [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 автоматически устанавливается в составе рабочей нагрузки **.NET для разработки мобильных приложений** .
+- **Java Developer Kit** — для разработки Xamarin Android 9.0 требуется [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (также можно попробовать использовать предварительную версию дистрибутива Майкрософт [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK 8 устанавливается автоматически как часть рабочей нагрузки **Разработка мобильных приложений на .NET**.
 
-- **Пакет SDK для Android** &ndash; пакет SDK для Android API 28 или более поздней версии необходимо установить через диспетчер пакет SDK для Android.
+- **Пакет SDK для Android** — нужно установить пакет SDK для Android (API 28) или более поздней версии с помощью Диспетчера SDK Android.
 
 ## <a name="getting-started"></a>Начало работы
 
-Чтобы приступить к разработке приложений для круговой системы Android с помощью Xamarin. Android, необходимо загрузить и установить последние версии средств и пакетов SDK, прежде чем можно будет создать первый круговой проект Android:
+Чтобы приступить к разработке приложений для Android Pie с использованием Xamarin.Android, необходимо скачать и установить последние версии средств и пакетов SDK до создания первого проекта для Android Pie:
 
-1. Рекомендуется использовать Visual Studio 2019. Если вы используете Visual Studio 2017, обновите [Visual studio 2017 до версии 15,8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) или более поздней. Если вы используете Visual Studio для Mac, обновите [Visual Studio 2017 для Mac версии 7,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) или более поздней.
+1. Рекомендуется использовать Visual Studio 2019. Если вы используете Visual Studio 2017, выполните обновление до [Visual Studio 2017 версии 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) или более поздней. Если вы используете Visual Studio для Mac, выполните обновление до [Visual Studio 2017 для Mac версии 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) или более поздней.
 
-2. Установка пакетов и средств для **круговой диаграммы Android (API 28)** с помощью диспетчера пакетов SDK.
+2. Установите пакеты **Android Pie (API 28)** и средства с помощью Диспетчера SDK Android.
 
-3. Создайте новый проект Xamarin. Android, предназначенный для **Android 9,0**.
+3. Создайте новый проект Xamarin.Android, предназначенный для **Android 9.0**.
 
-4. Настройка эмулятора или устройства для тестирования круговых приложений Android.
+4. Настройте эмулятор или устройство для тестирования приложений Android Pie.
 
-Каждое из этих действий описано в следующих разделах:
+В разделах ниже отдельно рассматривается каждый шаг.
 
 ### <a name="update-visual-studio"></a>Обновление Visual Studio
 
-Visual Studio 2019 рекомендуется использовать для создания приложений для круговой диаграммы Android с помощью Xamarin.
+Для создания приложений Android Pie с использованием Xamarin рекомендуется использовать Visual Studio 2019.
 
-Если вы используете Visual Studio 2017, обновите Visual Studio 2017 до версии 15,8 или более поздней (инструкции см. в статье [обновление до последней версии Visual studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). В macOS обновление до Visual Studio 2017 для Mac 7,6 или более поздней версии (инструкции см. в разделе [Установка и установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
+Если вы используете Visual Studio 2017, обновите средства до версии 15.8 или более поздней (инструкции см. [здесь](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). В macOS обновите Visual Studio 2017 для Mac до версии 7.6 или более поздней (инструкции см. в [этой статье](https://docs.microsoft.com/visualstudio/mac/installation)).
 
-### <a name="install-the-android-sdk"></a>Установка пакет SDK для Android
+### <a name="install-the-android-sdk"></a>Установка пакета SDK для Android
 
-Чтобы создать проект с помощью Xamarin. Android 9,0, необходимо сначала использовать диспетчер пакет SDK для Android, чтобы установить платформу SDK для **секторов Android (уровень API 28)** или более поздней версии.
+Чтобы создать проект с использованием Xamarin.Android 9.0, необходимо сначала использовать Диспетчер SDK Android, чтобы установить платформу SDK для **Android Pie (API уровня 28)** или более поздней версии.
 
-1. Запустите диспетчер пакетов SDK. В Visual Studio щелкните **сервис > Android > пакет SDK для Android Manager**. В Visual Studio для Mac выберите **сервис > диспетчер пакетов SDK**.
+1. Запустите Диспетчер SDK. В Visual Studio выберите элементы**Сервис > Android > Диспетчер пакетов SDK Android**. В Visual Studio для Mac выберите элементы **Сервис > Диспетчер пакетов SDK**.
 
-2. В правом нижнем углу щелкните значок шестеренки и выберите **репозиторий > Google (не поддерживается)** :
+2. В правом нижнем углу щелкните значок шестеренки и выберите элементы **Репозиторий > Google (не поддерживается)** :
 
-    [![настройки репозитория в Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Настройка репозитория Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
-3. Установите пакеты SDK для **секторов Android** , которые перечислены как **пакет SDK для Android Платформа 28** на вкладке " **платформы** " (Дополнительные сведения об использовании диспетчера пакетов SDK см. в разделе [пакет SDK для Android Setup](~/android/get-started/installation/android-sdk.md)):
+3. Установите пакеты SDK **Android Pie**, которые указаны в списке как **Android SDK Platform 28** на вкладке **Платформы** (дополнительные сведения об использовании Диспетчера SDK Android см. [здесь](~/android/get-started/installation/android-sdk.md)):
 
-    [![установка многокруговых пакетов Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Установка пакетов Android Pie](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
-4. Если вы используете эмулятор, создайте виртуальное устройство, которое поддерживает **уровень API 28**. Дополнительные сведения о создании виртуальных устройств см. [в статье Управление виртуальными устройствами с помощью Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
+4. Если вы используете эмулятор, создайте виртуальное устройство, которое поддерживает **API уровня 28**. Дополнительные сведения о создании и настройке виртуальных устройств см. в статье [Управление виртуальными устройствами с помощью Диспетчера устройств Android](~/android/get-started/installation/android-emulator/device-manager.md).
 
-### <a name="start-a-xamarinandroid-project"></a>Запуск проекта Xamarin. Android
+### <a name="start-a-xamarinandroid-project"></a>Запуск проекта Xamarin.Android
 
-Создайте новый проект Xamarin. Android. Если вы не знакомы с разработкой Android с помощью Xamarin, ознакомьтесь со статьей [Hello, Android,](~/android/get-started/hello-android/index.md) чтобы узнать о создании проектов Xamarin. Android.
+Создайте проект Xamarin.Android. Если вы не знакомы с разработкой приложений для Android с использованием Xamarin, ознакомьтесь с [этой статьей](~/android/get-started/hello-android/index.md), чтобы узнать о создании проектов Xamarin.Android.
 
-При создании проекта Android необходимо настроить параметры версии для целевого устройства Android 9,0 или более поздней версии. Например, чтобы выбрать для проекта круговую диаграмму Android, необходимо настроить уровень API Android для вашего проекта на **android 9,0** (API 28). Рекомендуется также задать для целевой платформы уровень API 28 или более поздней версии. Дополнительные сведения о настройке уровней API Android см. в разделе [Общие сведения об уровнях API Android](~/android/app-fundamentals/android-api-levels.md).
+При создании проекта Android необходимо настроить параметры версии для целевой версии Android 9.0 или более поздней. Например, чтобы создать проект для Android Pie, необходимо настроить целевой уровень API Android проекта, задав **Android 9.0** (API 28). Рекомендуем также задать API 28 или выше для уровня требуемой версии .NET Framework. Дополнительные сведения о настройке уровней API Android см. в [этой статье](~/android/app-fundamentals/android-api-levels.md).
 
 ### <a name="configure-a-device-or-emulator"></a>Настройка устройства или эмулятора
 
-При использовании физического устройства, например хранилища или пикселя, можно обновить устройство на круговую диаграмму Android, следуя инструкциям в разделе [образы фабрики для хранилища и точечных устройств](https://developers.google.com/android/images).
+При использовании физического устройства, например Nexus или Pixel, можно обновить устройство до Android Pie, следуя инструкциям на странице [Заводские образы для устройств Nexus и Pixel](https://developers.google.com/android/images).
 
-Если вы используете эмулятор, создайте виртуальное устройство для уровня API 28 и выберите образ на основе x86. Сведения об использовании Android Device Manager для создания виртуальных устройств и управления ими см. в статье [Управление виртуальными устройствами с помощью Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-Сведения об использовании эмулятора Android для тестирования и отладки см. в разделе [Отладка на Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
+Если вы используете эмулятор, создайте виртуальное устройство, которое поддерживает API уровня 28, и выберите образ на базе x86. Дополнительные сведения о создании виртуальных устройств и управлении ими с помощью Диспетчера устройств Android см. в [этой статье](~/android/get-started/installation/android-emulator/device-manager.md).
+Сведения об использовании Android Emulator для тестирования и отладки см. [здесь](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 ## <a name="new-features"></a>Новые функции
 
-Круговая диаграмма Android предоставляет ряд новых функций. Некоторые из этих новых функций предназначены для использования новых возможностей оборудования, предлагаемых последними устройствами Android, а другие предназначены для дальнейшего улучшения пользовательского интерфейса Android.
+Android Pie предоставляет ряд новых возможностей. Некоторые из них предназначены для работы с аппаратными возможностями новых устройств Android, а другие улучшают взаимодействие пользователей с Android.
 
-- **Отображать поддержку отреза** &ndash; предоставляет интерфейсы API для поиска расположения и формы _отреза_ в верхней части экрана на новых устройствах Android.
+- **Поддержка выреза в дисплее** — предоставляет API для поиска расположения и формы _выреза_ в верхней части экрана новых устройств Android.
 
-- **Улучшения уведомлений** &ndash; уведомления теперь могут отображать изображения, а новый класс `Person` используется для упрощения участников диалога.
+- **Улучшенные уведомления** — теперь в них можно использовать изображения, а новый класс `Person` упрощает общение.
 
-- **Позиционирование** в предметной области &ndash; поддержки платформы для протокола приема-передачи WiFi, что позволяет приложениям использовать устройства Wi-Fi для навигации по параметрам.
+- **Позиционирование в помещении** — поддержка протокола времени кругового пути для Wi-Fi (W-iFi Round-Trip-Time) на платформе, позволяющая приложениям использовать устройства Wi-Fi для навигации в помещении.
 
-- **Поддержка нескольких камер** &ndash; предоставляет возможность одновременного доступа к потокам из нескольких физических камер (например, двойных и двойных).
+- **Поддержка нескольких камер** — обеспечивает одновременный доступ к потокам из нескольких физических камер (например, двойных передних или задних камер).
 
-В следующих разделах описаны эти функции и приведены краткие примеры кода, которые помогут приступить к их использованию в приложении.
+В следующих разделах описаны эти возможности и приведены краткие примеры кода, которые помогут приступить к их использованию в приложении.
 
-### <a name="display-cutout-support"></a>Отображать поддержку отреза
+### <a name="display-cutout-support"></a>Поддержка вырезки дисплея
 
-Многие новые устройства Android с пограничными экранами имеют *отрезки экранов* (или «деление») в верхней части экрана для камеры и докладчика.
-На следующем снимке экрана показан пример эмулятора:
+У многих новых устройств Android с безрамочными дисплеями в верхней части есть *вырез* (или "челка") с камерой и динамиком.
+На следующем снимке экрана показан пример эмулятора с вырезом:
 
-[![эмулятора Android, моделирующий отрезки](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![Эмулятор Android с имитацией выреза](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
-Чтобы управлять отображением содержимого в окне приложения на устройствах с вырезой экрана, круговая диаграмма Android добавила новый атрибут макета окна [лайаутиндисплайкутаутмоде](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) . Этому атрибуту можно присвоить одно из следующих значений:
+Чтобы управлять отображением содержимого в окнах приложения на устройствах с вырезом в дисплее, в Android Pie добавлен новый атрибут макета окна [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode). Для этого атрибута следует указать одно из таких значений:
 
-- [Лайаутиндисплайкутаутмоденевер](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; окно никогда не может перекрываться с областью отреза.
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) — окно никогда не может перекрываться областью выреза.
 
-- [Лайаутиндисплайкутаутмодешортеджес](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; окно разрешается расширять на область отреза, но только на короткие края экрана. 
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) — окно может расширяться в область выреза, но только по коротким краям дисплея. 
 
-- [Лайаутиндисплайкутаутмодедефаулт](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; окно может быть расширено до области отреза, если она содержится в системной панели.
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) — окно может расширяться в область выреза, если вырез расположен в уровень с системной панелью.
 
-Например, чтобы предотвратить перекрытие окна приложения с областью отреза, установите для параметра режим отреза макета значение *никогда*: 
+Например, чтобы предотвратить перекрытие окна приложения областью выреза, задайте для режима макета значение *never*: 
 
 ```csharp
 Window.Attributes.LayoutInDisplayCutoutMode =
     Android.Views.LayoutInDisplayCutoutMode.Never;
 ```
 
-В следующих примерах приведены примеры этих режимов отреза. Первый снимок экрана слева находится в приложении в режиме, отличном от полноэкранного. На снимке экрана центра приложение переходит в полноэкранный режим с `LayoutInDisplayCutoutMode` установленным в значение `LayoutInDisplayCutoutModeShortEdges`. Обратите внимание, что белый фон приложения распространяется на область «отрезки экрана»:
+В следующих примерах приведены варианты этих режимов выреза. На первом снимке экрана слева показано приложение в режиме, отличном от полноэкранного. На снимке экрана в центре приложение работает в полноэкранном режиме с атрибутом `LayoutInDisplayCutoutMode`, для которого установлено значение `LayoutInDisplayCutoutModeShortEdges`. Обратите внимание, что белый фон приложения распространяется на область дисплея с вырезом:
 
-[![примере отображение режимов отреза в эмуляторе](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![Пример режимов для выреза дисплея в эмуляторе](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
-На завершающем снимке экрана (расположенном выше справа) `LayoutInDisplayCutoutMode` имеет значение `LayoutInDisplayCutoutModeShortNever` перед переходом в полноэкранный режим.
-Обратите внимание, что белый фон приложения не разрешается расширять в область "отрезки экрана".
+На последнем снимке экрана (расположенном выше справа) для атрибута `LayoutInDisplayCutoutMode` задано значение `LayoutInDisplayCutoutModeShortNever` до перехода в полноэкранный режим.
+Обратите внимание, что белый фон приложения не распространяется на область дисплея с вырезом.
 
-Если вам нужны более подробные сведения о области отреза на устройстве, можно использовать новый класс [дисплайкутаут](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout` представляет область экрана, которую нельзя использовать для вывода содержимого. Эти сведения можно использовать для получения расположения и формы отреза, чтобы приложение не предпринимало попытки отобразить содержимое в этой нефункциональной области.
+Если вам нужны более подробные сведения об области выреза на устройстве, можно использовать новый класс [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html). `DisplayCutout` представляет область экрана, которую нельзя использовать для отображения содержимого. Эти сведения можно использовать для получения расположения и формы выреза, чтобы приложение не пыталось показывать содержимое в этой нефункциональной области.
 
-Дополнительные сведения о новых функциях отреза в Android P см. в разделе [Поддержка отображаемых отверстий](https://developer.android.com/about/versions/pie/android-9.0#cutout).
+Дополнительные сведения о новых возможностях для выреза в Android P см. в разделе [Поддержка выреза в дисплее](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
-### <a name="notifications-enhancements"></a>Усовершенствования уведомлений
+### <a name="notifications-enhancements"></a>Улучшенные уведомления
 
-Круговая диаграмма Android предоставляет следующие усовершенствования для улучшения работы с обменом сообщениями:
+В Android Pie представлены следующие улучшения в работе с сообщениями:
 
-- Каналы уведомления (появившиеся в [Android Oreo](~/android/platform/oreo.md)) теперь поддерживают блокировку групп каналов.
+- Каналы уведомления (введенные в [Android Oreo](~/android/platform/oreo.md)) теперь поддерживают блокировку групп каналов.
 
-- Система уведомлений имеет три новые категории "не беспокоить" (приоритетные оповещения, системные звуки и источники мультимедиа). Кроме того, существует семь новых режимов «не беспокоить», которые можно использовать для подавления визуальных прерываний (таких как эмблемы, Индикаторы уведомлений, отображение строк состояния и запуск полноэкранных действий).
+- Система уведомлений предусматривает три новые категории запрета беспокоить (приоритетные оповещения, системные звуки и источники мультимедиа). Кроме того, есть семь новых режимов запрета беспокоить, которые можно использовать для подавления визуальных прерываний (таких как индикаторы событий, индикаторы уведомлений, отображение строки состояния и запуск полноэкранных действий).
 
-- Для представления отправителя сообщения был добавлен новый класс [Person](https://developer.android.com/reference/android/app/Person.html) . Использование этого класса помогает оптимизировать отрисовку каждого уведомления путем определения людей, участвующих в беседе (включая аватары и URI).
+- Для представления отправителя сообщения добавлен новый класс [Person](https://developer.android.com/reference/android/app/Person.html). Использование этого класса помогает оптимизировать визуализацию каждого уведомления благодаря определению людей, участвующих в беседе (в том числе их аватаров и универсальных кодов ресурсов (URI)).
 
-- Теперь уведомления могут отображать изображения. 
+- Теперь в уведомлениях можно использовать изображения. 
 
-В следующем примере показано, как использовать новые API для создания уведомления, которое содержит изображение. На следующих снимках экрана публикуется текстовое уведомление, за которым следует уведомление с внедренным изображением. При разворачивании уведомлений (как показано справа) отображается текст первого уведомления и изображение, внедренное во второе уведомление, увеличивается.
+В следующем примере показано, как использовать новые API для создания уведомления с изображением. На следующих снимках экрана показано текстовое уведомление, за которым следует уведомление с внедренным изображением. При открытии уведомления (как показано справа) отображается текст первого уведомления и увеличивается изображение, внедренное во второе уведомление.
 
-[![пример уведомления с изображением](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![Пример уведомления с изображением](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
-В следующем примере показано, как включить изображение в многосегментное уведомление Android и демонстрируется использование нового класса `Person`:
+В следующем примере показано, как включить изображение в уведомление Android Pie, и демонстрируется использование нового класса `Person`:
 
 1. Создайте объект `Person`, представляющий отправителя. Например, имя и значок отправителя включены в `fromPerson`:
 
@@ -163,7 +163,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
         .Build();
     ```
 
-2. Создайте `Notification.MessagingStyle.Message`, содержащий образ для отправки, передав его в новый метод [Notification. мессагингстиле. Message. SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) .
+2. Создайте `Notification.MessagingStyle.Message`, с изображением для отправки, передав изображение в новый метод [ Notification.MessagingStyle.Message.SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri).
    Пример:
 
     ```csharp
@@ -198,60 +198,60 @@ Window.Attributes.LayoutInDisplayCutoutMode =
     notificationManager.Notify(notificationId, builder.Build());
     ```
 
-Дополнительные сведения о создании уведомлений см. в разделе [локальные уведомления](~/android/app-fundamentals/notifications/local-notifications.md).
+Дополнительные сведения о создании уведомлений см. в [этой статье](~/android/app-fundamentals/notifications/local-notifications.md).
 
-### <a name="indoor-positioning"></a>Позиционирование внутри
+### <a name="indoor-positioning"></a>Позиционирование в помещении
 
-Круговая диаграмма Android обеспечивает поддержку IEEE 802.11 MC (также известного как время приема-передачи _WiFi_ или _RTT_), что позволяет приложениям обнаруживать расстояние до одной или нескольких точек доступа Wi-Fi. Используя эти сведения, приложение может использовать преимущества *позиционирования* с точностью до двух метров. На устройствах Android, обеспечивающих аппаратную поддержку для IEEE 801.11 MC, приложение может предлагать функции навигации, такие как управление на основе местоположения для смарт-устройств или последующее включение инструкций в хранилище:
+Android Pie обеспечивает поддержку стандарта IEEE 802.11mc (также известного как _W-iFi Round-Trip-Time_ или _Wi-Fi RTT_), что позволяет приложениям обнаруживать расстояние до одной или нескольких точек доступа Wi-Fi. Используя эту информацию, приложение предоставляет преимущества *позиционирования в помещении* с точностью от одного до двух метров. На устройствах Android, обеспечивающих аппаратную поддержку IEEE 801.11mc, приложение может предлагать функции навигации, такие как управление на основе местоположения для смарт-устройств или пошаговые инструкции в магазине:
 
-[![пример навигации с помощью RTT Wi-Fi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![Пример навигации в помещении с использованием Wi-Fi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
-Новый класс [вифирттманажер](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) и несколько вспомогательных классов предоставляют средства для измерения расстояния до устройств Wi-Fi. Дополнительные сведения о интерфейсах API позиционирования для размещения, появившихся в Android P, см. в разделе [Android .NET. Wi. RTT](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
+Новый класс [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) и несколько вспомогательных классов создают возможность измерять расстояние до устройств Wi-Fi. Дополнительные сведения о появившихся в Android P API позиционирования в помещении см. в справочнике [Android.Net.Wifi.Rtt](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
 ### <a name="multi-camera-support"></a>Поддержка нескольких камер
 
-Многие новые устройства Android имеют Сдвоенные или двойные камеры, которые полезны для таких функций, как стерео, улучшенные визуальные эффекты и улучшенные возможности масштабирования. В Android P появился новый API с [несколькими камерами](https://developer.android.com/about/versions/pie/android-9.0#camera) , позволяющий приложению использовать *логическую камеру* (или *логическую*камеру), которая поддерживается двумя или более физическими камерами.
-Чтобы определить, поддерживает ли устройство логическую камеру, можно просмотреть возможности каждой камеры на устройстве, чтобы узнать, поддерживает ли он [рекуеставаилаблекапабилитиеслогикалмултикамера](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
+Многие новые устройства Android оснащены двойными передними и/или задними камерами, которые полезны для таких функций, как стереозрение, расширенные визуальные эффекты и улучшенные возможности увеличения. В Android P появился новый [многокамерный](https://developer.android.com/about/versions/pie/android-9.0#camera) API, позволяющий приложению использовать *логическую камеру* (или *логическую многокамерность*), поддерживающую две или более физические камеры.
+Чтобы определить, поддерживает ли устройство логически несколько камер, можно просмотреть возможности каждой камеры на устройстве и узнать, поддерживает ли она [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
-Круговая диаграмма Android также включает новый класс [сессионконфигуратион](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) , который можно использовать для сокращения задержек во время первоначального захвата и устранения необходимости запуска и запуска потока камеры.
+Android Pie также предусматривает новый класс [SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html), который можно использовать для сокращения задержек при изначальной записи и устранения необходимости запуска потока с камеры.
 
-Дополнительные сведения о поддержке нескольких камер в Android P см. в разделе [Поддержка нескольких камер и обновление камеры](https://developer.android.com/about/versions/pie/android-9.0#camera).
+Дополнительные сведения о поддержке нескольких камер в Android P см. [здесь](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 ### <a name="other-features"></a>Другие возможности
 
-Кроме того, на круговой диаграмме Android поддерживаются еще несколько новых функций:
+Android Pie поддерживает еще несколько новых возможностей:
 
-- Новый класс [аниматедимажедравабле](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , который можно использовать для рисования и отображения анимированных изображений.
+- Новый класс [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) можно использовать для рисования и отображения анимированных изображений.
 
-- Новый класс [имажедекодер](https://developer.android.com/reference/android/graphics/ImageDecoder.html) , который заменяет `BitmapFactory`. `ImageDecoder` можно использовать для декодирования `AnimatedImageDrawable`.
+- Новый класс [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) заменяет `BitmapFactory`. `ImageDecoder` можно использовать для декодирования `AnimatedImageDrawable`.
 
-- Поддержка изображений HDR (с высоким динамическим диапазоном) видео и ХЕИФ (формат файлов изображений с высоким уровнем эффективности).
+- Поддержка видео HDR и изображений HEIF.
 
-- [Жобсчедулер](https://developer.android.com/reference/android/app/job/JobScheduler.html) был дополнен к более интеллектуальной обработке связанных с сетью заданий. Новый метод WebMethod класса [жобпараметерс](https://developer.android.com/reference/android/app/job/JobParameters) возвращает [лучшую сеть для](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) выполнения любых сетевых запросов для данного задания.
+- [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) усовершенствован для более интеллектуальной работы со связанными с сетью заданиями. Новый метод [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) класса [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) возвращает лучшую сеть для выполнения любых сетевых запросов для этого задания.
 
-Дополнительные сведения о последних функциях для круговой диаграммы Android см. в разделе [функции и API-интерфейсы Android 9](https://developer.android.com/about/versions/pie/android-9.0).
+Дополнительные сведения о последних возможностях Android Pie см. на странице [Возможности и API Android 9](https://developer.android.com/about/versions/pie/android-9.0).
 
 ## <a name="behavior-changes"></a>Изменения в поведении
 
-Если для целевой версии Android задан уровень API 28, то существует несколько изменений платформы, которые могут повлиять на поведение приложения, даже если вы не реализуете новые функции, описанные выше. Ниже приведен краткий обзор этих изменений.
+Если для целевой версии Android задан уровень API 28, следует учитывать несколько платформенных изменений, которые могут повлиять на поведение приложения, даже если вы не реализуете новые возможности, описанные выше. Далее представлена краткая сводка этих изменений:
 
-- Приложения должны теперь запрашивать разрешение переднего плана перед использованием служб переднего плана.
+- Приложения должны теперь запрашивать разрешение перед использованием служб переднего плана.
 
-- Если приложение содержит более одного процесса, оно не может совместно использовать один каталог данных [WebView](xref:Android.Webkit.WebView) в процессах.
+- Если приложение выполняет больше одного процесса, оно не может совместно использовать один каталог данных [WebView](xref:Android.Webkit.WebView) в процессах.
 
-- Прямой доступ к каталогу данных другого приложения по пути больше не разрешен.
+- Прямой доступ к каталогу данных другого приложения по пути теперь запрещен.
 
-Дополнительные сведения об изменениях в поведении для приложений, предназначенных для Android P, см. в разделе [изменения в поведении](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
+Дополнительные сведения об изменениях в поведении приложений для Android P см. [здесь](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
 ## <a name="sample-code"></a>Пример кода
 
-[Андроидпминидемо](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) — это пример приложения Xamarin. Android для Android, в котором показано, как устанавливать режимы отображения отреза, как использовать новый класс `Person` и как отправить уведомление, включающее изображение.
+[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) — это пример приложения Xamarin.Android для Android Pie, на котором показано, как устанавливать режимы отображения выреза, как использовать новый класс `Person` и как отправлять уведомления с внедренным изображением.
 
 ## <a name="summary"></a>Сводка
 
-В этой статье представлена круговая диаграмма под управлением Android и объясняется, как установить и настроить новейшие средства и пакеты для разработки Xamarin. Android на круговой диаграмме Android. В нем предоставлен обзор основных функций, доступных на круговой диаграмме Android, а также пример исходного кода для некоторых из этих функций.
-В нем содержатся ссылки на разделы документации по API и разработчиков Android, которые помогут вам приступить к созданию приложений для круговой диаграммы Android. Он также выделяет наиболее важные изменения в поведении на круги Android, которые могут повлиять на существующие приложения.
+Из этой статьи вы узнали об Android Pie, установке и настройке самых новых средств и пакетов для разработки приложений Xamarin.Android для Android Pie. В статье предоставлен обзор основных возможностей, доступных в Android Pie, а также пример исходного кода для некоторых из них.
+В ней содержатся ссылки на документацию по API и разделы для разработчиков под Android, которые помогут вам приступить к созданию приложений для Android Pie. В статье также описаны самые важные изменения в поведении Android Pie, которые могут повлиять на существующие приложения.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Круговая диаграмма Android 9](https://developer.android.com/about/versions/pie/)
+- [Android 9 Pie](https://developer.android.com/about/versions/pie/)

@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 14. Абсолютный макет
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 14. Абсолютный макет'
+title: Сводная информация о Главе 14. Абсолютный макет
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводная информация о Главе 14. Абсолютный макет
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
@@ -8,100 +8,100 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: c489bf244396cf180ed8e1272308048a14b67300
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70771134"
 ---
-# <a name="summary-of-chapter-14-absolute-layout"></a>Сводка Глава 14. Абсолютный макет
+# <a name="summary-of-chapter-14-absolute-layout"></a>Сводная информация о Главе 14. Абсолютный макет
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
-Как и `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) является производным от `Layout<View>` и наследует `Children` свойство. `AbsoluteLayout` реализует систему макета, которая требует от программиста для указания положения его дочерних элементов и, возможно, их размера. Позиция задается верхнего левого угла дочернего элемента относительно верхнего левого угла `AbsoluteLayout` в аппаратно независимых единицах. `AbsoluteLayout` также реализует пропорционально позиционирования и возможность изменения размера.
+Как и `StackLayout`, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) является производным от `Layout<View>` и наследует свойство `Children`. `AbsoluteLayout` реализует систему макета, в которой программисту нужно указывать позиции дочерних элементов и их размер (необязательно). Эти позиции определяются по координатам левого верхнего угла дочернего элемента относительно левого верхнего угла `AbsoluteLayout`, выраженным в не зависящих от устройства единицах измерения. `AbsoluteLayout` также реализует функции пропорционального размещения и изменения размера.
 
-`AbsoluteLayout` следует рассматривать как система макета специального назначения для использования только в том случае, если программист может создать размер на дочерние элементы (например, `BoxView` элементы) или когда размер этого элемента не влияет на положение других дочерних элементов. `HorizontalOptions` И `VerticalOptions` свойства не оказывают влияния на дочерние элементы `AbsoluteLayout`.
+`AbsoluteLayout` следует рассматривать как специализированную систему макета, которая используется только в том случае, когда программисту важно строго определять размер дочерних элементов (например, элементов `BoxView`) или когда размер элемента не влияет на расположение других дочерних элементов. Свойства `HorizontalOptions` и `VerticalOptions` не влияют на дочерние элементы `AbsoluteLayout`.
 
-В данной главе вводится также важной особенностью *присоединенного свойства связывания* , позволяющие настраивать свойства, определенные в одном классе (в данном случае `AbsoluteLayout`) должны быть присоединены к другой класс (является потомком `AbsoluteLayout`).
+В этой главе также представлена важная концепция *присоединенных привязываемых свойств*, которые позволяют присоединять свойства, определенные в одном классе (в нашем примере это `AbsoluteLayout`) к другому классу (дочернему элементу `AbsoluteLayout`).
 
-## <a name="absolutelayout-in-code"></a>AbsoluteLayout в коде
+## <a name="absolutelayout-in-code"></a>Код для AbsoluteLayout
 
-Можно добавить дочерний элемент `Children` коллекцию `AbsoluteLayout` с использованием стандарта [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) метод, но `AbsoluteLayout` также предоставляет расширенную [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) метод, который позволяет указать [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Другой [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) метод требует только [ `Point` ](xref:Xamarin.Forms.Point), при этом дочерние неограниченного и изменяет свой размер.
+Вы можете добавить дочерний элемент в коллекцию `Children` элемента `AbsoluteLayout` с помощью стандартного метода [`Add`](xref:System.Collections.Generic.ICollection`1.Add*), но `AbsoluteLayout` предоставляет еще и расширенный метод [`Add`](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*), который позволяет указать [`Rectangle`](xref:Xamarin.Forms.Rectangle). Еще один метод [`Add`](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) требует только [`Point`](xref:Xamarin.Forms.Point), то есть дочерний элемент неограничен и самостоятельно задает свои размеры.
 
-Можно создать `Rectangle` со значением [конструктор](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) , требуется четыре значения &mdash; первые два, указывающий положение верхнего левого угла дочернего элемента относительно его родительского элемента, а вторые два, указывающее, размер дочернего элемента. Или можно использовать [конструктор](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) требующее `Point` и [ `Size` ](xref:Xamarin.Forms.Size) значение.
+Вы можете создать значение `Rectangle` с помощью [конструктора](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)), который требует четыре значения &mdash;, из которых первые два указывают положение верхнего левого угла дочернего элемента относительно его родителя, а вторые два — размер этого дочернего элемента. Также можно использовать [конструктор](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)), который принимает `Point` и значение [`Size`](xref:Xamarin.Forms.Size).
 
-Эти `Add` методы показаны в [ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo), какие позиции `BoxView` элементов с помощью `Rectangle` значения и `Label` элемент, используя только что `Point` значение.
+Эти методы `Add` демонстрируются в примере [**AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo), который позиционирует элементы `BoxView` с помощью значений `Rectangle` и элемент `Label` по одному значению `Point`.
 
-[ **ChessboardFixed** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardFixed) примере используется 32 `BoxView` элементы должны быть созданы в формате доске. Эта программа предоставляет `BoxView` размер элементов, жестко 35 единиц квадрата. `AbsoluteLayout` Имеет его `HorizontalOptions` и `VerticalOptions` присвоено `LayoutOptions.Center`, чего `AbsoluteLayout` на общий размер 280 единиц квадрата.
+В примере [**ChessboardFixed**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardFixed) для создания шаблона шахматной доски используются 32 элемента `BoxView`. Программа присваивает элементам `BoxView` жестко запрограммированный размер обеих сторон 35 единиц. Для `AbsoluteLayout` параметрам `HorizontalOptions` и `VerticalOptions` присвоено значение `LayoutOptions.Center`, в результате чего общий размер `AbsoluteLayout` соответствует квадрату со стороной 280 единиц.
 
-## <a name="attached-bindable-properties"></a>Вложенные привязываемые свойства
+## <a name="attached-bindable-properties"></a>Присоединенные привязываемые свойства
 
-Можно также задать положение и, возможно, размер дочернего элемента `AbsoluteLayout` после его добавления к `Children` коллекции с помощью статического метода [ `AbsoluteLayout.SetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle)). Первым аргументом является дочерним элементом; второй — `Rectangle` объекта. Можно указать, что дочерние изменяет свой размер по горизонтали или по вертикали, задав значения высоты и ширины [ `AbsoluteLayout.AutoSize` ](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) константы.
+Вы можете также задать позицию и (необязательно) размер дочернего элемента `AbsoluteLayout` после добавления его в коллекцию `Children`, используя статический метод [`AbsoluteLayout.SetLayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle)). Первым аргументом он принимает дочерний элемент, а вторым — объект `Rectangle`. Вы можете указать, что дочерний элемент самостоятельно задает свой размер по горизонтали и (или) вертикали, присвоив значение константы [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) параметрам ширины и высоты.
 
-[ **ChessboardDynamic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) пример помещает `AbsoluteLayout` в `ContentView` с `SizeChanged` обработчик для вызова `AbsoluteLayout.SetLayoutBounds` на все дочерние элементы, чтобы сделать их как можно большего размера.  
+Пример [**ChessboardDynamic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) размещает `AbsoluteLayout` в `ContentView` с обработчиком `SizeChanged` для вызова `AbsoluteLayout.SetLayoutBounds` из всех дочерних элементов, чтобы максимально увеличить их размер.  
 
-Присоединенное свойство привязки, `AbsoluteLayout` определяет является статическим полем только для чтения типа `BindableProperty` с именем [ `AbsoluteLayout.LayoutBoundsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty). Статический `AbsoluteLayout.SetLayoutBounds` метод реализуется путем вызова `SetValue` дочерних элементов с `AbsoluteLayout.LayoutBoundsProperty`. Дочерние содержит словарь, в которой хранятся присоединенного привязываемые свойства и его значение. Во время структурирования `AbsoluteLayout` можно получить это значение путем вызова [ `AbsoluteLayout.GetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject)), которое реализуется с помощью `GetValue` вызова.
+Присоединенное привязываемое свойство, определенное в `AbsoluteLayout`, является статическим полем только для чтения с типом `BindableProperty` и именем [`AbsoluteLayout.LayoutBoundsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty). Статический метод `AbsoluteLayout.SetLayoutBounds` реализуется путем вызова `SetValue` из дочернего элемента с помощью `AbsoluteLayout.LayoutBoundsProperty`. Этот дочерний элемент содержит словарь, в котором хранятся присоединенное привязываемой свойство и его значение. На этапе создания макета `AbsoluteLayout` может получить это значение, вызвав [`AbsoluteLayout.GetLayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject)), который реализуется вызовом `GetValue`.
 
-## <a name="proportional-sizing-and-positioning"></a>Пропорциональное изменения размеров и положения
+## <a name="proportional-sizing-and-positioning"></a>Пропорциональный размер и размещение
 
-`AbsoluteLayout` реализует пропорциональное изменения размеров и положения компонента. Класс определяет второй присоединенного свойства привязки, [ `LayoutFlagsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty), со статическими методами связанных [ `AbsoluteLayout.SetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) и [ `AbsoluteLayout.GetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject)).
+`AbsoluteLayout` реализует функцию пропорционального размера и размещения. Этот класс определяет второе присоединенное привязываемой свойство [`LayoutFlagsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) с соответствующими статическими методами [`AbsoluteLayout.SetLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) и [`AbsoluteLayout.GetLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject)).
 
-Аргумент `AbsoluteLayout.SetLayoutFlags` и возвращаемое значение `AbsoluteLayout.GetLayoutFlags` является значением типа [ `AbsoluteLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayoutFlags), перечисление со следующими членами:
+Аргумент `AbsoluteLayout.SetLayoutFlags` и возвращаемое значение `AbsoluteLayout.GetLayoutFlags` имеют тип [`AbsoluteLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayoutFlags), то есть перечисление со следующими элементами:
 
-- [`None`](xref:Xamarin.Forms.AbsoluteLayoutFlags.None) (равно 0)
-- [`XProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.XProportional) (1)
-- [`YProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.YProportional) (2)
-- [`PositionProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.PositionProportional) (3)
-- [`WidthProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.WidthProportional) (4)
-- [`HeightProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.HeightProportional) (8)
-- [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) (12)
-- [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF)
+- [`None`](xref:Xamarin.Forms.AbsoluteLayoutFlags.None) (равно значению 0);
+- [`XProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.XProportional) (1);
+- [`YProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.YProportional) (2);
+- [`PositionProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.PositionProportional) (3);
+- [`WidthProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.WidthProportional) (4);
+- [`HeightProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.HeightProportional) (8);
+- [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) (12);
+- [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF).
 
-Вы можете комбинировать эти с C# побитового оператора OR.
+Их можно объединять с помощью оператора "побитового ИЛИ" из C#.
 
-Эти флаги установлены, определенные свойства `Rectangle` структуре границы макета, можно изменить положение и размер дочернего интерпретируются пропорционально.
+При установке этих флагов некоторые свойства структуры связывания макета `Rectangle`, которые применяются для выбора положения и размера дочернего элемента, рассматриваются как пропорциональные.
 
-Когда `WidthProportional` флаг установлен, `Width` значение 1 означает, что такой же ширины, что дочерние `AbsoluteLayout`. Подобный подход используется для высоты.
+Если задан флаг `WidthProportional`, значение 1 для параметра `Width` означает, что ширина дочернего элемента совпадает с шириной `AbsoluteLayout`. Такой же подход используется для высоты.
 
-Пропорциональное позиционирования учитывает размер. Когда `XProportional` флаг установлен, `X` свойство `Rectangle` пропорционально границы макета. Значение 0 означает, что дочерние левого края расположен над левым краем `AbsoluteLayout`, но позиция 1 означает, что правым краем дочернего элемента расположен на правом краю `AbsoluteLayout`, не за правый край `AbsoluteLayout` как это делается expec t. `X` Свойство 0,5 выравнивание по горизонтали в дочерние `AbsoluteLayout`.
+При пропорциональном размещении учитывается размер элементов. Если задан флаг `XProportional`, свойство `X` структуры макета `Rectangle` вычисляется как пропорциональное. Значение 0 означает, что левый край дочернего элемента размещается по левому краю `AbsoluteLayout`, но положение 1 означает, что правый край дочернего элемента размещается по правому краю `AbsoluteLayout`, а не за правым краем `AbsoluteLayout`, как можно было бы ожидать. Значение 0,5 для свойства `X` размещает дочерний элемент в центре `AbsoluteLayout` по горизонтальной оси.
 
-[ **ChessboardProportional** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardProportional) образце демонстрируется использование пропорциональное изменения размера и положения.
+Пример [**ChessboardProportional**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardProportional) демонстрирует применение функции пропорционального размера и размещения.
 
-## <a name="working-with-proportional-coordinates"></a>Работа с пропорциональным координаты
+## <a name="working-with-proportional-coordinates"></a>Использование пропорциональных координат
 
-В некоторых случаях проще рассматривать пропорционально позиционирования иначе, чем его реализации в `AbsoluteLayout`. Вы можете работать с пропорциональным координаты где `X` свойство 1 помещает левым краем дочернего элемента (а не правого края) от правого края `AbsoluteLayout`.
+Иногда бывает удобно использовать пропорциональное размещение не так, как оно реализовано в `AbsoluteLayout`. Вы можете предпочесть пропорциональные координаты, при использовании которых значение 1 для свойства `X` размещает левый (а не правый) край дочернего элемента по правому краю `AbsoluteLayout`.
 
-Этой альтернативной схемой размещения может вызываться «долей дочернего координаты». Можно преобразовать из координат долей дочернего границы макета, необходимые для `AbsoluteLayout` со следующими формулами:
+Эту альтернативную схему размещения можно назвать "дробные координаты дочернего элемента". Пересчет между дробными координатами дочернего элемента и структурой макета, которую использует `AbsoluteLayout`, можно выполнить по следующим формулам:
 
 layoutBounds.X = (fractionalChildCoordinate.X / (1 - layoutBounds.Width))
 
 layoutBounds.Y = (fractionalChildCoordinate.Y / (1 - layoutBounds.Height))
 
-[ **ProportionalCoordinateCalc** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/PropCoordCalc) в нем демонстрируется это.
+Этот подход демонстрируется в примере [**ProportionalCoordinateCalc**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/PropCoordCalc).
 
 ## <a name="absolutelayout-and-xaml"></a>AbsoluteLayout и XAML
 
-Можно использовать `AbsoluteLayout` в XAML и задать присоединенное привязываемые свойства для дочерних элементов `AbsoluteLayout` с помощью значения атрибутов, `AbsoluteLayout.LayoutBounds` и `AbsoluteLayout.LayoutFlags`. Это показано в [ **AbsoluteXamlDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteXamlDemo) и [ **ChessboardXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardXaml) примеры. Последний программа содержит 32 `BoxView` элементы только использует неявный `Style` , включающий `AbsoluteLayout.LayoutFlags` свойство для сохранения разметки вниз к минимуму.
+Вы можете применить `AbsoluteLayout` в XAML и настроить присоединенные привязываемые свойства дочерних элементов `AbsoluteLayout` с помощью значений атрибутов `AbsoluteLayout.LayoutBounds` и `AbsoluteLayout.LayoutFlags`. Этот подход применяется в примерах [**AbsoluteXamlDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteXamlDemo) и [**ChessboardXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardXaml). Вторая из этих программ содержит 32 элемента `BoxView`, но с помощью неявного `Style` со свойством `AbsoluteLayout.LayoutFlags` обходится минимальным количеством разметки.
 
-Атрибут в XAML, который состоит из имени класса, точки и имени свойства — *всегда* присоединенное свойство привязки.
+В XAML атрибут, состоящий из имени класса, символа точки и имени свойства *всегда* является присоединенным привязываемым свойством.
 
 ## <a name="overlays"></a>Наложения
 
-Можно использовать `AbsoluteLayout` для создания *наложения*, где приведены все страницы с другими элементами управления, возможно для защиты пользователя от взаимодействия с помощью обычных элементов управления на странице.
+Вы можете с помощью `AbsoluteLayout` создать *наложение*, которое перекрывает страницу другими элементами управления, например для защиты от вмешательства пользователя в работу основных элементов управления на этой страницы.
 
-[ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) примере продемонстрировано использование этого приема, а также демонстрирует [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar), отображающий экстента, к которому завершения программы задача.
+Пример [**SimpleOverlay**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) демонстрирует эту методику и [`ProgressBar`](xref:Xamarin.Forms.ProgressBar), с помощью которой обозначает ход выполнения задачи в программе.
 
-## <a name="some-fun"></a>Забавные
+## <a name="some-fun"></a>Немного развлечений
 
-[ **DotMatrixClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) пример отображает текущее время с отображением имитации 5 x 7 матричного. Каждая точка является `BoxView` (есть 228 из них) изменять размеры и расположение на `AbsoluteLayout`.
+Пример [**DotMatrixClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) отображает текущее время на модели матричного дисплея размером 5x7 точек. Каждая точка представляет собой `BoxView` (в общей сложности их 228), которому присваивается размер и положение на `AbsoluteLayout`.
 
-[![Тройной снимок экрана часов матричного](images/ch14fg08-small.png "часы матричного")](images/ch14fg08-large.png#lightbox "матричного часов")
+[![Снимок экрана с тремя изображениями цветных матричных часов](images/ch14fg08-small.png "Часы с матрицей из точек")](images/ch14fg08-large.png#lightbox "Часы с матрицей из точек")
 
-[ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) программы анимирует два `Label` объектов к экрану скачками по горизонтали и вертикали.
+Программа [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) перемещает по экрану два объекта `Label`, моделируя отражение от горизонтальных и вертикальных границ экрана.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 14 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
-- [Глава 14-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+- [Глава 14, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
+- [Примеры для Главы 14](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 - [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolute-layout.md)
 - [Вложенные свойства](~/xamarin-forms/xaml/attached-properties.md)

@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 10. Расширения разметки XAML
-description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка Глава 10. Расширения разметки XAML
+title: Сводка по главе 10. Расширения разметки XAML
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводка по главе 10. Расширения разметки XAML
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
@@ -8,93 +8,93 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 076e9f5155492e5a69d906c587b24495fe39d3f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334349"
 ---
-# <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Сводка Глава 10. Расширения разметки XAML
+# <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Сводка по главе 10. Расширения разметки XAML
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
-Как правило, средство синтаксического анализа XAML преобразует любой строки задается как значение атрибута для типа свойства, в зависимости от стандартных преобразований для базовых типов данных .NET, или [ `TypeConverter` ](xref:Xamarin.Forms.TypeConverter) производных присоединенного к свойству, либо его тип [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
+Как правило, средство синтаксического анализа XAML преобразует любую строку, заданную в качестве значения атрибута, в тип свойства на основе стандартных преобразований для базовых типов данных .NET или производной класса [`TypeConverter`](xref:Xamarin.Forms.TypeConverter), присоединенной к свойству или типу этого свойства с помощью [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 
-Но иногда бывает удобно задать атрибут из другого источника, например, элемент в словарь, или значение статического свойства или поля, или из расчета какого-либо рода.
+Но иногда бывает удобно задать атрибут из другого источника, например элемента в словаре, значения статического свойства или поля или какого-нибудь вычисления.
 
-Это задание из *расширения разметки XAML*. Несмотря на название, расширения разметки XAML — *не* расширение XML. XAML — это всегда юридические XML.
+Для этих целей и существует *расширение разметки XAML*. Несмотря на название, расширения разметки XAML *не являются* расширением языка XML. XAML — это всегда обычный XML.
 
-## <a name="the-code-infrastructure"></a>Код инфраструктуры
+## <a name="the-code-infrastructure"></a>Инфраструктура кода
 
-Расширение разметки XAML — это класс, реализующий [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) интерфейс. Такой класс часто содержит слово `Extension` в конце имени но обычно отображается в XAML без этого суффикса.
+Расширение разметки XAML — это класс, реализующий интерфейс [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension). В конце имени такого класса часто содержится слово `Extension`, но обычно имя отображается в XAML без этого суффикса.
 
-Следующие расширения разметки XAML, поддерживаются все реализации XAML:
+Следующие расширения разметки XAML поддерживаются во всех реализациях XAML:
 
-- `x:Static` поддерживается [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension)
-- `x:Reference` поддерживается [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension)
-- `x:Type` поддерживается [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension)
-- `x:Null` поддерживается [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension)
-- `x:Array` поддерживается [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension)
+- `x:Static` поддерживается в [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension);
+- `x:Reference` поддерживается в [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension);
+- `x:Type` поддерживается в [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension);
+- `x:Null` поддерживается в [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension);
+- `x:Array` поддерживается в [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension).
 
-Эти четыре расширения разметки XAML поддерживает многие реализации XAML, включая Xamarin.Forms:
+Следующие четыре расширения разметки XAML поддерживаются во многих реализациях XAML, включая Xamarin.Forms:
 
-- `StaticResource` поддерживается [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
-- `DynamicResource` поддерживается [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
-- `Binding` поддерживаемые [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;подробно [Глава 16. Привязка данных](chapter16.md)
-- `TemplateBinding` поддерживаемые [ `TemplateBindingExtension` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) &mdash;не рассматривается в книге
+- `StaticResource` поддерживается в [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension);
+- `DynamicResource` поддерживается в [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension);
+- `Binding` поддерживается в [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash; см. здесь: [Глава 16. Привязка данных](chapter16.md)
+- `TemplateBinding` поддерживается в [`TemplateBindingExtension`](xref:Xamarin.Forms.Xaml.TemplateBindingExtension)&mdash; (не рассматривается в этой книге).
 
-Дополнительное расширение разметки XAML включен в Xamarin.Forms, в связи с [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout):
+Дополнительное расширение разметки XAML включено в Xamarin.Forms в связи с [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout):
 
-- [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression)&mdash;не рассматривается в книге
+- [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression)&mdash; (не рассматривается в этой книге).
 
-## <a name="accessing-static-members"></a>Доступ к статическим членам
+## <a name="accessing-static-members"></a>Доступ к статическим элементам
 
-Используйте [ `x:Static` ](xref:Xamarin.Forms.Xaml.StaticExtension) задаваемого атрибута к значению общедоступного статического свойства, поля или перечисления члена элемента. Задайте [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) свойство к статическому члену. Обычно проще указать `x:Static` и имя члена в фигурные скобки. Имя `Member` свойство не нужно быть включен, только сам элемент. Этот общий синтаксис показан в [ **SharedStatics** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/SharedStatics) образца. Статические поля, сами определяются в [ `AppConstants` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter10/SharedStatics/SharedStatics/SharedStatics/AppConstants.cs) класса. Этот метод позволяет установить константы, используемые в программе.
+Используйте элемент [`x:Static`](xref:Xamarin.Forms.Xaml.StaticExtension), чтобы задать для атрибута значение общего статического свойства, поля или элемента перечисления. Задайте для свойства [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) статический элемент. Обычно проще указывать `x:Static` и имя элемента в фигурных скобках. Не обязательно включать имя свойства `Member`, достаточно указать сам элемент. Этот типичный синтаксис показан в примере [**SharedStatics**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/SharedStatics). Сами статические поля определяются в классе [`AppConstants`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter10/SharedStatics/SharedStatics/SharedStatics/AppConstants.cs). Этот метод позволяет устанавливать константы, используемые в программе.
 
-С помощью дополнительных объявления пространства имен XML, вы может ссылаться на открытые статические свойства, поля или перечисления элементов, определенных в .NET framework, как показано в [ **SystemStatics** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/SystemStatics) образца .
+С помощью дополнительного объявления пространства имен XML можно ссылаться на общие статические свойства, поля или элементы перечисления, определенные в .NET Framework, как показано в примере [**SystemStatics**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/SystemStatics).
 
 ## <a name="resource-dictionaries"></a>Словари ресурсов
 
-`VisualElement` Класс определяет свойство, именуемое [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) , можно присвоить объект типа [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). В XAML, можно хранить элементы в данном словаре и определить их с помощью `x:Key` атрибута. Элементы, хранящиеся в словаре ресурсов являются общими для всех ссылок на элемент.
+Класс `VisualElement` определяет свойство с именем [`Resources`](xref:Xamarin.Forms.VisualElement.Resources), которое можно задать для объекта типа [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). В XAML можно хранить элементы в этом словаре и указывать их с помощью атрибута `x:Key`. Элементы, хранящиеся в словаре ресурсов, являются общими для всех ссылок на этот элемент.
 
 ### <a name="staticresource-for-most-purposes"></a>StaticResource для большинства целей
 
-В большинстве случаев вы будете использовать [ `StaticResource` ](xref:Xamarin.Forms.Xaml.StaticResourceExtension) расширения разметки для ссылки на элемент из словаря ресурсов, как показано [ **ResourceSharing** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing) образца . Можно использовать `StaticResourceExtension` элемент или `StaticResource` в фигурных скобках:
+В большинстве случаев вы будете использовать расширение разметки [`StaticResource`](xref:Xamarin.Forms.Xaml.StaticResourceExtension), чтобы сослаться на элемент из словаря ресурсов, как показано в примере [**ResourceSharing**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing). Можно использовать элемент `StaticResourceExtension` или `StaticResource` в фигурных скобках.
 
-[![Тройной снимок общий доступ к ресурсам](images/ch10fg03-small.png "общий доступ к ресурсам")](images/ch10fg03-large.png#lightbox "общий доступ к ресурсам")
+[![Тройной снимок экрана общего доступа к ресурсам](images/ch10fg03-small.png "Общий доступ к ресурсам")](images/ch10fg03-large.png#lightbox "Общий доступ к ресурсам")
 
-Не следует путать `x:Static` расширения разметки и `StaticResource` расширение разметки.
+Не путайте расширение разметки `x:Static` и расширение разметки `StaticResource`.
 
 ### <a name="a-tree-of-dictionaries"></a>Дерево словарей
 
-Когда средство синтаксического анализа XAML обнаруживает `StaticResource`, он начинает поиск вверх по визуальному дереву, ключ на соответствие и затем поиск выполняется в `ResourceDictionary` в приложения `App` класса. Это позволяет элементов в словаре ресурсов глубже в визуальном дереве для переопределения словарь ресурсов, выше в визуальном дереве. Это показано в [ **ResourceTrees** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceTrees) образца.
+Когда средство синтаксического анализа XAML встречает `StaticResource`, оно начинает поиск соответствующего ключа в визуальном дереве, а затем — поиск в `ResourceDictionary` в классе `App` приложения. Это позволяет элементам словаря ресурсов, расположенным более глубоко в визуальном дереве, переопределять словарь ресурсов, находящийся выше в визуальном дереве. Это показано в примере [**ResourceTrees**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceTrees).
 
 ### <a name="dynamicresource-for-special-purposes"></a>DynamicResource для особых целей
 
-`StaticResource` Расширение разметки вызывает элемент, извлекаемый из словаря, при построении визуального дерева во время `InitializeComponent` вызова. Альтернативой `StaticResource` — [ `DynamicResource` ](xref:Xamarin.Forms.Xaml.DynamicResourceExtension), который хранит ссылку на ключ словаря и обновляет целевой объект в том случае, когда ссылка на элемент ключевых изменений.
+Расширение разметки `StaticResource` извлекает элемент из словаря при построении визуального дерева во время вызова `InitializeComponent`. Альтернативой `StaticResource` является расширение [`DynamicResource`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension), которое поддерживает ссылку на ключ словаря и обновляет целевой объект при изменении элемента, на который ссылается ключ.
 
-Разница между `StaticResource` и `DynamicResource` демонстрируется в [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) образца.
+Разница между `StaticResource` и `DynamicResource` показана в примере [**DynamicVsStatic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic).
 
-Свойство, которому присвоен `DynamicResource` должна опираться на может быть привязано, как описано в [Глава 11, инфраструктура связывания](chapter11.md).
+Свойство, заданное `DynamicResource`, должно поддерживаться привязываемым свойством, как описано в [главе 11 "Инфраструктура c возможностью привязки"](chapter11.md).
 
-## <a name="lesser-used-markup-extensions"></a>Расширения разметки, используется меньшее
+## <a name="lesser-used-markup-extensions"></a>Менее часто используемые расширения разметки
 
-Используйте [ `x:Null` ](xref:Xamarin.Forms.Xaml.NullExtension) расширение разметки, чтобы задать для свойства `null`.
+Используйте расширение разметки [`x:Null`](xref:Xamarin.Forms.Xaml.NullExtension), чтобы задать для свойства значение `null`.
 
-Используйте [ `x:Type` ](xref:Xamarin.Forms.Xaml.TypeExtension) расширение разметки, чтобы задать для свойства .NET `Type` объекта.
+Используйте расширение разметки [`x:Type`](xref:Xamarin.Forms.Xaml.TypeExtension), чтобы задать свойство для объекта .NET `Type`.
 
-Используйте [ `x:Array` ](xref:Xamarin.Forms.Xaml.ArrayExtension) определить массив. Укажите тип элементов массива, задав [`Type`] свойства `x:Type` расширение разметки.
+Для определения массива используйте [`x:Array`](xref:Xamarin.Forms.Xaml.ArrayExtension). Чтобы указать тип элементов массива, задайте для свойства [`Type`] расширение разметки `x:Type`.
 
 ## <a name="a-custom-markup-extension"></a>Пользовательское расширение разметки
 
-Можно создать собственные расширения разметки XAML, написав класс, реализующий [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) взаимодействовать с [ `ProvideValue` ](xref:Xamarin.Forms.Xaml.IMarkupExtension.ProvideValue(System.IServiceProvider)) метод.
+Вы можете создавать собственные расширения разметки XAML, создав класс, реализующий интерфейс [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension), с помощью метода [`ProvideValue`](xref:Xamarin.Forms.Xaml.IMarkupExtension.ProvideValue(System.IServiceProvider)).
 
-[ `HslColorExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) Класс удовлетворяют этим требованиям. Он создает значение типа `Color` на основе значений свойств с именем `H`, `S`, `L`, и `A`. Этот класс является первый элемент в библиотеку Xamarin.Forms [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) , сформированными и используется в ходе этой книги.
+Класс [`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) соответствует этому требованию. Он создает значение типа `Color` на основе значений свойств с именами `H`, `S`, `L` и `A`. Этот класс является первым элементом в библиотеке Xamarin.Forms под названием [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit), который создается и используется в этой книге.
 
-[ **CustomExtensionDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) образце показано, как сослаться на эту библиотеку, и использовать пользовательское расширение разметки.
+В примере [**CustomExtensionDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) показано, как ссылаться на эту библиотеку и применять пользовательское расширение разметки.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 10 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf)
-- [Глава 10 выборок](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
+- [Глава 10, полный текст в формате PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf)
+- [Примеры для главы 10](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 - [Расширения разметки XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

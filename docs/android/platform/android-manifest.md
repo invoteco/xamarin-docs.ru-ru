@@ -7,21 +7,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 1438c012608b367c21ebcc401c058b186b917f53
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027803"
 ---
 # <a name="working-with-the-android-manifest"></a>Работа с манифестом Android
 
-**AndroidManifest. XML** — это мощный файл на платформе Android, который позволяет описать функциональные возможности и требования приложения для Android. Однако работать с ним непросто. Xamarin. Android помогает снизить эту сложность, позволяя добавлять настраиваемые атрибуты в классы, которые затем будут использоваться для автоматического создания манифеста. Наша цель заключается в том, что 99% наших пользователей никогда не нужно вручную изменять **AndroidManifest. XML**. 
+**AndroidManifest.xml** на платформе Android — это мощный файл, который позволяет описать функциональные возможности и требования приложения для Android. Но работать с ним непросто. Xamarin.Android помогает упростить работу, позволяя добавлять в классы настраиваемые атрибуты, которые будут использоваться для автоматического создания манифеста. Наша цель заключается в том, чтобы 99 % наших пользователей никогда не испытывали потребности вручную изменять **AndroidManifest.xml**. 
 
-**AndroidManifest. XML** создается как часть процесса сборки, а XML-код, найденный в **свойствах/AndroidManifest. XML** , объединяется с XML, созданным на основе настраиваемых атрибутов. Полученный Объединенный **файл AndroidManifest. XML** находится в подкаталоге **obj** ; Например, он находится в **файле obj/Debug/Android/AndroidManifest. XML** для отладочных сборок. Процесс слияния является тривиальным: он использует пользовательские атрибуты в коде для создания XML-элементов и *вставляет* эти элементы в **AndroidManifest. XML**. 
+**AndroidManifest.xml** создается в процессе сборки, а найденный в **Properties/AndroidManifest.xml** XML-код объединяется с XML, созданным на основе настраиваемых атрибутов. Итоговый файл **AndroidManifest.xml** помещается в подкаталог **obj**, например для отладочных сборок. Например, он может находиться в папке **obj/Debug/android/AndroidManifest.xml**. Используется стандартный процесс слияния. Настраиваемые атрибуты в коде используются для создания XML-элементов, и эти элементы *вставляются* в **AndroidManifest.xml**. 
 
 ## <a name="the-basics"></a>Основы
 
-Во время компиляции сборки сканируются для классов, не являющихся`abstract`, которые являются производными от [Activity](xref:Android.App.Activity) и имеют объявленный атрибут [`[Activity]`](xref:Android.App.ActivityAttribute) . Затем эти классы и атрибуты используются для создания манифеста. Рассмотрим следующий пример кода: 
+В процессе компиляции в сборках выполняется поиск классов, которые не являются `abstract`, наследуют от класса [Activity](xref:Android.App.Activity) и имеют объявленный атрибут [`[Activity]`](xref:Android.App.ActivityAttribute). На основе этих классов и атрибутов создается манифест. Рассмотрим следующий пример кода: 
 
 ```csharp
 namespace Demo
@@ -32,8 +32,8 @@ namespace Demo
 }
 ```
 
-Это приведет к невозможности создания в **AndroidManifest. XML**. Если требуется создать элемент `<activity/>`, необходимо использовать [`[Activity]`](xref:Android.App.Activity) 
-настраиваемый атрибут: 
+В результате файл **AndroidManifest.xml** будет пустым. Если вам нужен элемент `<activity/>`, необходимо использовать настраиваемый атрибут [`[Activity]`](xref:Android.App.Activity): 
+custom attribute: 
 
 ```csharp
 namespace Demo
@@ -45,19 +45,19 @@ namespace Demo
 }
 ```
 
-Этот пример приводит к добавлению следующего фрагмента XML в **AndroidManifest. XML**:
+Этот пример приводит к добавлению следующего фрагмента XML в файл **AndroidManifest.xml**:
 
 ```xml
 <activity android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-Атрибут `[Activity]` не влияет на типы `abstract`; типы `abstract` игнорируются.
+Атрибут `[Activity]` не влияет на типы `abstract`. Все типы `abstract` игнорируются.
 
 ### <a name="activity-name"></a>Имя действия
 
-Начиная с Xamarin. Android 5,1, имя типа действия основано на MD5SUM имени экспортируемого типа с указанием сборки. Это позволяет предоставлять одно и то же полное имя из двух разных сборок и не возвращать ошибку упаковки. (Перед Xamarin. Android 5,1 имя типа действия по умолчанию было создано из пространства имен в нижнем регистре и имени класса.) 
+Начиная с Xamarin.Android 5.1, имена типов для действий основаны на MD5SUM от имени экспортируемого типа с указанием сборки. Это позволяет предоставить одно и то же полное имя из двух разных сборок и не получить ошибку упаковки (до версии Xamarin.Android 5.1 имя типа действия по умолчанию составлялось из имени пространства имен и имени класса в нижнем регистре). 
 
-Если вы хотите переопределить это значение по умолчанию и явно указать имя действия, используйте свойство [`Name`](xref:Android.App.ActivityAttribute.Name) : 
+Если вы хотите переопределить это поведение по умолчанию и указать имя действия явным образом, используйте свойство [`Name`](xref:Android.App.ActivityAttribute.Name): 
 
 ```csharp
 [Activity (Name="awesome.demo.activity")]
@@ -73,11 +73,11 @@ public class MyActivity : Activity
 ```
 
 > [!NOTE]
-> Свойство `Name` следует использовать только в целях обратной совместимости, так как такое Переименование может замедлить Поиск во время выполнения. Если у вас есть устаревший код, который ожидает, что имя типа по умолчанию для действия должно основываться на пространстве имен в нижнем регистре и имени класса, см. раздел имя [вызываемой оболочки Android](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) для получения советов по обеспечению совместимости. 
+> Свойство `Name` следует использовать только для поддержки обратной совместимости, так как такое переименование может замедлить поиск типов во время выполнения. Если у вас есть старый код, который ожидает, что в качестве имени типа для действия по умолчанию используется имя пространства имен и имя класса в нижнем регистре, воспользуйтесь рекомендациями по сохранению совместимости, касающимися [имени вызываемой программы-оболочки](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming). 
 
-### <a name="activity-title-bar"></a>Строка заголовка действия
+### <a name="activity-title-bar"></a>Заголовок действия
 
-По умолчанию Android предоставляет приложению заголовок при его запуске. Значение, используемое для этого, — [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). В большинстве случаев это значение будет отличаться от имени класса. Чтобы указать метку приложения в заголовке окна, используйте свойство [`Label`](xref:Android.App.ActivityAttribute.Label) .
+По умолчанию Android присваивает приложению заголовок при выполнении. Для этого используется значение [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). В большинстве случаев это значение отличается от имени класса. Чтобы указать в приложении метку для заголовка окна, используйте свойство [`Label`](xref:Android.App.ActivityAttribute.Label).
 Пример: 
 
 ```csharp
@@ -94,9 +94,9 @@ public class MyActivity : Activity
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-### <a name="launchable-from-application-chooser"></a>Запуск из средства выбора приложений
+### <a name="launchable-from-application-chooser"></a>Возможность запуска из средства выбора приложений
 
-По умолчанию действие не отображается на экране запуска приложений Android. Это связано с тем, что в приложении может быть много действий, и вам не нужен значок для каждого из них. Чтобы указать, какие из них должны быть запущены в средстве запуска приложений, используйте свойство [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) . Пример: 
+По умолчанию действие не отображается на экране запуска приложений Android. Это связано с тем, что в приложении может быть много действий. Вам не потребуется значок для каждого из них. Чтобы указать, какие из них должны запускаться через средство запуска приложений, используйте свойство [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher). Пример: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -119,7 +119,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-icon"></a>Значок действия
 
-По умолчанию для действия будет задан значок запуска по умолчанию, предоставляемый системой. Чтобы использовать пользовательский значок, сначала добавьте **. png** в **Resources/Draw**, задайте для его действия сборки значение **AndroidResource**, а затем используйте свойство [`Icon`](xref:Android.App.ActivityAttribute.Icon) , чтобы указать используемый значок. Пример: 
+По умолчанию действию присваивается значок запуска, предоставляемый системой. Чтобы использовать пользовательский значок, добавьте нужный файл **.png** в папку **Resources/drawable**, задайте для него действие сборки **AndroidResource** и с помощью свойства [`Icon`](xref:Android.App.ActivityAttribute.Icon) укажите этот файл в качестве значка. Пример: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -142,31 +142,31 @@ public class MyActivity : Activity
 
 ### <a name="permissions"></a>Разрешения
 
-При добавлении разрешений в манифест Android (как описано в разделе [Добавление разрешений в манифест Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)) эти разрешения записываются в **свойствах/AndroidManifest. XML**. Например, если задать разрешение `INTERNET`, в **свойствах/AndroidManifest. XML**будет добавлен следующий элемент: 
+При добавлении разрешений в манифест Android (как описано в [этой статье](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)) такие разрешения записываются в файл **Properties/AndroidManifest.xml**. Например, если задать разрешение `INTERNET`, то в **Properties/AndroidManifest.xml** будет добавлен следующий элемент: 
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-Отладочные сборки автоматически устанавливают некоторые разрешения для упрощения отладки (например, `INTERNET` и `READ_EXTERNAL_STORAGE`) &ndash; эти параметры задаются только в созданном **файле obj/Debug/Android/AndroidManifest. XML** и не отображаются как включенные в **требуемом параметры разрешений** . 
+Отладочные сборки автоматически устанавливают некоторые разрешения, чтобы упростить отладку (например `INTERNET` и `READ_EXTERNAL_STORAGE`) &ndash; эти параметры задаются только в созданном **obj/Debug/android/AndroidManifest.xml** и не отображаются как включенные в параметрах **необходимых разрешений**. 
 
-Например, если вы изучите созданный файл манифеста в файле **obj/Debug/Android/AndroidManifest. XML**, вы можете увидеть следующие добавленные элементы разрешений: 
+Например, если вы изучите созданный файл манифеста в **obj/Debug/android/AndroidManifest.xml**, то увидите следующие добавленные элементы разрешений: 
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
-В версии сборки выпуска манифеста (в **файле obj/Debug/Android/AndroidManifest. XML**) эти разрешения *не* настраиваются автоматически. Если вы обнаружите, что переключение на сборку выпуска приводит к тому, что приложение теряет разрешение, доступное в отладочной сборке, убедитесь, что это разрешение явно задано в параметрах, **необходимых** для приложения (см. раздел **Сборка > Android Приложение** в Visual Studio для Mac; см. раздел **свойства > манифесте Android** в Visual Studio). 
+В версии сборки выпуска эти разрешения *не* включаются в манифест автоматически (**obj/Debug/android/AndroidManifest.xml**). Если обнаружится, что при переключении на сборку выпуска приложение теряет разрешение, которое было доступно в сборке отладки, убедитесь, что это разрешение явным образом включено в параметрах **необходимых разрешений** для этого приложения (в разделе **Сборка > Приложение Android** в Visual Studio для Mac или **Свойства > Манифест Android** в Visual Studio). 
 
 ## <a name="advanced-features"></a>Дополнительные функции
 
 ### <a name="intent-actions-and-features"></a>Действия и функции намерения
 
-Манифест Android предоставляет способ описания возможностей действия. Это делается с помощью [целей](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) и [`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
-настраиваемый атрибут. Можно указать действия, подходящие для действия с [`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
-и какие категории подходят для [`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-. Необходимо указать по крайней мере одно действие (это объясняется тем, что действия предоставляются в конструкторе). `[IntentFilter]` можно предоставить несколько раз, и каждый из них будет иметь отдельный элемент `<intent-filter/>` внутри `<activity/>`. Пример:
+Манифест Android предоставляет способ для описания возможностей действия. Это делается с помощью [намерений](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) и настраиваемого атрибута [`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
+. Вы можете указать действия для своего действия с помощью конструктора [`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*),
+а подходящие категории — через свойство [`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
+. Необходимо указать хотя бы одно действие (именно поэтому действия предоставляются в конструкторе). `[IntentFilter]` может предоставляться несколько раз. При каждом его использовании в `<activity/>`создается отдельный элемент `<intent-filter/>`. Пример:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -196,9 +196,9 @@ public class MyActivity : Activity
 
 ### <a name="application-element"></a>Элемент Application
 
-В манифесте Android также предусмотрен способ объявления свойств для всего приложения. Это делается с помощью элемента `<application>` и его аналога, настраиваемого атрибута [приложения](xref:Android.App.ApplicationAttribute) . Обратите внимание, что это параметры уровня приложения (на уровне сборки), а не параметры для каждого действия. Как правило, вы объявляете свойства `<application>` для всего приложения, а затем переопределяете эти параметры (при необходимости) для каждого действия. 
+Кроме того, в манифесте Android можно объявлять свойства для всего приложения. Это делается с помощью элемента `<application>` и его аналога, настраиваемого атрибута [Application](xref:Android.App.ApplicationAttribute). Обратите внимание, что это параметры уровня приложения (сборки), а не отдельные параметры для каждого действия. Как правило, свойства `<application>` объявляются для всего приложения, а затем переопределяются (по мере необходимости) для каждого действия. 
 
-Например, следующий атрибут `Application` добавляется в **AssemblyInfo.CS** , чтобы указать, что приложение может быть отлажено, что его понятное имя — **мое приложение**, а в качестве темы по умолчанию для всех действий используется стиль `Theme.Light`. 
+Например, следующий атрибут `Application`, добавленный в **AssemblyInfo.cs**, означает, что приложение доступно для отладки, у него есть понятное для пользователя имя **My App** и в нем используется стиль `Theme.Light` в качестве темы по умолчанию для всех действий: 
 
 ```csharp
 [assembly: Application (Debuggable=true,   
@@ -206,7 +206,7 @@ public class MyActivity : Activity
                         Theme="@android:style/Theme.Light")]
 ```
 
-Это объявление приводит к созданию следующего фрагмента XML в файле **obj/Debug/Android/AndroidManifest. XML**:
+Это объявление приводит к созданию следующего фрагмента XML в файле **obj/Debug/Android/AndroidManifest.xml**:
 
 ```xml
 <application android:label="My App" 
@@ -215,25 +215,25 @@ public class MyActivity : Activity
                 ... />
 ```
 
-В этом примере все действия в приложении будут по умолчанию применены к стилю `Theme.Light`. Если задать тему действия `Theme.Dialog`, только это действие будет использовать стиль `Theme.Dialog`, тогда как все остальные действия в приложении будут по умолчанию иметь стиль `Theme.Light`, заданный в элементе `<application>`. 
+В этом примере все действия в приложении будут по умолчанию использовать стиль `Theme.Light`. Если задать для действия тему `Theme.Dialog`, то стиль `Theme.Dialog` будет применен только к этому действию. Все остальные действия в приложении будут использовать стиль по умолчанию `Theme.Light`, который задан в элементе `<application>`. 
 
-Элемент `Application` не является единственным способом настройки `<application>` атрибутов. Кроме того, можно вставлять атрибуты непосредственно в элемент `<application>` **Properties/AndroidManifest. XML**. Эти параметры объединяются в последний элемент `<application>`, который находится в **obj/Debug/Android/AndroidManifest. XML**. Обратите внимание, что содержимое **Properties/AndroidManifest. XML** всегда переопределяет данные, предоставленные пользовательскими атрибутами. 
+Элемент `Application` — не единственный способ настройки атрибутов `<application>`. Вместо этого вы можете вставлять атрибуты непосредственно в элемент `<application>` файла **Properties/AndroidManifest.xml**. Эти параметры объединяются в последний элемент `<application>` в файле **obj/Debug/Android/AndroidManifest.xml**. Обратите внимание, что содержимое **Properties/AndroidManifest.xml** всегда переопределяет данные, предоставленные пользовательскими атрибутами. 
 
-Существует множество атрибутов на уровне приложения, которые можно настроить в элементе `<application>`. Дополнительные сведения об этих параметрах см. в разделе [общедоступные свойства](xref:Android.App.ApplicationAttribute) [аппликатионаттрибуте](xref:Android.App.ApplicationAttribute). 
+Есть множество атрибутов на уровне приложения, которые можно настроить в элементе `<application>`. Дополнительные сведения об этих параметрах см. в разделе документации по [ApplicationAttribute](xref:Android.App.ApplicationAttribute), посвященном [открытым свойствам](xref:Android.App.ApplicationAttribute). 
 
 ## <a name="list-of-custom-attributes"></a>Список настраиваемых атрибутов
 
-- [Android. app. активитяттрибуте](xref:Android.App.ActivityAttribute) : создает фрагмент XML [/Манифест/аппликатион/Активити](https://developer.android.com/guide/topics/manifest/activity-element.html) 
-- [Android. app. аппликатионаттрибуте](xref:Android.App.ApplicationAttribute) : создает фрагмент XML [/Манифест/аппликатион](https://developer.android.com/guide/topics/manifest/application-element.html) 
-- [Android. app. инструментатионаттрибуте](xref:Android.App.InstrumentationAttribute) : создает фрагмент XML [/Манифест/инструментатион](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
-- [Android. app. интентфилтераттрибуте](xref:Android.App.IntentFilterAttribute) : создает фрагмент XML [//Интент-филтер](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
-- [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : создает фрагмент XML [//мета-дата](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
-- [Android. app. PrincipalPermissionAttribute](xref:Android.App.PermissionAttribute) : создает фрагмент XML [//пермиссион](https://developer.android.com/guide/topics/manifest/permission-element.html) 
-- [Android. app. пермиссионграупаттрибуте](xref:Android.App.PermissionGroupAttribute) : создает фрагмент XML [//пермиссион-грауп](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
-- [Android. app. пермиссионтриаттрибуте](xref:Android.App.PermissionTreeAttribute) : создает фрагмент XML [//пермиссион-три](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
-- [Android. app. сервицеаттрибуте](xref:Android.App.ServiceAttribute) : создает фрагмент XML [/Манифест/аппликатион/сервице](https://developer.android.com/guide/topics/manifest/service-element.html) 
-- [Android. app. усеслибраряттрибуте](xref:Android.App.UsesLibraryAttribute) : создает фрагмент XML [/Манифест/аппликатион/усес-либрари](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
-- [Android. app. усеспермиссионаттрибуте](xref:Android.App.UsesPermissionAttribute) : создает фрагмент XML [/Манифест/усес-пермиссион](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
-- [Android. Content. броадкастрецеивераттрибуте](xref:Android.Content.BroadcastReceiverAttribute) : создает фрагмент XML [/Манифест/аппликатион/рецеивер](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
-- [Android. Content. контентпровидераттрибуте](xref:Android.Content.ContentProviderAttribute) : создает фрагмент XML [/Манифест/аппликатион/провидер](https://developer.android.com/guide/topics/manifest/provider-element.html) 
-- [Android. Content. грантурипермиссионаттрибуте](xref:Android.Content.GrantUriPermissionAttribute) : создает фрагмент XML [/Манифест/аппликатион/провидер/Грант-Ури-пермиссион](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)
+- [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute). Позволяет создать фрагмент XML [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html). 
+- [Android.App.ApplicationAttribute](xref:Android.App.ApplicationAttribute). Позволяет создать фрагмент XML [/manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html). 
+- [Android.App.InstrumentationAttribute](xref:Android.App.InstrumentationAttribute). Позволяет создать фрагмент XML [/manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html). 
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Позволяет создать фрагмент XML [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html). 
+- [Android.App.MetaDataAttribute](xref:Android.App.MetaDataAttribute). Позволяет создать фрагмент XML [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html). 
+- [Android.App.PermissionAttribute](xref:Android.App.PermissionAttribute). Позволяет создать фрагмент XML [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html). 
+- [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute). Позволяет создать фрагмент XML [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html). 
+- [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute). Позволяет создать фрагмент XML [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html). 
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute). Позволяет создать фрагмент XML [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html). 
+- [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute). Позволяет создать фрагмент XML [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html). 
+- [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute). Позволяет создать фрагмент XML [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html). 
+- [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute). Позволяет создать фрагмент XML [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html). 
+- [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute). Позволяет создать фрагмент XML [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html). 
+- [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute). Позволяет создать фрагмент XML [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html).

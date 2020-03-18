@@ -1,6 +1,6 @@
 ---
-title: Сводка Глава 27. Пользовательские модули подготовки отчетов
-description: 'Создание мобильных приложений с помощью Xamarin. Forms: Сводка Глава 27. Пользовательские модули подготовки отчетов'
+title: Сводная информация о Главе 27. Пользовательские отрисовщики
+description: Создание мобильных приложений с помощью Xamarin.Forms. Сводная информация о Главе 27. Пользовательские отрисовщики
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
@@ -8,114 +8,114 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: fd4014fa4db4e90596c100d454cf0467512240a4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "70760503"
 ---
-# <a name="summary-of-chapter-27-custom-renderers"></a>Сводка Глава 27. Пользовательские модули подготовки отчетов
+# <a name="summary-of-chapter-27-custom-renderers"></a>Сводная информация о Главе 27. Пользовательские отрисовщики
 
 [![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 
 > [!NOTE] 
-> Заметки на этой странице указывать области, где различаются Xamarin.Forms материал, представленный в книге.
+> Примечания на этой странице указывают области, в которых Xamarin.Forms имеет расхождения с материалом, представленным в книге.
 
-Элемент Xamarin.Forms, такие как `Button` визуализируется с помощью кнопки с платформой, инкапсулируется в класс с именем `ButtonRenderer`.  Вот [версию iOS `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs), [версии Android `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)и [версии универсальной платформы Windows `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs).
+Элемент Xamarin.Forms, например `Button`, преобразуется для просмотра с помощью платформенной кнопки, инкапсулированной в класс с именем `ButtonRenderer`.  Ниже приведены версии для [iOS`ButtonRenderer`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs), [Android`ButtonRenderer`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs) и [UWP`ButtonRenderer`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs).
 
-В этой главе рассматривается, как можно написать собственные модули подготовки отчетов для создания пользовательских представлений, которые сопоставляются с объектами платформы.
+В этой главе рассматривается создание собственных отрисовщиков для создания пользовательских представлений, сопоставленных с платформенными объектами.
 
-## <a name="the-complete-class-hierarchy"></a>Иерархии полного класса
+## <a name="the-complete-class-hierarchy"></a>Полная иерархия классов
 
-Существует четыре сборки, содержащие код платформы Xamarin.Forms.
-Вы можете просмотреть источник на GitHub, используя следующие ссылки:
+Существует четыре сборки, содержащие платформенный код Xamarin.Forms.
+Вы можете просмотреть исходный код на сайте GitHub этим ссылкам:
 
-- [**Xamarin.Forms.Platform** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform) (очень небольшого размера)
+- [**Xamarin.Forms.Platform**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform) (очень короткий)
 - [**Xamarin.Forms.Platform.iOS**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.iOS)
 - [**Xamarin.Forms.Platform.Android**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.Android)
 - [**Xamarin.Forms.Platform.UAP**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.UAP)
 
 > [!NOTE]
-> `WinRT` Сборки, упомянутых в книге больше не являются частью этого решения. 
+> Сборки `WinRT`, упомянутые в книге, больше не являются частью этого решения. 
 
-[ **PlatformClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/PlatformClassHierarchy) пример отображает иерархию классов для сборок, которые являются допустимыми для выполнения платформы.
+В примере [**PlatformClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/PlatformClassHierarchy) показана иерархия классов для сборок, которые являются допустимыми для исполняющей платформы.
 
-Вы заметите важный класс с именем `ViewRenderer`. Это класс, производных от при создании в модуль подготовки отчетов для конкретной платформы. Такой объект содержится в трех различных версий, так как он привязан к системе представление целевой платформы:
+Обратите внимание на важный класс с именем `ViewRenderer`. Это класс, от которого производят наследование при создании платформенного отрисовщика. Он существует в трех разных версиях, так как он привязан к системе представления целевой платформы:
 
-IOS [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L25) имеет универсальных аргументов:
+В iOS [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L25) использует универсальные аргументы:
 
-- `TView` ограничен [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeView` ограничен [`UIKit.UIView`](xref:UIKit.UIView)
+- `TView`, связанный с [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
+- `TNativeView`, связанный с [`UIKit.UIView`](xref:UIKit.UIView)
 
-Android [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17) имеет универсальных аргументов:
+В Android [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17) использует универсальные аргументы:
 
-- `TView` ограничен [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeView` ограничен [`Android.Views.View`](xref:Android.Views.View)
+- `TView`, связанный с [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
+- `TNativeView`, связанный с [`Android.Views.View`](xref:Android.Views.View)
 
-UWP [ `ViewRenderer<TElement, TNativeElement>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ViewRenderer.cs#L6) по-разному с именем универсальных аргументов:
+В UWP [`ViewRenderer<TElement, TNativeElement>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ViewRenderer.cs#L6) использует универсальные аргументы:
 
-- `TElement` ограничен [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeElement` ограничен [`Windows.UI.Xaml.FrameworkElement`](/uwp/api/Windows.UI.Xaml.FrameworkElement)
+- `TElement`, связанный с [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
+- `TNativeElement`, связанный с [`Windows.UI.Xaml.FrameworkElement`](/uwp/api/Windows.UI.Xaml.FrameworkElement)
 
-При записи в модуль подготовки отчетов, будет производным от класса `View`и написав несколько `ViewRenderer` классов, по одному для каждой поддерживаемой платформы. Каждая реализация платформы будет ссылаться на собственный класс, производный от типа, который указан в качестве `TNativeView` или `TNativeElement` параметра.
+При написании отрисовщика вы получите производный класс от `View`, а затем запишете несколько `ViewRenderer` классов, по одному для каждой поддерживаемой платформы. Каждая платформенная реализация будет ссылаться на собственный класс, производный от типа, указанного в качестве параметра `TNativeView` или `TNativeElement`.
 
-## <a name="hello-custom-renderers"></a>Привет, пользовательские отрисовщики!
+## <a name="hello-custom-renderers"></a>Пользовательские отрисовщики
 
-[ **HelloRenderers** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/HelloRenderers) программа ссылается на пользовательское представление с именем `HelloView` в его [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers/App.cs) класса.
+Программа [**HelloRenderers**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/HelloRenderers) ссылается на пользовательское представление с именем `HelloView` в своем классе [`App`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers/App.cs).
 
-[ `HelloView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers/HelloView.cs) Класс включен в **HelloRenderers** проекта и просто является производным от `View`.
+Класс [`HelloView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers/HelloView.cs) включен в проект **HelloRenderers** и просто является производным от `View`.
 
-[ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.iOS/HelloViewRenderer.cs) В класс **HelloRenderers.iOS** проекта является производным от `ViewRenderer<HelloView, UILabel>`. В `OnElementChanged` переопределение, он создает собственный iOS `UILabel` и вызывает метод `SetNativeControl`.
+Класс [`HelloViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.iOS/HelloViewRenderer.cs) в проекте **HelloRenderers.iOS** является производным от `ViewRenderer<HelloView, UILabel>`. В переопределении `OnElementChanged` создается собственная iOS `UILabel` и вызывается `SetNativeControl`.
 
-[ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.Droid/HelloViewRenderer.cs) В класс **HelloRenderers.Droid** проекта является производным от `ViewRenderer<HelloView, TextView>`. В `OnElementChanged` переопределение, он создает Android `TextView` и вызывает метод `SetNativeControl`.
+Класс [`HelloViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.Droid/HelloViewRenderer.cs) в проекте **HelloRenderers.Droid** является производным от `ViewRenderer<HelloView, TextView>`. В переопределении `OnElementChanged` создается Android `TextView` и вызывается `SetNativeControl`.
 
-[ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.UWP/HelloViewRenderer.cs) В класс **HelloRenderers.UWP** и другие проекты Windows является производным от `ViewRenderer<HelloView, TextBlock>`. В `OnElementChanged` переопределение, он создает Windows `TextBlock` и вызывает метод `SetNativeControl`.
+Класс [`HelloViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.UWP/HelloViewRenderer.cs) в **HelloRenderers.UWP** и других проектах Windows является производным от `ViewRenderer<HelloView, TextBlock>`. В переопределении `OnElementChanged` создается Windows `TextBlock` и вызывается `SetNativeControl`.
 
-Все `ViewRenderer` содержат производные `ExportRenderer` атрибут на уровне сборки, которая связывает `HelloView` класс с определенной `HelloViewRenderer` класса. Это обнаружение модулей подготовки отчетов в проекты для отдельных платформ Xamarin.Forms:
+Все производные от `ViewRenderer` содержат атрибут `ExportRenderer` на уровне сборки, связывающий класс `HelloView` с определенным классом `HelloViewRenderer`. Таким образом Xamarin.Forms находит отрисовщики в отдельных проектах платформы:
 
-[![Тройной снимок экрана Hello представления](images/ch27fg02-small.png "пользовательские Отрисовщики")](images/ch27fg02-large.png#lightbox "пользовательские Отрисовщики")
+[![Тройной снимок экрана Hello View](images/ch27fg02-small.png "Пользовательские отрисовщики")](images/ch27fg02-large.png#lightbox "Пользовательские отрисовщики")
 
-## <a name="renderers-and-properties"></a>Модули подготовки отчетов и свойства
+## <a name="renderers-and-properties"></a>Отрисовщики и свойства
 
-Следующий набор модулей подготовки отчетов реализует Рисование эллипса и находится в различных проектов из [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) решения.
+Следующий набор отрисовщиков рисует эллипс и находится в различных проектах решения [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform).
 
-[ `EllipseView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/EllipseView.cs) Класс находится в **Xamarin.FormsBook.Platform** платформы. Аналогичен классу `BoxView` и определяет только одно свойство: `Color` типа `Color`.
+Класс [`EllipseView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/EllipseView.cs) принадлежит платформе **Xamarin.FormsBook.Platform**. Класс похож на `BoxView` и определяет только одно свойство: `Color` типа `Color`.
 
-Модули подготовки отчетов могут передавать значения свойств, заданные на `View` собственный объект путем переопределения `OnElementPropertyChanged` метод в модуль подготовки отчетов. В этом методе (и в большую часть модуля подготовки отчетов) доступны два свойства:
+Отрисовщики могут передавать значения свойств, заданные для `View`, в собственный объект, переопределяя метод `OnElementPropertyChanged` в отрисовщике. В этом методе (и в большей части отрисовщиков) доступны два свойства:
 
 - `Element`, элемент Xamarin.Forms
-- `Control`, собственного представления или объект мини-приложение или элемент управления
+- `Control`, собственное представление, мини-приложение или управляющий объект
 
-Типы эти свойства определяются универсальных параметров `ViewRenderer`. В этом примере `Element` имеет тип `EllipseView`.
+Типы этих свойств определяются универсальными параметрами для `ViewRenderer`. В этом примере `Element` имеет тип `EllipseView`.
 
-`OnElementPropertyChanged` Переопределение таким образом можно передать `Color` значение `Element` собственному `Control` объекта, возможно, с каким-либо преобразования. Приведены три модулей подготовки отчетов.
+Таким образом, переопределение `OnElementPropertyChanged` может переносить значение `Color` из `Element` в собственный объект `Control`, возможно, с какого-то рода преобразованием. Три отрисовщика:
 
-- iOS: [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseViewRenderer.cs), которая использует [ `EllipseUIView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseUIView.cs) класс эллипса.
-- Android — [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseViewRenderer.cs), которая использует [ `EllipseDrawableView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseDrawableView.cs) класс эллипса.
-- UWP: [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/EllipseViewRenderer.cs), который можно использовать собственный Windows [ `Ellipse` ](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) класса.
+- iOS — [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseViewRenderer.cs), который для отрисовки эллипса использует класс [`EllipseUIView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseUIView.cs).
+- Android — [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseViewRenderer.cs), который использует класс [`EllipseDrawableView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseDrawableView.cs) для отрисовки эллипса.
+- UWP — [`EllipseViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/EllipseViewRenderer.cs), который может использовать собственный класс Windows [`Ellipse`](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse).
 
-[ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) класс отображает некоторые из них `EllipseView` объектов:
+Класс [**EllipseDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) отображает несколько таких объектов `EllipseView`:
 
-[![Тройной снимок экрана: демонстрация эллипс](images/ch27fg03-small.png "EllipseView пользовательские Отрисовщики")](images/ch27fg03-large.png#lightbox "EllipseView пользовательские Отрисовщики")
+[![Тройной снимок экрана с демонстрацией эллипсов](images/ch27fg03-small.png "Пользовательские отрисовщики EllipseView")](images/ch27fg03-large.png#lightbox "Пользовательские отрисовщики EllipseView")
 
-[ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) подпрыгивает `EllipseView` off сторон экрана.
+[**BouncingBall**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) заставляет `EllipseView` отскакивать от краев экрана.
 
-## <a name="renderers-and-events"></a>Модули подготовки отчетов и событий
+## <a name="renderers-and-events"></a>Отрисовщики и события
 
-Можно также для модулей подготовки отчетов, косвенно создать события. [ `StepSlider` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/StepSlider.cs) Класс похож на обычный Xamarin.Forms `Slider` , но позволяет указать ряд дискретных действий между `Minimum` и `Maximum` значения.
+Кроме того, отрисовщики могут создавать события неявно. Класс [`StepSlider`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/StepSlider.cs) похож на стандартный класс Xamarin.Forms `Slider`, но позволяет указать ряд дискретных шагов между значениями `Minimum` и `Maximum`.
 
-Приведены три модулей подготовки отчетов.
+Три отрисовщика:
 
 - iOS: [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/StepSliderRenderer.cs)
 - Android: [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/StepSliderRenderer.cs)
 - UWP: [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/StepSliderRenderer.cs)
 
-Визуализаторов обнаруживать изменения в собственный элемент управления, а затем вызвать `SetValueFromRenderer`, которая ссылается на свойство, используемое, определенные в `StepSlider`, изменение чего `StepSlider` срабатывание `ValueChanged` событий.
+Отрисовщики обнаруживают изменения в собственном элементе управления, а затем вызывают `SetValueFromRenderer`, который ссылается на свойство с привязкой, определенное в `StepSlider`, изменение которого заставляет `StepSlider` запускать событие `ValueChanged`.
 
-[ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) в нем демонстрируется этот новый ползунок.
+В примере [**StepSliderDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) демонстрируется такой новый ползунок.
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Глава 27 полнотекстового поиска (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf)
-- [Глава 27-примеры](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
+- [Полный текст главы 27 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf)
+- [Примеры для Главы 27](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 - [Пользовательские отрисовщики](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

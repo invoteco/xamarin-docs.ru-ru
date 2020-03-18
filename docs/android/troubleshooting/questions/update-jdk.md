@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2018
 ms.openlocfilehash: 0f7499551db7d86d7978b9c3e1f562a2f054c202
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019521"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Как обновить версию Java Development Kit (JDK)?
@@ -21,42 +21,42 @@ _В этой статье показано, как обновить версию
 
 ## <a name="overview"></a>Обзор
 
-Xamarin. Android использует пакет средств разработки Java (JDK) для интеграции с пакет SDK для Android для создания приложений Android и запуска конструктора Android. Для последних версий пакет SDK для Android (API 24 и выше) требуется JDK 8 (1,8). Кроме того, можно установить [предварительную версию Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK, в конечном итоге, заменит JDK 8 для разработки Xamarin. Android.
+Xamarin.Android использует Java Development Kit (JDK) для интеграции с пакетом SDK для Android в целях создания приложений Android и запуска конструктора Android. Последние версии пакетов SDK для Android (API 24 и более поздних версий) требуют JDK 8 (1.8). Кроме того, можно установить [предварительную версию Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK, в конечном итоге, заменит JDK 8 для разработки Xamarin.Android.
 
-Чтобы обновить Microsoft Mobile OpenJDK, см. статью [Предварительная версия Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Чтобы выполнить обновление до JDK 8, выполните следующие действия.
+Сведения об обновлении до Microsoft Mobile OpenJDK см. в разделе [Обзор](~/android/get-started/installation/openjdk.md). Чтобы обновить до JDK 8, выполните приведенные ниже действия.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Скачайте JDK 8 (1,8) с [веб-сайта Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Загрузите JDK 8 (1.8) с веб-сайта [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Снимок экрана со страницей загрузки JDK на веб-сайте Oracle](update-jdk-images/image1.png)
 
-2. Выберите 64-разрядную версию, чтобы разрешить рендеринг [пользовательских элементов управления](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) в конструкторе Xamarin Android:
+2. Выберите 64-разрядную версию, чтобы разрешить визуализацию [пользовательских элементов управления](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) в конструкторе Xamarin Android:
 
-    ![Выбор пакета Windows x64 JDK для скачивания со страницы скачивания JDK](update-jdk-images/image2.png)
+    ![Выбор пакета Windows x64 JDK для загрузки со страницы загрузки JDK](update-jdk-images/image2.png)
 
-3. Запустите exe и установите **средства разработки**:
+3. Запустите EXE-файл и установите **средства разработки**.
 
     ![Установка средств разработки в установщике JDK](update-jdk-images/image3.png)
 
-4. Откройте Visual Studio и обновите **расположение пакета разработки Java** , чтобы оно указывало на новый JDK в разделе **сервис > параметры > Xamarin > Android параметры > расположение пакета Java Development Kit**:
+4. Откройте Visual Studio и обновите **расположение пакета SDK для Java** таким образом, чтобы оно ссылалось на новый JDK в **Средства > Параметры > Xamarin > Параметры Android > Расположение пакета SDK для Java**:
 
-    [Параметр пути![для JDK на странице параметров Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [![Настройка пути для JDK на странице "Параметры Android"](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Не забудьте перезапустить Visual Studio после обновления расположения.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
-1. Скачайте JDK 8 (1,8) с [веб-сайта Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Загрузите JDK 8 (1.8) с веб-сайта [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Снимок экрана со страницей загрузки JDK на веб-сайте Oracle](update-jdk-images/image1.png)
 
-2. Откройте файл DMG и запустите установщик. pkg:
+2. Откройте DMG-файл и запустите установщик PKG-файлов:
 
     ![Запуск установщика JDK на macOS](update-jdk-images/image5.png)
 
-Mac OS автоматически установит новую версию JDK в качестве значения по умолчанию, обновив **/систем/либрари/фрамеворкс/жававм.фрамеворк/версионс/куррент**. Затем можно дважды проверить, что в качестве расположения **пакета SDK для Java (JDK)** задано ожидаемое значение по умолчанию **/usr** в разделе **Visual Studio для Mac параметры > > проекты > расположения пакета SDK > расположения пакетов Android > > Java SDK (JDK)** :
+Mac OS автоматически установит новую версию JDK в качестве значения по умолчанию, обновив **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. Вы можете затем перепроверить, установлено ли расположение **Java SDK (JDK)** согласно стандартному **/usr** в **Visual Studio для Mac > Предпочтения > Проекты > Расположения пакетов SDK > Android > Расположения > Пакет SDK (JDK) для Java**:
 
-[![установки расположения JDK на вкладке расположения Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
+[![Настройка расположения JDK на вкладке "Расположения Android"](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----

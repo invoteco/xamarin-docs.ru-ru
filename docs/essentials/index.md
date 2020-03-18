@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: a0d1e397725ca0a60eb68fb0e6b989ee22c3f56a
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155264"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910729"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -28,6 +28,7 @@ Android, iOS и универсальная платформа Windows предо
 
 * [Акселерометр](accelerometer.md?context=xamarin/xamarin-forms) — получение данных об ускорении работы устройства в трехмерном пространстве.
 * [Сведения о приложении](app-information.md?context=xamarin/xamarin-forms) — получение сведений о приложении.
+* [Тема приложения](app-theme.md?context=xamarin/xamarin-forms) — определение текущей темы, запрошенной для приложения.
 * [Барометр](barometer.md?context=xamarin/xamarin-forms) — отслеживание изменений атмосферного давления.
 * [Батарея](battery.md?context=xamarin/xamarin-forms) — простой метод контроля уровня заряда батареи, источника питания и состояния.
 * [Буфер обмена](clipboard.md?context=xamarin/xamarin-forms) — быстрый и удобный метод устанавливать или считывать текст в буфере обмена.

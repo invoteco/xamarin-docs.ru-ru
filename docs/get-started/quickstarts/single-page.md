@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "71679983"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303633"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Создание одностраничного приложения Xamarin.Forms
 
@@ -36,7 +36,7 @@ ms.locfileid: "71679983"
 
 - Последний выпуск Visual Studio 2019 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**.
 - Знание языка C#.
-- (Необязательно) Парный компьютер Mac для сборки приложения в iOS.
+- (Необязательно) Парный компьютер Mac для построения приложения в iOS.
 
 Дополнительные сведения об этих предварительных требованиях см. в разделе [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -190,7 +190,7 @@ ms.locfileid: "71679983"
 
 - Выпуск Visual Studio 2017 с установленной рабочей нагрузкой **Разработка мобильных приложений на .NET**.
 - Знание языка C#.
-- (Необязательно) Парный компьютер Mac для сборки приложения в iOS.
+- (Необязательно) Парный компьютер Mac для построения приложения в iOS.
 
 Дополнительные сведения об этих предварительных требованиях см. в разделе [Установка Xamarin](~/get-started/installation/index.md). Сведения о подключении Visual Studio 2019 к узлу сборки Mac см. в статье [Связывание с Mac при разработке для Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
 ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910713"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303807"
 ---
 # <a name="xamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) состоит из списка вкладок и большой области сведений, где каждая вкладка загружает содержимое в область сведений. На снимках экрана ниже показана страница `TabbedPage` в iOS и Android.
 
@@ -36,7 +36,7 @@ Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) состоит из 
 
 ## <a name="create-a-tabbedpage"></a>Создание TabbedPage
 
-Создать [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) можно двумя способами.
+Создать [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) можно двумя способами:
 
 - Заполните [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) коллекцией дочерних объектов [`Page`](xref:Xamarin.Forms.Page), например [`ContentPage`](xref:Xamarin.Forms.ContentPage). Дополнительные сведения см. в разделе [Заполнение TabbedPage коллекцией Page](#populate-a-tabbedpage-with-a-page-collection).
 - Назначьте коллекции свойство [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource), а затем присвойте [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) свойству [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) для возврата станицы объектов в коллекции. Дополнительные сведения см. в разделе [Заполнение TabbedPage с помощью шаблона](#populate-a-tabbedpage-with-a-template).

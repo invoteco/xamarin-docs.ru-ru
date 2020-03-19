@@ -8,23 +8,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
 ms.openlocfilehash: b646893d8bbe63aa537c973c90552e0367735e47
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021216"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303513"
 ---
 # <a name="signing-the-android-application-package"></a>Подписывание пакета приложения для Android
 
 В разделе [Подготовка приложения к выпуску](~/android/deploy-test/release-prep/index.md) для сборки и архивации приложения для последующего подписывания и публикации использовался **Диспетчер архивов**. Из этого раздела вы узнаете, как создать удостоверение подписывания Android, как создать новый сертификат подписи для приложений Android и как опубликовать заархивированное приложение *напрямую* на диск. Полученный неопубликованный APK-файл можно установить на устройства с Android, минуя магазин приложений.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 В разделе [Архивирование для публикации](~/android/deploy-test/release-prep/index.md#archive) в диалоговом окне **Канал распространения** предлагается два варианта распространения. Выберите **Прямое**:
 
 [![Диалоговое окно "Канал распространения"](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 В разделе [Архивирование для публикации](~/android/deploy-test/release-prep/index.md#archive) в диалоговом окне **Подписать и распространить...** предлагается два варианта распространения. Выберите **Прямое** и нажмите **Далее**:
 
@@ -38,7 +38,7 @@ ms.locfileid: "73021216"
 
 ## <a name="create-a-new-certificate"></a>Создание нового сертификата
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 После выбора **Прямое** Visual Studio откроет страницу **Удостоверение подписывания** диалогового окна, как это показано на следующем рисунке. Для публикации .APK-файла его обязательно нужно подписать ключом подписи (также называемым сертификатом).
 
@@ -52,7 +52,7 @@ ms.locfileid: "73021216"
 
 На следующем рисунке приведен пример сведений, которые необходимо ввести в этом окне. Нажмите **Создать** для создания нового сертификата:
 
-[![Создание сертификата](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png#lightbox)
+[![Создание нового сертификата](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png#lightbox)
 
 Полученное хранилище ключей находится в следующем расположении:
 
@@ -67,7 +67,7 @@ ms.locfileid: "73021216"
 
 Подробные сведения о хранилище сертификата см. в разделе [Отображение MD5 и SHA1 сигнатур хранилища ключей](~/android/deploy-test/signing/keystore-signature.md).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 После нажатия кнопки **Прямое** Visual Studio для Mac откроет диалоговое окно **Удостоверение подписывания Android**. Для публикации .APK-файла его обязательно нужно подписать ключом подписи (также называемым сертификатом). Если сертификат уже существует, то для его импорта нажмите кнопку **Импорт существующего ключа** и перейдите к разделу [Подписывание пакета APK](#sign-the-apk) В ином случае нажмите кнопку **Создать новый ключ** для создания нового сертификата:
 
@@ -94,7 +94,7 @@ ms.locfileid: "73021216"
 
 ## <a name="sign-the-apk"></a>Подписывание пакета APK
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 При нажатии кнопки **Создать** новое хранилище ключей (содержащее новый сертификат) будет сохранено и отобразится в списке **Удостоверение подписывания**, как это показано на следующем рисунке. Для публикации приложения в Google Play нажмите **Отмена** и перейдите к разделу [Публикация в Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 Для публикации *напрямую* выберите удостоверение подписывания и нажмите **Сохранить как**, чтобы опубликовать приложение для независимого распространения. Например, на приведенном ниже рисунке выбрано созданное ранее удостоверение подписывания **chimp**:
@@ -118,7 +118,7 @@ ms.locfileid: "73021216"
 
 [![APK-файл в проводнике Windows](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Как мы видим, новый сертификат был добавлен в хранилище ключей. Для публикации приложения в Google Play нажмите **Отмена** и перейдите к разделу [Публикация в Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 В противоположном случае нажмите **Далее** для публикации приложения *напрямую* (для независимого распространения), как это показано в следующем примере:

@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558675"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303651"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Геопозиционирование
 
@@ -22,7 +22,7 @@ ms.locfileid: "67558675"
 
 Чтобы проверить функциональность класса **Geolocation**, нужно создать описанную ниже конфигурацию для конкретной платформы:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Требуются разрешения Coarse и Fine Location, которые следует настроить в проекте Android. Кроме того, если приложение предназначено для платформы Android 5.0 (уровень API 21) или более поздней версии, в файле манифеста необходимо объявить, что приложение использует аппаратные возможности. Для этого можно применить любой из следующих методов:
 
@@ -50,7 +50,7 @@ ms.locfileid: "67558675"
 
 Или щелкните правой кнопкой мыши проект Android и откройте свойства проекта. В разделе **Манифест Android** найдите область **Требуемые разрешения:** и установите флажок для разрешений **ACCESS_COARSE_LOCATION** и **ACCESS_FINE_LOCATION**. Это действие автоматически обновляет файл **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Приложение **Info.plist** должно содержать раздел `NSLocationWhenInUseUsageDescription`, чтобы получить доступ к расположению устройства.
 
@@ -63,7 +63,7 @@ ms.locfileid: "67558675"
 <string>Fill in a reason why your app needs access to location.</string>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Необходимо задать разрешение `Location` для приложения. Для этого откройте файл **Package.appxmanifest**, выберите вкладку **Возможности** и установите флажок **Расположение**.
 
@@ -148,31 +148,31 @@ catch (Exception ex)
 
 ### <a name="lowest"></a>Наименьшая
 
-| Platform | Расстояние (в метрах) |
+| Платформа | Расстояние (в метрах) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
 | UWP | 1000–5000 |
 
-### <a name="low"></a>Low
+### <a name="low"></a>Низкий
 
-| Platform | Расстояние (в метрах) |
+| Платформа | Расстояние (в метрах) |
 | --- | --- |
 | Android | 500 |
-| iOS | 1000. |
+| iOS | 1000 |
 | UWP | 300–3000 |
 
 ### <a name="medium-default"></a>Medium (по умолчанию)
 
-| Platform | Расстояние (в метрах) |
+| Платформа | Расстояние (в метрах) |
 | --- | --- |
 | Android | 100–500 |
 | iOS | 100 |
 | UWP | 30–500 |
 
-### <a name="high"></a>High
+### <a name="high"></a>Высокий
 
-| Platform | Расстояние (в метрах) |
+| Платформа | Расстояние (в метрах) |
 | --- | --- |
 | Android | 0–100 |
 | iOS | 10 |
@@ -180,7 +180,7 @@ catch (Exception ex)
 
 ### <a name="best"></a>Лучшее
 
-| Platform | Расстояние (в метрах) |
+| Платформа | Расстояние (в метрах) |
 | --- | --- |
 | Android | 0–100 |
 | iOS | ~0 |

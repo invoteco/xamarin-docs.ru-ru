@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2020
-ms.openlocfilehash: dfa452addd7cfb838091afdfb350484998d0cc9d
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 411c87c25701521bf27fbb863b02a90f8e523574
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636091"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303789"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Настройка страницы оболочки Xamarin.Forms
 
@@ -112,7 +112,7 @@ ms.locfileid: "77636091"
 
 ## <a name="enable-navigation-bar-shadow"></a>Включение тени панели навигации
 
-Класс `Shell` определяет присоединенное свойство `NavBarHasShadow` с типом `bool`, которое определяет, будет ли панель навигации иметь тень. По умолчанию этому свойству задано значение `false`.
+Класс `Shell` определяет присоединенное свойство `NavBarHasShadow` с типом `bool`, которое определяет, будет ли панель навигации иметь тень. По умолчанию для этого свойства задано значение `false` в iOS и значение `true` в Android.
 
 Хотя это свойство можно задать в производном объекте `Shell`, оно обычно устанавливается на любой странице, на которой нужно включить тень панели навигации. Так, в следующем примере XAML показано, как включить тень панели навигации из [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 

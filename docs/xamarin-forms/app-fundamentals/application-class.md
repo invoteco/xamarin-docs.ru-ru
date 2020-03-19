@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916490"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303771"
 ---
 # <a name="xamarinforms-app-class"></a>Класс App Xamarin.Forms
 
@@ -112,7 +112,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 
 В Xamarin.Forms 1.4 представлен дополнительный метод класса `Application` — `SavePropertiesAsync()`, который можно вызвать для упреждающего сохранения словаря `Properties`. Это позволяет сохранить свойства после важных обновлений, не рискуя, что они будут отсериализированы из-за сбоя либо завершены операционной системой.
 
-Ссылки на использование словаря `Properties` можно найти в главах **6**, [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf) и [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) книги о [создании мобильных приложений с помощью Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf), а также в соответствующих [примерах](https://github.com/xamarin/xamarin-forms-book-preview-2).
+Ссылки на использование словаря `Properties` можно найти в главах [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) и [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) книги о **создании мобильных приложений с помощью Xamarin.Forms**, а также в соответствующих [примерах](https://github.com/xamarin/xamarin-forms-book-preview-2).
 
 ## <a name="the-application-class"></a>Класс Application
 

@@ -85,7 +85,7 @@ Objective-C является супермножеством языка C. Это
 Например, следующий код включает пространство имен `UIKit`, то есть делает все классы этого пространства имен доступными в текущей реализации:
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
     // implementation of classes

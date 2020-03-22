@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/16/2020
-ms.openlocfilehash: c321884039674d3abb1a4b510ddfe2c062c28211
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 55fda0be2e260c5aa4a34ab2dcc1ac3cac33b92a
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77646734"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070293"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>Таббедпаже полупрозрачная панель вкладок в iOS
 
@@ -41,7 +41,7 @@ On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 Метод `TabbedPage.On<iOS>` указывает, что эта платформа будет запускаться только в iOS. Метод `TabbedPage.SetTranslucencyMode` в пространстве имен [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) используется для установки режима полупрозрачность панели вкладок на [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , указывая одно из следующих `TranslucencyMode` перечисляемых значений:
 
 - `Default`, который задает для панели вкладок режим полупрозрачность по умолчанию. Это значение по умолчанию для свойства `TabbedPage.TranslucencyMode`.
-- `Transparent`, который задает прозрачность панели вкладок.
+- `Translucent`, который задает прозрачность панели вкладок.
 - `Opaque`, который задает непрозрачную панель вкладок.
 
 Кроме того, можно использовать метод `GetTranslucencyMode` для получения текущего значения перечисления `TranslucencyMode`, применяемого к [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).

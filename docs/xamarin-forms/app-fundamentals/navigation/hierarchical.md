@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915683"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303825"
 ---
 # <a name="hierarchical-navigation"></a>Иерархическая навигация
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
-_Класс Навигатионпаже предоставляет иерархическую навигацию, в которой пользователь может перемещаться по страницам, перемещая и обратнее по мере необходимости. Класс реализует навигацию в качестве стека объектов страниц по принципу ЛИФО. В этой статье показано, как с помощью класса Навигатионпаже выполнять навигацию в стеке страниц._
+_Класс NavigationPage обеспечивает иерархическую навигацию, при которой пользователь может переходить по страницам вперед и назад по своему желанию. Этот класс реализует навигацию на основе стека объектов Page по методу ЛИФО (последним поступил — первым обслужен). В этой статье показано, как использовать класс NavigationPage для навигации в стеке страниц._
 
 Для перехода с одной страницы на другую приложение помещает новую страницу в стек навигации, где она становится активной страницей, как показано на следующем рисунке.
 
@@ -60,7 +60,7 @@ public App ()
 }
 ```
 
-В результате экземпляр `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) помещается в стек навигации, где он станет активной страницей и корневой страницей приложения. Эти действия показаны на следующих снимках экрана.
+В результате в стек навигации помещается экземпляр `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage), где он становится активной страницей и корневой страницей приложения. Эти действия показаны на следующих снимках экрана.
 
 ![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
@@ -339,7 +339,7 @@ public class TitleViewPage : ContentPage
 
 В результате объект [`Slider`](xref:Xamarin.Forms.Slider) отображается на панели навигации на [`NavigationPage`](xref:Xamarin.Forms.NavigationPage):
 
-[![Ползунок Титлевиев](hierarchical-images/titleview-small.png "Ползунок Титлевиев")](hierarchical-images/titleview-large.png#lightbox "Ползунок Титлевиев")
+[![TitleView ползунка](hierarchical-images/titleview-small.png "TitleView ползунка")](hierarchical-images/titleview-large.png#lightbox "TitleView ползунка")
 
 > [!IMPORTANT]
 > Многие представления не будут отображаться на панели навигации, если не указан размер представления с помощью свойств [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) и [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest). Кроме того, представление может быть заключено в [`StackLayout`](xref:Xamarin.Forms.StackLayout) со свойствами [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) и [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions), для которых установлены соответствующие значения.

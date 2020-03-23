@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: f0612ca53bc54cf4b15982b7743c64b1997a4455
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 069c40b74876bea1d3a0c8fca23b3d90c4b91635
+ms.sourcegitcommit: 997f7b6a1a1bc50b98c3ca5bbc75d6875ba2ae9a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031071"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510683"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Автоматическая подготовка для Xamarin.iOS
 
@@ -23,7 +23,9 @@ _Установив Xamarin.iOS для разработки приложений
 
 Автоматическая подготовка доступна на Visual Studio для Mac, Visual Studio 2019 и Visual Studio 2017 (версия 15.7 и более поздние). 
 
-Для использования этой функции у вас также должна быть платная учетная запись разработчика Apple. Дополнительные сведения об учетных записях разработчика Apple можно найти в статье [Подготовка устройства для Xamarin.iOS](~/ios/get-started/installation/device-provisioning/index.md).
+> [!NOTE]
+> Для использования этой функции у вас также должна быть платная учетная запись разработчика Apple. Дополнительные сведения об учетных записях разработчика Apple можно найти в статье [Подготовка устройства для Xamarin.iOS](~/ios/get-started/installation/device-provisioning/index.md).
+> Если у вас нет платной учетной записи разработчика Apple, ознакомьтесь с руководством [Бесплатная подготовка для Xamarin.iOS] (~/ios/get-started/installation/device-provisioning/free-provisioning.md).
 
 > [!NOTE]
 > Прежде чем начать, обязательно примите все лицензионные соглашения на [портале разработчика Apple](https://developer.apple.com/account/) или [App Store Connect](https://appstoreconnect.apple.com/).

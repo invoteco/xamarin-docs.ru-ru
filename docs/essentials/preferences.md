@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: c7d4e4f7ea27e150752b222e3ea4ce2c4256a43a
-ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
+ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78295408"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79497048"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Параметры
 
@@ -44,7 +44,7 @@ var myValue = Preferences.Get("my_key", "default_value");
 Чтобы проверить, существует ли определенный _ключ_ в параметрах, используйте следующий код:
 
 ```csharp
-bool hasKey = Preferences.HasKey("my_key");
+bool hasKey = Preferences.ContainsKey("my_key");
 ```
 
 Чтобы удалить _ключ_ из параметров, используйте следующий код:
@@ -72,6 +72,15 @@ Preferences.Clear();
 - **long**
 - **string**
 - **DateTime**
+
+## <a name="integrate-with-system-settings"></a>Интеграция с параметрами системы
+
+Настройки хранятся в собственном коде, что позволяет интегрировать параметры в собственные системные параметры. Для интеграции с платформой используйте документацию и примеры платформы:
+
+* Apple: [Реализация пакета параметров iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [Пример настроек приложения для iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Параметры watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Начало работы с экранами параметров](https://developer.android.com/guide/topics/ui/settings.html)
 
 ## <a name="implementation-details"></a>Сведения о реализации
 

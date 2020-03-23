@@ -956,6 +956,8 @@
           href: internals/class-hierarchy.md
         - name: Разрешение зависимостей
           href: internals/dependency-resolution.md
+        - name: Флаги экспериментального режима
+          href: internals/experimental-flags.md
         - name: Быстрые отрисовщики
           href: internals/fast-renderers.md
         - name: Source Link

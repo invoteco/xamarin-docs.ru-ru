@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/14/2020
-ms.openlocfilehash: 225b7dc7dc639031b3198a8fb9e7fe9fb9d7ee7f
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+ms.openlocfilehash: a6cb5a0e3573ebf998bb2f81c08ff63c81678b54
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423880"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159812"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Горячая перезагрузка XAML для Xamarin. Forms
 
@@ -59,7 +59,7 @@ Xamarin.Forms | 4,1 или выше
 
 ## <a name="known-limitations"></a>Известные ограничения
 
-* Другие целевые объекты Xamarin. Forms, такие как UWP и MacOS, пока *не* поддерживаются. Ход выполнения поддержки UWP можно отслеживать [здесь](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
+* Другие целевые объекты Xamarin. Forms, такие как UWP и macOS, пока *не* поддерживаются. Ход выполнения поддержки UWP можно отслеживать [здесь](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
 * Нельзя добавлять, удалять или переименовывать файлы или пакеты NuGet во время сеанса горячей загрузки XAML. При добавлении или удалении файла или пакета NuGet перестройте и повторно разверните приложение, чтобы продолжить использовать горячую перезагрузку XAML.
 * Задайте для компоновщика значение " **не связывать** " или " **нет** " для оптимальной работы. Параметр **связать только пакет SDK** работает в большинстве случаев, но в некоторых случаях может завершиться ошибкой. Параметры компоновщика можно найти в параметрах сборки Android и iOS.
 * Для отладки на физическом iPhone требуется, чтобы интерпретатор использовал горячую перезагрузку XAML. Для этого откройте параметры проекта, перейдите на вкладку сборка iOS и убедитесь, что параметр **включить интерпретатор Mono** включен. Может потребоваться изменить параметр **платформы** в верхней части страницы свойств на **iPhone**.
@@ -72,7 +72,7 @@ Xamarin.Forms | 4,1 или выше
 * [Советы и рекомендации по горячей загрузке XAML](https://devblogs.microsoft.com/xamarin/tips-tricks-xaml-hot-reload/)
 * [Углубленная перезагрузка XAML для Xamarin. Forms: Xamarin-шоу](https://www.youtube.com/watch?v=crhjjPjzknk)
 
-## <a name="troubleshooting"></a>Диагностика
+## <a name="troubleshooting"></a>Устранение неполадок
 
 * Если не удается инициализировать горячую перезагрузку XAML:
   * Обновите версию Xamarin. Forms.

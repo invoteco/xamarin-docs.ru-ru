@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: eb4d3d80fa416f7bb94f3137a0925a9a9807cb10
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.openlocfilehash: d8a57ac8688a0113ef267ea25fb54cbaaf562957
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480614"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070381"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Конструктивные шаблоны Xamarin.Forms для двухэкранных устройств
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
 В этом руководстве представлены рекомендуемые конструктивные шаблоны для двухэкранных устройств с кодом и примерами, которые помогут вам в создании интересных и удобных пользовательских интерфейсов.
 
@@ -270,5 +270,5 @@ ms.locfileid: "77480614"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры для двух экранов (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+- [Примеры для двух экранов (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 - [Создание приложений для двухэкранных устройств](index.md)

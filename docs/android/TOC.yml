@@ -141,6 +141,8 @@
               href: user-interface/android-designer/alternative-layout-views.md
             - name: Компоненты материального исполнения
               href: user-interface/android-designer/material-design-features.md
+            - name: Диагностика макетов Android
+              href: user-interface/android-designer/diagnostics.md
         - name: Тема материала
           href: user-interface/material-theme.md
         - name: Профиль пользователя

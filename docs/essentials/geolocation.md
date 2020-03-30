@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303651"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070359"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Геопозиционирование
 
@@ -217,6 +217,24 @@ double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Mi
 ```
 
 В конструкторе `Location` аргументы широты и долготы указаны в следующем порядке. Положительные значения широты находятся к северу от экватора, а положительные значения долготы — к востоку от нулевого меридиана. Используйте последний аргумент `CalculateDistance`, чтобы указать единицы измерения: мили или километры. Класс `UnitConverters` также определяет методы `KilometersToMiles` и `MilesToKilometers` для преобразования между двумя единицами измерения.
+
+## <a name="platform-differences"></a>Различия платформ
+
+Высота на каждой платформе вычисляется по-разному.
+
+# <a name="android"></a>[Android](#tab/android)
+
+В Android [высота](https://developer.android.com/reference/android/location/Location#getAltitude()), если она доступна, возвращается в виде высоты над нормальным эллипсоидом всемирной геодезической системы координат в метрах. Если в этом расположении нет высоты, возвращается 0,0.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+В iOS [высота](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) измеряется в метрах. Положительные значения указывают высоту выше уровня моря, а отрицательные значения указывают на высоту ниже уровня моря.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+В UWP высота возвращается в метрах. Дополнительные сведения см. в документации по [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem).
+
+-----
 
 ## <a name="api"></a>API
 

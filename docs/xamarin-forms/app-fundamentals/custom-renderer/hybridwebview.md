@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2019
-ms.openlocfilehash: 46d0b245246d9e93040cd8591dab8ed3a816268d
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 03/23/2020
+ms.openlocfilehash: 712ca4f8f3441e0d3c2aede1b2510b07ca89f829
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487013"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247617"
 ---
 # <a name="customizing-a-webview"></a>Настройка WebView
 
@@ -268,6 +268,15 @@ namespace CustomRenderer.iOS
         {
             ((HybridWebView)Element).InvokeAction(message.Body.ToString());
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -282,8 +291,8 @@ namespace CustomRenderer.iOS
 - Конструктор отрисовщика вызывает метод [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) для добавления обработчика сообщений скрипта с именем `invokeAction` в объект [`WKUserContentController`](xref:WebKit.WKUserContentController), который приводит к определению функции JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` во всех фреймах в экземплярах `WebView`, которые используют объект `WKUserContentController`.
 - Если настраваемый отрисовщик подключен к новому элементу Xamarin.Forms:
   - Метод [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) загружает HTML-файл, указанный свойством `HybridWebView.Uri`. Код указывает, что файл сохранен в папке `Content` проекта. Когда веб-страница отображается, функция JavaScript `invokeCSharpAction` внедряется в веб-страницу.
-- Когда элемент, к которому присоединен отрисовщик, меняется:
-  - Ресурсы освобождаются.
+- Ресурсы освобождаются, когда элемент, к которому присоединен отрисовщик, меняется.
+- При удалении отрисовщика элемент Xamarin.Forms очищается.
 
 > [!NOTE]
 > Класс `WKWebView` поддерживается только в iOS 8 и более поздних версий.
@@ -332,6 +341,15 @@ namespace CustomRenderer.Droid
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
             }
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -363,8 +381,8 @@ public class JavascriptWebViewClient : WebViewClient
   - Метод [`WebView.AddJavascriptInterface`](xref:Android.Webkit.WebView.AddJavascriptInterface*) вставляет новый экземпляр `JSBridge` в главный фрейм контекста JavaScript веб-преставления, называя его `jsBridge`. Это открывает доступ к методам в классе `JSBridge` из JavaScript.
   - Метод [`WebView.LoadUrl`](xref:Android.Webkit.WebView.LoadUrl*) загружает HTML-файл, указанный свойством `HybridWebView.Uri`. Код указывает, что файл сохранен в папке `Content` проекта.
   - В классе `JavascriptWebViewClient` функция JavaScript `invokeCSharpAction` внедряется в веб-страницу после завершения загрузки страницы.
-- Когда элемент, к которому присоединен отрисовщик, меняется:
-  - Ресурсы освобождаются.
+- Ресурсы освобождаются, когда элемент, к которому присоединен отрисовщик, меняется.
+- При удалении отрисовщика элемент Xamarin.Forms очищается.
 
 Когда выполняется функция JavaScript `invokeCSharpAction`, она, в свою очередь, вызывает метод `JSBridge.InvokeAction`, который показан в следующем примере кода:
 
@@ -441,6 +459,15 @@ namespace CustomRenderer.UWP
         {
             ((HybridWebView)Element).InvokeAction(e.Value);
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -452,8 +479,8 @@ namespace CustomRenderer.UWP
 - Если настраваемый отрисовщик подключен к новому элементу Xamarin.Forms:
   - Обработчики событий для событий `NavigationCompleted` и `ScriptNotify` регистрируются. Событие `NavigationCompleted` возникает, когда собственный элемент управления `WebView` завершил загрузку текущего содержимого или произошел сбой навигации. Событие `ScriptNotify` возникает, когда содержимое в собственном элементе управления `WebView` использует JavaScript для передачи строки в приложение. Веб-страница активирует событие `ScriptNotify` путем вызова `window.external.notify` с передачей параметра `string`.
   - Свойство `WebView.Source` получает значение URI HTML-файла, который задается свойством `HybridWebView.Uri`. Код предполагает, что файл сохранен в папке `Content` проекта. Когда веб-страница отобразится, событие `NavigationCompleted` сработает и метод `OnWebViewNavigationCompleted` будет вызван. Функция JavaScript `invokeCSharpAction` будет внедрена в веб-страницу с помощью метода `WebView.InvokeScriptAsync`, если навигация успешно завершена.
-- Когда элемент, к которому присоединен отрисовщик, меняется:
-  - Подписка от событий отменяется.
+- Подписка на это событие отменяется, если элемент Xamarin.Forms, к которому присоединен отрисовщик, изменяется.
+- При удалении отрисовщика элемент Xamarin.Forms очищается.
 
 ## <a name="related-links"></a>Связанные ссылки
 

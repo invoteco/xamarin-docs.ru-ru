@@ -431,7 +431,7 @@ KitKat автоматически создает [`PrintDocumentAdapter`](xref:A
 ```
 
 Взаимодействие с меню параметров в действии осуществляется с помощью методов `OnCreateOptionsMenu` и `OnOptionsItemSelected`.
-`OnCreateOptionsMenu` служит для добавления новых пунктов меню, таких как "Печать", из каталога Resources\*menu*.
+`OnCreateOptionsMenu` служит для добавления новых пунктов меню, таких как "Печать", из каталога Resources *menu*.
 `OnOptionsItemSelected` ожидает, пока пользователь не выберет пункт "Печать" в меню, после чего начинает печать.
 
 ```csharp

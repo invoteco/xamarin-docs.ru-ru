@@ -1,116 +1,116 @@
 ---
-title: Элемент для Xamarin. Forms MediaElement
-description: В этой статье объясняется, как использовать MediaElement для воспроизведения видео и аудио в приложении Xamarin. Forms.
+title: Xamarin.Forms MediaElement
+description: В этой статье объясняется, как использовать MediaElement для воспроизведения видео и аудио в приложении Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: e65f1e56-a80d-46c7-9ff4-7ae6650a3165
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 76a30bfb17c8263345d781386acf9d34c01aae3b
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.openlocfilehash: 6f6c51c428de569ceb09ed6a26cfc36881c86dc5
+ms.sourcegitcommit: b93754b220fca3d6e3d131341e3cfbe233d10f84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160413"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80628340"
 ---
-# <a name="xamarinforms-mediaelement"></a>Элемент для Xamarin. Forms MediaElement
+# <a name="xamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
+[![Скачать](~/media/shared/download.png) образец Скачать образец](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) — это представление для воспроизведения видео и аудио. Носители, поддерживаемые базовой платформой, можно воспроизводить из следующих источников:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)это вид для воспроизведения видео и аудио. Средства массовой информации, поддерживаемые базовой платформой, могут воспроизводиться из следующих источников:
 
-- Веб-узел с использованием URI (HTTP или HTTPS).
-- Ресурс, внедренный в приложение платформы, используя `ms-appx:///` схему URI.
-- Файлы, полученные из локальных и временных папок приложения с использованием `ms-appdata:///` схемы URI.
+- Веб, используя URI (HTTP или HTTPS).
+- Ресурс, встроенный в приложение `ms-appx:///` платформы, используя схему URI.
+- Файлы, которые поступают из локальных и временных папок данных приложения, используя схему `ms-appdata:///` URI.
 - Библиотека устройства.
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) могут использовать элементы управления воспроизведением платформы, которые называются элементами управления транспортом. Однако по умолчанию они отключены и могут быть заменены собственными элементами управления транспорта. На следующих снимках экрана показано, `MediaElement` воспроизводит видео с помощью элементов управления транспортной платформы:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)может использовать элементы управления воспроизведения платформы, которые называются транспортными элементами управления. Тем не менее, они отключены по умолчанию и могут быть заменены на ваш собственный транспортный контроль. На следующих `MediaElement` скриншотах показана игра видео с управлением транспортом платформы:
 
-[![Снимок экрана элемента MediaElement: воспроизведение видео в iOS и Android](mediaelement-images/playback-controls.png "Элемент MediaElement воспроизводит видео")](mediaelement-images/playback-controls-large.png#lightbox "Элемент MediaElement воспроизводит видео")
+[![Скриншот воспроизведения видео MediaElement на iOS и Android](mediaelement-images/playback-controls.png "MediaElement воскнет видео")](mediaelement-images/playback-controls-large.png#lightbox "MediaElement воскнет видео")
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) доступен в Xamarin. forms 4,5. Однако в настоящее время он экспериментальен и может использоваться только путем добавления следующей строки кода в файл *app.XAML.CS* :
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)доступен в Xamarin.Forms 4.5. Тем не менее, в настоящее время он является экспериментальным и может быть использован только путем добавления следующей строки кода в файл *App.xaml.cs:*
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
 > [!NOTE]
-> [`MediaElement`](xref:Xamarin.Forms.MediaElement) доступен в iOS, Android, универсальная платформа Windows (UWP), macOS, Windows Presentation Foundation и Tizen.
+> [`MediaElement`](xref:Xamarin.Forms.MediaElement)доступна на iOS, Android, универсальной платформе Windows (UWP), macOS, Windows Presentation Foundation и Tizen.
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) определяет следующие свойства:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)определяет следующие свойства:
 
-- [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect)типа [`Aspect`](xref:Xamarin.Forms.Aspect)определяет, как будет масштабироваться носитель в соответствии с отображаемой областью. Значение по умолчанию этого свойства равно `AspectFit`.
-- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay)типа `bool`указывает, начнется ли воспроизведение мультимедиа автоматически при установке свойства [`Source`](xref:Xamarin.Forms.MediaElement.Source) . Значение по умолчанию этого свойства равно `true`.
-- [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress)типа `double`указывает текущий ход выполнения буферизации. Значение этого свойства по умолчанию равно 0,0.
-- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek)типа `bool`указывает, можно ли переместить носитель, задав значение свойства [`Position`](xref:Xamarin.Forms.MediaElement.Position) . Это свойство доступно только для чтения.
-- [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState)типа [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)указывает текущее состояние элемента управления. Это свойство только для чтения, для которого значение по умолчанию — `MediaElementState.Closed`.
-- [`Duration`](xref:Xamarin.Forms.MediaElement.Duration)типа `TimeSpan?`указывает длительность текущего открытого носителя. Это свойство только для чтения, значением по умолчанию которого является `null`.
-- [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping)типа `bool`описывает, должен ли текущий загруженный источник мультимедиа возобновить воспроизведение с начала после достижения конца. Значение по умолчанию этого свойства равно `false`.
-- [`KeepScreenOn`](xref:Xamarin.Forms.MediaElement.KeepScreenOn)типа `bool`определяет, сохраняется ли экран устройства во время воспроизведения мультимедиа. Значение по умолчанию этого свойства равно `false`.
-- [`Position`](xref:Xamarin.Forms.MediaElement.Position), типа `TimeSpan`, описывает текущий ход выполнения воспроизведения мультимедиа. Значение по умолчанию этого свойства равно `TimeSpan.Zero`.
-- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls)типа `bool`определяет, отображаются ли элементы управления воспроизведением платформ. Значение по умолчанию этого свойства равно `false`.
-- [`Source`](xref:Xamarin.Forms.MediaElement.Source)типа [`MediaSource`](xref:Xamarin.Forms.MediaSource)указывает источник мультимедиа, загруженного в элемент управления.
-- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight)типа `int`указывает высоту элемента управления. Это свойство доступно только для чтения.
-- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth)типа `int`указывает ширину элемента управления. Это свойство доступно только для чтения.
-- [`Volume`](xref:Xamarin.Forms.MediaElement.Volume)типа `double`определяет громкость носителя, которая представлена в линейном масштабе от 0 до 1. Это свойство использует привязку `TwoWay`, а значение по умолчанию — 1.
+- [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect), типа, [`Aspect`](xref:Xamarin.Forms.Aspect)определяет, как средства массовой информации будут масштабироваться в соответствии с областью отображения. Значение по умолчанию этого свойства равно `AspectFit`.
+- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), типа, `bool`указывает, начнется ли воспроизведение мультимедиа автоматически при установке [`Source`](xref:Xamarin.Forms.MediaElement.Source) свойства. Значение по умолчанию этого свойства равно `true`.
+- [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress), типа, `double`указывает на текущий прогресс буферизации. Значение этого свойства по умолчанию составляет 0,0.
+- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), типа, `bool`указывает, можно ли переместить мультимедиа, [`Position`](xref:Xamarin.Forms.MediaElement.Position) установив значение свойства. Это свойство доступно только для чтения.
+- [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), типа, [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)указывает текущее состояние элемента управления. Это свойство только для чтения, `MediaElementState.Closed`значение по умолчанию которого .
+- [`Duration`](xref:Xamarin.Forms.MediaElement.Duration), типа, `TimeSpan?`указывает продолжительность в настоящее время открытых носителей. Это свойство только для чтения, `null`значение по умолчанию которого .
+- [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping), типа `bool`, описывает ли в настоящее время загруженный источник мультимедиа должен возобновить воспроизведение с самого начала после достижения его конца. Значение по умолчанию этого свойства равно `false`.
+- [`KeepScreenOn`](xref:Xamarin.Forms.MediaElement.KeepScreenOn), типа, `bool`определяет, должен ли экран устройства оставаться на во время воспроизведения мультимедиа. Значение по умолчанию этого свойства равно `false`.
+- [`Position`](xref:Xamarin.Forms.MediaElement.Position), типа `TimeSpan`, описывает текущий прогресс через время воспроизведения средств массовой информации. Значение по умолчанию этого свойства равно `TimeSpan.Zero`.
+- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), типа, `bool`определяет, отображаются ли элементы управления воспроизведения платформ. Значение по умолчанию этого свойства равно `false`.
+- [`Source`](xref:Xamarin.Forms.MediaElement.Source), типа, [`MediaSource`](xref:Xamarin.Forms.MediaSource)указывает источник носителя, загруженного в элемент управления.
+- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), типа, `int`указывает на высоту элемента управления. Это свойство доступно только для чтения.
+- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), типа, `int`указывает на ширину элемента управления. Это свойство доступно только для чтения.
+- [`Volume`](xref:Xamarin.Forms.MediaElement.Volume), типа, `double`определяет объем носителя, который представлен по линейной шкале между 0 и 1. Это свойство `TwoWay` использует привязку, а его значение по умолчанию составляет 1.
 
-Эти свойства, за исключением свойства `CanSeek`, поддерживаются [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) объектами, что означает, что они могут быть целевыми объектами привязки данных и стилями.
+Эти свойства, за исключением `CanSeek` свойства, [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) поддерживаются объектами, что означает, что они могут быть мишенями привязки данных и стилизованы.
 
 Класс [`MediaElement`](xref:Xamarin.Forms.MediaElement) также определяет четыре события:
 
-- [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened) возникает при проверке и открытии потока мультимедиа.
-- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded) срабатывает, когда `MediaElement` завершает воспроизведение носителя.
-- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed) запускается при возникновении ошибки, связанной с источником мультимедиа.
-- [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted) срабатывает, когда точка поиска запрошенной операции поиска готова к воспроизведению.
+- [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened)увольняется, когда поток мультимедиа был проверен и открыт.
+- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded)увольняется, `MediaElement` когда заканчивается играть свои средства массовой информации.
+- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed)увольняется при ошибке, связанной с источником мультимедиа.
+- [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted)увольняется, когда точка поиска запрашиваемых операций поиска готова к воспроизведению.
 
-Кроме того, [`MediaElement`](xref:Xamarin.Forms.MediaElement) включает методы [`Play`](xref:Xamarin.Forms.MediaElement.Play), [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)и [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) .
+Кроме [`MediaElement`](xref:Xamarin.Forms.MediaElement) того, [`Play`](xref:Xamarin.Forms.MediaElement.Play) [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)включает [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) в себя, и методы.
 
-Сведения о поддерживаемых форматах мультимедиа в Android см. в статье [Поддерживаемые форматы мультимедиа](https://developer.android.com/guide/topics/media/media-formats) в Developer.Android.com. Сведения о поддерживаемых форматах мультимедиа в универсальная платформа Windows (UWP) см. в разделе [Поддерживаемые кодеки](/windows/uwp/audio-video-camera/supported-codecs).
+Информацию о поддерживаемых медиаформатах на Android [можно](https://developer.android.com/guide/topics/media/media-formats) узнать на developer.android.com. Для получения информации о поддерживаемых форматах мультимедиа [Supported codecs](/windows/uwp/audio-video-camera/supported-codecs)на универсальной платформе Windows (UWP) см.
 
-## <a name="play-remote-media"></a>Воспроизвести Удаленный носитель
+## <a name="play-remote-media"></a>Воспроизведение удаленных носителей
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить удаленные файлы мультимедиа с помощью схем URI HTTP и HTTPS. Это достигается путем присвоения свойству [`Source`](xref:Xamarin.Forms.MediaElement.Source) универсального кода ресурса (URI) файла мультимедиа:
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить удаленные медиафайлы, используя схемы HTTP и HTTPS URI. Это достигается путем [`Source`](xref:Xamarin.Forms.MediaElement.Source) установки свойства uri медиафайла:
 
 ```xaml
 <MediaElement Source="https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4"
               ShowsPlaybackControls="True" />
 ```
 
-По умолчанию носитель, определенный свойством [`Source`](xref:Xamarin.Forms.MediaElement.Source) , играет роль сразу после открытия носителя. Чтобы отключить автоматическое воспроизведение мультимедиа, присвойте свойству [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) значение `false`.
+По умолчанию средства массовой [`Source`](xref:Xamarin.Forms.MediaElement.Source) информации, определяемые свойством, воспроизводится сразу после открытия носителя. Чтобы подавить автоматическое воспроизведение мультимедиа, установите свойство [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) на `false`.
 
-Элементы управления воспроизведением мультимедиа по умолчанию отключены и включаются путем присвоения свойству [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) значения `true`. [`MediaElement`](xref:Xamarin.Forms.MediaElement) будет использовать элементы управления воспроизведением платформы.
+Элементы воспроизведения мультимедиа отключены по [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) умолчанию `true`и включены при настройке свойства для. [`MediaElement`](xref:Xamarin.Forms.MediaElement)затем будет использовать элементы управления воспроизведения платформы.
 
-## <a name="play-local-media"></a>Воспроизвести локальный носитель
+## <a name="play-local-media"></a>Воспроизведение местных сми
 
-Локальный носитель можно воспроизвести из следующих источников:
+Местные средства массовой информации могут быть воспроизведены из следующих источников:
 
-- Ресурс, внедренный в приложение платформы, используя `ms-appx:///` схему URI.
-- Файлы, полученные из локальных и временных папок приложения с использованием `ms-appdata:///` схемы URI.
+- Ресурс, встроенный в приложение `ms-appx:///` платформы, используя схему URI.
+- Файлы, которые поступают из локальных и временных папок данных приложения, используя схему `ms-appdata:///` URI.
 - Библиотека устройства.
 
-Дополнительные сведения об этих схемах URI см. в разделе [схемы URI](/windows/uwp/app-resources/uri-schemes).
+Для получения дополнительной информации об [URI schemes](/windows/uwp/app-resources/uri-schemes)этих схемах URI см.
 
-### <a name="play-media-embedded-in-the-app-package"></a>Воспроизведение мультимедиа, внедренного в пакет приложения
+### <a name="play-media-embedded-in-the-app-package"></a>Воспроизведение мультимедиа, встроенных в пакет приложений
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить файлы мультимедиа, внедренные в пакет приложения, используя `ms-appx:///` схему URI. Файлы мультимедиа внедряются в пакет приложения путем помещения их в проект платформы.
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить медиафайлы, встроенные `ms-appx:///` в пакет приложений, используя схему URI. Медиафайлы встраиваются в пакет приложений, размещая их в проекте платформы.
 
-Хранение файла мультимедиа в проекте платформы отличается для каждой платформы:
+Хранение медиафайла в проекте платформы отличается для каждой платформы:
 
-- В iOS файлы мультимедиа должны храниться в папке **Resources** или во вложенной папке папки **Resources** . Файл мультимедиа должен иметь `Build Action` `BundleResource`.
-- В Android файлы мультимедиа должны храниться во вложенной папке **ресурсов** с именем **RAW**. В папке **raw** не может быть вложенных папок. Файл мультимедиа должен иметь `Build Action` `AndroidResource`.
-- В UWP файлы мультимедиа могут храниться в любой папке проекта. Файл мультимедиа должен иметь `BuildAction` `Content`.
+- На iOS файлы мультимедиа должны храниться в папке **Ресурсов** или в подфедере папки **Ресурсов.** Файл средств массовой `Build Action` `BundleResource`информации должен иметь .
+- На Android медиафайлы должны храниться в подфайле **Ресурсов,** названных **необработанными.** В папке **raw** не может быть вложенных папок. Файл средств массовой `Build Action` `AndroidResource`информации должен иметь .
+- На UWP файлы мультимедиа могут храниться в любой папке проекта. Файл средств массовой `BuildAction` `Content`информации должен иметь .
 
-Затем можно воспроизводить файлы мультимедиа, соответствующие этим критериям, с помощью `ms-appx:///` схеме URI:
+Файлы мультимедиа, отвечающие этим критериям, могут быть воспроизведены с помощью схемы `ms-appx:///` URI:
 
 ```xaml
 <MediaElement Source="ms-appx:///XamarinForms101UsingEmbeddedImages.mp4"
               ShowsPlaybackControls="True" />
 ```
 
-При использовании привязки данных можно использовать преобразователь значений для применения этой схемы URI:
+При использовании связывания данных для применения этой схемы URI можно использовать преобразователь значений:
 
 ```csharp
 public class VideoSourceConverter : IValueConverter
@@ -132,27 +132,27 @@ public class VideoSourceConverter : IValueConverter
 }
 ```
 
-Экземпляр `VideoSourceConverter` можно использовать для применения схемы URI `ms-appx:///` к внедренному файлу мультимедиа:
+Экземпляр `VideoSourceConverter` может быть использован для применения `ms-appx:///` схемы URI к встроенного файла мультимедиа:
 
 ```xaml
 <MediaElement Source="{Binding MediaSource, Converter={StaticResource VideoSourceConverter}}"
               ShowsPlaybackControls="True" />
 ```
 
-Дополнительные сведения о схеме URI ms-appx см. в статье [MS-Appx и ms-appx-web](/windows/uwp/app-resources/uri-schemes#ms-appx-and-ms-appx-web).
+Для получения дополнительной информации о схеме ms-appx URI [см.](/windows/uwp/app-resources/uri-schemes#ms-appx-and-ms-appx-web)
 
 ### <a name="play-media-from-the-apps-local-and-temporary-folders"></a>Воспроизведение мультимедиа из локальных и временных папок приложения
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить файлы мультимедиа, которые копируются в папки локальных или временных данных приложения, используя `ms-appdata:///` схему URI.
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить файлы мультимедиа, которые копируются в `ms-appdata:///` локальные или временные папки данных приложения, используя схему URI.
 
-В следующем примере показано, как свойство [`Source`](xref:Xamarin.Forms.MediaElement.Source) задано для файла мультимедиа, хранящегося в папке локальных данных приложения:
+Ниже приводится [`Source`](xref:Xamarin.Forms.MediaElement.Source) приведение набора свойств в файл мультимедиа, который хранится в локальной папке данных приложения:
 
 ```xaml
 <MediaElement Source="ms-appdata:///local/XamarinVideo.mp4"
               ShowsPlaybackControls="True" />
 ```
 
-В следующем примере показано свойство [`Source`](xref:Xamarin.Forms.MediaElement.Source) для файла мультимедиа, хранящегося в папке временных данных приложения.
+Ниже приводится [`Source`](xref:Xamarin.Forms.MediaElement.Source) свойство к файлу мультимедиа, который хранится во временной папке данных приложения:
 
 ```xaml
 <MediaElement Source="ms-appdata:///temp/XamarinVideo.mp4"
@@ -160,9 +160,9 @@ public class VideoSourceConverter : IValueConverter
 ```
 
 > [!IMPORTANT]
-> Кроме воспроизведения файлов мультимедиа, хранящихся в локальных или временных папках данных приложения, UWP также может воспроизводить файлы мультимедиа, расположенные в перемещаемой папке приложения. Это можно сделать, добавив в файл мультимедиа `ms-appdata:///roaming/`.
+> В дополнение к воспроизведению файлов мультимедиа, которые хранятся в локальных или временных папках данных приложения, UWP также может воспроизводить медиафайлы, которые находятся в папке роуминга приложения. Это может быть достигнуто путем `ms-appdata:///roaming/`предварительной фиксации файла мультимедиа с .
 
-При использовании привязки данных можно использовать преобразователь значений для применения этой схемы URI:
+При использовании связывания данных для применения этой схемы URI можно использовать преобразователь значений:
 
 ```csharp
 public class VideoSourceConverter : IValueConverter
@@ -181,18 +181,18 @@ public class VideoSourceConverter : IValueConverter
 }
 ```
 
-Экземпляр `VideoSourceConverter` можно использовать для применения схемы URI `ms-appdata:///` к файлу мультимедиа в локальной или временной папке данных приложения.
+Экземпляр `VideoSourceConverter` может быть использован для применения `ms-appdata:///` схемы URI к файлу мультимедиа в локальной или временной папке данных приложения:
 
 ```xaml
 <MediaElement Source="{Binding MediaSource, Converter={StaticResource VideoSourceConverter}}"
               ShowsPlaybackControls="True" />
 ```
 
-Дополнительные сведения о схеме URI MS-AppData см. в статье [MS-AppData](/windows/uwp/app-resources/uri-schemes#ms-appdata).
+Для получения дополнительной информации о схеме ms-appdata URI [см.](/windows/uwp/app-resources/uri-schemes#ms-appdata)
 
-#### <a name="copying-a-media-file-to-the-apps-local-or-temporary-data-folder"></a>Копирование файла мультимедиа в локальную или временную папку приложения
+#### <a name="copying-a-media-file-to-the-apps-local-or-temporary-data-folder"></a>Копирование файла мультимедиа в локальную или временную папку данных приложения
 
-Воспроизведение файла мультимедиа, хранящегося в папке локальных или временных данных приложения, требует, чтобы файл мультимедиа был скопирован в него приложением. Это можно сделать, например, скопировав файл мультимедиа из пакета приложения:
+Воспроизведение файла мультимедиа, хранящегося в локальной или временной папке данных приложения, требует, чтобы файл мультимедиа был скопирован там приложением. Это может быть достигнуто, например, путем копирования медиафайла из пакета приложений:
 
 ```csharp
 // This method copies the video from the app package to the app data
@@ -219,17 +219,17 @@ public static async Task CopyVideoIfNotExists(string filename)
 ```
 
 > [!NOTE]
-> В приведенном выше примере кода используется класс `FileSystem`, входящий в Xamarin. Essentials. Дополнительные сведения см. в разделе [вспомогательные функции файловой системы Xamarin. Essentials](~/essentials/file-system-helpers.md?context=xamarin%2Fxamarin-forms&tabs=android).
+> В приведенном выше `FileSystem` примере кода используется класс, включенный в Xamarin.Essentials. Для получения дополнительной информации [см.](~/essentials/file-system-helpers.md?context=xamarin%2Fxamarin-forms&tabs=android)
 
 ### <a name="play-media-from-the-device-library"></a>Воспроизведение мультимедиа из библиотеки устройств
 
-Большинство современных мобильных устройств и настольных компьютеров могут записывать видео и аудио с помощью камеры и микрофона устройства. Затем созданный носитель сохраняется в виде файлов на устройстве. Эти файлы можно извлечь из библиотеки и воспроизвести [`MediaElement`](xref:Xamarin.Forms.MediaElement).
+Большинство современных мобильных устройств и настольных компьютеров имеют возможность записывать видео и аудио с помощью камеры и микрофона устройства. Создаваемые средства массовой информации затем хранятся в виде файлов на устройстве. Эти файлы могут быть извлечены из [`MediaElement`](xref:Xamarin.Forms.MediaElement)библиотеки и воспроизведены .
 
-Каждая из платформ включает в себя средство, позволяющее пользователю выбирать носитель из библиотеки устройства. В Xamarin. Forms проекты платформы могут вызывать эту функцию, и ее можно вызывать с помощью класса [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
+Каждая из платформ включает в себя средство, которое позволяет пользователю выбирать мультимедиа из библиотеки устройства. В Xamarin.Forms проекты платформмогут вызывать эту функциональность, и [`DependencyService`](xref:Xamarin.Forms.DependencyService) ее можно вызывать по классу.
 
-Служба зависимости видео, используемая в образце приложения, очень похожа на ту, которая определена при [выборе фотографии из библиотеки рисунков](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md), за исключением того, что средство выбора возвращает имя файла, а не объект `Stream`. Проект общего кода определяет интерфейс с именем `IVideoPicker`, который определяет один метод с именем `GetVideoFileAsync`. Затем каждая платформа реализует этот интерфейс в `VideoPicker`ном классе.
+Служба подбора видео, используемая в примере приложения, очень похожа на услугу, определенную при [выборе фотографии из библиотеки изображений,](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)за исключением того, что сборщик возвращает имя файла, а не `Stream` объект. Общий код проекта определяет `IVideoPicker`интерфейс под названием , `GetVideoFileAsync`который определяет один метод под названием . Затем каждая платформа реализует `VideoPicker` этот интерфейс в классе.
 
-В следующем примере кода показано, как получить файл мультимедиа из библиотеки устройств.
+Следующий пример кода показывает, как извлечь файл мультимедиа из библиотеки устройств:
 
 ```csharp
 string filename = await DependencyService.Get<IVideoPicker>().GetVideoFileAsync();
@@ -242,21 +242,21 @@ if (!string.IsNullOrWhiteSpace(filename))
 }
 ```
 
-Служба зависимости видео вызывается путем вызова метода `DependencyService.Get` для получения реализации интерфейса `IVideoPicker` в проекте платформы. Затем в этом экземпляре вызывается метод `GetVideoFileAsync`, а возвращаемое имя файла используется для создания [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) объекта и задания его свойству [`Source`](xref:Xamarin.Forms.MediaElement.Source) [`MediaElement`](xref:Xamarin.Forms.MediaElement).
+Служба подбора видео-зависимости вызывается, вызывая `DependencyService.Get` метод `IVideoPicker` для получения реализации интерфейса в проекте платформы. Затем `GetVideoFileAsync` метод вызывается на этом экземпляре, и возвращенное имя файла используется для создания [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) объекта и установки его в [`Source`](xref:Xamarin.Forms.MediaElement.Source) свойство [`MediaElement`](xref:Xamarin.Forms.MediaElement).
 
-## <a name="change-video-aspect-ratio"></a>Изменение пропорций видео
+## <a name="change-video-aspect-ratio"></a>Изменение соотношения видеоаспектов
 
-Свойство [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) определяет способ масштабирования видео мультимедиа в соответствии с отображаемой областью. По умолчанию этому свойству присваивается элемент перечисления `AspectFit`, но его можно задать любому из [`Aspect`](xref:Xamarin.Forms.Aspect) членов перечисления:
+Свойство [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) определяет, как видео-медиа будут масштабироваться в соответствии с областью отображения. По умолчанию это свойство `AspectFit` устанавливается для участника перечисления, но [`Aspect`](xref:Xamarin.Forms.Aspect) может быть установлено любому из участников перечисления:
 
-- `AspectFit` указывает, что видео будет леттербоксед (при необходимости) для размещения в области экрана, сохраняя пропорции.
-- `AspectFill` указывает, что видео будет обрезано, чтобы заполнить область экрана, сохраняя пропорции.
-- `Fill` указывает, что видео будет растянуто для заполнения отображаемой области.
+- `AspectFit`указывает на то, что видео будет иметь почтовые ящики, если это необходимо, чтобы вписаться в область дисплея, сохраняя при этом соотношение сторон.
+- `AspectFill`указывает на то, что видео будет обрезано так, что оно заполняет область дисплея, сохраняя при этом соотношение сторон.
+- `Fill`указывает на то, что видео будет растянуто для заполнения зоны дисплея.
 
-## <a name="poll-for-position-data"></a>Опрос данных о положении
+## <a name="poll-for-position-data"></a>Опрос данных о позиции
 
-Уведомление об изменении свойства для свойства, допускающего привязку [`Position`](xref:Xamarin.Forms.MediaElement.Position) , срабатывает только в течение ключа, например с начала и окончания воспроизведения, а также при приостановке. Поэтому привязка данных к свойству `Position` не будет давать точные данные о положении. Вместо этого необходимо настроить таймер и опросить свойство.
+Уведомление об изменении [`Position`](xref:Xamarin.Forms.MediaElement.Position) свойства для связываемого свойства только в ключевые моменты, такие как начало и окончание воспроизведения и происходит пауза. Таким образом, привязка данных к свойству не даст точных данных о положении. `Position` Вместо этого необходимо настроить таймер и опросить свойство.
 
-Хорошим местом для этого является переопределение `OnAppearing` для страницы, требующей, чтобы данные о положении были воспроизведены как носители:
+Хорошее место для этого `OnAppearing` находится в переопределение для страницы, которая требует данных о позиции, как средства массовой информации играет:
 
 ```csharp
 bool polling = true;
@@ -282,50 +282,50 @@ protected override void OnDisappearing()
 }
 ```
 
-В этом примере переопределение `OnAppearing` запускает таймер, который обновляет `positionLabel` со значением `Position` каждую секунду. Обратный вызов таймера вызывается каждую секунду, пока обратный вызов не возвратит `false`. Когда происходит переход на страницу, выполняется переопределение `OnDisappearing`, которое останавливает вызов таймера.
+В этом примере `OnAppearing` переопределение запускает таймер, который обновляется `positionLabel` со значением каждую секунду. `Position` Обратный вызов таймер вызывается каждую секунду, пока обратный вызов не вернется. `false` При навигации `OnDisappearing` страницы выполняется переопределение, что останавливает вызов обратного вызова таймера.
 
-## <a name="understand-mediasource-types"></a>Общие сведения о типах Медиасаурце
+## <a name="understand-mediasource-types"></a>Понимание типов MediaSource
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить мультимедиа, присвоив его свойству [`Source`](xref:Xamarin.Forms.MediaElement.Source) удаленный или локальный файл мультимедиа. Свойство `Source` имеет тип [`MediaSource`](xref:Xamarin.Forms.MediaSource), и этот класс определяет два статических метода:
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) может воспроизводить [`Source`](xref:Xamarin.Forms.MediaElement.Source) мультимедиа, установив свое свойство в удаленном или локальном файле мультимедиа. Свойство `Source` типа, [`MediaSource`](xref:Xamarin.Forms.MediaSource)и этот класс определяет два статических метода:
 
-- [`FromFile`](xref:Xamarin.Forms.MediaSource.FromFile*)возвращает экземпляр [`MediaSource`](xref:Xamarin.Forms.MediaSource) из аргумента `string`.
-- [`FromUri`](xref:Xamarin.Forms.MediaSource.FromUri*)возвращает экземпляр [`MediaSource`](xref:Xamarin.Forms.MediaSource) из аргумента `Uri`.
+- [`FromFile`](xref:Xamarin.Forms.MediaSource.FromFile*), возвращает [`MediaSource`](xref:Xamarin.Forms.MediaSource) экземпляр `string` из аргумента.
+- [`FromUri`](xref:Xamarin.Forms.MediaSource.FromUri*), возвращает [`MediaSource`](xref:Xamarin.Forms.MediaSource) экземпляр `Uri` из аргумента.
 
-Кроме того, класс [`MediaSource`](xref:Xamarin.Forms.MediaSource) также имеет неявные операторы, возвращающие `MediaSource` экземпляры из `string` и `Uri` аргументов.
-
-> [!NOTE]
-> Если свойство [`Source`](xref:Xamarin.Forms.MediaElement.Source) задано в XAML, вызывается преобразователь типов, возвращающий экземпляр [`MediaSource`](xref:Xamarin.Forms.MediaSource) из `string` или `Uri`.
-
-Класс [`MediaSource`](xref:Xamarin.Forms.MediaSource) также имеет два производных класса:
-
-- [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource), который используется для указания удаленного файла мультимедиа из универсального кода ресурса (URI). Этот класс имеет [`Uri`](xref:Xamarin.Forms.UriMediaSource.Uri) свойство, для которого можно задать `Uri`.
-- [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource), который используется для указания локального файла мультимедиа из `string`. Этот класс имеет [`File`](xref:Xamarin.Forms.FileMediaSource.File) свойство, для которого можно задать `string`. Кроме того, этот класс содержит неявные операторы для преобразования `string` в `FileMediaSource` объект и объект `FileMediaSource` в `string`.
+Кроме того, [`MediaSource`](xref:Xamarin.Forms.MediaSource) в классе также `MediaSource` есть неявные операторы, которые возвращают экземпляры и `string` `Uri` аргументы.
 
 > [!NOTE]
-> При создании [`FileMediaSource`ного](xref:Xamarin.Forms.FileMediaSource) объекта в XAML вызывается преобразователь типов, возвращающий экземпляр [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) из `string`.
+> При [`Source`](xref:Xamarin.Forms.MediaElement.Source) установке свойства в XAML используется преобразователь [`MediaSource`](xref:Xamarin.Forms.MediaSource) типа `string` для `Uri`возврата экземпляра из или .
 
-## <a name="determine-mediaelement-status"></a>Определение состояния MediaElement
+Класс [`MediaSource`](xref:Xamarin.Forms.MediaSource) также имеет два класса, полученных:
 
-Класс [`MediaElement`](xref:Xamarin.Forms.MediaElement) определяет доступное только для чтения свойство с именем [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState)типа [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). Это свойство указывает текущее состояние элемента управления, например, воспроизведение или приостановка мультимедиа или еще не готово к воспроизведению мультимедиа.
+- [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource), который используется для указания удаленного файла мультимедиа из URI. Этот класс [`Uri`](xref:Xamarin.Forms.UriMediaSource.Uri) имеет свойство, которое может быть установлено на `Uri`.
+- [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource), который используется для указания локального `string`файла мультимедиа из . Этот класс [`File`](xref:Xamarin.Forms.FileMediaSource.File) имеет свойство, которое может быть установлено на `string`. Кроме того, этот класс имеет `string` неявных операторов для преобразования в `FileMediaSource` объект, и `FileMediaSource` объект в `string`.
 
-Перечисление [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) определяет следующие члены:
+> [!NOTE]
+> При [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) создании объекта в XAML используется преобразователь [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) типа для `string`возвращения экземпляра из .
 
-- `Closed` указывает, что `MediaElement` не содержит носитель.
-- `Opening` указывает, что `MediaElement` проверяется и пытается загрузить указанный источник.
-- `Buffering` указывает, что `MediaElement` загружает носитель для воспроизведения. Его свойство [`Position`](xref:Xamarin.Forms.MediaElement.Position) не переходит в это состояние. Если `MediaElement` воспроизводил видео, он по экрану продолжит отображать последний отображаемый кадр.
-- `Playing` указывает, что `MediaElement` воспроизводит источник мультимедиа.
-- `Paused` указывает, что `MediaElement` не переместит свойство [`Position`](xref:Xamarin.Forms.MediaElement.Position) . Если `MediaElement` воспроизводил видео, текущий кадр будет отображаться.
-- `Stopped` указывает, что `MediaElement` содержит носитель, но он не воспроизводится или приостанавливается. Его свойство [`Position`](xref:Xamarin.Forms.MediaElement.Position) имеет значение 0 и не переходит к нему. Если загруженный носитель является видео, `MediaElement` отображает первый кадр.
+## <a name="determine-mediaelement-status"></a>Определение статуса MediaElement
 
-Обычно не требуется проверять свойство [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) при использовании элементов управления транспорта [`MediaElement`](xref:Xamarin.Forms.MediaElement) . Однако это свойство очень важно при реализации собственных элементов управления транспортом.
+Класс [`MediaElement`](xref:Xamarin.Forms.MediaElement) определяет передевоприми только [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState)для чтения [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)свойство с именем типа. Это свойство указывает текущее состояние элемента управления, например, играет ли носители или приостанавливается, или если оно еще не готово к воспроизведению носителя.
 
-## <a name="implement-custom-transport-controls"></a>Реализация пользовательских элементов управления транспортом
+Перечисление [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) определяет следующих членов:
 
-Элементы управления транспорта проигрывателя мультимедиа включают кнопки, выполняющие функции **воспроизведения**, **приостановки**и **остановки**. Эти кнопки обычно определяются по знакомым значкам, а не тексту. Как правило, функции **Воспроизведение** и **Пауза** объединены в одну кнопку.
+- `Closed`указывает на `MediaElement` то, что носители не содержат средств массовой информации.
+- `Opening`указывает на `MediaElement` то, что проверка и попытка загрузки указанного источника.
+- `Buffering`указывает на `MediaElement` загрузку носителя для воспроизведения. Его [`Position`](xref:Xamarin.Forms.MediaElement.Position) собственность не продвигается в течение этого состояния. Если `MediaElement` воспроизведенное видео, оно продолжает отображать последнюю отображаемую рамку.
+- `Playing`указывает на `MediaElement` то, что играет источник мультимедиа.
+- `Paused`указывает на `MediaElement` то, [`Position`](xref:Xamarin.Forms.MediaElement.Position) что не продвигает свое имущество. Если `MediaElement` воспроизведенное видео, оно продолжает отображать текущий кадр.
+- `Stopped`указывает на `MediaElement` то, что носит средства массовой информации, но он не воспроизводится или не приостанавливается. Его [`Position`](xref:Xamarin.Forms.MediaElement.Position) собственность 0 и не заранее. Если загруженные носители `MediaElement` — это видео, отображается первый кадр.
 
-По умолчанию элементы управления воспроизведением [`MediaElement`](xref:Xamarin.Forms.MediaElement) отключены. Это позволяет управлять `MediaElement` программным способом или путем предоставления собственных элементов управления транспорта. В поддержку этого `MediaElement` включает методы [`Play`](xref:Xamarin.Forms.MediaElement.Play), [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)и [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) .
+Как правило, нет необходимости [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) осматривать [`MediaElement`](xref:Xamarin.Forms.MediaElement) свойство при использовании транспортного контроля. Однако это свойство становится важным при реализации собственного управления транспортом.
 
-В следующем примере XAML показана страница, содержащая [`MediaElement`](xref:Xamarin.Forms.MediaElement) и пользовательские элементы управления транспорта:
+## <a name="implement-custom-transport-controls"></a>Внедрение пользовательских транспортных средств управления
+
+Управление транспортом медиаплеера включает кнопки, **Play**выполняющие функции Воспроизведение, **Пауза**и **Остановка.** Эти кнопки обычно определяются по знакомым значкам, а не тексту. Как правило, функции **Воспроизведение** и **Пауза** объединены в одну кнопку.
+
+По умолчанию [`MediaElement`](xref:Xamarin.Forms.MediaElement) элементы управления воспроизведения отключены. Это позволяет управлять `MediaElement` программным управлением или поставлять собственный транспортный контроль. В поддержку `MediaElement` этого, [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)включает [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) в себя [`Play`](xref:Xamarin.Forms.MediaElement.Play), и методы.
+
+На следующем примере XAML показана страница, содержащая пользовательские элементы управления транспортом: [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -374,9 +374,9 @@ protected override void OnDisappearing()
 </ContentPage>
 ```
 
-В этом примере пользовательские элементы управления транспорта определяются как объекты [`Button`](xref:Xamarin.Forms.Button) . Однако существует только два `Button` объектов, первая `Button` представляющая **Воспроизведение** и **Пауза**, а вторая `Button` представляющая **остановку**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) объекты используются для включения и отключения кнопок, а также для переключения первой кнопки между **воспроизведением** и **паузой**. Дополнительные сведения о триггерах данных см. в разделе [триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+В этом примере пользовательские элементы управления транспортом определяются как [`Button`](xref:Xamarin.Forms.Button) объекты. Однако, Есть `Button` только два объекта, с `Button` первым представляющим `Button` **Play** и **паузы**, а второй представляющих **Стоп**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger)объекты используются для включения и отключения кнопок, а также для переключения первой кнопки между **Воспроизведением** и **Паузой.** Для получения дополнительной информации о триггерах данных, [см.](~/xamarin-forms/app-fundamentals/triggers.md)
 
-Файл кода программной части содержит обработчики событий [`Clicked`](xref:Xamarin.Forms.Button.Clicked) :
+В файле, закодированном [`Clicked`](xref:Xamarin.Forms.Button.Clicked) файле есть обработчики событий:
 
 ```csharp
 void OnPlayPauseButtonClicked(object sender, EventArgs args)
@@ -398,26 +398,26 @@ void OnStopButtonClicked(object sender, EventArgs args)
 }
 ```
 
-Кнопка **воспроизведения** может быть нажата, после того как она будет включена, чтобы начать воспроизведение:
+Кнопка **Воспроизведения** может быть нажата, как только она становится включена, чтобы начать воспроизведение:
 
-[![Снимок экрана элемента MediaElement с пользовательскими элементами управления транспортом в iOS и Android](mediaelement-images/custom-transport-playback.png "Элемент MediaElement воспроизводит видео")](mediaelement-images/custom-transport-playback-large.png#lightbox "Элемент MediaElement воспроизводит видео")
+[![Скриншот MediaElement с пользовательским транспортным элементом на iOS и Android](mediaelement-images/custom-transport-playback.png "MediaElement воскнет видео")](mediaelement-images/custom-transport-playback-large.png#lightbox "MediaElement воскнет видео")
 
-Нажатие кнопки **приостановить** приводит к паузе воспроизведения:
+Нажатие кнопки **«Пауза»** приводит к приостановке воспроизведения:
 
-[![Снимок экрана элемента MediaElement с приостановленным воспроизведением в iOS и Android](mediaelement-images/custom-transport-paused.png "MediaElement с приостановленным видео")](mediaelement-images/custom-transport-paused-large.png#lightbox "MediaElement с приостановленным видео")
+[![Скриншот MediaElement с приостановкой воспроизведения на iOS и Android](mediaelement-images/custom-transport-paused.png "MediaElement с приостановленным видео")](mediaelement-images/custom-transport-paused-large.png#lightbox "MediaElement с приостановленным видео")
 
-Нажатие кнопки **остановить** останавливает воспроизведение и возвращает расположение файла мультимедиа в начало.
+Нажатие кнопки **Стоп** останавливает воспроизведение и возвращает положение файла мультимедиа к началу.
 
-## <a name="implement-a-custom-position-bar"></a>Реализация пользовательской панели позиций
+## <a name="implement-a-custom-position-bar"></a>Реализация пользовательской панели позиции
 
-На каждой платформе реализуются элементы управления транспортировкой, в том числе строка позиционирования. Эта панель напоминает ползунок и показывает текущее расположение носителя в течение его общей продолжительности. Кроме того, можно управлять панелью позиций, чтобы перемещаться вперед или назад к новой должности в видео.
+На каждой платформе реализуются элементы управления транспортировкой, в том числе строка позиционирования. Этот бар напоминает ползунок и показывает текущее местоположение носителя в пределах его общей продолжительности. Кроме того, вы можете манипулировать позиционным баром, чтобы двигаться вперед или назад в новое положение в видео.
 
-Для реализации пользовательской панели должно знать длительность мультимедиа и текущую точку воспроизведения. Эти данные доступны в свойствах [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) и [`Position`](xref:Xamarin.Forms.MediaElement.Position) .
+Реализация пользовательской панели позиции требует знания продолжительности носителя и текущей позиции воспроизведения. Эти данные доступны [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) [`Position`](xref:Xamarin.Forms.MediaElement.Position) в свойствах.
 
 > [!IMPORTANT]
-> Чтобы получить точные данные о положении, [`Position`](xref:Xamarin.Forms.MediaElement.Position) необходимо опросить. Дополнительные сведения см. в разделе [опрос данных о положении](#poll-for-position-data).
+> Необходимо [`Position`](xref:Xamarin.Forms.MediaElement.Position) опросить, чтобы получить точные данные о положении. Для получения дополнительной информации, см [Опрос для позиции данных](#poll-for-position-data).
 
-Настраиваемую строку позиционирования можно реализовать с помощью [`Slider`](xref:Xamarin.Forms.Slider), как показано в следующем примере:
+Пользовательская панель положения может [`Slider`](xref:Xamarin.Forms.Slider)быть реализована с помощью , как показано в следующем примере:
 
 ```csharp
 public class PositionSlider : Slider
@@ -480,14 +480,14 @@ public class PositionSlider : Slider
 }
 ```
 
-Класс `PositionSlider` определяет собственные `Duration` и `Position` связываемые свойства, а также свойство с возможностью привязки `TimeToEnd`. Все три свойства имеют тип `TimeSpan`. Обработчик изменения свойства для свойства `Duration` задает для свойства `Maximum` [`Slider`](xref:Xamarin.Forms.Slider) свойство `TotalSeconds` значения `TimeSpan`. Свойство `TimeToEnd` вычисляется на основе изменений в свойствах `Duration` и `Position` и начинается с длительности носителя и уменьшается до нуля по мере того, как воспроизведение продолжается.
+Класс `PositionSlider` определяет свои `Duration` собственные `Position` и связываемые свойства, а также `TimeToEnd` связываемое свойство. Все три свойства `TimeSpan`типа. Обработчик свойства, `Duration` измененный `Maximum` для свойства, устанавливает свойство [`Slider`](xref:Xamarin.Forms.Slider) свойства к свойству `TotalSeconds` стоимости. `TimeSpan` Свойство `TimeToEnd` рассчитывается на основе `Duration` `Position` изменений в свойствах и начинается с длительности носителя и уменьшается до нуля по мере продолжения воспроизведения.
 
-`PositionSlider` обновляется с базовой [`Slider`](xref:Xamarin.Forms.Slider) при перемещении `Slider`, чтобы указать, что носитель должен быть расширен или реверсирован до новой должности. Это обнаруживается в обработчике `PropertyChanged` конструктора `PositionSlider`. Обработчик проверяет наличие изменений в свойстве `Value`. Если оно отличается от свойства `Position`, то свойству `Position` присваивается значение свойства `Value`. Дополнительные сведения об использовании [`Slider`](xref:Xamarin.Forms.Slider) см. в разделе [ползунок Xamarin. Forms.](~/xamarin-forms/user-interface/slider.md)
+Обновление `PositionSlider` от базового [`Slider`](xref:Xamarin.Forms.Slider) при `Slider` перемещении, чтобы указать, что средства массовой информации должны быть расширены или обращены в новую позицию. Это обнаруживается в `PropertyChanged` обработчике в конструкторе. `PositionSlider` Обработчик проверяет наличие изменений в свойстве `Value`. Если оно отличается от свойства `Position`, то свойству `Position` присваивается значение свойства `Value`. Для получения дополнительной [`Slider`](xref:Xamarin.Forms.Slider) информации об использовании см., [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
 
 > [!NOTE]
-> В Android [`Slider`](xref:Xamarin.Forms.Slider) содержит только 1000 дискретных шага, независимо от параметров `Minimum` и `Maximum`. Если длина носителя превышает 1000 секунд, то два разных `Position` значения будут соответствовать одному и тому же `Value` `Slider`. Именно поэтому вышеприведенный код проверяет, что новая и существующая должности больше одной сотый доли общей длительности.
+> На Android, [`Slider`](xref:Xamarin.Forms.Slider) только имеет 1000 дискретных `Minimum` шагов, независимо от `Maximum` и настроек. Если длина носителя превышает 1000 секунд, `Position` то два разных `Value` значения `Slider`будут соответствовать тому же . Вот почему приведенный выше код проверяет, что новое положение и существующее положение превышают одну сотую от общей продолжительности.
 
-В следующем примере показано использование `PositionSlider` на странице:
+Ниже приводится `PositionSlider` следующий пример, повысиваемый на странице:
 
 ```xaml
 <controls:PositionSlider x:Name="positionSlider"
@@ -504,17 +504,17 @@ public class PositionSlider : Slider
 </controls:PositionSlider>
 ```
 
-В этом примере свойство `Duration` `PositionSlider` привязано к данным свойства [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) [`MediaElement`](xref:Xamarin.Forms.MediaElement). При изменении свойства [`Value`](xref:Xamarin.Forms.Slider.Value) [`Slider`](xref:Xamarin.Forms.Slider) вызывается событие `ValueChanged` и выполняется обработчик `OnPositionSliderValueChanged`. Этот обработчик задает свойству [`MediaElement.Position`](xref:Xamarin.Forms.MediaElement.Position) значение свойства `PositionSlider.Position`. Таким образом, перетаскивание `Slider` приведет к изменению расположения воспроизведения мультимедиа:
+В `Duration` этом примере свойство `PositionSlider` данных связано с свойством [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) [`MediaElement`](xref:Xamarin.Forms.MediaElement). При [`Value`](xref:Xamarin.Forms.Slider.Value) [`Slider`](xref:Xamarin.Forms.Slider) изменении свойства `ValueChanged` событие сражается, и `OnPositionSliderValueChanged` обработчик выполняется. Этот обработчик устанавливает [`MediaElement.Position`](xref:Xamarin.Forms.MediaElement.Position) свойство `PositionSlider.Position` к значению свойства. Таким образом, `Slider` перетаскивание результатов в позиции воспроизведения мультимедиа меняется:
 
-[![Снимок экрана элемента MediaElement с настраиваемой строкой расположения в iOS и Android](mediaelement-images/custom-position-bar.png "MediaElement с настраиваемой строкой позиционирования")](mediaelement-images/custom-position-bar-large.png#lightbox "MediaElement с настраиваемой строкой позиционирования")
+[![Скриншот MediaElement с пользовательской позиционной панелью на iOS и Android](mediaelement-images/custom-position-bar.png "MediaElement с пользовательской позиционной панелью")](mediaelement-images/custom-position-bar-large.png#lightbox "MediaElement с пользовательской позиционной панелью")
 
-Кроме того, объект [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) используется для отключения `PositionSlider` при буферизации мультимедиа. Дополнительные сведения о триггерах данных см. в разделе [триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Кроме того, [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) объект используется для отсутствования `PositionSlider` буферизации носителя. Для получения дополнительной информации о триггерах данных, [см.](~/xamarin-forms/app-fundamentals/triggers.md)
 
-## <a name="implement-a-custom-volume-control"></a>Реализация пользовательского элемента управления "Громкость"
+## <a name="implement-a-custom-volume-control"></a>Внедрение пользовательского управления громкости
 
-Элементы управления воспроизведением мультимедиа, реализованные на каждой платформе, включают панель томов. Эта панель напоминает ползунок и показывает объем носителя. Кроме того, можно управлять панелью громкости, чтобы увеличить или уменьшить объем тома.
+Элементы воспроизведения мультимедиа, реализуемые каждой платформой, включают в себя панель громкости. Этот бар напоминает ползунок и показывает объем носителя. Кроме того, можно манипулировать панелью громкости, чтобы увеличить или уменьшить громкость.
 
-Настраиваемую панель томов можно реализовать с помощью [`Slider`](xref:Xamarin.Forms.Slider), как показано в следующем примере:
+Пользовательская панель громкости может [`Slider`](xref:Xamarin.Forms.Slider)быть реализована с помощью , как показано в следующем примере:
 
 ```xaml
 <StackLayout>
@@ -528,18 +528,18 @@ public class PositionSlider : Slider
 </StackLayout>
 ```
 
-В этом примере [`Slider`](xref:Xamarin.Forms.Slider) данные привязывают свойство `Value` к свойству [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) [`MediaElement`](xref:Xamarin.Forms.MediaElement). Это возможно потому, что свойство `Volume` использует привязку `TwoWay`. Поэтому изменение свойства `Value` приведет к изменению свойства `Volume`.
+В этом примере [`Slider`](xref:Xamarin.Forms.Slider) данные `Value` связывают [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) свое свойство с собственностью [`MediaElement`](xref:Xamarin.Forms.MediaElement). Это возможно, `Volume` поскольку `TwoWay` в свойстве используется связывание. Таким образом, `Value` изменение свойства `Volume` приведет к изменению свойства.
 
 > [!NOTE]
-> Свойство [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) имеет обратный вызов влидатион, который гарантирует, что его значение больше или равно 0,0 и меньше или равно 1,0.
+> Свойство [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) имеет vlidation callback, который гарантирует, что его значение больше или равно 0,0, и меньше, чем или равна 1,0.
 
-Дополнительные сведения об использовании [`Slider`](xref:Xamarin.Forms.Slider) см. в разделе [ползунок Xamarin. Forms.](~/xamarin-forms/user-interface/slider.md)
+Для получения дополнительной [`Slider`](xref:Xamarin.Forms.Slider) информации об использовании см., [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Медиаелементдемос (пример)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
+- [MediaElementDemos (образец)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 - [Схемы URI](/windows/uwp/app-resources/uri-schemes)
-- [Триггеры Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Ползунок Xamarin. Forms](~/xamarin-forms/user-interface/slider.md)
-- [Android: Поддерживаемые форматы мультимедиа](https://developer.android.com/guide/topics/media/media-formats)
+- [Триггеры Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Слайдер Xamarin.Forms](~/xamarin-forms/user-interface/slider.md)
+- [Android: Поддерживаемые медиа форматы](https://developer.android.com/guide/topics/media/media-formats)
 - [UWP: Поддерживаемые кодеки](/windows/uwp/audio-video-camera/supported-codecs)

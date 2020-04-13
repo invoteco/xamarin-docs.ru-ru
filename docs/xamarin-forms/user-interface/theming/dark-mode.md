@@ -1,57 +1,57 @@
 ---
-title: Обнаружение темного режима в приложениях Xamarin. Forms
-description: Темный режим может поддерживаться в любом приложении Xamarin. Forms с помощью сочетания ResourceDictionary, Динамикресаурцес и набора знаний платформы.
+title: Обнаружение темного режима в приложениях Xamarin.Forms
+description: Темный режим может быть поддержан в любом приложении Xamarin.Forms, используя комбинацию resourceDictionaries, DynamicResources и знаний платформы.
 ms.prod: xamarin
 ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
 ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2020
-ms.openlocfilehash: 104237155797ca90c52ad385e8349480f9666c4c
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 7fe1a98e6a497a5791f26df2fc96d41781b71ef6
+ms.sourcegitcommit: b93754b220fca3d6e3d131341e3cfbe233d10f84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303506"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80628314"
 ---
-# <a name="detect-dark-mode-in-xamarinforms-applications"></a>Обнаружение темного режима в приложениях Xamarin. Forms
+# <a name="detect-dark-mode-in-xamarinforms-applications"></a>Обнаружение темного режима в приложениях Xamarin.Forms
 
-Приложения Xamarin. Forms могут реагировать на изменения темы операционной системы с помощью той же стратегии, которая позволяет поддерживать [их](theming.md). Основное различие заключается в том, как активируется изменение темы. Темный режим относится к более широкому набору предпочтений внешнего вида, который можно задать на уровне операционной системы, а также о том, какие приложения должны отвечать и реагировать немедленно.
+Приложения Xamarin.Forms могут реагировать на изменения темы операционной системы, используя ту же стратегию, которая позволяет поддерживать [тематику.](theming.md) Основное различие заключается в том, как срабатывает смена темы. Темный режим относится к более широкому набору предпочтений внешнего вида, которые могут быть установлены на уровне операционной системы, и какие приложения должны уважать и реагировать на немедленно.
 
-Ниже приведены минимальные требования к использованию темного режима в приложениях Xamarin. Forms.
+Минимальные требования к использованию темного режима в приложениях Xamarin.Forms:
 
-- iOS 13 или более поздняя.
-- Android 9 или более поздней версии (Android 9 поддерживает режимы отображения, которые можно запрашивать).
-- Android 10 или более поздней версии (Android 10 уведомляет приложения об изменениях режима).
-- UWP v 10.0.10240.0 или более поздней версии.
-- Xamarin. Forms (любая версия).
+- iOS 13 или больше.
+- Android 9 или больше (Android 9 поддерживает режимы внешнего вида, которые вы можете заделать).
+- Android 10 или больше (Android 10 уведомляет приложения об изменениях режима).
+- UWP v10.0.10240.0 или больше.
+- Xamarin.Forms (любая версия).
 
-Ниже приведен процесс поддержки режимов внешнего вида, включая «светлый» и «темный».
+Процесс поддержки режимов внешнего вида, включая светлый и темный, заключается в следующем:
 
-1. Определите ресурсы, общие для всего приложения, в [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).
-2. Определите тему словаря ресурсов для каждого режима оформления, который предоставляет переопределения для каждого стиля, который вы хотите изменить.
-3. Задайте тему режима отображения по умолчанию в файле **app. XAML** приложения.
-4. Задайте для приложения стиль, используя расширение разметки `DynamicResource`, в котором должны реагировать стили при изменении режима отображения.
-5. Добавьте код для прослушивания изменений темы ОС и загрузки соответствующей темы приложения.
+1. Определите ресурсы, совместно [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)распределенные по всему приложению в .
+2. Определите тему словаря ресурсов для каждого режима внешнего вида, который предоставляет переопределения, специфичные для каждого стиля, который вы хотите изменить.
+3. Установите тему режима внешнего вида по умолчанию в файле **App.xaml** приложения.
+4. Стиль приложения с `DynamicResource` помощью расширения разметки, где вы хотите, чтобы стили реагировали при изменении режимов внешнего вида.
+5. Добавьте код для прослушивания изменений темы ОС и загрузите соответствующую тему приложения.
 
-На следующих снимках экрана показаны страницы с темами для светлых и темных режимов:
+Следующие скриншоты показывают тематические страницы, для светлого и темного режима:
 
-[![Снимок экрана: Главная страница приложения с темой, на снимке экрана iOS и android](theming-images/main-page-both-themes.png "Главная страница приложения с темой")](theming-images/main-page-both-themes-large.png#lightbox "Главная страница приложения с темой")
-на [ ![странице сведений в приложении с темой, в iOS и Android](theming-images/detail-page-both-themes.png "Страница сведений о приложении с темой")](theming-images/detail-page-both-themes-large.png#lightbox "Страница сведений о приложении с темой")
+[![Скриншот главной страницы тематизированного приложения, на iOS и Android](theming-images/main-page-both-themes.png "Главная страница тематизированного приложения")](theming-images/main-page-both-themes-large.png#lightbox "Главная страница тематизированного приложения")
+[![Скриншот подробной страницы тематизированного приложения, на iOS и Android](theming-images/detail-page-both-themes.png "Подробная страница тематизированного приложения")](theming-images/detail-page-both-themes-large.png#lightbox "Подробная страница тематизированного приложения")
 
-## <a name="define-themes"></a>Определение тем
+## <a name="define-themes"></a>Определить темы
 
-Пошаговые инструкции по созданию темных и светлых тем см. [в этом разделе](theming.md) . 
+Следуйте [тематические руководства](theming.md) для шаг за шагом подробности о создании темных и светлых тем.
 
-Новую тему для приложения можно легко настроить в соответствующем расположении кода платформы. Чтобы загрузить новую тему, просто замените текущий словарь ресурсов приложения на выбранный словарь ресурсов с темой.
+Вы можете легко установить новую тему для вашего приложения в соответствующем месте кода платформы. Чтобы загрузить новую тему, просто замените текущий словарь ресурсов приложения тематическим словарем ресурсов по вашему выбору:
 
 ```csharp
 App.Current.Resources = new YourDarkTheme();
 ```
 
-## <a name="detect-and-apply-theme"></a>Определение и применение темы
+## <a name="detect-and-apply-theme"></a>Обнаружение и применение темы
 
-Обнаружение текущей темы можно получить с помощью [`RequestedTheme`](~/essentials/app-theme.md) функции [Xamarin. Essentials](~/essentials/index.md) (версия 1.4.0 или более новая). Затем можно создать вспомогательный метод в новом классе или в классе `App`, чтобы настроить тему:
+Обнаружение в настоящее время запущенной [`RequestedTheme`](~/essentials/app-theme.md) темы может быть достигнуто с помощью функции [Xamarin.Essentials](~/essentials/index.md) (версия 1.4.0 или новее). Затем можно создать метод помощника в новом классе `App` или в классе для настройки темы:
 
 ```csharp
 public partial class App : Application
@@ -60,37 +60,37 @@ public partial class App : Application
     {
         if (AppInfo.RequestedTheme == AppTheme.Dark)
         {
-            // change to light theme
-            // e.g. App.Current.Resources = new YourLightTheme();
+            // Change to dark theme
+            // e.g. App.Current.Resources = new YourDarkTheme();
         }
         else
         {
-            // change to dark theme
-            // e.g. App.Current.Resources = new YourDarkTheme();
+            // Change to light theme
+            // e.g. App.Current.Resources = new YourLightTheme();
         }
     }
 }
 ```
 
-## <a name="react-to-appearance-mode-changes"></a>Реагирование на изменения режима отображения
+## <a name="react-to-appearance-mode-changes"></a>Реагировать на изменения режима видимости
 
-Режим отображения на устройстве может измениться по ряду причин, в зависимости от того, как пользователь настроил свои предпочтения, включая явное выбор режима, времени суток или таких факторов, как низкая-лампочка. Вам потребуется добавить код платформы, чтобы приложение может реагировать на эти изменения, а в следующих разделах это более подробно обсуждается.
+Режим внешнего вида на устройстве может меняться по целому ряду причин в зависимости от того, как пользователь настроил свои предпочтения, включая явное выбор режима, времени суток или факторов окружающей среды, таких как низкая освещенность. Вам придется добавить код платформы, чтобы убедиться, что приложение может реагировать на эти изменения, и следующие разделы обсуждают это более подробно.
 
 ### <a name="android"></a>Android
 
-Для поддержки темного режима в приложении необходимо обновить тему приложения, которую можно найти в `Resources/values/styles.xml`для наследования от `DayNight` темы:
+Для поддержки темного режима в приложении необходимо обновить тему вашего приложения, которая может быть найдена в, `Resources/values/styles.xml`чтобы унаследовать от темы: `DayNight`
 
 ```xml
 <style name="MainTheme.Base" parent="Theme.AppCompat.DayNight">
 ```
 
-Если вы выполнили обновление до [компонентов материалов](https://www.nuget.org/packages/Xamarin.Google.Android.Material/) андроидкс (1.1.0-RC2) или более поздней версии, вы можете использовать:
+Если вы обновили [компоненты](https://www.nuget.org/packages/Xamarin.Google.Android.Material/) AndroidX (1.1.0-rc2) или новее, вы можете использовать:
 
 ```xml
 <style name="MainTheme.Base" parent="Theme.MaterialComponents.DayNight">
 ```
 
-В файле **MainActivity.CS** приложения добавьте поле `ConfigChanges.UiMode` в свойство `ConfigurationChanges` в атрибуте `Activity`, чтобы ваше приложение получало уведомления об изменениях в режиме пользовательского интерфейса:
+В **MainActivity.cs** файле приложения добавьте `ConfigChanges.UiMode` поле `ConfigurationChanges` в `Activity` свойство в атрибуте, чтобы ваше приложение было уведомлено об изменениях режима uI:
 
 ```csharp
 [Activity(
@@ -98,7 +98,7 @@ public partial class App : Application
     ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode)]
 ```
 
-В том же файле **MainActivity.CS** Переопределите метод `OnConfigurationChanged`:
+В том же **файле** `OnConfigurationChanged` MainActivity.cs переопределить метод:
 
 ```csharp
 public override void OnConfigurationChanged(Configuration newConfig)
@@ -110,7 +110,7 @@ public override void OnConfigurationChanged(Configuration newConfig)
 
 ### <a name="ios"></a>iOS
 
-В iOS изменения режима отображения уведомляются о UIViewController, который в Xamarin. Forms является `ContentPage`. Чтобы переопределить этот метод, создайте пользовательский модуль подготовки отчетов в проекте iOS с именем `PageRenderer.cs`:
+На iOS изменения режима внешнего вида уведомляются на UIViewController, `ContentPage`который в Xamarin.Forms является . Для того, чтобы переопределить этот метод, создайте пользовательский рендерватор в проекте iOS под названием: `PageRenderer.cs`
 
 ```csharp
 using System;
@@ -152,11 +152,11 @@ namespace YourApp.iOS.Renderers
 }
 ```
 
-Переопределение метода `TraitCollectionDidChange` позволяет действовать при изменении `UserInterfaceStyle`.
+Преодоление `TraitCollectionDidChange` метода позволяет действовать `UserInterfaceStyle` на изменение.
 
 ### <a name="uwp"></a>UWP
 
-В UWP добавьте следующий код в файл **MainPage.XAML.CS** приложения:
+На UWP добавьте следующий код в **MainPage.xaml.cs** файл приложения:
 
 ```csharp
 public sealed partial class MainPage
@@ -185,7 +185,7 @@ public sealed partial class MainPage
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Их (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+- [Тематика (образец)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Словари ресурсов](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Динамические стили в Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Динамические стили в Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [Задание стиля приложений Xamarin.Forms с помощью стилей XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

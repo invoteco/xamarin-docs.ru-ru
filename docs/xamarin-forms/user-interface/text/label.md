@@ -1,36 +1,36 @@
 ---
-title: Метка Xamarin.Forms
-description: В этой статье объясняется, как использовать класс Xamarin.Forms метки для отображения одного или нескольких строк текста в приложениях.
+title: Этикетка Xamarin.Forms
+description: В этой статье объясняется, как использовать класс Xamarin.Forms Label для отображения одно- и многолинейного текста в приложениях.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/28/2019
-ms.openlocfilehash: 64fa15a15468a84ada3a377a9ac85bbf6310099c
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.date: 04/09/2020
+ms.openlocfilehash: bed6b8a774ecb352427f16b78d10e50821f92701
+ms.sourcegitcommit: 765b69ed451a0f48625ea597c3f39de95f3ae693
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305591"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987599"
 ---
-# <a name="xamarinforms-label"></a>Метка Xamarin.Forms
+# <a name="xamarinforms-label"></a>Этикетка Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Скачать](~/media/shared/download.png) образец Скачать образец](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Отображение текста в Xamarin. Forms_
+_Отображение текста в Xamarin.Forms_
 
-Представление [`Label`](xref:Xamarin.Forms.Label) используется для отображения текста как с одним, так и с несколькими строками. Метки можно иметь оформление текста, цветным текстом и использовать пользовательские шрифты (семейств, размеры и параметры).
+Представление [`Label`](xref:Xamarin.Forms.Label) используется для отображения текста, как одноименного, так и многолинейного. Этикетки могут иметь текстовые украшения, цветной текст и использовать пользовательские шрифты (семьи, размеры и опции).
 
-## <a name="text-decorations"></a>Оформление текста
+## <a name="text-decorations"></a>Текстовые украшения
 
-Оформление текста с подчеркиванием и зачеркиванием можно применять к экземплярам [`Label`](xref:Xamarin.Forms.Label) , присвоив свойству `Label.TextDecorations` один или несколько `TextDecorations` членов перечисления:
+Подчеркивание и забастовочные [`Label`](xref:Xamarin.Forms.Label) текстовые украшения `Label.TextDecorations` могут быть `TextDecorations` применены к экземплярам, установив свойство для одного или нескольких участников перечисления:
 
 - `None`
 - `Underline`
 - `Strikethrough`
 
-В следующем примере XAML показано задание свойства `Label.TextDecorations`:
+Следующий пример XAML демонстрирует `Label.TextDecorations` настройку свойства:
 
 ```xaml
 <Label Text="This is underlined text." TextDecorations="Underline"  />
@@ -46,16 +46,16 @@ var strikethroughLabel = new Label { Text = "This is text with strikethrough.", 
 var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
 ```
 
-На следующих снимках экрана показаны элементы перечисления `TextDecorations`, применяемые к экземплярам [`Label`](xref:Xamarin.Forms.Label) .
+На следующих скриншотах показаны `TextDecorations` участники [`Label`](xref:Xamarin.Forms.Label) перечисления, применяемые к экземплярам:
 
-![Метки с оформлением текста](label-images/label-textdecorations.png)
+![Этикетки с текстовыми украшениями](label-images/label-textdecorations.png)
 
 > [!NOTE]
-> Оформление текста можно также применить к экземплярам [`Span`](xref:Xamarin.Forms.Span) . Дополнительные сведения о классе `Span` см. в разделе [форматированный текст](#Formatted_Text).
+> Текстовые украшения также могут [`Span`](xref:Xamarin.Forms.Span) быть применены к экземплярам. Для получения дополнительной `Span` информации о классе см. [Formatted Text](#Formatted_Text)
 
-## <a name="character-spacing"></a>Интервал между символами
+## <a name="character-spacing"></a>Интервалы между символами
 
-Интервалы между символами можно применять к экземплярам [`Label`](xref:Xamarin.Forms.Label) , присвоив свойству `Label.CharacterSpacing` значение `double`.
+Расстояние между персонажами может [`Label`](xref:Xamarin.Forms.Label) быть применено `Label.CharacterSpacing` к `double` экземплярам, установив свойство к значению:
 
 ```xaml
 <Label Text="Character spaced text"
@@ -68,15 +68,43 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 };
 ```
 
-Результат заключается в том, что символы в тексте, отображаемом [`Label`](xref:Xamarin.Forms.Label) , размещаются `CharacterSpacing` независимыми от устройства единицами.
+Результатом является то, что символы [`Label`](xref:Xamarin.Forms.Label) в тексте отображается расставлены `CharacterSpacing` устройства-независимых единиц друг от друга.
+
+## <a name="new-lines"></a>Символы перевода строки
+
+Есть два основных метода [`Label`](xref:Xamarin.Forms.Label) для принуждения текста в новой строке, от XAML:
+
+1. Используйте символ подачи линии unicode, который является "&#10;".
+1. Укажите текст с помощью синтаксиса *элемента свойства.*
+
+В следующем коде показан пример обоих методов:
+
+```xaml
+<!-- Unicode line feed character -->
+<Label Text="First line &#10; Second line" />
+
+<!-- Property element syntax -->
+<Label>
+    <Label.Text>
+        First line
+        Second line
+    </Label.Text>
+</Label>
+```
+
+В C, текст может быть вытеснен на новую строку с символом «зн»:
+
+```csharp
+Label label = new Label { Text = "First line\nSecond line" };
+```
 
 ## <a name="colors"></a>Цвета
 
-Метки можно настроить для использования пользовательского цвета текста с помощью свойства BIND [`TextColor`](xref:Xamarin.Forms.Label.TextColor) .
+Этикетки могут быть установлены для использования пользовательского цвета текста через связываемые [`TextColor`](xref:Xamarin.Forms.Label.TextColor) свойства.
 
-Особое внимание необходимо, чтобы гарантировать, что цвета будет доступна для использования на каждой платформе. Так как каждая платформа имеет различные значения по умолчанию для цветов текста и фона, необходимо соблюдать осторожность выбрать умолчания, которое работает на каждом.
+Особая осторожность необходима для обеспечения того, чтобы цвета были пригодны для удостаивания на каждой платформе. Поскольку каждая платформа имеет различные значения по умолчанию для цветов текста и фона, вам нужно быть осторожным, чтобы выбрать по умолчанию, который работает на каждом.
 
-В следующем примере XAML задается цвет текста `Label`:
+Следующий пример XAML устанавливает цвет `Label`текста:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -106,39 +134,39 @@ public partial class LabelPage : ContentPage
 }
 ```
 
-На следующих снимках экрана показан результат установки свойства `TextColor`.
+Следующие скриншоты показывают результат `TextColor` настройки свойства:
 
-![Пример метки TextColor](label-images/textcolor.png)
+![Пример этикетки TextColor](label-images/textcolor.png)
 
-Дополнительные сведения о цветах см. в разделе [цвета](~/xamarin-forms/user-interface/colors.md).
+Для получения дополнительной информации о цветах, [см.](~/xamarin-forms/user-interface/colors.md)
 
 ## <a name="fonts"></a>Шрифты
 
-Дополнительные сведения об указании шрифтов в `Label`см. в разделе [шрифты](~/xamarin-forms/user-interface/text/fonts.md).
+Для получения дополнительной информации об `Label`указании шрифтов на, см. [Fonts](~/xamarin-forms/user-interface/text/fonts.md)
 
 <a name="Truncation_and_Wrapping" />
 
-## <a name="truncation-and-wrapping"></a>Усечение и поддерживающего перенос
+## <a name="truncation-and-wrapping"></a>Трубация и упаковка
 
-Метки могут быть настроены на обработку текста, который не может поместиться в одну строку одним из нескольких способов, предоставляемых свойством `LineBreakMode`. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) является перечислением со следующими значениями:
+Этикетки могут быть настроены для обработки текста, который не может поместиться на одной строке одним из нескольких способов, подверженных свойству. `LineBreakMode` [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode)это перечисление со следующими значениями:
 
-- **Хеадтрункатион** &ndash; усекает заголовок текста, отображая его конец.
-- **Чарактерврап** &ndash; заключает текст на новую строку с границей символа.
-- **Миддлетрункатион** &ndash; отображает начало и конец текста, а середина заменяется многоточием.
-- &ndash; без **переноса** не переносит текст, отображая всего столько же текста, сколько может уместиться в одной строке.
-- **Таилтрункатион** &ndash; показывает начало текста с усечением конца.
-- **WordWrap** &ndash; заключает текст на границе слова.
+- **HeadTruncation** &ndash; усечения головы текста, показывая конец.
+- **CharacterWrap** &ndash; заворачивает текст на новую строку на границе символов.
+- **MiddleTruncation** &ndash; отображает начало и конец текста, при этом середина заменяется эллипсисом.
+- **NoWrap** &ndash; не заворачивает текст, отображая только столько текста, сколько может поместиться на одной строке.
+- **TailTruncation** &ndash; показывает начало текста, усечение конца.
+- **WordWrap** &ndash; обертывает текст на границе слова.
 
-## <a name="display-a-specific-number-of-lines"></a>Отображение определенного числа строк
+## <a name="display-a-specific-number-of-lines"></a>Отобразить определенное количество строк
 
-Число строк, отображаемых [`Label`](xref:Xamarin.Forms.Label) , можно указать, задав для свойства `Label.MaxLines` значение `int`.
+Количество строк, отображаемых a, [`Label`](xref:Xamarin.Forms.Label) может быть определено путем установки `Label.MaxLines` свойства на `int` значение:
 
-- Если `MaxLines` равно-1, то есть значение по умолчанию, `Label` учитывает значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) , чтобы отображалась только одна строка, возможно, обрезанная или все строки со всем текстом.
-- Если значение `MaxLines` равно 0, `Label` не отображается.
-- Если `MaxLines` равен 1, то результат будет совпадать с установкой свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в значение [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)или [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). Однако `Label` будет учитывать значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в отношении размещения многоточия (если применимо).
-- Если `MaxLines` больше 1, `Label` отображает указанное число строк и учитывает значение свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) в отношении размещения многоточия (если применимо). Однако если для свойства [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) задано значение [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), то установка свойства `MaxLines` равным значению больше 1 не имеет смысла.
+- Когда `MaxLines` -1, что является его `Label` значением по умолчанию, уважает значение [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) свойства либо показать только одну строку, возможно, усеченную, или все строки со всем текстом.
+- Когда `MaxLines` 0, `Label` не отображается.
+- Когда `MaxLines` 1, результат идентичен [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) настройке [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode) [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)свойства, [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode)или [`NoWrap`](xref:Xamarin.Forms.LineBreakMode). Тем не `Label` менее, будет [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) уважать стоимость имущества в отношении размещения эллипсиса, если это применимо.
+- Когда `MaxLines` больше, чем `Label` 1, будет отображаться до указанного количества строк, [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) при соблюдении стоимости имущества в отношении размещения эллипсис, если это применимо. Однако установка `MaxLines` свойства на значение, превышающее [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 1, не [`NoWrap`](xref:Xamarin.Forms.LineBreakMode)имеет эффекта, если свойство настроено на.
 
-В следующем примере XAML показано задание свойства `MaxLines` в [`Label`](xref:Xamarin.Forms.Label):
+Следующий пример XAML демонстрирует `MaxLines` настройку [`Label`](xref:Xamarin.Forms.Label)свойства на:
 
 ```xaml
 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
@@ -156,18 +184,18 @@ var label =
 };
 ```
 
-На следующих снимках экрана показан результат установки свойства `MaxLines` равным 2, если текст достаточно длинный, чтобы занимать более 2 строк:
+Следующие скриншоты показывают результат `MaxLines` настройки свойства до 2, когда текст достаточно долго, чтобы занять более 2 строк:
 
-![Пример метки Макслинес](label-images/label-maxlines.png)
+![Пример этикетки MaxLines](label-images/label-maxlines.png)
 
-## <a name="display-html"></a>Отображать HTML
+## <a name="display-html"></a>Отображение HTML
 
-Класс [`Label`](xref:Xamarin.Forms.Label) имеет свойство `TextType`, которое определяет, должен ли экземпляр `Label` отображать обычный текст или HTML-текст. Этому свойству следует присвоить один из членов перечисления `TextType`:
+Класс [`Label`](xref:Xamarin.Forms.Label) имеет `TextType` свойство, которое `Label` определяет, должен ли экземпляр отображать простой текст или HTML-текст. Это свойство должно быть установлено `TextType` для одного из членов перечисления:
 
-- `Text` указывает, что `Label` будет отображать обычный текст и является значением по умолчанию свойства `Label.TextType`.
-- `Html` указывает, что `Label` будет отображать HTML-текст.
+- `Text`указывает на `Label` то, что будет отображаться простой текст, и значение по умолчанию `Label.TextType` свойства.
+- `Html`указывает на `Label` то, что будет отображаться HTML текст.
 
-Таким образом, [`Label`](xref:Xamarin.Forms.Label) экземпляры могут отображать HTML, присвоив свойству `Label.TextType` значение `Html`, а свойству `Label.Text` — строке HTML:
+Таким [`Label`](xref:Xamarin.Forms.Label) образом, экземпляры могут `Label.TextType` отображать `Html`HTML, `Label.Text` установив свойство на строку HTML:
 
 ```csharp
 Label label = new Label
@@ -177,16 +205,16 @@ Label label = new Label
 };
 ```
 
-В приведенном выше примере символы двойной кавычки в HTML должны быть экранированы с помощью символа `\`.
+В приведенном выше примере, двойные символы цитаты `\` в HTML должны быть избежаны с помощью символа.
 
-В XAML строки HTML могут стать нечитаемыми из-за дополнительного экранирования `<` и `>` символов:
+В XAML HTML строки могут стать нечитаемыми из-за дополнительного побега `<` и `>` символов:
 
 ```xaml
 <Label Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
        TextType="Html"  />
 ```
 
-Кроме того, для повышения удобочитаемости HTML может быть встроен в `CDATA` разделе:
+Кроме того, для большей читаемости HTML `CDATA` может быть выровнен в разделе:
 
 ```xaml
 <Label TextType="Html">
@@ -196,44 +224,44 @@ Label label = new Label
 </Label>
 ```
 
-В этом примере свойству `Label.Text` присваивается строка HTML, встроенная в раздел `CDATA`. Это работает потому, что свойство `Text` является `ContentProperty`ом класса `Label`.
+В этом примере свойство `Label.Text` устанавливается на строку HTML, которая встроена `CDATA` в раздел. Это работает, `Text` потому `ContentProperty` что `Label` свойство для класса.
 
-На следующих снимках экрана показан [`Label`](xref:Xamarin.Forms.Label) , отображающий HTML:
+На следующих скриншотах отображается [`Label`](xref:Xamarin.Forms.Label) HTML:
 
-![Снимки экрана метки, отображающей HTML, в iOS и Android](label-images/label-html.png)
+![Скриншоты этикетки, отображающей HTML, на iOS и Android](label-images/label-html.png)
 
 > [!IMPORTANT]
-> Отображение HTML в [`Label`](xref:Xamarin.Forms.Label) ограничено HTML-тегами, которые поддерживаются базовой платформой.
+> Отображение [`Label`](xref:Xamarin.Forms.Label) HTML в а ограничено HTML-тегами, поддерживаемыми базовой платформой.
 
 <a name="Formatted_Text" />
 
 ## <a name="formatted-text"></a>Форматированный текст
 
-Метки предоставляют свойство [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) , которое позволяет просматривать текст с несколькими шрифтами и цветами в одном и том же представлении.
+Этикетки разоблачают свойство, [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) позволяющее представить текст несколькими шрифтами и цветами в одном представлении.
 
-Свойство `FormattedText` имеет тип [`FormattedString`](xref:Xamarin.Forms.FormattedString), который состоит из одного или нескольких экземпляров [`Span`](xref:Xamarin.Forms.Span) , задается через свойство [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) . Для настройки внешнего вида можно использовать следующие свойства `Span`.
+Свойство `FormattedText` типа [`FormattedString`](xref:Xamarin.Forms.FormattedString), который включает в [`Span`](xref:Xamarin.Forms.Span) себя один или [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) несколько экземпляров, установленных через свойство. Следующие `Span` свойства могут быть использованы для установки внешнего вида:
 
-- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) — цвет фона диапазона.
+- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor)- цвет фона диапазона.
 - `CharacterSpacing` с типом `double` представляет собой интервал между знаками текста `Span`.
-- [`Font`](xref:Xamarin.Forms.Span.Font) — шрифт текста в диапазоне.
-- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) — атрибуты шрифта для текста в диапазоне.
-- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) — семейство шрифтов, которому принадлежит шрифт текста в диапазоне.
-- [`FontSize`](xref:Xamarin.Forms.Span.FontSize) — размер шрифта для текста в диапазоне.
-- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) — цвет текста в диапазоне. Это свойство устарело и было заменено свойством `TextColor`.
-- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) — коэффициент, применяемый к высоте строки по умолчанию для диапазона. Дополнительные сведения см. в разделе [Height строки](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style) — стиль, применяемый к диапазону.
-- [`Text`](xref:Xamarin.Forms.Span.Text) — текст диапазона.
-- [`TextColor`](xref:Xamarin.Forms.Span.TextColor) — цвет текста в диапазоне.
-- `TextDecorations` — Оформление, применяемое к тексту в диапазоне. Дополнительные сведения см. в разделе [Оформление текста](#text-decorations).
+- [`Font`](xref:Xamarin.Forms.Span.Font)- шрифт для текста в пролете.
+- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes)— атрибуты шрифта для текста в диапазоне.
+- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily)- семейство шрифтов, к которому принадлежит шрифт для текста в диапазоне.
+- [`FontSize`](xref:Xamarin.Forms.Span.FontSize)- размер шрифта для текста в пролете.
+- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor)- цвет текста в пролете. Это свойство устарело и `TextColor` было заменено свойством.
+- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight)- множитель для применения к высоте линии по умолчанию диапазона. Для получения дополнительной информации [см.](#line-height)
+- [`Style`](xref:Xamarin.Forms.Span.Style)- стиль, чтобы применить к пролету.
+- [`Text`](xref:Xamarin.Forms.Span.Text)- текст пролета.
+- [`TextColor`](xref:Xamarin.Forms.Span.TextColor)- цвет текста в пролете.
+- `TextDecorations`- украшения для применения к тексту в пролете. Для получения дополнительной [информации,](#text-decorations)см Текст украшения .
 
-Свойства [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor), [`Text`](xref:Xamarin.Forms.Span.Text)и [`Text`](xref:Xamarin.Forms.Span.Text) BIND имеют режим привязки по умолчанию [`OneWay`](xref:Xamarin.Forms.BindingMode). Дополнительные сведения об этом режиме привязки см. в описании [режима привязки по умолчанию](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) в разделе " [режим привязки](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) ".
+В [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) [`Text`](xref:Xamarin.Forms.Span.Text), [`Text`](xref:Xamarin.Forms.Span.Text) и связываемые свойства [`OneWay`](xref:Xamarin.Forms.BindingMode)имеют режим связывания по умолчанию . Для получения дополнительной информации об этом режиме [Binding Mode](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) связывания [см.](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode)
 
-Кроме того, свойство [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) можно использовать для определения коллекции распознавателей жестов, которые будут реагировать на жесты на [`Span`](xref:Xamarin.Forms.Span).
+Кроме того, [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) свойство может быть использовано для определения коллекции распознавания [`Span`](xref:Xamarin.Forms.Span)жестов, которые будут реагировать на жесты на .
 
 > [!NOTE]
-> Невозможно отобразить HTML в [`Span`](xref:Xamarin.Forms.Span).
+> Отобразить HTML в [`Span`](xref:Xamarin.Forms.Span).
 
-В следующем примере XAML показано `FormattedText` свойство, состоящее из трех экземпляров [`Span`](xref:Xamarin.Forms.Span) :
+Следующий пример XAML `FormattedText` демонстрирует свойство, [`Span`](xref:Xamarin.Forms.Span) состоящее из трех экземпляров:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -283,25 +311,25 @@ public class LabelPageCode : ContentPage
 ```
 
 > [!IMPORTANT]
-> Свойство [`Text`](xref:Xamarin.Forms.Span.Text) `Span` можно задать с помощью привязки данных. Более подробную информацию см. в разделе [Привязка данных](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+> Свойство [`Text`](xref:Xamarin.Forms.Span.Text) `Span` может быть установлено с помощью связывания данных. Более подробную информацию см. в разделе [Привязка данных](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-Обратите внимание, что [`Span`](xref:Xamarin.Forms.Span) может также реагировать на любые жесты, добавленные в коллекцию [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) диапазона. Например, к второй `Span` в приведенных выше примерах кода был добавлен [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) . Таким образом, при нажатии этой `Span` `TapGestureRecognizer` будет реагировать на исполнение `ICommand`, определенного свойством [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) . Дополнительные сведения о распознавателях жестов см. в разделе [жесты Xamarin. Forms](~/xamarin-forms/app-fundamentals/gestures/index.md).
+Обратите внимание, что a [`Span`](xref:Xamarin.Forms.Span) также может реагировать на [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) любые жесты, которые добавляются в коллекцию диапазона. Например, [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a был добавлен `Span` ко второму в приведенных выше примерах кода. Таким образом, `Span` когда `TapGestureRecognizer` это постучал будет реагировать, исполняя `ICommand` определяется [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) свойством. Для получения дополнительной информации о распознавании жестов, см [Xamarin.Forms жесты](~/xamarin-forms/app-fundamentals/gestures/index.md).
 
-На следующих снимках экрана показан результат установки свойства `FormattedString` в три экземпляра `Span`:
+Следующие скриншоты показывают результат `FormattedString` настройки `Span` свойства до трех экземпляров:
 
-![Пример метки FormattedText](label-images/formattedtext.png)
+![Пример formattedText этикетки](label-images/formattedtext.png)
 
 ## <a name="line-height"></a>Высота линии
 
-Вертикальную высоту [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) можно настроить, задав для свойства [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) или [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) значение `double`. В iOS и Android эти значения являются множителями исходной высоты строки, а на универсальная платформа Windows (UWP) значение свойства `Label.LineHeight` является множителем размера шрифта метки.
+Вертикальная высота [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) может быть настроена [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) путем настройки свойства или [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) `double` значения. На iOS и Android эти значения являются мультипликаторами первоначальной высоты `Label.LineHeight` линии, а на универсальной платформе Windows (UWP) значение свойства является множественником размера шрифта этикетки.
 
 > [!NOTE]
 >
-> - В iOS свойства [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) и [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) изменяют высоту строки текста, находящуюся в одной строке, и текст, который переносится на несколько строк.
-> - В Android свойства [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) и [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) изменяют только высоту строки текста, которая переносится на несколько строк.
-> - В UWP свойство [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) изменяет высоту строки текста, которая переносится на несколько строк, а свойство [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) не оказывает никакого влияния.
+> - На iOS, [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) и свойства изменить высоту строки текста, который помещается на одной строке, и текст, который обертывания на несколько строк.
+> - На Android, [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) и свойства только изменить высоту линии текста, который обертывания на несколько строк.
+> - На UWP [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) свойство изменяет высоту строки текста, которая [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) обертывается на несколько строк, и свойство не имеет эффекта.
 
-В следующем примере XAML показано задание свойства [`LineHeight`](xref:Xamarin.Forms.Label.LineHeight) в [`Label`](xref:Xamarin.Forms.Label):
+Следующий пример XAML демонстрирует [`LineHeight`](xref:Xamarin.Forms.Label.LineHeight) настройку [`Label`](xref:Xamarin.Forms.Label)свойства на:
 
 ```xaml
 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
@@ -319,11 +347,11 @@ var label =
 };
 ```
 
-На следующих снимках экрана показан результат установки свойства [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) в значение 1,8:
+Следующие скриншоты показывают результат [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) установки свойства до 1.8:
 
-![Пример метки LineHeight](label-images/label-lineheight.png)
+![Пример линии этикетки](label-images/label-lineheight.png)
 
-В следующем примере XAML показано задание свойства [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) в [`Span`](xref:Xamarin.Forms.Span):
+Следующий пример XAML демонстрирует [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) настройку [`Span`](xref:Xamarin.Forms.Span)свойства на:
 
 ```xaml
 <Label LineBreakMode="WordWrap">
@@ -359,13 +387,13 @@ var label = new Label
 };
 ```
 
-На следующих снимках экрана показан результат установки свойства [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) в значение 1,8:
+Следующие скриншоты показывают результат [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) установки свойства до 1.8:
 
-![Пример span LineHeight](label-images/span-lineheight.png)
+![Пример линии Span](label-images/span-lineheight.png)
 
 ## <a name="padding"></a>Заполнение
 
-Заполнение представляет пространство между элементом и его дочерними элементами и используется для отделения элемента от его собственного содержимого. Заполнение можно применять к экземплярам [`Label`](xref:Xamarin.Forms.Label) , присвоив свойству `Label.Padding` значение [`Thickness`](xref:Xamarin.Forms.Thickness) .
+Обивка представляет пространство между элементом и его элементами ребенка и используется для отделения элемента от собственного содержимого. Обивка может [`Label`](xref:Xamarin.Forms.Label) быть применена `Label.Padding` к [`Thickness`](xref:Xamarin.Forms.Thickness) экземплярам, установив свойство к значению:
 
 ```xaml
 <Label Padding="10">
@@ -398,22 +426,22 @@ Label label = new Label
 ```
 
 > [!IMPORTANT]
-> В iOS при создании [`Label`](xref:Xamarin.Forms.Label) , который задает свойство `Padding`, будет применено заполнение, а значение заполнения можно будет обновить позже. Однако при создании `Label`, который не задает свойство `Padding`, попытка его установки в дальнейшем не повлияет.
+> На iOS, [`Label`](xref:Xamarin.Forms.Label) когда создается `Padding` свойство, будет применена обивка, а значение заполнения может быть обновлено позже. Однако при `Label` создании создается, что `Padding` не устанавливает свойство, попытка установить его позже не будет иметь никакого эффекта.
 >
-> В Android и универсальная платформа Windows значение свойства `Padding` может быть указано при создании `Label` или более поздней версии.
+> На Android и универсальной `Padding` платформе Windows значение свойства `Label` может быть определено при создании или позже.
 
-Дополнительные сведения о заполнении см. в разделе [поля и заполнение](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+Для получения дополнительной информации о обивке, [см.](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 
 ## <a name="hyperlinks"></a>Гиперссылки
 
-Текст, отображаемый [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) экземпляры, можно преобразовать в гиперссылки с помощью следующего подхода:
+Текст, отображаемый экземплярами, [`Label`](xref:Xamarin.Forms.Label) [`Span`](xref:Xamarin.Forms.Span) может быть превращен в гиперссылки со следующим подходом:
 
-1. Задайте свойства `TextColor` и `TextDecoration` [`Label`](xref:Xamarin.Forms.Label) или [`Span`](xref:Xamarin.Forms.Span).
-1. Добавьте [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) в коллекцию [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) [`Label`](xref:Xamarin.Forms.Label) или [`Span`](xref:Xamarin.Forms.Span), свойство [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) которой привязано к `ICommand`, а свойство [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) содержит открываемый URL-адрес.
-1. Определите `ICommand`, которые будут выполняться [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
-1. Напишите код, который будет выполнен `ICommand`.
+1. Установите `TextColor` `TextDecoration` и свойства [`Label`](xref:Xamarin.Forms.Label) [`Span`](xref:Xamarin.Forms.Span)или .
+1. Добавить [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) в [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) коллекцию [`Label`](xref:Xamarin.Forms.Label) [`Span`](xref:Xamarin.Forms.Span)или [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) , чье свойство связывается с `ICommand`, и чье [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) свойство содержит URL, чтобы открыть.
+1. Определите, `ICommand` что будет выполнено [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
+1. Напишите код, который будет `ICommand`выполнен .
 
-В следующем примере кода, взятом из примера [демонстрации гиперссылок](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , показан [`Label`](xref:Xamarin.Forms.Label) , содержимое которого задается из нескольких экземпляров [`Span`](xref:Xamarin.Forms.Span) :
+На следующем примере кода, взятом из образца [Hyperlink Demos,](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) показан о содержимом [`Label`](xref:Xamarin.Forms.Label) которого устанавливается из нескольких [`Span`](xref:Xamarin.Forms.Span) экземпляров:
 
 ```xaml
 <Label>
@@ -434,13 +462,13 @@ Label label = new Label
 </Label>
 ```
 
-В этом примере первый и третий экземпляры [`Span`](xref:Xamarin.Forms.Span) состоят из текста, а вторая `Span` представляет собой гиперссылку с касанием. Цвет текста установлен синим цветом и имеет подчеркивание текста. При этом создается внешний вид гиперссылки, как показано на следующих снимках экрана:
+В этом примере первая и третья [`Span`](xref:Xamarin.Forms.Span) экземпляры `Span` включают текст, а второй представляет собой tappable гиперссылку. Он имеет свой цвет текста набор синий, и имеет подчеркнутое оформление текста. Это создает видимость гиперссылки, как показано на следующих скриншотах:
 
 [![Гиперссылки](label-images/hyperlinks-small.png "Гиперссылки")](label-images/hyperlinks-large.png#lightbox)
 
-При нажатии этой гиперссылки [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) будет реагировать, выполнив `ICommand`, определенный свойством [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) . Кроме того, URL-адрес, заданный свойством [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) , будет передан в `ICommand` в качестве параметра.
+При нажатии гиперссылки [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) будет реагировать, исполняя `ICommand` определяемое ее [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) свойством. Кроме того, URL, [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) указанный свойством, `ICommand` будет передан в качестве параметра.
 
-Код программной части для страницы XAML содержит реализацию `TapCommand`:
+Закодирование для страницы XAML `TapCommand` содержит реализацию:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -456,13 +484,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-`TapCommand` выполняет метод `Launcher.OpenAsync`, передавая значение свойства [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) в качестве параметра. Метод `Launcher.OpenAsync` предоставляется Xamarin. Essentials и открывается в веб-браузере. Таким образом, общий результат заключается в том, что при касании гиперссылки на странице появляется веб-браузер, и открывается URL-адрес, связанный с гиперссылкой.
+Выполняет `TapCommand` `Launcher.OpenAsync` метод, передавая [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) значение свойства в качестве параметра. Метод `Launcher.OpenAsync` предоставляется Xamarin.Essentials, и открывает URL в веб-браузере. Таким образом, общий эффект заключается в том, что при нажатии гиперссылки на странице появляется веб-браузер и отображается URL,связанный с гиперссылкой.
 
-### <a name="creating-a-reusable-hyperlink-class"></a>Создание повторно используемого класса гиперссылки
+### <a name="creating-a-reusable-hyperlink-class"></a>Создание многоразового класса гиперссылки
 
-Предыдущий подход к созданию гиперссылки требует написания повторяющегося кода каждый раз, когда требуется гиперссылка в приложении. Однако классы [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) могут быть подклассами для создания классов `HyperlinkLabel` и `HyperlinkSpan` с помощью распознавателя жестов и кода форматирования текста.
+Предыдущий подход к созданию гиперссылки требует написания повторяющихся кодов каждый раз, когда требуется гиперссылка в приложении. Тем не [`Label`](xref:Xamarin.Forms.Label) менее, как классы, так и [`Span`](xref:Xamarin.Forms.Span) классы могут быть подклассными для создания `HyperlinkLabel` и `HyperlinkSpan` классов, с добавлением там распознавания жестов и кода форматирования текста.
 
-В следующем примере кода, взятом из примера [демонстрации гиперссылок](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , показан класс `HyperlinkSpan`:
+Следующий пример кода, взятый из образца `HyperlinkSpan` [Hyperlink Demos,](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) показывает класс:
 
 ```csharp
 public class HyperlinkSpan : Span
@@ -489,9 +517,9 @@ public class HyperlinkSpan : Span
 }
 ```
 
-Класс `HyperlinkSpan` определяет свойство `Url` и связанное [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), а конструктор задает внешний вид гиперссылки и [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) , которые будут реагировать при касании гиперссылки. При нажатии `HyperlinkSpan` `TapGestureRecognizer` будет отвечать, выполнив метод `Launcher.OpenAsync`, чтобы открыть URL-адрес, указанный свойством `Url`, в веб-браузере.
+Класс `HyperlinkSpan` определяет свойство `Url` и [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)связанное с ним свойство, а [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) конструктор устанавливает внешний вид гиперссылки и то, что будет реагировать при нажатии гиперссылки. `HyperlinkSpan` При нажатии будет `TapGestureRecognizer` ответчик, выражая `Launcher.OpenAsync` метод открытия URL-адреса, `Url` указанный свойством, в веб-браузере.
 
-Класс `HyperlinkSpan` можно использовать, добавив в XAML экземпляр класса:
+Класс `HyperlinkSpan` можно использовать, добавив экземпляр класса в XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -514,14 +542,14 @@ public class HyperlinkSpan : Span
 </ContentPage>
 ```
 
-## <a name="styling-labels"></a>Стиль метки
+## <a name="styling-labels"></a>Укладка этикетки
 
-В предыдущих разделах рассматривалось установка [`Label`](xref:Xamarin.Forms.Label) и [`Span`](xref:Xamarin.Forms.Span) свойств для каждого экземпляра. Тем не менее наборы свойств могут быть сгруппированы в один стиль, который последовательно применяется для одного или нескольких представлений. Это может повысить читаемость кода и делать изменения дизайна проще в реализации. Дополнительные сведения см. в разделе [стили](~/xamarin-forms/user-interface/text/styles.md).
+Предыдущие разделы [`Label`](xref:Xamarin.Forms.Label) охватывали настройки и [`Span`](xref:Xamarin.Forms.Span) свойства на основе в каждом экземпляре. Однако наборы свойств можно сгруппировать в один стиль, который постоянно применяется к одному или многим представлениям. Это может повысить читаемость кода и упростить реализацию изменений в дизайне. Для получения дополнительной информации, см [Стили](~/xamarin-forms/user-interface/text/styles.md).
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Текст (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [Гиперссылки (пример)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
-- [Создание мобильных приложений с помощью Xamarin. Forms, глава 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
+- [Текст (образец)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Гиперссылки (образец)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
+- [Создание мобильных приложений с помощью Xamarin.Forms, глава 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [API Label](xref:Xamarin.Forms.Label)
-- [API span](xref:Xamarin.Forms.Span)
+- [Span API](xref:Xamarin.Forms.Span)

@@ -4,7 +4,7 @@
   items:
     - name: Предисловие
       href: preface.md
-    - name: Вступление
+    - name: Введение
       href: introduction.md
     - name: MVVM
       displayName: 'Model, View, ViewModel'
@@ -14,7 +14,7 @@
       href: dependency-injection.md
     - name: Взаимодействие между слабо связанными компонентами
       href: communicating-between-loosely-coupled-components.md
-    - name: Навигация
+    - name: Навигации
       href: navigation.md
     - name: Проверка
       href: validation.md

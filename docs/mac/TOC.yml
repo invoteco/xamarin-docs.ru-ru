@@ -15,7 +15,7 @@
     - name: Принципы работы приложения
       href: app-fundamentals/index.md
       items:
-        - name: Специальные возможности
+        - name: Возможности доступа
           href: app-fundamentals/accessibility.md
         - name: Общие шаблоны и идиомы
           href: app-fundamentals/patterns.md
@@ -27,7 +27,7 @@
           href: app-fundamentals/xib.md
         - name: Проектирование пользовательского интерфейса .storyboard/.xib-less
           href: app-fundamentals/xibless-ui.md
-        - name: Образы
+        - name: Изображения
           href: app-fundamentals/image.md
         - name: "Привязка данных и кодирование типа \"ключ\_— значение\""
           href: app-fundamentals/databinding.md
@@ -46,7 +46,7 @@
           href: user-interface/window.md
         - name: Диалоговые окна
           href: user-interface/dialog.md
-        - name: Предупреждения
+        - name: видны узлы
           href: user-interface/alert.md
         - name: Меню
           href: user-interface/menu.md
@@ -70,7 +70,7 @@
         - name: "Введение в macOS\_Mojave"
           href: platform/introduction-to-macos-mojave/index.md
           items:
-            - name: Начало работы
+            - name: Приступая к работе
               href: platform/introduction-to-macos-mojave/get-started.md
         - name: "Введение в macOS\_High\_Sierra"
           href: platform/introduction-to-macos-high-sierra/index.md
@@ -158,11 +158,11 @@
             - name: Objective Sharpie
               href: ~/cross-platform/macios/binding/objective-sharpie/index.md?context=xamarin/mac
               items:
-                - name: Начало работы
+                - name: Приступая к работе
                   href: ~/cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin/mac
                 - name: Средства и команды
                   href: ~/cross-platform/macios/binding/objective-sharpie/tools.md?context=xamarin/mac
-                - name: Функции
+                - name: Компоненты
                   href: ~/cross-platform/macios/binding/objective-sharpie/platform/index.md?context=xamarin/mac
                   items:
                     - name: ApiDefinitions и StructsAndEnums
@@ -210,7 +210,7 @@
           href: internals/architecture.md
         - name: Как работает Xamarin.Mac
           href: internals/how-it-works.md
-        - name: Инфраструктуры
+        - name: Платформы
           href: internals/frameworks.md
         - name: регистратор
           href: internals/registrar.md

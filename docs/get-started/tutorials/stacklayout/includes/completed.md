@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: ae5962de05190ad914c86ceb0a9b52edb72232dc
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107337"
 ---
-Поздравляем с завершением этого руководства, в котором вы научились:
+Поздравляем с завершением этого учебника, где вы научились:
 
 > [!div class="checklist"]
 >
@@ -14,7 +14,7 @@ ms.locfileid: "71107337"
 > - Задавать ориентацию `StackLayout`.
 > - Задавать выравнивание дочернего представления и расширения в `StackLayout`.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы узнать больше об основах создания мобильных приложений с помощью Xamarin.Forms, перейдите к учебнику по меткам.
 

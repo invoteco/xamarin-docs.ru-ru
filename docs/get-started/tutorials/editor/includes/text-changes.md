@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 653d3677f96d7da78af61531c535b1b7db684e7e
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135113"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** измените объявление [`Editor`](xref:Xamarin.Forms.Editor) таким образом, чтобы оно установило обработчик для событий [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) и [`Completed`](xref:Xamarin.Forms.Editor.Completed).
 
@@ -17,9 +17,9 @@ ms.locfileid: "77135113"
             Completed="OnEditorCompleted" />
     ```
 
-    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) для обработчика событий `OnEditorTextChanged`, а [`Completed`](xref:Xamarin.Forms.Editor.Completed) — для обработчика `OnEditorCompleted`. На следующем шаге создаются оба обработчика событий.
+    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) для обработчика событий `OnEditorTextChanged`, а [`Completed`](xref:Xamarin.Forms.Editor.Completed) — для обработчика `OnEditorCompleted`. Оба обработчика событий будут созданы на следующем шаге.
 
-1. В **обозревателе решений** в проекте **EditorTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в файле **MainPage.xaml.cs** добавьте обработчики событий `OnEditorTextChanged` и `OnEditorCompleted` в класс.
+1. В **обозревателе решений** в проекте **EditorTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в **MainPage.xaml.cs** добавьте обработчики событий `OnEditorTextChanged` и `OnEditorCompleted` в класс.
 
     ```csharp
     void OnEditorTextChanged(object sender, TextChangedEventArgs e)
@@ -41,7 +41,7 @@ ms.locfileid: "77135113"
     > [!IMPORTANT]
     > Любой текст, введенный в [`Editor`](xref:Xamarin.Forms.Editor), хранится в свойстве [`Text`](xref:Xamarin.Forms.InputView.Text).
 
-1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
+1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
 
     [![Снимок экрана: редактор, содержащий текст, в iOS и Android](../images/text-changes.png "Редактор с текстом")](../images/text-changes-large.png#lightbox "Редактор с текстом")
 
@@ -49,7 +49,7 @@ ms.locfileid: "77135113"
 
     Дополнительные сведения о событиях [`Editor`](xref:Xamarin.Forms.Editor) см. в разделе [Интерактивность](~/xamarin-forms/user-interface/text/editor.md#interactivity) в руководстве [Редактор Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** измените объявление [`Editor`](xref:Xamarin.Forms.Editor) таким образом, чтобы оно установило обработчик для событий [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) и [`Completed`](xref:Xamarin.Forms.Editor.Completed).
 
@@ -60,9 +60,9 @@ ms.locfileid: "77135113"
             Completed="OnEditorCompleted" />
     ```
 
-    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) для обработчика событий `OnEditorTextChanged`, а [`Completed`](xref:Xamarin.Forms.Editor.Completed) — для обработчика `OnEditorCompleted`. На следующем шаге создаются оба обработчика событий.
+    Этот код устанавливает событие [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) для обработчика событий `OnEditorTextChanged`, а [`Completed`](xref:Xamarin.Forms.Editor.Completed) — для обработчика `OnEditorCompleted`. Оба обработчика событий будут созданы на следующем шаге.
 
-1. На **Панели решений** в проекте **EditorTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в файле **MainPage.xaml.cs** добавьте обработчики событий `OnEditorTextChanged` и `OnEditorCompleted` в класс.
+1. На **Панели решений** в проекте **EditorTutorial** разверните узел **MainPage.xaml** и дважды щелкните файл **MainPage.xaml.cs**, чтобы открыть его. Затем в **MainPage.xaml.cs** добавьте обработчики событий `OnEditorTextChanged` и `OnEditorCompleted` в класс.
 
     ```csharp
     void OnEditorTextChanged(object sender, TextChangedEventArgs e)

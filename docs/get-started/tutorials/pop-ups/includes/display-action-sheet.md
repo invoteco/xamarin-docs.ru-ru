@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "66193822"
 ---
 
 В Xamarin.Forms есть модальное всплывающее окно, известное как таблица действий, которое помогает пользователям выполнять различные задачи. В этом упражнении вы воспользуетесь методом [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) из класса [`Page`](xref:Xamarin.Forms.Page), чтобы отобразить таблицу действий, которая проводит пользователей через задачу.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** добавьте новое объявление [`Button`](xref:Xamarin.Forms.Button), которое будет отображать таблицу действий:
 
@@ -35,7 +35,7 @@ ms.locfileid: "66193822"
     > [!IMPORTANT]
     > Метод [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) является асинхронным и всегда должен ожидаться с ключевым словом `await`.
 
-1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Затем коснитесь пункта [`Button`](xref:Xamarin.Forms.Button), добавленного в [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Затем коснитесь пункта [`Button`](xref:Xamarin.Forms.Button), добавленного в [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
     [![Снимок экрана: лист действий в iOS и Android](../images/actionsheet.png "Лист действий с инструкциями по задаче для пользователя")](../images/actionsheet-large.png#lightbox "Лист действий с инструкциями по задаче для пользователя")
 
@@ -43,7 +43,7 @@ ms.locfileid: "66193822"
 
     Дополнительные сведения об отображении таблицы действий см. в разделе [с инструкциями по задачам](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) в руководстве [по отображению всплывающих окон](~/xamarin-forms/user-interface/pop-ups.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** добавьте новое объявление [`Button`](xref:Xamarin.Forms.Button), которое будет отображать таблицу действий:
 
@@ -69,7 +69,7 @@ ms.locfileid: "66193822"
     > [!IMPORTANT]
     > Метод [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) является асинхронным и всегда должен ожидаться с ключевым словом `await`.
 
-1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Затем коснитесь пункта [`Button`](xref:Xamarin.Forms.Button), добавленного в [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+1. Чтобы запустить приложения в выбранном симуляторе iOS или эмуляторе Android, нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) на панели инструментов Visual Studio для Mac. Затем коснитесь пункта [`Button`](xref:Xamarin.Forms.Button), добавленного в [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
     [![Снимок экрана: лист действий в iOS и Android](../images/actionsheet.png "Лист действий с инструкциями по задаче для пользователя")](../images/actionsheet-large.png#lightbox "Лист действий с инструкциями по задаче для пользователя")
 

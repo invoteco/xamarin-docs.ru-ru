@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: b1c6e031d30dc4c30007e04cd8e883c8ddf2e6a0
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107327"
 ---
-Поздравляем с завершением этого руководства, в котором вы научились:
+Поздравляем с завершением этого учебника, где вы научились:
 
 > [!div class="checklist"]
 >
@@ -14,7 +14,7 @@ ms.locfileid: "71107327"
 > - Изменять внешний вид `Label`.
 > - Представлять в одном `Label` текст, который имеет несколько форматов.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы узнать больше об основах создания мобильных приложений с помощью Xamarin.Forms, перейдите к руководству по кнопкам.
 

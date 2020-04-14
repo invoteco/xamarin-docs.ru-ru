@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61384587"
 ---
 Файлы изображений могут быть добавлены в проекты платформы и использоваться в общем коде Xamarin.Forms. Этот метод распространения является обязательным для изображений, специфических для платформы, например при использовании разных разрешений на различных платформах или немного разных вариантах изображения.
@@ -16,7 +16,7 @@ ms.locfileid: "61384587"
 > [!IMPORTANT]
 > Для использования одного изображения на всех платформах *следует использовать одно и то же имя файла на всех платформах*, и оно должно представлять собой допустимое имя ресурса Android (т. е. только строчные буквы, цифры, подчеркивания и точки).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **обозревателе решений**в проекте **ImageTutorial.iOS** разверните **Каталог активов** и дважды щелкните **Активы**, чтобы открыть этот раздел. Затем в **Assets.xcassets** нажмите кнопку **Плюс** и выберите команду **Добавить набор изображений**:
 
@@ -62,7 +62,7 @@ ms.locfileid: "61384587"
 
     Дополнительные сведения о локальных изображениях см. в разделе [Вывод изображений](~/xamarin-forms/user-interface/images.md#local-images) в руководстве [Изображения в Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. На **Панели решения** в проекте **ImageTutorial.iOS** дважды щелкните **Assets.xcassets**, чтобы открыть его. Затем в **списке ресурсов** щелкните правой кнопкой мыши и выберите команду **Новый набор изображений**:
 

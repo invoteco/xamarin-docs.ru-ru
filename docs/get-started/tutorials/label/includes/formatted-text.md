@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "60896722"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** измените объявление [`Label`](xref:Xamarin.Forms.Label), чтобы представить текст, который использует несколько форматов, в одном `Label`.
 
@@ -36,7 +36,7 @@ ms.locfileid: "60896722"
 
     Дополнительные сведения о внешнем виде параметра [`Span`](xref:Xamarin.Forms.Span) см. в разделе [Форматированный текст](~/xamarin-forms/user-interface/text/label.md#formatted-text) в руководстве по [меткам в Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** измените объявление [`Label`](xref:Xamarin.Forms.Label), чтобы представить текст, который использует несколько форматов, в одном `Label`.
 

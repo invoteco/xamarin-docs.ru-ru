@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107339"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
@@ -12,9 +12,9 @@ ms.locfileid: "71107339"
 - Руководство по [сетке](~/get-started/tutorials/grid/index.yml).
 - Руководство по [меткам](~/get-started/tutorials/label/index.yml).
 - Руководство по [кнопкам](~/get-started/tutorials/button/index.yml).
-- Руководство по [Entry](~/get-started/tutorials/entry/index.yml).
+- Руководство по [записям](~/get-started/tutorials/entry/index.yml).
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее.
 
 > [!div class="checklist"]
 >

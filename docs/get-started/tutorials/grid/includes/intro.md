@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: cbf301b341f78ae8d8826580d30a13393716f56c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059784"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
 
 - Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее.
 
 > [!div class="checklist"]
 >

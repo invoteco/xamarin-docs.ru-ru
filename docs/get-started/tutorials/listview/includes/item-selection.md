@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "74062923"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.ListView) таким образом, чтобы оно установило обработчики для событий [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) и [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped).
 
@@ -45,7 +45,7 @@ ms.locfileid: "74062923"
 
     Дополнительные сведения о выборе элементов и нажатии кнопок, см. в разделе [Выбор & касание](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) в руководстве [Интерактивность ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.ListView) таким образом, чтобы оно установило обработчики для событий [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) и [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped).
 

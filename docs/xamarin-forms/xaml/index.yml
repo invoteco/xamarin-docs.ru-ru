@@ -11,31 +11,31 @@ metadata:
   ms.author: dabritch
   ms.date: 12/27/2019
   ms.openlocfilehash: 5f01b3ecf914d6c7c5c36378511c0fd7e30c952c
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/06/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "75679692"
 landingContent:
 - title: Начало работы
   linkLists:
   - linkListType: concept
     links:
-    - text: Основные сведения
+    - text: Основы
       url: xaml-basics/index.md
-    - text: Элементы управления
+    - text: Управление
       url: xaml-controls.md
     - text: Компиляция
       url: xamlc.md
     - text: Расширения разметки
       url: markup-extensions/index.md
-- title: Инструментарий
+- title: Инструменты
   linkLists:
   - linkListType: concept
     links:
     - text: Горячая перезагрузка
       url: hot-reload.md
-    - text: Панель элементов
+    - text: Область элементов
       url: toolbox.md
     - text: Средство предварительного просмотра
       url: xaml-previewer/index.md

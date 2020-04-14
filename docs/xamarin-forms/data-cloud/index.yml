@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 12/27/2019
   ms.openlocfilehash: 5eb567466b13b8baaa731bc1b37197336fac99bd
-  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/06/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "75680267"
 landingContent:
 - title: Локальное хранилище данных
@@ -33,7 +33,7 @@ landingContent:
       url: azure-services/azure-cosmosdb.md
     - text: Центры уведомлений Azure
       url: azure-services/azure-notification-hub.md
-    - text: Служба хранилища Azure
+    - text: Хранилище Azure
       url: azure-services/azure-storage.md
     - text: Поиск Azure
       url: azure-services/azure-search.md
@@ -45,7 +45,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Вступление
+    - text: Введение
       url: azure-cognitive-services/index.md
     - text: Распознавание речи
       url: azure-cognitive-services/speech-recognition.md
@@ -55,11 +55,11 @@ landingContent:
       url: azure-cognitive-services/text-translation.md
     - text: Распознавание эмоций
       url: azure-cognitive-services/emotion-recognition.md
-- title: Веб-службы
+- title: ВЕБ-СЛУЖБЫ
   linkLists:
   - linkListType: concept
     links:
-    - text: Вступление
+    - text: Введение
       url: web-services/introduction.md
     - text: ASMX
       url: web-services/asmx.md
@@ -67,7 +67,7 @@ landingContent:
       url: web-services/wcf.md
     - text: REST
       url: web-services/rest.md
-- title: Проверка подлинности
+- title: Аутентификация
   linkLists:
   - linkListType: concept
     links:

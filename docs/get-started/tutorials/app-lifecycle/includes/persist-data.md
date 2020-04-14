@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135105"
 ---
 Подкласс [`Application`](xref:Xamarin.Forms.Application) имеет статический словарь [`Properties`](xref:Xamarin.Forms.Application.Properties), который можно использовать для хранения данных в изменениях состояния жизненного цикла. Словарь использует ключ `string` и хранит значение `object`. Словарь сохраняется на устройстве автоматически и будет заполнен повторно при перезапуске приложения.
@@ -13,7 +13,7 @@ ms.locfileid: "77135105"
 
 В этом упражнении вы измените приложение для сохранения текста из [`Entry`](xref:Xamarin.Forms.Entry) после фоновой обработки и восстановите текст `Entry` при перезапуске приложения.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **обозревателе решений** в проекте **AppLifecycleTutorial** разверните **App.xaml** и дважды щелкните файл **App.xaml.cs**, чтобы открыть его. Удалите в **App.xaml.cs** весь код шаблона и замените его приведенным ниже кодом.
 
@@ -67,7 +67,7 @@ ms.locfileid: "77135105"
 
     Нет необходимости восстанавливать данные из словаря [`Properties`](xref:Xamarin.Forms.Application.Properties) в перегрузке метода `OnResume`. Это обусловлено тем, что когда приложение выполняется в фоновом режиме, оно и его состояние по-прежнему находятся в памяти.
 
-1. В **обозревателе решений** в проекте **AppLifecycleTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
+1. В **обозревателе решений** в проекте **AppLifecycleTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -105,9 +105,9 @@ ms.locfileid: "77135105"
     > [!NOTE]
     > Переопределение метода `OnAppearing` выполняется после готовности [`ContentPage`](xref:Xamarin.Forms.ContentPage), но только прежде чем он станет видимым. Таким образом лучше всего задать содержимое представлений Xamarin.Forms.
 
-    Когда текст в [`Entry`](xref:Xamarin.Forms.Entry) завершен с помощью ключа возврата, в свойстве `App.DisplayText`выполняется метод `OnEntryCompleted` и хранится текст `Entry`.
+    Когда текст в [`Entry`](xref:Xamarin.Forms.Entry) завершен с помощью ключа возврата, в свойстве `OnEntryCompleted`выполняется метод `Entry` и хранится текст `App.DisplayText`.
 
-1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android.
 
     Введите любой текст в [`Entry`](xref:Xamarin.Forms.Entry) и нажмите клавишу возврата. Затем выполните приложение в фоновом режиме, нажав кнопку "Домашняя страница", чтобы вызвать метод `OnSleep`.
 
@@ -117,7 +117,7 @@ ms.locfileid: "77135105"
 
     Дополнительные сведения о сохранении данных в словарь Properties см. в разделе [Словарь Properties](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) в руководстве [Класс App Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. На **Панели решения** в проекте **AppLifecycleTutorial** разверните **App.xaml** и дважды щелкните файл **App.xaml.cs**, чтобы открыть его. Удалите в **App.xaml.cs** весь код шаблона и замените его приведенным ниже кодом.
 
@@ -171,7 +171,7 @@ ms.locfileid: "77135105"
 
     Нет необходимости восстанавливать данные из словаря [`Properties`](xref:Xamarin.Forms.Application.Properties) в перегрузке метода `OnResume`. Это обусловлено тем, что когда приложение выполняется в фоновом режиме, оно и его состояние по-прежнему находятся в памяти.
 
-1. На **Панели решения** в проекте **AppLifecycleTutorial** дважды щелкните **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
+1. На **Панели решения** в проекте **AppLifecycleTutorial** дважды щелкните **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -209,9 +209,9 @@ ms.locfileid: "77135105"
     > [!NOTE]
     > Переопределение метода `OnAppearing` выполняется после готовности [`ContentPage`](xref:Xamarin.Forms.ContentPage), но только прежде чем он станет видимым. Таким образом лучше всего задать содержимое представлений Xamarin.Forms.
 
-    Когда текст в [`Entry`](xref:Xamarin.Forms.Entry) завершен с помощью ключа возврата, в свойстве `App.DisplayText`выполняется метод `OnEntryCompleted` и хранится текст `Entry`.
+    Когда текст в [`Entry`](xref:Xamarin.Forms.Entry) завершен с помощью ключа возврата, в свойстве `OnEntryCompleted`выполняется метод `Entry` и хранится текст `App.DisplayText`.
 
-1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
+1. Чтобы запустить приложения в выбранном симуляторе iOS или эмуляторе Android, нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) на панели инструментов Visual Studio для Mac.
 
     Введите любой текст в [`Entry`](xref:Xamarin.Forms.Entry) и нажмите клавишу возврата. Затем выполните приложение в фоновом режиме, нажав кнопку "Домашняя страница", чтобы вызвать метод `OnSleep`.
 

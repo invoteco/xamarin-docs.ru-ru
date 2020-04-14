@@ -35,7 +35,7 @@
           href: paths/dots.md
         - name: Рисование пальцами
           href: paths/finger-paint.md
-    - name: Transform
+    - name: Преобразования
       href: transforms/index.md
       items:
         - name: Преобразование переноса
@@ -72,7 +72,7 @@
           href: curves/text-paths.md
         - name: Сведения о пути и перечисление
           href: curves/information.md
-    - name: Растровые изображения
+    - name: Битовые карты
       href: bitmaps/index.md
       items:
         - name: Вывод растровых изображений
@@ -123,5 +123,5 @@
       items:
         - name: Заметки о конкретных платформах
           href: ~/graphics-games/skiasharp/platform.md
-    - name: Справочник по интерфейсам API
+    - name: Справочник по API
       href: /dotnet/api/skiasharp/

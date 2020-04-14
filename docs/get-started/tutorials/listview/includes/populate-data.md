@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "69541529"
 ---
 Объект [`ListView`](xref:Xamarin.Forms.ListView) заполняется данными с помощью свойства [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), которое имеет тип `IEnumerable`. Предыдущий шаг заполняет `ListView` в XAML массивом строк. Тем не менее обычно `ListView` будет заполняться данными из коллекции, определенной в коде программной части, которая реализует `IEnumerable`.
 
 В этом упражнении вы измените проект **ListViewTutorial** для заполнения [`ListView`](xref:Xamarin.Forms.ListView) данными из коллекции объектов, хранящейся в `List`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **обозревателе решений** в проекте **ListViewTutorial** добавьте класс с именем `Monkey`, содержащий следующий код:
 
@@ -191,7 +191,7 @@ ms.locfileid: "69541529"
 
     [`ListView`](xref:Xamarin.Forms.ListView) отображает свойство `Name` для каждого `Monkey` в коллекции `Monkeys`. Это обусловлено тем, что по умолчанию `ListView` вызывает метод `ToString` при отображении объектов из коллекции (который был переопределен в классе `Monkey` для возвращения значения свойства `Name`).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. На **Панели решения** в проекте **ListViewTutorial** добавьте класс с именем `Monkey`, содержащий следующий код:
 

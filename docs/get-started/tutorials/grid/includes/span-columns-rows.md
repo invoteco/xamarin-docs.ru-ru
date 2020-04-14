@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61375983"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** измените объявление [`Grid`](xref:Xamarin.Forms.Grid) для определения столбцов и строк и разместите содержимое в столбцах и строках:
 
@@ -37,7 +37,7 @@ ms.locfileid: "61375983"
 
     Дополнительные сведения об охвате нескольких столбцов и строк см. в разделе [Диапазоны](~/xamarin-forms/user-interface/layouts/grid.md#spans) в руководстве [Сетка Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** измените объявление [`Grid`](xref:Xamarin.Forms.Grid) для определения столбцов и строк и разместите содержимое в столбцах и строках:
 

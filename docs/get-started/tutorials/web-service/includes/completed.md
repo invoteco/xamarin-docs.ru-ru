@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e0f7e89be5de282daf10f941d0f0b8d0175df81a
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107340"
 ---
 Поздравляем с завершением этого учебника, где вы научились:
@@ -14,7 +14,7 @@ ms.locfileid: "71107340"
 > - Создавать классы веб-службы.
 > - Использовать классы веб-службы.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Эта серия учебников описывает основы создания приложений для мобильных устройств с помощью Xamarin.Forms. Чтобы получить дополнительные сведения о разработке для Xamarin.Forms, ознакомьтесь со следующими функциональными возможностями:
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ff3a0477c6b8a2bf30693ff05a4a992ad053d2b9
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107334"
 ---
 Прежде чем работать с этим учебником, вы должны выполнить:
@@ -11,7 +11,7 @@ ms.locfileid: "71107334"
 - Краткое руководство [Создание первого приложения Xamarin.Forms](~/get-started/first-app/index.md).
 - Руководство по [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее.
 
 > [!div class="checklist"]
 >

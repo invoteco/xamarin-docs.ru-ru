@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 90f3f9ff5ed29a1ae2c93e355fc15bc6550d78dd
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135068"
 ---
 В этом упражнении вы создадите пользовательский интерфейс для использования класса `RestService`, который, в свою очередь, получает данные из веб-API [OpenWeatherMap](https://openweathermap.org/).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
-1. В **обозревателе решений** в проекте **WebServiceTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
+1. В **обозревателе решений** в проекте **WebServiceTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -67,7 +67,7 @@ ms.locfileid: "77135068"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий с именем `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Кроме того, [`Entry`](xref:Xamarin.Forms.Entry) имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту с помощью назначенного имени.
 
@@ -121,16 +121,16 @@ ms.locfileid: "77135068"
     > [!IMPORTANT]
     > Свойство [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) наследуется через визуальное дерево. Так как оно задано для объекта [`ContentPage`](xref:Xamarin.Forms.ContentPage), дочерние объекты `ContentPage` наследуют свое значение, включая экземпляры [`Label`](xref:Xamarin.Forms.Label).
 
-1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Коснитесь [`Button`](xref:Xamarin.Forms.Button) для получения текущих данных о погоде для Сиэтла:
+1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения), чтобы запустить приложение в выбранном удаленном симуляторе iOS или эмуляторе Android. Коснитесь [`Button`](xref:Xamarin.Forms.Button) для получения текущих данных о погоде для Сиэтла:
 
     [![Снимок экрана с данными о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде в Сиэтле")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
 
     > [!IMPORTANT]
     > Ваш личный ключ API OpenWeatherMap должен быть задан как значение константы `OpenWeatherMapAPIKey` в классе `Constants`.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
-1. На **панели решений** в проекте **WebServiceTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
+1. На **панели решений** в проекте **WebServiceTutorial** дважды щелкните файл **MainPage.xaml**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -187,7 +187,7 @@ ms.locfileid: "77135068"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий с именем `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) и набора экземпляров [`Label`](xref:Xamarin.Forms.Label) в [`Grid`](xref:Xamarin.Forms.Grid). `Entry` предварительно заполняется значением "Seattle" через свойство [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` устанавливает событие [`Clicked`](xref:Xamarin.Forms.Button.Clicked) для обработчика событий `OnButtonClicked`, который будет создан на следующем шаге. Половина экземпляров `Label` отображает статический текст, а оставшиеся экземпляры привязаны к свойствам `WeatherData`. В среде выполнения экземпляры `Label`, которые используют привязки данных, будут использовать свои соответствующие свойства [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) для объекта `WeatherData`, чтобы использовать выражения привязки. Дополнительные сведения о привязке данных см. в разделе [Привязки данных в Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Кроме того, [`Entry`](xref:Xamarin.Forms.Entry) имеет имя, указанное с помощью атрибута `x:Name`. Это позволяет файлу с выделенным кодом получать доступ к объекту с помощью назначенного имени.
 
@@ -243,7 +243,7 @@ ms.locfileid: "77135068"
     > [!IMPORTANT]
     > Свойство [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) наследуется через визуальное дерево. Так как оно задано для объекта [`ContentPage`](xref:Xamarin.Forms.ContentPage), дочерние объекты `ContentPage` наследуют свое значение, включая экземпляры [`Label`](xref:Xamarin.Forms.Label).
 
-1. На панели инструментов Visual Studio для Mac нажмите клавишу **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android. Коснитесь [`Button`](xref:Xamarin.Forms.Button) для получения текущих данных о погоде для Сиэтла:
+1. Чтобы запустить приложения в выбранном симуляторе iOS или эмуляторе Android, нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) на панели инструментов Visual Studio для Mac. Коснитесь [`Button`](xref:Xamarin.Forms.Button) для получения текущих данных о погоде для Сиэтла:
 
     [![Снимок экрана с данными о погоде в Сиэтле в iOS и Android](../images/consume-web-service.png "Данные о погоде в Сиэтле")](../images/consume-web-service-large.png#lightbox "Данные о погоде в Сиэтле")
 

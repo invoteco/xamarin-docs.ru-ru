@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 83baf0982da49b5568a43a1695f78150119d4d88
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107329"
 ---
-Поздравляем с завершением этого руководства, в котором вы научились:
+Поздравляем с завершением этого учебника, где вы научились:
 
 > [!div class="checklist"]
 >
@@ -14,7 +14,7 @@ ms.locfileid: "71107329"
 > - Настраивать внешний вид `Image`.
 > - Отображать локальный файл изображения из проекта каждой платформы.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы узнать больше об основах создания мобильных приложений с помощью Xamarin.Forms, перейдите к учебнику по сетке.
 

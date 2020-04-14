@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61372971"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** измените объявление [`Button`](xref:Xamarin.Forms.Button), чтобы изменить его внешний вид:
 
@@ -30,7 +30,7 @@ ms.locfileid: "61372971"
 
     Дополнительные сведения о настройке внешнего вида [`Button`](xref:Xamarin.Forms.Button) см. в разделе [Внешний вид кнопки](~/xamarin-forms/user-interface/button.md#button-appearance) в руководстве по [кнопкам в Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** измените объявление [`Button`](xref:Xamarin.Forms.Button), чтобы изменить его внешний вид:
 

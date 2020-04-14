@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "67560020"
 ---
 Размер и положение дочерних представлений в [`StackLayout`](xref:Xamarin.Forms.StackLayout) зависят от значений свойств [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) и [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) дочерних представлений и значений свойств [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) и [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
@@ -13,7 +13,7 @@ ms.locfileid: "67560020"
 - **Выравнивание** — настройки выравнивания дочернего представления, которые определяют его положение и размер в рамках родительского макета.
 - **Расширение** — указывает, должно ли дочернее представление использовать дополнительное пространство, если оно доступно (используется только [`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. В **MainPage.xaml** измените объявление [`StackLayout`](xref:Xamarin.Forms.StackLayout), чтобы задать параметры выравнивания и расширения для каждого [`Label`](xref:Xamarin.Forms.Label):
 
@@ -69,7 +69,7 @@ ms.locfileid: "67560020"
 
     Дополнительные сведения о выравнивании и расширении см. в разделе [Параметры макета в Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio для Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
 1. В **MainPage.xaml** измените объявление [`StackLayout`](xref:Xamarin.Forms.StackLayout), чтобы задать параметры выравнивания и расширения для каждого [`Label`](xref:Xamarin.Forms.Label):
 
@@ -124,8 +124,3 @@ ms.locfileid: "67560020"
     > Когда все пространство в [`StackLayout`](xref:Xamarin.Forms.StackLayout) занято, параметр расширения ни на что не влияет.
 
     Дополнительные сведения о выравнивании и расширении см. в разделе [Параметры макета в Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
-
------
-
-> [!div class="nextstepaction"]
-> [У меня возникла проблема](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+3+Feedback&template=tutorial_template.md)

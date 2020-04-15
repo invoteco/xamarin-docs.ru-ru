@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Gyroscope'
+title: 'Xamarin.Essentials: Гироскоп'
 description: Класс Gyroscope в Xamarin.Essentials позволяет отслеживать датчик гироскопа устройства, который измеряет вращение вокруг трех основных осей устройства.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 1e19585e238d66568364be7ccdbdb52d22b04066
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898515"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61259492"
 ---
-# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: Gyroscope
+# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: Гироскоп
 
 Класс **Gyroscope** позволяет отслеживать датчик гироскопа устройства, который представляет собой поворот вокруг трех основных осей устройства.
 

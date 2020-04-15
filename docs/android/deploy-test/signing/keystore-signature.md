@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 49d67db46416584248a9b15db606538f5ebfba79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021010"
 ---
 # <a name="finding-your-keystores-signature"></a>Отображение вашей цифровой подписи хранилища ключей
@@ -21,7 +21,7 @@ MD5 и SHA1 сигнатуры приложений Xamarin.Android завися
 
 Xamarin.Android подписывает все отладочные сборки при помощи одного и того же файла **debug.keystore**. Этот файл создается при первой установке Xamarin.Android. Ниже описывается процедура отображения MD5 и SHA1 сигнатур файла Xamarin.Android **debug.keystore** по умолчанию.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Найдите файл Xamarin **debug.keystore**, используемый для подписывания приложений. По умолчанию хранилище ключей, которое используется для подписывания отладочных версий приложений Xamarin.Android, располагается по следующему пути:
 
@@ -59,7 +59,7 @@ Certificate fingerprints:
          Version: 3
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Найдите файл Xamarin **debug.keystore**, используемый для подписывания приложений. По умолчанию хранилище ключей, которое используется для подписывания отладочных версий приложений Xamarin.Android, располагается по следующему пути:
 
@@ -112,7 +112,7 @@ KeyIdentifier [
 
 Процесс для сборок выпуска, подписанных собственным файлом **.keystore**, совпадает с процессом, описанным выше, за исключением того, что вместо файла **debug.keystore** Xamarin.Android использует файл **.keystore** для выпуска. При создании файла хранилища ключей измените значения пароля хранилища ключей и имени псевдонима на свои.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Когда для подписания приложения Xamarin.Android используется мастер **Распространить** в Visual Studio, получаемое хранилище ключей располагается в следующем месте:
 
@@ -124,7 +124,7 @@ KeyIdentifier [
 
 Дополнительные сведения о подписывании приложений Xamarin.Android см. в разделе [Подписывание пакета приложения для Android](~/android/deploy-test/signing/index.md).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 При подписывании приложения в Visual Studio для Mac при помощи мастера **Подписать и распространить...** ключевое хранилище будет находиться по следующему пути:
 

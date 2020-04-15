@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 5cfaeb8589514972dfcccd11009a02c00f95bfac
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72696444"
 ---
 # <a name="xamarinforms-carousel-page"></a>CarouselPage в Xamarin.Forms
@@ -48,7 +48,7 @@ _CarouselPage в Xamarin.Forms — это страница, по которой
 
 Создать [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) можно двумя способами:
 
-- [Заполните](#Populating_a_CarouselPage_with_a_Page_Collection) `CarouselPage` коллекцией дочерних экземпляров [`ContentPage`](xref:Xamarin.Forms.ContentPage).
+- [Заполните](#Populating_a_CarouselPage_with_a_Page_Collection)`CarouselPage` коллекцией дочерних экземпляров [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 - [Присвойте](#Populating_a_CarouselPage_with_a_Template) коллекцию свойству [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource), а затем присвойте [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) свойству [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate), чтобы вернуть экземпляры [`ContentPage`](xref:Xamarin.Forms.ContentPage) для объектов в коллекции.
 
 Оба способа приводят к тому, что в `CarouselPage` страницы будут отображаться по очереди. При проведении пальцем по экрану будет выполняться переход к следующей странице.

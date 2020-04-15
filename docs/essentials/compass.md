@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Compass'
+title: 'Xamarin.Essentials: Компас'
 description: В этом документе описывается класс Compass в Xamarin.Essentials, который позволяет отслеживать направление устройства на северный магнитный полюс.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898788"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61356881"
 ---
-# <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Compass
+# <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Компас
 
 Класс **Compass** позволяет отслеживать направление устройства на северный магнитный полюс.
 
@@ -74,7 +74,7 @@ public class CompassTest
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Android не предоставляет API для извлечения данных о направлении компаса. Для вычисления направления на северный магнитный полюс используются акселерометр и магнитометр. Именно такой поход рекомендует Google.
 

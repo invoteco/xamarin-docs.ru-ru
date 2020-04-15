@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725466"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Подписывание приложений Xamarin.Mac с помощью идентификатора разработчика
@@ -26,7 +26,7 @@ ms.locfileid: "76725466"
 
  [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
 
-## <a name="build"></a>Построить
+## <a name="build"></a>Построение
 
 Перед выполнением сборки убедитесь, что выбрана правильная конфигурация, и в окне **Сборка Mac** выберите параметр создания пакета установки.
 

@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70120118"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Вибрация
@@ -22,7 +22,7 @@ ms.locfileid: "70120118"
 
 Чтобы получить доступ к функции **Vibration**, нужно создать описанную ниже конфигурацию для конкретной платформы.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Требуется разрешение Vibrate (Вибрация), которое следует настроить в проекте Android. Для этого можно применить любой из следующих методов:
 
@@ -42,11 +42,11 @@ ms.locfileid: "70120118"
 
 ИЛИ щелкните правой кнопкой мыши проект Android и откройте свойства проекта. В разделе **Манифест Android** найдите область **Требуемые разрешения:** и установите флажок для разрешения **Vibrate** (Вибрация). Это действие автоматически обновляет файл **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Дополнительная настройка не требуется.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Различия платформ отсутствуют.
 
@@ -101,17 +101,17 @@ catch (Exception ex)
 
 ## <a name="platform-differences"></a>Различия платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Различия платформ отсутствуют.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - Устройство вибрирует, только если задан параметр Vibrate on ring (Вибрация при вызове).
 - Постоянная вибрация в течение 500 миллисекунд.
 - Невозможно отменить вибрацию.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Различия платформ отсутствуют.
 

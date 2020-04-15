@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
 ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
-ms.sourcegitcommit: 7fd88ada5b44a62390fe1a73ef08014e4d236a2d
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80261314"
 ---
 # <a name="preparing-an-application-for-release"></a>Подготовка приложения к выпуску

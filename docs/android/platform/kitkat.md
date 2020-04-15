@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027232"
 ---
 # <a name="kitkat-features"></a>Функции KitKat
@@ -689,7 +689,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 - *Различение контроллеров*. KitKat контроллерам назначаются уникальные целочисленные идентификаторы, доступ к которым можно получить с помощью свойства `ControllerNumber` устройства. Это помогает различать игроков в игре.
 
 - *Дистанционное управление*. Если внести несколько изменений на стороне оборудования и программного обеспечения, KitKat позволяет превратить устройство с инфракрасным передатчиком в пульт дистанционного управления с помощью `ConsumerIrService` и взаимодействовать с периферийными устройствами с помощью новых API [`RemoteController`](xref:Android.Media.RemoteController)
-  .
+  Необходимо загрузить и установить пакет NuGet LINQ to Twitter для работы с этим учебником.
 
 Дополнительные сведения об изменениях, описанных выше, см. в обзоре [интерфейсов API Android 4.4](https://developer.android.com/about/versions/android-4.4.html) от Google.
 

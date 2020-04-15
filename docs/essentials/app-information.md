@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/29/2019
 ms.custom: video
 ms.openlocfilehash: 69d0cb503d329ccfb4c29fb6cc4a589bef97e893
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756994"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: Сведения о приложении
@@ -60,7 +60,7 @@ AppInfo.ShowSettingsUI();
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Сведения о приложении получены из следующих полей `AndroidManifest.xml`:
 
@@ -69,7 +69,7 @@ AppInfo.ShowSettingsUI();
 - **PackageName**: `package` на узле `manifest`
 - **VersionString** — `android:versionName` на узле `application`
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Сведения о приложении получены из следующих полей `Info.plist`:
 
@@ -78,7 +78,7 @@ AppInfo.ShowSettingsUI();
 - **PackageName**: `CFBundleIdentifier`
 - **VersionString** — `CFBundleShortVersionString`
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Сведения о приложении получены из следующих полей `Package.appxmanifest`:
 

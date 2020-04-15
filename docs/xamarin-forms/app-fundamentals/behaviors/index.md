@@ -8,28 +8,28 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: df0a767976247166205ae8a3d70fd59c521646f6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997163"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61197543"
 ---
 # <a name="xamarinforms-behaviors"></a>Реакции на события Xamarin.Forms
 
 _Реакции на события позволяют добавлять функциональные возможности в элементы управления пользовательского интерфейса без разделения их на подклассы. Реакции на события пишутся в коде и добавляются в элементы управления в XAML или коде._
 
-## <a name="introduction-to-behaviorsintroductionmd"></a>[Введение в реакции на события](introduction.md)
+## <a name="introduction-to-behaviors"></a>[Введение в реакции на события](introduction.md)
 
 Реакции на события позволяют реализовать код, который обычно пришлось бы писать как код программной части, так как он напрямую взаимодействует с API элемента управления таким образом, что его можно быстро подключить к элементу управления. В этой статье приводятся общие сведения о реакциях на события.
 
-## <a name="attached-behaviorsattachedmd"></a>[Вложенные реакции на событие](attached.md)
+## <a name="attached-behaviors"></a>[Вложенные реакции на событие](attached.md)
 
-Вложенные реакции на события — это классы `static` с одним или несколькими вложенными свойствами. В этой статье содержатся сведения о создании и использовании вложенных реакций на события.
+Присоединенные реакции на события — это классы `static` с одним или несколькими присоединенными свойствами. В этой статье содержатся сведения о создании и использовании присоединенных реакций на события.
 
-## <a name="xamarinforms-behaviorscreatingmd"></a>[Реакции на событие Xamarin.Forms](creating.md)
+## <a name="xamarinforms-behaviors"></a>[Реакции на событие Xamarin.Forms](creating.md)
 
 Реакции на событие Xamarin.Forms создаются путем наследования от классов [`Behavior`](xref:Xamarin.Forms.Behavior) или [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1). В этой статье содержатся сведения о создании и использовании реакций на события Xamarin.Forms.
 
-## <a name="reusable-behaviorsreusableindexmd"></a>[Повторно используемые реакции на событие](reusable/index.md)
+## <a name="reusable-behaviors"></a>[Повторно используемые реакции на событие](reusable/index.md)
 
 Реакции на события могут повторно использоваться в нескольких приложениях. В этих статьях содержатся сведения о создании полезных реакций на события для выполнения часто используемых функций.

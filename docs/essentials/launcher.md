@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
 ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75488521"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Средство запуска
@@ -56,11 +56,11 @@ public class LauncherTest
 
 ### <a name="additional-platform-setup"></a>Настройка дополнительных платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Дополнительная настройка не требуется.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 В iOS 9 и более поздних версиях Apple обеспечивает применение схем, которые может запрашивать приложение. Чтобы определить схемы, которые вы хотите использовать, необходимо указать `LSApplicationQueriesSchemes` в файле `Info.plist`.
 
@@ -72,7 +72,7 @@ public class LauncherTest
 </array>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Дополнительная настройка не требуется.
 
@@ -97,11 +97,11 @@ await Launcher.OpenAsync(new OpenFileRequest
 
 ## <a name="platform-differences"></a>Различия платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Задача, возвращенная методом `CanOpenAsync`, выполняется немедленно.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Если конечное приложение на этом устройстве никогда ранее не открывалось с помощью метода `OpenAsync` из вашего приложения, iOS однократно предложит пользователю разрешить открывать его с помощью вашего приложения.
 
@@ -109,7 +109,7 @@ await Launcher.OpenAsync(new OpenFileRequest
 
 Дополнительные сведения о реализации iOS доступны [здесь](xref:UIKit.UIApplication.CanOpenUrl*).
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Различия платформ отсутствуют.
 

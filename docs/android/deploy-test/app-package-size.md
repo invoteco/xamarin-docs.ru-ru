@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: ff1bc56ab1cf02e9e5354da94bebd0661da34bc5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028156"
 ---
 # <a name="application-package-size"></a>Размеры пакета приложения
@@ -32,7 +32,7 @@ Xamarin.Android использует разные механизмы, чтобы
 
 При сборке приложения для распространения следует применить дополнительный процесс "компоновки", который проверяет приложение и удаляет любой неиспользуемый код. Примерно такой же процесс [сборщик мусора](~/android/internals/garbage-collection.md) выполняет для динамической памяти. Разница лишь в том, что он работает с объектами, а компоновщик — с кодом приложения. Например, в System.dll существует целое пространство имен для отправки и получения электронной почты. Если приложение не использует эти возможности, код для них просто зря занимает место в приложении. Запустив компоновщик для приложения Hello World, мы получим новую версию пакета:
 
-[![Размер пакета после применения компоновщика](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
+[![Размер пакета после компоновщика](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 Как видите, этот процесс значительно сокращает объем BCL, удаляя все ненужное. Обратите внимание, что конечный размер BCL всегда зависит от того, что используется в приложении. Давайте рассмотрим приложение ApiDemo с более серьезной функциональностью. Здесь хорошо видно, что компонент BCL занимает больше места, чем в примере Hello World, поскольку ApiDemo нужно больше функций из него:
 

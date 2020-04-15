@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/06/2019
 ms.openlocfilehash: dfb7f12affc8b0b41ec56cd17894c0f0a4b5fc6e
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73662354"
 ---
 # <a name="customizing-a-map-pin"></a>Настройка закрепления карты

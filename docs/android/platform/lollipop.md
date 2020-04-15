@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 297c7806ce8a880d65c38ef0e4672e41fee5acfe
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724446"
 ---
 # <a name="lollipop-features"></a>Возможности Lollipop
@@ -452,9 +452,9 @@ Android 5.0 предоставляет несколько новых интер�
 
 В этой статье приводятся общие сведения о важных новых возможностях Android 5.0 для разработчиков приложений Xamarin.Android:
 
-- Material Theme;
+- Тема материала
 
-- анимация;
+- Анимации
 
 - тени и возвышение представлений;
 

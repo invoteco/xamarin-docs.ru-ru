@@ -8,32 +8,32 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
 ms.openlocfilehash: 2de1d1dd065a01bb457ebf03acdc0c01529abf7b
-ms.sourcegitcommit: 1242d32b7f072c837005cdee174abe6c0d1d0c68
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73083838"
 ---
 # <a name="xamarinforms-effects"></a>Эффекты в Xamarin.Forms
 
 _Пользовательские интерфейсы Xamarin.Forms отрисовываются с помощью собственных элементов управления целевой платформы, обеспечивая единообразный внешний вид приложений Xamarin.Forms на каждой платформе. Эффекты позволяют настраивать собственные элементы управления на каждой платформе без реализации пользовательского отрисовщика._
 
-## <a name="introduction-to-effectsintroductionmd"></a>[Введение в эффекты](introduction.md)
+## <a name="introduction-to-effects"></a>[Введение в эффекты](introduction.md)
 
 Эффекты позволяют настраивать собственные элементы управления на каждой платформе и обычно используются для незначительных изменений стиля. В этой статье приводится общая информация об эффектах, описывается граница между эффектами и пользовательскими отрисовщиками и рассказывается о классе `PlatformEffect`.
 
-## <a name="creating-an-effectcreatingmd"></a>[Создание эффекта](creating.md)
+## <a name="creating-an-effect"></a>[Создание эффекта](creating.md)
 
 Эффекты упрощают настройку элемента управления. В этой статье показано, как создать эффект, который изменяет цвет фона элемента управления [`Entry`](xref:Xamarin.Forms.Entry), когда элемент управления получает фокус.
 
-## <a name="passing-parameters-to-an-effectpassing-parametersindexmd"></a>[Передача параметров эффекту](passing-parameters/index.md)
+## <a name="passing-parameters-to-an-effect"></a>[Передача параметров эффекту](passing-parameters/index.md)
 
 Если вы создадите эффект, настроенный через параметры, его можно использовать повторно. В эти статьях описывается использование свойств для передачи параметров эффекту и изменение параметра в среде выполнения.
 
-## <a name="invoking-events-from-an-effecttouch-trackingmd"></a>[Вызов событий из эффекта](touch-tracking.md)
+## <a name="invoking-events-from-an-effect"></a>[Вызов событий из эффекта](touch-tracking.md)
 
 Эффекты могут вызывать события. В этой статье показано, как создать событие, которое реализует низкоуровневое отслеживание касаний пальца и передает приложению сведения о нажатии, перемещении и отпускании.
 
-## <a name="reusable-roundeffectreusable-roundeffectmd"></a>[Многоразовый RoundEffect](reusable-roundeffect.md)
+## <a name="reusable-roundeffect"></a>[Многоразовый RoundEffect](reusable-roundeffect.md)
 
 RoundEffect — это многоразовый эффект, который можно применить к любому элементу управления, производному от VisualElement, для отрисовки этого элемента управления в виде круга. Этот эффект можно использовать для создания круглых изображений, круглых кнопок или других круглых элементов управления.

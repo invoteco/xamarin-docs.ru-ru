@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
 ms.openlocfilehash: 6e80daf2be1b672dc7d0de3e303dfb9261c10472
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940917"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Настройка пакета SDK для Android для Xamarin.Android
@@ -27,7 +27,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Диспетчер пакетов SDK для Android, предназначенный для Xamarin (устанавливается в составе рабочей нагрузки **Разработка мобильных приложений на .NET**), поможет вам скачать новейшие компоненты Android, необходимые для разработки приложения Xamarin.Android. Он заменяет автономный диспетчер пакетов SDK от Google, который был признан нерекомендуемым.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="requirements"></a>Требования
 
@@ -123,7 +123,7 @@ _Visual Studio включает диспетчер пакетов SDK для A
 
 Чтобы вернуться на поддерживаемый репозиторий платформ и инструментов, щелкните **Майкрософт (рекомендуется)** . Это восстановит список пакетов и инструментов по умолчанию.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 ## <a name="requirements"></a>Требования
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 2f9de881621b6634b95bdca56a0aa9e7b9f2bb98
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771851"
 ---
 # <a name="accessing-the-devices-video-library"></a>Доступ к видеотеке устройства
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Большинство современных мобильных устройств и настольных компьютеров позволяют записывать видео с помощью камеры. Создаваемые пользователем видеоролики сохраняются в виде файлов на устройстве. Эти файлы можно извлечь из библиотеки изображений и воспроизвести с помощью класса `VideoPlayer`, как и любые другие видеоролики.
 

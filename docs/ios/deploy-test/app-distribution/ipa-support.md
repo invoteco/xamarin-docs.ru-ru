@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030428"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Поддержка IPA в Xamarin.iOS
@@ -54,7 +54,7 @@ _В этой статье описано, как создать файл IPA, к
 
 ## <a name="creating-an-ipa"></a>Создание IPA
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Создание IPA теперь встроено в новый рабочий процесс публикации. Для этого следуйте инструкциям ниже, чтобы заархивировать приложение, подписать его и сохранить ваш IPA.
 
@@ -133,7 +133,7 @@ _В этой статье описано, как создать файл IPA, к
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Когда профиль подготовки создан и выбран, создан необязательный файл **iTunesMetadata.plist**, а также заданы иллюстрации iTunes в Visual Studio, вы можете выполнить сборку IPA для распространения. После этого нужно настроить проект. Выполните следующие действия:
 
@@ -169,7 +169,7 @@ _В этой статье описано, как создать файл IPA, к
 
 ## <a name="customizing-the-ipa-location"></a>Настройка расположения файла IPA
 
-Новое свойство **MSBuild** `IpaPackageDir` позволяет упростить настройку расположения для вывода файла **IPA**. Если в параметре `IpaPackageDir` задано настраиваемое расположение, файл **IPA** будет помещен в указанную папку, а не в установленный по умолчанию подкаталог с меткой времени. Это может быть полезно при создании автоматизированных сборок, для работы которых требуется конкретный путь к каталогу (например, это могут быть сборки непрерывной интеграции).
+Новое свойство **MSBuild**`IpaPackageDir` позволяет упростить настройку расположения для вывода файла **IPA**. Если в параметре `IpaPackageDir` задано настраиваемое расположение, файл **IPA** будет помещен в указанную папку, а не в установленный по умолчанию подкаталог с меткой времени. Это может быть полезно при создании автоматизированных сборок, для работы которых требуется конкретный путь к каталогу (например, это могут быть сборки непрерывной интеграции).
 
 Использовать новое свойство можно несколькими способами:
 
@@ -229,11 +229,11 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 
 Новое приложение iOS будет отображаться в разделе **Мои приложения**, где его можно щелкнуть правой кнопкой мыши и получить сведения о приложении:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
 

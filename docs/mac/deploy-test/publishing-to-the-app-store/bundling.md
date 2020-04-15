@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: f4d38bb66a34257c1e0a27c5fbbfe16f59743e83
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725510"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Объединение для магазина Mac App Store
@@ -31,7 +31,7 @@ ms.locfileid: "76725510"
 
 [![Изменение параметров сборки](bundling-images/build.png "Изменение параметров сборки")](bundling-images/build-large.png#lightbox)
 
-## <a name="build"></a>Построить
+## <a name="build"></a>Построение
 
 Перед выполнением сборки выберите конфигурацию **Выпуск**. При сборке приложения _дважды_ выводится предложение об использовании сертификатов приложения и установщика:
 

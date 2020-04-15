@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 3b3fa14ec81bd4f06322197b7140654f9086ce73
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556487"
 ---
 # <a name="debug-xamarinandroid-apps"></a>Отладка приложений Xamarin.Android
@@ -22,14 +22,14 @@ ms.locfileid: "75556487"
 
 При разработке приложений Android приложения требуется запускать либо на физическом оборудовании, либо с помощью эмулятора. Использование оборудования является лучшим, но не всегда самым целесообразным вариантом. Во многих случаях может быть проще и рентабельнее смоделировать или сэмулировать оборудование Android с помощью одного из описанных ниже эмуляторов.
 
-### <a name="debugging-on-the-android-emulatorandroiddeploy-testdebuggingdebug-on-emulatormd"></a>[Отладка приложений в Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
+### <a name="debugging-on-the-android-emulator"></a>[Отладка приложений в Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
 
 В этой статье описано, как открыть Android Emulator из Visual Studio и запустить приложение на виртуальном устройстве.
 
-### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[Отладка на устройстве](~/android/deploy-test/debugging/debug-on-device.md)
+### <a name="debugging-on-a-device"></a>[Отладка на устройстве](~/android/deploy-test/debugging/debug-on-device.md)
 
 В этой статье показано, как настроить физическое устройство Android для развертывания на нем приложения Xamarin.Android непосредственно в Visual Studio или Visual Studio для Mac.
 
-### <a name="android-debug-logandroiddeploy-testdebuggingandroid-debug-logmd"></a>[Журнал отладки Android](~/android/deploy-test/debugging/android-debug-log.md)
+### <a name="android-debug-log"></a>[Журнал отладки Android](~/android/deploy-test/debugging/android-debug-log.md)
 
 Очень часто разработчики для отладки своих приложений используют `Console.WriteLine`. Однако на мобильной платформе, такой как Android, консоль отсутствует. На устройствах Android доступен журнал, который, скорее всего, потребуется вам при создании приложения. Иногда его называют **logcat** из-за команды, вводимой для его получения. Из этой статьи вы узнаете, как использовать **logcat**.

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/13/2018
 ms.openlocfilehash: f6a38aea1e46e1165bb36d83e75e24769de0a1e2
-ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75655382"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Работа с назначениями в Xamarin.iOS
@@ -37,7 +37,7 @@ Visual Studio для Mac и Visual Studio предоставляют понят�
 
 В дополнение к выбору и настройке необходимых служб приложения при определении ИД приложения необходимо также в проекте Xamarin.iOS настроить назначения, отредактировав файлы **Info.plist** и **Entitlements.plist**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Для настройки назначений Visual Studio для Mac выполните следующее:
 
@@ -54,7 +54,7 @@ Visual Studio для Mac и Visual Studio предоставляют понят�
 5. Выберите и настройте назначения для приложения Xamarin.iOS таким образом, чтобы соответствовать настройкам созданного ранее ИД приложения.
 6. Сохраните изменения в файле **Entitlements.plist**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Для настройки назначений в Visual Studio выполните следующее:
 

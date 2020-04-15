@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026367"
 ---
 # <a name="ios-build-mechanics"></a>Механизм сборки iOS
@@ -26,7 +26,7 @@ _В этом руководстве описано, как планироват�
 
 ## <a name="timing-apps"></a>Замеры времени для приложений
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Чтобы включить вывод диагностики MSBuild в Visual Studio для Mac, выполните следующие действия:
 
@@ -38,7 +38,7 @@ _В этом руководстве описано, как планироват�
 6. Выполните очистку и перестройку пакета.
 7. Просмотрите диагностический вывод на панели ошибок (Представление > Панели > Ошибки), нажав кнопку выходных данных сборки.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Чтобы включить вывод диагностики MSBuild в Visual Studio, выполните следующие действия:
 

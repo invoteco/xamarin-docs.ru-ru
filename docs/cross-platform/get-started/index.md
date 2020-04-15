@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
 ms.openlocfilehash: bc7a5217f3260eb36e45a683b5520347c22641b0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73016382"
 ---
 # <a name="building-mobile-apps"></a>Создание мобильных приложений
@@ -32,19 +32,19 @@ ms.locfileid: "73016382"
 
 Дополнительные сведения о принципах функционирования Xamarin и начале работы с проектами по разработке мобильных приложений см. в приведенных ниже руководствах:
 
-### <a name="what-is-xamarincross-platformget-startedintroduction-to-mobile-developmentmd"></a>[Что такое Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
+### <a name="what-is-xamarin"></a>[Что такое Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
 
 В этом документе содержатся общие сведения о *работе Xamarin* и описываются руководства по началу работы с Xamarin.Forms, Android и iOS.
 
-### <a name="mobile-software-development-lifecyclecross-platformget-startedintroduction-to-mobile-sdlcmd"></a>[Жизненный цикл разработки мобильного ПО](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
+### <a name="mobile-software-development-lifecycle"></a>[Жизненный цикл разработки мобильного ПО](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 В этой статье рассматривается жизненный цикл разработки мобильных приложений и приводятся некоторые аспекты, которые следует учитывать при создании проектов для мобильных приложений. Разработчики, желающие быстро приступить к работе, могут пропустить это руководство сейчас и вернуться к нему позднее, чтобы получить более полное представление о разработке мобильных приложений.
 
-## <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Создание кроссплатформенных приложений](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+## <a name="building-cross-platform-applications"></a>[Создание кроссплатформенных приложений](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 Используя Xamarin и помня о некоторых аспектах при проектировании и разработке приложений для мобильных устройств, можно реализовать эффективный общий доступ к коду на нескольких мобильных платформах, сократить время выхода на рынок, использовать существующий потенциал, обеспечить потребности заказчиков в отношении мобильного доступа и уменьшить сложности, связанные с использованием разных платформ. В этом документе перечислены ключевые рекомендации по реализации этих преимуществ для служебных и офисных приложений.
 
-### <a name="introducing-visual-studio-for-machttpsdocsmicrosoftcomvisualstudiomac"></a>[Знакомство с Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/)
+### <a name="introducing-visual-studio-for-mac"></a>[Знакомство с Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/)
 
 Дополнительные сведения о Visual Studio для Mac, интегрированной среде разработки (IDE) для macOS.
 

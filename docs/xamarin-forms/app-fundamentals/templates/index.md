@@ -8,18 +8,18 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: d5610a37d4700edb9cd2b9d8fb90a7506b66ca68
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75955699"
 ---
 # <a name="xamarinforms-templates"></a>Шаблоны Xamarin.Forms
 
-## <a name="control-templatescontrol-templatemd"></a>[Шаблоны элементов управления](control-template.md)
+## <a name="control-templates"></a>[Шаблоны элементов управления](control-template.md)
 
 Шаблоны элементов управления Xamarin.Forms позволяют определить визуальную структуру производных пользовательских элементов управления [`ContentView`](xref:Xamarin.Forms.ContentView) и производных страниц [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
-## <a name="data-templatesdata-templatesindexmd"></a>[Шаблоны данных](data-templates/index.md)
+## <a name="data-templates"></a>[Шаблоны данных](data-templates/index.md)
 
 Шаблоны данных Xamarin.Forms позволяют настраивать представление данных в поддерживаемых элементах управления.

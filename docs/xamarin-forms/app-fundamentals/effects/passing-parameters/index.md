@@ -8,20 +8,20 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: f7d8c8f7d3a3778afdae64039a9614c02c261156
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771427"
 ---
 # <a name="passing-parameters-to-an-effect"></a>Передача параметров эффекту
 
 _Параметры эффектов могут быть определены свойствами, что позволяет повторно использовать эффекты. Затем параметры можно передать эффекту, указав значение каждого свойства при создании экземпляра эффекта._
 
-## <a name="passing-effect-parameters-as-common-language-runtime-propertiesclr-propertiesmd"></a>[Передача параметров эффекта в качестве свойств среды CLR](clr-properties.md)
+## <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>[Передача параметров эффекта в качестве свойств среды CLR](clr-properties.md)
 
 Свойства общеязыковой среды выполнения (CLR) можно использовать для определения параметров эффекта, не реагирующих на изменения свойств во время выполнения. В этой статье демонстрируется использование свойств среды CLR для передачи параметров эффекту.
 
-## <a name="passing-effect-parameters-as-attached-propertiesattached-propertiesmd"></a>[Передача параметров эффекта в качестве присоединенных свойств](attached-properties.md)
+## <a name="passing-effect-parameters-as-attached-properties"></a>[Передача параметров эффекта в качестве присоединенных свойств](attached-properties.md)
 
 Присоединенные свойства можно использовать для определения параметров эффекта, реагирующих на изменения свойств времени выполнения. В этой статье описывается использование присоединенных свойств для передачи параметров эффекту и изменение параметра во время выполнения.

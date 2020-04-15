@@ -9,19 +9,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: af0b9b4a73a82afbaef314384b10d6b9465a4b29
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022819"
 ---
 # <a name="sample-app-hello-ios"></a>Пример приложения: Привет, iOS
 
-## <a name="part-1-quickstartiosget-startedhello-ioshello-ios-quickstartmd"></a>[Часть 1. Краткое руководство](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
+## <a name="part-1-quickstart"></a>[Часть 1. Краткое руководство](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
 
 В первой части этого руководства описывается порядок создания приложения, которое преобразует введенный пользователем буквенно-цифровой телефонный номер в числовой телефонный номер и затем набирает его.
 
-## <a name="part-2-deep-diveiosget-startedhello-ioshello-ios-deepdivemd"></a>[Часть 2. Глубокое погружение](~/ios/get-started/hello-ios/hello-ios-deepdive.md)
+## <a name="part-2-deep-dive"></a>[Часть 2. Глубокое погружение](~/ios/get-started/hello-ios/hello-ios-deepdive.md)
 
 Во второй части этого документа рассматривается сборка приложения и представлены фундаментальные сведения о принципах работы приложений iOS.
 

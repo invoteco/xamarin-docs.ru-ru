@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/08/2019
 ms.custom: video
 ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67855758"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Подключение
@@ -23,7 +23,7 @@ ms.locfileid: "67855758"
 
 Чтобы проверить функциональность класса **Connectivity**, нужно создать описанную ниже конфигурацию для конкретной платформы.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Требуется разрешение `AccessNetworkState`, которое следует настроить в проекте Android. Для этого можно применить любой из следующих методов:
 
@@ -43,11 +43,11 @@ ms.locfileid: "67855758"
 
 ИЛИ щелкните правой кнопкой мыши проект Android и откройте свойства проекта. В разделе **Манифест Android** найдите область **Требуемые разрешения:** и установите флажок для разрешения **Access Network State** (Доступ к состоянию сети). Это действие автоматически обновляет файл **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Дополнительная настройка не требуется.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Дополнительная настройка не требуется.
 

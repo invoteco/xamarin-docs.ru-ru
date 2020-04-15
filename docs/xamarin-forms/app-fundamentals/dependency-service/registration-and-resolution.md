@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
 ms.openlocfilehash: 6e666c16c9b1afc3478f524cae2f84d6704319c2
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70199219"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Регистрация и разрешение класса Xamarin.Forms DependencyService
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 При использовании Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) для вызова собственных функций платформы реализации платформы нужно зарегистрировать в `DependencyService`, после чего разрешить их из общего кода для вызова.
 
@@ -138,7 +138,7 @@ DeviceOrientation orientation = DependencyService.Resolve<IDeviceOrientationServ
 ```
 
 > [!NOTE]
-> Когда метод [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) переключается на вызов метода [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*), он по умолчанию создает отдельный экземпляр интерфейса `T`, реализуемого платформой. Но такое поведение можно изменить. Дополнительные сведения см. в разделе [Управлении временем существования разрешенных объектов](#manage-the-lifetime-of-resolved-objects).
+> Когда метод [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) переключается на вызов метода [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*), он по умолчанию создает отдельный экземпляр интерфейса `T`, реализуемого платформой. Хотя это можно изменить. Дополнительные сведения см. в разделе [Управлении временем существования разрешенных объектов](#manage-the-lifetime-of-resolved-objects).
 
 ## <a name="manage-the-lifetime-of-resolved-objects"></a>Управлении временем существования разрешенных объектов
 

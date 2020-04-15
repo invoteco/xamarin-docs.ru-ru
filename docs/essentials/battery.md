@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756919"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Батарея
@@ -23,7 +23,7 @@ ms.locfileid: "70756919"
 
 Для доступа к функции **Battery** нужно создать описанную ниже конфигурацию для конкретной платформы.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Требуется разрешение `Battery`, которое следует настроить в проекте Android. Для этого можно применить любой из следующих методов:
 
@@ -43,11 +43,11 @@ ms.locfileid: "70756919"
 
 ИЛИ щелкните правой кнопкой мыши проект Android и откройте свойства проекта. В разделе **Манифест Android** найдите область **Требуемые разрешения:** и установите флажок для разрешения **Battery**. Это действие автоматически обновляет файл **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Дополнительная настройка не требуется.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Дополнительная настройка не требуется.
 
@@ -164,16 +164,16 @@ public class EnergySaverTest
 
 ## <a name="platform-differences"></a>Различия платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Различия платформ отсутствуют.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - Устройство должно использоваться для тестирования интерфейсов API. 
 - Для `PowerSource` будут возвращаться только значения `AC` или `Battery`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - Для `PowerSource` будут возвращаться только значения `AC` или `Battery`.
 

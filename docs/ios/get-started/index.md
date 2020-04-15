@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: b335533bfddf78e5fe2770356d29e27dbdccd0f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022767"
 ---
 # <a name="get-started-with-xamarinios"></a>Начало работы с Xamarin.iOS
@@ -36,19 +36,19 @@ Xamarin.iOS позволяет разработчикам создавать с�
 
 ## <a name="getting-started-series"></a>Материалы по началу работы
 
-### <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[Настройка и установка](~/ios/get-started/installation/index.md)
+### <a name="setup-and-installation"></a>[Настройка и установка](~/ios/get-started/installation/index.md)
 
 Приступите к использованию Xamarin.iOS в Visual Studio для Mac или Visual Studio. В этом разделе рассматриваются скачивание, установка с помощью установщика Xamarin, вход с учетной записью Майкрософт, общие моменты по устранению неполадок, подготовка устройств и многое другое.
 
-### <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Привет, iOS](~/ios/get-started/hello-ios/index.md)
+### <a name="hello-ios"></a>[Привет, iOS](~/ios/get-started/hello-ios/index.md)
 
 Из этого состоящего из двух частей руководства вы узнаете, как создать свое первое приложение Xamarin.iOS в Visual Studio для Mac или Visual Studio. Вы также получите представление об основах разработки приложений iOS с помощью Xamarin. В этом руководстве рассматриваются средства, понятия и действия, необходимые для создания и развертывания приложения Xamarin.iOS.
 
-### <a name="hello-ios-multiscreeniosget-startedhello-ios-multiscreenindexmd"></a>[Привет, iOS (несколько экранов)](~/ios/get-started/hello-ios-multiscreen/index.md)
+### <a name="hello-ios-multiscreen"></a>[Привет, iOS (несколько экранов)](~/ios/get-started/hello-ios-multiscreen/index.md)
 
 В этом руководстве из двух частей мы расширим функционал приложения, созданного в руководстве по началу работы с iOS, для работы со вторым экраном. В нем рассматриваются такие концепции, как конструктивный шаблон модель-представление-контроллер, реализация навигации iOS и углубленные сведения о структуре и работе приложения iOS.
 
-## <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Xamarin для разработчиков Objective-C](objective-c-developers/index.md)
+## <a name="xamarin-for-objective-c-developers"></a>[Xamarin для разработчиков Objective-C](objective-c-developers/index.md)
 
 В этой статье описано, как разработчикам Objective-C перейти на платформу Xamarin.
 

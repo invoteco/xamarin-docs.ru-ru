@@ -8,20 +8,20 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 039f00997b35c79295f41bafddc1322904da01c2
-ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50911545"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61197766"
 ---
 # <a name="reusable-behaviors"></a>Повторно используемые реакции на события
 
 _Реакции на события могут повторно использоваться в нескольких приложениях. В этих статьях содержатся сведения о создании полезных реакций на события для выполнения часто используемых функций._
 
-## <a name="reusable-effectbehavioreffect-behaviormd"></a>[Повторно используемая EffectBehavior](effect-behavior.md)
+## <a name="reusable-effectbehavior"></a>[Повторно используемая EffectBehavior](effect-behavior.md)
 
 Реакции на события удобно использовать для добавления эффекта в элемент управления, удаления стереотипного эффекта, обработки кода из файлов кода программной части. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для добавления эффекта в элемент управления.
 
-## <a name="reusable-eventtocommandbehaviorevent-to-command-behaviormd"></a>[Повторно используемая EventToCommandBehavior](event-to-command-behavior.md)
+## <a name="reusable-eventtocommandbehavior"></a>[Повторно используемая EventToCommandBehavior](event-to-command-behavior.md)
 
 Реакции на события можно использовать для сопоставления команд с элементами управления, которые не были предназначены для взаимодействия с командами. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для выполнения команды при возникновении события.

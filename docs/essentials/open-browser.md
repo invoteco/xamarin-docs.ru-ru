@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: fe8730ba6bc664269d79c550fb4e0abef7767fe0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70765001"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Браузер
@@ -64,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Особенности реализации для платформ
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Режим запуска определяет, как запускается браузер:
 
@@ -76,7 +76,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 С помощью `Intent` будет запрошено открытие Uri в обычном системном браузере.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Предпочитаемый режим системы
 
@@ -86,7 +86,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 С помощью стандартного параметра `OpenUrl` в главном приложении запускается браузер по умолчанию за пределами приложения.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Всегда будет запускаться браузер, установленный у пользователя по умолчанию, независимо от `BrowserLaunchMode`.
 

@@ -9,10 +9,10 @@ ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: b0eb471bd41bb38d62ced38ed66cfa0dfee37bbf
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023422"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Беспроводное развертывание для приложений Xamarin.iOS и tvOS
@@ -27,14 +27,14 @@ ms.locfileid: "73023422"
 
 Чтобы применить развертывание по беспроводному соединению, вам потребуется следующее.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 - macOS 10.12.4.
 - Последняя версия Visual Studio для Mac
 - Xcode 9.0 или более поздней версии.
 - Устройство под управлением iOS 11.0 или tvOS 11.0, или более поздней версии.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 - Последняя версия Visual Studio
 - Устройство под управлением iOS 11.0 или tvOS 11.0, или более поздней версии.

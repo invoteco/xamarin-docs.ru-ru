@@ -9,21 +9,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
 ms.openlocfilehash: 2cb2e90355cf93903c7a3b7e1beb65528d09d82d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027975"
 ---
 # <a name="hello-android"></a>Привет, Android
 
 _Из этого руководства из двух частей вы узнаете, как создать первое приложение Xamarin.Android в Visual Studio для Mac или Visual Studio, а также получите представление об основах разработки приложений Android с помощью Xamarin. Кроме того, в этом руководстве описаны средства, понятия и действия, необходимые для создания и развертывания приложения Xamarin.Android._
 
-## <a name="part-1-quickstartandroidget-startedhello-androidhello-android-quickstartmd"></a>[Часть 1. Краткое руководство](~/android/get-started/hello-android/hello-android-quickstart.md)
+## <a name="part-1-quickstart"></a>[Часть 1. Краткое руководство](~/android/get-started/hello-android/hello-android-quickstart.md)
 
 В первой части этого руководства вы создадите приложение, которое преобразует введенный пользователем буквенно-цифровой телефонный номер в числовой телефонный номер и затем набирает его.
 
-## <a name="part-2-deep-diveandroidget-startedhello-androidhello-android-deepdivemd"></a>[Часть 2. Глубокое погружение](~/android/get-started/hello-android/hello-android-deepdive.md)
+## <a name="part-2-deep-dive"></a>[Часть 2. Глубокое погружение](~/android/get-started/hello-android/hello-android-deepdive.md)
 
 Во второй части этого документа вы проверите, что было создано, и получите полное представление о работе приложения Android.
 

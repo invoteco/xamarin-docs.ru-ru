@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: 0fa717a775ff2f1ace9e248a8afde8d373e8a1f8
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724348"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>Работа с JNI и Xamarin.Android
@@ -50,7 +50,7 @@ JNI, предоставляемый в [пространстве имен Androi
 
 Первая цель служит исключительно для удобства и инкапсуляции сложности, чтобы предоставить потребителям простой управляемый набор классов. Для этого необходимо использовать различные члены [JNIEnv](xref:Android.Runtime.JNIEnv), как описано далее в этой статье. Помните, что использовать управляемые вызываемые оболочки вовсе не обязательно. Для однократного использования несвязанных членов Java вполне достаточно встроенного JNI &ndash;. Управляемые вызываемые оболочки нужны для создания подклассов и реализации интерфейсов.
 
-## <a name="android-callable-wrappers"></a>Вызываемые оболочки Android
+## <a name="android-callable-wrappers"></a>Вызываемые программы-оболочки Android
 
 Вызываемые оболочки Android (ACW) требуются, когда среде выполнения Android (ART) нужно вызвать управляемый код. Эти оболочки являются обязательными, так как невозможно зарегистрировать классы во время выполнения.
 (В частности, функция JNI [DefineClass](https://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html#wp15986) не поддерживается средой выполнения Android. Таким образом вызываемые оболочки Android компенсируют отсутствие поддержки регистрации типа во время выполнения.)
@@ -665,7 +665,7 @@ public class Adder : Java.Lang.Object {
 
 1. имеется настраиваемый атрибут `[Register]`;
 
-1. `RegisterAttribute.DoNotGenerateAcw` равно `true`.
+1. `RegisterAttribute.DoNotGenerateAcw` равно `true`
 
 В этом случае для интеграции сборки мусора тип *не должен* содержать какие-либо поля, которые могут ссылаться на подкласс `Java.Lang.Object` или `Java.Lang.Object` во время выполнения. Например, не допускаются поля типа `System.Object` и любого типа интерфейса. Разрешены типы, которые не могут ссылаться на экземпляры `Java.Lang.Object`, такие как `System.String` и `List<int>`. Это ограничение призвано предотвратить преждевременное удаление объектов сборщиком мусора.
 
@@ -1316,8 +1316,8 @@ long f(int n, String s, int[] array);
 
 - **ссылки на встроенные типы**;
 - **упрощенные ссылки**;
-- **ссылки на типы**;
-- **ссылки на массивы**.
+- **type**
+- **array**
 
 ### <a name="built-in-type-references"></a>Ссылки на встроенные типы
 

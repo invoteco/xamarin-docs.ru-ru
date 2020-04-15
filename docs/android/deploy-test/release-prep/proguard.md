@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940694"
 ---
 # <a name="proguard"></a>ProGuard
@@ -316,11 +316,11 @@ Unknown option '-keep' in line 1 of file 'proguard.cfg'
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Чтобы избежать этой проблемы, измените настраиваемый файл конфигурации в текстовом редакторе, который позволит сохранить файл без метки BOM. Чтобы устранить эту проблему, для текстового редактора необходимо задать кодировку `UTF-8`. Например, в текстовом редакторе [Notepad ++](https://notepad-plus-plus.org/) можно сохранять файлы без отметки BOM, выбрав **Кодировка &gt; Кодировать в UTF-8 без BOM** при сохранении файла. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 Чтобы избежать этой проблемы, сохраните настраиваемый файл конфигурации в текстовом редакторе, который позволяет пропускать метку BOM. 
 

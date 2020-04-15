@@ -574,6 +574,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/ios
         - name: Вибрация
           href: ~/essentials/vibrate.md?context=xamarin/ios
+        - name: Веб-средство проверки подлинности
+          href: ~/essentials/web-authenticator.md?context=xamarin/ios
         - name: Заметки о выпуске Xamarin.Essentials
           href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: Устранение неполадок

@@ -143,6 +143,8 @@
               href: user-interface/android-designer/material-design-features.md
             - name: Диагностика макетов Android
               href: user-interface/android-designer/diagnostics.md
+            - name: Анализаторы диагностики Android Designer
+              href: user-interface/android-designer/diagnostic-analyzers.md
         - name: Тема материала
           href: user-interface/material-theme.md
         - name: Профиль пользователя
@@ -463,6 +465,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: Вибрация
           href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: Веб-средство проверки подлинности
+          href: ~/essentials/web-authenticator.md?context=xamarin/android
         - name: Заметки о выпуске Xamarin.Essentials
           href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: Устранение неполадок

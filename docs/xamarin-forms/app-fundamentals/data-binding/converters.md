@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771610"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Преобразователи значений привязки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Привязки данных обычно передают данные из исходного свойства в целевое свойство (а иногда из целевого свойства в исходное). Эта передача проста в том случае, когда исходные и целевые свойства относятся к одному типу или когда один тип может быть преобразован в другой тип путем неявного преобразования. Если это не так, должно выполняться преобразование типов.
 
@@ -97,9 +97,9 @@ public class IntToBoolConverter : IValueConverter
 
 Страница **Включение кнопок** демонстрирует распространенную потребность, когда `Button` выполняет операцию на основе текста, который пользователь вводит в представлении `Entry`. Если никакие данные не были введены в `Entry`, `Button` должен быть отключен. Каждый элемент `Button` содержит привязку данных для его свойства `IsEnabled`. Источником привязки данных является свойство `Length` свойства `Text` соответствующего элемента `Entry`. Если это свойство `Length` не возвращает нуль, преобразователь величин возвращает `true` и включается элемент `Button`:
 
-[![Включение кнопок](converters-images/enablebuttons-small.png "Включение кнопок")](converters-images/enablebuttons-large.png#lightbox "Enable Buttons")
+[![Включение кнопок](converters-images/enablebuttons-small.png "Включение кнопок")](converters-images/enablebuttons-large.png#lightbox "Включение кнопок")
 
-Обратите внимание, что свойство `Text` в каждом `Entry` инициализируется в пустую строку. В этом случае свойство `Text` имеет значение `null` по умолчанию, а данные привязки не будут работать.
+Обратите внимание, что свойство `Text` в каждом `Entry` инициализируется в пустую строку. В этом случаесвойство `Text` имеет значение `null` по умолчанию, а данные привязки не будут работать.
 
 Некоторые преобразователи величин созданы специально для конкретных приложений, тогда как другие являются общими. Если вы знаете, что преобразователь величин будет использоваться только в привязках `OneWay`, то метод `ConvertBack` может просто возвращать `null`.
 
@@ -238,7 +238,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 
 В последних трех парах `Switch` и `Label` универсальный аргумент имеет значение `Style` и все объекты `Style` предоставляются для значений `TrueObject` и `FalseObject`. Они переопределяют неявный стиль для `Label`, заданный в словаре ресурсов, поэтому свойства в этом стиле явно назначаются `Label`. Включение и выключение `Switch` приводит к тому, что изменения отражаются в соответствующем `Label`:
 
-[![Переключение индикаторов](converters-images/switchindicators-small.png "Переключение индикаторов")](converters-images/switchindicators-large.png#lightbox "Switch Indicators")
+[![Переключение индикаторов](converters-images/switchindicators-small.png "Переключение индикаторов")](converters-images/switchindicators-large.png#lightbox "Переключение индикаторов")
 
 [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) можно также использовать для реализации аналогичных изменений в интерфейсе пользователя на основе других представлений.
 
@@ -460,9 +460,9 @@ binding.ConverterParameter = 255;
 
 Значения свойств `Red` и `Green` отображаются с помощью расширения разметки `Binding`. Свойство `Blue`, тем не менее, создает экземпляр класса `Binding` для демонстрации способа задания явного значения `double` для свойства `ConverterParameter`.
 
-Результат выглядит так:
+Ниже приведен результат.
 
-[![Средство выбора цвета RGB](converters-images/rgbcolorselector-small.png "Средство выбора цвета RGB")](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
+[![Выбор цвета в системе RGB](converters-images/rgbcolorselector-small.png "Выбор цвета в системе RGB")](converters-images/rgbcolorselector-large.png#lightbox "Выбор цвета в системе RGB")
 
 ## <a name="related-links"></a>Связанные ссылки
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9a17bff9bd0a23d59faf7602544b25c7ec05a86
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771246"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Создание DataTemplateSelector в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
 _С помощью объекта DataTemplateSelector можно выбирать шаблон DataTemplate во время выполнения в соответствии со значением привязанного к данным свойства. Это позволяет применять несколько шаблонов DataTemplate к одному типу объектов, чтобы настроить внешний вид определенных объектов. В этой статье содержатся сведения о создании и использовании объекта DataTemplateSelector._
 
@@ -91,7 +91,7 @@ public class PersonDataTemplateSelector : DataTemplateSelector
 
 На следующих снимках экрана показан результат применения `PersonDataTemplateSelector` к каждому объекту базовой коллекции в [`ListView`](xref:Xamarin.Forms.ListView).
 
-![](selector-images/data-template-selector.png "ListView с селектором шаблона данных")
+![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
 
 Все объекты `Person`, свойство `DateOfBirth` которых имеет значение не меньше 1980, отображаются зеленым цветом. Остальные объекты отображаются красным цветом.
 

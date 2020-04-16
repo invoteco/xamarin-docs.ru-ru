@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 399f411acd497b9d55ca81f670556430fe5f5503
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771290"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Создание DataTemplate в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Шаблоны данных могут создаваться как встроенные, в ResourceDictionary, или из пользовательского типа или соответствующего типа ячейки Xamarin.Forms. В этой статье рассматривается каждый из способов._
 
@@ -28,7 +28,7 @@ _Шаблоны данных могут создаваться как встро
 
 Какой бы способ ни использовался, в результате внешний вид каждой ячейки [`ListView`](xref:Xamarin.Forms.ListView) определяется шаблоном [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), как показано на следующих снимках экрана.
 
-![](creating-images/data-template-appearance.png "ListView с шаблоном DataTemplate")
+![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
 
 <a name="inline" />
 

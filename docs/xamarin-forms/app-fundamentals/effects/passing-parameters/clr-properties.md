@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 04d96dad455cbcf8360f12ee97a0540e7e746d62
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771475"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Передача параметров эффекта в качестве свойств среды CLR
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 _Свойства общеязыковой среды выполнения (CLR) можно использовать для определения параметров эффекта, не реагирующих на изменения свойств во время выполнения. В этой статье демонстрируется использование свойств среды CLR для передачи параметров эффекту._
 
@@ -30,11 +30,11 @@ _Свойства общеязыковой среды выполнения (CLR)
 
 В примере приложения показан эффект `ShadowEffect`, который добавляет тень к тексту, отображаемому элементом управления [`Label`](xref:Xamarin.Forms.Label). На следующей схеме показаны обязанности каждого проекта в примере приложения, а также связи между ними:
 
-![](clr-properties-images/shadow-effect.png "Обязанности проекта с эффектом тени")
+![](clr-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
 Элемент управления [`Label`](xref:Xamarin.Forms.Label) в `HomePage` настраивается с помощью класса `LabelShadowEffect` в каждом проекте для конкретной платформы. Параметры передаются каждому эффекту `LabelShadowEffect` через свойства в классе `ShadowEffect`. Каждый класс `LabelShadowEffect` является производным от класса `PlatformEffect` для каждой платформы. В результате тень добавляется к тексту, отображаемому элементом управления `Label`, как показано на следующих снимках экрана.
 
-![](clr-properties-images/screenshots.png "Эффект тени на каждой платформе")
+![](clr-properties-images/screenshots.png "Shadow Effect on each Platform")
 
 ## <a name="creating-effect-parameters"></a>Создание параметров эффекта
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: c93feb9527892b7b4c60c9d213361d19d3bc4b93
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771732"
 ---
 # <a name="implementing-a-view"></a>Реализация представления
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
 _Настраиваемые элементы управления пользовательского интерфейса Xamarin.Forms должны быть производными от класса View, который используется для размещения макетов и элементов управления на экране. Эта статья описывает, как создать настраиваемый отрисовщик для пользовательского элемента управления Xamarin.Forms, который используется для отображения видеопотока для предварительного просмотра с камеры устройства._
 
@@ -24,7 +24,7 @@ _Настраиваемые элементы управления пользов
 
 На следующей схеме показана связь между классом [`View`](xref:Xamarin.Forms.View) и соответствующими собственными элементами управления, которые его реализуют:
 
-![](view-images/view-classes.png "Связь между классом View и его реализующими собственными классами")
+![](view-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
 
 Процесс отрисовки можно использовать для реализации настроек конкретных платформ путем создания настраиваемого отрисовщика для [`View`](xref:Xamarin.Forms.View) на каждой платформе. Этот процесс выглядит следующим образом:
 
@@ -121,11 +121,11 @@ public class MainPageCS : ContentPage
 
 На следующей схеме показаны обязанности каждого проекта в примере приложения, а также связи между ними:
 
-![](view-images/solution-structure.png "Обязанности проекта настраиваемого отрисовщика CameraPreview")
+![](view-images/solution-structure.png "CameraPreview Custom Renderer Project Responsibilities")
 
 Пользовательский элемент управления `CameraPreview` отрисовывается с помощью зависящих от платформы классов отрисовщика, которые являются производными от класса `ViewRenderer` каждой платформы. Это приводит к тому, что каждый пользовательский элемент управления `CameraPreview` отрисовывается с помощью зависящих от платформы элементов управления, как показано на следующих снимках экрана:
 
-![](view-images/screenshots.png "CameraPreview на каждой платформе")
+![](view-images/screenshots.png "CameraPreview on each Platform")
 
 Класс `ViewRenderer` предоставляет метод `OnElementChanged`, который вызывается при создании пользовательского элемента управления Xamarin.Forms для отрисовки соответствующего собственного элемента управления. Этот метод принимает параметр `ElementChangedEventArgs`, содержащий свойства `OldElement` и `NewElement`. Эти свойства представляют элемент Xamarin.Forms, к которому *был* присоединен отрисовщик, и элемент Xamarin.Forms, к которому *присоединен* отрисовщик, соответственно. В примере приложения свойство `OldElement` будет иметь значение `null`, а свойство `NewElement` будет содержать ссылку на экземпляр `CameraPreview`.
 

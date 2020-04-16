@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018
-ms.openlocfilehash: e027d41e98c26ef1659c27ab05df3052e19cc670
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 0fc74ae2307ffd14f8c52515c93993a51455997a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "73027138"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80805952"
 ---
 # <a name="location-services-on-android"></a>Службы расположения в Android
 
@@ -84,7 +84,7 @@ API Fused Location Provider предоставляет множество дру
 Fused Location Provider является компонентом [Сервисов Google Play](https://developer.android.com/google/play-services/index.html).
 Для работы API Fused Location Provider в приложении должен быть правильно установлен и настроен пакет Сервисов Google Play, а на устройстве должен быть установлен APK Сервисов Google Play.
 
-Прежде чем приложение Xamarin.Android сможет использовать пакет, в проект нужно добавить пакет **Xamarin.GooglePlayServices.Maps**. Кроме того, во все файлы исходного кода, которые ссылаются на классы, описанные ниже, должны быть добавлены следующие инструкции `using`.
+Прежде чем приложение Xamarin.Android сможет использовать Fused Location Provider, в проект нужно добавить пакет **Xamarin.GooglePlayServices.Location**. Кроме того, во все файлы исходного кода, которые ссылаются на классы, описанные ниже, должны быть добавлены следующие инструкции `using`.
 
 ```csharp
 using Android.Gms.Common;

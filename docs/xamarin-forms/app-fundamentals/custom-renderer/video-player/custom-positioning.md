@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650647"
 ---
 # <a name="custom-video-positioning"></a>Настраиваемая строка позиционирования видео
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 На каждой платформе реализуются элементы управления транспортировкой, в том числе строка позиционирования. Эта строка похожа на ползунок или полосу прокрутки и отображает общую продолжительность видео, а также текущую позицию его воспроизведения. Кроме того, с помощью строки позиционирования пользователь может перемещаться вперед или назад в другую позицию воспроизведения.
 
@@ -475,7 +475,7 @@ if (newPosition.Seconds != Position.Seconds)
 
 Первая кнопка с многоточием (···) скрывает объект `ActivityIndicator`. Ее действие аналогично описываемому на предыдущей странице **Настраиваемая транспортировка**. Обратите внимание на два элемента `Label`, на которых отображаются свойства `Position` и `TimeToEnd`. Кнопка с многоточием между этими двумя элементами `Label` скрывает два элемента `Button`, показанные на странице **Настраиваемая транспортировка** для воспроизведения, приостановки и остановки. Логика кода программной части также аналогична странице **Настраиваемая транспортировка**.
 
-[![Настраиваемая строка позиционирования](custom-positioning-images/custompositioning-small.png "Настраиваемая строка позиционирования")](custom-positioning-images/custompositioning-large.png#lightbox "Настраиваемая строка позиционирования")
+[![Настраиваемое размещение](custom-positioning-images/custompositioning-small.png "Настраиваемое размещение")](custom-positioning-images/custompositioning-large.png#lightbox "Настраиваемое размещение")
 
 Это заключительная статья, посвященная объекту `VideoPlayer`.
 

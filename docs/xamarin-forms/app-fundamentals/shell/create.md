@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
 ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68739307"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Создание приложения оболочки Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Чтобы создать приложение оболочки Xamarin.Forms сделайте следующее:
 
@@ -128,11 +128,11 @@ namespace Xaminals
 
 Этот XAML при выполнении отображает `CatsPage`, то есть первый элемент содержимого, объявленный в производном классе `Shell`:
 
-[![Снимок экрана с приложением оболочки для iOS и Android](create-images/cats.png "Приложение оболочки")](create-images/cats-large.png#lightbox "Приложение оболочки")
+[![Снимок экрана приложения оболочки для iOS и Android](create-images/cats.png "Приложение оболочки")](create-images/cats-large.png#lightbox "Приложение оболочки")
 
 Если нажать значок из трех полосок или провести пальцем от левого края, отобразится всплывающий элемент:
 
-[![Снимок экрана для всплывающего элемента оболочки для iOS и Android](create-images/flyout-reduced.png "Всплывающий элемент оболочки")](create-images/flyout-reduced-large.png#lightbox "Всплывающий элемент оболочки")
+[![Снимок экрана: всплывающий элемент оболочки в iOS и Android](create-images/flyout-reduced.png "Всплывающий элемент оболочки")](create-images/flyout-reduced-large.png#lightbox "Всплывающий элемент оболочки")
 
 > [!IMPORTANT]
 > В приложении оболочки каждый [`ContentPage`](xref:Xamarin.Forms.ContentPage), который является дочерним элементом объекта `ShellContent`, создается во время запуска приложения. Такой метод добавления объектов `ShellContent` приводит к созданию дополнительных страниц во время запуска приложения, что может замедлять запуск. Но оболочка может создавать страницы и по требованию, реагируя на переходы. Дополнительные сведения см. в разделе [об эффективности загрузки страниц](tabs.md#efficient-page-loading) в [руководстве по вкладкам оболочки Xamarin.Forms](tabs.md).

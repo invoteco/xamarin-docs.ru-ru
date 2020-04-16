@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771994"
 ---
 # <a name="reusable-effectbehavior"></a>Повторно используемая реакция на событие EffectBehavior
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _Реакции на события удобно использовать для добавления эффекта в элемент управления, удаления стереотипного эффекта, обработки кода из файлов кода программной части. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для добавления эффекта в элемент управления._
 
@@ -157,7 +157,7 @@ label.Behaviors.Add (new EffectBehavior {
 
 Когда во время выполнения реакция на событие присоединяется к элементу управления [`Label`](xref:Xamarin.Forms.Label), `Xamarin.LabelShadowEffect` добавляется в коллекцию [`Effects`](xref:Xamarin.Forms.Element.Effects) элемента управления. В результате тень добавляется к тексту, отображаемому элементом управления `Label`, как показано на следующих снимках экрана.
 
-![](effect-behavior-images/screenshots.png "Пример приложения с EffectsBehavior")
+![](effect-behavior-images/screenshots.png "Sample Application with EffectsBehavior")
 
 Преимущество добавления эффектов в элементы управления и удаления эффектов из них с помощью реакций на события заключается в том, что код для обработки стереотипных эффектов можно удалить из файлов кода программной части.
 

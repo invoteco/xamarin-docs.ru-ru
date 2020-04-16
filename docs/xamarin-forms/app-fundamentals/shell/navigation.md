@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71674566"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Навигация в оболочке Xamarin.Forms
@@ -156,7 +156,7 @@ await Shell.Current.GoToAsync("monkeydetails");
 
 Кроме того, поддерживаются следующие форматы относительных маршрутов.
 
-| Формат | ОПИСАНИЕ |
+| Формат | Описание |
 | --- | --- |
 | //*маршрут* | Поиск указанного маршрута выполняется в иерархии маршрутов вверх, начиная от текущего отображаемого маршрута. |
 | ///*маршрут* | Поиск указанного маршрута выполняется в иерархии маршрутов вниз, начиная от текущего отображаемого маршрута. |
@@ -211,7 +211,7 @@ bears
 
 Класс `Shell` определяет событие `Navigating`, которое возникает перед выполнением любого перехода — программного или вызванного действием пользователя. Объект `ShellNavigatingEventArgs`, который прилагается к событию `Navigating`, содержит следующие свойства:
 
-| Свойство. | type | ОПИСАНИЕ |
+| Свойство. | type | Описание |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI текущей страницы. |
 | `Source` | `ShellNavigationSource` | Тип выполненного перехода. |
@@ -226,7 +226,7 @@ bears
 
 Класс `Shell` также определяет событие `Navigated`, которое возникает при завершении навигации. Объект `ShellNavigatedEventArgs`, который прилагается к событию `Navigating`, содержит следующие свойства:
 
-| Свойство. | type | ОПИСАНИЕ |
+| Свойство. | type | Описание |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI текущей страницы. |
 | `Previous`| `ShellNavigationState` | URI предыдущей страницы. |
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 Свойство `Command` получает значение `ICommand` для выполнения при нажатии кнопки "Назад", а в свойстве `IconOverride` сохраняется значок, используемый для кнопки "Назад":
 
-[![Снимок экрана с переопределением значка для кнопки "Назад" в оболочке для iOS и Android](navigation-images/back-button.png "Переопределение значка для кнопки \"Назад\" в оболочке")](navigation-images/back-button-large.png#lightbox "Переопределение значка кнопки "Назад" в оболочке")
+[![Снимок экрана с переопределением значка для кнопки "Назад" в оболочке для iOS и Android](navigation-images/back-button.png "Переопределение значка кнопки "Назад" в оболочке")](navigation-images/back-button-large.png#lightbox "Переопределение значка кнопки "Назад" в оболочке")
 
 ## <a name="related-links"></a>Связанные ссылки
 

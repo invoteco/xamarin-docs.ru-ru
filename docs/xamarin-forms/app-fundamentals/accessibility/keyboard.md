@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: b8c6ed9e803b8dec05b2279ed93f956ed11a1c07
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71997110"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Специальные возможности клавиатуры в Xamarin.Forms
@@ -53,7 +53,7 @@ ms.locfileid: "71997110"
 
 На следующем снимке экрана показана последовательность табуляции по умолчанию для этого примера кода:
 
-![](keyboard-images/default-tab-order.png "Последовательность табуляции по умолчанию на основе строк")
+![](keyboard-images/default-tab-order.png "Default Row-based Tab Order")
 
 Здесь последовательность табуляции основана на строках и соответствует порядку элементов управления в XAML. Таким образом, при нажатии клавиши TAB выполняется переход по экземплярам имени [`Entry`](xref:Xamarin.Forms.Entry), а затем экземплярам фамилии `Entry`. Однако более интуитивно понятным было бы использование перехода по столбцам, чтобы при нажатии клавиши TAB выполнялся переход по парам имя-фамилия. Этого можно добиться, указав последовательность табуляции для элементов управления вводом.
 
@@ -110,7 +110,7 @@ ms.locfileid: "71997110"
 
 На следующем снимке экрана показана последовательность табуляции для этого примера кода:
 
-![](keyboard-images/correct-tab-order.png "Последовательность табуляции на основе столбцов")
+![](keyboard-images/correct-tab-order.png "Column-based Tab Order")
 
 Здесь последовательность табуляции основана на столбцах. Таким образом, при нажатии клавиши TAB выполняется переход по парам имя-фамилия [`Entry`](xref:Xamarin.Forms.Entry).
 

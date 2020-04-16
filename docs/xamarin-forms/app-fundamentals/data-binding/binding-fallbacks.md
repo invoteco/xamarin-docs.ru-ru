@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
 ms.openlocfilehash: 67fd8070ae36bdc1a90b8a33b25f13369d8d995d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650201"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Резервные значения привязки в Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Иногда может происходить сбой привязки данных из-за того, что не удалось разрешить источник привязки, или из-за того, что успешно выполненная привязка возвращает значение `null`. Хотя в таких ситуациях можно применять преобразователи величин или другой дополнительный код, повысить надежность привязок можно путем определения резервных значений, которые используются в случае сбоя привязки. Для этого можно определить свойства [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) и [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) в выражении привязки. Так как эти свойства находятся в классе [`BindingBase`](xref:Xamarin.Forms.BindingBase), их можно использовать с обычными привязками, скомпилированными привязками и расширением разметки `Binding`.
 

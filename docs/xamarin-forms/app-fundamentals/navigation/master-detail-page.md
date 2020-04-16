@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 702ec35bca051f7255c5c9d67d2dc68d4f89ca52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68645956"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Страница "Основной вид и подробности" Xamarin.Forms
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
 _Xamarin.Forms MasterDetailPage представляет собой страницу, управляющую двумя страницами связанных данных — главной страницей, которая представляет элементы, и страницей сведений, которая представляет сведения об элементах на главной странице. В этой статье описываются принципы работы со страницей MasterDetailPage и перехода между управляемыми страницами данных._
 
@@ -24,7 +24,7 @@ _Xamarin.Forms MasterDetailPage представляет собой страни
 
 На главной странице обычно отображается список элементов, как показано на следующем снимке экрана:
 
-[![](master-detail-page-images/masterpage-components.png "Компоненты главной страницы")](master-detail-page-images/masterpage-components-large.png#lightbox "Компоненты главной страницы")
+[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
 
 Расположение списка элементов одинаково для каждой платформы, а при выборе отдельного элемента осуществляется переход на соответствующую страницу сведений. Кроме того, на главной странице также представлена панель навигации с кнопкой, с помощью которой можно перейти к активной странице сведений:
 
@@ -34,7 +34,7 @@ _Xamarin.Forms MasterDetailPage представляет собой страни
 
 Страница сведений с данными, соответствующими выбранному на главной странице элементу, а также основные компоненты страницы сведений показаны на следующих снимках экрана:
 
-![](master-detail-page-images/detailpage-components.png "Компоненты страницы сведений")
+![](master-detail-page-images/detailpage-components.png "Detail Page Components")
 
 На странице сведений располагается панель навигации, содержимое которой зависит от платформы:
 
@@ -210,7 +210,7 @@ public class MasterPageCS : ContentPage
 
 На следующих снимках экрана показаны главные страницы на каждой платформе:
 
-![](master-detail-page-images/masterpage.png "Пример главной страницы")
+![](master-detail-page-images/masterpage.png "Master Page Example")
 
 ### <a name="creating-and-displaying-the-detail-page"></a>Создание и отображение страницы сведений
 
@@ -245,7 +245,7 @@ public partial class MainPage : MasterDetailPage
 
 На следующих снимках экрана показана страница сведений `ContactPage`, которая выводится на экран после выбора соответствующего элемента на главной странице:
 
-![](master-detail-page-images/detailpage.png "Пример страницы сведений")
+![](master-detail-page-images/detailpage.png "Detail Page Example")
 
 <a name="Controlling_the_Detail_Page_Display_Behavior" />
 

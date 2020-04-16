@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 4573d58f80b9c168f5d0a8a3f72beb64c29b1703
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771841"
 ---
 # <a name="loading-application-resource-videos"></a>Загрузка видеоресурсов приложения
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Пользовательские отрисовщики для представления `VideoPlayer` могут воспроизводить видеофайлы, внедренные в проекты для отдельных платформ в виде ресурсов приложения. Однако текущая версия `VideoPlayer` не может обращаться к ресурсам, внедренным в библиотеку .NET Standard.
 
@@ -177,7 +177,7 @@ namespace FormsVideoLibrary.UWP
 
 Так выглядит работающая страница:
 
-[![Воспроизведение видеоресурса](loading-resources-images/playvideoresource-small.png "Воспроизведение видеоресурса")](loading-resources-images/playvideoresource-large.png#lightbox "Воспроизведение видеоресурса")
+[![Воспроизведение видеоматериала](loading-resources-images/playvideoresource-small.png "Воспроизведение видеоматериала")](loading-resources-images/playvideoresource-large.png#lightbox "Воспроизведение видеоматериала")
 
 Теперь вы знаете, как [загружать видео по универсальному коду ресурса (URI) в Интернете](web-videos.md) и как воспроизводить внедренные ресурсы. Вы также можете [загружать видео из видеотеки устройства](accessing-library.md).
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
 ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70772007"
 ---
 # <a name="customizing-an-entry"></a>Настройка элемента управления Entry
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _Элемент управления Xamarin.Forms Entry позволяет редактировать одну строку текста. В этой статье показано, как создать пользовательский отрисовщик для элемента управления Entry, чтобы переопределить собственный способ отрисовки по умолчанию с помощью настройки для конкретной платформы._
 
@@ -24,7 +24,7 @@ _Элемент управления Xamarin.Forms Entry позволяет ре
 
 На следующей схеме показана связь между элементом управления [`Entry`](xref:Xamarin.Forms.Entry) и соответствующими собственными элементами управления, которые его реализуют:
 
-![](entry-images/entry-classes.png "Связь между элементом управления Entry и реализующими собственными элементами управления")
+![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
 
 Процесс отрисовки можно использовать для реализации настроек для конкретных платформ путем создания пользовательского отрисовщика для элемента управления [`Entry`](xref:Xamarin.Forms.Entry) на каждой платформе. Этот процесс выглядит следующим образом:
 
@@ -111,11 +111,11 @@ public class MainPage : ContentPage
 
 На следующей схеме показаны обязанности каждого проекта в примере приложения, а также связи между ними:
 
-![](entry-images/solution-structure.png "Обязанности проекта пользовательского отрисовщика MyEntry")
+![](entry-images/solution-structure.png "MyEntry Custom Renderer Project Responsibilities")
 
 Элемент управления `MyEntry` отрисовывается с помощью зависящих от платформы классов `MyEntryRenderer`, которые являются производными от класса `EntryRenderer` для каждой платформы. Это приводит к тому, что каждый элемент управления `MyEntry` отрисовывается с использованием цвета фона для конкретной платформы, как показано на следующих снимках экрана.
 
-![](entry-images/screenshots.png "Элемент управления MyEntry на каждой платформе")
+![](entry-images/screenshots.png "MyEntry Control on each Platform")
 
 Класс `EntryRenderer` предоставляет метод `OnElementChanged`, который вызывается при создании элемента управления Xamarin.Forms для отрисовки соответствующего собственного элемента управления. Этот метод принимает параметр `ElementChangedEventArgs`, содержащий свойства `OldElement` и `NewElement`. Эти свойства представляют элемент Xamarin.Forms, к которому *был* присоединен отрисовщик, и элемент Xamarin.Forms, к которому *присоединен* отрисовщик, соответственно. В примере приложения свойство `OldElement` будет иметь значение `null`, а свойство `NewElement` будет содержать ссылку на элемент управления `MyEntry`.
 

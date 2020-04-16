@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 1438c012608b367c21ebcc401c058b186b917f53
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027803"
 ---
 # <a name="working-with-the-android-manifest"></a>Работа с манифестом Android
@@ -33,7 +33,7 @@ namespace Demo
 ```
 
 В результате файл **AndroidManifest.xml** будет пустым. Если вам нужен элемент `<activity/>`, необходимо использовать настраиваемый атрибут [`[Activity]`](xref:Android.App.Activity): 
-custom attribute: 
+  
 
 ```csharp
 namespace Demo

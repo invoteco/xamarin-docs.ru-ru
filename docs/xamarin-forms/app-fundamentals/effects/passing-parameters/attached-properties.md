@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771481"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Передача параметров эффекта в качестве присоединенных свойств
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _Присоединенные свойства можно использовать для определения параметров эффекта, реагирующих на изменения свойств времени выполнения. В этой статье описывается использование присоединенных свойств для передачи параметров эффекту и изменение параметра во время выполнения._
 
@@ -35,11 +35,11 @@ _Присоединенные свойства можно использоват
 
 В примере приложения показан `ShadowEffect`, который добавляет тень к тексту, отображаемому элементом управления [`Label`](xref:Xamarin.Forms.Label). Кроме того, цвет тени может быть изменен во время выполнения. На следующей схеме показаны обязанности каждого проекта в примере приложения, а также связи между ними:
 
-![](attached-properties-images/shadow-effect.png "Обязанности проекта с эффектом тени")
+![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
 Элемент управления [`Label`](xref:Xamarin.Forms.Label) в `HomePage` настраивается с помощью класса `LabelShadowEffect` в каждом проекте для конкретной платформы. Параметры передаются каждому классу `LabelShadowEffect` через присоединенные свойства в классе `ShadowEffect`. Каждый класс `LabelShadowEffect` является производным от класса `PlatformEffect` для каждой платформы. В результате тень добавляется к тексту, отображаемому элементом управления `Label`, как показано на следующих снимках экрана.
 
-![](attached-properties-images/screenshots.png "Эффект тени на каждой платформе")
+![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
 
 ## <a name="creating-effect-parameters"></a>Создание параметров эффекта
 
@@ -318,7 +318,7 @@ namespace EffectsDemo.Droid
     }
 ```
 
-Метод `OnAttached` вызывает методы, которые получают значения присоединенного свойства с помощью методов получения `ShadowEffect`, и вызывает метод, который вызывает метод [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) для создания тени с использованием значений свойств. Ели у элемента управления, к которому присоединен эффект, отсутствуют свойства `Control.Layer`, указанная выше функциональность заключается в блок `try`/`catch`. Поскольку очистка не требуется, метод `OnDetached` не предоставляет реализацию.
+Метод `OnAttached` вызывает методы, которые получают значения присоединенного свойства с помощью методов получения `ShadowEffect`, и вызывает метод, который вызывает метод [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) для создания тени с использованием значений свойств. Если у элемента управления, к которому присоединен эффект, отсутствуют свойства `Control.Layer`, указанная выше функциональность заключается в блок `try`/`catch`. Поскольку очистка не требуется, метод `OnDetached` не предоставляет реализацию.
 
 #### <a name="responding-to-property-changes"></a>Реагирование на изменения свойств
 

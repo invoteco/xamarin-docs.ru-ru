@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/16/2018
 ms.openlocfilehash: 951b019a4a0bf503629b6ac63853bd5b1c818bce
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022755"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Бесплатная подготовка для приложений Xamarin.iOS
@@ -63,7 +63,7 @@ ms.locfileid: "73022755"
     ![Выбор схемы сборки Xcode](free-provisioning-images/xcodescheme.png "Выбор схемы сборки Xcode")
 
 9. Откройте параметры проекта приложения, щелкнув узел верхнего уровня этого приложения в **Навигаторе проекта** Xcode.
-10. В разделе **Общие параметры > Удостоверение** убедитесь, что **Идентификатор пакета** _точно соответствует_ идентификатору пакета вашего приложения Xamarin.iOS.
+10. В разделе **Общие параметры > Удостоверение** убедитесь, что значение параметра **Идентификатор пакета** _точно соответствует_ идентификатору пакета вашего приложения Xamarin.iOS.
 
     ![Указание идентификатора пакета](free-provisioning-images/launchapp5.png "Указание идентификатора пакета")
 
@@ -87,7 +87,7 @@ ms.locfileid: "73022755"
 
 ### <a name="deploy-your-xamarinios-app"></a>Развертывание приложения Xamarin.iOS
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio для Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/macos)
 
 1. Подключите устройство iOS к узлу сборки Mac через USB или [беспроводное соединение](~/ios/deploy-test/wireless-deployment.md).
 2. В Visual Studio для Mac на **Панели решения** дважды щелкните файл **Info.plist**.
@@ -106,7 +106,7 @@ ms.locfileid: "73022755"
 9. Нажмите кнопку **OK**, чтобы сохранить параметры и закрыть окно **Параметры проекта**.
 10. Выберите устройство iOS и запустите приложение.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Убедитесь, что среда Visual Studio 2019 или Visual Studio 2017 [связана с узлом сборки Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Подключите устройство iOS к узлу сборки Mac через USB или [беспроводное соединение](~/ios/deploy-test/wireless-deployment.md).

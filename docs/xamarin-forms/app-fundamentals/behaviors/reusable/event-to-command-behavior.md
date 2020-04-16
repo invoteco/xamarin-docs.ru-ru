@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
 ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650912"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>Повторно используемый EventToCommandBehavior
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 _Реакции на события можно использовать для сопоставления команд с элементами управления, которые не были предназначены для взаимодействия с командами. В этой статье демонстрируется создание и использование реакции на событие Xamarin.Forms для выполнения команды при возникновении события._
 
@@ -198,7 +198,7 @@ selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 
 Во время выполнения реакция на событие будет реагировать на взаимодействие с элементом управления. При выборе элемента в [`ListView`](xref:Xamarin.Forms.ListView) активируется событие [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected), из-за чего выполняется `OutputAgeCommand` в модели представления. В свою очередь, это вызывает обновление свойства `SelectedItemText` модели представления, к которому привязан [`Label`](xref:Xamarin.Forms.Label), как показано на следующем снимке экрана:
 
-[![](event-to-command-behavior-images/screenshots-sml.png "Пример приложения с EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Пример приложения с EventToCommandBehavior")
+[![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
 
 Преимуществом использования этой реакции на событие для выполнения команды при возникновении события является то, что команды можно сопоставить с элементами управления, которые не были предназначены для взаимодействия с командами. Кроме того, это удаляет стандартный код обработки событий из файлов кода программной части.
 

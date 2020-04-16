@@ -1,17 +1,17 @@
 ---
 ms.topic: include
-ms.openlocfilehash: e4dfd1ac12f3010939d483381a785091d71599ed
-ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
+ms.openlocfilehash: b82ebeaeb28195e3ec0f5a0200c0448b6b76196a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2018
-ms.locfileid: "52294831"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61259480"
 ---
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Скорость датчика](xref:Xamarin.Essentials.SensorSpeed)
+## <a name="sensor-speed"></a>[Скорость датчика](xref:Xamarin.Essentials.SensorSpeed)
 
 - **Fastest** (Максимальная) — максимально быстрое получение данных датчика (возврат в поток пользовательского интерфейса не гарантирован).
 - **Game** (Игра) — скорость, подходящая для игр (возврат в поток пользовательского интерфейса не гарантирован).
-- **Normal** (Нормальная) — скорость по умолчанию, которая подходит для изменений ориентации экрана.
+- **Normal** (Нормальная) — скорость по умолчанию, которая подходит для изменений ориентации экрана.
 - **UI** (Пользовательский интерфейс) — скорость, которая подходит для типичного пользовательского интерфейса.
 
 Если нет гарантии, что обработчик событий будет запущен в потоке пользовательского интерфейса, и этому обработчику событий требуется доступ к элементам интерфейса, используйте метод [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) для запуска кода в потоке пользовательского интерфейса.

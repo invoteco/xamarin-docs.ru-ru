@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771808"
 ---
 # <a name="implementing-a-video-player"></a>Реализация видеопроигрывателя
 
-[![Скачать пример](~/media/shared/download.png) Скачать пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Загрузить образец](~/media/shared/download.png) загрузить пример](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Иногда нужно, чтобы видеофайлы воспроизводились в приложении Xamarin.Forms. В этой серии статей объясняется, как написать пользовательские отрисовщики для iOS, Android и универсальной платформы Windows (UWP) для класса Xamarin.Forms `VideoPlayer`.
 
@@ -30,7 +30,7 @@ ms.locfileid: "70771808"
 
 Для видеопроигрывателей нужны *элементы управления транспортировкой* — кнопки для воспроизведения и приостановки видео, а также панель положения, которая показывает, сколько времени от видео прошло и позволяет быстро перемотать его. `VideoPlayer` может использовать элементы управления транспортировкой и панель положения, предоставленную платформой (как показано ниже). Вы также можете предоставить пользовательские элементы управления и панель положения. Программа, запущенная на iOS, Android и универсальной платформе Windows:
 
-[![Воспроизвести видео через Интернет](web-videos-images/playwebvideo-small.png "Воспроизвести видео через Интернет")](web-videos-images/playwebvideo-large.png#lightbox "Воспроизвести видео через Интернет")
+[![Воспроизведение видео через Интернет](web-videos-images/playwebvideo-small.png "Воспроизведение видео через Интернет")](web-videos-images/playwebvideo-large.png#lightbox "Воспроизведение видео через Интернет")
 
 Разумеется, вы можете повернуть телефон боком для более крупного представления.
 
@@ -38,31 +38,31 @@ ms.locfileid: "70771808"
 
 В следующем ряде статей постепенно показывается, как создаются отрисовщики платформы и поддерживающие классы:
 
-## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[Создание видеопроигрывателей платформы](player-creation.md)
+## <a name="creating-the-platform-video-players"></a>[Создание видеопроигрывателей платформы](player-creation.md)
 
 Для каждой платформы требуется поддерживаемый класс `VideoPlayerRenderer`, создающий и обрабатывающий элемент управления видеопроигрывателем. В этой статье показана структура классов отрисовщика и то, как создаются проигрыватели.
 
-## <a name="playing-a-web-videoweb-videosmd"></a>[Воспроизведение видео через Интернет](web-videos.md)
+## <a name="playing-a-web-video"></a>[Воспроизведение видео через Интернет](web-videos.md)
 
 Возможно, самый распространенный источник видео для видеопроигрывателя — это Интернет. В этой статье описывается, как можно указать ссылку на видео в Интернете и использовать ее как источник для видеопроигрывателя.
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[Привязка видеоисточников к проигрывателю](source-bindings.md)
+## <a name="binding-video-sources-to-the-player"></a>[Привязка видеоисточников к проигрывателю](source-bindings.md)
 
 В этой статье для представления коллекции видео для воспроизведения используется `ListView`. Одна программа показывает, как файл с выделенным кодом может задать источник видеопроигрывателя, а вторая — как использовать привязку данных между `ListView` и видеопроигрывателем.
 
-## <a name="loading-application-resource-videosloading-resourcesmd"></a>[Загрузка видеоресурсов приложения](loading-resources.md)
+## <a name="loading-application-resource-videos"></a>[Загрузка видеоресурсов приложения](loading-resources.md)
 
 Видео можно внедрять как ресурсы в проекты платформы. В этой статье показано, как хранить эти ресурсы и загружать их позже в программу для воспроизведения в видеопроигрывателе.
 
-## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[Доступ к видеотеке устройства](accessing-library.md)
+## <a name="accessing-the-devices-video-library"></a>[Доступ к видеотеке устройства](accessing-library.md)
 
 При создании видео с помощью камеры устройства видеофайл сохраняется в библиотеку изображений устройства. В этой статье показано, как выбрать видео в средстве выбора изображений устройства, а затем воспроизвести их с помощью видеопроигрывателя.
 
-## <a name="custom-video-transport-controlscustom-transportmd"></a>[Пользовательские элементы управления транспортировкой видео](custom-transport.md)
+## <a name="custom-video-transport-controls"></a>[Пользовательские элементы управления транспортировкой видео](custom-transport.md)
 
 Хотя видеопроигрыватели на каждой платформе предоставляют собственные элементы управления транспортировкой в виде кнопок **Воспроизвести** и **Приостановить**, вы можете заменить кнопки своими. Эта статья поможет вам сделать это.
 
-## <a name="custom-video-positioningcustom-positioningmd"></a>[Настраиваемое размещение видео](custom-positioning.md)
+## <a name="custom-video-positioning"></a>[Настраиваемое размещение видео](custom-positioning.md)
 
 В каждом видеопроигрывателе платформы есть панель положения, которая показывает, сколько времени от видео прошло, и позволяет перемотать его вперед или назад до определенного места. В этой статье показано, как заменить панель положения пользовательским элементом управления.
 

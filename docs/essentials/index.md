@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.openlocfilehash: 1d68203e80e0bc28e7060d5873c122db8c2ff960
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910729"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80387211"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -61,6 +61,7 @@ Android, iOS и универсальная платформа Windows предо
 * [Преобразователи единиц](unit-converters.md?context=xamarin/xamarin-forms) — вспомогательные методы для преобразования единиц.
 * [Отслеживания версий](version-tracking.md?context=xamarin/xamarin-forms) — отслеживание версий и номеров сборки для приложений.
 * [Вибрация](vibrate.md?context=xamarin/xamarin-forms) — включение вибродвигателя на устройстве.
+* [Веб-средство для проверки подлинности](web-authenticator.md?context=xamarin/xamarin-forms) — запуск потоков проверки подлинности в веб-браузере и ожидание обратного вызова.
 
 ## <a name="troubleshooting"></a>[Устранение неполадок](troubleshooting.md?context=xamarin/xamarin-forms)
 

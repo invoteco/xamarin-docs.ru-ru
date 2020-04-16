@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2019
 ms.openlocfilehash: 531d9719eb4bf5c23001ebe4260254e13f9989eb
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72697159"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Скомпилированные привязки Xamarin.Forms
@@ -128,7 +128,7 @@ _Скомпилированные привязки разрешаются быс
 
 При первом запуске приложения объект [`ListView`](xref:Xamarin.Forms.ListView) заполняется экземплярами `NamedColor`. При выборе элемента в объекте `ListView` свойству [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) присваивается цвет элемента, выбранного в `ListView`:
 
-[![Скомпилированный список цветов](compiled-bindings-images/compiledcolorlist-small.png "Скомпилированный список цветов")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![Скомпилированный список цветов](compiled-bindings-images/compiledcolorlist-small.png "Скомпилированный список цветов")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Скомпилированный список цветов")
 
 При выборе других элементов в [`ListView`](xref:Xamarin.Forms.BoxView) обновляется цвет элемента [`BoxView`](xref:Xamarin.Forms.BoxView).
 

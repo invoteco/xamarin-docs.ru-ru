@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
 ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027991"
 ---
 # <a name="profiling-android-apps"></a>Профилирование приложений Android
@@ -105,8 +105,8 @@ Android Studio 3.0 и более поздних версий включает в
 Подробные сведения об использовании Android Profiler приведены в [документации по Android Studio](https://developer.android.com/studio/profile/android-profiler.html).
 Для разработчиков Xamarin Android могут представлять интерес следующие разделы:
 
-- [Профилировщик ЦП](https://developer.android.com/studio/profile/cpu-profiler.html) &ndash; объясняет, как проверить загрузку ЦП и активность потоков для приложения в режиме реального времени.
+- [Профилировщик ЦП](https://developer.android.com/studio/profile/cpu-profiler.html) помогает проверить загрузку ЦП и активность потоков для приложения в реальном времени.
 
-- [Профилировщик памяти](https://developer.android.com/studio/profile/memory-profiler.html) — отображает график использования памяти приложением в режиме реального времени, а также позволяет регистрировать выделения памяти для анализа.
+- [Профилировщик памяти](https://developer.android.com/studio/profile/memory-profiler.html) отображает график использования памяти приложением в реальном времени, а также позволяет регистрировать выделения памяти для анализа.
 
-- [Профилировщик сети](https://developer.android.com/studio/profile/network-profiler.html) — отображает сведения о сетевой активности в реальном времени для данных, отправляемых и получаемых приложением.
+- [Профилировщик сети](https://developer.android.com/studio/profile/network-profiler.html) отображает сведения о сетевой активности в реальном времени для данных, отправляемых и получаемых приложением.

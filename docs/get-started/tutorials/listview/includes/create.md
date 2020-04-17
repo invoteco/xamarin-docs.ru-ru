@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 28a0b894d6230810f99ffaec4b93d9d87120e30f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c864f5d97e72a58e4b3c28fdeb97b7cfaea75992
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67277417"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389933"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -17,7 +17,7 @@ ms.locfileid: "67277417"
 
     Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
-1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **ListViewTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
+1. В **обозревателе решений** дважды щелкните файл **MainPage.xaml** в проекте **ListViewTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -42,9 +42,9 @@ ms.locfileid: "67277417"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`ListView`](xref:Xamarin.Forms.Image) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) задает элементы, которые нужно отобразить, которые определены в массиве строк.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`ListView`](xref:Xamarin.Forms.ListView) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) задает элементы, которые нужно отобразить, которые определены в массиве строк.
 
-1. На панели инструментов Visual Studio нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном удаленном симуляторе iOS или эмуляторе Android.
+1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
     [![Снимок экрана: ListView в iOS и Android](../images/create-listview.png "ListView с данными")](../images/create-listview-large.png#lightbox "ListView с данными")
 
@@ -59,7 +59,7 @@ ms.locfileid: "67277417"
 
     Дополнительные сведения о создаваемой библиотеке .NET Standard см. в разделе [Структура приложения Xamarin.Forms](~/get-started/first-app/index.md) статьи [Краткое руководство по Xamarin.Forms глубокое погружение в обработку](~/get-started/first-app/index.md).
 
-1. На **Панели решения** дважды щелкните файл **MainPage.xaml** в проекте **ListViewTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом.
+1. На **Панели решения** дважды щелкните файл **MainPage.xaml** в проекте **ListViewTutorial**, чтобы открыть его. В **MainPage.xaml** удалите весь код шаблона и замените его приведенным ниже кодом:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -84,7 +84,7 @@ ms.locfileid: "67277417"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`ListView`](xref:Xamarin.Forms.Image) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) задает элементы, которые нужно отобразить, которые определены в массиве строк.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`ListView`](xref:Xamarin.Forms.ListView) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) задает элементы, которые нужно отобразить, которые определены в массиве строк.
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 

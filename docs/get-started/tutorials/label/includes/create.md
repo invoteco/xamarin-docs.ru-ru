@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1bcd808221ee319fa2818563418d2362b146e354
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "72678734"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389922"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ ms.locfileid: "72678734"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Button.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что `Label` будет выравниваться по горизонтали по центру.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Label.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что `Label` будет выравниваться по горизонтали по центру.
 
 1. На панели инструментов Visual Studio нажмите кнопку **Запуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS удаленной работы или эмуляторе Android:
 
@@ -62,7 +62,7 @@ ms.locfileid: "72678734"
     </ContentPage>
     ```
 
-    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Button.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что текст будет выравниваться по горизонтали по центру.
+    Этот код декларативно определяет пользовательский интерфейс для страницы, который состоит из [`Label`](xref:Xamarin.Forms.Label) в [`StackLayout`](xref:Xamarin.Forms.StackLayout). Свойство [`Label.Text`](xref:Xamarin.Forms.Label.Text) определяет текст, который отображается, а свойство [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) указывает, что текст будет выравниваться по горизонтали по центру.
 
 1. На панели инструментов Visual Studio для Mac нажмите кнопку **Пуск** (треугольная кнопка, похожая на кнопку воспроизведения) для запуска приложения в выбранном симуляторе iOS или эмуляторе Android.
 

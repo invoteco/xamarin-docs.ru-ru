@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 04d2a244482c92a615c3eec2130cec1df8aaaf1f
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61037631"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389992"
 ---
 Ранее мы заполнили [`ListView`](xref:Xamarin.Forms.ListView) данными с помощью привязки данных. Однако несмотря на привязку данных к коллекции, где каждый объект в коллекции определял несколько элементов данных, только один элемент данных отображался для каждого объекта (свойство `Name` объекта `Monkey`).
 
@@ -12,7 +12,7 @@ ms.locfileid: "61037631"
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
-1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.Image), чтобы настроить внешний вид каждой строки:
+1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.ListView), чтобы настроить внешний вид каждой строки:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}"
@@ -62,7 +62,7 @@ ms.locfileid: "61037631"
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio для Mac](#tab/vsmac)
 
-1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.Image), чтобы настроить внешний вид каждой строки:
+1. В **MainPage.xaml** измените объявление [`ListView`](xref:Xamarin.Forms.ListView), чтобы настроить внешний вид каждой строки:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}"

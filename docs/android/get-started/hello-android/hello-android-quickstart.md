@@ -137,7 +137,7 @@ _В этом состоящем из двух частей руководств�
 ```csharp
 using System.Text;
 using System;
-namespace Core
+namespace Phoneword
 {
     public static class PhonewordTranslator
     {
@@ -241,7 +241,7 @@ Button translateButton = FindViewById<Button>(Resource.Id.TranslateButton);
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    string translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    string translatedNumber = Phoneword.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = string.Empty;
